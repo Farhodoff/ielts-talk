@@ -281,7 +281,7 @@ export const CoachChatArea: React.FC<CoachChatAreaProps> = ({
                               type="button"
                               onClick={() => onInspectPitch(vocab.word, vocab.reading)}
                               className="inline-flex cursor-pointer items-center gap-1 rounded-lg border border-primary/25 bg-primary/10 px-1.5 py-0.5 text-[10px] font-bold text-primary transition-all hover:bg-primary/20 hover:shadow-xs active:scale-95"
-                              title="Yapon tili ohangi (Pitch Accent) grafigini ko'rish"
+                              title="Talaffuz va intonatsiya grafigini ko'rish"
                             >
                               <TrendingUp size={11} />
                               <span>Pitch</span>

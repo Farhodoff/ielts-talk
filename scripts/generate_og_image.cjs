@@ -15,7 +15,7 @@ async function generateOgImage() {
 <head>
   <meta charset="UTF-8">
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800;900&family=Noto+Sans+JP:wght@700;900&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800;900&family=JetBrains+Mono:wght@600;700&display=swap');
     
     * {
       box-sizing: border-box;
@@ -26,17 +26,18 @@ async function generateOgImage() {
     body {
       width: 1200px;
       height: 630px;
-      background-color: #0c1017;
+      background-color: #090D16;
       background-image: 
-        radial-gradient(circle at 15% 20%, rgba(232, 72, 58, 0.22) 0%, transparent 45%),
-        radial-gradient(circle at 85% 80%, rgba(99, 102, 241, 0.20) 0%, transparent 45%),
-        radial-gradient(circle at 50% 50%, rgba(201, 169, 97, 0.10) 0%, transparent 60%);
+        radial-gradient(circle at 12% 18%, rgba(99, 102, 241, 0.28) 0%, transparent 48%),
+        radial-gradient(circle at 88% 75%, rgba(245, 158, 11, 0.18) 0%, transparent 45%),
+        radial-gradient(circle at 50% 40%, rgba(37, 99, 235, 0.14) 0%, transparent 55%),
+        radial-gradient(circle at 75% 20%, rgba(16, 185, 129, 0.12) 0%, transparent 40%);
       font-family: 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
       color: #ffffff;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      padding: 56px 64px;
+      padding: 52px 64px;
       overflow: hidden;
       position: relative;
     }
@@ -45,35 +46,43 @@ async function generateOgImage() {
       content: '';
       position: absolute;
       inset: 0;
-      background-image: linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-                        linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
-      background-size: 40px 40px;
+      background-image: 
+        linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+      background-size: 38px 38px;
       pointer-events: none;
     }
 
     .header {
       display: flex;
       align-items: center;
-      gap: 20px;
+      justify-content: space-between;
       position: relative;
       z-index: 10;
     }
 
+    .brand-group {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
     .logo-box {
-      width: 76px;
-      height: 76px;
+      width: 72px;
+      height: 72px;
       border-radius: 20px;
-      background: linear-gradient(135deg, #1e2632 0%, #11161d 100%);
-      border: 2px solid rgba(232, 72, 58, 0.45);
-      box-shadow: 0 12px 32px rgba(232, 72, 58, 0.3), 0 2px 8px rgba(0,0,0,0.5);
+      background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+      border: 2px solid rgba(99, 102, 241, 0.5);
+      box-shadow: 0 12px 30px rgba(79, 70, 229, 0.35), 0 2px 8px rgba(0,0,0,0.6);
       display: flex;
       align-items: center;
       justify-content: center;
+      padding: 8px;
     }
 
     .logo-box svg {
-      width: 48px;
-      height: 48px;
+      width: 52px;
+      height: 52px;
     }
 
     .brand-names {
@@ -85,66 +94,99 @@ async function generateOgImage() {
     .brand-title-wrap {
       display: flex;
       align-items: baseline;
-      gap: 14px;
+      gap: 12px;
     }
 
     .brand-title {
       font-size: 38px;
       font-weight: 900;
       letter-spacing: -0.03em;
-      background: linear-gradient(to right, #ffffff, #f1f5f9);
+      color: #ffffff;
+    }
+
+    .brand-title span.blue {
+      background: linear-gradient(135deg, #60a5fa 0%, #818cf8 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
 
-    .jp-sub {
-      font-family: 'Noto Sans JP', sans-serif;
-      font-size: 22px;
-      font-weight: 700;
-      color: #e8483a;
-      letter-spacing: 0.05em;
+    .brand-pill {
+      display: inline-flex;
+      align-items: center;
+      padding: 4px 10px;
+      border-radius: 8px;
+      background: rgba(245, 158, 11, 0.15);
+      border: 1px solid rgba(245, 158, 11, 0.4);
+      color: #fbbf24;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
     }
 
     .brand-tagline {
-      font-size: 15px;
+      font-size: 14px;
       font-weight: 600;
       color: #94a3b8;
-      letter-spacing: 0.02em;
+      letter-spacing: 0.01em;
+    }
+
+    .header-badge {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      padding: 8px 16px;
+      border-radius: 999px;
+      backdrop-filter: blur(12px);
+      font-size: 13px;
+      font-weight: 700;
+      color: #e2e8f0;
+    }
+
+    .header-badge .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #10b981;
+      box-shadow: 0 0 10px #10b981;
     }
 
     .hero-content {
       position: relative;
       z-index: 10;
-      max-width: 900px;
-      margin-top: 10px;
+      max-width: 960px;
+      margin-top: 14px;
     }
 
     .headline {
-      font-size: 50px;
+      font-size: 48px;
       font-weight: 900;
-      line-height: 1.15;
-      letter-spacing: -0.03em;
-      margin-bottom: 16px;
+      line-height: 1.16;
+      letter-spacing: -0.035em;
+      margin-bottom: 14px;
       color: #ffffff;
     }
 
     .headline span.highlight {
-      background: linear-gradient(135deg, #f43f5e 0%, #e11d48 50%, #fb7185 100%);
+      background: linear-gradient(135deg, #38bdf8 0%, #6366f1 50%, #a855f7 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
 
     .headline span.gold {
-      background: linear-gradient(135deg, #f59e0b 0%, #fbbf24 100%);
+      background: linear-gradient(135deg, #f59e0b 0%, #fbbf24 60%, #fde68a 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
 
     .subheadline {
-      font-size: 20px;
+      font-size: 19px;
       font-weight: 500;
       color: #94a3b8;
       line-height: 1.45;
+      max-width: 880px;
     }
 
     .cards-row {
@@ -153,23 +195,30 @@ async function generateOgImage() {
       gap: 16px;
       position: relative;
       z-index: 10;
+      margin-top: 16px;
     }
 
     .card {
-      background: rgba(22, 27, 34, 0.85);
-      backdrop-filter: blur(16px);
+      background: rgba(15, 23, 42, 0.75);
+      backdrop-filter: blur(20px);
       border: 1px solid rgba(255, 255, 255, 0.08);
       border-radius: 18px;
-      padding: 20px;
+      padding: 20px 18px;
       display: flex;
       flex-direction: column;
       gap: 8px;
-      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.4);
+      box-shadow: 0 12px 28px -6px rgba(0, 0, 0, 0.45);
+      transition: all 0.3s ease;
+    }
+
+    .card-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
     }
 
     .card-icon {
       font-size: 26px;
-      margin-bottom: 2px;
     }
 
     .card-title {
@@ -180,10 +229,10 @@ async function generateOgImage() {
     }
 
     .card-desc {
-      font-size: 13px;
+      font-size: 12.5px;
       font-weight: 500;
       color: #94a3b8;
-      line-height: 1.35;
+      line-height: 1.4;
     }
 
     .card-badge {
@@ -194,32 +243,32 @@ async function generateOgImage() {
       font-size: 10px;
       font-weight: 800;
       text-transform: uppercase;
-      letter-spacing: 0.05em;
+      letter-spacing: 0.04em;
       margin-top: 4px;
     }
 
-    .badge-rose {
-      background: rgba(244, 63, 94, 0.15);
-      color: #fb7185;
-      border: 1px solid rgba(244, 63, 94, 0.3);
+    .badge-amber {
+      background: rgba(245, 158, 11, 0.16);
+      color: #fbbf24;
+      border: 1px solid rgba(245, 158, 11, 0.35);
     }
 
-    .badge-amber {
-      background: rgba(245, 158, 11, 0.15);
-      color: #fbbf24;
-      border: 1px solid rgba(245, 158, 11, 0.3);
+    .badge-rose {
+      background: rgba(244, 63, 94, 0.16);
+      color: #fb7185;
+      border: 1px solid rgba(244, 63, 94, 0.35);
     }
 
     .badge-indigo {
-      background: rgba(99, 102, 241, 0.15);
-      color: #818cf8;
-      border: 1px solid rgba(99, 102, 241, 0.3);
+      background: rgba(99, 102, 241, 0.18);
+      color: #a5b4fc;
+      border: 1px solid rgba(99, 102, 241, 0.35);
     }
 
     .badge-emerald {
-      background: rgba(16, 185, 129, 0.15);
+      background: rgba(16, 185, 129, 0.16);
       color: #34d399;
-      border: 1px solid rgba(16, 185, 129, 0.3);
+      border: 1px solid rgba(16, 185, 129, 0.35);
     }
 
     .footer {
@@ -237,78 +286,116 @@ async function generateOgImage() {
 
     .url-chip {
       background: rgba(255, 255, 255, 0.06);
-      padding: 6px 14px;
+      padding: 6px 16px;
       border-radius: 999px;
       color: #e2e8f0;
-      font-family: monospace;
+      font-family: 'JetBrains Mono', monospace;
       font-size: 13px;
-      border: 1px solid rgba(255, 255, 255, 0.1);
+      font-weight: 700;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      letter-spacing: 0.02em;
     }
   </style>
 </head>
 <body>
   <div class="header">
-    <div class="logo-box">
-      <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M4 10C14 8.5 34 8.5 44 10C45.5 10.2 45.5 12.5 44 13C34 11.5 14 11.5 4 13C2.5 12.5 2.5 10.2 4 10Z" fill="#E8483A"/>
-        <path d="M7 14H41V16.8H7V14Z" fill="#E8483A"/>
-        <rect x="22" y="16.8" width="4" height="5.2" rx="0.6" fill="#C9A961"/>
-        <path d="M5 22H43V24.8H5V22Z" fill="#E8483A"/>
-        <path d="M12.5 16.8L11 41H15L16 16.8H12.5Z" fill="#E8483A"/>
-        <path d="M32 16.8L33 41H37L35.5 16.8H32Z" fill="#E8483A"/>
-        <rect x="9" y="40" width="7" height="3.2" rx="1" fill="#C9A961"/>
-        <rect x="32" y="40" width="7" height="3.2" rx="1" fill="#C9A961"/>
-      </svg>
-    </div>
-    <div class="brand-names">
-      <div class="brand-title-wrap">
-        <span class="brand-title">Nihongo Talk</span>
-        <span class="jp-sub">日本語トーク</span>
+    <div class="brand-group">
+      <div class="logo-box">
+        <!-- Minimalist Academic Speech Emblem -->
+        <svg viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round">
+            <!-- Circular Speech Bubble Body -->
+            <path
+              d="M172 245 C 130 280, 130 355, 175 395 C 220 435, 292 435, 332 395 L 372 425 L 360 375 C 385 348, 388 305, 368 272"
+              stroke-width="32"
+            />
+            <!-- Graduation Mortarboard Top (Rhombus) -->
+            <polygon
+              points="256,92 428,168 256,244 84,168"
+              stroke-width="32"
+              fill="#1C2C78"
+            />
+            <!-- Under-Cap Band -->
+            <path
+              d="M170 206 V240 C170 274, 342 274, 342 240 V206"
+              stroke-width="26"
+            />
+            <!-- Tassel Cord and Drop -->
+            <path
+              d="M400 180 V245"
+              stroke="#F59E0B"
+              stroke-width="14"
+            />
+          </g>
+          <circle cx="400" cy="254" r="10" fill="#F59E0B" />
+        </svg>
       </div>
-      <span class="brand-tagline">Yapon Tilini AI Yordamida Tizimli O'rganish Platformasi</span>
+      <div class="brand-names">
+        <div class="brand-title-wrap">
+          <span class="brand-title">IELTS <span class="blue">Talk</span></span>
+          <span class="brand-pill">Academic & General</span>
+        </div>
+        <span class="brand-tagline">AI Yordamida IELTS Imtihoniga Tizimli Tayyorgarlik Platformasi</span>
+      </div>
+    </div>
+
+    <div class="header-badge">
+      <span class="dot"></span>
+      <span>Cambridge & CEFR Aligned</span>
     </div>
   </div>
 
   <div class="hero-content">
     <h1 class="headline">
-      <span class="highlight">JLPT N5–N1</span> Imtihoniga Tayyorlaning & <br/>
+      <span class="highlight">IELTS Band 7.5+</span> Imtihoniga Tayyorlaning & <br/>
       <span class="gold">AI Speaking Coach</span> Bilan Erkin Gapiring
     </h1>
     <p class="subheadline">
-      Interaktiv ovozli suhbatlar, Anki SM-2 oraliq takrorlash fleshkartalari va to'liq JLPT imtihon simulyatsiyasi.
+      Examiner Gordon bilan jonli Part 1-3 intervyusi, Writing Task 1 & 2 tezkor tahlili va Anki SM-2 aqlli fleshkartalari.
     </p>
   </div>
 
   <div class="cards-row">
     <div class="card">
-      <div class="card-icon">🗣️</div>
-      <div class="card-title">AI Speaking</div>
-      <div class="card-desc">Jonli ovozli suhbat, talaffuz va xatolar tahlili</div>
-      <span class="card-badge badge-rose">Yuki-Sensei</span>
+      <div class="card-top">
+        <div class="card-icon">🎙️</div>
+        <span class="card-badge badge-amber">Band 8.5+ Mock</span>
+      </div>
+      <div class="card-title">AI Speaking Coach</div>
+      <div class="card-desc">Examiner Gordon bilan real vaqtda ovozli imtihon simulyatsiyasi va baholash</div>
     </div>
+
     <div class="card">
-      <div class="card-icon">⛩️</div>
-      <div class="card-title">JLPT N5–N1</div>
-      <div class="card-desc">Lug'at, grammatika, dokkai va choukai testlari</div>
-      <span class="card-badge badge-amber">Mock Exam</span>
+      <div class="card-top">
+        <div class="card-icon">✍️</div>
+        <span class="card-badge badge-rose">Instant Feedback</span>
+      </div>
+      <div class="card-title">Writing Evaluator</div>
+      <div class="card-desc">Task 1 va Task 2 insholarini 4 ta rasmiy mezon bo'yicha tezkor tahlili</div>
     </div>
+
     <div class="card">
-      <div class="card-icon">🎴</div>
-      <div class="card-title">Fleshkartalar</div>
-      <div class="card-desc">Anki SM-2 algoritmi va 10 000+ so'zlar bazasi</div>
-      <span class="card-badge badge-indigo">Spaced Repetition</span>
+      <div class="card-top">
+        <div class="card-icon">🎧</div>
+        <span class="card-badge badge-indigo">Full Practice</span>
+      </div>
+      <div class="card-title">Mock Imtihonlar</div>
+      <div class="card-desc">Reading va Listening to'liq testlari, vaqt nazorati va xatolar ustida ishlash</div>
     </div>
+
     <div class="card">
-      <div class="card-icon">⚡</div>
-      <div class="card-title">Telegram App</div>
-      <div class="card-desc">To'g'ridan-to'g'ri Telegram ichida qulay mashqlar</div>
-      <span class="card-badge badge-emerald">TWA Support</span>
+      <div class="card-top">
+        <div class="card-icon">🎴</div>
+        <span class="card-badge badge-emerald">Spaced Repetition</span>
+      </div>
+      <div class="card-title">SRS Fleshkartalar</div>
+      <div class="card-desc">Oxford 3000 va Academic Word List bo'yicha Anki SM-2 algoritmli takrorlash</div>
     </div>
   </div>
 
   <div class="footer">
-    <span>© 2026 Nihongo Talk. Barcha huquqlar himoyalangan.</span>
-    <span class="url-chip">nihon-talk.vercel.app</span>
+    <span>© 2026 IELTS Talk. Barcha huquqlar himoyalangan.</span>
+    <span class="url-chip">ielts-talk.vercel.app</span>
   </div>
 </body>
 </html>

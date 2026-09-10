@@ -1,12 +1,12 @@
 # ==============================================================================
-# Nihongo Talk Robots Configuration
-# Production URL: https://nihon-talk.vercel.app
+# IELTS Talk Robots Configuration
+# Production URL: https://ielts-talk.vercel.app
 # ==============================================================================
 
 # Default Crawlers (Googlebot, Bingbot, Yandex, DuckDuckBot, Baiduspider)
 User-agent: *
 Allow: /
-Allow: /jlpt
+Allow: /ielts
 Allow: /speaking
 Allow: /speaking-coach
 Allow: /pricing
@@ -24,8 +24,9 @@ Disallow: /personal-plan
 # Generative AI & Search Engine Crawlers (ChatGPT Search, Perplexity, Claude, Apple Intelligence)
 User-agent: GPTBot
 Allow: /
-Allow: /jlpt
+Allow: /ielts
 Allow: /speaking
+Allow: /speaking-coach
 Allow: /pricing
 Allow: /developers
 Allow: /llms.txt
@@ -34,8 +35,9 @@ Disallow: /admin
 
 User-agent: PerplexityBot
 Allow: /
-Allow: /jlpt
+Allow: /ielts
 Allow: /speaking
+Allow: /speaking-coach
 Allow: /pricing
 Allow: /developers
 Allow: /llms.txt
@@ -44,8 +46,9 @@ Disallow: /admin
 
 User-agent: ClaudeBot
 Allow: /
-Allow: /jlpt
+Allow: /ielts
 Allow: /speaking
+Allow: /speaking-coach
 Allow: /pricing
 Allow: /developers
 Allow: /llms.txt
@@ -54,20 +57,22 @@ Disallow: /admin
 
 User-agent: Google-Extended
 Allow: /
-Allow: /jlpt
+Allow: /ielts
 Allow: /speaking
+Allow: /speaking-coach
 Allow: /pricing
 Allow: /developers
 Allow: /llms.txt
 
 User-agent: Applebot-Extended
 Allow: /
-Allow: /jlpt
+Allow: /ielts
 Allow: /speaking
+Allow: /speaking-coach
 Allow: /pricing
 Allow: /developers
 Allow: /llms.txt
 
 # Host and Sitemap Declarations
-Host: https://nihon-talk.vercel.app
-Sitemap: https://nihon-talk.vercel.app/sitemap.xml
+Host: https://ielts-talk.vercel.app
+Sitemap: https://ielts-talk.vercel.app/sitemap.xml

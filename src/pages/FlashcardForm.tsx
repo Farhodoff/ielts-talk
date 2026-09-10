@@ -84,7 +84,7 @@ const FlashcardForm: React.FC = () => {
                         <div className="p-4 bg-primary/5 rounded-2xl border border-primary/20 space-y-3 mb-2">
                             <input
                                 type="text"
-                                placeholder="Fan nomi (masalan, Yapon tili)..."
+                                placeholder="Fan nomi (masalan, IELTS Vocabulary)..."
                                 value={newSubName}
                                 onChange={(e) => setNewSubName(e.target.value)}
                                 className="w-full px-3 py-2 text-sm rounded-xl border border-border bg-card text-foreground outline-hidden focus:ring-2 focus:ring-primary"

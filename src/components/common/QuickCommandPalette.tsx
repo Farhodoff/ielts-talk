@@ -6,7 +6,6 @@ import {
   Calendar,
   BookOpen,
   Copy,
-  Sparkles,
   GraduationCap,
   Mic,
   Clock,
@@ -92,15 +91,6 @@ const COMMANDS: CommandItem[] = [
   },
 
   // Til & Imtihonlar
-  {
-    id: 'jlpt',
-    title: 'JLPT Hub 🎌',
-    description: 'Yapon tili N5-N1 imtihon va darslari',
-    category: 'Til & Imtihonlar',
-    path: '/jlpt',
-    icon: Sparkles,
-    keywords: ['yapon', 'japanese', 'n5', 'n4', 'n3', 'n2', 'n1', 'kanji'],
-  },
   {
     id: 'ielts',
     title: 'IELTS Hub 🎓',

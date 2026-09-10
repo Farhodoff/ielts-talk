@@ -377,7 +377,7 @@ export const PersonalizedOnboardingModal: React.FC<PersonalizedOnboardingModalPr
                         <div className="p-4 rounded-2xl bg-muted/40 border border-border text-left space-y-2">
                             <div className="flex items-center justify-between text-xs">
                                 <span className="text-muted-foreground">Tanlangan Yo'nalish:</span>
-                                <strong className="text-foreground">{selectedLanguage === 'ja' ? '🎌 Yapon tili' : selectedLanguage === 'en' ? '🎓 Ingliz tili' : '📚 Umumiy'}</strong>
+                                <strong className="text-foreground">{selectedGoal.includes('General') ? '🎯 IELTS General Training' : '🎓 IELTS Academic'}</strong>
                             </div>
                             <div className="flex items-center justify-between text-xs">
                                 <span className="text-muted-foreground">Maqsad Darajasi:</span>
@@ -392,7 +392,7 @@ export const PersonalizedOnboardingModal: React.FC<PersonalizedOnboardingModalPr
                         <button
                             onClick={() => {
                                 onClose();
-                                navigate('/jlpt');
+                                navigate('/ielts');
                                 toast({ title: "🚀 Darsingiz boshlandi! Omad tilaymiz!" });
                             }}
                             className="w-full py-3.5 px-6 rounded-2xl bg-gradient-to-r from-emerald-600 via-teal-600 to-emerald-600 hover:from-emerald-500 hover:to-teal-500 text-white font-black text-sm shadow-xl shadow-emerald-600/25 hover:scale-[1.02] active:scale-95 transition-all flex items-center justify-center gap-2"

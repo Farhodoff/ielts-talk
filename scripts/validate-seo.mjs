@@ -5,7 +5,7 @@ import { fileURLToPath } from 'url';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const rootDir = path.resolve(__dirname, '..');
 
-console.log('🔍 Validating Nihongo Talk SEO Infrastructure...\n');
+console.log('🔍 Validating IELTS Talk SEO Infrastructure...\n');
 
 let errors = 0;
 
@@ -22,7 +22,7 @@ function check(desc, fn) {
 // 1. Robots.txt
 check('robots.txt exists and contains Sitemap and AI Bots', () => {
   const content = fs.readFileSync(path.join(rootDir, 'public', 'robots.txt'), 'utf8');
-  if (!content.includes('Sitemap: https://nihon-talk.vercel.app/sitemap.xml')) {
+  if (!content.includes('Sitemap: https://ielts-talk.vercel.app/sitemap.xml')) {
     throw new Error('Missing Sitemap declaration');
   }
   if (!content.includes('User-agent: GPTBot') || !content.includes('User-agent: PerplexityBot')) {
@@ -33,13 +33,13 @@ check('robots.txt exists and contains Sitemap and AI Bots', () => {
 // 2. Sitemap.xml
 check('sitemap.xml exists and has valid multilingual tags', () => {
   const content = fs.readFileSync(path.join(rootDir, 'public', 'sitemap.xml'), 'utf8');
-  const requiredUrls = ['/', '/jlpt', '/speaking', '/pricing', '/twa'];
+  const requiredUrls = ['/', '/ielts', '/speaking-coach', '/pricing', '/twa'];
   for (const u of requiredUrls) {
-    if (!content.includes(`<loc>https://nihon-talk.vercel.app${u === '/' ? '/' : u}</loc>`)) {
+    if (!content.includes(`<loc>https://ielts-talk.vercel.app${u === '/' ? '/' : u}</loc>`)) {
       throw new Error(`Missing route in sitemap: ${u}`);
     }
   }
-  if (!content.includes('hreflang="uz"') || !content.includes('hreflang="ja"') || !content.includes('hreflang="x-default"')) {
+  if (!content.includes('hreflang="uz"') || !content.includes('hreflang="en"') || !content.includes('hreflang="x-default"')) {
     throw new Error('Missing multilingual hreflang attributes');
   }
 });
@@ -47,7 +47,7 @@ check('sitemap.xml exists and has valid multilingual tags', () => {
 // 3. llms.txt (GEO standard)
 check('llms.txt exists with structured platform documentation', () => {
   const content = fs.readFileSync(path.join(rootDir, 'public', 'llms.txt'), 'utf8');
-  if (!content.includes('Nihongo Talk') || !content.includes('JLPT Master Hub')) {
+  if (!content.includes('IELTS Talk') || !content.includes('Speaking Coach')) {
     throw new Error('llms.txt is incomplete');
   }
 });

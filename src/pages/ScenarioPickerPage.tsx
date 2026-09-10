@@ -1,22 +1,16 @@
 import React, { useState, useEffect } from 'react';
-import { useNavigate, useSearchParams } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { ConversationScenario, ScenarioSessionResult } from '../components/speaking/scenarioTypes';
 import { ScenarioService } from '../services/ScenarioService';
 import { Sparkles, Play, Award, History, ArrowLeft, Plus, Globe, Trash2, X, AlertTriangle } from 'lucide-react';
-import { isSuperAdmin } from '../utils/admin';
-import { useStudyData } from '../context/StudyPlannerContext';
 import { useLanguage } from '../context/LanguageContext';
 import { toast } from '../hooks/use-toast';
 
 export const ScenarioPickerPage: React.FC = () => {
     const navigate = useNavigate();
-    const [searchParams, setSearchParams] = useSearchParams();
-    const { user } = useStudyData();
     const { language } = useLanguage();
-    const isSuper = isSuperAdmin(user?.email);
 
-    const initialLang = (isSuper && searchParams.get('lang') === 'en' ? 'en' : 'ja') as 'en' | 'ja';
-    const [activeLang, setActiveLang] = useState<'en' | 'ja'>(initialLang);
+    const activeLang = 'en';
     const [scenarios, setScenarios] = useState<ConversationScenario[]>(() => ScenarioService.getImmediateScenarios());
     const [history, setHistory] = useState<ScenarioSessionResult[]>(() => ScenarioService.getImmediateHistory());
     const [selectedLevel, setSelectedLevel] = useState<string>('all');
@@ -28,10 +22,10 @@ export const ScenarioPickerPage: React.FC = () => {
 
     // New Scenario Form State
     const [formData, setFormData] = useState({
-        language: 'ja' as 'ja' | 'en',
-        emoji: '💼',
-        difficulty: 'N2' as ConversationScenario['difficulty'],
-        category: 'business' as 'business' | 'daily' | 'travel' | 'social' | 'academic',
+        language: 'en' as 'ja' | 'en',
+        emoji: '🎓',
+        difficulty: 'B2' as ConversationScenario['difficulty'],
+        category: 'academic' as 'business' | 'daily' | 'travel' | 'social' | 'academic',
         title_ja: '',
         title_en: '',
         title_uz: '',
@@ -73,12 +67,6 @@ export const ScenarioPickerPage: React.FC = () => {
         };
     }, []);
 
-    const handleLangChange = (lang: 'en' | 'ja') => {
-        setActiveLang(lang);
-        setSelectedLevel('all');
-        setSearchParams({ lang });
-    };
-
     const langScenarios = scenarios.filter(s => {
         const sLang = s.language || (s.title_en ? 'en' : 'ja');
         return sLang === activeLang;
@@ -95,9 +83,9 @@ export const ScenarioPickerPage: React.FC = () => {
 
     const handleOpenCreateModal = () => {
         setFormData({
-            language: activeLang,
-            emoji: activeLang === 'ja' ? '💼' : '🗣️',
-            difficulty: activeLang === 'ja' ? 'N2' : 'B2',
+            language: 'en',
+            emoji: '🎓',
+            difficulty: 'B2',
             category: 'business',
             title_ja: '',
             title_en: '',
@@ -212,7 +200,6 @@ export const ScenarioPickerPage: React.FC = () => {
         }
     };
 
-    const jaLevels = ['all', 'N5', 'N4', 'N3', 'N2', 'N1'] as const;
     const enLevels = ['all', 'A2', 'B1', 'B2', 'C1', 'IELTS'] as const;
 
     return (
@@ -225,66 +212,33 @@ export const ScenarioPickerPage: React.FC = () => {
                     <div className="space-y-3">
                         <div className="flex items-center gap-2">
                             <button
-                                onClick={() => navigate(activeLang === 'ja' ? '/jlpt' : '/ielts')}
+                                onClick={() => navigate('/ielts')}
                                 className="p-2 bg-muted hover:bg-muted/80 border border-border rounded-xl text-foreground transition-all cursor-pointer"
+                                title="IELTS Hub'ga qaytish"
                             >
                                 <ArrowLeft size={16} />
                             </button>
                             <span className="text-xs font-bold px-3 py-1 bg-[#C9A961]/15 text-[#C9A961] rounded-full border border-[#C9A961]/30 flex items-center gap-1.5">
                                 <Globe size={12} />
-                                {activeLang === 'ja' 
-                                    ? (language === 'ja' ? '🎌 日本語シチュエーション会話' : '🎌 Japanese Conversation Scenarios') 
-                                    : '🇬🇧 English Conversation Scenarios'}
+                                🇬🇧 IELTS & Academic Scenarios
                             </span>
                         </div>
                         <h1 className="text-2xl md:text-3xl font-display font-black tracking-tight text-foreground">
-                            {activeLang === 'ja' 
-                                ? (language === 'ja' ? 'シチュエーション会話練習' : 'Japanese Scenarios (Muloqot Ssenariylari)') 
-                                : 'English Scenarios (Real-World Conversation)'}
+                            IELTS Speaking & Conversation Scenarios
                         </h1>
                         <p className="text-xs md:text-sm text-muted-foreground max-w-xl leading-relaxed">
-                            {activeLang === 'ja'
-                                ? (language === 'ja' 
-                                    ? "ビジネス交渉、障害報告、面接、ショッピングなど、リアルな場面でAIと自由に会話練習をしましょう。" 
-                                    : "Biznes muzokaralar, tizim nosozligi hisoboti, ish suhbati va real hayotiy ssenariylarda AI murabbiy bilan erkin muloqot qiling.")
-                                : "IT ish intervyusi, aeroport va turli xil real vaziyatlarda jonli ovozli muloqot qiling."}
+                            IELTS Speaking mock imtihoni (Examiner Gordon), IT ish intervyusi, viza suhbati va real vaziyatlarda jonli ovozli muloqot qiling.
                         </p>
                     </div>
 
                     <div className="flex items-center gap-3">
-                        {/* Language Selector in Header (Super Admin Only) */}
-                        {isSuper && (
-                            <div className="flex bg-muted/60 p-1 rounded-2xl border border-border">
-                                <button
-                                    onClick={() => handleLangChange('en')}
-                                    className={`px-3 py-1.5 rounded-xl text-xs font-bold transition-all cursor-pointer ${
-                                        activeLang === 'en'
-                                            ? 'bg-primary text-primary-foreground shadow-xs'
-                                            : 'text-muted-foreground hover:text-foreground'
-                                    }`}
-                                >
-                                    🇬🇧 English
-                                </button>
-                                <button
-                                    onClick={() => handleLangChange('ja')}
-                                    className={`px-3 py-1.5 rounded-xl text-xs font-bold transition-all cursor-pointer ${
-                                        activeLang === 'ja'
-                                            ? 'bg-primary text-primary-foreground shadow-xs'
-                                            : 'text-muted-foreground hover:text-foreground'
-                                    }`}
-                                >
-                                    🎌 日本語
-                                </button>
-                            </div>
-                        )}
-
                         {/* Direct Scenario Create Button */}
                         <button
                             onClick={handleOpenCreateModal}
                             className="px-4 py-2.5 bg-primary hover:bg-primary/90 text-primary-foreground rounded-2xl text-xs font-bold flex items-center gap-2 shadow-md shadow-primary/20 transition-all self-start md:self-auto cursor-pointer active:scale-95"
                         >
                             <Plus size={16} />
-                            <span>{language === 'ja' ? 'シナリオ作成' : "Ssenariy Qo'shish"}</span>
+                            <span>Ssenariy Qo'shish</span>
                         </button>
                     </div>
                 </div>
@@ -293,7 +247,7 @@ export const ScenarioPickerPage: React.FC = () => {
             {/* Level Filter Tabs */}
             <div className="flex items-center justify-between gap-4 overflow-x-auto pb-2 border-b border-border">
                 <div className="flex items-center gap-2">
-                    {(activeLang === 'ja' ? jaLevels : enLevels).map(lvl => (
+                    {enLevels.map(lvl => (
                         <button
                             key={lvl}
                             onClick={() => setSelectedLevel(lvl)}
@@ -303,9 +257,7 @@ export const ScenarioPickerPage: React.FC = () => {
                                     : 'bg-muted/60 text-muted-foreground border-border hover:text-foreground hover:bg-muted'
                             }`}
                         >
-                            {lvl === 'all' 
-                                ? (language === 'ja' ? 'すべて' : 'Barchasi') 
-                                : activeLang === 'ja' ? `JLPT ${lvl}` : `CEFR / ${lvl}`}
+                            {lvl === 'all' ? 'Barchasi' : lvl === 'IELTS' ? 'IELTS Mock' : `Band / ${lvl}`}
                         </button>
                     ))}
                 </div>
@@ -346,7 +298,7 @@ export const ScenarioPickerPage: React.FC = () => {
                                                     ? 'bg-emerald-500/10 text-emerald-400 border-emerald-500/20'
                                                     : 'bg-[#C9A961]/15 text-[#C9A961] border-[#C9A961]/30'
                                             }`}>
-                                                {activeLang === 'ja' ? 'JLPT ' : ''}{scenario.difficulty}
+                                                {scenario.difficulty}
                                             </span>
                                             
                                             {/* Delete Button */}

@@ -12,13 +12,13 @@ export interface SEOProps {
   noIndex?: boolean;
 }
 
-const DEFAULT_TITLE = 'Nihongo Talk';
+const DEFAULT_TITLE = 'IELTS Talk';
 const DEFAULT_DESC =
-  'JLPT N5-N1 darajalariga tizimli tayyorlaning. AI Speaking Coach, Writing Evaluator, SM-2 Fleshkartalar va shaxsiy kunlik reja.';
+  'IELTS Academic va General imtihonlariga tayyorgarlik platformasi. AI Speaking Coach (Examiner Gordon), Writing tahlili, Band 8.0+ fleshkartalar va shaxsiy o\'quv rejasi.';
 const DEFAULT_KEYWORDS =
-  "Nihongo Talk, yapon tili, JLPT tayyorgarlik, Anki SM-2, fleshkartalar, AI Speaking Coach, JLPT Mock Exam, Pomodoro timer, o'quv rejalashtiruvchi";
-const BASE_URL = 'https://nihon-talk.vercel.app';
-const DEFAULT_OG_IMAGE = `${BASE_URL}/og-image.jpg?v=2`;
+  "IELTS Talk, IELTS imtihon, IELTS speaking mock, Examiner Gordon, IELTS writing evaluation, Band 7.5, Band 8.0, Cambridge IELTS, British Council, IDP, fleshkartalar, AI Speaking Coach";
+const BASE_URL = 'https://ielts-talk.vercel.app';
+const DEFAULT_OG_IMAGE = `${BASE_URL}/og-image.jpg?v=3`;
 
 export const useSEO = ({
   title,
@@ -35,7 +35,7 @@ export const useSEO = ({
     // 1. Update Title - avoid redundant duplication of brand name
     let finalTitle = DEFAULT_TITLE;
     if (title && title.trim() !== DEFAULT_TITLE) {
-      finalTitle = title.includes('Nihongo Talk') ? title : `${title} — Nihongo Talk`;
+      finalTitle = title.includes('IELTS Talk') ? title : `${title} — IELTS Talk`;
     }
     document.title = finalTitle;
 
@@ -84,7 +84,7 @@ export const useSEO = ({
     // 3. Canonical URL
     setMetaTag('link[rel="canonical"]', 'href', finalCanonical, 'link');
 
-    // 4. Multilingual Hreflang Tags (SEO for Uzbek and Japanese)
+    // 4. Multilingual Hreflang Tags (SEO for Uzbek and English)
     const setHreflang = (lang: string, href: string) => {
       let link = document.querySelector(
         `link[rel="alternate"][hreflang="${lang}"]`,
@@ -99,17 +99,17 @@ export const useSEO = ({
     };
 
     setHreflang('uz', `${finalCanonical}?lang=uz`);
-    setHreflang('ja', `${finalCanonical}?lang=ja`);
+    setHreflang('en', `${finalCanonical}?lang=en`);
     setHreflang('x-default', finalCanonical);
 
     // 5. Open Graph / Facebook / Telegram
-    const activeLocale = locale || (document.documentElement.lang === 'ja' ? 'ja_JP' : 'uz_UZ');
+    const activeLocale = locale || (document.documentElement.lang === 'en' ? 'en_US' : 'uz_UZ');
     const ogTitle =
       finalTitle === DEFAULT_TITLE
-        ? "Yapon tilini AI yordamida o'rganish (JLPT N5–N1)"
-        : finalTitle.replace(/ — Nihongo Talk$/i, '');
+        ? "IELTS Talk — AI IELTS Preparation & Speaking Coach"
+        : finalTitle.replace(/ — IELTS Talk$/i, '');
 
-    setMetaTag('meta[property="og:site_name"]', 'content', 'Nihongo Talk');
+    setMetaTag('meta[property="og:site_name"]', 'content', 'IELTS Talk');
     setMetaTag('meta[property="og:title"]', 'content', ogTitle);
     setMetaTag('meta[property="og:description"]', 'content', finalDesc);
     setMetaTag('meta[property="og:image"]', 'content', finalImage);

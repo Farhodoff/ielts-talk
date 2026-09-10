@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { supabase } from '../../lib/supabase';
 import { Button } from '../../components/ui/Button';
 import { useNavigate } from 'react-router-dom';
-import { Plus, BookOpen, Edit2, Loader2, Trash2, X, Award, FileText, Sparkles, CheckCircle2, Search, Shield } from 'lucide-react';
+import { Plus, BookOpen, Edit2, Loader2, Trash2, X, Award, FileText, CheckCircle2, Search, Shield, RefreshCw, Layers } from 'lucide-react';
 import { useStudyData } from '../../context/StudyPlannerContext';
 import { isAdminEmail } from '../../utils/admin';
 
@@ -17,12 +17,10 @@ export const ExamsManager: React.FC = () => {
 
     // Filter & Search
     const [searchQuery, setSearchQuery] = useState('');
-    const [activeTab, setActiveTab] = useState<'ALL' | 'IELTS' | 'JLPT' | 'PUBLISHED'>('ALL');
+    const [activeTab, setActiveTab] = useState<'ALL' | 'IELTS' | 'PUBLISHED'>('ALL');
 
     // Step-by-Step Creation Wizard State
     const [showCreateModal, setShowCreateModal] = useState(false);
-    const [examCategory, setExamCategory] = useState<'IELTS' | 'JLPT'>('IELTS');
-    const [jlptLevel, setJlptLevel] = useState<'N5' | 'N4' | 'N3' | 'N2' | 'N1'>('N3');
     const [ieltsType, setIeltsType] = useState<'Academic' | 'General'>('Academic');
     const [newTitle, setNewTitle] = useState('');
     const [newDesc, setNewDesc] = useState('');
@@ -60,7 +58,7 @@ export const ExamsManager: React.FC = () => {
     }, [user]);
 
     const handleCreateExam = async () => {
-        const fullType = examCategory === 'JLPT' ? `JLPT ${jlptLevel}` : `IELTS (${ieltsType})`;
+        const fullType = `IELTS (${ieltsType})`;
         const titleToSave = newTitle.trim() || `${fullType} Mock Test`;
 
         setCreating(true);
@@ -124,15 +122,15 @@ export const ExamsManager: React.FC = () => {
         if (!matchesSearch) return false;
 
         if (activeTab === 'IELTS') return exam.type.includes('IELTS');
-        if (activeTab === 'JLPT') return exam.type.includes('JLPT');
         if (activeTab === 'PUBLISHED') return exam.is_published;
         return true;
     });
 
     const stats = {
         total: exams.length,
-        ielts: exams.filter(e => e.type.includes('IELTS')).length,
-        jlpt: exams.filter(e => e.type.includes('JLPT')).length,
+        ielts: exams.filter(e => e.type?.includes('IELTS')).length,
+        academic: exams.filter(e => e.type?.includes('Academic') || e.title?.includes('Academic')).length,
+        general: exams.filter(e => e.type?.includes('General') || e.title?.includes('General')).length,
         published: exams.filter(e => e.is_published).length
     };
 
@@ -154,33 +152,38 @@ export const ExamsManager: React.FC = () => {
     );
 
     return (
-        <div className="max-w-7xl mx-auto px-4 py-8 space-y-8 animate-in fade-in duration-300">
-            {/* Header Banner */}
-            <div className="relative overflow-hidden rounded-3xl bg-gradient-to-r from-indigo-600 via-purple-600 to-rose-600 p-8 text-white shadow-xl shadow-indigo-500/10">
-                <div className="relative z-10 flex flex-col md:flex-row md:items-center justify-between gap-6">
-                    <div className="space-y-2">
-                        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 backdrop-blur-md text-xs font-bold uppercase tracking-wider">
-                            <Sparkles className="w-3.5 h-3.5" /> Exam Management Studio
-                        </div>
-                        <h1 className="text-2xl md:text-4xl font-extrabold tracking-tight">IELTS & JLPT Imtihonlar Markazi</h1>
-                        <p className="text-sm text-indigo-100 max-w-xl">
-                            Testlar yaratish, Dokkai o'qish matnlari, Listening qismlari hamda AI orqali tekshiriladigan Writing/Speaking topshiriqlarini boshqarish.
-                        </p>
-                    </div>
-                    <Button 
-                        onClick={() => setShowCreateModal(true)} 
-                        className="gap-2 bg-white text-indigo-700 hover:bg-slate-100 font-extrabold px-6 py-3 rounded-2xl shadow-lg hover:shadow-xl transition transform hover:-translate-y-0.5"
+        <div className="space-y-8 animate-in fade-in duration-300 p-2 md:p-4 max-w-7xl mx-auto">
+            {/* Header */}
+            <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 border-b border-slate-200 dark:border-slate-800 pb-6">
+                <div>
+                    <h1 className="text-2xl md:text-4xl font-extrabold tracking-tight">IELTS Imtihonlar Markazi</h1>
+                    <p className="text-slate-500 text-sm mt-1">Rasmiy IELTS Academic va General Training mock imtihonlarini boshqarish</p>
+                </div>
+
+                <div className="flex items-center gap-2">
+                    <button
+                        onClick={fetchExams}
+                        disabled={loading}
+                        className="p-2.5 rounded-xl border border-slate-200 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-600 dark:text-slate-300 transition"
+                        title="Yangilash"
                     >
-                        <Plus className="w-5 h-5" /> Yangi Imtihon Qo'shish
-                    </Button>
+                        <RefreshCw className={`w-5 h-5 ${loading ? 'animate-spin' : ''}`} />
+                    </button>
+                    <button
+                        onClick={() => setShowCreateModal(true)}
+                        className="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-sm shadow-lg shadow-indigo-600/20 transition active:scale-95"
+                    >
+                        <Plus className="w-5 h-5" />
+                        <span>Yangi IELTS Imtihoni</span>
+                    </button>
                 </div>
             </div>
 
-            {/* Quick Metrics Bar */}
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+            {/* Stats Overview */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                 <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-4 shadow-sm flex items-center gap-4">
                     <div className="w-12 h-12 rounded-xl bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 flex items-center justify-center font-bold">
-                        <BookOpen className="w-6 h-6" />
+                        <Layers className="w-6 h-6" />
                     </div>
                     <div>
                         <div className="text-2xl font-black text-slate-900 dark:text-white">{stats.total}</div>
@@ -193,18 +196,18 @@ export const ExamsManager: React.FC = () => {
                         <FileText className="w-6 h-6" />
                     </div>
                     <div>
-                        <div className="text-2xl font-black text-slate-900 dark:text-white">{stats.ielts}</div>
-                        <div className="text-xs font-semibold text-slate-400">IELTS Testlar</div>
+                        <div className="text-2xl font-black text-slate-900 dark:text-white">{stats.academic}</div>
+                        <div className="text-xs font-semibold text-slate-400">IELTS Academic</div>
                     </div>
                 </div>
 
                 <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-4 shadow-sm flex items-center gap-4">
-                    <div className="w-12 h-12 rounded-xl bg-rose-500/10 text-rose-600 dark:text-rose-400 flex items-center justify-center font-bold">
+                    <div className="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-600 dark:text-amber-400 flex items-center justify-center font-bold">
                         <Award className="w-6 h-6" />
                     </div>
                     <div>
-                        <div className="text-2xl font-black text-slate-900 dark:text-white">{stats.jlpt}</div>
-                        <div className="text-xs font-semibold text-slate-400">JLPT Testlar (N1-N5)</div>
+                        <div className="text-2xl font-black text-slate-900 dark:text-white">{stats.general}</div>
+                        <div className="text-xs font-semibold text-slate-400">General Training</div>
                     </div>
                 </div>
 
@@ -224,8 +227,7 @@ export const ExamsManager: React.FC = () => {
                 <div className="flex gap-1.5 overflow-x-auto w-full sm:w-auto pb-1 sm:pb-0">
                     {[
                         { id: 'ALL', label: 'Barchasi' },
-                        { id: 'IELTS', label: 'IELTS' },
-                        { id: 'JLPT', label: 'JLPT (読解/聴解)' },
+                        { id: 'IELTS', label: 'IELTS Mock Testlar' },
                         { id: 'PUBLISHED', label: 'Nashr qilinganlar' },
                     ].map(tab => (
                         <button
@@ -340,79 +342,36 @@ export const ExamsManager: React.FC = () => {
                             </button>
                         </div>
 
-                        {/* Step 1: Category Selection */}
+                        {/* Step 1: IELTS Module Selection */}
                         <div className="space-y-2">
-                            <label className="block text-xs font-extrabold text-slate-500 uppercase tracking-wider">1. Imtihon Turini Tanlang:</label>
+                            <label className="block text-xs font-extrabold text-slate-500 uppercase tracking-wider">1. IELTS Modulini Tanlang:</label>
                             <div className="grid grid-cols-2 gap-3">
                                 <button
                                     type="button"
-                                    onClick={() => setExamCategory('IELTS')}
+                                    onClick={() => setIeltsType('Academic')}
                                     className={`p-4 rounded-2xl border font-bold text-sm flex flex-col items-center gap-2 transition ${
-                                        examCategory === 'IELTS'
+                                        ieltsType === 'Academic'
                                             ? 'bg-gradient-to-r from-indigo-600 to-purple-600 text-white border-indigo-600 shadow-lg shadow-indigo-500/20 scale-[1.02]'
                                             : 'bg-slate-50 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border-slate-200 dark:border-slate-700 hover:border-indigo-300'
                                     }`}
                                 >
                                     <FileText className="w-7 h-7" />
-                                    <span>IELTS</span>
+                                    <span>IELTS Academic</span>
                                 </button>
                                 <button
                                     type="button"
-                                    onClick={() => setExamCategory('JLPT')}
+                                    onClick={() => setIeltsType('General')}
                                     className={`p-4 rounded-2xl border font-bold text-sm flex flex-col items-center gap-2 transition ${
-                                        examCategory === 'JLPT'
-                                            ? 'bg-gradient-to-r from-rose-600 to-amber-600 text-white border-rose-600 shadow-lg shadow-rose-500/20 scale-[1.02]'
-                                            : 'bg-slate-50 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border-slate-200 dark:border-slate-700 hover:border-rose-300'
+                                        ieltsType === 'General'
+                                            ? 'bg-gradient-to-r from-blue-600 to-indigo-600 text-white border-blue-600 shadow-lg shadow-blue-500/20 scale-[1.02]'
+                                            : 'bg-slate-50 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border-slate-200 dark:border-slate-700 hover:border-blue-300'
                                     }`}
                                 >
                                     <Award className="w-7 h-7" />
-                                    <span>JLPT (Yapon Tili)</span>
+                                    <span>IELTS General Training</span>
                                 </button>
                             </div>
                         </div>
-
-                        {/* Step 2: Level Selection */}
-                        {examCategory === 'JLPT' ? (
-                            <div className="space-y-2">
-                                <label className="block text-xs font-extrabold text-slate-500 uppercase tracking-wider">2. JLPT Darajasini Tanlang (N1 - N5):</label>
-                                <div className="grid grid-cols-5 gap-2">
-                                    {(['N5', 'N4', 'N3', 'N2', 'N1'] as const).map(lvl => (
-                                        <button
-                                            key={lvl}
-                                            type="button"
-                                            onClick={() => setJlptLevel(lvl)}
-                                            className={`py-3 rounded-xl font-black text-sm border transition ${
-                                                jlptLevel === lvl
-                                                    ? 'bg-rose-600 text-white border-rose-600 shadow-md scale-[1.05]'
-                                                    : 'bg-slate-50 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border-slate-200 dark:border-slate-700'
-                                            }`}
-                                        >
-                                            {lvl}
-                                        </button>
-                                    ))}
-                                </div>
-                            </div>
-                        ) : (
-                            <div className="space-y-2">
-                                <label className="block text-xs font-extrabold text-slate-500 uppercase tracking-wider">2. IELTS Turini Tanlang:</label>
-                                <div className="grid grid-cols-2 gap-2">
-                                    {(['Academic', 'General'] as const).map(t => (
-                                        <button
-                                            key={t}
-                                            type="button"
-                                            onClick={() => setIeltsType(t)}
-                                            className={`py-3 rounded-xl font-bold text-sm border transition ${
-                                                ieltsType === t
-                                                    ? 'bg-indigo-600 text-white border-indigo-600 shadow-md'
-                                                    : 'bg-slate-50 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border-slate-200 dark:border-slate-700'
-                                            }`}
-                                        >
-                                            {t}
-                                        </button>
-                                    ))}
-                                </div>
-                            </div>
-                        )}
 
                         {/* Step 3: Title & Description */}
                         <div className="space-y-3">
@@ -421,7 +380,7 @@ export const ExamsManager: React.FC = () => {
                                 <input
                                     value={newTitle}
                                     onChange={e => setNewTitle(e.target.value)}
-                                    placeholder={examCategory === 'JLPT' ? `JLPT ${jlptLevel} Mock Test 1` : `IELTS ${ieltsType} Mock Test 1`}
+                                    placeholder={`IELTS ${ieltsType} Mock Test 1`}
                                     className="w-full p-3.5 rounded-2xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-sm font-sans outline-none focus:ring-2 focus:ring-indigo-500"
                                 />
                             </div>

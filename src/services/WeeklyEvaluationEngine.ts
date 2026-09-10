@@ -133,17 +133,11 @@ Output ONLY the text feedback in Uzbek, no markdown fences.`;
         // Fallback Uzbek evaluation feedback if AI fails
         if (!aiFeedback) {
             if (completionRate >= 80) {
-                aiFeedback = goal.language === 'ja'
-                    ? "Ajoyib natija! Siz haftalik rejadagi topshiriqlarni juda yaxshi bajardingiz. Yapon tili grammatikasi va kanji bo'yicha mustahkam progress kuzatilmoqda. Kelasi haftada ham shu tempda davom etishni va zaif ko'nikmalarni takrorlashni tavsiya etamiz."
-                    : "Outstanding week! You successfully completed most of your tasks. Keep up this steady pace. Next week, we recommend slightly increasing mock exam simulation tasks.";
+                aiFeedback = "Ajoyib natija! Siz haftalik rejadagi topshiriqlarni juda yaxshi bajardingiz. IELTS grammatikasi va akademik leksika bo'yicha mustahkam progress kuzatilmoqda. Kelasi haftada ham shu tempda davom etishni va mock testlar bilan mustahkamlashni tavsiya etamiz.";
             } else if (completionRate >= 50) {
-                aiFeedback = goal.language === 'ja'
-                    ? "Yaxshi natija, ammo ba'zi kunlarni o'tkazib yubordingiz. Yapon tili suhbat ko'nikmalarini (Speaking) rivojlantirishga ko'proq vaqt ajratishingiz kerak. Kelasi haftada vazifalar vaqtini 5-10 daqiqaga qisqartirishni tavsiya etamiz."
-                    : "Moderate progress. You had some missed days. Next week, we suggest reducing vocabulary study time by 5 minutes and allocating that budget directly to practice writing exercises.";
+                aiFeedback = "Yaxshi natija, ammo ba'zi kunlarni o'tkazib yubordingiz. IELTS Speaking va Writing ko'nikmalarini rivojlantirishga ko'proq vaqt ajratishingiz kerak. Kelasi haftada vazifalar vaqtini 5-10 daqiqaga qisqartirishni tavsiya etamiz.";
             } else {
-                aiFeedback = goal.language === 'ja'
-                    ? "Afsuski, darslarga yetarlicha vaqt ajratmadingiz. Kelgusi haftada dars yuklamasini kamaytiramiz va poydevor darslariga qaytamiz."
-                    : "Your task completion rate is below 50%. Next week, the system will adjust tasks to be shorter and focus on core fundamentals and flashcards review first.";
+                aiFeedback = "Afsuski, darslarga yetarlicha vaqt ajratmadingiz. Kelgusi haftada dars yuklamasini moslashtiramiz va asosiy IELTS poydevor darslariga qaytamiz.";
             }
         }
 
