@@ -18,8 +18,6 @@ import {
   BarChart3,
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { useAuthStore } from '../../stores';
-import { isSuperAdmin } from '../../utils/admin';
 
 interface CommandItem {
   id: string;
@@ -155,8 +153,6 @@ interface QuickCommandPaletteProps {
 }
 
 export const QuickCommandPalette: React.FC<QuickCommandPaletteProps> = ({ isOpen, onClose }) => {
-  const user = useAuthStore((s) => s.user);
-  const isSuper = isSuperAdmin(user?.email, (user as any)?.role);
   const [query, setQuery] = useState('');
   const [selectedIndex, setSelectedIndex] = useState(0);
   const inputRef = useRef<HTMLInputElement>(null);
