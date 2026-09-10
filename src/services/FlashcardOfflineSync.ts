@@ -6,6 +6,7 @@ export interface QueuedFlashcardUpdate {
   id: string;
   updates: Record<string, any>;
   timestamp: number;
+  retries?: number;
 }
 
 const OFFLINE_QUEUE_KEY = 'study_planner_flashcard_offline_queue';
@@ -86,13 +87,19 @@ export const FlashcardOfflineSync = {
             .update(item.updates)
             .eq('id', item.id);
           if (error) {
-            remaining.push(item);
+            const nextRetries = (item.retries || 0) + 1;
+            if (nextRetries < 5) {
+              remaining.push({ ...item, retries: nextRetries });
+            }
             failed++;
           } else {
             synced++;
           }
         } catch {
-          remaining.push(item);
+          const nextRetries = (item.retries || 0) + 1;
+          if (nextRetries < 5) {
+            remaining.push({ ...item, retries: nextRetries });
+          }
           failed++;
         }
       }
