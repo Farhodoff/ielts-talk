@@ -1,10 +1,11 @@
 import React, { useState, Suspense, lazy } from 'react';
-import { Target, BookOpen, GraduationCap, Headphones, PenTool, Mic, Sparkles } from 'lucide-react';
+import { Target, BookOpen, GraduationCap, Headphones, PenTool, Mic, Sparkles, Compass } from 'lucide-react';
 import { useSearchParams, Link } from 'react-router-dom';
 import { RealWeaknessTracker } from '../components/ielts/RealWeaknessTracker';
 import { DailyTargetHub } from '../components/ielts/DailyTargetHub';
 import { useSEO } from '../hooks/useSEO';
 
+const IeltsMasterRoadmapView = lazy(() => import('../components/ielts/IeltsMasterRoadmapView'));
 const PersonalPlanPage = lazy(() => import('./PersonalPlanPage'));
 const IeltsGrammarMaster = lazy(() => import('../components/ielts/IeltsGrammarMaster'));
 const VocabularyGenerator = lazy(() =>
@@ -26,16 +27,16 @@ const DailyReflectionModal = lazy(() =>
 
 export const IeltsHubPage: React.FC = () => {
   useSEO({
-    title: 'IELTS Master Hub (Shaxsiy Reja, Grammatika, Mocks, Writing)',
+    title: 'IELTS Master Hub (Bosqichlar Xaritasi, Shaxsiy Reja, Mocks, Writing)',
     description:
-      "IELTS Band 7.5+ uchun maxsus AI shaxsiy o'quv rejasi. Speaking, Writing Task 1 & 2 baholash, Reading & Listening mock testlari va Band 7.5 Grammatika Akademiyasi.",
+      "IELTS Band 7.5+ uchun maxsus 4 bosqichli strategik xarita, Speaking Makkar 2026, Writing Task 1 & 2 baholash, Reading & Listening mock testlari va Band 7.5 Grammatika.",
     canonical: '/ielts',
     keywords:
-      "IELTS mock exam O'zbekiston, IELTS Speaking AI, IELTS Writing baholash, IELTS Band 7 grammatika, shaxsiy reja",
+      "IELTS 0 dan tayyorgarlik, IELTS roadmap, IELTS mock exam O'zbekiston, IELTS Speaking AI, IELTS Writing baholash, IELTS Band 7 grammatika",
   });
 
   const [searchParams, setSearchParams] = useSearchParams();
-  const activeTab = searchParams.get('tab') || 'grammar';
+  const activeTab = searchParams.get('tab') || 'roadmap';
 
   const [isReflectionOpen, setIsReflectionOpen] = useState(false);
 
@@ -57,18 +58,22 @@ export const IeltsHubPage: React.FC = () => {
               <span>IELTS MASTER SUITE & ACADEMY</span>
             </div>
             <h1 className="text-3xl font-black tracking-tight text-white md:text-4xl">
-              {activeTab === 'plan'
-                ? 'IELTS Shaxsiy Rejangiz'
-                : activeTab === 'writing'
-                  ? 'IELTS Writing Mock & Examiner'
-                  : activeTab === 'reading_listening'
-                    ? 'IELTS Reading & Listening Mock'
-                    : 'IELTS Band 7.5 Grammatika Akademiyasi'}
+              {activeTab === 'roadmap'
+                ? 'IELTS 0 dan Band 8.0 gacha Xarita'
+                : activeTab === 'plan'
+                  ? 'IELTS Shaxsiy Rejangiz'
+                  : activeTab === 'writing'
+                    ? 'IELTS Writing Mock & Examiner'
+                    : activeTab === 'reading_listening'
+                      ? 'IELTS Reading & Listening Mock'
+                      : 'IELTS Band 7.5 Grammatika Akademiyasi'}
             </h1>
             <p className="text-sm leading-relaxed text-slate-300">
-              {activeTab === 'plan'
-                ? 'Sizning maqsadli Band ballingiz uchun adaptiv kunlik va haftalik vazifalar taqsimoti.'
-                : 'Band 7.5+ Grammatika Akademiyasi, Reading/Listening va Writing mock imtihonlari yagona markazda.'}
+              {activeTab === 'roadmap'
+                ? 'Noldan boshlovchilar uchun Foundation (baza) dan tortib Makkar 2026 gacha to\'liq bosqichma-bosqich o\'quv dasturi.'
+                : activeTab === 'plan'
+                  ? 'Sizning maqsadli Band ballingiz uchun adaptiv kunlik va haftalik vazifalar taqsimoti.'
+                  : 'Band 7.5+ Grammatika Akademiyasi, Reading/Listening va Writing mock imtihonlari yagona markazda.'}
             </p>
           </div>
 
@@ -88,10 +93,21 @@ export const IeltsHubPage: React.FC = () => {
       {/* Unified IELTS Navigation Tabs */}
       <div className="scrollbar-none flex max-w-full items-center gap-1.5 overflow-x-auto rounded-2xl border border-border/80 bg-muted/40 p-1.5">
         <button
+          onClick={() => handleTabChange('roadmap')}
+          className={`flex shrink-0 items-center gap-2 whitespace-nowrap rounded-xl px-4 py-2 text-xs font-black transition-all ${
+            activeTab === 'roadmap'
+              ? 'bg-amber-600 text-white shadow-md'
+              : 'text-muted-foreground hover:text-foreground'
+          }`}
+        >
+          <Compass size={16} /> 🗺️ Bosqichlar Xaritasi (0 ➡️ 8.0)
+        </button>
+
+        <button
           onClick={() => handleTabChange('plan')}
           className={`flex shrink-0 items-center gap-2 whitespace-nowrap rounded-xl px-4 py-2 text-xs font-black transition-all ${
             activeTab === 'plan'
-              ? 'bg-amber-600 text-white shadow-md'
+              ? 'bg-blue-600 text-white shadow-md'
               : 'text-muted-foreground hover:text-foreground'
           }`}
         >
@@ -147,6 +163,13 @@ export const IeltsHubPage: React.FC = () => {
           </div>
         }
       >
+        {/* Tab 0: 4-Stage Strategic Master Roadmap (0 to 8.0) */}
+        {activeTab === 'roadmap' && (
+          <div className="animate-in fade-in">
+            <IeltsMasterRoadmapView />
+          </div>
+        )}
+
         {/* Tab 1: Personal Learning Plan & Schedule */}
         {activeTab === 'plan' && (
           <div className="animate-in fade-in">
