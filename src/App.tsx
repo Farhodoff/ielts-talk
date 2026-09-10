@@ -136,6 +136,14 @@ const App: React.FC = () => {
   const [isLoading, setIsLoading] = useState<boolean>(() => !session && !isPublicPreviewActive());
 
   useEffect(() => {
+    document.documentElement.classList.add('dark');
+    document.documentElement.classList.remove('light');
+    try {
+      localStorage.setItem('study_planner_theme', 'dark');
+    } catch {}
+  }, []);
+
+  useEffect(() => {
     // Safety timeout: Never leave the UI stuck on "Yuklanmoqda..."
     const safetyTimer = setTimeout(() => {
       setIsLoading(false);

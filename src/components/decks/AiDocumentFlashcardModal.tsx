@@ -147,19 +147,19 @@ Faqat toza JSON array qaytar, hech qanday markdown belgilari qo'shma.`
                 initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.95 }}
-                className="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-2xl w-full max-w-3xl max-h-[90vh] flex flex-col shadow-2xl overflow-hidden"
+                className="bg-card border border-border rounded-2xl w-full max-w-3xl max-h-[90vh] flex flex-col shadow-2xl overflow-hidden text-foreground"
             >
                 {/* Header */}
-                <div className="flex items-center justify-between p-5 border-b border-gray-100 dark:border-gray-800 bg-gradient-to-r from-indigo-500/10 via-purple-500/10 to-pink-500/10">
+                <div className="flex items-center justify-between p-5 border-b border-border bg-gradient-to-r from-indigo-500/10 via-purple-500/10 to-pink-500/10">
                     <div className="flex items-center gap-3">
                         <div className="p-2.5 bg-indigo-600 text-white rounded-xl shadow-md">
                             <Sparkles className="w-5 h-5" />
                         </div>
                         <div>
-                            <h3 className="font-bold text-gray-900 dark:text-white text-lg">
+                            <h3 className="font-bold text-foreground text-lg">
                                 AI Hujjat & Konspektdan Fleshkarta Generator
                             </h3>
-                            <p className="text-xs text-gray-500 dark:text-gray-400">
+                            <p className="text-xs text-muted-foreground">
                                 Matn, leksiya yoki konspektdan 1 soniyada professional fleshkartalar yarating
                             </p>
                         </div>

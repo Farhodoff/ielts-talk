@@ -37,24 +37,24 @@ const ImportModal: React.FC<ImportModalProps> = ({
 
     return (
         <div className="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm flex items-center justify-center p-4 animate-in fade-in">
-            <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl max-w-md w-full p-6 relative">
+            <div className="bg-card border border-border rounded-2xl shadow-xl max-w-md w-full p-6 relative text-foreground">
                 <button
                     onClick={onClose}
-                    className="absolute top-4 right-4 text-gray-400 hover:text-gray-600 dark:hover:text-gray-200"
+                    className="absolute top-4 right-4 text-muted-foreground hover:text-foreground"
                 >
                     <X size={24} />
                 </button>
 
-                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-1">Anki / CSV / JSON Orqali Yuklash</h3>
-                <p className="text-gray-500 dark:text-gray-400 text-sm mb-6">
+                <h3 className="text-xl font-bold text-foreground mb-1">Anki / CSV / JSON Orqali Yuklash</h3>
+                <p className="text-muted-foreground text-sm mb-6">
                     Anki (.apkg/.txt), CSV, TSV yoki JSON tayyor kartochkalar to'plamini yuklash.
                 </p>
 
                 <form onSubmit={handleSubmit} className="space-y-4">
                     <div>
-                        <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Qaysi fanga?</label>
+                        <label className="block text-sm font-medium text-foreground mb-2">Qaysi fanga?</label>
                         <select
-                            className="w-full px-4 py-2 rounded-xl border border-gray-200 dark:border-gray-600 bg-white dark:bg-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                            className="w-full px-4 py-2 rounded-xl border border-border bg-muted/60 text-foreground focus:outline-none focus:ring-2 focus:ring-indigo-500"
                             value={importSubjectId}
                             onChange={(e) => setImportSubjectId(e.target.value)}
                             required
@@ -67,9 +67,9 @@ const ImportModal: React.FC<ImportModalProps> = ({
                     </div>
 
                     <div>
-                        <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Anki / CSV / TSV / JSON Fayl</label>
+                        <label className="block text-sm font-medium text-foreground mb-2">Anki / CSV / TSV / JSON Fayl</label>
                         <div
-                            className="border-2 border-dashed border-gray-300 dark:border-gray-600 rounded-xl p-6 text-center hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors cursor-pointer"
+                            className="border-2 border-dashed border-border rounded-xl p-6 text-center hover:bg-muted/40 transition-colors cursor-pointer"
                             onClick={() => fileInputRef.current?.click()}
                         >
                             <input
@@ -79,8 +79,8 @@ const ImportModal: React.FC<ImportModalProps> = ({
                                 accept=".json,.csv,.tsv,.txt,.apkg"
                                 onChange={(e) => setImportFile(e.target.files?.[0] || null)}
                             />
-                            <FileText className="mx-auto text-gray-400 mb-2" size={32} />
-                            <p className="text-sm font-medium text-gray-600 dark:text-gray-400">
+                            <FileText className="mx-auto text-muted-foreground mb-2" size={32} />
+                            <p className="text-sm font-medium text-muted-foreground">
                                 {importFile ? importFile.name : "Anki (.apkg/txt), CSV yoki JSON faylni tanlang"}
                             </p>
                         </div>

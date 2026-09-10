@@ -49,6 +49,14 @@ const StudyModePage: React.FC = () => {
     });
   };
 
+  useEffect(() => {
+    document.documentElement.classList.add('dark');
+    document.documentElement.classList.remove('light');
+    try {
+      localStorage.setItem('study_planner_theme', 'dark');
+    } catch {}
+  }, []);
+
   const [planTaskCompleted, setPlanTaskCompleted] = useState(false);
   const planTask = (
     location.state as { personalPlanTask?: { planId: string; taskId: string } } | null

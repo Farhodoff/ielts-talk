@@ -4,8 +4,6 @@ import { motion, useInView } from 'framer-motion';
 import {
   ArrowRight,
   Menu,
-  Moon,
-  Sun,
   X,
   Mic,
   Volume2,
@@ -497,40 +495,14 @@ const LandingPage: React.FC = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [selectedLessonTab, setSelectedLessonTab] = useState('Band 7.5');
 
-  const [isDark, setIsDark] = useState(() => {
-    if (typeof window !== 'undefined') {
-      const saved = localStorage.getItem('study_planner_theme');
-      if (saved) return saved === 'dark';
-      return document.documentElement.classList.contains('dark');
-    }
-    return true;
-  });
-
   useEffect(() => {
     if (typeof window === 'undefined') return;
-    if (isDark) {
-      document.documentElement.classList.add('dark');
-    } else {
-      document.documentElement.classList.remove('dark');
-    }
-  }, [isDark]);
-
-  const toggleTheme = () => {
-    setIsDark((prev) => {
-      const next = !prev;
-      if (typeof localStorage !== 'undefined') {
-        localStorage.setItem('study_planner_theme', next ? 'dark' : 'light');
-      }
-      if (typeof document !== 'undefined') {
-        if (next) {
-          document.documentElement.classList.add('dark');
-        } else {
-          document.documentElement.classList.remove('dark');
-        }
-      }
-      return next;
-    });
-  };
+    document.documentElement.classList.add('dark');
+    document.documentElement.classList.remove('light');
+    try {
+      localStorage.setItem('study_planner_theme', 'dark');
+    } catch {}
+  }, []);
 
   useSEO({
     title: t('landing.seoTitle'),
@@ -607,19 +579,7 @@ const LandingPage: React.FC = () => {
               </button>
             </div>
 
-            {/* Theme switch */}
-            <button
-              onClick={toggleTheme}
-              className="cursor-pointer rounded-lg border border-border p-2 text-foreground shadow-sm transition-colors hover:bg-muted active:scale-95"
-              title={isDark ? 'Kunduzgi rejim' : 'Tungi rejim'}
-              aria-label={isDark ? 'Light mode' : 'Dark mode'}
-            >
-              {isDark ? (
-                <Sun size={18} className="text-amber-400" />
-              ) : (
-                <Moon size={18} className="text-muted-foreground" />
-              )}
-            </button>
+
 
             {/* Login (desktop) */}
             <button
@@ -693,18 +653,6 @@ const LandingPage: React.FC = () => {
                     <span>EN</span>
                   </button>
                 </div>
-
-                <button
-                  onClick={toggleTheme}
-                  className="flex w-full items-center justify-center gap-1.5 rounded-lg border border-border bg-card px-3 py-2 text-xs font-bold text-foreground transition-colors hover:bg-muted"
-                >
-                  {isDark ? (
-                    <Sun size={15} className="text-amber-400" />
-                  ) : (
-                    <Moon size={15} className="text-muted-foreground" />
-                  )}
-                  <span>{isDark ? 'Kunduzgi rejim' : 'Tungi rejim'}</span>
-                </button>
               </div>
 
               <hr className="border-border" />

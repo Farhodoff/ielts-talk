@@ -70,6 +70,14 @@ export const FlashcardStudySession: React.FC<FlashcardStudySessionProps> = ({
     };
   }, [isTwa]);
 
+  useEffect(() => {
+    document.documentElement.classList.add('dark');
+    document.documentElement.classList.remove('light');
+    try {
+      localStorage.setItem('study_planner_theme', 'dark');
+    } catch {}
+  }, []);
+
   const [queue, setQueue] = useState<Flashcard[]>([]);
   const [currentCardIndex, setCurrentCardIndex] = useState(0);
   const [isFlipped, setIsFlipped] = useState(false);

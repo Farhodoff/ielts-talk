@@ -60,6 +60,14 @@ const DecksPage: React.FC = () => {
   const [activeStudySubjectId, setActiveStudySubjectId] = useState<string | null>(studyQueryParam);
 
   useEffect(() => {
+    document.documentElement.classList.add('dark');
+    document.documentElement.classList.remove('light');
+    try {
+      localStorage.setItem('study_planner_theme', 'dark');
+    } catch {}
+  }, []);
+
+  useEffect(() => {
     if (studyQueryParam) {
       setActiveStudySubjectId(studyQueryParam);
     }
