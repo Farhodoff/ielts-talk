@@ -18,7 +18,7 @@ const DEFAULT_DESC =
 const DEFAULT_KEYWORDS =
   "IELTS Talk, IELTS imtihon, IELTS speaking mock, Examiner Gordon, IELTS writing evaluation, Band 7.5, Band 8.0, Cambridge IELTS, British Council, IDP, fleshkartalar, AI Speaking Coach";
 const BASE_URL = 'https://ielts-talk.vercel.app';
-const DEFAULT_OG_IMAGE = `${BASE_URL}/og-image.jpg?v=3`;
+const DEFAULT_OG_IMAGE = `${BASE_URL}/og-image.jpg?v=4`;
 
 export const useSEO = ({
   title,

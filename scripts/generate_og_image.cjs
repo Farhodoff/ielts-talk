@@ -6,7 +6,7 @@ async function generateOgImage() {
   const browser = await chromium.launch();
   const page = await browser.newPage({
     viewport: { width: 1200, height: 630 },
-    deviceScaleFactor: 2,
+    deviceScaleFactor: 1,
   });
 
   const htmlContent = `
@@ -408,7 +408,7 @@ async function generateOgImage() {
   const jpgPath = path.join(publicDir, 'og-image.jpg');
   const pngPath = path.join(publicDir, 'og-image.png');
 
-  await page.screenshot({ path: jpgPath, type: 'jpeg', quality: 95 });
+  await page.screenshot({ path: jpgPath, type: 'jpeg', quality: 88 });
   await page.screenshot({ path: pngPath, type: 'png' });
 
   console.log('✅ Generated og-image.jpg and og-image.png successfully in:', publicDir);
