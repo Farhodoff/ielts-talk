@@ -287,4 +287,46 @@ describe('Personal Learning Plan Database Persistence', () => {
         // Verify supabase.auth.updateUser is NOT called with weekly_plans or goals
         expect(supabase.auth.updateUser).not.toHaveBeenCalled();
     });
+
+    // 9. Missing schema cache resilience
+    it('9. saveGoal and saveWeeklyPlan gracefully handle missing schema tables without throwing', async () => {
+        const schemaError = new Error("Could not find the table 'public.personal_learning_goals' in the schema cache");
+        mockSingle.mockResolvedValue({ data: null, error: schemaError });
+        mockUpsert.mockReturnValue({
+            select: vi.fn().mockReturnValue({
+                single: vi.fn().mockResolvedValue({ data: null, error: schemaError })
+            })
+        });
+
+        const goal = makeTestGoal({ id: 'resilient-goal' });
+        const plan = makeTestPlan({ id: 'resilient-plan', goalId: 'resilient-goal' });
+
+        // Neither saveGoal nor saveWeeklyPlan should throw
+        await expect(PersonalLearningPlanService.saveGoal(testUserId, goal)).resolves.not.toThrow();
+        await expect(PersonalLearningPlanService.saveWeeklyPlan(plan)).resolves.not.toThrow();
+
+        // Cached locally despite missing remote schema
+        expect(PersonalLearningPlanService.getActiveGoal(testUserId)?.id).toBe('resilient-goal');
+        expect(PersonalLearningPlanService.getWeeklyPlans(testUserId).some(p => p.id === 'resilient-plan')).toBe(true);
+    });
+
+    // 10. saveWeeklyEvaluation and resetPlan resilience
+    it('10. saveWeeklyEvaluation and resetPlan gracefully handle missing schema tables without throwing', async () => {
+        const schemaError = new Error("Could not find the table 'public.weekly_learning_evaluations' in the schema cache");
+        mockUpsert.mockResolvedValue({ error: schemaError });
+        mockDelete.mockReturnValue({
+            eq: vi.fn().mockResolvedValue({ error: schemaError })
+        });
+
+        const goal = makeTestGoal({ id: 'eval-goal' });
+        const ev = makeTestEval({ id: 'resilient-eval' });
+
+        localStorage.setItem(`study_planner_personal_goal_${testUserId}`, JSON.stringify(goal));
+
+        await expect(PersonalLearningPlanService.saveWeeklyEvaluation(ev)).resolves.not.toThrow();
+        await expect(PersonalLearningPlanService.resetPlan(testUserId)).resolves.not.toThrow();
+
+        // Cache was successfully cleared by resetPlan
+        expect(PersonalLearningPlanService.getActiveGoal(testUserId)).toBeNull();
+    });
 });

@@ -261,12 +261,18 @@ export const PersonalPlanPage: React.FC = () => {
 
       const result = await PersonalLearningPlanEngine.generateWeeklyPlan(userId, newGoal, 1);
 
-      await PersonalLearningPlanService.saveGoal(userId, newGoal);
-      await PersonalLearningPlanService.saveWeeklyPlan(result.plan);
-
+      // Immediately activate plan in local state
       setActiveGoal(newGoal);
       setCurrentPlan(result.plan);
       setGenerationStep(null);
+
+      // Persist locally and sync with server
+      try {
+        await PersonalLearningPlanService.saveGoal(userId, newGoal);
+        await PersonalLearningPlanService.saveWeeklyPlan(result.plan);
+      } catch (saveErr) {
+        console.warn('[PersonalPlanPage] Remote save notice (saved to local cache):', saveErr);
+      }
 
       if (result.noticeMessage) {
         toast({ title: 'Plan generated', description: result.noticeMessage });

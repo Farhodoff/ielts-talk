@@ -159,42 +159,46 @@ export const PersonalLearningPlanService = {
         } catch {}
 
         if (userId && userId !== 'guest') {
-            const dbGoalId = toDeterministicUUID(goal.id);
-            const dbPayload = {
-                id: dbGoalId,
-                user_id: userId,
-                language: goal.language,
-                goal_type: goal.goalType,
-                current_level: goal.currentLevel,
-                target_level: goal.targetLevel,
-                target_goal: goal.targetGoal,
-                deadline: goal.deadline,
-                daily_minutes: goal.dailyMinutes,
-                total_weeks: goal.totalWeeks,
-                current_week: goal.currentWeek,
-                status: goal.status,
-                updated_at: new Date().toISOString()
-            };
-
-            const { data, error } = await supabase
-                .from('personal_learning_goals')
-                .upsert(dbPayload)
-                .select()
-                .single();
-
-            if (error) {
-                console.error('[PersonalLearningPlanService] saveGoal DB error:', error);
-                throw error;
-            }
-
-            if (data) {
-                const updatedGoal: PersonalLearningGoal = {
-                    ...goal,
-                    id: data.id,
-                    createdAt: data.created_at,
-                    updatedAt: data.updated_at
+            try {
+                const dbGoalId = toDeterministicUUID(goal.id);
+                const dbPayload = {
+                    id: dbGoalId,
+                    user_id: userId,
+                    language: goal.language,
+                    goal_type: goal.goalType,
+                    current_level: goal.currentLevel,
+                    target_level: goal.targetLevel,
+                    target_goal: goal.targetGoal,
+                    deadline: goal.deadline,
+                    daily_minutes: goal.dailyMinutes,
+                    total_weeks: goal.totalWeeks,
+                    current_week: goal.currentWeek,
+                    status: goal.status,
+                    updated_at: new Date().toISOString()
                 };
-                localStorage.setItem(key, JSON.stringify(updatedGoal));
+
+                const { data, error } = await supabase
+                    .from('personal_learning_goals')
+                    .upsert(dbPayload)
+                    .select()
+                    .single();
+
+                if (error) {
+                    console.warn('[PersonalLearningPlanService] saveGoal DB sync notice (using local storage):', error.message || error);
+                    return;
+                }
+
+                if (data) {
+                    const updatedGoal: PersonalLearningGoal = {
+                        ...goal,
+                        id: data.id,
+                        createdAt: data.created_at,
+                        updatedAt: data.updated_at
+                    };
+                    localStorage.setItem(key, JSON.stringify(updatedGoal));
+                }
+            } catch (err: any) {
+                console.warn('[PersonalLearningPlanService] saveGoal DB sync exception (using local storage):', err?.message || err);
             }
         }
     },
@@ -377,36 +381,40 @@ export const PersonalLearningPlanService = {
 
         // 2. Save to database
         if (plan.userId && plan.userId !== 'guest') {
-            const dbPlanId = toDeterministicUUID(plan.id);
-            const dbGoalId = toDeterministicUUID(plan.goalId);
+            try {
+                const dbPlanId = toDeterministicUUID(plan.id);
+                const dbGoalId = toDeterministicUUID(plan.goalId);
 
-            const dbPayload = {
-                id: dbPlanId,
-                goal_id: dbGoalId,
-                user_id: plan.userId,
-                week_number: plan.weekNumber,
-                plan_data: {
-                    startDate: plan.startDate,
-                    endDate: plan.endDate,
-                    objectives: plan.objectives,
-                    focusSkills: plan.focusSkills,
-                    days: plan.days,
-                    reasoning: plan.reasoning,
-                    expectedOutcome: plan.expectedOutcome,
-                    aiGenerated: plan.aiGenerated,
-                    version: plan.version,
-                    status: plan.status
-                },
-                updated_at: new Date().toISOString()
-            };
+                const dbPayload = {
+                    id: dbPlanId,
+                    goal_id: dbGoalId,
+                    user_id: plan.userId,
+                    week_number: plan.weekNumber,
+                    plan_data: {
+                        startDate: plan.startDate,
+                        endDate: plan.endDate,
+                        objectives: plan.objectives,
+                        focusSkills: plan.focusSkills,
+                        days: plan.days,
+                        reasoning: plan.reasoning,
+                        expectedOutcome: plan.expectedOutcome,
+                        aiGenerated: plan.aiGenerated,
+                        version: plan.version,
+                        status: plan.status
+                    },
+                    updated_at: new Date().toISOString()
+                };
 
-            const { error } = await supabase
-                .from('weekly_learning_plans')
-                .upsert(dbPayload, { onConflict: 'goal_id, week_number' });
+                const { error } = await supabase
+                    .from('weekly_learning_plans')
+                    .upsert(dbPayload, { onConflict: 'goal_id, week_number' });
 
-            if (error) {
-                console.error('[PersonalLearningPlanService] saveWeeklyPlan DB error:', error);
-                throw error;
+                if (error) {
+                    console.warn('[PersonalLearningPlanService] saveWeeklyPlan DB notice (using local storage):', error.message || error);
+                    return;
+                }
+            } catch (err: any) {
+                console.warn('[PersonalLearningPlanService] saveWeeklyPlan DB exception (using local storage):', err?.message || err);
             }
         }
     },
@@ -515,40 +523,42 @@ export const PersonalLearningPlanService = {
 
         // 2. Save to database
         if (evaluation.userId && evaluation.userId !== 'guest') {
-            const activeGoal = this.getActiveGoal(evaluation.userId);
-            if (!activeGoal) {
-                throw new Error('[PersonalLearningPlanService] Active goal not found in cache for evaluation save');
-            }
+            try {
+                const activeGoal = this.getActiveGoal(evaluation.userId);
+                if (!activeGoal) return;
 
-            const dbEvalId = toDeterministicUUID(evaluation.id);
-            const dbGoalId = toDeterministicUUID(activeGoal.id);
+                const dbEvalId = toDeterministicUUID(evaluation.id);
+                const dbGoalId = toDeterministicUUID(activeGoal.id);
 
-            const dbPayload = {
-                id: dbEvalId,
-                goal_id: dbGoalId,
-                user_id: evaluation.userId,
-                week_number: evaluation.weekNumber,
-                evaluation_data: {
-                    weeklyPlanId: evaluation.weeklyPlanId,
-                    completionRate: evaluation.completionRate,
-                    studyMinutesPlanned: evaluation.studyMinutesPlanned,
-                    studyMinutesActual: evaluation.studyMinutesActual,
-                    skillScores: evaluation.skillScores,
-                    masteryDelta: evaluation.masteryDelta,
-                    srsRetention: evaluation.srsRetention,
-                    weakSkills: evaluation.weakSkills,
-                    strongSkills: evaluation.strongSkills,
-                    aiFeedback: evaluation.aiFeedback
+                const dbPayload = {
+                    id: dbEvalId,
+                    goal_id: dbGoalId,
+                    user_id: evaluation.userId,
+                    week_number: evaluation.weekNumber,
+                    evaluation_data: {
+                        weeklyPlanId: evaluation.weeklyPlanId,
+                        completionRate: evaluation.completionRate,
+                        studyMinutesPlanned: evaluation.studyMinutesPlanned,
+                        studyMinutesActual: evaluation.studyMinutesActual,
+                        skillScores: evaluation.skillScores,
+                        masteryDelta: evaluation.masteryDelta,
+                        srsRetention: evaluation.srsRetention,
+                        weakSkills: evaluation.weakSkills,
+                        strongSkills: evaluation.strongSkills,
+                        aiFeedback: evaluation.aiFeedback
+                    }
+                };
+
+                const { error } = await supabase
+                    .from('weekly_learning_evaluations')
+                    .upsert(dbPayload, { onConflict: 'goal_id, week_number' });
+
+                if (error) {
+                    console.warn('[PersonalLearningPlanService] saveWeeklyEvaluation DB notice (using local storage):', error.message || error);
+                    return;
                 }
-            };
-
-            const { error } = await supabase
-                .from('weekly_learning_evaluations')
-                .upsert(dbPayload, { onConflict: 'goal_id, week_number' });
-
-            if (error) {
-                console.error('[PersonalLearningPlanService] saveWeeklyEvaluation DB error:', error);
-                throw error;
+            } catch (err: any) {
+                console.warn('[PersonalLearningPlanService] saveWeeklyEvaluation DB exception (using local storage):', err?.message || err);
             }
         }
     },
@@ -582,14 +592,17 @@ export const PersonalLearningPlanService = {
 
         // 2. Delete from database (cascade handles weekly plans and evaluations deletion automatically)
         if (userId && userId !== 'guest') {
-            const { error } = await supabase
-                .from('personal_learning_goals')
-                .delete()
-                .eq('user_id', userId);
+            try {
+                const { error } = await supabase
+                    .from('personal_learning_goals')
+                    .delete()
+                    .eq('user_id', userId);
 
-            if (error) {
-                console.error('[PersonalLearningPlanService] resetPlan DB error:', error);
-                throw error;
+                if (error) {
+                    console.warn('[PersonalLearningPlanService] resetPlan DB notice:', error.message || error);
+                }
+            } catch (err: any) {
+                console.warn('[PersonalLearningPlanService] resetPlan DB exception:', err?.message || err);
             }
         }
     },
