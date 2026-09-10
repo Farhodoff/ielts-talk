@@ -147,5 +147,130 @@ export const IELTS_LISTENING_EXAMS: ListeningExam[] = [
                 ]
             }
         ]
+    },
+    {
+        id: "cambridge-19-test-2",
+        title: "IELTS Listening Academic Practice Test 2 (University & Ocean Ecology)",
+        sections: [
+            {
+                sectionNumber: 1,
+                title: "Section 1: Student Accommodation Booking Enquiry",
+                audioUrl: "",
+                script: "Officer: Good morning, Student Accommodation Office. How may I assist you today?\nStudent: Hello, I am arriving next month for the postgraduate engineering course, and I need to finalize my campus housing application.\nOfficer: Welcome! Could I please take down your family name and student ID?\nStudent: Yes, my surname is Henderson, that is H-E-N-D-E-R-S-O-N, and my student ID is EN-7492.\nOfficer: Thank you, Ms. Henderson. And what type of accommodation do you prefer? We have standard shared rooms and en-suite studios.\nStudent: I would definitely prefer a single en-suite studio with a private study desk.\nOfficer: Understood. The move-in date for international postgraduates will be Saturday, 25th September. Is that suitable?\nStudent: Yes, the 25th of September matches my flight arrival perfectly. Thank you!",
+                instruction: "Complete the notes below. Write NO MORE THAN TWO WORDS AND/OR A NUMBER for each answer.",
+                questions: [
+                    {
+                        id: 1,
+                        text: "Student surname: ________",
+                        correctAnswer: "Henderson",
+                        type: "fill",
+                        explanation: "The student spells her surname: H-E-N-D-E-R-S-O-N."
+                    },
+                    {
+                        id: 2,
+                        text: "Student ID number: EN-________",
+                        correctAnswer: "7492",
+                        type: "fill",
+                        explanation: "The student provides her ID: EN-7492."
+                    },
+                    {
+                        id: 3,
+                        text: "Requested move-in date:",
+                        options: [
+                            "Friday, 24th September",
+                            "Saturday, 25th September",
+                            "Monday, 27th September"
+                        ],
+                        correctAnswer: "1",
+                        type: "choice",
+                        explanation: "The housing officer specifies Saturday, 25th September, which the student confirms matches her flight."
+                    }
+                ]
+            },
+            {
+                sectionNumber: 2,
+                title: "Section 2: University Library Orientation Tour",
+                audioUrl: "",
+                script: "Librarian: Welcome new students to the Central University Library. Our library holds over 1.2 million volumes and subscribes to 500 academic digital journals. On the ground floor, you will find the collaborative study lounge where group discussion is permitted. However, the third floor is designated as a strict silent study zone. Additionally, scanning and digital borrowing are completely free of charge for all registered students.",
+                instruction: "Choose the correct letter, A, B or C.",
+                questions: [
+                    {
+                        id: 4,
+                        text: "Which floor of the library is reserved for silent individual study?",
+                        options: [
+                            "Ground floor",
+                            "Second floor",
+                            "Third floor"
+                        ],
+                        correctAnswer: "2",
+                        type: "choice",
+                        explanation: "The librarian clarifies that the third floor is designated as a strict silent study zone."
+                    },
+                    {
+                        id: 5,
+                        text: "Digital borrowing and document scanning for registered students is _______.",
+                        options: [
+                            "charged at $2 per document",
+                            "completely free of charge",
+                            "limited to weekend hours"
+                        ],
+                        correctAnswer: "1",
+                        type: "choice",
+                        explanation: "The speaker highlights: 'scanning and digital borrowing are completely free of charge for all registered students.'"
+                    }
+                ]
+            },
+            {
+                sectionNumber: 3,
+                title: "Section 3: Academic Tutor Consultation on Renewable Grid Project",
+                audioUrl: "",
+                script: "Professor: Come in Mark and Elena. Let us review your draft proposal on urban renewable grids.\nElena: Thank you Professor Davis. We decided to compare solar rooftop deployment against small-scale municipal wind turbines in coastal cities.\nProfessor: A timely research angle. Have you collected enough empirical data on annual wind velocity fluctuations?\nMark: Yes, we analyzed meteorological datasets from 12 coastal cities spanning the last five years.\nProfessor: Excellent. Make sure you highlight battery storage degradation in Chapter 3.",
+                instruction: "Complete the consultation summary below.",
+                questions: [
+                    {
+                        id: 6,
+                        text: "The student research compares solar rooftops with _______ turbines.",
+                        correctAnswer: "wind",
+                        type: "fill",
+                        explanation: "Elena states they compare solar rooftops against municipal wind turbines."
+                    },
+                    {
+                        id: 7,
+                        text: "The data examined covered coastal cities over a period of _______ years.",
+                        correctAnswer: "5",
+                        type: "fill",
+                        explanation: "Mark notes they analyzed datasets spanning the last five years."
+                    }
+                ]
+            },
+            {
+                sectionNumber: 4,
+                title: "Section 4: Scientific Lecture on Marine Bioluminescence",
+                audioUrl: "",
+                script: "Lecturer: In deep-sea ecosystems below 200 meters, sunlight is entirely absent. In this perpetual darkness, over 75% of oceanic organisms have evolved bioluminescence—the biochemical production of light through the enzyme luciferase catalyzing the oxidation of luciferin. Contrary to early theories suggesting bioluminescence was solely for illuminating food, modern marine biology identifies two primary survival functions: counter-illumination camouflage to avoid predators from below, and intraspecific communication for mating signals.",
+                instruction: "Choose the correct letter, A, B or C.",
+                questions: [
+                    {
+                        id: 8,
+                        text: "Approximately what proportion of deep-sea creatures produce bioluminescence?",
+                        options: [
+                            "Over 25%",
+                            "Over 50%",
+                            "Over 75%"
+                        ],
+                        correctAnswer: "2",
+                        type: "choice",
+                        explanation: "The lecturer states: 'over 75% of oceanic organisms have evolved bioluminescence.'"
+                    },
+                    {
+                        id: 9,
+                        text: "The chemical reaction creating biological light requires the enzyme _______.",
+                        correctAnswer: "luciferase",
+                        type: "fill",
+                        explanation: "The lecture explicitly names the enzyme: 'through the enzyme luciferase catalyzing the oxidation of luciferin.'"
+                    }
+                ]
+            }
+        ]
     }
 ];
