@@ -177,5 +177,77 @@ export const en = {
         theme: 'Display & Theme',
         lightMode: 'Light Mode',
         darkMode: 'Dark Mode'
+    },
+    landing: {
+        eyebrow: 'AI IELTS Examiner · 24/7 Personal Mentor',
+        headline: 'Achieve IELTS Band 7.5+. Starting Today.',
+        speakingAiMessage1: 'Could you tell me a little bit about your hometown?',
+        speakingUserMessage: 'Certainly! I come from Samarkand, a renowned historic city in Uzbekistan.',
+        speakingAiMessage2: 'That is fascinating! What makes it special for tourists?',
+        seoTitle: 'IELTS Talk — AI IELTS Speaking, Writing & Full Mock Platform',
+        subtitle:
+            'Not just textbooks — authentic exam simulation. Practice Speaking Parts 1-3 with an AI Examiner and receive official Cambridge-calibrated band scores for your Writing essays.',
+        seoKeywords:
+            'IELTS Talk, IELTS Speaking mock, IELTS Writing evaluator, Band 7.5, Band 8.0, Cambridge IELTS, IDP, British Council',
+        description:
+            'Not just textbooks — authentic exam simulation. Practice Speaking Parts 1-3 with an AI Examiner and receive official Cambridge-calibrated band scores for your Writing essays.',
+        ctaPrimary: 'Start For Free →',
+        ctaSecondary: '▶ Watch Demo',
+        trustSpeaking: 'AI Examiner',
+        trustJlpt: 'IELTS Roadmap',
+        trustSrs: 'Band 7.5+ Grammar',
+        navFeatures: 'Features',
+        navRoadmap: 'Roadmap',
+        navSpeaking: 'Speaking Mock',
+        navLogin: 'Login',
+        navCta: 'Get Started',
+        featuresTitle: 'IELTS Mastery Begins with Real Practice',
+        featuresSubtitle:
+            'Beyond rote grammar memorization. Real Cambridge & IDP exam conditions with instantaneous feedback.',
+        featureSpeakingTitle: 'AI Speaking Mock (Part 1, 2, 3)',
+        featureSpeakingDesc:
+            'Official Cambridge/IDP questions, preparation timers, cue cards, and real-time audio evaluation on official criteria.',
+        featureDiagTitle: 'Writing Task 1 & 2 AI Evaluator',
+        featureDiagDesc:
+            'Detailed band scoring across Task Achievement, Coherence & Cohesion, Lexical Resource, and Grammatical Range.',
+        featurePlanTitle: 'Target Band 7.5+ Roadmap',
+        featurePlanDesc:
+            'Just 15 minutes a day. Adaptive learning modules focused on your specific grammatical and lexical weaknesses.',
+        featureSrsTitle: 'Academic Vocabulary & Collocations',
+        featureSrsDesc:
+            'Master Band 8+ academic collocations and idioms backed by the proven Anki SM-2 spaced repetition algorithm.',
+        stepsTitle: 'Three Steps to Exam Readiness',
+        step1Title: 'Select Your Target Band',
+        step1Desc: 'Aiming for Band 6.5 or 8.0? Our quick diagnostic pinpoints your current readiness.',
+        step1Jp: 'BAND',
+        step2Title: 'Choose Practice Module',
+        step2Desc: 'Speaking Parts 1-3, Academic Writing Task 1 visual reports, or Task 2 essays.',
+        step2Jp: 'MODULE',
+        step3Title: 'Examine & Receive Feedback',
+        step3Desc: 'Speak or write. Receive instant Band score breakdowns with line-by-line enhancements.',
+        step3Jp: 'EXAM',
+        step4Title: 'Consistent Daily Progress',
+        step4Desc: 'Daily mock sessions build the stamina and spontaneous fluency required on exam day.',
+        roadmapTitle: 'IELTS Band Milestone Roadmap',
+        speakingTitle: 'Inside the AI Examiner Speaking Room',
+        speakingSubtitle:
+            'Real-time metrics for Fluency, Lexical Resource, Grammar, and Pronunciation with line-by-line model answers.',
+        speakingFluency: 'Fluency & Coherence',
+        speakingGrammar: 'Grammatical Range',
+        speakingVocabulary: 'Lexical Resource',
+        speakingPronunciation: 'Pronunciation',
+        finalCtaTitle: 'Take Your First Mock Exam Today',
+        finalCtaDesc:
+            'Stop procrastinating. Experience real Cambridge exam conditions right now and discover your accurate Band score.',
+        finalCtaButton: 'Start Practicing Now →',
+        footerCopy: '© 2026 IELTS Talk. All rights reserved.',
+        footerSub:
+            'State-of-the-art AI preparation platform for IELTS candidates aiming for top university admissions worldwide.',
+        dashToday: "Today's Study Plan",
+        dashRoadmap: 'Band 6.5 → Band 7.5+ Path',
+        dashVocab: 'Academic Vocabulary',
+        dashGrammar: 'Band 7.5 Grammar',
+        dashSpeaking: 'Speaking Mock',
+        dashKanji: 'Writing Task 1 & 2'
     }
 };

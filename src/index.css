@@ -4,73 +4,73 @@
 
 @layer base {
   :root {
-    /* Sumi-e & Hanko Light theme — Warm Washi Paper Base */
-    --background: 43 33% 96%; /* #F8F6F0 */
-    --foreground: 214 22% 13%; /* #1A2028 */
+    /* IELTS Academic Light theme — Crisp Slate & Royal Oxford Blue */
+    --background: 210 40% 98%; /* #F8FAFC */
+    --foreground: 222 47% 11%; /* #0F172A */
 
     --card: 0 0% 100%; /* #FFFFFF */
-    --card-foreground: 214 22% 13%;
+    --card-foreground: 222 47% 11%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 214 22% 13%;
+    --popover-foreground: 222 47% 11%;
 
-    --primary: 6 73% 53%; /* #DC4433 Vermillion Hanko Red */
+    --primary: 221 83% 53%; /* #1D4ED8 / #2563EB Royal Academic Blue */
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 40 20% 93%; /* #EFECE6 */
-    --secondary-foreground: 214 22% 13%;
+    --secondary: 214 32% 91%; /* #E2E8F0 */
+    --secondary-foreground: 222 47% 11%;
 
-    --muted: 40 18% 92%; /* #EAE7E0 */
+    --muted: 210 40% 96%; /* #F1F5F9 */
     --muted-foreground: 215 16% 47%; /* #64748B */
 
-    --accent: 6 73% 53%; /* #DC4433 */
+    --accent: 348 83% 47%; /* #DC2626 Cambridge Crimson Red */
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%; /* #F87171 */
     --destructive-foreground: 0 0% 100%;
 
-    --border: 40 14% 87%; /* #E2DFD8 */
-    --input: 40 14% 87%;
-    --ring: 6 73% 53%;
+    --border: 214 32% 91%; /* #E2E8F0 */
+    --input: 214 32% 91%;
+    --ring: 221 83% 53%;
 
-    --gold: 42 49% 58%; /* #C9A961 */
-    --gold-foreground: 214 22% 13%;
+    --gold: 38 92% 50%; /* #F59E0B IELTS Band Gold */
+    --gold-foreground: 222 47% 11%;
 
-    --radius: 1rem;
+    --radius: 0.875rem;
   }
 
   .dark {
-    /* Sumi-e & Hanko Dark theme — Deep Ink Navy/Sumi Charcoal Base */
-    --background: 210 25% 8%; /* #0F1419 Deep Sumi Charcoal/Navy */
-    --foreground: 36 17% 95%; /* #F5F3F0 Warm Off-White */
+    /* IELTS Academic Dark theme — Midnight Obsidian/Slate & Royal Blue */
+    --background: 222 47% 7%; /* #0B0F17 Midnight Slate/Navy Base */
+    --foreground: 210 40% 98%; /* #F8FAFC */
 
-    --card: 214 22% 13%; /* #1A2028 Elevated Ink-Slate */
-    --card-foreground: 36 17% 95%; /* #F5F3F0 */
+    --card: 222 47% 11%; /* #0F172A Elevated Slate Card */
+    --card-foreground: 210 40% 98%;
 
-    --popover: 214 22% 13%; /* #1A2028 */
-    --popover-foreground: 36 17% 95%;
+    --popover: 222 47% 11%;
+    --popover-foreground: 210 40% 98%;
 
-    --primary: 5 79% 57%; /* #E8483A Vermillion Hanko Red */
+    --primary: 217 91% 60%; /* #3B82F6 Vibrant Royal Blue */
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 214 20% 17%; /* #222B36 */
-    --secondary-foreground: 36 17% 95%;
+    --secondary: 217 33% 17%; /* #1E293B */
+    --secondary-foreground: 210 40% 98%;
 
-    --muted: 214 20% 17%; /* #222B36 */
-    --muted-foreground: 35 6% 53%; /* #8B8680 Warm Sumi Gray */
+    --muted: 217 33% 15%; /* #162032 */
+    --muted-foreground: 215 20% 65%; /* #94A3B8 Cool Slate Gray */
 
-    --accent: 5 79% 57%; /* #E8483A */
+    --accent: 348 83% 55%; /* #EF4444 Cambridge Crimson Accent */
     --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 84% 60%; /* #F87171 Soft Alert Rose */
+    --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 214 20% 19%; /* #26303B Subtle Ink Border */
-    --input: 214 20% 19%;
-    --ring: 5 79% 57%;
+    --border: 217 33% 18%; /* #1E293B */
+    --input: 217 33% 18%;
+    --ring: 217 91% 60%;
 
-    --gold: 42 49% 58%; /* #C9A961 Japanese Antique Gold */
-    --gold-foreground: 210 25% 8%;
+    --gold: 38 92% 50%; /* #F59E0B IELTS Band Gold */
+    --gold-foreground: 222 47% 7%;
   }
 }
 
@@ -117,15 +117,19 @@ a {
 
 @layer utilities {
   .font-display {
-    font-family: 'Newsreader', 'Shippori Mincho', serif;
+    font-family: 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+
+  .font-serif-academic {
+    font-family: 'Merriweather', 'Newsreader', Georgia, serif;
   }
 
   .font-japanese {
-    font-family: 'Noto Sans JP', 'Shippori Mincho', sans-serif;
+    font-family: 'Inter', system-ui, sans-serif;
   }
 
   .glass {
-    @apply border border-border bg-card/85 shadow-[0_4px_30px_rgba(0,0,0,0.2)] backdrop-blur-xl;
+    @apply border border-border bg-card/85 shadow-[0_4px_30px_rgba(0,0,0,0.06)] dark:shadow-[0_4px_30px_rgba(0,0,0,0.3)] backdrop-blur-xl;
   }
 
   .glass-card {
@@ -133,15 +137,23 @@ a {
   }
 
   .text-gradient {
-    @apply bg-gradient-to-r from-red-500 via-rose-500 to-amber-500 bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-blue-600 via-indigo-600 to-sky-500 bg-clip-text text-transparent;
+  }
+
+  .text-gradient-ielts {
+    @apply bg-gradient-to-r from-blue-600 via-indigo-600 to-cyan-500 bg-clip-text text-transparent;
   }
 
   .text-gradient-hanko {
-    @apply bg-gradient-to-r from-[#E8483A] via-[#F87171] to-[#FBBF24] bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-blue-600 via-indigo-600 to-sky-500 bg-clip-text text-transparent;
   }
 
   .text-gradient-gold {
-    @apply bg-gradient-to-r from-[#FDE68A] via-[#C9A961] to-[#B8964C] bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-amber-400 via-amber-500 to-yellow-600 bg-clip-text text-transparent;
+  }
+
+  .badge-band {
+    @apply inline-flex items-center gap-1.5 rounded-full border border-amber-500/30 bg-amber-500/10 px-2.5 py-0.5 text-[11px] font-black text-amber-500 shadow-xs;
   }
 
   .badge-hanko {
@@ -149,11 +161,11 @@ a {
   }
 
   .badge-gold {
-    @apply inline-flex items-center gap-1.5 rounded-full border border-[#C9A961]/30 bg-amber-500/10 px-2.5 py-0.5 text-[11px] font-black text-[#C9A961] shadow-xs;
+    @apply inline-flex items-center gap-1.5 rounded-full border border-amber-500/30 bg-amber-500/10 px-2.5 py-0.5 text-[11px] font-black text-amber-500 shadow-xs;
   }
 
   .card-sumi {
-    @apply rounded-2xl border border-border bg-card p-6 transition-all duration-200 hover:border-primary/30;
+    @apply rounded-2xl border border-border bg-card p-6 transition-all duration-200 hover:border-primary/30 shadow-xs;
   }
 
   /* 3D Transform utilities for flashcard flip */

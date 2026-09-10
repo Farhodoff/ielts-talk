@@ -1,6 +1,6 @@
 import React, { useState, Suspense, lazy } from 'react';
-import { Target, BookOpen, GraduationCap, Headphones, PenTool } from 'lucide-react';
-import { useSearchParams } from 'react-router-dom';
+import { Target, BookOpen, GraduationCap, Headphones, PenTool, Mic, Sparkles } from 'lucide-react';
+import { useSearchParams, Link } from 'react-router-dom';
 import { RealWeaknessTracker } from '../components/ielts/RealWeaknessTracker';
 import { DailyTargetHub } from '../components/ielts/DailyTargetHub';
 import { useSEO } from '../hooks/useSEO';
@@ -45,13 +45,14 @@ export const IeltsHubPage: React.FC = () => {
 
   return (
     <div className="mx-auto max-w-7xl max-w-full space-y-6 overflow-x-hidden p-3.5 pb-16 sm:p-4 md:space-y-8 md:p-8">
-      {/* Header Banner */}
-      <div className="relative overflow-hidden rounded-3xl border border-amber-500/20 bg-gradient-to-r from-amber-950/80 via-slate-900 to-indigo-950/80 p-6 shadow-2xl backdrop-blur-xl md:p-8">
-        <div className="pointer-events-none absolute -right-12 -top-12 h-64 w-64 rounded-full bg-amber-500/10 blur-3xl" />
+      {/* Header Banner with Oxford Navy & Cambridge Gold accents */}
+      <div className="relative overflow-hidden rounded-3xl border border-blue-500/20 bg-gradient-to-r from-slate-900 via-blue-950 to-indigo-950 p-6 shadow-2xl backdrop-blur-xl md:p-8">
+        <div className="pointer-events-none absolute -right-12 -top-12 h-64 w-64 rounded-full bg-blue-500/15 blur-3xl" />
+        <div className="pointer-events-none absolute -left-12 -bottom-12 h-48 w-48 rounded-full bg-amber-500/10 blur-3xl" />
 
         <div className="relative z-10 flex flex-col items-start justify-between gap-6 md:flex-row md:items-center">
           <div className="max-w-2xl space-y-2">
-            <div className="inline-flex items-center gap-2 rounded-full border border-amber-500/30 bg-amber-500/15 px-3 py-1 text-xs font-extrabold text-amber-400">
+            <div className="inline-flex items-center gap-2 rounded-full border border-amber-500/30 bg-amber-500/15 px-3 py-1 text-xs font-extrabold text-amber-400 shadow-xs">
               <GraduationCap size={14} />
               <span>IELTS MASTER SUITE & ACADEMY</span>
             </div>
@@ -69,6 +70,17 @@ export const IeltsHubPage: React.FC = () => {
                 ? 'Sizning maqsadli Band ballingiz uchun adaptiv kunlik va haftalik vazifalar taqsimoti.'
                 : 'Band 7.5+ Grammatika Akademiyasi, Reading/Listening va Writing mock imtihonlari yagona markazda.'}
             </p>
+          </div>
+
+          <div className="flex items-center gap-3 shrink-0">
+            <Link
+              to="/ielts/speaking-mock"
+              className="flex items-center gap-2 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 px-5 py-3 text-xs font-black text-white shadow-lg shadow-blue-500/25 transition-all duration-200 hover:scale-105 active:scale-95"
+            >
+              <Mic size={16} />
+              <span>Speaking Mock Boshlash</span>
+              <Sparkles size={14} />
+            </Link>
           </div>
         </div>
       </div>
@@ -118,6 +130,13 @@ export const IeltsHubPage: React.FC = () => {
         >
           <PenTool size={16} /> ✍️ Writing Mock & Examiner
         </button>
+
+        <Link
+          to="/ielts/speaking-mock"
+          className="flex shrink-0 items-center gap-2 whitespace-nowrap rounded-xl px-4 py-2 text-xs font-black text-muted-foreground hover:text-foreground transition-all ml-auto hover:bg-muted"
+        >
+          <Mic size={16} className="text-blue-500" /> 🎙️ Speaking Simulator
+        </Link>
       </div>
 
       {/* Tab Views */}
