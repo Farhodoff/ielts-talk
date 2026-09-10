@@ -8,20 +8,17 @@ describe('Speaking Conversation Scenarios Integrity Tests', () => {
     expect(uniqueIds.size).toBe(ids.length);
   });
 
-  it('2. "business_koushou" must exist exactly once', () => {
-    const matches = DEFAULT_SCENARIOS.filter((s) => s.id === 'business_koushou');
-    expect(matches.length).toBe(1);
-    expect(matches[0].difficulty).toBe('N1');
-    expect(matches[0].language).toBe('ja');
+  it('2. Core English scenarios like "tech_job_interview" must exist', () => {
+    const techInterview = DEFAULT_SCENARIOS.find((s) => s.id === 'tech_job_interview');
+    expect(techInterview).toBeDefined();
+    expect(techInterview?.difficulty).toBe('C1');
+    expect(techInterview?.language).toBe('en');
   });
 
-  it('3. "shakai_mondai_iken" must have valid snake_case ID without spaces', () => {
-    const spaceIdScenario = DEFAULT_SCENARIOS.find((s) => s.id.includes(' '));
-    expect(spaceIdScenario).toBeUndefined();
-
-    const shakaiScenario = DEFAULT_SCENARIOS.find((s) => s.id === 'shakai_mondai_iken');
-    expect(shakaiScenario).toBeDefined();
-    expect(shakaiScenario?.title_ja).toContain('社会問題');
+  it('3. IELTS speaking scenarios must have valid snake_case ID', () => {
+    const ieltsScenario = DEFAULT_SCENARIOS.find((s) => s.id === 'ielts_speaking_full_mock');
+    expect(ieltsScenario).toBeDefined();
+    expect(ieltsScenario?.language).toBe('en');
   });
 
   it('4. All scenario IDs must match snake_case format', () => {
@@ -31,12 +28,9 @@ describe('Speaking Conversation Scenarios Integrity Tests', () => {
     }
   });
 
-  it('5. Verify accurate scenario counts (8 English, 34 Japanese = 42 total)', () => {
+  it('5. Verify accurate scenario counts (8 English scenarios total)', () => {
     const enScenarios = DEFAULT_SCENARIOS.filter((s) => s.language === 'en');
-    const jaScenarios = DEFAULT_SCENARIOS.filter((s) => s.language === 'ja' || !s.language);
-
     expect(enScenarios.length).toBe(8);
-    expect(jaScenarios.length).toBe(34);
-    expect(DEFAULT_SCENARIOS.length).toBe(42);
+    expect(DEFAULT_SCENARIOS.length).toBe(8);
   });
 });

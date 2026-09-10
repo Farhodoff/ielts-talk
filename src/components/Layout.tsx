@@ -27,7 +27,7 @@ import { AnimatePresence, motion } from 'framer-motion';
 import { Sheet, SheetContent, SheetTrigger } from './ui/sheet';
 import { Button } from './ui/Button';
 import { AppLogo } from './AppLogo';
-import { UzbekistanFlag, JapanFlag } from './common/FlagIcons';
+import { UzbekistanFlag, UKFlag } from './common/FlagIcons';
 import { GlobalAnnouncementBanner } from './GlobalAnnouncementBanner';
 import { QuickCommandPalette } from './common/QuickCommandPalette';
 
@@ -49,7 +49,7 @@ const Layout: React.FC = () => {
   });
 
   const { language, setLanguage, t } = useLanguage();
-  const { user, primaryLanguage, enabledLanguages, targetLevel, setPrimaryFocus } = useStudyData();
+  const { user, primaryLanguage, enabledLanguages, targetLevel } = useStudyData();
   const displayEmail = user?.email || '';
   const isAdmin = Boolean(displayEmail && isAdminEmail(displayEmail, (user as any)?.role));
   const isSuper = Boolean(displayEmail && isSuperAdmin(displayEmail));
@@ -82,7 +82,7 @@ const Layout: React.FC = () => {
     if (!tg?.BackButton) return;
     if (typeof tg.isVersionAtLeast === 'function' && !tg.isVersionAtLeast('6.1')) return;
 
-    const isTopLevel = location.pathname === '/' || location.pathname === '/jlpt';
+    const isTopLevel = location.pathname === '/' || location.pathname === '/ielts';
     if (isTopLevel) {
       try {
         tg.BackButton.hide();
@@ -114,38 +114,22 @@ const Layout: React.FC = () => {
       '/room',
       '/focus',
       '/ielts/speaking-mock',
-      '/jlpt/listening',
     ];
     return fullScreenPaths.some((p) => location.pathname.startsWith(p));
   }, [location.pathname]);
 
   const navItems: NavItem[] = useMemo(() => {
-    const isJa = language === 'ja';
-    // Super Admin can switch to English (IELTS) track for development
-    if (isSuper && primaryLanguage === 'en') {
-      return [
-        { name: isJa ? '単語・語彙分析' : 'Vocabulary', path: '/vocabulary?lang=en', icon: Brain },
-        { name: isJa ? 'IELTSマスター' : 'IELTS Master', path: '/ielts', icon: BookOpen },
-        { name: isJa ? '会話シナリオ' : 'Scenarios', path: '/scenarios?lang=en', icon: Sparkles },
-        { name: isJa ? 'AIスピーキング' : 'Speaking', path: '/speaking-coach?lang=en', icon: Mic },
-        { name: isJa ? 'フラッシュカード' : 'Fleshkard', path: '/flashcards', icon: Copy },
-        { name: isJa ? '集中タイマー' : 'Pomodoro', path: '/focus', icon: Clock },
-        { name: isJa ? '進捗・分析' : 'Progress', path: '/progress', icon: BarChart3 },
-      ];
-    }
-
-    // Public Focus: 100% Japanese (JLPT)
     return [
-      { name: isJa ? 'JLPTマスター' : 'JLPT Master', path: '/jlpt', icon: BookOpen },
-      { name: isJa ? '個人学習プラン' : 'Shaxsiy Rejam', path: '/personal-plan', icon: Target },
-      { name: isJa ? '単語・語彙分析' : 'Vocabulary', path: '/vocabulary?lang=ja', icon: Brain },
-      { name: isJa ? '会話シナリオ' : 'Scenarios', path: '/scenarios?lang=ja', icon: Sparkles },
-      { name: isJa ? 'AIスピーキング' : 'Speaking', path: '/speaking-coach?lang=ja', icon: Mic },
-      { name: isJa ? 'フラッシュカード' : 'Fleshkard', path: '/flashcards', icon: Copy },
-      { name: isJa ? '集中タイマー' : 'Pomodoro', path: '/focus', icon: Clock },
-      { name: isJa ? '進捗・分析' : 'Progress', path: '/progress', icon: BarChart3 },
+      { name: 'IELTS Master', path: '/ielts', icon: BookOpen },
+      { name: 'Shaxsiy Rejam', path: '/personal-plan', icon: Target },
+      { name: 'Vocabulary', path: '/vocabulary?lang=en', icon: Brain },
+      { name: 'Scenarios', path: '/scenarios?lang=en', icon: Sparkles },
+      { name: 'Speaking Coach', path: '/speaking-coach?lang=en', icon: Mic },
+      { name: 'Fleshkard', path: '/flashcards', icon: Copy },
+      { name: 'Pomodoro', path: '/focus', icon: Clock },
+      { name: 'Progress', path: '/progress', icon: BarChart3 },
     ];
-  }, [primaryLanguage, isSuper, language]);
+  }, []);
 
   const formatTime = (seconds: number) => {
     const mins = Math.floor(seconds / 60);
@@ -154,21 +138,16 @@ const Layout: React.FC = () => {
   };
 
   const getPageTitle = () => {
-    const isJa = language === 'ja';
     const found = navItems.find((item) => item.path === location.pathname);
     if (found) return found.name;
-    if (location.pathname.startsWith('/scenarios')) return isJa ? '会話シナリオ' : 'Scenarios';
-    if (location.pathname.startsWith('/speaking-coach'))
-      return isJa ? 'AIスピーキング' : 'Speaking';
-    if (location.pathname === '/jlpt') return isJa ? 'JLPTマスター' : 'JLPT Master';
-    if (location.pathname === '/ielts') return isJa ? 'IELTSマスター' : 'IELTS Master';
-    if (location.pathname === '/progress')
-      return isJa ? '学習進捗 & アナリティクス' : "O'quv Statistikasi & Progress";
-    if (location.pathname === '/admin')
-      return isJa ? 'システム管理者ダッシュボード' : 'Super Admin Paneli';
-    if (location.pathname === '/personal-plan') return isJa ? '個人学習プラン' : 'Shaxsiy Rejam';
-    if (location.pathname === '/settings') return isJa ? '設定' : 'Sozlamalar';
-    return 'Nihongo Talk';
+    if (location.pathname.startsWith('/scenarios')) return 'Scenarios';
+    if (location.pathname.startsWith('/speaking-coach')) return 'Speaking Coach';
+    if (location.pathname === '/ielts') return 'IELTS Master';
+    if (location.pathname === '/progress') return "O'quv Statistikasi & Progress";
+    if (location.pathname === '/admin') return 'Super Admin Paneli';
+    if (location.pathname === '/personal-plan') return 'Shaxsiy Rejam';
+    if (location.pathname === '/settings') return 'Sozlamalar';
+    return 'IELTS Talk';
   };
 
   const NavLinks = ({ onClick }: { onClick?: () => void }) => (
@@ -282,9 +261,9 @@ const Layout: React.FC = () => {
         <div className="flex shrink-0 items-center gap-1.5">
           <button
             type="button"
-            onClick={() => setLanguage(language === 'uz' ? 'ja' : 'uz')}
+            onClick={() => setLanguage(language === 'uz' ? 'en' : 'uz')}
             className="flex items-center gap-1 rounded-xl border border-border/80 bg-muted/80 px-2 py-1 text-[11px] font-bold text-muted-foreground shadow-xs transition-all hover:bg-muted hover:text-foreground active:scale-95"
-            title={language === 'uz' ? '日本語 (JA)' : "O'zbekcha (UZ)"}
+            title={language === 'uz' ? 'English (EN)' : "O'zbekcha (UZ)"}
           >
             {language === 'uz' ? (
               <>
@@ -293,8 +272,8 @@ const Layout: React.FC = () => {
               </>
             ) : (
               <>
-                <JapanFlag className="h-2.5 w-3.5" />
-                <span>JA</span>
+                <UKFlag className="h-2.5 w-3.5" />
+                <span>EN</span>
               </>
             )}
           </button>
@@ -303,7 +282,7 @@ const Layout: React.FC = () => {
             type="button"
             onClick={() => openRatingModal()}
             className="flex items-center justify-center rounded-xl border border-amber-500/25 bg-amber-500/10 p-1.5 text-amber-500 transition hover:bg-amber-500/20 active:scale-95"
-            title={language === 'ja' ? '評価' : 'Baholash'}
+            title="Baholash"
           >
             <Star size={16} className="fill-amber-400" />
           </button>
@@ -352,39 +331,19 @@ const Layout: React.FC = () => {
                 }`}
               >
                 <div className="flex min-w-0 items-center gap-1.5">
-                  <span className="text-sm">{primaryLanguage === 'ja' ? '🇯🇵' : '🇬🇧'}</span>
+                  <span className="text-sm">🇬🇧</span>
                   <span className="truncate text-xs font-bold text-foreground">
-                    {primaryLanguage === 'ja'
-                      ? `JLPT ${targetLevel || 'N3'}`
-                      : `IELTS ${targetLevel || 'B2'}`}
+                    {`IELTS ${targetLevel || 'B2'}`}
                   </span>
                 </div>
-                <button
-                  type="button"
-                  onClick={() => setPrimaryFocus(primaryLanguage === 'en' ? 'ja' : 'en')}
-                  className="shrink-0 rounded-lg border border-border bg-background/80 px-2 py-0.5 text-[10px] font-bold text-muted-foreground shadow-xs transition-all hover:bg-background hover:text-foreground"
-                  title="Boshqa tilga o'tish"
-                >
-                  ⇄ Almashtirish
-                </button>
               </div>
             ) : (
-              <button
-                type="button"
-                onClick={() => setPrimaryFocus(primaryLanguage === 'en' ? 'ja' : 'en')}
-                className={`flex h-9 w-9 items-center justify-center rounded-xl border text-sm transition-all ${
-                  primaryLanguage === 'ja'
-                    ? 'border-rose-500/30 bg-rose-950/30'
-                    : 'border-indigo-500/30 bg-indigo-950/30'
-                }`}
-                title={
-                  primaryLanguage === 'ja'
-                    ? `🇯🇵 JLPT ${targetLevel || 'N3'}`
-                    : `🇬🇧 IELTS ${targetLevel || 'B2'}`
-                }
+              <div
+                className="flex h-9 w-9 items-center justify-center rounded-xl border border-indigo-500/30 bg-indigo-950/30 text-sm"
+                title={`🇬🇧 IELTS ${targetLevel || 'B2'}`}
               >
-                {primaryLanguage === 'ja' ? '🇯🇵' : '🇬🇧'}
-              </button>
+                🇬🇧
+              </div>
             )}
           </div>
         )}
@@ -442,7 +401,7 @@ const Layout: React.FC = () => {
               onClick={() => setLanguage(language === 'uz' ? 'ja' : 'uz')}
               className="flex shrink-0 items-center gap-1.5 rounded-xl border border-border/80 bg-muted/80 px-2.5 py-1.5 text-[11px] font-bold text-muted-foreground shadow-xs transition-all hover:bg-muted hover:text-foreground"
               title={
-                language === 'uz' ? '日本語に切り替え (Switch to Japanese)' : "O'zbek tiliga o'tish"
+                language === 'uz' ? "Ingliz tiliga o'tish (Switch to English)" : "O'zbek tiliga o'tish"
               }
             >
               {language === 'uz' ? (
@@ -452,8 +411,8 @@ const Layout: React.FC = () => {
                 </>
               ) : (
                 <>
-                  <JapanFlag className="h-2.5 w-4" />
-                  <span>JA</span>
+                  <UKFlag className="h-2.5 w-4" />
+                  <span>EN</span>
                 </>
               )}
             </button>
@@ -486,17 +445,17 @@ const Layout: React.FC = () => {
       <nav className="glass-card fixed bottom-0 z-40 flex w-full items-center justify-around border-t border-border bg-background/90 px-2 pb-[max(env(safe-area-inset-bottom),0.5rem)] pt-1.5 backdrop-blur-md md:hidden">
         {[
           {
-            name: isSuper && primaryLanguage === 'en' ? 'IELTS' : 'JLPT',
-            path: isSuper && primaryLanguage === 'en' ? '/ielts' : '/jlpt',
+            name: 'IELTS',
+            path: '/ielts',
             icon: BookOpen,
           },
           { name: t('nav.aiCoach') || 'Speaking', path: '/speaking-coach', icon: Mic },
           { name: t('nav.flashcards') || 'Fleshkard', path: '/flashcards', icon: Copy },
-          { name: language === 'ja' ? 'プラン' : 'Rejam', path: '/personal-plan', icon: Target },
+          { name: 'Rejam', path: '/personal-plan', icon: Target },
         ].map((item) => {
           const isItemActive =
             location.pathname.startsWith(item.path) ||
-            (item.path === '/jlpt' && location.pathname === '/') ||
+            (item.path === '/ielts' && (location.pathname === '/' || location.pathname === '/ielts')) ||
             (item.path === '/speaking-coach' && location.pathname.startsWith('/speaking')) ||
             (item.path === '/flashcards' &&
               (location.pathname.startsWith('/flashcards') ||

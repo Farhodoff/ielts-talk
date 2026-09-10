@@ -14,7 +14,7 @@ import {
 import { generateAIResponse, extractJsonFromAiResponse } from '../utils/ai/aiCore';
 import { speakText } from '../utils/audioTts';
 import { useStudyData } from '../context/StudyPlannerContext';
-import { FuriganaText } from '../components/jlpt/FuriganaText';
+import { FuriganaText } from "../components/common/FuriganaText";
 import { supabase } from '../lib/supabase';
 import { toDeterministicUUID } from '../utils/uuid';
 import { isSuperAdmin } from '../utils/admin';
@@ -41,111 +41,47 @@ export const VocabularyBuilderPage: React.FC = () => {
   const isSuper = isSuperAdmin(user?.email, user?.role);
 
   const BUILTIN_VOCAB_DB: Record<string, VocabWordDetails> = {
-    維持: {
-      word: '維持',
-      language: 'ja',
-      phonetic: 'いじ (iji)',
-      furigana: '維[い]持[じ]',
-      level: 'N2',
-      partOfSpeech: '名詞・サ変 (Noun, suru verb)',
-      uzbekTranslation: 'Saqlab turish, davom ettirish (Hold/Maintenance)',
-      definition: '物事の状態をそのまま保ち続けること。衰えたり失われたりしないように支えること。',
-      synonyms: ['保持 (ほじ)', '存続 (そんぞく)', '継続 (けいぞく)', '保全 (ほぜん)'],
-      collocations: ['現状を維持する', '健康を維持する', '良好な関係を維持する', '維持管理費'],
+    comprehensive: {
+      word: 'comprehensive',
+      language: 'en',
+      phonetic: '/ˌkɒm.prɪˈhen.sɪv/',
+      furigana: '',
+      level: 'B2',
+      partOfSpeech: 'Adjective',
+      uzbekTranslation: "Keng qamrovli, har tomonlama, to'liq",
+      definition: 'Complete and including everything that is necessary.',
+      synonyms: ['exhaustive', 'thorough', 'all-inclusive', 'extensive'],
+      collocations: ['comprehensive study', 'comprehensive review', 'comprehensive guide'],
       examples: [
         {
-          sentence: '高いモチベーションを長期的に維持することが、JLPT合格において最も重要です。',
-          translation:
-            "Yuqori motivatsiyani uzoq muddat saqlab turish til o'rganishda eng muhim omildir.",
-        },
-        {
-          sentence: 'この歴史的な日本庭園は、市民の協力によって美しく維持されています。',
-          translation: "Ushbu tarixiy bog' shahar aholisi ko'magida chiroyli saqlab turilmoqda.",
-        },
-        {
-          sentence: '健康と体力を維持するため、毎朝30分の運動を欠かさず行っています。',
-          translation: "Sog'lik va quvvatni saqlash uchun har kuni ertalab mashq qilaman.",
-        },
-      ],
-    },
-    挑戦: {
-      word: '挑戦',
-      language: 'ja',
-      phonetic: 'ちょうせん (chousen)',
-      furigana: '挑[ちょう]戦[せん]',
-      level: 'N2',
-      partOfSpeech: '名詞・サ変 (Noun, suru verb)',
-      uzbekTranslation: "Sinov, chaqiruv, o'zini sinab ko'rish (Challenge)",
-      definition: '困難な事柄や新しい領域に積極的に立ち向かうこと。',
-      synonyms: ['チャレンジ (challenge)', '試み (こころみ)', '立ち向かう (たちむかう)'],
-      collocations: ['新しい挑戦', '限界に挑戦する', '難関試験に挑戦する'],
-      examples: [
-        {
-          sentence: '失敗を恐れず、常に新しい分野へ挑戦し続ける姿勢が大切です。',
-          translation: "Xatolardan qo'rqmay, doimo yangi sohalarga intilish muhimdir.",
-        },
-        {
-          sentence: '彼は今年、JLPT N1の合格を目指して全力で挑戦しています。',
-          translation:
-            "U bu yil JLPT N1 darajasini qo'lga kiritish uchun bor kuchi bilan harakat qilmoqda.",
-        },
-      ],
-    },
-    勉強: {
-      word: '勉強',
-      language: 'ja',
-      phonetic: 'べんきょう (benkyou)',
-      furigana: '勉[べん]強[きょう]',
-      level: 'N5',
-      partOfSpeech: '名詞・サ変 (Noun, suru verb)',
-      uzbekTranslation: "O'qish, o'rganish, saboq (Study)",
-      definition: '学問や技術を身につけるために努力すること。経験から教訓を得ること。',
-      synonyms: ['学習 (がくしゅう)', '学問 (がくもん)', '研究 (けんきゅう)'],
-      collocations: ['日本語を勉強する', '勉強に励む', '大変勉強になりました'],
-      examples: [
-        {
-          sentence: '毎晩AIコーチと一緒に日本語の発音と会話を勉強しています。',
-          translation: "Har oqshom AI ustoz bilan birga yapon tili talaffuzini o'rganaman.",
-        },
-        {
-          sentence: '今回のプロジェクトは、私にとって非常に大きな勉強になりました。',
-          translation: "Bu galgi loyiha men uchun juda katta saboq bo'ldi.",
+          sentence: 'The academy provides a comprehensive IELTS preparation program.',
+          translation: "Akademiya keng qamrovli IELTS tayyorgarlik dasturini taqdim etadi.",
         },
       ],
     },
   };
 
-  const [query, setQuery] = useState('維持');
+  const [query, setQuery] = useState('comprehensive');
   const [isSearching, setIsSearching] = useState(false);
   const [currentResult, setCurrentResult] = useState<VocabWordDetails | null>(
-    () => BUILTIN_VOCAB_DB['維持'],
+    () => BUILTIN_VOCAB_DB['comprehensive'],
   );
   const [errorMsg, setErrorMsg] = useState<string | null>(null);
   const [selectedSubjectId, setSelectedSubjectId] = useState<string>('');
   const [isAddedToFlashcards, setIsAddedToFlashcards] = useState(false);
 
   const [activeTab, setActiveTab] = useState<'search' | 'saved' | 'history'>('search');
-  const [history, setHistory] = useState<VocabWordDetails[]>(() => [BUILTIN_VOCAB_DB['維持']]);
+  const [history, setHistory] = useState<VocabWordDetails[]>(() => [BUILTIN_VOCAB_DB['comprehensive']]);
   const [savedWords, setSavedWords] = useState<VocabWordDetails[]>([]);
 
-  const SAMPLE_WORDS =
-    !isSuper || primaryLanguage === 'ja'
-      ? [
-          { label: '勉強 (N5)', query: '勉強' },
-          { label: '維持 (N2)', query: '維持' },
-          { label: '習慣 (N3)', query: '習慣' },
-          { label: '挑戦 (N2)', query: '挑戦' },
-          { label: '継続 (N1)', query: '継続' },
-          { label: '成長 (N3)', query: '成長' },
-        ]
-      : [
-          { label: 'paramount (C1)', query: 'paramount' },
-          { label: 'ubiquitous (C2)', query: 'ubiquitous' },
-          { label: 'resilient (B2)', query: 'resilient' },
-          { label: 'pragmatic (C1)', query: 'pragmatic' },
-          { label: 'perseverance (C1)', query: 'perseverance' },
-          { label: 'meticulous (C2)', query: 'meticulous' },
-        ];
+  const SAMPLE_WORDS = [
+    { label: 'paramount (C1)', query: 'paramount' },
+    { label: 'ubiquitous (C2)', query: 'ubiquitous' },
+    { label: 'resilient (B2)', query: 'resilient' },
+    { label: 'pragmatic (C1)', query: 'pragmatic' },
+    { label: 'perseverance (C1)', query: 'perseverance' },
+    { label: 'meticulous (C2)', query: 'meticulous' },
+  ];
 
   useEffect(() => {
     // Load from localStorage as fallback
@@ -241,25 +177,25 @@ export const VocabularyBuilderPage: React.FC = () => {
       return;
     }
 
-    const prompt = `You are a professional linguist and dictionary expert for JLPT Japanese language students.
-Analyze the following word or phrase: "${searchTerm}".
+    const prompt = `You are a professional English linguist, lexicographer, and IELTS vocabulary expert.
+Analyze the following English word or phrase: "${searchTerm}".
 
 Return ONLY a raw valid JSON object (no markdown, no backticks) with this structure:
 {
   "word": "${searchTerm}",
-  "language": "en" | "ja",
-  "phonetic": "IPA pronunciation or hiragana/romaji",
-  "furigana": "Kanji[Furigana] format if Japanese, or empty string",
-  "level": "B1" | "B2" | "C1" | "C2" | "N5" | "N4" | "N3" | "N2" | "N1",
-  "partOfSpeech": "noun / verb / adjective / etc",
+  "language": "en",
+  "phonetic": "IPA pronunciation (e.g. /ˈpær.ə.maʊnt/)",
+  "furigana": "",
+  "level": "A1" | "A2" | "B1" | "B2" | "C1" | "C2" | "IELTS",
+  "partOfSpeech": "noun / verb / adjective / adverb / phrasal verb",
   "uzbekTranslation": "To'g'ri va aniq o'zbekcha tarjimasi",
-  "definition": "Simple English/Japanese dictionary definition",
+  "definition": "Clear Oxford/Cambridge English definition",
   "synonyms": ["synonym1", "synonym2", "synonym3", "synonym4"],
   "collocations": ["collocation 1", "collocation 2", "collocation 3"],
   "examples": [
-    { "sentence": "Example sentence 1 in original language", "translation": "O'zbekcha tarjimasi 1" },
-    { "sentence": "Example sentence 2 in original language", "translation": "O'zbekcha tarjimasi 2" },
-    { "sentence": "Example sentence 3 in original language", "translation": "O'zbekcha tarjimasi 3" }
+    { "sentence": "Authentic academic or IELTS example sentence 1", "translation": "O'zbekcha tarjimasi 1" },
+    { "sentence": "Example sentence 2", "translation": "O'zbekcha tarjimasi 2" },
+    { "sentence": "Example sentence 3", "translation": "O'zbekcha tarjimasi 3" }
   ]
 }`;
 
@@ -419,9 +355,9 @@ Return ONLY a raw valid JSON object (no markdown, no backticks) with this struct
               {language === 'ja' ? 'AI単語帳・辞書ビルダー' : 'Smart Vocabulary Builder'}
             </h1>
             <p className="mt-0.5 text-xs text-muted-foreground">
-              {language === 'ja'
-                ? 'JLPTの単語をリアルタイムでAI分析。意味・例文・類語・漢字の読み方を瞬時に学習できます。'
-                : "JLPT N5–N1 yapon tili lug'at boyligingizni oshiring, Kanji, sinonimlar va misollar o'rganing."}
+              {language === 'en'
+                ? 'Master academic & IELTS vocabulary with AI definitions, collocations, and examples.'
+                : "IELTS va akademik ingliz tili lug'at boyligingizni oshiring, kolokatsiyalar, sinonimlar va misollar o'rganing."}
             </p>
           </div>
         </div>
@@ -478,9 +414,9 @@ Return ONLY a raw valid JSON object (no markdown, no backticks) with this struct
                   onChange={(e) => setQuery(e.target.value)}
                   onKeyDown={(e) => e.key === 'Enter' && handleSearch()}
                   placeholder={
-                    language === 'ja'
-                      ? '単語を入力してEnter（例: 勉強, 維持, 習慣, 挑戦）...'
-                      : "So'z kiritib Enter bosing (masalan: 勉強, 維持, 習慣, 挑戦)..."
+                    language === 'en'
+                      ? 'Type an English word & press Enter (e.g. resilient, paramount, meticulous)...'
+                      : "So'z kiritib Enter bosing (masalan: resilient, paramount, meticulous)..."
                   }
                   className="w-full rounded-2xl border border-border bg-background py-3.5 pl-11 pr-4 text-sm font-medium text-foreground transition-all placeholder:text-muted-foreground/60 focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
                 />

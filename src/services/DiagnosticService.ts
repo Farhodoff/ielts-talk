@@ -293,8 +293,7 @@ export const ENGLISH_DIAGNOSTIC_BANK: DiagnosticQuestion[] = [
   },
 ];
 
-import { JAPANESE_DIAGNOSTIC_BANK } from '../data/japaneseDiagnosticBank';
-export { JAPANESE_DIAGNOSTIC_BANK };
+export const JAPANESE_DIAGNOSTIC_BANK: DiagnosticQuestion[] = [];
 
 export const DiagnosticService = {
   /**

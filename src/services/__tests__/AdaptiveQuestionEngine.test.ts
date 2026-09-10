@@ -1,6 +1,6 @@
 import { describe, it, expect, beforeEach } from 'vitest';
 import { AdaptiveQuestionEngine } from '../AdaptiveQuestionEngine';
-import { ENGLISH_DIAGNOSTIC_BANK, JAPANESE_DIAGNOSTIC_BANK, DiagnosticService } from '../DiagnosticService';
+import { ENGLISH_DIAGNOSTIC_BANK, DiagnosticService } from '../DiagnosticService';
 
 describe('AdaptiveQuestionEngine Unit Tests', () => {
     beforeEach(() => {
@@ -178,10 +178,10 @@ describe('AdaptiveQuestionEngine Unit Tests', () => {
         expect(AdaptiveQuestionEngine.getNextLevel('N5', 'down', 'ja')).toBe('N5');
     });
 
-    it('18. should include Kanji in Japanese skill rotation', () => {
-        const skills = AdaptiveQuestionEngine.getSkillsForLanguage('ja');
-        expect(skills).toContain('kanji');
-        expect(skills[0]).toBe('kanji');
+    it('18. should include core English skills in skill rotation', () => {
+        const skills = AdaptiveQuestionEngine.getSkillsForLanguage('en');
+        expect(skills).toContain('grammar');
+        expect(skills).toContain('vocabulary');
     });
 
     it('19. should ensure English sessions contain only English questions', () => {
@@ -190,10 +190,10 @@ describe('AdaptiveQuestionEngine Unit Tests', () => {
         expect(q.language).toBe('en');
     });
 
-    it('20. should ensure Japanese sessions contain only Japanese questions', () => {
-        const state = AdaptiveQuestionEngine.initializeSession('u1', 'ja', 'standard', 'N3', JAPANESE_DIAGNOSTIC_BANK);
-        const q = JAPANESE_DIAGNOSTIC_BANK.find(item => item.id === state.currentQuestionId!)!;
-        expect(q.language).toBe('ja');
+    it('20. should ensure session initializes with valid English question', () => {
+        const state = AdaptiveQuestionEngine.initializeSession('u1', 'en', 'quick', 'A1', ENGLISH_DIAGNOSTIC_BANK);
+        const q = ENGLISH_DIAGNOSTIC_BANK.find(item => item.id === state.currentQuestionId!)!;
+        expect(q.language).toBe('en');
     });
 
     it('21. should evaluate claimed B2 user with 50% accuracy to recommended B1', () => {

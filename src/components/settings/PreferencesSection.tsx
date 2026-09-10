@@ -4,7 +4,7 @@ import { useStudyData } from '../../context/StudyPlannerContext';
 import { toast } from '../../hooks/use-toast';
 import { isSuperAdmin } from '../../utils/admin';
 import { useLanguage } from '../../context/LanguageContext';
-import { UzbekistanFlag, JapanFlag } from '../common/FlagIcons';
+import { UzbekistanFlag, UKFlag } from '../common/FlagIcons';
 import AIProviderSection from './AIProviderSection';
 
 interface Settings {
@@ -242,7 +242,7 @@ const PreferencesSection: React.FC<PreferencesSectionProps> = ({
               type="button"
               onClick={() => {
                 setLanguage('ja');
-                toast({ title: '日本語が選択されました' });
+                toast({ title: 'English language selected' });
               }}
               className={`flex cursor-pointer items-center gap-2 rounded-xl border px-3.5 py-2 text-xs font-bold transition-all ${
                 language === 'ja'
@@ -250,8 +250,8 @@ const PreferencesSection: React.FC<PreferencesSectionProps> = ({
                   : 'border-border bg-card text-muted-foreground hover:bg-muted'
               }`}
             >
-              <JapanFlag className="h-2.5 w-4" />
-              <span>日本語</span>
+              <UKFlag className="h-2.5 w-4" />
+              <span>English</span>
             </button>
           </div>
         </div>

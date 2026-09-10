@@ -1,5 +1,56 @@
-import { JlptKanjiItem, JlptGrammarItem, JlptVocabItem } from '../data/jlptGrammarKanji';
-import { JlptGrammarQuestion } from '../data/jlpt/grammar_data';
+export interface JlptKanjiItem {
+  id: string;
+  level: 'N5' | 'N4' | 'N3' | 'N2' | 'N1' | string;
+  kanji: string;
+  onyomi: string;
+  kunyomi: string;
+  meaningUz: string;
+  strokeCount: number;
+  examples: {
+    word: string;
+    reading: string;
+    meaning: string;
+  }[];
+}
+
+export interface JlptGrammarItem {
+  id: string;
+  level: 'N5' | 'N4' | 'N3' | 'N2' | 'N1' | string;
+  title: string;
+  romaji: string;
+  meaningUz: string;
+  structure: string;
+  pattern?: string;
+  formation?: string;
+  examples: {
+    ja: string;
+    romaji: string;
+    uz: string;
+  }[];
+}
+
+export interface JlptVocabItem {
+  id?: string;
+  word: string;
+  reading: string;
+  meaningUz: string;
+  level: string;
+  partOfSpeech?: string;
+}
+
+export interface JlptGrammarQuestion {
+  id: number | string;
+  level: 'N5' | 'N4' | 'N3' | 'N2' | 'N1' | string;
+  pattern: string;
+  questionText: string;
+  options: string[];
+  correctAnswer: number;
+  explanationUzbek: string;
+  question?: string;
+  explanation?: string;
+  category?: string;
+}
+
 import { supabase } from '../lib/supabase';
 
 import { safeLocalStorage } from '../utils/storage/safeLocalStorage';
@@ -731,18 +782,20 @@ export class CustomContentService {
     // Custom items take precedence
     for (const item of custom) {
       const char = item.kanji.trim();
-      if (!char || seenKanji.has(char) || seenId.has(item.id)) continue;
+      const id = item.id || '';
+      if (!char || seenKanji.has(char) || (id && seenId.has(id))) continue;
       seenKanji.add(char);
-      seenId.add(item.id);
+      if (id) seenId.add(id);
       result.push(item);
     }
 
     // Append base items if not already present
     for (const item of baseList) {
       const char = item.kanji.trim();
-      if (!char || seenKanji.has(char) || seenId.has(item.id)) continue;
+      const id = item.id || '';
+      if (!char || seenKanji.has(char) || (id && seenId.has(id))) continue;
       seenKanji.add(char);
-      seenId.add(item.id);
+      if (id) seenId.add(id);
       result.push(item);
     }
 
@@ -767,8 +820,9 @@ export class CustomContentService {
     // Custom items take precedence
     for (const item of custom) {
       const key = cleanTitle(item.title);
-      if (!key || seenId.has(item.id) || seenTitle.has(key)) continue;
-      seenId.add(item.id);
+      const id = item.id || '';
+      if (!key || (id && seenId.has(id)) || seenTitle.has(key)) continue;
+      if (id) seenId.add(id);
       seenTitle.add(key);
       result.push(item);
     }
@@ -776,8 +830,9 @@ export class CustomContentService {
     // Append base items if not already present
     for (const item of baseList) {
       const key = cleanTitle(item.title);
-      if (!key || seenId.has(item.id) || seenTitle.has(key)) continue;
-      seenId.add(item.id);
+      const id = item.id || '';
+      if (!key || (id && seenId.has(id)) || seenTitle.has(key)) continue;
+      if (id) seenId.add(id);
       seenTitle.add(key);
       result.push(item);
     }
@@ -883,7 +938,7 @@ export class CustomContentService {
       const updatedItem: JlptGrammarQuestion = {
         ...current[idx],
         ...partial,
-        id,
+        id: String(id),
       };
 
       current[idx] = updatedItem;

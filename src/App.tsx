@@ -25,8 +25,6 @@ const AdminDashboardPage = lazyWithRetry(() => import('./pages/AdminDashboardPag
 const SpeakingCoachPage = lazyWithRetry(() => import('./pages/SpeakingCoachPage'));
 const IeltsHubPage = lazyWithRetry(() => import('./pages/IeltsHubPage'));
 const IeltsSpeakingMockPage = lazyWithRetry(() => import('./pages/IeltsSpeakingMockPage'));
-const JlptHubPage = lazyWithRetry(() => import('./pages/JlptHubPage'));
-const JlptWritingPage = lazyWithRetry(() => import('./pages/JlptWritingPage'));
 const VocabularyBuilderPage = lazyWithRetry(() =>
   import('./pages/VocabularyBuilderPage').then((m) => ({ default: m.VocabularyBuilderPage })),
 );
@@ -53,28 +51,11 @@ const ProgressPage = lazyWithRetry(() => import('./pages/ProgressPage'));
 const DashboardPage = lazyWithRetry(() => import('./pages/DashboardPage'));
 const LandingPage = lazyWithRetry(() => import('./pages/LandingPage'));
 
-import { isSuperAdmin, isUserAdmin } from './utils/admin';
+import { isUserAdmin } from './utils/admin';
 import { useAuthStore } from './stores';
 import { safeLocalStorage } from './utils/storage/safeLocalStorage';
 import { isPublicPreviewActive, MOCK_PREVIEW_SESSION } from './config/previewMode';
 import { isTelegramWebApp, initTelegramAuth } from './utils/telegramAuth';
-
-const SuperAdminRoute: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const user = useAuthStore((s) => s.user);
-  const loading = useAuthStore((s) => s.loading);
-  if (isPublicPreviewActive()) {
-    return <>{children}</>;
-  }
-  const cachedUser = safeLocalStorage.getJSON<any>('study_planner_user_cache', null);
-  const effectiveUser = user || cachedUser;
-  if (loading && !effectiveUser) {
-    return <PageLoader />;
-  }
-  if (!isSuperAdmin(effectiveUser?.email)) {
-    return <Navigate to="/jlpt" replace />;
-  }
-  return <>{children}</>;
-};
 
 const AdminRoute: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const user = useAuthStore((s) => s.user);
@@ -88,7 +69,7 @@ const AdminRoute: React.FC<{ children: React.ReactNode }> = ({ children }) => {
     return <PageLoader />;
   }
   if (!isUserAdmin(effectiveUser)) {
-    return <Navigate to="/jlpt" replace />;
+    return <Navigate to="/ielts" replace />;
   }
   return <>{children}</>;
 };
@@ -259,7 +240,7 @@ const App: React.FC = () => {
                 <Suspense fallback={<PageLoader />}>
                   <Routes>
                     <Route path="/" element={<Layout />}>
-                      <Route index element={<Navigate to="/jlpt" replace />} />
+                      <Route index element={<Navigate to="/ielts" replace />} />
                       <Route path="landing" element={<LandingPage />} />
                       <Route path="dashboard" element={<DashboardPage />} />
                       <Route
@@ -276,81 +257,33 @@ const App: React.FC = () => {
                       <Route path="lesson/:lessonId" element={<LessonPlayerPage />} />
                       <Route path="speaking" element={<SpeakingCoachPage />} />
                       <Route path="speaking-coach" element={<SpeakingCoachPage />} />
-                      <Route
-                        path="ielts"
-                        element={
-                          <SuperAdminRoute>
-                            <IeltsHubPage />
-                          </SuperAdminRoute>
-                        }
-                      />
+                      <Route path="ielts" element={<IeltsHubPage />} />
                       <Route
                         path="ielts/grammar"
-                        element={
-                          <SuperAdminRoute>
-                            <Navigate to="/ielts?tab=grammar" replace />
-                          </SuperAdminRoute>
-                        }
+                        element={<Navigate to="/ielts?tab=grammar" replace />}
                       />
                       <Route
                         path="ielts/writing"
-                        element={
-                          <SuperAdminRoute>
-                            <Navigate to="/ielts?tab=writing" replace />
-                          </SuperAdminRoute>
-                        }
+                        element={<Navigate to="/ielts?tab=writing" replace />}
                       />
                       <Route
                         path="ielts-writing"
-                        element={
-                          <SuperAdminRoute>
-                            <Navigate to="/ielts?tab=writing" replace />
-                          </SuperAdminRoute>
-                        }
+                        element={<Navigate to="/ielts?tab=writing" replace />}
                       />
-                      <Route
-                        path="ielts/speaking-mock"
-                        element={
-                          <SuperAdminRoute>
-                            <IeltsSpeakingMockPage />
-                          </SuperAdminRoute>
-                        }
-                      />
+                      <Route path="ielts/speaking-mock" element={<IeltsSpeakingMockPage />} />
                       <Route
                         path="ielts/reading-listening"
-                        element={
-                          <SuperAdminRoute>
-                            <Navigate to="/ielts?tab=reading_listening" replace />
-                          </SuperAdminRoute>
-                        }
+                        element={<Navigate to="/ielts?tab=reading_listening" replace />}
                       />
-                      <Route path="jlpt" element={<JlptHubPage />} />
-                      <Route path="scenarios" element={<ScenarioPickerPage />} />
+                      {/* JLPT Legacy Routes -> Redirect to IELTS */}
+                      <Route path="jlpt/*" element={<Navigate to="/ielts" replace />} />
+                      <Route path="jlpt" element={<Navigate to="/ielts" replace />} />
                       <Route
                         path="jlpt-speaking"
-                        element={<Navigate to="/speaking-coach?lang=ja" replace />}
+                        element={<Navigate to="/speaking-coach?lang=en" replace />}
                       />
-                      <Route path="jlpt-writing" element={<JlptWritingPage />} />
-                      <Route
-                        path="jlpt/listening"
-                        element={<Navigate to="/jlpt?tab=listening" replace />}
-                      />
-                      <Route
-                        path="jlpt/grammar"
-                        element={<Navigate to="/jlpt?tab=kanji" replace />}
-                      />
-                      <Route
-                        path="jlpt/grammar-quiz"
-                        element={<Navigate to="/jlpt?tab=kanji" replace />}
-                      />
-                      <Route
-                        path="jlpt/reading"
-                        element={<Navigate to="/jlpt?tab=reading" replace />}
-                      />
-                      <Route
-                        path="jlpt/mock-exam"
-                        element={<Navigate to="/jlpt?tab=mock" replace />}
-                      />
+                      <Route path="jlpt-writing" element={<Navigate to="/ielts?tab=writing" replace />} />
+                      <Route path="scenarios" element={<ScenarioPickerPage />} />
                       <Route path="calendar" element={<CalendarPage />} />
                       <Route path="subjects" element={<SubjectsPage />} />
                       <Route path="subjects/:id" element={<SubjectDetailPage />} />
@@ -373,7 +306,7 @@ const App: React.FC = () => {
                       <Route path="pricing" element={<PricingPage />} />
                       <Route path="room/:roomId" element={<StudyRoomPage />} />
                       <Route path="settings" element={<SettingsPage />} />
-                      <Route path="twa" element={<Navigate to="/jlpt" replace />} />
+                      <Route path="twa" element={<Navigate to="/ielts" replace />} />
                       <Route path="developers" element={<DeveloperApiPage />} />
                       <Route path="api-docs" element={<Navigate to="/developers" replace />} />
                       <Route
@@ -393,17 +326,17 @@ const App: React.FC = () => {
                         }
                       />
                       <Route path="exams/:id" element={<ExamTake />} />
-                      <Route path="auth" element={<Navigate to="/jlpt" replace />} />
-                      <Route path="login" element={<Navigate to="/jlpt" replace />} />
-                      <Route path="register" element={<Navigate to="/jlpt" replace />} />
-                      <Route path="signup" element={<Navigate to="/jlpt" replace />} />
-                      <Route path="*" element={<Navigate to="/jlpt" replace />} />
+                      <Route path="auth" element={<Navigate to="/ielts" replace />} />
+                      <Route path="login" element={<Navigate to="/ielts" replace />} />
+                      <Route path="register" element={<Navigate to="/ielts" replace />} />
+                      <Route path="signup" element={<Navigate to="/ielts" replace />} />
+                      <Route path="*" element={<Navigate to="/ielts" replace />} />
                     </Route>
-                    <Route path="/auth" element={<Navigate to="/jlpt" replace />} />
-                    <Route path="/login" element={<Navigate to="/jlpt" replace />} />
-                    <Route path="/register" element={<Navigate to="/jlpt" replace />} />
-                    <Route path="/signup" element={<Navigate to="/jlpt" replace />} />
-                    <Route path="*" element={<Navigate to="/jlpt" replace />} />
+                    <Route path="/auth" element={<Navigate to="/ielts" replace />} />
+                    <Route path="/login" element={<Navigate to="/ielts" replace />} />
+                    <Route path="/register" element={<Navigate to="/ielts" replace />} />
+                    <Route path="/signup" element={<Navigate to="/ielts" replace />} />
+                    <Route path="*" element={<Navigate to="/ielts" replace />} />
                   </Routes>
                 </Suspense>
                 <GlobalAudioPlayer />

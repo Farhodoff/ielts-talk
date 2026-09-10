@@ -1,7 +1,7 @@
 import React, { useState, useMemo } from 'react';
 import { Award, CheckCircle2, XCircle, ChevronRight, RotateCcw, Sparkles } from 'lucide-react';
 import { TestQuestion } from '../../types/lesson';
-import { FuriganaText } from '../jlpt/FuriganaText';
+import { FuriganaText } from "../common/FuriganaText";
 
 export interface MissedQuestionInfo {
     questionId: string;

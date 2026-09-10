@@ -10,15 +10,7 @@ describe('CurriculumService Unit Tests', () => {
         expect(course.levels.map(l => l.code)).toEqual(['A1', 'A2', 'B1', 'B2', 'C1', 'C2']);
     });
 
-    it('2. should return complete Japanese curriculum with N5 to N1 levels', () => {
-        const course = CurriculumService.getJapaneseCurriculum();
-
-        expect(course.language).toBe('ja');
-        expect(course.levels.length).toBe(5);
-        expect(course.levels.map(l => l.code)).toEqual(['N5', 'N4', 'N3', 'N2', 'N1']);
-    });
-
-    it('3. should enforce correct sequential ordering of units and lessons', () => {
+    it('2. should enforce correct sequential ordering of units and lessons', () => {
         const course = CurriculumService.getEnglishCurriculum();
 
         for (const level of course.levels) {
@@ -33,11 +25,11 @@ describe('CurriculumService Unit Tests', () => {
         }
     });
 
-    it('4. should resolve course dynamically by language', () => {
+    it('3. should resolve English course for platform', () => {
         const enCourse = CurriculumService.getCourse('en');
-        const jaCourse = CurriculumService.getCourse('ja');
+        const fallbackCourse = CurriculumService.getCourse('ja');
 
         expect(enCourse.language).toBe('en');
-        expect(jaCourse.language).toBe('ja');
+        expect(fallbackCourse.language).toBe('en');
     });
 });

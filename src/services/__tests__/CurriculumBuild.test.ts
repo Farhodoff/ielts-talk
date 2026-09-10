@@ -21,8 +21,7 @@ describe('Phase 17 — Curriculum Quality & Progression Verification', () => {
     });
 
     const courses = [
-        CurriculumService.getEnglishCurriculum(),
-        CurriculumService.getJapaneseCurriculum()
+        CurriculumService.getEnglishCurriculum()
     ];
 
     const sampleGoalEn = {
@@ -215,28 +214,12 @@ describe('Phase 17 — Curriculum Quality & Progression Verification', () => {
         expect(levelCodes).toContain('C2');
     });
 
-    it('11. Japanese progression levels exist', () => {
-        const japanese = CurriculumService.getJapaneseCurriculum();
-        const levelCodes = japanese.levels.map(l => l.code);
-        expect(levelCodes).toContain('N5');
-        expect(levelCodes).toContain('N4');
-        expect(levelCodes).toContain('N3');
-        expect(levelCodes).toContain('N2');
-        expect(levelCodes).toContain('N1');
-    });
-
-    it('12. IELTS mapping exists', () => {
+    it('11. IELTS mapping exists', () => {
         const english = CurriculumService.getEnglishCurriculum();
         const b2Level = english.levels.find(l => l.code === 'B2');
         const ieltsLessons = b2Level?.units.flatMap(u => u.lessons).filter(l => l.examTrack === 'IELTS');
         expect(ieltsLessons?.length).toBeGreaterThan(0);
         expect(ieltsLessons?.[0].examTrack).toBe('IELTS');
-    });
-
-    it('13. JLPT mapping exists', () => {
-        const japanese = CurriculumService.getJapaneseCurriculum();
-        const n5Lessons = japanese.levels.find(l => l.code === 'N5')?.units.flatMap(u => u.lessons);
-        expect(n5Lessons?.[0].examTrack).toBe('JLPT');
     });
 
     it('14. direct URL protection', () => {

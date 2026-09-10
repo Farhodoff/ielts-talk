@@ -8,16 +8,16 @@ describe('LessonService', () => {
     });
 
     it('retrieves valid lesson by ID', () => {
-        const jaLesson = LessonService.getLessonById('ja-n3-u1-l1');
-        expect(jaLesson).toBeDefined();
-        expect(jaLesson?.language).toBe('ja');
-        expect(jaLesson?.level).toBe('N3');
-        expect(jaLesson?.steps.length).toBe(3);
-
         const enLesson = LessonService.getLessonById('en-b2-u1-l1');
         expect(enLesson).toBeDefined();
         expect(enLesson?.language).toBe('en');
         expect(enLesson?.level).toBe('B2');
+        expect(enLesson?.steps.length).toBe(3);
+
+        const a1Lesson = LessonService.getLessonById('en-a1-u1-l1');
+        expect(a1Lesson).toBeDefined();
+        expect(a1Lesson?.language).toBe('en');
+        expect(a1Lesson?.level).toBe('A1');
     });
 
     it('returns null for non-existent lesson ID', () => {
@@ -26,28 +26,23 @@ describe('LessonService', () => {
     });
 
     it('filters lessons by language track correctly', () => {
-        const jaLessons = LessonService.getLessonsForLanguage('ja');
-        expect(jaLessons.length).toBeGreaterThan(0);
-        jaLessons.forEach(l => expect(l.language).toBe('ja'));
-
         const enLessons = LessonService.getLessonsForLanguage('en');
         expect(enLessons.length).toBeGreaterThan(0);
         enLessons.forEach(l => expect(l.language).toBe('en'));
     });
 
     it('retrieves default starting lesson for language and level', () => {
-        const defaultJa = LessonService.getDefaultLessonForLanguage('ja', 'N3');
-        expect(defaultJa?.id).toBe('ja-n3-u1-l1');
+        const defaultA1 = LessonService.getDefaultLessonForLanguage('en', 'A1');
+        expect(defaultA1?.id).toBe('en-a1-u1-l1');
 
         const defaultEn = LessonService.getDefaultLessonForLanguage('en', 'B2');
         expect(defaultEn?.id).toBe('en-b2-u1-l1');
     });
 
     it('validates lesson step types and structured payload integrity', () => {
-        const lesson = LessonService.getLessonById('ja-n3-u1-l1')!;
+        const lesson = LessonService.getLessonById('en-b2-u1-l1')!;
         expect(lesson.steps[0].type).toBe('learn');
         expect(lesson.steps[0].learnData?.explanation).toBeTruthy();
-        // Real curriculum embeds vocabulary in the learn step (grammar may be inline in explanation)
         expect(lesson.steps[0].learnData?.vocabulary?.length).toBeGreaterThan(0);
 
         expect(lesson.steps[1].type).toBe('practice');

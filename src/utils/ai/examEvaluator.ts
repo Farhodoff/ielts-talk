@@ -1,5 +1,4 @@
 import { callSelectedAIProvider } from './aiCore';
-import type { JlptScoreReport } from '../jlptScoring';
 
 export interface ExamQuestionAnswer {
   questionText: string;
@@ -22,14 +21,14 @@ export interface ExamDiagnosticReport {
     correct_concept: string;
   }>;
   actionable_recommendation: string;
-  jlptScoreReport?: JlptScoreReport;
+  jlptScoreReport?: any;
 }
 
 export async function evaluateMockExamSession(
   level: string,
   questions: ExamQuestionAnswer[],
   durationSeconds: number,
-  jlptScoreReport?: JlptScoreReport,
+  jlptScoreReport?: any,
 ): Promise<ExamDiagnosticReport> {
   const totalCount = questions.length;
   const correctCount = questions.filter((q) => q.isCorrect).length;

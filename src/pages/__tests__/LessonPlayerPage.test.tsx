@@ -33,22 +33,6 @@ describe('LessonPlayerPage', () => {
         vi.clearAllMocks();
     });
 
-    it('renders Japanese lesson properly with title, level, and Learn step', () => {
-        render(
-            <MemoryRouter initialEntries={['/lesson/ja-n3-u1-l1']}>
-                <Routes>
-                    <Route path="/lesson/:lessonId" element={<LessonPlayerPage />} />
-                </Routes>
-            </MemoryRouter>
-        );
-
-        expect(screen.getAllByText(/Passive Voice/i).length).toBeGreaterThan(0);
-        expect(screen.getAllByText(/JLPT N3/i).length).toBeGreaterThan(0);
-        expect(screen.getAllByText(/Passive Voice Formation/i).length).toBeGreaterThan(0);
-        expect(screen.getAllByText(/褒/).length).toBeGreaterThan(0);
-        expect(screen.getAllByText(/叱/).length).toBeGreaterThan(0);
-    });
-
     it('renders English B2 lesson properly with academic vocabulary and Inversion grammar', () => {
         render(
             <MemoryRouter initialEntries={['/lesson/en-b2-u1-l1']}>
@@ -66,7 +50,7 @@ describe('LessonPlayerPage', () => {
 
     it('navigates from Learn to Practice step and enables checking answers', async () => {
         render(
-            <MemoryRouter initialEntries={['/lesson/ja-n3-u1-l1']}>
+            <MemoryRouter initialEntries={['/lesson/en-b2-u1-l1']}>
                 <Routes>
                     <Route path="/lesson/:lessonId" element={<LessonPlayerPage />} />
                 </Routes>
@@ -78,10 +62,10 @@ describe('LessonPlayerPage', () => {
         fireEvent.click(nextBtn);
 
         // Now in Practice step (real curriculum content)
-        expect(screen.getByText(/To'g'ri majhul nisbat shaklini tanlang/i)).toBeInTheDocument();
+        expect(screen.getByText(/To'g'ri inversiya shaklini tanlang/i)).toBeInTheDocument();
 
         // Select the first (correct) option
-        const optionA = screen.getByText(/誰/);
+        const optionA = screen.getByText(/have I heard/i);
         fireEvent.click(optionA);
 
         const checkBtn = screen.getByRole('button', { name: /Javobni Tekshirish/i });
@@ -110,7 +94,7 @@ describe('LessonPlayerPage', () => {
         });
 
         render(
-            <MemoryRouter initialEntries={['/lesson/ja-n3-u1-l1']}>
+            <MemoryRouter initialEntries={['/lesson/en-b2-u1-l1']}>
                 <Routes>
                     <Route path="/lesson/:lessonId" element={<LessonPlayerPage />} />
                 </Routes>

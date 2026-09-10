@@ -1,7 +1,7 @@
 import React, { useState, useMemo } from 'react';
 import { CheckCircle2, XCircle, ArrowRight, Sparkles } from 'lucide-react';
 import { PracticeExercise } from '../../types/lesson';
-import { FuriganaText } from '../jlpt/FuriganaText';
+import { FuriganaText } from "../common/FuriganaText";
 
 interface PracticeStepViewProps {
     instructions: string;

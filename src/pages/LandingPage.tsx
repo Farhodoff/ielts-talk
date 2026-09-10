@@ -16,7 +16,7 @@ import {
   Lock,
 } from 'lucide-react';
 import { AppLogo } from '../components/AppLogo';
-import { UzbekistanFlag, JapanFlag } from '../components/common/FlagIcons';
+import { UzbekistanFlag, UKFlag } from '../components/common/FlagIcons';
 import { useSEO } from '../hooks/useSEO';
 import { useLanguage } from '../context/LanguageContext';
 
@@ -581,10 +581,10 @@ const LandingPage: React.FC = () => {
                     ? 'bg-primary text-primary-foreground shadow-xs'
                     : 'text-muted-foreground hover:text-foreground'
                 }`}
-                title="日本語に切り替え"
+                title="Ingliz tiliga o'tish"
               >
-                <JapanFlag className="h-2.5 w-4" />
-                <span>JA</span>
+                <UKFlag className="h-2.5 w-4" />
+                <span>EN</span>
               </button>
             </div>
 
@@ -670,8 +670,8 @@ const LandingPage: React.FC = () => {
                         : 'text-muted-foreground hover:text-foreground'
                     }`}
                   >
-                    <JapanFlag className="h-2.5 w-4" />
-                    <span>日本語</span>
+                    <UKFlag className="h-2.5 w-4" />
+                    <span>EN</span>
                   </button>
                 </div>
 

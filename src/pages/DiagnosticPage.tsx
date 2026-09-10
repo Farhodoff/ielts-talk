@@ -26,7 +26,7 @@ import { CurriculumLessonResolver } from '../services/CurriculumLessonResolver';
 import { MasteryEngine } from '../services/MasteryEngine';
 import { isSuperAdmin } from '../utils/admin';
 import { speakJapaneseText, speakText, stopAllAudio } from '../utils/audioTts';
-import { FuriganaText } from '../components/jlpt/FuriganaText';
+import { FuriganaText } from "../components/common/FuriganaText";
 
 export const DiagnosticPage: React.FC = () => {
   const { primaryLanguage, targetLevel, user } = useStudyData();

@@ -12,8 +12,7 @@ import {
   Sparkles,
   BookOpen,
 } from 'lucide-react';
-import { CustomContentService } from '../../services/CustomContentService';
-import { JlptGrammarQuestion } from '../../data/jlpt/grammar_data';
+import { CustomContentService, JlptGrammarQuestion } from '../../services/CustomContentService';
 import { toast } from '../../hooks/use-toast';
 
 export const AdminQuizManager: React.FC = () => {
@@ -61,7 +60,7 @@ export const AdminQuizManager: React.FC = () => {
 
   const handleEditClick = (q: JlptGrammarQuestion) => {
     setEditingId(q.id);
-    setLevel(q.level);
+    setLevel(q.level as any);
     setPattern(q.pattern || '');
     setQuestionText(q.questionText);
     setOpt0(q.options[0] || '');

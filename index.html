@@ -17,7 +17,7 @@
     (function() {
       try {
         if (window.location.pathname === '/twa') {
-          window.location.replace('/jlpt');
+          window.location.replace('/ielts');
         }
         if (window.Telegram?.WebApp) {
           window.Telegram.WebApp.ready();
@@ -31,7 +31,7 @@
         }
         const lang = localStorage.getItem('study_planner_lang');
         const urlLang = new URLSearchParams(window.location.search).get('lang');
-        if (urlLang === 'ja' || urlLang === 'uz' || urlLang === 'en') {
+        if (urlLang === 'uz' || urlLang === 'en') {
           document.documentElement.lang = urlLang;
         } else if (lang) {
           document.documentElement.lang = lang;
@@ -43,36 +43,36 @@
   <meta name="theme-color" content="#0F1419" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-  <meta name="apple-mobile-web-app-title" content="Nihongo Talk" />
+  <meta name="apple-mobile-web-app-title" content="IELTS Talk" />
   <meta name="mobile-web-app-capable" content="yes" />
-  <meta name="author" content="Nihongo Talk Team" />
+  <meta name="author" content="IELTS Talk Team" />
 
   <!-- Primary SEO Meta Tags -->
-  <title>Nihongo Talk</title>
-  <meta name="title" content="Nihongo Talk" />
-  <meta name="description" content="JLPT N5-N1 darajalariga tizimli tayyorlaning. AI Speaking Coach, Anki SM-2 Fleshkartalar, Kanji, Grammatika va shaxsiy o'quv rejalashtiruvchi." />
-  <meta name="keywords" content="Nihongo Talk, yapon tili, JLPT tayyorgarlik, JLPT N5-N1, Kanji o'rganish, Anki SM-2, fleshkartalar, AI Speaking Coach, JLPT Mock Exam, Pomodoro timer" />
-  <link rel="canonical" href="https://nihon-talk.vercel.app/" />
+  <title>IELTS Talk — AI IELTS Preparation & Speaking Coach</title>
+  <meta name="title" content="IELTS Talk — AI IELTS Preparation & Speaking Coach" />
+  <meta name="description" content="Master IELTS Academic & General with AI Speaking Coach, Writing Evaluator, Reading/Listening Mocks, and CEFR Flashcards." />
+  <meta name="keywords" content="IELTS Talk, IELTS Preparation, IELTS Speaking Coach, IELTS Writing Task 2, IELTS Mocks, CEFR English, Anki Flashcards, Band 7+" />
+  <link rel="canonical" href="https://ielts-talk.vercel.app/" />
 
   <!-- Open Graph / Facebook / Telegram / WhatsApp -->
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://nihon-talk.vercel.app/" />
-  <meta property="og:site_name" content="Nihongo Talk" />
-  <meta property="og:title" content="Yapon tilini AI yordamida o'rganish (JLPT N5–N1)" />
-  <meta property="og:description" content="JLPT N5-N1 darajalariga tizimli tayyorlaning. AI Speaking Coach, Anki SM-2 Fleshkartalar va shaxsiy kunlik reja." />
-  <meta property="og:image" content="https://nihon-talk.vercel.app/og-image.jpg?v=2" />
+  <meta property="og:url" content="https://ielts-talk.vercel.app/" />
+  <meta property="og:site_name" content="IELTS Talk" />
+  <meta property="og:title" content="IELTS Talk — AI IELTS Preparation Platform" />
+  <meta property="og:description" content="Achieve Band 7.5+ with real-time AI Speaking Coach, instant Writing evaluations, and complete IELTS mock tests." />
+  <meta property="og:image" content="https://ielts-talk.vercel.app/og-image.jpg" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
-  <meta property="og:image:alt" content="Nihongo Talk - Yapon tilini AI yordamida o'rganish" />
+  <meta property="og:image:alt" content="IELTS Talk - AI IELTS Preparation Platform" />
   <meta property="og:locale" content="uz_UZ" />
   <meta property="og:locale:alternate" content="en_US" />
 
   <!-- Twitter Card Tags -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:url" content="https://nihon-talk.vercel.app/" />
-  <meta name="twitter:title" content="Yapon tilini AI yordamida o'rganish (JLPT N5–N1)" />
-  <meta name="twitter:description" content="JLPT N5-N1 darajalariga tizimli tayyorlaning. AI Speaking Coach va Anki SM-2 Fleshkartalar." />
-  <meta name="twitter:image" content="https://nihon-talk.vercel.app/og-image.jpg?v=2" />
+  <meta name="twitter:url" content="https://ielts-talk.vercel.app/" />
+  <meta name="twitter:title" content="IELTS Talk — AI IELTS Preparation Platform" />
+  <meta name="twitter:description" content="Achieve Band 7.5+ with AI Speaking Coach and Writing Evaluator." />
+  <meta name="twitter:image" content="https://ielts-talk.vercel.app/og-image.jpg" />
 
   <!-- Preconnect & DNS-Prefetch for Fast Loading -->
   <link rel="preconnect" href="https://fonts.googleapis.com">

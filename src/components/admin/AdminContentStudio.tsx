@@ -14,9 +14,7 @@ import {
   X,
   Sparkles,
 } from 'lucide-react';
-import { CustomContentService, BulkImportResult } from '../../services/CustomContentService';
-import { JlptKanjiItem, JlptGrammarItem } from '../../data/jlptGrammarKanji';
-import { JlptGrammarQuestion } from '../../data/jlpt/grammar_data';
+import { CustomContentService, BulkImportResult, JlptKanjiItem, JlptGrammarItem, JlptGrammarQuestion } from '../../services/CustomContentService';
 import { useStudyData } from '../../context/StudyPlannerContext';
 import { AdminScenarioManager } from './AdminScenarioManager';
 import { AdminQuizManager } from './AdminQuizManager';

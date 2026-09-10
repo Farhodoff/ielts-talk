@@ -28,18 +28,9 @@ export const LearningOrchestrator = {
      * Resolve the primary language of the user from local storage or defaults.
      */
     getPrimaryLanguage(): SupportedLanguage {
-        const isTest = typeof globalThis !== 'undefined' && (globalThis as any).process?.env?.VITEST === 'true';
         const saved = safeLocalStorage.getItem('study_planner_primary_language') || 
                       safeLocalStorage.getItem('study_planner_study_track');
-        if (isTest) {
-            return (saved === 'ja' || saved === 'en') ? saved : 'en';
-        }
-        const cachedUser = safeLocalStorage.getJSON<any>('study_planner_user_cache', null);
-        const email = cachedUser?.email;
-        if (!isSuperAdmin(email)) {
-            return 'ja';
-        }
-        return (saved === 'ja' || saved === 'en') ? saved : 'ja';
+        return (saved === 'en') ? saved : 'en';
     },
 
     /**

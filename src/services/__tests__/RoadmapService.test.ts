@@ -74,39 +74,39 @@ describe('RoadmapService Unit Tests', () => {
         expect(c1?.status).toBe('locked');
     });
 
-    it('3. should build Japanese N5 beginner roadmap', () => {
+    it('3. should build English A1 beginner roadmap', () => {
         const state = createBaseState({
-            primaryLanguage: 'ja',
-            currentLevel: 'N5',
-            targetLevel: 'N3',
-            targetGoal: 'JLPT N2'
+            primaryLanguage: 'en',
+            currentLevel: 'A1',
+            targetLevel: 'B1',
+            targetGoal: 'IELTS 6.5+'
         });
         const roadmap = RoadmapService.getLearningRoadmap(state);
 
-        expect(roadmap.language).toBe('ja');
-        expect(roadmap.levels[0].code).toBe('N5');
+        expect(roadmap.language).toBe('en');
+        expect(roadmap.levels[0].code).toBe('A1');
         expect(roadmap.levels[0].status).toBe('current');
-        expect(roadmap.levels[1].status).toBe('locked'); // N4 is locked
+        expect(roadmap.levels[1].status).toBe('locked'); // A2 is locked
     });
 
-    it('4. should build Japanese N3 roadmap with N5-N4 completed and N2-N1 locked', () => {
+    it('4. should build English B1 roadmap with A1-A2 completed and B2-C1 locked', () => {
         const state = createBaseState({
-            primaryLanguage: 'ja',
-            currentLevel: 'N3',
-            targetLevel: 'N2',
-            targetGoal: 'JLPT N2'
+            primaryLanguage: 'en',
+            currentLevel: 'B1',
+            targetLevel: 'B2',
+            targetGoal: 'IELTS 7.0+'
         });
         const roadmap = RoadmapService.getLearningRoadmap(state);
 
-        const n5 = roadmap.levels.find(l => l.code === 'N5');
-        const n4 = roadmap.levels.find(l => l.code === 'N4');
-        const n3 = roadmap.levels.find(l => l.code === 'N3');
-        const n2 = roadmap.levels.find(l => l.code === 'N2');
+        const a1 = roadmap.levels.find(l => l.code === 'A1');
+        const a2 = roadmap.levels.find(l => l.code === 'A2');
+        const b1 = roadmap.levels.find(l => l.code === 'B1');
+        const b2 = roadmap.levels.find(l => l.code === 'B2');
 
-        expect(n5?.status).toBe('completed');
-        expect(n4?.status).toBe('completed');
-        expect(n3?.status).toBe('current');
-        expect(n2?.status).toBe('locked');
+        expect(a1?.status).toBe('completed');
+        expect(a2?.status).toBe('completed');
+        expect(b1?.status).toBe('current');
+        expect(b2?.status).toBe('locked');
     });
 
     it('5. should identify active lesson node on the roadmap', () => {
@@ -169,15 +169,15 @@ describe('RoadmapService Unit Tests', () => {
         expect(roadmap.overallProgressPercentage).toBeLessThanOrEqual(100);
     });
 
-    it('9. should ensure Japanese user receives only Japanese JLPT levels', () => {
+    it('9. should ensure roadmap contains only valid English CEFR levels', () => {
         const state = createBaseState({
-            primaryLanguage: 'ja',
-            enabledLanguages: ['ja', 'en']
+            primaryLanguage: 'en',
+            enabledLanguages: ['en']
         });
         const roadmap = RoadmapService.getLearningRoadmap(state);
 
         for (const lvl of roadmap.levels) {
-            expect(['N5', 'N4', 'N3', 'N2', 'N1']).toContain(lvl.code);
+            expect(['A1', 'A2', 'B1', 'B2', 'C1', 'C2']).toContain(lvl.code);
         }
     });
 
@@ -357,28 +357,28 @@ describe('RoadmapService Unit Tests', () => {
         expect(['current', 'available']).toContain(l1?.status);
     });
 
-    it('22. Japanese N5 prerequisite chain: l2 is locked until l1 is completed', () => {
+    it('22. English A1 prerequisite chain: l2 is locked until l1 is completed', () => {
         const state = createBaseState({
-            primaryLanguage: 'ja',
-            currentLevel: 'N5',
-            targetLevel: 'N3'
+            primaryLanguage: 'en',
+            currentLevel: 'A1',
+            targetLevel: 'B1'
         });
         const roadmap = RoadmapService.getLearningRoadmap(state);
-        const n5Level = roadmap.levels.find(l => l.code === 'N5');
-        const l2 = n5Level?.units[0].lessons.find(l => l.id === 'ja-n5-u1-l2');
+        const a1Level = roadmap.levels.find(l => l.code === 'A1');
+        const l2 = a1Level?.units[0].lessons.find(l => l.id === 'en-a1-u1-l2');
 
         expect(l2?.status).toBe('locked');
         expect(l2?.lockReason).toBeDefined();
 
         // Now complete l1
         localStorage.setItem(
-            'study_planner_lesson_progress_test_roadmap_user_ja-n5-u1-l1',
-            JSON.stringify({ lessonId: 'ja-n5-u1-l1', isCompleted: true })
+            'study_planner_lesson_progress_test_roadmap_user_en-a1-u1-l1',
+            JSON.stringify({ lessonId: 'en-a1-u1-l1', isCompleted: true })
         );
 
         const updatedRoadmap = RoadmapService.getLearningRoadmap(state);
-        const updatedN5 = updatedRoadmap.levels.find(l => l.code === 'N5');
-        const updatedL2 = updatedN5?.units[0].lessons.find(l => l.id === 'ja-n5-u1-l2');
+        const updatedA1 = updatedRoadmap.levels.find(l => l.code === 'A1');
+        const updatedL2 = updatedA1?.units[0].lessons.find(l => l.id === 'en-a1-u1-l2');
 
         expect(updatedL2?.status).toBe('available');
     });

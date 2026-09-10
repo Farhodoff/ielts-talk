@@ -15,26 +15,17 @@ describe('Phase 19 - E2E Closed-Loop Learning System & Language Isolation', () =
         localStorage.clear();
     });
 
-    it('1. Verifies 285 total production curriculum lessons loaded cleanly', () => {
-        expect(ALL_CURRICULUM_LESSONS.length).toBeGreaterThanOrEqual(275);
+    it('1. Verifies 140+ total production English curriculum lessons loaded cleanly', () => {
+        expect(ALL_CURRICULUM_LESSONS.length).toBeGreaterThanOrEqual(140);
         const enLessons = LessonService.getLessonsForLanguage('en');
-        const jaLessons = LessonService.getLessonsForLanguage('ja');
         expect(enLessons.length).toBeGreaterThanOrEqual(140);
-        expect(jaLessons.length).toBeGreaterThanOrEqual(135);
     });
 
-    it('2. Enforces strict English and Japanese language isolation across all levels', () => {
+    it('2. Enforces strict English curriculum and ID prefix isolation across all levels', () => {
         const enLessons = LessonService.getLessonsForLanguage('en');
-        const jaLessons = LessonService.getLessonsForLanguage('ja');
-
         for (const l of enLessons) {
             expect(l.language).toBe('en');
             expect(l.id).toMatch(/^en-/);
-        }
-
-        for (const l of jaLessons) {
-            expect(l.language).toBe('ja');
-            expect(l.id).toMatch(/^ja-/);
         }
     });
 
@@ -81,14 +72,14 @@ describe('Phase 19 - E2E Closed-Loop Learning System & Language Isolation', () =
         expect(c2Access.reason).toMatch(/requires level C2/i);
     });
 
-    it('6. Does not block JLPT level progression due to speaking skill', () => {
-        safeLocalStorage.setItem('study_planner_primary_language', 'ja');
-        safeLocalStorage.setItem('study_planner_target_level_ja', 'N5');
+    it('6. Does not block CEFR level progression due to speaking skill', () => {
+        safeLocalStorage.setItem('study_planner_primary_language', 'en');
+        safeLocalStorage.setItem('study_planner_target_level_en', 'B1');
 
-        const jaSkills = ['vocabulary', 'kanji', 'grammar', 'reading', 'listening'] as const;
-        for (const skill of jaSkills) {
+        const enSkills = ['vocabulary', 'grammar', 'reading', 'listening'] as const;
+        for (const skill of enSkills) {
             for (let i = 0; i < 5; i++) {
-                MasteryEngine.recordEvidence(userId, 'ja', {
+                MasteryEngine.recordEvidence(userId, 'en', {
                     id: `ev_${skill}_${i}`,
                     skill,
                     score: 90,
@@ -98,7 +89,7 @@ describe('Phase 19 - E2E Closed-Loop Learning System & Language Isolation', () =
             }
         }
 
-        const profile = WeaknessEngine.getUserMasteryProfile(userId, 'ja');
+        const profile = WeaknessEngine.getUserMasteryProfile(userId, 'en');
         expect(profile.skills.vocabulary.status).toBe('mastered');
         expect(profile.skills.speaking.status).toBe('not_started');
     });

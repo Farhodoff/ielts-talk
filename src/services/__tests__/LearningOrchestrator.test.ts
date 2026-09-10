@@ -26,28 +26,28 @@ describe('LearningOrchestrator Foundation Unit Tests', () => {
         expect(state.currentPosition?.courseId).toBeDefined();
     });
 
-    it('2. should resolve Japanese user learning state with JLPT levels', async () => {
-        localStorage.setItem('study_planner_primary_language', 'ja');
-        localStorage.setItem('study_planner_target_level', 'N3');
-        localStorage.setItem('study_planner_target_goal', 'JLPT N2 Pass');
+    it('2. should resolve English user learning state with CEFR/IELTS levels', async () => {
+        localStorage.setItem('study_planner_primary_language', 'en');
+        localStorage.setItem('study_planner_target_level_en', 'B2');
+        localStorage.setItem('study_planner_target_goal_en', 'IELTS 7.0 Pass');
 
-        const state = await LearningOrchestrator.getUserLearningState('test-user-ja');
+        const state = await LearningOrchestrator.getUserLearningState('test-user-en');
 
-        expect(state.primaryLanguage).toBe('ja');
-        expect(state.targetLevel).toBe('N3');
-        expect(state.targetGoal).toBe('JLPT N2 Pass');
-        expect(state.currentPosition?.lessonId).toContain('ja-');
+        expect(state.primaryLanguage).toBe('en');
+        expect(state.targetLevel).toBe('B2');
+        expect(state.targetGoal).toBe('IELTS 7.0 Pass');
+        expect(state.currentPosition?.lessonId).toContain('en-');
     });
 
-    it('3. should prioritize primary language even if secondary languages exist', async () => {
-        localStorage.setItem('study_planner_primary_language', 'ja');
-        localStorage.setItem('study_planner_enabled_languages', JSON.stringify(['ja', 'en']));
+    it('3. should prioritize primary English language', async () => {
+        localStorage.setItem('study_planner_primary_language', 'en');
+        localStorage.setItem('study_planner_enabled_languages', JSON.stringify(['en']));
 
         const state = await LearningOrchestrator.getUserLearningState('test-user-multi');
 
-        expect(state.primaryLanguage).toBe('ja');
-        expect(state.enabledLanguages).toEqual(['ja', 'en']);
-        expect(state.currentPosition?.lessonId).toContain('ja-');
+        expect(state.primaryLanguage).toBe('en');
+        expect(state.enabledLanguages).toEqual(['en']);
+        expect(state.currentPosition?.lessonId).toContain('en-');
     });
 
     it('4. should detect in-progress lesson position correctly', async () => {

@@ -9,7 +9,7 @@ const DeveloperApiPage = lazy(() => import('../pages/DeveloperApiPage'));
 const PricingPage = lazy(() =>
   import('../pages/PricingPage').then((m) => ({ default: m.PricingPage })),
 );
-const JlptHubPage = lazy(() => import('../pages/JlptHubPage'));
+const IeltsHubPage = lazy(() => import('../pages/IeltsHubPage'));
 const SpeakingCoachPage = lazy(() => import('../pages/SpeakingCoachPage'));
 
 /**
@@ -28,9 +28,11 @@ export const UnauthRouter: React.FC = () => (
       >
         <Routes>
           <Route path="/" element={<LandingPage />} />
-          <Route path="/twa" element={<Navigate to="/jlpt" replace />} />
+          <Route path="/twa" element={<Navigate to="/ielts" replace />} />
           <Route path="/pricing" element={<PricingPage />} />
-          <Route path="/jlpt" element={<JlptHubPage />} />
+          <Route path="/ielts" element={<IeltsHubPage />} />
+          <Route path="/jlpt/*" element={<Navigate to="/ielts" replace />} />
+          <Route path="/jlpt" element={<Navigate to="/ielts" replace />} />
           <Route path="/speaking" element={<SpeakingCoachPage />} />
           <Route path="/speaking-coach" element={<SpeakingCoachPage />} />
           <Route path="/auth" element={<AuthPage />} />

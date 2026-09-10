@@ -54,17 +54,28 @@ export const UzbekistanFlag: React.FC<FlagProps> = ({ className = 'w-4 h-3 round
 );
 
 /**
- * Clean SVG Vector Flag of Japan
+ * Clean SVG Vector Flag of United Kingdom (UK)
  */
-export const JapanFlag: React.FC<FlagProps> = ({ className = 'w-4 h-3 rounded-[2px]', size }) => (
+export const UKFlag: React.FC<FlagProps> = ({ className = 'w-4 h-3 rounded-[2px]', size }) => (
     <svg
-        viewBox="0 0 300 200"
-        width={size ? size * 1.5 : undefined}
+        viewBox="0 0 60 30"
+        width={size ? size * 2 : undefined}
         height={size || undefined}
-        className={`inline-block shrink-0 shadow-xs overflow-hidden border border-border/40 ${className}`}
+        className={`inline-block shrink-0 shadow-xs overflow-hidden ${className}`}
         aria-hidden="true"
     >
-        <rect width="300" height="200" fill="#FFFFFF" />
-        <circle cx="150" cy="100" r="60" fill="#BC002D" />
+        <clipPath id="uk-s">
+            <path d="M0,0 v30 h60 v-30 z"/>
+        </clipPath>
+        <clipPath id="uk-t">
+            <path d="M30,15 h30 v15 z v15 h-30 z h-30 v-15 z v-15 h30 z"/>
+        </clipPath>
+        <g clipPath="url(#uk-s)">
+            <path d="M0,0 v30 h60 v-30 z" fill="#012169"/>
+            <path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" strokeWidth="6"/>
+            <path d="M0,0 L60,30 M60,0 L0,30" clipPath="url(#uk-t)" stroke="#C8102E" strokeWidth="4"/>
+            <path d="M30,0 v30 M0,15 h60" stroke="#fff" strokeWidth="10"/>
+            <path d="M30,0 v30 M0,15 h60" stroke="#C8102E" strokeWidth="6"/>
+        </g>
     </svg>
 );

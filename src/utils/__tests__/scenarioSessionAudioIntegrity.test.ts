@@ -16,27 +16,26 @@ describe('Scenario Session Audio and Echo Suppression Integrity Tests', () => {
     }
   });
 
-  it('2. Detects acoustic echo loopback for Japanese scenario openings', () => {
-    const restaurantScenario = DEFAULT_SCENARIOS.find((s) => s.id === 'restaurant');
-    expect(restaurantScenario).toBeDefined();
-    const coachLine = restaurantScenario!.opening_line_ja!;
+  it('2. Detects acoustic echo loopback for English scenario openings', () => {
+    const visaScenario = DEFAULT_SCENARIOS.find((s) => s.id === 'us_visa_interview');
+    expect(visaScenario).toBeDefined();
+    const coachLine = visaScenario!.opening_line_en!;
 
     // Full loopback from speaker
     expect(isAcousticEcho(coachLine, coachLine)).toBe(true);
 
-    // Partial substring (at least 8 chars in Japanese) picked up by mic
-    const subChunk = coachLine.slice(0, 14);
+    // Partial substring picked up by mic
+    const subChunk = coachLine.slice(0, 20);
     expect(isAcousticEcho(subChunk, coachLine)).toBe(true);
   });
 
   it('3. Does NOT flag genuine user answers to scenario prompts as echo', () => {
-    const restaurantScenario = DEFAULT_SCENARIOS.find((s) => s.id === 'restaurant');
-    const coachLine = restaurantScenario!.opening_line_ja!;
+    const visaScenario = DEFAULT_SCENARIOS.find((s) => s.id === 'us_visa_interview');
+    const coachLine = visaScenario!.opening_line_en!;
 
-    // Real student responses to the restaurant prompt
-    expect(isAcousticEcho('2人です。テーブル席をお願いします。', coachLine)).toBe(false);
-    expect(isAcousticEcho('予約したファルホドと申します。', coachLine)).toBe(false);
-    expect(isAcousticEcho('禁煙席は空いていますか？', coachLine)).toBe(false);
+    // Real student responses to the visa interview prompt
+    expect(isAcousticEcho('I am traveling to attend an academic conference in New York.', coachLine)).toBe(false);
+    expect(isAcousticEcho('Here is my passport and financial documentation.', coachLine)).toBe(false);
   });
 
   it('4. Detects acoustic echo loopback for English scenario openings', () => {

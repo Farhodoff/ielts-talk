@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Volume2, BookOpen, CheckCircle2, Info, Lightbulb } from 'lucide-react';
 import { LearnContent, SupportedLanguage } from '../../types/lesson';
 import { speakText, speakJapaneseText } from '../../utils/audioTts';
-import { FuriganaText } from '../jlpt/FuriganaText';
+import { FuriganaText } from "../common/FuriganaText";
 
 interface LearnStepViewProps {
     content: LearnContent;

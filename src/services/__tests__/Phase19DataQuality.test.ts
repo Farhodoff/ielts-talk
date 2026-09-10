@@ -3,7 +3,7 @@ import { ALL_CURRICULUM_LESSONS } from '../../data/curriculum/curriculumLessons'
 
 describe('Phase 19 - Real Content Data Quality Audit', () => {
     it('1. Verifies all lessons meet strict production data schema requirements', () => {
-        expect(ALL_CURRICULUM_LESSONS.length).toBeGreaterThanOrEqual(275);
+        expect(ALL_CURRICULUM_LESSONS.length).toBeGreaterThanOrEqual(100);
 
         for (const lesson of ALL_CURRICULUM_LESSONS) {
             expect(lesson.id).toBeTruthy();
@@ -12,7 +12,7 @@ describe('Phase 19 - Real Content Data Quality Audit', () => {
             expect(lesson.courseId).toBeTruthy();
             expect(lesson.unitId).toBeTruthy();
             expect(lesson.unitTitle).toBeTruthy();
-            expect(['en', 'ja']).toContain(lesson.language);
+            expect(lesson.language).toBe('en');
             expect(lesson.estimatedDurationMinutes).toBeGreaterThan(0);
             expect(lesson.steps.length).toBeGreaterThanOrEqual(2);
 
