@@ -1,130 +1,37 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
-  <defs>
-    <!-- Background Gradient -->
-    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0F1422" />
-      <stop offset="50%" stop-color="#141B2D" />
-      <stop offset="100%" stop-color="#090D16" />
-    </linearGradient>
+  <!-- Rich Cobalt Indigo Background -->
+  <rect width="512" height="512" rx="112" fill="#1C2C78" />
 
-    <!-- Border Accent -->
-    <linearGradient id="borderGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#6366F1" stop-opacity="0.8" />
-      <stop offset="50%" stop-color="#EAB308" stop-opacity="0.4" />
-      <stop offset="100%" stop-color="#8B5CF6" stop-opacity="0.8" />
-    </linearGradient>
-
-    <!-- Neon Glow Gradient for Cap & Bubble -->
-    <linearGradient id="neonGlow" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#38BDF8" />
-      <stop offset="40%" stop-color="#6366F1" />
-      <stop offset="80%" stop-color="#A855F7" />
-      <stop offset="100%" stop-color="#EC4899" />
-    </linearGradient>
-
-    <!-- Tassel Gradient -->
-    <linearGradient id="tasselGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#FDE047" />
-      <stop offset="100%" stop-color="#CA8A04" />
-    </linearGradient>
-
-    <!-- Center Radial Glow -->
-    <radialGradient id="centerGlow" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#6366F1" stop-opacity="0.35" />
-      <stop offset="60%" stop-color="#8B5CF6" stop-opacity="0.15" />
-      <stop offset="100%" stop-color="#0F1422" stop-opacity="0" />
-    </radialGradient>
-
-    <!-- Drop Shadow Filter for Glow -->
-    <filter id="neonShadow" x="-20%" y="-20%" width="140%" height="140%">
-      <feDropShadow dx="0" dy="4" stdDeviation="10" flood-color="#6366F1" flood-opacity="0.75" />
-      <feDropShadow dx="0" dy="0" stdDeviation="4" flood-color="#38BDF8" flood-opacity="0.9" />
-    </filter>
-  </defs>
-
-  <!-- Outer Rounded Squircle Frame -->
-  <rect x="20" y="20" width="472" height="472" rx="112" fill="url(#bgGrad)" stroke="url(#borderGrad)" stroke-width="12" />
-
-  <!-- Center Ambient Glow -->
-  <circle cx="256" cy="256" r="160" fill="url(#centerGlow)" />
-
-  <!-- Main Symbol Group with Glow Filter -->
-  <g filter="url(#neonShadow)">
-    <!-- Graduation Cap Top (Diamond / Rhombus) -->
-    <path 
-      d="M256 120 L400 188 L256 256 L112 188 Z" 
-      fill="none" 
-      stroke="url(#neonGlow)" 
-      stroke-width="16" 
-      stroke-linejoin="round" 
-    />
-    <path 
-      d="M256 124 L392 188 L256 252 L120 188 Z" 
-      fill="url(#neonGlow)" 
-      fill-opacity="0.18" 
+  <!-- Minimalist Academic Speech Emblem -->
+  <g fill="none" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Circular Speech Bubble Body -->
+    <!-- Center (256, 320), Radius ~96 -->
+    <!-- Arc from under cap around to tail -->
+    <path
+      d="M172 245 C 130 280, 130 355, 175 395 C 220 435, 292 435, 332 395 L 372 425 L 360 375 C 385 348, 388 305, 368 272"
+      stroke-width="32"
     />
 
-    <!-- Cap Skull Arc / Base -->
-    <path 
-      d="M172 216 V276 C172 312, 340 312, 340 276 V216" 
-      fill="none" 
-      stroke="url(#neonGlow)" 
-      stroke-width="14" 
-      stroke-linecap="round" 
+    <!-- Graduation Mortarboard Top (Rhombus) -->
+    <polygon
+      points="256,92 428,168 256,244 84,168"
+      stroke-width="32"
+      fill="#1C2C78"
     />
 
-    <!-- Cap Tassel Hanging on Left -->
-    <path 
-      d="M256 188 L142 226 V288" 
-      fill="none" 
-      stroke="url(#tasselGrad)" 
-      stroke-width="6" 
-      stroke-linecap="round" 
-    />
-    <circle cx="142" cy="296" r="8" fill="url(#tasselGrad)" />
-
-    <!-- Speech Dialogue Loop / Soundwave Base -->
-    <path 
-      d="M170 330 C150 370, 200 420, 270 420 C320 420, 360 385, 360 345 C360 320, 345 300, 320 288" 
-      fill="none" 
-      stroke="url(#neonGlow)" 
-      stroke-width="16" 
-      stroke-linecap="round" 
-    />
-    <!-- Speech Tail -->
-    <path 
-      d="M346 396 L376 434 L324 414" 
-      fill="url(#neonGlow)" 
-      stroke="url(#neonGlow)" 
-      stroke-width="6" 
-      stroke-linejoin="round" 
-      stroke-linecap="round" 
+    <!-- Under-Cap Band -->
+    <path
+      d="M170 206 V240 C170 274, 342 274, 342 240 V206"
+      stroke-width="26"
     />
 
-    <!-- Voice Sound Waves (Right Side Inside Speech Area) -->
-    <!-- Wave 1 (Small) -->
-    <path 
-      d="M272 324 C282 334, 282 350, 272 360" 
-      fill="none" 
-      stroke="#38BDF8" 
-      stroke-width="12" 
-      stroke-linecap="round" 
-    />
-    <!-- Wave 2 (Medium) -->
-    <path 
-      d="M298 312 C316 328, 316 356, 298 372" 
-      fill="none" 
-      stroke="#818CF8" 
-      stroke-width="12" 
-      stroke-linecap="round" 
-    />
-    <!-- Wave 3 (Large) -->
-    <path 
-      d="M324 300 C350 322, 350 362, 324 384" 
-      fill="none" 
-      stroke="#C084FC" 
-      stroke-width="12" 
-      stroke-linecap="round" 
+    <!-- Tassel Cord and Drop (Golden Amber Accent) -->
+    <path
+      d="M400 180 V245"
+      stroke="#F59E0B"
+      stroke-width="14"
     />
   </g>
+  <!-- Tassel Finial & Bell -->
+  <circle cx="400" cy="254" r="10" fill="#F59E0B" />
 </svg>
