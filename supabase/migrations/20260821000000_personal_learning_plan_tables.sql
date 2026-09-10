@@ -43,7 +43,6 @@ CREATE POLICY delete_own_goals ON public.personal_learning_goals
 
 -- Indexes for personal_learning_goals
 CREATE INDEX IF NOT EXISTS idx_goals_user_id ON public.personal_learning_goals(user_id);
-CREATE INDEX IF NOT EXISTS idx_goals_user_status ON public.personal_learning_goals(user_id, status);
 
 
 -- 2. Create weekly_learning_plans table

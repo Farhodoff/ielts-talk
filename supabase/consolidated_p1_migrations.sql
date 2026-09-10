@@ -85,8 +85,15 @@ DROP POLICY IF EXISTS delete_own_goals ON public.personal_learning_goals;
 CREATE POLICY delete_own_goals ON public.personal_learning_goals
     FOR DELETE TO authenticated USING (auth.uid() = user_id);
 
+-- In case table already existed from earlier schema without new columns:
+ALTER TABLE IF EXISTS public.personal_learning_goals
+    ADD COLUMN IF NOT EXISTS deadline TIMESTAMPTZ,
+    ADD COLUMN IF NOT EXISTS daily_minutes INTEGER DEFAULT 45,
+    ADD COLUMN IF NOT EXISTS total_weeks INTEGER DEFAULT 12,
+    ADD COLUMN IF NOT EXISTS current_week INTEGER DEFAULT 1,
+    ADD COLUMN IF NOT EXISTS status TEXT DEFAULT 'active';
+
 CREATE INDEX IF NOT EXISTS idx_goals_user_id ON public.personal_learning_goals(user_id);
-CREATE INDEX IF NOT EXISTS idx_goals_user_status ON public.personal_learning_goals(user_id, status);
 
 -- Weekly Plans
 CREATE TABLE IF NOT EXISTS public.weekly_learning_plans (
