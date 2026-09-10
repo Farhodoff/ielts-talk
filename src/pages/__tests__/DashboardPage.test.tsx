@@ -102,6 +102,7 @@ describe('Phase 8.8 — Dashboard Page Render & UX Hardening Tests', () => {
         vi.clearAllMocks();
         localStorage.clear();
         mockUseStudyData.primaryLanguage = 'en';
+        mockUseStudyData.targetLevel = 'B2';
         mockUseStudyData.loading = false;
         vi.spyOn(LearningPathEngine, 'getLearningPathState').mockResolvedValue(mockEngineState as any);
     });
