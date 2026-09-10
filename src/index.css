@@ -4,37 +4,37 @@
 
 @layer base {
   :root {
-    /* IELTS Academic Light theme — Crisp Slate & Royal Oxford Blue */
-    --background: 210 40% 98%; /* #F8FAFC */
-    --foreground: 222 47% 11%; /* #0F172A */
+    /* Single product theme — midnight surfaces with one royal-blue accent. */
+    --background: 222 47% 7%;
+    --foreground: 210 40% 98%;
 
-    --card: 0 0% 100%; /* #FFFFFF */
-    --card-foreground: 222 47% 11%;
+    --card: 222 47% 11%;
+    --card-foreground: 210 40% 98%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222 47% 11%;
+    --popover: 222 47% 11%;
+    --popover-foreground: 210 40% 98%;
 
-    --primary: 221 83% 53%; /* #1D4ED8 / #2563EB Royal Academic Blue */
+    --primary: 217 91% 60%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 214 32% 91%; /* #E2E8F0 */
-    --secondary-foreground: 222 47% 11%;
+    --secondary: 217 33% 17%;
+    --secondary-foreground: 210 40% 98%;
 
-    --muted: 210 40% 96%; /* #F1F5F9 */
-    --muted-foreground: 215 16% 47%; /* #64748B */
+    --muted: 217 33% 15%;
+    --muted-foreground: 215 20% 65%;
 
-    --accent: 348 83% 47%; /* #DC2626 Cambridge Crimson Red */
+    --accent: 217 91% 60%;
     --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 84% 60%; /* #F87171 */
+    --destructive: 217 91% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 214 32% 91%; /* #E2E8F0 */
-    --input: 214 32% 91%;
-    --ring: 221 83% 53%;
+    --border: 217 33% 18%;
+    --input: 217 33% 18%;
+    --ring: 217 91% 60%;
 
-    --gold: 38 92% 50%; /* #F59E0B IELTS Band Gold */
-    --gold-foreground: 222 47% 11%;
+    --gold: 217 91% 60%;
+    --gold-foreground: 222 47% 7%;
 
     --radius: 0.875rem;
   }

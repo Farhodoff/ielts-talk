@@ -23,12 +23,10 @@
           window.Telegram.WebApp.ready();
           window.Telegram.WebApp.expand();
         }
-        const theme = localStorage.getItem('study_planner_theme');
-        if (theme === 'light') {
-          document.documentElement.classList.remove('dark');
-        } else {
-          document.documentElement.classList.add('dark');
-        }
+        // IELTS Talk uses one consistent dark interface.  Ignore legacy
+        // preferences so a previous light-theme value cannot flash on load.
+        localStorage.setItem('study_planner_theme', 'dark');
+        document.documentElement.classList.add('dark');
         const lang = localStorage.getItem('study_planner_lang');
         const urlLang = new URLSearchParams(window.location.search).get('lang');
         if (urlLang === 'uz' || urlLang === 'en') {

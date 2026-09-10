@@ -896,7 +896,8 @@ export const StudyPlannerProvider: React.FC<{ children: React.ReactNode }> = ({ 
     setAppSettings((prev) => {
       const newState = {
         ...prev,
-        theme: updates.theme !== undefined ? updates.theme : prev.theme,
+        // The interface has a single supported theme: dark.
+        theme: 'dark' as const,
         notificationsEnabled:
           updates.notificationsEnabled !== undefined
             ? updates.notificationsEnabled

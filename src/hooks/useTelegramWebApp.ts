@@ -37,24 +37,17 @@ export function useTelegramWebApp(): UseTelegramWebAppReturn {
         console.warn('Telegram WebApp expand/ready warning:', err);
       }
 
-      // Sync color scheme
+      // Keep the product's single dark theme while still exposing Telegram's
+      // scheme to callers that need it for platform-specific behavior.
       const scheme = tg.colorScheme === 'light' ? 'light' : 'dark';
       setColorScheme(scheme);
-      if (scheme === 'light') {
-        document.documentElement.classList.remove('dark');
-      } else {
-        document.documentElement.classList.add('dark');
-      }
+      document.documentElement.classList.add('dark');
 
       // Listen to theme change
       const handleThemeChange = () => {
         if (tg.colorScheme) {
           setColorScheme(tg.colorScheme);
-          if (tg.colorScheme === 'light') {
-            document.documentElement.classList.remove('dark');
-          } else {
-            document.documentElement.classList.add('dark');
-          }
+          document.documentElement.classList.add('dark');
         }
       };
 

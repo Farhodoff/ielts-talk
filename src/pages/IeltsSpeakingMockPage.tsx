@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { ArrowLeft, Mic, MicOff, Award, Clock, Sparkles, AlertCircle, ChevronRight, RefreshCw, Volume2, Dices } from 'lucide-react';
+import { ArrowLeft, Mic, MicOff, Award, Clock, Sparkles, AlertCircle, ChevronRight, RefreshCw, Volume2, Dices, List, Search, X, BookOpen } from 'lucide-react';
 import { Button } from '../components/ui/Button';
 import { evaluateIeltsSpeakingFullMock, SpeakingMockReport } from '../utils/ai';
 import { speakText } from '../utils/audioTts';
@@ -22,6 +22,9 @@ export const IeltsSpeakingMockPage: React.FC = () => {
         const randomIndex = Math.floor(Math.random() * CAMBRIDGE_IELTS_TOPICS.length);
         return CAMBRIDGE_IELTS_TOPICS[randomIndex];
     });
+    const [isTopicModalOpen, setIsTopicModalOpen] = useState(false);
+    const [topicSearchQuery, setTopicSearchQuery] = useState('');
+    const [selectedCategoryFilter, setSelectedCategoryFilter] = useState('All');
 
     // Steps: 'intro' -> 'part1' -> 'part2_prep' -> 'part2_speech' -> 'part3' -> 'evaluating' -> 'report'
     const [step, setStep] = useState<'intro' | 'part1' | 'part2_prep' | 'part2_speech' | 'part3' | 'evaluating' | 'report'>('intro');
@@ -39,10 +42,20 @@ export const IeltsSpeakingMockPage: React.FC = () => {
     const PART3_QUESTIONS = selectedTopic.part3;
     const [part3Index, setPart3Index] = useState(0);
 
+    const handleSelectTopic = (topic: IeltsSpeakingTopic) => {
+        setSelectedTopic(topic);
+        setPart1Index(0);
+        setPart3Index(0);
+        setPrepSeconds(60);
+        setSpeechSeconds(120);
+        setCurrentAnswerText('');
+        setIsTopicModalOpen(false);
+    };
+
     const handleRandomizeTopic = () => {
         const otherTopics = CAMBRIDGE_IELTS_TOPICS.filter(t => t.id !== selectedTopic.id);
         const random = otherTopics[Math.floor(Math.random() * otherTopics.length)] || CAMBRIDGE_IELTS_TOPICS[0];
-        setSelectedTopic(random);
+        handleSelectTopic(random);
     };
 
     // State for Recording & Answers
@@ -234,6 +247,16 @@ export const IeltsSpeakingMockPage: React.FC = () => {
         }
     };
 
+    const allCategories = ['All', ...Array.from(new Set(CAMBRIDGE_IELTS_TOPICS.map((t) => t.category)))];
+
+    const filteredTopics = CAMBRIDGE_IELTS_TOPICS.filter((t) => {
+        const matchesCategory = selectedCategoryFilter === 'All' || t.category === selectedCategoryFilter;
+        const matchesSearch =
+            t.part2.title.toLowerCase().includes(topicSearchQuery.toLowerCase()) ||
+            t.category.toLowerCase().includes(topicSearchQuery.toLowerCase());
+        return matchesCategory && matchesSearch;
+    });
+
     return (
         <div className="max-w-5xl mx-auto p-4 md:p-8 space-y-6">
             {/* Header Navigation */}
@@ -246,7 +269,7 @@ export const IeltsSpeakingMockPage: React.FC = () => {
                 </button>
                 <div className="flex items-center gap-2">
                     <span className="px-3 py-1 bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 font-extrabold text-xs rounded-full border border-indigo-500/20">
-                        🎙️ Official 3-Part Speaking Simulator
+                        🎙️ Official 3-Part Speaking Simulator ({CAMBRIDGE_IELTS_TOPICS.length} bilet)
                     </span>
                 </div>
             </div>
@@ -264,29 +287,61 @@ export const IeltsSpeakingMockPage: React.FC = () => {
                         </p>
                     </div>
 
-                    {/* Active Cambridge Exam Card */}
-                    <div className="bg-gradient-to-r from-indigo-500/10 via-purple-500/10 to-pink-500/10 border border-indigo-500/20 p-4 rounded-2xl text-left flex items-center justify-between gap-3">
-                        <div>
-                            <span className="text-[10px] font-extrabold uppercase text-indigo-600 dark:text-indigo-400 tracking-wider">
-                                {selectedTopic.category} (Cambridge IELTS Test)
-                            </span>
-                            <h4 className="text-sm font-extrabold text-foreground mt-0.5">
-                                Cue Card: "{selectedTopic.part2.title}"
-                            </h4>
+                    {/* Active Cambridge & Makkar Exam Card */}
+                    <div className="bg-gradient-to-r from-indigo-500/10 via-purple-500/10 to-pink-500/10 border border-indigo-500/20 p-5 rounded-3xl text-left space-y-3">
+                        <div className="flex items-start justify-between gap-3">
+                            <div>
+                                <span className="text-[10px] font-extrabold uppercase text-indigo-600 dark:text-indigo-400 tracking-wider bg-indigo-500/10 px-2.5 py-1 rounded-full border border-indigo-500/20">
+                                    {selectedTopic.category}
+                                </span>
+                                <h4 className="text-sm md:text-base font-extrabold text-foreground mt-2">
+                                    Cue Card: "{selectedTopic.part2.title}"
+                                </h4>
+                            </div>
+                            <div className="flex items-center gap-1.5 shrink-0">
+                                <button
+                                    onClick={() => setIsTopicModalOpen(true)}
+                                    className="px-3 py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl text-xs font-bold flex items-center gap-1.5 transition-all shadow-md active:scale-95"
+                                    title="Mavzular ro'yxatidan tanlash"
+                                >
+                                    <List size={14} /> Biletlar ({CAMBRIDGE_IELTS_TOPICS.length})
+                                </button>
+                                <button
+                                    onClick={handleRandomizeTopic}
+                                    className="px-3 py-2 bg-background border border-border rounded-xl text-xs font-bold text-muted-foreground hover:text-foreground hover:bg-muted flex items-center gap-1.5 transition-all active:scale-95"
+                                    title="Boshqa imtihon bileti"
+                                >
+                                    <Dices size={14} className="text-indigo-500" /> 🎲
+                                </button>
+                            </div>
                         </div>
-                        <button
-                            onClick={handleRandomizeTopic}
-                            className="px-3 py-2 bg-background border border-border rounded-xl text-xs font-bold text-muted-foreground hover:text-foreground hover:bg-muted flex items-center gap-1.5 shrink-0 transition-all active:scale-95"
-                            title="Boshqa imtihon bileti"
-                        >
-                            <Dices size={15} className="text-indigo-500" /> Boshqa Bilet 🎲
-                        </button>
+
+                        {/* Band 7.5+ Vocabulary Preview */}
+                        {selectedTopic.vocabulary && selectedTopic.vocabulary.length > 0 && (
+                            <div className="pt-2 border-t border-indigo-500/10">
+                                <span className="text-[11px] font-bold text-muted-foreground mb-1.5 flex items-center gap-1">
+                                    <Sparkles size={12} className="text-amber-500" /> Ushbu mavzu uchun Band 7.5+ iboralar:
+                                </span>
+                                <div className="flex flex-wrap gap-1.5">
+                                    {selectedTopic.vocabulary.map((v, idx) => (
+                                        <span
+                                            key={idx}
+                                            className="px-2.5 py-1 bg-background/80 border border-indigo-500/20 rounded-lg text-xs font-medium text-foreground"
+                                            title={v.example}
+                                        >
+                                            <strong className="text-indigo-600 dark:text-indigo-400">{v.term}</strong>
+                                            <span className="text-muted-foreground text-[11px] ml-1.5">({v.meaningUz})</span>
+                                        </span>
+                                    ))}
+                                </div>
+                            </div>
+                        )}
                     </div>
 
                     <div className="grid grid-cols-3 gap-3 text-left">
                         <div className="p-3 bg-muted/40 rounded-2xl border border-border/50">
                             <span className="text-xs font-bold text-primary block">Part 1</span>
-                            <span className="text-xs text-muted-foreground">4 ta umumiy savol</span>
+                            <span className="text-xs text-muted-foreground">{PART1_QUESTIONS.length} ta savol</span>
                         </div>
                         <div className="p-3 bg-muted/40 rounded-2xl border border-border/50">
                             <span className="text-xs font-bold text-indigo-500 block">Part 2</span>
@@ -294,7 +349,7 @@ export const IeltsSpeakingMockPage: React.FC = () => {
                         </div>
                         <div className="p-3 bg-muted/40 rounded-2xl border border-border/50">
                             <span className="text-xs font-bold text-purple-500 block">Part 3</span>
-                            <span className="text-xs text-muted-foreground">3 ta mantiqiy savol</span>
+                            <span className="text-xs text-muted-foreground">{PART3_QUESTIONS.length} ta tahlil savoli</span>
                         </div>
                     </div>
 
@@ -546,6 +601,103 @@ export const IeltsSpeakingMockPage: React.FC = () => {
                     <Button onClick={() => setStep('intro')} className="w-full py-4 font-bold rounded-2xl">
                         <RefreshCw className="mr-2" size={18} /> Qayta Test Topshirish
                     </Button>
+                </div>
+            )}
+
+            {/* TOPIC PICKER MODAL */}
+            {isTopicModalOpen && (
+                <div className="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm flex items-center justify-center p-4">
+                    <div className="bg-card border border-border rounded-3xl w-full max-w-2xl max-h-[85vh] flex flex-col shadow-2xl overflow-hidden animate-in fade-in zoom-in-95 duration-200">
+                        {/* Modal Header */}
+                        <div className="p-5 border-b border-border flex items-center justify-between">
+                            <div className="flex items-center gap-2.5">
+                                <div className="p-2.5 rounded-xl bg-indigo-500/10 text-indigo-600 dark:text-indigo-400">
+                                    <BookOpen size={20} />
+                                </div>
+                                <div>
+                                    <h3 className="font-extrabold text-foreground text-lg">IELTS Speaking Biletlari (2026)</h3>
+                                    <p className="text-xs text-muted-foreground">O'zingiz mashq qilmoqchi bo'lgan mavzuni tanlang ({CAMBRIDGE_IELTS_TOPICS.length} ta mavzu)</p>
+                                </div>
+                            </div>
+                            <button
+                                onClick={() => setIsTopicModalOpen(false)}
+                                className="p-2 rounded-xl hover:bg-muted text-muted-foreground hover:text-foreground transition-all"
+                            >
+                                <X size={20} />
+                            </button>
+                        </div>
+
+                        {/* Search Bar */}
+                        <div className="p-4 border-b border-border bg-muted/20">
+                            <div className="relative">
+                                <Search size={16} className="absolute left-3.5 top-1/2 -translate-y-1/2 text-muted-foreground" />
+                                <input
+                                    type="text"
+                                    value={topicSearchQuery}
+                                    onChange={(e) => setTopicSearchQuery(e.target.value)}
+                                    placeholder="Mavzu nomi yoki kalit so'z bo'yicha qidiring..."
+                                    className="w-full pl-10 pr-4 py-2.5 bg-background border border-border rounded-xl text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                                    autoFocus
+                                />
+                            </div>
+
+                            {/* Category Filter Chips */}
+                            <div className="flex gap-1.5 overflow-x-auto pb-1 scrollbar-none">
+                                {allCategories.map((cat) => (
+                                    <button
+                                        key={cat}
+                                        onClick={() => setSelectedCategoryFilter(cat)}
+                                        className={`px-3 py-1 rounded-full text-xs font-bold whitespace-nowrap transition-all ${
+                                            selectedCategoryFilter === cat
+                                                ? 'bg-indigo-600 text-white shadow-sm'
+                                                : 'bg-background border border-border text-muted-foreground hover:text-foreground'
+                                        }`}
+                                    >
+                                        {cat}
+                                    </button>
+                                ))}
+                            </div>
+                        </div>
+
+                        {/* Topics List */}
+                        <div className="p-4 overflow-y-auto space-y-2.5 flex-1">
+                            {filteredTopics.map((topic, idx) => (
+                                <button
+                                    key={topic.id}
+                                    onClick={() => handleSelectTopic(topic)}
+                                    className={`w-full p-4 rounded-2xl border text-left transition-all flex items-center justify-between gap-3 group ${
+                                        selectedTopic.id === topic.id
+                                            ? 'bg-indigo-500/10 border-indigo-500/40 ring-1 ring-indigo-500'
+                                            : 'bg-card border-border hover:bg-muted/50 hover:border-indigo-500/30'
+                                    }`}
+                                >
+                                    <div className="space-y-1.5 min-w-0 flex-1">
+                                        <div className="flex items-center gap-2">
+                                            <span className="text-[10px] font-extrabold uppercase text-indigo-600 dark:text-indigo-400 bg-indigo-500/10 px-2 py-0.5 rounded-md border border-indigo-500/20">
+                                                {topic.category}
+                                            </span>
+                                            <span className="text-[10px] font-bold text-muted-foreground">
+                                                #{idx + 1}
+                                            </span>
+                                        </div>
+                                        <h4 className="text-sm font-extrabold text-foreground group-hover:text-indigo-500 transition-colors">
+                                            "{topic.part2.title}"
+                                        </h4>
+                                        <p className="text-xs text-muted-foreground truncate">
+                                            {topic.part2.bullets.slice(0, 2).join(' • ')}
+                                        </p>
+                                    </div>
+                                    <ChevronRight size={18} className="text-muted-foreground group-hover:text-indigo-500 group-hover:translate-x-0.5 transition-all shrink-0" />
+                                </button>
+                            ))}
+                            {filteredTopics.length === 0 && (
+                                <div className="text-center py-12 text-muted-foreground">
+                                    <p className="text-sm font-bold">Mos keluvchi mavzu topilmadi.</p>
+                                    <p className="text-xs mt-1">Boshqa kalit so'z bilan qidirib ko'ring.</p>
+                                </div>
+                            )}
+                        </div>
+                    </div>
                 </div>
             )}
         </div>
