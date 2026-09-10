@@ -168,36 +168,46 @@ export const evaluateIeltsEssay = async (
     const wordCount = essayText.trim().split(/\s+/).filter(Boolean).length;
 
     const prompt = `
-      Act as an official Senior IELTS Writing Examiner (BC/IDP certified).
-      Evaluate the following IELTS Writing ${taskType === 'task1' ? 'Task 1' : 'Task 2'} essay strictly against the official 4 criteria:
-      1. Task ${taskType === 'task1' ? 'Achievement' : 'Response'} (TR)
-      2. Coherence and Cohesion (CC)
-      3. Lexical Resource (LR)
-      4. Grammatical Range and Accuracy (GRA)
+      Act as an official Cambridge / IDP Senior IELTS Writing Examiner.
+      Evaluate the following IELTS Writing ${taskType === 'task1' ? 'Task 1' : 'Task 2'} submission strictly against the official public band descriptors:
+      1. Task ${taskType === 'task1' ? 'Achievement (TA)' : 'Response (TR)'}:
+         ${taskType === 'task1' 
+           ? '- Did candidate include an explicit OVERVIEW highlighting main trends/differences?\n         - Are key features appropriately selected and compared without speculation or outside opinion?' 
+           : '- Is there a clear, consistent thesis statement from introduction to conclusion?\n         - Are all parts of the prompt fully addressed with well-supported arguments and relevant examples?'}
+      2. Coherence and Cohesion (CC):
+         - Paragraphing logic, clear central topic in each body paragraph, accurate and diverse cohesive devices (avoiding mechanical overuse).
+      3. Lexical Resource (LR):
+         - Natural collocations, precise academic register, avoidance of repetitive vocabulary, accurate word formation and spelling.
+      4. Grammatical Range and Accuracy (GRA):
+         - Variety of complex sentences (conditionals, passive structures, relative clauses, inversion), error-free sentence ratio, punctuation accuracy.
 
-      PROMPT / ESSAY QUESTION:
+      Word Count Penalty Check:
+      - Submitted: ${wordCount} words. Standard requirement: ${taskType === 'task1' ? 'at least 150 words' : 'at least 250 words'}.
+      - If under the threshold, deduct Task Response accordingly.
+
+      PROMPT / QUESTION:
       "${promptQuestion}"
 
-      STUDENT'S ESSAY TEXT (Word count: ${wordCount}):
+      CANDIDATE ESSAY:
       """
       ${essayText}
       """
 
-      Provide a comprehensive JSON evaluation report. All explanations, feedbacks, strengths, and tips MUST be written in Uzbek (O'zbek tilida).
-      The Band scores must be numbers (e.g. 5.5, 6.0, 6.5, 7.0, 7.5, 8.0).
-      Calculate overallBand as average of the 4 scores rounded to nearest half band.
+      Provide a comprehensive, authoritative evaluation report. All explanations, feedbacks, strengths, and tips MUST be written in Uzbek (O'zbek tilida).
+      Scores must be realistic IELTS bands (e.g. 5.0, 5.5, 6.0, 6.5, 7.0, 7.5, 8.0).
+      Calculate overallBand as the exact average of the 4 criteria rounded to the nearest half band.
 
-      JSON Output Schema (Return ONLY valid JSON without markdown formatting):
+      JSON Output Schema (Return ONLY valid JSON):
       {
         "overallBand": 6.5,
         "taskResponseScore": 6.5,
         "coherenceScore": 6.0,
         "lexicalResourceScore": 7.0,
         "grammarScore": 6.0,
-        "taskResponseFeedback": "Tushuntirish Uzbek tilida",
-        "coherenceFeedback": "Tushuntirish Uzbek tilida",
-        "lexicalResourceFeedback": "Tushuntirish Uzbek tilida",
-        "grammarFeedback": "Tushuntirish Uzbek tilida",
+        "taskResponseFeedback": "TA/TR tahlili o'zbek tilida",
+        "coherenceFeedback": "CC tahlili o'zbek tilida",
+        "lexicalResourceFeedback": "LR tahlili o'zbek tilida",
+        "grammarFeedback": "GRA tahlili o'zbek tilida",
         "wordCount": ${wordCount},
         "strengths": ["Kuchli jihati 1", "Kuchli jihati 2"],
         "weaknesses": ["Kuchsiz jihati 1", "Kuchsiz jihati 2"],
@@ -215,8 +225,8 @@ export const evaluateIeltsEssay = async (
             "context": "Qanday gapda ishlatish (Uzbekcha)"
           }
         ],
-        "modelAnswerBand8": "Ushbu inshoning Band 8.0/9.0 darajasidagi ideal, qayta mukammal yozilgan to'liq varianti (ingliz tilida)",
-        "improvementTips": ["Tavsiya 1", "Tavsiya 2"]
+        "modelAnswerBand8": "Ushbu mavzu bo'yicha Band 8.5/9.0 darajasidagi ideal, mukammal yozilgan to'liq namuna (ingliz tilida)",
+        "improvementTips": ["Band 7.5+ ga chiqish uchun 1-tavsiya", "2-tavsiya"]
       }
     `;
 

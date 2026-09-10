@@ -85,4 +85,36 @@ export const PRESET_DECKS: PresetDeck[] = [
       return data.default as PresetCard[];
     },
   },
+  {
+    id: 'deck_phonetics_foundation',
+    title: '🔤 Phonetics & Pronunciation Essentials',
+    description:
+      "Ingliz tilini noldan boshlovchilar uchun 44 ta fonetik tovush, o'qilmaydigan harflar (silent letters) va urg'u qoidalari.",
+    language: 'en',
+    level: 'A1-A2',
+    badgeColor: 'bg-teal-500/10 text-teal-600 border-teal-500/20',
+    icon: '🔤',
+    cardCount: 10,
+    isPremiumOnly: false,
+    loadCards: async () => {
+      const data = await import('./decks/phonetics_foundation.json');
+      return data.default as PresetCard[];
+    },
+  },
+  {
+    id: 'deck_makkar_2026_collocations',
+    title: '🔥 Makkar 2026 Band 7.5+ Golden Collocations',
+    description:
+      "2026-yil may-avgust IELTS imtihon bashorati bo'yicha Speaking va Writing uchun eng yuqori ball beruvchi oltin iboralar va kollokatsiyalar.",
+    language: 'en',
+    level: 'IELTS Collocations',
+    badgeColor: 'bg-rose-500/10 text-rose-600 border-rose-500/20',
+    icon: '🔥',
+    cardCount: 30,
+    isPremiumOnly: false,
+    loadCards: async () => {
+      const data = await import('./decks/makkar_2026_collocations.json');
+      return data.default as PresetCard[];
+    },
+  },
 ];

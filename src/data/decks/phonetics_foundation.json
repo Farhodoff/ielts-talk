@@ -1,0 +1,72 @@
+[
+  {
+    "front": "TH sound /θ/ (Voiceless)",
+    "phonetic": "/θ/ as in think, thank, path",
+    "back": "Jangsiz TH tovushi: til tishlar orasiga qo'yilib, faqat havo chiqariladi (o'zbekcha 's' emas).",
+    "example": "Think /θɪŋk/ — Thank you for your thoughtful answer.",
+    "category": "Phonetics"
+  },
+  {
+    "front": "TH sound /ð/ (Voiced)",
+    "phonetic": "/ð/ as in this, that, mother",
+    "back": "Jangdor TH tovushi: til tishlar orasiga qo'yilib, ovoz tebranishi hosil qilinadi ('z' emas).",
+    "example": "This /ðɪs/ — That is their mother and father.",
+    "category": "Phonetics"
+  },
+  {
+    "front": "W vs V distinction",
+    "phonetic": "/w/ vs /v/",
+    "back": "/w/ da lablar dumaloq trubka qilinadi (wet). /v/ da esa yuqori tishlar pastki labga tegadi (vet).",
+    "example": "West /west/ vs Vest /vest/ — Beware of confusing them in speaking.",
+    "category": "Phonetics"
+  },
+  {
+    "front": "Short /ɪ/ vs Long /iː/",
+    "phonetic": "/ɪ/ vs /iː/",
+    "back": "Qisqa /ɪ/ (ship) va cho'ziq /iː/ (sheep). Bu so'z ma'nosini butunlay o'zgartiradi!",
+    "example": "Live /lɪv/ (yashamoq) vs Leave /liːv/ (tark etmoq).",
+    "category": "Phonetics"
+  },
+  {
+    "front": "The Schwa sound /ə/",
+    "phonetic": "/ə/ (about, teacher, banana)",
+    "back": "Ingliz tilidagi eng ko'p uchraydigan urg'usiz neytral tovush: bo'shashgan qisqa 'e/a'.",
+    "example": "Teacher /ˈtiː.tʃər/, About /əˈbaʊt/, Problem /ˈprɒb.ləm/.",
+    "category": "Phonetics"
+  },
+  {
+    "front": "Silent 'K' rule (kn-)",
+    "phonetic": "kn- -> /n/",
+    "back": "So'z boshida K va N yonma-yon kelsa, K harfi o'qilmaydi!",
+    "example": "Know /nəʊ/, Knife /naɪf/, Knee /niː/, Knight /naɪt/.",
+    "category": "Phonetics"
+  },
+  {
+    "front": "Silent 'W' rule (wr-)",
+    "phonetic": "wr- -> /r/",
+    "back": "So'z boshida W va R yonma-yon kelsa, W harfi o'qilmaydi!",
+    "example": "Write /raɪt/, Wrong /rɒŋ/, Wrist /rɪst/, Wrap /ræp/.",
+    "category": "Phonetics"
+  },
+  {
+    "front": "Silent 'B' rule (-mb)",
+    "phonetic": "-mb -> /m/",
+    "back": "M harfidan so'ng so'z oxirida kelgan B harfi o'qilmaydi!",
+    "example": "Climb /klaɪm/, Comb /kəʊm/, Bomb /bɒm/, Thumb /θʌm/.",
+    "category": "Phonetics"
+  },
+  {
+    "front": "-ED ending pronunciations",
+    "phonetic": "/t/, /d/, /ɪd/",
+    "back": "-ed qo'shimchasi: T/D dan keyin /ɪd/ (wanted); jangsizdan keyin /t/ (walked); jangdordan keyin /d/ (played).",
+    "example": "Wanted /ˈwɒn.tɪd/, Watched /wɒtʃt/, Cleaned /kliːnd/.",
+    "category": "Phonetics"
+  },
+  {
+    "front": "Word Stress: Noun vs Verb",
+    "phonetic": "REcord (ot) vs reCORD (fe'l)",
+    "back": "Ikki bo'g'inli so'zlarda otlarda urg'u birinchi bo'g'inda, fe'llarda esa ikkinchi bo'g'inda bo'ladi.",
+    "example": "An OBject (ot: buyum) vs to obJECT (fe'l: e'tiroz bildirmoq).",
+    "category": "Phonetics"
+  }
+]
