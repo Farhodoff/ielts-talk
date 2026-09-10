@@ -171,10 +171,7 @@ export const QuickCommandPalette: React.FC<QuickCommandPaletteProps> = ({ isOpen
     }
   }, [isOpen]);
 
-  const allowedCommands = COMMANDS.filter((cmd) => {
-    if (cmd.id === 'ielts' && !isSuper) return false;
-    return true;
-  });
+  const allowedCommands = COMMANDS;
 
   const filtered = allowedCommands.filter((cmd) => {
     if (!query.trim()) return true;

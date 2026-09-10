@@ -52,10 +52,10 @@ describe('Accessibility & Keyboard Shortcuts Suite', () => {
         );
 
         const searchInput = screen.getByPlaceholderText(/Sahifa yoki qurol qidirish/i);
-        fireEvent.change(searchInput, { target: { value: 'JLPT' } });
+        fireEvent.change(searchInput, { target: { value: 'IELTS' } });
 
         fireEvent.keyDown(searchInput, { key: 'Enter', code: 'Enter' });
-        expect(mockNavigate).toHaveBeenCalledWith('/jlpt');
+        expect(mockNavigate).toHaveBeenCalledWith('/ielts');
         expect(onClose).toHaveBeenCalled();
 
         fireEvent.keyDown(searchInput, { key: 'Escape', code: 'Escape' });

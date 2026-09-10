@@ -16,16 +16,16 @@ describe('useSEO & Dynamic Google Rich Results Schema', () => {
   it('updates document.title and canonical link correctly', () => {
     renderHook(() =>
       useSEO({
-        title: 'JLPT N2 Grammatika',
+        title: 'IELTS Writing Task 2',
         description: 'Test tavsif',
-        canonical: '/jlpt',
+        canonical: '/ielts',
       }),
     );
 
-    expect(document.title).toBe('JLPT N2 Grammatika — Nihongo Talk');
+    expect(document.title).toBe('IELTS Writing Task 2 — IELTS Talk');
     const canonicalLink = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;
     expect(canonicalLink).toBeTruthy();
-    expect(canonicalLink?.href).toBe('https://nihon-talk.vercel.app/jlpt');
+    expect(canonicalLink?.href).toBe('https://ielts-talk.vercel.app/ielts');
   });
 
   it('applies aggregateRating to existing WebApplication in JSON-LD script', () => {
