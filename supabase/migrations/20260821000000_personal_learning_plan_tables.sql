@@ -4,19 +4,27 @@
 CREATE TABLE IF NOT EXISTS public.personal_learning_goals (
     id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
     user_id UUID NOT NULL REFERENCES auth.users(id) ON DELETE CASCADE,
-    language TEXT NOT NULL,
+    language TEXT NOT NULL DEFAULT 'en',
     goal_type TEXT NOT NULL,
     current_level TEXT NOT NULL,
     target_level TEXT NOT NULL,
     target_goal TEXT,
     deadline TIMESTAMPTZ,
-    daily_minutes INTEGER NOT NULL,
-    total_weeks INTEGER NOT NULL,
+    daily_minutes INTEGER NOT NULL DEFAULT 45,
+    total_weeks INTEGER NOT NULL DEFAULT 12,
     current_week INTEGER NOT NULL DEFAULT 1,
     status TEXT NOT NULL DEFAULT 'active',
     created_at TIMESTAMPTZ NOT NULL DEFAULT now(),
     updated_at TIMESTAMPTZ NOT NULL DEFAULT now()
 );
+
+-- In case table already existed from earlier schema without new columns:
+ALTER TABLE IF EXISTS public.personal_learning_goals
+    ADD COLUMN IF NOT EXISTS deadline TIMESTAMPTZ,
+    ADD COLUMN IF NOT EXISTS daily_minutes INTEGER DEFAULT 45,
+    ADD COLUMN IF NOT EXISTS total_weeks INTEGER DEFAULT 12,
+    ADD COLUMN IF NOT EXISTS current_week INTEGER DEFAULT 1,
+    ADD COLUMN IF NOT EXISTS status TEXT DEFAULT 'active';
 
 -- RLS for personal_learning_goals
 ALTER TABLE public.personal_learning_goals ENABLE ROW LEVEL SECURITY;
