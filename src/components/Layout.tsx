@@ -22,7 +22,7 @@ import { useRatingModalStore } from '../stores';
 import { useFocusTimerContext } from '../context/FocusTimerContext';
 import { useLanguage } from '../context/LanguageContext';
 import { useStudyData } from '../context/StudyPlannerContext';
-import { isAdminEmail, isSuperAdmin } from '../utils/admin';
+import { isAdminEmail } from '../utils/admin';
 import { AnimatePresence, motion } from 'framer-motion';
 import { Sheet, SheetContent, SheetTrigger } from './ui/sheet';
 import { Button } from './ui/Button';
@@ -49,10 +49,9 @@ const Layout: React.FC = () => {
   });
 
   const { language, setLanguage, t } = useLanguage();
-  const { user, primaryLanguage, enabledLanguages, targetLevel } = useStudyData();
+  const { user, targetLevel } = useStudyData();
   const displayEmail = user?.email || '';
   const isAdmin = Boolean(displayEmail && isAdminEmail(displayEmail, (user as any)?.role));
-  const isSuper = Boolean(displayEmail && isSuperAdmin(displayEmail));
 
   const isRatingOpen = useRatingModalStore((s) => s.isOpen);
   const isRatingSubmitting = useRatingModalStore((s) => s.isSubmitting);
@@ -234,11 +233,11 @@ const Layout: React.FC = () => {
           <div className="flex flex-col">
             <span className="mb-1 text-[10px] font-bold uppercase leading-none tracking-widest text-muted-foreground">
               {focusState.mode === 'focus'
-                ? language === 'ja'
-                  ? '集中'
+                ? language === 'en'
+                  ? 'Focus'
                   : 'Fokus'
-                : language === 'ja'
-                  ? '休憩'
+                : language === 'en'
+                  ? 'Break'
                   : 'Tanaffus'}
             </span>
             <span className="font-mono text-lg font-bold tabular-nums leading-none text-foreground">
@@ -319,32 +318,26 @@ const Layout: React.FC = () => {
           </Button>
         </div>
 
-        {/* Secondary Focus Quick Switcher (Only for Super Admin when 2 languages enabled) */}
-        {isSuper && enabledLanguages.length > 1 && (
-          <div className={`px-3.5 pb-1 pt-2.5 ${isCollapsed ? 'flex justify-center px-1' : ''}`}>
-            {!isCollapsed ? (
-              <div
-                className={`flex items-center justify-between rounded-xl border px-3 py-1.5 transition-all ${
-                  primaryLanguage === 'ja'
-                    ? 'border-rose-500/30 bg-rose-950/25 text-rose-300'
-                    : 'border-indigo-500/30 bg-indigo-950/25 text-indigo-300'
-                }`}
-              >
-                <div className="flex min-w-0 items-center gap-1.5">
-                  <span className="text-sm">🇬🇧</span>
-                  <span className="truncate text-xs font-bold text-foreground">
-                    {`IELTS ${targetLevel || 'B2'}`}
-                  </span>
-                </div>
+        {/* Focus Badge */}
+        {!isCollapsed ? (
+          <div className="px-3.5 pb-1 pt-2.5">
+            <div className="flex items-center justify-between rounded-xl border border-indigo-500/30 bg-indigo-950/25 px-3 py-1.5 text-indigo-300">
+              <div className="flex min-w-0 items-center gap-1.5">
+                <span className="text-sm">🇬🇧</span>
+                <span className="truncate text-xs font-bold text-foreground">
+                  {`IELTS ${targetLevel || 'B2'}`}
+                </span>
               </div>
-            ) : (
-              <div
-                className="flex h-9 w-9 items-center justify-center rounded-xl border border-indigo-500/30 bg-indigo-950/30 text-sm"
-                title={`🇬🇧 IELTS ${targetLevel || 'B2'}`}
-              >
-                🇬🇧
-              </div>
-            )}
+            </div>
+          </div>
+        ) : (
+          <div className="flex justify-center px-1 pb-1 pt-2.5">
+            <div
+              className="flex h-9 w-9 items-center justify-center rounded-xl border border-indigo-500/30 bg-indigo-950/30 text-sm"
+              title={`🇬🇧 IELTS ${targetLevel || 'B2'}`}
+            >
+              🇬🇧
+            </div>
           </div>
         )}
 
@@ -366,7 +359,7 @@ const Layout: React.FC = () => {
               title={isCollapsed ? 'Admin Panel' : ''}
             >
               <Shield size={16} className="shrink-0 text-rose-500" />
-              {!isCollapsed && <span>{language === 'ja' ? '管理コンソール' : 'Admin Panel'}</span>}
+              {!isCollapsed && <span>{language === 'en' ? 'Admin Panel' : 'Admin Panel'}</span>}
             </NavLink>
           )}
 
@@ -375,10 +368,10 @@ const Layout: React.FC = () => {
             type="button"
             onClick={() => openRatingModal()}
             className={`flex w-full items-center ${isCollapsed ? 'justify-center' : ''} gap-2.5 rounded-xl border border-amber-500/25 bg-amber-500/10 px-3 py-2 text-xs font-semibold text-amber-600 shadow-xs transition-all hover:bg-amber-500/20 active:scale-95 dark:text-amber-400`}
-            title={language === 'ja' ? 'アプリを評価・フィードバック' : 'Ilovani baholash (5★)'}
+            title={language === 'en' ? 'Rate app & feedback' : 'Ilovani baholash (5★)'}
           >
             <Star size={16} className="shrink-0 fill-amber-400 text-amber-500" />
-            {!isCollapsed && <span>{language === 'ja' ? '⭐ アプリ評価' : '⭐ Baholash'}</span>}
+            {!isCollapsed && <span>{language === 'en' ? '⭐ Rate App' : '⭐ Baholash'}</span>}
           </button>
 
           <div className="flex items-center gap-1.5">
@@ -391,14 +384,14 @@ const Layout: React.FC = () => {
                     : 'text-muted-foreground hover:bg-muted/80 hover:text-foreground'
                 }`
               }
-              title={isCollapsed ? (language === 'ja' ? '設定' : 'Sozlamalar') : ''}
+              title={isCollapsed ? (language === 'en' ? 'Settings' : 'Sozlamalar') : ''}
             >
               <SettingsIcon size={16} />
-              {!isCollapsed && <span>{language === 'ja' ? '設定' : 'Sozlamalar'}</span>}
+              {!isCollapsed && <span>{language === 'en' ? 'Settings' : 'Sozlamalar'}</span>}
             </NavLink>
 
             <button
-              onClick={() => setLanguage(language === 'uz' ? 'ja' : 'uz')}
+              onClick={() => setLanguage(language === 'uz' ? 'en' : 'uz')}
               className="flex shrink-0 items-center gap-1.5 rounded-xl border border-border/80 bg-muted/80 px-2.5 py-1.5 text-[11px] font-bold text-muted-foreground shadow-xs transition-all hover:bg-muted hover:text-foreground"
               title={
                 language === 'uz' ? "Ingliz tiliga o'tish (Switch to English)" : "O'zbek tiliga o'tish"

@@ -294,61 +294,38 @@ export const StudyPlannerProvider: React.FC<{ children: React.ReactNode }> = ({ 
     return null;
   });
 
-  // Learning Focus State - Defaults to 100% Japanese ('ja') for all public users
+  // Learning Focus State - Defaults to 100% English / IELTS ('en') for all users
   const [primaryLanguage, setPrimaryLanguage] = useState<'en' | 'ja'>(() => {
-    const cachedUser = safeLocalStorage.getJSON<User | null>('study_planner_user_cache', null);
-    const email = cachedUser?.email;
-    if (!isSuperAdmin(email)) {
-      safeLocalStorage.setItem('study_planner_primary_language', 'ja');
-      safeLocalStorage.setItem('study_planner_study_track', 'ja');
-      return 'ja';
-    }
-    const saved =
-      safeLocalStorage.getItem('study_planner_primary_language') ||
-      safeLocalStorage.getItem('study_planner_study_track');
-    return saved === 'ja' || saved === 'en' ? saved : 'ja';
+    safeLocalStorage.setItem('study_planner_primary_language', 'en');
+    safeLocalStorage.setItem('study_planner_study_track', 'en');
+    return 'en';
   });
 
-  const [enabledLanguages, setEnabledLanguages] = useState<('en' | 'ja')[]>(() => {
-    const cachedUser = safeLocalStorage.getJSON<User | null>('study_planner_user_cache', null);
-    const email = cachedUser?.email;
-    if (!isSuperAdmin(email)) {
-      return ['ja'];
-    }
-    const saved = safeLocalStorage.getJSON<('en' | 'ja')[] | null>(
-      'study_planner_enabled_languages',
-      null,
-    );
-    if (Array.isArray(saved) && saved.length > 0) return saved;
-    return [primaryLanguage];
-  });
+  const [enabledLanguages, setEnabledLanguages] = useState<('en' | 'ja')[]>(['en']);
 
   const [targetLevel, setTargetLevel] = useState<string>(() => {
-    return LearningTrackStorage.getTargetLevel(primaryLanguage);
+    return LearningTrackStorage.getTargetLevel('en');
   });
 
   const [targetGoal, setTargetGoal] = useState<string>(() => {
-    return LearningTrackStorage.getTargetGoal(primaryLanguage);
+    return LearningTrackStorage.getTargetGoal('en');
   });
 
-  // Enforce 100% Japanese track for non-super-admins
+  // Enforce English (IELTS) track
   useEffect(() => {
-    const activeEmail = user?.email;
-    if (!isSuperAdmin(activeEmail)) {
-      if (primaryLanguage !== 'ja') {
-        setPrimaryLanguage('ja');
-        safeLocalStorage.setItem('study_planner_primary_language', 'ja');
-        safeLocalStorage.setItem('study_planner_study_track', 'ja');
-      }
-      setEnabledLanguages(['ja']);
-      const currentJaTarget = LearningTrackStorage.getTargetLevel('ja');
-      if (targetLevel !== currentJaTarget) {
-        setTargetLevel(currentJaTarget);
-      }
-      const currentJaGoal = LearningTrackStorage.getTargetGoal('ja');
-      if (targetGoal !== currentJaGoal) {
-        setTargetGoal(currentJaGoal);
-      }
+    if (primaryLanguage !== 'en') {
+      setPrimaryLanguage('en');
+      safeLocalStorage.setItem('study_planner_primary_language', 'en');
+      safeLocalStorage.setItem('study_planner_study_track', 'en');
+    }
+    setEnabledLanguages(['en']);
+    const currentEnTarget = LearningTrackStorage.getTargetLevel('en');
+    if (targetLevel !== currentEnTarget) {
+      setTargetLevel(currentEnTarget);
+    }
+    const currentEnGoal = LearningTrackStorage.getTargetGoal('en');
+    if (targetGoal !== currentEnGoal) {
+      setTargetGoal(currentEnGoal);
     }
   }, [user?.email, primaryLanguage, targetLevel, targetGoal]);
 

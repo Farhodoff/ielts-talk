@@ -54,24 +54,24 @@ const PROMPT_SUGGESTIONS_BY_LANG: Record<
 > = {
   en: [
     {
-      title: 'Introduce Yourself',
-      text: "Hajimemashite. Let's practice self-introduction in Japanese. Can you ask me questions to prompt my self-intro?",
+      title: 'IELTS Part 1 Warm-up',
+      text: "Hello! I'd like to practice IELTS Speaking Part 1. Could you ask me warm-up questions about my hometown, study, and hobbies?",
       icon: '👋',
     },
     {
-      title: 'Roast My Japanese',
-      text: 'I want you to be a strict Japanese teacher. Correct every grammatical or pronunciation mistake I make in Japanese!',
-      icon: '🔥',
-    },
-    {
-      title: 'JLPT Speaking Mock',
-      text: "Let's practice for JLPT speaking. Give me a daily conversation topic to talk about.",
+      title: 'Part 2 Cue Card Speech',
+      text: 'Please give me an IELTS Speaking Part 2 Cue Card topic. I will take 1 minute to prepare and speak for 2 minutes.',
       icon: '📝',
     },
     {
-      title: 'IT Mock Interview',
-      text: 'Act as a Japanese IT recruiter and ask me 3 interview questions in Japanese.',
-      icon: '💼',
+      title: 'Part 3 Deep Discussion',
+      text: "Let's practice IELTS Speaking Part 3 abstract questions. Challenge my opinions with analytical follow-up questions.",
+      icon: '🧠',
+    },
+    {
+      title: 'Band 8+ Vocabulary Roast',
+      text: 'Act as a strict IELTS examiner. Point out every repetitive word and grammatical slip, and suggest Band 8+ academic idioms and collocations!',
+      icon: '🔥',
     },
   ],
   ja: [
