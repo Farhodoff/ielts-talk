@@ -1,6 +1,73 @@
 import { ConversationScenario } from '../components/speaking/scenarioTypes';
+import { CAMBRIDGE_IELTS_TOPICS } from './ieltsSpeakingTopics';
+
+export const MAKKAR_IELTS_SCENARIOS: ConversationScenario[] = CAMBRIDGE_IELTS_TOPICS.map((topic) => {
+  const emojiMatch = topic.category.match(/^(\p{Emoji})/u);
+  const emoji = emojiMatch ? emojiMatch[1] : '🎙️';
+  const cleanCategory = topic.category.replace(/^[^\s]+\s*/, '');
+  const keyPhrases = [
+    ...(topic.vocabulary ? topic.vocabulary.map((v) => v.term) : []),
+    ...(topic.usefulPhrases || []),
+  ].slice(0, 8);
+
+  const bulletsText = topic.part2.bullets.map((b) => `- ${b}`).join('\n');
+  const part1Text = topic.part1.map((q, idx) => `${idx + 1}. ${q}`).join('\n');
+  const part3Text = topic.part3.map((q, idx) => `${idx + 1}. ${q}`).join('\n');
+  const vocabText = (topic.vocabulary || [])
+    .map((v) => `- "${v.term}": ${v.meaningUz} (e.g. "${v.example}")`)
+    .join('\n');
+
+  const openingLine = `Good day! My name is Gordon, and I will be your official IELTS Speaking Examiner. Today we are conducting the Speaking test. Let's begin with Part 1: ${topic.part1[0]}`;
+
+  const context_prompt = `You are an official Cambridge/IDP IELTS Speaking Examiner named Gordon.
+Today's test is based on the 2026 Makkar & Cambridge IELTS Speaking Forecast.
+Category: ${cleanCategory}
+Cue Card: "${topic.part2.title}"
+
+Structure of the test:
+Part 1 Warm-up Questions:
+${part1Text}
+
+Part 2 Cue Card:
+"${topic.part2.title}"
+Guidance points for the candidate:
+${bulletsText}
+
+Part 3 In-depth Discussion Questions:
+${part3Text}
+
+Target Band 7.5+ Vocabulary to listen for, validate, and encourage:
+${vocabText}
+
+Instructions for the examiner:
+1. Conduct Part 1 questions naturally one by one. Keep exchanges conversational and authentic.
+2. When ready, invite the candidate to speak on the Part 2 Cue Card for up to 2 minutes.
+3. Advance to Part 3 abstract questions, challenging their opinions constructively.
+4. If the candidate uses target vocabulary correctly, reward high Lexical Resource marks.
+5. Provide constructive feedback and estimated IELTS Band score at the conclusion of the test.`;
+
+  return {
+    id: topic.id,
+    language: 'en' as const,
+    title_en: topic.part2.title,
+    title_uz: `IELTS Speaking: ${topic.part2.title.replace(/^Describe /i, '')} (${cleanCategory})`,
+    emoji,
+    difficulty: 'IELTS' as const,
+    category: 'academic' as const,
+    description_uz: `2026 Makkar bashorati: Part 1, Part 2 ("${topic.part2.title}") va Part 3 tahliliy suhbati.`,
+    opening_line_en: openingLine,
+    context_prompt,
+    key_phrases: keyPhrases,
+    is_custom: false,
+  };
+});
 
 export const DEFAULT_SCENARIOS: ConversationScenario[] = [
+  // ==========================================
+  // 🎓 MAKKAR & CAMBRIDGE 2026 IELTS SCENARIOS
+  // ==========================================
+  ...MAKKAR_IELTS_SCENARIOS,
+
   // ==========================================
   // 🇬🇧 ENGLISH CONVERSATION SCENARIOS
   // ==========================================

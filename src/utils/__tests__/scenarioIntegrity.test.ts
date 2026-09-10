@@ -28,9 +28,9 @@ describe('Speaking Conversation Scenarios Integrity Tests', () => {
     }
   });
 
-  it('5. Verify accurate scenario counts (8 English scenarios total)', () => {
+  it('5. Verify accurate scenario counts (38 English & Makkar 2026 scenarios total)', () => {
     const enScenarios = DEFAULT_SCENARIOS.filter((s) => s.language === 'en');
-    expect(enScenarios.length).toBe(8);
-    expect(DEFAULT_SCENARIOS.length).toBe(8);
+    expect(enScenarios.length).toBe(38);
+    expect(DEFAULT_SCENARIOS.length).toBe(38);
   });
 });

@@ -7,6 +7,32 @@ export function generateContextualHints(
 ): ConversationHintItem[] {
   const clean = coachText.trim();
 
+  // 0. IELTS / English scenario smart hints
+  if (scenario && (scenario.difficulty === 'IELTS' || scenario.language === 'en')) {
+    const keyPhrases = scenario.key_phrases || [];
+    const kp1 = keyPhrases[0] || 'in my opinion';
+    const kp2 = keyPhrases[1] || 'on the other hand';
+    const kp3 = keyPhrases[2] || 'crucial aspect';
+
+    return [
+      {
+        japanese: `From my personal perspective, ${kp1} plays a pivotal role.`,
+        romaji: 'Band 7.5+ Opinion Starter',
+        uzbek: `Mening shaxsiy nuqtai nazarimdan, bu juda muhim o'rin tutadi.`,
+      },
+      {
+        japanese: `Taking everything into consideration, ${kp2} should definitely not be overlooked.`,
+        romaji: 'Band 8.0+ Complex Coherence',
+        uzbek: `Barcha jihatlarni hisobga olganda, buni aslo inkor etib bo'lmaydi.`,
+      },
+      {
+        japanese: `To put it another way, ${kp3} brings substantial benefits in the long run.`,
+        romaji: 'Band 7.5+ Paraphrasing & Lexical Resource',
+        uzbek: `Boshqacha qilib aytganda, bu uzoq muddatda sezilarli foyda keltiradi.`,
+      },
+    ];
+  }
+
   // 1. Scenario-specific smart hints
   if (scenario?.id === 'tokyo_train_ticket') {
     return [

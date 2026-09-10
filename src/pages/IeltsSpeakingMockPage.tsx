@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { ArrowLeft, Mic, MicOff, Award, Clock, Sparkles, AlertCircle, ChevronRight, RefreshCw, Volume2, Dices, List, Search, X, BookOpen } from 'lucide-react';
+import { ArrowLeft, Mic, MicOff, Award, Clock, Sparkles, AlertCircle, ChevronRight, RefreshCw, Volume2, Dices, List, Search, X, BookOpen, Bot } from 'lucide-react';
 import { Button } from '../components/ui/Button';
 import { evaluateIeltsSpeakingFullMock, SpeakingMockReport } from '../utils/ai';
 import { speakText } from '../utils/audioTts';
@@ -336,6 +336,16 @@ export const IeltsSpeakingMockPage: React.FC = () => {
                                 </div>
                             </div>
                         )}
+
+                        {/* Live AI Examiner Coach button */}
+                        <div className="pt-2 border-t border-indigo-500/15">
+                            <button
+                                onClick={() => navigate(`/speaking-coach?scenario=${selectedTopic.id}`)}
+                                className="w-full py-2.5 px-4 bg-gradient-to-r from-emerald-600 via-teal-600 to-cyan-600 hover:from-emerald-700 hover:to-cyan-700 text-white rounded-2xl text-xs md:text-sm font-black flex items-center justify-center gap-2 shadow-lg shadow-emerald-500/20 hover:shadow-emerald-500/30 transition-all active:scale-98 cursor-pointer"
+                            >
+                                <Bot size={16} /> 🎙️ Ushbu Bilet Bo'yicha AI Examiner Gordon Bilan Jonli Suhbat
+                            </button>
+                        </div>
                     </div>
 
                     <div className="grid grid-cols-3 gap-3 text-left">
@@ -662,10 +672,10 @@ export const IeltsSpeakingMockPage: React.FC = () => {
                         {/* Topics List */}
                         <div className="p-4 overflow-y-auto space-y-2.5 flex-1">
                             {filteredTopics.map((topic, idx) => (
-                                <button
+                                <div
                                     key={topic.id}
                                     onClick={() => handleSelectTopic(topic)}
-                                    className={`w-full p-4 rounded-2xl border text-left transition-all flex items-center justify-between gap-3 group ${
+                                    className={`w-full p-4 rounded-2xl border text-left transition-all flex items-center justify-between gap-3 group cursor-pointer ${
                                         selectedTopic.id === topic.id
                                             ? 'bg-indigo-500/10 border-indigo-500/40 ring-1 ring-indigo-500'
                                             : 'bg-card border-border hover:bg-muted/50 hover:border-indigo-500/30'
@@ -687,8 +697,21 @@ export const IeltsSpeakingMockPage: React.FC = () => {
                                             {topic.part2.bullets.slice(0, 2).join(' • ')}
                                         </p>
                                     </div>
-                                    <ChevronRight size={18} className="text-muted-foreground group-hover:text-indigo-500 group-hover:translate-x-0.5 transition-all shrink-0" />
-                                </button>
+                                    <div className="flex items-center gap-2 shrink-0">
+                                        <button
+                                            type="button"
+                                            onClick={(e) => {
+                                                e.stopPropagation();
+                                                navigate(`/speaking-coach?scenario=${topic.id}`);
+                                            }}
+                                            className="px-2.5 py-1.5 bg-emerald-600/10 hover:bg-emerald-600 text-emerald-600 hover:text-white rounded-xl text-[11px] font-extrabold flex items-center gap-1 border border-emerald-500/20 transition-all cursor-pointer active:scale-95 shadow-xs"
+                                            title="AI Examiner bilan jonli muloqot"
+                                        >
+                                            <Bot size={13} /> AI Suhbat
+                                        </button>
+                                        <ChevronRight size={18} className="text-muted-foreground group-hover:text-indigo-500 group-hover:translate-x-0.5 transition-all shrink-0" />
+                                    </div>
+                                </div>
                             ))}
                             {filteredTopics.length === 0 && (
                                 <div className="text-center py-12 text-muted-foreground">
