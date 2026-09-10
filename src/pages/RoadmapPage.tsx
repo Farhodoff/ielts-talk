@@ -18,12 +18,10 @@ import { useLanguage } from '../context/LanguageContext';
 import { LearningOrchestrator } from '../services/LearningOrchestrator';
 import { RoadmapService } from '../services/RoadmapService';
 import { LearningRoadmap, RoadmapLevelNode, RoadmapLessonNode } from '../types/curriculum';
-import { isSuperAdmin } from '../utils/admin';
 
 const RoadmapPage: React.FC = () => {
-    const { primaryLanguage, targetLevel, targetGoal, flashcards, user } = useStudyData();
-    const isSuper = isSuperAdmin(user?.email);
-    const effectiveLang = isSuper ? primaryLanguage : 'ja';
+    const { targetLevel, targetGoal, flashcards, user } = useStudyData();
+    const effectiveLang = 'en';
     const { language } = useLanguage();
     const isUz = language !== 'en';
 

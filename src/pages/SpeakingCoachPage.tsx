@@ -98,48 +98,33 @@ const PROMPT_SUGGESTIONS_BY_LANG: Record<
   ],
 };
 
-export const getCoachInitialGreeting = (lang: 'en' | 'ja', p: CoachPersona): string => {
-  if (lang === 'ja') {
-    switch (p) {
-      case 'roast':
-        return 'こんにちは！鬼先生です。遠慮せずに日本語で話してください！';
-      case 'gentle':
-        return 'こんにちは！日本語の先生です。いつでもお話ししてくださいね。';
-      case 'ielts':
-        return 'こんにちは！JLPTスピーキングの練習を始めましょう！';
-      case 'interview':
-        return 'こんにちは。本日のIT面接を担当いたします。自己紹介をお願いします。';
-      case 'travel':
-        return 'いらっしゃいませ！成田空港へようこそ。どのようなご要件でしょうか？';
-      case 'casual':
-        return 'やあ！元気？今日は何について話そうか！';
-    }
-  } else {
-    switch (p) {
-      case 'roast':
-        return 'Hello! Strict Japanese Roast Coach here. Speak in Japanese and prepare for corrections!';
-      case 'gentle':
-        return "Hello! I'm your Japanese language tutor. Feel free to start talking in Japanese whenever you're ready!";
-      case 'ielts':
-        return "Good day! Let's practice Japanese JLPT Speaking. Shall we begin?";
-      case 'interview':
-        return "Hello! Welcome to your Japanese IT Job Mock Interview. Let's start with a self-introduction in Japanese.";
-      case 'travel':
-        return "Konnichiwa! Welcome to Narita Airport. Let's practice travel Japanese.";
-      case 'casual':
-        return "Hey friend! Let's chat in casual Japanese. What's on your mind today?";
-    }
+export const getCoachInitialGreeting = (_lang: 'en' | 'ja', p: CoachPersona): string => {
+  switch (p) {
+    case 'ielts':
+      return "Good afternoon. My name is Gordon, and I will be your IELTS speaking examiner today. Could you please state your full name and where you are from?";
+    case 'roast':
+      return "Hello! Strict British Examiner Gordon here. Speak with confidence, avoid repetition, and showcase your Band 8.0 vocabulary!";
+    case 'gentle':
+      return "Hello! I'm your Cambridge English speaking tutor. Speak at your own comfortable pace whenever you're ready!";
+    case 'interview':
+      return "Good day and welcome to your Global Job Interview. Please introduce yourself and your professional background in English.";
+    case 'travel':
+      return "Welcome to London Heathrow Airport. Where are you travelling from today?";
+    case 'casual':
+      return "Hi there! Let's have a natural, fluent English conversation. What's on your mind today?";
+    default:
+      return "Good day! I am your AI IELTS Speaking Coach. How can I help you prepare today?";
   }
 };
 
 const SpeakingCoachPage: React.FC = () => {
   useSEO({
-    title: 'AI Yapon Tili Muloqot Murabbiyi (Yuki-sensei)',
+    title: 'AI IELTS Speaking Coach (Examiner Gordon)',
     description:
-      "Yapon tilida erkin gapirishni o'rganing. Real vaqtda talaffuz, xatolar tahlili va interaktiv hayotiy dialoglar.",
-    canonical: '/speaking',
+      "IELTS Speaking Part 1, Part 2 va Part 3 bo'yicha real vaqtda audio muloqot va Cambridge rubrikasi bo'yicha baholash.",
+    canonical: '/speaking-coach',
     keywords:
-      'yapon tili speaking, AI yapon tili suhbatdosh, Yuki sensei, yaponcha talaffuz, JLPT kaiwa',
+      'IELTS speaking mock, Examiner Gordon, IELTS coach, Cambridge speaking test, band 8.0 speaking',
   });
 
   const navigate = useNavigate();
@@ -179,20 +164,11 @@ const SpeakingCoachPage: React.FC = () => {
   const urlLang = searchParams.get('lang');
   const scenarioIdParam = searchParams.get('scenario');
 
-  const initialLang: 'en' | 'ja' = isSuper && urlLang === 'en' ? 'en' : 'ja';
-  const [language, setLanguage] = useState<'en' | 'ja'>(initialLang);
+  const [language, setLanguage] = useState<'en' | 'ja'>('en');
 
   useEffect(() => {
-    if (!isSuper) {
-      setLanguage('ja');
-      return;
-    }
-    if (urlLang === 'ja' || urlLang === 'en') {
-      setLanguage((prev) => (prev !== urlLang ? urlLang : prev));
-    } else if (primaryLanguage === 'ja' || primaryLanguage === 'en') {
-      setLanguage((prev) => (prev !== primaryLanguage ? primaryLanguage : prev));
-    }
-  }, [urlLang, primaryLanguage, isSuper]);
+    setLanguage('en');
+  }, [urlLang, primaryLanguage]);
 
   // Scenario & Voice Recorder state
   const [activeScenario, setActiveScenario] = useState<ConversationScenario | null>(() => {
@@ -207,13 +183,11 @@ const SpeakingCoachPage: React.FC = () => {
 
   const voiceRecorder = useVoiceRecorder();
 
-  const handleLanguageChange = (newLang: 'en' | 'ja') => {
-    if (isLiveSession) return;
-    setLanguage(newLang);
-    setSearchParams({ lang: newLang });
+  const handleLanguageChange = (_newLang: 'en' | 'ja') => {
+    setLanguage('en');
   };
 
-  const [persona, setPersona] = useState<CoachPersona>('roast');
+  const [persona, setPersona] = useState<CoachPersona>('ielts');
   const [targetBand, setTargetBand] = useState<'5.0' | '6.0' | '7.0' | '7.5' | '8.0' | '9.0'>(
     '7.5',
   );

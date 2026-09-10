@@ -42,8 +42,8 @@ const DashboardPage: React.FC = () => {
     settings,
   } = useStudyData();
   const { language, t } = useLanguage();
-  const isJaTrack = true; // Nihon Talk is strictly Japanese only
-  const cachedStateKey = `study_planner_cached_dashboard_ja`;
+  const isJaTrack = false; // IELTS Talk is strictly English/IELTS only
+  const cachedStateKey = `study_planner_cached_dashboard_en`;
   const initialCached = useMemo(() => {
     return safeLocalStorage.getJSON<any>(cachedStateKey, null);
   }, [cachedStateKey]);
@@ -381,7 +381,7 @@ const DashboardPage: React.FC = () => {
         <Loader2
           className="h-8 w-8 animate-spin text-primary"
           role="status"
-          aria-label="Loading Nihongo Talk dashboard..."
+          aria-label="Loading IELTS Talk dashboard..."
         />
       </div>
     );
@@ -494,16 +494,9 @@ const DashboardPage: React.FC = () => {
         <div className="relative z-10 flex flex-col justify-between gap-8 lg:flex-row lg:items-center">
           <div className="max-w-2xl space-y-3">
             <div className="flex flex-wrap items-center gap-2">
-              <span className="text-2xl">{isJaTrack ? '🇯🇵' : '🇬🇧'}</span>
-              <span
-                className={`rounded-full border px-3 py-1 text-xs font-black uppercase tracking-wider ${
-                  isJaTrack
-                    ? 'border-rose-500/30 bg-rose-500/20 text-rose-400'
-                    : 'border-indigo-500/30 bg-indigo-500/20 text-indigo-400'
-                }`}
-              >
-                {isJaTrack ? `JLPT ${effectiveTargetLevel}` : `IELTS (${effectiveTargetLevel})`}{' '}
-                Focus Mode
+              <span className="text-2xl">🇬🇧</span>
+              <span className="rounded-full border border-indigo-500/30 bg-indigo-500/20 px-3 py-1 text-xs font-black uppercase tracking-wider text-indigo-400">
+                {`IELTS (${effectiveTargetLevel}) Focus Mode`}
               </span>
               <span className="text-xs font-medium text-muted-foreground">
                 • {effectiveTargetGoal}
@@ -516,12 +509,12 @@ const DashboardPage: React.FC = () => {
                 <div className="flex items-center gap-2">
                   <span className="flex items-center gap-1 text-xs font-bold uppercase tracking-wider text-amber-500">
                     <Sparkles size={14} className="animate-pulse" />
-                    {language === 'ja'
-                      ? 'いま いちばん たいせつな ステップ'
+                    {language === 'en'
+                      ? 'Priority Learning Step'
                       : 'Hozirgi Eng Muhim Qadam'}
                   </span>
                   <span className="rounded-full bg-secondary px-2.5 py-0.5 text-xs font-medium text-muted-foreground">
-                    ⏱️ ~{nextAction.estimatedMinutes} {language === 'ja' ? 'ふん' : 'daqiqa'}
+                    ⏱️ ~{nextAction.estimatedMinutes} daqiqa
                   </span>
                 </div>
                 <h2 className="text-2xl font-black tracking-tight text-foreground">
@@ -537,20 +530,12 @@ const DashboardPage: React.FC = () => {
             ) : (
               <div>
                 <h3 className="text-xl font-bold text-foreground">
-                  {isJaTrack
-                    ? language === 'ja'
-                      ? 'きょうの にほんご レッスン'
-                      : "Bugungi Yapon Tili Mashg'ulotlari"
-                    : language === 'ja'
-                      ? 'きょうの えいご レッスン'
-                      : 'Bugungi IELTS & Akademik Ingliz Tili'}
+                  {language === 'en'
+                    ? "Today's IELTS & Academic English Tasks"
+                    : 'Bugungi IELTS & Akademik Ingliz Tili'}
                 </h3>
                 <p className="text-xs text-muted-foreground">
-                  {isJaTrack
-                    ? language === 'ja'
-                      ? 'まいにち 20この かんじ、ぶんぽう、AI かいわ。'
-                      : 'Har kuni 20 ta yangi Kanji, grammatika va AI muloqot.'
-                    : "Speaking Examiner, Writing tahlili va Oxford Academic lug'at."}
+                  Speaking Examiner, Writing tahlili va Oxford Academic lug'at.
                 </p>
               </div>
             )}

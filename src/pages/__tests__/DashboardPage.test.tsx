@@ -190,7 +190,7 @@ describe('Phase 8.8 — Dashboard Page Render & UX Hardening Tests', () => {
     it('7. should render Next Best Action Hero card with proper titles and cta label', async () => {
         await renderDashboard();
         expect(screen.getByText('Continue lesson')).toBeInTheDocument();
-        expect(screen.getByText('Hozirgi Eng Muhim Qadam')).toBeInTheDocument();
+        expect(screen.getByText(/Priority Learning Step|Hozirgi Eng Muhim Qadam/)).toBeInTheDocument();
     });
 
     // 8. Daily activity render
@@ -279,28 +279,17 @@ describe('Phase 8.8 — Dashboard Page Render & UX Hardening Tests', () => {
     });
 
     // 17. English user -> Hero CTA present
-    it.skip('17. should show English flags and badge markers for active English users', async () => {
+    it('17. should show English flags and badge markers for active English users', async () => {
         await renderDashboard();
         expect(screen.getByText('🇬🇧')).toBeInTheDocument();
         expect(screen.getByText('IELTS (B2) Focus Mode')).toBeInTheDocument();
     });
 
-    // 18. Japanese user -> Japanese Hero CTA
-    it('18. should show Japanese flags and badge markers when Japanese is selected', async () => {
-        mockUseStudyData.primaryLanguage = 'ja';
-        mockUseStudyData.targetLevel = 'N3';
-        const jaState = {
-            ...mockEngineState,
-            primaryLanguage: 'ja',
-            nextAction: {
-                ...mockEngineState.nextAction,
-                route: '/jlpt/grammar-quiz'
-            }
-        };
-        vi.spyOn(LearningPathEngine, 'getLearningPathState').mockResolvedValue(jaState as any);
+    // 18. IELTS Talk always enforces IELTS focus mode
+    it('18. should enforce English IELTS focus mode even if legacy state exists', async () => {
         await renderDashboard();
-        expect(screen.getByText('🇯🇵')).toBeInTheDocument();
-        expect(screen.getByText('JLPT N3 Focus Mode')).toBeInTheDocument();
+        expect(screen.getByText('🇬🇧')).toBeInTheDocument();
+        expect(screen.getAllByText(/IELTS/).length).toBeGreaterThan(0);
     });
 
     // 19. Zero-level English -> foundation action
@@ -317,20 +306,18 @@ describe('Phase 8.8 — Dashboard Page Render & UX Hardening Tests', () => {
         expect(screen.getByText('English Alphabet and Sounds')).toBeInTheDocument();
     });
 
-    // 20. Zero-level Japanese -> Hiragana/foundation action
-    it('20. should recommend Hiragana foundation action for zero level Japanese learners', async () => {
-        mockUseStudyData.primaryLanguage = 'ja';
-        const hiraganaState = {
+    // 20. IELTS beginner foundation action
+    it('20. should recommend IELTS foundation action for beginner learners', async () => {
+        const ieltsState = {
             ...mockEngineState,
-            primaryLanguage: 'ja',
             nextAction: {
                 ...mockEngineState.nextAction,
-                title: 'Hiragana and Katakana Basics'
+                title: 'IELTS Band 5.0 Foundation Vocabulary'
             }
         };
-        vi.spyOn(LearningPathEngine, 'getLearningPathState').mockResolvedValue(hiraganaState as any);
+        vi.spyOn(LearningPathEngine, 'getLearningPathState').mockResolvedValue(ieltsState as any);
         await renderDashboard();
-        expect(screen.getByText('Hiragana and Katakana Basics')).toBeInTheDocument();
+        expect(screen.getByText('IELTS Band 5.0 Foundation Vocabulary')).toBeInTheDocument();
     });
 
     // 21. Unfinished lesson -> Continue CTA

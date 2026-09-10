@@ -24,14 +24,12 @@ import {
 } from '../types/diagnostic';
 import { CurriculumLessonResolver } from '../services/CurriculumLessonResolver';
 import { MasteryEngine } from '../services/MasteryEngine';
-import { isSuperAdmin } from '../utils/admin';
 import { speakJapaneseText, speakText, stopAllAudio } from '../utils/audioTts';
 import { FuriganaText } from "../components/common/FuriganaText";
 
 export const DiagnosticPage: React.FC = () => {
   const { primaryLanguage, targetLevel, user } = useStudyData();
-  const isSuper = isSuperAdmin(user?.email);
-  const effectiveLang = isSuper ? primaryLanguage : 'ja';
+  const effectiveLang: 'en' | 'ja' = (primaryLanguage as 'en' | 'ja') || 'en';
   const { language } = useLanguage();
   const isUz = language !== 'en';
   const navigate = useNavigate();

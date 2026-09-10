@@ -205,7 +205,7 @@ const AccountSection: React.FC = () => {
                   type="text"
                   value={targetGoal}
                   onChange={(e) => setTargetGoal(e.target.value)}
-                  placeholder="Masalan: JLPT N2, Yapon Tili, IT & Dasturlash"
+                  placeholder="Masalan: IELTS 7.5, Academic Writing, Speaking Band 8.0"
                   className="w-full rounded-xl border border-border bg-background px-4 py-2.5 text-sm font-semibold text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
                 />
               ) : (

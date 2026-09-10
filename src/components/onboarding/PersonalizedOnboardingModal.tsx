@@ -6,7 +6,6 @@ import {
 import { useStudyData } from '../../context/StudyPlannerContext';
 import { toast } from '../../hooks/use-toast';
 import { useNavigate } from 'react-router-dom';
-import { isSuperAdmin } from '../../utils/admin';
 
 interface PersonalizedOnboardingModalProps {
     isOpen: boolean;
@@ -17,14 +16,13 @@ export const PersonalizedOnboardingModal: React.FC<PersonalizedOnboardingModalPr
     isOpen,
     onClose
 }) => {
-    const { user, updateSettings, subjects, addSubject, addFlashcardsBatch, setPrimaryFocus } = useStudyData();
+    const { updateSettings, subjects, addSubject, addFlashcardsBatch, setPrimaryFocus } = useStudyData();
     const navigate = useNavigate();
-    const isSuper = isSuperAdmin(user?.email);
 
     const [step, setStep] = useState<1 | 2 | 3 | 4>(1);
-    const [selectedLanguage, setSelectedLanguage] = useState<'ja' | 'en'>('ja');
-    const [selectedLevel, setSelectedLevel] = useState<string>('N3');
-    const [selectedGoal, setSelectedGoal] = useState<string>('🎯 JLPT Imtihoni (N5-N1)');
+    const [selectedLanguage, setSelectedLanguage] = useState<'ja' | 'en'>('en');
+    const [selectedLevel, setSelectedLevel] = useState<string>('B2');
+    const [selectedGoal, setSelectedGoal] = useState<string>('🎯 IELTS Imtihoni (Band 7+)');
     const [selectedGoalMinutes, setSelectedGoalMinutes] = useState<number>(30);
     const [isFinalizing, setIsFinalizing] = useState(false);
 
@@ -164,40 +162,38 @@ export const PersonalizedOnboardingModal: React.FC<PersonalizedOnboardingModalPr
                         </div>
 
                         <div className="grid grid-cols-1 gap-3.5">
-                            {isSuper && (
-                                <button
-                                    onClick={() => handleLanguageSelect('en')}
-                                    className="w-full p-5 rounded-2xl border-2 border-border hover:border-indigo-500 bg-background hover:bg-indigo-500/5 text-left flex items-center gap-4 transition-all group shadow-sm hover:shadow-md"
-                                >
-                                    <span className="text-4xl p-2.5 rounded-2xl bg-indigo-500/10 text-indigo-400 group-hover:scale-105 transition-transform">🇬🇧</span>
-                                    <div className="flex-1">
-                                        <div className="font-extrabold text-base text-foreground flex items-center justify-between">
-                                            <span>Ingliz Tili (IELTS Track)</span>
-                                            <span className="text-[10px] font-black uppercase px-2.5 py-0.5 rounded-full bg-indigo-500/20 text-indigo-400 border border-indigo-500/30">Super Admin Preview</span>
-                                        </div>
-                                        <p className="text-xs text-muted-foreground mt-1 leading-relaxed">
-                                            IELTS Examiner Speaking, Writing baholash, Reading/Listening testlari va Anki lug'at
-                                        </p>
-                                    </div>
-                                    <ArrowRight size={20} className="text-muted-foreground group-hover:text-indigo-400 group-hover:translate-x-1 transition-all" />
-                                </button>
-                            )}
-
                             <button
-                                onClick={() => handleLanguageSelect('ja')}
-                                className="w-full p-5 rounded-2xl border-2 border-rose-500/80 hover:border-rose-500 bg-rose-950/10 hover:bg-rose-500/10 text-left flex items-center gap-4 transition-all group shadow-sm hover:shadow-md"
+                                onClick={() => handleLanguageSelect('en')}
+                                className="w-full p-5 rounded-2xl border-2 border-primary/50 hover:border-primary bg-primary/5 text-left flex items-center gap-4 transition-all group shadow-sm hover:shadow-md"
                             >
-                                <span className="text-4xl p-2.5 rounded-2xl bg-rose-500/10 text-rose-400 group-hover:scale-105 transition-transform">🇯🇵</span>
+                                <span className="text-4xl p-2.5 rounded-2xl bg-primary/10 text-primary group-hover:scale-105 transition-transform">🇬🇧</span>
                                 <div className="flex-1">
                                     <div className="font-extrabold text-base text-foreground flex items-center justify-between">
-                                        <span>Yapon Tili (JLPT Track)</span>
-                                        <span className="text-[10px] font-black uppercase px-2.5 py-0.5 rounded-full bg-rose-500/20 text-rose-400 border border-rose-500/30">★ ASOSIY FOKUS • N5 – N1</span>
+                                        <span>IELTS Academic Track</span>
+                                        <span className="text-[10px] font-black uppercase px-2.5 py-0.5 rounded-full bg-primary/20 text-primary border border-primary/30">Asosiy Fokus</span>
                                     </div>
                                     <p className="text-xs text-muted-foreground mt-1 leading-relaxed">
-                                        Kanji eslash, Grammatika testi, AI Yaponcha suhbat senariylari va Minna no Nihongo
+                                        Universitet qabuli, Speaking mock (Gordon), Writing tahlil va Cambridge testlari
                                     </p>
                                 </div>
-                                <ArrowRight size={20} className="text-muted-foreground group-hover:text-rose-400 group-hover:translate-x-1 transition-all" />
+                                <ArrowRight size={20} className="text-muted-foreground group-hover:text-primary group-hover:translate-x-1 transition-all" />
+                            </button>
+
+                            <button
+                                onClick={() => handleLanguageSelect('en')}
+                                className="w-full p-5 rounded-2xl border-2 border-border hover:border-primary/50 bg-background hover:bg-primary/5 text-left flex items-center gap-4 transition-all group shadow-sm hover:shadow-md"
+                            >
+                                <span className="text-4xl p-2.5 rounded-2xl bg-amber-500/10 text-amber-500 group-hover:scale-105 transition-transform">🎯</span>
+                                <div className="flex-1">
+                                    <div className="font-extrabold text-base text-foreground flex items-center justify-between">
+                                        <span>IELTS General Training Track</span>
+                                        <span className="text-[10px] font-black uppercase px-2.5 py-0.5 rounded-full bg-amber-500/20 text-amber-500 border border-amber-500/30">Immigratsiya & Ish</span>
+                                    </div>
+                                    <p className="text-xs text-muted-foreground mt-1 leading-relaxed">
+                                        Ish vizasi, xalqaro ko'chish, kundalik ish joyi muloqoti va amaliy xatlar
+                                    </p>
+                                </div>
+                                <ArrowRight size={20} className="text-muted-foreground group-hover:text-amber-500 group-hover:translate-x-1 transition-all" />
                             </button>
                         </div>
                     </div>
@@ -219,65 +215,33 @@ export const PersonalizedOnboardingModal: React.FC<PersonalizedOnboardingModalPr
                         </div>
 
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 max-h-72 overflow-y-auto pr-1">
-                            {selectedLanguage === 'ja' && (
-                                [
-                                    { level: 'Beginner', title: '🌱 Boshlang\'ich (N5)', desc: "Hiragana, Katakana & asosiy iboralar" },
-                                    { level: 'N4', title: '🎌 JLPT N4', desc: "Kundalik suhbat va 300 ta Kanji" },
-                                    { level: 'N3', title: '🎌 JLPT N3', desc: "O'rta daraja, ishlash & 650 Kanji", tag: 'Tavsiya' },
-                                    { level: 'N2', title: '🎌 JLPT N2', desc: "Biznes & Universitet darajasi" },
-                                    { level: 'N1', title: '🎌 JLPT N1', desc: "Ona tili darajasida erkin" },
-                                ].map((item) => (
-                                    <button
-                                        key={item.level}
-                                        onClick={() => setSelectedLevel(item.level)}
-                                        className={`p-3.5 rounded-2xl border-2 text-left flex flex-col justify-between transition-all ${
-                                            selectedLevel === item.level
-                                                ? 'border-rose-500 bg-rose-500/10 text-foreground font-bold shadow-xs'
-                                                : 'border-border bg-background hover:bg-muted/60 text-muted-foreground hover:text-foreground'
-                                        }`}
-                                    >
-                                        <div className="flex items-center justify-between w-full">
-                                            <span className="text-sm font-extrabold text-foreground">{item.title}</span>
-                                            {item.tag && (
-                                                <span className="text-[10px] font-black px-1.5 py-0.5 rounded-md bg-rose-500 text-white">
-                                                    {item.tag}
-                                                </span>
-                                            )}
-                                        </div>
-                                        <div className="text-[11px] text-muted-foreground mt-1">{item.desc}</div>
-                                    </button>
-                                ))
-                            )}
-
-                            {selectedLanguage === 'en' && (
-                                [
-                                    { level: 'A1-A2', title: '🌱 Beginner (A1-A2)', desc: "Asosiy grammatika & tayanch so'zlar" },
-                                    { level: 'B1', title: '🎓 Intermediate (B1)', desc: "IELTS 4.5 - 5.5 bazasi" },
-                                    { level: 'B2', title: '🎓 Upper-Int (B2)', desc: "IELTS 6.0 - 7.0 akademik tayyorgarlik", tag: 'Tavsiya' },
-                                    { level: 'C1', title: '🎓 Advanced (C1)', desc: "IELTS 7.5 - 8.5 & Karyera" },
-                                    { level: 'C2', title: '🎓 Mastery (C2)', desc: "Ona tili darajasidagi ravonlik" },
-                                ].map((item) => (
-                                    <button
-                                        key={item.level}
-                                        onClick={() => setSelectedLevel(item.level)}
-                                        className={`p-3.5 rounded-2xl border-2 text-left flex flex-col justify-between transition-all ${
-                                            selectedLevel === item.level
-                                                ? 'border-indigo-500 bg-indigo-500/10 text-foreground font-bold shadow-xs'
-                                                : 'border-border bg-background hover:bg-muted/60 text-muted-foreground hover:text-foreground'
-                                        }`}
-                                    >
-                                        <div className="flex items-center justify-between w-full">
-                                            <span className="text-sm font-extrabold text-foreground">{item.title}</span>
-                                            {item.tag && (
-                                                <span className="text-[10px] font-black px-1.5 py-0.5 rounded-md bg-indigo-600 text-white">
-                                                    {item.tag}
-                                                </span>
-                                            )}
-                                        </div>
-                                        <div className="text-[11px] text-muted-foreground mt-1">{item.desc}</div>
-                                    </button>
-                                ))
-                            )}
+                            {[
+                                { level: 'A1-A2', title: '🌱 Beginner (A1-A2)', desc: "Asosiy grammatika & tayanch so'zlar" },
+                                { level: 'B1', title: '🎓 Intermediate (B1)', desc: "IELTS 4.5 - 5.5 bazasi" },
+                                { level: 'B2', title: '🎓 Upper-Int (B2)', desc: "IELTS 6.0 - 7.0 akademik tayyorgarlik", tag: 'Tavsiya' },
+                                { level: 'C1', title: '🎓 Advanced (C1)', desc: "IELTS 7.5 - 8.5 & Karyera" },
+                                { level: 'C2', title: '🎓 Mastery (C2)', desc: "Ona tili darajasidagi ravonlik" },
+                            ].map((item) => (
+                                <button
+                                    key={item.level}
+                                    onClick={() => setSelectedLevel(item.level)}
+                                    className={`p-3.5 rounded-2xl border-2 text-left flex flex-col justify-between transition-all ${
+                                        selectedLevel === item.level
+                                            ? 'border-indigo-500 bg-indigo-500/10 text-foreground font-bold shadow-xs'
+                                            : 'border-border bg-background hover:bg-muted/60 text-muted-foreground hover:text-foreground'
+                                    }`}
+                                >
+                                    <div className="flex items-center justify-between w-full">
+                                        <span className="text-sm font-extrabold text-foreground">{item.title}</span>
+                                        {item.tag && (
+                                            <span className="text-[10px] font-black px-1.5 py-0.5 rounded-md bg-indigo-600 text-white">
+                                                {item.tag}
+                                            </span>
+                                        )}
+                                    </div>
+                                    <div className="text-[11px] text-muted-foreground mt-1">{item.desc}</div>
+                                </button>
+                            ))}
                         </div>
 
                         <div className="flex items-center justify-between pt-2">

@@ -20,9 +20,9 @@ export const PricingPage: React.FC = () => {
   const { user } = useStudyData();
 
   useSEO({
-    title: 'Barcha Imkoniyatlar Bepul — Nihongo Talk',
+    title: 'Barcha Imkoniyatlar Bepul — IELTS Talk',
     description:
-      "Nihongo Talk barcha o'quvchilar uchun 100% bepul. Speaking Coach va JLPT darslari erkin ochiq.",
+      "IELTS Talk barcha o'quvchilar uchun 100% bepul. AI Speaking Coach va IELTS darslari erkin ochiq.",
     canonical: '/pricing',
   });
 
@@ -34,7 +34,7 @@ export const PricingPage: React.FC = () => {
           <AppLogo size="md" />
         </div>
         <button
-          onClick={() => navigate(user ? '/jlpt' : '/login')}
+          onClick={() => navigate(user ? '/ielts' : '/login')}
           className="cursor-pointer rounded-xl border border-border bg-card px-4 py-2 text-xs font-bold text-foreground transition-all hover:bg-muted"
         >
           {user ? 'Platformaga kirish' : 'Kirish'}
@@ -65,7 +65,7 @@ export const PricingPage: React.FC = () => {
               Hech Qanday To'lov yoki Narxlar Yo'q
             </h1>
             <p className="mx-auto max-w-lg text-sm leading-relaxed text-muted-foreground sm:text-base">
-              Nihongo Talk har bir foydalanuvchi uchun mutlaqo bepul. Pullik obunalar, cheklovlar
+              IELTS Talk har bir foydalanuvchi uchun mutlaqo bepul. Pullik obunalar, cheklovlar
               yoki yashirin to'lovlar mavjud emas — barcha imkoniyatlar erkin ochiq.
             </p>
           </div>
@@ -87,10 +87,10 @@ export const PricingPage: React.FC = () => {
             <div className="space-y-1.5 rounded-2xl border border-border bg-muted/40 p-4">
               <div className="flex items-center gap-2 text-xs font-bold text-foreground">
                 <BookOpen size={16} className="text-cyan-500" />
-                <span>JLPT N5–N1</span>
+                <span>IELTS Band 5.0–9.0</span>
               </div>
               <p className="text-[11px] leading-relaxed text-muted-foreground">
-                Grammatika, kanji va audiolardan iborat barcha darajalar
+                Speaking, Writing, Reading va Listening bo'yicha to'liq tayyorgarlik
               </p>
               <span className="inline-block text-[10px] font-bold text-emerald-500">
                 Bepul · Cheklovlarsiz
@@ -127,7 +127,7 @@ export const PricingPage: React.FC = () => {
           <div className="pt-4">
             <Button
               size="lg"
-              onClick={() => navigate(user ? '/jlpt' : '/register')}
+              onClick={() => navigate(user ? '/ielts' : '/register')}
               className="mx-auto flex w-full cursor-pointer items-center justify-center gap-2 rounded-2xl bg-primary px-8 py-3.5 text-sm font-black text-primary-foreground shadow-lg shadow-primary/25 transition-transform hover:scale-[1.02] hover:bg-primary/90 active:scale-95 sm:w-auto"
             >
               <span>{user ? "Darslarga O'tish" : 'Hoziroq Bepul Boshlang'}</span>

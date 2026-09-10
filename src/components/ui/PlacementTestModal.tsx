@@ -90,10 +90,10 @@ export const PlacementTestModal: React.FC<PlacementTestModalProps> = ({ isOpen, 
                         </span>
                     </div>
                     <h2 className="text-2xl font-black">
-                        {testType === 'jlpt' ? 'JLPT Darajani Aniqlash' : 'IELTS Darajani Aniqlash'}
+                        IELTS Darajani Aniqlash Testi
                     </h2>
                     <p className="text-blue-100 mt-1 text-sm">
-                        AI orqali hozirgi darajangizni bilib oling.
+                        AI orqali hozirgi IELTS darajangiz va Band balingizni aniqlang.
                     </p>
                 </div>
 
@@ -110,8 +110,7 @@ export const PlacementTestModal: React.FC<PlacementTestModalProps> = ({ isOpen, 
                             <Sparkles className="w-16 h-16 text-indigo-500 mx-auto mb-4" />
                             <h3 className="text-lg font-bold mb-2">Darajangizni aniq bilmaysizmi?</h3>
                             <p className="text-muted-foreground text-sm mb-6">
-                                AI Ustoz sizga 5 ta maxsus savol beradi. Javoblaringizga qarab haqiqiy 
-                                {testType === 'jlpt' ? ' JLPT (N5-N1)' : ' IELTS (Band)'} darajangizni aniqlab beradi.
+                                AI Ustoz sizga 5 ta maxsus savol beradi. Javoblaringizga qarab haqiqiy IELTS (Band) darajangizni aniqlab beradi.
                             </p>
                             <button
                                 onClick={startTest}

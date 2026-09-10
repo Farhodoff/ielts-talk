@@ -56,11 +56,11 @@ export const CoachTopBar: React.FC<CoachTopBarProps> = ({
   const ActivePersonaIcon = currentPersona.icon;
 
   const displayName = activeScenario
-    ? `${activeScenario.emoji} ${activeScenario.title_ja}`
+    ? `${activeScenario.emoji} ${activeScenario.title_en || activeScenario.title_uz}`
     : currentPersona.name;
 
   const displayDesc = activeScenario
-    ? `JLPT ${activeScenario.difficulty} • ${activeScenario.title_uz}`
+    ? `IELTS ${activeScenario.difficulty || 'Band 7.0'} • ${activeScenario.title_uz || activeScenario.title_en}`
     : currentPersona.desc;
 
   return (
