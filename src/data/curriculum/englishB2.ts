@@ -2601,807 +2601,1258 @@ export const ENGLISH_B2_LESSONS: Lesson[] = [
     ]
 },
     {
-        "id": "en-b2-u3-l1",
-        "courseId": "english-b2",
-        "unitId": "en-b2-u3",
-        "unitTitle": "Unit 3: Academic Discourse & Rhetoric",
-        "language": "en",
-        "level": "B2",
-        "lessonNumber": 1,
-        "title": "Advanced Discourse Markers (Conversely, Furthermore, In light of)",
-        "description": "Murakkab fikrlar o'rtasida mantiqiy bog'liqlik o'rnatish.",
-        "estimatedDurationMinutes": 15,
-        "icon": "🔤",
-        "steps": [
-            {
-                "id": "en-b2-u3-l1-s1",
-                "title": "Diskurs Vositalari",
-                "type": "learn",
-                "estimatedMinutes": 5,
-                "learnData": {
-                    "title": "Sophisticated Discourse Markers",
-                    "explanation": "Conversely (Aksincha), In light of (Inobatga olgan holda), Notwithstanding (Shunga qaramasdan), In essence (Mohiyatan).",
-                    "vocabulary": [
-                        {
-                            "term": "Conversely",
-                            "reading": "/ˈkɒn.vɜːs.li/",
-                            "meaning": "Aksincha / Teskarisiga",
-                            "exampleSentence": "Some thrive under pressure; conversely, others falter.",
-                            "exampleTranslation": "Ayrimlar bosim ostida o'sadi, aksincha, boshqalar qiyinchilikka uchraydi."
-                        },
-                        {
-                            "term": "Coherence",
-                            "reading": "/kəʊˈhɪə.rəns/",
-                            "meaning": "Mantiqiy bogʻliqlik, izchillik",
-                            "exampleSentence": "Ensure structural coherence throughout your essay.",
-                            "exampleTranslation": "Inshoyingiz davomida tuzilmaviy izchillikni taʼminlang."
-                        },
-                        {
-                            "term": "Compelling",
-                            "reading": "/kəmˈpel.ɪŋ/",
-                            "meaning": "Juda ishonarli, maftunkor",
-                            "exampleSentence": "He presented a compelling argument in the debate.",
-                            "exampleTranslation": "U bahsda juda ishonarli dalil keltirdi."
-                        }
-                    ],
-                    "grammarRules": [
-                        {
-                            "pattern": "Advanced Discourse Markers (Conversely, Furthermore, In light of)",
-                            "meaning": "Murakkab fikrlar o'rtasida mantiqiy bog'liqlik o'rnatish.",
-                            "usageNotes": "Conversely (Aksincha), In light of (Inobatga olgan holda), Notwithstanding (Shunga qaramasdan), In essence (Mohiyatan).",
-                            "examples": [
-                                {
-                                    "sentence": "Some thrive under pressure; conversely, others falter.",
-                                    "translation": "Ayrimlar bosim ostida o'sadi, aksincha, boshqalar qiyinchilikka uchraydi."
-                                }
-                            ]
-                        }
-                    ]
-                }
-            },
-            {
-                "id": "en-b2-u3-l1-s2",
-                "title": "Mashq",
-                "type": "practice",
-                "estimatedMinutes": 5,
-                "practiceData": {
-                    "instructions": "To'g'ri bog'lovchini tanlang.",
-                    "exercises": [
-                        {
-                            "id": "en-b2-u3-l1-e1",
-                            "type": "multiple-choice",
-                            "prompt": "\"_______ recent data, we must revise our annual targets.\"",
-                            "options": [
-                                "In light of",
-                                "By light of",
-                                "In light with",
-                                "To light of"
-                            ],
-                            "correctAnswer": 0,
-                            "explanation": "In light of (inobatga olib)."
-                        },
-                        {
-                            "id": "en-b2-u3-l1-ex-2",
-                            "type": "multiple-choice",
-                            "prompt": "Choose the correct word to complete the sentence: \"Ensure structural coherence throughout your essay.\"",
-                            "options": [
-                                "Coherence",
-                                "reluctance",
-                                "doubt",
-                                "delay"
-                            ],
-                            "correctAnswer": 0,
-                            "explanation": "\"Coherence\" (Mantiqiy bogʻliqlik, izchillik) fits the context appropriately."
-                        }
-                    ]
-                }
-            },
-            {
-                "id": "en-b2-u3-l1-s3",
-                "title": "Test",
-                "type": "test",
-                "estimatedMinutes": 5,
-                "testData": {
-                    "instructions": "Savollarga javob bering.",
-                    "passingScorePercentage": 75,
-                    "questions": [
-                        {
-                            "id": "en-b2-u3-l1-q1",
-                            "question": "_______ the economic slowdown, the company posted record profits.",
-                            "options": [
-                                "Notwithstanding",
-                                "Despite of",
-                                "Although",
-                                "Whereas"
-                            ],
-                            "correctAnswerIndex": 0,
-                            "explanation": "Notwithstanding the slowdown."
-                        },
-                        {
-                            "id": "en-b2-u3-l1-q2",
-                            "question": "\"In essence\" iborasining ma'nosi:",
-                            "options": [
-                                "Boshida",
-                                "Tasodifan",
-                                "Kutilmaganda",
-                                "Mohiyatan / Aslida"
-                            ],
-                            "correctAnswerIndex": 3,
-                            "explanation": "In essence — Mohiyatan."
-                        },
-                        {
-                            "id": "en-b2-u3-l1-q3",
-                            "question": "He presented a persuasive argument. _______, his methodology was flawed.",
-                            "options": [
-                                "Furthermore",
-                                "Consequently",
-                                "Nonetheless",
-                                "Moreover"
-                            ],
-                            "correctAnswerIndex": 2,
-                            "explanation": "Nonetheless (Shunga qaramay)."
-                        },
-                        {
-                            "id": "en-b2-u3-l1-q4",
-                            "question": "Which connector expresses a direct contrast between two sentences?",
-                            "options": [
-                                "Namely,",
-                                "Conversely,",
-                                "In addition,",
-                                "For instance,"
-                            ],
-                            "correctAnswerIndex": 1,
-                            "explanation": "Conversely (Aksincha)."
-                        }
-                    ]
-                }
+    "id": "en-b2-u3-l1",
+    "courseId": "english-b2",
+    "unitId": "en-b2-u3",
+    "unitTitle": "Unit 3: Academic Discourse & Rhetoric",
+    "language": "en",
+    "level": "B2",
+    "lessonNumber": 1,
+    "title": "Advanced Discourse Markers (Conversely, Furthermore, In light of)",
+    "description": "Ilg'or ritorik va kogeziya bog'lovchilari: ilmiy insho va munozaralarda mantiqiy bog'liqlikni Band 7.0+ darajasiga yetkazish.",
+    "estimatedDurationMinutes": 18,
+    "icon": "🔗",
+    "steps": [
+        {
+            "id": "en-b2-u3-l1-s1",
+            "title": "Ilg'or Diskurs Bog'lovchilari",
+            "type": "learn",
+            "estimatedMinutes": 6,
+            "learnData": {
+                "title": "Sophisticated Cohesive Devices: Contrast, Extension, and Causality",
+                "explanation": "IELTS Writing Task 2 va Speaking Part 3 da Coherence and Cohesion bo'yicha 7.0+ ball olishning asosiy talabi — oddiy maktab darajasidagi 'and', 'but', 'so', 'also' so'zlaridan voz kechib, nozik semantik qirralarga ega ilg'or diskurs bog'lovchilarini to'g'ri punktuatsiya bilan qo'llashdir.\n\n1. Asosiy Ilg'or Bog'lovchilar va Ularning Vazifalari:\n- **Conversely** (aksincha, teskarisiga): Ikki qarama-qarshi fakt yoki pozitsiyani taqqoslashda.\n  • *'Northern regions experience prolonged winters; conversely, southern districts enjoy subtropical climates.'*\n- **Furthermore / Moreover / In addition to this** (bundan tashqari, ustiga-ustak): Fikrni yangi kuchli dalil bilan mustahkamlashda.\n  • *'The scheme creates employment; furthermore, it revitalizes derelict urban infrastructure.'*\n- **In light of + Noun phrase** (...ni hisobga olgan holda, ...dan kelib chiqib):\n  • *'In light of recent fiscal deficits, municipal spending must be trimmed.'*\n- **Notwithstanding + Noun phrase** (...ga qaramasdan, qaramay):\n  • *'Notwithstanding severe inflationary pressures, household consumer spending remained robust.'*\n- **By way of illustration / Exemplified by** (misol tariqasida):\n  • *'Public transport systems reduce pollution, as exemplified by Zurich's zero-emission electric trams.'*\n- **To put it in another perspective / That is to say** (boshqacha aytganda / ya'ni).\n\n2. Tinish Belgilari va Sintaksis (Punctuation & Syntax):\n- 'Conversely', 'Furthermore', 'Moreover', 'Nevertheless' kabi bog'lovchi ravishlar (conjunctive adverbs) gap boshida kelsa, KETIDAN VERGUL QO'YILISHI SHART: *'Furthermore, ...'*\n- Agar ikki mustaqil gap o'rtasida kelsa: Nuqtali vergul (;) + bog'lovchi + vergul (,) ishlatiladi: *'The project was costly; nevertheless, the returns were exceptional.'*\n- 'In light of' va 'Notwithstanding' esa predlog vazifasini o'tab, to'liq gap emas, OT yoki OT BIRIKMASI oladi.\n\n3. O'zbek o'rganuvchilari uchun xavfli tuzoqlar (Common Pitfalls):\n- ❌ *'In light of the economy is bad...'* -> ✅ *'In light of THE ECONOMIC DOWNTURN...'*\n- ❌ *'Notwithstanding of the rain...'* -> ✅ *'Notwithstanding the rain...'* ('of' qo'shilmaydi!).\n- ❌ *'Furthermore he arrived late.'* -> ✅ *'Furthermore, he arrived late.'* (Vergul unutilmasligi lozim).\n\n4. IELTS Writing & Speaking Corner:\n- Task 2 Essay Application: Inshoning ikkinchi asosiy paragrafini boshlashda: *'Conversely, opponents contend that unfettered free market deregulation fosters severe wealth concentration.'*\n- Speaking Part 3 Model: *'In light of rapid urban migration, municipal authorities must urgently expand public transit networks.'*",
+                "vocabulary": [
+                    {
+                        "term": "conversely",
+                        "reading": "/kənˈvɜːs.li/",
+                        "meaning": "aksincha, teskarisiga (taqqoslashda)",
+                        "exampleSentence": "Urban real estate values soared; conversely, rural property prices stagnated.",
+                        "exampleTranslation": "Shahar ko'chmas mulk narxlari keskin ko'tarildi; aksincha, qishloq mulklari bahosi turg'unlashdi."
+                    },
+                    {
+                        "term": "notwithstanding",
+                        "reading": "/ˌnɒt.wɪðˈstæn.dɪŋ/",
+                        "meaning": "...ga qaramasdan, shunga qaramay",
+                        "exampleSentence": "Notwithstanding macroeconomic turbulence, the domestic technology sector demonstrated robust profitability.",
+                        "exampleTranslation": "Makroiqtisodiy beqarorlikka qaramasdan, mahalliy texnologiya sektori mustahkam daromadlilikni namoyish etdi."
+                    },
+                    {
+                        "term": "furthermore",
+                        "reading": "/ˌfɜː.ðəˈmɔːr/",
+                        "meaning": "bundan tashqari, ustiga-ustak",
+                        "exampleSentence": "The proposal curtails operational overhead; furthermore, it eliminates bureaucratic bottlenecks.",
+                        "exampleTranslation": "Taklif operatsion xarajatlarni qisqartiradi; bundan tashqari, u byurokratik to'siqlarni bartaraf etadi."
+                    },
+                    {
+                        "term": "derelict",
+                        "reading": "/ˈder.ə.lɪkt/",
+                        "meaning": "tashlandiq, qarovsiz qolgan, xarob",
+                        "exampleSentence": "The urban renewal grant converts derelict warehouses into vibrant community centers.",
+                        "exampleTranslation": "Shaharni yangilash granti qarovsiz omborxonalarni gavjum jamoat markazlariga aylantiradi."
+                    },
+                    {
+                        "term": "deficit",
+                        "reading": "/ˈdef.ɪ.sɪt/",
+                        "meaning": "kamomad, taqchillik, defitsit",
+                        "exampleSentence": "In light of the chronic fiscal deficit, public infrastructure subsidies were trimmed.",
+                        "exampleTranslation": "Surunkali byudjet taqchilligini hisobga olgan holda, davlat infratuzilmasi subsidiyalari qisqartirildi."
+                    },
+                    {
+                        "term": "exemplify",
+                        "reading": "/ɪɡˈzem.plɪ.faɪ/",
+                        "meaning": "yaqqol misol bo'lmoq, namuna bo'lmoq",
+                        "exampleSentence": "Singapore exemplifies how strategic transit planning can virtually eliminate urban gridlock.",
+                        "exampleTranslation": "Singapur strategik transport rejalashtirish qanday qilib shahar tirbandligini deyarli yo'q qila olishiga yaqqol misoldir."
+                    },
+                    {
+                        "term": "bottleneck",
+                        "reading": "/ˈbɒt.əl.nek/",
+                        "meaning": "tiqilinch, to'siq, jarayonni sekinlashtiruvchi joy",
+                        "exampleSentence": "Digitalizing border customs procedures eradicated costly logistical bottlenecks.",
+                        "exampleTranslation": "Chegara bojxona jarayonlarini raqamlashtirish qimmatga tushadigan logistika to'siqlarini yo'q qildi."
+                    },
+                    {
+                        "term": "robust",
+                        "reading": "/rəʊˈbʌst/",
+                        "meaning": "baquvvat, mustahkam, barqaror",
+                        "exampleSentence": "Consumer confidence remained remarkably robust throughout the economic downturn.",
+                        "exampleTranslation": "Iqtisodiy pasayish davrida iste'molchilar ishonchi aql bovar qilmas darajada mustahkam bo'lib qoldi."
+                    }
+                ],
+                "grammarRules": [
+                    {
+                        "pattern": "Clause 1; conversely, Clause 2.",
+                        "meaning": "Ikki qarama-qarshi mustaqil fikrni bog'lash",
+                        "usageNotes": "Nuqtali vergul va oddiy vergul bilan ajratiladi.",
+                        "examples": [
+                            {
+                                "sentence": "Extroverts gain energy from social mingling; conversely, introverts require solitude to recharge.",
+                                "translation": "Ekstrovertlar ijtimoiy muloqotdan energiya oladilar; aksincha, introvertlar quvvat to'plash uchun yolg'izlikka muhtojdirlar."
+                            }
+                        ]
+                    },
+                    {
+                        "pattern": "In light of + Noun Phrase, Main Clause",
+                        "meaning": "Mavjud dalil yoki holatdan kelib chiqqan holda xulosa",
+                        "usageNotes": "Ketidan to'liq gap emas, faqat ot birikmasi keladi.",
+                        "examples": [
+                            {
+                                "sentence": "In light of overwhelming empirical proof, the council revised the regulation.",
+                                "translation": "Inkor etib bo'lmas amaliy dalillarni hisobga olgan holda, kengash qoidani qayta ko'rib chiqdi."
+                            }
+                        ]
+                    },
+                    {
+                        "pattern": "Notwithstanding + Noun Phrase, Main Clause",
+                        "meaning": "Shunga qaramasdan (formal contrast)",
+                        "usageNotes": "'of' predlogi qo'yilmaydi.",
+                        "examples": [
+                            {
+                                "sentence": "Notwithstanding initial setbacks, the launch succeeded brilliantly.",
+                                "translation": "Dastlabki muammolarga qaramasdan, start ajoyib muvaffaqiyat qozondi."
+                            }
+                        ]
+                    }
+                ]
             }
-        ]
-    },
+        },
+        {
+            "id": "en-b2-u3-l1-s2",
+            "title": "Amaliy Mashqlar",
+            "type": "practice",
+            "estimatedMinutes": 5,
+            "practiceData": {
+                "instructions": "Ilg'or diskurs bog'lovchilariga mos to'g'ri variantlarni tanlang.",
+                "exercises": [
+                    {
+                        "id": "en-b2-u3-l1-e1",
+                        "type": "multiple-choice",
+                        "prompt": "Large metropolitan hubs attract youth seeking careers; _______ , depopulated rural counties face labor deficits.",
+                        "options": [
+                            "conversely",
+                            "furthermore",
+                            "notwithstanding",
+                            "due to"
+                        ],
+                        "correctAnswer": 0,
+                        "explanation": "Ikki qarama-qarshi holatni taqqoslash uchun: 'conversely' (aksincha)."
+                    },
+                    {
+                        "id": "en-b2-u3-l1-e2",
+                        "type": "multiple-choice",
+                        "prompt": "_______ the unexpected raw material shortages, the factory fulfilled all quarterly shipments.",
+                        "options": [
+                            "Notwithstanding",
+                            "Notwithstanding of",
+                            "Although of",
+                            "In light that"
+                        ],
+                        "correctAnswer": 0,
+                        "explanation": "'Notwithstanding' to'g'ridan-to'g'ri ot birikmasi bilan ishlatiladi ('of'siz)."
+                    },
+                    {
+                        "id": "en-b2-u3-l1-e3",
+                        "type": "multiple-choice",
+                        "prompt": "_______ recent epidemiological findings, public health guidelines have been updated.",
+                        "options": [
+                            "In light of",
+                            "In light that",
+                            "Conversely",
+                            "Notwithstanding to"
+                        ],
+                        "correctAnswer": 0,
+                        "explanation": "'In light of + Noun phrase' (...ni hisobga olgan holda)."
+                    },
+                    {
+                        "id": "en-b2-u3-l1-e4",
+                        "type": "multiple-choice",
+                        "prompt": "The new transit policy curbs vehicular congestion; _______ , it substantially lowers atmospheric pollution.",
+                        "options": [
+                            "moreover",
+                            "in spite of",
+                            "whereas",
+                            "despite"
+                        ],
+                        "correctAnswer": 0,
+                        "explanation": "Fikrni yangi ijobiy dalil bilan kengaytirish uchun: 'moreover' / 'furthermore'."
+                    },
+                    {
+                        "id": "en-b2-u3-l1-e5",
+                        "type": "multiple-choice",
+                        "prompt": "Which sentence is punctuated CORRECTLY according to academic conventions?",
+                        "options": [
+                            "Furthermore the survey sample was too limited to draw conclusions.",
+                            "Furthermore, the survey sample was too limited to draw conclusions.",
+                            "Furthermore; the survey sample was too limited to draw conclusions.",
+                            "Furthermore: the survey sample was too limited to draw conclusions."
+                        ],
+                        "correctAnswer": 1,
+                        "explanation": "Gap boshidagi 'Furthermore'dan keyin doimo vergul qo'yiladi."
+                    }
+                ]
+            }
+        },
+        {
+            "id": "en-b2-u3-l1-s3",
+            "title": "Yakuniy Test",
+            "type": "test",
+            "estimatedMinutes": 5,
+            "testData": {
+                "instructions": "5 ta test savoliga to'g'ri javob bering. O'tish bali: 80%.",
+                "passingScorePercentage": 80,
+                "questions": [
+                    {
+                        "id": "en-b2-u3-l1-q1",
+                        "question": "Which cohesive device expresses a direct logical antithesis between two facts?",
+                        "options": [
+                            "Furthermore",
+                            "Conversely",
+                            "In addition",
+                            "Consequently"
+                        ],
+                        "correctAnswerIndex": 1,
+                        "explanation": "'Conversely' to'g'ridan-to'g'ri qarama-qarshilik va teskari munosabatni bildiradi."
+                    },
+                    {
+                        "id": "en-b2-u3-l1-q2",
+                        "question": "_______ severe regulatory hurdles, the fintech startup raised $20 million in venture funding.",
+                        "options": [
+                            "Notwithstanding",
+                            "Although",
+                            "Even though",
+                            "Whereas"
+                        ],
+                        "correctAnswerIndex": 0,
+                        "explanation": "'severe regulatory hurdles' ot birikmasi bo'lgani sababli 'Notwithstanding' to'g'ri."
+                    },
+                    {
+                        "id": "en-b2-u3-l1-q3",
+                        "question": "Why is 'In light of the company is bankrupt' grammatically incorrect?",
+                        "options": [
+                            "Because 'in light of' requires an interrogative pronoun.",
+                            "Because 'in light of' is a prepositional phrase requiring a noun phrase, not a finite clause.",
+                            "Because 'bankrupt' is not an adjective.",
+                            "Because 'light' only refers to illumination."
+                        ],
+                        "correctAnswerIndex": 1,
+                        "explanation": "'In light of'dan keyin to'liq gap kelmaydi, faqat ot birikmasi ('In light of the company's bankruptcy') kelishi lozim."
+                    },
+                    {
+                        "id": "en-b2-u3-l1-q4",
+                        "question": "The research lab upgraded its high-speed servers; _______ , it hired five senior data architects.",
+                        "options": [
+                            "furthermore",
+                            "despite",
+                            "in spite of",
+                            "whereas"
+                        ],
+                        "correctAnswerIndex": 0,
+                        "explanation": "Qo'shimcha harakatni kiritish: 'furthermore'."
+                    },
+                    {
+                        "id": "en-b2-u3-l1-q5",
+                        "question": "Identify the connector that best introduces an exemplar in academic writing:",
+                        "options": [
+                            "as exemplified by",
+                            "conversely",
+                            "notwithstanding",
+                            "in light of"
+                        ],
+                        "correctAnswerIndex": 0,
+                        "explanation": "Misol keltirish uchun: 'as exemplified by' (namuna qilib olinganda)."
+                    }
+                ]
+            }
+        }
+    ]
+},
     {
-        "id": "en-b2-u3-l2",
-        "courseId": "english-b2",
-        "unitId": "en-b2-u3",
-        "unitTitle": "Unit 3: Academic Discourse & Rhetoric",
-        "language": "en",
-        "level": "B2",
-        "lessonNumber": 2,
-        "title": "Hedging & Modesty in Academic Stance (tends to, arguably)",
-        "description": "Akademik matnlarda ehtiyotkorlik va dalillarni bo'rttirmasdan ifodalash san'ati.",
-        "estimatedDurationMinutes": 14,
-        "icon": "🛡️",
-        "steps": [
-            {
-                "id": "en-b2-u3-l2-s1",
-                "title": "Hedging Usullari",
-                "type": "learn",
-                "estimatedMinutes": 4,
-                "learnData": {
-                    "title": "Hedging in Academic Writing",
-                    "explanation": "Akademik tilda 100% mutlaq da'volar o'rniga (e.g. \"Computers destroy brains\" EMAS), ehtiyotkor konstruktsiyalar qo'llaniladi: \"Excessive screen time tends to impair concentration\", \"This arguably represents a breakthrough\".",
-                    "keyPoints": [
-                        "Verbs: appear to, seem to, tend to, suggest that",
-                        "Adverbs: arguably, presumably, potentially, largely"
-                    ],
-                    "grammarRules": [
-                        {
-                            "pattern": "Hedging & Modesty in Academic Stance (tends to, arguably)",
-                            "meaning": "Akademik matnlarda ehtiyotkorlik va dalillarni bo'rttirmasdan ifodalash san'ati.",
-                            "usageNotes": "Akademik tilda 100% mutlaq da'volar o'rniga (e.g. \"Computers destroy brains\" EMAS), ehtiyotkor konstruktsiyalar qo'llaniladi: \"Excessive screen time tends to impair concentration\", \"This arguably represents a breakthrough\".",
-                            "examples": [
-                                {
-                                    "sentence": "I study English every day with dedication.",
-                                    "translation": "Har kuni ingliz tilini astoydil o'rganaman."
-                                }
-                            ]
-                        }
-                    ],
-                    "vocabulary": [
-                        {
-                            "term": "Coherence",
-                            "reading": "/kəʊˈhɪə.rəns/",
-                            "meaning": "Mantiqiy bogʻliqlik, izchillik",
-                            "exampleSentence": "Ensure structural coherence throughout your essay.",
-                            "exampleTranslation": "Inshoyingiz davomida tuzilmaviy izchillikni taʼminlang."
-                        },
-                        {
-                            "term": "Compelling",
-                            "reading": "/kəmˈpel.ɪŋ/",
-                            "meaning": "Juda ishonarli, maftunkor",
-                            "exampleSentence": "He presented a compelling argument in the debate.",
-                            "exampleTranslation": "U bahsda juda ishonarli dalil keltirdi."
-                        },
-                        {
-                            "term": "Substantiate",
-                            "reading": "/səbˈstæn.ʃi.eɪt/",
-                            "meaning": "Asoslab bermoq, isbotlamoq",
-                            "exampleSentence": "You must substantiate your claims with empirical evidence.",
-                            "exampleTranslation": "Siz oʻz daʼvolaringizni empirik dalillar bilan asoslab berishingiz kerak."
-                        }
-                    ]
-                }
-            },
-            {
-                "id": "en-b2-u3-l2-s2",
-                "title": "Mashq",
-                "type": "practice",
-                "estimatedMinutes": 5,
-                "practiceData": {
-                    "instructions": "To'g'ri hedging ifodasini tanlang.",
-                    "exercises": [
-                        {
-                            "id": "en-b2-u3-l2-e1",
-                            "type": "multiple-choice",
-                            "prompt": "Which sentence demonstrates proper academic hedging?",
-                            "options": [
-                                "Sleep deprivation definitely destroys everyone's brain.",
-                                "The findings suggest that sleep deprivation may reduce cognitive capacity.",
-                                "Sleep has 100% effect on everything.",
-                                "No one can ever think without 10 hours of sleep."
-                            ],
-                            "correctAnswer": 1,
-                            "explanation": "Suggest that ... may reduce ..."
-                        },
-                        {
-                            "id": "en-b2-u3-l2-ex-2",
-                            "type": "multiple-choice",
-                            "prompt": "Choose the correct word to complete the sentence: \"He presented a compelling argument in the debate.\"",
-                            "options": [
-                                "doubt",
-                                "Compelling",
-                                "delay",
-                                "reluctance"
-                            ],
-                            "correctAnswer": 1,
-                            "explanation": "\"Compelling\" (Juda ishonarli, maftunkor) fits the context appropriately."
-                        }
-                    ]
-                }
-            },
-            {
-                "id": "en-b2-u3-l2-s3",
-                "title": "Test",
-                "type": "test",
-                "estimatedMinutes": 5,
-                "testData": {
-                    "instructions": "Savollarga javob bering.",
-                    "passingScorePercentage": 75,
-                    "questions": [
-                        {
-                            "id": "en-b2-u3-l2-q1",
-                            "question": "\"Arguably\" nimani bildiradi?",
-                            "options": [
-                                "Mutlaqo noto'g'ri",
-                                "Ehtimol / Fikrlarga ko'ra (isbotlanishi mumkin bo'lgan holda)",
-                                "G'azab bilan",
-                                "Hech qachon"
-                            ],
-                            "correctAnswerIndex": 1,
-                            "explanation": "Arguably — Da'vo qilish mumkinki / Ehtimol."
-                        },
-                        {
-                            "id": "en-b2-u3-l2-q2",
-                            "question": "The preliminary survey _______ to indicate a shift in consumer preferences.",
-                            "options": [
-                                "appearedly",
-                                "is appearing",
-                                "appears",
-                                "appear"
-                            ],
-                            "correctAnswerIndex": 2,
-                            "explanation": "Appears to indicate."
-                        },
-                        {
-                            "id": "en-b2-u3-l2-q3",
-                            "question": "Why do researchers use hedging?",
-                            "options": [
-                                "To confuse readers",
-                                "Because they don't know English",
-                                "To make texts longer",
-                                "To avoid making unsupported absolute claims"
-                            ],
-                            "correctAnswerIndex": 3,
-                            "explanation": "To avoid unsupported absolute claims."
-                        },
-                        {
-                            "id": "en-b2-u3-l2-q4",
-                            "question": "Which modal verb is most frequently used for hedging?",
-                            "options": [
-                                "May / Might / Could",
-                                "Need / Dare",
-                                "Will / Won't",
-                                "Must / Shall"
-                            ],
-                            "correctAnswerIndex": 0,
-                            "explanation": "May / Might / Could."
-                        }
-                    ]
-                }
+    "id": "en-b2-u3-l2",
+    "courseId": "english-b2",
+    "unitId": "en-b2-u3",
+    "unitTitle": "Unit 3: Academic Discourse & Rhetoric",
+    "language": "en",
+    "level": "B2",
+    "lessonNumber": 2,
+    "title": "Hedging & Modesty in Academic Stance (tends to, arguably)",
+    "description": "Akademik ehtiyotkorlik (Hedging): mutlaq xulosalardan qochish, ilmiy kamtarlik va g'oyalarni xolis asoslash texnikasi.",
+    "estimatedDurationMinutes": 18,
+    "icon": "🛡️",
+    "steps": [
+        {
+            "id": "en-b2-u3-l2-s1",
+            "title": "Akademik Hedging va Xolislik",
+            "type": "learn",
+            "estimatedMinutes": 6,
+            "learnData": {
+                "title": "Hedging Strategies: Expressing Academic Caution and Nuance",
+                "explanation": "Akademik va ilmiy dunyoda hech bir olim yoki tadqiqotchi 'Bu dori 100% barcha kasalliklarni davolaydi' yoki 'Texnologiya insoniyatni har doim dangasa qiladi' deb yozmaydi. Chunki har qanday mutlaq da'vo bitta istisno bilan yo'qqa chiqishi mumkin. Fikrlarni ehtiyotkorlik, xolislik va ilmiy kamtarlik bilan ifodalash usuli **Hedging** deb ataladi.\n\n1. Asosiy Hedging Usullari:\n- **1. Ehtiyotkor Fe'llar (Hedging Verbs):**\n  • *tend to, appear to, seem to, indicate, suggest, propose*\n  • *'Adolescents tend to exhibit heightened emotional volatility during stress.'* (Har doim emas, balki shunday moyillikka ega).\n  • *'The data appears to support the initial hypothesis.'*\n- **2. Ehtimollik Modal Fe'llari (Probability Modals):**\n  • *may, might, could*\n  • *'Excessive screen exposure may contribute to sleep disruptions.'* ('causes' deb qat'iy hukm qilinmaydi).\n- **3. Ehtiyotkor Ravishlar (Approximators & Adverbs):**\n  • *arguably, predominantly, conceivably, largely, tentatively*\n  • *'Artificial intelligence is arguably the most transformative technology of this era.'* ('arguably' — buni bahslashish mumkin, lekin kuchli dalillar bor degani).\n- **4. Ehtiyotkor Sifatlar va Iboralar (Cautious Phrases):**\n  • *'It is plausible that...'* / *'Evidence strongly suggests that...'* / *'It is widely assumed that...'*.\n\n2. O'zbek Tili Bilan Qiyos (Uzbek Contrastive Analysis):\n- O'zbek tilida bu ma'no '-ga moyil', 'ehtimoldan xoli emas', 'go'yoki', 'shunday xulosa qilish mumkinki' iboralari orqali beriladi.\n- IELTS Writing Task 2 da 'overgeneralization' (ortiqcha umumlashtirish) uchun nomzodlarning Task Achievement balli pasaytiriladi. Hedging usullarini qo'llash orqali siz Band 7.0–8.0 darajasidagi yetuk akademik uslubni namoyon qilasiz.\n\n3. O'zbek o'rganuvchilari uchun xavfli tuzoqlar (Common Pitfalls):\n- ❌ *'Smartphones completely destroy students' memory.'* -> ✅ *'Excessive smartphone utilization appears to impair short-term recall among students.'*\n- ❌ *'It is arguably that...'* -> ✅ *'It is ARGUABLE that...' / 'He is ARGUABLY the best...'* ('arguably' ravish, 'arguable' sifat!).\n- ❌ *'Everybody agrees that money makes happiness.'* -> ✅ *'It is widely acknowledged that financial security significantly contributes to subjective well-being.'*\n\n4. IELTS Writing Task 2 Application Corner:\n- Insho dalillarini taqdim etishda: *'While critics assert that automation eradicates employment, empirical trends suggest that it largely shifts labor demand towards sophisticated technical roles.'*",
+                "vocabulary": [
+                    {
+                        "term": "arguably",
+                        "reading": "/ˈɑːɡ.ju.ə.bli/",
+                        "meaning": "ehtimol, bahslashish mumkin bo'lgan tarzda (kuchli dalillar bilan)",
+                        "exampleSentence": "Renewable energy is arguably the most decisive factor in combating global warming.",
+                        "exampleTranslation": "Qayta tiklanuvchi energiya, ehtimol, global isishga qarshi kurashdagi eng hal qiluvchi omildir."
+                    },
+                    {
+                        "term": "predominantly",
+                        "reading": "/prɪˈdɒm.ɪ.nənt.li/",
+                        "meaning": "asosan, ko'proq, ustun darajada",
+                        "exampleSentence": "The economic upturn was predominantly driven by high-tech manufacturing exports.",
+                        "exampleTranslation": "Iqtisodiy o'sish asosan yuqori texnologiyali ishlab chiqarish eksporti hisobiga ta'minlandi."
+                    },
+                    {
+                        "term": "conceivably",
+                        "reading": "/kənˈsiː.və.bli/",
+                        "meaning": "tasavvur qilsa bo'ladigan darajada, ehtimolki",
+                        "exampleSentence": "Quantum cryptography could conceivably render conventional encryption obsolete.",
+                        "exampleTranslation": "Kvant shifrlash an'anaviy shifrlash tizimlarini ehtimolki butunlay yaroqsiz qilib qo'yishi mumkin."
+                    },
+                    {
+                        "term": "tentative",
+                        "reading": "/ˈten.tə.tɪv/",
+                        "meaning": "dastlabki, sinov tariqasidagi, qat'iy bo'lmagan",
+                        "exampleSentence": "The clinical research team published tentative conclusions pending further peer review.",
+                        "exampleTranslation": "Klinik tadqiqot jamoasi keyingi ekspert xulosalarini kutgan holda dastlabki xulosalarni e'lon qildi."
+                    },
+                    {
+                        "term": "plausible",
+                        "reading": "/ˈplɔː.zə.bəl/",
+                        "meaning": "ishonarli, haqiqatga yaqin, mantiqiy",
+                        "exampleSentence": "It is plausible that environmental shifts accelerated the ancient empire's decline.",
+                        "exampleTranslation": "Ekologik o'zgarishlar qadimgi imperiyaning qulashini tezlashtirgan bo'lishi haqiqatga yaqindir."
+                    },
+                    {
+                        "term": "impair",
+                        "reading": "/ɪmˈpeər/",
+                        "meaning": "zaiflashtirmoq, shikastlamoq, pasaytirmoq",
+                        "exampleSentence": "Chronic sleep deprivation tends to impair working memory and emotional regulation.",
+                        "exampleTranslation": "Surunkali uyqusizlik operativ xotira va hissiyotlarni boshqarishni zaiflashtirishga moyildir."
+                    },
+                    {
+                        "term": "corroborate",
+                        "reading": "/kəˈrɒb.ə.reɪt/",
+                        "meaning": "qo'shimcha dalillar bilan tasdiqlamoq",
+                        "exampleSentence": "Further meteorological measurements are required to corroborate these tentative findings.",
+                        "exampleTranslation": "Ushbu dastlabki xulosalarni tasdiqlash uchun keyingi meteorologik o'lchovlar talab etiladi."
+                    },
+                    {
+                        "term": "volatile",
+                        "reading": "/ˈvɒl.ə.taɪl/",
+                        "meaning": "beqaror, o'zgaruvchan, kutilmagan",
+                        "exampleSentence": "Financial markets tend to be volatile during geopolitical transitions.",
+                        "exampleTranslation": "Geosiyosiy o'zgarishlar davrida moliya bozorlari beqaror bo'lishga moyildir."
+                    }
+                ],
+                "grammarRules": [
+                    {
+                        "pattern": "Subject + tends to + Verb (bare infinitive)",
+                        "meaning": "Umumiy tendensiya yoki moyillikni ifodalash (mutlaqlikdan qochish)",
+                        "usageNotes": "Obyekt har doim emas, ko'pincha shunday harakat qilishini bildiradi.",
+                        "examples": [
+                            {
+                                "sentence": "Urban youth tend to prioritize experiential spending over asset accumulation.",
+                                "translation": "Shahar yoshlari mol-mulk to'plashdan ko'ra hayotiy tajribalarga pul sarflashni afzal ko'rishga moyildirlar."
+                            }
+                        ]
+                    },
+                    {
+                        "pattern": "It is arguable / plausible that + Clause",
+                        "meaning": "Ilmiy ehtiyotkor bayonot",
+                        "usageNotes": "Fikrni qat'iy hukm emas, balki asosli nuqtai nazar sifatida taqdim etadi.",
+                        "examples": [
+                            {
+                                "sentence": "It is plausible that early exposure to music accelerates mathematical comprehension.",
+                                "translation": "Musiqa bilan erta tanishish matematik tushunishni tezlashtirishi haqiqatga yaqindir."
+                            }
+                        ]
+                    }
+                ]
             }
-        ]
-    },
+        },
+        {
+            "id": "en-b2-u3-l2-s2",
+            "title": "Amaliy Mashqlar",
+            "type": "practice",
+            "estimatedMinutes": 5,
+            "practiceData": {
+                "instructions": "Akademik hedging qoidalariga mos variantlarni tanlang.",
+                "exercises": [
+                    {
+                        "id": "en-b2-u3-l2-e1",
+                        "type": "multiple-choice",
+                        "prompt": "Instead of saying 'Social media destroys teenage attention spans', which hedged sentence is superior?",
+                        "options": [
+                            "Social media 100% eradicates teen attention.",
+                            "Evidence suggests that excessive social media consumption may impair adolescent attention spans.",
+                            "Teenagers are always mentally ruined by apps.",
+                            "Social media never helps anyone to concentrate."
+                        ],
+                        "correctAnswer": 1,
+                        "explanation": "B variantida 'Evidence suggests that... may impair' orqali xolis va ilmiy ehtiyotkorlik (hedging) qo'llangan."
+                    },
+                    {
+                        "id": "en-b2-u3-l2-e2",
+                        "type": "multiple-choice",
+                        "prompt": "Remote professionals _______ to experience blurrier boundaries between professional and domestic duties.",
+                        "options": [
+                            "tend",
+                            "tending",
+                            "tended to be",
+                            "are tended"
+                        ],
+                        "correctAnswer": 0,
+                        "explanation": "'tend to + Verb' (moyillik bildiruvchi fe'l)."
+                    },
+                    {
+                        "id": "en-b2-u3-l2-e3",
+                        "type": "multiple-choice",
+                        "prompt": "Clean hydrogen is _______ the most versatile green fuel for heavy maritime freight.",
+                        "options": [
+                            "arguably",
+                            "arguable",
+                            "argued that",
+                            "arguing"
+                        ],
+                        "correctAnswer": 0,
+                        "explanation": "Sifat ('the most versatile') oldidan ravish keladi: 'arguably the most versatile'."
+                    },
+                    {
+                        "id": "en-b2-u3-l2-e4",
+                        "type": "multiple-choice",
+                        "prompt": "It is _______ that geopolitical tensions could disrupt global semiconductor supply chains.",
+                        "options": [
+                            "plausibly",
+                            "plausible",
+                            "plausibility",
+                            "to plausible"
+                        ],
+                        "correctAnswer": 1,
+                        "explanation": "'It is + Adjective + that...': 'It is plausible that...'."
+                    },
+                    {
+                        "id": "en-b2-u3-l2-e5",
+                        "type": "multiple-choice",
+                        "prompt": "Why is overgeneralization penalized in IELTS Academic essays?",
+                        "options": [
+                            "Because examiners prefer shorter words.",
+                            "Because academic writing demands objectivity, nuance, and evidence-based moderation rather than absolute claims.",
+                            "Because overgeneralization requires too many commas.",
+                            "Because it violates British spelling conventions."
+                        ],
+                        "correctAnswer": 1,
+                        "explanation": "Akademik yozma nutq mutlaq da'volarni emas, balki dalillarga asoslangan xolislik va ehtiyotkorlikni talab etadi."
+                    }
+                ]
+            }
+        },
+        {
+            "id": "en-b2-u3-l2-s3",
+            "title": "Yakuniy Test",
+            "type": "test",
+            "estimatedMinutes": 5,
+            "testData": {
+                "instructions": "5 ta test savoliga to'g'ri javob bering. O'tish bali: 80%.",
+                "passingScorePercentage": 80,
+                "questions": [
+                    {
+                        "id": "en-b2-u3-l2-q1",
+                        "question": "Which adverb best conveys an evidence-backed assertion that is open to scholarly debate?",
+                        "options": [
+                            "arguably",
+                            "totally",
+                            "undoubtedly",
+                            "strictly"
+                        ],
+                        "correctAnswerIndex": 0,
+                        "explanation": "'arguably' ilmiy bahsda kuchli dalillar borligini, ammo mutlaq haqiqat sifatida tiqishtirilmayotganini ifodalaydi."
+                    },
+                    {
+                        "id": "en-b2-u3-l2-q2",
+                        "question": "The newly discovered compound could _______ revolutionize solid-state battery manufacturing.",
+                        "options": [
+                            "conceivably",
+                            "entirely impossible",
+                            "predominant",
+                            "tentative"
+                        ],
+                        "correctAnswerIndex": 0,
+                        "explanation": "'could conceivably revolutionize' (tasavvur qilsa bo'ladigan darajada inqilob qilishi mumkin)."
+                    },
+                    {
+                        "id": "en-b2-u3-l2-q3",
+                        "question": "Children raised in multilingual households appear _______ cognitive flexibility earlier.",
+                        "options": [
+                            "develop",
+                            "to develop",
+                            "developing",
+                            "developed"
+                        ],
+                        "correctAnswerIndex": 1,
+                        "explanation": "'appear to develop' (appear to + infinitive)."
+                    },
+                    {
+                        "id": "en-b2-u3-l2-q4",
+                        "question": "Which statement illustrates the most professionally hedged conclusion?",
+                        "options": [
+                            "Eating sugar is the direct and only cause of human depression.",
+                            "Preliminary observations suggest that excessive refined sugar intake may correlate with mood instability.",
+                            "Sugar guarantees severe mental illness in all consumers.",
+                            "No person who eats sweets can ever be happy."
+                        ],
+                        "correctAnswerIndex": 1,
+                        "explanation": "Variant B 'Preliminary observations suggest... may correlate' orqali namunali akademik xolislikni ko'rsatgan."
+                    },
+                    {
+                        "id": "en-b2-u3-l2-q5",
+                        "question": "The initial survey results are merely _______ and require rigorous corroboration.",
+                        "options": [
+                            "tentative",
+                            "immutable",
+                            "derelict",
+                            "predominant"
+                        ],
+                        "correctAnswerIndex": 0,
+                        "explanation": "Dastlabki va hali to'liq tasdiqlanmagan natijalar 'tentative' deyiladi."
+                    }
+                ]
+            }
+        }
+    ]
+},
     {
-        "id": "en-b2-u3-l3",
-        "courseId": "english-b2",
-        "unitId": "en-b2-u3",
-        "unitTitle": "Unit 3: Academic Discourse & Rhetoric",
-        "language": "en",
-        "level": "B2",
-        "lessonNumber": 3,
-        "title": "Global Economics, Trade & Consumerism",
-        "description": "Iqtisodiy jarayonlar, bozor dinamikasi va xalqaro savdo terminologiyasi.",
-        "estimatedDurationMinutes": 15,
-        "icon": "📈",
-        "steps": [
-            {
-                "id": "en-b2-u3-l3-s1",
-                "title": "Iqtisodiyot Leksikasi",
-                "type": "learn",
-                "estimatedMinutes": 5,
-                "learnData": {
-                    "title": "Economic & Trade Vocabulary",
-                    "explanation": "Supply and demand (talab va taklif), Inflation (inflyatsiya), Fiscal policy (soliq-byudjet siyosati), Commodity prices (xomashyo narxlari).",
-                    "vocabulary": [
-                        {
-                            "term": "Inflation",
-                            "reading": "/ɪnˈfleɪ.ʃən/",
-                            "meaning": "Inflyatsiya / Narxlar oshishi",
-                            "exampleSentence": "Central banks raise interest rates to curb inflation.",
-                            "exampleTranslation": "Markaziy banklar inflyatsiyani jilovlash uchun foiz stavkalarini oshiradi."
-                        },
-                        {
-                            "term": "Revenue",
-                            "reading": "/ˈrev.ən.juː/",
-                            "meaning": "Daromad / Tushum",
-                            "exampleSentence": "Company revenue surged by 15%.",
-                            "exampleTranslation": "Kompaniya daromadi 15% ga o'sdi."
-                        },
-                        {
-                            "term": "Nuance",
-                            "reading": "/ˈnjuː.ɑːns/",
-                            "meaning": "Nozik farq, qirra",
-                            "exampleSentence": "She understood every subtle nuance of the language.",
-                            "exampleTranslation": "U tilning har bir nozik qirrasini tushundi."
-                        }
-                    ],
-                    "grammarRules": [
-                        {
-                            "pattern": "Global Economics, Trade & Consumerism",
-                            "meaning": "Iqtisodiy jarayonlar, bozor dinamikasi va xalqaro savdo terminologiyasi.",
-                            "usageNotes": "Supply and demand (talab va taklif), Inflation (inflyatsiya), Fiscal policy (soliq-byudjet siyosati), Commodity prices (xomashyo narxlari).",
-                            "examples": [
-                                {
-                                    "sentence": "Central banks raise interest rates to curb inflation.",
-                                    "translation": "Markaziy banklar inflyatsiyani jilovlash uchun foiz stavkalarini oshiradi."
-                                },
-                                {
-                                    "sentence": "Company revenue surged by 15%.",
-                                    "translation": "Kompaniya daromadi 15% ga o'sdi."
-                                }
-                            ]
-                        }
-                    ]
-                }
-            },
-            {
-                "id": "en-b2-u3-l3-s2",
-                "title": "Mashq",
-                "type": "practice",
-                "estimatedMinutes": 5,
-                "practiceData": {
-                    "instructions": "To'g'ri iqtisodiy atamani tanlang.",
-                    "exercises": [
-                        {
-                            "id": "en-b2-u3-l3-e1",
-                            "type": "multiple-choice",
-                            "prompt": "\"When supply is low and demand is high, prices usually _______.\"",
-                            "options": [
-                                "stabilize to zero",
-                                "diminish",
-                                "soar / increase",
-                                "plummet"
-                            ],
-                            "correctAnswer": 2,
-                            "explanation": "Narxlar ko'tariladi: soar / increase."
-                        },
-                        {
-                            "id": "en-b2-u3-l3-ex-2",
-                            "type": "multiple-choice",
-                            "prompt": "Choose the correct word to complete the sentence: \"Company revenue surged by 15%.\"",
-                            "options": [
-                                "reluctance",
-                                "delay",
-                                "Revenue",
-                                "doubt"
-                            ],
-                            "correctAnswer": 2,
-                            "explanation": "\"Revenue\" (Daromad / Tushum) fits the context appropriately."
-                        }
-                    ]
-                }
-            },
-            {
-                "id": "en-b2-u3-l3-s3",
-                "title": "Test",
-                "type": "test",
-                "estimatedMinutes": 5,
-                "testData": {
-                    "instructions": "Savollarga javob bering.",
-                    "passingScorePercentage": 75,
-                    "questions": [
-                        {
-                            "id": "en-b2-u3-l3-q1",
-                            "question": "\"Plummet\" so'zining ma'nosi nima?",
-                            "options": [
-                                "Barqaror turmoq",
-                                "Ikkilanmoq",
-                                "Keskin pasaymoq / Qulamoq",
-                                "Sekin o'smoq"
-                            ],
-                            "correctAnswerIndex": 2,
-                            "explanation": "Plummet — Keskin tushib ketmoq."
-                        },
-                        {
-                            "id": "en-b2-u3-l3-q2",
-                            "question": "Gross Domestic Product (GDP) measures a country's total _______ output.",
-                            "options": [
-                                "educational",
-                                "economic",
-                                "military",
-                                "weather"
-                            ],
-                            "correctAnswerIndex": 1,
-                            "explanation": "Economic output."
-                        },
-                        {
-                            "id": "en-b2-u3-l3-q3",
-                            "question": "Tariffs are taxes imposed on _______ goods.",
-                            "options": [
-                                "imported",
-                                "domestic",
-                                "free",
-                                "discarded"
-                            ],
-                            "correctAnswerIndex": 0,
-                            "explanation": "Imported goods (import tovarlari)."
-                        },
-                        {
-                            "id": "en-b2-u3-l3-q4",
-                            "question": "What happens in a competitive market?",
-                            "options": [
-                                "Prices become infinite",
-                                "Only one company exists",
-                                "All production ceases",
-                                "Consumers benefit from quality and price choices"
-                            ],
-                            "correctAnswerIndex": 3,
-                            "explanation": "Consumers benefit."
-                        }
-                    ]
-                }
+    "id": "en-b2-u3-l3",
+    "courseId": "english-b2",
+    "unitId": "en-b2-u3",
+    "unitTitle": "Unit 3: Academic Discourse & Rhetoric",
+    "language": "en",
+    "level": "B2",
+    "lessonNumber": 3,
+    "title": "Global Economics, Trade & Consumerism",
+    "description": "Global iqtisodiyot, xalqaro savdo va iste'molchilik madaniyati: fiskal siyosat, inflyatsiya va bozor dinamikasi bo'yicha B2 akademik tili.",
+    "estimatedDurationMinutes": 18,
+    "icon": "📈",
+    "steps": [
+        {
+            "id": "en-b2-u3-l3-s1",
+            "title": "Global Iqtisodiyot va Savdo",
+            "type": "learn",
+            "estimatedMinutes": 6,
+            "learnData": {
+                "title": "Macroeconomics, Globalization, and Modern Consumer Behavior",
+                "explanation": "IELTS Academic Reading va Writing bo'limlarida iqtisodiy mavzular (moliya, xalqaro savdo, mehnat bozori, inflyatsiya va iste'molchilik) doimiy ravishda uchraydi. B2 darajasida ushbu sohani professional tahlil qila olish talab etiladi.\n\n1. Asosiy Makroiqtisodiy Tushunchalar (Macroeconomic Concepts):\n- **fiscal policy** (fiskal/byudjet-soliq siyosati) vs **monetary policy** (monetar/pul-kredit siyosati)\n- **inflationary pressures** (inflyatsiya bosimi) va **purchasing power** (xarid qobiliyati)\n- **trade tariffs and protectionism** (bojxona to'lovlari va protektsionizm)\n- **consumerism** (haddan tashqari iste'molchilik madaniyati)\n- **market saturation** (bozorning to'yinishi)\n\n2. Iqtisodiy Trendlarni Tasvirlash Fe'llari (Describing Economic Dynamics):\n- *fluctuate* (tebranmoq, beqaror o'zgarmoq)\n- *stagnate* (turg'unlashmoq, o'smay qolmoq)\n- *surge / skyrocket* (keskin ko'tarilib ketmoq)\n- *plummet / tumble* (keskin qulamoq, pastga tushmoq)\n- *curb inflation* (inflyatsiyani jilovlamoq)\n\n3. O'zbek Tili Bilan Qiyos (Uzbek Contrastive Analysis):\n- O'zbek tilida 'narxlar ko'tarildi', 'iqtisod yomonlashdi' deb umumiy iboralar ishlatilsa, ingliz tilida 'purchasing power eroded', 'escalating inflationary pressures', 'impose retaliatory tariffs' kabi o'ta aniq, boy iqtisodiy birikmalar talab etiladi.\n\n4. O'zbek o'rganuvchilari uchun xavfli tuzoqlar (Common Pitfalls):\n- ❌ *'The economic of the country is growing.'* -> ✅ *'The ECONOMY of the country is growing.'* ('Economic' — iqtisodiy (sifat), 'economy' — iqtisodiyot (ot)).\n- ❌ *'He works in a financial.'* -> ✅ *'He works in FINANCE / the financial sector.'*\n- ❌ *'Prices increased with 10%.'* -> ✅ *'Prices increased BY 10%.'* (Miqdoriy o'zgarish predlogi — 'by').\n\n5. IELTS Writing Task 2 & Speaking Part 3 Corner:\n- Topic: Consumerism & Materialism\n- Question: 'To what extent does relentless consumerism negatively affect modern society?'\n- Model Band 7.0 Answer: 'Unchecked consumerism exerts a profoundly detrimental influence on environmental sustainability. Driven by pervasive advertising, individuals frequently purchase disposable commodities, which exacerbates landfill accumulation. Furthermore, the relentless pursuit of material acquisitions tends to erode genuine psychological well-being, fostering chronic financial stress rather than contentment.'",
+                "vocabulary": [
+                    {
+                        "term": "protectionism",
+                        "reading": "/prəˈtek.ʃən.ɪ.zəm/",
+                        "meaning": "protektsionizm (mahalliy ishlab chiqaruvchilarni himoya qilish uchun boj solish siyosati)",
+                        "exampleSentence": "Aggressive trade protectionism can provoke retaliatory tariffs and disrupt global supply chains.",
+                        "exampleTranslation": "Agressiv savdo protektsionizmi javob bojlarini keltirib chiqarishi va global ta'minot zanjirlarini buzishi mumkin."
+                    },
+                    {
+                        "term": "purchasing power",
+                        "reading": "/ˈpɜː.tʃəs.ɪŋ ˌpaʊ.ər/",
+                        "meaning": "xarid qobiliyati (pulning tovar olish kuchi)",
+                        "exampleSentence": "Runaway inflation drastically erodes the purchasing power of middle-income households.",
+                        "exampleTranslation": "Nazoratsiz inflyatsiya o'rta daromadli xonadonlarning xarid qobiliyatini keskin yemirib boradi."
+                    },
+                    {
+                        "term": "stagnate",
+                        "reading": "/stæɡˈneɪt/",
+                        "meaning": "turg'unlashmoq, o'sishdan to'xtab qolmoq",
+                        "exampleSentence": "Real wages have largely stagnated over the past decade despite substantial corporate profits.",
+                        "exampleTranslation": "Katta korporativ foydalarga qaramay, real ish haqlari o'tgan o'n yillikda asosan turg'unlashib qoldi."
+                    },
+                    {
+                        "term": "commodity",
+                        "reading": "/kəˈmɒd.ə.ti/",
+                        "meaning": "xomashyo, tovar, mahsulot (bozorda sotiladigan)",
+                        "exampleSentence": "Volatile commodity prices, particularly petroleum and wheat, impact developing nations.",
+                        "exampleTranslation": "Xomashyo narxlarining beqarorligi, ayniqsa neft va bug'doy, rivojlanayotgan davlatlarga qattiq ta'sir ko'rsatadi."
+                    },
+                    {
+                        "term": "consumerism",
+                        "reading": "/kənˈsjuː.mə.rɪ.zəm/",
+                        "meaning": "iste'molchilik madaniyati (haddan tashqari ko'p xarid qilish)",
+                        "exampleSentence": "Excessive consumerism fuels environmental degradation through uncurbed waste production.",
+                        "exampleTranslation": "Haddan tashqari iste'molchilik chiqindilar ishlab chiqarish orqali atrof-muhit tanazzulini kuchaytiradi."
+                    },
+                    {
+                        "term": "monetary",
+                        "reading": "/ˈmʌn.ɪ.tri/",
+                        "meaning": "pul-kreditga oid, monetar",
+                        "exampleSentence": "Central banks utilize monetary policy, including interest rate hikes, to curb inflation.",
+                        "exampleTranslation": "Markaziy banklar inflyatsiyani jilovlash uchun foiz stavkalarini oshirish kabi monetar siyosatdan foydalanadilar."
+                    },
+                    {
+                        "term": "retaliatory",
+                        "reading": "/rɪˈtæl.jə.tər.i/",
+                        "meaning": "qasdma-qasd, javob tariqasida qilingan (sanksiya, tarif)",
+                        "exampleSentence": "The imposing of export duties triggered retaliatory measures from neighboring trading partners.",
+                        "exampleTranslation": "Eksport bojlarining joriy etilishi qo'shni savdo hamkorlarining javob choralarini keltirib chiqardi."
+                    },
+                    {
+                        "term": "saturation",
+                        "reading": "/ˌsætʃ.ərˈeɪ.ʃən/",
+                        "meaning": "to'yinish, me'yoridan oshib ketish (bozorda)",
+                        "exampleSentence": "Domestic smartphone market saturation forced manufacturers to seek overseas consumers.",
+                        "exampleTranslation": "Ichki smartfon bozorining to'yinishi ishlab chiqaruvchilarni xorijiy xaridorlarni izlashga majbur qildi."
+                    }
+                ],
+                "grammarRules": [
+                    {
+                        "pattern": "increase / decrease + BY + Percentage / Number",
+                        "meaning": "Iqtisodiy miqdoriy o'zgarishni ifodalash",
+                        "usageNotes": "Farq miqdorini bildirishda 'by' predlogi ishlatiladi.",
+                        "examples": [
+                            {
+                                "sentence": "Consumer expenditures climbed by 12% in the final quarter.",
+                                "translation": "Iste'mol xarajatlari so'nggi chorakda 12% ga oshdi."
+                            }
+                        ]
+                    }
+                ]
             }
-        ]
-    },
+        },
+        {
+            "id": "en-b2-u3-l3-s2",
+            "title": "Amaliy Mashqlar",
+            "type": "practice",
+            "estimatedMinutes": 5,
+            "practiceData": {
+                "instructions": "Iqtisodiy leksika va kollokatsiyalar bo'yicha to'g'ri variantlarni tanlang.",
+                "exercises": [
+                    {
+                        "id": "en-b2-u3-l3-e1",
+                        "type": "multiple-choice",
+                        "prompt": "Persistent inflation drastically erodes the _______ of ordinary wage earners.",
+                        "options": [
+                            "purchasing power",
+                            "protectionism",
+                            "monetary tariff",
+                            "commodity saturation"
+                        ],
+                        "correctAnswer": 0,
+                        "explanation": "Inflyatsiya ishchilarning xarid qobiliyatini (purchasing power) yemirib boradi."
+                    },
+                    {
+                        "id": "en-b2-u3-l3-e2",
+                        "type": "multiple-choice",
+                        "prompt": "The national unemployment rate dropped _______ 1.5% following fiscal stimulus.",
+                        "options": [
+                            "by",
+                            "with",
+                            "at",
+                            "of"
+                        ],
+                        "correctAnswer": 0,
+                        "explanation": "Miqdoriy ko'rsatkichning o'zgarishi: 'dropped by 1.5%'."
+                    },
+                    {
+                        "id": "en-b2-u3-l3-e3",
+                        "type": "multiple-choice",
+                        "prompt": "Which term describes a national trade policy that shields domestic industries with import tariffs?",
+                        "options": [
+                            "Protectionism",
+                            "Consumerism",
+                            "Saturation",
+                            "Solvency"
+                        ],
+                        "correctAnswer": 0,
+                        "explanation": "Mahalliy ishlab chiqaruvchilarni bojlari orqali himoya qilish 'Protectionism' deyiladi."
+                    },
+                    {
+                        "id": "en-b2-u3-l3-e4",
+                        "type": "multiple-choice",
+                        "prompt": "Despite technological automation, factory wages have largely _______ for five years.",
+                        "options": [
+                            "stagnated",
+                            "liquidated",
+                            "plummeted with",
+                            "suffocated"
+                        ],
+                        "correctAnswer": 0,
+                        "explanation": "Oyliklar turg'unlashib, o'smay qolgan: 'stagnated'."
+                    },
+                    {
+                        "id": "en-b2-u3-l3-e5",
+                        "type": "multiple-choice",
+                        "prompt": "Identify the grammatically correct sentence:",
+                        "options": [
+                            "The economic of Uzbekistan is diversifying rapidly.",
+                            "The economy of Uzbekistan is diversifying rapidly.",
+                            "The financial of Uzbekistan is diversifying rapidly.",
+                            "The economical of Uzbekistan is diversifying rapidly."
+                        ],
+                        "correctAnswer": 1,
+                        "explanation": "Mamlakat iqtisodiyoti ot sifatida 'economy' deyiladi ('economic' esa sifat)."
+                    }
+                ]
+            }
+        },
+        {
+            "id": "en-b2-u3-l3-s3",
+            "title": "Yakuniy Test",
+            "type": "test",
+            "estimatedMinutes": 5,
+            "testData": {
+                "instructions": "5 ta test savoliga to'g'ri javob bering. O'tish bali: 80%.",
+                "passingScorePercentage": 80,
+                "questions": [
+                    {
+                        "id": "en-b2-u3-l3-q1",
+                        "question": "When a market reaches a stage where no additional products can be sold, it has reached _______ .",
+                        "options": [
+                            "saturation",
+                            "protectionism",
+                            "monetary policy",
+                            "solvency"
+                        ],
+                        "correctAnswerIndex": 0,
+                        "explanation": "Bozorning mahsulot bilan to'lib toshishi va to'yinishi 'saturation' deyiladi."
+                    },
+                    {
+                        "id": "en-b2-u3-l3-q2",
+                        "question": "The central bank enacted an emergency interest rate hike to _______ soaring inflation.",
+                        "options": [
+                            "curb",
+                            "liquidate",
+                            "saturate",
+                            "stagnate"
+                        ],
+                        "correctAnswerIndex": 0,
+                        "explanation": "Inflyatsiyani jilovlash / cheklash: 'curb inflation'."
+                    },
+                    {
+                        "id": "en-b2-u3-l3-q3",
+                        "question": "Crude oil, timber, and copper ore are primary examples of global _______ .",
+                        "options": [
+                            "commodities",
+                            "consumerisms",
+                            "subsidies",
+                            "tariffs"
+                        ],
+                        "correctAnswerIndex": 0,
+                        "explanation": "Global xomashyo va tovarlar 'commodities' deyiladi."
+                    },
+                    {
+                        "id": "en-b2-u3-l3-q4",
+                        "question": "Retaliatory tariffs are trade barriers imposed _______ .",
+                        "options": [
+                            "in response to tariffs introduced by another trading partner",
+                            "to celebrate international treaties",
+                            "to abolish all export duties",
+                            "only on humanitarian aid"
+                        ],
+                        "correctAnswerIndex": 0,
+                        "explanation": "Qasdma-qasd kiritiladigan bojlar boshqa davlatning cheklovlariga javoban joriy etiladi."
+                    },
+                    {
+                        "id": "en-b2-u3-l3-q5",
+                        "question": "Excessive consumerism in developed nations exerts a _______ impact on planetary ecology.",
+                        "options": [
+                            "detrimental",
+                            "tentative",
+                            "malleable",
+                            "retrospective"
+                        ],
+                        "correctAnswerIndex": 0,
+                        "explanation": "Iste'molchilik sayyora ekologiyasiga zararli (detrimental) ta'sir ko'rsatadi."
+                    }
+                ]
+            }
+        }
+    ]
+},
     {
-        "id": "en-b2-u3-l4",
-        "courseId": "english-b2",
-        "unitId": "en-b2-u3",
-        "unitTitle": "Unit 3: Academic Discourse & Rhetoric",
-        "language": "en",
-        "level": "B2",
-        "lessonNumber": 4,
-        "title": "Environmental Sustainability & Climate Solutions",
-        "description": "Ekologik yechimlar, uglerod neytralligi va yashil energetika tahlili.",
-        "estimatedDurationMinutes": 15,
-        "icon": "🌍",
-        "steps": [
-            {
-                "id": "en-b2-u3-l4-s1",
-                "title": "Yashil Barqarorlik",
-                "type": "learn",
-                "estimatedMinutes": 5,
-                "learnData": {
-                    "title": "Climate Mitigation Strategies",
-                    "explanation": "Decarbonization (uglerodsizlantirish), Circular economy (aylanma iqtisodiyot), Biodiversity conservation (bioxilma-xillikni saqlash).",
-                    "vocabulary": [
-                        {
-                            "term": "Biodiversity",
-                            "reading": "/ˌbaɪ.əʊ.daɪˈvɜː.sə.ti/",
-                            "meaning": "Bioxilma-xillik",
-                            "exampleSentence": "Rainforests boast immense biodiversity.",
-                            "exampleTranslation": "Yomg'irli o'rmonlar boy bioxilma-xillikka ega."
-                        },
-                        {
-                            "term": "Nuance",
-                            "reading": "/ˈnjuː.ɑːns/",
-                            "meaning": "Nozik farq, qirra",
-                            "exampleSentence": "She understood every subtle nuance of the language.",
-                            "exampleTranslation": "U tilning har bir nozik qirrasini tushundi."
-                        },
-                        {
-                            "term": "Coherence",
-                            "reading": "/kəʊˈhɪə.rəns/",
-                            "meaning": "Mantiqiy bogʻliqlik, izchillik",
-                            "exampleSentence": "Ensure structural coherence throughout your essay.",
-                            "exampleTranslation": "Inshoyingiz davomida tuzilmaviy izchillikni taʼminlang."
-                        }
-                    ],
-                    "grammarRules": [
-                        {
-                            "pattern": "Environmental Sustainability & Climate Solutions",
-                            "meaning": "Ekologik yechimlar, uglerod neytralligi va yashil energetika tahlili.",
-                            "usageNotes": "Decarbonization (uglerodsizlantirish), Circular economy (aylanma iqtisodiyot), Biodiversity conservation (bioxilma-xillikni saqlash).",
-                            "examples": [
-                                {
-                                    "sentence": "Rainforests boast immense biodiversity.",
-                                    "translation": "Yomg'irli o'rmonlar boy bioxilma-xillikka ega."
-                                }
-                            ]
-                        }
-                    ]
-                }
-            },
-            {
-                "id": "en-b2-u3-l4-s2",
-                "title": "Mashq",
-                "type": "practice",
-                "estimatedMinutes": 5,
-                "practiceData": {
-                    "instructions": "To'g'ri so'zni tanlang.",
-                    "exercises": [
-                        {
-                            "id": "en-b2-u3-l4-e1",
-                            "type": "multiple-choice",
-                            "prompt": "\"A circular economy aims to eliminate _______ through recycling and reuse.\"",
-                            "options": [
-                                "oxygen",
-                                "food",
-                                "wealth",
-                                "waste"
-                            ],
-                            "correctAnswer": 3,
-                            "explanation": "Eliminate waste."
-                        },
-                        {
-                            "id": "en-b2-u3-l4-ex-2",
-                            "type": "multiple-choice",
-                            "prompt": "Choose the correct word to complete the sentence: \"She understood every subtle nuance of the language.\"",
-                            "options": [
-                                "reluctance",
-                                "delay",
-                                "doubt",
-                                "Nuance"
-                            ],
-                            "correctAnswer": 3,
-                            "explanation": "\"Nuance\" (Nozik farq, qirra) fits the context appropriately."
-                        }
-                    ]
-                }
-            },
-            {
-                "id": "en-b2-u3-l4-s3",
-                "title": "Test",
-                "type": "test",
-                "estimatedMinutes": 5,
-                "testData": {
-                    "instructions": "Savollarga javob bering.",
-                    "passingScorePercentage": 75,
-                    "questions": [
-                        {
-                            "id": "en-b2-u3-l4-q1",
-                            "question": "\"Carbon neutral\" means:",
-                            "options": [
-                                "Stopping all industry",
-                                "Building nuclear weapons",
-                                "Burning maximum coal",
-                                "Balancing emitted carbon with carbon removal"
-                            ],
-                            "correctAnswerIndex": 3,
-                            "explanation": "Balancing emitted carbon."
-                        },
-                        {
-                            "id": "en-b2-u3-l4-q2",
-                            "question": "Afforestation refers to:",
-                            "options": [
-                                "Planting new forests on barren land",
-                                "Building dams",
-                                "Hunting wild animals",
-                                "Cutting down forests"
-                            ],
-                            "correctAnswerIndex": 0,
-                            "explanation": "Planting new forests."
-                        },
-                        {
-                            "id": "en-b2-u3-l4-q3",
-                            "question": "Which sector is a primary contributor to greenhouse gas emissions?",
-                            "options": [
-                                "Library book lending",
-                                "Handicraft weaving",
-                                "Fossil-fuel energy generation",
-                                "Organic farming without machinery"
-                            ],
-                            "correctAnswerIndex": 2,
-                            "explanation": "Fossil-fuel energy."
-                        },
-                        {
-                            "id": "en-b2-u3-l4-q4",
-                            "question": "\"Sustainable development meets the needs of the present without compromising future generations.\" Bu nima?",
-                            "options": [
-                                "Barqaror rivojlanishning klassik ta'rifi",
-                                "Iqtisodiy qonun buzilishi",
-                                "Eski ertak",
-                                "Tijorat reklamasi"
-                            ],
-                            "correctAnswerIndex": 0,
-                            "explanation": "Classic definition of sustainable development."
-                        }
-                    ]
-                }
+    "id": "en-b2-u3-l4",
+    "courseId": "english-b2",
+    "unitId": "en-b2-u3",
+    "unitTitle": "Unit 3: Academic Discourse & Rhetoric",
+    "language": "en",
+    "level": "B2",
+    "lessonNumber": 4,
+    "title": "Environmental Sustainability & Climate Solutions",
+    "description": "Ekologik barqarorlik va iqlim yechimlari: uglerod neytralligi, aylanma iqtisodiyot (circular economy) va xalqaro iqlim kelishuvlari tili.",
+    "estimatedDurationMinutes": 18,
+    "icon": "🌿",
+    "steps": [
+        {
+            "id": "en-b2-u3-l4-s1",
+            "title": "Ekologik Barqarorlik va Aylanma Iqtisodiyot",
+            "type": "learn",
+            "estimatedMinutes": 6,
+            "learnData": {
+                "title": "Environmental Sustainability, Carbon Neutrality, and Circular Economics",
+                "explanation": "IELTS Writing Task 2 va Speaking Part 3 imtihonlarida ekologiya eng markaziy mavzulardan biridir. B2 darajasida gaplar shunchaki 'save trees' yoki 'stop pollution' emas, balki chuqur ilmiy konseptlar (Carbon neutrality, Circular economy, Ecological footprint) asosida qurilishi shart.\n\n1. Asosiy B2 Ekologik Konseptlar:\n- **carbon neutrality / net-zero emissions** -> uglerod neytralligi (atmosferaga chiqarilgan karbonat chiqindisi hajmi tabiat yutgan hajmga teng bo'lishi).\n- **circular economy** -> aylanma iqtisodiyot (xomashyoni 'ishlab chiqarish - ishlatish - tashlab yuborish' o'rniga doimiy qayta ishlab, chiqindisiz foydalanish modeli).\n- **ecological footprint** -> ekologik iz (inson faoliyatining tabiatga yuklagan umumiy yuki).\n- **geothermal and tidal energy** -> geotermal va dengiz to'lqinlari energiyasi.\n- **reforestation and carbon sequestration** -> o'rmonlarni qayta tiklash va karbonatni yer ostiga bog'lab saqlash.\n\n2. Sintaktik Bog'lanish va Ilg'or Konstruksiyalar:\n- *'Had industrialized nations transitioned towards a circular economy earlier, global plastic contamination wouldn't be as pervasive as it is today.'* (Mixed Conditional).\n- *'It is imperative that metropolitan authorities mandate solar panel integration on all newly erected commercial complexes.'* (Subjunctive).\n\n3. O'zbek Tili Bilan Qiyos (Uzbek Contrastive Analysis):\n- O'zbek tilida 'aylanma iqtisodiyot', 'chiqindisiz texnologiya' yangi tushunchalar hisoblanadi. Ingliz tilida bu 'circular economics' va 'closed-loop recycling systems' deb yuritiladi.\n- O'quvchilar ko'pincha 'nature' so'zi oldiga noo'rin 'the' qo'yishadi ('the nature' xato, 'nature' yakka o'zi artiklsiz keladi, ammo 'the environment' artiklli bo'ladi!).\n\n4. O'zbek o'rganuvchilari uchun xavfli tuzoqlar (Common Pitfalls):\n- ❌ *'We must protect the nature.'* -> ✅ *'We must protect NATURE / THE ENVIRONMENT.'*\n- ❌ *'Cars make too many emissions.'* -> ✅ *'Vehicles RELEASE / EMIT hazardous emissions.'*\n- ❌ *'Electric cars have zero pollution.'* -> ✅ *'Electric vehicles produce ZERO TAILPIPE EMISSIONS.'* (Chunki elektr stansiyasida elektr ishlab chiqarilganda baribir chiqindi bo'lishi mumkin, shuning uchun 'tailpipe emissions' deb aniq aytish kerak!).\n\n5. IELTS Speaking & Writing Foundation Corner:\n- Question: 'Should governments penalize corporations that fail to meet net-zero carbon targets?'\n- Model Band 7.5 Answer: 'In my perspective, regulatory sanctions are absolutely essential. Relying solely on corporate goodwill has proved demonstrably ineffective. Imposing punitive levies on heavy carbon emitters creates a compelling financial incentive to invest in carbon sequestration and closed-loop manufacturing. Furthermore, revenues generated from these penalties can be channeled into public renewable infrastructure.'",
+                "vocabulary": [
+                    {
+                        "term": "neutrality",
+                        "reading": "/njuːˈtræl.ə.ti/",
+                        "meaning": "neytrallik, muvozanat (carbon neutrality)",
+                        "exampleSentence": "The Nordic nations pledged to achieve complete carbon neutrality by 2035.",
+                        "exampleTranslation": "Shimoliy Yevropa davlatlari 2035-yilga qadar to'liq uglerod neytralligiga erishish majburiyatini oldilar."
+                    },
+                    {
+                        "term": "sequestration",
+                        "reading": "/ˌsiː.kwesˈtreɪ.ʃən/",
+                        "meaning": "uglerodni tutib qolish va saqlash (carbon sequestration)",
+                        "exampleSentence": "Reforestation provides a cost-effective biological mechanism for carbon sequestration.",
+                        "exampleTranslation": "O'rmonlarni qayta tiklash uglerodni yutib saqlashning tejamkor biologik mexanizmini taqdim etadi."
+                    },
+                    {
+                        "term": "pervasive",
+                        "reading": "/pəˈveɪ.sɪv/",
+                        "meaning": "hamma joyga tarqalgan, chuqur singib ketgan",
+                        "exampleSentence": "Microplastic contamination has become pervasive across freshwater ecosystems.",
+                        "exampleTranslation": "Mikroplastik bilan ifloslanish chuchuk suv ekotizimlari bo'ylab hamma joyga tarqaldi."
+                    },
+                    {
+                        "term": "punitive",
+                        "reading": "/ˈpjuː.nɪ.tɪv/",
+                        "meaning": "jazolovchi, jarima tarzida qo'llanadigan",
+                        "exampleSentence": "Municipal councils imposed punitive fines on manufacturing units discharging untreated wastewater.",
+                        "exampleTranslation": "Shahar kengashlari tozalanmagan oqovalarni oqizgan ishlab chiqarish korxonalariga jazolovchi jarimalar qo'lladi."
+                    },
+                    {
+                        "term": "incentive",
+                        "reading": "/ɪnˈsen.tɪv/",
+                        "meaning": "rag'batlantiruvchi omil, turtki",
+                        "exampleSentence": "Subsidies on electric cars create a powerful financial incentive for urban motorists.",
+                        "exampleTranslation": "Elektromobillarga beriladigan subsidiyalar shahar haydovchilari uchun kuchli moliyaviy rag'bat yaratadi."
+                    },
+                    {
+                        "term": "tailpipe",
+                        "reading": "/ˈteɪl.paɪp/",
+                        "meaning": "avtomobil tutun chiqarish trubasi (glushitel)",
+                        "exampleSentence": "While electric vehicles generate zero tailpipe emissions, battery manufacturing remains carbon-intensive.",
+                        "exampleTranslation": "Elektromobillar trubasidan nol chiqindi chiqarsa-da, ularning akkumulyatorlarini ishlab chiqarish ko'p uglerod talab qiladi."
+                    },
+                    {
+                        "term": "deplete",
+                        "reading": "/dɪˈpliːt/",
+                        "meaning": "tugatmoq, kamaytirib yubormoq",
+                        "exampleSentence": "Overexploitation of subterranean aquifers threatens to deplete regional drinking reserves.",
+                        "exampleTranslation": "Yerosti suv havzalaridan me'yordan ortiq foydalanish mintaqaviy ichimlik suvi zaxiralarini tugatib yuborish bilan tahdid qilmoqda."
+                    },
+                    {
+                        "term": "circular economy",
+                        "reading": "/ˈsɜː.kjə.lər iˈkɒn.ə.mi/",
+                        "meaning": "aylanma iqtisodiyot (chiqindisiz qayta ishlash modeli)",
+                        "exampleSentence": "Transitioning to a circular economy reduces reliance on virgin raw materials.",
+                        "exampleTranslation": "Aylanma iqtisodiyotga o'tish birlamchi tabiiy xomashyoga bo'lgan qaramlikni kamaytiradi."
+                    }
+                ],
+                "grammarRules": [
+                    {
+                        "pattern": "Subjunctive in environmental policy: mandate that + Subject + be / Verb",
+                        "meaning": "Ekologik qonunchilikdagi qat'iy talab",
+                        "usageNotes": "Davlat va xalqaro tashkilotlar talablarida qo'llanadi.",
+                        "examples": [
+                            {
+                                "sentence": "The treaty mandates that industrial emissions be reduced by half.",
+                                "translation": "Bitim sanoat chiqindilarining yarmiga qisqartirilishini qat'iy talab qiladi."
+                            }
+                        ]
+                    }
+                ]
             }
-        ]
-    },
+        },
+        {
+            "id": "en-b2-u3-l4-s2",
+            "title": "Amaliy Mashqlar",
+            "type": "practice",
+            "estimatedMinutes": 5,
+            "practiceData": {
+                "instructions": "Ekologik barqarorlik leksikasi va grammatikasi bo'yicha to'g'ri variantlarni tanlang.",
+                "exercises": [
+                    {
+                        "id": "en-b2-u3-l4-e1",
+                        "type": "multiple-choice",
+                        "prompt": "An economic framework aimed at eliminating waste through continuous recycling is known as a _______ .",
+                        "options": [
+                            "circular economy",
+                            "protectionist economy",
+                            "fiscal deficit",
+                            "monetary policy"
+                        ],
+                        "correctAnswer": 0,
+                        "explanation": "Chiqindisiz qayta ishlashga asoslangan iqtisodiy model 'circular economy' deyiladi."
+                    },
+                    {
+                        "id": "en-b2-u3-l4-e2",
+                        "type": "multiple-choice",
+                        "prompt": "Planting mangrove forests along coastlines provides a natural mechanism for carbon _______ .",
+                        "options": [
+                            "sequestration",
+                            "tailpipe",
+                            "punitive",
+                            "discrepancy"
+                        ],
+                        "correctAnswer": 0,
+                        "explanation": "Uglerodni yutish va saqlash: 'carbon sequestration'."
+                    },
+                    {
+                        "id": "en-b2-u3-l4-e3",
+                        "type": "multiple-choice",
+                        "prompt": "Which sentence correctly uses the word 'nature' in English?",
+                        "options": [
+                            "We ought to spend more leisure time in the nature.",
+                            "We ought to spend more leisure time in nature.",
+                            "We ought to spend more leisure time in a nature.",
+                            "We ought to spend more leisure time in nature's the."
+                        ],
+                        "correctAnswer": 1,
+                        "explanation": "Tabiat ma'nosida 'nature' artiklsiz keladi: 'in nature'."
+                    },
+                    {
+                        "id": "en-b2-u3-l4-e4",
+                        "type": "multiple-choice",
+                        "prompt": "Electric city buses are praised because they generate zero _______ emissions.",
+                        "options": [
+                            "tailpipe",
+                            "sequestration",
+                            "bottleneck",
+                            "viable"
+                        ],
+                        "correctAnswer": 0,
+                        "explanation": "Avtomobil quvuridan chiqadigan chiqindilar 'tailpipe emissions' deyiladi."
+                    },
+                    {
+                        "id": "en-b2-u3-l4-e5",
+                        "type": "multiple-choice",
+                        "prompt": "Governments decided to impose _______ taxes on high-emission sport utility vehicles.",
+                        "options": [
+                            "punitive",
+                            "dormant",
+                            "tentative",
+                            "culpable"
+                        ],
+                        "correctAnswer": 0,
+                        "explanation": "Jazolovchi yoki ogohlantiruvchi soliqlar 'punitive taxes' deyiladi."
+                    }
+                ]
+            }
+        },
+        {
+            "id": "en-b2-u3-l4-s3",
+            "title": "Yakuniy Test",
+            "type": "test",
+            "estimatedMinutes": 5,
+            "testData": {
+                "instructions": "5 ta test savoliga to'g'ri javob bering. O'tish bali: 80%.",
+                "passingScorePercentage": 80,
+                "questions": [
+                    {
+                        "id": "en-b2-u3-l4-q1",
+                        "question": "Achieving 'carbon neutrality' means that an entity _______ .",
+                        "options": [
+                            "stops using all electrical power completely",
+                            "balances the carbon emissions it produces with an equivalent amount removed from the atmosphere",
+                            "only burns high-sulfur coal",
+                            "relies 100% on imported fossil fuel"
+                        ],
+                        "correctAnswerIndex": 1,
+                        "explanation": "Uglerod neytralligi chiqarilgan chiqindini tabiat yutgan hajm bilan tenglashtirishni anglatadi."
+                    },
+                    {
+                        "id": "en-b2-u3-l4-q2",
+                        "question": "Microplastic particles have become _______ in oceanic food webs.",
+                        "options": [
+                            "pervasive",
+                            "dormant",
+                            "punitive",
+                            "tentative"
+                        ],
+                        "correctAnswerIndex": 0,
+                        "explanation": "Hamma joyga tarqagan, keng qamrovli: 'pervasive'."
+                    },
+                    {
+                        "id": "en-b2-u3-l4-q3",
+                        "question": "Tax credits for residential solar installations provide a compelling _______ for homeowners.",
+                        "options": [
+                            "incentive",
+                            "deficit",
+                            "bottleneck",
+                            "stagnation"
+                        ],
+                        "correctAnswerIndex": 0,
+                        "explanation": "Moliyaviy rag'bat: 'compelling incentive'."
+                    },
+                    {
+                        "id": "en-b2-u3-l4-q4",
+                        "question": "Over-extraction threatens to _______ underground aquifers across agricultural zones.",
+                        "options": [
+                            "deplete",
+                            "substantiate",
+                            "exacerbate",
+                            "liquidate"
+                        ],
+                        "correctAnswerIndex": 0,
+                        "explanation": "Suv zaxiralarini tugatib qo'ymoq: 'deplete aquifers'."
+                    },
+                    {
+                        "id": "en-b2-u3-l4-q5",
+                        "question": "The global treaty demands that all member states _______ rigorous environmental audits.",
+                        "options": [
+                            "conduct",
+                            "conducts",
+                            "conducted",
+                            "conducting"
+                        ],
+                        "correctAnswerIndex": 0,
+                        "explanation": "Subjunctive: 'demands that member states conduct' (bare infinitive)."
+                    }
+                ]
+            }
+        }
+    ]
+},
     {
-        "id": "en-b2-u3-l5",
-        "courseId": "english-b2",
-        "unitId": "en-b2-u3",
-        "unitTitle": "Unit 3: Academic Discourse & Rhetoric",
-        "language": "en",
-        "level": "B2",
-        "lessonNumber": 5,
-        "title": "B2 Paraphrasing Techniques for High Band Scores",
-        "description": "Sinonimlar, so'z turkumini o'zgartirish va grammatik strukturani restrukturizatsiya qilish orqali mukammal parafraz.",
-        "estimatedDurationMinutes": 16,
-        "icon": "🔄",
-        "steps": [
-            {
-                "id": "en-b2-u3-l5-s1",
-                "title": "Parafraz Qoidalari",
-                "type": "learn",
-                "estimatedMinutes": 5,
-                "learnData": {
-                    "title": "The Art of Paraphrasing for IELTS",
-                    "explanation": "1. Synonym substitution (Sinonimlar almashtirish). 2. Changing word form (Otni fe'lga yoki sifatga o'zgartirish). 3. Changing active to passive. 4. Reversing sentence clauses.",
-                    "keyPoints": [
-                        "Original: \"Many young people prefer purchasing goods via online platforms because it is convenient.\"",
-                        "Paraphrased: \"Digital commerce is increasingly favored by the youth demographic owing to its accessibility and speed.\""
-                    ],
-                    "grammarRules": [
-                        {
-                            "pattern": "B2 Paraphrasing Techniques for High Band Scores",
-                            "meaning": "Sinonimlar, so'z turkumini o'zgartirish va grammatik strukturani restrukturizatsiya qilish orqali mukammal parafraz.",
-                            "usageNotes": "1. Synonym substitution (Sinonimlar almashtirish). 2. Changing word form (Otni fe'lga yoki sifatga o'zgartirish). 3. Changing active to passive. 4. Reversing sentence clauses.",
-                            "examples": [
-                                {
-                                    "sentence": "I study English every day with dedication.",
-                                    "translation": "Har kuni ingliz tilini astoydil o'rganaman."
-                                }
-                            ]
-                        }
-                    ],
-                    "vocabulary": [
-                        {
-                            "term": "Nuance",
-                            "reading": "/ˈnjuː.ɑːns/",
-                            "meaning": "Nozik farq, qirra",
-                            "exampleSentence": "She understood every subtle nuance of the language.",
-                            "exampleTranslation": "U tilning har bir nozik qirrasini tushundi."
-                        },
-                        {
-                            "term": "Coherence",
-                            "reading": "/kəʊˈhɪə.rəns/",
-                            "meaning": "Mantiqiy bogʻliqlik, izchillik",
-                            "exampleSentence": "Ensure structural coherence throughout your essay.",
-                            "exampleTranslation": "Inshoyingiz davomida tuzilmaviy izchillikni taʼminlang."
-                        },
-                        {
-                            "term": "Compelling",
-                            "reading": "/kəmˈpel.ɪŋ/",
-                            "meaning": "Juda ishonarli, maftunkor",
-                            "exampleSentence": "He presented a compelling argument in the debate.",
-                            "exampleTranslation": "U bahsda juda ishonarli dalil keltirdi."
-                        }
-                    ]
-                }
-            },
-            {
-                "id": "en-b2-u3-l5-s2",
-                "title": "Mashq",
-                "type": "practice",
-                "estimatedMinutes": 5,
-                "practiceData": {
-                    "instructions": "Eng yaxshi parafraz variantini tanlang.",
-                    "exercises": [
-                        {
-                            "id": "en-b2-u3-l5-e1",
-                            "type": "multiple-choice",
-                            "prompt": "Original: \"Governments should allocate funds to public transportation.\" Which is the best paraphrase?",
-                            "options": [
-                                "Authorities ought to channel financial resources into public transit infrastructure.",
-                                "Governments must spend money on cars.",
-                                "People need to walk to work.",
-                                "Public transport is bad and governments know it."
-                            ],
-                            "correctAnswer": 0,
-                            "explanation": "Authorities ought to channel financial resources..."
-                        },
-                        {
-                            "id": "en-b2-u3-l5-ex-2",
-                            "type": "multiple-choice",
-                            "prompt": "Choose the correct word to complete the sentence: \"Ensure structural coherence throughout your essay.\"",
-                            "options": [
-                                "Coherence",
-                                "doubt",
-                                "reluctance",
-                                "delay"
-                            ],
-                            "correctAnswer": 0,
-                            "explanation": "\"Coherence\" (Mantiqiy bogʻliqlik, izchillik) fits the context appropriately."
-                        }
-                    ]
-                }
-            },
-            {
-                "id": "en-b2-u3-l5-s3",
-                "title": "Test",
-                "type": "test",
-                "estimatedMinutes": 6,
-                "testData": {
-                    "instructions": "Savollarga javob bering.",
-                    "passingScorePercentage": 75,
-                    "questions": [
-                        {
-                            "id": "en-b2-u3-l5-q1",
-                            "question": "Original: \"Eating fast food leads to obesity.\" Best paraphrase:",
-                            "options": [
-                                "The consumption of processed junk food contributes to excessive weight gain.",
-                                "Fast food is delicious and healthy.",
-                                "Eating food makes people run faster.",
-                                "Obesity causes people to cook burgers."
-                            ],
-                            "correctAnswerIndex": 0,
-                            "explanation": "Consumption of processed food contributes to weight gain."
-                        },
-                        {
-                            "id": "en-b2-u3-l5-q2",
-                            "question": "What is a common error in weak paraphrasing?",
-                            "options": [
-                                "Using accurate academic synonyms",
-                                "Changing grammatical voice correctly",
-                                "Maintaining the original meaning",
-                                "Swapping words without understanding collocation nuance"
-                            ],
-                            "correctAnswerIndex": 3,
-                            "explanation": "Swapping words blindly without collocations."
-                        },
-                        {
-                            "id": "en-b2-u3-l5-q3",
-                            "question": "Original: \"Tourism brings enormous financial benefits to local communities.\" Paraphrase:",
-                            "options": [
-                                "Regional populations derive substantial economic advantages from the travel industry.",
-                                "Local money is spent on traveling abroad.",
-                                "Financial institutions dislike tourists.",
-                                "Tourists destroy hotels."
-                            ],
-                            "correctAnswerIndex": 0,
-                            "explanation": "Regional populations derive substantial economic advantages."
-                        },
-                        {
-                            "id": "en-b2-u3-l5-q4",
-                            "question": "Which technique was used: \"He solved the problem\" -> \"A solution was formulated by him\"?",
-                            "options": [
-                                "Pure copy-paste",
-                                "Active to passive voice conversion and nominalization",
-                                "Deletion of facts",
-                                "Contraction"
-                            ],
-                            "correctAnswerIndex": 1,
-                            "explanation": "Passive voice & nominalization."
-                        }
-                    ]
-                }
+    "id": "en-b2-u3-l5",
+    "courseId": "english-b2",
+    "unitId": "en-b2-u3",
+    "unitTitle": "Unit 3: Academic Discourse & Rhetoric",
+    "language": "en",
+    "level": "B2",
+    "lessonNumber": 5,
+    "title": "B2 Paraphrasing Techniques for High Band Scores",
+    "description": "IELTS Band 7.0+ uchun parafrazlash texnikalari: nominalizatsiya (fe'lni otga aylantirish), sintaktik konversiya va akademik sinonimiya.",
+    "estimatedDurationMinutes": 18,
+    "icon": "🔄",
+    "steps": [
+        {
+            "id": "en-b2-u3-l5-s1",
+            "title": "Parafrazlash va Nominalizatsiya San'ati",
+            "type": "learn",
+            "estimatedMinutes": 6,
+            "learnData": {
+                "title": "Advanced Paraphrasing: Nominalisation, Syntactic Inversion, and Synonymy",
+                "explanation": "IELTS Reading va Writing imtihonlarida baland ball olishning eng asosiy kaliti — parafrazlash (fikrni o'zgartirmasdan, boshqa ilg'or so'zlar va boshqa grammatik tuzilma bilan aytish) qobiliyatidir.\nKo'pchilik nomzodlar parafrazlashni shunchaki bitta so'z o'rniga boshqa so'z qo'yish (synonym swap) deb tushunishadi. Ammo Band 7.5+ darajasidagi haqiqiy parafrazlash 3 ta usulning sintezidan iborat:\n\n1. Nominalizatsiya (Nominalisation — fe'llar va sifatlarni otga aylantirish):\nAkademik ingliz tilining eng xarakterli jihati bu — fe'lli og'zaki uslubdan otli ixcham akademik uslubga o'tishdir.\n- Oddiy: *'Because the global climate is warming rapidly, sea levels are rising.'*\n- Nominalizatsiyalashgan: *'Rapid global warming has triggered a consequential rise in sea levels.'* ('warming' va 'rise' otga aylandi).\n- Oddiy: *'Governments must intervene immediately so that they can resolve poverty.'*\n- Nominalizatsiyalashgan: *'Immediate state intervention is imperative for poverty alleviation.'*\n\n2. Sintaktik Transformatsiya (Syntactic Transformation):\n- Faol nisbatdan Majhul nisbatga o'tish (Active -> Passive): *'Scientists observed anomalies' -> 'Anomalies were detected by researchers.'*\n- Sabab-oqibat strukturasini teskari aylantirish (Cause <-> Effect): *'Heavy rainfall caused floods' -> 'The flooding was attributable to torrential precipitation.'*\n- Cleft yoki Participle clause qo'llash: *'Having analyzed the fiscal data, economists predicted a rebound.'*\n\n3. Aniq Akademik Sinonimiya (Precise Academic Synonymy):\n- *'a big problem'* -> *'a formidable challenge / pressing predicament'*\n- *'solve the issue'* -> *'tackle / mitigate / alleviate the crisis'*\n- *'a good result'* -> *'a favorable outcome'*\n- *'people who live in cities'* -> *'urban inhabitants / metropolitan dwellers'*.\n\n4. O'zbek Tili Bilan Qiyos (Uzbek Contrastive Analysis):\n- O'zbek tilida gap ko'pincha fe'l bilan tugaydi ('Inflyatsiya tufayli xalq qiynalmoqda').\n- Ingliz akademik uslubida esa harakatlar otga aylantirilib gap boshiga chiqariladi: *'Inflationary pressures have precipitated severe socioeconomic hardship'*. Bu usul inshongizni bolalarcha oddiy gaplardan tozalaydi.\n\n5. IELTS Writing Task 2 Introduction Paraphrase Formula:\n- Prompt: *'Some people think that universities should only teach subjects that are useful for future employment.'*\n- Band 7.5 Paraphrase: *'It is widely contended that tertiary educational institutions ought to exclusively curate vocational curricula tailored to the modern workforce.'*",
+                "vocabulary": [
+                    {
+                        "term": "nominalisation",
+                        "reading": "/ˌnɒm.ɪ.nəl.aɪˈzeɪ.ʃən/",
+                        "meaning": "nominalizatsiya (fe'l yoki sifatni otga aylantirish orqali akademik uslub yaratish)",
+                        "exampleSentence": "Nominalisation elevates the stylistic maturity of academic research papers.",
+                        "exampleTranslation": "Nominalizatsiya ilmiy tadqiqot maqolalarining uslubiy yetukligini oshiradi."
+                    },
+                    {
+                        "term": "alleviation",
+                        "reading": "/əˌliː.viˈeɪ.ʃən/",
+                        "meaning": "yengillashtirish, yumshatish (og'riq, qashshoqlikni)",
+                        "exampleSentence": "Microfinance programs contribute significantly to poverty alleviation in agrarian districts.",
+                        "exampleTranslation": "Mikromoliyalashtirish dasturlari qishloq tumanlarida qashshoqlikni yengillashtirishga sezilarli hissa qo'shadi."
+                    },
+                    {
+                        "term": "attributable",
+                        "reading": "/əˈtrɪb.jə.tə.bəl/",
+                        "meaning": "...sababli yuzaga kelgan, ...ga bog'liq",
+                        "exampleSentence": "The substantial increase in crop yields is directly attributable to precision irrigation.",
+                        "exampleTranslation": "Hosilning sezilarli darajada ortishi bevosita tejamkor sug'orish tizimlariga bog'liqdir."
+                    },
+                    {
+                        "term": "torrential",
+                        "reading": "/təˈren.ʃəl/",
+                        "meaning": "kuchli, jala quygandek (yomg'ir)",
+                        "exampleSentence": "The river burst its banks following forty-eight hours of torrential precipitation.",
+                        "exampleTranslation": "Qirq sakkiz soatlik kuchli yog'ingarchilikdan so'ng daryo o'z qirg'oqlaridan toshib ketdi."
+                    },
+                    {
+                        "term": "dweller",
+                        "reading": "/ˈdwel.ər/",
+                        "meaning": "istiqomat qiluvchi, yashovchi (urban dwellers)",
+                        "exampleSentence": "Metropolitan dwellers frequently confront elevated levels of ambient noise pollution.",
+                        "exampleTranslation": "Megapolis aholisi tez-tez yuqori darajadagi atrof shovqinining ifloslanishiga duch keladi."
+                    },
+                    {
+                        "term": "curate",
+                        "reading": "/kjʊəˈreɪt/",
+                        "meaning": "saralab tanlamoq, tashkil qilmoq (o'quv dasturini)",
+                        "exampleSentence": "Universities must curate academic modules that reflect technological developments.",
+                        "exampleTranslation": "Universitetlar texnologik taraqqiyotni aks ettiruvchi akademik modullarni saralab shakllantirishlari shart."
+                    },
+                    {
+                        "term": "vocational",
+                        "reading": "/vəʊˈkeɪ.ʃən.əl/",
+                        "meaning": "kasbiy, hunarga yo'naltirilgan",
+                        "exampleSentence": "Vocational apprenticeships provide hands-on expertise for mechanical technicians.",
+                        "exampleTranslation": "Kasbiy shogirdlik mexanik texniklar uchun amaliy tajribani taqdim etadi."
+                    },
+                    {
+                        "term": "formidable",
+                        "reading": "/fɔːˈmɪd.ə.bəl/",
+                        "meaning": "ulkan, jiddiy, katta qiyinchilik tug'diruvchi",
+                        "exampleSentence": "Bridging regional socioeconomic inequality remains a formidable challenge for authorities.",
+                        "exampleTranslation": "Hududiy ijtimoiy-iqtisodiy tengsizlikni bartaraf etish rasmiylar uchun ulkan sinov bo'lib qolmoqda."
+                    }
+                ],
+                "grammarRules": [
+                    {
+                        "pattern": "Verb Clause -> Nominal Phrase + Verb",
+                        "meaning": "Nominalizatsiya orqali gapni ixchamlashtirish",
+                        "usageNotes": "Fe'l otga aylanadi va gapning egasi sifatida keladi.",
+                        "examples": [
+                            {
+                                "sentence": "\"People migrate from villages because poverty increases\" -> \"Rural depopulation is driven by escalating poverty.\"",
+                                "translation": "Qishloq aholisining kamayishi ortib borayotgan qashshoqlik bilan izohlanadi."
+                            }
+                        ]
+                    }
+                ]
             }
-        ]
-    },
+        },
+        {
+            "id": "en-b2-u3-l5-s2",
+            "title": "Amaliy Mashqlar",
+            "type": "practice",
+            "estimatedMinutes": 5,
+            "practiceData": {
+                "instructions": "Parafrazlash va nominalizatsiya qoidalariga mos to'g'ri variantlarni tanlang.",
+                "exercises": [
+                    {
+                        "id": "en-b2-u3-l5-e1",
+                        "type": "multiple-choice",
+                        "prompt": "Paraphrase using nominalisation: 'Because factories pollute rivers, fish populations are declining.'",
+                        "options": [
+                            "Industrial river pollution has precipitated a sharp decline in aquatic populations.",
+                            "Factories pollute rivers and so fish die.",
+                            "Fish die because the factories make pollution in water.",
+                            "Due to factories are polluting, fish decline."
+                        ],
+                        "correctAnswer": 0,
+                        "explanation": "A variantida 'pollute' -> 'pollution', 'declining' -> 'decline' bo'lib, professional nominalizatsiya qo'llangan."
+                    },
+                    {
+                        "id": "en-b2-u3-l5-e2",
+                        "type": "multiple-choice",
+                        "prompt": "Urban inhabitants can also be accurately paraphrased in academic essays as _______ .",
+                        "options": [
+                            "city dwellers",
+                            "metropolitan workers",
+                            "town people",
+                            "village people"
+                        ],
+                        "correctAnswer": 0,
+                        "explanation": "'urban inhabitants' iborasining tabiiy akademik sinonimi 'city dwellers' yoki 'metropolitan dwellers'dir."
+                    },
+                    {
+                        "id": "en-b2-u3-l5-e3",
+                        "type": "multiple-choice",
+                        "prompt": "The flash floods were directly _______ to forty-eight hours of torrential rainfall.",
+                        "options": [
+                            "attributable",
+                            "pervasive",
+                            "punitive",
+                            "tentative"
+                        ],
+                        "correctAnswer": 0,
+                        "explanation": "...sababli yuz bergan: 'attributable to'."
+                    },
+                    {
+                        "id": "en-b2-u3-l5-e4",
+                        "type": "multiple-choice",
+                        "prompt": "Tertiary institutions must carefully _______ vocational syllabi that align with current job markets.",
+                        "options": [
+                            "curate",
+                            "suffocate",
+                            "stagnate",
+                            "liquidate"
+                        ],
+                        "correctAnswer": 0,
+                        "explanation": "O'quv rejasini saralab tuzish: 'curate syllabi'."
+                    },
+                    {
+                        "id": "en-b2-u3-l5-e5",
+                        "type": "multiple-choice",
+                        "prompt": "Which phrase is an academic replacement for 'solve a big problem'?",
+                        "options": [
+                            "alleviate a formidable predicament",
+                            "do a big solution",
+                            "make a problem small",
+                            "fix big bad things"
+                        ],
+                        "correctAnswer": 0,
+                        "explanation": "'alleviate a formidable predicament' yuqori akademik (Band 7.5+) darajadagi leksik birlashmadir."
+                    }
+                ]
+            }
+        },
+        {
+            "id": "en-b2-u3-l5-s3",
+            "title": "Yakuniy Test",
+            "type": "test",
+            "estimatedMinutes": 5,
+            "testData": {
+                "instructions": "Unit 3 bo'yicha yakuniy sinov testidan o'ting. O'tish bali: 80%.",
+                "passingScorePercentage": 80,
+                "questions": [
+                    {
+                        "id": "en-b2-u3-l5-q1",
+                        "question": "What is the grammatical term for converting verbs and adjectives into nouns to create formal academic style?",
+                        "options": [
+                            "Nominalisation",
+                            "Inversion",
+                            "Subjunctive",
+                            "Alliteration"
+                        ],
+                        "correctAnswerIndex": 0,
+                        "explanation": "Fe'l va sifatlarni otga aylantirish jarayoni 'Nominalisation' deb ataladi."
+                    },
+                    {
+                        "id": "en-b2-u3-l5-q2",
+                        "question": "Paraphrase: 'Governments should invest in railways to reduce highway traffic.'",
+                        "options": [
+                            "Capital allocation into rail networks is essential to alleviate motorway congestion.",
+                            "Governments must buy trains so roads have less cars.",
+                            "To reduce cars, trains should be paid by states.",
+                            "Motorways are bad, so trains are good."
+                        ],
+                        "correctAnswerIndex": 0,
+                        "explanation": "Variant A 'Capital allocation into rail networks is essential to alleviate motorway congestion' eng yetuk akademik shakldir."
+                    },
+                    {
+                        "id": "en-b2-u3-l5-q3",
+                        "question": "Economic expansion in the capital was predominantly _______ to international venture capital inflows.",
+                        "options": [
+                            "attributable",
+                            "imperative",
+                            "dormant",
+                            "malleable"
+                        ],
+                        "correctAnswerIndex": 0,
+                        "explanation": "O'sish xorijiy sarmoyalar oqimi sababli yuz bergan: 'attributable to'."
+                    },
+                    {
+                        "id": "en-b2-u3-l5-q4",
+                        "question": "Community microcredit schemes play an indispensable role in poverty _______ .",
+                        "options": [
+                            "alleviation",
+                            "protectionism",
+                            "saturation",
+                            "discrepancy"
+                        ],
+                        "correctAnswerIndex": 0,
+                        "explanation": "Qashshoqlikni yumshatish / kamaytirish: 'poverty alleviation'."
+                    },
+                    {
+                        "id": "en-b2-u3-l5-q5",
+                        "question": "Tackling global climate change presents a _______ challenge for contemporary multilateral diplomacy.",
+                        "options": [
+                            "formidable",
+                            "tentative",
+                            "derelict",
+                            "culpable"
+                        ],
+                        "correctAnswerIndex": 0,
+                        "explanation": "Ulkan / jiddiy chaqiriq: 'formidable challenge'."
+                    }
+                ]
+            }
+        }
+    ]
+},
     {
         "id": "en-b2-u4-l1",
         "courseId": "english-b2",
