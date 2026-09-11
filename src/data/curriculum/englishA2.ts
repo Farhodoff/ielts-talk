@@ -4851,57 +4851,120 @@ export const ENGLISH_A2_LESSONS: Lesson[] = [
         "unitTitle": "Unit 5: Socializing & Future Plans",
         "language": "en",
         "level": "A2",
-        "lessonNumber": 21,
-        "title": "Making Invitations & Arrangements",
-        "description": "Takliflar: \"Would you like to...?\", \"Shall we...?\", \"How about...?\" va mos javoblar.",
-        "estimatedDurationMinutes": 14,
+        "lessonNumber": 1,
+        "title": "Social Invitations, Making Plans & Responding",
+        "description": "Do'stlarni mehmonga va tadbirlarga taklif qilish, taklifni qabul qilish, muloyim rad etish va kelishib olish.",
+        "estimatedDurationMinutes": 15,
         "icon": "✉️",
         "steps": [
             {
                 "id": "en-a2-u5-l1-s1",
-                "title": "Taklif Iboralari",
+                "title": "Taklif Qilish va Javob Berish",
                 "type": "learn",
                 "estimatedMinutes": 5,
                 "learnData": {
-                    "title": "Making & Responding to Invitations",
-                    "explanation": "Birovni biror joyga taklif qilish va rozi bo'lish / rad etish iboralari.",
-                    "keyPoints": [
-                        "Would you like to join us for dinner? — Biz bilan kechki ovqatga qo'shilasizmi?",
-                        "I would love to, thanks! — Jon deb, rahmat!",
-                        "I am sorry, I can't. I am busy. — Uzr, bora olmayman. Bandman."
-                    ],
+                    "title": "Making, Accepting & Declining Invitations",
+                    "explanation": "Do'stlar va tanishlar bilan reja tuzish, tadbirga taklif qilish va xushmuomalalik bilan javob berish:\n\n1. Taklif Qilish Qoliplari (Inviting Patterns):\n- 'Would you like to + fe'l?': 'Would you like to join us for dinner tonight?' (Eng rasmiy va xushmuomala).\n- 'Do you fancy + V-ing?': 'Do you fancy going for a coffee after work?' (Norasmiy, do'stona taklif).\n- 'How about / What about + V-ing?': 'How about watching a movie this Friday?'\n- 'Shall we + fe'l?': 'Shall we meet outside the subway station at 6 PM?'\n\n2. Taklifni Qabul Qilish (Accepting):\n- 'I'd love to, thank you!' (Jon deb, rahmat!).\n- 'That sounds fantastic / like a great plan!' (Ajoyib reja!).\n- 'Count me in!' (Meni ham hisobga qo'shing!).\n\n3. Taklifni Muloyim Rad Etish (Declining Politely):\n- Ingliz madaniyatida shunchaki 'No' yoki 'I don't want' deb aytish o'ta qo'pol hisoblanadi!\n- Formulaga amal qiling: Rahmat aytish + Uzr so'rash + Sababini aytish + Keyingi safarga qoldirish:\n- 'I'd really love to, but I'm afraid I have an important deadline tonight. Can I take a rain check?' (Jon deb borardim-u, ammo bugun muhim ishim bor edi. Boshqa safarga qoldirsak maylimi?).\n\n4. O'zbek o'rganuvchilari uchun xavfli tuzoqlar (Common Pitfalls):\n- ❌ 'I don't want.' -> ✅ 'I'd love to, but unfortunately I'm busy.'\n- ❌ 'Would you like go?' -> ✅ 'Would you like TO go?' ('Would like' dan keyin 'to' unutilmasin).\n- ❌ 'How about go?' -> ✅ 'How about GOING?' ('How about' dan keyin fe'lga -ing qo'shiladi).\n\n5. IELTS Speaking Foundation Corner:\n- Topic: Hanging out with Friends (Speaking Part 1)\n- Examiner: 'How often do you hang out with your friends?'\n- Model Band 6.0+ Answer: 'To be honest, on weekdays I am extremely occupied with my studies and work responsibilities, so I rarely have time to socialize. However, on weekends, my close friends and I always arrange a get-together at a local tea house or café to catch up on each other's news and relax.'\n- Lexical Tip: 'Hang out', 'catch up on', 'arrange a get-together' kabi tabiiy birikmalar ravonlik va lug'at ballingizni oshiradi.",
                     "vocabulary": [
                         {
-                            "term": "Invitation",
+                            "term": "invitation",
                             "reading": "/ˌɪn.vɪˈteɪ.ʃən/",
-                            "meaning": "Taklifnoma",
-                            "exampleSentence": "Thank you for the invitation.",
-                            "exampleTranslation": "Taklif uchun rahmat."
+                            "meaning": "taklifnoma, taklif",
+                            "exampleSentence": "Thank you so much for the dinner invitation; we had a wonderful time.",
+                            "exampleTranslation": "Kechki ovqat taklifi uchun katta rahmat; ajoyib vaqt o'tkazdik."
                         },
                         {
-                            "term": "Improve",
-                            "reading": "/ɪmˈpruːv/",
-                            "meaning": "Yaxshilamoq, rivojlantirmoq",
-                            "exampleSentence": "Reading books will improve your vocabulary.",
-                            "exampleTranslation": "Kitob oʻqish soʻz boyligingizni oshiradi."
+                            "term": "join",
+                            "reading": "/dʒɔɪn/",
+                            "meaning": "qo'shilmoq (davraga yoki tadbirga)",
+                            "exampleSentence": "Would you like to join us for a walk in the park?",
+                            "exampleTranslation": "Bog'dagi sayrimizga biz bilan birga qo'shilishni xohlaysizmi?"
                         },
                         {
-                            "term": "Opportunity",
-                            "reading": "/ˌɒp.əˈtʃuː.nə.ti/",
-                            "meaning": "Imkoniyat",
-                            "exampleSentence": "This is a great opportunity to learn.",
-                            "exampleTranslation": "Bu oʻrganish uchun ajoyib imkoniyat."
+                            "term": "would love to",
+                            "reading": "/wʊd lʌv tuː/",
+                            "meaning": "jon deb, mamnuniyat bilan",
+                            "exampleSentence": "I would love to come to your birthday party this Saturday!",
+                            "exampleTranslation": "Bu shanba kungi tug'ilgan kuningizga jon deb boraman!"
+                        },
+                        {
+                            "term": "arrange",
+                            "reading": "/əˈreɪndʒ/",
+                            "meaning": "kelishmoq, rejalashtirmoq",
+                            "exampleSentence": "We arranged to meet in front of the library at 3 o'clock.",
+                            "exampleTranslation": "Biz soat 3 da kutubxona oldida uchrashishga kelishib oldik."
+                        },
+                        {
+                            "term": "hang out",
+                            "reading": "/hæŋ aʊt/",
+                            "meaning": "birga vaqt o'tkazmoq, aylanmoq",
+                            "exampleSentence": "Teenagers often hang out at shopping malls on Saturday afternoons.",
+                            "exampleTranslation": "O'smirlar shanba tushdan keyin ko'pincha savdo markazlarida birga vaqt o'tkazishadi."
+                        },
+                        {
+                            "term": "catch up",
+                            "reading": "/kætʃ ʌp/",
+                            "meaning": "yangiliklarni aytishib gaplashib olmoq",
+                            "exampleSentence": "It was great to catch up with my school friends after so many years.",
+                            "exampleTranslation": "Shuncha yillardan so'ng maktabdosh do'stlarim bilan ko'rishib, yangiliklarni gaplashib olish ajoyib bo'ldi."
+                        },
+                        {
+                            "term": "rain check",
+                            "reading": "/reɪn tʃek/",
+                            "meaning": "taklifni keyingi safarga qoldirish (take a rain check)",
+                            "exampleSentence": "I can't go bowling tonight, but can I take a rain check for next week?",
+                            "exampleTranslation": "Bugun boulingga bora olmayman, lekin keyingi haftaga qoldirsak maylimi?"
+                        },
+                        {
+                            "term": "available",
+                            "reading": "/əˈveɪ.lə.bəl/",
+                            "meaning": "bo'sh, vaqti bor",
+                            "exampleSentence": "Are you available for a quick phone call this afternoon?",
+                            "exampleTranslation": "Bugun tushdan keyin qisqa telefon suhbatiga bo'shmisiz?"
+                        },
+                        {
+                            "term": "fancy",
+                            "reading": "/ˈfæn.si/",
+                            "meaning": "xohlamoq, ko'ngli tusamoq (Do you fancy...?)",
+                            "exampleSentence": "Do you fancy grabbing a bite to eat before the film starts?",
+                            "exampleTranslation": "Film boshlanishidan oldin yengil tamaddi qilib olishni xohlaysizmi?"
+                        },
+                        {
+                            "term": "busy",
+                            "reading": "/ˈbɪz.i/",
+                            "meaning": "band, bo'sh emas",
+                            "exampleSentence": "I am terribly busy preparing for my IELTS exam this month.",
+                            "exampleTranslation": "Bu oyda IELTS imtihoniga tayyorgarlik ko'rib juda ham bandman."
                         }
                     ],
                     "grammarRules": [
                         {
-                            "pattern": "Making Invitations & Arrangements",
-                            "meaning": "Takliflar: \"Would you like to...?\", \"Shall we...?\", \"How about...?\" va mos javoblar.",
-                            "usageNotes": "Birovni biror joyga taklif qilish va rozi bo'lish / rad etish iboralari.",
+                            "pattern": "Making Suggestions: How about / What about + V-ing vs Shall we + base verb",
+                            "meaning": "Birgalikda biror ish qilishni taklif qilish grammatikasi",
+                            "usageNotes": "'How about' va 'What about' dan keyin fe'lga -ing qo'shiladi. 'Shall we' dan keyin esa fe'lning asosi (bare infinitive) keladi.",
                             "examples": [
                                 {
-                                    "sentence": "Thank you for the invitation.",
-                                    "translation": "Taklif uchun rahmat."
+                                    "sentence": "How about trying that new Italian restaurant downtown?",
+                                    "translation": "Shahar markazidagi yangi italyan restoraniga borib ko'rishga nima deysiz?"
+                                },
+                                {
+                                    "sentence": "Shall we order some pizza for the meeting?",
+                                    "translation": "Uchrashuv uchun pitsa buyurtma qilamizmi?"
+                                }
+                            ]
+                        },
+                        {
+                            "pattern": "Polite Acceptance and Refusal: I'd love to, but... / Can I take a rain check?",
+                            "meaning": "Taklifga do'stona va odobli javob berish modellari",
+                            "usageNotes": "Taklif rad etilganda darhol sabab ko'rsatish va muqobil vaqt taklif qilish ingliz tilida odob me'yoridir.",
+                            "examples": [
+                                {
+                                    "sentence": "I'd love to come, but I have already promised to help my brother.",
+                                    "translation": "Borishni juda xohlardim, lekin ukamga yordam berishga allaqachon va'da berib qo'yganman."
+                                },
+                                {
+                                    "sentence": "That sounds like fun, but I must take a rain check this time.",
+                                    "translation": "Juda qiziq tuyuladi, lekin bu safar keyinga qoldirishimga to'g'ri keladi."
                                 }
                             ]
                         }
@@ -4910,61 +4973,148 @@ export const ENGLISH_A2_LESSONS: Lesson[] = [
             },
             {
                 "id": "en-a2-u5-l1-s2",
-                "title": "Mashq",
+                "title": "Amaliy Mashqlar",
                 "type": "practice",
-                "estimatedMinutes": 4,
+                "estimatedMinutes": 5,
                 "practiceData": {
-                    "instructions": "To'g'ri javobni tanlang.",
+                    "instructions": "Taklif qilish va javob berishga oid to'g'ri grammatik shakl va iboralarni tanlang.",
                     "exercises": [
                         {
                             "id": "en-a2-u5-l1-e1",
                             "type": "multiple-choice",
-                            "prompt": "\"Would you like _______ to the movies tonight?\"",
+                            "prompt": "\"Would you like _______ us for dinner at the new restaurant tonight?\"",
                             "options": [
-                                "went",
-                                "to go",
-                                "going",
-                                "go"
+                                "join",
+                                "joining",
+                                "to join",
+                                "joined"
                             ],
-                            "correctAnswer": 1,
-                            "explanation": "Would you like + to + verb."
+                            "correctAnswer": 2,
+                            "explanation": "'Would you like + to + verb' shakli to'g'ri: 'to join'."
                         },
                         {
-                            "id": "en-a2-u5-l1-ex-2",
+                            "id": "en-a2-u5-l1-e2",
                             "type": "multiple-choice",
-                            "prompt": "Choose the correct word to complete the sentence: \"Reading books will improve your vocabulary.\"",
+                            "prompt": "\"How about _______ a cup of coffee and discussing our project?\"",
                             "options": [
-                                "doubt",
-                                "Improve",
-                                "delay",
-                                "reluctance"
+                                "have",
+                                "having",
+                                "to have",
+                                "had"
                             ],
                             "correctAnswer": 1,
-                            "explanation": "\"Improve\" (Yaxshilamoq, rivojlantirmoq) fits the context appropriately."
+                            "explanation": "'How about' predlogidan keyin fe'lga -ing qo'shiladi: 'having'."
+                        },
+                        {
+                            "id": "en-a2-u5-l1-e3",
+                            "type": "multiple-choice",
+                            "prompt": "\"Shall we _______ at 7 PM outside the cinema?\"",
+                            "options": [
+                                "meet",
+                                "meeting",
+                                "to meet",
+                                "met"
+                            ],
+                            "correctAnswer": 0,
+                            "explanation": "'Shall we' modalidan so'ng fe'lning sof asosi keladi: 'meet'."
+                        },
+                        {
+                            "id": "en-a2-u5-l1-e4",
+                            "type": "multiple-choice",
+                            "prompt": "\"I'm sorry, I have an urgent doctor's appointment tonight. Can I take a _______ check?\"",
+                            "options": [
+                                "sun",
+                                "rain",
+                                "snow",
+                                "wind"
+                            ],
+                            "correctAnswer": 1,
+                            "explanation": "'Take a rain check' — taklifni keyingi qulay vaqtga qoldirish ma'nosidagi mashhur ibora."
+                        },
+                        {
+                            "id": "en-a2-u5-l1-e5",
+                            "type": "multiple-choice",
+                            "prompt": "\"Do you fancy _______ a movie with us this evening?\"",
+                            "options": [
+                                "watch",
+                                "watching",
+                                "to watch",
+                                "watched"
+                            ],
+                            "correctAnswer": 1,
+                            "explanation": "'Fancy' fe'lidan keyin Gerund (V-ing) ishlatiladi: 'fancy watching'."
                         }
                     ]
                 }
             },
             {
                 "id": "en-a2-u5-l1-s3",
-                "title": "Test",
+                "title": "Yakuniy Test",
                 "type": "test",
                 "estimatedMinutes": 5,
                 "testData": {
-                    "instructions": "Savollarga javob bering.",
-                    "passingScorePercentage": 75,
+                    "instructions": "Ijtimoiy takliflar va kelishuvlarga oid savollarga javob bering.",
+                    "passingScorePercentage": 80,
                     "questions": [
                         {
                             "id": "en-a2-u5-l1-q1",
-                            "question": "How about _______ football this weekend?",
+                            "question": "Qaysi jumla taklifni muloyim va madaniyatsiz ko'rinmasdan rad etishning eng yaxshi namunasidir?",
                             "options": [
-                                "played",
-                                "playing",
-                                "to play",
-                                "play"
+                                "No, I don't want to come with you.",
+                                "I'd love to, but unfortunately I have other plans tonight.",
+                                "Why are you inviting me? I am busy.",
+                                "I hate concerts, so no."
                             ],
                             "correctAnswerIndex": 1,
-                            "explanation": "How about + V-ing."
+                            "explanation": "'I'd love to, but unfortunately...' odobli rad etishning eng namunali shaklidir."
+                        },
+                        {
+                            "id": "en-a2-u5-l1-q2",
+                            "question": "'How about ...' iborasidan keyin fe'l qanday shaklda bo'lishi shart?",
+                            "options": [
+                                "Fe'lning o'tgan zamon shaklida (V2)",
+                                "'To' yuklamasi bilan (Infinitive)",
+                                "'-ing' qo'shimchasi bilan (Gerund)",
+                                "Faqat modal fe'l bilan"
+                            ],
+                            "correctAnswerIndex": 2,
+                            "explanation": "'How about / What about' dan keyin fe'lga -ing qo'shiladi (How about going...)."
+                        },
+                        {
+                            "id": "en-a2-u5-l1-q3",
+                            "question": "What does the expression 'catch up with friends' mean?",
+                            "options": [
+                                "Do'stlar ortidan quvib yetib olish",
+                                "Do'stlar bilan anchadan keyin uchrashib yangiliklarni bo'lishmoq",
+                                "Do'stlar bilan janjallashmoq",
+                                "Do'stlarga qarz bermoq"
+                            ],
+                            "correctAnswerIndex": 1,
+                            "explanation": "'Catch up' uzoq vaqt ko'rishmagan odamlar bilan gaplashib yangiliklardan xabardor bo'lishdir."
+                        },
+                        {
+                            "id": "en-a2-u5-l1-q4",
+                            "question": "Choose the sentence with the correct grammar:",
+                            "options": [
+                                "Would you like coming with us to the museum?",
+                                "Would you like to come with us to the museum?",
+                                "Would you like come with us to the museum?",
+                                "Would you like to coming with us to the museum?"
+                            ],
+                            "correctAnswerIndex": 1,
+                            "explanation": "'Would you like + to + base verb' (Would you like to come)."
+                        },
+                        {
+                            "id": "en-a2-u5-l1-q5",
+                            "question": "Friend: 'Hey, are you free to grab lunch tomorrow?' — You: 'Sure, _______! I'm completely free.'",
+                            "options": [
+                                "count me out",
+                                "count me in",
+                                "take a rain check",
+                                "I don't like it"
+                            ],
+                            "correctAnswerIndex": 1,
+                            "explanation": "'Count me in!' — Meni ham qo'shing, jon deb boraman degan rozilik ifodasi."
                         }
                     ]
                 }
@@ -4978,57 +5128,120 @@ export const ENGLISH_A2_LESSONS: Lesson[] = [
         "unitTitle": "Unit 5: Socializing & Future Plans",
         "language": "en",
         "level": "A2",
-        "lessonNumber": 22,
-        "title": "Technology & Digital Life Vocabulary",
-        "description": "Texnologiya va raqamli hayot: \"Download\", \"Upload\", \"Password\", \"Social media\", va fe'llar.",
-        "estimatedDurationMinutes": 14,
+        "lessonNumber": 2,
+        "title": "Technology, Digital Life & Online Communication",
+        "description": "Zamonaviy gadjetlar, ijtimoiy tarmoqlar, internet xavfsizligi va raqamli hayot iboralari.",
+        "estimatedDurationMinutes": 15,
         "icon": "💻",
         "steps": [
             {
                 "id": "en-a2-u5-l2-s1",
-                "title": "Raqamli So'zlar",
+                "title": "Raqamli Hayot va Texnologiya",
                 "type": "learn",
                 "estimatedMinutes": 5,
                 "learnData": {
-                    "title": "Digital Technology Terms",
-                    "explanation": "Komp'yuter va smartfondan foydalanishdagi asosiy A2 iboralar.",
-                    "keyPoints": [
-                        "Log in / Log out — Tizimga kirish / chiqish",
-                        "Attach a file — Fayl ilova qilish",
-                        "Click the button — Tugmani bosish"
-                    ],
+                    "title": "Technology, Smartphones & the Digital World",
+                    "explanation": "Bugungi kunda har bir muloqot raqamli vositalar bilan bog'liq. Texnologiya va internet atamalarini ingliz tilida to'g'ri qo'llash:\n\n1. Asosiy Texnologik Fe'llar va Birikmalar:\n- Download (internetdan qurilmaga yuklab olmoq) vs Upload (qurilmadan internetga/tarmoqqa joylamoq).\n- Log in / Sign in (tizimga kirish) vs Log out / Sign out (tizimdan chiqish).\n- Turn on / Switch on (qurilmani yoqish) vs Turn off / Shut down (o'chirish).\n- Charge (quvvatlamoq): 'I need to charge my smartphone; the battery is low.'\n- Attachment (xatga biriktirilgan fayl): 'Please check the attachment in my email.'\n\n2. Telefon va Batareya Holati (Battery Life):\n- 'My phone died' yoki 'My phone ran out of battery' (Telefonimning zaryadi tugab, o'chib qoldi).\n- 'Do you have a phone charger I could borrow?' (Quvvatlagichingizni bir ozga olib tursam bo'ladimi?).\n\n3. O'zbek o'rganuvchilari uchun xavfli tuzoqlar (Common Pitfalls):\n- ❌ 'My phone is empty, I must fill it.' -> ✅ 'My phone is out of battery / dead; I need to CHARGE it.' (O'zbek tilida 'zaryadkaga to'ldirish' deyiladi, lekin ingliz tilida faqat 'charge' fe'li ishlatiladi, 'fill' xato!).\n- ❌ 'Open the computer.' -> ✅ 'Turn on the computer.' (Dasturiy yoqish uchun 'turn on' ishlatiladi. 'Open' esa noutbuk qopqog'ini jismoniy ochishni bildiradi).\n- ❌ 'Send me by telegram.' -> ✅ 'Send it to me VIA Telegram' yoki 'ON Telegram.'\n\n4. IELTS Speaking Foundation Corner:\n- Topic: Technology and Social Media (Speaking Part 1 & 2)\n- Examiner: 'Do you spend a great deal of time on social media?'\n- Model Band 6.0+ Answer: 'To be completely honest, I spend a couple of hours every day browsing social media platforms. I mainly use messaging apps to stay connected with relatives and follow technological news, though I constantly try to monitor my screen time to avoid getting distracted from my studies.'\n- Lexical Tip: 'Browse social media', 'stay connected with', 'monitor screen time' kabi iboralar IELTS baholovchisiga yuqori darajadagi lug'at boyligini ko'rsatadi.",
                     "vocabulary": [
                         {
-                            "term": "Password",
+                            "term": "download",
+                            "reading": "/ˌdaʊnˈləʊd/",
+                            "meaning": "yuklab olmoq (internetdan qurilmaga)",
+                            "exampleSentence": "You can download the course materials directly from our learning portal.",
+                            "exampleTranslation": "Kurs materiallarini to'g'ridan-to'g'ri o'quv portalimizdan yuklab olishingiz mumkin."
+                        },
+                        {
+                            "term": "upload",
+                            "reading": "/ˌʌpˈləʊd/",
+                            "meaning": "internetga joylamoq / yuklamoq",
+                            "exampleSentence": "Please upload your homework assignment as a PDF file before midnight.",
+                            "exampleTranslation": "Iltimos, uy vazifangizni yarim tungacha PDF fayl shaklida yuklang."
+                        },
+                        {
+                            "term": "attachment",
+                            "reading": "/əˈtætʃ.mənt/",
+                            "meaning": "ilova (xatga biriktirilgan hujjat)",
+                            "exampleSentence": "I have included the financial report as an attachment in this email.",
+                            "exampleTranslation": "Men moliyaviy hisobotni ushbu xatga ilova sifatida biriktirdim."
+                        },
+                        {
+                            "term": "password",
                             "reading": "/ˈpɑːs.wɜːd/",
-                            "meaning": "Parol",
-                            "exampleSentence": "Enter your password.",
-                            "exampleTranslation": "Parolingizni kiriting."
+                            "meaning": "maxfiy parol",
+                            "exampleSentence": "Always choose a complex password that combines letters, numbers, and symbols.",
+                            "exampleTranslation": "Har doim harflar, raqamlar va belgilarni birlashtirgan murakkab parol tanlang."
                         },
                         {
-                            "term": "Opportunity",
-                            "reading": "/ˌɒp.əˈtʃuː.nə.ti/",
-                            "meaning": "Imkoniyat",
-                            "exampleSentence": "This is a great opportunity to learn.",
-                            "exampleTranslation": "Bu oʻrganish uchun ajoyib imkoniyat."
+                            "term": "delete",
+                            "reading": "/dɪˈliːt/",
+                            "meaning": "o'chirib tashlamoq",
+                            "exampleSentence": "Be careful not to delete essential system files from your computer.",
+                            "exampleTranslation": "Kompyuteringizdagi muhim tizim fayllarini o'chirib yubormaslik uchun ehtiyot bo'ling."
                         },
                         {
-                            "term": "Confidence",
-                            "reading": "/ˈkɒn.fɪ.dəns/",
-                            "meaning": "Ishonch",
-                            "exampleSentence": "Practice gives you confidence in speaking.",
-                            "exampleTranslation": "Mashq qilish gapirishda ishonch bagʻishlaydi."
+                            "term": "browse",
+                            "reading": "/braʊz/",
+                            "meaning": "internet sahifalarini ko'zdan kechirmoq, varaqlamoq",
+                            "exampleSentence": "I spent an hour browsing the web looking for affordable flight tickets.",
+                            "exampleTranslation": "Hamyonbop aviachiptalar qidirib internet sahifalarini ko'rib chiqishga bir soat sarfladim."
+                        },
+                        {
+                            "term": "charger",
+                            "reading": "/ˈtʃɑː.dʒər/",
+                            "meaning": "quvvatlagich (zaryadka)",
+                            "exampleSentence": "I accidentally left my phone charger in the hotel room.",
+                            "exampleTranslation": "Tasodifan telefonimning quvvatlagichini mehmonxona xonasida qoldirib ketibman."
+                        },
+                        {
+                            "term": "social media",
+                            "reading": "/ˌsəʊ.ʃəl ˈmiː.di.ə/",
+                            "meaning": "ijtimoiy tarmoqlar",
+                            "exampleSentence": "Excessive use of social media can negatively affect your concentration.",
+                            "exampleTranslation": "Ijtimoiy tarmoqlardan haddan tashqari ko'p foydalanish diqqatingizga salbiy ta'sir ko'rsatishi mumkin."
+                        },
+                        {
+                            "term": "out of battery",
+                            "reading": "/aʊt əv ˈbæt.ər.i/",
+                            "meaning": "quvvati tugagan, o'chib qolgan",
+                            "exampleSentence": "My laptop is completely out of battery, so I need to plug it into the wall socket.",
+                            "exampleTranslation": "Noutbukimning zaryadi butunlay tugab qoldi, shuning uchun uni rozetkaga ulashim kerak."
+                        },
+                        {
+                            "term": "app",
+                            "reading": "/æp/",
+                            "meaning": "mobil ilova (application)",
+                            "exampleSentence": "This language learning app helps me practice vocabulary every day.",
+                            "exampleTranslation": "Ushbu til o'rganish ilovasi menga har kuni so'zlarni mashq qilishga yordam beradi."
                         }
                     ],
                     "grammarRules": [
                         {
-                            "pattern": "Technology & Digital Life Vocabulary",
-                            "meaning": "Texnologiya va raqamli hayot: \"Download\", \"Upload\", \"Password\", \"Social media\", va fe'llar.",
-                            "usageNotes": "Komp'yuter va smartfondan foydalanishdagi asosiy A2 iboralar.",
+                            "pattern": "Phrasal Verbs in Technology: Turn on / off, Log in / out, Plug in",
+                            "meaning": "Texnik qurilmalarni boshqarish fe'llari",
+                            "usageNotes": "Qurilmalarni elektrga ulash 'plug in', tizimga kirish 'log in / sign in', ishga tushirish 'turn on / switch on' deb aytiladi.",
                             "examples": [
                                 {
-                                    "sentence": "Enter your password.",
-                                    "translation": "Parolingizni kiriting."
+                                    "sentence": "Don't forget to log out of your bank account when using a shared computer.",
+                                    "translation": "Umumiy kompyuterdan foydalanganda bank hisobingizdan chiqishni unutmang."
+                                },
+                                {
+                                    "sentence": "Could you please turn off your mobile phone during the lecture?",
+                                    "translation": "Ma'ruza davomida mobil telefoningizni o'chirib qo'ya olasizmi, iltimos?"
+                                }
+                            ]
+                        },
+                        {
+                            "pattern": "Collocations with Digital Media: share a post, send an attachment, stream a video",
+                            "meaning": "Raqamli tarmoqdagi barqaror so'z birikmalari",
+                            "usageNotes": "Raqamli muloqotda to'g'ri fe'l va otlarni birga qo'llash tabiiylikni ta'minlaydi.",
+                            "examples": [
+                                {
+                                    "sentence": "She shared an inspiring post about learning languages on her social media page.",
+                                    "translation": "U o'zining ijtimoiy tarmoqdagi sahifasida til o'rganish haqidagi ilhomlantiruvchi postni ulashdi."
+                                },
+                                {
+                                    "sentence": "We can stream the live concert in high definition directly on our TV.",
+                                    "translation": "Biz jonli konsertni to'g'ridan-to'g'ri televizorimizda yuqori sifatda tomosha qilishimiz mumkin."
                                 }
                             ]
                         }
@@ -5037,61 +5250,148 @@ export const ENGLISH_A2_LESSONS: Lesson[] = [
             },
             {
                 "id": "en-a2-u5-l2-s2",
-                "title": "Mashq",
+                "title": "Amaliy Mashqlar",
                 "type": "practice",
-                "estimatedMinutes": 4,
+                "estimatedMinutes": 5,
                 "practiceData": {
-                    "instructions": "To'g'ri so'zni tanlang.",
+                    "instructions": "Raqamli hayot va texnologiyaga oid to'g'ri so'z va iboralarni tanlang.",
                     "exercises": [
                         {
                             "id": "en-a2-u5-l2-e1",
                             "type": "multiple-choice",
-                            "prompt": "Don't forget to _______ your document before closing.",
+                            "prompt": "\"My phone is completely _______; could I borrow your charger for thirty minutes?\"",
                             "options": [
-                                "forget",
-                                "delete",
-                                "save",
-                                "lose"
+                                "empty",
+                                "dead",
+                                "closed",
+                                "lost"
                             ],
-                            "correctAnswer": 2,
-                            "explanation": "Save = saqlash."
+                            "correctAnswer": 1,
+                            "explanation": "Zaryadi tugab o'chib qolgan telefon haqida 'my phone is dead' yoki 'out of battery' deyiladi."
                         },
                         {
-                            "id": "en-a2-u5-l2-ex-2",
+                            "id": "en-a2-u5-l2-e2",
                             "type": "multiple-choice",
-                            "prompt": "Choose the correct word to complete the sentence: \"This is a great opportunity to learn.\"",
+                            "prompt": "\"I couldn't read the contract because you forgot to add the _______ to your email.\"",
                             "options": [
-                                "Opportunity",
-                                "reluctance",
-                                "doubt",
-                                "delay"
+                                "attachment",
+                                "password",
+                                "charger",
+                                "battery"
                             ],
                             "correctAnswer": 0,
-                            "explanation": "\"Opportunity\" (Imkoniyat) fits the context appropriately."
+                            "explanation": "Emailga biriktiriladigan fayl 'attachment' deyiladi."
+                        },
+                        {
+                            "id": "en-a2-u5-l2-e3",
+                            "type": "multiple-choice",
+                            "prompt": "\"You need to enter your username and _______ to access the student dashboard.\"",
+                            "options": [
+                                "receipt",
+                                "ticket",
+                                "password",
+                                "prescription"
+                            ],
+                            "correctAnswer": 2,
+                            "explanation": "Tizimga kirish uchun maxfiy so'z 'password' (parol) dir."
+                        },
+                        {
+                            "id": "en-a2-u5-l2-e4",
+                            "type": "multiple-choice",
+                            "prompt": "\"Before you leave the computer lab, remember to _______ out of your personal email.\"",
+                            "options": [
+                                "log",
+                                "take",
+                                "turn",
+                                "download"
+                            ],
+                            "correctAnswer": 0,
+                            "explanation": "Tizimdan chiqish: 'log out'."
+                        },
+                        {
+                            "id": "en-a2-u5-l2-e5",
+                            "type": "multiple-choice",
+                            "prompt": "\"It takes only ten seconds to _______ this small audio file with our high-speed internet.\"",
+                            "options": [
+                                "download",
+                                "charge",
+                                "plug",
+                                "close"
+                            ],
+                            "correctAnswer": 0,
+                            "explanation": "Internetdan faylni ko'chirib olish 'download' fe'lidir."
                         }
                     ]
                 }
             },
             {
                 "id": "en-a2-u5-l2-s3",
-                "title": "Test",
+                "title": "Yakuniy Test",
                 "type": "test",
                 "estimatedMinutes": 5,
                 "testData": {
-                    "instructions": "Savollarga javob bering.",
-                    "passingScorePercentage": 75,
+                    "instructions": "Texnologiya va raqamli aloqa iboralariga oid test savollariga javob bering.",
+                    "passingScorePercentage": 80,
                     "questions": [
                         {
                             "id": "en-a2-u5-l2-q1",
-                            "question": "I sent you an email with an _______ file.",
+                            "question": "Telefonning quvvati tugab o'chganini to'g'ri ifodalovchi gapni tanlang:",
                             "options": [
-                                "attaches",
-                                "attaching",
-                                "attached",
-                                "attach"
+                                "My phone is empty of energy.",
+                                "My phone ran out of battery.",
+                                "My phone filled down.",
+                                "My phone is closed completely."
                             ],
-                            "correctAnswerIndex": 2,
-                            "explanation": "Attached file (ilova qilingan fayl)."
+                            "correctAnswerIndex": 1,
+                            "explanation": "'My phone ran out of battery' yoki 'My phone is dead' eng tabiiy va to'g'ri ifodadir."
+                        },
+                        {
+                            "id": "en-a2-u5-l2-q2",
+                            "question": "Kompyuterni yoqish uchun qaysi ibora qo'llaniladi?",
+                            "options": [
+                                "Open the computer",
+                                "Turn on the computer",
+                                "Download the computer",
+                                "Log in the computer"
+                            ],
+                            "correctAnswerIndex": 1,
+                            "explanation": "Elektron qurilmalarni yoqish 'turn on' / 'switch on' deyiladi ('open' emas)."
+                        },
+                        {
+                            "id": "en-a2-u5-l2-q3",
+                            "question": "What is the difference between 'download' and 'upload'?",
+                            "options": [
+                                "Download is saving from internet to device; upload is sending from device to internet",
+                                "Upload is deleting files; download is creating files",
+                                "Both words have the exact same meaning",
+                                "Download is for audio only; upload is for photos only"
+                            ],
+                            "correctAnswerIndex": 0,
+                            "explanation": "Download — internetdan qurilmaga yuklab olish, upload — qurilmadan internetga yuklash."
+                        },
+                        {
+                            "id": "en-a2-u5-l2-q4",
+                            "question": "Which sentence correctly uses a preposition for messaging platforms?",
+                            "options": [
+                                "Please send me the file by Telegram.",
+                                "Please send me the file on Telegram.",
+                                "Please send me the file at Telegram.",
+                                "Please send me the file inside Telegram."
+                            ],
+                            "correctAnswerIndex": 1,
+                            "explanation": "Ijtimoiy tarmoqlar va ilovalarda 'on Telegram / on WhatsApp' ishlatiladi."
+                        },
+                        {
+                            "id": "en-a2-u5-l2-q5",
+                            "question": "Why do security experts recommend two-factor authentication?",
+                            "options": [
+                                "To slow down your device speed",
+                                "To protect your account even if someone discovers your password",
+                                "To delete unnecessary attachments",
+                                "To save battery life"
+                            ],
+                            "correctAnswerIndex": 1,
+                            "explanation": "Ikki bosqichli himoya parol oshkor bo'lganda ham akkauntni xavfsiz saqlaydi."
                         }
                     ]
                 }
@@ -5105,57 +5405,120 @@ export const ENGLISH_A2_LESSONS: Lesson[] = [
         "unitTitle": "Unit 5: Socializing & Future Plans",
         "language": "en",
         "level": "A2",
-        "lessonNumber": 23,
-        "title": "Describing Life Events & Biography",
-        "description": "Biografiya va hayotiy voqealar: \"Be born\", \"Graduate\", \"Get a job\", \"Move to another city\".",
-        "estimatedDurationMinutes": 14,
+        "lessonNumber": 3,
+        "title": "Life Events, Milestones & Biographies",
+        "description": "Inson hayotidagi muhim bosqichlar: tug'ilish, ta'lim, kasbiy faoliyat, oila qurish va biografik hikoyalar.",
+        "estimatedDurationMinutes": 15,
         "icon": "📜",
         "steps": [
             {
                 "id": "en-a2-u5-l3-s1",
-                "title": "Hayotiy Voqealar",
+                "title": "Hayotiy Bosqichlar va Biografiya",
                 "type": "learn",
                 "estimatedMinutes": 5,
                 "learnData": {
-                    "title": "Life Milestones",
-                    "explanation": "O'tmishdagi hayotiy bosqichlar va biografiyalar haqida gapirish.",
-                    "keyPoints": [
-                        "He was born in 1995 in Samarkand.",
-                        "She graduated from university 3 years ago.",
-                        "They got married in 2020."
-                    ],
+                    "title": "Talking About Life Milestones & Personal History",
+                    "explanation": "Inson hayotidagi eng muhim burilish nuqtalari, tarjimai hol va yutuqlar haqida gapirish:\n\n1. Asosiy Hayotiy Bosqichlar (Life Milestones):\n- Be born (tug'ilmoq): 'I was born in Samarkand in 2002.'\n- Grow up (ulg'aymoq): 'He grew up in a small town near Bukhara.'\n- Graduate FROM (o'qishni bitirmoq): 'She graduated from university with honors.' ('from' shart!).\n- Get married TO (turmush qurmoq): 'They got married in 2021.' ('to' ishlatiladi, 'with' emas!).\n- Move TO (boshqa joyga ko'chmoq): 'We moved to Tashkent three years ago.'\n- Retire (nafaqaga chiqmoq): 'My grandfather retired at the age of 63.'\n\n2. Vaqt Predloglari (Prepositions of Time in Biographies):\n- In + yil/oy: 'in 1995', 'in September'.\n- On + aniq sana/kun: 'on May 14th, 2000', 'on Monday'.\n- At + aniq yosh: 'at the age of 18', 'at 25'.\n\n3. O'zbek o'rganuvchilari uchun xavfli tuzoqlar (Common Pitfalls):\n- ❌ 'He married with Malika.' -> ✅ 'He married Malika' yoki 'He got married TO Malika.' (Ingliz tilida 'marry' fe'li 'with' predlogini mutlaqo qabul qilmaydi!).\n- ❌ 'I graduated university.' -> ✅ 'I graduated FROM university.' ('From' tushib qolmasin).\n- ❌ 'I was born in 5th of June.' -> ✅ 'I was born ON the 5th of June.' (Aniq kunda 'on' bo'ladi).\n\n4. IELTS Speaking Foundation Corner:\n- Topic: Describing your background and family history (Speaking Part 2 Foundation)\n- Examiner: 'Could you tell me a little about where you grew up and your education?'\n- Model Band 6.0+ Answer: 'I was born and raised in Samarkand, which is renowned for its magnificent historical architecture. I grew up in a supportive environment, and after graduating from secondary school, I moved to Tashkent to pursue my bachelor's degree in software engineering.'\n- Set Phrase: 'Born and raised in...' birikmasi o'z ona shahri haqida gapirganda eng tabiiy va yuqori ball beruvchi iboradir.",
                     "vocabulary": [
                         {
-                            "term": "Graduate",
+                            "term": "be born",
+                            "reading": "/biː bɔːn/",
+                            "meaning": "tug'ilmoq (was/were born)",
+                            "exampleSentence": "Alisher Navoi was born in Herat in the year 1441.",
+                            "exampleTranslation": "Alisher Navoiy 1441-yilda Hirotda tug'ilgan."
+                        },
+                        {
+                            "term": "grow up",
+                            "reading": "/ɡrəʊ ʌp/",
+                            "meaning": "ulg'aymoq, voyaga yetmoq",
+                            "exampleSentence": "Although he was born in London, he grew up in Canada.",
+                            "exampleTranslation": "U Londonda tug'ilgan bo'lsa-da, Kanadada ulg'aygan."
+                        },
+                        {
+                            "term": "graduate",
                             "reading": "/ˈɡrædʒ.u.eɪt/",
-                            "meaning": "Bitirmoq (o'quv yurti)",
-                            "exampleSentence": "I graduated in 2022.",
-                            "exampleTranslation": "Men 2022-yilda bitirdim."
+                            "meaning": "o'qishni bitirmoq (from university)",
+                            "exampleSentence": "My older sister graduated from medical school last summer.",
+                            "exampleTranslation": "Katta opam o'tgan yozda tibbiyot oliygohini bitirdi."
                         },
                         {
-                            "term": "Confidence",
-                            "reading": "/ˈkɒn.fɪ.dəns/",
-                            "meaning": "Ishonch",
-                            "exampleSentence": "Practice gives you confidence in speaking.",
-                            "exampleTranslation": "Mashq qilish gapirishda ishonch bagʻishlaydi."
+                            "term": "career",
+                            "reading": "/kəˈrɪər/",
+                            "meaning": "martaba, kasbiy yo'l (urg'u 2-bo'g'inda)",
+                            "exampleSentence": "He began his teaching career more than twenty years ago.",
+                            "exampleTranslation": "U o'zining o'qituvchilik faoliyatini yigirma yildan ko'proq vaqt oldin boshlagan."
                         },
                         {
-                            "term": "Schedule",
-                            "reading": "/ˈʃedʒ.uːl/",
-                            "meaning": "Jadval, reja",
-                            "exampleSentence": "Let me check my schedule for tomorrow.",
-                            "exampleTranslation": "Ertangi kun jadvalimni tekshirib koʻray."
+                            "term": "get married",
+                            "reading": "/ɡet ˈmær.id/",
+                            "meaning": "turmush qurmoq, uylanmoq",
+                            "exampleSentence": "They got married in a beautiful ceremony surrounded by family.",
+                            "exampleTranslation": "Ular oila a'zolari davrasida go'zal marosimda turmush qurdilar."
+                        },
+                        {
+                            "term": "retire",
+                            "reading": "/rɪˈtaɪər/",
+                            "meaning": "nafaqaga chiqmoq",
+                            "exampleSentence": "After working for forty years at the bank, my father decided to retire.",
+                            "exampleTranslation": "Bankda qirq yil ishlaganidan so'ng, otam nafaqaga chiqishga qaror qildi."
+                        },
+                        {
+                            "term": "milestone",
+                            "reading": "/ˈmaɪl.stəʊn/",
+                            "meaning": "muhim hayotiy bosqich, burilish nuqtasi",
+                            "exampleSentence": "Graduating from university is a major milestone in every young person's life.",
+                            "exampleTranslation": "Universitetni bitirish har bir yosh inson hayotidagi muhim burilish nuqtasidir."
+                        },
+                        {
+                            "term": "ambition",
+                            "reading": "/æmˈbɪʃ.ən/",
+                            "meaning": "maqsad, intilish, orzu",
+                            "exampleSentence": "His ultimate ambition is to establish his own technology startup.",
+                            "exampleTranslation": "Uning eng katta maqsadi o'zining texnologik startapini yo'lga qo'yishdir."
+                        },
+                        {
+                            "term": "move",
+                            "reading": "/muːv/",
+                            "meaning": "ko'chmoq (boshqa shahar yoki uyga)",
+                            "exampleSentence": "Our family moved to Tashkent in search of better career opportunities.",
+                            "exampleTranslation": "Oilamiz yaxshiroq kasbiy imkoniyatlar izlab Toshkentga ko'chib o'tdi."
+                        },
+                        {
+                            "term": "pass away",
+                            "reading": "/pɑːs əˈweɪ/",
+                            "meaning": "olamdan o'tmoq, vafot etmoq (xushmuomala)",
+                            "exampleSentence": "His great-grandfather peacefully passed away at the age of ninety-five.",
+                            "exampleTranslation": "Uning katta bobosi to'qson besh yoshida tinchgina olamdan o'tdi."
                         }
                     ],
                     "grammarRules": [
                         {
-                            "pattern": "Describing Life Events & Biography",
-                            "meaning": "Biografiya va hayotiy voqealar: \"Be born\", \"Graduate\", \"Get a job\", \"Move to another city\".",
-                            "usageNotes": "O'tmishdagi hayotiy bosqichlar va biografiyalar haqida gapirish.",
+                            "pattern": "Prepositions with Dates and Years: in (year) vs on (exact date) vs at (age)",
+                            "meaning": "Biografiyada vaqt va yoshni to'g'ri ifodalash",
+                            "usageNotes": "Yil uchun 'in', to'liq sana uchun 'on', yosh uchun 'at the age of' qo'yiladi.",
                             "examples": [
                                 {
-                                    "sentence": "I graduated in 2022.",
-                                    "translation": "Men 2022-yilda bitirdim."
+                                    "sentence": "He was born in 1998, but got married on September 12th, 2023.",
+                                    "translation": "U 1998-yilda tug'ilgan, ammo 2023-yil 12-sentyabrda turmush qurgan."
+                                },
+                                {
+                                    "sentence": "She wrote her first novel at the age of twenty-two.",
+                                    "translation": "U o'zining birinchi romanini yigirma ikki yoshida yozgan."
+                                }
+                            ]
+                        },
+                        {
+                            "pattern": "Graduate from (institution) & Marry / Get married to",
+                            "meaning": "Ta'lim va nikoh fe'llarining to'g'ri predlogli boshqaruvi",
+                            "usageNotes": "'Graduate' doim 'from' talab qiladi. 'Marry' predlogsiz keladi: 'he married her'; ammo majhul/holat shaklida 'get married TO' ishlatiladi.",
+                            "examples": [
+                                {
+                                    "sentence": "He graduated from Oxford University three years ago.",
+                                    "translation": "U uch yil oldin Oksford universitetini bitirgan."
+                                },
+                                {
+                                    "sentence": "She got married to an architect last spring.",
+                                    "translation": "U o'tgan bahorda me'morga turmushga chiqdi."
                                 }
                             ]
                         }
@@ -5164,61 +5527,148 @@ export const ENGLISH_A2_LESSONS: Lesson[] = [
             },
             {
                 "id": "en-a2-u5-l3-s2",
-                "title": "Mashq",
+                "title": "Amaliy Mashqlar",
                 "type": "practice",
-                "estimatedMinutes": 4,
+                "estimatedMinutes": 5,
                 "practiceData": {
-                    "instructions": "To'g'ri fe'l shaklini tanlang.",
+                    "instructions": "Tarjimai hol va hayotiy bosqichlarga oid to'g'ri predlog va fe'llarni tanlang.",
                     "exercises": [
                         {
                             "id": "en-a2-u5-l3-e1",
                             "type": "multiple-choice",
-                            "prompt": "\"Shakespeare _______ born in 1564.\"",
+                            "prompt": "\"I was born _______ the 18th of March, 2001.\"",
                             "options": [
-                                "were",
-                                "has been",
-                                "is",
-                                "was"
+                                "in",
+                                "at",
+                                "on",
+                                "from"
                             ],
-                            "correctAnswer": 3,
-                            "explanation": "He was born..."
+                            "correctAnswer": 2,
+                            "explanation": "Aniq sana (kun va oy) oldidan 'on' predlogi ishlatiladi."
                         },
                         {
-                            "id": "en-a2-u5-l3-ex-2",
+                            "id": "en-a2-u5-l3-e2",
                             "type": "multiple-choice",
-                            "prompt": "Choose the correct word to complete the sentence: \"Practice gives you confidence in speaking.\"",
+                            "prompt": "\"After studying for four years, Dilnoza graduated _______ Tashkent State University.\"",
                             "options": [
-                                "doubt",
-                                "reluctance",
-                                "delay",
-                                "Confidence"
+                                "at",
+                                "from",
+                                "in",
+                                "of"
                             ],
-                            "correctAnswer": 3,
-                            "explanation": "\"Confidence\" (Ishonch) fits the context appropriately."
+                            "correctAnswer": 1,
+                            "explanation": "Universitetni bitirish 'graduate from' orqali yasaladi."
+                        },
+                        {
+                            "id": "en-a2-u5-l3-e3",
+                            "type": "multiple-choice",
+                            "prompt": "\"Farhod got married _______ Nilufar in a traditional Uzbek wedding ceremony.\"",
+                            "options": [
+                                "with",
+                                "to",
+                                "at",
+                                "for"
+                            ],
+                            "correctAnswer": 1,
+                            "explanation": "'Get married TO someone' to'g'ri modeldir ('married with' xato)."
+                        },
+                        {
+                            "id": "en-a2-u5-l3-e4",
+                            "type": "multiple-choice",
+                            "prompt": "\"Although he was born in a village, he _______ up in the capital city.\"",
+                            "options": [
+                                "grown",
+                                "grew",
+                                "grow",
+                                "growing"
+                            ],
+                            "correctAnswer": 1,
+                            "explanation": "O'tgan zamonda 'grew up' (ulg'aydi)."
+                        },
+                        {
+                            "id": "en-a2-u5-l3-e5",
+                            "type": "multiple-choice",
+                            "prompt": "\"My grandfather worked as a train driver until he _______ at age 65.\"",
+                            "options": [
+                                "retired",
+                                "graduated",
+                                "was born",
+                                "moved"
+                            ],
+                            "correctAnswer": 0,
+                            "explanation": "Ish faoliyatini yakunlab pensiyaga chiqish 'retired' deyiladi."
                         }
                     ]
                 }
             },
             {
                 "id": "en-a2-u5-l3-s3",
-                "title": "Test",
+                "title": "Yakuniy Test",
                 "type": "test",
                 "estimatedMinutes": 5,
                 "testData": {
-                    "instructions": "Savollarga javob bering.",
-                    "passingScorePercentage": 75,
+                    "instructions": "Inson hayotidagi muhim bosqichlar va biografiyaga oid test savollariga javob bering.",
+                    "passingScorePercentage": 80,
                     "questions": [
                         {
                             "id": "en-a2-u5-l3-q1",
-                            "question": "When did they _______ to Tashkent?",
+                            "question": "Qaysi gapda nikoh haqidagi grammatik bog'lanish to'g'ri tuzilgan?",
                             "options": [
-                                "moved",
-                                "moves",
-                                "moving",
-                                "move"
+                                "Bobur married with Malika last December.",
+                                "Bobur got married to Malika last December.",
+                                "Bobur was married with Malika last December.",
+                                "Bobur married to Malika last December."
                             ],
-                            "correctAnswerIndex": 3,
-                            "explanation": "Did ... move (lug'at shakli)."
+                            "correctAnswerIndex": 1,
+                            "explanation": "'Got married TO' yoki to'g'ridan-to'g'ri 'married Malika' to'g'ri bo'ladi. 'Married with' mutlaqo xato."
+                        },
+                        {
+                            "id": "en-a2-u5-l3-q2",
+                            "question": "Tug'ilgan vaqt va joy haqidagi qaysi gap to'g'ri tuzilgan?",
+                            "options": [
+                                "I was born on 1999 in Samarkand.",
+                                "I was born in 1999 in Samarkand.",
+                                "I am born in 1999 in Samarkand.",
+                                "I were born in 1999 on Samarkand."
+                            ],
+                            "correctAnswerIndex": 1,
+                            "explanation": "Yil uchun 'in 1999' va shahar uchun 'in Samarkand' ishlatiladi: 'I was born in 1999 in Samarkand'."
+                        },
+                        {
+                            "id": "en-a2-u5-l3-q3",
+                            "question": "Universitetni tamomlash qanday aytiladi?",
+                            "options": [
+                                "I finished from university.",
+                                "I graduated from university.",
+                                "I graduated university.",
+                                "I got university out."
+                            ],
+                            "correctAnswerIndex": 1,
+                            "explanation": "Universitetni bitirish 'graduate from university' deb aytiladi."
+                        },
+                        {
+                            "id": "en-a2-u5-l3-q4",
+                            "question": "What does the expression 'born and raised in Tashkent' mean?",
+                            "options": [
+                                "Toshkentda faqat bir necha oy mehmon bo'lgan",
+                                "Toshkentda tug'ilgan va shu yerda voyaga yetgan/ulg'aygan",
+                                "Toshkentdan boshqa shaharga ko'chib ketgan",
+                                "Toshkentda universitetda o'qigan"
+                            ],
+                            "correctAnswerIndex": 1,
+                            "explanation": "'Born and raised in...' — shu shaharda tug'ilib o'sgan degan ma'nodagi mashhur ibora."
+                        },
+                        {
+                            "id": "en-a2-u5-l3-q5",
+                            "question": "At what age did he start his first business? — 'He started his company _______ the age of twenty-one.'",
+                            "options": [
+                                "in",
+                                "on",
+                                "at",
+                                "by"
+                            ],
+                            "correctAnswerIndex": 2,
+                            "explanation": "Yosh ko'rsatilganda 'at the age of ...' birikmasi ishlatiladi."
                         }
                     ]
                 }
@@ -5232,57 +5682,120 @@ export const ENGLISH_A2_LESSONS: Lesson[] = [
         "unitTitle": "Unit 5: Socializing & Future Plans",
         "language": "en",
         "level": "A2",
-        "lessonNumber": 24,
-        "title": "Giving Advice with Should & Ought To",
-        "description": "Maslahat berish: \"You should see a doctor\", \"You shouldn't stay up late\".",
-        "estimatedDurationMinutes": 14,
-        "icon": "💡",
+        "lessonNumber": 4,
+        "title": "Giving Opinions, Agreeing & Disagreeing",
+        "description": "Mavzular yuzasidan o'z fikrini bildirish, sabab ko'rsatish, suhbatdosh fikriga qo'shilish va xushmuomala e'tiroz bildirish.",
+        "estimatedDurationMinutes": 15,
+        "icon": "💭",
         "steps": [
             {
                 "id": "en-a2-u5-l4-s1",
-                "title": "Maslahat Fe'li (Should)",
+                "title": "Fikr Bildirish va Bahslashish",
                 "type": "learn",
                 "estimatedMinutes": 5,
                 "learnData": {
-                    "title": "Giving Advice (Should / Shouldn't)",
-                    "explanation": "Kimgadir maslahat berishda \"should\" qo'llaniladi.",
-                    "keyPoints": [
-                        "You should drink more water. — Ko'proq suv ichishingiz kerak.",
-                        "You shouldn't eat so much junk food. — Juda ko'p zararli taom yemasligingiz kerak.",
-                        "What should I do? — Men nima qilishim kerak?"
-                    ],
+                    "title": "Stating Views, Agreeing & Respectful Disagreeing",
+                    "explanation": "Ingliz tilida o'z nuqtai nazarini bildirish, dalillar keltirish va suhbatdosh fikriga madaniyatli munosabat bildirish:\n\n1. O'z Fikrini Boshlash Iboralari (Stating Opinions):\n- 'In my opinion, ...' (Mening fikrimcha, ...).\n- 'From my point of view, ...' (Mening nuqtai nazarimdan, ...).\n- 'I personally believe that ...' (Shaxsan men shunga ishonamanki, ...).\n- 'As far as I'm concerned, ...' (Menga qolsa / Mening nazarimda, ...).\n\n2. Fikrga To'liq yoki Qisman Qo'shilish (Agreeing):\n- 'I completely agree with you.' (Sizga butunlay qo'shilaman).\n- 'You're absolutely right!' (Mutlaqo haqsiz!).\n- 'I couldn't agree more.' (Bundan ortiq qo'shila olmasdim - 100% rozilik).\n- 'I partly agree with that, but...' (Qisman qo'shilaman, ammo...).\n\n3. Muloyim E'tiroz Bildirish (Disagreeing Politely):\n- Shunchaki 'You are wrong!' deyish ingliz tilida tajovuzkor va noo'rin sanaladi.\n- 'I see your point, but on the other hand...' (Fikringizni tushunib turibman, ammo boshqa tomondan...).\n- 'I'm afraid I have to disagree with that.' (Kechirasiz-u, men bunga qo'shila olmayman).\n\n4. O'zbek o'rganuvchilari uchun xavfli tuzoqlar (Common Pitfalls):\n- ❌ 'I am agree with you.' -> ✅ 'I AGREE with you.' ('Agree' sifat emas, mustaqil fe'l! Shu sababli 'am/is/are' qo'yilmaydi!).\n- ❌ 'I am disagree.' -> ✅ 'I DISAGREE' yoki 'I don't agree.'\n- ❌ 'In my opinion, I think...' -> ✅ 'In my opinion, ...' yoki 'I think...' (Ikkala iborani birga ishlatish uslubiy xatodir).\n\n5. IELTS Speaking Foundation Corner:\n- Topic: Giving and Justifying Opinions (Speaking Part 3 Foundation)\n- Examiner: 'Do you believe artificial intelligence will replace teachers in classrooms?'\n- Model Band 6.0+ Answer: 'In my opinion, artificial intelligence will certainly assist educators by automating administrative tasks like grading homework. However, I respectfully disagree with the idea that AI will completely replace teachers, simply because computers cannot offer real empathy, personal encouragement, and human mentorship.'\n- Argumentation Tip: Javobingizni uch bosqichda tuzing: Fikr (In my opinion...) + Sabab (because...) + Cheklov/Qarama-qarshilik (However, on the other hand...).",
                     "vocabulary": [
                         {
-                            "term": "Advice",
-                            "reading": "/ədˈvaɪs/",
-                            "meaning": "Maslahat",
-                            "exampleSentence": "Can you give me some advice?",
-                            "exampleTranslation": "Menga biror maslahat bera olasizmi?"
+                            "term": "opinion",
+                            "reading": "/əˈpɪn.jən/",
+                            "meaning": "fikr, mulohaza",
+                            "exampleSentence": "In my opinion, public transportation should be free for all university students.",
+                            "exampleTranslation": "Mening fikrimcha, jamoat transporti barcha universitet talabalari uchun bepul bo'lishi kerak."
                         },
                         {
-                            "term": "Schedule",
-                            "reading": "/ˈʃedʒ.uːl/",
-                            "meaning": "Jadval, reja",
-                            "exampleSentence": "Let me check my schedule for tomorrow.",
-                            "exampleTranslation": "Ertangi kun jadvalimni tekshirib koʻray."
+                            "term": "believe",
+                            "reading": "/bɪˈliːv/",
+                            "meaning": "ishonmoq, deb hisoblamoq",
+                            "exampleSentence": "I strongly believe that daily exercise improves mental well-being.",
+                            "exampleTranslation": "Kundalik jismoniy mashqlar ruhiy salomatlikni yaxshilashiga qat'iy ishonaman."
                         },
                         {
-                            "term": "Improve",
-                            "reading": "/ɪmˈpruːv/",
-                            "meaning": "Yaxshilamoq, rivojlantirmoq",
-                            "exampleSentence": "Reading books will improve your vocabulary.",
-                            "exampleTranslation": "Kitob oʻqish soʻz boyligingizni oshiradi."
+                            "term": "agree",
+                            "reading": "/əˈɡriː/",
+                            "meaning": "fikriga qo'shilmoq (fe'l)",
+                            "exampleSentence": "I agree with your suggestion to hold our meetings online.",
+                            "exampleTranslation": "Uchrashuvlarimizni onlayn o'tkazish haqidagi taklifingizga qo'shilaman."
+                        },
+                        {
+                            "term": "disagree",
+                            "reading": "/ˌdɪs.əˈɡriː/",
+                            "meaning": "rozi bo'lmaslik, e'tiroz bildirmoq (fe'l)",
+                            "exampleSentence": "It is completely normal for colleagues to disagree on project strategies.",
+                            "exampleTranslation": "Hamkasblarning loyiha strategiyalari bo'yicha fikrlari bir joydan chiqmasligi mutlaqo tabiiydir."
+                        },
+                        {
+                            "term": "viewpoint",
+                            "reading": "/ˈvjuː.pɔɪnt/",
+                            "meaning": "nuqtai nazar",
+                            "exampleSentence": "We must consider this environmental issue from different viewpoints.",
+                            "exampleTranslation": "Ushbu ekologik masalani turli nuqtai nazarlardan ko'rib chiqishimiz kerak."
+                        },
+                        {
+                            "term": "prefer",
+                            "reading": "/prɪˈfɜːr/",
+                            "meaning": "afzal ko'rmoq",
+                            "exampleSentence": "I prefer reading printed paper books to reading electronic screens.",
+                            "exampleTranslation": "Elektron ekranni o'qigandan ko'ra qog'oz kitoblarni o'qishni afzal ko'raman."
+                        },
+                        {
+                            "term": "personally",
+                            "reading": "/ˈpɜː.sən.əl.i/",
+                            "meaning": "shaxsan o'zim",
+                            "exampleSentence": "Personally, I find learning new languages to be a rewarding hobby.",
+                            "exampleTranslation": "Shaxsan o'zim yangi tillarni o'rganishni foydali sevimli mashg'ulot deb bilaman."
+                        },
+                        {
+                            "term": "exactly",
+                            "reading": "/ɪɡˈzækt.li/",
+                            "meaning": "aynan shunday, to'ppa-to'g'ri (rozilik bildirishda)",
+                            "exampleSentence": "Exactly! That is precisely what I was trying to explain.",
+                            "exampleTranslation": "Aynan shunday! Men tushuntirmoqchi bo'lgan narsa ayni shu edi."
+                        },
+                        {
+                            "term": "partly",
+                            "reading": "/ˈpɑːt.li/",
+                            "meaning": "qisman (qisman qo'shilish)",
+                            "exampleSentence": "I partly agree with your opinion, but there are other factors to consider.",
+                            "exampleTranslation": "Fikringizga qisman qo'shilaman, ammo e'tiborga olinishi kerak bo'lgan boshqa omillar ham bor."
+                        },
+                        {
+                            "term": "argument",
+                            "reading": "/ˈɑːɡ.jə.mənt/",
+                            "meaning": "dalil, bahs asosi",
+                            "exampleSentence": "She presented a very convincing argument during the debate.",
+                            "exampleTranslation": "U bahs-munozara paytida juda ishonarli dalil keltirdi."
                         }
                     ],
                     "grammarRules": [
                         {
-                            "pattern": "Giving Advice with Should & Ought To",
-                            "meaning": "Maslahat berish: \"You should see a doctor\", \"You shouldn't stay up late\".",
-                            "usageNotes": "Kimgadir maslahat berishda \"should\" qo'llaniladi.",
+                            "pattern": "Agree / Disagree as Verbs (NOT adjectives with 'to be')",
+                            "meaning": "'Agree' va 'disagree' fe'llarining to'g'ri qo'llanilishi",
+                            "usageNotes": "'Agree' fe'l bo'lgani sababli 'I am agree' deyish qo'pol xatodir. To'g'risi: 'I agree' yoki 'I disagree'.",
                             "examples": [
                                 {
-                                    "sentence": "Can you give me some advice?",
-                                    "translation": "Menga biror maslahat bera olasizmi?"
+                                    "sentence": "I completely agree with the points you mentioned.",
+                                    "translation": "Siz aytib o'tgan fikrlarga to'liq qo'shilaman."
+                                },
+                                {
+                                    "sentence": "He disagrees with the new company policy.",
+                                    "translation": "U kompaniyaning yangi siyosatiga qo'shilmaydi."
+                                }
+                            ]
+                        },
+                        {
+                            "pattern": "Polite Disagreement: I see your point, but... / I'm afraid I disagree",
+                            "meaning": "Suhbatdoshni ranjitmasdan e'tiroz bildirish tuzilmasi",
+                            "usageNotes": "Avval suhbatdoshning gapini tushunganingizni aytib, so'ngra 'but' bilan o'z fikringizni bayon qilasiz.",
+                            "examples": [
+                                {
+                                    "sentence": "I see what you mean, but electric cars are still quite expensive for most families.",
+                                    "translation": "Nima demoqchi ekanligingizni tushundim, lekin elektromobillar ko'pchilik oilalar uchun hanuz ancha qimmat."
+                                },
+                                {
+                                    "sentence": "I'm afraid I cannot agree with that conclusion.",
+                                    "translation": "Kechirasiz-u, men bu xulosaga qo'shila olmayman."
                                 }
                             ]
                         }
@@ -5291,61 +5804,148 @@ export const ENGLISH_A2_LESSONS: Lesson[] = [
             },
             {
                 "id": "en-a2-u5-l4-s2",
-                "title": "Mashq",
+                "title": "Amaliy Mashqlar",
                 "type": "practice",
-                "estimatedMinutes": 4,
+                "estimatedMinutes": 5,
                 "practiceData": {
-                    "instructions": "To'g'ri javobni tanlang.",
+                    "instructions": "Fikr bildirish va bahslashishga oid to'g'ri grammatik shakllarni tanlang.",
                     "exercises": [
                         {
                             "id": "en-a2-u5-l4-e1",
                             "type": "multiple-choice",
-                            "prompt": "\"You have a fever. You _______ see a doctor.\"",
+                            "prompt": "\"I _______ with your opinion that daily reading enhances vocabulary.\"",
                             "options": [
-                                "should",
-                                "don't",
-                                "mustn't to",
-                                "shouldn't"
+                                "am agree",
+                                "agree",
+                                "agreed to",
+                                "am agreeing"
                             ],
-                            "correctAnswer": 0,
-                            "explanation": "Should = tavsiya/maslahat."
+                            "correctAnswer": 1,
+                            "explanation": "'Agree' fe'ldir, shu sababli 'I agree with...' to'g'ri ('I am agree' xato)."
                         },
                         {
-                            "id": "en-a2-u5-l4-ex-2",
+                            "id": "en-a2-u5-l4-e2",
                             "type": "multiple-choice",
-                            "prompt": "Choose the correct word to complete the sentence: \"Let me check my schedule for tomorrow.\"",
+                            "prompt": "\"In my _______, learning a foreign language opens countless international opportunities.\"",
                             "options": [
-                                "Schedule",
-                                "delay",
-                                "reluctance",
-                                "doubt"
+                                "opinion",
+                                "viewpoint to",
+                                "agree",
+                                "believe"
                             ],
                             "correctAnswer": 0,
-                            "explanation": "\"Schedule\" (Jadval, reja) fits the context appropriately."
+                            "explanation": "'In my opinion' (mening fikrimcha) turg'un iboradir."
+                        },
+                        {
+                            "id": "en-a2-u5-l4-e3",
+                            "type": "multiple-choice",
+                            "prompt": "\"Speaker A: 'Living in the city center is too noisy.' — Speaker B: '_______ right! I can never sleep peacefully.'\"",
+                            "options": [
+                                "You're absolutely",
+                                "You am",
+                                "You do",
+                                "You have"
+                            ],
+                            "correctAnswer": 0,
+                            "explanation": "'You're absolutely right!' (Mutlaqo haqsiz!)."
+                        },
+                        {
+                            "id": "en-a2-u5-l4-e4",
+                            "type": "multiple-choice",
+                            "prompt": "\"I see your point, _______ on the other hand, the cost of living in rural areas is much lower.\"",
+                            "options": [
+                                "so",
+                                "because",
+                                "but",
+                                "since"
+                            ],
+                            "correctAnswer": 2,
+                            "explanation": "'I see your point, but on the other hand...' e'tiroz bildirishning mashhur qolipidir."
+                        },
+                        {
+                            "id": "en-a2-u5-l4-e5",
+                            "type": "multiple-choice",
+                            "prompt": "\"I'm afraid I _______ with your statement regarding remote working.\"",
+                            "options": [
+                                "am disagree",
+                                "disagree",
+                                "not agree",
+                                "don't agreeing"
+                            ],
+                            "correctAnswer": 1,
+                            "explanation": "'I disagree' (qo'shilmayman) to'g'ri fe'l shaklidir."
                         }
                     ]
                 }
             },
             {
                 "id": "en-a2-u5-l4-s3",
-                "title": "Test",
+                "title": "Yakuniy Test",
                 "type": "test",
                 "estimatedMinutes": 5,
                 "testData": {
-                    "instructions": "Savollarga javob bering.",
-                    "passingScorePercentage": 75,
+                    "instructions": "Fikr bildirish, rozilik va e'tiroz strategiyalariga oid test savollariga javob bering.",
+                    "passingScorePercentage": 80,
                     "questions": [
                         {
                             "id": "en-a2-u5-l4-q1",
-                            "question": "Which sentence correctly gives negative advice?",
+                            "question": "Qaysi gapda 'agree' so'zi grammatik xatosiz ishlatilgan?",
                             "options": [
-                                "You shouldn't smoke.",
-                                "You don't should smoke.",
-                                "You must not smoke to.",
-                                "You should not to smoke."
+                                "I am totally agree with your perspective.",
+                                "I totally agree with your perspective.",
+                                "I am agree with you 100%.",
+                                "She is agrees with the team decision."
+                            ],
+                            "correctAnswerIndex": 1,
+                            "explanation": "'Agree' fe'li to'g'ridan-to'g'ri 'I agree' shaklida ishlatiladi, yordamchi 'am' fe'li qo'yilmaydi."
+                        },
+                        {
+                            "id": "en-a2-u5-l4-q2",
+                            "question": "Suhbatdosh fikriga 100% qo'shilishni ifodalovchi eng kuchli inglizcha ibora qaysi?",
+                            "options": [
+                                "I couldn't agree more.",
+                                "I partly agree with you.",
+                                "Maybe you are right, maybe not.",
+                                "I don't think you are right."
                             ],
                             "correctAnswerIndex": 0,
-                            "explanation": "You shouldn't smoke."
+                            "explanation": "'I couldn't agree more' — bundan ortiq qo'shila olmasdim, ya'ni to'liq 100% roziman deganidir."
+                        },
+                        {
+                            "id": "en-a2-u5-l4-q3",
+                            "question": "Madaniyatli va xushmuomala tarzda e'tiroz bildirishning eng to'g'ri usuli qaysi?",
+                            "options": [
+                                "'You are totally wrong!' deb aytish",
+                                "'Shut up, your opinion makes no sense.' deb aytish",
+                                "'I see what you mean, but I see things a bit differently.' deb aytish",
+                                "Javob bermasdan indamay ketib qolish"
+                            ],
+                            "correctAnswerIndex": 2,
+                            "explanation": "Avval suhbatdosh fikrini hurmat qilib, so'ng o'z qarashini bildirish ingliz madaniyatida me'yordir."
+                        },
+                        {
+                            "id": "en-a2-u5-l4-q4",
+                            "question": "Qaysi gapda uslubiy ortiqchalik (tautologiya) mavjud?",
+                            "options": [
+                                "In my opinion, sports are good for health.",
+                                "I think that sports are good for health.",
+                                "In my opinion, I think that sports are good for health.",
+                                "From my point of view, sports are good for health."
+                            ],
+                            "correctAnswerIndex": 2,
+                            "explanation": "'In my opinion' va 'I think' bir gapda birga kelishi ortiqchalik hisoblanadi."
+                        },
+                        {
+                            "id": "en-a2-u5-l4-q5",
+                            "question": "Speaker A: 'Learning English requires daily practice.' — Speaker B: '_______! Without practice, you easily forget vocabulary.'",
+                            "options": [
+                                "Exactly",
+                                "I disagree",
+                                "Never",
+                                "Seldom"
+                            ],
+                            "correctAnswerIndex": 0,
+                            "explanation": "'Exactly!' — Aynan shunday, to'g'ri aytdingiz!"
                         }
                     ]
                 }
@@ -5359,156 +5959,270 @@ export const ENGLISH_A2_LESSONS: Lesson[] = [
         "unitTitle": "Unit 5: Socializing & Future Plans",
         "language": "en",
         "level": "A2",
-        "lessonNumber": 25,
-        "title": "A2 Comprehensive Final Assessment & B1 Bridge",
-        "description": "A2 darajasining to'liq yakuniy baholash imtihoni va B1 darajasiga o'tish uchun tayyorgarlik.",
-        "estimatedDurationMinutes": 16,
+        "lessonNumber": 5,
+        "title": "A2 Comprehensive Capstone & IELTS Speaking Bridge",
+        "description": "A2 darajasining barcha grammatik zamonlari, funksional muloqot va IELTS Speaking Part 1/2 ga o'tish imtihoni.",
+        "estimatedDurationMinutes": 18,
         "icon": "🎓",
         "steps": [
             {
                 "id": "en-a2-u5-l5-s1",
-                "title": "A2 Xulosa va B1 Tayyorgarlik",
+                "title": "A2 Yakuniy Xulosa va IELTS Ko'prigi",
                 "type": "learn",
-                "estimatedMinutes": 5,
+                "estimatedMinutes": 6,
                 "learnData": {
-                    "title": "A2 Comprehensive Review",
-                    "explanation": "A2 darajadagi barcha asosiy tushunchalar: Past Simple, Continuous, Comparatives, Future (going to), Modals (have to, should).",
-                    "keyPoints": [
-                        "Past vs Present comparison",
-                        "Basic connectors: because, although, so, but",
-                        "Expressing opinions and giving recommendations"
+                    "title": "A2 Mastery & Transitioning to B1 Intermediate",
+                    "explanation": "Tabriklaymiz! Siz CEFR A2 (Pre-Intermediate) darajasining so'nggi darsiga yetib keldingiz. Ushbu darsda barcha o'rganilgan mavzular umumlashtiriladi va IELTS Speaking imtihoni uchun mustahkam poydevor qo'yiladi:\n\n1. A2 Darajada Egallangan Asosiy Grammatik Ustunlar:\n- O'tgan zamon: Past Simple (to'g'ri va noto'g'ri fe'llar) va Past Continuous (While I was working, my phone rang).\n- Kelasi zamon: Will (lahzalik qarorlar/va'dalar), Be Going To (oldindan rejalashtirilgan niyatlar va dalillar) hamda Present Continuous (aniq kelishilgan tadbirlar).\n- Sifat darajalari va taqqoslash: Comparatives (-er / more) va Superlatives (-est / most), as... as.\n- Modal fe'llar: Must / Have to (majburiyat), Should (maslahat), Can / Could (imkoniyat va muloyim so'rovlar).\n- Shart ergash gaplar: Zero Conditional (haqiqatlar) va First Conditional (If + Present, will + Verb).\n\n2. IELTS Speaking Band 6.0+ Strategiyalari (A2 dan B1 ga o'tish):\n- Hech qachon 'Yes', 'No', 'I don't know' deb bir so'zli javob bermang!\n- 3 Bosqichli Javob Qoidasi: Bevosita javob (Direct Answer) + Sabab yoki izoh (Reason/Explanation) + Hayotiy misol (Concrete Example).\n- Talaffuz va bog'lovchilar: 'Actually', 'To be honest', 'On the other hand', 'Furthermore'.\n\n3. Imtihon Oldidan Oltin Qoidalar:\n- O'tgan zamon haqida gapirayotganda fe'lning 2-shaklini tushirib qoldirmang.\n- Sifatlarni 'more better' yoki 'most easiest' deb ikkilanma darajalamang.\n- Suhbatdoshni tinglay olish va tushunmay qolganda 'Pardon?' yoki 'Could you repeat that, please?' deb muloqotni tiklashdan tortinmang.\n\n4. IELTS Speaking Part 1 & Part 2 Capstone Namoyishi:\n- Examiner: 'How has learning English impacted your daily life and what are your future aspirations?'\n- Model Band 6.0+ Capstone Answer: 'Learning English has completely transformed my daily routine. In the past, I struggled to understand basic conversations, but now I can confidently read articles, watch educational videos, and communicate with people from different backgrounds. Looking ahead, once I reach an upper-intermediate level, I am going to take the academic IELTS exam because my ultimate goal is to win a scholarship and study for my master's degree abroad.'",
+                    "vocabulary": [
+                        {
+                            "term": "fluency",
+                            "reading": "/ˈfluː.ən.si/",
+                            "meaning": "ravonlik, erkin muloqot qobiliyati",
+                            "exampleSentence": "Practicing speaking every day will significantly increase your fluency.",
+                            "exampleTranslation": "Har kuni gapirishni mashq qilish ravonligingizni sezilarli darajada oshiradi."
+                        },
+                        {
+                            "term": "accuracy",
+                            "reading": "/ˈæk.jə.rə.si/",
+                            "meaning": "grammatik aniqlik, to'g'rilik",
+                            "exampleSentence": "Both fluency and grammatical accuracy are crucial for achieving a high IELTS score.",
+                            "exampleTranslation": "IELTS'da yuqori ball olish uchun ham ravonlik, ham grammatik aniqlik juda muhimdir."
+                        },
+                        {
+                            "term": "confident",
+                            "reading": "/ˈkɒn.fɪ.dənt/",
+                            "meaning": "o'ziga ishongan",
+                            "exampleSentence": "With consistent practice, you will become confident in expressing your ideas in English.",
+                            "exampleTranslation": "Doimiy mashqlar bilan ingliz tilida o'z fikrlaringizni ifodalashda o'zingizga ishonchingiz ortadi."
+                        },
+                        {
+                            "term": "achievement",
+                            "reading": "/əˈtʃiːv.mənt/",
+                            "meaning": "yutuq, muvaffaqiyat",
+                            "exampleSentence": "Finishing the entire A2 curriculum is a commendable achievement.",
+                            "exampleTranslation": "Butun A2 o'quv dasturini yakunlash maqtovga sazovor yutuqdir."
+                        },
+                        {
+                            "term": "progress",
+                            "reading": "/ˈprəʊ.ɡres/",
+                            "meaning": "o'sish, siljish, rivojlanish",
+                            "exampleSentence": "Track your weekly learning progress to see how far you have advanced.",
+                            "exampleTranslation": "Qanchalik ilgarilab ketganingizni ko'rish uchun haftalik o'quv rivojlanishingizni kuzatib boring."
+                        },
+                        {
+                            "term": "challenge",
+                            "reading": "/ˈtʃæl.ɪndʒ/",
+                            "meaning": "qiyinchilik, sinov",
+                            "exampleSentence": "Moving from A2 to B1 is an exciting challenge that requires disciplined effort.",
+                            "exampleTranslation": "A2 dan B1 ga o'tish intizomli mehnat talab qiladigan qiziqarli sinovdir."
+                        },
+                        {
+                            "term": "transition",
+                            "reading": "/trænˈzɪʃ.ən/",
+                            "meaning": "o'tish (bir bosqichdan ikkinchisiga)",
+                            "exampleSentence": "The transition from basic sentences to complex ideas is the key mark of intermediate English.",
+                            "exampleTranslation": "Oddiy gaplardan murakkab fikrlarga o'tish o'rta (intermediate) darajadagi ingliz tilining asosiy belgisidir."
+                        },
+                        {
+                            "term": "evaluate",
+                            "reading": "/ɪˈvæl.ju.eɪt/",
+                            "meaning": "baholamoq",
+                            "exampleSentence": "This final assessment is designed to evaluate your comprehensive language skills.",
+                            "exampleTranslation": "Ushbu yakuniy baholash sizning har tomonlama til ko'nikmalaringizni baholash uchun mo'ljallangan."
+                        },
+                        {
+                            "term": "strengths",
+                            "reading": "/streŋθs/",
+                            "meaning": "kuchli tomonlar",
+                            "exampleSentence": "Identify your vocabulary strengths and work diligently on areas that need improvement.",
+                            "exampleTranslation": "Lug'at bo'yicha kuchli tomonlaringizni aniqlang va yaxshilanishga muhtoj sohalar ustida qat'iyat bilan ishlang."
+                        },
+                        {
+                            "term": "proficiency",
+                            "reading": "/prəˈfɪʃ.ən.si/",
+                            "meaning": "malaka, tilni chuqur bilish darajasi",
+                            "exampleSentence": "Language proficiency grows rapidly through active speaking and listening practice.",
+                            "exampleTranslation": "Til bilish malakasi faol gapirish va tinglab tushunish mashqlari orqali jadal o'sadi."
+                        }
                     ],
                     "grammarRules": [
                         {
-                            "pattern": "A2 Comprehensive Final Assessment & B1 Bridge",
-                            "meaning": "A2 darajasining to'liq yakuniy baholash imtihoni va B1 darajasiga o'tish uchun tayyorgarlik.",
-                            "usageNotes": "A2 darajadagi barcha asosiy tushunchalar: Past Simple, Continuous, Comparatives, Future (going to), Modals (have to, should).",
+                            "pattern": "Comprehensive A2 Tense Synthesis: Past vs Present vs Future",
+                            "meaning": "Ingliz tili asosiy zamonlarini o'rinli va to'g'ri aralashtirib qo'llash",
+                            "usageNotes": "IELTS Speakingda hikoya qilganda o'tmish (Past Simple/Continuous), hozirgi holat (Present Simple) va kelajak rejalari (Going to/Will) uyg'unlikda ishlatiladi.",
                             "examples": [
                                 {
-                                    "sentence": "I study English every day with dedication.",
-                                    "translation": "Har kuni ingliz tilini astoydil o'rganaman."
+                                    "sentence": "While I was living in Samarkand, I decided that I am going to study abroad next year.",
+                                    "translation": "Samarqandda yashab yurgan paytimda, kelasi yili xorijda o'qishga qaror qildim."
+                                },
+                                {
+                                    "sentence": "If you practice consistently, you will achieve your target band score.",
+                                    "translation": "Agar muntazam shug'ullansangiz, ko'zlangan balingizga albatta erishasiz."
                                 }
                             ]
-                        }
-                    ],
-                    "vocabulary": [
-                        {
-                            "term": "Schedule",
-                            "reading": "/ˈʃedʒ.uːl/",
-                            "meaning": "Jadval, reja",
-                            "exampleSentence": "Let me check my schedule for tomorrow.",
-                            "exampleTranslation": "Ertangi kun jadvalimni tekshirib koʻray."
                         },
                         {
-                            "term": "Improve",
-                            "reading": "/ɪmˈpruːv/",
-                            "meaning": "Yaxshilamoq, rivojlantirmoq",
-                            "exampleSentence": "Reading books will improve your vocabulary.",
-                            "exampleTranslation": "Kitob oʻqish soʻz boyligingizni oshiradi."
-                        },
-                        {
-                            "term": "Opportunity",
-                            "reading": "/ˌɒp.əˈtʃuː.nə.ti/",
-                            "meaning": "Imkoniyat",
-                            "exampleSentence": "This is a great opportunity to learn.",
-                            "exampleTranslation": "Bu oʻrganish uchun ajoyib imkoniyat."
+                            "pattern": "A2 to B1 Discourse Markers: In my opinion, Although, However, As a result",
+                            "meaning": "Fikrlarni mantiqiy bog'lovchi kirish so'zlar",
+                            "usageNotes": "Gaplarni oddiy 'and', 'but' bilan cheklab qo'ymasdan, yuqoriroq darajadagi bog'lovchilar bilan boyitish.",
+                            "examples": [
+                                {
+                                    "sentence": "Although the grammar was challenging at first, I improved significantly through practice.",
+                                    "translation": "Grammatika dastlab qiyin bo'lgan bo'lsa-da, mashqlar orqali sezilarli darajada rivojlandim."
+                                },
+                                {
+                                    "sentence": "He studied diligently; as a result, he passed the final assessment with excellence.",
+                                    "translation": "U astoydil o'qidi; natijada, yakuniy imtihonni a'lo baho bilan topshirdi."
+                                }
+                            ]
                         }
                     ]
                 }
             },
             {
                 "id": "en-a2-u5-l5-s2",
-                "title": "A2 Mashqlar",
+                "title": "A2 Yakuniy Amaliyot",
                 "type": "practice",
-                "estimatedMinutes": 5,
+                "estimatedMinutes": 6,
                 "practiceData": {
-                    "instructions": "Savollarga javob bering.",
+                    "instructions": "A2 darajasining barcha grammatik qoidalarini jamlagan amaliy mashqlarni bajaring.",
                     "exercises": [
                         {
                             "id": "en-a2-u5-l5-e1",
                             "type": "multiple-choice",
-                            "prompt": "\"I missed the bus, _______ I walked to school.\"",
+                            "prompt": "\"While we _______ dinner at the café last night, all the lights suddenly went out.\"",
                             "options": [
-                                "because",
-                                "but",
-                                "so",
-                                "although"
+                                "have",
+                                "had",
+                                "were having",
+                                "are having"
                             ],
                             "correctAnswer": 2,
-                            "explanation": "So = shuning uchun (natija)."
+                            "explanation": "O'tmishda davom etayotgan harakat: Past Continuous ('were having')."
                         },
                         {
-                            "id": "en-a2-u5-l5-ex-2",
+                            "id": "en-a2-u5-l5-e2",
                             "type": "multiple-choice",
-                            "prompt": "Choose the correct word to complete the sentence: \"Reading books will improve your vocabulary.\"",
+                            "prompt": "\"Look at those dark storm clouds! It _______ rain very soon.\"",
                             "options": [
-                                "delay",
-                                "Improve",
-                                "doubt",
-                                "reluctance"
+                                "will",
+                                "is going to",
+                                "rains",
+                                "is raining to"
                             ],
                             "correctAnswer": 1,
-                            "explanation": "\"Improve\" (Yaxshilamoq, rivojlantirmoq) fits the context appropriately."
+                            "explanation": "Ko'z o'ngimizdagi aniq dalilga asoslangan kelasi zamon taxmini: 'is going to rain'."
+                        },
+                        {
+                            "id": "en-a2-u5-l5-e3",
+                            "type": "multiple-choice",
+                            "prompt": "\"This electric bicycle is _______ than the old manual one, but it is also more expensive.\"",
+                            "options": [
+                                "much faster",
+                                "more faster",
+                                "fastest",
+                                "as fast"
+                            ],
+                            "correctAnswer": 0,
+                            "explanation": "Bir bo'g'inli sifat qiyosiy darajasi: 'faster', kuchaytirish uchun 'much faster' ('more faster' xato)."
+                        },
+                        {
+                            "id": "en-a2-u5-l5-e4",
+                            "type": "multiple-choice",
+                            "prompt": "\"If you _______ your homework tonight, you will be able to watch the football match tomorrow.\"",
+                            "options": [
+                                "finish",
+                                "will finish",
+                                "finished",
+                                "finishes"
+                            ],
+                            "correctAnswer": 0,
+                            "explanation": "First conditional shart ergash gapida Present Simple: 'If you finish...' ('will finish' xato)."
+                        },
+                        {
+                            "id": "en-a2-u5-l5-e5",
+                            "type": "multiple-choice",
+                            "prompt": "\"You _______ smoke inside the hospital; it is strictly prohibited by law.\"",
+                            "options": [
+                                "shouldn't",
+                                "don't have to",
+                                "mustn't",
+                                "needn't"
+                            ],
+                            "correctAnswer": 2,
+                            "explanation": "Qat'iy qonuniy taqiq uchun 'mustn't' ishlatiladi."
                         }
                     ]
                 }
             },
             {
                 "id": "en-a2-u5-l5-s3",
-                "title": "A2 Level Promotion Exam",
+                "title": "A2 Yakuniy Bitiruv Imtihoni",
                 "type": "test",
                 "estimatedMinutes": 6,
                 "testData": {
-                    "instructions": "B1 darajasiga o'tish uchun testni kamida 80% natija bilan topshiring.",
+                    "instructions": "A2 darajasini to'liq yakunlash va B1 darajasiga o'tish imtihonini kamida 80% natija bilan topshiring.",
                     "passingScorePercentage": 80,
                     "questions": [
                         {
                             "id": "en-a2-u5-l5-q1",
-                            "question": "While we _______ dinner, the lights went out.",
+                            "question": "Qaysi gapda o'tgan zamon (Past Simple va Past Continuous) to'g'ri bog'langan?",
                             "options": [
-                                "had",
-                                "are having",
-                                "were having",
-                                "have"
+                                "While I walked home, it was starting to rain.",
+                                "While I was walking home, it started to rain.",
+                                "While I walk home, it started to rain.",
+                                "While I was walking home, it was starting to rain."
                             ],
-                            "correctAnswerIndex": 2,
-                            "explanation": "While we were having..."
+                            "correctAnswerIndex": 1,
+                            "explanation": "Davom etayotgan fon harakati Past Continuous ('was walking'), uni bo'lib qo'ygan qisqa harakat esa Past Simple ('started')."
                         },
                         {
                             "id": "en-a2-u5-l5-q2",
-                            "question": "He is _______ taller than his brother.",
+                            "question": "Avvaldan rejalashtirilgan qat'iy kelajak niyatini bildiruvchi to'g'ri gap qaysi?",
                             "options": [
-                                "much",
-                                "very",
-                                "many",
-                                "more"
+                                "I think I will buy a car maybe.",
+                                "I have decided. I am going to buy a new car next month.",
+                                "I bought a new car next month.",
+                                "I am buy a new car next month."
                             ],
-                            "correctAnswerIndex": 0,
-                            "explanation": "Much taller (ancha balandroq)."
+                            "correctAnswerIndex": 1,
+                            "explanation": "Oldindan qaror qilingan aniq reja va niyat uchun 'be going to' qo'llaniladi."
                         },
                         {
                             "id": "en-a2-u5-l5-q3",
-                            "question": "You _______ clean your room before going out; mom said so.",
+                            "question": "Qaysi jumla grammatik jihatdan mutlaqo to'g'ri tuzilgan?",
                             "options": [
-                                "don't have to",
-                                "can",
-                                "shouldn't",
-                                "must"
+                                "He is more taller than his brother.",
+                                "This exam is more easier than last year.",
+                                "Health is much more important than money.",
+                                "She is the most fast runner in our school."
                             ],
-                            "correctAnswerIndex": 3,
-                            "explanation": "Must = buyruq/majburiyat."
+                            "correctAnswerIndex": 2,
+                            "explanation": "'Important' ko'p bo'g'inli sifat: 'more important', kuchaytiruvchisi 'much more important'. Boshqa variantlarda ikkilanma darajalanish xatosi bor."
                         },
                         {
                             "id": "en-a2-u5-l5-q4",
-                            "question": "She has decided. She _______ start a new business next year.",
+                            "question": "'If it rains tomorrow, we will stay at home.' gapida nima uchun 'if' dan keyin 'will' ishlatilmagan?",
                             "options": [
-                                "starts",
-                                "will be",
-                                "is going to",
-                                "went to"
+                                "Chunki First Conditional qoidasiga ko'ra, shart ergash gapida kelasi ma'noda ham Present Simple ishlatiladi.",
+                                "Chunki gap o'tgan zamonda yozilgan.",
+                                "Chunki yomg'ir hech qachon yog'maydi.",
+                                "Chunki 'rains' bu modal fe'l hisoblanadi."
                             ],
-                            "correctAnswerIndex": 2,
-                            "explanation": "Qaror qilingan reja: is going to."
+                            "correctAnswerIndex": 0,
+                            "explanation": "Ingliz tili qoidasiga binoan, shart ergash gaplarida ('if' dan so'ng) 'will' ishlatilmaydi, Present Simple qo'yiladi."
+                        },
+                        {
+                            "id": "en-a2-u5-l5-q5",
+                            "question": "O'zbek o'quvchilari orasida eng ko'p uchraydigan 'I am agree with you' xatosining sababi nima?",
+                            "options": [
+                                "'Agree' so'zi sifat emas, balki fe'l, shuning uchun 'am' yordamchi fe'li kerak emas.",
+                                "'Agree' so'zi faqat o'tgan zamonda ishlatiladi.",
+                                "'With' predlogi xato, 'to' qo'yilishi kerak.",
+                                "Bu gapda hech qanday xatolik yo'q."
+                            ],
+                            "correctAnswerIndex": 0,
+                            "explanation": "'Agree' (qo'shilmoq) mustaqil fe'l bo'lganligi sababli 'I agree with you' deb aytiladi."
                         }
                     ]
                 }
