@@ -2579,162 +2579,228 @@ export const ENGLISH_A1_LESSONS: Lesson[] = [
         "level": "A1",
         "lessonNumber": 1,
         "title": "Telling Time & Daily Routines",
-        "description": "Soatni aytish va kun tartibini ifodalash.",
-        "estimatedDurationMinutes": 12,
+        "description": "Soatni aniq va tushunarli aytish, vaqt predloglari (at, in, on) hamda kun tartibini ifodalash.",
+        "estimatedDurationMinutes": 14,
         "icon": "⏰",
         "steps": [
-            {
-                "id": "en-a1-u3-l1-s1",
-                "title": "Soat va Vaqt",
-                "type": "learn",
-                "estimatedMinutes": 4,
-                "learnData": {
-                    "title": "What time is it?",
-                    "explanation": "Ingliz tilida vaqtni aytish: It is 7 o'clock (Soat 7). At 7:00 AM (ertalab soat 7 da).",
-                    "vocabulary": [
-                        {
-                            "term": "O'clock",
-                            "reading": "/əˈklɒk/",
-                            "meaning": "Aniq soat",
-                            "exampleSentence": "It is eight o'clock.",
-                            "exampleTranslation": "Soat sakkiz."
-                        },
-                        {
-                            "term": "Morning",
-                            "reading": "/ˈmɔː.nɪŋ/",
-                            "meaning": "Tong / Ertalab",
-                            "exampleSentence": "Good morning everyone.",
-                            "exampleTranslation": "Hammamizga xayrli tong."
-                        },
-                        {
-                            "term": "Wake up",
-                            "reading": "/weɪk ʌp/",
-                            "meaning": "Uyg'onmoq",
-                            "exampleSentence": "I wake up at 6:30.",
-                            "exampleTranslation": "Men soat 6:30 da uyg'onaman."
+                {
+                        "id": "en-a1-u3-l1-s1",
+                        "title": "Vaqt va Kun Tartibi Asoslari",
+                        "type": "learn",
+                        "estimatedMinutes": 5,
+                        "learnData": {
+                                "title": "What time is it? & Daily Habits",
+                                "explanation": "Ingliz tilida vaqtni aytish va kunlik jadvalni ifodalash:\n\n1. Vaqtni aytishning 2 xil usuli bor:\n- Oddiy / Raqamli usul (Digital): Soat va minut ketma-ket aytiladi.\n  • 7:15 -> \"It is seven fifteen.\"\n  • 8:30 -> \"It is eight thirty.\"\n  • 9:45 -> \"It is nine forty-five.\"\n- An'anaviy usul (Past & To):\n  • O'tgan minutlar uchun (1-30 minut): PAST (It is ten past eight - 8 dan 10 minut o'tdi).\n  • Qolgan minutlar uchun (31-59 minut): TO (It is twenty to nine - 9 ga 20 minut qoldi).\n  • 15 minut: \"quarter\" (quarter past seven - 7 dan 15 minut o'tdi, quarter to eight - 8 ga 15 minut qoldi).\n  • 30 minut: \"half\" (half past eight - 8:30).\n\n2. Vaqt predloglari (Prepositions of Time):\n- Aniq soat vaqtlari uchun har doim 'AT' ishlatiladi: at 7 o'clock, at half past eight, at noon, at midnight.\n- Kun qismlari uchun 'IN': in the morning, in the afternoon, in the evening (LEKIN: at night).\n- Hafta kunlari uchun 'ON': on Monday, on Friday morning.\n\n3. O'zbek o'rganuvchilari uchun xavfli tuzoqlar (Common Pitfalls):\n- ❌ \"I wake up in 7 o'clock.\" -> ✅ \"I wake up AT 7 o'clock.\" (Soat oldidan faqat AT bo'ladi!).\n- ❌ \"What time is?\" -> ✅ \"What time IS IT?\" (Ingliz tilida ega tushib qolmaydi).\n- ❌ \"It is half to eight.\" -> ✅ \"It is half PAST seven.\" (Yarimta o'tdi deb aytiladi, kam deyilmaydi).\n\n4. IELTS Speaking Part 1 Foundation Corner:\n- Topic: Daily Routine\n- Examiner: \"What is your typical daily routine like?\"\n- Model Band 6.0+ Answer: \"Well, on weekdays, my routine is quite structured. I usually wake up at seven o'clock, have a quick breakfast, and leave home by quarter past eight to catch the bus.\"\n- Fluency & Connected Speech Tip: \"wake up at\" iborasi /weɪ.kʌ.pət/ tarzida tutashtirilib aytiladi.",
+                                "vocabulary": [
+                                        {
+                                                "term": "o'clock",
+                                                "reading": "/əˈklɒk/",
+                                                "meaning": "aniq soat (faqat butun soatlarda)",
+                                                "exampleSentence": "My morning lecture begins at nine o'clock sharp.",
+                                                "exampleTranslation": "Mening ertalabki ma'ruzam roppa-rosa soat to'qqizda boshlanadi."
+                                        },
+                                        {
+                                                "term": "half past",
+                                                "reading": "/hɑːf pɑːst/",
+                                                "meaning": "yarimta o'tdi (30 daqiqa)",
+                                                "exampleSentence": "We usually meet in the library at half past two.",
+                                                "exampleTranslation": "Biz odatda kutubxonada ikki yarimda uchrashamiz."
+                                        },
+                                        {
+                                                "term": "quarter to",
+                                                "reading": "/ˈkwɔːtə tuː/",
+                                                "meaning": "15 daqiqa qoldi (chorak kam)",
+                                                "exampleSentence": "It is quarter to eight; hurry up or we will be late.",
+                                                "exampleTranslation": "Sakkizga o'n besh daqiqa qoldi; shoshil, aks holda kechikamiz."
+                                        },
+                                        {
+                                                "term": "quarter past",
+                                                "reading": "/ˈkwɔːtə pɑːst/",
+                                                "meaning": "15 daqiqa o'tdi (chorak o'tdi)",
+                                                "exampleSentence": "The express train departs at quarter past six.",
+                                                "exampleTranslation": "Tezyurar poyezd oltidan o'n besh daqiqa o'tganda yo'lga chiqadi."
+                                        },
+                                        {
+                                                "term": "wake up",
+                                                "reading": "/weɪk ʌp/",
+                                                "meaning": "uyg'onmoq",
+                                                "exampleSentence": "I always wake up early, even on Sunday mornings.",
+                                                "exampleTranslation": "Men har doim, hatto yakshanba tongida ham erta uyg'onaman."
+                                        },
+                                        {
+                                                "term": "leave home",
+                                                "reading": "/liːv həʊm/",
+                                                "meaning": "uydan chiqib ketmoq",
+                                                "exampleSentence": "He leaves home at half past seven to avoid morning traffic.",
+                                                "exampleTranslation": "U ertalabki tirbandlikdan qochish uchun yetti yarimda uydan chiqadi."
+                                        },
+                                        {
+                                                "term": "noon",
+                                                "reading": "/nuːn/",
+                                                "meaning": "peshin vaqti (kunduzi soat 12:00)",
+                                                "exampleSentence": "We always take a lunch break at noon.",
+                                                "exampleTranslation": "Biz har doim peshinda tushlik tanaffusiga chiqamiz."
+                                        },
+                                        {
+                                                "term": "midnight",
+                                                "reading": "/ˈmɪdnaɪt/",
+                                                "meaning": "yarim tun (tun soat 00:00)",
+                                                "exampleSentence": "Students should not study until midnight before exams.",
+                                                "exampleTranslation": "Talabalar imtihondan oldin yarim tungacha dars qilmasliklari kerak."
+                                        }
+                                ]
                         }
-                    ],
-                    "keyPoints": [
-                        "Vaqt oldidan \"at\" predlogi ishlatiladi: at 8 o'clock, at noon."
-                    ],
-                    "grammarRules": [
-                        {
-                            "pattern": "Telling Time & Daily Routines",
-                            "meaning": "Soatni aytish va kun tartibini ifodalash.",
-                            "usageNotes": "Ingliz tilida vaqtni aytish: It is 7 o'clock (Soat 7). At 7:00 AM (ertalab soat 7 da).",
-                            "examples": [
-                                {
-                                    "sentence": "It is eight o'clock.",
-                                    "translation": "Soat sakkiz."
-                                },
-                                {
-                                    "sentence": "Good morning everyone.",
-                                    "translation": "Hammamizga xayrli tong."
-                                }
-                            ]
+                },
+                {
+                        "id": "en-a1-u3-l1-s2",
+                        "title": "Vaqt va Jadval Mashqlari",
+                        "type": "practice",
+                        "estimatedMinutes": 4,
+                        "practiceData": {
+                                "instructions": "To'g'ri soat shakli yoki vaqt predlogini tanlang.",
+                                "exercises": [
+                                        {
+                                                "id": "en-a1-u3-l1-e1",
+                                                "type": "multiple-choice",
+                                                "prompt": "Qaysi jumla 'Soat sakkizdan o'n besh daqiqa o'tdi' ma'nosini to'g'ri ifodalaydi?",
+                                                "options": [
+                                                        "It is quarter to eight.",
+                                                        "It is quarter past eight.",
+                                                        "It is eight quarter.",
+                                                        "It is half past eight."
+                                                ],
+                                                "correctAnswer": 1,
+                                                "explanation": "'Quarter past' 15 daqiqa o'tganini bildiradi. 8:15 -> It is quarter past eight."
+                                        },
+                                        {
+                                                "id": "en-a1-u3-l1-e2",
+                                                "type": "multiple-choice",
+                                                "prompt": "Bo'sh joyni to'g'ri predlog bilan to'ldiring: 'My first lesson starts ___ 8:30 AM.'",
+                                                "options": [
+                                                        "in",
+                                                        "on",
+                                                        "at",
+                                                        "for"
+                                                ],
+                                                "correctAnswer": 2,
+                                                "explanation": "Aniq soat vaqtlari oldidan har doim 'at' predlogi qo'yiladi (at 8:30 AM)."
+                                        },
+                                        {
+                                                "id": "en-a1-u3-l1-e3",
+                                                "type": "multiple-choice",
+                                                "prompt": "7:45 vaqtini an'anaviy usulda qanday aytish to'g'ri?",
+                                                "options": [
+                                                        "It is quarter to eight.",
+                                                        "It is quarter past seven.",
+                                                        "It is forty-five past seven.",
+                                                        "It is half to eight."
+                                                ],
+                                                "correctAnswer": 0,
+                                                "explanation": "7:45 bu soat 8 ga 15 minut qolganini bildiradi: 'It is quarter to eight'."
+                                        },
+                                        {
+                                                "id": "en-a1-u3-l1-e4",
+                                                "type": "multiple-choice",
+                                                "prompt": "Kun qismi oldidan to'g'ri predlogni tanlang: 'I do my homework ___ the evening.'",
+                                                "options": [
+                                                        "at",
+                                                        "in",
+                                                        "on",
+                                                        "to"
+                                                ],
+                                                "correctAnswer": 1,
+                                                "explanation": "Kun qismlari (morning, afternoon, evening) uchun 'in' ishlatiladi: 'in the evening'."
+                                        },
+                                        {
+                                                "id": "en-a1-u3-l1-e5",
+                                                "type": "multiple-choice",
+                                                "prompt": "'What time do you usually wake up?' savoliga eng to'g'ri javobni tanlang:",
+                                                "options": [
+                                                        "I wake up in seven o'clock.",
+                                                        "I wake up at seven o'clock.",
+                                                        "I am wake up at seven.",
+                                                        "I wakes up on seven o'clock."
+                                                ],
+                                                "correctAnswer": 1,
+                                                "explanation": "'I wake up at seven o'clock' grammatik jihatdan benuqson: I bilan fe'l o'zgarmaydi va soat oldidan 'at' ishlatiladi."
+                                        }
+                                ]
                         }
-                    ]
+                },
+                {
+                        "id": "en-a1-u3-l1-s3",
+                        "title": "Dars Testi: Telling Time",
+                        "type": "test",
+                        "estimatedMinutes": 5,
+                        "testData": {
+                                "instructions": "Savollarga to'g'ri javob berib, mavzuni mustahkamlang.",
+                    "passingScorePercentage": 80,
+                                "questions": [
+                                        {
+                                                "id": "en-a1-u3-l1-q1",
+                                                "question": "Vaqtni so'rash uchun eng to'g'ri grammatik savol qaysi?",
+                                                "options": [
+                                                        "What time is?",
+                                                        "What time is it?",
+                                                        "What is time it?",
+                                                        "How much time is?"
+                                                ],
+                                                "correctAnswerIndex": 1,
+                                                "explanation": "Vaqtni so'rash uchun standart formula: 'What time is it?' yoki 'What's the time?'."
+                                        },
+                                        {
+                                                "id": "en-a1-u3-l1-q2",
+                                                "question": "'Peshin vaqtida' iborasi ingliz tilida qanday ifodalanadi?",
+                                                "options": [
+                                                        "in noon",
+                                                        "on noon",
+                                                        "at noon",
+                                                        "to noon"
+                                                ],
+                                                "correctAnswerIndex": 2,
+                                                "explanation": "'Noon' va 'midnight' aniq nuqta vaqtlar hisoblanib, ularning oldidan 'at' keladi (at noon, at midnight)."
+                                        },
+                                        {
+                                                "id": "en-a1-u3-l1-q3",
+                                                "question": "'U soat 6:30 da uydan chiqadi' jumlasining to'g'ri inglizcha tarjimasi qaysi?",
+                                                "options": [
+                                                        "He leave home at half past six.",
+                                                        "He leaves home at half past six.",
+                                                        "He leaves home on six thirty.",
+                                                        "He is leave home in half past six."
+                                                ],
+                                                "correctAnswerIndex": 1,
+                                                "explanation": "'He' uchun fe'lga -s qo'shiladi (leaves) va soat oldidan 'at' qo'yiladi."
+                                        },
+                                        {
+                                                "id": "en-a1-u3-l1-q4",
+                                                "question": "'It is twenty past nine' qaysi raqamli vaqtga to'g'ri keladi?",
+                                                "options": [
+                                                        "8:40",
+                                                        "9:20",
+                                                        "9:40",
+                                                        "10:20"
+                                                ],
+                                                "correctAnswerIndex": 1,
+                                                "explanation": "'Twenty past nine' 9 dan 20 daqiqa o'tganini, ya'ni 9:20 ni bildiradi."
+                                        },
+                                        {
+                                                "id": "en-a1-u3-l1-q5",
+                                                "question": "IELTS Speaking: 'When do you usually go to bed?' savoliga qaysi javob tabiiy va grammatik to'g'ri?",
+                                                "options": [
+                                                        "I go bed on 11.",
+                                                        "I normally go to bed at around eleven o'clock.",
+                                                        "I am go to bed in midnight.",
+                                                        "I goes to bed at 11 o'clock."
+                                                ],
+                                                "correctAnswerIndex": 1,
+                                                "explanation": "'I normally go to bed at around eleven o'clock' iborasi grammatik jihatdan to'g'ri va 'around' (taxminan) so'zi ravonlik bag'ishlaydi."
+                                        }
+                                ]
+                        }
                 }
-            },
-            {
-                "id": "en-a1-u3-l1-s2",
-                "title": "Mashq",
-                "type": "practice",
-                "estimatedMinutes": 4,
-                "practiceData": {
-                    "instructions": "Vaqt predlogini tanlang.",
-                    "exercises": [
-                        {
-                            "id": "en-a1-u3-l1-e1",
-                            "type": "multiple-choice",
-                            "prompt": "\"I start work _______ 9:00 AM.\"",
-                            "options": [
-                                "at",
-                                "on",
-                                "in",
-                                "to"
-                            ],
-                            "correctAnswer": 0,
-                            "explanation": "Aniq vaqt bilan \"at\" ishlatiladi: at 9:00 AM."
-                        },
-                        {
-                            "id": "en-a1-u3-l1-ex-2",
-                            "type": "multiple-choice",
-                            "prompt": "Choose the correct word to complete the sentence: \"Good morning everyone.\"",
-                            "options": [
-                                "Morning",
-                                "doubt",
-                                "reluctance",
-                                "delay"
-                            ],
-                            "correctAnswer": 0,
-                            "explanation": "\"Morning\" (Tong / Ertalab) fits the context appropriately."
-                        }
-                    ]
-                }
-            },
-            {
-                "id": "en-a1-u3-l1-s3",
-                "title": "Test",
-                "type": "test",
-                "estimatedMinutes": 4,
-                "testData": {
-                    "instructions": "Test savollariga javob bering.",
-                    "passingScorePercentage": 75,
-                    "questions": [
-                        {
-                            "id": "en-a1-u3-l1-q1",
-                            "question": "What time _______ you usually have breakfast?",
-                            "options": [
-                                "do",
-                                "does",
-                                "are",
-                                "is"
-                            ],
-                            "correctAnswerIndex": 0,
-                            "explanation": "What time do you...?"
-                        },
-                        {
-                            "id": "en-a1-u3-l1-q2",
-                            "question": "She goes to bed _______ 11:00 PM.",
-                            "options": [
-                                "in",
-                                "by",
-                                "at",
-                                "on"
-                            ],
-                            "correctAnswerIndex": 2,
-                            "explanation": "At 11:00 PM."
-                        },
-                        {
-                            "id": "en-a1-u3-l1-q3",
-                            "question": "\"Noon\" so'zining ma'nosi nima?",
-                            "options": [
-                                "Tush payti (12:00)",
-                                "Oqshom",
-                                "Tong",
-                                "Yarim kecha"
-                            ],
-                            "correctAnswerIndex": 0,
-                            "explanation": "Noon — Tush vaqti (12:00)."
-                        },
-                        {
-                            "id": "en-a1-u3-l1-q4",
-                            "question": "I exercise in the _______.",
-                            "options": [
-                                "time",
-                                "hour",
-                                "clock",
-                                "morning"
-                            ],
-                            "correctAnswerIndex": 3,
-                            "explanation": "In the morning (ertalab)."
-                        }
-                    ]
-                }
-            }
         ]
-    },
+},
     {
         "id": "en-a1-u3-l2",
         "courseId": "english-a1",
@@ -2744,169 +2810,228 @@ export const ENGLISH_A1_LESSONS: Lesson[] = [
         "level": "A1",
         "lessonNumber": 2,
         "title": "Food, Drinks & Cafe Ordering",
-        "description": "Oziq-ovqatlar, ichimliklar va kafeda buyurtma berish.",
-        "estimatedDurationMinutes": 12,
+        "description": "Oziq-ovqat va ichimliklar, sanaladigan/sanalmaydigan otlar hamda kafeda xushmuomala buyurtma berish.",
+        "estimatedDurationMinutes": 14,
         "icon": "☕",
         "steps": [
-            {
-                "id": "en-a1-u3-l2-s1",
-                "title": "Taomlar va Ichimliklar",
-                "type": "learn",
-                "estimatedMinutes": 4,
-                "learnData": {
-                    "title": "Ordering Food and Drinks",
-                    "explanation": "Kafeda buyurtma berishda: \"Can I have... please?\" yoki \"I would like (I'd like)...\" ishlatiladi.",
-                    "vocabulary": [
-                        {
-                            "term": "Coffee",
-                            "reading": "/ˈkɒf.i/",
-                            "meaning": "Qahva",
-                            "exampleSentence": "A cup of black coffee, please.",
-                            "exampleTranslation": "Iltimos, bir finjon qora qahva."
-                        },
-                        {
-                            "term": "Tea",
-                            "reading": "/tiː/",
-                            "meaning": "Choy",
-                            "exampleSentence": "Do you prefer green tea?",
-                            "exampleTranslation": "Ko'k choyni ma'qul ko'rasizmi?"
-                        },
-                        {
-                            "term": "Water",
-                            "reading": "/ˈwɔː.tər/",
-                            "meaning": "Suv",
-                            "exampleSentence": "A bottle of mineral water.",
-                            "exampleTranslation": "Bir shisha mineral suv."
-                        },
-                        {
-                            "term": "Bread",
-                            "reading": "/bred/",
-                            "meaning": "Non",
-                            "exampleSentence": "Fresh bread is delicious.",
-                            "exampleTranslation": "Yangi yopilgan non mazali."
+                {
+                        "id": "en-a1-u3-l2-s1",
+                        "title": "Oziq-ovqat va Kafeda Muloqot",
+                        "type": "learn",
+                        "estimatedMinutes": 5,
+                        "learnData": {
+                                "title": "Countable vs Uncountable Nouns & Polite Ordering",
+                                "explanation": "Taomlar va kafeda xushmuomala muloqot qilish qoidalari:\n\n1. Sanaladigan va Sanalmaydigan Otlar (Countable vs Uncountable):\n- Sanaladigan otlar (Countable): Dona-dona qilib sanash mumkin bo'lgan narsalar (an apple, two eggs, a sandwich). Ko'plikda -s oladi (apples, sandwiches).\n- Sanalmaydigan otlar (Uncountable): Suyuqliklar, donador yoki massa narsalar (water, milk, bread, rice, sugar). Ularning oldiga 'a/an' qo'yilmaydi va ko'plikda -s qo'shilmaydi (❌ waters, ❌ breads).\n  • O'lchov birliklari bilan aytiladi: \"a cup of coffee\", \"a bottle of water\", \"a slice of bread\".\n\n2. Some va Any qoidasi:\n- Some (bir nechta / biroz): Darak gaplarda va xushmuomala takliflarda ishlatiladi.\n  • \"I'd like some water, please.\"\n  • \"Would you like some tea?\"\n- Any (hech qanday / biron bir): Inkor gaplar va umumiy savollarda ishlatiladi.\n  • \"We do not have any milk.\"\n  • \"Do you have any vegetarian dishes?\"\n\n3. Kafeda buyurtma berish odobi (Polite Ordering):\n- ❌ Qo'pol/To'g'ridan-to'g'ri: \"I want coffee!\" (O'zbekchada \"Kofe bering\" oddiy bo'lsa-da, ingliz tilida o'ta qo'pol eshitiladi).\n- ✅ Madaniyatli iboralar:\n  • \"Could I have a cappuccino, please?\"\n  • \"I would like (I'd like) a green tea, please.\"\n  • \"Can we have the bill, please?\" (Hisobni olsak bo'ladimi?).\n\n4. O'zbek o'rganuvchilari uchun xavfli tuzoqlar (Common Pitfalls):\n- ❌ \"Give me one coffee and two waters.\" -> ✅ \"Could I have a coffee and two bottles of water, please?\".\n- ❌ \"Dessert\" (/dɪˈzɜːt/ - shirinlik) so'zini \"Desert\" (/ˈdezət/ - sahro) bilan adashtirish.\n- ❌ \"How many sugar do you take?\" -> ✅ \"How MUCH sugar do you take?\" (Shakar sanalmaydi, shuning uchun 'much').\n\n5. IELTS Speaking Part 1 Foundation Corner:\n- Topic: Food and Restaurants\n- Examiner: \"What kind of food do you like the most?\"\n- Model Band 6.0+ Answer: \"To be honest, I really enjoy traditional food like plov and grilled kebabs because they are rich in flavour. When eating out at a cafe, I usually order a hot cappuccino with a chocolate croissant.\"\n- Intonation Tip: Buyurtma berish va iltimos so'roqlarida oxirgi so'zda ohang biroz ko'tariladi: \"Could I have the bill, please? ⤴\".",
+                                "vocabulary": [
+                                        {
+                                                "term": "order",
+                                                "reading": "/ˈɔːdə/",
+                                                "meaning": "buyurtma bermoq",
+                                                "exampleSentence": "Are you ready to order, or do you need a few more minutes?",
+                                                "exampleTranslation": "Buyurtma berishga tayyormisiz yoki yana bir necha daqiqa kerakmi?"
+                                        },
+                                        {
+                                                "term": "bill",
+                                                "reading": "/bɪl/",
+                                                "meaning": "hisob varaqasi (restoranda to'lov cheki)",
+                                                "exampleSentence": "Excuse me, could we have the bill, please?",
+                                                "exampleTranslation": "Kechirasiz, to'lov hisobini bersangiz, iltimos?"
+                                        },
+                                        {
+                                                "term": "still water",
+                                                "reading": "/stɪl ˈwɔːtə/",
+                                                "meaning": "gazsiz toza suv",
+                                                "exampleSentence": "I would like a glass of still water with lemon.",
+                                                "exampleTranslation": "Men limonli bir stakan gazsiz suv xohlayman."
+                                        },
+                                        {
+                                                "term": "sparkling water",
+                                                "reading": "/ˈspɑːklɪŋ ˈwɔːtə/",
+                                                "meaning": "gazlangan mineral suv",
+                                                "exampleSentence": "Do you prefer still or sparkling water?",
+                                                "exampleTranslation": "Siz gazsiz yoki gazlangan suvni afzal ko'rasizmi?"
+                                        },
+                                        {
+                                                "term": "delicious",
+                                                "reading": "/dɪˈlɪʃəs/",
+                                                "meaning": "juda mazali, totli",
+                                                "exampleSentence": "This home-made pasta is absolutely delicious.",
+                                                "exampleTranslation": "Bu uyda tayyorlangan pasta mutlaqo ajoyib mazali."
+                                        },
+                                        {
+                                                "term": "main course",
+                                                "reading": "/meɪn kɔːs/",
+                                                "meaning": "asosiy taom",
+                                                "exampleSentence": "For the main course, I will have roasted chicken with vegetables.",
+                                                "exampleTranslation": "Asosiy taom sifatida men sabzavotlar bilan qovurilgan tovuq tanlayman."
+                                        },
+                                        {
+                                                "term": "dessert",
+                                                "reading": "/dɪˈzɜːt/",
+                                                "meaning": "shirinlik / desert",
+                                                "exampleSentence": "Would you like some apple pie for dessert?",
+                                                "exampleTranslation": "Desertga olmali pirog xohlaysizmi?"
+                                        },
+                                        {
+                                                "term": "waiter",
+                                                "reading": "/ˈweɪtə/",
+                                                "meaning": "ofitsiant (erkak)",
+                                                "exampleSentence": "The polite waiter brought our hot drinks very quickly.",
+                                                "exampleTranslation": "Xushmuomala ofitsiant issiq ichimliklarimizni juda tez olib keldi."
+                                        }
+                                ]
                         }
-                    ],
-                    "keyPoints": [
-                        "Can I have a coffee, please? — Qahva bersangiz, iltimos."
-                    ],
-                    "grammarRules": [
-                        {
-                            "pattern": "Food, Drinks & Cafe Ordering",
-                            "meaning": "Oziq-ovqatlar, ichimliklar va kafeda buyurtma berish.",
-                            "usageNotes": "Kafeda buyurtma berishda: \"Can I have... please?\" yoki \"I would like (I'd like)...\" ishlatiladi.",
-                            "examples": [
-                                {
-                                    "sentence": "A cup of black coffee, please.",
-                                    "translation": "Iltimos, bir finjon qora qahva."
-                                },
-                                {
-                                    "sentence": "Do you prefer green tea?",
-                                    "translation": "Ko'k choyni ma'qul ko'rasizmi?"
-                                }
-                            ]
+                },
+                {
+                        "id": "en-a1-u3-l2-s2",
+                        "title": "Kafeda Buyurtma Mashqlari",
+                        "type": "practice",
+                        "estimatedMinutes": 4,
+                        "practiceData": {
+                                "instructions": "Eng madaniyatli va grammatik jihatdan to'g'ri javobni tanlang.",
+                                "exercises": [
+                                        {
+                                                "id": "en-a1-u3-l2-e1",
+                                                "type": "multiple-choice",
+                                                "prompt": "Kafeda ofitsiantga qahva buyurtma berishning eng xushmuomala usuli qaysi?",
+                                                "options": [
+                                                        "I want coffee now.",
+                                                        "Give me one coffee.",
+                                                        "Could I have a coffee, please?",
+                                                        "I need coffee immediately."
+                                                ],
+                                                "correctAnswer": 2,
+                                                "explanation": "'Could I have..., please?' xushmuomala va xalqaro miqyosda eng qabul qilingan so'rov shakli."
+                                        },
+                                        {
+                                                "id": "en-a1-u3-l2-e2",
+                                                "type": "multiple-choice",
+                                                "prompt": "Qaysi so'z sanalmaydigan ot (uncountable) hisoblanadi va oldiga 'a/an' ololmaydi?",
+                                                "options": [
+                                                        "sandwich",
+                                                        "bread",
+                                                        "apple",
+                                                        "banana"
+                                                ],
+                                                "correctAnswer": 1,
+                                                "explanation": "'Bread' (non) ingliz tilida sanalmaydi. 'a bread' deb bo'lmaydi, 'a piece/slice of bread' yoki 'some bread' deyiladi."
+                                        },
+                                        {
+                                                "id": "en-a1-u3-l2-e3",
+                                                "type": "multiple-choice",
+                                                "prompt": "Bo'sh joyni to'ldiring: 'We don't have ___ fresh milk in the fridge.'",
+                                                "options": [
+                                                        "some",
+                                                        "any",
+                                                        "a",
+                                                        "an"
+                                                ],
+                                                "correctAnswer": 1,
+                                                "explanation": "Inkor gaplarda (don't have) sanalmaydigan otlar oldidan 'any' ishlatiladi."
+                                        },
+                                        {
+                                                "id": "en-a1-u3-l2-e4",
+                                                "type": "multiple-choice",
+                                                "prompt": "'Hisobni olsak bo'ladimi?' so'rovining to'g'ri tarjimasi qaysi?",
+                                                "options": [
+                                                        "Can we have the bill, please?",
+                                                        "Where is money paper?",
+                                                        "Take our money now.",
+                                                        "Give the cheque please."
+                                                ],
+                                                "correctAnswer": 0,
+                                                "explanation": "Restoranda hisob so'rash uchun 'Can we have the bill, please?' standarti qo'llaniladi."
+                                        },
+                                        {
+                                                "id": "en-a1-u3-l2-e5",
+                                                "type": "multiple-choice",
+                                                "prompt": "Bo'sh joyga to'g'ri so'zni qo'ying: 'Would you like ___ orange juice?'",
+                                                "options": [
+                                                        "any",
+                                                        "some",
+                                                        "a",
+                                                        "an"
+                                                ],
+                                                "correctAnswer": 1,
+                                                "explanation": "Xushmuomala taklif bildirilganda (Would you like...?), savol bo'lsa ham 'some' ishlatiladi."
+                                        }
+                                ]
                         }
-                    ]
+                },
+                {
+                        "id": "en-a1-u3-l2-s3",
+                        "title": "Dars Testi: Food & Drinks",
+                        "type": "test",
+                        "estimatedMinutes": 5,
+                        "testData": {
+                                "instructions": "Savollarga to'g'ri javob berib, mavzuni mustahkamlang.",
+                    "passingScorePercentage": 80,
+                                "questions": [
+                                        {
+                                                "id": "en-a1-u3-l2-q1",
+                                                "question": "Sanalmaydigan otlar uchun qaysi ifoda grammatik xato hisoblanadi?",
+                                                "options": [
+                                                        "two cups of tea",
+                                                        "three waters",
+                                                        "a bottle of water",
+                                                        "some cold milk"
+                                                ],
+                                                "correctAnswerIndex": 1,
+                                                "explanation": "'Water' sanalmaydi, unga to'g'ridan-to'g'ri son va ko'plik qo'shib 'three waters' deyish xatodir (three bottles of water to'g'ri)."
+                                        },
+                                        {
+                                                "id": "en-a1-u3-l2-q2",
+                                                "question": "'Shirinlik' so'zining to'g'ri yozilishi va urg'u o'rni qaysi?",
+                                                "options": [
+                                                        "Desert (urg'u 1-bo'g'inda)",
+                                                        "Dessert (urg'u 2-bo'g'inda)",
+                                                        "Desert (urg'u 2-bo'g'inda)",
+                                                        "Dessert (urg'u 1-bo'g'inda)"
+                                                ],
+                                                "correctAnswerIndex": 1,
+                                                "explanation": "Shirinlik bu 'dessert' bo'lib, ikkita 's' bilan yoziladi va urg'u ikkinchi bo'g'inga tushadi (/dɪˈzɜːt/)."
+                                        },
+                                        {
+                                                "id": "en-a1-u3-l2-q3",
+                                                "question": "Choy yoki qahvaga shakar miqdorini so'rashda qaysi so'roq iborasi to'g'ri?",
+                                                "options": [
+                                                        "How many sugar do you take?",
+                                                        "How much sugar do you take?",
+                                                        "How many sugars you want?",
+                                                        "What sugar you take?"
+                                                ],
+                                                "correctAnswerIndex": 1,
+                                                "explanation": "Shakar sanalmaydigan ot bo'lgani uchun 'How much sugar' deb so'raladi."
+                                        },
+                                        {
+                                                "id": "en-a1-u3-l2-q4",
+                                                "question": "'I would like to order a grilled fish for the ___.' Bo'sh joyga qaysi atama mos keladi?",
+                                                "options": [
+                                                        "starter bill",
+                                                        "main course",
+                                                        "spoon table",
+                                                        "beverage clock"
+                                                ],
+                                                "correctAnswerIndex": 1,
+                                                "explanation": "'Main course' - asosiy taom (baliq, go'sht va hk.)."
+                                        },
+                                        {
+                                                "id": "en-a1-u3-l2-q5",
+                                                "question": "IELTS Speaking: 'Do you prefer cooking at home or eating at restaurants?' savoliga eng yaxshi javob boshlanishi qaysi?",
+                                                "options": [
+                                                        "I want restaurant because good.",
+                                                        "To be honest, I lean towards cooking at home because it is much healthier and more budget-friendly.",
+                                                        "Home cooking is have food.",
+                                                        "No restaurant, I am eat home always."
+                                                ],
+                                                "correctAnswerIndex": 1,
+                                                "explanation": "'To be honest, I lean towards... because...' - Band 6.0+ darajasidagi tabiiy, ravon va asosli javob."
+                                        }
+                                ]
+                        }
                 }
-            },
-            {
-                "id": "en-a1-u3-l2-s2",
-                "title": "Mashq",
-                "type": "practice",
-                "estimatedMinutes": 4,
-                "practiceData": {
-                    "instructions": "Buyurtma iborasini tanlang.",
-                    "exercises": [
-                        {
-                            "id": "en-a1-u3-l2-e1",
-                            "type": "multiple-choice",
-                            "prompt": "\"I would _______ a cup of tea, please.\"",
-                            "options": [
-                                "want to",
-                                "likes",
-                                "liking",
-                                "like"
-                            ],
-                            "correctAnswer": 3,
-                            "explanation": "I would like... (Iltimos, menga ... bersangiz)."
-                        },
-                        {
-                            "id": "en-a1-u3-l2-ex-2",
-                            "type": "multiple-choice",
-                            "prompt": "Choose the correct word to complete the sentence: \"Do you prefer green tea?\"",
-                            "options": [
-                                "doubt",
-                                "delay",
-                                "Tea",
-                                "reluctance"
-                            ],
-                            "correctAnswer": 2,
-                            "explanation": "\"Tea\" (Choy) fits the context appropriately."
-                        }
-                    ]
-                }
-            },
-            {
-                "id": "en-a1-u3-l2-s3",
-                "title": "Test",
-                "type": "test",
-                "estimatedMinutes": 4,
-                "testData": {
-                    "instructions": "Savollarga javob bering.",
-                    "passingScorePercentage": 75,
-                    "questions": [
-                        {
-                            "id": "en-a1-u3-l2-q1",
-                            "question": "How much _______ this sandwich?",
-                            "options": [
-                                "are",
-                                "am",
-                                "do",
-                                "is"
-                            ],
-                            "correctAnswerIndex": 3,
-                            "explanation": "How much is this sandwich?"
-                        },
-                        {
-                            "id": "en-a1-u3-l2-q2",
-                            "question": "Can I _______ the bill, please?",
-                            "options": [
-                                "have",
-                                "make",
-                                "do",
-                                "be"
-                            ],
-                            "correctAnswerIndex": 0,
-                            "explanation": "Can I have the bill, please? (Hisobni keltirsangiz)."
-                        },
-                        {
-                            "id": "en-a1-u3-l2-q3",
-                            "question": "\"Delicious\" so'zining ma'nosi nima?",
-                            "options": [
-                                "Eski",
-                                "Mazali / Shiringina",
-                                "Sho'r",
-                                "Achchiq"
-                            ],
-                            "correctAnswerIndex": 1,
-                            "explanation": "Delicious — Mazali."
-                        },
-                        {
-                            "id": "en-a1-u3-l2-q4",
-                            "question": "I drink two glasses of _______ every day.",
-                            "options": [
-                                "meat",
-                                "rice",
-                                "water",
-                                "bread"
-                            ],
-                            "correctAnswerIndex": 2,
-                            "explanation": "Glasses of water (Suv stakanlari)."
-                        }
-                    ]
-                }
-            }
         ]
-    },
+},
     {
         "id": "en-a1-u3-l3",
         "courseId": "english-a1",
@@ -2916,163 +3041,228 @@ export const ENGLISH_A1_LESSONS: Lesson[] = [
         "level": "A1",
         "lessonNumber": 3,
         "title": "Rooms in a House & Prepositions of Place",
-        "description": "Uy xonalari va joylashuv predloglari (in, on, under).",
-        "estimatedDurationMinutes": 12,
-        "icon": "🏠",
+        "description": "Uy xonalari, mebellar, There is / There are konstruksiyasi hamda joylashuv predloglari.",
+        "estimatedDurationMinutes": 14,
+        "icon": "🛋️",
         "steps": [
-            {
-                "id": "en-a1-u3-l3-s1",
-                "title": "Uy va Predloglar",
-                "type": "learn",
-                "estimatedMinutes": 4,
-                "learnData": {
-                    "title": "In, On, Under, Next to",
-                    "explanation": "Narsalarning qayerda ekanligini bildirish: in (ichida), on (ustida), under (ostida), next to (yonida).",
-                    "vocabulary": [
-                        {
-                            "term": "Kitchen",
-                            "reading": "/ˈkɪtʃ.ən/",
-                            "meaning": "Oshxona",
-                            "exampleSentence": "Mom is in the kitchen.",
-                            "exampleTranslation": "Ona oshxonada."
-                        },
-                        {
-                            "term": "Bedroom",
-                            "reading": "/ˈbed.ruːm/",
-                            "meaning": "Yotoqxona",
-                            "exampleSentence": "The bed is in my bedroom.",
-                            "exampleTranslation": "Karavot yotoqxonamda."
-                        },
-                        {
-                            "term": "Table",
-                            "reading": "/ˈteɪ.bəl/",
-                            "meaning": "Stol",
-                            "exampleSentence": "The key is on the table.",
-                            "exampleTranslation": "Kalit stol ustida."
+                {
+                        "id": "en-a1-u3-l3-s1",
+                        "title": "Uy Xonalari va There is / There are",
+                        "type": "learn",
+                        "estimatedMinutes": 5,
+                        "learnData": {
+                                "title": "Describing Rooms & Spatial Prepositions",
+                                "explanation": "Uy va xonani tasvirlash, mebellarning joylashuvini ifodalash:\n\n1. There is / There are (Mavjudlik konstruksiyasi):\n- O'zbek tilida \"Xonada bitta stol bor\" yoki \"Stol ustida kitoblar bor\" deb oxirida 'bor' so'zi ishlatiladi.\n- Ingliz tilida mavjudlik har doim gap boshida THERE IS yoki THERE ARE bilan boshlanadi!\n  • Birlik va sanalmaydigan otlar: \"There is a sofa in the living room.\" / \"There is milk in the fridge.\"\n  • Ko'plik otlar: \"There are two chairs next to the desk.\"\n  • Inkor: \"There isn't a television in my bedroom.\" / \"There aren't any pictures on the wall.\"\n  • Savol: \"Is there a balcony?\" -> \"Yes, there is.\" / \"Are there two bathrooms?\" -> \"No, there aren't.\"\n\n2. Joylashuv Predloglari (Prepositions of Place):\n- IN: ichida (in the wardrobe, in the kitchen).\n- ON: ustida (on the desk, on the wall).\n- UNDER: tagida (under the bed).\n- NEXT TO: yonida (next to the sofa).\n- BETWEEN: orasida (ikkita narsa o'rtasida: between the window and the door).\n- IN FRONT OF: ro'parasida / oldida (in front of the TV).\n- BEHIND: orqasida (behind the door).\n\n3. O'zbek o'rganuvchilari uchun xavfli tuzoqlar (Common Pitfalls):\n- ❌ \"In my room has a big bed.\" -> ✅ \"There is a big bed in my room.\" ('Have/Has' faqat shaxsning egaligida ishlatiladi, joyda mavjudlik uchun faqat There is/are!).\n- ❌ \"There is two windows in the room.\" -> ✅ \"There are two windows in the room.\" (Ko'plik bo'lsa 'are' bo'lishi shart).\n- ❌ \"I bought new furnitures.\" -> ✅ \"I bought new furniture.\" ('Furniture' so'zi sanalmaydi, hech qachon -s olmaydi).\n\n4. IELTS Speaking Part 1 Foundation Corner:\n- Topic: Accommodation / Your Home\n- Examiner: \"Can you describe your favourite room in your home?\"\n- Model Band 6.0+ Answer: \"Certainly. My favourite room is undoubtedly my bedroom because it is bright and peaceful. There is a comfortable study desk right next to the window, where I can read books with plenty of natural sunlight.\"\n- Lexical Resource Tip: \"undoubtedly\" (shubhasiz), \"peaceful\" (tinch, osoyishta), \"natural sunlight\" (tabiiy quyosh nuri).",
+                                "vocabulary": [
+                                        {
+                                                "term": "living room",
+                                                "reading": "/ˈlɪvɪŋ ruːm/",
+                                                "meaning": "mehmonxona (umumiy dam olish xonasi)",
+                                                "exampleSentence": "My family gathers in the living room every evening to chat.",
+                                                "exampleTranslation": "Oilamiz har oqshom suhbatlashish uchun mehmonxonaga yig'iladi."
+                                        },
+                                        {
+                                                "term": "kitchen",
+                                                "reading": "/ˈkɪtʃɪn/",
+                                                "meaning": "oshxona",
+                                                "exampleSentence": "There is a modern microwave and an oven in our kitchen.",
+                                                "exampleTranslation": "Oshxonamizda zamonaviy mikroto'lqinli pech va duxovka bor."
+                                        },
+                                        {
+                                                "term": "bedroom",
+                                                "reading": "/ˈbedruːm/",
+                                                "meaning": "yotoqxona",
+                                                "exampleSentence": "My bedroom has a cozy bed and a wooden wardrobe.",
+                                                "exampleTranslation": "Mening yotoqxonamda qulay karavot va yog'och shkaf bor."
+                                        },
+                                        {
+                                                "term": "furniture",
+                                                "reading": "/ˈfɜːnɪtʃə/",
+                                                "meaning": "mebel jihozlari (har doim birlikda)",
+                                                "exampleSentence": "The apartment is rented with elegant, modern furniture.",
+                                                "exampleTranslation": "Kvartira nafis, zamonaviy mebellar bilan ijaraga beriladi."
+                                        },
+                                        {
+                                                "term": "between",
+                                                "reading": "/bɪˈtwiːn/",
+                                                "meaning": "orasida (ikki narsa o'rtasida)",
+                                                "exampleSentence": "The small nightstand is between the bed and the wardrobe.",
+                                                "exampleTranslation": "Kichkina tumbachka karavot va shkafning o'rtasida joylashgan."
+                                        },
+                                        {
+                                                "term": "behind",
+                                                "reading": "/bɪˈhaɪnd/",
+                                                "meaning": "orqasida",
+                                                "exampleSentence": "Don't leave your slippers behind the bedroom door.",
+                                                "exampleTranslation": "Shypak-shippaklaringizni yotoqxona eshigi orqasida qoldirmang."
+                                        },
+                                        {
+                                                "term": "in front of",
+                                                "reading": "/ɪn frʌnt əv/",
+                                                "meaning": "oldida, ro'parasida",
+                                                "exampleSentence": "There is a soft rug in front of the warm fireplace.",
+                                                "exampleTranslation": "Issiq kamin oldida yumshoq gilamcha bor."
+                                        },
+                                        {
+                                                "term": "balcony",
+                                                "reading": "/ˈbælkəni/",
+                                                "meaning": "balkon / ayvon",
+                                                "exampleSentence": "We love drinking morning coffee on the open balcony.",
+                                                "exampleTranslation": "Biz ochiq balkonda ertalabki qahvani ichishni yaxshi ko'ramiz."
+                                        }
+                                ]
                         }
-                    ],
-                    "keyPoints": [
-                        "The book is on the desk.",
-                        "The cat is under the chair."
-                    ],
-                    "grammarRules": [
-                        {
-                            "pattern": "Rooms in a House & Prepositions of Place",
-                            "meaning": "Uy xonalari va joylashuv predloglari (in, on, under).",
-                            "usageNotes": "Narsalarning qayerda ekanligini bildirish: in (ichida), on (ustida), under (ostida), next to (yonida).",
-                            "examples": [
-                                {
-                                    "sentence": "Mom is in the kitchen.",
-                                    "translation": "Ona oshxonada."
-                                },
-                                {
-                                    "sentence": "The bed is in my bedroom.",
-                                    "translation": "Karavot yotoqxonamda."
-                                }
-                            ]
+                },
+                {
+                        "id": "en-a1-u3-l3-s2",
+                        "title": "Joylashuv va Mebel Mashqlari",
+                        "type": "practice",
+                        "estimatedMinutes": 4,
+                        "practiceData": {
+                                "instructions": "Bo'sh joylarni to'g'ri grammatik shakl yoki predlog bilan to'ldiring.",
+                                "exercises": [
+                                        {
+                                                "id": "en-a1-u3-l3-e1",
+                                                "type": "multiple-choice",
+                                                "prompt": "Bo'sh joyni to'g'ri to'ldiring: '___ three armchairs in our living room.'",
+                                                "options": [
+                                                        "There is",
+                                                        "There are",
+                                                        "It is",
+                                                        "They is"
+                                                ],
+                                                "correctAnswer": 1,
+                                                "explanation": "'Three armchairs' ko'plikda bo'lgani uchun 'There are' ishlatiladi."
+                                        },
+                                        {
+                                                "id": "en-a1-u3-l3-e2",
+                                                "type": "multiple-choice",
+                                                "prompt": "'Stol deraza va eshik o'rtasida joylashgan' jumlasiga qaysi predlog mos keladi?",
+                                                "options": [
+                                                        "under",
+                                                        "between",
+                                                        "behind",
+                                                        "on"
+                                                ],
+                                                "correctAnswer": 1,
+                                                "explanation": "Ikki narsaning o'rtasidagi joylashuv 'between' predlogi orqali ifodalanadi."
+                                        },
+                                        {
+                                                "id": "en-a1-u3-l3-e3",
+                                                "type": "multiple-choice",
+                                                "prompt": "Qaysi jumla grammatik jihatdan MUTLAQO TO'G'RI tuzilgan?",
+                                                "options": [
+                                                        "In my flat have two bathrooms.",
+                                                        "There is two bathrooms in my flat.",
+                                                        "There are two bathrooms in my flat.",
+                                                        "My flat there is two bathrooms."
+                                                ],
+                                                "correctAnswer": 2,
+                                                "explanation": "Ingliz tilida mavjudlik 'There are two bathrooms in my flat' shaklida ifodalanadi ('in my flat have...' xato)."
+                                        },
+                                        {
+                                                "id": "en-a1-u3-l3-e4",
+                                                "type": "multiple-choice",
+                                                "prompt": "'Devorda biron bir rasm bormi?' so'roq jumlasi qanday bo'ladi?",
+                                                "options": [
+                                                        "Is there any pictures on the wall?",
+                                                        "Are there any pictures on the wall?",
+                                                        "Do there pictures on the wall?",
+                                                        "Have there any pictures on the wall?"
+                                                ],
+                                                "correctAnswer": 1,
+                                                "explanation": "'Pictures' ko'plik ot, shuning uchun so'roq 'Are there any...?' bilan boshlanadi."
+                                        },
+                                        {
+                                                "id": "en-a1-u3-l3-e5",
+                                                "type": "multiple-choice",
+                                                "prompt": "'The kitten is sleeping ___ the bed' (mushukcha karavot tagida uxlayapti). Bo'sh joyga qaysi predlog kerak?",
+                                                "options": [
+                                                        "under",
+                                                        "on",
+                                                        "in",
+                                                        "between"
+                                                ],
+                                                "correctAnswer": 0,
+                                                "explanation": "Biror narsaning osti yoki tagi uchun 'under' predlogi ishlatiladi."
+                                        }
+                                ]
                         }
-                    ]
+                },
+                {
+                        "id": "en-a1-u3-l3-s3",
+                        "title": "Dars Testi: Rooms & Prepositions",
+                        "type": "test",
+                        "estimatedMinutes": 5,
+                        "testData": {
+                                "instructions": "Savollarga to'g'ri javob berib, mavzuni mustahkamlang.",
+                    "passingScorePercentage": 80,
+                                "questions": [
+                                        {
+                                                "id": "en-a1-u3-l3-q1",
+                                                "question": "Qaysi so'z sanalmaydigan ot bo'lib, unga 's' qo'shish xato hisoblanadi?",
+                                                "options": [
+                                                        "table",
+                                                        "furniture",
+                                                        "chair",
+                                                        "lamp"
+                                                ],
+                                                "correctAnswerIndex": 1,
+                                                "explanation": "'Furniture' (mebel jihozlari) jamlovchi sanalmaydigan ot bo'lib, unga -s qo'shib bo'lmaydi."
+                                        },
+                                        {
+                                                "id": "en-a1-u3-l3-q2",
+                                                "question": "'There isn't ___ mirror in the hallway.' Bo'sh joyga qaysi artikl mos?",
+                                                "options": [
+                                                        "a",
+                                                        "an",
+                                                        "some",
+                                                        "many"
+                                                ],
+                                                "correctAnswerIndex": 0,
+                                                "explanation": "'Mirror' birlikdagi sanaladigan undosh tovush bilan boshlangan ot, inkor shaklda 'a mirror' to'g'ri bo'ladi."
+                                        },
+                                        {
+                                                "id": "en-a1-u3-l3-q3",
+                                                "question": "'Oshxonamizda muzlatgich yo'q' jumlasining to'g'ri tarjimasi qaysi?",
+                                                "options": [
+                                                        "There isn't a fridge in our kitchen.",
+                                                        "In our kitchen not have a fridge.",
+                                                        "Our kitchen doesn't have there fridge.",
+                                                        "There aren't a fridge in our kitchen."
+                                                ],
+                                                "correctAnswerIndex": 0,
+                                                "explanation": "'There isn't a fridge in our kitchen' - birlikdagi mavjud emaslikning qat'iy va to'g'ri ifodasi."
+                                        },
+                                        {
+                                                "id": "en-a1-u3-l3-q4",
+                                                "question": "'The sofa is placed ___ the television' (Divan televizor ro'parasida turibdi).",
+                                                "options": [
+                                                        "between",
+                                                        "in front of",
+                                                        "under",
+                                                        "at"
+                                                ],
+                                                "correctAnswerIndex": 1,
+                                                "explanation": "'In front of' - oldida, ro'parasida ma'nosini bildiradi."
+                                        },
+                                        {
+                                                "id": "en-a1-u3-l3-q5",
+                                                "question": "IELTS Speaking: 'What would you like to change about your room?' savoliga qaysi javob leksik jihatdan boy?",
+                                                "options": [
+                                                        "I want change bed because small.",
+                                                        "If I had the chance, I would add more shelves because there are many books on the floor.",
+                                                        "My room is change table.",
+                                                        "No change anything, room good."
+                                                ],
+                                                "correctAnswerIndex": 1,
+                                                "explanation": "'If I had the chance, I would add more shelves because there are many books...' fikrni to'liq va grammatik aniq ochib beradi."
+                                        }
+                                ]
+                        }
                 }
-            },
-            {
-                "id": "en-a1-u3-l3-s2",
-                "title": "Mashq",
-                "type": "practice",
-                "estimatedMinutes": 4,
-                "practiceData": {
-                    "instructions": "Joylashuv predlogini tanlang.",
-                    "exercises": [
-                        {
-                            "id": "en-a1-u3-l3-e1",
-                            "type": "multiple-choice",
-                            "prompt": "\"The soup is _______ the bowl.\"",
-                            "options": [
-                                "in",
-                                "next",
-                                "under",
-                                "on"
-                            ],
-                            "correctAnswer": 0,
-                            "explanation": "Idishning ichida bo'lgani uchun \"in\"."
-                        },
-                        {
-                            "id": "en-a1-u3-l3-ex-2",
-                            "type": "multiple-choice",
-                            "prompt": "Choose the correct word to complete the sentence: \"The bed is in my bedroom.\"",
-                            "options": [
-                                "Bedroom",
-                                "reluctance",
-                                "delay",
-                                "doubt"
-                            ],
-                            "correctAnswer": 0,
-                            "explanation": "\"Bedroom\" (Yotoqxona) fits the context appropriately."
-                        }
-                    ]
-                }
-            },
-            {
-                "id": "en-a1-u3-l3-s3",
-                "title": "Test",
-                "type": "test",
-                "estimatedMinutes": 4,
-                "testData": {
-                    "instructions": "Savollarga javob bering.",
-                    "passingScorePercentage": 75,
-                    "questions": [
-                        {
-                            "id": "en-a1-u3-l3-q1",
-                            "question": "The shoes are _______ the bed.",
-                            "options": [
-                                "under",
-                                "into",
-                                "at",
-                                "in"
-                            ],
-                            "correctAnswerIndex": 0,
-                            "explanation": "Under the bed (karavot ostida)."
-                        },
-                        {
-                            "id": "en-a1-u3-l3-q2",
-                            "question": "There is a picture _______ the wall.",
-                            "options": [
-                                "under",
-                                "at",
-                                "in",
-                                "on"
-                            ],
-                            "correctAnswerIndex": 3,
-                            "explanation": "On the wall (devorda)."
-                        },
-                        {
-                            "id": "en-a1-u3-l3-q3",
-                            "question": "\"Living room\" so'zining ma'nosi nima?",
-                            "options": [
-                                "Oshxona",
-                                "Hammom",
-                                "Mehmonxona / Zal",
-                                "Garaj"
-                            ],
-                            "correctAnswerIndex": 2,
-                            "explanation": "Living room — Mehmonxona."
-                        },
-                        {
-                            "id": "en-a1-u3-l3-q4",
-                            "question": "The supermarket is next _______ the bank.",
-                            "options": [
-                                "at",
-                                "to",
-                                "in",
-                                "of"
-                            ],
-                            "correctAnswerIndex": 1,
-                            "explanation": "Next to (yonida)."
-                        }
-                    ]
-                }
-            }
         ]
-    },
+},
     {
         "id": "en-a1-u3-l4",
         "courseId": "english-a1",
@@ -3082,159 +3272,228 @@ export const ENGLISH_A1_LESSONS: Lesson[] = [
         "level": "A1",
         "lessonNumber": 4,
         "title": "Places in Town & Giving Simple Directions",
-        "description": "Shahardagi asosiy joylar va yo'nalish so'rash.",
-        "estimatedDurationMinutes": 12,
+        "description": "Shahardagi jamoat joylari, manzil so'rash va oddiy yo'l ko'rsatish (Go straight, Turn left).",
+        "estimatedDurationMinutes": 14,
         "icon": "🗺️",
         "steps": [
-            {
-                "id": "en-a1-u3-l4-s1",
-                "title": "Shahar va Yo'nalishlar",
-                "type": "learn",
-                "estimatedMinutes": 4,
-                "learnData": {
-                    "title": "Places in Town & Directions",
-                    "explanation": "Shahar bo'ylab harakatlanish: Turn left (chapga buring), Turn right (o'ngga buring), Go straight (to'g'riga yuring).",
-                    "vocabulary": [
-                        {
-                            "term": "Hospital",
-                            "reading": "/ˈhɒs.pɪ.təl/",
-                            "meaning": "Shifoxona",
-                            "exampleSentence": "The hospital is near here.",
-                            "exampleTranslation": "Shifoxona shu yaqinda."
-                        },
-                        {
-                            "term": "Bank",
-                            "reading": "/bæŋk/",
-                            "meaning": "Bank",
-                            "exampleSentence": "Where is the nearest bank?",
-                            "exampleTranslation": "Eng yaqin bank qayerda?"
-                        },
-                        {
-                            "term": "Turn left",
-                            "reading": "/tɜːn left/",
-                            "meaning": "Chapga burilmoq",
-                            "exampleSentence": "Turn left at the traffic lights.",
-                            "exampleTranslation": "Svetoforda chapga buring."
+                {
+                        "id": "en-a1-u3-l4-s1",
+                        "title": "Shaharda Mo'ljal Olish va Yo'l Ko'rsatish",
+                        "type": "learn",
+                        "estimatedMinutes": 5,
+                        "learnData": {
+                                "title": "Asking for and Giving Directions",
+                                "explanation": "Shaharda sayohat qilish, manzilni so'rash va yo'l tushuntirish qoidalari:\n\n1. Manzil so'rash odobi (Polite Inquiries):\n- Notanish odamdan yo'l so'raganda har doim \"Excuse me\" (Kechirasiz) bilan boshlanadi:\n  • \"Excuse me, where is the nearest pharmacy?\" (Kechirasiz, eng yaqin dorixona qayerda?)\n  • \"Excuse me, how can I get to the central train station?\" (Kechirasiz, vokzalga qanday borsam bo'ladi?)\n  • \"Is there a bank around here?\" (Bu atrofda biron bank bormi?)\n\n2. Yo'l ko'rsatishda Buyruq mayli (Imperatives):\n- Yo'l tushuntirganda to'g'ridan-to'g'ri fe'llardan boshlanadi:\n  • \"Go straight ahead\" (To'g'riga qarab yuring).\n  • \"Turn right\" (O'ngga buriling).\n  • \"Turn left at the traffic lights\" (Svetofordan chapga buriling).\n  • \"Cross the street at the pedestrian crossing\" (Piyodalar yo'lagidan ko'chani kesib o'ting).\n  • \"Take the second turning on your left\" (Chapdagi ikkinchi ko'chaga buriling).\n  • \"It is on your right / opposite the bank\" (U sizning o'ng tomoningizda / bankning ro'parasida).\n\n3. O'zbek o'rganuvchilari uchun xavfli tuzoqlar (Common Pitfalls):\n- ❌ \"Where the pharmacy is?\" -> ✅ \"Where IS the pharmacy?\" (So'roq gapda 'is' egadan oldinda keladi).\n- ❌ \"Go to straight.\" -> ✅ \"Go straight.\" ('Straight' oldidan 'to' qo'yilmaydi).\n- ❌ \"Turn to right.\" -> ✅ \"Turn right.\" ('Turn' dan keyin to'g'ridan-to'g'ri yo'nalish aytiladi).\n\n4. IELTS Speaking Part 1 Foundation Corner:\n- Topic: Hometown & Neighbourhood\n- Examiner: \"What facilities are available near your house?\"\n- Model Band 6.0+ Answer: \"In my local neighbourhood, there are plenty of convenient facilities. For example, there is a large supermarket just across the street, and the subway station is within five minutes' walk.\"\n- Examiner-Friendly Expressions: \"within walking distance\" (piyoda yetib borsa bo'ladigan masofada), \"just across the street\" (ko'chaning narigi tomonida).",
+                                "vocabulary": [
+                                        {
+                                                "term": "crossroads",
+                                                "reading": "/ˈkrɒsrəʊdz/",
+                                                "meaning": "chorraha",
+                                                "exampleSentence": "Be very careful when driving through this busy crossroads.",
+                                                "exampleTranslation": "Ushbu gavjum chorrahadan o'tayotganda juda ehtiyot bo'ling."
+                                        },
+                                        {
+                                                "term": "pharmacy",
+                                                "reading": "/ˈfɑːməsi/",
+                                                "meaning": "dorixona",
+                                                "exampleSentence": "The 24-hour pharmacy is located opposite the general hospital.",
+                                                "exampleTranslation": "24 soatlik dorixona umumiy shifoxonaning ro'parasida joylashgan."
+                                        },
+                                        {
+                                                "term": "turn right",
+                                                "reading": "/tɜːn raɪt/",
+                                                "meaning": "o'ngga burilmoq",
+                                                "exampleSentence": "Walk past the museum and then turn right into Elm Street.",
+                                                "exampleTranslation": "Muzeydan o'tib, keyin Elm ko'chasiga o'ngga buriling."
+                                        },
+                                        {
+                                                "term": "turn left",
+                                                "reading": "/tɜːn left/",
+                                                "meaning": "chapga burilmoq",
+                                                "exampleSentence": "Turn left at the next roundabout to reach the airport.",
+                                                "exampleTranslation": "Aeroportga yetish uchun keyingi aylanma yo'ldan chapga buriling."
+                                        },
+                                        {
+                                                "term": "go straight",
+                                                "reading": "/ɡəʊ streɪt/",
+                                                "meaning": "to'g'riga bormoq",
+                                                "exampleSentence": "Go straight ahead for two hundred metres until you see the cinema.",
+                                                "exampleTranslation": "Kinoteatrni ko'rmaguningizcha ikki yuz metr to'g'riga boring."
+                                        },
+                                        {
+                                                "term": "pedestrian crossing",
+                                                "reading": "/pəˈdestriən ˈkrɒsɪŋ/",
+                                                "meaning": "piyodalar o'tish yo'lagi (zebra)",
+                                                "exampleSentence": "Pedestrians should always cross wide roads at the pedestrian crossing.",
+                                                "exampleTranslation": "Piyodalar keng yo'llarni har doim piyodalar o'tish joyidan kesib o'tishlari kerak."
+                                        },
+                                        {
+                                                "term": "traffic lights",
+                                                "reading": "/ˈtræfɪk laɪts/",
+                                                "meaning": "svetofor",
+                                                "exampleSentence": "Wait until the traffic lights turn green before driving.",
+                                                "exampleTranslation": "Mashinani haydashdan oldin svetofor yashil bo'lishini kuting."
+                                        },
+                                        {
+                                                "term": "bus stop",
+                                                "reading": "/bʌs stɒp/",
+                                                "meaning": "avtobus bekati",
+                                                "exampleSentence": "There is a sheltered bus stop right in front of the supermarket.",
+                                                "exampleTranslation": "Supermarketning qoq oldida soyabonli avtobus bekati bor."
+                                        }
+                                ]
                         }
-                    ],
-                    "grammarRules": [
-                        {
-                            "pattern": "Places in Town & Giving Simple Directions",
-                            "meaning": "Shahardagi asosiy joylar va yo'nalish so'rash.",
-                            "usageNotes": "Shahar bo'ylab harakatlanish: Turn left (chapga buring), Turn right (o'ngga buring), Go straight (to'g'riga yuring).",
-                            "examples": [
-                                {
-                                    "sentence": "The hospital is near here.",
-                                    "translation": "Shifoxona shu yaqinda."
-                                },
-                                {
-                                    "sentence": "Where is the nearest bank?",
-                                    "translation": "Eng yaqin bank qayerda?"
-                                }
-                            ]
+                },
+                {
+                        "id": "en-a1-u3-l4-s2",
+                        "title": "Yo'l Ko'rsatish Mashqlari",
+                        "type": "practice",
+                        "estimatedMinutes": 4,
+                        "practiceData": {
+                                "instructions": "Eng to'g'ri yo'l so'rash yoki ko'rsatish iborasini tanlang.",
+                                "exercises": [
+                                        {
+                                                "id": "en-a1-u3-l4-e1",
+                                                "type": "multiple-choice",
+                                                "prompt": "Notanish kishidan metroga qanday borishni so'rashning eng to'g'ri usuli qaysi?",
+                                                "options": [
+                                                        "Hey, where is metro?",
+                                                        "Excuse me, how can I get to the nearest metro station?",
+                                                        "Show me metro quickly.",
+                                                        "Where I can find metro go?"
+                                                ],
+                                                "correctAnswer": 1,
+                                                "explanation": "'Excuse me, how can I get to...?' - yo'l so'rashning eng madaniy va to'g'ri shaklidir."
+                                        },
+                                        {
+                                                "id": "en-a1-u3-l4-e2",
+                                                "type": "multiple-choice",
+                                                "prompt": "Bo'sh joyni to'ldiring: '___ straight ahead, then turn right at the traffic lights.'",
+                                                "options": [
+                                                        "Going",
+                                                        "Go",
+                                                        "Go to",
+                                                        "You are go"
+                                                ],
+                                                "correctAnswer": 1,
+                                                "explanation": "Yo'l ko'rsatish buyruq fe'li bilan boshlanadi: 'Go straight ahead'."
+                                        },
+                                        {
+                                                "id": "en-a1-u3-l4-e3",
+                                                "type": "multiple-choice",
+                                                "prompt": "'Svetoforda chapga buriling' jumlasi ingliz tilida qanday bo'ladi?",
+                                                "options": [
+                                                        "Turn to left in traffic light.",
+                                                        "Turn left at the traffic lights.",
+                                                        "Turn the left on traffic lights.",
+                                                        "Turning left at traffic lights."
+                                                ],
+                                                "correctAnswer": 1,
+                                                "explanation": "'Turn left at the traffic lights' - 'turn' dan so'ng predlogsiz 'left' va nuqta joy uchun 'at' keladi."
+                                        },
+                                        {
+                                                "id": "en-a1-u3-l4-e4",
+                                                "type": "multiple-choice",
+                                                "prompt": "'Kutubxona sizning o'ng tomoningizda bo'ladi' jumlasi qaysi?",
+                                                "options": [
+                                                        "The library is on your right.",
+                                                        "The library is to your right.",
+                                                        "The library is in your right hand.",
+                                                        "The library on right side you."
+                                                ],
+                                                "correctAnswer": 0,
+                                                "explanation": "'On your right' yoki 'on your left' - tomonni ko'rsatuvchi standart ibora."
+                                        },
+                                        {
+                                                "id": "en-a1-u3-l4-e5",
+                                                "type": "multiple-choice",
+                                                "prompt": "'Dorixona bankning ro'parasida joylashgan.' Qaysi predlog kerak?",
+                                                "options": [
+                                                        "between",
+                                                        "opposite",
+                                                        "behind of",
+                                                        "in"
+                                                ],
+                                                "correctAnswer": 1,
+                                                "explanation": "'Opposite' - ro'parasida, qarama-qarshi tomonida deganidir."
+                                        }
+                                ]
                         }
-                    ]
+                },
+                {
+                        "id": "en-a1-u3-l4-s3",
+                        "title": "Dars Testi: Places & Directions",
+                        "type": "test",
+                        "estimatedMinutes": 5,
+                        "testData": {
+                                "instructions": "Savollarga to'g'ri javob berib, mavzuni mustahkamlang.",
+                    "passingScorePercentage": 80,
+                                "questions": [
+                                        {
+                                                "id": "en-a1-u3-l4-q1",
+                                                "question": "Yo'l so'rashda qaysi so'roq gap tuzilishi xato?",
+                                                "options": [
+                                                        "Excuse me, where is the post office?",
+                                                        "Excuse me, how do I get to the museum?",
+                                                        "Excuse me, where the supermarket is located?",
+                                                        "Excuse me, is there a pharmacy nearby?"
+                                                ],
+                                                "correctAnswerIndex": 2,
+                                                "explanation": "To'g'ridan-to'g'ri so'roq gapda yordamchi fe'l egadan oldinga o'tishi kerak: 'Where is the supermarket located?' bo'lishi lozim."
+                                        },
+                                        {
+                                                "id": "en-a1-u3-l4-q2",
+                                                "question": "'Piyodalar o'tish yo'lagi' ingliz tilida nima deyiladi?",
+                                                "options": [
+                                                        "pedestrian street",
+                                                        "pedestrian crossing",
+                                                        "crosswalk light",
+                                                        "car street"
+                                                ],
+                                                "correctAnswerIndex": 1,
+                                                "explanation": "Britaniya ingliz tilida 'pedestrian crossing' (yoki 'zebra crossing') deyiladi."
+                                        },
+                                        {
+                                                "id": "en-a1-u3-l4-q3",
+                                                "question": "'Chorrahada to'xtang' jumlasining to'g'ri ifodasi qaysi?",
+                                                "options": [
+                                                        "Stop at the crossroads.",
+                                                        "Stop to the crossroads.",
+                                                        "Stop on crossroads road.",
+                                                        "Stopping at crossroad."
+                                                ],
+                                                "correctAnswerIndex": 0,
+                                                "explanation": "'Stop at the crossroads' - aniq lokatsiyalar uchun 'at' qo'llanadi."
+                                        },
+                                        {
+                                                "id": "en-a1-u3-l4-q4",
+                                                "question": "'Take the second turning on your left.' Bu ko'rsatma nima ma'noni bildiradi?",
+                                                "options": [
+                                                        "Chapdagi birinchi ko'chaga kiring.",
+                                                        "Chapdagi ikkinchi burilishga buriling.",
+                                                        "O'ng tomonga qarab yuring.",
+                                                        "Ikki marta chapga qarang."
+                                                ],
+                                                "correctAnswerIndex": 1,
+                                                "explanation": "'Take the second turning on your left' - chapdagi ikkinchi ko'chaga / burilishga buriling deganidir."
+                                        },
+                                        {
+                                                "id": "en-a1-u3-l4-q5",
+                                                "question": "IELTS Speaking: 'What do you like most about your town?' savoliga qaysi javob ifodasi eng tabiiy?",
+                                                "options": [
+                                                        "My town have big building.",
+                                                        "What I appreciate most is that public transport is very efficient, and all key amenities are within walking distance.",
+                                                        "I like city because good.",
+                                                        "City is very many people."
+                                                ],
+                                                "correctAnswerIndex": 1,
+                                                "explanation": "'What I appreciate most is that public transport is very efficient, and all key amenities are within walking distance' - Band 6.5+ darajasidagi tabiiy va boy ifoda."
+                                        }
+                                ]
+                        }
                 }
-            },
-            {
-                "id": "en-a1-u3-l4-s2",
-                "title": "Mashq",
-                "type": "practice",
-                "estimatedMinutes": 4,
-                "practiceData": {
-                    "instructions": "Yo'nalish so'zini tanlang.",
-                    "exercises": [
-                        {
-                            "id": "en-a1-u3-l4-e1",
-                            "type": "multiple-choice",
-                            "prompt": "\"To'g'riga boring\" iborasini tanlang:",
-                            "options": [
-                                "Go under",
-                                "Go straight",
-                                "Turn left",
-                                "Turn back"
-                            ],
-                            "correctAnswer": 1,
-                            "explanation": "Go straight — To'g'riga yuring."
-                        },
-                        {
-                            "id": "en-a1-u3-l4-ex-2",
-                            "type": "multiple-choice",
-                            "prompt": "Choose the correct word to complete the sentence: \"Where is the nearest bank?\"",
-                            "options": [
-                                "doubt",
-                                "delay",
-                                "reluctance",
-                                "Bank"
-                            ],
-                            "correctAnswer": 3,
-                            "explanation": "\"Bank\" (Bank) fits the context appropriately."
-                        }
-                    ]
-                }
-            },
-            {
-                "id": "en-a1-u3-l4-s3",
-                "title": "Test",
-                "type": "test",
-                "estimatedMinutes": 4,
-                "testData": {
-                    "instructions": "Testni yeching.",
-                    "passingScorePercentage": 75,
-                    "questions": [
-                        {
-                            "id": "en-a1-u3-l4-q1",
-                            "question": "Excuse me, _______ is the library?",
-                            "options": [
-                                "when",
-                                "where",
-                                "what",
-                                "who"
-                            ],
-                            "correctAnswerIndex": 1,
-                            "explanation": "Where is the library?"
-                        },
-                        {
-                            "id": "en-a1-u3-l4-q2",
-                            "question": "Turn _______ at the corner to find the pharmacy.",
-                            "options": [
-                                "direct",
-                                "up",
-                                "right",
-                                "straight"
-                            ],
-                            "correctAnswerIndex": 2,
-                            "explanation": "Turn right (o'ngga buring)."
-                        },
-                        {
-                            "id": "en-a1-u3-l4-q3",
-                            "question": "\"Airport\" so'zining ma'nosi:",
-                            "options": [
-                                "Temiryo'l vokzali",
-                                "Mehmonxona",
-                                "Avtobus bekati",
-                                "Aeroport"
-                            ],
-                            "correctAnswerIndex": 3,
-                            "explanation": "Airport — Aeroport."
-                        },
-                        {
-                            "id": "en-a1-u3-l4-q4",
-                            "question": "It is opposite _______ the park.",
-                            "options": [
-                                "to",
-                                "in",
-                                "of",
-                                "no preposition"
-                            ],
-                            "correctAnswerIndex": 3,
-                            "explanation": "Opposite the park (to'g'risida)."
-                        }
-                    ]
-                }
-            }
         ]
-    },
+},
     {
         "id": "en-a1-u3-l5",
         "courseId": "english-a1",
@@ -3244,159 +3503,228 @@ export const ENGLISH_A1_LESSONS: Lesson[] = [
         "level": "A1",
         "lessonNumber": 5,
         "title": "Weather & Seasons",
-        "description": "Ob-havo va yil fasllari haqida suhbatlashish.",
-        "estimatedDurationMinutes": 10,
-        "icon": "☀️",
+        "description": "Ob-havo holatlari, yil fasllari, haroratni ifodalash va 'What is the weather like?' savoli.",
+        "estimatedDurationMinutes": 14,
+        "icon": "⛅",
         "steps": [
-            {
-                "id": "en-a1-u3-l5-s1",
-                "title": "Ob-havo Leksikasi",
-                "type": "learn",
-                "estimatedMinutes": 4,
-                "learnData": {
-                    "title": "What's the weather like?",
-                    "explanation": "Ob-havoni tasvirlash: It is sunny (quyoshli), It is rainy (yomg'irli), It is cold (sovuq).",
-                    "vocabulary": [
-                        {
-                            "term": "Sunny",
-                            "reading": "/ˈsʌn.i/",
-                            "meaning": "Quyoshli",
-                            "exampleSentence": "It is warm and sunny today.",
-                            "exampleTranslation": "Bugun iliq va quyoshli."
-                        },
-                        {
-                            "term": "Rainy",
-                            "reading": "/ˈreɪ.ni/",
-                            "meaning": "Yomg'irli",
-                            "exampleSentence": "Take an umbrella, it is rainy.",
-                            "exampleTranslation": "Soyabon oling, yomg'ir yog'yapti."
-                        },
-                        {
-                            "term": "Summer",
-                            "reading": "/ˈsʌm.ər/",
-                            "meaning": "Yoz fasli",
-                            "exampleSentence": "Summer is my favorite season.",
-                            "exampleTranslation": "Yoz mening sevimli faslim."
+                {
+                        "id": "en-a1-u3-l5-s1",
+                        "title": "Ob-havo va Yil Fasllari",
+                        "type": "learn",
+                        "estimatedMinutes": 5,
+                        "learnData": {
+                                "title": "Weather Conditions & Four Seasons",
+                                "explanation": "Ob-havoni tasvirlash va yil fasllari haqida gapirish qoidalari:\n\n1. Ob-havoni aytishda Boshlovchi Ega (Dummy Subject 'IT'):\n- O'zbek tilida \"Bugun sovuq\" yoki \"Hozir yomg'ir yog'yapti\" deb boshlasak-da, ingliz tilida ob-havo har doim **IT** olmoshi bilan boshlanadi!\n  • It is sunny today (Bugun quyoshli).\n  • It is cold and windy (Sovuq va shamolli).\n  • It is freezing outside (Tashqarida sovuq qattiq / muzlatyapti).\n  • It is raining at the moment (Ayni damda yomg'ir yog'yapti - hozirgi davomli zamon).\n  • It snows a lot in December (Dekabrda ko'p qor yog'adi - odatiy holat).\n\n2. Ob-havoni so'rash qolipi:\n- \"What is the weather like today?\" (Bugun ob-havo qanday?)\n- \"How is the weather outside?\" (Tashqarida havo qanday?)\n- \"What's the forecast for tomorrow?\" (Ertaga ob-havo prognozi qanday?)\n\n3. To'rt fasl (The Four Seasons):\n- Spring (bahor) - \"in spring\"\n- Summer (yoz) - \"in summer\"\n- Autumn / Fall (kuz) - \"in autumn\"\n- Winter (qish) - \"in winter\"\n- Fasllar oldidan 'IN' predlogi ishlatiladi: \"I love swimming in summer.\"\n\n4. O'zbek o'rganuvchilari uchun xavfli tuzoqlar (Common Pitfalls):\n- ❌ \"Today is very rain.\" -> ✅ \"It is raining today.\" (fe'l) yoki \"It is rainy today.\" (sifat).\n- ❌ \"The weather is very hot today.\" (to'g'ri, lekin ko'proq tabiiy variant: \"It is very hot today.\").\n- ❌ \"What the weather is like?\" -> ✅ \"What IS the weather like?\" (So'roqda yordamchi fe'l egadan oldinda bo'ladi).\n\n5. IELTS Speaking Part 1 Foundation Corner:\n- Topic: Weather & Seasons\n- Examiner: \"What kind of weather do you like best?\"\n- Model Band 6.0+ Answer: \"To be honest, I prefer mild and sunny weather, especially in spring. It is neither freezing cold nor scorching hot, which allows me to spend quality time outdoors with friends.\"\n- High-Scoring Idiomatic Pairs: \"mild and pleasant\" (mo'tadil va yoqimli), \"freezing cold\" (muzdek sovuq), \"scorching hot\" (jazirama issiq).",
+                                "vocabulary": [
+                                        {
+                                                "term": "sunny",
+                                                "reading": "/ˈsʌni/",
+                                                "meaning": "quyoshli, ochiq havo",
+                                                "exampleSentence": "It is a bright and sunny morning, perfect for a picnic.",
+                                                "exampleTranslation": "Yorqin va quyoshli tong, piknik qilish uchun ayni muddao."
+                                        },
+                                        {
+                                                "term": "rainy",
+                                                "reading": "/ˈreɪni/",
+                                                "meaning": "yomg'irli",
+                                                "exampleSentence": "Take your umbrella with you because it is a rainy afternoon.",
+                                                "exampleTranslation": "Soyaboningizni o'zingiz bilan oling, chunki tushdan keyin yomg'irli havo."
+                                        },
+                                        {
+                                                "term": "forecast",
+                                                "reading": "/ˈfɔːkɑːst/",
+                                                "meaning": "ob-havo ma'lumoti / prognoz",
+                                                "exampleSentence": "According to the evening weather forecast, temperatures will drop tomorrow.",
+                                                "exampleTranslation": "Kechki ob-havo prognoziga ko'ra, ertaga harorat pasayadi."
+                                        },
+                                        {
+                                                "term": "freezing",
+                                                "reading": "/ˈfriːzɪŋ/",
+                                                "meaning": "qattiq sovuq, muzlatadigan darajada sovuq",
+                                                "exampleSentence": "You should wear a heavy woolen coat; it is freezing outside.",
+                                                "exampleTranslation": "Qalin jun palto kiyishingiz kerak; tashqarida havo qattiq sovuq."
+                                        },
+                                        {
+                                                "term": "humid",
+                                                "reading": "/ˈhjuːmɪd/",
+                                                "meaning": "nam, dim (havo)",
+                                                "exampleSentence": "Summers in tropical areas can be extremely hot and humid.",
+                                                "exampleTranslation": "Tropik zonalarda yoz oylari juda issiq va dim bo'lishi mumkin."
+                                        },
+                                        {
+                                                "term": "autumn",
+                                                "reading": "/ˈɔːtəm/",
+                                                "meaning": "kuz fasli (Amerika inglizchasida: fall)",
+                                                "exampleSentence": "In autumn, the golden leaves fall from the trees.",
+                                                "exampleTranslation": "Kuzda tillarang barglar daraxtlardan to'kiladi."
+                                        },
+                                        {
+                                                "term": "spring",
+                                                "reading": "/sprɪŋ/",
+                                                "meaning": "bahor fasli",
+                                                "exampleSentence": "Everything turns green and fresh when spring arrives.",
+                                                "exampleTranslation": "Bahor kelganda hamma narsa yashillikka burkanadi va yangilanadi."
+                                        },
+                                        {
+                                                "term": "cloudy",
+                                                "reading": "/ˈklaʊdi/",
+                                                "meaning": "bulutli",
+                                                "exampleSentence": "The morning was clear, but now the sky is completely cloudy.",
+                                                "exampleTranslation": "Tong ochiq edi, lekin hozir osmon butunlay bulutli."
+                                        }
+                                ]
                         }
-                    ],
-                    "grammarRules": [
-                        {
-                            "pattern": "Weather & Seasons",
-                            "meaning": "Ob-havo va yil fasllari haqida suhbatlashish.",
-                            "usageNotes": "Ob-havoni tasvirlash: It is sunny (quyoshli), It is rainy (yomg'irli), It is cold (sovuq).",
-                            "examples": [
-                                {
-                                    "sentence": "It is warm and sunny today.",
-                                    "translation": "Bugun iliq va quyoshli."
-                                },
-                                {
-                                    "sentence": "Take an umbrella, it is rainy.",
-                                    "translation": "Soyabon oling, yomg'ir yog'yapti."
-                                }
-                            ]
+                },
+                {
+                        "id": "en-a1-u3-l5-s2",
+                        "title": "Ob-havo Mashqlari",
+                        "type": "practice",
+                        "estimatedMinutes": 4,
+                        "practiceData": {
+                                "instructions": "Ob-havoga oid to'g'ri so'z va iboralarni tanlang.",
+                                "exercises": [
+                                        {
+                                                "id": "en-a1-u3-l5-e1",
+                                                "type": "multiple-choice",
+                                                "prompt": "'Bugun ob-havo qanday?' savolining eng to'g'ri shakli qaysi?",
+                                                "options": [
+                                                        "What the weather like today?",
+                                                        "What is the weather like today?",
+                                                        "How weather is today?",
+                                                        "Which weather is it today?"
+                                                ],
+                                                "correctAnswer": 1,
+                                                "explanation": "'What is the weather like today?' - ob-havoni so'rash uchun asosiy standart qolipdir."
+                                        },
+                                        {
+                                                "id": "en-a1-u3-l5-e2",
+                                                "type": "multiple-choice",
+                                                "prompt": "Ayni paytda yomg'ir yog'ayotganini qaysi jumla to'g'ri ifodalaydi?",
+                                                "options": [
+                                                        "It is rain outside.",
+                                                        "It is raining outside.",
+                                                        "Today is raining outside.",
+                                                        "The weather rains outside now."
+                                                ],
+                                                "correctAnswer": 1,
+                                                "explanation": "Ayni paytdagi holat Present Continuous bilan 'It is raining outside' deb aytiladi."
+                                        },
+                                        {
+                                                "id": "en-a1-u3-l5-e3",
+                                                "type": "multiple-choice",
+                                                "prompt": "Fasllar oldidan qaysi predlog ishlatiladi? 'We usually go skiing ___ winter.'",
+                                                "options": [
+                                                        "on",
+                                                        "at",
+                                                        "in",
+                                                        "to"
+                                                ],
+                                                "correctAnswer": 2,
+                                                "explanation": "Yil fasllari (in winter, in summer, in spring, in autumn) oldidan har doim 'in' qo'llanadi."
+                                        },
+                                        {
+                                                "id": "en-a1-u3-l5-e4",
+                                                "type": "multiple-choice",
+                                                "prompt": "'Tashqarida havo juda sovuq, qalin kiyim kiy.' Bo'sh joyni to'ldiring: 'It is ___ cold outside.'",
+                                                "options": [
+                                                        "freezing",
+                                                        "cloudy",
+                                                        "sunny",
+                                                        "humid"
+                                                ],
+                                                "correctAnswer": 0,
+                                                "explanation": "'Freezing cold' - qattiq, qaqshatqich sovuqni ifodalovchi tabiiy iboradir."
+                                        },
+                                        {
+                                                "id": "en-a1-u3-l5-e5",
+                                                "type": "multiple-choice",
+                                                "prompt": "'Kuzda daraxtlar barglarini to'kadi.' Qaysi so'z 'kuz' ma'nosini bildiradi?",
+                                                "options": [
+                                                        "spring",
+                                                        "summer",
+                                                        "autumn",
+                                                        "winter"
+                                                ],
+                                                "correctAnswer": 2,
+                                                "explanation": "'Autumn' (AQSHda 'fall') - kuz fasli."
+                                        }
+                                ]
                         }
-                    ]
+                },
+                {
+                        "id": "en-a1-u3-l5-s3",
+                        "title": "Dars Testi: Weather & Seasons",
+                        "type": "test",
+                        "estimatedMinutes": 5,
+                        "testData": {
+                                "instructions": "Savollarga to'g'ri javob berib, mavzuni mustahkamlang.",
+                    "passingScorePercentage": 80,
+                                "questions": [
+                                        {
+                                                "id": "en-a1-u3-l5-q1",
+                                                "question": "Qaysi jumla ingliz tilida grammatik jihatdan xato tuzilgan?",
+                                                "options": [
+                                                        "It is very warm today.",
+                                                        "Today is hot and sunny.",
+                                                        "Today is rain a lot.",
+                                                        "It snows in January."
+                                                ],
+                                                "correctAnswerIndex": 2,
+                                                "explanation": "'Today is rain a lot' xato, chunki to be fe'li bilan fe'lning oddiy shakli yonma-yon kela olmaydi. 'It is raining a lot' yoki 'It rains a lot' bo'lishi kerak."
+                                        },
+                                        {
+                                                "id": "en-a1-u3-l5-q2",
+                                                "question": "'Ob-havo ma'lumoti / prognozi' so'zining inglizcha muqobili qaysi?",
+                                                "options": [
+                                                        "weather forecast",
+                                                        "weather newsroom",
+                                                        "temperature note",
+                                                        "cloud paper"
+                                                ],
+                                                "correctAnswerIndex": 0,
+                                                "explanation": "'Weather forecast' - ob-havo prognozi."
+                                        },
+                                        {
+                                                "id": "en-a1-u3-l5-q3",
+                                                "question": "'The climate is hot and ___ near the ocean' (havoda namlik yuqori). Qaysi sifat mos keladi?",
+                                                "options": [
+                                                        "dry",
+                                                        "humid",
+                                                        "freezing",
+                                                        "clear"
+                                                ],
+                                                "correctAnswerIndex": 1,
+                                                "explanation": "'Humid' - nam, dim havo holati."
+                                        },
+                                        {
+                                                "id": "en-a1-u3-l5-q4",
+                                                "question": "'What is the weather like in Tashkent in summer?' savoliga to'g'ri javob qaysi?",
+                                                "options": [
+                                                        "It is usually very hot and dry.",
+                                                        "In summer it rain snow.",
+                                                        "The Tashkent is cold season.",
+                                                        "It are hot in summer."
+                                                ],
+                                                "correctAnswerIndex": 0,
+                                                "explanation": "'It is usually very hot and dry' grammatik va mazmunan mukammal javob."
+                                        },
+                                        {
+                                                "id": "en-a1-u3-l5-q5",
+                                                "question": "IELTS Speaking: 'Do you prefer rainy or sunny days?' savoliga eng to'liq javob qaysi?",
+                                                "options": [
+                                                        "Sunny day because I like.",
+                                                        "I definitely prefer sunny days because good weather always lifts my mood and allows me to go for long walks.",
+                                                        "Rain is no good, sun yes.",
+                                                        "I am like sunny day everyday."
+                                                ],
+                                                "correctAnswerIndex": 1,
+                                                "explanation": "'I definitely prefer sunny days because good weather always lifts my mood and allows me to...' - his-tuyg'uni ochib beruvchi, idiomali va yuqori ballga loyiq javob."
+                                        }
+                                ]
+                        }
                 }
-            },
-            {
-                "id": "en-a1-u3-l5-s2",
-                "title": "Mashq",
-                "type": "practice",
-                "estimatedMinutes": 3,
-                "practiceData": {
-                    "instructions": "Ob-havo so'zini tanlang.",
-                    "exercises": [
-                        {
-                            "id": "en-a1-u3-l5-e1",
-                            "type": "multiple-choice",
-                            "prompt": "\"Qorli ob-havo\" qanday ataladi?",
-                            "options": [
-                                "Windy",
-                                "Sunny",
-                                "Snowy",
-                                "Cloudy"
-                            ],
-                            "correctAnswer": 2,
-                            "explanation": "Snowy — Qorli."
-                        },
-                        {
-                            "id": "en-a1-u3-l5-ex-2",
-                            "type": "multiple-choice",
-                            "prompt": "Choose the correct word to complete the sentence: \"Take an umbrella, it is rainy.\"",
-                            "options": [
-                                "reluctance",
-                                "doubt",
-                                "Rainy",
-                                "delay"
-                            ],
-                            "correctAnswer": 2,
-                            "explanation": "\"Rainy\" (Yomg'irli) fits the context appropriately."
-                        }
-                    ]
-                }
-            },
-            {
-                "id": "en-a1-u3-l5-s3",
-                "title": "Test",
-                "type": "test",
-                "estimatedMinutes": 3,
-                "testData": {
-                    "instructions": "Savollarga javob bering.",
-                    "passingScorePercentage": 75,
-                    "questions": [
-                        {
-                            "id": "en-a1-u3-l5-q1",
-                            "question": "It is very _______ in winter.",
-                            "options": [
-                                "warm",
-                                "hot",
-                                "cold",
-                                "sunny"
-                            ],
-                            "correctAnswerIndex": 2,
-                            "explanation": "Qishda sovuq: cold."
-                        },
-                        {
-                            "id": "en-a1-u3-l5-q2",
-                            "question": "How many _______ are there in a year?",
-                            "options": [
-                                "season",
-                                "seasons",
-                                "clouds",
-                                "weather"
-                            ],
-                            "correctAnswerIndex": 1,
-                            "explanation": "Four seasons in a year."
-                        },
-                        {
-                            "id": "en-a1-u3-l5-q3",
-                            "question": "\"Spring\" qaysi fasl?",
-                            "options": [
-                                "Bahor",
-                                "Yoz",
-                                "Qish",
-                                "Kuz"
-                            ],
-                            "correctAnswerIndex": 0,
-                            "explanation": "Spring — Bahor."
-                        },
-                        {
-                            "id": "en-a1-u3-l5-q4",
-                            "question": "It is _______ today, so wear a warm jacket.",
-                            "options": [
-                                "hot and sunny",
-                                "warm",
-                                "summer",
-                                "windy and cold"
-                            ],
-                            "correctAnswerIndex": 3,
-                            "explanation": "Windy and cold."
-                        }
-                    ]
-                }
-            }
         ]
-    },
+},
     {
         "id": "en-a1-u4-l1",
         "courseId": "english-a1",
