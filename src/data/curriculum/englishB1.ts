@@ -4125,823 +4125,1351 @@ export const ENGLISH_B1_LESSONS: Lesson[] = [
         ]
     },
     {
-        "id": "en-b1-u4-l1",
-        "courseId": "english-b1",
-        "unitId": "en-b1-u4",
-        "unitTitle": "Unit 4: Relative Clauses & Modal Deduction",
-        "language": "en",
-        "level": "B1",
-        "lessonNumber": 1,
-        "title": "Defining Relative Clauses (who, which, that, where)",
-        "description": "Aniqlovchi ergash gaplar orqali odamlar, narsalar va joylarni aniqlashtirish.",
-        "estimatedDurationMinutes": 14,
-        "icon": "🔗",
-        "steps": [
-            {
-                "id": "en-b1-u4-l1-s1",
-                "title": "Defining Clauses",
-                "type": "learn",
-                "estimatedMinutes": 4,
-                "learnData": {
-                    "title": "Who, Which, That, Where, Whose",
-                    "explanation": "Who — odamlar uchun, Which/That — narsalar va hayvonlar uchun, Where — joylar uchun, Whose — egalik uchun.",
-                    "keyPoints": [
-                        "The woman who lives next door is an architect.",
-                        "The book which / that I borrowed was fascinating.",
-                        "The cafe where we met is closed today."
-                    ],
-                    "grammarRules": [
-                        {
-                            "pattern": "Defining Relative Clauses (who, which, that, where)",
-                            "meaning": "Aniqlovchi ergash gaplar orqali odamlar, narsalar va joylarni aniqlashtirish.",
-                            "usageNotes": "Who — odamlar uchun, Which/That — narsalar va hayvonlar uchun, Where — joylar uchun, Whose — egalik uchun.",
-                            "examples": [
-                                {
-                                    "sentence": "I study English every day with dedication.",
-                                    "translation": "Har kuni ingliz tilini astoydil o'rganaman."
-                                }
-                            ]
-                        }
-                    ],
-                    "vocabulary": [
-                        {
-                            "term": "Requirement",
-                            "reading": "/rɪˈkwaɪə.mənt/",
-                            "meaning": "Talab, shart",
-                            "exampleSentence": "Fluency is a core requirement for this role.",
-                            "exampleTranslation": "Ravonlik bu lavozim uchun asosiy talabdir."
-                        },
-                        {
-                            "term": "Significantly",
-                            "reading": "/sɪɡˈnɪf.ɪ.kənt.li/",
-                            "meaning": "Sezilarli darajada",
-                            "exampleSentence": "Her grades improved significantly this term.",
-                            "exampleTranslation": "Bu semestrda uning baholari sezilarli darajada yaxshilandi."
-                        },
-                        {
-                            "term": "Perspective",
-                            "reading": "/pəˈspek.tɪv/",
-                            "meaning": "Nuqtayi nazar",
-                            "exampleSentence": "Traveling gives you a broader perspective on life.",
-                            "exampleTranslation": "Sayohat qilish hayotga kengroq nuqtayi nazar beradi."
-                        }
-                    ]
-                }
-            },
-            {
-                "id": "en-b1-u4-l1-s2",
-                "title": "Mashq",
-                "type": "practice",
-                "estimatedMinutes": 5,
-                "practiceData": {
-                    "instructions": "To'g'ri nisbiy olmoshni tanlang.",
-                    "exercises": [
-                        {
-                            "id": "en-b1-u4-l1-e1",
-                            "type": "multiple-choice",
-                            "prompt": "\"The man _______ car was stolen reported it to the police.\"",
-                            "options": [
-                                "whose",
-                                "which",
-                                "whom",
-                                "who"
-                            ],
-                            "correctAnswer": 0,
-                            "explanation": "Egalik: whose car."
-                        },
-                        {
-                            "id": "en-b1-u4-l1-ex-2",
-                            "type": "multiple-choice",
-                            "prompt": "Choose the correct word to complete the sentence: \"Her grades improved significantly this term.\"",
-                            "options": [
-                                "reluctance",
-                                "delay",
-                                "Significantly",
-                                "doubt"
-                            ],
-                            "correctAnswer": 2,
-                            "explanation": "\"Significantly\" (Sezilarli darajada) fits the context appropriately."
-                        }
-                    ]
-                }
-            },
-            {
-                "id": "en-b1-u4-l1-s3",
-                "title": "Test",
-                "type": "test",
-                "estimatedMinutes": 5,
-                "testData": {
-                    "instructions": "Savollarga javob bering.",
-                    "passingScorePercentage": 75,
-                    "questions": [
-                        {
-                            "id": "en-b1-u4-l1-q1",
-                            "question": "A doctor is a person _______ treats ill patients.",
-                            "options": [
-                                "who",
-                                "where",
-                                "whose",
-                                "which"
-                            ],
-                            "correctAnswerIndex": 0,
-                            "explanation": "Inson uchun: who."
-                        },
-                        {
-                            "id": "en-b1-u4-l1-q2",
-                            "question": "This is the school _______ I studied ten years ago.",
-                            "options": [
-                                "which",
-                                "where",
-                                "that",
-                                "who"
-                            ],
-                            "correctAnswerIndex": 1,
-                            "explanation": "Joy uchun: where."
-                        },
-                        {
-                            "id": "en-b1-u4-l1-q3",
-                            "question": "I bought a gadget _______ helps monitor sleep quality.",
-                            "options": [
-                                "where",
-                                "who",
-                                "that",
-                                "whose"
-                            ],
-                            "correctAnswerIndex": 2,
-                            "explanation": "Narsa uchun: that / which."
-                        },
-                        {
-                            "id": "en-b1-u4-l1-q4",
-                            "question": "Do you know the girl _______ father is a pilot?",
-                            "options": [
-                                "whom",
-                                "which",
-                                "who",
-                                "whose"
-                            ],
-                            "correctAnswerIndex": 3,
-                            "explanation": "Whose father."
-                        }
-                    ]
-                }
+    "id": "en-b1-u4-l1",
+    "courseId": "english-b1",
+    "unitId": "en-b1-u4",
+    "unitTitle": "Unit 4: Relative Clauses & Modal Deduction",
+    "language": "en",
+    "level": "B1",
+    "lessonNumber": 1,
+    "title": "Defining Relative Clauses (who, which, that, where, whose)",
+    "description": "Aniqlovchi ergash gaplar: shaxs, buyum, joy va egalikni aniqlovchi bog'lovchilar yordamida ikkita mustaqil fikrni professional birlashtirish.",
+    "estimatedDurationMinutes": 16,
+    "icon": "🔗",
+    "steps": [
+        {
+            "id": "en-b1-u4-l1-s1",
+            "title": "Defining Relative Clauses: Zaruriy Aniqlovchilar",
+            "type": "learn",
+            "estimatedMinutes": 6,
+            "learnData": {
+                "title": "Defining Relative Clauses (who, which, that, where, whose)",
+                "explanation": "Ingliz tilida Defining Relative Clauses (aniqlovchi ergash gaplar) qaysi shaxs, buyum yoki joy haqida gap ketayotganini aniq belgilash uchun xizmat qiladi. Bu qism gapdan olib tashlansa, asosiy fikr noaniq bo'lib qoladi. Vergul (comma) ASLO ishlatilmaydi!\n\n1. Asosiy Bog'lovchi Olmoshlar (Relative Pronouns):\n- who / that -> Insonlar uchun: 'The specialist who conducted the training was very knowledgeable.'\n- which / that -> Narsalar va hayvonlar uchun: 'The application that automates data backups saves two hours daily.'\n- whose -> Egalik ('kimningki'): 'I met an engineer whose software revolutionized logistics.'\n- where -> Joylar uchun ('qayerdaki'): 'This is the conference hall where international delegates assemble.'\n- when -> Vaqt uchun ('qachonki'): 'I remember the day when I received my university acceptance letter.'\n\n2. O'zbek Tili Bilan Sintaktik Qiyos (Contrastive Analysis):\n- O'zbek tilida aniqlovchi ergash gaplar odatda sifatdosh (-gan, -digan) shaklida otning OLDIGA qo'yiladi: 'Kecha ma'ruza o'qigan professor...'\n- Ingliz tilida esa asosiy otdan KEYIN nisbiy olmosh bilan ergash gap kiritiladi: 'The professor who delivered the lecture yesterday...'\n\n3. Olmoshni Tushirib Qoldirish (Omission of Relative Pronouns):\n- Agar nisbiy olmoshdan keyin boshqa ega (subject) kelsa (ya'ni olmosh to'ldiruvchi bo'lsa), uni tushirib qoldirish mumkin: 'The book (that) I read was fascinating.'\n- Ammo nisbiy olmosh fe'lning egasi bo'lsa, uni tushirib bo'lmaydi: 'The engineer who designed this bridge...' ('designed'ning egasi 'who').\n\n4. O'zbek o'rganuvchilari uchun xavfli tuzoqlar (Common Pitfalls):\n- ❌ 'The man which spoke at the meeting...' -> ✅ 'The man WHO spoke at the meeting...' (Insonlarga nisbatan 'which' ishlatish qo'pol xatodir!).\n- ❌ 'The car which I drove it was electric.' -> ✅ 'The car which I drove was electric.' ('which' allaqachon obyekt bo'lgani uchun 'it' olmoshini takrorlash grammatik ortiqchalik / redundancy hisoblanadi).\n- ❌ 'The students, who score high, get scholarships.' (defining clause da keraksiz vergul qo'yish xato).\n\n5. IELTS Speaking Foundation Corner:\n- Topic: People and Mentors (Speaking Part 2)\n- Question: 'Describe a mentor who had a strong influence on you.'\n- Model Band 6.0-6.5 Answer: 'I would like to describe my secondary school mathematics teacher, who fundamentally reshaped my intellectual curiosity. He was an educator whose dedication motivated every student in our group. Whenever we grappled with formulas that seemed impossible, he devised real-world scenarios where those mathematical principles operated. Thanks to the analytical confidence that he fostered, I managed to pursue computer science at university.'\n- Syntax Booster Tip: Gaplaringizni 'who', 'whose', 'where' bilan boyitsangiz, Grammatical Range and Accuracy mezoni bo'yicha darhol 6.0+ ballga chiqasiz.",
+                "vocabulary": [
+                    {
+                        "term": "participant",
+                        "reading": "/pɑːˈtɪs.ɪ.pənt/",
+                        "meaning": "qatnashchi, ishtirokchi",
+                        "exampleSentence": "The participants who submitted feedback early received complimentary learning materials.",
+                        "exampleTranslation": "Fikr-mulohazalarini erta yuborgan ishtirokchilar bepul o'quv materiallarini olishdi."
+                    },
+                    {
+                        "term": "appliance",
+                        "reading": "/əˈplaɪ.əns/",
+                        "meaning": "maishiy yoki texnik asbob-uskuna",
+                        "exampleSentence": "We prioritize purchasing electrical appliances that minimize power consumption.",
+                        "exampleTranslation": "Biz elektr energiyasi sarfini minimallashtiradigan texnikalarni xarid qilishni afzal ko'ramiz."
+                    },
+                    {
+                        "term": "supervisor",
+                        "reading": "/ˈsuː.pə.vaɪ.zər/",
+                        "meaning": "nazoratchi, rahbar",
+                        "exampleSentence": "The project supervisor whose team meets quarterly targets will receive a commendation.",
+                        "exampleTranslation": "Jamoasi choraklik rejani bajargan loyiha rahbari maqtov yorlig'i bilan taqdirlanadi."
+                    },
+                    {
+                        "term": "venue",
+                        "reading": "/ˈven.juː/",
+                        "meaning": "tadbir o'tkaziladigan joy / bino",
+                        "exampleSentence": "This is the newly renovated venue where the symposium will be hosted.",
+                        "exampleTranslation": "Bu simpozium o'tkaziladigan yangi ta'mirlangan bino."
+                    },
+                    {
+                        "term": "initiative",
+                        "reading": "/ɪˈnɪʃ.ə.tɪv/",
+                        "meaning": "tashabbus, amaliy loyiha",
+                        "exampleSentence": "The community initiative that targets urban recycling has gained widespread support.",
+                        "exampleTranslation": "Shaharni qayta ishlashga qaratilgan jamoat tashabbusi keng qo'llab-quvvatlandi."
+                    },
+                    {
+                        "term": "scholarship",
+                        "reading": "/ˈskɒl.ə.ʃɪp/",
+                        "meaning": "ta'lim granti, stipendiya",
+                        "exampleSentence": "Students who satisfy stringent academic criteria qualify for this prestigious scholarship.",
+                        "exampleTranslation": "Qat'iy akademik talablarga javob beradigan talabalar ushbu nufuzli grantga ega bo'ladilar."
+                    },
+                    {
+                        "term": "colleague",
+                        "reading": "/ˈkɒl.iːɡ/",
+                        "meaning": "hamkasb",
+                        "exampleSentence": "I collaborated with a senior colleague whose expertise in data analytics was invaluable.",
+                        "exampleTranslation": "Men ma'lumotlar tahlili bo'yicha tajribasi beqiyos bo'lgan katta hamkasbim bilan hamkorlik qildim."
+                    },
+                    {
+                        "term": "facility",
+                        "reading": "/fəˈsɪl.ə.ti/",
+                        "meaning": "qulaylik, majmua, inshoot",
+                        "exampleSentence": "The laboratory facility where modern vaccines are tested operates under sterile conditions.",
+                        "exampleTranslation": "Zamonaviy vaksinalar sinovdan o'tkaziladigan laboratoriya majmuasi steril sharoitda ishlaydi."
+                    }
+                ],
+                "grammarRules": [
+                    {
+                        "pattern": "Noun (person) + who / that + Verb + Object",
+                        "meaning": "Shaxsni aniqlovchi ergash gap",
+                        "usageNotes": "Insonlar uchun 'who' yoki 'that' qo'llanadi. 'Which' ishlatish taqiqlanadi. Vergul qo'yilmaydi.",
+                        "examples": [
+                            {
+                                "sentence": "The candidate who performed best in the interview was hired.",
+                                "translation": "Suhbatda eng yaxshi natija ko'rsatgan nomzod ishga qabul qilindi."
+                            },
+                            {
+                                "sentence": "I spoke to the doctor that diagnosed my condition.",
+                                "translation": "Men mening holatimga tashxis qo'ygan shifokor bilan suhbatlashdim."
+                            }
+                        ]
+                    },
+                    {
+                        "pattern": "Noun (thing) + which / that + Verb / Clause",
+                        "meaning": "Narsa yoki tushunchani aniqlovchi ergash gap",
+                        "usageNotes": "Jonivorlar va narsalar uchun 'which' yoki 'that' qo'llaniladi.",
+                        "examples": [
+                            {
+                                "sentence": "The program that handles accounting was updated yesterday.",
+                                "translation": "Buxgalteriya hisobini yuritadigan dastur kecha yangilandi."
+                            },
+                            {
+                                "sentence": "He bought a gadget which tracks sleep patterns.",
+                                "translation": "U uyqu fazalarini kuzatib boruvchi moslama sotib oldi."
+                            }
+                        ]
+                    },
+                    {
+                        "pattern": "Noun + whose + Noun + Verb...",
+                        "meaning": "Egalik ma'nosini ifodalovchi aniqlovchi ('kimningki')",
+                        "usageNotes": "'whose' insonlar va tashkilotlar uchun egalikni ko'rsatadi.",
+                        "examples": [
+                            {
+                                "sentence": "We assisted a tourist whose passport had been misplaced.",
+                                "translation": "Biz pasporti yo'qolgan sayyohga yordam berdik."
+                            }
+                        ]
+                    },
+                    {
+                        "pattern": "Noun (place) + where + Subject + Verb",
+                        "meaning": "Harakat sodir bo'ladigan joyni aniqlash",
+                        "usageNotes": "Agar manzil ichida biror ish-harakat ro'y bersa 'where' o'rinli bo'ladi.",
+                        "examples": [
+                            {
+                                "sentence": "This is the library where I completed my master's thesis.",
+                                "translation": "Bu men magistrlik dissertatsiyamni yozgan kutubxona."
+                            }
+                        ]
+                    }
+                ]
             }
-        ]
-    },
+        },
+        {
+            "id": "en-b1-u4-l1-s2",
+            "title": "Amaliy Mashqlar",
+            "type": "practice",
+            "estimatedMinutes": 5,
+            "practiceData": {
+                "instructions": "Defining relative clauses qoidalariga mos eng to'g'ri variantni tanlang.",
+                "exercises": [
+                    {
+                        "id": "en-b1-u4-l1-e1",
+                        "type": "multiple-choice",
+                        "prompt": "The lecturer _______ delivered the keynote address is an authority on renewable energy.",
+                        "options": [
+                            "who",
+                            "which",
+                            "whose",
+                            "where"
+                        ],
+                        "correctAnswer": 0,
+                        "explanation": "Ma'ruza o'quvchi shaxs (lecturer) bo'lganligi sababli 'who' to'g'ri keladi."
+                    },
+                    {
+                        "id": "en-b1-u4-l1-e2",
+                        "type": "multiple-choice",
+                        "prompt": "She founded a start-up _______ develops automated software for medical diagnostics.",
+                        "options": [
+                            "who",
+                            "that",
+                            "where",
+                            "whose"
+                        ],
+                        "correctAnswer": 1,
+                        "explanation": "Start-up kompaniya / loyiha (narsa) bo'lgani uchun 'that' yoki 'which' ishlatiladi."
+                    },
+                    {
+                        "id": "en-b1-u4-l1-e3",
+                        "type": "multiple-choice",
+                        "prompt": "I met a researcher _______ laboratory recently discovered an eco-friendly polymer.",
+                        "options": [
+                            "whom",
+                            "whose",
+                            "which",
+                            "that"
+                        ],
+                        "correctAnswer": 1,
+                        "explanation": "Tadqiqotchining laboratoriyasi haqida egalik ma'nosi ketmoqda, shuning uchun 'whose' to'g'ri."
+                    },
+                    {
+                        "id": "en-b1-u4-l1-e4",
+                        "type": "multiple-choice",
+                        "prompt": "This is the co-working hub _______ digital nomads collaborate on international projects.",
+                        "options": [
+                            "which",
+                            "where",
+                            "that",
+                            "whose"
+                        ],
+                        "correctAnswer": 1,
+                        "explanation": "Harakat ro'y beradigan makon / joy aniqlanayotgani uchun 'where' qo'llaniladi."
+                    },
+                    {
+                        "id": "en-b1-u4-l1-e5",
+                        "type": "multiple-choice",
+                        "prompt": "In which sentence can the relative pronoun be safely OMITTED (tushirib qoldirilishi mumkin)?",
+                        "options": [
+                            "The candidate who spoke eloquently received the grant.",
+                            "The book that I borrowed from the library is due tomorrow.",
+                            "The athlete who broke the world record trains eight hours a day.",
+                            "The software which runs the mainframe needs updating."
+                        ],
+                        "correctAnswer": 1,
+                        "explanation": "'that I borrowed' jumlasida 'that' to'ldiruvchi vazifasidadir (I borrowed the book). Shuning uchun uni tushirib: 'The book I borrowed...' deyish mumkin."
+                    }
+                ]
+            }
+        },
+        {
+            "id": "en-b1-u4-l1-s3",
+            "title": "Yakuniy Test",
+            "type": "test",
+            "estimatedMinutes": 5,
+            "testData": {
+                "instructions": "5 ta savolga to'g'ri javob bering. O'tish bali: 80% (kamida 4 ta to'g'ri).",
+                "passingScorePercentage": 80,
+                "questions": [
+                    {
+                        "id": "en-b1-u4-l1-q1",
+                        "question": "A philanthropist is a wealthy individual _______ donates capital to humanitarian causes.",
+                        "options": [
+                            "which",
+                            "who",
+                            "whose",
+                            "where"
+                        ],
+                        "correctAnswerIndex": 1,
+                        "explanation": "Insonlarga nisbatan 'who' qo'llanadi."
+                    },
+                    {
+                        "id": "en-b1-u4-l1-q2",
+                        "question": "Identify the grammatically correct sentence without redundant pronouns:",
+                        "options": [
+                            "The car which I drove it was electric.",
+                            "The car which I drove was electric.",
+                            "The car who I drove was electric.",
+                            "The car whose I drove it was electric."
+                        ],
+                        "correctAnswerIndex": 1,
+                        "explanation": "'which I drove' yetarli; 'it' olmoshini qo'shish xato takrorlanish sanaladi."
+                    },
+                    {
+                        "id": "en-b1-u4-l1-q3",
+                        "question": "The university _______ campus is situated near the river is celebrating its centenary.",
+                        "options": [
+                            "whose",
+                            "who",
+                            "which",
+                            "where"
+                        ],
+                        "correctAnswerIndex": 0,
+                        "explanation": "Universitetning kampusi (egalik) bo'lgani sababli 'whose campus' ishlatiladi."
+                    },
+                    {
+                        "id": "en-b1-u4-l1-q4",
+                        "question": "Why do defining relative clauses NOT take commas?",
+                        "options": [
+                            "Because they provide non-essential trivia.",
+                            "Because the information is essential to restrict and identify the specific noun.",
+                            "Because commas are only used after adjectives.",
+                            "Because they are strictly written in formal letters only."
+                        ],
+                        "correctAnswerIndex": 1,
+                        "explanation": "Defining clause otni aynan qaysi ekanligini belgilab beruvchi zaruriy ma'lumot beradi, shuning uchun vergul qo'yilmaydi."
+                    },
+                    {
+                        "id": "en-b1-u4-l1-q5",
+                        "question": "The museum _______ we observed ancient manuscripts was built in the nineteenth century.",
+                        "options": [
+                            "which",
+                            "where",
+                            "that",
+                            "whose"
+                        ],
+                        "correctAnswerIndex": 1,
+                        "explanation": "Muzey ichida harakat sodir bo'lgan joy ma'nosida 'where we observed' bo'ladi."
+                    }
+                ]
+            }
+        }
+    ]
+},
     {
-        "id": "en-b1-u4-l2",
-        "courseId": "english-b1",
-        "unitId": "en-b1-u4",
-        "unitTitle": "Unit 4: Relative Clauses & Modal Deduction",
-        "language": "en",
-        "level": "B1",
-        "lessonNumber": 2,
-        "title": "Non-defining Relative Clauses (extra info with commas)",
-        "description": "Qo'shimcha ma'lumot beruvchi ergash gaplar va vergul qo'yilishi.",
-        "estimatedDurationMinutes": 14,
-        "icon": "✍️",
-        "steps": [
-            {
-                "id": "en-b1-u4-l2-s1",
-                "title": "Non-defining Clauses",
-                "type": "learn",
-                "estimatedMinutes": 4,
-                "learnData": {
-                    "title": "Non-defining Relative Clauses",
-                    "explanation": "Asosiy gapga shunchaki qo'shimcha ma'lumot qo'shadi, vergullar bilan ajratiladi. Bu turda \"that\" ishlatilmaydi!",
-                    "keyPoints": [
-                        "My brother, who lives in Berlin, is visiting us next week.",
-                        "Paris, which is the capital of France, attracts millions of tourists."
-                    ],
-                    "grammarRules": [
-                        {
-                            "pattern": "Non-defining Relative Clauses (extra info with commas)",
-                            "meaning": "Qo'shimcha ma'lumot beruvchi ergash gaplar va vergul qo'yilishi.",
-                            "usageNotes": "Asosiy gapga shunchaki qo'shimcha ma'lumot qo'shadi, vergullar bilan ajratiladi. Bu turda \"that\" ishlatilmaydi!",
-                            "examples": [
-                                {
-                                    "sentence": "I study English every day with dedication.",
-                                    "translation": "Har kuni ingliz tilini astoydil o'rganaman."
-                                }
-                            ]
-                        }
-                    ],
-                    "vocabulary": [
-                        {
-                            "term": "Significantly",
-                            "reading": "/sɪɡˈnɪf.ɪ.kənt.li/",
-                            "meaning": "Sezilarli darajada",
-                            "exampleSentence": "Her grades improved significantly this term.",
-                            "exampleTranslation": "Bu semestrda uning baholari sezilarli darajada yaxshilandi."
-                        },
-                        {
-                            "term": "Perspective",
-                            "reading": "/pəˈspek.tɪv/",
-                            "meaning": "Nuqtayi nazar",
-                            "exampleSentence": "Traveling gives you a broader perspective on life.",
-                            "exampleTranslation": "Sayohat qilish hayotga kengroq nuqtayi nazar beradi."
-                        },
-                        {
-                            "term": "Efficient",
-                            "reading": "/ɪˈfɪʃ.ənt/",
-                            "meaning": "Samarali",
-                            "exampleSentence": "We need to find a more efficient solution.",
-                            "exampleTranslation": "Biz yanada samaraliroq yechim topishimiz kerak."
-                        }
-                    ]
-                }
-            },
-            {
-                "id": "en-b1-u4-l2-s2",
-                "title": "Mashq",
-                "type": "practice",
-                "estimatedMinutes": 5,
-                "practiceData": {
-                    "instructions": "To'g'ri olmoshni tanlang.",
-                    "exercises": [
-                        {
-                            "id": "en-b1-u4-l2-e1",
-                            "type": "multiple-choice",
-                            "prompt": "\"Samarkand, _______ is an ancient city, is famous for its Registan square.\"",
-                            "options": [
-                                "that",
-                                "where",
-                                "who",
-                                "which"
-                            ],
-                            "correctAnswer": 3,
-                            "explanation": "Verguldan keyin \"that\" ishlatilmaydi: which."
-                        },
-                        {
-                            "id": "en-b1-u4-l2-ex-2",
-                            "type": "multiple-choice",
-                            "prompt": "Choose the correct word to complete the sentence: \"Traveling gives you a broader perspective on life.\"",
-                            "options": [
-                                "doubt",
-                                "Perspective",
-                                "delay",
-                                "reluctance"
-                            ],
-                            "correctAnswer": 1,
-                            "explanation": "\"Perspective\" (Nuqtayi nazar) fits the context appropriately."
-                        }
-                    ]
-                }
-            },
-            {
-                "id": "en-b1-u4-l2-s3",
-                "title": "Test",
-                "type": "test",
-                "estimatedMinutes": 5,
-                "testData": {
-                    "instructions": "Savollarga javob bering.",
-                    "passingScorePercentage": 75,
-                    "questions": [
-                        {
-                            "id": "en-b1-u4-l2-q1",
-                            "question": "Which sentence has correct punctuation?",
-                            "options": [
-                                "My mother who is a doctor, loves her job.",
-                                "My mother who is a doctor loves, her job.",
-                                "My mother, that is a doctor, loves her job.",
-                                "My mother, who is a doctor, loves her job."
-                            ],
-                            "correctAnswerIndex": 3,
-                            "explanation": "Ikkala tomondan vergul bilan ajratilgan."
-                        },
-                        {
-                            "id": "en-b1-u4-l2-q2",
-                            "question": "Can \"that\" be used in a non-defining relative clause?",
-                            "options": [
-                                "Only for people",
-                                "Only for places",
-                                "No, never",
-                                "Yes, always"
-                            ],
-                            "correctAnswerIndex": 2,
-                            "explanation": "Non-defining gaplarda \"that\" ishlatilmaydi."
-                        },
-                        {
-                            "id": "en-b1-u4-l2-q3",
-                            "question": "Albert Einstein, _______ was born in Germany, won the Nobel Prize.",
-                            "options": [
-                                "where",
-                                "who",
-                                "which",
-                                "that"
-                            ],
-                            "correctAnswerIndex": 1,
-                            "explanation": "Inson uchun: who."
-                        },
-                        {
-                            "id": "en-b1-u4-l2-q4",
-                            "question": "The company's headquarters, _______ are located in New York, employ 500 staff.",
-                            "options": [
-                                "which",
-                                "that",
-                                "where",
-                                "who"
-                            ],
-                            "correctAnswerIndex": 0,
-                            "explanation": "Which."
-                        }
-                    ]
-                }
+    "id": "en-b1-u4-l2",
+    "courseId": "english-b1",
+    "unitId": "en-b1-u4",
+    "unitTitle": "Unit 4: Relative Clauses & Modal Deduction",
+    "language": "en",
+    "level": "B1",
+    "lessonNumber": 2,
+    "title": "Non-defining Relative Clauses (extra info with commas)",
+    "description": "Izohlovchi ergash gaplar: vergul bilan ajratilgan qo'shimcha axborot berish va rasmiy nutqda fikrni boyitish qoidalari.",
+    "estimatedDurationMinutes": 16,
+    "icon": "📝",
+    "steps": [
+        {
+            "id": "en-b1-u4-l2-s1",
+            "title": "Non-defining Relative Clauses: Qo'shimcha Izoh",
+            "type": "learn",
+            "estimatedMinutes": 6,
+            "learnData": {
+                "title": "Non-defining Relative Clauses (Extra Information with Commas)",
+                "explanation": "Non-defining relative clauses (izohlovchi ergash gaplar) allaqachon aniq bo'lgan shaxs, narsa yoki joy haqida *qo'shimcha, ikkinchi darajali* ma'lumot beradi. Ushbu qism gapdan olib tashlansa ham, asosiy gapning ma'nosi o'zgarmaydi va to'liq saqlanib qoladi.\n\n1. Eng Muhim 3 Ta Qat'iy Qoida:\n- 1. Vergul (comma) bilan ajratilishi SHART! Gap o'rtasida kelsa, ikki tomondan vergul qo'yiladi: 'Dr. Smith, who founded the clinic, has retired.'\n- 2. 'THAT' ISHLATILMAYDI! Verguldan keyin hech qachon 'that' kelmaydi. Faqat 'who', 'which', 'whose', 'where' ishlatiladi.\n- 3. Nisbiy olmosh hech qachon tushirib qoldirilmaydi!\n\n2. Butun Gapga Nisbatan 'Which' (Sentential Relative Clause):\n- 'He passed his final exam with honors, which delighted his parents.' -> Bu yerda 'which' faqat bitta so'zga emas, balki butun oldingi gapga (u imtihonni a'lo topshirganiga) ishora qiladi.\n\n3. Defining vs Non-defining Farqi:\n- Defining: 'My sister who lives in Paris is a journalist.' (Mening bir nechta opam bor, aynan Parijda yashaydigan biri jurnalist).\n- Non-defining: 'My sister, who lives in Paris, is a journalist.' (Mening bitta opam bor, u haqida qo'shimcha ravishda Parijda yashashi aytilmoqda).\n\n4. O'zbek o'rganuvchilari uchun xavfli tuzoqlar (Common Pitfalls):\n- ❌ 'Samarkand, that is a historical city, attracts visitors.' -> ✅ 'Samarkand, WHICH is a historical city, attracts visitors.' (Vergulli gapda 'that' qat'iyan taqiqlanadi!).\n- ❌ 'My mother who is a doctor loves gardening.' (Insonning bitta onasi bo'lganligi sababli, ikki tomondan vergul qo'yilishi shart: 'My mother, who is a doctor, loves gardening.').\n- ❌ 'He offered to help me which was kind.' (Butun gapga izoh beruvchi 'which' oldidan vergul tushirib qoldirilmasligi kerak).\n\n5. IELTS Speaking Foundation Corner:\n- Topic: Historic Cities and Cultural Heritage (Speaking Part 3)\n- Question: 'Why is it important to conserve historical monuments in modern cities?'\n- Model Band 6.5 Answer: 'In my perspective, safeguarding heritage landmarks is crucial. Take Bukhara, which preserves architecture spanning over a millennium; it provides a tangible link to our ancestral roots. These historic structures, which international tourists admire tremendously, generate substantial revenue for regional artisans, which in turn stimulates sustainable economic prosperity.'\n- Grammar Tip: Part 3 da fikringizni non-defining clauses bilan boyitsangiz ('which in turn...', 'who has dedicated his career to...'), javobingiz ancha yetuk va akademik eshitiladi.",
+                "vocabulary": [
+                    {
+                        "term": "headquarters",
+                        "reading": "/ˈhedˌkwɔː.təz/",
+                        "meaning": "bosh ofis, bosh qarorgoh",
+                        "exampleSentence": "The corporate headquarters, which overlooks the central plaza, houses 600 employees.",
+                        "exampleTranslation": "Markaziy maydonga qarab turgan kompaniya bosh qarorgohida 600 nafar xodim ishlaydi."
+                    },
+                    {
+                        "term": "archaeologist",
+                        "reading": "/ˌɑː.kiˈɒl.ə.dʒɪst/",
+                        "meaning": "arxeolog",
+                        "exampleSentence": "Professor Harrison, who is a renowned archaeologist, identified the bronze artifacts.",
+                        "exampleTranslation": "Mashhur arxeolog bo'lgan professor Xarrison bronza buyumlarni aniqlab berdi."
+                    },
+                    {
+                        "term": "innovation",
+                        "reading": "/ˌɪn.əˈveɪ.ʃən/",
+                        "meaning": "innovatsiya, yangilik",
+                        "exampleSentence": "Their water purification device, which uses graphene filters, won an international prize.",
+                        "exampleTranslation": "Grafen filtrlaridan foydalanadigan suv tozalash moslamasi xalqaro sovrinni qo'lga kiritdi."
+                    },
+                    {
+                        "term": "tutor",
+                        "reading": "/ˈtʃuː.tər/",
+                        "meaning": "shaxsiy o'qituvchi, repetitor, ilmiy rahbar",
+                        "exampleSentence": "My university tutor, whose academic guidance was pivotal, edited my research draft.",
+                        "exampleTranslation": "Ilmiy maslahati hal qiluvchi bo'lgan universitet o'qituvchim tadqiqot qoralamamni tahrirladi."
+                    },
+                    {
+                        "term": "distinction",
+                        "reading": "/dɪˈstɪŋk.ʃən/",
+                        "meaning": "a'lo baho, imtiyoz, farqlanish",
+                        "exampleSentence": "She graduated with distinction, which opened doors to international doctoral programs.",
+                        "exampleTranslation": "U o'qishni a'lo baho bilan tugatdi, bu esa xalqaro doktorantura dasturlariga yo'l ochdi."
+                    },
+                    {
+                        "term": "landmark",
+                        "reading": "/ˈlænd.mɑːk/",
+                        "meaning": "tarixiy obida, shahar ramzi",
+                        "exampleSentence": "The ancient minaret, which has withstood several earthquakes, is undergoing restoration.",
+                        "exampleTranslation": "Bir nechta zilzilalarga bardosh bergan qadimiy minora restavratsiya qilinmoqda."
+                    },
+                    {
+                        "term": "breakthrough",
+                        "reading": "/ˈbreɪk.θruː/",
+                        "meaning": "katta kashfiyot, ilmiy siljish",
+                        "exampleSentence": "The clinical breakthrough, which occurred after years of trials, promises effective therapy.",
+                        "exampleTranslation": "Yillar davomidagi sinovlardan so'ng yuz bergan klinik yutuq samarali davolashni va'da qilmoqda."
+                    },
+                    {
+                        "term": "metropolis",
+                        "reading": "/məˈtrɒp.əl.ɪs/",
+                        "meaning": "katta megapolis shahar",
+                        "exampleSentence": "Tokyo, where millions commute daily via underground transit, is a model metropolis.",
+                        "exampleTranslation": "Millionlab odamlar har kuni metroda qatnaydigan Tokio namunali megapolisdir."
+                    }
+                ],
+                "grammarRules": [
+                    {
+                        "pattern": "Proper Noun, who + Verb..., Main Clause",
+                        "meaning": "Shaxs haqida qo'shimcha ma'lumot kiritish (ikkala tomondan vergul)",
+                        "usageNotes": "Faqat 'who' ishlatiladi. 'That' taqiqlanadi.",
+                        "examples": [
+                            {
+                                "sentence": "Alexander, who studied abroad, now manages our export branch.",
+                                "translation": "Chet elda tahsil olgan Aleksandr endi eksport filialimizni boshqaradi."
+                            }
+                        ]
+                    },
+                    {
+                        "pattern": "Unique Noun / Proper Noun, which + Verb..., Main Clause",
+                        "meaning": "Narsa, shahar yoki obyekt haqida qo'shimcha ma'lumot",
+                        "usageNotes": "Verguldan keyin narsalar uchun doimo 'which' ishlatiladi.",
+                        "examples": [
+                            {
+                                "sentence": "The Eiffel Tower, which was completed in 1889, attracts millions of visitors.",
+                                "translation": "1889-yilda qurib bitkazilgan Eyfel minorasi millionlab sayyohlarni jalb qiladi."
+                            }
+                        ]
+                    },
+                    {
+                        "pattern": "Main Clause, which + Verb...",
+                        "meaning": "Butun oldingi fikrga nisbatan munosabat yoki natija bildirish",
+                        "usageNotes": "Oldidagi barcha voqea-hodisani umumlashtirish uchun 'which' ishlatiladi.",
+                        "examples": [
+                            {
+                                "sentence": "He arrived thirty minutes early, which impressed the interviewers.",
+                                "translation": "U o'ttiz daqiqa erta yetib keldi, bu esa suhbat oluvchilarda katta taassurot qoldirdi."
+                            }
+                        ]
+                    }
+                ]
             }
-        ]
-    },
+        },
+        {
+            "id": "en-b1-u4-l2-s2",
+            "title": "Amaliy Mashqlar",
+            "type": "practice",
+            "estimatedMinutes": 5,
+            "practiceData": {
+                "instructions": "Non-defining relative clauses qoidalariga mos variantlarni tanlang.",
+                "exercises": [
+                    {
+                        "id": "en-b1-u4-l2-e1",
+                        "type": "multiple-choice",
+                        "prompt": "Shakespeare, _______ wrote Hamlet, was born in Stratford-upon-Avon.",
+                        "options": [
+                            "who",
+                            "that",
+                            "which",
+                            "whom"
+                        ],
+                        "correctAnswer": 0,
+                        "explanation": "Taniqli shaxs nomi va vergul bor bo'lgani sababli 'that' ishlatilmaydi; faqat 'who' to'g'ri."
+                    },
+                    {
+                        "id": "en-b1-u4-l2-e2",
+                        "type": "multiple-choice",
+                        "prompt": "The new hybrid bus fleet, _______ was manufactured domestically, cuts emissions by 40%.",
+                        "options": [
+                            "which",
+                            "that",
+                            "what",
+                            "where"
+                        ],
+                        "correctAnswer": 0,
+                        "explanation": "Non-defining clause da narsalar uchun verguldan keyin faqat 'which' ishlatiladi ('that' xato)."
+                    },
+                    {
+                        "id": "en-b1-u4-l2-e3",
+                        "type": "multiple-choice",
+                        "prompt": "The flight was delayed due to heavy fog, _______ caused immense frustration among travelers.",
+                        "options": [
+                            "what",
+                            "which",
+                            "that",
+                            "this"
+                        ],
+                        "correctAnswer": 1,
+                        "explanation": "Butun oldingi voqea (parvozning kechikishi) oqibatini ifodalash uchun verguldan keyin 'which' qo'llanadi."
+                    },
+                    {
+                        "id": "en-b1-u4-l2-e4",
+                        "type": "multiple-choice",
+                        "prompt": "Which sentence contains CORRECT punctuation and grammar for non-defining clauses?",
+                        "options": [
+                            "Samarkand that is famous for its blue tiles attracted thousands of visitors.",
+                            "Samarkand, which is famous for its blue tiles, attracted thousands of visitors.",
+                            "Samarkand, that is famous for its blue tiles attracted thousands of visitors.",
+                            "Samarkand which is famous for its blue tiles attracted thousands of visitors."
+                        ],
+                        "correctAnswer": 1,
+                        "explanation": "Ikkala tomondan vergul bilan ajratilgan va 'which' to'g'ri qo'llangan variant B dir."
+                    },
+                    {
+                        "id": "en-b1-u4-l2-e5",
+                        "type": "multiple-choice",
+                        "prompt": "Professor Higgins, _______ lecture on phonetics was fascinating, is visiting our department.",
+                        "options": [
+                            "who",
+                            "whose",
+                            "whom",
+                            "which"
+                        ],
+                        "correctAnswer": 1,
+                        "explanation": "Professor Higginsning ma'ruzasi (egalik) bo'lganligi sababli 'whose' to'g'ri."
+                    }
+                ]
+            }
+        },
+        {
+            "id": "en-b1-u4-l2-s3",
+            "title": "Yakuniy Test",
+            "type": "test",
+            "estimatedMinutes": 5,
+            "testData": {
+                "instructions": "5 ta savolga to'g'ri javob bering. O'tish bali: 80%.",
+                "passingScorePercentage": 80,
+                "questions": [
+                    {
+                        "id": "en-b1-u4-l2-q1",
+                        "question": "Why is 'that' incorrect in: 'The internet, that was invented decades ago, changed the world'?",
+                        "options": [
+                            "Because 'that' cannot refer to inventions.",
+                            "Because 'that' is strictly prohibited in non-defining relative clauses set off by commas.",
+                            "Because 'that' requires the past perfect tense.",
+                            "Because 'that' is only used for human beings."
+                        ],
+                        "correctAnswerIndex": 1,
+                        "explanation": "Vergulli izohlovchi gaplarda 'that' ishlatish grammatik jihatdan taqiqlanadi; uning o'rniga 'which' bo'lishi kerak."
+                    },
+                    {
+                        "id": "en-b1-u4-l2-q2",
+                        "question": "The company founder, _______ started the brand in 2010, gave an inspiring speech.",
+                        "options": [
+                            "who",
+                            "that",
+                            "which",
+                            "whose"
+                        ],
+                        "correctAnswerIndex": 0,
+                        "explanation": "Shaxs va vergul mavjud bo'lgani sababli 'who' to'g'ri keladi."
+                    },
+                    {
+                        "id": "en-b1-u4-l2-q3",
+                        "question": "He volunteered to work overtime on Saturday, _______ impressed the executive team.",
+                        "options": [
+                            "what",
+                            "that",
+                            "which",
+                            "as"
+                        ],
+                        "correctAnswerIndex": 2,
+                        "explanation": "Butun gapga nisbatan izoh bildirish uchun 'which' ishlatiladi."
+                    },
+                    {
+                        "id": "en-b1-u4-l2-q4",
+                        "question": "Can the relative pronoun be omitted in a non-defining relative clause?",
+                        "options": [
+                            "Yes, always.",
+                            "Yes, if it acts as an object.",
+                            "No, relative pronouns can never be omitted in non-defining relative clauses.",
+                            "Only in informal speech."
+                        ],
+                        "correctAnswerIndex": 2,
+                        "explanation": "Non-defining relative clauses ichidagi nisbiy olmoshlar hech qachon tushirib qoldirilishi mumkin emas."
+                    },
+                    {
+                        "id": "en-b1-u4-l2-q5",
+                        "question": "Our central library, _______ thousands of rare manuscripts are preserved, underwent restoration.",
+                        "options": [
+                            "which",
+                            "where",
+                            "that",
+                            "what"
+                        ],
+                        "correctAnswerIndex": 1,
+                        "explanation": "Kutubxona ichida qo'lyozmalar saqlanadigan joy nazarda tutilgani uchun 'where' to'g'ri."
+                    }
+                ]
+            }
+        }
+    ]
+},
     {
-        "id": "en-b1-u4-l3",
-        "courseId": "english-b1",
-        "unitId": "en-b1-u4",
-        "unitTitle": "Unit 4: Relative Clauses & Modal Deduction",
-        "language": "en",
-        "level": "B1",
-        "lessonNumber": 3,
-        "title": "Modals of Deduction: Must, Might, Can't be",
-        "description": "Mantiqiy xulosa chiqarish: 100% ishonch (must be), ehtimol (might be), imkonsiz (can't be).",
-        "estimatedDurationMinutes": 14,
-        "icon": "🔍",
-        "steps": [
-            {
-                "id": "en-b1-u4-l3-s1",
-                "title": "Mantiqiy Xulosa Modal Fe'llari",
-                "type": "learn",
-                "estimatedMinutes": 4,
-                "learnData": {
-                    "title": "Must, Might / May, Can't",
-                    "explanation": "Must be — 95%+ ishonch (\"shunday bo'lsa kerak\"). Might / May be — 50% ehtimol (\"bo'lishi mumkin\"). Can't be — 0% ehtimol (\"bo'lishi mumkin emas\").",
-                    "keyPoints": [
-                        "He has a Ferrari; he must be wealthy.",
-                        "She hasn't answered; she might be in a meeting.",
-                        "He only left 5 minutes ago; he can't be in Samarkand already."
-                    ],
-                    "grammarRules": [
-                        {
-                            "pattern": "Modals of Deduction: Must, Might, Can't be",
-                            "meaning": "Mantiqiy xulosa chiqarish: 100% ishonch (must be), ehtimol (might be), imkonsiz (can't be).",
-                            "usageNotes": "Must be — 95%+ ishonch (\"shunday bo'lsa kerak\"). Might / May be — 50% ehtimol (\"bo'lishi mumkin\"). Can't be — 0% ehtimol (\"bo'lishi mumkin emas\").",
-                            "examples": [
-                                {
-                                    "sentence": "I study English every day with dedication.",
-                                    "translation": "Har kuni ingliz tilini astoydil o'rganaman."
-                                }
-                            ]
-                        }
-                    ],
-                    "vocabulary": [
-                        {
-                            "term": "Perspective",
-                            "reading": "/pəˈspek.tɪv/",
-                            "meaning": "Nuqtayi nazar",
-                            "exampleSentence": "Traveling gives you a broader perspective on life.",
-                            "exampleTranslation": "Sayohat qilish hayotga kengroq nuqtayi nazar beradi."
-                        },
-                        {
-                            "term": "Efficient",
-                            "reading": "/ɪˈfɪʃ.ənt/",
-                            "meaning": "Samarali",
-                            "exampleSentence": "We need to find a more efficient solution.",
-                            "exampleTranslation": "Biz yanada samaraliroq yechim topishimiz kerak."
-                        },
-                        {
-                            "term": "Requirement",
-                            "reading": "/rɪˈkwaɪə.mənt/",
-                            "meaning": "Talab, shart",
-                            "exampleSentence": "Fluency is a core requirement for this role.",
-                            "exampleTranslation": "Ravonlik bu lavozim uchun asosiy talabdir."
-                        }
-                    ]
-                }
-            },
-            {
-                "id": "en-b1-u4-l3-s2",
-                "title": "Mashq",
-                "type": "practice",
-                "estimatedMinutes": 5,
-                "practiceData": {
-                    "instructions": "To'g'ri modal xulosani tanlang.",
-                    "exercises": [
-                        {
-                            "id": "en-b1-u4-l3-e1",
-                            "type": "multiple-choice",
-                            "prompt": "\"The lights are off and no one answers the door. They _______ be out.\"",
-                            "options": [
-                                "shouldn't",
-                                "can't",
-                                "must",
-                                "needn't"
-                            ],
-                            "correctAnswer": 2,
-                            "explanation": "Mantiqiy kuchli xulosa: must be out."
-                        },
-                        {
-                            "id": "en-b1-u4-l3-ex-2",
-                            "type": "multiple-choice",
-                            "prompt": "Choose the correct word to complete the sentence: \"We need to find a more efficient solution.\"",
-                            "options": [
-                                "Efficient",
-                                "reluctance",
-                                "doubt",
-                                "delay"
-                            ],
-                            "correctAnswer": 0,
-                            "explanation": "\"Efficient\" (Samarali) fits the context appropriately."
-                        }
-                    ]
-                }
-            },
-            {
-                "id": "en-b1-u4-l3-s3",
-                "title": "Test",
-                "type": "test",
-                "estimatedMinutes": 5,
-                "testData": {
-                    "instructions": "Savollarga javob bering.",
-                    "passingScorePercentage": 75,
-                    "questions": [
-                        {
-                            "id": "en-b1-u4-l3-q1",
-                            "question": "That _______ be John. He is in London this week!",
-                            "options": [
-                                "might",
-                                "must",
-                                "can't",
-                                "should"
-                            ],
-                            "correctAnswerIndex": 2,
-                            "explanation": "Imkonsiz: can't be."
-                        },
-                        {
-                            "id": "en-b1-u4-l3-q2",
-                            "question": "Take an umbrella. It _______ rain later this afternoon.",
-                            "options": [
-                                "can't",
-                                "ought",
-                                "must to",
-                                "might"
-                            ],
-                            "correctAnswerIndex": 3,
-                            "explanation": "Ehtimol: might rain."
-                        },
-                        {
-                            "id": "en-b1-u4-l3-q3",
-                            "question": "She studied for 10 hours today. She _______ be exhausted.",
-                            "options": [
-                                "must",
-                                "shouldn't",
-                                "might not",
-                                "can't"
-                            ],
-                            "correctAnswerIndex": 0,
-                            "explanation": "Kuchli xulosa: must be exhausted."
-                        },
-                        {
-                            "id": "en-b1-u4-l3-q4",
-                            "question": "\"This restaurant can't be cheap; look at the diamond chandeliers.\" Bu jumlada can't be nima ma'noda?",
-                            "options": [
-                                "Arzon bo'lishi kerak",
-                                "Arzon bo'lishi shart",
-                                "Arzon bo'lishi aslo mumkin emas (kuchli inkor xulosa)",
-                                "Arzon bo'lishi mumkin"
-                            ],
-                            "correctAnswerIndex": 2,
-                            "explanation": "Mantiqiy inkor xulosa."
-                        }
-                    ]
-                }
+    "id": "en-b1-u4-l3",
+    "courseId": "english-b1",
+    "unitId": "en-b1-u4",
+    "unitTitle": "Unit 4: Relative Clauses & Modal Deduction",
+    "language": "en",
+    "level": "B1",
+    "lessonNumber": 3,
+    "title": "Modals of Deduction: Must, Might, Can't be",
+    "description": "Hozirgi va kelasi zamon ehtimollik va mantiqiy xulosalari: dalillarga asoslangan ishonch yoki imkonsizlikni bildirish.",
+    "estimatedDurationMinutes": 16,
+    "icon": "🔍",
+    "steps": [
+        {
+            "id": "en-b1-u4-l3-s1",
+            "title": "Modals of Deduction: Ehtimollik va Xulosalar",
+            "type": "learn",
+            "estimatedMinutes": 6,
+            "learnData": {
+                "title": "Modals of Deduction: Must be, Can't be, Might / Could be",
+                "explanation": "Modals of Deduction (mantiqiy xulosa modal fe'llari) biror fakt yoki holat qanchalik haqiqat ekanligini mavjud dalillarga asoslanib ifodalash uchun ishlatiladi.\n\n1. Ishonch Darajalari (Degrees of Certainty):\n- MUST BE (95-99% ijobiy ishonch): 'U shubhasiz shunday bo'lsa kerak'. Masalan: 'He has worked 12 hours without a break; he must be exhausted.'\n- CAN'T BE (95-99% inkor ishonch / imkonsiz): 'Bu bo'lishi aslo mumkin emas'. Masalan: 'That car can't be John's; he sold his vehicle last month.'\n  ⚠️ E'tibor bering: Mantiqiy imkonsizlik uchun 'must not be' ISHLATILMAYDI! Har doim 'can't be' deyiladi.\n- MIGHT / MAY / COULD BE (30-50% taxmin / ehtimollik): 'Bo'lishi ham, bo'lmasligi ham mumkin'. Masalan: 'Take an umbrella; it might rain later.' / 'She is not at her desk; she could be in a meeting.'\n\n2. Davom Etayotgan Harakat Xulosasi (Continuous Deduction):\n- Modal + be + Verb-ing: 'Listen to the piano music upstairs! David must be practicing for the concert.'\n\n3. O'zbek Tili Bilan Sintaktik Qiyos (Contrastive Analysis):\n- O'zbek tilida '-sa kerak', 'bo'lishi mumkin', 'bo'lishi aslo mumkin emas' qo'shimchalari va iboralaridan foydalaniladi.\n- Ingliz tilida bu ma'no fe'l oldiga qo'yiladigan maxsus modal fe'llar ('must', 'can't', 'might') orqali qisqa va aniq ifodalanadi.\n\n4. O'zbek o'rganuvchilari uchun xavfli tuzoqlar (Common Pitfalls):\n- ❌ 'He didn't eat all day; he must not be hungry.' (imkonsiz ma'nosida) -> ✅ 'He CAN'T be full. / He MUST be starving.'\n- ❌ 'It can rain tomorrow.' -> ✅ 'It MIGHT / MAY / COULD rain tomorrow.' (Muayyan kungi ob-havo ehtimoli uchun 'can' ishlatilmaydi; faqat 'might/may/could' qo'llaniladi!).\n- ❌ 'She might is at home.' -> ✅ 'She might BE at home.' (Modal fe'ldan keyin har doim fe'lning asosi 'be' keladi).\n\n5. IELTS Speaking Foundation Corner:\n- Topic: Future Predictions & Automation (Speaking Part 3)\n- Question: 'How might artificial intelligence affect everyday office jobs in the next ten years?'\n- Model Band 6.5 Answer: 'Well, automated algorithms could certainly handle mundane administrative tasks, such as scheduling or invoice filing. Consequently, white-collar employees might be required to focus more on creative problem-solving and interpersonal communication. Some pessimists claim that human managers will disappear entirely, but that can't be realistic because empathy and ethical judgement can never be authentically replicated by machines.'\n- Strategy: Part 3 da fikrlaringizni 'might', 'could', 'can't be' kabi deduction vositalari bilan ifodalash imtihon oluvchiga o'zbek tilidagi qoliplardan chiqib, moslashuvchan inglizcha mantiqiy xulosalar qila olishingizni ko'rsatadi.",
+                "vocabulary": [
+                    {
+                        "term": "exhausted",
+                        "reading": "/ɪɡˈzɔː.stɪd/",
+                        "meaning": "juda qattiq charchagan, darmonsiz",
+                        "exampleSentence": "After hiking up the steep mountain for seven hours, the tourists must be exhausted.",
+                        "exampleTranslation": "Tik tog' bo'ylab yetti soat piyoda yurgach, sayyohlar juda qattiq charchagan bo'lsa kerak."
+                    },
+                    {
+                        "term": "plausible",
+                        "reading": "/ˈplɔː.zə.bəl/",
+                        "meaning": "ishonarli, haqiqatga yaqin",
+                        "exampleSentence": "Her explanation for the delay sounds plausible, but it might still require verification.",
+                        "exampleTranslation": "Uning kechikish bo'yicha tushuntirishi ishonarli ko'rinadi, ammo baribir tekshirish talab qilinishi mumkin."
+                    },
+                    {
+                        "term": "genuine",
+                        "reading": "/ˈdʒen.ju.ɪn/",
+                        "meaning": "haqiqiy, asl, qalbaki bo'lmagan",
+                        "exampleSentence": "At that unbelievably cheap price, the leather handbag can't be genuine.",
+                        "exampleTranslation": "Bunday aql bovar qilmas darajada arzon narxda bu charm sumka asl bo'lishi mumkin emas."
+                    },
+                    {
+                        "term": "identical",
+                        "reading": "/aɪˈden.tɪ.kəl/",
+                        "meaning": "aynan bir xil, batamom o'xshash",
+                        "exampleSentence": "The two signature specimens look virtually identical to the naked eye.",
+                        "exampleTranslation": "Bu ikki imzo namunasi oddiy ko'z bilan qaraganda deyarli aynan bir xil ko'rinadi."
+                    },
+                    {
+                        "term": "evident",
+                        "reading": "/ˈev.ɪ.dənt/",
+                        "meaning": "ravshan, yaqqol ko'rinib turgan",
+                        "exampleSentence": "From the celebratory atmosphere, it is evident that they must have won the contract.",
+                        "exampleTranslation": "Bayramona muhitdan ravshanki, ular shartnomani yutib olgan bo'lsalar kerak."
+                    },
+                    {
+                        "term": "speculation",
+                        "reading": "/ˌspek.jəˈleɪ.ʃən/",
+                        "meaning": "taxmin, faraz",
+                        "exampleSentence": "Until the official report is published, any commentary is pure speculation.",
+                        "exampleTranslation": "Rasmiy hisobot e'lon qilinmaguncha, har qanday sharh shunchaki taxmindir."
+                    },
+                    {
+                        "term": "conclusive",
+                        "reading": "/kənˈkluː.sɪv/",
+                        "meaning": "qat'iy, uzil-kesil, hal qiluvchi",
+                        "exampleSentence": "The laboratory tests provided conclusive evidence regarding the water contamination.",
+                        "exampleTranslation": "Laboratoriya sinovlari suvning ifloslanganligi haqida qat'iy dalillar keltirdi."
+                    },
+                    {
+                        "term": "unoccupied",
+                        "reading": "/ʌnˈɒk.jə.paɪd/",
+                        "meaning": "bo'sh, band bo'lmagan",
+                        "exampleSentence": "The office lights are switched off; the premises must be unoccupied.",
+                        "exampleTranslation": "Ofis chiroqlari o'chirilgan; bino bo'sh bo'lsa kerak."
+                    }
+                ],
+                "grammarRules": [
+                    {
+                        "pattern": "Subject + must + be + Adjective / Noun",
+                        "meaning": "Kuchli mantiqiy ishonch (95%+ ijobiy)",
+                        "usageNotes": "Mavjud dalillar asosida biror narsa haqiqat ekanligiga deyarli 100% ishonch bildirilganda ishlatiladi.",
+                        "examples": [
+                            {
+                                "sentence": "You have worked 14 hours today; you must be exhausted.",
+                                "translation": "Bugun 14 soat ishladingiz; juda charchagan bo'lishingiz kerak."
+                            },
+                            {
+                                "sentence": "He speaks four languages fluently; he must be a linguist.",
+                                "translation": "U to'rtta tilda ravon gapiradi; u tilshunos bo'lsa kerak."
+                            }
+                        ]
+                    },
+                    {
+                        "pattern": "Subject + can't + be + Adjective / Noun",
+                        "meaning": "Mantiqiy imkonsizlik (95%+ inkor)",
+                        "usageNotes": "Mavjud dalillar asosida biror narsa bo'lishi aslo mumkin emasligini bildiradi.",
+                        "examples": [
+                            {
+                                "sentence": "He can't be forty years old; he looks like a college student.",
+                                "translation": "U qirq yoshda bo'lishi mumkin emas; u kollej talabasiga o'xshaydi."
+                            }
+                        ]
+                    },
+                    {
+                        "pattern": "Subject + might / may / could + Verb (bare infinitive)",
+                        "meaning": "O'rtacha noaniq ehtimollik (30-50%)",
+                        "usageNotes": "Biror voqea sodir bo'lishi mumkinligini, lekin aniq emasligini ko'rsatadi.",
+                        "examples": [
+                            {
+                                "sentence": "The parcel might arrive this afternoon, but I am not certain.",
+                                "translation": "Posilka bugun tushdan keyin kelishi mumkin, lekin aniq bilmayman."
+                            }
+                        ]
+                    }
+                ]
             }
-        ]
-    },
+        },
+        {
+            "id": "en-b1-u4-l3-s2",
+            "title": "Amaliy Mashqlar",
+            "type": "practice",
+            "estimatedMinutes": 5,
+            "practiceData": {
+                "instructions": "Vaziyatga mos to'g'ri modal xulosani tanlang.",
+                "exercises": [
+                    {
+                        "id": "en-b1-u4-l3-e1",
+                        "type": "multiple-choice",
+                        "prompt": "You haven't slept for 24 hours and your eyes are bloodshot. You _______ be completely exhausted!",
+                        "options": [
+                            "must",
+                            "can't",
+                            "might",
+                            "should"
+                        ],
+                        "correctAnswer": 0,
+                        "explanation": "Dalil yaqqol ko'rinib turibdi (24 soat uxlamagan), shuning uchun 99% ishonch bilan 'must be' deyiladi."
+                    },
+                    {
+                        "id": "en-b1-u4-l3-e2",
+                        "type": "multiple-choice",
+                        "prompt": "He is only 16 years old. He _______ be a fully qualified commercial airline pilot!",
+                        "options": [
+                            "must",
+                            "can't",
+                            "might not",
+                            "could"
+                        ],
+                        "correctAnswer": 1,
+                        "explanation": "16 yoshda malakali tijoriy uchuvchi bo'lish mantiqan imkonsiz, shuning uchun 'can't be' to'g'ri."
+                    },
+                    {
+                        "id": "en-b1-u4-l3-e3",
+                        "type": "multiple-choice",
+                        "prompt": "I am not certain where Lola is right now; she _______ be working in the archive room or in the canteen.",
+                        "options": [
+                            "must",
+                            "might",
+                            "can't",
+                            "has to"
+                        ],
+                        "correctAnswer": 1,
+                        "explanation": "'I am not certain' (aniq bilmayman) iborasi o'rtacha ehtimollikni bildiradi, shuning uchun 'might' to'g'ri."
+                    },
+                    {
+                        "id": "en-b1-u4-l3-e4",
+                        "type": "multiple-choice",
+                        "prompt": "Look at the smoke billowing from that kitchen window! Something _______ be burning.",
+                        "options": [
+                            "can't",
+                            "must",
+                            "might not",
+                            "couldn't"
+                        ],
+                        "correctAnswer": 1,
+                        "explanation": "Qora tutun chiqayotganini ko'rib turgan holda xulosa qilinmoqda: biror narsa yonayotgan bo'lishi kerak ('must be burning')."
+                    },
+                    {
+                        "id": "en-b1-u4-l3-e5",
+                        "type": "multiple-choice",
+                        "prompt": "Why is 'It can rain tomorrow' unidiomatic or incorrect in English?",
+                        "options": [
+                            "Because 'can' is only used for past abilities.",
+                            "Because 'can' denotes general theoretical capability, whereas specific future likelihood requires 'might', 'may', or 'could'.",
+                            "Because rain is an inanimate noun.",
+                            "Because modals cannot be used with weather words."
+                        ],
+                        "correctAnswer": 1,
+                        "explanation": "Muayyan vaziyatdagi ehtimollik uchun 'can' emas, 'might/may/could' ishlatiladi."
+                    }
+                ]
+            }
+        },
+        {
+            "id": "en-b1-u4-l3-s3",
+            "title": "Yakuniy Test",
+            "type": "test",
+            "estimatedMinutes": 5,
+            "testData": {
+                "instructions": "5 ta savolga to'g'ri javob bering. O'tish bali: 80%.",
+                "passingScorePercentage": 80,
+                "questions": [
+                    {
+                        "id": "en-b1-u4-l3-q1",
+                        "question": "The restaurant is packed with diners every single evening; the food _______ be exceptional.",
+                        "options": [
+                            "can't",
+                            "must",
+                            "might not",
+                            "couldn't"
+                        ],
+                        "correctAnswerIndex": 1,
+                        "explanation": "Har kuni to'lib toshayotganiga qarab ijobiy mantiqiy xulosa: ovqatlari a'lo darajada bo'lishi kerak ('must be')."
+                    },
+                    {
+                        "id": "en-b1-u4-l3-q2",
+                        "question": "Sarah is currently living in Egypt; that _______ be her standing across the street in Tashkent.",
+                        "options": [
+                            "must",
+                            "can't",
+                            "might",
+                            "should"
+                        ],
+                        "correctAnswerIndex": 1,
+                        "explanation": "Sara Misrda bo'lgani sababli, uning bu yerda ko'chada turishi mutlaqo imkonsiz: 'can't be her'."
+                    },
+                    {
+                        "id": "en-b1-u4-l3-q3",
+                        "question": "Which modal expresses that something is 30-50% possible, but uncertain?",
+                        "options": [
+                            "must",
+                            "can't",
+                            "might",
+                            "will definitely"
+                        ],
+                        "correctAnswerIndex": 2,
+                        "explanation": "'Might' noaniq va o'rtacha ehtimollikni bildiradi."
+                    },
+                    {
+                        "id": "en-b1-u4-l3-q4",
+                        "question": "Choose the correct continuous deduction: 'Listen to the guitar chords upstairs! John _______ his new track.'",
+                        "options": [
+                            "must practicing",
+                            "must be practicing",
+                            "can't practicing",
+                            "might practiced"
+                        ],
+                        "correctAnswerIndex": 1,
+                        "explanation": "Hozir sodir bo'layotgan harakat: 'must + be + Verb-ing' -> 'must be practicing'."
+                    },
+                    {
+                        "id": "en-b1-u4-l3-q5",
+                        "question": "Identify the incorrect sentence expressing impossibility:",
+                        "options": [
+                            "He must be the new department manager.",
+                            "They can't be at home because their car is not outside.",
+                            "She might know the correct password for the server.",
+                            "He must not be a doctor because he lacks a medical degree. (when meaning impossible)"
+                        ],
+                        "correctAnswerIndex": 3,
+                        "explanation": "Mantiqiy imkonsizlik uchun 'can't be a doctor' deyilishi shart, 'must not be' xato hisoblanadi."
+                    }
+                ]
+            }
+        }
+    ]
+},
     {
-        "id": "en-b1-u4-l4",
-        "courseId": "english-b1",
-        "unitId": "en-b1-u4",
-        "unitTitle": "Unit 4: Relative Clauses & Modal Deduction",
-        "language": "en",
-        "level": "B1",
-        "lessonNumber": 4,
-        "title": "Linking Words & Cohesion (However, Although, Therefore)",
-        "description": "Fikrlarni mantiqiy bog'lash, zidlash va natija ko'rsatish vositalari.",
-        "estimatedDurationMinutes": 14,
-        "icon": "🧩",
-        "steps": [
-            {
-                "id": "en-b1-u4-l4-s1",
-                "title": "Bog'lovchilar Tizimi",
-                "type": "learn",
-                "estimatedMinutes": 4,
-                "learnData": {
-                    "title": "Contrast, Result and Addition",
-                    "explanation": "Contrast (Zidlash): However, Although, Despite, In spite of. Result (Natija): Therefore, As a result, Consequently. Addition (Qo'shimcha): Moreover, Furthermore, In addition.",
-                    "keyPoints": [
-                        "Despite + Noun / V-ing (Despite the rain, we went out).",
-                        "Although + Clause (Although it was raining, we went out)."
-                    ],
-                    "grammarRules": [
-                        {
-                            "pattern": "Linking Words & Cohesion (However, Although, Therefore)",
-                            "meaning": "Fikrlarni mantiqiy bog'lash, zidlash va natija ko'rsatish vositalari.",
-                            "usageNotes": "Contrast (Zidlash): However, Although, Despite, In spite of. Result (Natija): Therefore, As a result, Consequently. Addition (Qo'shimcha): Moreover, Furthermore, In addition.",
-                            "examples": [
-                                {
-                                    "sentence": "I study English every day with dedication.",
-                                    "translation": "Har kuni ingliz tilini astoydil o'rganaman."
-                                }
-                            ]
-                        }
-                    ],
-                    "vocabulary": [
-                        {
-                            "term": "Efficient",
-                            "reading": "/ɪˈfɪʃ.ənt/",
-                            "meaning": "Samarali",
-                            "exampleSentence": "We need to find a more efficient solution.",
-                            "exampleTranslation": "Biz yanada samaraliroq yechim topishimiz kerak."
-                        },
-                        {
-                            "term": "Requirement",
-                            "reading": "/rɪˈkwaɪə.mənt/",
-                            "meaning": "Talab, shart",
-                            "exampleSentence": "Fluency is a core requirement for this role.",
-                            "exampleTranslation": "Ravonlik bu lavozim uchun asosiy talabdir."
-                        },
-                        {
-                            "term": "Significantly",
-                            "reading": "/sɪɡˈnɪf.ɪ.kənt.li/",
-                            "meaning": "Sezilarli darajada",
-                            "exampleSentence": "Her grades improved significantly this term.",
-                            "exampleTranslation": "Bu semestrda uning baholari sezilarli darajada yaxshilandi."
-                        }
-                    ]
-                }
-            },
-            {
-                "id": "en-b1-u4-l4-s2",
-                "title": "Mashq",
-                "type": "practice",
-                "estimatedMinutes": 5,
-                "practiceData": {
-                    "instructions": "To'g'ri bog'lovchini tanlang.",
-                    "exercises": [
-                        {
-                            "id": "en-b1-u4-l4-e1",
-                            "type": "multiple-choice",
-                            "prompt": "\"_______ the heavy traffic, we arrived on time.\"",
-                            "options": [
-                                "However",
-                                "Despite",
-                                "Although",
-                                "Even though"
-                            ],
-                            "correctAnswer": 1,
-                            "explanation": "Otdan oldin: Despite the heavy traffic."
-                        },
-                        {
-                            "id": "en-b1-u4-l4-ex-2",
-                            "type": "multiple-choice",
-                            "prompt": "Choose the correct word to complete the sentence: \"Fluency is a core requirement for this role.\"",
-                            "options": [
-                                "doubt",
-                                "reluctance",
-                                "delay",
-                                "Requirement"
-                            ],
-                            "correctAnswer": 3,
-                            "explanation": "\"Requirement\" (Talab, shart) fits the context appropriately."
-                        }
-                    ]
-                }
-            },
-            {
-                "id": "en-b1-u4-l4-s3",
-                "title": "Test",
-                "type": "test",
-                "estimatedMinutes": 5,
-                "testData": {
-                    "instructions": "Savollarga javob bering.",
-                    "passingScorePercentage": 75,
-                    "questions": [
-                        {
-                            "id": "en-b1-u4-l4-q1",
-                            "question": "He worked extremely hard. _______, he earned a well-deserved promotion.",
-                            "options": [
-                                "However",
-                                "Therefore",
-                                "Although",
-                                "Despite"
-                            ],
-                            "correctAnswerIndex": 1,
-                            "explanation": "Therefore (Natijada)."
-                        },
-                        {
-                            "id": "en-b1-u4-l4-q2",
-                            "question": "_______ she felt unwell, she attended the lecture.",
-                            "options": [
-                                "Although",
-                                "Despite",
-                                "In spite of",
-                                "However"
-                            ],
-                            "correctAnswerIndex": 0,
-                            "explanation": "Although + sentence."
-                        },
-                        {
-                            "id": "en-b1-u4-l4-q3",
-                            "question": "The hotel was expensive. _______, the service was disappointing.",
-                            "options": [
-                                "Despite",
-                                "Although",
-                                "Even though",
-                                "Furthermore"
-                            ],
-                            "correctAnswerIndex": 3,
-                            "explanation": "Furthermore (Bundan tashqari)."
-                        },
-                        {
-                            "id": "en-b1-u4-l4-q4",
-                            "question": "Which word is followed by a comma when placed at the start of a sentence?",
-                            "options": [
-                                "However,",
-                                "Because",
-                                "While",
-                                "Although"
-                            ],
-                            "correctAnswerIndex": 0,
-                            "explanation": "However, ..."
-                        }
-                    ]
-                }
+    "id": "en-b1-u4-l4",
+    "courseId": "english-b1",
+    "unitId": "en-b1-u4",
+    "unitTitle": "Unit 4: Relative Clauses & Modal Deduction",
+    "language": "en",
+    "level": "B1",
+    "lessonNumber": 4,
+    "title": "Linking Words & Cohesion (However, Although, Therefore, Despite)",
+    "description": "Bog'lovchilar va matn kogeziyasi: zidlik, sabab-oqibat va maqsad bog'lovchilarini IELTS mezonlariga mos qo'llash.",
+    "estimatedDurationMinutes": 16,
+    "icon": "🧩",
+    "steps": [
+        {
+            "id": "en-b1-u4-l4-s1",
+            "title": "Linking Words: Fikrlarni Professional Bog'lash",
+            "type": "learn",
+            "estimatedMinutes": 6,
+            "learnData": {
+                "title": "Cohesive Devices: Contrast, Cause, and Purpose",
+                "explanation": "Bog'lovchilar (linking words & cohesive devices) jumlalar va paragraflar orasidagi mantiqiy aloqadorlikni ta'minlaydi. IELTS Writing va Speaking imtihonlarida 'Coherence and Cohesion' bo'yicha yuqori ball olishning eng asosiy kalitidir.\n\n1. Zidlik Bog'lovchilari (Contrast):\n- Although / Even though + Ega + Fe'l (to'liq gap): 'Although the tuition was high, she enrolled in the course.'\n- Despite / In spite of + Ot / Olmosh / Verb-ing: 'Despite the rainy weather, the outdoor game proceeded.' / 'In spite of feeling exhausted, he finished the report.'\n  ⚠️ Hech qachon 'despite of' deb yozmang! 'Despite' yolg'iz keladi, 'in spite' esa 'of' bilan keladi.\n- However / Nevertheless + Vergul (gap boshida mustaqil fikr): 'The budget was cut. However, project quality remained high.'\n- Whereas / While (ikki holatni taqqoslash): 'Some prefer urban apartments, whereas others favor suburban cottages.'\n\n2. Sabab va Oqibat Bog'lovchilari (Cause & Result):\n- Therefore / Consequently / As a result + Vergul: 'Inflation surged; consequently, living expenses climbed.'\n- Due to / Owing to / Because of + Ot / Gerund: 'Due to technical difficulties, the seminar was delayed.'\n\n3. Maqsad Bog'lovchilari (Purpose):\n- in order to / so as to + Fe'lning asosi: 'He relocated to London in order to study finance.'\n- so that + Ega + can / could / would + Fe'l: 'We left early so that we could secure front-row seats.'\n\n4. O'zbek o'rganuvchilari uchun xavfli tuzoqlar (Common Pitfalls):\n- ❌ 'Despite of the rain, we went out.' -> ✅ 'Despite the rain... / In spite of the rain...'\n- ❌ 'Although he was tired, but he kept working.' -> ✅ 'Although he was tired, he kept working.' (Bitta gapda 'although' va 'but' birga ishlatilmaydi!).\n- ❌ 'He studied hard in order that pass.' -> ✅ 'He studied hard in order to pass. / ...so that he could pass.'\n\n5. IELTS Writing Task 2 Foundation Corner:\n- Question: 'Should governments invest in public transport rather than expanding highway networks?'\n- Model Band 6.5-7.0 Answer: 'In my perspective, subsidizing public transport systems is significantly more advantageous. Although expanding motorway networks offers temporary traffic alleviation, it ultimately encourages more private vehicle ownership, which exacerbates carbon emissions. By contrast, investing in electric railways provides an eco-friendly and affordable alternative for everyday commuters. Therefore, metropolitan councils should channel capital into rapid transit so that urban congestion can be systematically minimized.'\n- Examiner Tip: IELTSda oddiy 'and', 'but', 'so' so'zlarini doimiy takrorlash o'rniga 'Although', 'By contrast', 'Therefore', 'So that' kabi kogeziya vositalarini to'g'ri tinish belgilari bilan ishlating.",
+                "vocabulary": [
+                    {
+                        "term": "consequently",
+                        "reading": "/ˈkɒn.sɪ.kwənt.li/",
+                        "meaning": "natijada, oqibatda",
+                        "exampleSentence": "The express train broke down; consequently, dozens missed their flights.",
+                        "exampleTranslation": "Tezyurar poyezd buzilib qoldi; oqibatda o'nlab kishilar o'z parvozlarini o'tkazib yuborishdi."
+                    },
+                    {
+                        "term": "nevertheless",
+                        "reading": "/ˌnev.ə.ðəˈles/",
+                        "meaning": "shunga qaramasdan, shunday bo'lsa-da",
+                        "exampleSentence": "The team faced severe budget restrictions; nevertheless, they delivered the prototype.",
+                        "exampleTranslation": "Jamoa qat'iy byudjet cheklovlariga duch keldi; shunday bo'lsa-da, ular prototipni yetkazib berishdi."
+                    },
+                    {
+                        "term": "furthermore",
+                        "reading": "/ˌfɜː.ðəˈmɔːr/",
+                        "meaning": "bundan tashqari, qo'shimcha ravishda",
+                        "exampleSentence": "The proposal cuts operational expenses; furthermore, it reduces industrial waste.",
+                        "exampleTranslation": "Taklif operatsion xarajatlarni qisqartiradi; bundan tashqari, u sanoat chiqindilarini kamaytiradi."
+                    },
+                    {
+                        "term": "whereas",
+                        "reading": "/weəˈræz/",
+                        "meaning": "holbuki, vaholanki, bir paytda (taqqoslash)",
+                        "exampleSentence": "Physical retail sales decreased, whereas online commerce expanded significantly.",
+                        "exampleTranslation": "An'anaviy do'kon savdosi kamaydi, vaholanki onlayn tijorat sezilarli darajada kengaydi."
+                    },
+                    {
+                        "term": "obstacle",
+                        "reading": "/ˈɒb.stə.kəl/",
+                        "meaning": "to'siq, g'ov",
+                        "exampleSentence": "Despite multiple regulatory obstacles, the educational non-profit expanded.",
+                        "exampleTranslation": "Ko'plab me'yoriy to'siqlarga qaramay, notijorat ta'lim tashkiloti kengayib bordi."
+                    },
+                    {
+                        "term": "in order to",
+                        "reading": "/ɪn ˈɔː.də tuː/",
+                        "meaning": "...maqsadida, ...qilish uchun",
+                        "exampleSentence": "They reinforced network firewalls in order to prevent cyber intrusions.",
+                        "exampleTranslation": "Kiberhujumlarning oldini olish maqsadida ular tarmoq xavfsizlik devorlarini kuchaytirishdi."
+                    },
+                    {
+                        "term": "so that",
+                        "reading": "/səʊ ðæt/",
+                        "meaning": "...bo'lishi uchun, ...bo'lsin deb",
+                        "exampleSentence": "We circulated the lecture summary so that absent participants could catch up.",
+                        "exampleTranslation": "Qatnasha olmagan ishtirokchilar yetib olishlari uchun ma'ruza xulosasini tarqatdik."
+                    },
+                    {
+                        "term": "owing to",
+                        "reading": "/ˈəʊ.ɪŋ tuː/",
+                        "meaning": "sababli, tufayli",
+                        "exampleSentence": "Owing to severe blizzards, all regional flights were grounded.",
+                        "exampleTranslation": "Qattiq qor bo'roni tufayli barcha hududiy reyslar bekor qilindi."
+                    }
+                ],
+                "grammarRules": [
+                    {
+                        "pattern": "Although + Subject + Verb, Main Clause",
+                        "meaning": "Zidlikni ifodalash (garchi ... bo'lsa ham)",
+                        "usageNotes": "'Although'dan keyin to'liq gap (Subject + Verb) keladi. 'But' bilan birga ishlatilmaydi.",
+                        "examples": [
+                            {
+                                "sentence": "Although the test was challenging, most students achieved passing grades.",
+                                "translation": "Test qiyin bo'lishiga qaramay, aksariyat talabalar o'tish ballini to'plashdi."
+                            }
+                        ]
+                    },
+                    {
+                        "pattern": "Despite / In spite of + Noun / Gerund (-ing), Main Clause",
+                        "meaning": "Zidlikni ot yoki harakat orqali ifodalash",
+                        "usageNotes": "'Despite'dan keyin 'of' kelmaydi. Faqat ot yoki fe'lning -ing shakli qo'yiladi.",
+                        "examples": [
+                            {
+                                "sentence": "Despite the heavy rain, the match continued.",
+                                "translation": "Kuchli yomg'irga qaramay, o'yin davom etdi."
+                            },
+                            {
+                                "sentence": "In spite of studying all night, he felt energetic.",
+                                "translation": "Tun bo'yi dars qilganiga qaramay, u o'zini baquvvat his qildi."
+                            }
+                        ]
+                    },
+                    {
+                        "pattern": "Sentence 1. However / Therefore, Sentence 2.",
+                        "meaning": "Ikki mustaqil fikrni bog'lash",
+                        "usageNotes": "'However' zidlikni, 'Therefore' esa oqibatni ko'rsatadi va vergul bilan ajratiladi.",
+                        "examples": [
+                            {
+                                "sentence": "The price was quite high. However, the quality justified the cost.",
+                                "translation": "Narx ancha baland edi. Shunga qaramay, sifat bu xarajatni oqladi."
+                            }
+                        ]
+                    }
+                ]
             }
-        ]
-    },
+        },
+        {
+            "id": "en-b1-u4-l4-s2",
+            "title": "Amaliy Mashqlar",
+            "type": "practice",
+            "estimatedMinutes": 5,
+            "practiceData": {
+                "instructions": "Gaplarning tuzilishiga mos keluvchi eng to'g'ri bog'lovchini tanlang.",
+                "exercises": [
+                    {
+                        "id": "en-b1-u4-l4-e1",
+                        "type": "multiple-choice",
+                        "prompt": "_______ the team conducted exhaustive research, they could not verify the historical claim.",
+                        "options": [
+                            "Although",
+                            "Despite",
+                            "In spite of",
+                            "However"
+                        ],
+                        "correctAnswer": 0,
+                        "explanation": "'the team conducted exhaustive research' to'liq gap bo'lganligi sababli 'Although' to'g'ri."
+                    },
+                    {
+                        "id": "en-b1-u4-l4-e2",
+                        "type": "multiple-choice",
+                        "prompt": "_______ having minimal financial reserves, the community founded an interactive youth club.",
+                        "options": [
+                            "Although",
+                            "Despite",
+                            "Even though",
+                            "Whereas"
+                        ],
+                        "correctAnswer": 1,
+                        "explanation": "'having minimal financial reserves' gerund (-ing) frazasi bo'lgani sababli 'Despite' to'g'ri keladi."
+                    },
+                    {
+                        "id": "en-b1-u4-l4-e3",
+                        "type": "multiple-choice",
+                        "prompt": "The factory upgraded its robotic assembly line _______ enhance manufacturing precision.",
+                        "options": [
+                            "so that",
+                            "in order to",
+                            "because of",
+                            "due to"
+                        ],
+                        "correctAnswer": 1,
+                        "explanation": "'enhance' fe'lning asosi bo'lgani sababli maqsadni ifodalash uchun 'in order to enhance' to'g'ri."
+                    },
+                    {
+                        "id": "en-b1-u4-l4-e4",
+                        "type": "multiple-choice",
+                        "prompt": "She installed a smart thermostat _______ she could monitor household heating remotely.",
+                        "options": [
+                            "in order to",
+                            "so that",
+                            "despite",
+                            "therefore"
+                        ],
+                        "correctAnswer": 1,
+                        "explanation": "'she could monitor' to'liq gap bo'lib, maqsad ifodalanganligi uchun 'so that' to'g'ri keladi."
+                    },
+                    {
+                        "id": "en-b1-u4-l4-e5",
+                        "type": "multiple-choice",
+                        "prompt": "Which sentence has NO grammatical or punctuation errors?",
+                        "options": [
+                            "Despite of being sick, he completed the exam.",
+                            "Although he studied diligently, but he failed the test.",
+                            "The company lost funding. Consequently, several projects were halted.",
+                            "In spite the heavy rain, the aircraft departed."
+                        ],
+                        "correctAnswer": 2,
+                        "explanation": "C varianti to'g'ri. A da 'despite of' xato; B da 'although... but' xato; D da 'in spite of' bo'lishi kerak."
+                    }
+                ]
+            }
+        },
+        {
+            "id": "en-b1-u4-l4-s3",
+            "title": "Yakuniy Test",
+            "type": "test",
+            "estimatedMinutes": 5,
+            "testData": {
+                "instructions": "5 ta savolga to'g'ri javob bering. O'tish bali: 80%.",
+                "passingScorePercentage": 80,
+                "questions": [
+                    {
+                        "id": "en-b1-u4-l4-q1",
+                        "question": "Which conjunction can be followed directly by a noun phrase without 'the fact that'?",
+                        "options": [
+                            "Although",
+                            "Even though",
+                            "Despite",
+                            "Whereas"
+                        ],
+                        "correctAnswerIndex": 2,
+                        "explanation": "'Despite' bevosita ot yoki otlashgan so'z birikmasi (noun phrase) bilan ishlatiladi."
+                    },
+                    {
+                        "id": "en-b1-u4-l4-q2",
+                        "question": "Electric vehicles produce zero tailpipe emissions, _______ conventional petrol cars release carbon gases.",
+                        "options": [
+                            "whereas",
+                            "therefore",
+                            "in order to",
+                            "because of"
+                        ],
+                        "correctAnswerIndex": 0,
+                        "explanation": "Ikki qarama-qarshi holatni taqqoslash uchun 'whereas' (vaholanki / bir paytda) ishlatiladi."
+                    },
+                    {
+                        "id": "en-b1-u4-l4-q3",
+                        "question": "The meeting was postponed _______ the sudden illness of the department chairman.",
+                        "options": [
+                            "because",
+                            "due to",
+                            "since",
+                            "as"
+                        ],
+                        "correctAnswerIndex": 1,
+                        "explanation": "'the sudden illness...' ot iborasi bo'lgani sababli 'due to' (tufayli) to'g'ri."
+                    },
+                    {
+                        "id": "en-b1-u4-l4-q4",
+                        "question": "Why is 'Although he had plenty of money, but he lived modestly' incorrect?",
+                        "options": [
+                            "Because 'modestly' is an adjective, not an adverb.",
+                            "Because 'although' and 'but' are both contrasting connectors and cannot be used in the same sentence.",
+                            "Because 'plenty' cannot be used with money.",
+                            "Because 'had' must be in the past continuous."
+                        ],
+                        "correctAnswerIndex": 1,
+                        "explanation": "Bitta gapda 'Although' va 'but' bir vaqtda qo'llanilishi mumkin emas (redundancy)."
+                    },
+                    {
+                        "id": "en-b1-u4-l4-q5",
+                        "question": "He woke up at 5:00 AM _______ catch the earliest express train.",
+                        "options": [
+                            "so that",
+                            "in order to",
+                            "due to",
+                            "consequently"
+                        ],
+                        "correctAnswerIndex": 1,
+                        "explanation": "'catch' fe'l bo'lganligi sababli 'in order to catch' to'g'ri."
+                    }
+                ]
+            }
+        }
+    ]
+},
     {
-        "id": "en-b1-u4-l5",
-        "courseId": "english-b1",
-        "unitId": "en-b1-u4",
-        "unitTitle": "Unit 4: Relative Clauses & Modal Deduction",
-        "language": "en",
-        "level": "B1",
-        "lessonNumber": 5,
-        "title": "B1 Reading: The Future of Global Remote Work",
-        "description": "Masofaviy ish va xalqaro jamoalar haqidagi B1 tahliliy maqolani o'qish.",
-        "estimatedDurationMinutes": 15,
-        "icon": "🌐",
-        "steps": [
-            {
-                "id": "en-b1-u4-l5-s1",
-                "title": "Maqolani O'qish",
-                "type": "learn",
-                "estimatedMinutes": 5,
-                "learnData": {
-                    "title": "The Shift to Hybrid Workspaces",
-                    "explanation": "Matnni tahlil qilib o'qing.",
-                    "keyPoints": [
-                        "The global workforce has undergone significant transformations in recent years.",
-                        "Hybrid models allow professionals to balance collaborative office meetings with focused home sessions.",
-                        "Digital communication platforms enable seamless teamwork across multiple time zones.",
-                        "However, maintaining corporate culture and preventing burnout require proactive management."
-                    ],
-                    "vocabulary": [
-                        {
-                            "term": "Transformation",
-                            "reading": "/ˌtræns.fəˈmeɪ.ʃən/",
-                            "meaning": "Katta o'zgarish / Transformatsiya",
-                            "exampleSentence": "Digital transformation is essential.",
-                            "exampleTranslation": "Raqamli transformatsiya zarur."
-                        },
-                        {
-                            "term": "Burnout",
-                            "reading": "/ˈbɜːn.aʊt/",
-                            "meaning": "Haddan tashqari toliqish / Ishdan sovush",
-                            "exampleSentence": "Long hours can cause burnout.",
-                            "exampleTranslation": "Uzoq ish vaqti toliqishga olib kelishi mumkin."
-                        },
-                        {
-                            "term": "Perspective",
-                            "reading": "/pəˈspek.tɪv/",
-                            "meaning": "Nuqtayi nazar",
-                            "exampleSentence": "Traveling gives you a broader perspective on life.",
-                            "exampleTranslation": "Sayohat qilish hayotga kengroq nuqtayi nazar beradi."
-                        }
-                    ],
-                    "grammarRules": [
-                        {
-                            "pattern": "B1 Reading: The Future of Global Remote Work",
-                            "meaning": "Masofaviy ish va xalqaro jamoalar haqidagi B1 tahliliy maqolani o'qish.",
-                            "usageNotes": "Matnni tahlil qilib o'qing.",
-                            "examples": [
-                                {
-                                    "sentence": "Digital transformation is essential.",
-                                    "translation": "Raqamli transformatsiya zarur."
-                                },
-                                {
-                                    "sentence": "Long hours can cause burnout.",
-                                    "translation": "Uzoq ish vaqti toliqishga olib kelishi mumkin."
-                                }
-                            ]
-                        }
-                    ]
-                }
-            },
-            {
-                "id": "en-b1-u4-l5-s2",
-                "title": "Tushunish Savollari",
-                "type": "practice",
-                "estimatedMinutes": 5,
-                "practiceData": {
-                    "instructions": "Matn bo'yicha to'g'ri javobni tanlang.",
-                    "exercises": [
-                        {
-                            "id": "en-b1-u4-l5-e1",
-                            "type": "multiple-choice",
-                            "prompt": "What do hybrid work models allow professionals to do?",
-                            "options": [
-                                "Balance office collaboration with home focus",
-                                "Eliminate all meetings",
-                                "Only work at night",
-                                "Never work again"
-                            ],
-                            "correctAnswer": 0,
-                            "explanation": "Balance office collaboration with focused home sessions."
-                        },
-                        {
-                            "id": "en-b1-u4-l5-ex-2",
-                            "type": "multiple-choice",
-                            "prompt": "Choose the correct word to complete the sentence: \"Long hours can cause burnout.\"",
-                            "options": [
-                                "Burnout",
-                                "delay",
-                                "reluctance",
-                                "doubt"
-                            ],
-                            "correctAnswer": 0,
-                            "explanation": "\"Burnout\" (Haddan tashqari toliqish / Ishdan sovush) fits the context appropriately."
-                        }
-                    ]
-                }
-            },
-            {
-                "id": "en-b1-u4-l5-s3",
-                "title": "Test",
-                "type": "test",
-                "estimatedMinutes": 5,
-                "testData": {
-                    "instructions": "Savollarga javob bering.",
-                    "passingScorePercentage": 75,
-                    "questions": [
-                        {
-                            "id": "en-b1-u4-l5-q1",
-                            "question": "What enables seamless teamwork across different time zones?",
-                            "options": [
-                                "Digital communication platforms",
-                                "Fewer computers",
-                                "Postal mail",
-                                "Slower internet"
-                            ],
-                            "correctAnswerIndex": 0,
-                            "explanation": "Digital communication platforms."
-                        },
-                        {
-                            "id": "en-b1-u4-l5-q2",
-                            "question": "What requires proactive management according to the article?",
-                            "options": [
-                                "Buying more office furniture",
-                                "Canceling all projects",
-                                "Maintaining culture and preventing burnout",
-                                "Reducing salaries"
-                            ],
-                            "correctAnswerIndex": 2,
-                            "explanation": "Maintaining culture and preventing burnout."
-                        },
-                        {
-                            "id": "en-b1-u4-l5-q3",
-                            "question": "\"Seamless\" so'zining ma'nosi:",
-                            "options": [
-                                "Uzluksiz / Bir maromdagi",
-                                "Xavfli",
-                                "Qiyin",
-                                "Qimmat"
-                            ],
-                            "correctAnswerIndex": 0,
-                            "explanation": "Seamless — Uzluksiz, oson integratsiyalashgan."
-                        },
-                        {
-                            "id": "en-b1-u4-l5-q4",
-                            "question": "The overall tone of the text is:",
-                            "options": [
-                                "Angry and critical",
-                                "Fictional",
-                                "Comedic",
-                                "Informative and analytical"
-                            ],
-                            "correctAnswerIndex": 3,
-                            "explanation": "Informative and analytical."
-                        }
-                    ]
-                }
+    "id": "en-b1-u4-l5",
+    "courseId": "english-b1",
+    "unitId": "en-b1-u4",
+    "unitTitle": "Unit 4: Relative Clauses & Modal Deduction",
+    "language": "en",
+    "level": "B1",
+    "lessonNumber": 5,
+    "title": "B1 Reading: The Future of Global Remote Work",
+    "description": "B1 darajadagi akademik matn tahlili: ergash gaplar va mantiqiy bog'lovchilar yordamida global masofaviy mehnat bozorini o'rganish.",
+    "estimatedDurationMinutes": 16,
+    "icon": "🌐",
+    "steps": [
+        {
+            "id": "en-b1-u4-l5-s1",
+            "title": "Akademik Matn Tahlili: Remote Work",
+            "type": "learn",
+            "estimatedMinutes": 6,
+            "learnData": {
+                "title": "Academic Reading & Critical Synthesis: Global Remote Work",
+                "explanation": "Ushbu darsda Unit 4 dagi barcha mavzular (defining & non-defining relative clauses, modals of deduction, linking words) akademik matn tarkibida birlashtiriladi.\n\n📖 The Transformation of Modern Workplaces\nOver the past decade, cloud technology and digital communication hubs have radically transformed traditional office routines. Telecommuting, which was once considered a luxury for elite software engineers, has now expanded across education, marketing, and finance.\n\nEmployees who perform knowledge-based tasks increasingly demand hybrid schedules. Proponents assert that autonomy improves productivity; moreover, eliminating lengthy morning commutes spares workers considerable psychological strain. Consequently, people can allocate extra time to personal wellness and family life.\n\nNevertheless, corporate executives raise legitimate counterarguments. Team collaboration, which thrives on spontaneous hallway conversations, can suffer when personnel operate in isolation. Sceptics argue that young interns who lack physical mentorship might struggle to assimilate corporate culture. Furthermore, managers who rely on conventional supervision can't easily measure qualitative output without intrusive monitoring tools.\n\nUltimately, forward-thinking enterprises that strike an equilibrium between autonomous flexibility and structured in-person collaboration will attract the highest caliber talent in tomorrow's global economy.\n\nGrammatika va Sintaksis Sintezi:\n1. Non-defining relative clause: 'Telecommuting, which was once considered a luxury...'\n2. Defining relative clause: 'Employees who perform knowledge-based tasks...'\n3. Modal of deduction: 'personnel operate in isolation... managers can't easily measure...'\n4. Linking devices: 'Consequently', 'Nevertheless', 'Furthermore', 'Ultimately'.",
+                "vocabulary": [
+                    {
+                        "term": "telecommuting",
+                        "reading": "/ˌtel.ɪ.kəˈmjuː.tɪŋ/",
+                        "meaning": "masofadan turib ishlash, uydan ishlash",
+                        "exampleSentence": "Telecommuting allows professionals to balance demanding careers with domestic life.",
+                        "exampleTranslation": "Masofadan ishlash mutaxassislarga talabchan kasbni oilaviy hayot bilan muvozanatlashga imkon beradi."
+                    },
+                    {
+                        "term": "autonomy",
+                        "reading": "/ɔːˈtɒn.ə.mi/",
+                        "meaning": "mustaqillik, erkinlik, avtonomiya",
+                        "exampleSentence": "Employees who enjoy schedule autonomy often demonstrate higher dedication.",
+                        "exampleTranslation": "Jadval mustaqilligiga ega xodimlar ko'pincha yuqori sadoqat ko'rsatadilar."
+                    },
+                    {
+                        "term": "proponent",
+                        "reading": "/prəˈpəʊ.nənt/",
+                        "meaning": "tarafdor, himoyachi",
+                        "exampleSentence": "Proponents of remote employment emphasize substantial energy savings.",
+                        "exampleTranslation": "Masofaviy ish tarafdorlari sezilarli energiya tejamkorligini alohida ta'kidlaydilar."
+                    },
+                    {
+                        "term": "equilibrium",
+                        "reading": "/ˌek.wɪˈlɪb.ri.əm/",
+                        "meaning": "muvozanat, barqarorlik",
+                        "exampleSentence": "Achieving a sustainable equilibrium between labor and leisure is vital.",
+                        "exampleTranslation": "Mehnat va dam olish o'rtasida barqaror muvozanatga erishish hayotiy ahamiyatga ega."
+                    },
+                    {
+                        "term": "assimilate",
+                        "reading": "/əˈsɪm.ɪ.leɪt/",
+                        "meaning": "o'zlashtirmoq, moslashmoq, qabul qilmoq",
+                        "exampleSentence": "New recruits need structured mentoring in order to assimilate workplace norms.",
+                        "exampleTranslation": "Yangi xodimlar ish joyi me'yorlariga moslashish uchun tizimli murabbiylikka muhtoj."
+                    },
+                    {
+                        "term": "caliber",
+                        "reading": "/ˈkæl.ɪ.bər/",
+                        "meaning": "saviyada, mahorat darajasi",
+                        "exampleSentence": "Our firm seeks individuals of exceptional caliber for senior advisory roles.",
+                        "exampleTranslation": "Kompaniyamiz yetakchi maslahatchi lavozimlariga yuqori saviyadagi mutaxassislarni izlamoqda."
+                    },
+                    {
+                        "term": "intrusive",
+                        "reading": "/ɪnˈtruː.sɪv/",
+                        "meaning": "ortiqcha aralashuvchi, xalal beruvchi",
+                        "exampleSentence": "Constant screen tracking is viewed as an intrusive supervision tactic.",
+                        "exampleTranslation": "Ekranni doimiy kuzatib turish xodimning shaxsiy chegarasiga tajovuzkor nazorat sifatida ko'riladi."
+                    },
+                    {
+                        "term": "spontaneous",
+                        "reading": "/spɒnˈteɪ.ni.əs/",
+                        "meaning": "tabiiy, o'z-o'zidan paydo bo'ladigan, kutilmagan",
+                        "exampleSentence": "Spontaneous discussions in office cafeterias often spark innovative ideas.",
+                        "exampleTranslation": "Ofis oshxonalaridagi kutilmagan suhbatlar ko'pincha innovatsion g'oyalarni uyg'otadi."
+                    }
+                ],
+                "grammarRules": [
+                    {
+                        "pattern": "Noun, which + Clause..., Main Verb",
+                        "meaning": "Akademik matnda fon ma'lumot berish (Non-defining)",
+                        "usageNotes": "Matn boshida mavzuga kirish uchun qo'llaniladi.",
+                        "examples": [
+                            {
+                                "sentence": "Remote work, which expanded during pandemics, transformed commercial real estate.",
+                                "translation": "Pandemiya davrida keng tarqalgan masofaviy ish tijoriy ko'chmas mulk bozorini o'zgartirdi."
+                            }
+                        ]
+                    },
+                    {
+                        "pattern": "Although / Whereas Clause 1, Clause 2 with modal deduction",
+                        "meaning": "Zidlik va mantiqiy taxmin sintezi",
+                        "usageNotes": "Murakkab dalillarni taqqoslashda ishlatiladi.",
+                        "examples": [
+                            {
+                                "sentence": "Although digital platforms are efficient, they can't fully substitute human rapport.",
+                                "translation": "Raqamli platformalar samarali bo'lsa-da, ular insoniy yaqinlikning o'rnini to'liq bosa olmaydi."
+                            }
+                        ]
+                    }
+                ]
             }
-        ]
-    },
+        },
+        {
+            "id": "en-b1-u4-l5-s2",
+            "title": "Amaliy Mashqlar",
+            "type": "practice",
+            "estimatedMinutes": 5,
+            "practiceData": {
+                "instructions": "Matn tahlili va sintaktik integratsiya mashqlarini bajaring.",
+                "exercises": [
+                    {
+                        "id": "en-b1-u4-l5-e1",
+                        "type": "multiple-choice",
+                        "prompt": "According to the reading passage, why do proponents favor telecommuting?",
+                        "options": [
+                            "Because it completely eliminates the need for any corporate managers.",
+                            "Because autonomy improves productivity and eliminating commutes spares psychological strain.",
+                            "Because it guarantees that interns do not need training.",
+                            "Because companies no longer have to pay salaries."
+                        ],
+                        "correctAnswer": 1,
+                        "explanation": "Matnda ochiq ta'kidlangan: avtonomiya samaradorlikni oshiradi va yo'l charchog'idan xalos etadi."
+                    },
+                    {
+                        "id": "en-b1-u4-l5-e2",
+                        "type": "multiple-choice",
+                        "prompt": "Telecommuting, _______ was once considered an exclusive perk, is now widespread.",
+                        "options": [
+                            "who",
+                            "that",
+                            "which",
+                            "where"
+                        ],
+                        "correctAnswer": 2,
+                        "explanation": "Non-defining clause va narsa (tushuncha) haqida bo'lgani sababli vergul orasida 'which' to'g'ri."
+                    },
+                    {
+                        "id": "en-b1-u4-l5-e3",
+                        "type": "multiple-choice",
+                        "prompt": "Junior trainees _______ operate in complete isolation might struggle to assimilate organizational norms.",
+                        "options": [
+                            "which",
+                            "who",
+                            "whose",
+                            "where"
+                        ],
+                        "correctAnswer": 1,
+                        "explanation": "Trainees (yosh stajorlar - insonlar) uchun defining clause da 'who' ishlatiladi."
+                    },
+                    {
+                        "id": "en-b1-u4-l5-e4",
+                        "type": "multiple-choice",
+                        "prompt": "Without physical interaction, collaborative cohesion _______ suffer over extended periods.",
+                        "options": [
+                            "can't",
+                            "might",
+                            "must not",
+                            "is able"
+                        ],
+                        "correctAnswer": 1,
+                        "explanation": "Ehtimoliy xavfni bildirish uchun 'might suffer' (zarar ko'rishi mumkin) to'g'ri keladi."
+                    },
+                    {
+                        "id": "en-b1-u4-l5-e5",
+                        "type": "multiple-choice",
+                        "prompt": "Enterprises introduced hybrid schedules _______ employees could balance focus with team synergy.",
+                        "options": [
+                            "in order to",
+                            "so that",
+                            "despite",
+                            "although"
+                        ],
+                        "correctAnswer": 1,
+                        "explanation": "'employees could balance...' to'liq gap bo'lib, maqsad ifodalanganligi uchun 'so that' to'g'ri."
+                    }
+                ]
+            }
+        },
+        {
+            "id": "en-b1-u4-l5-s3",
+            "title": "Yakuniy Test",
+            "type": "test",
+            "estimatedMinutes": 5,
+            "testData": {
+                "instructions": "5 ta kompleks savolga to'g'ri javob bering. O'tish bali: 80%.",
+                "passingScorePercentage": 80,
+                "questions": [
+                    {
+                        "id": "en-b1-u4-l5-q1",
+                        "question": "What is the primary syntactic distinction between defining and non-defining relative clauses?",
+                        "options": [
+                            "Defining clauses take semicolons, while non-defining clauses take dashes.",
+                            "Defining clauses provide essential identification without commas; non-defining clauses add extra details enclosed in commas.",
+                            "Defining clauses can only refer to people.",
+                            "Non-defining clauses use 'that' exclusively."
+                        ],
+                        "correctAnswerIndex": 1,
+                        "explanation": "Defining clauses vergulsiz bo'lib zaruriy ma'lumot beradi, non-defining clauses esa vergullar bilan ajratilib qo'shimcha ma'lumot kiritadi."
+                    },
+                    {
+                        "id": "en-b1-u4-l5-q2",
+                        "question": "The manager, _______ visionary leadership transformed the brand, was honored yesterday.",
+                        "options": [
+                            "who",
+                            "whose",
+                            "that",
+                            "which"
+                        ],
+                        "correctAnswerIndex": 1,
+                        "explanation": "Menejerning yetakchiligi (egalik ma'nosi) sababli 'whose visionary leadership' to'g'ri."
+                    },
+                    {
+                        "id": "en-b1-u4-l5-q3",
+                        "question": "Choose the correct sentence expressing strong negative impossibility in the present:",
+                        "options": [
+                            "He must not be in London because I saw him here ten minutes ago.",
+                            "He can't be in London because I saw him here ten minutes ago.",
+                            "He might not in London because I saw him.",
+                            "He couldn't to be in London because I saw him."
+                        ],
+                        "correctAnswerIndex": 1,
+                        "explanation": "Hozirgi zamondagi mantiqiy imkonsizlik 'can't be' orqali ifodalanadi."
+                    },
+                    {
+                        "id": "en-b1-u4-l5-q4",
+                        "question": "_______ extensive security measures, hackers gained unauthorized access to the network.",
+                        "options": [
+                            "Although",
+                            "Despite",
+                            "Even though",
+                            "Whereas"
+                        ],
+                        "correctAnswerIndex": 1,
+                        "explanation": "'extensive security measures' ot birikmasi bo'lgani sababli 'Despite' to'g'ri keladi."
+                    },
+                    {
+                        "id": "en-b1-u4-l5-q5",
+                        "question": "The company upgraded software _______ prevent unexpected operational downtime.",
+                        "options": [
+                            "so that",
+                            "in order to",
+                            "because of",
+                            "due to"
+                        ],
+                        "correctAnswerIndex": 1,
+                        "explanation": "'prevent' fe'l bo'lgani uchun maqsad ma'nosida 'in order to prevent' qo'llaniladi."
+                    }
+                ]
+            }
+        }
+    ]
+},
     {
         "id": "en-b1-u5-l1",
         "courseId": "english-b1",
