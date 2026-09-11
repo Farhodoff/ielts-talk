@@ -4750,152 +4750,228 @@ export const ENGLISH_C1_LESSONS: Lesson[] = [
         "level": "C1",
         "lessonNumber": 1,
         "title": "C1 Advanced Synthesis: Grammar & Lexicon Convergence",
-        "description": "Barcha murakkab grammatik konstruktsiyalar (Inverted conditionals, fronting, clefts, passive causatives)ni bir butun matnda jamlash.",
-        "estimatedDurationMinutes": 18,
-        "icon": "🏛️",
+        "description": "Inversiya, nominalizatsiya, to'siqsiz bog'lovchilar va hedging kabi barcha C1 vositalarini yagona yaxlit nutqiy tizimga birlashtirish.",
+        "estimatedDurationMinutes": 22,
+        "icon": "⚡",
         "steps": [
             {
                 "id": "en-c1-u5-l1-s1",
-                "title": "Oliy Sintaksis Sintezi",
+                "title": "Grammar & Lexicon Convergence",
                 "type": "learn",
-                "estimatedMinutes": 5,
+                "estimatedMinutes": 8,
                 "learnData": {
-                    "title": "Convergence of Advanced Structures",
-                    "explanation": "C1 darajadagi professional matn yuqori grammatik rang-baranglikni tabiiy ravishda birlashtiradi: Inverted conditional + Fronting + Nominalization + Cleft sentence.",
-                    "keyPoints": [
-                        "\"Had policymakers prioritized sustainable infrastructure a decade ago, the current urban gridlock would not be so acute. What is urgently needed today is not merely incremental funding, but a comprehensive paradigm shift in public transit architecture.\""
-                    ],
-                    "grammarRules": [
-                        {
-                            "pattern": "C1 Advanced Synthesis: Grammar & Lexicon Convergence",
-                            "meaning": "Barcha murakkab grammatik konstruktsiyalar (Inverted conditionals, fronting, clefts, passive causatives)ni bir butun matnda jamlash.",
-                            "usageNotes": "C1 darajadagi professional matn yuqori grammatik rang-baranglikni tabiiy ravishda birlashtiradi: Inverted conditional + Fronting + Nominalization + Cleft sentence.",
-                            "examples": [
-                                {
-                                    "sentence": "I study English every day with dedication.",
-                                    "translation": "Har kuni ingliz tilini astoydil o'rganaman."
-                                }
-                            ]
-                        }
-                    ],
+                    "title": "Synthesizing C1 Grammatical & Lexical Architecture",
+                    "explanation": "C1 Capstone bosqichida alohida grammatik qoidalar (inversiya, nominalizatsiya, to'siqsiz gaplar) endi alohida-alohida emas, balki bir-biri bilan uzviy bog'langan, estetik jihatdan nafis va ilmiy jihatdan kuchli yaxlit matnga aylanadi.\n\nSintez mexanizmlari:\n1. **Inversiya va Nominalizatsiya Birlashuvi**:\n   - *Had the sudden escalation of geopolitical hostilities not precipitated widespread trade disruption, economic recovery would have proceeded unimpeded.*\n   - Bu bitta jumlada ham 3-tur shart inversiyasi (*Had... not precipitated*), ham chuqur nominalizatsiya (*sudden escalation*, *trade disruption*), ham C1 lug'at boyligi (*unimpeded*) uyg'unlashgan.\n\n2. **Hedging va Concession Integratsiyasi**:\n   - *Remarkable though the preliminary laboratory yields appear, researchers must tentatively temper their enthusiasm, lest unwarranted conclusions distort clinical deployment.*\n   - Sifatning fronting shakli (*Remarkable though...*), ehtiyotkor ilmiy ravish (*tentatively temper*), va klassik subjunktiv vosita (*lest... distort*).\n\n3. **Ritorik Muvozanat va Ritmic Tekislik**:\n   - Murakkab, og'ir jumlalardan so'ng qisqa, ta'sirchan xulosa berish orqali matnning o'qilish ritmini mukammallashtirish (*Cadence control*).\n\n⚠️ **O'zbek o'rganuvchilari uchun xavfli tuzoqlar (Common Pitfalls)**:\n- ❌ *Sentence overcrowding.* (Bitta gap ichiga hamma qoidalarni tiqishtirib, 6 qatordan iborat chalkash, nafas yetmaydigan jumla yasash). Muvozanatni saqlang: murakkab fikr ketidan lo'nda tushuntirish bering.\n- ❌ *Mixing incompatible registers.* (Akademik inversiya ishlatib, orqasidan so'zlashuvdagi sleng qo'shib yuborish uslubiy buzuqlik hisoblanadi).\n\n🎯 **IELTS Speaking & Writing Band 8.5 Masterclass**:\n- **Prompt**: Task 2: Evaluate whether sovereign wealth should be redirected from space exploration to terrestrial poverty alleviation.\n- **Model Answer (Band 8.5+)**: Were global leaders to divert astrophysics funding toward poverty alleviation, immediate humanitarian relief would undeniably ensue. Nevertheless, such fiscal reallocation represents a dangerously myopic tradeoff. Space technologies have historically served as a potent catalyst for terrestrial breakthroughs, yielding satellite climate monitoring and solar materials. Therefore, rather than establishing a false dichotomy between terrestrial welfare and cosmic discovery, governance frameworks must strike an optimal equilibrium between both imperatives.\n- **Discourse Markers**: Were global leaders to divert..., immediate humanitarian relief would undeniably ensue, dangerously myopic tradeoff, potent catalyst for terrestrial breakthroughs, strike an optimal equilibrium between\n- **Examiner / Intonation Tip**: Sintez jumlalarida bosh gapdagi modal fe'lga alohida semantik urg'u bering (*would UNDENIABLY ensue*). Bu nutqingizga nufuzli ishonch bag'ishlaydi.",
                     "vocabulary": [
                         {
-                            "term": "Nominalisation",
-                            "reading": "/ˌnɒmɪnəlaɪˈzeɪʃən/",
-                            "meaning": "Feʼlni otga aylantirish (akademik uslub)",
-                            "exampleSentence": "Nominalisation lends academic weight to scientific discourse.",
-                            "exampleTranslation": "Nominalizatsiya ilmiy matnga akademik salmoq beradi."
+                            "term": "Convergence",
+                            "reading": "/kənˈvɜː.dʒəns/",
+                            "meaning": "Yaqinlashuv, bir nuqtada tutashuv, konvergensiya",
+                            "exampleSentence": "The convergence of artificial intelligence and genomic sequencing heralds a revolution in personalized oncology.",
+                            "exampleTranslation": "Sun'iy intellekt va genom sekvenlashining tutashuvi individual onkologiyada inqilobdan darak bermoqda."
                         },
                         {
-                            "term": "Pragmatic",
-                            "reading": "/præɡˈmæt.ɪk/",
-                            "meaning": "Amaliy, pragmatik",
-                            "exampleSentence": "We adopted a pragmatic approach to problem-solving.",
-                            "exampleTranslation": "Biz muammoni hal qilishda amaliy yondashuvni qoʻlladik."
+                            "term": "Seamless",
+                            "reading": "/ˈsiːm.ləs/",
+                            "meaning": "Choksiz, uzluksiz, bir-biriga silliq ulangan",
+                            "exampleSentence": "The speaker achieved a seamless transition between macroeconomic data and human ethical dilemmas.",
+                            "exampleTranslation": "Notiq makroiqtisodiy dalillar va insoniy axloqiy dilemmalar o'rtasida uzluksiz silliq o'tishga erishdi."
                         },
                         {
-                            "term": "Pervasive",
-                            "reading": "/pəˈveɪ.sɪv/",
-                            "meaning": "Keng tarqalgan, singib ketgan",
-                            "exampleSentence": "Digital transformation has a pervasive impact on society.",
-                            "exampleTranslation": "Raqamli transformatsiya jamiyatga chuqur singib borgan taʼsir koʻrsatadi."
+                            "term": "Pinnacle",
+                            "reading": "/ˈpɪn.ə.kəl/",
+                            "meaning": "Cho'qqi, eng yuqori erishilgan pog'ona",
+                            "exampleSentence": "Awarding the Nobel Prize represented the glorious pinnacle of her forty-year scientific career.",
+                            "exampleTranslation": "Nobel mukofotining topshirilishi uning qirq yillik ilmiy faoliyatining shonli cho'qqisini ifodaladi."
+                        },
+                        {
+                            "term": "Unimpeded",
+                            "reading": "/ˌʌn.ɪmˈpiː.dɪd/",
+                            "meaning": "To'siqsiz, g'ovsiz, erkin harakatlanuvchi",
+                            "exampleSentence": "The bilateral trade pact ensured the unimpeded transit of humanitarian supplies across the border.",
+                            "exampleTranslation": "Ikki tomonlama savdo shartnomasi gumanitar yuklarning chegara orqali to'siqsiz tranzitini ta'minladi."
+                        },
+                        {
+                            "term": "Temper",
+                            "reading": "/ˈtem.pər/",
+                            "meaning": "Biroz bosmoq, mo''tadillashtirmoq, jilovlamoq",
+                            "exampleSentence": "Prudent central bankers must temper market euphoria with sober interest rate warnings.",
+                            "exampleTranslation": "Vazmin markaziy bankirlar bozor eyforiyasini qat'iy foiz stavkasi ogohlantirishlari bilan jilovlashlari kerak."
+                        },
+                        {
+                            "term": "Lest",
+                            "reading": "/lest/",
+                            "meaning": "...bo'lib qolmasin deb, ...ning oldini olish uchun (subjunktiv bilan)",
+                            "exampleSentence": "The diplomat guarded her words meticulously, lest misunderstandings jeopardize the fragile peace negotiations.",
+                            "exampleTranslation": "Diplomat noaniq tushunmovchiliklar nozik tinchlik muzokaralarini xavf ostiga qo'ymasligi uchun o'z so'zlarini sinchkovlik bilan nazorat qildi."
+                        },
+                        {
+                            "term": "Culmination",
+                            "reading": "/ˌkʌl.mɪˈneɪ.ʃən/",
+                            "meaning": "Kulminatsiya, uzoq mehnatning yakuniy yuksak natijasi",
+                            "exampleSentence": "The publication of this multi-volume encyclopedia represents the culmination of a decade of archival research.",
+                            "exampleTranslation": "Ko'p jildli ushbu ensiklopediyaning nashr etilishi o'n yillik arxiv tadqiqotlarining yuksak kulminatsiyasidir."
+                        },
+                        {
+                            "term": "Unravel",
+                            "reading": "/ʌnˈræv.əl/",
+                            "meaning": "Chigalini yechmoq, sirini ochmoq / barbod bo'lib parchalanmoq",
+                            "exampleSentence": "Neuroscientists strive to unravel the biological enigma of subjective human consciousness.",
+                            "exampleTranslation": "Neyroolimlar subyektiv inson onging biologik jumboq chigalini yechishga intilmoqdalar."
                         }
+                    ],
+                    "keyPoints": [
+                        "Convergence synthesizes inversion, clefting, nominalization, and hedging into cohesive prose.",
+                        "Avoid syntactic overcrowding: balance dense multi-clause sentences with concise punchy assertions.",
+                        "Use 'lest' with subjunctive bare infinitive to express formal precautionary motives (e.g. 'lest error arise').",
+                        "Achieve seamless lexical transitions by picking up the thematic tail of the previous clause."
                     ]
                 }
             },
             {
                 "id": "en-c1-u5-l1-s2",
-                "title": "Mashq",
+                "title": "Advanced Synthesis Amaliyoti",
                 "type": "practice",
                 "estimatedMinutes": 6,
                 "practiceData": {
-                    "instructions": "To'g'ri sintaktik strukturani tanlang.",
+                    "instructions": "Murakkab sintaktik va leksik sintez qoidalariga mos eng to'g'ri jumlalarni tanlang.",
                     "exercises": [
                         {
                             "id": "en-c1-u5-l1-e1",
                             "type": "multiple-choice",
-                            "prompt": "\"_______ the committee to endorse the proposal, execution would commence without delay.\"",
+                            "prompt": "Identify the sentence that achieves optimal C1 synthesis of inversion, nominalization, and hedging:",
                             "options": [
-                                "Were",
-                                "Should",
-                                "Had",
-                                "If were"
+                                "Had the municipal council not hesitated, the mitigation of seasonal urban flooding could conceivably have succeeded.",
+                                "If the council was not waiting, stopping floods could maybe work.",
+                                "Were the council to not wait, flooding was stopped completely.",
+                                "Should the council not have waited, urban floods would stop with big certainty."
                             ],
                             "correctAnswer": 0,
-                            "explanation": "Were the committee to endorse..."
+                            "explanation": "'Had... not hesitated' (inversion), 'mitigation of seasonal urban flooding' (nominalization), va 'could conceivably have succeeded' (hedging) benuqson C1 sintezini tashkil etadi."
                         },
                         {
-                            "id": "en-c1-u5-l1-ex-2",
+                            "id": "en-c1-u5-l1-e2",
                             "type": "multiple-choice",
-                            "prompt": "Choose the correct word to complete the sentence: \"We adopted a pragmatic approach to problem-solving.\"",
+                            "prompt": "Choose the correct archaic/formal conjunction that triggers subjunctive verb form: 'We must verify the experimental baseline, _______ anomalous readings invalidate the cohort trial.'",
                             "options": [
-                                "Pragmatic",
-                                "reluctance",
-                                "doubt",
-                                "delay"
+                                "lest",
+                                "unless",
+                                "provided",
+                                "albeit"
                             ],
                             "correctAnswer": 0,
-                            "explanation": "\"Pragmatic\" (Amaliy, pragmatik) fits the context appropriately."
+                            "explanation": "'Lest' bog'lovchisi '...bo'lib qolmasin deb' ma'nosida subjunktiv fe'l shakli ('lest anomalous readings invalidate...') bilan ishlatiladi."
+                        },
+                        {
+                            "id": "en-c1-u5-l1-e3",
+                            "type": "multiple-choice",
+                            "prompt": "What does the word 'pinnacle' mean in: 'Achieving fluency in four languages was the pinnacle of his academic pursuits'?",
+                            "options": [
+                                "The highest point or culmination of success",
+                                "A disastrous failure",
+                                "The very beginning stage",
+                                "An accidental coincidence"
+                            ],
+                            "correctAnswer": 0,
+                            "explanation": "'Pinnacle' — muvaffaqiyatning eng yuksak cho'qqisi degani."
+                        },
+                        {
+                            "id": "en-c1-u5-l1-e4",
+                            "type": "multiple-choice",
+                            "prompt": "Complete: 'The treaty guaranteed the _______ flow of essential pharmaceuticals to refugee clinics.'",
+                            "options": [
+                                "unimpeded",
+                                "opaque",
+                                "myopic",
+                                "fallacious"
+                            ],
+                            "correctAnswer": 0,
+                            "explanation": "To'siqsiz, erkin harakatlanuvchi ta'minot oqimi 'unimpeded flow' deb yoziladi."
+                        },
+                        {
+                            "id": "en-c1-u5-l1-e5",
+                            "type": "multiple-choice",
+                            "prompt": "Select the verb meaning 'to moderate, tone down, or balance with caution':",
+                            "options": [
+                                "Temper",
+                                "Wreak",
+                                "Encroach",
+                                "Disseminate"
+                            ],
+                            "correctAnswer": 0,
+                            "explanation": "'Temper' — jo'shqinlikni vazminlik bilan jilovlamoq, mo''tadillashtirmoq demakdir."
                         }
                     ]
                 }
             },
             {
                 "id": "en-c1-u5-l1-s3",
-                "title": "Test",
+                "title": "Advanced Synthesis Baholash Testi",
                 "type": "test",
                 "estimatedMinutes": 7,
                 "testData": {
-                    "instructions": "Savollarga javob bering.",
-                    "passingScorePercentage": 75,
+                    "instructions": "C1 yuqori sintez mezonlari bo'yicha imtihon.",
+                    "passingScorePercentage": 80,
                     "questions": [
                         {
                             "id": "en-c1-u5-l1-q1",
-                            "question": "Which sentence demonstrates flawless C1 syntax?",
+                            "question": "What distinguishes genuine C1 linguistic synthesis from mere grammatical pretension?",
                             "options": [
-                                "Seldom has an intellectual discovery catalyzed such profound ethical dilemmas as genetic engineering.",
-                                "Seldom did an intellectual discovery catalyzed.",
-                                "Seldom an intellectual discovery has catalyzed dilemmas.",
-                                "Rarely an intellectual discovery catalyzes."
+                                "Using complex syntax naturally to serve clarity and rhetorical power, rather than awkwardly forcing disconnected rules into a chaotic sentence.",
+                                "Using words that are at least fifteen letters long.",
+                                "Never using punctuation marks.",
+                                "Writing exclusively in passive voice."
                             ],
                             "correctAnswerIndex": 0,
-                            "explanation": "Seldom has an intellectual discovery catalyzed..."
+                            "explanation": "Haqiqiy C1 sintez murakkab grammatikani o'z o'rnida, fikr ravonligi va mantiqiy kuchga xizmat qiladigan tarzda tabiiy qo'llashdir."
                         },
                         {
                             "id": "en-c1-u5-l1-q2",
-                            "question": "Had the warning signals _______ heeded, the catastrophe could have been averted.",
+                            "question": "'The successful launch of the James Webb Space Telescope marked the glorious _______ of three decades of international engineering collaboration.'",
                             "options": [
-                                "being",
-                                "have been",
-                                "be",
-                                "been"
+                                "culmination",
+                                "dichotomy",
+                                "subtext",
+                                "retraction"
                             ],
-                            "correctAnswerIndex": 3,
-                            "explanation": "Had the signals been heeded (Passive)."
+                            "correctAnswerIndex": 0,
+                            "explanation": "Ko'p yillik mehnatning eng yuksak yakuni va cho'qqisi 'glorious culmination' iborasi bilan beriladi."
                         },
                         {
                             "id": "en-c1-u5-l1-q3",
-                            "question": "\"What warrants immediate scrutiny is...\" Bu qaysi grammatik tuzilma?",
+                            "question": "Which sentence demonstrates the correct subjunctive usage after 'lest'?",
                             "options": [
-                                "Inverted zero conditional",
-                                "Dangling modifier",
-                                "Wh- Cleft sentence for emphasis",
-                                "Passive participle"
+                                "He kept the research data encrypted, lest unauthorized intruders compromise the clinical trial.",
+                                "He kept the research data encrypted, lest unauthorized intruders compromised the clinical trial.",
+                                "He kept the research data encrypted, lest unauthorized intruders will compromise the clinical trial.",
+                                "He kept the research data encrypted, lest unauthorized intruders compromising the clinical trial."
                             ],
-                            "correctAnswerIndex": 2,
-                            "explanation": "Wh- Cleft sentence."
+                            "correctAnswerIndex": 0,
+                            "explanation": "'Lest'dan keyin fe'lning asosiy shakli (bare subjunctive: 'compromise') qo'yiladi."
                         },
                         {
                             "id": "en-c1-u5-l1-q4",
-                            "question": "Choose the most cohesive and sophisticated academic linker:",
+                            "question": "What is the primary danger of 'sentence overcrowding' in academic writing?",
                             "options": [
-                                "Anyway moving on,",
-                                "Notwithstanding the aforementioned caveats,",
-                                "Also and so,",
-                                "Like I said before,"
+                                "The reader loses track of the core grammatical subject and the central logical assertion becomes incomprehensible.",
+                                "The essay uses too few nouns.",
+                                "It violates computer font requirements.",
+                                "It makes the margins of the paper uneven."
                             ],
-                            "correctAnswerIndex": 1,
-                            "explanation": "Notwithstanding the aforementioned caveats..."
+                            "correctAnswerIndex": 0,
+                            "explanation": "Gapni haddan tashqari ko'p ergash gaplar bilan to'ldirib yuborish asosiy fikrning yo'qolishiga va matnning tushunarsiz bo'lishiga olib keladi."
+                        },
+                        {
+                            "id": "en-c1-u5-l1-q5",
+                            "question": "'Biochemists are beginning to _______ the intricate molecular signals that trigger cellular apoptosis.'",
+                            "options": [
+                                "unravel",
+                                "posture",
+                                "dismantle",
+                                "stifle"
+                            ],
+                            "correctAnswerIndex": 0,
+                            "explanation": "Murakkab biologik jumboqning sirini ochish va yechish 'unravel the molecular signals' deyiladi."
                         }
                     ]
                 }
@@ -4911,153 +4987,228 @@ export const ENGLISH_C1_LESSONS: Lesson[] = [
         "level": "C1",
         "lessonNumber": 2,
         "title": "C1 Advanced Reading: Deconstructing Sociopolitical Bias",
-        "description": "Ommaviy axborot vositalari va siyosiy tahlillardagi tarafkashlik va ritorik nayranglarni ochib beruvchi tahliliy o'qish.",
-        "estimatedDurationMinutes": 18,
+        "description": "Nufuzli xalqaro nashrlardagi (The Economist, Foreign Affairs) ijtimoiy-siyosiy noxolislik (bias), mafkuraviy yo'naltirish (framing) va yashirin g'oyalarni fosh etish.",
+        "estimatedDurationMinutes": 22,
         "icon": "📰",
         "steps": [
             {
                 "id": "en-c1-u5-l2-s1",
-                "title": "Tahliliy O'qish",
+                "title": "Deconstructing Sociopolitical Bias & Media Framing",
                 "type": "learn",
-                "estimatedMinutes": 5,
+                "estimatedMinutes": 8,
                 "learnData": {
-                    "title": "Media Framing & Rhetorical Manipulation",
-                    "explanation": "Axborot maydonidagi manipulyatsiyalar: Framing effect (masalani qaysi burchakdan ko'rsatish), Loaded language (hissiy bo'yoqdor so'zlar), Omission of crucial context.",
-                    "keyPoints": [
-                        "Framing: \"Fiscal reform\" vs \"Austerity cuts\"",
-                        "Loaded terms: \"Freedom fighters\" vs \"Insurgents\""
-                    ],
-                    "grammarRules": [
-                        {
-                            "pattern": "C1 Advanced Reading: Deconstructing Sociopolitical Bias",
-                            "meaning": "Ommaviy axborot vositalari va siyosiy tahlillardagi tarafkashlik va ritorik nayranglarni ochib beruvchi tahliliy o'qish.",
-                            "usageNotes": "Axborot maydonidagi manipulyatsiyalar: Framing effect (masalani qaysi burchakdan ko'rsatish), Loaded language (hissiy bo'yoqdor so'zlar), Omission of crucial context.",
-                            "examples": [
-                                {
-                                    "sentence": "I study English every day with dedication.",
-                                    "translation": "Har kuni ingliz tilini astoydil o'rganaman."
-                                }
-                            ]
-                        }
-                    ],
+                    "title": "Critical Deconstruction of Ideological Bias & Media Framing",
+                    "explanation": "Oliy darajadagi o'quvchi xalqaro nufuzli nashrlarni mutlaq betaraf deb qabul qilmaydi. U har bir maqolaning orqasida ma'lum bir iqtisodiy yoki siyosiy manfaat, mafkuraviy ramka (media framing) va leksik bo'yash (spin) yotganini tahlil qiladi.\n\nAsosiy tahliliy usullar:\n1. **Lexical Framing (So'z tanlash orqali voqeani bo'yash)**:\n   - Bir xil hodisani bir nashr *'freedom fighters / dissidents'* deb atasa, boshqa tomon *'insurgents / subversives'* deb ta'riflaydi. Tanlangan so'z muallifning pozitsiyasini fosh qiladi.\n   - *Tax relief* (soliqni yengillatish - soliqni azob deb ko'rsatish) vs *Tax revenue* (davlat taraqqiyot sarmoyasi).\n\n2. **Omission & Selection Bias (Faktlarni tanlab berish)**:\n   - O'z qarashiga to'g'ri kelmaydigan statistik ko'rsatkichlarni butunlay tilga olmasdan chetlab o'tish (*deliberate omission*).\n\n3. **Polarizing Rhetoric (Qutblashtiruvchi ritorika)**:\n   - Ommaviy axborot vositalari o'quvchilarni jalb qilish uchun ko'pincha murakkab masalalarni 'yaxshi va yomon' deb sun'iy qutblashtiradi (*polarize*).\n\n⚠️ **O'zbek o'rganuvchilari uchun xavfli tuzoqlar (Common Pitfalls)**:\n- ❌ *Believing that academic grammar equals absolute objectivity.* (Grammatika qanchalik mukammal bo'lmasin, muallif o'z manfaatini himoya qilayotgan bo'lishi mumkin).\n- ❌ *Confusing 'disinterested' with 'uninterested'.* ('Uninterested' — befarq, qiziqmaydigan; 'Disinterested' — xolis, hech qanday shaxsiy manfaatdorligi bo'lmagan xolis hakam!).\n  ✅ *A judge must remain disinterested, not uninterested.*\n\n🎯 **IELTS Speaking & Writing Band 8.5 Masterclass**:\n- **Prompt**: Task 2: Is it possible for journalism to be entirely free of sociopolitical bias?\n- **Model Answer (Band 8.5+)**: Absolute journalistic impartiality remains an elusive ideal rather than an achievable reality. Because news organizations operate within distinct ideological parameters, editorial gatekeepers inevitably frame narratives to reflect their institutional worldview. Even when factual veracity is scrupulously maintained, the selective dissemination of data serves to polarize public discourse. Consequently, media literacy entails deconstructing authorial perspective rather than naively seeking sanitized neutrality.\n- **Discourse Markers**: Absolute journalistic impartiality remains an elusive ideal, editorial gatekeepers inevitably frame narratives, selective dissemination of data serves to polarize, media literacy entails deconstructing\n- **Examiner / Intonation Tip**: *Elusive ideal* (erishib bo'lmas orzu), *editorial gatekeepers*, *selective dissemination* kabi iboralar sizning tahliliy tafakkuringizni eng yuqori darajada ifodalaydi.",
                     "vocabulary": [
                         {
-                            "term": "Pragmatic",
-                            "reading": "/præɡˈmæt.ɪk/",
-                            "meaning": "Amaliy, pragmatik",
-                            "exampleSentence": "We adopted a pragmatic approach to problem-solving.",
-                            "exampleTranslation": "Biz muammoni hal qilishda amaliy yondashuvni qoʻlladik."
+                            "term": "Bias",
+                            "reading": "/ˈbaɪ.əs/",
+                            "meaning": "Noxolislik, tarafkashlik, bir tomonga og'ish",
+                            "exampleSentence": "Scholars detected subtle partisan bias in the newspaper's election coverage.",
+                            "exampleTranslation": "Olimlar gazetaning saylov yoritilishida nozik partiyaviy tarafkashlikni aniqladilar."
                         },
                         {
-                            "term": "Pervasive",
-                            "reading": "/pəˈveɪ.sɪv/",
-                            "meaning": "Keng tarqalgan, singib ketgan",
-                            "exampleSentence": "Digital transformation has a pervasive impact on society.",
-                            "exampleTranslation": "Raqamli transformatsiya jamiyatga chuqur singib borgan taʼsir koʻrsatadi."
+                            "term": "Polarize",
+                            "reading": "/ˈpəʊ.lə.raɪz/",
+                            "meaning": "Qutblashtirmoq, jamiyatni bir-biriga qarshi ikki tarafga bo'lib yubormoq",
+                            "exampleSentence": "Heated debates regarding immigration quotas continue to polarize the national electorate.",
+                            "exampleTranslation": "Immigratsiya kvotalari bo'yicha qizg'in bahslar milliy saylovchilarni qutblashtirishda davom etmoqda."
                         },
                         {
-                            "term": "Exemplify",
-                            "reading": "/ɪɡˈzem.plɪ.faɪ/",
-                            "meaning": "Yorqin misol boʻlmoq",
-                            "exampleSentence": "Recent discoveries exemplify the power of modern physics.",
-                            "exampleTranslation": "Soʻnggi kashfiyotlar zamonaviy fizika qudratini yaqqol namoyon etadi."
+                            "term": "Deconstruct",
+                            "reading": "/ˌdiː.kənˈstrʌkt/",
+                            "meaning": "Dekonstruktsiya qilmoq, matnning yashirin qatlamlari va ziddiyatlarini fosh qilmoq",
+                            "exampleSentence": "Literary theorists deconstruct the political narrative to expose suppressed historical voices.",
+                            "exampleTranslation": "Adabiyot nazariyachilari bostirilgan tarixiy ovozlarni ochib berish uchun siyosiy rivoyatni dekonstruktsiya qiladilar."
+                        },
+                        {
+                            "term": "Disseminate",
+                            "reading": "/dɪˈsem.ɪ.neɪt/",
+                            "meaning": "Keng tarqatmoq, ommaga yoymoq (axborot, g'oya)",
+                            "exampleSentence": "Digital networks enable bad actors to disseminate fabricated propaganda within seconds.",
+                            "exampleTranslation": "Raqamli tarmoqlar yovuz niyatli kimsalarga bir necha soniya ichida to'qima propagandani keng tarqatish imkonini beradi."
+                        },
+                        {
+                            "term": "Subversive",
+                            "reading": "/səbˈvɜː.sɪv/",
+                            "meaning": "Tizimni ichkaridan yemiruvchi, isyonkor, tuzumni ag'darishga qaratilgan",
+                            "exampleSentence": "The authoritarian regime censored the satirical theatrical play, declaring it politically subversive.",
+                            "exampleTranslation": "Avtoritar rejim satirik teatr spektaklini siyosiy jihatdan isyonkor va buzg'unchi deb e'lon qilib, senzuraga soldi."
+                        },
+                        {
+                            "term": "Partisan",
+                            "reading": "/ˌpɑː.tɪˈzæn/",
+                            "meaning": "Bir partiya yoki tarafga ko'r-ko'rona sodiq, tarafdor",
+                            "exampleSentence": "Fierce partisan rancor has paralyzed legislative decision-making in the senate.",
+                            "exampleTranslation": "Shiddatli partiyaviy adovat senatda qonunchilik qarorlarini qabul qilishni falaj qilib qo'ydi."
+                        },
+                        {
+                            "term": "Veracity",
+                            "reading": "/vəˈræs.ə.ti/",
+                            "meaning": "Haqiqiylik, rostgo'ylik, dalillarning to'g'riligi",
+                            "exampleSentence": "Fact-checking organizations rigorously verify the veracity of viral social media assertions.",
+                            "exampleTranslation": "Fakt-tekshiruvchi tashkilotlar virusdek tarqalgan ijtimoiy tarmoq da'volarining haqiqiyligini qat'iy tekshiradilar."
+                        },
+                        {
+                            "term": "Disinterested",
+                            "reading": "/dɪsˈɪn.trəs.tɪd/",
+                            "meaning": "Xolis, betaraf, shaxsiy moddiy manfaatdor bo'lmagan",
+                            "exampleSentence": "A disinterested panel of international judges was appointed to adjudicate the maritime boundary dispute.",
+                            "exampleTranslation": "Dengiz chegarasi bo'yicha nizoni hal qilish uchun xalqaro sudyalardan iborat xolis hakamlar hay'ati tayinlandi."
                         }
+                    ],
+                    "keyPoints": [
+                        "Media literacy demands deconstructing ideological framing, diction slant, and deliberate data omission.",
+                        "Recognize loaded terminology (e.g. 'subversive' vs 'reformist', 'regime' vs 'administration').",
+                        "Understand that true objectivity is an ideal; all texts reflect their author's sociocultural situatedness.",
+                        "Crucial vocabulary distinction: 'disinterested' (impartial, fair) vs 'uninterested' (bored, indifferent)."
                     ]
                 }
             },
             {
                 "id": "en-c1-u5-l2-s2",
-                "title": "Mashq",
+                "title": "Deconstructing Bias Amaliyoti",
                 "type": "practice",
                 "estimatedMinutes": 6,
                 "practiceData": {
-                    "instructions": "Tarafkashlik turini aniqlang.",
+                    "instructions": "Matnlardagi ijtimoiy-siyosiy noxolislik va leksik bo'yash tahliliga oid eng to'g'ri variantlarni tanlang.",
                     "exercises": [
                         {
                             "id": "en-c1-u5-l2-e1",
                             "type": "multiple-choice",
-                            "prompt": "An article titles an event \"Heroic Tax Relief\" instead of \"Budget Reduction for Healthcare\". This is an example of:",
+                            "prompt": "Choose the word that means 'completely impartial, unbiased, and having no personal financial stake in the outcome':",
                             "options": [
-                                "Pure objective science",
-                                "Loaded framing and bias",
-                                "Translation error",
-                                "Math formula"
+                                "Disinterested",
+                                "Uninterested",
+                                "Partisan",
+                                "Subversive"
                             ],
-                            "correctAnswer": 1,
-                            "explanation": "Loaded framing and bias."
+                            "correctAnswer": 0,
+                            "explanation": "'Disinterested' — xolis, hech qanday shaxsiy manfaatdorlikka ega bo'lmagan deganidir ('uninterested' esa befarq degani)."
                         },
                         {
-                            "id": "en-c1-u5-l2-ex-2",
+                            "id": "en-c1-u5-l2-e2",
                             "type": "multiple-choice",
-                            "prompt": "Choose the correct word to complete the sentence: \"Digital transformation has a pervasive impact on society.\"",
+                            "prompt": "Which newspaper headline demonstrates the strongest ideological 'framing' against a public strike?",
                             "options": [
-                                "doubt",
-                                "Pervasive",
-                                "delay",
-                                "reluctance"
+                                "Transit Workers Hold Strike Demanding Higher Wages",
+                                "Selfish Rail Union Strands Millions of Suffering Commuters in Greedy Blackmail",
+                                "Rail Workers and Management Continue Labor Negotiations",
+                                "Metropolitan Train Services Suspended Due to Union Action"
                             ],
                             "correctAnswer": 1,
-                            "explanation": "\"Pervasive\" (Keng tarqalgan, singib ketgan) fits the context appropriately."
+                            "explanation": "'Selfish rail union', 'suffering commuters', 'greedy blackmail' kabi o'ta yuklangan salbiy so'zlar orqali voqea bir tomonlama bo'yalgan (framing)."
+                        },
+                        {
+                            "id": "en-c1-u5-l2-e3",
+                            "type": "multiple-choice",
+                            "prompt": "Fill in the blank: 'Social media algorithms tend to echo users' existing biases, which increasingly _______ public opinion.'",
+                            "options": [
+                                "polarizes",
+                                "substantiates",
+                                "remediates",
+                                "dismantles"
+                            ],
+                            "correctAnswer": 0,
+                            "explanation": "Jamiyatni ikki qarama-qarshi qutbga bo'lib yuborish 'polarizes public opinion' deyiladi."
+                        },
+                        {
+                            "id": "en-c1-u5-l2-e4",
+                            "type": "multiple-choice",
+                            "prompt": "What does verifying the 'veracity' of a historical document involve?",
+                            "options": [
+                                "Confirming its truthfulness, authenticity, and factual accuracy",
+                                "Translating it into three foreign languages",
+                                "Printing it on expensive glossy paper",
+                                "Burning the original manuscript"
+                            ],
+                            "correctAnswer": 0,
+                            "explanation": "'Veracity' — hujjatning rostgo'yligi, haqiqiyligi va dalillarning aniqligini tekshirishni bildiradi."
+                        },
+                        {
+                            "id": "en-c1-u5-l2-e5",
+                            "type": "multiple-choice",
+                            "prompt": "Complete: 'The ministry warned that non-state actors were using bots to _______ fabricated election rumors.'",
+                            "options": [
+                                "disseminate",
+                                "temper",
+                                "unravel",
+                                "elucidate"
+                            ],
+                            "correctAnswer": 0,
+                            "explanation": "Soxta xabarlarni keng ommaga tarqatish 'disseminate fabricated rumors' iborasi bilan ifodalanadi."
                         }
                     ]
                 }
             },
             {
                 "id": "en-c1-u5-l2-s3",
-                "title": "Test",
+                "title": "Deconstructing Bias Baholash Testi",
                 "type": "test",
                 "estimatedMinutes": 7,
                 "testData": {
-                    "instructions": "Savollarga javob bering.",
-                    "passingScorePercentage": 75,
+                    "instructions": "OAV noxolisligi va diskurs dekonstruktsiyasi bo'yicha imtihon.",
+                    "passingScorePercentage": 80,
                     "questions": [
                         {
                             "id": "en-c1-u5-l2-q1",
-                            "question": "What is \"framing\" in media communication?",
+                            "question": "What is 'selection bias' (omission bias) in investigative journalism?",
                             "options": [
-                                "Putting a picture in a wooden frame",
-                                "The way information is curated and presented to influence audience perception and judgment",
-                                "Broadcasting sports events",
-                                "Printing newspapers on color paper"
+                                "Deliberately choosing which facts or statistics to publish while concealing counter-evidence that contradicts the publication's political stance.",
+                                "Selecting high-resolution photographs for the front page.",
+                                "Hiring only journalists who graduated from Harvard.",
+                                "Choosing the font size of the article."
                             ],
-                            "correctAnswerIndex": 1,
-                            "explanation": "Curating and presenting to influence perception."
+                            "correctAnswerIndex": 0,
+                            "explanation": "O'z pozitsiyasiga mos faktlarni tanlab olib, zid keluvchi haqiqatlarni yashirib ketish 'selection/omission bias' deb ataladi."
                         },
                         {
                             "id": "en-c1-u5-l2-q2",
-                            "question": "\"Omission bias\" occurs when a journalist:",
+                            "question": "'The security apparatus seized unauthorized pamphlets, condemning them as _______ incitement against the state.'",
                             "options": [
-                                "Spells a name wrong",
-                                "Uses too many commas",
-                                "Leaves out critical context or counter-evidence that contradicts the desired narrative",
-                                "Interviews too many experts"
+                                "subversive",
+                                "disinterested",
+                                "unimpeded",
+                                "salient"
                             ],
-                            "correctAnswerIndex": 2,
-                            "explanation": "Leaves out critical context."
+                            "correctAnswerIndex": 0,
+                            "explanation": "Davlatga qarshi isyonkor va buzg'unchi harakat 'subversive incitement' deb ta'riflanadi."
                         },
                         {
                             "id": "en-c1-u5-l2-q3",
-                            "question": "Which descriptor is the most neutral and objective?",
+                            "question": "What is the crucial difference between 'disinterested' and 'uninterested'?",
                             "options": [
-                                "The glorious economic miracle",
-                                "The corrupt corporate handout",
-                                "The disastrous socialist scheme",
-                                "The proposed fiscal legislation"
+                                "'Disinterested' means impartial and unbiased, while 'uninterested' means not engaged or bored.",
+                                "'Disinterested' is French, while 'uninterested' is German.",
+                                "They mean the exact same thing.",
+                                "'Uninterested' refers only to financial contracts."
                             ],
-                            "correctAnswerIndex": 3,
-                            "explanation": "The proposed fiscal legislation."
+                            "correctAnswerIndex": 0,
+                            "explanation": "'Disinterested' — xolis va adolatli; 'uninterested' — befarq va qiziqmaydigan deganidir."
                         },
                         {
                             "id": "en-c1-u5-l2-q4",
-                            "question": "Critical media literacy empowers citizens to:",
+                            "question": "Which of the following phrases represents a classic example of ideologically loaded 'spin'?",
                             "options": [
-                                "Discern rhetorical manipulation and evaluate claims based on empirical merit",
-                                "Only listen to one television channel",
-                                "Refuse to read any news",
-                                "Believe everything on social media"
+                                "Describing a military retreat as 'strategic backward repositioning'.",
+                                "Reporting that temperatures reached 32 degrees Celsius.",
+                                "Stating that the train arrived at 14:00.",
+                                "Printing a table of rainfall metrics."
                             ],
                             "correctAnswerIndex": 0,
-                            "explanation": "Discern manipulation and evaluate empirical merit."
+                            "explanation": "Chekinishni 'strategik orqaga joylashish' deb atash noxush haqiqatni so'zlar bilan bezashning (political spin) klassik namunasidir."
+                        },
+                        {
+                            "id": "en-c1-u5-l2-q5",
+                            "question": "'The senate committee was paralyzed by fierce _______ loyalty, preventing any bipartisan accord.'",
+                            "options": [
+                                "partisan",
+                                "disinterested",
+                                "subservient",
+                                "opaque"
+                            ],
+                            "correctAnswerIndex": 0,
+                            "explanation": "Bir partiyaga ko'r-ko'rona sodiqlik 'partisan loyalty' deb ataladi."
                         }
                     ]
                 }
@@ -5073,149 +5224,228 @@ export const ENGLISH_C1_LESSONS: Lesson[] = [
         "level": "C1",
         "lessonNumber": 3,
         "title": "C1 High-Level Academic Listening: Scientific Meta-Analysis",
-        "description": "Olimlarning yuzlab tadqiqotlarni jamlovchi meta-tahlil ma'ruzasini tinglash va ilmiy xulosalarni ajratish.",
-        "estimatedDurationMinutes": 18,
+        "description": "Yuqori darajadagi ilmiy konferensiyalar, meta-analiz metodologiyasi, statistik ahamiyatlilik (p-value, confidence intervals) va ilmiy bahslarni tinglash.",
+        "estimatedDurationMinutes": 22,
         "icon": "🔬",
         "steps": [
             {
                 "id": "en-c1-u5-l3-s1",
-                "title": "Meta-tahlil Ma'ruzasi",
+                "title": "Listening to Scientific Meta-Analysis & Symposia",
                 "type": "learn",
-                "estimatedMinutes": 5,
+                "estimatedMinutes": 8,
                 "learnData": {
-                    "title": "Systematic Reviews & Statistical Heterogeneity",
-                    "explanation": "Meta-analysis birlamchi tadqiqotlarning natijalarini matematik jihatdan umumlashtiradi. Asosiy tushunchalar: Sample size (tanlanma hajmi), Statistical significance (statistik ahamiyatlilik: p < 0.05), Publication bias (faqat ijobiy natijalarning chop etilishi).",
+                    "title": "Decoding Scientific Meta-Analyses and Statistical Discourse",
+                    "explanation": "C1 darajasidagi eng murakkab akademik tinglash — bu yuzlab individual tadqiqotlarni jamlab umumiy xulosa beruvchi ilmiy meta-analiz (meta-analysis) hisobotlari va xalqaro simpoziumlardagi ma'ruzalarni tushunishdir.\n\nAsosiy ilmiy-statistik leksika:\n1. **Korrelyatsiya va Sababiyat (Correlation vs Causation)**:\n   - *Correlation does not imply causation.* (Ikki hodisaning bir vaqtda sodir bo'lishi ulardan biri ikkinchisini keltirib chiqarganini bildirmaydi).\n   - Tinglash paytida ma'ruzachi buni ta'kidlaydimi? *'Although variables X and Y correlate strongly, longitudinal trials indicate that a third confounding factor drives the observed outcome.'*\n\n2. **Statistik Ahamiyatlilik (Statistical Significance & Replicability)**:\n   - **p-value / confidence interval**: Natijaning tasodif emasligini tasdiqlovchi ehtimollik o'lchovlari.\n   - **Replicability crisis**: Ko'plab psixologik va tibbiy tajribalarning mustaqil olimlar tomonidan qayta takrorlanganda bir xil natija bermasligi muammosi.\n\n3. **Kohorta va Namunani Tahlil Qilish (Cohort Dynamics)**:\n   - *Sample size limitations*: Tanlangan respondentlar sonining kamligi.\n   - *Heterogeneity of data*: Har xil mamlakatlardan olingan ma'lumotlarning bir xil me'yorga tushmasligi.\n\n⚠️ **O'zbek o'rganuvchilari uchun xavfli tuzoqlar (Common Pitfalls)**:\n- ❌ *Assuming correlation equals direct cause.* (IELTS Listening testlaridagi eng xatarli ilmiy tuzoq!).\n- ❌ *Getting flustered by mathematical abbreviations.* (p < 0.05 yoki CI kabi atamalar eshitilganda sarosimaga tushmang; asosiy e'tiborni ma'ruzachining xulosasiga — *statistically robust* yoki *statistically insignificant* ekanligiga qarating).\n\n🎯 **IELTS Speaking & Writing Band 8.5 Masterclass**:\n- **Prompt**: Speaking Part 3: Why should society be cautious when media outlets report single scientific studies?\n- **Model Answer (Band 8.5+)**: Sensationalist headlines routinely conflate statistical correlation with direct causation. A single preliminary trial, burdened by small cohort sizes and unaddressed confounding variables, rarely warrants sweeping policy overhauls. Discerning observers must await comprehensive meta-analyses that synthesize multi-laboratory replications before embracing novel scientific paradigms.\n- **Discourse Markers**: Sensationalist headlines routinely conflate... with..., burdened by small cohort sizes, rarely warrants sweeping policy overhauls, await comprehensive meta-analyses that synthesize\n- **Examiner / Intonation Tip**: *Conflate correlation with causation* (korrelyatsiyani sababiyat bilan qorishtirib yubormoq) iborasi Band 9.0 darajasidagi mukammal ilmiy iboradir.",
                     "vocabulary": [
                         {
+                            "term": "Meta-analysis",
+                            "reading": "/ˌmet.ə.əˈnæl.ə.sɪs/",
+                            "meaning": "Meta-analiz (bir xil mavzudagi o'nlab/yuzlab mustaqil tadqiqotlar natijalarini matematik birlashtirib umumiy xulosa chiqarish)",
+                            "exampleSentence": "The landmark meta-analysis aggregated data across seventy-four clinical trials involving over fifty thousand patients.",
+                            "exampleTranslation": "Tarixiy meta-analiz ellik mingdan ortiq bemorni qamrab olgan yetmish to'rtta klinik sinov ma'lumotlarini birlashtirdi."
+                        },
+                        {
+                            "term": "Conflate",
+                            "reading": "/kənˈfleɪt/",
+                            "meaning": "Ikki xil tushunchani bir-biriga qo'shib yubormoq, chalkashtirmoq",
+                            "exampleSentence": "Popular media outlets frequently conflate weather volatility with long-term climate shift.",
+                            "exampleTranslation": "Ommaviy axborot vositalari ob-havoning beqarorligini uzoq muddatli iqlim o'zgarishi bilan tez-tez chalkashtirib yuboradilar."
+                        },
+                        {
+                            "term": "Cohort",
+                            "reading": "/ˈkəʊ.hɔːt/",
+                            "meaning": "Kohorta, umumiy xususiyatga ega bo'lgan o'rganiluvchi guruh",
+                            "exampleSentence": "The epidemiological cohort was tracked over a thirty-year timeframe to assess cardiovascular health.",
+                            "exampleTranslation": "Yurak-qon tomir salomatligini baholash uchun epidemiologik guruh (kohorta) o'ttiz yil davomida kuzatib borildi."
+                        },
+                        {
                             "term": "Heterogeneity",
-                            "reading": "/ˌhet.ər.ə.dʒəˈniː.ə.ti/",
-                            "meaning": "Har xillik / Turfa xillik",
-                            "exampleSentence": "Statistical heterogeneity was observed.",
-                            "exampleTranslation": "Statistik turfa xillik kuzatildi."
+                            "reading": "/ˌhet.ər.əʊ.dʒəˈniː.ə.ti/",
+                            "meaning": "Geterogenlik, har xillik, turlicha tarkibli bo'lish",
+                            "exampleSentence": "Extreme heterogeneity among sample populations precluded researchers from making uniform generalizations.",
+                            "exampleTranslation": "Tanlangan guruhlar orasidagi keskin har xillik tadqiqotchilarga bir xil umumiy xulosalar chiqarishga to'sqinlik qildi."
                         },
                         {
-                            "term": "Exemplify",
-                            "reading": "/ɪɡˈzem.plɪ.faɪ/",
-                            "meaning": "Yorqin misol boʻlmoq",
-                            "exampleSentence": "Recent discoveries exemplify the power of modern physics.",
-                            "exampleTranslation": "Soʻnggi kashfiyotlar zamonaviy fizika qudratini yaqqol namoyon etadi."
+                            "term": "Causation",
+                            "reading": "/kɔːˈzeɪ.ʃən/",
+                            "meaning": "Sababiyat, sabab-oqibat bog'liqligi",
+                            "exampleSentence": "Establishing definitive biological causation requires rigorous double-blind randomized control trials.",
+                            "exampleTranslation": "Qat'iy biologik sababiyatni isbotlash qat'iy ikki tomonlama yashirin nazorat sinovlarini talab qiladi."
                         },
                         {
-                            "term": "Nominalisation",
-                            "reading": "/ˌnɒmɪnəlaɪˈzeɪʃən/",
-                            "meaning": "Feʼlni otga aylantirish (akademik uslub)",
-                            "exampleSentence": "Nominalisation lends academic weight to scientific discourse.",
-                            "exampleTranslation": "Nominalizatsiya ilmiy matnga akademik salmoq beradi."
+                            "term": "Robust",
+                            "reading": "/rəʊˈbʌst/",
+                            "meaning": "Mustahkam, ishonchli, xatoga chidamli (statistika haqida)",
+                            "exampleSentence": "The peer review panel concluded that the econometric regressions were mathematically robust.",
+                            "exampleTranslation": "Taqrizchilar hay'ati ekonometrik regressiyalar matematik jihatdan mustahkam va ishonchli degan xulosaga keldi."
+                        },
+                        {
+                            "term": "Insignificant",
+                            "reading": "/ˌɪn.sɪɡˈnɪf.ɪ.kənt/",
+                            "meaning": "Ahamiyatsiz, statistik jihatdan isbotlanmagan",
+                            "exampleSentence": "The observed variation in blood pressure proved statistically insignificant after adjusting for age.",
+                            "exampleTranslation": "Qon bosimidagi kuzatilgan o'zgarish yosh omili hisobga olingandan so'ng statistik jihatdan ahamiyatsiz bo'lib chiqdi."
+                        },
+                        {
+                            "term": "Discrepancy",
+                            "reading": "/dɪˈskrep.ən.si/",
+                            "meaning": "Tafovut, nomuvofiqlik, ziddiyat",
+                            "exampleSentence": "Auditors noted an irreconcilable discrepancy between reported grant expenditures and actual receipts.",
+                            "exampleTranslation": "Auditorlar ko'rsatilgan grant xarajatlari va haqiqiy cheklar o'rtasida bartaraf etib bo'lmas tafovutni qayd etdilar."
                         }
                     ],
-                    "grammarRules": [
-                        {
-                            "pattern": "C1 High-Level Academic Listening: Scientific Meta-Analysis",
-                            "meaning": "Olimlarning yuzlab tadqiqotlarni jamlovchi meta-tahlil ma'ruzasini tinglash va ilmiy xulosalarni ajratish.",
-                            "usageNotes": "Meta-analysis birlamchi tadqiqotlarning natijalarini matematik jihatdan umumlashtiradi. Asosiy tushunchalar: Sample size (tanlanma hajmi), Statistical significance (statistik ahamiyatlilik: p < 0.05), Publication bias (faqat ijobiy natijalarning chop etilishi).",
-                            "examples": [
-                                {
-                                    "sentence": "Statistical heterogeneity was observed.",
-                                    "translation": "Statistik turfa xillik kuzatildi."
-                                }
-                            ]
-                        }
+                    "keyPoints": [
+                        "Never conflate correlation (two things happening together) with causation (one thing causing another).",
+                        "Listen for evaluations of data strength: 'statistically robust' vs 'statistically insignificant'.",
+                        "Understand the value of meta-analyses: they aggregate multiple studies to overcome small cohort limitations.",
+                        "Identify phrases signaling methodological reservations: 'heterogeneity among datasets', 'confounding factors'."
                     ]
                 }
             },
             {
                 "id": "en-c1-u5-l3-s2",
-                "title": "Mashq",
+                "title": "Scientific Meta-Analysis Amaliyoti",
                 "type": "practice",
                 "estimatedMinutes": 6,
                 "practiceData": {
-                    "instructions": "Ilmiy xulosani aniqlang.",
+                    "instructions": "Ilmiy ma'ruzalar va meta-analiz tahliliga oid eng to'g'ri jumlalarni tanlang.",
                     "exercises": [
                         {
                             "id": "en-c1-u5-l3-e1",
                             "type": "multiple-choice",
-                            "prompt": "Professor: \"While individual cohort studies varied, the synthesized meta-analytic effect size yielded a statistically significant correlation.\" What is the finding?",
+                            "prompt": "What logical error is committed when someone claims: 'Ice cream sales increase in summer, and drownings increase in summer; therefore, eating ice cream causes people to drown'?",
                             "options": [
-                                "All data was fabricated",
-                                "No conclusions can ever be drawn",
-                                "The synthesized evidence confirms a statistically significant correlation",
-                                "The studies proved nothing"
+                                "Conflating statistical correlation with direct causation",
+                                "Using conditional inversion incorrectly",
+                                "Conducting a double-blind trial",
+                                "Establishing an inviolable sanctuary"
                             ],
-                            "correctAnswer": 2,
-                            "explanation": "Synthesized evidence confirms correlation."
+                            "correctAnswer": 0,
+                            "explanation": "Issiq ob-havo ikkala holatni ham keltirib chiqarayotgan yashirin omil (confounding variable); ularni bir-biriga sababchi qilish 'conflating correlation with causation' xatosidir."
                         },
                         {
-                            "id": "en-c1-u5-l3-ex-2",
+                            "id": "en-c1-u5-l3-e2",
                             "type": "multiple-choice",
-                            "prompt": "Choose the correct word to complete the sentence: \"Recent discoveries exemplify the power of modern physics.\"",
+                            "prompt": "Why is a 'meta-analysis' considered superior to an individual standalone study?",
                             "options": [
-                                "reluctance",
-                                "delay",
-                                "Exemplify",
-                                "doubt"
+                                "It aggregates data across dozens of independent trials, increasing statistical power and minimizing sample bias.",
+                                "It is written in very poetic rhyming verse.",
+                                "It costs zero dollars to publish.",
+                                "It eliminates all need for peer review."
                             ],
-                            "correctAnswer": 2,
-                            "explanation": "\"Exemplify\" (Yorqin misol boʻlmoq) fits the context appropriately."
+                            "correctAnswer": 0,
+                            "explanation": "Meta-analiz o'nlab mustaqil tadqiqotlarni matematik birlashtirib, individual namuna xatolarini kamaytiradi va ishonchlilikni oshiradi."
+                        },
+                        {
+                            "id": "en-c1-u5-l3-e3",
+                            "type": "multiple-choice",
+                            "prompt": "Fill in the blank: 'The study tracked a _______ of 10,000 twins over four decades to isolate genetic determinants.'",
+                            "options": [
+                                "cohort",
+                                "cadence",
+                                "tricolon",
+                                "retraction"
+                            ],
+                            "correctAnswer": 0,
+                            "explanation": "Uzoq muddat kuzatiladigan tadqiqot guruhi 'cohort' deb ataladi."
+                        },
+                        {
+                            "id": "en-c1-u5-l3-e4",
+                            "type": "multiple-choice",
+                            "prompt": "What does describing statistical data as 'robust' imply?",
+                            "options": [
+                                "Strong, reliable, and capable of withstanding critical mathematical scrutiny",
+                                "Weak and full of errors",
+                                "Calculated by an amateur intern",
+                                "Written in ancient numerals"
+                            ],
+                            "correctAnswer": 0,
+                            "explanation": "'Robust' — mustahkam, ishonchli va matematik tekshiruvlarga bardosh bera oladigan ma'lumot degani."
+                        },
+                        {
+                            "id": "en-c1-u5-l3-e5",
+                            "type": "multiple-choice",
+                            "prompt": "Complete: 'Due to severe _______ in measurement protocols across the clinics, combining the datasets proved mathematically impossible.'",
+                            "options": [
+                                "heterogeneity",
+                                "concurrence",
+                                "consensus",
+                                "sanctuary"
+                            ],
+                            "correctAnswer": 0,
+                            "explanation": "Protokollarning bir-biriga to'g'ri kelmasligi va turlicha bo'lishi 'heterogeneity' so'zi orqali ifodalanadi."
                         }
                     ]
                 }
             },
             {
                 "id": "en-c1-u5-l3-s3",
-                "title": "Test",
+                "title": "Scientific Meta-Analysis Baholash Testi",
                 "type": "test",
                 "estimatedMinutes": 7,
                 "testData": {
-                    "instructions": "Savollarga javob bering.",
-                    "passingScorePercentage": 75,
+                    "instructions": "Ilmiy simpozium va meta-analiz leksikasi bo'yicha imtihon.",
+                    "passingScorePercentage": 80,
                     "questions": [
                         {
                             "id": "en-c1-u5-l3-q1",
-                            "question": "What is a \"systematic review\"?",
+                            "question": "What is the 'replicability crisis' in modern experimental science?",
                             "options": [
-                                "A book review by a student",
-                                "An advertisement for medicine",
-                                "A rigorous, reproducible synthesis of all available empirical studies on a specific research question",
-                                "A quick glance at a magazine"
+                                "The inability of independent scientists to reproduce the published findings of earlier experiments, threatening scientific credibility.",
+                                "A shortage of paper to print scientific journals.",
+                                "The rising price of microscope lenses.",
+                                "A disagreement about the English spelling of technical words."
                             ],
-                            "correctAnswerIndex": 2,
-                            "explanation": "Rigorous reproducible synthesis of studies."
+                            "correctAnswerIndex": 0,
+                            "explanation": "'Replicability crisis' — mustaqil olimlar ilgari nashr etilgan natijalarni qayta takrorlay olmasligi oqibatida yuzaga kelgan ishonch inqirozidir."
                         },
                         {
                             "id": "en-c1-u5-l3-q2",
-                            "question": "\"Publication bias\" refers to the tendency for journals to:",
+                            "question": "'Journalists frequently _______ preliminary hypotheses with established clinical facts, causing public alarm.'",
                             "options": [
-                                "Refuse to print graphs",
-                                "Publish statistically positive results while ignoring negative or null findings",
-                                "Print on glossy paper",
-                                "Only publish in French"
+                                "conflate",
+                                "unravel",
+                                "temper",
+                                "outstrip"
                             ],
-                            "correctAnswerIndex": 1,
-                            "explanation": "Publish positive while ignoring null findings."
+                            "correctAnswerIndex": 0,
+                            "explanation": "Dastlabki farazlarni isbotlangan faktlar bilan chalkashtirib qorishtirish 'conflate hypotheses with facts' deb yoziladi."
                         },
                         {
                             "id": "en-c1-u5-l3-q3",
-                            "question": "What does \"p < 0.05\" conventionally indicate in scientific research?",
+                            "question": "If a clinical trial outcome is determined to be 'statistically insignificant', what does it mean?",
                             "options": [
-                                "That the observed result is statistically significant and unlikely due to random chance alone",
-                                "That 5% of patients left",
-                                "That the experiment took 5 hours",
-                                "That the paper has 5 pages"
+                                "The observed difference could very plausibly have occurred simply by random chance rather than due to the medicine.",
+                                "The medicine was 100% successful.",
+                                "The trial lasted for 500 years.",
+                                "The doctors forgot to write down the patients' names."
                             ],
                             "correctAnswerIndex": 0,
-                            "explanation": "Statistically significant result."
+                            "explanation": "'Statistically insignificant' — natija dori tufayli emas, balki shunchaki tasodif tufayli yuz bergan bo'lish ehtimoli yuqoriligini bildiradi."
                         },
                         {
                             "id": "en-c1-u5-l3-q4",
-                            "question": "A \"placebo-controlled, double-blind randomized trial\" means:",
+                            "question": "'The statistical analysis revealed an irreconcilable _______ between the raw telemetry data and the published report.'",
                             "options": [
-                                "Everyone is blindfolded",
-                                "Doctors guess the results",
-                                "Patients take whatever medicine they want",
-                                "Neither participants nor researchers know who received the real treatment versus placebo during testing"
+                                "discrepancy",
+                                "consensus",
+                                "anaphora",
+                                "sanctuary"
                             ],
-                            "correctAnswerIndex": 3,
-                            "explanation": "Neither participants nor researchers know."
+                            "correctAnswerIndex": 0,
+                            "explanation": "Xom ma'lumotlar va e'lon qilingan hisobot o'rtasidagi ziddiyat va tafovut 'discrepancy' deb ataladi."
+                        },
+                        {
+                            "id": "en-c1-u5-l3-q5",
+                            "question": "Identify the statement that correctly reflects sound scientific skepticism:",
+                            "options": [
+                                "Because one study found coffee cured cancer, everyone must drink fifty cups a day immediately.",
+                                "While preliminary trials show promise, policy recommendations should await confirmatory meta-analyses.",
+                                "Scientists are all liars and we should never listen to any medicine advice.",
+                                "If an article is on social media, it is guaranteed to be 100% true."
+                            ],
+                            "correctAnswerIndex": 1,
+                            "explanation": "Dastlabki natijalar umidli bo'lsa-da, siyosiy tavsiyalar oldidan tasdiqlovchi meta-analizlarni kutish haqiqiy ilmiy ehtiyotkorlikdir."
                         }
                     ]
                 }
@@ -5231,149 +5461,228 @@ export const ENGLISH_C1_LESSONS: Lesson[] = [
         "level": "C1",
         "lessonNumber": 4,
         "title": "C1 Academic Editorial: Policy Recommendations & Reform",
-        "description": "Hukumat yoki xalqaro tashkilotlar uchun yuqori darajadagi tahliliy bosh maqola (editorial) va strategik tavsiyanomalar yozish.",
-        "estimatedDurationMinutes": 18,
-        "icon": "🏛️",
+        "description": "Nufuzli tahririyat maqolasi (editorial) va davlat siyosati bo'yicha tavsiyalar (policy brief) yozish: normativ sintaksis va pragmatik islohotlar.",
+        "estimatedDurationMinutes": 22,
+        "icon": "⚖️",
         "steps": [
             {
                 "id": "en-c1-u5-l4-s1",
-                "title": "Bosh Maqola Yozish",
+                "title": "Authoritative Policy Recommendations & Editorials",
                 "type": "learn",
-                "estimatedMinutes": 5,
+                "estimatedMinutes": 8,
                 "learnData": {
-                    "title": "Formulating Policy Editorials",
-                    "explanation": "1. Situational Analysis: Muammoning miqyosi. 2. Critique of Current Inadequacies: Mavjud kamchiliklar. 3. Actionable Policy Roadmap: Aniq amaliy qadamlar. 4. Strategic Vision: Uzoq muddatli istiqbol.",
+                    "title": "Crafting Authoritative Policy Briefs and Scholarly Editorials",
+                    "explanation": "C1 darajasidagi tahlilchining eng mas'uliyatli vazifasi — muammoni shunchaki tanqid qilish emas, balki hukumat, vazirliklar va xalqaro tashkilotlar uchun amaliy, pragmatik va qonuniy asoslangan siyosiy tavsiyalar (Policy Recommendations) ishlab chiqishdir.\n\nSiyosiy Tahririyat Arxitekturasi:\n1. **Muammoning Dolzarbligini Ko'rsatish (The Urgent Imperative)**:\n   - *Current regulatory inaction regarding algorithmic trading platforms constitutes an untenable systemic hazard.*\n2. **Pragmatik Islohot Taklifi (Actionable Policy Proposals)**:\n   - *It is imperative that regulatory authorities overhaul statutory auditing protocols.*\n   - Normativ subjunktiv va buyruq fe'llaridan foydalanish: *We propose that the ministry establish an independent ombudsman forthwith.*\n3. **Moliyaviy va Huquqiy Oqlash (Pragmatic Feasibility)**:\n   - *Admittedly, executing this comprehensive overhaul incurs initial administrative overheads; nevertheless, proactive compliance preempts multi-billion dollar systemic bailouts.*\n\nAsosiy Leksik Qoliplar:\n- **Overhaul**: Tizimni tubdan qayta qurish, kapital ta'mirlash (*a comprehensive legislative overhaul*).\n- **Enact**: Qonun qabul qilmoq, kuchga kiritmoq (*parliament must enact stringent anti-monopoly statutes*).\n- **Proactive**: Oldindan harakat qiluvchi, tashabbuskor (muammo sodir bo'lishini kutib o'tirmasdan).\n\n⚠️ **O'zbek o'rganuvchilari uchun xavfli tuzoqlar (Common Pitfalls)**:\n- ❌ *The government must do something good immediately.* (O'ta noaniq va havaskorona ibora; aniq chora-tadbir taklif qiling!).\n  ✅ *Parliament must enact enforceable statutory caps on carbon emissions.*\n- ❌ *Suggesting unrealistic utopian proposals.* (Barcha soliqni bekor qilish yoki bir kunda hamma narsani bepul qilish kabi takliflar tahlilchining nufuzini yo'qqa chiqaradi).\n\n🎯 **IELTS Speaking & Writing Band 8.5 Masterclass**:\n- **Prompt**: Task 2: What measures can governments take to combat youth unemployment in rural areas?\n- **Model Answer (Band 8.5+)**: Addressing rural youth underemployment necessitates a proactive, multi-pronged policy intervention. First, municipal authorities must enact targeted fiscal incentives to lure technology hubs away from saturated metropolitan corridors. Concurrently, regional vocational academies must overhaul their pedagogical curricula to align with modern digital trades. By pairing tax concessions with apprenticeships, policymakers can revitalize stagnant local economies while precluding rural brain drain.\n- **Discourse Markers**: necessitates a proactive, multi-pronged policy intervention, enact targeted fiscal incentives to lure..., Concurrently, regional vocational academies must overhaul..., revitalize stagnant local economies while precluding\n- **Examiner / Intonation Tip**: *Enact targeted fiscal incentives* va *overhaul pedagogical curricula* kabi aniq institutsional birikmalar inshongizga vazirlik tahlilchilarining oliy darajasini baxsh etadi.",
                     "vocabulary": [
                         {
-                            "term": "Actionable",
-                            "reading": "/ˈæk.ʃən.ə.bəl/",
-                            "meaning": "Amalda qo'llasa bo'ladigan / Real",
-                            "exampleSentence": "We require actionable policy recommendations.",
-                            "exampleTranslation": "Bizga amalda qo'llasa bo'ladigan siyosiy tavsiyalar kerak."
+                            "term": "Overhaul",
+                            "reading": "/ˈəʊ.və.hɔːl/",
+                            "meaning": "Tubdan qayta qurish, to'liq isloh qilish",
+                            "exampleSentence": "The new administration pledged to overhaul the archaic national healthcare taxation framework.",
+                            "exampleTranslation": "Yangi ma'muriyat eskirgan milliy sog'liqni saqlash soliq tizimini tubdan qayta qurishga va'da berdi."
                         },
                         {
-                            "term": "Nominalisation",
-                            "reading": "/ˌnɒmɪnəlaɪˈzeɪʃən/",
-                            "meaning": "Feʼlni otga aylantirish (akademik uslub)",
-                            "exampleSentence": "Nominalisation lends academic weight to scientific discourse.",
-                            "exampleTranslation": "Nominalizatsiya ilmiy matnga akademik salmoq beradi."
+                            "term": "Enact",
+                            "reading": "/ɪˈnækt/",
+                            "meaning": "Qonun sifatida qabul qilmoq, kuchga kiritmoq",
+                            "exampleSentence": "Legislators convened an emergency session to enact stringent data privacy protections.",
+                            "exampleTranslation": "Qonunchilar qat'iy ma'lumotlar maxfiyligi himoyasini qonun sifatida qabul qilish uchun favqulodda sessiyaga yig'ildilar."
+                        },
+                        {
+                            "term": "Proactive",
+                            "reading": "/prəʊˈæk.tɪv/",
+                            "meaning": "Tashabbuskor, oldindan chora ko'ruvchi (reaktiv bo'lmagan)",
+                            "exampleSentence": "Proactive pandemic surveillance protocols prevent localized disease clusters from escalating.",
+                            "exampleTranslation": "Oldindan chora ko'ruvchi pandemiya nazorati protokollari mahalliy kasallik o'choqlarining kuchayib ketishining oldini oladi."
                         },
                         {
                             "term": "Pragmatic",
                             "reading": "/præɡˈmæt.ɪk/",
-                            "meaning": "Amaliy, pragmatik",
-                            "exampleSentence": "We adopted a pragmatic approach to problem-solving.",
-                            "exampleTranslation": "Biz muammoni hal qilishda amaliy yondashuvni qoʻlladik."
+                            "meaning": "Pragmatik, amaliyotga asoslangan, real",
+                            "exampleSentence": "Diplomats negotiated a pragmatic compromise that balanced trade expansion with labor rights.",
+                            "exampleTranslation": "Diplomatlar savdo kengayishini mehnat huquqlari bilan muvozanatlashtirgan pragmatik murosa bitimini kelishib oldilar."
+                        },
+                        {
+                            "term": "Untenable",
+                            "reading": "/ʌnˈten.ə.bəl/",
+                            "meaning": "Himoya qilib bo'lmaydigan, oqlab bo'lmas, barqaror saqlab bo'lmaydigan",
+                            "exampleSentence": "Maintaining ballooning sovereign debt subsidies is an economically untenable fiscal stance.",
+                            "exampleTranslation": "Kattalashib borayotgan davlat qarzi subsidiyalarini saqlab qolish iqtisodiy jihatdan oqlab bo'lmaydigan moliyaviy pozitsiyadir."
+                        },
+                        {
+                            "term": "Stagnant",
+                            "reading": "/ˈstæɡ.nənt/",
+                            "meaning": "Turg'un, harakatsiz, o'sishdan to'xtagan",
+                            "exampleSentence": "Injecting sovereign stimulus funds is essential to jumpstart stagnant regional economies.",
+                            "exampleTranslation": "Turg'un mintaqaviy iqtisodiyotlarni qayta jonlantirish uchun davlat rag'batlantirish mablag'larini kiritish juda muhimdir."
+                        },
+                        {
+                            "term": "Brain drain",
+                            "reading": "/ˈbreɪn dreɪn/",
+                            "meaning": "Aql oqimi (iste'dodli mutaxassislarning xorijga ketib qolishi)",
+                            "exampleSentence": "Without competitive domestic research salaries, developing nations will continue to suffer chronic brain drain.",
+                            "exampleTranslation": "Raqobatbardosh mahalliy tadqiqot maoshlarisiz, rivojlanayotgan davlatlar surunkali aql oqimidan aziyat chekishda davom etadi."
+                        },
+                        {
+                            "term": "Multi-pronged",
+                            "reading": "/ˌmʌl.tiˈprɒŋd/",
+                            "meaning": "Ko'p tomonlama, har xil burchakdan bir vaqtda qilingan (strategiya)",
+                            "exampleSentence": "Combating urban homelessness requires a multi-pronged strategy combining affordable shelter and mental healthcare.",
+                            "exampleTranslation": "Shahar uysizligiga qarshi kurashish arzon boshpana va ruhiy salomatlikni birlashtirgan ko'p tomonlama strategiyani talab qiladi."
                         }
                     ],
-                    "grammarRules": [
-                        {
-                            "pattern": "C1 Academic Editorial: Policy Recommendations & Reform",
-                            "meaning": "Hukumat yoki xalqaro tashkilotlar uchun yuqori darajadagi tahliliy bosh maqola (editorial) va strategik tavsiyanomalar yozish.",
-                            "usageNotes": "1. Situational Analysis: Muammoning miqyosi. 2. Critique of Current Inadequacies: Mavjud kamchiliklar. 3. Actionable Policy Roadmap: Aniq amaliy qadamlar. 4. Strategic Vision: Uzoq muddatli istiqbol.",
-                            "examples": [
-                                {
-                                    "sentence": "We require actionable policy recommendations.",
-                                    "translation": "Bizga amalda qo'llasa bo'ladigan siyosiy tavsiyalar kerak."
-                                }
-                            ]
-                        }
+                    "keyPoints": [
+                        "Policy writing demands actionable, feasible, and legally sound proposals rather than vague idealistic wishes.",
+                        "Use normative and legislative vocabulary: 'enact statutes', 'comprehensive overhaul', 'proactive intervention'.",
+                        "Acknowledge fiscal constraints: justify short-term expenditure by demonstrating long-term crisis prevention.",
+                        "Propose 'multi-pronged' initiatives that tackle both root causes and immediate symptoms."
                     ]
                 }
             },
             {
                 "id": "en-c1-u5-l4-s2",
-                "title": "Mashq",
+                "title": "Academic Editorial Amaliyoti",
                 "type": "practice",
                 "estimatedMinutes": 6,
                 "practiceData": {
-                    "instructions": "To'g'ri siyosiy tavsiya jumlasini tanlang.",
+                    "instructions": "Davlat siyosati va tahliliy tavsiyalarga oid eng to'g'ri jumlalarni tanlang.",
                     "exercises": [
                         {
                             "id": "en-c1-u5-l4-e1",
                             "type": "multiple-choice",
-                            "prompt": "Which sentence exemplifies an actionable, high-level policy recommendation?",
+                            "prompt": "Choose the most authoritative policy recommendation phrasing:",
                             "options": [
-                                "Stop bad pollution now please.",
-                                "Make everything green immediately.",
-                                "Governments should do good things.",
-                                "Policymakers must institute transparent subsidy frameworks to incentivize private capital mobilization in decarbonization."
+                                "The president should maybe think about changing some small things.",
+                                "It is imperative that parliament enact statutory carbon pricing mechanisms forthwith.",
+                                "We want the government to make air very clean and nice.",
+                                "People should just stop using all fossil fuels by tomorrow morning."
                             ],
-                            "correctAnswer": 3,
-                            "explanation": "Policymakers must institute transparent subsidy frameworks..."
+                            "correctAnswer": 1,
+                            "explanation": "'It is imperative that parliament enact statutory carbon pricing mechanisms forthwith' rasmiy, normativ va yuridik jihatdan benuqson taklifdir."
                         },
                         {
-                            "id": "en-c1-u5-l4-ex-2",
+                            "id": "en-c1-u5-l4-e2",
                             "type": "multiple-choice",
-                            "prompt": "Choose the correct word to complete the sentence: \"Nominalisation lends academic weight to scientific discourse.\"",
+                            "prompt": "What does an 'overhaul' of a regulatory framework involve?",
                             "options": [
-                                "reluctance",
-                                "delay",
-                                "doubt",
-                                "Nominalisation"
+                                "A thorough examination and fundamental restructuring to repair or modernize the system",
+                                "Deleting all laws and creating total anarchy",
+                                "Translating laws into Latin",
+                                "Hiring two new administrative assistants"
                             ],
-                            "correctAnswer": 3,
-                            "explanation": "\"Nominalisation\" (Feʼlni otga aylantirish (akademik uslub)) fits the context appropriately."
+                            "correctAnswer": 0,
+                            "explanation": "'Overhaul' — tizimni chuqur tekshirib, tubdan qayta qurish va zamonaviylashtirishni anglatadi."
+                        },
+                        {
+                            "id": "en-c1-u5-l4-e3",
+                            "type": "multiple-choice",
+                            "prompt": "Fill in the blank: 'Relying on foreign emergency borrowing while ignoring inflation is an economically _______ strategy.'",
+                            "options": [
+                                "untenable",
+                                "sentient",
+                                "disinterested",
+                                "inviolable"
+                            ],
+                            "correctAnswer": 0,
+                            "explanation": "Uzoq vaqt saqlab yoki himoya qilib bo'lmaydigan xatarli holat 'economically untenable' deb ataladi."
+                        },
+                        {
+                            "id": "en-c1-u5-l4-e4",
+                            "type": "multiple-choice",
+                            "prompt": "What term describes the mass migration of highly educated scientists and engineers from developing nations to wealthier economies?",
+                            "options": [
+                                "Brain drain",
+                                "Tricolon",
+                                "Dissonance",
+                                "Strawman"
+                            ],
+                            "correctAnswer": 0,
+                            "explanation": "Malakali kadrlar va olimlarning chet elga ketib qolishi hodisasi 'brain drain' (aql oqimi) deb nomlanadi."
+                        },
+                        {
+                            "id": "en-c1-u5-l4-e5",
+                            "type": "multiple-choice",
+                            "prompt": "Select the adjective meaning 'taking decisive action in advance rather than merely reacting after catastrophe strikes':",
+                            "options": [
+                                "Proactive",
+                                "Stagnant",
+                                "Myopic",
+                                "Opaque"
+                            ],
+                            "correctAnswer": 0,
+                            "explanation": "'Proactive' — muammo yuzaga kelishini kutib o'tirmasdan, oldindan faol chora ko'ruvchi degan ma'noni beradi."
                         }
                     ]
                 }
             },
             {
                 "id": "en-c1-u5-l4-s3",
-                "title": "Test",
+                "title": "Academic Editorial Baholash Testi",
                 "type": "test",
                 "estimatedMinutes": 7,
                 "testData": {
-                    "instructions": "Savollarga javob bering.",
-                    "passingScorePercentage": 75,
+                    "instructions": "Siyosiy tahlil va davlat tavsiyalari yozish bo'yicha imtihon.",
+                    "passingScorePercentage": 80,
                     "questions": [
                         {
                             "id": "en-c1-u5-l4-q1",
-                            "question": "\"Incentivize\" nimani bildiradi?",
+                            "question": "What is the primary function of an executive 'Policy Brief'?",
                             "options": [
-                                "Taqiqlamoq",
-                                "Yo'qotmoq",
-                                "Jazolamoq",
-                                "Rag'batlantirmoq / Motivatsiya yaratmoq"
+                                "To deliver a concise, actionable distillation of research findings and concrete legislative recommendations to high-level decision makers.",
+                                "To publish romantic poetry about government buildings.",
+                                "To list employee vacation schedules.",
+                                "To teach basic vocabulary to elementary students."
                             ],
-                            "correctAnswerIndex": 3,
-                            "explanation": "Incentivize — Rag'batlantirmoq."
+                            "correctAnswerIndex": 0,
+                            "explanation": "Siyosiy brifing (Policy Brief) rahbarlarga muammo mohiyatini va aniq qonunchilik tavsiyalarini lo'nda taqdim etish uchun xizmat qiladi."
                         },
                         {
                             "id": "en-c1-u5-l4-q2",
-                            "question": "An editorial reflects the official institutional stance of:",
+                            "question": "'The parliamentary opposition demanded an immediate _______ of the controversial surveillance law.'",
                             "options": [
-                                "The publication's editorial board or organization",
-                                "A fictional character",
-                                "A commercial sponsor only",
-                                "A random anonymous reader"
+                                "overhaul",
+                                "retraction",
+                                "posturing",
+                                "cadence"
                             ],
                             "correctAnswerIndex": 0,
-                            "explanation": "Editorial board/organization."
+                            "explanation": "Qonunni tubdan qayta ko'rib chiqish va yangilash 'an overhaul of the law' deyiladi."
                         },
                         {
                             "id": "en-c1-u5-l4-q3",
-                            "question": "Which term denotes the practical feasibility and viability of a proposed policy?",
+                            "question": "Which phrase describes a comprehensive strategy addressing multiple fronts simultaneously?",
                             "options": [
-                                "Impossibility",
-                                "Abstractness",
-                                "Implementability / Viability",
-                                "Fictionality"
+                                "A multi-pronged approach",
+                                "A single-edge blade",
+                                "A reductionist dichotomy",
+                                "An ad hominem critique"
                             ],
-                            "correctAnswerIndex": 2,
-                            "explanation": "Viability / Implementability."
+                            "correctAnswerIndex": 0,
+                            "explanation": "Bir vaqtning o'zida har xil yo'nalishlarda harakat qiluvchi reja 'a multi-pronged approach' deb ataladi."
                         },
                         {
                             "id": "en-c1-u5-l4-q4",
-                            "question": "Choose the most persuasive rhetorical closure for a policy paper:",
+                            "question": "Why is 'pragmatism' prioritized in real-world governance policy design?",
                             "options": [
-                                "Decisive legislative action today will secure economic prosperity and environmental resilience for generations to come.",
-                                "We hope someone reads this.",
-                                "And that is the end of the text.",
-                                "Goodbye everyone."
+                                "Because policies must be practically feasible, economically sustainable, and politically enforceable within real-world institutional constraints.",
+                                "Because pragmatism means spending no money whatsoever.",
+                                "Because politicians dislike writing complete sentences.",
+                                "Because pragmatic ideas require no legal approval."
                             ],
                             "correctAnswerIndex": 0,
-                            "explanation": "Decisive legislative action today..."
+                            "explanation": "Pragmatizm qonunlarning qog'ozda qolib ketmasdan, real hayotiy imkoniyatlar doirasida amalga oshishi mumkinligini ta'minlaydi."
+                        },
+                        {
+                            "id": "en-c1-u5-l4-q5",
+                            "question": "'Without statutory intervention, the region risks remaining an economically _______ backwater.'",
+                            "options": [
+                                "stagnant",
+                                "sentient",
+                                "disinterested",
+                                "inviolable"
+                            ],
+                            "correctAnswerIndex": 0,
+                            "explanation": "O'sishsiz qotib qolgan turg'un holat 'economically stagnant' deb ta'riflanadi."
                         }
                     ]
                 }
@@ -5389,154 +5698,228 @@ export const ENGLISH_C1_LESSONS: Lesson[] = [
         "level": "C1",
         "lessonNumber": 5,
         "title": "C1 Capstone Proficiency & C2 Transition Examination",
-        "description": "C1 Advanced darajasini to'liq tasdiqlash va C2 Mastery (IELTS 8.5-9.0) darajasiga yo'llanma imtihoni.",
-        "estimatedDurationMinutes": 20,
-        "icon": "🏆",
+        "description": "CEFR C1 darajasining yakuniy sintezi: Band 8.5–9.0 darajasidagi to'liq malaka, oliy notiqlik va C2 (Mastery) darajasiga o'tish imtihoni.",
+        "estimatedDurationMinutes": 25,
+        "icon": "🎓",
         "steps": [
             {
                 "id": "en-c1-u5-l5-s1",
-                "title": "C1 Advanced Bitiruv Imtihoni",
+                "title": "C1 Final Synthesis & C2 Horizon",
                 "type": "learn",
-                "estimatedMinutes": 5,
+                "estimatedMinutes": 8,
                 "learnData": {
-                    "title": "C1 Advanced (IELTS 7.5 - 8.0) Comprehensive Mastery",
-                    "explanation": "Siz murakkab sintaktik inversiyalar, nominalizatsiya, epistemic hedging, akademik ma'ruzalar tahlili va oratory notiqlik san'atini to'liq egalladingiz!",
-                    "keyPoints": [
-                        "Effortless academic and professional writing",
-                        "Subtext and implicit meaning decoding across all skills",
-                        "Ready for C2 Mastery (IELTS 8.5 - 9.0)"
-                    ],
-                    "grammarRules": [
-                        {
-                            "pattern": "C1 Capstone Proficiency & C2 Transition Examination",
-                            "meaning": "C1 Advanced darajasini to'liq tasdiqlash va C2 Mastery (IELTS 8.5-9.0) darajasiga yo'llanma imtihoni.",
-                            "usageNotes": "Siz murakkab sintaktik inversiyalar, nominalizatsiya, epistemic hedging, akademik ma'ruzalar tahlili va oratory notiqlik san'atini to'liq egalladingiz!",
-                            "examples": [
-                                {
-                                    "sentence": "I study English every day with dedication.",
-                                    "translation": "Har kuni ingliz tilini astoydil o'rganaman."
-                                }
-                            ]
-                        }
-                    ],
+                    "title": "C1 Capstone Achievement & The Bridge to C2 Mastery",
+                    "explanation": "Tabriklaymiz! Siz CEFR C1 darajasining yakuniy cho'qqisiga (Capstone) yetib keldingiz. Ushbu bosqichda o'quvchi ingliz tilini 'chet tili' sifatida emas, balki murakkab ilmiy, falsafiy va diplomatik g'oyalarni erkin ifodalovchi o'zining tabiiy intellektual quroli sifatida qo'llay oladi.\n\nC1 vs C2 Farqlari:\n- **C1 (Effective Operational Proficiency)**: Qiyin, uzun va abstrakt matnlarni erkin tushunadi; ravon va tabiiy gapiradi; ijtimoiy, akademik va kasbiy maqsadlarda tilni moslashuvchan qo'llaydi (IELTS Band 7.5–8.0).\n- **C2 (Mastery)**: Eshitgan yoki o'qigan har qanday ma'lumotni osonlikcha umumlashtiradi; ona tilida so'zlashuvchi elita bilan tenglashib, nozik kinoyalar, madaniy tagma'nolar va tarixiy alluziyalarni bir lahzada ilg'ab oladi (IELTS Band 8.5–9.0).\n\nC1 Yakuniy Tekshiruv Mezonlari (The 6 Pillars Check):\n1. **Advanced Syntactic Range**: Inversiya (Had I, Were you, Should you), cleft sentences, participle clauses va nominalizatsiyani xatosiz boshqarish.\n2. **Lexical Precision**: Hedging (ostensibly, purportedly), kollokatsiyalar (wreak havoc, strike a balance) va yuqori registrli idiomalarni erkin ishlatish.\n3. **Critical Discourse**: Submatn va OAV mafkuraviy yo'naltirilishini fosh qila olish.\n4. **Academic Cohesion**: Mexanik bog'lovchilarsiz anaphorik oqim yaratish.\n5. **Spontaneous Depth**: Imtihonda savolga falsafiy va ko'p qirrali tahlil bilan javob berish.\n6. **Zero Pitfalls**: Ona tili (o'zbek tili) interferensiyasi bilan bog'liq odatiy xatolardan to'liq forig' bo'lish.\n\n🎯 **IELTS Speaking & Writing Band 8.5–9.0 Capstone Masterclass**:\n- **Prompt**: Speaking Part 3 / Writing Task 2: What is the ultimate metric of human civilizational progress?\n- **Model Response (Band 9.0)**: The definitive barometer of civilizational maturity lies not in aggregate gross domestic output, nor in the proliferation of algorithmic marvels. Rather, it hinges upon our collective capacity to safeguard the vulnerable, cultivate intellectual inquiry, and preserve our fragile biosphere. True advancement represents an ethical imperative—a conscious commitment to ensure that technological prowess remains strictly subservient to human dignity.\n- **Discourse Markers**: The definitive barometer of..., lies not in..., nor in..., Rather, it hinges upon..., True advancement represents an ethical imperative—a conscious commitment to...\n- **Examiner / Intonation Tip**: Nutqingizni balandparvozlikdan xoli, chuqur falsafiy sokinlik va qat'iy intonatsion ritm bilan yakunlang. Bu tilni mukammal egallagan shaxsning belgisi!",
                     "vocabulary": [
                         {
-                            "term": "Nominalisation",
-                            "reading": "/ˌnɒmɪnəlaɪˈzeɪʃən/",
-                            "meaning": "Feʼlni otga aylantirish (akademik uslub)",
-                            "exampleSentence": "Nominalisation lends academic weight to scientific discourse.",
-                            "exampleTranslation": "Nominalizatsiya ilmiy matnga akademik salmoq beradi."
+                            "term": "Capstone",
+                            "reading": "/ˈkæp.stəʊn/",
+                            "meaning": "Tosh toj, bino yoki o'quv dasturining eng so'nggi yakunlovchi cho'qqisi",
+                            "exampleSentence": "The thesis symposium served as the academic capstone of their master's degree.",
+                            "exampleTranslation": "Dissertatsiya simpoziumi ularning magistrlik darajasining yakuniy akademik cho'qqisi (capstone) bo'lib xizmat qildi."
                         },
                         {
-                            "term": "Pragmatic",
-                            "reading": "/præɡˈmæt.ɪk/",
-                            "meaning": "Amaliy, pragmatik",
-                            "exampleSentence": "We adopted a pragmatic approach to problem-solving.",
-                            "exampleTranslation": "Biz muammoni hal qilishda amaliy yondashuvni qoʻlladik."
+                            "term": "Proficiency",
+                            "reading": "/prəˈfɪʃ.ən.si/",
+                            "meaning": "Malaka, mahorat, yuqori darajada bilish",
+                            "exampleSentence": "Fluency is desirable, but professional translation requires rigorous semantic proficiency.",
+                            "exampleTranslation": "Ravonlik yaxshi, ammo professional tarjima chuqur ma'noviy mahoratni (proficiency) talab qiladi."
                         },
                         {
-                            "term": "Pervasive",
-                            "reading": "/pəˈveɪ.sɪv/",
-                            "meaning": "Keng tarqalgan, singib ketgan",
-                            "exampleSentence": "Digital transformation has a pervasive impact on society.",
-                            "exampleTranslation": "Raqamli transformatsiya jamiyatga chuqur singib borgan taʼsir koʻrsatadi."
+                            "term": "Mastery",
+                            "reading": "/ˈmɑː.stər.i/",
+                            "meaning": "Mukammallik, ustalik, C2 darajasi",
+                            "exampleSentence": "Achieving true mastery of English entails effortless command of idiomatic and cultural nuances.",
+                            "exampleTranslation": "Ingliz tilini chinakam mukammal egallash idiomatik va madaniy nozikliklarni erkin boshqarishni taqozo etadi."
+                        },
+                        {
+                            "term": "Inimitable",
+                            "reading": "/ɪˈnɪm.ɪ.tə.bəl/",
+                            "meaning": "Tengsiz, takrorlanmas, taqlid qilib bo'lmaydigan darajada ajoyib",
+                            "exampleSentence": "The author wrote in an inimitable literary prose that captivated generations of scholars.",
+                            "exampleTranslation": "Muallif avlodlar davomida olimlarni lol qoldirgan tengsiz va takrorlanmas adabiy nasrda ijod qildi."
+                        },
+                        {
+                            "term": "Command",
+                            "reading": "/kəˈmɑːnd/",
+                            "meaning": "Mukammal egallaganlik, boshqara olish qudrati",
+                            "exampleSentence": "She demonstrated an enviable command of parliamentary rhetoric during the constitutional debate.",
+                            "exampleTranslation": "U konstitutsiyaviy bahs davomida parlament notiqlik san'atini havas qilgudek mukammal egallaganini namoyish etdi."
+                        },
+                        {
+                            "term": "Barometer",
+                            "reading": "/bəˈrɒm.ɪ.tər/",
+                            "meaning": "Barometr, darajani o'lchovchi mezon/ko'rsatkich",
+                            "exampleSentence": "Literacy rates serve as an enduring barometer of national socioeconomic development.",
+                            "exampleTranslation": "Savodxonlik darajasi milliy ijtimoiy-iqtisodiy taraqqiyotning doimiy o'lchov mezoni (barometri) bo'lib xizmat qiladi."
+                        },
+                        {
+                            "term": "Allusion",
+                            "reading": "/əˈluː.ʒən/",
+                            "meaning": "Alluziya, tarixiy yoki adabiy voqeaga nozik ishora",
+                            "exampleSentence": "Her speech contained subtle biblical and mythological allusions that resonated with historians.",
+                            "exampleTranslation": "Uning nutqi tarixchilar qalbiga yetib borgan nozik diniy va mifologik alluziyalarni o'z ichiga olgan edi."
+                        },
+                        {
+                            "term": "Unwavering",
+                            "reading": "/ʌnˈweɪ.vər.ɪŋ/",
+                            "meaning": "Qat'iy, sobitqadam, o'zgarmas",
+                            "exampleSentence": "Her unwavering dedication to human rights advocacy earned her international acclaim.",
+                            "exampleTranslation": "Uning inson huquqlari himoyasiga sobitqadam va qat'iy sadoqati unga xalqaro e'tirof keltirdi."
                         }
+                    ],
+                    "keyPoints": [
+                        "C1 represents Effective Operational Proficiency; C2 represents Complete Bilingual Mastery and Cultural Nuance.",
+                        "Capstone synthesis combines: Inversion, Cleft sentences, Nominalisation, Hedging, Rebuttal, and Rhetoric.",
+                        "Flawless error-free execution: elimination of all mother-tongue transfer pitfalls.",
+                        "Confidence, natural cadence, and nuanced philosophical agility distinguish Band 8.5–9.0 speakers."
                     ]
                 }
             },
             {
                 "id": "en-c1-u5-l5-s2",
-                "title": "Kompleks C1 Mashqi",
+                "title": "C1 Capstone Amaliyoti",
                 "type": "practice",
-                "estimatedMinutes": 7,
+                "estimatedMinutes": 6,
                 "practiceData": {
-                    "instructions": "Imtihon savoliga to'g'ri javob bering.",
+                    "instructions": "C1 yakuniy malaka va C2 o'tish mezonlariga mos eng mukammal jumlalarni tanlang.",
                     "exercises": [
                         {
                             "id": "en-c1-u5-l5-e1",
                             "type": "multiple-choice",
-                            "prompt": "\"Were the initial findings _______ corroborated by independent trials, this would mark an epochal scientific milestone.\"",
+                            "prompt": "Identify the sentence that represents Band 9.0 oratorical synthesis:",
                             "options": [
-                                "to be",
-                                "being",
-                                "having been",
-                                "been to"
+                                "Good governments must give food to poor people because poverty is very sad.",
+                                "The definitive barometer of civilizational progress lies in our unwavering commitment to safeguarding human dignity.",
+                                "Nowadays governments should just stop making wars and do nice economy.",
+                                "Because of big issues in the world, leaders have to work very strongly."
                             ],
-                            "correctAnswer": 0,
-                            "explanation": "Were findings to be corroborated..."
+                            "correctAnswer": 1,
+                            "explanation": "'The definitive barometer of civilizational progress lies in our unwavering commitment to safeguarding human dignity' — leksik va ritorik jihatdan benuqson Band 9.0 namunasidir."
                         },
                         {
-                            "id": "en-c1-u5-l5-ex-2",
+                            "id": "en-c1-u5-l5-e2",
                             "type": "multiple-choice",
-                            "prompt": "Choose the correct word to complete the sentence: \"We adopted a pragmatic approach to problem-solving.\"",
+                            "prompt": "What does having an 'enviable command of the language' signify?",
                             "options": [
-                                "Pragmatic",
-                                "doubt",
-                                "reluctance",
-                                "delay"
+                                "Possessing an exceptionally high level of fluency, accuracy, and nuanced expressive capability",
+                                "Being able to yell loudly in English",
+                                "Knowing how to spell the word 'cat'",
+                                "Having a dictionary in your backpack"
                             ],
                             "correctAnswer": 0,
-                            "explanation": "\"Pragmatic\" (Amaliy, pragmatik) fits the context appropriately."
+                            "explanation": "'Enviable command' — tilni havas qilsa arzigulik darajada ravon, aniq va nozik ma'nolargacha mukammal egallaganlikni bildiradi."
+                        },
+                        {
+                            "id": "en-c1-u5-l5-e3",
+                            "type": "multiple-choice",
+                            "prompt": "What is an 'allusion' in high-register literary English?",
+                            "options": [
+                                "An indirect, subtle reference to a historical event, classical myth, or literary work without explicit citation",
+                                "A dangerous visual illusion in the desert",
+                                "A grammatical mistake involving apostrophes",
+                                "A punctuation mark used in mathematics"
+                            ],
+                            "correctAnswer": 0,
+                            "explanation": "'Allusion' — tarixiy, adabiy yoki mifologik hodisaga ochiq nomini aytmasdan qilingan nozik ishoradir."
+                        },
+                        {
+                            "id": "en-c1-u5-l5-e4",
+                            "type": "multiple-choice",
+                            "prompt": "Choose the word meaning 'impossible to copy, uniquely brilliant':",
+                            "options": [
+                                "Inimitable",
+                                "Untenable",
+                                "Myopic",
+                                "Subservient"
+                            ],
+                            "correctAnswer": 0,
+                            "explanation": "'Inimitable' — takrorlanmas, boshqalar taqlid qilib bo'lmaydigan darajada yuksak degani."
+                        },
+                        {
+                            "id": "en-c1-u5-l5-e5",
+                            "type": "multiple-choice",
+                            "prompt": "Complete: 'The judicial tribunal acted with _______ neutrality, refusing to bow to external executive pressure.'",
+                            "options": [
+                                "unwavering",
+                                "stagnant",
+                                "opaque",
+                                "reductive"
+                            ],
+                            "correctAnswer": 0,
+                            "explanation": "Qat'iy va sobitqadam betaraflik 'unwavering neutrality' deb yoziladi."
                         }
                     ]
                 }
             },
             {
                 "id": "en-c1-u5-l5-s3",
-                "title": "C1 Yakuniy Sertifikatsiya Testi",
+                "title": "C1 Capstone Yakuniy Imtihoni",
                 "type": "test",
                 "estimatedMinutes": 8,
                 "testData": {
-                    "instructions": "C1 darajasini muvaffaqiyatli yakunlash uchun barcha savollarga javob bering.",
-                    "passingScorePercentage": 75,
+                    "instructions": "CEFR C1 darajasining to'liq kursini yakunlovchi yakuniy sinov imtihoni.",
+                    "passingScorePercentage": 80,
                     "questions": [
                         {
                             "id": "en-c1-u5-l5-q1",
-                            "question": "Under no circumstances _______ confidential client records be disclosed without explicit judicial authorization.",
+                            "question": "What is the primary operational distinction between CEFR C1 and CEFR C2?",
                             "options": [
-                                "should",
-                                "they should",
-                                "did",
-                                "is to"
+                                "C1 enables full independent operational proficiency in complex academic and professional spheres, whereas C2 represents effortless mastery, precision, and native-level idiomatic nuance.",
+                                "C1 is only for teenagers, while C2 is for retirees.",
+                                "C1 requires no writing tests.",
+                                "There is no difference; they are identical certificates."
                             ],
                             "correctAnswerIndex": 0,
-                            "explanation": "Inversion: should confidential records be disclosed."
+                            "explanation": "C1 — mustaqil operativ akademik malaka bo'lsa, C2 — ona tilidagi ziyolilar darajasidagi beminnat ustalik va madaniy nozikliklarni qamrab oladi."
                         },
                         {
                             "id": "en-c1-u5-l5-q2",
-                            "question": "Had the regulatory framework been updated earlier, the systemic financial contagion _______ mitigated.",
+                            "question": "'The defense minister's speech was remarkable for its _______ style, weaving classical Latin rhetorical cadence with modern military strategy.'",
                             "options": [
-                                "would be",
-                                "can have been",
-                                "is",
-                                "could have been"
+                                "inimitable",
+                                "untenable",
+                                "myopic",
+                                "stagnant"
                             ],
-                            "correctAnswerIndex": 3,
-                            "explanation": "Could have been mitigated."
+                            "correctAnswerIndex": 0,
+                            "explanation": "Boshqalar taqlid qilib bo'lmaydigan darajadagi betakror uslub 'inimitable style' deb ataladi."
                         },
                         {
                             "id": "en-c1-u5-l5-q3",
-                            "question": "\"Ubiquitous\" nimani bildiradi?",
+                            "question": "Which sentence demonstrates the pinnacle of C1 conditional inversion, nominalisation, and hedging?",
                             "options": [
-                                "Hamma yerda keng tarqalgan / Mavjud bo'lgan",
-                                "Juda xavfli",
-                                "Noma'lum",
-                                "Juda qadimiy"
+                                "Had regulatory agencies intervened proactively, the catastrophic fallout from the banking collapse could plausibly have been averted.",
+                                "If banks had some regulations, bad things might not happen today.",
+                                "Were banks to regulate, people would not lose money maybe.",
+                                "Should banks regulate themselves, money loss stops with big certainty."
                             ],
                             "correctAnswerIndex": 0,
-                            "explanation": "Ubiquitous — Hamma yerda mavjud."
+                            "explanation": "'Had... intervened proactively', 'catastrophic fallout', va 'could plausibly have been averted' — C1 sintaksisi va leksikasining eng yuksak cho'qqisidir."
                         },
                         {
                             "id": "en-c1-u5-l5-q4",
-                            "question": "Which IELTS score corresponds to the C1 Advanced level?",
+                            "question": "What does passing the C1 Capstone examination with 80%+ verify about a student's linguistic capabilities?",
                             "options": [
-                                "Band 5.0",
-                                "Band 7.0 to 8.0",
-                                "Band 2.5",
-                                "Band 4.0"
+                                "The learner has mastered complex syntax, eliminated common L1 pitfalls, and is fully equipped for IELTS Band 7.5–8.0+ and international academic study.",
+                                "The student has memorized ten grammar rules.",
+                                "The student knows how to greet tourists.",
+                                "The student can only read simplified children's stories."
                             ],
-                            "correctAnswerIndex": 1,
-                            "explanation": "Band 7.0 to 8.0."
+                            "correctAnswerIndex": 0,
+                            "explanation": "C1 Capstone'ni muvaffaqiyatli tamomlash o'rganuvchining barcha murakkab sintaktik qoliplarni egallaganini, xatolarni bartaraf etganini va IELTS Band 8.0+ darajasiga to'liq tayyorligini tasdiqlaydi."
+                        },
+                        {
+                            "id": "en-c1-u5-l5-q5",
+                            "question": "'Throughout decades of political turmoil, the philosopher maintained an _______ commitment to intellectual freedom.'",
+                            "options": [
+                                "unwavering",
+                                "untenable",
+                                "opaque",
+                                "reductionist"
+                            ],
+                            "correctAnswerIndex": 0,
+                            "explanation": "O'zgarmas, sobitqadam sadoqat 'unwavering commitment' iborasi orqali ifodalanadi."
                         }
                     ]
                 }
