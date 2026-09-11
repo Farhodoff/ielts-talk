@@ -4887,131 +4887,230 @@ export const ENGLISH_A1_LESSONS: Lesson[] = [
         "unitTitle": "Unit 5: Travel & Shopping",
         "language": "en",
         "level": "A1",
-        "lessonNumber": 21,
-        "title": "Asking for Directions & Places in Town",
-        "description": "Shahar bo'ylab harakatlanish: \"Where is...?\", \"Turn left\", \"Go straight\" va joylashuv predloglari.",
-        "estimatedDurationMinutes": 12,
-        "icon": "🗺️",
+        "lessonNumber": 1,
+        "title": "Travel, Transport & Buying Tickets",
+        "description": "Sayohat qilish, jamoat transporti, chipta xarid qilish (single/return) va stansiyada muloqot.",
+        "estimatedDurationMinutes": 14,
+        "icon": "🚆",
         "steps": [
-            {
-                "id": "en-a1-u5-l1-s1",
-                "title": "Yo'nalish So'rash & Predloglar",
-                "type": "learn",
-                "estimatedMinutes": 4,
-                "learnData": {
-                    "title": "Directions & Locations",
-                    "explanation": "Shahar bo'ylab yo'l so'rash va ko'rsatish uchun \"Where is...\", \"next to\", \"opposite\", \"between\" ishlatiladi.",
-                    "keyPoints": [
-                        "Where is the library? — Kutubxona qayerda?",
-                        "Turn left / Turn right — Chapga buriling / O'ngga buriling",
-                        "Go straight ahead — To'g'riga bering",
-                        "Opposite the bank — Bankning ro'parasida"
-                    ],
-                    "vocabulary": [
-                        {
-                            "term": "Library",
-                            "reading": "/ˈlaɪ.brər.i/",
-                            "meaning": "Kutubxona",
-                            "exampleSentence": "The library is near the park.",
-                            "exampleTranslation": "Kutubxona parkning yonida."
-                        },
-                        {
-                            "term": "Opposite",
-                            "reading": "/ˈɒp.ə.zɪt/",
-                            "meaning": "Ro'parasida",
-                            "exampleSentence": "The bus stop is opposite the store.",
-                            "exampleTranslation": "Avtobus bekati do'konning ro'parasida."
-                        },
-                        {
-                            "term": "Family",
-                            "reading": "/ˈfæm.əl.i/",
-                            "meaning": "Oila",
-                            "exampleSentence": "I love my family.",
-                            "exampleTranslation": "Men oilamni yaxshi koʻraman."
+                {
+                        "id": "en-a1-u5-l1-s1",
+                        "title": "Transport va Chipta Xaridi",
+                        "type": "learn",
+                        "estimatedMinutes": 5,
+                        "learnData": {
+                                "title": "Travel Vocabulary & Booking Transport",
+                                "explanation": "Sayohat va jamoat transportidan foydalanish asoslari:\n\n1. Transport vositalari va Predloglar:\n- 'BY' predlogi: Har qanday mexanik transport vositasi bilan harakatlanganda ishlatiladi:\n  • by train (poyezdda), by bus (avtobusda), by plane (samolyotda), by car (mashinada), by metro (metroda).\n- LEKIN PIYODA yurish uchun faqat **ON FOOT** ishlatiladi (❌ by foot emas!).\n  • \"I usually go to university on foot because it is very close.\"\n\n2. Chipta xarid qilish iboralari (Buying Tickets):\n- Single ticket: Bir tomonga chipta (One-way ticket).\n- Return ticket: Borish-kelish chiptasi (Round-trip ticket).\n- Madaniy so'rovlar:\n  • \"Could I have a return ticket to Samarkand, please?\"\n  • \"Which platform does the high-speed train depart from?\" (Poyezd nechanchi platformadan jo'naydi?)\n  • \"What time does the next flight arrive?\" (Keyingi samolyot soat nechada yetib keladi?).\n\n3. O'zbek o'rganuvchilari uchun xavfli tuzoqlar (Common Pitfalls):\n- ❌ \"I go to work by foot.\" -> ✅ \"I go to work ON FOOT.\" (Piyoda faqat 'on foot'!).\n- ❌ \"Which platform the train leaves?\" -> ✅ \"Which platform DOES the train leave from?\" (So'roq gapda yordamchi fe'l egadan oldinda!).\n- ❌ \"I want two tickets for Samarkand.\" -> ✅ \"Could I have two tickets to Samarkand, please?\" (Xushmuomala so'rov).\n\n4. IELTS Speaking Part 1 Foundation Corner:\n- Topic: Public Transport & Travel\n- Examiner: \"How do you usually travel around your city?\"\n- Model Band 6.0+ Answer: \"Generally speaking, I rely on the underground metro system because it is remarkably punctual and allows me to steer clear of heavy rush-hour traffic.\"\n- Band 6.5+ Expressions: \"rely on\" (tayanmoq, foydalanmoq), \"remarkably punctual\" (hayratlanarli darajada aniq vaqtida yuradigan), \"steer clear of\" (chetlab o'tmoq), \"rush-hour traffic\" (tig'iz vaqtdagi tirbandlik).",
+                                "vocabulary": [
+                                        {
+                                                "term": "single ticket",
+                                                "reading": "/ˈsɪŋɡəl ˈtɪkɪt/",
+                                                "meaning": "bir tomonga chipta",
+                                                "exampleSentence": "I only need a single ticket because my brother will drive me back.",
+                                                "exampleTranslation": "Menga faqat bir tomonga chipta kerak, chunki akam meni mashinada qaytarib olib keladi."
+                                        },
+                                        {
+                                                "term": "return ticket",
+                                                "reading": "/rɪˈtɜːn ˈtɪkɪt/",
+                                                "meaning": "borish-kelish (ikki tomonlama) chiptasi",
+                                                "exampleSentence": "Buying a return ticket is often more economical than two singles.",
+                                                "exampleTranslation": "Borish-kelish chiptasini olish odatda ikkita bittalik chiptadan ko'ra arzonroq tushadi."
+                                        },
+                                        {
+                                                "term": "platform",
+                                                "reading": "/ˈplætfɔːm/",
+                                                "meaning": "temiryo'l platformasi / perron",
+                                                "exampleSentence": "The high-speed train to Bukhara will depart from platform four.",
+                                                "exampleTranslation": "Buxoroga tezyurar poyezd to'rtinchi perrondan yo'lga chiqadi."
+                                        },
+                                        {
+                                                "term": "passenger",
+                                                "reading": "/ˈpæsɪndʒə/",
+                                                "meaning": "yo'lovchi",
+                                                "exampleSentence": "All passengers must fasten their seat belts during take-off.",
+                                                "exampleTranslation": "Barcha yo'lovchilar samolyot ko'tarilayotganda xavfsizlik kamarlarini taqishlari shart."
+                                        },
+                                        {
+                                                "term": "departure",
+                                                "reading": "/dɪˈpɑːtʃə/",
+                                                "meaning": "jo'nab ketish (vaqti)",
+                                                "exampleSentence": "Check the electronic board for the estimated departure time.",
+                                                "exampleTranslation": "Kutilayotgan jo'nash vaqti uchun elektron tabloga qarang."
+                                        },
+                                        {
+                                                "term": "arrival",
+                                                "reading": "/əˈraɪvəl/",
+                                                "meaning": "yetib kelish / kelish zali",
+                                                "exampleSentence": "Her family was waiting excitedly in the airport arrival hall.",
+                                                "exampleTranslation": "Uning oilasi aeroportning kutib olish zalida hayajon bilan kutayotgan edi."
+                                        },
+                                        {
+                                                "term": "luggage",
+                                                "reading": "/ˈlʌɡɪdʒ/",
+                                                "meaning": "yuk, chamadonlar (sanalmaydi)",
+                                                "exampleSentence": "How many pieces of luggage are you checking in today?",
+                                                "exampleTranslation": "Bugun nechta yuk birligini topshiryapsiz?"
+                                        },
+                                        {
+                                                "term": "on foot",
+                                                "reading": "/ɒn fʊt/",
+                                                "meaning": "piyoda (harakatlanish)",
+                                                "exampleSentence": "Since the weather was pleasant, we decided to explore the ancient city on foot.",
+                                                "exampleTranslation": "Ob-havo yoqimli bo'lgani uchun biz qadimiy shaharni piyoda aylanib ko'rishga qaror qildik."
+                                        }
+                                ]
                         }
-                    ],
-                    "grammarRules": [
-                        {
-                            "pattern": "Asking for Directions & Places in Town",
-                            "meaning": "Shahar bo'ylab harakatlanish: \"Where is...?\", \"Turn left\", \"Go straight\" va joylashuv predloglari.",
-                            "usageNotes": "Shahar bo'ylab yo'l so'rash va ko'rsatish uchun \"Where is...\", \"next to\", \"opposite\", \"between\" ishlatiladi.",
-                            "examples": [
-                                {
-                                    "sentence": "The library is near the park.",
-                                    "translation": "Kutubxona parkning yonida."
-                                },
-                                {
-                                    "sentence": "The bus stop is opposite the store.",
-                                    "translation": "Avtobus bekati do'konning ro'parasida."
-                                }
-                            ]
+                },
+                {
+                        "id": "en-a1-u5-l1-s2",
+                        "title": "Transport Mashqlari",
+                        "type": "practice",
+                        "estimatedMinutes": 4,
+                        "practiceData": {
+                                "instructions": "To'g'ri predlog va sayohat iboralarini tanlang.",
+                                "exercises": [
+                                        {
+                                                "id": "en-a1-u5-l1-e1",
+                                                "type": "multiple-choice",
+                                                "prompt": "'Piyoda maktabga boraman' jumlasidagi to'g'ri predlogni tanlang: 'I go to school ___ foot.'",
+                                                "options": [
+                                                        "by",
+                                                        "on",
+                                                        "with",
+                                                        "in"
+                                                ],
+                                                "correctAnswer": 1,
+                                                "explanation": "Piyoda yurish faqat 'on foot' deb aytiladi ('by foot' xato)."
+                                        },
+                                        {
+                                                "id": "en-a1-u5-l1-e2",
+                                                "type": "multiple-choice",
+                                                "prompt": "Kassirga borish-kelish chiptasi so'rashning to'g'ri usuli qaysi?",
+                                                "options": [
+                                                        "Give me go and back ticket.",
+                                                        "Could I have a return ticket to London, please?",
+                                                        "I want two-side paper please.",
+                                                        "Return ticket give now."
+                                                ],
+                                                "correctAnswer": 1,
+                                                "explanation": "'Could I have a return ticket to..., please?' - eng to'g'ri va madaniyatli ibora."
+                                        },
+                                        {
+                                                "id": "en-a1-u5-l1-e3",
+                                                "type": "multiple-choice",
+                                                "prompt": "Poyezd qaysi platformadan jo'nashini so'rash qolipi qaysi?",
+                                                "options": [
+                                                        "Which platform does the train leave from?",
+                                                        "Where platform train leaves?",
+                                                        "Which platform leaves the train from?",
+                                                        "What platform the train is going?"
+                                                ],
+                                                "correctAnswer": 0,
+                                                "explanation": "'Which platform does the train leave from?' - yordamchi fe'l 'does' egadan oldinda bo'lgan to'g'ri so'roq tuzilishi."
+                                        },
+                                        {
+                                                "id": "en-a1-u5-l1-e4",
+                                                "type": "multiple-choice",
+                                                "prompt": "'Luggage' (yuk) so'zi haqidagi qaysi qoida to'g'ri?",
+                                                "options": [
+                                                        "U sanaladi va unga 'luggages' deb ko'plik qo'shiladi.",
+                                                        "U sanalmaydigan ot bo'lib, ko'plikda -s olmaydi.",
+                                                        "Oldiga har doim 'a luggage' artikli qo'yiladi.",
+                                                        "Faqat samolyotda ishlatiladi."
+                                                ],
+                                                "correctAnswer": 1,
+                                                "explanation": "'Luggage' ingliz tilida sanalmaydigan ot bo'lib, 'luggages' deb aytish xatodir."
+                                        },
+                                        {
+                                                "id": "en-a1-u5-l1-e5",
+                                                "type": "multiple-choice",
+                                                "prompt": "'Poyezdda sayohat qilish' ingliz tilida qanday ifodalanadi?",
+                                                "options": [
+                                                        "travel on train",
+                                                        "travel by train",
+                                                        "travel with train",
+                                                        "travel through train"
+                                                ],
+                                                "correctAnswer": 1,
+                                                "explanation": "Transport turlari bilan harakatlanganda 'by' predlogi ishlatiladi: 'by train'."
+                                        }
+                                ]
                         }
-                    ]
+                },
+                {
+                        "id": "en-a1-u5-l1-s3",
+                        "title": "Dars Testi: Travel & Transport",
+                        "type": "test",
+                        "estimatedMinutes": 5,
+                        "testData": {
+                                "instructions": "Savollarga to'g'ri javob berib, mavzuni mustahkamlang.",
+                                "passingScorePercentage": 80,
+                                "questions": [
+                                        {
+                                                "id": "en-a1-u5-l1-q1",
+                                                "question": "Qaysi transport ifodasida predlog xato ishlatilgan?",
+                                                "options": [
+                                                        "by bus",
+                                                        "by metro",
+                                                        "by foot",
+                                                        "by plane"
+                                                ],
+                                                "correctAnswerIndex": 2,
+                                                "explanation": "'by foot' noto'g'ri; ingliz tilida faqat 'on foot' qo'llaniladi."
+                                        },
+                                        {
+                                                "id": "en-a1-u5-l1-q2",
+                                                "question": "'Single ticket' nima ma'noni bildiradi?",
+                                                "options": [
+                                                        "Faqat bir kishilik chipta",
+                                                        "Faqat bir tomonga chipta (borish)",
+                                                        "Borish va qaytish chiptasi",
+                                                        "Chegirmali talaba chiptasi"
+                                                ],
+                                                "correctAnswerIndex": 1,
+                                                "explanation": "'Single ticket' (yoki Amerika inglizchasida 'one-way ticket') - faqat bir tomonga amal qiluvchi chipta."
+                                        },
+                                        {
+                                                "id": "en-a1-u5-l1-q3",
+                                                "question": "Aeroportda samolyotlarning yetib kelish vaqti ko'rsatiladigan hudud nima deyiladi?",
+                                                "options": [
+                                                        "Departures",
+                                                        "Arrivals",
+                                                        "Platforms",
+                                                        "Checkouts"
+                                                ],
+                                                "correctAnswerIndex": 1,
+                                                "explanation": "'Arrivals' - samolyotlar yoki poyezdlar yetib keladigan hudud (uchib kelish zali)."
+                                        },
+                                        {
+                                                "id": "en-a1-u5-l1-q4",
+                                                "question": "'The express train arrives ___ platform three.' Bo'sh joyga qaysi predlog mos?",
+                                                "options": [
+                                                        "at",
+                                                        "in",
+                                                        "to",
+                                                        "from"
+                                                ],
+                                                "correctAnswerIndex": 0,
+                                                "explanation": "Platformaga yetib kelish: 'arrives at platform three'."
+                                        },
+                                        {
+                                                "id": "en-a1-u5-l1-q5",
+                                                "question": "IELTS Speaking: 'Do you prefer travelling by train or by bus?' savoliga qaysi javob boy leksika va to'g'ri asos keltiradi?",
+                                                "options": [
+                                                        "Bus because cheap.",
+                                                        "I definitely prefer travelling by train because it is considerably more spacious and allows me to read comfortably without experiencing motion sickness.",
+                                                        "Train is go fast.",
+                                                        "I am like both same."
+                                                ],
+                                                "correctAnswerIndex": 1,
+                                                "explanation": "'I definitely prefer travelling by train because it is considerably more spacious and allows me to...' - Band 6.5+ darajasidagi tabiiy va kuchli dalillarga ega javob."
+                                        }
+                                ]
+                        }
                 }
-            },
-            {
-                "id": "en-a1-u5-l1-s2",
-                "title": "Mashq",
-                "type": "practice",
-                "estimatedMinutes": 4,
-                "practiceData": {
-                    "instructions": "To'g'ri iborani tanlang.",
-                    "exercises": [
-                        {
-                            "id": "en-a1-u5-l1-e1",
-                            "type": "multiple-choice",
-                            "prompt": "\"Turn left at the supermarket.\" ma'nosi:",
-                            "options": [
-                                "Supermarketdan chapga buriling",
-                                "To'g'riga bering",
-                                "O'ngga buriling",
-                                "Supermarketga kiring"
-                            ],
-                            "correctAnswer": 0,
-                            "explanation": "Turn left = chapga buriling."
-                        },
-                        {
-                            "id": "en-a1-u5-l1-ex-2",
-                            "type": "multiple-choice",
-                            "prompt": "Choose the correct word to complete the sentence: \"The bus stop is opposite the store.\"",
-                            "options": [
-                                "Opposite",
-                                "delay",
-                                "reluctance",
-                                "doubt"
-                            ],
-                            "correctAnswer": 0,
-                            "explanation": "\"Opposite\" (Ro'parasida) fits the context appropriately."
-                        }
-                    ]
-                }
-            },
-            {
-                "id": "en-a1-u5-l1-s3",
-                "title": "Test",
-                "type": "test",
-                "estimatedMinutes": 4,
-                "testData": {
-                    "instructions": "Savollarga javob bering.",
-                    "passingScorePercentage": 75,
-                    "questions": [
-                        {
-                            "id": "en-a1-u5-l1-q1",
-                            "question": "Where _______ the nearest pharmacy?",
-                            "options": [
-                                "is",
-                                "be",
-                                "am",
-                                "are"
-                            ],
-                            "correctAnswerIndex": 0,
-                            "explanation": "Where is... (birlik ot)."
-                        }
-                    ]
-                }
-            }
         ]
-    },
+},
     {
         "id": "en-a1-u5-l2",
         "courseId": "english-a1",
@@ -5019,126 +5118,230 @@ export const ENGLISH_A1_LESSONS: Lesson[] = [
         "unitTitle": "Unit 5: Travel & Shopping",
         "language": "en",
         "level": "A1",
-        "lessonNumber": 22,
-        "title": "At the Supermarket & Prices",
-        "description": "Do'konda xarid qilish: \"How much is this?\", \"I would like...\", va pul birliklari.",
-        "estimatedDurationMinutes": 12,
-        "icon": "🛒",
+        "lessonNumber": 2,
+        "title": "Shopping, Clothes & Asking Prices",
+        "description": "Do'konda xarid qilish, narx so'rash (How much is/are?), kiyim o'lchamlari va kiyib ko'rish (try on).",
+        "estimatedDurationMinutes": 14,
+        "icon": "🛍️",
         "steps": [
-            {
-                "id": "en-a1-u5-l2-s1",
-                "title": "Xarid Iboralari",
-                "type": "learn",
-                "estimatedMinutes": 4,
-                "learnData": {
-                    "title": "Shopping & Asking Prices",
-                    "explanation": "Narx so'rash uchun \"How much is...?\" va \"How much are...?\" ishlatiladi.",
-                    "keyPoints": [
-                        "How much is this shirt? — Bu ko'ylak qancha turadi?",
-                        "How much are these apples? — Bu olmalar qancha turadi?",
-                        "I would like 1 kg of rice. — Men 1 kg guruch xohlayman."
-                    ],
-                    "vocabulary": [
-                        {
-                            "term": "Receipt",
-                            "reading": "/rɪˈsiːt/",
-                            "meaning": "Kvitansiya / Chek",
-                            "exampleSentence": "Here is your receipt.",
-                            "exampleTranslation": "Mana sizning chekingiz."
-                        },
-                        {
-                            "term": "Family",
-                            "reading": "/ˈfæm.əl.i/",
-                            "meaning": "Oila",
-                            "exampleSentence": "I love my family.",
-                            "exampleTranslation": "Men oilamni yaxshi koʻraman."
-                        },
-                        {
-                            "term": "Morning",
-                            "reading": "/ˈmɔː.nɪŋ/",
-                            "meaning": "Tong, ertalab",
-                            "exampleSentence": "Good morning, everyone!",
-                            "exampleTranslation": "Hammaga xayrli tong!"
+                {
+                        "id": "en-a1-u5-l2-s1",
+                        "title": "Do'konda Narx So'rash va Kiyim Tanlash",
+                        "type": "learn",
+                        "estimatedMinutes": 5,
+                        "learnData": {
+                                "title": "Shopping Phrases: Sizes, Fitting Rooms & Payment",
+                                "explanation": "Do'konda xarid qilish va kiyim sotib olish qoidalari:\n\n1. Narx so'rash qolipi (How much is vs How much are):\n- Birlikdagi buyumlar yoki sanalmaydigan narsalar uchun:\n  • \"How much IS this woolen sweater?\" -> \"It is 25 pounds.\"\n- Ko'plikdagi buyumlar (shimlar, poyabzallar, ko'zoynaklar) uchun:\n  • \"How much ARE these leather boots?\" -> \"They are 80 dollars.\"\n\n2. Kiyib ko'rish va O'lcham (Fitting & Sizes):\n- Fitting room: Kiyim almashtirish / kiyib ko'rish xonasi.\n- Try on: Kiyib ko'rmoq.\n  • \"Can I try this shirt on?\" / \"Can I try them on?\" (Olmosh o'rtaga tushadi: try IT on, try THEM on).\n- O'lcham so'rash:\n  • \"Do you have this jacket in a medium / large size?\"\n  • \"It is too tight (juda tor) / It is too loose (juda keng).\"\n\n3. To'lov qilish (Payment Methods):\n- \"Can I pay by credit card?\" (Karta orqali to'lasam bo'ladimi? - by card).\n- \"I will pay in cash.\" (Naqd pulda to'layman - in cash).\n- Receipt (/rɪˈsiːt/): To'lov cheki ('p' harfi o'qilmaydi!).\n\n4. O'zbek o'rganuvchilari uchun xavfli tuzoqlar (Common Pitfalls):\n- ❌ \"How many is this shirt?\" -> ✅ \"How MUCH is this shirt?\" (Narx har doim 'how much' bilan so'raladi).\n- ❌ \"Can I try on it?\" -> ✅ \"Can I try IT on?\" (Frazeologik fe'lda olmosh o'rtaga kiradi).\n- ❌ \"Receipt\" so'zidagi 'p' ni o'qish -> /rɪˈsiːt/ deb talaffuz qilinadi, 'p' mutlaqo o'qilmaydi.\n\n5. IELTS Speaking Part 1 Foundation Corner:\n- Topic: Shopping & Buying Clothes\n- Examiner: \"Do you enjoy shopping for clothes?\"\n- Model Band 6.0+ Answer: \"To be honest, I am not a massive fan of shopping in crowded malls. I much prefer browsing online stores because it saves both time and money.\"\n- Examiner-Friendly Vocabulary: \"browse online stores\" (onlayn do'konlarni ko'zdan kechirmoq), \"crowded malls\" (gavjum savdo markazlari).",
+                                "vocabulary": [
+                                        {
+                                                "term": "fitting room",
+                                                "reading": "/ˈfɪtɪŋ ruːm/",
+                                                "meaning": "kiyim kiyib ko'rish xonasi",
+                                                "exampleSentence": "Excuse me, where are the fitting rooms located?",
+                                                "exampleTranslation": "Kechirasiz, kiyib ko'rish xonalari qayerda joylashgan?"
+                                        },
+                                        {
+                                                "term": "try on",
+                                                "reading": "/traɪ ɒn/",
+                                                "meaning": "kiyib ko'rmoq",
+                                                "exampleSentence": "You should definitely try this stylish jacket on before purchasing it.",
+                                                "exampleTranslation": "Bu zamonaviy kurtkani sotib olishdan oldin, albatta, kiyib ko'rishingiz kerak."
+                                        },
+                                        {
+                                                "term": "receipt",
+                                                "reading": "/rɪˈsiːt/",
+                                                "meaning": "chek, kvitansiya (p harfi o'qilmaydi)",
+                                                "exampleSentence": "Keep your sales receipt safely in case you need an exchange.",
+                                                "exampleTranslation": "Agar almashtirish kerak bo'lib qolsa deb, to'lov chekingizni ehtiyot qilib saqlang."
+                                        },
+                                        {
+                                                "term": "discount",
+                                                "reading": "/ˈdɪskaʊnt/",
+                                                "meaning": "chegirma",
+                                                "exampleSentence": "They are offering a twenty percent discount on all winter shoes.",
+                                                "exampleTranslation": "Ular barcha qishki poyabzallarga yigirma foizli chegirma taklif qilmoqdalar."
+                                        },
+                                        {
+                                                "term": "cashier",
+                                                "reading": "/kæˈʃɪə/",
+                                                "meaning": "kassir (to'lov qabul qiluvchi)",
+                                                "exampleSentence": "Please pay the cashier at the front counter.",
+                                                "exampleTranslation": "Iltimos, to'lovni oldingi peshtaxtadagi kassirga to'lang."
+                                        },
+                                        {
+                                                "term": "affordable",
+                                                "reading": "/əˈfɔːdəbəl/",
+                                                "meaning": "hamyonbop, arzon va qulay narxli",
+                                                "exampleSentence": "This local brand offers high quality at very affordable prices.",
+                                                "exampleTranslation": "Ushbu mahalliy brend juda hamyonbop narxlarda yuqori sifatni taklif etadi."
+                                        },
+                                        {
+                                                "term": "tight",
+                                                "reading": "/taɪt/",
+                                                "meaning": "tor, siqadigan (kiyim)",
+                                                "exampleSentence": "These shoes are slightly too tight for my feet.",
+                                                "exampleTranslation": "Bu poyabzal oyog'imga biroz torlik qilyapti."
+                                        },
+                                        {
+                                                "term": "size",
+                                                "reading": "/saɪz/",
+                                                "meaning": "o'lcham (kiyim yoki poyabzal o'lchami)",
+                                                "exampleSentence": "Could you check if you have this coat in size medium?",
+                                                "exampleTranslation": "Sizda bu paltoning o'rtacha (medium) o'lchami bormi, tekshirib bera olasizmi?"
+                                        }
+                                ]
                         }
-                    ],
-                    "grammarRules": [
-                        {
-                            "pattern": "At the Supermarket & Prices",
-                            "meaning": "Do'konda xarid qilish: \"How much is this?\", \"I would like...\", va pul birliklari.",
-                            "usageNotes": "Narx so'rash uchun \"How much is...?\" va \"How much are...?\" ishlatiladi.",
-                            "examples": [
-                                {
-                                    "sentence": "Here is your receipt.",
-                                    "translation": "Mana sizning chekingiz."
-                                }
-                            ]
+                },
+                {
+                        "id": "en-a1-u5-l2-s2",
+                        "title": "Xarid Mashqlari",
+                        "type": "practice",
+                        "estimatedMinutes": 4,
+                        "practiceData": {
+                                "instructions": "Bo'sh joylarni to'g'ri grammatik shakl bilan to'ldiring.",
+                                "exercises": [
+                                        {
+                                                "id": "en-a1-u5-l2-e1",
+                                                "type": "multiple-choice",
+                                                "prompt": "Krassovkaning narxini so'rash uchun qaysi savol to'g'ri? 'How much ___ these sneakers?'",
+                                                "options": [
+                                                        "is",
+                                                        "are",
+                                                        "do",
+                                                        "does"
+                                                ],
+                                                "correctAnswer": 1,
+                                                "explanation": "'Sneakers' ko'plik ot bo'lgani sababli 'How much are these sneakers?' bo'ladi."
+                                        },
+                                        {
+                                                "id": "en-a1-u5-l2-e2",
+                                                "type": "multiple-choice",
+                                                "prompt": "'Bu ko'ylakni kiyib ko'rsam maylimi?' jumlasi qaysi?",
+                                                "options": [
+                                                        "Can I try on it?",
+                                                        "Can I try it on?",
+                                                        "Do I try on this?",
+                                                        "May I try on they?"
+                                                ],
+                                                "correctAnswer": 1,
+                                                "explanation": "'Try it on' - 'it' olmoshi frazeologik fe'l o'rtasiga qo'yiladi."
+                                        },
+                                        {
+                                                "id": "en-a1-u5-l2-e3",
+                                                "type": "multiple-choice",
+                                                "prompt": "Kredit karta bilan to'lashda qaysi predlog ishlatiladi? 'Can I pay ___ card?'",
+                                                "options": [
+                                                        "with",
+                                                        "by",
+                                                        "in",
+                                                        "on"
+                                                ],
+                                                "correctAnswer": 1,
+                                                "explanation": "Karta orqali to'lov har doim 'by credit card' yoki 'by card' deb aytiladi."
+                                        },
+                                        {
+                                                "id": "en-a1-u5-l2-e4",
+                                                "type": "multiple-choice",
+                                                "prompt": "'Receipt' (chek) so'zining to'g'ri talaffuzi qaysi?",
+                                                "options": [
+                                                        "/re-sipt/ (p harfi eshitiladi)",
+                                                        "/rɪˈsiːt/ (p harfi o'qilmaydi)",
+                                                        "/re-sept/ (p harfi urg'uli)",
+                                                        "/ri-kept/"
+                                                ],
+                                                "correctAnswer": 1,
+                                                "explanation": "'Receipt' so'zida 'p' harfi 'silent' (talaffuz etilmaydi): /rɪˈsiːt/."
+                                        },
+                                        {
+                                                "id": "en-a1-u5-l2-e5",
+                                                "type": "multiple-choice",
+                                                "prompt": "Do'konda kiyim juda tor kelganda sotuvchiga nima deyiladi?",
+                                                "options": [
+                                                        "It is too tight.",
+                                                        "It is too loose.",
+                                                        "It is very affordable.",
+                                                        "It is too cheap."
+                                                ],
+                                                "correctAnswer": 0,
+                                                "explanation": "'It is too tight' - u juda tor keldi deganidir."
+                                        }
+                                ]
                         }
-                    ]
+                },
+                {
+                        "id": "en-a1-u5-l2-s3",
+                        "title": "Dars Testi: Shopping & Prices",
+                        "type": "test",
+                        "estimatedMinutes": 5,
+                        "testData": {
+                                "instructions": "Savollarga to'g'ri javob berib, mavzuni mustahkamlang.",
+                                "passingScorePercentage": 80,
+                                "questions": [
+                                        {
+                                                "id": "en-a1-u5-l2-q1",
+                                                "question": "Narx so'rashda qaysi jumla xato hisoblanadi?",
+                                                "options": [
+                                                        "How much is this leather bag?",
+                                                        "How much are those black shoes?",
+                                                        "How many is this silk scarf?",
+                                                        "How much does this jacket cost?"
+                                                ],
+                                                "correctAnswerIndex": 2,
+                                                "explanation": "Narx so'rashda hech qachon 'how many' ishlatilmaydi; 'How much is...' bo'lishi lozim."
+                                        },
+                                        {
+                                                "id": "en-a1-u5-l2-q2",
+                                                "question": "'Naqd pulda to'layman' jumlasining to'g'ri inglizcha tarjimasi qaysi?",
+                                                "options": [
+                                                        "I will pay by cash.",
+                                                        "I will pay in cash.",
+                                                        "I pay with cash money.",
+                                                        "I will pay on cash."
+                                                ],
+                                                "correctAnswerIndex": 1,
+                                                "explanation": "Naqd pulda to'lash: 'in cash' (kartada esa: 'by card')."
+                                        },
+                                        {
+                                                "id": "en-a1-u5-l2-q3",
+                                                "question": "Kiyim sotib olishdan oldin uni qayerda o'lchab ko'riladi?",
+                                                "options": [
+                                                        "at the cashier desk",
+                                                        "in the fitting room",
+                                                        "in the waiting room",
+                                                        "at the platform"
+                                                ],
+                                                "correctAnswerIndex": 1,
+                                                "explanation": "Kiyim kiyib ko'riladigan maxsus xona 'fitting room' deyiladi."
+                                        },
+                                        {
+                                                "id": "en-a1-u5-l2-q4",
+                                                "question": "'Affordable' so'zining ma'nosi nima?",
+                                                "options": [
+                                                        "Haddan tashqari qimmat",
+                                                        "O'ta sifatli va kamyob",
+                                                        "Hamyonbop, cho'ntakbop narxli",
+                                                        "Eski va sifatsiz"
+                                                ],
+                                                "correctAnswerIndex": 2,
+                                                "explanation": "'Affordable' - sotib olishga qurb yetadigan, qimmat bo'lmagan, hamyonbop."
+                                        },
+                                        {
+                                                "id": "en-a1-u5-l2-q5",
+                                                "question": "IELTS Speaking: 'Do you prefer shopping alone or with friends?' savoliga qaysi javob ravon va to'liq?",
+                                                "options": [
+                                                        "Alone because fast.",
+                                                        "I genuinely prefer shopping alone because I can take my time, compare prices calmly, and make decisions without feeling rushed.",
+                                                        "With friends is have fun.",
+                                                        "I never buy clothes."
+                                                ],
+                                                "correctAnswerIndex": 1,
+                                                "explanation": "'I genuinely prefer shopping alone because I can take my time, compare prices calmly...' - Band 6.5+ leksika va to'liq ravonlik."
+                                        }
+                                ]
+                        }
                 }
-            },
-            {
-                "id": "en-a1-u5-l2-s2",
-                "title": "Mashq",
-                "type": "practice",
-                "estimatedMinutes": 4,
-                "practiceData": {
-                    "instructions": "To'g'ri javobni tanlang.",
-                    "exercises": [
-                        {
-                            "id": "en-a1-u5-l2-e1",
-                            "type": "multiple-choice",
-                            "prompt": "\"How _______ is this jacket?\"",
-                            "options": [
-                                "old",
-                                "much",
-                                "many",
-                                "long"
-                            ],
-                            "correctAnswer": 1,
-                            "explanation": "How much = narx so'rash."
-                        },
-                        {
-                            "id": "en-a1-u5-l2-ex-2",
-                            "type": "multiple-choice",
-                            "prompt": "Choose the correct word to complete the sentence: \"I love my family.\"",
-                            "options": [
-                                "delay",
-                                "Family",
-                                "doubt",
-                                "reluctance"
-                            ],
-                            "correctAnswer": 1,
-                            "explanation": "\"Family\" (Oila) fits the context appropriately."
-                        }
-                    ]
-                }
-            },
-            {
-                "id": "en-a1-u5-l2-s3",
-                "title": "Test",
-                "type": "test",
-                "estimatedMinutes": 4,
-                "testData": {
-                    "instructions": "Savollarga javob bering.",
-                    "passingScorePercentage": 75,
-                    "questions": [
-                        {
-                            "id": "en-a1-u5-l2-q1",
-                            "question": "How much _______ these shoes?",
-                            "options": [
-                                "do",
-                                "are",
-                                "is",
-                                "am"
-                            ],
-                            "correctAnswerIndex": 1,
-                            "explanation": "These shoes (ko'plik ot) -> are."
-                        }
-                    ]
-                }
-            }
         ]
-    },
+},
     {
         "id": "en-a1-u5-l3",
         "courseId": "english-a1",
@@ -5146,126 +5349,230 @@ export const ENGLISH_A1_LESSONS: Lesson[] = [
         "unitTitle": "Unit 5: Travel & Shopping",
         "language": "en",
         "level": "A1",
-        "lessonNumber": 23,
-        "title": "Ordering Food in a Restaurant",
-        "description": "Restoranda taom buyurtma qilish: \"Can I have...?\", \"A table for two\", va menyu so'zlari.",
-        "estimatedDurationMinutes": 12,
-        "icon": "🍽️",
+        "lessonNumber": 3,
+        "title": "Hotel Booking & Check-In English",
+        "description": "Mehmonxonada xona band qilish, ro'yxatdan o'tish (check-in / check-out) va xizmatlar so'rash.",
+        "estimatedDurationMinutes": 14,
+        "icon": "🏨",
         "steps": [
-            {
-                "id": "en-a1-u5-l3-s1",
-                "title": "Restoran Iboralari",
-                "type": "learn",
-                "estimatedMinutes": 4,
-                "learnData": {
-                    "title": "Ordering Food & Drinks",
-                    "explanation": "Restoranda xushmuomalalik bilan buyurtma berish iboralari.",
-                    "keyPoints": [
-                        "Can I have the menu, please? — Menyu bersangiz.",
-                        "I would like a cup of tea. — Choy so'rayman.",
-                        "The bill, please. — Hisobni keltirsangiz."
-                    ],
-                    "vocabulary": [
-                        {
-                            "term": "Menu",
-                            "reading": "/ˈmen.juː/",
-                            "meaning": "Taomnoma / Menyu",
-                            "exampleSentence": "Could we see the menu?",
-                            "exampleTranslation": "Menyuni ko'rsak bo'ladimi?"
-                        },
-                        {
-                            "term": "Morning",
-                            "reading": "/ˈmɔː.nɪŋ/",
-                            "meaning": "Tong, ertalab",
-                            "exampleSentence": "Good morning, everyone!",
-                            "exampleTranslation": "Hammaga xayrli tong!"
-                        },
-                        {
-                            "term": "Welcome",
-                            "reading": "/ˈwel.kəm/",
-                            "meaning": "Xush kelibsiz",
-                            "exampleSentence": "Welcome to our English class.",
-                            "exampleTranslation": "Ingliz tili darsimizga xush kelibsiz."
+                {
+                        "id": "en-a1-u5-l3-s1",
+                        "title": "Mehmonxona Muloqoti Asoslari",
+                        "type": "learn",
+                        "estimatedMinutes": 5,
+                        "learnData": {
+                                "title": "Hotel English: Reservations, Key Cards & Amenities",
+                                "explanation": "Mehmonxonada xona band qilish va qulay joylashish uchun asosiy iboralar:\n\n1. Mehmonxonaga kirish va Ro'yxatdan o'tish (Check-in):\n- Qabulxona xodimiga (receptionist) murojaat:\n  • \"Hello, I have a reservation under the name of Sardor Aliyev.\" (Salom, mening Sardor Aliyev nomiga band qilingan buyurtmam bor).\n  • \"Here is my passport and booking confirmation.\" (Mana pasportim va bron tasdig'i).\n- Xona turlari:\n  • Single room: Bir kishilik xona (bitta yotoqli).\n  • Double room: Ikki kishilik xona (bitta katta ikki kishilik karavotli).\n  • Twin room: Ikkita alohida bir kishilik karavotli xona.\n\n2. Mehmonxona xizmatlari va savollar:\n- \"Does the room price include breakfast?\" (Xona narxiga nonushta kiradimi?)\n- \"What is the Wi-Fi password, please?\" (Wi-Fi paroli qanday?)\n- \"What time is check-out tomorrow?\" (Ertaga xonani topshirish soat nechada?).\n- \"Could I have a wake-up call at 6:30 AM?\" (Meni 6:30 da uyg'otib qo'ya olasizmi?).\n\n3. O'zbek o'rganuvchilari uchun xavfli tuzoqlar (Common Pitfalls):\n- ❌ \"I want check-in.\" -> ✅ \"I would like to check in, please.\"\n- ❌ \"Give me key.\" -> ✅ \"Here is your key card, sir.\" (Zamonaviy mehmonxonalarda kalit o'rniga plastik 'key card' beriladi).\n- ❌ \"How much clock check out?\" -> ✅ \"What time is check-out?\"\n\n4. IELTS Speaking Part 1 Foundation Corner:\n- Topic: Holidays & Accommodation\n- Examiner: \"What kind of accommodation do you prefer when travelling?\"\n- Model Band 6.0+ Answer: \"When I travel on holiday, I typically opt for boutique hotels or comfortable guesthouses. They tend to offer warm hospitality and give a more authentic taste of the local culture.\"\n- Examiner-Friendly Vocabulary: \"opt for\" (tanlamoq, afzal ko'rmoq), \"boutique hotel\" (kichik, shinam mehmonxona), \"authentic taste\" (haqiqiy, asl tajriba), \"warm hospitality\" (samimiy mehmondo'stlik).",
+                                "vocabulary": [
+                                        {
+                                                "term": "reservation",
+                                                "reading": "/ˌrezəˈveɪʃən/",
+                                                "meaning": "oldindan band qilish (bron)",
+                                                "exampleSentence": "I made a hotel reservation online three weeks in advance.",
+                                                "exampleTranslation": "Men uch hafta oldin internet orqali mehmonxona xonasini band qilgandim."
+                                        },
+                                        {
+                                                "term": "receptionist",
+                                                "reading": "/rɪˈsepʃənɪst/",
+                                                "meaning": "qabulxona xodimi (administrator)",
+                                                "exampleSentence": "The friendly receptionist handed us our electronic room keys.",
+                                                "exampleTranslation": "Xushmuomala administrator bizga xonamizning elektron kalitlarini topshirdi."
+                                        },
+                                        {
+                                                "term": "key card",
+                                                "reading": "/kiː kɑːd/",
+                                                "meaning": "elektron kalit-karta",
+                                                "exampleSentence": "Swipe your key card over the sensor to unlock your door.",
+                                                "exampleTranslation": "Eshigingizni ochish uchun kalit-kartangizni sensorga tekkizing."
+                                        },
+                                        {
+                                                "term": "check in",
+                                                "reading": "/tʃek ɪn/",
+                                                "meaning": "ro'yxatdan o'tmoq (mehmonxonaga joylashish)",
+                                                "exampleSentence": "Guests can check in at the front desk from two o'clock onwards.",
+                                                "exampleTranslation": "Mehmonlar soat ikkidan boshlab qabulxonada ro'yxatdan o'tishlari mumkin."
+                                        },
+                                        {
+                                                "term": "check out",
+                                                "reading": "/tʃek aʊt/",
+                                                "meaning": "xonani topshirib ketmoq",
+                                                "exampleSentence": "We must check out before noon to avoid extra charges.",
+                                                "exampleTranslation": "Qo'shimcha to'lovlardan qochish uchun peshingacha xonani topshirishimiz shart."
+                                        },
+                                        {
+                                                "term": "double room",
+                                                "reading": "/ˈdʌbəl ruːm/",
+                                                "meaning": "ikki kishilik katta karavotli xona",
+                                                "exampleSentence": "We booked a quiet double room with a view of the garden.",
+                                                "exampleTranslation": "Biz bog'ga qaragan sokin ikki kishilik xona band qildik."
+                                        },
+                                        {
+                                                "term": "complimentary",
+                                                "reading": "/ˌkɒmplɪˈmentəri/",
+                                                "meaning": "bepul (mehmonxona tomonidan taqdim etiladigan)",
+                                                "exampleSentence": "All guests receive a complimentary bottle of mineral water daily.",
+                                                "exampleTranslation": "Barcha mehmonlar har kuni bepul mineral suv shishasini oladilar."
+                                        },
+                                        {
+                                                "term": "wake-up call",
+                                                "reading": "/ˈweɪk ʌp kɔːl/",
+                                                "meaning": "telefon orqali uyg'otish xizmati",
+                                                "exampleSentence": "I requested a wake-up call at six in the morning for my early flight.",
+                                                "exampleTranslation": "Erta tongdagi reysim sababli ertalab soat oltiga uyg'otish xizmatiga buyurtma berdim."
+                                        }
+                                ]
                         }
-                    ],
-                    "grammarRules": [
-                        {
-                            "pattern": "Ordering Food in a Restaurant",
-                            "meaning": "Restoranda taom buyurtma qilish: \"Can I have...?\", \"A table for two\", va menyu so'zlari.",
-                            "usageNotes": "Restoranda xushmuomalalik bilan buyurtma berish iboralari.",
-                            "examples": [
-                                {
-                                    "sentence": "Could we see the menu?",
-                                    "translation": "Menyuni ko'rsak bo'ladimi?"
-                                }
-                            ]
+                },
+                {
+                        "id": "en-a1-u5-l3-s2",
+                        "title": "Mehmonxona Mashqlari",
+                        "type": "practice",
+                        "estimatedMinutes": 4,
+                        "practiceData": {
+                                "instructions": "Bo'sh joylarni to'g'ri ibora bilan to'ldiring.",
+                                "exercises": [
+                                        {
+                                                "id": "en-a1-u5-l3-e1",
+                                                "type": "multiple-choice",
+                                                "prompt": "Mehmonxona qabulxonasida 'Mening bronim bor' jumlasi qanday aytiladi?",
+                                                "options": [
+                                                        "I have a reservation.",
+                                                        "I have a ticket room.",
+                                                        "I want a room today now.",
+                                                        "I am booked bed."
+                                                ],
+                                                "correctAnswer": 0,
+                                                "explanation": "'I have a reservation' - mehmonxonada bron borligini aytishning standart usuli."
+                                        },
+                                        {
+                                                "id": "en-a1-u5-l3-e2",
+                                                "type": "multiple-choice",
+                                                "prompt": "'Xona narxiga nonushta kiradimi?' savoli qaysi?",
+                                                "options": [
+                                                        "Does the price include breakfast?",
+                                                        "Is breakfast inside price?",
+                                                        "Have room breakfast money?",
+                                                        "Does breakfast price room?"
+                                                ],
+                                                "correctAnswer": 0,
+                                                "explanation": "'Does the price include breakfast?' - xizmatlar narxga kirishini so'rashning eng to'g'ri grammatik qolipi."
+                                        },
+                                        {
+                                                "id": "en-a1-u5-l3-e3",
+                                                "type": "multiple-choice",
+                                                "prompt": "Mehmonxonada bepul taqdim etiladigan xizmatlar qanday ataladi?",
+                                                "options": [
+                                                        "expensive",
+                                                        "complimentary",
+                                                        "forbidden",
+                                                        "tight"
+                                                ],
+                                                "correctAnswer": 1,
+                                                "explanation": "'Complimentary' - mehmonxona yoki aviakompaniya tomonidan bepul tuhfa qilinadigan xizmat."
+                                        },
+                                        {
+                                                "id": "en-a1-u5-l3-e4",
+                                                "type": "multiple-choice",
+                                                "prompt": "'Ertaga xonani topshirish (ketish) soat nechada?' savoli qaysi?",
+                                                "options": [
+                                                        "What time is check-out tomorrow?",
+                                                        "What time you check out me?",
+                                                        "When I can leave room free?",
+                                                        "How much clock check out?"
+                                                ],
+                                                "correctAnswer": 0,
+                                                "explanation": "'What time is check-out tomorrow?' - mehmonxonadan chiqish vaqtini so'rashning to'g'ri shakli."
+                                        },
+                                        {
+                                                "id": "en-a1-u5-l3-e5",
+                                                "type": "multiple-choice",
+                                                "prompt": "'Twin room' qanday xonani anglatadi?",
+                                                "options": [
+                                                        "Bitta katta ikki kishilik karavotli xona",
+                                                        "Ikkita alohida bir kishilik karavotli xona",
+                                                        "Faqat bir kishilik xona",
+                                                        "Oshxonasiz xona"
+                                                ],
+                                                "correctAnswer": 1,
+                                                "explanation": "'Twin room' - ikkita alohida bittalik karavotga ega bo'lgan xonadir."
+                                        }
+                                ]
                         }
-                    ]
+                },
+                {
+                        "id": "en-a1-u5-l3-s3",
+                        "title": "Dars Testi: Hotel English",
+                        "type": "test",
+                        "estimatedMinutes": 5,
+                        "testData": {
+                                "instructions": "Savollarga to'g'ri javob berib, mavzuni mustahkamlang.",
+                                "passingScorePercentage": 80,
+                                "questions": [
+                                        {
+                                                "id": "en-a1-u5-l3-q1",
+                                                "question": "Mehmonxona xonasining eshigini ochish uchun beriladigan plastik karta nima deyiladi?",
+                                                "options": [
+                                                        "credit card",
+                                                        "key card",
+                                                        "discount card",
+                                                        "boarding pass"
+                                                ],
+                                                "correctAnswerIndex": 1,
+                                                "explanation": "Xona eshigini ochuvchi karta 'key card' deb ataladi."
+                                        },
+                                        {
+                                                "id": "en-a1-u5-l3-q2",
+                                                "question": "'Under the name of...' iborasi qaysi vaziyatda ishlatiladi?",
+                                                "options": [
+                                                        "Do'konda chek so'raganda",
+                                                        "Bron kimning nomiga rasmiylashtirilganini aytganda",
+                                                        "Aeroportda pasport topshirganda",
+                                                        "Restoranda ovqat tanlaganda"
+                                                ],
+                                                "correctAnswerIndex": 1,
+                                                "explanation": "'I have a reservation under the name of...' - bron falonchi nomiga qilinganini bildiradi."
+                                        },
+                                        {
+                                                "id": "en-a1-u5-l3-q3",
+                                                "question": "Ertalab poyezd yoki reysga kechikmaslik uchun qabulxonadan qaysi xizmat so'raladi?",
+                                                "options": [
+                                                        "check-out call",
+                                                        "wake-up call",
+                                                        "single room call",
+                                                        "luggage call"
+                                                ],
+                                                "correctAnswerIndex": 1,
+                                                "explanation": "'Wake-up call' - mijozni telefon orqali uyg'otish xizmati."
+                                        },
+                                        {
+                                                "id": "en-a1-u5-l3-q4",
+                                                "question": "Mehmonxonaga yetib kelib, xonaga ro'yxatdan o'tib joylashish jarayoni nima deyiladi?",
+                                                "options": [
+                                                        "check-out",
+                                                        "check-in",
+                                                        "departure",
+                                                        "try-on"
+                                                ],
+                                                "correctAnswerIndex": 1,
+                                                "explanation": "Yetib kelib xonani qabul qilib olish jarayoni 'check-in' deyiladi."
+                                        },
+                                        {
+                                                "id": "en-a1-u5-l3-q5",
+                                                "question": "IELTS Speaking: 'What makes a hotel stay enjoyable for you?' savoliga eng yaxshi javob qaysi?",
+                                                "options": [
+                                                        "Bed is good.",
+                                                        "In my opinion, what matters most is clean and quiet rooms, high-speed Wi-Fi, and courteous hotel staff who attend to requests promptly.",
+                                                        "Hotel have TV.",
+                                                        "I don't like any hotel."
+                                                ],
+                                                "correctAnswerIndex": 1,
+                                                "explanation": "'clean and quiet rooms, high-speed Wi-Fi, and courteous hotel staff who attend to requests promptly' - Band 7.0 darajasidagi mukammal javob."
+                                        }
+                                ]
+                        }
                 }
-            },
-            {
-                "id": "en-a1-u5-l3-s2",
-                "title": "Mashq",
-                "type": "practice",
-                "estimatedMinutes": 4,
-                "practiceData": {
-                    "instructions": "To'g'ri iborani tanlang.",
-                    "exercises": [
-                        {
-                            "id": "en-a1-u5-l3-e1",
-                            "type": "multiple-choice",
-                            "prompt": "\"Can I _______ a glass of water, please?\"",
-                            "options": [
-                                "having",
-                                "has",
-                                "have",
-                                "had"
-                            ],
-                            "correctAnswer": 2,
-                            "explanation": "Can I have...?"
-                        },
-                        {
-                            "id": "en-a1-u5-l3-ex-2",
-                            "type": "multiple-choice",
-                            "prompt": "Choose the correct word to complete the sentence: \"Good morning, everyone!\"",
-                            "options": [
-                                "reluctance",
-                                "doubt",
-                                "Morning",
-                                "delay"
-                            ],
-                            "correctAnswer": 2,
-                            "explanation": "\"Morning\" (Tong, ertalab) fits the context appropriately."
-                        }
-                    ]
-                }
-            },
-            {
-                "id": "en-a1-u5-l3-s3",
-                "title": "Test",
-                "type": "test",
-                "estimatedMinutes": 4,
-                "testData": {
-                    "instructions": "Savollarga javob bering.",
-                    "passingScorePercentage": 75,
-                    "questions": [
-                        {
-                            "id": "en-a1-u5-l3-q1",
-                            "question": "How do you ask for the check in a restaurant?",
-                            "options": [
-                                "Where is food?",
-                                "Give me money.",
-                                "The bill, please.",
-                                "I am full."
-                            ],
-                            "correctAnswerIndex": 2,
-                            "explanation": "The bill, please."
-                        }
-                    ]
-                }
-            }
         ]
-    },
+},
     {
         "id": "en-a1-u5-l4",
         "courseId": "english-a1",
@@ -5273,126 +5580,230 @@ export const ENGLISH_A1_LESSONS: Lesson[] = [
         "unitTitle": "Unit 5: Travel & Shopping",
         "language": "en",
         "level": "A1",
-        "lessonNumber": 24,
-        "title": "Talking about Weather & Seasons",
-        "description": "Ob-havo va fasllar: \"It is sunny/rainy/cold\", \"What is the weather like today?\".",
-        "estimatedDurationMinutes": 12,
-        "icon": "🌤️",
+        "lessonNumber": 4,
+        "title": "Past Simple of To Be: Was & Were",
+        "description": "O'tgan zamonda To Be fe'li (was / were), o'tgan zamon vaqt ko'rsatkichlari (yesterday, last night, ago).",
+        "estimatedDurationMinutes": 14,
+        "icon": "⏳",
         "steps": [
-            {
-                "id": "en-a1-u5-l4-s1",
-                "title": "Ob-havo Iboralari",
-                "type": "learn",
-                "estimatedMinutes": 4,
-                "learnData": {
-                    "title": "Weather & Seasons",
-                    "explanation": "Ob-havo haqida gapirganda \"It is + Sifat\" qo'llaniladi (It is cold, It is raining).",
-                    "keyPoints": [
-                        "What is the weather like? — Ob-havo qanday?",
-                        "It is hot and sunny. — Issiq va quyoshli.",
-                        "Spring, Summer, Autumn, Winter — Yoz, Kuz, Qish, Bahor."
-                    ],
-                    "vocabulary": [
-                        {
-                            "term": "Weather",
-                            "reading": "/ˈweð.ər/",
-                            "meaning": "Ob-havo",
-                            "exampleSentence": "The weather is nice today.",
-                            "exampleTranslation": "Bugun ob-havo yaxshi."
-                        },
-                        {
-                            "term": "Welcome",
-                            "reading": "/ˈwel.kəm/",
-                            "meaning": "Xush kelibsiz",
-                            "exampleSentence": "Welcome to our English class.",
-                            "exampleTranslation": "Ingliz tili darsimizga xush kelibsiz."
-                        },
-                        {
-                            "term": "Friend",
-                            "reading": "/frend/",
-                            "meaning": "Doʻst",
-                            "exampleSentence": "She is my best friend.",
-                            "exampleTranslation": "U mening eng yaxshi doʻstim."
+                {
+                        "id": "en-a1-u5-l4-s1",
+                        "title": "Was va Were Qoidalari",
+                        "type": "learn",
+                        "estimatedMinutes": 5,
+                        "learnData": {
+                                "title": "Past Simple of 'To Be': Was & Were",
+                                "explanation": "O'tgan zamonda holat va mavjudlikni ifodalash (To Be fe'lining o'tgan zamoni):\n\n1. Was va Were taqsimoti:\n- WAS (Birlik shaxslar uchun: I, He, She, It):\n  • I was at home yesterday. (Men kecha uyda edim).\n  • She was tired after the long journey. (U uzoq safardan keyin charchagan edi).\n  • The weather was wonderful last weekend. (O'tgan dam olish kunlarida ob-havo ajoyib edi).\n- WERE (Ko'plik shaxslar va You uchun: We, You, They):\n  • We were very happy to see our old friends. (Biz do'stlarimizni ko'rishdan juda xursand edik).\n  • You were late for the lecture this morning.\n  • They were in London last month.\n\n2. Inkor shakli (Wasn't / Weren't):\n- was not -> wasn't (/ˈwɒzənt/)\n- were not -> weren't (/wɜːnt/)\n  • \"He wasn't at the meeting.\"\n  • \"They weren't satisfied with the hotel service.\"\n\n3. So'roq shakli:\n- Was / Were egadan oldinga o'tadi:\n  • \"Were you at home last night?\" -> \"Yes, I was.\" / \"No, I wasn't.\"\n  • \"Where were you born?\" -> \"I was born in Samarkand.\"\n\n4. O'tgan zamon vaqt ko'rsatkichlari (Past Time Markers):\n- yesterday (kecha), yesterday morning (kecha ertalab)\n- last night (kecha tunda), last week (o'tgan hafta), last year (o'tgan yili)\n- two days ago (ikki kun oldin), five years ago (besh yil oldin)\n- in 2018 (2018-yilda).\n\n5. O'zbek o'rganuvchilari uchun xavfli tuzoqlar (Common Pitfalls):\n- ❌ \"We was in Tashkent yesterday.\" -> ✅ \"We WERE in Tashkent yesterday.\" (We bilan har doim 'were'!).\n- ❌ \"Yesterday I am exhausted.\" -> ✅ \"Yesterday I WAS exhausted.\" (Kecha bo'lsa 'was' bo'lishi shart!).\n- ❌ \"Where was you?\" -> ✅ \"Where WERE you?\" ('You' birlikda ham, ko'plikda ham 'were' oladi).\n\n6. IELTS Speaking Part 1 Foundation Corner:\n- Topic: Last Weekend / Childhood\n- Examiner: \"How was your last weekend?\"\n- Model Band 6.0+ Answer: \"To be honest, it was quite relaxing. On Saturday, I was at home catching up on some sleep, and on Sunday evening, my friends and I were at a traditional teahouse.\"\n- Examiner Tip: \"catching up on some sleep\" (to'yib uxlab dam olmoq) - ravon va tabiiy idiomadir.",
+                                "vocabulary": [
+                                        {
+                                                "term": "yesterday",
+                                                "reading": "/ˈjestədeɪ/",
+                                                "meaning": "kecha",
+                                                "exampleSentence": "I was busy preparing my presentation all day yesterday.",
+                                                "exampleTranslation": "Men kecha kun bo'yi taqdimotimni tayyorlash bilan band edim."
+                                        },
+                                        {
+                                                "term": "last night",
+                                                "reading": "/lɑːst naɪt/",
+                                                "meaning": "kecha oqshom / kecha kechasi",
+                                                "exampleSentence": "Where were you at ten o'clock last night?",
+                                                "exampleTranslation": "Kecha oqshom soat o'nda qayerda edingiz?"
+                                        },
+                                        {
+                                                "term": "ago",
+                                                "reading": "/əˈɡəʊ/",
+                                                "meaning": "avval, oldin (vaqtdan keyin qo'yiladi)",
+                                                "exampleSentence": "They arrived in this historic city three days ago.",
+                                                "exampleTranslation": "Ular bu tarixiy shaharga uch kun oldin yetib keldilar."
+                                        },
+                                        {
+                                                "term": "exhausted",
+                                                "reading": "/ɪɡˈzɔːstɪd/",
+                                                "meaning": "o'ta charchagan, darmonsiz",
+                                                "exampleSentence": "After the eight-hour hike, all of us were completely exhausted.",
+                                                "exampleTranslation": "Sakkiz soatlik piyoda yurishdan so'ng barchamiz butunlay charchab holdan toygan edik."
+                                        },
+                                        {
+                                                "term": "crowded",
+                                                "reading": "/ˈkraʊdɪd/",
+                                                "meaning": "gavjum, odamlar bilan to'la",
+                                                "exampleSentence": "The central train station was extremely crowded yesterday morning.",
+                                                "exampleTranslation": "Kecha ertalab markaziy temiryo'l vokzali o'ta gavjum edi."
+                                        },
+                                        {
+                                                "term": "wonderful",
+                                                "reading": "/ˈwʌndəfəl/",
+                                                "meaning": "ajoyib, g'oyat go'zal",
+                                                "exampleSentence": "Our family holiday in the mountains was truly wonderful.",
+                                                "exampleTranslation": "Tog'dagi oilaviy ta'tilimiz haqiqatan ham ajoyib o'tdi."
+                                        },
+                                        {
+                                                "term": "born",
+                                                "reading": "/bɔːn/",
+                                                "meaning": "tug'ilgan (I was born...)",
+                                                "exampleSentence": "I was born in a peaceful village near Bukhara.",
+                                                "exampleTranslation": "Men Buxoro yaqinidagi sokin qishloqda tug'ilganman."
+                                        },
+                                        {
+                                                "term": "satisfied",
+                                                "reading": "/ˈsætɪsfaɪd/",
+                                                "meaning": "mamnun, rozi bo'lgan",
+                                                "exampleSentence": "The manager was highly satisfied with the team's exam results.",
+                                                "exampleTranslation": "Menejer jamoaning imtihon natijalaridan juda mamnun edi."
+                                        }
+                                ]
                         }
-                    ],
-                    "grammarRules": [
-                        {
-                            "pattern": "Talking about Weather & Seasons",
-                            "meaning": "Ob-havo va fasllar: \"It is sunny/rainy/cold\", \"What is the weather like today?\".",
-                            "usageNotes": "Ob-havo haqida gapirganda \"It is + Sifat\" qo'llaniladi (It is cold, It is raining).",
-                            "examples": [
-                                {
-                                    "sentence": "The weather is nice today.",
-                                    "translation": "Bugun ob-havo yaxshi."
-                                }
-                            ]
+                },
+                {
+                        "id": "en-a1-u5-l4-s2",
+                        "title": "Was va Were Mashqlari",
+                        "type": "practice",
+                        "estimatedMinutes": 4,
+                        "practiceData": {
+                                "instructions": "Bo'sh joylarni to'g'ri 'was' yoki 'were' shakli bilan to'ldiring.",
+                                "exercises": [
+                                        {
+                                                "id": "en-a1-u5-l4-e1",
+                                                "type": "multiple-choice",
+                                                "prompt": "Bo'sh joyni to'g'ri to'ldiring: 'We ___ in the library all afternoon yesterday.'",
+                                                "options": [
+                                                        "was",
+                                                        "were",
+                                                        "are",
+                                                        "been"
+                                                ],
+                                                "correctAnswer": 1,
+                                                "explanation": "'We' ko'plik olmoshi o'tgan zamonda 'were' oladi: 'We were'."
+                                        },
+                                        {
+                                                "id": "en-a1-u5-l4-e2",
+                                                "type": "multiple-choice",
+                                                "prompt": "Savol gapni to'g'ri tuzing: '___ you at home at 8 o'clock last night?'",
+                                                "options": [
+                                                        "Was",
+                                                        "Were",
+                                                        "Are",
+                                                        "Did"
+                                                ],
+                                                "correctAnswer": 1,
+                                                "explanation": "'You' bilan o'tgan zamon To Be so'rog'i 'Were' orqali yasaladi: 'Were you...?'."
+                                        },
+                                        {
+                                                "id": "en-a1-u5-l4-e3",
+                                                "type": "multiple-choice",
+                                                "prompt": "Inkor gapni to'ldiring: 'She ___ at school yesterday because she had a fever.'",
+                                                "options": [
+                                                        "wasn't",
+                                                        "weren't",
+                                                        "isn't",
+                                                        "didn't was"
+                                                ],
+                                                "correctAnswer": 0,
+                                                "explanation": "'She' uchinchi shaxs birlik uchun o'tgan zamon inkori 'wasn't' bo'ladi."
+                                        },
+                                        {
+                                                "id": "en-a1-u5-l4-e4",
+                                                "type": "multiple-choice",
+                                                "prompt": "Qaysi jumla grammatik jihatdan MUTLAQO TO'G'RI?",
+                                                "options": [
+                                                        "Where was you born?",
+                                                        "Where were you born?",
+                                                        "Where are you born in 2000?",
+                                                        "Where did you born?"
+                                                ],
+                                                "correctAnswer": 1,
+                                                "explanation": "'Where were you born?' - tug'ilgan joyni so'rashning qat'iy va yagona to'g'ri grammatik qolipi."
+                                        },
+                                        {
+                                                "id": "en-a1-u5-l4-e5",
+                                                "type": "multiple-choice",
+                                                "prompt": "'The weather ___ bright and sunny last Sunday.'",
+                                                "options": [
+                                                        "was",
+                                                        "were",
+                                                        "is",
+                                                        "are"
+                                                ],
+                                                "correctAnswer": 0,
+                                                "explanation": "'The weather' birlik sanalmaydigan ot, o'tgan zamonda 'was' ishlatiladi."
+                                        }
+                                ]
                         }
-                    ]
+                },
+                {
+                        "id": "en-a1-u5-l4-s3",
+                        "title": "Dars Testi: Was & Were",
+                        "type": "test",
+                        "estimatedMinutes": 5,
+                        "testData": {
+                                "instructions": "Savollarga to'g'ri javob berib, mavzuni mustahkamlang.",
+                                "passingScorePercentage": 80,
+                                "questions": [
+                                        {
+                                                "id": "en-a1-u5-l4-q1",
+                                                "question": "Qaysi shaxslar bilan 'was' yordamchi fe'li ishlatiladi?",
+                                                "options": [
+                                                        "I, He, She, It",
+                                                        "We, You, They",
+                                                        "You, He, They",
+                                                        "Faqat I va You"
+                                                ],
+                                                "correctAnswerIndex": 0,
+                                                "explanation": "'Was' birlik shaxslar bilan qo'llanadi: I was, He was, She was, It was."
+                                        },
+                                        {
+                                                "id": "en-a1-u5-l4-q2",
+                                                "question": "Qaysi jumla grammatik jihatdan XATO?",
+                                                "options": [
+                                                        "They were at the cinema last night.",
+                                                        "My brother was exhausted after work.",
+                                                        "We was very happy with our holiday.",
+                                                        "The streets were crowded yesterday."
+                                                ],
+                                                "correctAnswerIndex": 2,
+                                                "explanation": "'We was' xato, to'g'risi: 'We WERE very happy'."
+                                        },
+                                        {
+                                                "id": "en-a1-u5-l4-q3",
+                                                "question": "'Three days ago' iborasi nima ma'noni anglatadi?",
+                                                "options": [
+                                                        "Uch kundan keyin",
+                                                        "Uch kun oldin",
+                                                        "Uch kundan beri",
+                                                        "Uch kun davomida"
+                                                ],
+                                                "correctAnswerIndex": 1,
+                                                "explanation": "'Ago' - oldin, avval deganidir (three days ago = uch kun oldin)."
+                                        },
+                                        {
+                                                "id": "en-a1-u5-l4-q4",
+                                                "question": "'Were they satisfied with the food?' savoliga to'g'ri qisqa inkor javob qaysi?",
+                                                "options": [
+                                                        "No, they weren't.",
+                                                        "No, they wasn't.",
+                                                        "No, they didn't.",
+                                                        "No, they aren't."
+                                                ],
+                                                "correctAnswerIndex": 0,
+                                                "explanation": "'Were they...?' savoliga inkor: 'No, they weren't'."
+                                        },
+                                        {
+                                                "id": "en-a1-u5-l4-q5",
+                                                "question": "IELTS Speaking: 'Tell me about a memorable day in your past.' savoliga eng yaxshi boshlanish qaysi?",
+                                                "options": [
+                                                        "Past day is good.",
+                                                        "A particularly memorable day was my high school graduation two years ago. Everyone was ecstatic, and our teachers were deeply proud of our achievements.",
+                                                        "I am graduate two years ago.",
+                                                        "Yesterday was day memorable."
+                                                ],
+                                                "correctAnswerIndex": 1,
+                                                "explanation": "'A particularly memorable day was... Everyone was ecstatic, and our teachers were deeply proud...' - Band 6.5+ o'tgan zamon To Be fe'llarini mahorat bilan qo'llagan."
+                                        }
+                                ]
+                        }
                 }
-            },
-            {
-                "id": "en-a1-u5-l4-s2",
-                "title": "Mashq",
-                "type": "practice",
-                "estimatedMinutes": 4,
-                "practiceData": {
-                    "instructions": "To'g'ri so'zni tanlang.",
-                    "exercises": [
-                        {
-                            "id": "en-a1-u5-l4-e1",
-                            "type": "multiple-choice",
-                            "prompt": "\"It is _______ outside. Take an umbrella!\"",
-                            "options": [
-                                "sunny",
-                                "dry",
-                                "hot",
-                                "raining"
-                            ],
-                            "correctAnswer": 3,
-                            "explanation": "Raining = yomg'ir yog'moqda."
-                        },
-                        {
-                            "id": "en-a1-u5-l4-ex-2",
-                            "type": "multiple-choice",
-                            "prompt": "Choose the correct word to complete the sentence: \"Welcome to our English class.\"",
-                            "options": [
-                                "doubt",
-                                "delay",
-                                "reluctance",
-                                "Welcome"
-                            ],
-                            "correctAnswer": 3,
-                            "explanation": "\"Welcome\" (Xush kelibsiz) fits the context appropriately."
-                        }
-                    ]
-                }
-            },
-            {
-                "id": "en-a1-u5-l4-s3",
-                "title": "Test",
-                "type": "test",
-                "estimatedMinutes": 4,
-                "testData": {
-                    "instructions": "Savollarga javob bering.",
-                    "passingScorePercentage": 75,
-                    "questions": [
-                        {
-                            "id": "en-a1-u5-l4-q1",
-                            "question": "Which season comes after Summer?",
-                            "options": [
-                                "Spring",
-                                "Monday",
-                                "Winter",
-                                "Autumn"
-                            ],
-                            "correctAnswerIndex": 3,
-                            "explanation": "Summer -> Autumn (Kuz)."
-                        }
-                    ]
-                }
-            }
         ]
-    },
+},
     {
         "id": "en-a1-u5-l5",
         "courseId": "english-a1",
@@ -5400,160 +5811,228 @@ export const ENGLISH_A1_LESSONS: Lesson[] = [
         "unitTitle": "Unit 5: Travel & Shopping",
         "language": "en",
         "level": "A1",
-        "lessonNumber": 25,
-        "title": "A1 Comprehensive Final Assessment",
-        "description": "A1 darajasidagi barcha grammatika va leksikani umumiy tekshirish uchun yakuniy baholash imtihoni.",
-        "estimatedDurationMinutes": 15,
+        "lessonNumber": 5,
+        "title": "A1 Capstone: Comprehensive Review & IELTS Speaking Simulation",
+        "description": "A1 darajasining barcha grammatik mavzulari bo'yicha to'liq umumlashtiruvchi imtihon va IELTS Speaking Part 1 simulyatsiyasi.",
+        "estimatedDurationMinutes": 16,
         "icon": "🏆",
         "steps": [
-            {
-                "id": "en-a1-u5-l5-s1",
-                "title": "A1 Yakuniy Takrorlash",
-                "type": "learn",
-                "estimatedMinutes": 5,
-                "learnData": {
-                    "title": "A1 Level Master Summary",
-                    "explanation": "A1 darajasida egallangan barcha asosiy mavzular: To Be, Present Simple, Can/Can't, Directions, Shopping, Daily Routines.",
-                    "keyPoints": [
-                        "Present Simple: Everyday routines and habits",
-                        "Basic Vocabulary: Numbers, days, food, places",
-                        "Questions & Negatives: Do/Does, Is/Are"
-                    ],
-                    "grammarRules": [
-                        {
-                            "pattern": "A1 Comprehensive Final Assessment",
-                            "meaning": "A1 darajasidagi barcha grammatika va leksikani umumiy tekshirish uchun yakuniy baholash imtihoni.",
-                            "usageNotes": "A1 darajasida egallangan barcha asosiy mavzular: To Be, Present Simple, Can/Can't, Directions, Shopping, Daily Routines.",
-                            "examples": [
-                                {
-                                    "sentence": "I study English every day with dedication.",
-                                    "translation": "Har kuni ingliz tilini astoydil o'rganaman."
-                                }
-                            ]
+                {
+                        "id": "en-a1-u5-l5-s1",
+                        "title": "A1 Darajasi Xulosasi va IELTS Poydevori",
+                        "type": "learn",
+                        "estimatedMinutes": 5,
+                        "learnData": {
+                                "title": "A1 Comprehensive Roadmap & Speaking Strategy",
+                                "explanation": "Tabriklaymiz! Siz CEFR A1 (Elementary) darajasining barcha 25 ta darsini to'liq bosib o'tdingiz!\n\n1. A1 Grammatika Xaritasi (Master Grammar Blueprint):\n- TO BE (Present & Past): am, is, are & was, were.\n- OT VA EGALIK: Plurals (-s, -es, irregulars), Articles (a/an/the), Possessives (my, your, his, her, 's).\n- DEMONSTRATIVES: this, that, these, those.\n- PRESENT SIMPLE: Doimiy odatlar, 3-shaxs birlik (-s/es), inkor (don't/doesn't), so'roq (Do/Does...?).\n- PRESENT CONTINUOUS: Ayni damdagi harakatlar (am/is/are + V-ing) va Stative Verbs (know, want, understand).\n- MODAL VERB: Can / Can't (qobiliyat va ruxsat).\n- THERE IS / THERE ARE: Xona va joylashuv mavjudligi + predloglar (in, on, between, opposite).\n- VAQT VA SAYOHAT: Soatni aytish (at 7:00), jamoat transporti (by bus, on foot), xaridlar (how much is/are).\n\n2. O'zbek o'rganuvchilari uchun TOP-5 Halokatli Xatolar (Final Check):\n1. ❌ \"I student\" -> ✅ \"I AM a student\" (To be tushib qolmasin!).\n2. ❌ \"He work every day\" -> ✅ \"He WORK-S every day\" (3-shaxs birlikda -s unutmaslik!).\n3. ❌ \"In my room have a table\" -> ✅ \"THERE IS a table in my room.\"\n4. ❌ \"I go by foot\" -> ✅ \"I go ON FOOT.\"\n5. ❌ \"I am knowing you\" -> ✅ \"I KNOW you\" (Holat fe'llari -ing olmaydi!).\n\n3. IELTS Speaking Part 1 To'liq Simulyatsiyasi (Band 6.0 - 6.5):\n- Savol 1 (Hometown): \"Where are you from?\"\n  • Model: \"I was born and raised in Tashkent, which is the bustling capital city of Uzbekistan. It is a modern city with great amenities and convenient public transport.\"\n- Savol 2 (Daily Routine): \"What do you normally do on a typical weekday?\"\n  • Model: \"On weekdays, I usually wake up at seven o'clock, have a light breakfast, and commute to my university by metro. In the evenings, I enjoy reading fiction books or cycling in the local park.\"\n- Savol 3 (Free time): \"What do you like to do on weekends?\"\n  • Model: \"At the weekends, I prefer unwinding with my family. We often cook traditional pilaf together or visit my grandparents in the countryside.\"",
+                                "vocabulary": [
+                                        {
+                                                "term": "achieve",
+                                                "reading": "/əˈtʃiːv/",
+                                                "meaning": "erishmoq, zabt etmoq (maqsadga)",
+                                                "exampleSentence": "With consistent daily practice, you can achieve your target IELTS score.",
+                                                "exampleTranslation": "Har kungi muntazam mashg'ulotlar orqali siz o'z ko'zlangan IELTS ballingizga erisha olasiz."
+                                        },
+                                        {
+                                                "term": "confidence",
+                                                "reading": "/ˈkɒnfɪdəns/",
+                                                "meaning": "o'ziga ishonch",
+                                                "exampleSentence": "Mastering A1 grammar builds tremendous confidence for spoken English.",
+                                                "exampleTranslation": "A1 grammatikasini puxta o'zlashtirish ingliz tilida so'zlashishda ulkan ishonch bag'ishlaydi."
+                                        },
+                                        {
+                                                "term": "fluency",
+                                                "reading": "/ˈfluːənsi/",
+                                                "meaning": "nutq ravonligi, erkinligi",
+                                                "exampleSentence": "Our primary objective is to develop natural fluency and clear pronunciation.",
+                                                "exampleTranslation": "Bizning asosiy maqsadimiz — tabiiy nutq ravonligi va aniq talaffuzni shakllantirishdir."
+                                        },
+                                        {
+                                                "term": "accuracy",
+                                                "reading": "/ˈækjərəsi/",
+                                                "meaning": "grammatik aniqlik, xatosizlik",
+                                                "exampleSentence": "Grammatical accuracy is just as crucial as fluency in the IELTS exam.",
+                                                "exampleTranslation": "IELTS imtihonida grammatik aniqlik ravonlik kabi o'ta muhim ahamiyatga ega."
+                                        },
+                                        {
+                                                "term": "elementary",
+                                                "reading": "/ˌelɪˈmentəri/",
+                                                "meaning": "boshlang'ich, asosiy (A1/A2)",
+                                                "exampleSentence": "Congratulations on successfully finishing the elementary level!",
+                                                "exampleTranslation": "Boshlang'ich (elementary) bosqichni muvaffaqiyatli tamomlaganingiz bilan tabriklaymiz!"
+                                        },
+                                        {
+                                                "term": "progress",
+                                                "reading": "/ˈprəʊɡres/",
+                                                "meaning": "o'sish, yuksalish, siljish",
+                                                "exampleSentence": "You have made remarkable progress throughout these twenty-five lessons.",
+                                                "exampleTranslation": "Siz ushbu yigirma beshta dars davomida hayratlanarli o'sishga erishdingiz."
+                                        },
+                                        {
+                                                "term": "unwind",
+                                                "reading": "/ʌnˈwaɪnd/",
+                                                "meaning": "dam olib hordiq chiqarmoq",
+                                                "exampleSentence": "Listening to gentle acoustic music helps me unwind after hard work.",
+                                                "exampleTranslation": "Sokin akustik musiqa tinglash menga mashaqqatli mehnatdan keyin hordiq chiqarishga yordam beradi."
+                                        },
+                                        {
+                                                "term": "bustling",
+                                                "reading": "/ˈbʌslɪŋ/",
+                                                "meaning": "qaynoq, gavjum, hayot qaynagan (shahar)",
+                                                "exampleSentence": "Samarkand is a bustling historic city that attracts visitors globally.",
+                                                "exampleTranslation": "Samarqand butun dunyodan sayyohlarni jalb etuvchi gavjum tarixiy shahardir."
+                                        }
+                                ]
                         }
-                    ],
-                    "vocabulary": [
-                        {
-                            "term": "Welcome",
-                            "reading": "/ˈwel.kəm/",
-                            "meaning": "Xush kelibsiz",
-                            "exampleSentence": "Welcome to our English class.",
-                            "exampleTranslation": "Ingliz tili darsimizga xush kelibsiz."
-                        },
-                        {
-                            "term": "Friend",
-                            "reading": "/frend/",
-                            "meaning": "Doʻst",
-                            "exampleSentence": "She is my best friend.",
-                            "exampleTranslation": "U mening eng yaxshi doʻstim."
-                        },
-                        {
-                            "term": "Family",
-                            "reading": "/ˈfæm.əl.i/",
-                            "meaning": "Oila",
-                            "exampleSentence": "I love my family.",
-                            "exampleTranslation": "Men oilamni yaxshi koʻraman."
+                },
+                {
+                        "id": "en-a1-u5-l5-s2",
+                        "title": "A1 Yakuniy Amaliy Mashqlari",
+                        "type": "practice",
+                        "estimatedMinutes": 5,
+                        "practiceData": {
+                                "instructions": "A1 darajasining turli mavzularidagi xatolarni aniqlang va to'g'ri variantni tanlang.",
+                                "exercises": [
+                                        {
+                                                "id": "en-a1-u5-l5-e1",
+                                                "type": "multiple-choice",
+                                                "prompt": "Qaysi gapda 3-shaxs birlik qoidasi (Present Simple) to'g'ri qo'llangan?",
+                                                "options": [
+                                                        "My brother work in a commercial bank.",
+                                                        "My brother works in a commercial bank.",
+                                                        "My brother is work in a commercial bank.",
+                                                        "My brother working in a commercial bank."
+                                                ],
+                                                "correctAnswer": 1,
+                                                "explanation": "'My brother' (He) uchinchi shaxs birlik, fe'lga -s qo'shiladi: 'works'."
+                                        },
+                                        {
+                                                "id": "en-a1-u5-l5-e2",
+                                                "type": "multiple-choice",
+                                                "prompt": "Ayni damdagi harakat (Present Continuous) uchun to'g'ri gapni tanlang:",
+                                                "options": [
+                                                        "Listen! Someone knocks at the door.",
+                                                        "Listen! Someone is knocking at the door.",
+                                                        "Listen! Someone are knocking at the door.",
+                                                        "Listen! Someone knocking at the door."
+                                                ],
+                                                "correctAnswer": 1,
+                                                "explanation": "'Someone' birlik olmosh hisoblanadi: 'is knocking'."
+                                        },
+                                        {
+                                                "id": "en-a1-u5-l5-e3",
+                                                "type": "multiple-choice",
+                                                "prompt": "'Xonada ikkita qulay divan bor' jumlasining to'g'ri inglizcha shakli qaysi?",
+                                                "options": [
+                                                        "In the room has two comfortable sofas.",
+                                                        "There is two comfortable sofas in the room.",
+                                                        "There are two comfortable sofas in the room.",
+                                                        "The room have two comfortable sofas."
+                                                ],
+                                                "correctAnswer": 2,
+                                                "explanation": "Ko'plikdagi mavjudlik har doim 'There are' bilan ifodalanadi."
+                                        },
+                                        {
+                                                "id": "en-a1-u5-l5-e4",
+                                                "type": "multiple-choice",
+                                                "prompt": "Qaysi jumla o'tgan zamonda (Past Simple To Be) to'g'ri tuzilgan?",
+                                                "options": [
+                                                        "Yesterday we was at the botanical garden.",
+                                                        "Yesterday we were at the botanical garden.",
+                                                        "Yesterday we are at the botanical garden.",
+                                                        "Yesterday we been at the botanical garden."
+                                                ],
+                                                "correctAnswer": 1,
+                                                "explanation": "'We' ko'plik olmoshi o'tgan zamonda 'were' bilan keladi."
+                                        },
+                                        {
+                                                "id": "en-a1-u5-l5-e5",
+                                                "type": "multiple-choice",
+                                                "prompt": "'Can' modal fe'li bilan qaysi jumla to'g'ri berilgan?",
+                                                "options": [
+                                                        "She can to speak three languages.",
+                                                        "She can speaks three languages.",
+                                                        "She can speak three languages.",
+                                                        "She cans speak three languages."
+                                                ],
+                                                "correctAnswer": 2,
+                                                "explanation": "'Can' dan keyin fe'l hech qanday qo'shimchasiz va 'to' siz keladi: 'She can speak'."
+                                        }
+                                ]
                         }
-                    ]
+                },
+                {
+                        "id": "en-a1-u5-l5-s3",
+                        "title": "A1 Yakuniy Baholash Imtihoni",
+                        "type": "test",
+                        "estimatedMinutes": 6,
+                        "testData": {
+                                "instructions": "A1 darajasi bo'yicha yakuniy imtihon savollariga javob bering.",
+                                "passingScorePercentage": 80,
+                                "questions": [
+                                        {
+                                                "id": "en-a1-u5-l5-q1",
+                                                "question": "O'zbek o'rganuvchilarining eng ko'p qiladigan 'I student' xatosi qanday tuzatiladi?",
+                                                "options": [
+                                                        "I am a student.",
+                                                        "I is a student.",
+                                                        "I are student.",
+                                                        "I be student."
+                                                ],
+                                                "correctAnswerIndex": 0,
+                                                "explanation": "Ingliz tilida kesimlik fe'li tushib qolmaydi: 'I am a student'."
+                                        },
+                                        {
+                                                "id": "en-a1-u5-l5-q2",
+                                                "question": "Holat fe'li (stative verb) qaysi javobda to'g'ri qo'llangan?",
+                                                "options": [
+                                                        "I am understanding you very well now.",
+                                                        "I understand you very well now.",
+                                                        "I am knowing this grammar.",
+                                                        "He is wanting water now."
+                                                ],
+                                                "correctAnswerIndex": 1,
+                                                "explanation": "'Understand', 'know', 'want' holat fe'llari bo'lib, davomli zamonda (-ing bilan) ishlatilmaydi."
+                                        },
+                                        {
+                                                "id": "en-a1-u5-l5-q3",
+                                                "question": "'Piyoda bormoq' va 'soat 8 da' iboralari qaysi javobda xatosiz berilgan?",
+                                                "options": [
+                                                        "by foot / in 8 o'clock",
+                                                        "on foot / at 8 o'clock",
+                                                        "on foot / on 8 o'clock",
+                                                        "by foot / at 8 o'clock"
+                                                ],
+                                                "correctAnswerIndex": 1,
+                                                "explanation": "Piyoda yurish: 'on foot'; soat vaqtlari oldidan: 'at 8 o'clock'."
+                                        },
+                                        {
+                                                "id": "en-a1-u5-l5-q4",
+                                                "question": "'Kecha ob-havo qanday edi?' savolining to'g'ri inglizcha varianti qaysi?",
+                                                "options": [
+                                                        "What was the weather like yesterday?",
+                                                        "What were the weather like yesterday?",
+                                                        "How was weather like yesterday?",
+                                                        "What the weather was like yesterday?"
+                                                ],
+                                                "correctAnswerIndex": 0,
+                                                "explanation": "'What was the weather like yesterday?' - o'tgan zamondagi ob-havoni so'rash qolipi."
+                                        },
+                                        {
+                                                "id": "en-a1-u5-l5-q5",
+                                                "question": "IELTS Speaking Part 1 da 'Tell me about yourself' savoliga eng yaxshi A1/A2 javob qaysi?",
+                                                "options": [
+                                                        "My name is John. I am 20. I like football.",
+                                                        "Well, my name is Sardor. I am currently a university student in Tashkent majoring in economics. In my leisure time, I am keen on reading and learning foreign languages.",
+                                                        "I am student, my family four, bye.",
+                                                        "Name is Sardor, I live home."
+                                                ],
+                                                "correctAnswerIndex": 1,
+                                                "explanation": "'Well, my name is... I am currently a university student... majoring in... In my leisure time, I am keen on...' - ravon, bog'lovchilar bilan boyitilgan, A1-A2 darajasidagi eng namunali javob."
+                                        }
+                                ]
+                        }
                 }
-            },
-            {
-                "id": "en-a1-u5-l5-s2",
-                "title": "A1 Yakuniy Mashq",
-                "type": "practice",
-                "estimatedMinutes": 5,
-                "practiceData": {
-                    "instructions": "A1 darajasidagi savollarni yeching.",
-                    "exercises": [
-                        {
-                            "id": "en-a1-u5-l5-e1",
-                            "type": "multiple-choice",
-                            "prompt": "\"_______ do you live?\" — \"I live in Tashkent.\"",
-                            "options": [
-                                "Where",
-                                "When",
-                                "Who",
-                                "What"
-                            ],
-                            "correctAnswer": 0,
-                            "explanation": "Where = qayerda."
-                        },
-                        {
-                            "id": "en-a1-u5-l5-ex-2",
-                            "type": "multiple-choice",
-                            "prompt": "Choose the correct word to complete the sentence: \"She is my best friend.\"",
-                            "options": [
-                                "Friend",
-                                "reluctance",
-                                "delay",
-                                "doubt"
-                            ],
-                            "correctAnswer": 0,
-                            "explanation": "\"Friend\" (Doʻst) fits the context appropriately."
-                        }
-                    ]
-                }
-            },
-            {
-                "id": "en-a1-u5-l5-s3",
-                "title": "A1 Level Promotion Exam",
-                "type": "test",
-                "estimatedMinutes": 5,
-                "testData": {
-                    "instructions": "A2 darajasiga o'tish uchun testni kamida 80% natija bilan topshiring.",
-                    "passingScorePercentage": 80,
-                    "questions": [
-                        {
-                            "id": "en-a1-u5-l5-q1",
-                            "question": "She _______ to the gym every morning.",
-                            "options": [
-                                "goes",
-                                "going",
-                                "is go",
-                                "go"
-                            ],
-                            "correctAnswerIndex": 0,
-                            "explanation": "She goes..."
-                        },
-                        {
-                            "id": "en-a1-u5-l5-q2",
-                            "question": "Where _______ your parents work?",
-                            "options": [
-                                "does",
-                                "is",
-                                "are",
-                                "do"
-                            ],
-                            "correctAnswerIndex": 3,
-                            "explanation": "Parents (they) -> do."
-                        },
-                        {
-                            "id": "en-a1-u5-l5-q3",
-                            "question": "There is _______ apple on the table.",
-                            "options": [
-                                "an",
-                                "a",
-                                "some",
-                                "any"
-                            ],
-                            "correctAnswerIndex": 0,
-                            "explanation": "An apple."
-                        },
-                        {
-                            "id": "en-a1-u5-l5-q4",
-                            "question": "We _______ have a car.",
-                            "options": [
-                                "not",
-                                "don't",
-                                "doesn't",
-                                "aren't"
-                            ],
-                            "correctAnswerIndex": 1,
-                            "explanation": "We don't have..."
-                        }
-                    ]
-                }
-            }
         ]
-    }
+}
 ];
