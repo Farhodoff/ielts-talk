@@ -496,65 +496,68 @@ const DecksPage: React.FC = () => {
         </div>
 
         {isSuper && (
-          <div className="flex flex-wrap items-center gap-2.5">
-            {/* Add Subject Button */}
-            <Button
-              onClick={() => setIsAddSubjectOpen(true)}
-              className="rounded-2xl bg-primary px-5 py-3 text-xs font-extrabold text-primary-foreground shadow-md hover:bg-primary/90"
-            >
-              <Plus size={16} className="mr-1.5" /> {t('flashcards.createDeck')}
-            </Button>
-
-            {/* Primary Button */}
-            <Link to="/flashcards/new">
-              <Button className="rounded-2xl border border-border bg-card px-5 py-3 text-xs font-extrabold text-foreground shadow-xs hover:bg-muted">
-                <Plus size={16} className="mr-1.5" /> {t('flashcards.addManual')}
+          <div className="flex flex-col sm:flex-row flex-wrap items-stretch sm:items-center gap-2.5 w-full lg:w-auto">
+            {/* Primary Action Buttons */}
+            <div className="grid grid-cols-2 sm:flex sm:items-center gap-2">
+              {/* Add Subject Button */}
+              <Button
+                onClick={() => setIsAddSubjectOpen(true)}
+                className="w-full sm:w-auto rounded-2xl bg-primary px-3.5 sm:px-5 py-2.5 sm:py-3 text-xs font-extrabold text-primary-foreground shadow-md hover:bg-primary/90 justify-center"
+              >
+                <Plus size={16} className="mr-1.5 shrink-0" /> <span className="truncate">{t('flashcards.createDeck')}</span>
               </Button>
-            </Link>
+
+              {/* Primary Button */}
+              <Link to="/flashcards/new" className="w-full sm:w-auto">
+                <Button className="w-full sm:w-auto rounded-2xl border border-border bg-card px-3.5 sm:px-5 py-2.5 sm:py-3 text-xs font-extrabold text-foreground shadow-xs hover:bg-muted justify-center">
+                  <Plus size={16} className="mr-1.5 shrink-0" /> <span className="truncate">{t('flashcards.addManual')}</span>
+                </Button>
+              </Link>
+            </div>
 
             {/* AI & Import Action Group */}
-            <div className="flex items-center gap-1.5 rounded-2xl border border-border bg-card/80 p-1">
+            <div className="flex items-center gap-1.5 rounded-2xl border border-border bg-card/80 p-1 overflow-x-auto max-w-full">
               <button
                 onClick={() => setIsDocGeneratorOpen(true)}
-                className="flex items-center gap-1.5 rounded-xl border border-[#C9A961]/30 bg-[#C9A961]/20 px-3 py-2 text-xs font-extrabold text-[#C9A961] shadow-xs transition-all hover:bg-[#C9A961]/30"
+                className="flex items-center gap-1.5 rounded-xl border border-[#C9A961]/30 bg-[#C9A961]/20 px-3 py-2 text-xs font-extrabold text-[#C9A961] shadow-xs transition-all hover:bg-[#C9A961]/30 shrink-0"
                 title={
                   language === 'ja'
                     ? 'ノートや文章からQ&A・フラッシュカードを生成'
                     : 'Konspekt yoki matndan Q&A va test fleshkartalari tuzish'
                 }
               >
-                <Sparkles size={15} /> {language === 'ja' ? 'AIノート要約' : 'AI Konspekt & Quiz'}
+                <Sparkles size={15} className="shrink-0" /> <span className="whitespace-nowrap">{language === 'ja' ? 'AIノート要約' : 'AI Konspekt & Quiz'}</span>
               </button>
               <button
                 onClick={() => setAiSubjectId('global')}
-                className="flex items-center gap-1.5 rounded-xl px-3 py-2 text-xs font-extrabold text-primary transition-all hover:bg-primary/10"
+                className="flex items-center gap-1.5 rounded-xl px-3 py-2 text-xs font-extrabold text-primary transition-all hover:bg-primary/10 shrink-0"
                 title={language === 'ja' ? 'AIでカードを自動生成' : 'AI bilan kartochka yaratish'}
               >
-                <Book size={15} /> {language === 'ja' ? 'AI自動生成' : 'AI Generator'}
+                <Book size={15} className="shrink-0" /> <span className="whitespace-nowrap">{language === 'ja' ? 'AI自動生成' : 'AI Generator'}</span>
               </button>
               <button
                 onClick={() => setIsExtractModalOpen(true)}
-                className="flex items-center gap-1.5 rounded-xl px-3 py-2 text-xs font-extrabold text-muted-foreground transition-all hover:bg-muted/60 hover:text-foreground"
+                className="flex items-center gap-1.5 rounded-xl px-3 py-2 text-xs font-extrabold text-muted-foreground transition-all hover:bg-muted/60 hover:text-foreground shrink-0"
                 title={language === 'ja' ? '文章から単語を抽出' : "Matndan lug'at ajratib olish"}
               >
-                <FileText size={15} /> {language === 'ja' ? '単語抽出' : 'Extractor'}
+                <FileText size={15} className="shrink-0" /> <span className="whitespace-nowrap">{language === 'ja' ? '単語抽出' : 'Extractor'}</span>
               </button>
               <button
                 onClick={() => setImportModalOpen(true)}
-                className="flex items-center gap-1.5 rounded-xl px-3 py-2 text-xs font-extrabold text-muted-foreground transition-all hover:bg-muted/60 hover:text-foreground"
+                className="flex items-center gap-1.5 rounded-xl px-3 py-2 text-xs font-extrabold text-muted-foreground transition-all hover:bg-muted/60 hover:text-foreground shrink-0"
                 title={
                   language === 'ja' ? 'JSONファイルをインポート' : 'JSON formatida fayl yuklash'
                 }
               >
-                <Upload size={15} /> Import
+                <Upload size={15} className="shrink-0" /> <span className="whitespace-nowrap">Import</span>
               </button>
               {isAdmin && (
                 <button
                   onClick={() => setIsAdminModalOpen(true)}
-                  className="flex items-center gap-1.5 rounded-xl border border-rose-500/20 bg-rose-500/10 px-3 py-2 text-xs font-black text-rose-500 transition-all hover:bg-rose-500/20"
+                  className="flex items-center gap-1.5 rounded-xl border border-rose-500/20 bg-rose-500/10 px-3 py-2 text-xs font-black text-rose-500 transition-all hover:bg-rose-500/20 shrink-0"
                   title="Buzuq kartalarni saralash va o'chirish"
                 >
-                  <ShieldAlert size={15} /> Admin Cleaner
+                  <ShieldAlert size={15} className="shrink-0" /> <span className="whitespace-nowrap">Admin Cleaner</span>
                 </button>
               )}
             </div>
@@ -595,27 +598,27 @@ const DecksPage: React.FC = () => {
       )}
 
       {/* Navigation Tabs - Sticky */}
-      <div className="sticky top-0 z-20 -my-2 flex flex-wrap items-center justify-between gap-4 border-b border-border/40 bg-background/95 py-2 backdrop-blur-md">
-        <div className="flex items-center gap-2 rounded-2xl border border-border/80 bg-card p-1.5 shadow-xs">
+      <div className="sticky top-0 z-20 -my-2 flex flex-wrap items-center justify-between gap-3 border-b border-border/40 bg-background/95 py-2 backdrop-blur-md">
+        <div className="flex items-center gap-1.5 sm:gap-2 rounded-2xl border border-border/80 bg-card p-1 sm:p-1.5 shadow-xs w-full sm:w-auto">
           <button
             onClick={() => setActiveTab('my')}
-            className={`flex cursor-pointer items-center gap-2 rounded-xl px-5 py-2.5 text-xs font-black transition-all ${
+            className={`flex-1 sm:flex-initial flex cursor-pointer items-center justify-center gap-1.5 sm:gap-2 rounded-xl px-3.5 sm:px-5 py-2 sm:py-2.5 text-xs font-black transition-all ${
               activeTab === 'my'
                 ? 'bg-primary text-primary-foreground shadow-xs'
                 : 'text-muted-foreground hover:text-foreground'
             }`}
           >
-            <Layers size={16} /> {t('flashcards.myDecks')} ({subjects.length})
+            <Layers size={16} /> <span>{t('flashcards.myDecks')} ({subjects.length})</span>
           </button>
           <button
             onClick={() => setActiveTab('library')}
-            className={`flex cursor-pointer items-center gap-2 rounded-xl px-5 py-2.5 text-xs font-black transition-all ${
+            className={`flex-1 sm:flex-initial flex cursor-pointer items-center justify-center gap-1.5 sm:gap-2 rounded-xl px-3.5 sm:px-5 py-2 sm:py-2.5 text-xs font-black transition-all ${
               activeTab === 'library'
                 ? 'bg-primary text-primary-foreground shadow-xs'
                 : 'text-muted-foreground hover:text-foreground'
             }`}
           >
-            <Library size={16} /> {t('flashcards.library')} ({visiblePresetDecks.length})
+            <Library size={16} /> <span>{t('flashcards.library')} ({visiblePresetDecks.length})</span>
           </button>
         </div>
       </div>
@@ -623,27 +626,27 @@ const DecksPage: React.FC = () => {
       {activeTab === 'my' && (
         <div className="space-y-6">
           {/* Sub-tabs & Multi-select Toolbar */}
-          <div className="flex flex-wrap items-center justify-between gap-4 rounded-2xl border border-border/80 bg-card/60 p-3">
-            <div className="flex items-center gap-2">
+          <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3 rounded-2xl border border-border/80 bg-card/60 p-2.5 sm:p-3">
+            <div className="grid grid-cols-2 sm:flex sm:items-center gap-2">
               <button
                 onClick={() => {
                   setSubTab('active');
                   setSelectedSubjectIds([]);
                 }}
-                className={`flex items-center gap-1.5 rounded-xl px-4 py-2 text-xs font-black transition-all ${
+                className={`flex items-center justify-center gap-1.5 rounded-xl px-3 sm:px-4 py-2 text-xs font-black transition-all ${
                   subTab === 'active'
                     ? 'bg-primary text-primary-foreground shadow-xs'
                     : 'text-muted-foreground hover:bg-muted/60 hover:text-foreground'
                 }`}
               >
-                <FolderCheck size={15} /> Faol To'plamlar ({activeSubjects.length})
+                <FolderCheck size={15} /> <span>Faol ({activeSubjects.length})</span>
               </button>
               <button
                 onClick={() => {
                   setSubTab('archived');
                   setSelectedSubjectIds([]);
                 }}
-                className={`flex items-center gap-1.5 rounded-xl px-4 py-2 text-xs font-black transition-all ${
+                className={`flex items-center justify-center gap-1.5 rounded-xl px-3 sm:px-4 py-2 text-xs font-black transition-all ${
                   subTab === 'archived'
                     ? 'bg-[#C9A961] font-black text-black shadow-xs'
                     : 'text-muted-foreground hover:bg-muted/60 hover:text-foreground'

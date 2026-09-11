@@ -260,38 +260,38 @@ export const IeltsMasterRoadmapView: React.FC = () => {
   };
 
   return (
-    <div className="space-y-8 animate-in fade-in">
+    <div className="space-y-6 sm:space-y-8 animate-in fade-in">
       {/* Top Banner: Diagnostic Quick Callout */}
-      <div className="relative overflow-hidden rounded-3xl border border-border bg-gradient-to-r from-card via-muted/30 to-card p-6 md:p-8 shadow-sm">
-        <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
-          <div className="space-y-2.5 max-w-2xl">
-            <div className="flex items-center gap-2">
-              <span className="px-3 py-1 bg-amber-500/15 border border-amber-500/30 text-amber-500 rounded-full text-xs font-black flex items-center gap-1.5">
+      <div className="relative overflow-hidden rounded-2xl sm:rounded-3xl border border-border bg-gradient-to-r from-card via-muted/30 to-card p-4 sm:p-6 md:p-8 shadow-sm">
+        <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 sm:gap-6">
+          <div className="space-y-2 sm:space-y-2.5 max-w-2xl">
+            <div className="flex flex-wrap items-center gap-2">
+              <span className="px-2.5 sm:px-3 py-1 bg-amber-500/15 border border-amber-500/30 text-amber-500 rounded-full text-[11px] sm:text-xs font-black flex items-center gap-1.5">
                 <Compass size={14} /> Strategik Yo'l Xaritasi
               </span>
-              <span className="text-xs font-semibold text-muted-foreground">
+              <span className="text-[11px] sm:text-xs font-semibold text-muted-foreground">
                 Noldan (A1) ➡️ Band 8.5 (C1-C2)
               </span>
             </div>
-            <h2 className="text-2xl md:text-3xl font-black tracking-tight text-foreground">
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-black tracking-tight text-foreground">
               Siz Qaysi Bosqichdasiz?
             </h2>
-            <p className="text-xs md:text-sm text-muted-foreground leading-relaxed">
+            <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
               O'zingizga mos bosqichni tanlang va shaxsiy reja bo'yicha harakatlaning. Agar darajangizni aniq bilmasangiz, 10 daqiqalik diagnostik test orqali aniqlab olishingiz mumkin.
             </p>
           </div>
 
-          <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 shrink-0">
+          <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 sm:gap-3 shrink-0">
             <button
               onClick={() => navigate('/diagnostic')}
-              className="px-4 py-3 bg-background border border-border hover:bg-muted text-foreground rounded-2xl text-xs font-bold flex items-center justify-center gap-2 transition-all shadow-xs cursor-pointer active:scale-95"
+              className="px-4 py-2.5 sm:py-3 bg-background border border-border hover:bg-muted text-foreground rounded-xl sm:rounded-2xl text-xs font-bold flex items-center justify-center gap-2 transition-all shadow-xs cursor-pointer active:scale-95"
             >
               <Brain size={16} className="text-purple-500" />
               <span>Darajani Aniqlash Testi</span>
             </button>
             <button
               onClick={() => navigate('/ielts/speaking-mock')}
-              className="px-5 py-3 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white rounded-2xl text-xs font-black flex items-center justify-center gap-2 shadow-lg shadow-blue-500/20 transition-all cursor-pointer active:scale-95"
+              className="px-4 sm:px-5 py-2.5 sm:py-3 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white rounded-xl sm:rounded-2xl text-xs font-black flex items-center justify-center gap-2 shadow-lg shadow-blue-500/20 transition-all cursor-pointer active:scale-95"
             >
               <Mic size={16} />
               <span>Makkar 2026 Mocks</span>
@@ -301,33 +301,33 @@ export const IeltsMasterRoadmapView: React.FC = () => {
         </div>
 
         {/* 4-Stage Fast Tracker Pills */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-2.5 mt-6 pt-6 border-t border-border/60">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-2 sm:gap-2.5 mt-5 sm:mt-6 pt-5 sm:pt-6 border-t border-border/60">
           {STAGES.map((st) => (
             <button
               key={st.id}
               onClick={() => {
                 setExpandedStageId(st.id);
               }}
-              className={`p-3 rounded-2xl border text-left transition-all cursor-pointer ${
+              className={`p-2.5 sm:p-3 rounded-xl sm:rounded-2xl border text-left transition-all cursor-pointer ${
                 expandedStageId === st.id
                   ? 'bg-card border-primary/50 shadow-md ring-1 ring-primary/40'
                   : 'bg-muted/30 border-border/70 hover:bg-muted/60'
               }`}
             >
               <div className="flex items-center justify-between gap-1 mb-1">
-                <span className={`text-[10px] font-extrabold uppercase px-2 py-0.5 rounded-md ${st.badgeBg} ${st.badgeText}`}>
+                <span className={`text-[9px] sm:text-[10px] font-extrabold uppercase px-1.5 sm:px-2 py-0.5 rounded-md ${st.badgeBg} ${st.badgeText}`}>
                   {st.levelCode}
                 </span>
                 {currentStageId === st.id && (
-                  <span className="text-[10px] font-bold text-amber-500 flex items-center gap-0.5">
-                    <Target size={11} /> Mening Bosqichim
+                  <span className="text-[9px] sm:text-[10px] font-bold text-amber-500 flex items-center gap-0.5 truncate">
+                    <Target size={11} className="shrink-0" /> Mening Bosqichim
                   </span>
                 )}
               </div>
-              <div className="text-xs font-extrabold text-foreground truncate">
+              <div className="text-[11px] sm:text-xs font-extrabold text-foreground truncate">
                 {st.titleUz.split(':')[1] || st.titleUz}
               </div>
-              <div className="text-[11px] font-mono text-muted-foreground mt-0.5">
+              <div className="text-[10px] sm:text-[11px] font-mono text-muted-foreground mt-0.5">
                 Band {st.ieltsBand}
               </div>
             </button>
@@ -336,7 +336,7 @@ export const IeltsMasterRoadmapView: React.FC = () => {
       </div>
 
       {/* Vertical Stages List */}
-      <div className="space-y-6">
+      <div className="space-y-4 sm:space-y-6">
         {STAGES.map((stage) => {
           const isExpanded = expandedStageId === stage.id;
           const isCurrent = currentStageId === stage.id;
@@ -344,7 +344,7 @@ export const IeltsMasterRoadmapView: React.FC = () => {
           return (
             <div
               key={stage.id}
-              className={`relative rounded-3xl border transition-all duration-300 overflow-hidden ${
+              className={`relative rounded-2xl sm:rounded-3xl border transition-all duration-300 overflow-hidden ${
                 isCurrent
                   ? 'bg-card border-primary/40 shadow-lg ring-1 ring-primary/20'
                   : 'bg-card border-border shadow-xs hover:border-border/80'
@@ -354,25 +354,25 @@ export const IeltsMasterRoadmapView: React.FC = () => {
               <div className={`absolute top-0 left-0 right-0 h-32 bg-gradient-to-b ${stage.accentGradient} pointer-events-none`} />
 
               {/* Stage Header */}
-              <div className="relative z-10 p-5 md:p-6">
-                <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+              <div className="relative z-10 p-4 sm:p-5 md:p-6">
+                <div className="flex flex-col md:flex-row md:items-center justify-between gap-3 sm:gap-4">
                   <div className="space-y-1.5 flex-1">
-                    <div className="flex flex-wrap items-center gap-2">
-                      <span className={`px-2.5 py-1 rounded-full text-xs font-black border ${stage.badgeBg} ${stage.badgeBorder} ${stage.badgeText}`}>
+                    <div className="flex flex-wrap items-center gap-1.5 sm:gap-2">
+                      <span className={`px-2 sm:px-2.5 py-0.5 sm:py-1 rounded-full text-[11px] sm:text-xs font-black border ${stage.badgeBg} ${stage.badgeBorder} ${stage.badgeText}`}>
                         {stage.levelCode} • {stage.cefr}
                       </span>
-                      <span className="px-2.5 py-1 rounded-full text-xs font-bold bg-muted text-muted-foreground border border-border">
+                      <span className="px-2 sm:px-2.5 py-0.5 sm:py-1 rounded-full text-[11px] sm:text-xs font-bold bg-muted text-muted-foreground border border-border">
                         🎯 Band {stage.ieltsBand}
                       </span>
-                      <span className="px-2.5 py-1 rounded-full text-xs font-medium text-muted-foreground">
+                      <span className="px-2 sm:px-2.5 py-0.5 sm:py-1 rounded-full text-[11px] sm:text-xs font-medium text-muted-foreground">
                         ⏱️ {stage.estimatedTime}
                       </span>
                     </div>
 
-                    <h3 className="text-xl md:text-2xl font-black text-foreground pt-1">
+                    <h3 className="text-lg sm:text-xl md:text-2xl font-black text-foreground pt-1">
                       {stage.titleUz}
                     </h3>
-                    <p className="text-xs md:text-sm text-muted-foreground leading-relaxed">
+                    <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
                       {stage.subtitleUz}
                     </p>
                   </div>
@@ -381,17 +381,17 @@ export const IeltsMasterRoadmapView: React.FC = () => {
                   <div className="flex items-center gap-2 shrink-0">
                     <button
                       onClick={() => handleSelectMyStage(stage.id)}
-                      className={`px-3.5 py-2 rounded-xl text-xs font-black transition-all cursor-pointer ${
+                      className={`px-3 py-1.5 sm:py-2 rounded-xl text-xs font-black transition-all cursor-pointer ${
                         isCurrent
                           ? 'bg-emerald-600 text-white shadow-md'
                           : 'bg-muted hover:bg-muted/80 text-foreground border border-border'
                       }`}
                     >
-                      {isCurrent ? '✓ Mening Bosqichim' : 'Mening Bosqichim Qilib Tanlash'}
+                      {isCurrent ? '✓ Mening Bosqichim' : 'Bosqichni Tanlash'}
                     </button>
                     <button
                       onClick={() => setExpandedStageId(isExpanded ? 0 : stage.id)}
-                      className="p-2 bg-muted hover:bg-muted/80 rounded-xl text-foreground border border-border transition-all cursor-pointer"
+                      className="p-1.5 sm:p-2 bg-muted hover:bg-muted/80 rounded-xl text-foreground border border-border transition-all cursor-pointer"
                       title={isExpanded ? "Yopish" : "Ochish"}
                     >
                       {isExpanded ? <ChevronUp size={18} /> : <ChevronDown size={18} />}
@@ -400,7 +400,7 @@ export const IeltsMasterRoadmapView: React.FC = () => {
                 </div>
 
                 {/* Audience note */}
-                <div className="mt-4 p-3 bg-muted/40 rounded-2xl border border-border/50 text-xs text-muted-foreground flex items-center gap-2">
+                <div className="mt-3 sm:mt-4 p-2.5 sm:p-3 bg-muted/40 rounded-xl sm:rounded-2xl border border-border/50 text-xs text-muted-foreground flex items-center gap-2">
                   <HelpCircle size={15} className="text-primary shrink-0" />
                   <span><strong>Kimlar uchun:</strong> {stage.targetAudience}</span>
                 </div>
@@ -408,7 +408,7 @@ export const IeltsMasterRoadmapView: React.FC = () => {
 
               {/* Collapsible Content: Skills & Milestones */}
               {isExpanded && (
-                <div className="p-5 md:p-6 pt-0 border-t border-border/40 space-y-6 animate-in fade-in duration-200">
+                <div className="p-4 sm:p-5 md:p-6 pt-0 border-t border-border/40 space-y-5 animate-in fade-in duration-200">
                   {/* Skills Grid */}
                   <div className="space-y-3 pt-4">
                     <h4 className="text-xs font-black uppercase tracking-wider text-muted-foreground flex items-center gap-1.5">

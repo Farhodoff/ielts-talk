@@ -469,19 +469,19 @@ export const FlashcardStudySession: React.FC<FlashcardStudySessionProps> = ({
   const progressPercentage = Math.round((currentCardIndex / queue.length) * 100);
 
   return (
-    <div className="fixed inset-0 z-50 flex flex-col overflow-y-auto bg-background/95 p-4 pb-[max(1.5rem,env(safe-area-inset-bottom,20px))] backdrop-blur-xl md:p-8">
+    <div className="fixed inset-0 z-50 flex flex-col overflow-y-auto bg-background/95 p-3.5 pb-[max(1.5rem,env(safe-area-inset-bottom,20px))] backdrop-blur-xl sm:p-6 md:p-8">
       {/* Top Bar */}
-      <div className="mx-auto mb-6 flex w-full max-w-3xl items-center justify-between gap-4">
+      <div className="mx-auto mb-4 sm:mb-6 flex w-full max-w-3xl items-center justify-between gap-2 sm:gap-4">
         <button
           onClick={onClose}
-          className="flex cursor-pointer items-center gap-2 rounded-xl p-2 text-xs font-bold text-muted-foreground transition-all hover:bg-muted/60 hover:text-foreground"
+          className="flex cursor-pointer items-center gap-1.5 sm:gap-2 rounded-xl p-2 text-xs font-bold text-muted-foreground transition-all hover:bg-muted/60 hover:text-foreground shrink-0"
         >
           <ArrowLeft size={18} />
-          <span>{isJa ? '単語帳一覧に戻る' : "To'plamlarga qaytish"}</span>
+          <span className="hidden sm:inline">{isJa ? '単語帳一覧に戻る' : "To'plamlarga qaytish"}</span>
         </button>
 
         {/* Progress bar */}
-        <div className="max-w-xs flex-1 space-y-1">
+        <div className="max-w-xs flex-1 space-y-1 px-1">
           <div className="flex justify-between text-[11px] font-bold text-muted-foreground">
             <span>
               {currentCardIndex + 1} / {queue.length}
@@ -496,13 +496,13 @@ export const FlashcardStudySession: React.FC<FlashcardStudySessionProps> = ({
           </div>
         </div>
 
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-1.5 sm:gap-2 shrink-0">
           {/* Audio Accent toggle */}
           {!isJapanese && (
             <select
               value={accent}
               onChange={(e) => setAccent(e.target.value as any)}
-              className="focus:outline-hidden rounded-xl border border-border bg-muted/60 px-2.5 py-1.5 text-xs font-bold text-foreground"
+              className="focus:outline-hidden rounded-xl border border-border bg-muted/60 px-2 sm:px-2.5 py-1.5 text-xs font-bold text-foreground"
             >
               <option value="en-US">🇺🇸 US</option>
               <option value="en-GB">🇬🇧 UK</option>
@@ -512,7 +512,7 @@ export const FlashcardStudySession: React.FC<FlashcardStudySessionProps> = ({
           {/* Auto Audio Playback Toggle */}
           <button
             onClick={toggleAutoAudio}
-            className={`flex cursor-pointer items-center gap-1.5 rounded-xl border px-2.5 py-1.5 text-xs font-extrabold transition-all ${
+            className={`flex cursor-pointer items-center gap-1 rounded-xl border px-2 sm:px-2.5 py-1.5 text-xs font-extrabold transition-all ${
               autoAudio
                 ? 'border-primary/40 bg-primary/10 text-primary shadow-xs'
                 : 'border-border bg-card text-muted-foreground hover:text-foreground'
@@ -524,12 +524,12 @@ export const FlashcardStudySession: React.FC<FlashcardStudySessionProps> = ({
                   : 'Avtomatik ovoz: Yoqilgan'
                 : isJa
                   ? '自動音声: オフ'
-                  : 'Avtomatik ovoz: O‘chirilgan'
+                  : "Avtomatik ovoz: O'chirilgan"
             }
           >
             <Volume2 size={14} className={autoAudio ? 'animate-pulse text-primary' : ''} />
             <span className="hidden sm:inline">
-              {autoAudio ? (isJa ? '音声: オン' : 'Ovoz: On') : isJa ? '音声: オフ' : 'Ovoz: Off'}
+              {autoAudio ? (isJa ? 'オン' : 'On') : isJa ? 'オフ' : 'Off'}
             </span>
           </button>
 
@@ -537,17 +537,17 @@ export const FlashcardStudySession: React.FC<FlashcardStudySessionProps> = ({
           <div className="flex rounded-xl border border-border bg-card p-1">
             <button
               onClick={() => setStudyMode('srs')}
-              className={`rounded-lg px-2.5 py-1 text-[11px] font-extrabold transition-all ${
+              className={`rounded-lg px-2 sm:px-2.5 py-1 text-[11px] font-extrabold transition-all ${
                 studyMode === 'srs'
                   ? 'bg-primary text-primary-foreground shadow-xs'
                   : 'text-muted-foreground'
               }`}
             >
-              {isJa ? 'SRS暗記' : 'SRS'}
+              {isJa ? 'SRS' : 'SRS'}
             </button>
             <button
               onClick={() => setStudyMode('type')}
-              className={`rounded-lg px-2.5 py-1 text-[11px] font-extrabold transition-all ${
+              className={`rounded-lg px-2 sm:px-2.5 py-1 text-[11px] font-extrabold transition-all ${
                 studyMode === 'type'
                   ? 'bg-primary text-primary-foreground shadow-xs'
                   : 'text-muted-foreground'
@@ -636,7 +636,7 @@ export const FlashcardStudySession: React.FC<FlashcardStudySessionProps> = ({
               }`}
             >
               {/* Front Side */}
-              <div className="backface-hidden absolute inset-0 flex flex-col justify-between rounded-3xl border border-border bg-card p-8 shadow-2xl transition-all hover:border-primary/40">
+              <div className="backface-hidden absolute inset-0 flex flex-col justify-between rounded-3xl border border-border bg-card p-5 sm:p-8 shadow-2xl transition-all hover:border-primary/40">
                 {/* Top Card Controls */}
                 <div className="flex items-center justify-between">
                   <span className="rounded-full bg-primary/10 px-3 py-1 text-xs font-extrabold text-primary">
@@ -702,7 +702,7 @@ export const FlashcardStudySession: React.FC<FlashcardStudySessionProps> = ({
               </div>
 
               {/* Back Side */}
-              <div className="backface-hidden rotate-y-180 absolute inset-0 flex flex-col justify-between rounded-3xl border-2 border-primary/50 bg-gradient-to-br from-card via-card to-primary/5 p-8 shadow-2xl">
+              <div className="backface-hidden rotate-y-180 absolute inset-0 flex flex-col justify-between rounded-3xl border-2 border-primary/50 bg-gradient-to-br from-card via-card to-primary/5 p-5 sm:p-8 shadow-2xl">
                 {/* Top Card Controls */}
                 <div className="flex items-center justify-between">
                   <span className="rounded-full bg-emerald-500/15 px-3 py-1 text-xs font-extrabold text-emerald-600 dark:text-emerald-400">

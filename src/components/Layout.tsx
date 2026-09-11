@@ -113,6 +113,7 @@ const Layout: React.FC = () => {
       '/room',
       '/focus',
       '/ielts/speaking-mock',
+      '/study-mode',
     ];
     return fullScreenPaths.some((p) => location.pathname.startsWith(p));
   }, [location.pathname]);
@@ -435,107 +436,109 @@ const Layout: React.FC = () => {
       </main>
 
       {/* Mobile Bottom Navigation */}
-      <nav className="glass-card fixed bottom-0 z-40 flex w-full items-center justify-around border-t border-border bg-background/90 px-2 pb-[max(env(safe-area-inset-bottom),0.5rem)] pt-1.5 backdrop-blur-md md:hidden">
-        {[
-          {
-            name: 'IELTS',
-            path: '/ielts',
-            icon: BookOpen,
-          },
-          { name: t('nav.aiCoach') || 'Speaking', path: '/speaking-coach', icon: Mic },
-          { name: t('nav.flashcards') || 'Fleshkard', path: '/flashcards', icon: Copy },
-          { name: 'Rejam', path: '/personal-plan', icon: Target },
-        ].map((item) => {
-          const isItemActive =
-            location.pathname.startsWith(item.path) ||
-            (item.path === '/ielts' && (location.pathname === '/' || location.pathname === '/ielts')) ||
-            (item.path === '/speaking-coach' && location.pathname.startsWith('/speaking')) ||
-            (item.path === '/flashcards' &&
-              (location.pathname.startsWith('/flashcards') ||
-                location.pathname.startsWith('/study-mode')));
+      {!isFullScreenPage && (
+        <nav className="glass-card fixed bottom-0 z-40 flex w-full items-center justify-around border-t border-border bg-background/90 px-2 pb-[max(env(safe-area-inset-bottom),0.5rem)] pt-1.5 backdrop-blur-md md:hidden">
+          {[
+            {
+              name: 'IELTS',
+              path: '/ielts',
+              icon: BookOpen,
+            },
+            { name: t('nav.aiCoach') || 'Speaking', path: '/speaking-coach', icon: Mic },
+            { name: t('nav.flashcards') || 'Fleshkard', path: '/flashcards', icon: Copy },
+            { name: 'Rejam', path: '/personal-plan', icon: Target },
+          ].map((item) => {
+            const isItemActive =
+              location.pathname.startsWith(item.path) ||
+              (item.path === '/ielts' && (location.pathname === '/' || location.pathname === '/ielts')) ||
+              (item.path === '/speaking-coach' && location.pathname.startsWith('/speaking')) ||
+              (item.path === '/flashcards' &&
+                (location.pathname.startsWith('/flashcards') ||
+                  location.pathname.startsWith('/study-mode')));
 
-          return (
-            <NavLink
-              key={item.path}
-              to={item.path}
-              className={`flex w-16 flex-col items-center justify-center rounded-xl p-1.5 transition-all duration-200 ${
-                isItemActive
-                  ? 'scale-105 bg-primary/10 font-bold text-primary shadow-xs'
-                  : 'text-muted-foreground hover:text-foreground'
-              }`}
-            >
-              <item.icon size={20} className="mb-1" strokeWidth={isItemActive ? 2.5 : 2} />
-              <span className="text-[10px] font-medium leading-none">{item.name}</span>
-            </NavLink>
-          );
-        })}
-
-        <Sheet open={isSidebarOpen} onOpenChange={setSidebarOpen}>
-          <SheetTrigger asChild>
-            <button
-              aria-label="Menyuni ochish"
-              className="flex w-16 flex-col items-center justify-center rounded-xl p-1.5 text-muted-foreground transition-colors hover:text-foreground"
-            >
-              <Menu size={20} className="mb-1" />
-              <span className="text-[10px] font-medium leading-none">Menyu</span>
-            </button>
-          </SheetTrigger>
-          <SheetContent side="left" className="flex w-72 flex-col bg-card p-0">
-            <div className="flex h-16 items-center justify-between border-b border-border p-4">
-              <div className="flex items-center gap-2">
-                <AppLogo size="sm" />
-              </div>
-            </div>
-            <div className="flex-1 overflow-y-auto">
-              <NavLinks onClick={() => setSidebarOpen(false)} />
-            </div>
-            <div className="space-y-2 border-t border-border/60 bg-card/80 p-3.5">
-              <button
-                type="button"
-                onClick={() => {
-                  setSidebarOpen(false);
-                  openRatingModal();
-                }}
-                className="flex w-full items-center gap-2.5 rounded-xl border border-amber-500/25 bg-amber-500/10 px-3 py-2 text-xs font-bold text-amber-600 transition hover:bg-amber-500/20 active:scale-95 dark:text-amber-400"
+            return (
+              <NavLink
+                key={item.path}
+                to={item.path}
+                className={`flex w-16 flex-col items-center justify-center rounded-xl p-1.5 transition-all duration-200 ${
+                  isItemActive
+                    ? 'scale-105 bg-primary/10 font-bold text-primary shadow-xs'
+                    : 'text-muted-foreground hover:text-foreground'
+                }`}
               >
-                <Star size={16} className="shrink-0 fill-amber-400 text-amber-500" />
-                <span>{language === 'ja' ? '⭐ アプリを評価する' : '⭐ Ilovani baholash'}</span>
-              </button>
+                <item.icon size={20} className="mb-1" strokeWidth={isItemActive ? 2.5 : 2} />
+                <span className="text-[10px] font-medium leading-none">{item.name}</span>
+              </NavLink>
+            );
+          })}
 
-              {isAdmin && (
+          <Sheet open={isSidebarOpen} onOpenChange={setSidebarOpen}>
+            <SheetTrigger asChild>
+              <button
+                aria-label="Menyuni ochish"
+                className="flex w-16 flex-col items-center justify-center rounded-xl p-1.5 text-muted-foreground transition-colors hover:text-foreground"
+              >
+                <Menu size={20} className="mb-1" />
+                <span className="text-[10px] font-medium leading-none">Menyu</span>
+              </button>
+            </SheetTrigger>
+            <SheetContent side="left" className="flex w-72 flex-col bg-card p-0">
+              <div className="flex h-16 items-center justify-between border-b border-border p-4">
+                <div className="flex items-center gap-2">
+                  <AppLogo size="sm" />
+                </div>
+              </div>
+              <div className="flex-1 overflow-y-auto">
+                <NavLinks onClick={() => setSidebarOpen(false)} />
+              </div>
+              <div className="space-y-2 border-t border-border/60 bg-card/80 p-3.5">
+                <button
+                  type="button"
+                  onClick={() => {
+                    setSidebarOpen(false);
+                    openRatingModal();
+                  }}
+                  className="flex w-full items-center gap-2.5 rounded-xl border border-amber-500/25 bg-amber-500/10 px-3 py-2 text-xs font-bold text-amber-600 transition hover:bg-amber-500/20 active:scale-95 dark:text-amber-400"
+                >
+                  <Star size={16} className="shrink-0 fill-amber-400 text-amber-500" />
+                  <span>{language === 'ja' ? '⭐ アプリを評価する' : '⭐ Ilovani baholash'}</span>
+                </button>
+
+                {isAdmin && (
+                  <NavLink
+                    to="/admin"
+                    onClick={() => setSidebarOpen(false)}
+                    className={({ isActive }) =>
+                      `flex w-full items-center gap-3 rounded-xl px-3 py-2 text-xs font-bold transition-all duration-200 ${
+                        isActive
+                          ? 'border border-rose-500/30 bg-rose-500/15 text-rose-400 shadow-xs'
+                          : 'border border-rose-500/20 text-rose-400/90 hover:bg-rose-500/10 hover:text-rose-400'
+                      }`
+                    }
+                  >
+                    <Shield size={16} className="shrink-0 text-rose-500" />
+                    <span>Admin Panel</span>
+                  </NavLink>
+                )}
                 <NavLink
-                  to="/admin"
+                  to="/settings"
                   onClick={() => setSidebarOpen(false)}
                   className={({ isActive }) =>
-                    `flex w-full items-center gap-3 rounded-xl px-3 py-2 text-xs font-bold transition-all duration-200 ${
+                    `flex w-full items-center gap-2.5 rounded-xl px-3 py-2 text-xs font-semibold transition-all duration-200 ${
                       isActive
-                        ? 'border border-rose-500/30 bg-rose-500/15 text-rose-400 shadow-xs'
-                        : 'border border-rose-500/20 text-rose-400/90 hover:bg-rose-500/10 hover:text-rose-400'
+                        ? 'bg-primary/10 font-bold text-primary shadow-xs'
+                        : 'text-muted-foreground hover:bg-muted/80 hover:text-foreground'
                     }`
                   }
                 >
-                  <Shield size={16} className="shrink-0 text-rose-500" />
-                  <span>Admin Panel</span>
+                  <SettingsIcon size={16} className="shrink-0" />
+                  <span>{t('nav.settings') || 'Sozlamalar'}</span>
                 </NavLink>
-              )}
-              <NavLink
-                to="/settings"
-                onClick={() => setSidebarOpen(false)}
-                className={({ isActive }) =>
-                  `flex w-full items-center gap-2.5 rounded-xl px-3 py-2 text-xs font-semibold transition-all duration-200 ${
-                    isActive
-                      ? 'bg-primary/10 font-bold text-primary shadow-xs'
-                      : 'text-muted-foreground hover:bg-muted/80 hover:text-foreground'
-                  }`
-                }
-              >
-                <SettingsIcon size={16} className="shrink-0" />
-                <span>{t('nav.settings') || 'Sozlamalar'}</span>
-              </NavLink>
-            </div>
-          </SheetContent>
-        </Sheet>
-      </nav>
+              </div>
+            </SheetContent>
+          </Sheet>
+        </nav>
+      )}
 
       {/* Quick Command Palette (Cmd/Ctrl + K) */}
       <QuickCommandPalette

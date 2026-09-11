@@ -258,57 +258,58 @@ export const IeltsSpeakingMockPage: React.FC = () => {
     });
 
     return (
-        <div className="max-w-5xl mx-auto p-4 md:p-8 space-y-6">
+        <div className="max-w-5xl mx-auto p-3 sm:p-4 md:p-8 space-y-4 sm:space-y-6">
             {/* Header Navigation */}
-            <div className="flex items-center justify-between border-b border-border pb-4">
+            <div className="flex items-center justify-between border-b border-border pb-3 sm:pb-4">
                 <button
                     onClick={() => navigate('/ielts')}
-                    className="p-2.5 rounded-xl border border-border text-muted-foreground hover:text-foreground hover:bg-muted transition-all"
+                    className="p-2 sm:p-2.5 rounded-xl border border-border text-muted-foreground hover:text-foreground hover:bg-muted transition-all"
                 >
-                    <ArrowLeft size={20} />
+                    <ArrowLeft size={18} />
                 </button>
                 <div className="flex items-center gap-2">
-                    <span className="px-3 py-1 bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 font-extrabold text-xs rounded-full border border-indigo-500/20">
-                        🎙️ Official 3-Part Speaking Simulator ({CAMBRIDGE_IELTS_TOPICS.length} bilet)
+                    <span className="px-2.5 sm:px-3 py-1 bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 font-extrabold text-[11px] sm:text-xs rounded-full border border-indigo-500/20">
+                        🎙️ 3-Part Speaking Simulator ({CAMBRIDGE_IELTS_TOPICS.length} bilet)
                     </span>
                 </div>
             </div>
 
             {/* STEP 1: INTRO */}
             {step === 'intro' && (
-                <div className="bg-card border border-border rounded-3xl p-8 text-center space-y-6 shadow-xl max-w-2xl mx-auto">
-                    <div className="w-20 h-20 bg-indigo-500/10 text-indigo-600 rounded-full flex items-center justify-center mx-auto">
-                        <Mic size={40} />
+                <div className="bg-card border border-border rounded-2xl sm:rounded-3xl p-4 sm:p-6 md:p-8 text-center space-y-4 sm:space-y-6 shadow-xl max-w-2xl mx-auto">
+                    <div className="w-16 h-16 sm:w-20 sm:h-20 bg-indigo-500/10 text-indigo-600 rounded-full flex items-center justify-center mx-auto">
+                        <Mic size={32} className="sm:hidden" />
+                        <Mic size={40} className="hidden sm:block" />
                     </div>
                     <div>
-                        <h2 className="text-2xl font-black text-foreground">IELTS Speaking Full Mock Test</h2>
-                        <p className="text-sm text-muted-foreground mt-2 leading-relaxed">
+                        <h2 className="text-xl sm:text-2xl font-black text-foreground">IELTS Speaking Full Mock Test</h2>
+                        <p className="text-xs sm:text-sm text-muted-foreground mt-1.5 leading-relaxed">
                             Haqiqiy imtihon muhitida Part 1, Part 2 (Cue Card + 60s tayyorlanish) va Part 3 bosqichlarini topshiring hamda rasmiy 4 ta mezon bo'yicha Band Score hisobotingizni oling.
                         </p>
                     </div>
 
                     {/* Active Cambridge & Makkar Exam Card */}
-                    <div className="bg-gradient-to-r from-indigo-500/10 via-purple-500/10 to-pink-500/10 border border-indigo-500/20 p-5 rounded-3xl text-left space-y-3">
-                        <div className="flex items-start justify-between gap-3">
+                    <div className="bg-gradient-to-r from-indigo-500/10 via-purple-500/10 to-pink-500/10 border border-indigo-500/20 p-4 sm:p-5 rounded-2xl sm:rounded-3xl text-left space-y-3">
+                        <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-2.5 sm:gap-3">
                             <div>
-                                <span className="text-[10px] font-extrabold uppercase text-indigo-600 dark:text-indigo-400 tracking-wider bg-indigo-500/10 px-2.5 py-1 rounded-full border border-indigo-500/20">
+                                <span className="text-[10px] font-extrabold uppercase text-indigo-600 dark:text-indigo-400 tracking-wider bg-indigo-500/10 px-2.5 py-0.5 rounded-full border border-indigo-500/20">
                                     {selectedTopic.category}
                                 </span>
-                                <h4 className="text-sm md:text-base font-extrabold text-foreground mt-2">
+                                <h4 className="text-sm md:text-base font-extrabold text-foreground mt-1.5">
                                     Cue Card: "{selectedTopic.part2.title}"
                                 </h4>
                             </div>
                             <div className="flex items-center gap-1.5 shrink-0">
                                 <button
                                     onClick={() => setIsTopicModalOpen(true)}
-                                    className="px-3 py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl text-xs font-bold flex items-center gap-1.5 transition-all shadow-md active:scale-95"
+                                    className="px-3 py-1.5 sm:py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl text-xs font-bold flex items-center gap-1.5 transition-all shadow-md active:scale-95"
                                     title="Mavzular ro'yxatidan tanlash"
                                 >
                                     <List size={14} /> Biletlar ({CAMBRIDGE_IELTS_TOPICS.length})
                                 </button>
                                 <button
                                     onClick={handleRandomizeTopic}
-                                    className="px-3 py-2 bg-background border border-border rounded-xl text-xs font-bold text-muted-foreground hover:text-foreground hover:bg-muted flex items-center gap-1.5 transition-all active:scale-95"
+                                    className="px-2.5 py-1.5 sm:py-2 bg-background border border-border rounded-xl text-xs font-bold text-muted-foreground hover:text-foreground hover:bg-muted flex items-center gap-1.5 transition-all active:scale-95"
                                     title="Boshqa imtihon bileti"
                                 >
                                     <Dices size={14} className="text-indigo-500" /> 🎲
@@ -326,11 +327,11 @@ export const IeltsSpeakingMockPage: React.FC = () => {
                                     {selectedTopic.vocabulary.map((v, idx) => (
                                         <span
                                             key={idx}
-                                            className="px-2.5 py-1 bg-background/80 border border-indigo-500/20 rounded-lg text-xs font-medium text-foreground"
+                                            className="px-2 py-0.5 sm:px-2.5 sm:py-1 bg-background/80 border border-indigo-500/20 rounded-lg text-[11px] sm:text-xs font-medium text-foreground"
                                             title={v.example}
                                         >
                                             <strong className="text-indigo-600 dark:text-indigo-400">{v.term}</strong>
-                                            <span className="text-muted-foreground text-[11px] ml-1.5">({v.meaningUz})</span>
+                                            <span className="text-muted-foreground text-[10px] sm:text-[11px] ml-1">({v.meaningUz})</span>
                                         </span>
                                     ))}
                                 </div>
@@ -341,23 +342,23 @@ export const IeltsSpeakingMockPage: React.FC = () => {
                         <div className="pt-2 border-t border-indigo-500/15">
                             <button
                                 onClick={() => navigate(`/speaking-coach?scenario=${selectedTopic.id}`)}
-                                className="w-full py-2.5 px-4 bg-gradient-to-r from-emerald-600 via-teal-600 to-cyan-600 hover:from-emerald-700 hover:to-cyan-700 text-white rounded-2xl text-xs md:text-sm font-black flex items-center justify-center gap-2 shadow-lg shadow-emerald-500/20 hover:shadow-emerald-500/30 transition-all active:scale-98 cursor-pointer"
+                                className="w-full py-2.5 px-3 sm:px-4 bg-gradient-to-r from-emerald-600 via-teal-600 to-cyan-600 hover:from-emerald-700 hover:to-cyan-700 text-white rounded-xl sm:rounded-2xl text-xs md:text-sm font-black flex items-center justify-center gap-2 shadow-lg shadow-emerald-500/20 hover:shadow-emerald-500/30 transition-all active:scale-98 cursor-pointer"
                             >
-                                <Bot size={16} /> 🎙️ Ushbu Bilet Bo'yicha AI Examiner Gordon Bilan Jonli Suhbat
+                                <Bot size={16} /> 🎙️ AI Examiner Bilan Jonli Suhbat
                             </button>
                         </div>
                     </div>
 
-                    <div className="grid grid-cols-3 gap-3 text-left">
-                        <div className="p-3 bg-muted/40 rounded-2xl border border-border/50">
+                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 sm:gap-3 text-left">
+                        <div className="p-3 bg-muted/40 rounded-xl sm:rounded-2xl border border-border/50">
                             <span className="text-xs font-bold text-primary block">Part 1</span>
                             <span className="text-xs text-muted-foreground">{PART1_QUESTIONS.length} ta savol</span>
                         </div>
-                        <div className="p-3 bg-muted/40 rounded-2xl border border-border/50">
+                        <div className="p-3 bg-muted/40 rounded-xl sm:rounded-2xl border border-border/50">
                             <span className="text-xs font-bold text-indigo-500 block">Part 2</span>
                             <span className="text-xs text-muted-foreground">60s tayyorgarlik + 120s nutq</span>
                         </div>
-                        <div className="p-3 bg-muted/40 rounded-2xl border border-border/50">
+                        <div className="p-3 bg-muted/40 rounded-xl sm:rounded-2xl border border-border/50">
                             <span className="text-xs font-bold text-purple-500 block">Part 3</span>
                             <span className="text-xs text-muted-foreground">{PART3_QUESTIONS.length} ta tahlil savoli</span>
                         </div>
@@ -368,34 +369,34 @@ export const IeltsSpeakingMockPage: React.FC = () => {
                             setStep('part1');
                             speakText(PART1_QUESTIONS[0], 'en-GB');
                         }}
-                        className="w-full py-4 bg-indigo-600 hover:bg-indigo-700 text-white font-extrabold text-base rounded-2xl shadow-lg shadow-indigo-500/20"
+                        className="w-full py-3.5 sm:py-4 bg-indigo-600 hover:bg-indigo-700 text-white font-extrabold text-sm sm:text-base rounded-xl sm:rounded-2xl shadow-lg shadow-indigo-500/20"
                     >
-                        Imtihonni Boshlash <ChevronRight className="ml-2" size={20} />
+                        Imtihonni Boshlash <ChevronRight className="ml-2" size={18} />
                     </Button>
                 </div>
             )}
 
             {/* STEP 2: PART 1 */}
             {step === 'part1' && (
-                <div className="bg-card border border-border rounded-3xl p-8 space-y-6 shadow-xl">
-                    <div className="flex items-center justify-between border-b border-border pb-4">
-                        <span className="text-xs font-black uppercase text-indigo-500 tracking-wider">Part 1: Introduction ({part1Index + 1} / {PART1_QUESTIONS.length})</span>
+                <div className="bg-card border border-border rounded-2xl sm:rounded-3xl p-4 sm:p-6 md:p-8 space-y-4 sm:space-y-6 shadow-xl">
+                    <div className="flex items-center justify-between border-b border-border pb-3 sm:pb-4">
+                        <span className="text-[11px] sm:text-xs font-black uppercase text-indigo-500 tracking-wider">Part 1: Introduction ({part1Index + 1} / {PART1_QUESTIONS.length})</span>
                         <button onClick={() => speakText(PART1_QUESTIONS[part1Index], 'en-GB')} className="p-2 text-primary hover:bg-primary/10 rounded-xl">
-                            <Volume2 size={20} />
+                            <Volume2 size={18} />
                         </button>
                     </div>
 
-                    <div className="text-center space-y-3 py-4">
-                        <h3 className="text-2xl font-extrabold text-foreground">{PART1_QUESTIONS[part1Index]}</h3>
+                    <div className="text-center space-y-2 sm:space-y-3 py-2 sm:py-4">
+                        <h3 className="text-lg sm:text-2xl font-extrabold text-foreground">{PART1_QUESTIONS[part1Index]}</h3>
                         <p className="text-xs text-muted-foreground">Savolga 2-3 ta mukammal gap bilan javob bering.</p>
                     </div>
 
-                    <div className="space-y-4">
-                        <div className="p-4 bg-muted/40 rounded-2xl border border-border min-h-24 font-medium text-foreground">
+                    <div className="space-y-3 sm:space-y-4">
+                        <div className="p-3.5 sm:p-4 bg-muted/40 rounded-xl sm:rounded-2xl border border-border min-h-20 sm:min-h-24 font-medium text-xs sm:text-sm text-foreground">
                             {currentAnswerText || <span className="text-muted-foreground italic">Ovozli javobingiz bu yerda ko'rinadi...</span>}
                         </div>
 
-                        <div className="flex items-center gap-3">
+                        <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 sm:gap-3">
                             <Button
                                 onClick={isListening ? stopListening : startListening}
                                 variant={isListening ? "destructive" : "default"}
@@ -404,7 +405,7 @@ export const IeltsSpeakingMockPage: React.FC = () => {
                                 {isListening ? <><MicOff className="mr-2" size={18} /> To'xtatish</> : <><Mic className="mr-2" size={18} /> Ovozli Javob Berish</>}
                             </Button>
 
-                            <Button onClick={handleNextPart1} className="py-3 px-6 font-bold bg-indigo-600 text-white rounded-xl">
+                            <Button onClick={handleNextPart1} className="py-3 px-5 sm:px-6 font-bold bg-indigo-600 text-white rounded-xl">
                                 Keyingi Savol <ChevronRight className="ml-1" size={18} />
                             </Button>
                         </div>
@@ -414,21 +415,21 @@ export const IeltsSpeakingMockPage: React.FC = () => {
 
             {/* STEP 3: PART 2 PREP (CUE CARD 60S COUNTDOWN) */}
             {step === 'part2_prep' && (
-                <div className="bg-card border border-border rounded-3xl p-8 space-y-6 shadow-xl max-w-2xl mx-auto">
+                <div className="bg-card border border-border rounded-2xl sm:rounded-3xl p-4 sm:p-6 md:p-8 space-y-4 sm:space-y-6 shadow-xl max-w-2xl mx-auto">
                     <div className="flex items-center justify-between">
-                        <span className="text-xs font-black uppercase text-amber-500 tracking-wider">Part 2: Cue Card Preparation</span>
-                        <div className="flex items-center gap-2 text-amber-500 font-extrabold text-lg bg-amber-500/10 px-3 py-1 rounded-full border border-amber-500/20">
-                            <Clock size={20} /> {prepSeconds} soniya
+                        <span className="text-[11px] sm:text-xs font-black uppercase text-amber-500 tracking-wider">Part 2: Cue Card Preparation</span>
+                        <div className="flex items-center gap-1.5 sm:gap-2 text-amber-500 font-extrabold text-sm sm:text-lg bg-amber-500/10 px-2.5 sm:px-3 py-1 rounded-full border border-amber-500/20">
+                            <Clock size={16} /> {prepSeconds} soniya
                         </div>
                     </div>
 
-                    <div className="p-6 bg-gradient-to-br from-amber-500/10 to-orange-500/10 border border-amber-500/20 rounded-2xl space-y-4 text-left">
-                        <h3 className="text-xl font-black text-foreground">{CUE_CARD_TOPIC.title}</h3>
+                    <div className="p-4 sm:p-6 bg-gradient-to-br from-amber-500/10 to-orange-500/10 border border-amber-500/20 rounded-xl sm:rounded-2xl space-y-3 sm:space-y-4 text-left">
+                        <h3 className="text-lg sm:text-xl font-black text-foreground">{CUE_CARD_TOPIC.title}</h3>
                         <p className="text-xs text-muted-foreground font-bold uppercase">Siz quyidagilar haqida gapirishingiz kerak:</p>
-                        <ul className="space-y-2 text-sm text-foreground font-medium">
+                        <ul className="space-y-1.5 sm:space-y-2 text-xs sm:text-sm text-foreground font-medium">
                             {CUE_CARD_TOPIC.bullets.map((b, i) => (
                                 <li key={i} className="flex items-center gap-2">
-                                    <span className="w-1.5 h-1.5 rounded-full bg-amber-500" /> {b}
+                                    <span className="w-1.5 h-1.5 rounded-full bg-amber-500 shrink-0" /> {b}
                                 </li>
                             ))}
                         </ul>
@@ -438,7 +439,7 @@ export const IeltsSpeakingMockPage: React.FC = () => {
 
                     <Button
                         onClick={() => setStep('part2_speech')}
-                        className="w-full py-3.5 bg-amber-500 hover:bg-amber-600 text-white font-extrabold rounded-xl"
+                        className="w-full py-3 sm:py-3.5 bg-amber-500 hover:bg-amber-600 text-white font-extrabold text-xs sm:text-sm rounded-xl"
                     >
                         Tayyorman — Nutqni Boshlash (120s)
                     </Button>
@@ -447,24 +448,24 @@ export const IeltsSpeakingMockPage: React.FC = () => {
 
             {/* STEP 4: PART 2 SPEECH (120S SPEECH COUNTDOWN) */}
             {step === 'part2_speech' && (
-                <div className="bg-card border border-border rounded-3xl p-8 space-y-6 shadow-xl">
+                <div className="bg-card border border-border rounded-2xl sm:rounded-3xl p-4 sm:p-6 md:p-8 space-y-4 sm:space-y-6 shadow-xl">
                     <div className="flex items-center justify-between">
-                        <span className="text-xs font-black uppercase text-amber-500 tracking-wider">Part 2: Long Turn Speech</span>
-                        <div className="flex items-center gap-2 text-red-500 font-extrabold text-lg bg-red-500/10 px-3 py-1 rounded-full border border-red-500/20">
-                            <Clock size={20} /> {speechSeconds} soniya qoldi
+                        <span className="text-[11px] sm:text-xs font-black uppercase text-amber-500 tracking-wider">Part 2: Long Turn Speech</span>
+                        <div className="flex items-center gap-1.5 sm:gap-2 text-red-500 font-extrabold text-sm sm:text-lg bg-red-500/10 px-2.5 sm:px-3 py-1 rounded-full border border-red-500/20">
+                            <Clock size={16} /> {speechSeconds}s qoldi
                         </div>
                     </div>
 
-                    <div className="p-4 bg-muted/40 border border-border rounded-2xl text-left">
-                        <h4 className="font-bold text-sm text-foreground mb-1">{CUE_CARD_TOPIC.title}</h4>
+                    <div className="p-3.5 sm:p-4 bg-muted/40 border border-border rounded-xl sm:rounded-2xl text-left">
+                        <h4 className="font-bold text-xs sm:text-sm text-foreground mb-1">{CUE_CARD_TOPIC.title}</h4>
                         <p className="text-xs text-muted-foreground">{CUE_CARD_TOPIC.bullets.join(" • ")}</p>
                     </div>
 
-                    <div className="p-4 bg-muted/40 rounded-2xl border border-border min-h-32 font-medium text-foreground">
+                    <div className="p-3.5 sm:p-4 bg-muted/40 rounded-xl sm:rounded-2xl border border-border min-h-24 sm:min-h-32 font-medium text-xs sm:text-sm text-foreground">
                         {currentAnswerText || <span className="text-muted-foreground italic">Gapirishni boshlang. Javobingiz yozib olinmoqda...</span>}
                     </div>
 
-                    <div className="flex gap-3">
+                    <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 sm:gap-3">
                         <Button
                             onClick={isListening ? stopListening : startListening}
                             variant={isListening ? "destructive" : "default"}
@@ -472,7 +473,7 @@ export const IeltsSpeakingMockPage: React.FC = () => {
                         >
                             {isListening ? <><MicOff className="mr-2" size={18} /> To'xtatish</> : <><Mic className="mr-2" size={18} /> Mikrofonni Yoqish</>}
                         </Button>
-                        <Button onClick={handleFinishPart2} className="py-3 px-6 font-bold bg-amber-500 text-white rounded-xl">
+                        <Button onClick={handleFinishPart2} className="py-3 px-5 sm:px-6 font-bold bg-amber-500 text-white rounded-xl">
                             Part 2 Yakunlash <ChevronRight className="ml-1" size={18} />
                         </Button>
                     </div>
@@ -481,25 +482,25 @@ export const IeltsSpeakingMockPage: React.FC = () => {
 
             {/* STEP 5: PART 3 */}
             {step === 'part3' && (
-                <div className="bg-card border border-border rounded-3xl p-8 space-y-6 shadow-xl">
-                    <div className="flex items-center justify-between border-b border-border pb-4">
-                        <span className="text-xs font-black uppercase text-purple-500 tracking-wider">Part 3: Discussion ({part3Index + 1} / {PART3_QUESTIONS.length})</span>
+                <div className="bg-card border border-border rounded-2xl sm:rounded-3xl p-4 sm:p-6 md:p-8 space-y-4 sm:space-y-6 shadow-xl">
+                    <div className="flex items-center justify-between border-b border-border pb-3 sm:pb-4">
+                        <span className="text-[11px] sm:text-xs font-black uppercase text-purple-500 tracking-wider">Part 3: Discussion ({part3Index + 1} / {PART3_QUESTIONS.length})</span>
                         <button onClick={() => speakText(PART3_QUESTIONS[part3Index], 'en-GB')} className="p-2 text-primary hover:bg-primary/10 rounded-xl">
-                            <Volume2 size={20} />
+                            <Volume2 size={18} />
                         </button>
                     </div>
 
-                    <div className="text-center space-y-3 py-4">
-                        <h3 className="text-2xl font-extrabold text-foreground">{PART3_QUESTIONS[part3Index]}</h3>
+                    <div className="text-center space-y-2 sm:space-y-3 py-2 sm:py-4">
+                        <h3 className="text-lg sm:text-2xl font-extrabold text-foreground">{PART3_QUESTIONS[part3Index]}</h3>
                         <p className="text-xs text-muted-foreground">PREP usuli (Point, Reason, Example) bo'yicha batafsil fikringizni ayting.</p>
                     </div>
 
-                    <div className="space-y-4">
-                        <div className="p-4 bg-muted/40 rounded-2xl border border-border min-h-24 font-medium text-foreground">
+                    <div className="space-y-3 sm:space-y-4">
+                        <div className="p-3.5 sm:p-4 bg-muted/40 rounded-xl sm:rounded-2xl border border-border min-h-20 sm:min-h-24 font-medium text-xs sm:text-sm text-foreground">
                             {currentAnswerText || <span className="text-muted-foreground italic">Ovozli javobingiz bu yerda ko'rinadi...</span>}
                         </div>
 
-                        <div className="flex items-center gap-3">
+                        <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 sm:gap-3">
                             <Button
                                 onClick={isListening ? stopListening : startListening}
                                 variant={isListening ? "destructive" : "default"}
@@ -508,7 +509,7 @@ export const IeltsSpeakingMockPage: React.FC = () => {
                                 {isListening ? <><MicOff className="mr-2" size={18} /> To'xtatish</> : <><Mic className="mr-2" size={18} /> Ovozli Javob Berish</>}
                             </Button>
 
-                            <Button onClick={handleNextPart3} className="py-3 px-6 font-bold bg-purple-600 text-white rounded-xl">
+                            <Button onClick={handleNextPart3} className="py-3 px-5 sm:px-6 font-bold bg-purple-600 text-white rounded-xl">
                                 {part3Index < PART3_QUESTIONS.length - 1 ? 'Keyingi Savol' : 'Testni Yakunlash'} <ChevronRight className="ml-1" size={18} />
                             </Button>
                         </div>
@@ -518,13 +519,14 @@ export const IeltsSpeakingMockPage: React.FC = () => {
 
             {/* STEP 6: EVALUATING */}
             {step === 'evaluating' && (
-                <div className="bg-card border border-border rounded-3xl p-12 text-center space-y-6 shadow-xl max-w-lg mx-auto">
-                    <div className="w-20 h-20 bg-indigo-500/10 text-indigo-600 rounded-full flex items-center justify-center mx-auto animate-pulse">
-                        <Sparkles size={40} />
+                <div className="bg-card border border-border rounded-2xl sm:rounded-3xl p-8 sm:p-12 text-center space-y-4 sm:space-y-6 shadow-xl max-w-lg mx-auto">
+                    <div className="w-16 h-16 sm:w-20 sm:h-20 bg-indigo-500/10 text-indigo-600 rounded-full flex items-center justify-center mx-auto animate-pulse">
+                        <Sparkles size={32} className="sm:hidden" />
+                        <Sparkles size={40} className="hidden sm:block" />
                     </div>
                     <div>
-                        <h3 className="text-xl font-bold text-foreground">IELTS Examiner Tahlil Qilmoqda...</h3>
-                        <p className="text-xs text-muted-foreground mt-2">
+                        <h3 className="text-lg sm:text-xl font-bold text-foreground">IELTS Examiner Tahlil Qilmoqda...</h3>
+                        <p className="text-xs text-muted-foreground mt-1.5 leading-relaxed">
                             Fluency, Lexical Resource, Grammar va Pronunciation ko'rsatkichlaringiz hisoblanmoqda.
                         </p>
                     </div>
@@ -533,7 +535,7 @@ export const IeltsSpeakingMockPage: React.FC = () => {
 
             {/* STEP 7: FINAL EXAMINER REPORT */}
             {step === 'report' && report && (
-                <div className="bg-card border border-border rounded-3xl p-8 space-y-8 shadow-2xl">
+                <div className="bg-card border border-border rounded-2xl sm:rounded-3xl p-4 sm:p-6 md:p-8 space-y-6 sm:space-y-8 shadow-2xl">
                     <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 border-b border-border pb-6">
                         <div>
                             <span className="text-xs font-black uppercase text-indigo-500">Rasmiy IELTS Examiner Hisoboti</span>

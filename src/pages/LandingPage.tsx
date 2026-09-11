@@ -54,13 +54,13 @@ const HeroPhoneMockup: React.FC = () => {
   const [isPlayingAudio, setIsPlayingAudio] = useState(false);
 
   return (
-    <div className="mx-auto flex w-full max-w-[340px] select-none justify-center [perspective:1200px] sm:max-w-[360px]">
+    <div className="mx-auto flex w-full max-w-[300px] sm:max-w-[360px] select-none justify-center [perspective:1200px]">
       <motion.div
         initial={{ opacity: 0, y: 30, rotateY: -12, rotateX: 4 }}
         animate={{ opacity: 1, y: 0, rotateY: -6, rotateX: 2 }}
         whileHover={{ rotateY: 0, rotateX: 0, scale: 1.02 }}
         transition={{ duration: 0.6, ease: 'easeOut' }}
-        className="relative flex h-[640px] w-full flex-col justify-between overflow-hidden rounded-[44px] border border-border bg-card p-4 shadow-2xl"
+        className="relative flex h-[580px] sm:h-[640px] w-full flex-col justify-between overflow-hidden rounded-[36px] sm:rounded-[44px] border border-border bg-card p-3.5 sm:p-4 shadow-2xl"
       >
         {/* Phone Notch */}
         <div className="mx-auto mb-2 h-6 w-28 shrink-0 rounded-b-2xl bg-foreground/10" />
@@ -680,10 +680,10 @@ const LandingPage: React.FC = () => {
       </motion.nav>
 
       {/* ======== ACADEMIC BACKDROP ACCENTS ======== */}
-      <div className="pointer-events-none absolute left-6 top-24 -z-10 select-none text-[160px] font-black tracking-tighter leading-none text-foreground opacity-[0.02] sm:text-[240px]">
+      <div className="pointer-events-none absolute left-6 top-24 -z-10 hidden sm:block select-none text-[160px] font-black tracking-tighter leading-none text-foreground opacity-[0.02] sm:text-[240px]">
         IELTS
       </div>
-      <div className="pointer-events-none absolute right-6 top-[850px] -z-10 select-none text-[140px] font-black tracking-tighter leading-none text-foreground opacity-[0.02] sm:text-[200px]">
+      <div className="pointer-events-none absolute right-6 top-[850px] -z-10 hidden sm:block select-none text-[140px] font-black tracking-tighter leading-none text-foreground opacity-[0.02] sm:text-[200px]">
         BAND 9
       </div>
 

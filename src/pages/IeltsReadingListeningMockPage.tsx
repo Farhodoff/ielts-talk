@@ -37,6 +37,7 @@ export const IeltsReadingListeningMockPage: React.FC = () => {
     const { awardXP, user } = useStudyData();
     const [testType, setTestType] = useState<'reading' | 'listening'>('reading');
     const [step, setStep] = useState<'intro' | 'test' | 'report'>('intro');
+    const [mobileTestTab, setMobileTestTab] = useState<'passage' | 'questions'>('passage');
 
     // AI Generation States
     const [aiTopic, setAiTopic] = useState('');
@@ -678,13 +679,39 @@ export const IeltsReadingListeningMockPage: React.FC = () => {
                         </div>
                     </div>
 
+                    {/* Mobile Switcher (Visible only on < lg screens) */}
+                    <div className="flex lg:hidden rounded-2xl border border-border bg-card p-1.5 shadow-sm">
+                        <button
+                            onClick={() => setMobileTestTab('passage')}
+                            className={`flex-1 py-2.5 rounded-xl text-xs font-black transition-all flex items-center justify-center gap-1.5 ${
+                                mobileTestTab === 'passage'
+                                    ? 'bg-indigo-600 text-white shadow-md'
+                                    : 'text-muted-foreground hover:text-foreground'
+                            }`}
+                        >
+                            <BookOpen size={14} />
+                            <span>{testType === 'reading' ? "📖 Matnni O'qish" : "🎧 Audio Player"}</span>
+                        </button>
+                        <button
+                            onClick={() => setMobileTestTab('questions')}
+                            className={`flex-1 py-2.5 rounded-xl text-xs font-black transition-all flex items-center justify-center gap-1.5 ${
+                                mobileTestTab === 'questions'
+                                    ? 'bg-indigo-600 text-white shadow-md'
+                                    : 'text-muted-foreground hover:text-foreground'
+                            }`}
+                        >
+                            <FileText size={14} />
+                            <span>📝 Savollar ({Object.keys(userAnswers).length}/{currentPassage.questions.length})</span>
+                        </button>
+                    </div>
+
                     {/* Passage & Questions Grid */}
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6">
                         
                         {/* LEFT: Passage or Audio Player */}
-                        <div className="bg-card border border-border p-6 rounded-3xl space-y-4 shadow-sm h-fit">
+                        <div className={`bg-card border border-border p-4 sm:p-6 rounded-2xl sm:rounded-3xl space-y-4 shadow-sm h-fit ${mobileTestTab === 'questions' ? 'hidden lg:block' : 'block'}`}>
                             <div className="border-b border-border pb-3 flex items-center justify-between">
-                                <h3 className="text-base font-extrabold text-foreground">{currentPassage.title}</h3>
+                                <h3 className="text-sm sm:text-base font-extrabold text-foreground">{currentPassage.title}</h3>
                                 {currentPassage.academicLevel && (
                                     <span className="text-[10px] font-black px-2 py-0.5 rounded-md bg-muted text-muted-foreground border border-border">
                                         {currentPassage.academicLevel}
@@ -694,10 +721,10 @@ export const IeltsReadingListeningMockPage: React.FC = () => {
 
                             {testType === 'listening' ? (
                                 <div className="space-y-5 py-2">
-                                    <div className="p-5 bg-purple-50 dark:bg-purple-950/20 border border-purple-200/60 dark:border-purple-900/40 rounded-2xl text-center space-y-3">
+                                    <div className="p-4 sm:p-5 bg-purple-50 dark:bg-purple-950/20 border border-purple-200/60 dark:border-purple-900/40 rounded-2xl text-center space-y-3">
                                         <div className="flex justify-center">
-                                            <div className="p-4 bg-purple-500/10 text-purple-600 dark:text-purple-400 rounded-full animate-pulse">
-                                                <Volume2 size={32} />
+                                            <div className="p-3.5 sm:p-4 bg-purple-500/10 text-purple-600 dark:text-purple-400 rounded-full animate-pulse">
+                                                <Volume2 size={28} />
                                             </div>
                                         </div>
                                         <div>
@@ -709,7 +736,7 @@ export const IeltsReadingListeningMockPage: React.FC = () => {
                                     </div>
 
                                     {/* Audio Controller Panel */}
-                                    <div className="space-y-3 bg-muted/40 p-4 border border-border rounded-2xl">
+                                    <div className="space-y-3 bg-muted/40 p-3 sm:p-4 border border-border rounded-2xl">
                                         {/* Seek slider */}
                                         <div className="flex items-center gap-2 text-xs font-mono">
                                             <span>{formatTime(Math.round(audioProgress))}</span>
@@ -736,7 +763,7 @@ export const IeltsReadingListeningMockPage: React.FC = () => {
                                                 </button>
                                                 <Button
                                                     onClick={handlePlayPause}
-                                                    className="w-12 h-12 bg-purple-600 hover:bg-purple-700 text-white rounded-full flex items-center justify-center shadow-md"
+                                                    className="w-11 h-11 sm:w-12 sm:h-12 bg-purple-600 hover:bg-purple-700 text-white rounded-full flex items-center justify-center shadow-md"
                                                 >
                                                     {isPlaying ? <Pause size={18} /> : <Play size={18} className="ml-0.5" />}
                                                 </Button>
@@ -755,7 +782,7 @@ export const IeltsReadingListeningMockPage: React.FC = () => {
                                                     <button
                                                         key={speed}
                                                         onClick={() => handleSpeedChange(speed)}
-                                                        className={`px-2 py-1 rounded-md border ${
+                                                        className={`px-1.5 sm:px-2 py-1 rounded-md border ${
                                                             playbackSpeed === speed 
                                                                 ? 'bg-purple-600 text-white border-purple-600' 
                                                                 : 'bg-background border-border text-muted-foreground'
@@ -779,24 +806,48 @@ export const IeltsReadingListeningMockPage: React.FC = () => {
                                         </button>
 
                                         {showTranscriptDuringTest && currentPassage.script && (
-                                            <div className="p-4 bg-muted/40 border border-border rounded-xl text-xs text-muted-foreground font-mono leading-relaxed whitespace-pre-line max-h-60 overflow-y-auto">
+                                            <div className="p-3 sm:p-4 bg-muted/40 border border-border rounded-xl text-xs text-muted-foreground font-mono leading-relaxed whitespace-pre-line max-h-60 overflow-y-auto">
                                                 {currentPassage.script}
                                             </div>
                                         )}
                                     </div>
+
+                                    {/* Mobile button to proceed to questions */}
+                                    <button
+                                        onClick={() => setMobileTestTab('questions')}
+                                        className="w-full lg:hidden py-3 px-4 rounded-xl bg-purple-600 hover:bg-purple-700 text-white text-xs font-black flex items-center justify-center gap-1.5 shadow-md active:scale-95 transition-all mt-2"
+                                    >
+                                        <span>Savollarga o'tish ({currentPassage.questions.length} ta)</span>
+                                        <ChevronRight size={14} />
+                                    </button>
                                 </div>
                             ) : (
-                                <div className="text-xs text-foreground/90 leading-relaxed whitespace-pre-line font-serif space-y-3 max-h-[600px] overflow-y-auto pr-2">
-                                    {currentPassage.text}
+                                <div className="space-y-4">
+                                    <div className="text-xs text-foreground/90 leading-relaxed whitespace-pre-line font-serif space-y-3 max-h-[450px] sm:max-h-[600px] overflow-y-auto pr-2">
+                                        {currentPassage.text}
+                                    </div>
+                                    <button
+                                        onClick={() => setMobileTestTab('questions')}
+                                        className="w-full lg:hidden py-3 px-4 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-black flex items-center justify-center gap-1.5 shadow-md active:scale-95 transition-all"
+                                    >
+                                        <span>Savollarga o'tish ({currentPassage.questions.length} ta)</span>
+                                        <ChevronRight size={14} />
+                                    </button>
                                 </div>
                             )}
                         </div>
 
                         {/* RIGHT: Questions Form */}
-                        <div className="space-y-4">
+                        <div className={`space-y-4 ${mobileTestTab === 'passage' ? 'hidden lg:block' : 'block'}`}>
                             <div className="bg-muted/30 border border-border/60 p-3 rounded-2xl text-xs text-muted-foreground flex items-center justify-between">
-                                <span>Savollar: {Object.keys(userAnswers).length} / {currentPassage.questions.length} ta bajarildi</span>
-                                <span className="font-bold text-indigo-500">IELTS Formati</span>
+                                <span>Savollar: {Object.keys(userAnswers).length} / {currentPassage.questions.length} ta</span>
+                                <button
+                                    onClick={() => setMobileTestTab('passage')}
+                                    className="lg:hidden text-xs font-bold text-indigo-500 hover:underline flex items-center gap-1"
+                                >
+                                    <BookOpen size={13} /> {testType === 'reading' ? "Matnni o'qish" : "Audio pleyer"}
+                                </button>
+                                <span className="hidden lg:inline font-bold text-indigo-500">IELTS Formati</span>
                             </div>
 
                             {currentPassage.questions.map(q => (
