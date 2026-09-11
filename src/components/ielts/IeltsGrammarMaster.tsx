@@ -94,6 +94,7 @@ export const IeltsGrammarMaster: React.FC = () => {
   const [missedQuestions, setMissedQuestions] = useState<{ topic: IeltsGrammarTopic; q: any }[]>(
     [],
   );
+  const [focusedQuizAnswers, setFocusedQuizAnswers] = useState<Record<number, string>>({});
 
   if (isLoadingFallback && rawTopics.length === 0) {
     return (
@@ -221,8 +222,6 @@ export const IeltsGrammarMaster: React.FC = () => {
     setIsQuizCompleted(false);
     setMissedQuestions([]);
   };
-
-  const [focusedQuizAnswers, setFocusedQuizAnswers] = useState<Record<number, string>>({});
 
   const focusedTopic = topicParam
     ? topics.find(
