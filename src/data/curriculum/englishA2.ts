@@ -3432,7 +3432,7 @@ export const ENGLISH_A2_LESSONS: Lesson[] = [
                                                         "stop",
                                                         "continue",
                                                         "refuse",
-                                                        "delay"
+                                                        "cancel"
                                                 ],
                                                 "correctAnswerIndex": 1,
                                                 "explanation": "'Carry on' = continue (davom ettirmoq)."
@@ -3612,7 +3612,7 @@ export const ENGLISH_A2_LESSONS: Lesson[] = [
                             "type": "multiple-choice",
                             "prompt": "\"I'm sorry, sir, but your suitcase exceeds the weight limit. You must pay an excess _______ fee.\"",
                             "options": [
-                                "delay",
+                                "penalty",
                                 "ticket",
                                 "luggage",
                                 "reservation"
