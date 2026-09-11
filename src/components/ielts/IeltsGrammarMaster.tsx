@@ -10,6 +10,7 @@ import {
   Plus,
   Check,
   ArrowRight,
+  ArrowLeft,
   BookCheck,
 } from 'lucide-react';
 import type { IeltsGrammarTopic } from '../../data/ielts/ielts_grammar_data';
@@ -28,7 +29,7 @@ export const IeltsGrammarMaster: React.FC = () => {
   const { topics: rawTopics } = useGrammarLessons('en');
   const { getItemStatus, setItemStatus, getStatsForLevel } = useEnglishGrammarMastery();
 
-  const [searchParams] = useSearchParams();
+  const [searchParams, setSearchParams] = useSearchParams();
   const topicParam = searchParams.get('topic');
 
   const [activeTab, setActiveTab] = useState<'grammar' | 'quiz'>('grammar');
@@ -220,6 +221,338 @@ export const IeltsGrammarMaster: React.FC = () => {
     setIsQuizCompleted(false);
     setMissedQuestions([]);
   };
+
+  const [focusedQuizAnswers, setFocusedQuizAnswers] = useState<Record<number, string>>({});
+
+  const focusedTopic = topicParam
+    ? topics.find(
+        (t) =>
+          t.id === topicParam ||
+          t.id.toLowerCase() === topicParam.toLowerCase() ||
+          t.title.toLowerCase().includes(topicParam.toLowerCase()),
+      )
+    : null;
+
+  // If a specific topic is selected via URL (?topic=...), show the dedicated isolated masterclass
+  if (focusedTopic) {
+    const isMastered = getItemStatus(focusedTopic.id) === 'mastered';
+    const isExported = savedCardIds.includes(focusedTopic.id);
+    const currentIndex = topics.findIndex((t) => t.id === focusedTopic.id);
+    const nextTopic = currentIndex >= 0 && currentIndex < topics.length - 1 ? topics[currentIndex + 1] : null;
+
+    const handleSelectTopic = (targetId: string) => {
+      const nextParams = new URLSearchParams(searchParams);
+      nextParams.set('topic', targetId);
+      setSearchParams(nextParams);
+      setFocusedQuizAnswers({});
+    };
+
+    const handleBack = () => {
+      const nextParams = new URLSearchParams(searchParams);
+      nextParams.delete('topic');
+      setSearchParams(nextParams);
+    };
+
+    const handleCompleteTopic = async () => {
+      await setItemStatus(focusedTopic.id, 'mastered');
+      awardXP(50);
+      try {
+        let engSub = subjects.find(
+          (s) => s.name.toLowerCase().includes('english') || s.name.toLowerCase().includes('ielts'),
+        );
+        await addSession({
+          duration: 15,
+          type: 'focus',
+          completed: true,
+          subjectId: engSub?.id || undefined,
+          startTime: new Date().toISOString(),
+        });
+      } catch (e) {}
+      toast({
+        title: '🎉 Tabriklaymiz! Unit Muvaffaqiyatli Yakunlandi',
+        description: `"${focusedTopic.title}" bo'yicha dars to'liq o'zlashtirildi va +50 XP berildi!`,
+      });
+    };
+
+    return (
+      <div className="space-y-6 animate-in fade-in duration-300">
+        {/* Navigation & Actions Top Bar */}
+        <div className="flex flex-wrap items-center justify-between gap-3 rounded-2xl border border-slate-800 bg-slate-900/90 p-3 sm:p-4 shadow-xl backdrop-blur-md">
+          <button
+            onClick={handleBack}
+            className="flex items-center gap-2 rounded-xl bg-slate-800 hover:bg-slate-700 px-4 py-2 text-xs font-bold text-slate-200 transition cursor-pointer"
+          >
+            <ArrowLeft className="h-4 w-4" />
+            <span>← Barcha Grammatika Darslariga Qaytish</span>
+          </button>
+
+          <div className="flex items-center gap-2 flex-wrap">
+            <span
+              className={`rounded-full border px-3 py-1 text-xs font-black ${
+                focusedTopic.level.startsWith('A')
+                  ? 'border-emerald-500/40 bg-emerald-500/20 text-emerald-300'
+                  : focusedTopic.level.startsWith('B')
+                    ? 'border-blue-500/40 bg-blue-500/20 text-blue-300'
+                    : 'border-purple-500/40 bg-purple-500/20 text-purple-300'
+              }`}
+            >
+              {focusedTopic.level} • {focusedTopic.category}
+            </span>
+
+            <button
+              onClick={() => handleExportToFlashcard(focusedTopic)}
+              disabled={isExported}
+              className={`flex items-center gap-1.5 rounded-xl border px-3.5 py-1.5 text-xs font-bold transition cursor-pointer ${
+                isExported
+                  ? 'border-emerald-500/50 bg-emerald-500/20 text-emerald-300 cursor-default'
+                  : 'border-slate-700 bg-slate-800 text-slate-200 hover:bg-slate-700'
+              }`}
+            >
+              {isExported ? <Check className="h-3.5 w-3.5" /> : <Plus className="h-3.5 w-3.5" />}
+              {isExported ? 'Fleshkartada mavjud' : 'Fleshkartaga saqlash'}
+            </button>
+
+            <button
+              onClick={handleCompleteTopic}
+              className={`flex items-center gap-1.5 rounded-xl px-4 py-2 text-xs font-black transition shadow-md cursor-pointer ${
+                isMastered
+                  ? 'bg-emerald-600/30 text-emerald-300 border border-emerald-500/40'
+                  : 'bg-emerald-600 hover:bg-emerald-500 text-white'
+              }`}
+            >
+              <CheckCircle2 className="h-4 w-4" />
+              <span>{isMastered ? '✅ O\'zlashtirildi' : 'Darsni yakunlash (+50 XP)'}</span>
+            </button>
+          </div>
+        </div>
+
+        {/* Hero Card */}
+        <div className="relative overflow-hidden rounded-3xl border border-indigo-500/30 bg-gradient-to-br from-slate-900 via-indigo-950/40 to-slate-900 p-6 md:p-8 shadow-2xl">
+          <div className="pointer-events-none absolute -right-12 -top-12 h-48 w-48 rounded-full bg-indigo-500/10 blur-3xl" />
+          <div className="flex flex-col gap-3">
+            <div className="inline-flex items-center gap-2 rounded-full border border-amber-500/30 bg-amber-500/15 px-3 py-1 text-xs font-extrabold text-amber-300 w-fit">
+              <Sparkles className="h-3.5 w-3.5" /> Shaxsiy Rejangizdagi Fokus Dars
+            </div>
+            <div>
+              <h1 className="text-2xl md:text-3xl font-black text-white tracking-tight">
+                {focusedTopic.title}
+              </h1>
+              <p className="mt-2 text-base md:text-lg font-semibold text-amber-300/90">
+                🇺🇿 {focusedTopic.uzbekMeaning}
+              </p>
+            </div>
+            {focusedTopic.ieltsRelevance && (
+              <div className="rounded-2xl border border-blue-500/30 bg-blue-500/10 p-4 text-xs md:text-sm text-blue-200 leading-relaxed flex items-start gap-3">
+                <Sparkles className="h-5 w-5 shrink-0 text-blue-400 mt-0.5" />
+                <div>
+                  <span className="font-extrabold text-white block mb-0.5">IELTS Imtihonida Qo'llanilishi:</span>
+                  {focusedTopic.ieltsRelevance}
+                </div>
+              </div>
+            )}
+          </div>
+        </div>
+
+        {/* Formula & Theory Card */}
+        <div className="space-y-4 rounded-3xl border border-slate-800 bg-slate-900/90 p-6 md:p-8 shadow-xl backdrop-blur-md">
+          <h2 className="flex items-center gap-2.5 text-lg font-black text-white">
+            <span>📐 Grammatik Formula & Tuzilishi</span>
+          </h2>
+
+          <div className="rounded-2xl border border-indigo-500/30 bg-gradient-to-r from-indigo-950/70 to-slate-950/90 p-4 sm:p-5 font-mono text-sm sm:text-base font-bold text-indigo-200 shadow-inner">
+            {focusedTopic.structure}
+          </div>
+
+          <div className="space-y-2 pt-2">
+            <h3 className="text-xs font-bold text-slate-400 uppercase tracking-wider">Batafsil Tushuntirish va Qoidalar:</h3>
+            <p className="text-sm md:text-base leading-relaxed text-slate-200">
+              {focusedTopic.explanation}
+            </p>
+          </div>
+        </div>
+
+        {/* Academic & Speaking Examples with Audio */}
+        {focusedTopic.academicExamples && focusedTopic.academicExamples.length > 0 && (
+          <div className="space-y-4 rounded-3xl border border-slate-800 bg-slate-900/90 p-6 md:p-8 shadow-xl backdrop-blur-md">
+            <h2 className="flex items-center gap-2.5 text-lg font-black text-white">
+              <span>🎙️ Amaliy Misollar & Talaffuz (IELTS Kontekstida)</span>
+            </h2>
+            <div className="space-y-3">
+              {focusedTopic.academicExamples.map((ex, idx) => (
+                <div
+                  key={idx}
+                  className="group relative flex flex-col sm:flex-row sm:items-center justify-between gap-3 rounded-2xl border border-slate-800/80 bg-slate-950/60 p-4 transition hover:border-indigo-500/40 hover:bg-slate-950/90"
+                >
+                  <div className="space-y-1 flex-1">
+                    <div className="flex items-center gap-2">
+                      <span className="rounded-md bg-indigo-500/20 px-2 py-0.5 text-[10px] font-black text-indigo-300">
+                        {ex.context}
+                      </span>
+                      <p className="text-sm sm:text-base font-bold text-white group-hover:text-indigo-200 transition">
+                        {ex.sentence}
+                      </p>
+                    </div>
+                    <p className="text-xs sm:text-sm text-slate-400 italic">
+                      🇺🇿 {ex.translation}
+                    </p>
+                  </div>
+                  <button
+                    onClick={() => speakText(ex.sentence, 'en-GB')}
+                    className="flex shrink-0 items-center justify-center rounded-xl border border-indigo-500/30 bg-indigo-500/10 p-2.5 text-indigo-300 hover:bg-indigo-500/20 transition self-start sm:self-center cursor-pointer"
+                    title="Audioni tinglash"
+                  >
+                    <Volume2 className="h-4 w-4" />
+                  </button>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* Common Mistakes & Pitfalls */}
+        {focusedTopic.commonMistakes && focusedTopic.commonMistakes.length > 0 && (
+          <div className="space-y-4 rounded-3xl border border-rose-950/40 bg-slate-900/90 p-6 md:p-8 shadow-xl backdrop-blur-md">
+            <h2 className="flex items-center gap-2.5 text-lg font-black text-white">
+              <span>⚠️ Ko'p Uchraydigan Xatolar & Tuzoqlar (Common Mistakes)</span>
+            </h2>
+            <div className="space-y-3">
+              {focusedTopic.commonMistakes.map((m, idx) => (
+                <div
+                  key={idx}
+                  className="rounded-2xl border border-rose-500/20 bg-rose-950/10 p-4 space-y-2 text-xs sm:text-sm"
+                >
+                  <div className="flex items-start gap-2">
+                    <span className="rounded-md bg-rose-500/20 px-2 py-0.5 text-[10px] font-black text-rose-300 shrink-0">
+                      ❌ XATO
+                    </span>
+                    <span className="line-through text-rose-300 font-medium">{m.incorrect}</span>
+                  </div>
+                  <div className="flex items-start gap-2">
+                    <span className="rounded-md bg-emerald-500/20 px-2 py-0.5 text-[10px] font-black text-emerald-300 shrink-0">
+                      ✅ TO'G'RI
+                    </span>
+                    <span className="text-emerald-300 font-bold">{m.correct}</span>
+                  </div>
+                  <div className="text-slate-400 pl-2 border-l-2 border-slate-700 text-xs mt-1">
+                    💡 <span className="font-semibold text-slate-300">Izoh:</span> {m.explanation}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* Practice Quiz for this unit */}
+        {focusedTopic.quizQuestions && focusedTopic.quizQuestions.length > 0 && (
+          <div className="space-y-5 rounded-3xl border border-slate-800 bg-slate-900/90 p-6 md:p-8 shadow-xl backdrop-blur-md">
+            <h2 className="flex items-center gap-2.5 text-lg font-black text-white">
+              <span>🎯 Mavzuni Mustahkamlash Testi ({focusedTopic.quizQuestions.length} ta savol)</span>
+            </h2>
+            <div className="space-y-6">
+              {focusedTopic.quizQuestions.map((q, qIdx) => {
+                const selectedOpt = focusedQuizAnswers[qIdx];
+                const isAnswered = !!selectedOpt;
+                const isCorrect = selectedOpt === q.correctAnswer;
+
+                return (
+                  <div
+                    key={qIdx}
+                    className="rounded-2xl border border-slate-800 bg-slate-950/70 p-4 sm:p-5 space-y-3"
+                  >
+                    <div className="text-sm sm:text-base font-bold text-white">
+                      {qIdx + 1}. {q.question}
+                    </div>
+
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+                      {q.options.map((opt, oIdx) => {
+                        const isThisSelected = selectedOpt === opt;
+                        const isThisCorrect = opt === q.correctAnswer;
+
+                        let btnClass = 'border-slate-800 bg-slate-900 text-slate-300 hover:border-indigo-500 hover:bg-slate-800';
+                        if (isAnswered) {
+                          if (isThisCorrect) {
+                            btnClass = 'border-emerald-500/60 bg-emerald-500/20 text-emerald-200 font-bold';
+                          } else if (isThisSelected) {
+                            btnClass = 'border-rose-500/60 bg-rose-500/20 text-rose-200';
+                          } else {
+                            btnClass = 'border-slate-800/50 bg-slate-900/40 text-slate-500 opacity-60';
+                          }
+                        }
+
+                        return (
+                          <button
+                            key={oIdx}
+                            disabled={isAnswered}
+                            onClick={() => {
+                              setFocusedQuizAnswers((prev) => ({ ...prev, [qIdx]: opt }));
+                              if (opt === q.correctAnswer) {
+                                awardXP(10);
+                              }
+                            }}
+                            className={`rounded-xl border p-3 text-left text-xs sm:text-sm font-medium transition cursor-pointer ${btnClass}`}
+                          >
+                            {opt}
+                          </button>
+                        );
+                      })}
+                    </div>
+
+                    {isAnswered && (
+                      <div
+                        className={`rounded-xl p-3 text-xs leading-relaxed ${
+                          isCorrect
+                            ? 'bg-emerald-500/15 border border-emerald-500/30 text-emerald-300'
+                            : 'bg-rose-500/15 border border-rose-500/30 text-rose-300'
+                        }`}
+                      >
+                        <span className="font-bold block mb-0.5">
+                          {isCorrect ? "✅ To'g'ri javob!" : `❌ Noto'g'ri. To'g'ri javob: ${q.correctAnswer}`}
+                        </span>
+                        💡 {q.explanation}
+                      </div>
+                    )}
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        )}
+
+        {/* Footer Navigation Bar */}
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-3 rounded-2xl border border-slate-800 bg-slate-900/90 p-4 shadow-xl">
+          <button
+            onClick={handleBack}
+            className="w-full sm:w-auto flex items-center justify-center gap-2 rounded-xl bg-slate-800 hover:bg-slate-700 px-5 py-2.5 text-xs font-bold text-slate-300 transition cursor-pointer"
+          >
+            <ArrowLeft className="h-4 w-4" />
+            <span>← Barcha Darslarga Qaytish</span>
+          </button>
+
+          <div className="flex items-center gap-2 w-full sm:w-auto">
+            {nextTopic && (
+              <button
+                onClick={() => handleSelectTopic(nextTopic.id)}
+                className="w-full sm:w-auto flex items-center justify-center gap-2 rounded-xl bg-indigo-600 hover:bg-indigo-500 px-5 py-2.5 text-xs font-black text-white transition shadow-md cursor-pointer"
+              >
+                <span>Keyingi Unit ({nextTopic.level}) →</span>
+              </button>
+            )}
+            <button
+              onClick={handleCompleteTopic}
+              className={`w-full sm:w-auto flex items-center justify-center gap-2 rounded-xl px-5 py-2.5 text-xs font-black transition shadow-md cursor-pointer ${
+                isMastered
+                  ? 'bg-emerald-600/30 text-emerald-300 border border-emerald-500/40'
+                  : 'bg-emerald-600 hover:bg-emerald-500 text-white'
+              }`}
+            >
+              <CheckCircle2 className="h-4 w-4" />
+              <span>{isMastered ? '✅ O\'zlashtirildi' : 'Darsni Yakunlash (+50 XP)'}</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="space-y-6">

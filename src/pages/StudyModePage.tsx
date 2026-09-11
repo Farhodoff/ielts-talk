@@ -18,6 +18,7 @@ import { PersonalLearningPlanService } from '../services/PersonalLearningPlanSer
 import { isFlashcardAnswerCorrect } from '../utils/flashcardMatching';
 import { useTelegramWebApp } from '../hooks/useTelegramWebApp';
 import { useFlashcardSwipe } from '../hooks/useFlashcardSwipe';
+import { PRESET_DECKS } from '../data/presetDecks';
 
 const StudyModePage: React.FC = () => {
   const { subjectId } = useParams<{ subjectId?: string }>();
@@ -75,11 +76,84 @@ const StudyModePage: React.FC = () => {
   const [allAvailableCards, setAllAvailableCards] = useState<Flashcard[]>([]);
   const [batchLimit, setBatchLimit] = useState<'10' | '25' | '50' | 'all'>('25');
 
-  const currentSubject = subjects.find((s) => s.id === subjectId);
   const searchParams = useMemo(() => new URLSearchParams(location.search), [location.search]);
   const langFilter = searchParams.get('lang'); // 'ja' | 'en' | null
+  const deckParam = searchParams.get('deck') || searchParams.get('deckId');
+  const partParam = searchParams.get('part');
+
+  const extractedPart = useMemo(() => {
+    if (partParam) return partParam;
+    const m = deckParam?.match(/_part_(\d+)$/i);
+    return m ? m[1] : null;
+  }, [partParam, deckParam]);
+
+  const matchedPresetDeck = useMemo(() => {
+    if (!deckParam) return null;
+    const cleanId = deckParam.replace(/_part_\d+$/i, '');
+    return (
+      PRESET_DECKS.find(
+        (d) =>
+          d.id === deckParam ||
+          d.id.toLowerCase() === cleanId.toLowerCase() ||
+          d.id.toLowerCase() === deckParam.toLowerCase(),
+      ) || null
+    );
+  }, [deckParam]);
+
+  const currentSubject = useMemo(() => {
+    if (subjectId) {
+      return subjects.find((s) => s.id === subjectId);
+    }
+    if (matchedPresetDeck) {
+      return {
+        id: matchedPresetDeck.id,
+        name: `${matchedPresetDeck.title}${extractedPart ? ` — ${extractedPart}-Qism` : ''}`,
+        color: '#0d9488',
+        schedule: [],
+      };
+    }
+    return undefined;
+  }, [subjectId, subjects, matchedPresetDeck, extractedPart]);
 
   useEffect(() => {
+    if (isQueueInitialized) return;
+
+    if (matchedPresetDeck) {
+      matchedPresetDeck
+        .loadCards()
+        .then((rawCards) => {
+          const quota = 25; // 25 words daily dosage quota
+          const partNum = Math.max(1, parseInt(extractedPart || '1', 10));
+          const startIdx = (partNum - 1) * quota;
+          const chunk = rawCards.slice(startIdx, startIdx + quota);
+
+          const presetCards: Flashcard[] = chunk.map((c, i) => ({
+            id: `preset-${matchedPresetDeck.id}-p${partNum}-${i}`,
+            userId: user?.id || 'guest',
+            subjectId: matchedPresetDeck.id,
+            front: c.front,
+            back: `${c.back}${c.phonetic ? ` (${c.phonetic})` : ''}${c.example ? `\n\nMisol: "${c.example}"` : ''}`,
+            interval: 1,
+            repetitions: 0,
+            easeFactor: 2.5,
+            dueDate: new Date().toISOString(),
+            nextReviewDate: new Date().toISOString(),
+            isArchived: false,
+            createdAt: new Date().toISOString(),
+            updatedAt: new Date().toISOString(),
+          }));
+
+          setAllAvailableCards(presetCards);
+          setQueue(presetCards);
+          setIsQueueInitialized(true);
+        })
+        .catch((err) => {
+          console.error('Error loading preset cards:', err);
+          setIsQueueInitialized(true);
+        });
+      return;
+    }
+
     if (flashcards.length > 0 && !isQueueInitialized) {
       let pool = flashcards;
 
@@ -125,7 +199,18 @@ const StudyModePage: React.FC = () => {
     } else if (flashcards.length === 0 && !loading && !isQueueInitialized) {
       setIsQueueInitialized(true);
     }
-  }, [subjectId, flashcards, isQueueInitialized, loading, batchLimit, langFilter, subjects]);
+  }, [
+    subjectId,
+    flashcards,
+    isQueueInitialized,
+    loading,
+    batchLimit,
+    langFilter,
+    subjects,
+    matchedPresetDeck,
+    partParam,
+    user?.id,
+  ]);
 
   const handleBatchLimitChange = (newLimit: '10' | '25' | '50' | 'all') => {
     setBatchLimit(newLimit);
@@ -325,7 +410,9 @@ const StudyModePage: React.FC = () => {
       setIsProcessing(true);
 
       try {
-        await reviewFlashcard(currentCard.id, grade, currentCard);
+        if (!currentCard.id.startsWith('preset-')) {
+          await reviewFlashcard(currentCard.id, grade, currentCard);
+        }
         const xpGained =
           grade === Rating.EASY ? 15 : grade === Rating.GOOD ? 10 : grade === Rating.HARD ? 5 : 2;
         setTotalXpEarned((prev) => prev + xpGained);

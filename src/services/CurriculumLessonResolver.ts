@@ -184,6 +184,32 @@ export const CurriculumLessonResolver = {
       };
     }
 
+    // 1b. Oxford 3000 Vocabulary Decks (by CEFR level and daily quota part)
+    if (lessonId.startsWith('deck_oxford_3000')) {
+      const match = lessonId.match(/(deck_oxford_3000_[ab][12])(?:_part_(\d+))?/i);
+      const deckId = match ? match[1].toLowerCase() : lessonId;
+      const part = match && match[2] ? match[2] : '1';
+      const level = deckId.includes('a1')
+        ? 'A1'
+        : deckId.includes('a2')
+          ? 'A2'
+          : deckId.includes('b1')
+            ? 'B1'
+            : 'B2';
+      return {
+        lessonId,
+        sourceType: 'vocabulary',
+        route: `/study-mode?deck=${deckId}&part=${part}`,
+        contentId: lessonId,
+        title: `Oxford 3000 (${level}) — ${part}-Qism`,
+        language: 'en',
+        level,
+        skill: 'vocabulary',
+        isAvailable: true,
+        availabilityMessage: `Oxford 3000 ${level} darajali so'z boyligi to'plami.`,
+      };
+    }
+
     // 2. Known English Curriculum Nodes (hardcoded routing overrides)
     if (lessonId.startsWith('en-')) {
       if (lessonId === 'en-a1-u1-l1') {

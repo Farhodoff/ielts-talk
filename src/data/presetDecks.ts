@@ -16,7 +16,11 @@ export interface PresetDeck {
     | 'B1-B2'
     | 'C1-C2'
     | 'IELTS Collocations'
-    | 'IELTS Topics';
+    | 'IELTS Topics'
+    | 'A1'
+    | 'A2'
+    | 'B1'
+    | 'B2';
   badgeColor: string;
   icon: string;
   cardCount: number;
@@ -39,6 +43,70 @@ export interface PresetSubDeck {
 }
 
 export const PRESET_DECKS: PresetDeck[] = [
+  {
+    id: 'deck_oxford_3000_a1',
+    title: '📘 Oxford 3000 — A1 (Elementary)',
+    description:
+      "American Oxford 3000 kitobidan A1 darajasidagi eng muhim 897 ta tayanch so'z va iboralar.",
+    language: 'en',
+    level: 'A1',
+    badgeColor: 'bg-emerald-500/10 text-emerald-600 border-emerald-500/20',
+    icon: '📘',
+    cardCount: 897,
+    isPremiumOnly: false,
+    loadCards: async () => {
+      const data = await import('./decks/oxford_3000_a1.json');
+      return data.default as PresetCard[];
+    },
+  },
+  {
+    id: 'deck_oxford_3000_a2',
+    title: '📗 Oxford 3000 — A2 (Pre-Intermediate)',
+    description:
+      "IELTS 4.0-5.0 darajasidagi o'quvchilar uchun Oxford 3000 kitobining A2 daraja so'z boyligi.",
+    language: 'en',
+    level: 'A2',
+    badgeColor: 'bg-teal-500/10 text-teal-600 border-teal-500/20',
+    icon: '📗',
+    cardCount: 864,
+    isPremiumOnly: false,
+    loadCards: async () => {
+      const data = await import('./decks/oxford_3000_a2.json');
+      return data.default as PresetCard[];
+    },
+  },
+  {
+    id: 'deck_oxford_3000_b1',
+    title: '📙 Oxford 3000 — B1 (Intermediate)',
+    description:
+      "IELTS 5.5-6.0 darajadagi akademik muloqot va o'qish uchun zarur bo'lgan 804 ta oraliq so'zlar.",
+    language: 'en',
+    level: 'B1',
+    badgeColor: 'bg-indigo-500/10 text-indigo-600 border-indigo-500/20',
+    icon: '📙',
+    cardCount: 804,
+    isPremiumOnly: false,
+    loadCards: async () => {
+      const data = await import('./decks/oxford_3000_b1.json');
+      return data.default as PresetCard[];
+    },
+  },
+  {
+    id: 'deck_oxford_3000_b2',
+    title: '📕 Oxford 3000 — B2 (Upper-Intermediate)',
+    description:
+      "IELTS 6.5-7.5 Band talabalari uchun murakkab akademik kontekst va maqolalar so'zlari.",
+    language: 'en',
+    level: 'B2',
+    badgeColor: 'bg-rose-500/10 text-rose-600 border-rose-500/20',
+    icon: '📕',
+    cardCount: 728,
+    isPremiumOnly: false,
+    loadCards: async () => {
+      const data = await import('./decks/oxford_3000_b2.json');
+      return data.default as PresetCard[];
+    },
+  },
   {
     id: 'deck_starter_a1_a2',
     title: '🌱 A1-A2 Starter Vocabulary',

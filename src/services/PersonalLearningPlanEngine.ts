@@ -13,8 +13,9 @@ import { CurriculumLessonResolver, STATIC_CURRICULUM_MAP } from './CurriculumLes
 import { CurriculumService } from './CurriculumService';
 import { LearningPathEngine } from './LearningPathEngine';
 import { PersonalLearningPlanService } from './PersonalLearningPlanService';
-
 import { generateUUID, toDeterministicUUID } from '../utils/uuid';
+import { mapIeltsBandToCefr, getCurriculumConfigForBand } from '../utils/curriculum/ieltsLevelCalibrator';
+import { IELTS_GRAMMAR_DATABASE } from '../data/ielts/ielts_grammar_data';
 
 const LOCK_KEY_PREFIX = 'study_planner_pending_generation_';
 
@@ -125,17 +126,25 @@ export function getLevelPedagogicalDirectives(
     }
   } else {
     // English Track
+    const cefr = mapIeltsBandToCefr(levelCode);
+    const config = getCurriculumConfigForBand(levelCode);
+
     if (goalType === 'ielts') {
-      return `IELTS TARGET DIRECTIVES (Target Band: ${levelCode}):
-- Speaking: Part 1 fluency, Part 2 2-minute cue card sustained speech, Part 3 abstract discussion. Route: /speaking-coach?lang=en
-- Writing: Task 1 academic report (charts, diagrams, trends) and Task 2 argumentative/discussion essay structure. Route: /ielts?tab=writing
-- Reading: Skimming & scanning, True/False/Not Given, heading matching, speed drills under timed conditions. Route: /ielts?tab=reading_listening
-- Listening: Sections 1-4, focus on keyword prediction, distractors, and spelling accuracy. Route: /ielts?tab=reading_listening
-- Grammar & Vocab: Complex sentence structures (inversion, cleft sentences, conditionals), Academic Word List (AWL). Route: /ielts?tab=grammar`;
+      return `IELTS TARGET DIRECTIVES (Current Level: ${levelCode} -> Calibrated CEFR: ${cefr}, Target Band: ${targetLevelCode || '6.5'}):
+- PEDAGOGICAL CALIBRATION:
+  * For IELTS 5.0 (Band 4.0 - 5.0), the student's foundation is strictly CEFR A2 (Pre-Intermediate).
+  * Vocabulary: MUST assign exactly 1 Oxford 3000 A2 part (${config.dailyDosage.vocabWordsPerDay} words per day) using route /study-mode?deck=${config.oxfordDeckId}&part=1..7.
+  * Grammar: MUST assign exactly 1 isolated Murphy ${cefr} unit per day from AVAILABLE_CONTENT_IDS with route /ielts?tab=grammar&topic={murphy_unit_id}.
+  * Skills Rotation: Assign 1 active skill exercise per day (Speaking Coach / Writing Task / Reading drill).
+- Speaking: Part 1 fluency, Part 2 2-minute sustained speech, Part 3 abstract questions. Route: /speaking-coach?lang=en or /ielts/speaking-mock
+- Writing: Task 1 academic report & Task 2 structure. Route: /ielts?tab=writing
+- Reading & Listening: Cambridge speed drills & keyword prediction. Route: /ielts?tab=reading_listening
+- Non-negotiable Daily Dosage ("Me'yor"): Every single day must have distinct, bite-sized tasks: exactly 1 grammar unit, exactly 1 Oxford 3000 level-matched vocabulary part (${config.dailyDosage.vocabWordsPerDay} words), and 1 skill exercise. Do not lump all topics together into generic headings!`;
     } else {
-      return `GENERAL ENGLISH DIRECTIVES (CEFR ${levelCode}):
-- Develop everyday conversational fluency, functional grammar, and rich active vocabulary.
-- Rotate grammar theory, vocabulary flashcards, speaking coach drills, and reading articles.`;
+      return `GENERAL ENGLISH DIRECTIVES (CEFR ${cefr}, Current Band: ${levelCode}):
+- Vocabulary: Oxford 3000 ${cefr} level parts via /study-mode?deck=${config.oxfordDeckId}&part=1..7
+- Grammar: Murphy ${cefr} units via /ielts?tab=grammar&topic={murphy_unit_id}
+- Rotate functional grammar, Oxford 3000 flashcard quotas, speaking coach drills, and reading.`;
     }
   }
 }
@@ -287,39 +296,44 @@ export const PersonalLearningPlanEngine = {
         });
       }
 
-      // If English track, also include Murphy A1 Unit IDs
+      // If English track, populate calibrated Murphy Grammar Units and Oxford 3000 Level Decks
       if (!isJa) {
-        availableContent.push(
-          { id: 'murphy_u01_am_is_are', title: 'Unit 1: am / is / are', skill: 'grammar' },
-          {
-            id: 'murphy_u02_am_is_are_questions',
-            title: 'Unit 2: am / is / are questions',
-            skill: 'grammar',
-          },
-          {
-            id: 'murphy_u03_present_continuous',
-            title: 'Unit 3: Present Continuous',
-            skill: 'grammar',
-          },
-          { id: 'murphy_u05_present_simple', title: 'Unit 5: Present Simple', skill: 'grammar' },
-          { id: 'murphy_u10_was_were', title: 'Unit 10: was / were', skill: 'grammar' },
-          {
-            id: 'murphy_u11_past_simple_regular_irregular',
-            title: 'Unit 11: Past Simple',
-            skill: 'grammar',
-          },
-          {
-            id: 'murphy_u15_present_perfect_1',
-            title: 'Unit 15: Present Perfect',
-            skill: 'grammar',
-          },
-          { id: 'murphy_u31_can_could', title: 'Unit 23: can / could', skill: 'speaking' },
-          {
-            id: 'murphy_u36_there_is_there_are',
-            title: 'Unit 3: there is / there are',
-            skill: 'grammar',
-          },
-        );
+        const cefr = mapIeltsBandToCefr(goal.currentLevel);
+        const levelConfig = getCurriculumConfigForBand(goal.currentLevel);
+
+        // Filter Murphy Grammar Units for this user's CEFR level
+        const levelUnits = IELTS_GRAMMAR_DATABASE.filter((t) => {
+          if (cefr === 'A1') return t.level.includes('A1');
+          if (cefr === 'A2') return t.level.includes('A2') || t.level === 'A1-A2';
+          if (cefr === 'B1') return t.level.includes('B1') || t.level === 'B1-B2';
+          if (cefr === 'B2') return t.level.includes('B2') || t.level === 'B1-B2';
+          if (cefr === 'C1' || cefr === 'C2')
+            return t.level.includes('C1') || t.level.includes('B2');
+          return true;
+        });
+
+        const selectedUnits =
+          levelUnits.length > 0 ? levelUnits : IELTS_GRAMMAR_DATABASE.slice(0, 25);
+        selectedUnits.slice(0, 15).forEach((u) => {
+          if (!completedLessonIds.includes(u.id)) {
+            availableContent.push({
+              id: u.id,
+              title: u.title,
+              skill: 'grammar',
+            });
+          }
+        });
+
+        // Add Oxford 3000 level-specific vocabulary parts
+        const oxfordDeckId = levelConfig.oxfordDeckId;
+        const deckTitle = levelConfig.oxfordDeckTitle;
+        for (let p = 1; p <= 7; p++) {
+          availableContent.push({
+            id: `${oxfordDeckId}_part_${p}`,
+            title: `${deckTitle} — ${p}-Qism (${levelConfig.dailyDosage.vocabWordsPerDay} ta so'z)`,
+            skill: 'vocabulary',
+          });
+        }
       }
 
       const allowedRoutes = isJa
@@ -342,6 +356,7 @@ export const PersonalLearningPlanEngine = {
             '/ielts?tab=writing',
             '/vocabulary',
             '/study-mode',
+            '/ielts/speaking-mock',
           ];
 
       const strongSkills = state.masteryProfile?.topStrengths.map((s) => s.skill) || [];
@@ -762,8 +777,17 @@ ${prompt}`;
               (resolvedRoute === '/ielts' || !resolvedRoute.includes('speaking'))
             ) {
               resolvedRoute = '/ielts/speaking-mock';
-            } else if (effectiveSkill === 'vocabulary' && !resolvedRoute.startsWith('/vocabulary')) {
-              resolvedRoute = '/vocabulary';
+            } else if (effectiveSkill === 'vocabulary') {
+              if (actualContentId && actualContentId.startsWith('deck_oxford_3000')) {
+                const match = actualContentId.match(/(deck_oxford_3000_[ab][12])(?:_part_(\d+))?/i);
+                const deckId = match ? match[1].toLowerCase() : actualContentId;
+                const part = match && match[2] ? match[2] : '1';
+                resolvedRoute = `/study-mode?deck=${deckId}&part=${part}`;
+              } else if (resolvedRoute.startsWith('/study-mode')) {
+                // Preserve direct study mode routes (e.g. preset deck parameters)
+              } else if (!resolvedRoute.startsWith('/vocabulary')) {
+                resolvedRoute = '/vocabulary';
+              }
             } else if (effectiveSkill === 'grammar') {
               if (actualContentId && actualContentId.startsWith('murphy_')) {
                 resolvedRoute = `/ielts?tab=grammar&topic=${actualContentId}`;
