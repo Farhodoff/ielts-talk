@@ -5074,815 +5074,1247 @@ export const ENGLISH_B2_LESSONS: Lesson[] = [
     ]
 },
     {
-        "id": "en-b2-u5-l1",
-        "courseId": "english-b2",
-        "unitId": "en-b2-u5",
-        "unitTitle": "Unit 5: IELTS Writing Task 1 & 2 Mastery",
-        "language": "en",
-        "level": "B2",
-        "lessonNumber": 1,
-        "title": "IELTS Writing Task 1: Line Graphs & Bar Charts",
-        "description": "Grafik va diagrammalarni tahlil qilish, umumiy ko'rinish (overview) va dinamika tili.",
-        "estimatedDurationMinutes": 16,
-        "icon": "📊",
-        "steps": [
-            {
-                "id": "en-b2-u5-l1-s1",
-                "title": "Task 1 Strukturasi",
-                "type": "learn",
-                "estimatedMinutes": 5,
-                "learnData": {
-                    "title": "Academic Writing Task 1 Structure",
-                    "explanation": "1. Introduction: Savolni parafraz qilish. 2. Overview: Eng asosiy 2-3 ta tendensiyani umumlashtirish (sonlarsiz). 3. Body 1 & Body 2: Tafsilotlar, solishtirishlar va aniq raqamlar.",
-                    "keyPoints": [
-                        "Overview bo'lmasa — maksimal Band 5 beriladi!",
-                        "Tendensiya so'zlari: increased steadily, fluctuated wildly, reached a peak of, plummeted dramatically."
-                    ],
-                    "vocabulary": [
-                        {
-                            "term": "Fluctuate",
-                            "reading": "/ˈflʌk.tʃu.eɪt/",
-                            "meaning": "Tebranmoq / O'zgarib turmoq",
-                            "exampleSentence": "Oil prices fluctuated throughout the year.",
-                            "exampleTranslation": "Neft narxi yil davomida tebranib turdi."
-                        },
-                        {
-                            "term": "Overview",
-                            "reading": "/ˈəʊ.və.vjuː/",
-                            "meaning": "Umumiy xulosa / Sharh",
-                            "exampleSentence": "The overview captures key trends.",
-                            "exampleTranslation": "Umumiy sharh asosiy tendensiyalarni o'zida aks ettiradi."
-                        },
-                        {
-                            "term": "Nuance",
-                            "reading": "/ˈnjuː.ɑːns/",
-                            "meaning": "Nozik farq, qirra",
-                            "exampleSentence": "She understood every subtle nuance of the language.",
-                            "exampleTranslation": "U tilning har bir nozik qirrasini tushundi."
-                        }
-                    ],
-                    "grammarRules": [
-                        {
-                            "pattern": "IELTS Writing Task 1: Line Graphs & Bar Charts",
-                            "meaning": "Grafik va diagrammalarni tahlil qilish, umumiy ko'rinish (overview) va dinamika tili.",
-                            "usageNotes": "1. Introduction: Savolni parafraz qilish. 2. Overview: Eng asosiy 2-3 ta tendensiyani umumlashtirish (sonlarsiz). 3. Body 1 & Body 2: Tafsilotlar, solishtirishlar va aniq raqamlar.",
-                            "examples": [
-                                {
-                                    "sentence": "Oil prices fluctuated throughout the year.",
-                                    "translation": "Neft narxi yil davomida tebranib turdi."
-                                },
-                                {
-                                    "sentence": "The overview captures key trends.",
-                                    "translation": "Umumiy sharh asosiy tendensiyalarni o'zida aks ettiradi."
-                                }
-                            ]
-                        }
-                    ]
-                }
-            },
-            {
-                "id": "en-b2-u5-l1-s2",
-                "title": "Mashq",
-                "type": "practice",
-                "estimatedMinutes": 5,
-                "practiceData": {
-                    "instructions": "To'g'ri Task 1 iborasini tanlang.",
-                    "exercises": [
-                        {
-                            "id": "en-b2-u5-l1-e1",
-                            "type": "multiple-choice",
-                            "prompt": "\"Overall, renewable energy consumption _______ (experienced) a steady upward trend.\"",
-                            "options": [
-                                "was experienced",
-                                "has experience",
-                                "experienced",
-                                "experiencing"
-                            ],
-                            "correctAnswer": 2,
-                            "explanation": "Experienced a steady upward trend."
-                        },
-                        {
-                            "id": "en-b2-u5-l1-ex-2",
-                            "type": "multiple-choice",
-                            "prompt": "Choose the correct word to complete the sentence: \"The overview captures key trends.\"",
-                            "options": [
-                                "reluctance",
-                                "delay",
-                                "Overview",
-                                "doubt"
-                            ],
-                            "correctAnswer": 2,
-                            "explanation": "\"Overview\" (Umumiy xulosa / Sharh) fits the context appropriately."
-                        }
-                    ]
-                }
-            },
-            {
-                "id": "en-b2-u5-l1-s3",
-                "title": "Test",
-                "type": "test",
-                "estimatedMinutes": 6,
-                "testData": {
-                    "instructions": "Savollarga javob bering.",
-                    "passingScorePercentage": 75,
-                    "questions": [
-                        {
-                            "id": "en-b2-u5-l1-q1",
-                            "question": "What is the minimum word count for IELTS Academic Writing Task 1?",
-                            "options": [
-                                "100 words",
-                                "200 words",
-                                "150 words",
-                                "250 words"
-                            ],
-                            "correctAnswerIndex": 2,
-                            "explanation": "150 words minimum."
-                        },
-                        {
-                            "id": "en-b2-u5-l1-q2",
-                            "question": "Why is an \"Overview\" paragraph essential in Task 1?",
-                            "options": [
-                                "It is optional and not graded",
-                                "Without an overview, Task Achievement score cannot exceed Band 5",
-                                "It adds colors to the chart",
-                                "It counts as Task 2"
-                            ],
-                            "correctAnswerIndex": 1,
-                            "explanation": "Cannot exceed Band 5 without an overview."
-                        },
-                        {
-                            "id": "en-b2-u5-l1-q3",
-                            "question": "Which phrase describes reaching the highest point?",
-                            "options": [
-                                "Reached a peak of",
-                                "Bottomed out at",
-                                "Remained flat at",
-                                "Decreased slightly to"
-                            ],
-                            "correctAnswerIndex": 0,
-                            "explanation": "Reached a peak of."
-                        },
-                        {
-                            "id": "en-b2-u5-l1-q4",
-                            "question": "Should you give your personal opinions in IELTS Task 1?",
-                            "options": [
-                                "Yes, always say which country is best",
-                                "Yes, write about your life",
-                                "Only in the conclusion",
-                                "No, never — only describe what is shown in the chart"
-                            ],
-                            "correctAnswerIndex": 3,
-                            "explanation": "Never give personal opinions in Task 1."
-                        }
-                    ]
-                }
+    "id": "en-b2-u5-l1",
+    "courseId": "english-b2",
+    "unitId": "en-b2-u5",
+    "unitTitle": "Unit 5: IELTS Writing Task 1 & 2 Mastery",
+    "language": "en",
+    "level": "B2",
+    "lessonNumber": 1,
+    "title": "IELTS Writing Task 1: Line Graphs & Bar Charts",
+    "description": "IELTS Academic Task 1: chiziqli grafiklar va gistogrammalar tahlili, umumiy sharh (Overview) yozish, dinamik trendlar va miqdoriy predloglar mahorati.",
+    "estimatedDurationMinutes": 18,
+    "icon": "📊",
+    "steps": [
+        {
+            "id": "en-b2-u5-l1-s1",
+            "title": "Task 1: Trendlar va Overview Arxitekturasi",
+            "type": "learn",
+            "estimatedMinutes": 6,
+            "learnData": {
+                "title": "Mastering IELTS Writing Task 1: Overviews, Trend Verbs, and Precision Prepositions",
+                "explanation": "IELTS Academic Writing Task 1 da nomzodga diagramma, grafik yoki jadval taqdim etiladi va 20 daqiqada kamida 150 ta so'zdan iborat faktik hisobot yozish talab etiladi. Shaxsiy fikr yoki sabab to'qish qat'iyan taqiqlanadi!\n\n1. Hisobotning 4 Qismli Tuzilishi (Report Architecture):\n- **1. Paraphrased Introduction (1 ta gap):** Savol sarlavhasini boshqa so'zlar bilan qayta yozish.\n  • *'The line graph illustrates fluctuations in global crude oil consumption between 1990 and 2020.'*\n- **2. Overview (Eng muhim paragraf - 2 ta gap):** Hech qanday raqamlarsiz, eng katta 2 ta umumiy trendni bayon qilish (qaysi ko'tarildi, qaysi tushdi, qaysi eng baland bo'lib qoldi). Overview bo'lmasa, Task Achievement mezonidan 5.0 dan yuqori ball olib bo'lmaydi!\n  • *'Overall, it is readily apparent that while consumption of renewables surged dramatically over the period, coal utilization plummeted. Throughout the entire timeframe, fossil fuel remained the dominant energy source.'*\n- **3. Body Paragraph 1 (Tafsilotlar va raqamlar):** Asosiy o'sishlar, boshlang'ich va eng yuqori nuqtalar.\n- **4. Body Paragraph 2 (Tafsilotlar va taqqoslashlar):** Pasayishlar va yakuniy ko'rsatkichlar.\n\n2. Trend Fe'llari va Ravishlari (Dynamic Trend Vocabulary):\n- Keskin o'sish: *soar, rocket, surge dramatically, climb substantially*\n- Sekin o'sish: *increase gradually, edge up steadily, experience a modest rise*\n- Turg'unlik / Tebranish: *level off at, plateau at, fluctuate wildly*\n- Keskin tushish: *plummet, tumble, collapse, drop precipitously*\n\n3. Eng Muhim Predloglar (Crucial Prepositions of Change):\n- **increase BY 15%** -> 15% ga oshdi (o'zgarish farqi).\n- **increase TO 80%** -> 80% gacha yetdi (yakuniy nuqta).\n- **peak AT 10,000 units** -> 10,000 dona cho'qqisiga chiqdi.\n- **stand AT 45%** -> 45% darajasida turdi (boshlang'ich nuqta).\n- **a drop OF 20%** -> 20% lik pasayish (otdan keyin 'of').\n\n4. O'zbek o'rganuvchilari uchun xavfli tuzoqlar (Common Pitfalls):\n- ❌ *'It increased with 10%.'* -> ✅ *'It increased BY 10%.'*\n- ❌ *'In my opinion, the oil price increased because of war.'* -> ✅ Task 1 da hech qachon shaxsiy taxmin yoki sabab yozilmaydi, faqat grafikdagi faktlar keltiriladi!\n- ❌ Raqamlarni ko'r-ko'rona ro'yxat qilib yozib chiqish. Eng asosiysi — taqqoslash (*'In stark contrast to X, which grew threefold, Y halved'*).",
+                "vocabulary": [
+                    {
+                        "term": "overview",
+                        "reading": "/ˈəʊ.və.vjuː/",
+                        "meaning": "umumiy xulosa, bosh tendensiyalar sharhi (Task 1 dagi majburiy qism)",
+                        "exampleSentence": "Without a transparent overview paragraph, Task Achievement is capped at Band 5.",
+                        "exampleTranslation": "Aniq umumiy xulosa paragrafisiz Task Achievement bo'yicha ball 5 bilan cheklanadi."
+                    },
+                    {
+                        "term": "plummet",
+                        "reading": "/ˈplʌm.ɪt/",
+                        "meaning": "keskin qulamoq, pastga sho'ng'imoq",
+                        "exampleSentence": "Coal consumption plummeted from 70% in 1995 to an all-time nadir of 12% in 2020.",
+                        "exampleTranslation": "Ko'mir iste'moli 1995-yildagi 70% dan 2020-yilda eng past 12% lik nuqtaga quladi."
+                    },
+                    {
+                        "term": "nadir",
+                        "reading": "/ˈneɪ.dɪər/",
+                        "meaning": "eng quyi nuqta, eng past daraja",
+                        "exampleSentence": "Automobile sales reached their nadir during the economic recession of 2008.",
+                        "exampleTranslation": "Avtomobil savdosi 2008-yilgi iqtisodiy inqiroz paytida o'zining eng quyi nuqtasiga tushdi."
+                    },
+                    {
+                        "term": "plateau",
+                        "reading": "/ˈplæt.əʊ/",
+                        "meaning": "o'sishdan to'xtab bir xil darajada saqlanib turmoq",
+                        "exampleSentence": "After five years of steady expansion, computer ownership plateaued at 85%.",
+                        "exampleTranslation": "Besh yillik barqaror o'sishdan so'ng kompyuterga egalik qilish 85% darajasida to'xtab qoldi."
+                    },
+                    {
+                        "term": "fluctuate",
+                        "reading": "/ˈflʌk.tʃu.eɪt/",
+                        "meaning": "beqaror tebranmoq, to'lqinlanmoq",
+                        "exampleSentence": "Wheat prices fluctuated wildly between thirty and seventy dollars throughout the decade.",
+                        "exampleTranslation": "Bug'doy narxlari o'n yillik davomida 30 va 70 dollar oralig'ida beqaror tebranib turdi."
+                    },
+                    {
+                        "term": "surge",
+                        "reading": "/sɜːdʒ/",
+                        "meaning": "keskin va tez ko'tarilmoq",
+                        "exampleSentence": "Solar panel adoptions surged threefold over the five-year reporting timeframe.",
+                        "exampleTranslation": "Quyosh panellaridan foydalanish besh yillik hisobot davrida uch barobarga oshdi."
+                    },
+                    {
+                        "term": "threefold",
+                        "reading": "/ˈθriː.fəʊld/",
+                        "meaning": "uch karra, uch barobar",
+                        "exampleSentence": "Agricultural productivity experienced a threefold expansion following modern irrigation.",
+                        "exampleTranslation": "Zamonaviy sug'orishdan so'ng qishloq xo'jaligi unumdorligi uch karra kengayishni boshdan kechirdi."
+                    },
+                    {
+                        "term": "precipitously",
+                        "reading": "/prɪˈsɪp.ɪ.təs.li/",
+                        "meaning": "shiddat bilan, tik pasayish holatida",
+                        "exampleSentence": "Foreign investment tumbled precipitously following sudden regulatory revisions.",
+                        "exampleTranslation": "Xorijiy investitsiyalar to'satdan kiritilgan qoidalar ortidan shiddat bilan pastga quladi."
+                    }
+                ],
+                "grammarRules": [
+                    {
+                        "pattern": "Noun + experienced / underwent a [Adjective] rise / drop of [X%]",
+                        "meaning": "Trendni ot birikmasi orqali tasvirlash",
+                        "usageNotes": "Fe'lli gaplarni otli tuzilmalarga almashtirish leksik xilma-xillikni ta'minlaydi.",
+                        "examples": [
+                            {
+                                "sentence": "Renewable energy witnessed a dramatic surge of 40% over the decade.",
+                                "translation": "Qayta tiklanuvchi energiya o'n yillik davomida 40% lik keskin o'sishni ko'rsatdi."
+                            }
+                        ]
+                    },
+                    {
+                        "pattern": "Prepositions of Change: from [X] to [Y]; by [Difference]; at [Point]",
+                        "meaning": "Miqdoriy o'zgarish predloglari",
+                        "usageNotes": "'by' o'zgarish farqini, 'to' esa yakuniy natijani bildiradi.",
+                        "examples": [
+                            {
+                                "sentence": "Expenditures escalated by $5 million to reach a total of $20 million.",
+                                "translation": "Xarajatlar 5 million dollarga oshib, jami 20 million dollarga yetdi."
+                            }
+                        ]
+                    }
+                ]
             }
-        ]
-    },
+        },
+        {
+            "id": "en-b2-u5-l1-s2",
+            "title": "Amaliy Mashqlar",
+            "type": "practice",
+            "estimatedMinutes": 5,
+            "practiceData": {
+                "instructions": "IELTS Writing Task 1 leksikasi va predloglariga mos to'g'ri variantlarni tanlang.",
+                "exercises": [
+                    {
+                        "id": "en-b2-u5-l1-e1",
+                        "type": "multiple-choice",
+                        "prompt": "Global crude oil production increased _______ 15% to reach an all-time peak _______ 100 million barrels daily.",
+                        "options": [
+                            "by / at",
+                            "with / on",
+                            "to / by",
+                            "of / in"
+                        ],
+                        "correctAnswer": 0,
+                        "explanation": "O'sish farqi 'by 15%', eng yuqori nuqta 'at 100 million' bilan beriladi."
+                    },
+                    {
+                        "id": "en-b2-u5-l1-e2",
+                        "type": "multiple-choice",
+                        "prompt": "What is the primary requirement of a high-scoring 'Overview' paragraph in Task 1?",
+                        "options": [
+                            "Listing every single date and decimal point found on the graph.",
+                            "Highlighting the overall main trends and key features without quoting specific data figures.",
+                            "Explaining personal hypotheses about why the lines changed.",
+                            "Writing an emotional introduction."
+                        ],
+                        "correctAnswer": 1,
+                        "explanation": "Overview da aniq raqamlarga to'xtalmasdan, umumiy asosiy trendlar va farqlar umumlashtiriladi."
+                    },
+                    {
+                        "id": "en-b2-u5-l1-e3",
+                        "type": "multiple-choice",
+                        "prompt": "After peaking at 80% in 2012, passenger numbers _______ before plummeting in 2020.",
+                        "options": [
+                            "plateaued",
+                            "plateauing",
+                            "to plateau",
+                            "plateaus"
+                        ],
+                        "correctAnswer": 0,
+                        "explanation": "O'tgan zamondagi turg'unlik: 'plateaued' (bir xil darajada saqlanib turdi)."
+                    },
+                    {
+                        "id": "en-b2-u5-l1-e4",
+                        "type": "multiple-choice",
+                        "prompt": "Which sentence demonstrates professional lexical variety in Task 1?",
+                        "options": [
+                            "Car sales went up and then bike sales went up too.",
+                            "While automobile acquisitions experienced a threefold expansion, bicycle purchases tumbled precipitously.",
+                            "Cars had good numbers but bikes had bad numbers.",
+                            "The chart shows cars and bikes going higher."
+                        ],
+                        "correctAnswer": 1,
+                        "explanation": "B variantida 'experienced a threefold expansion' va 'tumbled precipitously' kabi ilg'or B2/C1 leksika qo'llangan."
+                    },
+                    {
+                        "id": "en-b2-u5-l1-e5",
+                        "type": "multiple-choice",
+                        "prompt": "Why is writing 'I think oil sales increased because of winter weather' marked down in Task 1?",
+                        "options": [
+                            "Because 'winter' is spelled wrong.",
+                            "Because Task 1 strictly prohibits personal opinions, speculations, or outside explanations not shown on the graph.",
+                            "Because oil cannot be measured.",
+                            "Because examiners dislike the word 'weather'."
+                        ],
+                        "correctAnswer": 1,
+                        "explanation": "Task 1 faqat grafikdagi obyektiv faktlarni talab qiladi, shaxsiy taxmin yoki sabab to'qish taqiqlanadi."
+                    }
+                ]
+            }
+        },
+        {
+            "id": "en-b2-u5-l1-s3",
+            "title": "Yakuniy Test",
+            "type": "test",
+            "estimatedMinutes": 5,
+            "testData": {
+                "instructions": "5 ta test savoliga to'g'ri javob bering. O'tish bali: 80%.",
+                "passingScorePercentage": 80,
+                "questions": [
+                    {
+                        "id": "en-b2-u5-l1-q1",
+                        "question": "The lowest point on a graph is formally termed the _______ .",
+                        "options": [
+                            "nadir",
+                            "plateau",
+                            "zenith",
+                            "median"
+                        ],
+                        "correctAnswerIndex": 0,
+                        "explanation": "Eng quyi tub nuqta 'nadir' deb ataladi."
+                    },
+                    {
+                        "id": "en-b2-u5-l1-q2",
+                        "question": "Between 2005 and 2015, domestic air travel witnessed a substantial drop _______ 25%.",
+                        "options": [
+                            "of",
+                            "by",
+                            "with",
+                            "at"
+                        ],
+                        "correctAnswerIndex": 0,
+                        "explanation": "Otdan keyin ('a drop / a rise'): 'a drop OF 25%'."
+                    },
+                    {
+                        "id": "en-b2-u5-l1-q3",
+                        "question": "What is the minimum recommended word count for IELTS Academic Writing Task 1?",
+                        "options": [
+                            "100 words",
+                            "150 words",
+                            "250 words",
+                            "300 words"
+                        ],
+                        "correctAnswerIndex": 1,
+                        "explanation": "Task 1 ning rasmiy minimal chegarasi — 150 ta so'z."
+                    },
+                    {
+                        "id": "en-b2-u5-l1-q4",
+                        "question": "The renewable energy market experienced a _______ increase, growing from 10% to 30%.",
+                        "options": [
+                            "threefold",
+                            "precipitous",
+                            "nadir",
+                            "stagnant"
+                        ],
+                        "correctAnswerIndex": 0,
+                        "explanation": "10% dan 30% ga chiqish — uch barobar (threefold) o'sishdir."
+                    },
+                    {
+                        "id": "en-b2-u5-l1-q5",
+                        "question": "If a line fluctuates between 40 and 60 for three years without rising or falling overall, it _______ .",
+                        "options": [
+                            "fluctuated within a narrow corridor",
+                            "plummeted to zero",
+                            "surged exponentially",
+                            "collapsed precipitously"
+                        ],
+                        "correctAnswerIndex": 0,
+                        "explanation": "Bir xil oraliqda o'zgarib turish 'fluctuated within a narrow corridor' deyiladi."
+                    }
+                ]
+            }
+        }
+    ]
+},
     {
-        "id": "en-b2-u5-l2",
-        "courseId": "english-b2",
-        "unitId": "en-b2-u5",
-        "unitTitle": "Unit 5: IELTS Writing Task 1 & 2 Mastery",
-        "language": "en",
-        "level": "B2",
-        "lessonNumber": 2,
-        "title": "IELTS Writing Task 1: Process Diagrams & Maps",
-        "description": "Jarayonlar (ishlab chiqarish bosqichlari) va xaritalardagi o'zgarishlarni tasvirlash.",
-        "estimatedDurationMinutes": 15,
-        "icon": "🗺️",
-        "steps": [
-            {
-                "id": "en-b2-u5-l2-s1",
-                "title": "Jarayon va Xarita Tili",
-                "type": "learn",
-                "estimatedMinutes": 5,
-                "learnData": {
-                    "title": "Process Diagrams & Map Descriptions",
-                    "explanation": "Jarayonda majhul nisbat (Passive Voice) va ketma-ketlik bog'lovchilari (Initially, Subsequently, Following this, In the final stage) qo'llaniladi. Xaritalarda joylashuv va o'zgarish fe'llari: demolished, constructed, converted into, expanded.",
-                    "vocabulary": [
-                        {
-                            "term": "Subsequently",
-                            "reading": "/ˈsʌb.sɪ.kwənt.li/",
-                            "meaning": "Shundan so'ng / Keyinchalik",
-                            "exampleSentence": "The raw materials are subsequently heated.",
-                            "exampleTranslation": "Xomashyo shundan so'ng qizdiriladi."
-                        },
-                        {
-                            "term": "Demolish",
-                            "reading": "/dɪˈmɒl.ɪʃ/",
-                            "meaning": "Buzib tashlamoq (binoni)",
-                            "exampleSentence": "The old warehouse was demolished.",
-                            "exampleTranslation": "Eski omborxona buzib tashlandi."
-                        },
-                        {
-                            "term": "Coherence",
-                            "reading": "/kəʊˈhɪə.rəns/",
-                            "meaning": "Mantiqiy bogʻliqlik, izchillik",
-                            "exampleSentence": "Ensure structural coherence throughout your essay.",
-                            "exampleTranslation": "Inshoyingiz davomida tuzilmaviy izchillikni taʼminlang."
-                        }
-                    ],
-                    "grammarRules": [
-                        {
-                            "pattern": "IELTS Writing Task 1: Process Diagrams & Maps",
-                            "meaning": "Jarayonlar (ishlab chiqarish bosqichlari) va xaritalardagi o'zgarishlarni tasvirlash.",
-                            "usageNotes": "Jarayonda majhul nisbat (Passive Voice) va ketma-ketlik bog'lovchilari (Initially, Subsequently, Following this, In the final stage) qo'llaniladi. Xaritalarda joylashuv va o'zgarish fe'llari: demolished, constructed, converted into, expanded.",
-                            "examples": [
-                                {
-                                    "sentence": "The raw materials are subsequently heated.",
-                                    "translation": "Xomashyo shundan so'ng qizdiriladi."
-                                },
-                                {
-                                    "sentence": "The old warehouse was demolished.",
-                                    "translation": "Eski omborxona buzib tashlandi."
-                                }
-                            ]
-                        }
-                    ]
-                }
-            },
-            {
-                "id": "en-b2-u5-l2-s2",
-                "title": "Mashq",
-                "type": "practice",
-                "estimatedMinutes": 5,
-                "practiceData": {
-                    "instructions": "To'g'ri so'zni tanlang.",
-                    "exercises": [
-                        {
-                            "id": "en-b2-u5-l2-e1",
-                            "type": "multiple-choice",
-                            "prompt": "\"The former industrial zone was converted _______ a public recreational park.\"",
-                            "options": [
-                                "for",
-                                "onto",
-                                "to",
-                                "into"
-                            ],
-                            "correctAnswer": 3,
-                            "explanation": "Converted into (aylantirildi)."
-                        },
-                        {
-                            "id": "en-b2-u5-l2-ex-2",
-                            "type": "multiple-choice",
-                            "prompt": "Choose the correct word to complete the sentence: \"The old warehouse was demolished.\"",
-                            "options": [
-                                "doubt",
-                                "Demolish",
-                                "delay",
-                                "reluctance"
-                            ],
-                            "correctAnswer": 1,
-                            "explanation": "\"Demolish\" (Buzib tashlamoq (binoni)) fits the context appropriately."
-                        }
-                    ]
-                }
-            },
-            {
-                "id": "en-b2-u5-l2-s3",
-                "title": "Test",
-                "type": "test",
-                "estimatedMinutes": 5,
-                "testData": {
-                    "instructions": "Savollarga javob bering.",
-                    "passingScorePercentage": 75,
-                    "questions": [
-                        {
-                            "id": "en-b2-u5-l2-q1",
-                            "question": "Which grammatical voice is primarily used in man-made process diagrams?",
-                            "options": [
-                                "Future continuous",
-                                "Imperative",
-                                "Active voice only",
-                                "Passive voice"
-                            ],
-                            "correctAnswerIndex": 3,
-                            "explanation": "Passive voice (e.g. is harvested, is transported)."
-                        },
-                        {
-                            "id": "en-b2-u5-l2-q2",
-                            "question": "\"The trees were chopped down and replaced with apartments.\" What does \"chopped down\" mean?",
-                            "options": [
-                                "Cut down / Felled",
-                                "Protected",
-                                "Watered",
-                                "Planted"
-                            ],
-                            "correctAnswerIndex": 0,
-                            "explanation": "Cut down."
-                        },
-                        {
-                            "id": "en-b2-u5-l2-q3",
-                            "question": "Which linking phrase indicates the first step of a process?",
-                            "options": [
-                                "Lastly",
-                                "Subsequently",
-                                "Initially / In the initial stage",
-                                "Eventually"
-                            ],
-                            "correctAnswerIndex": 2,
-                            "explanation": "Initially."
-                        },
-                        {
-                            "id": "en-b2-u5-l2-q4",
-                            "question": "To the north of the river, a new bridge was _______.",
-                            "options": [
-                                "constructed",
-                                "destructed",
-                                "destroying",
-                                "demolish"
-                            ],
-                            "correctAnswerIndex": 0,
-                            "explanation": "Was constructed."
-                        }
-                    ]
-                }
+    "id": "en-b2-u5-l2",
+    "courseId": "english-b2",
+    "unitId": "en-b2-u5",
+    "unitTitle": "Unit 5: IELTS Writing Task 1 & 2 Mastery",
+    "language": "en",
+    "level": "B2",
+    "lessonNumber": 2,
+    "title": "IELTS Writing Task 1: Process Diagrams & Maps",
+    "description": "IELTS Academic Task 1: texnologik jarayonlar (Process) va xaritalar (Maps) tahlili, passiv nisbat ketma-ketligi va fazoviy o'zgarishlar tili.",
+    "estimatedDurationMinutes": 18,
+    "icon": "🗺️",
+    "steps": [
+        {
+            "id": "en-b2-u5-l2-s1",
+            "title": "Jarayonlar va Xaritalar Tahlili",
+            "type": "learn",
+            "estimatedMinutes": 6,
+            "learnData": {
+                "title": "Describing Manufacturing Processes, Natural Cycles, and Map Transformations",
+                "explanation": "Grafiklar bilan bir qatorda, IELTS Task 1 da ko'pincha texnologik ishlab chiqarish jarayonlari (masalan, shisha idishlarni qayta ishlash, sement ishlab chiqarish) yoki shahar xaritalaridagi o'zgarishlar (1990 vs 2020) tushadi.\n\n1. Jarayon Diagrammalari (Process Diagrams):\n- **Majhul Nisbat (Passive Voice) ustunligi:** Ishlab chiqarish jarayonida odamlar kim ekanligi emas, mahsulot bilan nima sodir bo'layotgani muhim. Shuning uchun fe'llarning 90% qismi Passive Voice bo'ladi!\n  • *'First, raw limestone IS CRUSHED into powder.'*\n  • *'Subsequently, the mixture IS HEATED in a rotating furnace at 1000°C.'*\n- **Ketma-ketlik Bog'lovchilari (Sequencing Markers):**\n  • *Initially / At the commencement of the process...*\n  • *Following this / In the subsequent phase...*\n  • *Simultaneously / Concurrently...*\n  • *The final stage involves...*\n\n2. Xaritalar (Maps & Urban Transformations):\nShahar yoki hududning vaqt davomidagi o'zgarishini tasvirlashda maxsus leksikadan foydalaniladi:\n- **Buzib tashlash / Yo'qotish:** *demolished, knocked down, flattened, eradicated*\n  • *'The old factory was demolished to make way for a residential complex.'*\n- **Kengaytirish / Qurish:** *constructed, erected, modernized, expanded*\n  • *'The railway network was extended towards the industrial port.'*\n- **O'rnini almashtirish / Qayta qurish:** *converted into, transformed into, replaced by*\n  • *'The industrial zone was converted into a recreational park.'*\n- **Fazoviy Yo'nalishlar (Compass Directions):** *to the north of, in the southwestern quadrant, adjacent to, situated on the eastern fringe*.\n\n3. O'zbek Tili Bilan Qiyos (Uzbek Contrastive Analysis):\n- O'zbek tilida 'shimolida', 'janubida' deb oddiy aytilsa, ingliz tilida 'in the north' (hududning o'z ichida) va 'to the north of' (hududdan tashqarida, shimol tomonda) predloglari qat'iy farqlanadi.\n- O'rganuvchilar jarayon yozayotganda majhul nisbat o'rniga faol nisbatdan foydalanib xato qilishadi: 'they heat the stone' EMAS, 'the stone is heated'!",
+                "vocabulary": [
+                    {
+                        "term": "demolish",
+                        "reading": "/dɪˈmɒl.ɪʃ/",
+                        "meaning": "buzib tashlamoq, yer bilan yakson qilmoq (binoni)",
+                        "exampleSentence": "The derelict textile mill was demolished to make way for a multi-story shopping mall.",
+                        "exampleTranslation": "Eski to'qimachilik fabrikasi ko'p qavatli savdo markaziga joy ochish uchun buzib tashlandi."
+                    },
+                    {
+                        "term": "furnace",
+                        "reading": "/ˈfɜː.nɪs/",
+                        "meaning": "yuqori haroratli sanoat pechi",
+                        "exampleSentence": "The raw materials are conveyed into a cylindrical furnace heated to 1500°C.",
+                        "exampleTranslation": "Xomashyo 1500°C gacha qizdirilgan silindrsimon pechga uzatiladi."
+                    },
+                    {
+                        "term": "convey",
+                        "reading": "/kənˈveɪ/",
+                        "meaning": "yetkazmoq, konveyer orqali uzatmoq",
+                        "exampleSentence": "Crushed limestone is conveyed via automated belts into the mixing chamber.",
+                        "exampleTranslation": "Maydalangan ohaktosh avtomatlashtirilgan lentalar orqali aralashtirish kamerasiga uzatiladi."
+                    },
+                    {
+                        "term": "quadrant",
+                        "reading": "/ˈkwɒd.rənt/",
+                        "meaning": "chorak qism, zona (xaritada: the northeastern quadrant)",
+                        "exampleSentence": "Extensive residential expansion occurred predominantly in the southeastern quadrant of the town.",
+                        "exampleTranslation": "Keng turar-joy kengayishi asosan shaharchaning janubi-sharqiy qismida yuz berdi."
+                    },
+                    {
+                        "term": "adjacent",
+                        "reading": "/əˈdʒeɪ.sənt/",
+                        "meaning": "yonma-yon, qo'shni, yondosh",
+                        "exampleSentence": "A modern sports facility was erected adjacent to the secondary school.",
+                        "exampleTranslation": "O'rta maktabga yondosh qilib zamonaviy sport majmuasi qurildi."
+                    },
+                    {
+                        "term": "erect",
+                        "reading": "/ɪˈrekt/",
+                        "meaning": "qurmoq, qad ko'tarmoq (bino, minora)",
+                        "exampleSentence": "Three wind turbines were erected along the northern coastline.",
+                        "exampleTranslation": "Shimoliy qirg'oq bo'ylab uchta shamol turbinasi qad rostladi."
+                    },
+                    {
+                        "term": "recreational",
+                        "reading": "/ˌrek.riˈeɪ.ʃən.əl/",
+                        "meaning": "dam olish va hordiq chiqarishga oid",
+                        "exampleSentence": "Agricultural pastures were repurposed into public recreational parklands.",
+                        "exampleTranslation": "Qishloq xo'jaligi yaylovlari jamoat hordiq chiqarish bog'lariga aylantirildi."
+                    },
+                    {
+                        "term": "fringe",
+                        "reading": "/frɪndʒ/",
+                        "meaning": "chekka qism, shahar cheti",
+                        "exampleSentence": "Industrial warehouses expanded primarily along the eastern fringe of the metropolis.",
+                        "exampleTranslation": "Sanoat omborxonalari asosan megapolisning sharqiy chekkasi bo'ylab kengaydi."
+                    }
+                ],
+                "grammarRules": [
+                    {
+                        "pattern": "Process Passive: Subject + is / are + Past Participle (V3) + by / through...",
+                        "meaning": "Jarayon bosqichlarini tasvirlash",
+                        "usageNotes": "Harakat bajaruvchisi shart emas, harakatning o'zi markazda turadi.",
+                        "examples": [
+                            {
+                                "sentence": "Once cooled, the molten glass is molded into custom containers.",
+                                "translation": "Sovutilgach, suyuq shisha maxsus idishlarga quyib shakllantiriladi."
+                            }
+                        ]
+                    },
+                    {
+                        "pattern": "Map Transformation: Noun was replaced by / gave way to + Noun",
+                        "meaning": "Xaritada bino yoki hududning o'zgarishi",
+                        "usageNotes": "Eski binoning yangisiga almashganini ko'rsatishda qo'llanadi.",
+                        "examples": [
+                            {
+                                "sentence": "The industrial dockyards gave way to luxury residential apartments.",
+                                "translation": "Sanoat porti o'z o'rnini hashamatli turar-joy xonadonlariga bo'shatib berdi."
+                            }
+                        ]
+                    }
+                ]
             }
-        ]
-    },
+        },
+        {
+            "id": "en-b2-u5-l2-s2",
+            "title": "Amaliy Mashqlar",
+            "type": "practice",
+            "estimatedMinutes": 5,
+            "practiceData": {
+                "instructions": "Process va Maps leksikasi va grammatikasiga mos to'g'ri variantlarni tanlang.",
+                "exercises": [
+                    {
+                        "id": "en-b2-u5-l2-e1",
+                        "type": "multiple-choice",
+                        "prompt": "In the final manufacturing phase, the purified liquid _______ into sterile containers.",
+                        "options": [
+                            "is poured",
+                            "poured",
+                            "is pouring",
+                            "pours"
+                        ],
+                        "correctAnswer": 0,
+                        "explanation": "Jarayon tasvirida Passive Voice talab etiladi: 'is poured'."
+                    },
+                    {
+                        "id": "en-b2-u5-l2-e2",
+                        "type": "multiple-choice",
+                        "prompt": "The abandoned railway station was demolished to _______ way for an eco-friendly bus depot.",
+                        "options": [
+                            "make",
+                            "do",
+                            "build",
+                            "create"
+                        ],
+                        "correctAnswer": 0,
+                        "explanation": "Ingliz tilidagi turg'un kollokatsiya: 'make way for' (o'rnini bo'shatib bermoq)."
+                    },
+                    {
+                        "id": "en-b2-u5-l2-e3",
+                        "type": "multiple-choice",
+                        "prompt": "A modern pedestrian mall was constructed directly _______ the historic municipal library.",
+                        "options": [
+                            "adjacent to",
+                            "adjacent with",
+                            "adjacent on",
+                            "adjacent at"
+                        ],
+                        "correctAnswer": 0,
+                        "explanation": "Yondosh / qo'shni: 'adjacent to + Noun'."
+                    },
+                    {
+                        "id": "en-b2-u5-l2-e4",
+                        "type": "multiple-choice",
+                        "prompt": "Which voice is overwhelmingly preferred when writing an IELTS Process diagram report?",
+                        "options": [
+                            "Active Voice",
+                            "Passive Voice",
+                            "Imperative Voice",
+                            "Subjunctive Voice"
+                        ],
+                        "correctAnswer": 1,
+                        "explanation": "Texnologik jarayonlarda harakat subyekti emas, mahsulot ustida bajarilgan ish markazda bo'lgani uchun Passive Voice qo'llaniladi."
+                    },
+                    {
+                        "id": "en-b2-u5-l2-e5",
+                        "type": "multiple-choice",
+                        "prompt": "The rural woodland situated on the western _______ of the village was cleared for farming.",
+                        "options": [
+                            "fringe",
+                            "furnace",
+                            "conveyor",
+                            "nadir"
+                        ],
+                        "correctAnswer": 0,
+                        "explanation": "Hudud chekkasi: 'on the western fringe'."
+                    }
+                ]
+            }
+        },
+        {
+            "id": "en-b2-u5-l2-s3",
+            "title": "Yakuniy Test",
+            "type": "test",
+            "estimatedMinutes": 5,
+            "testData": {
+                "instructions": "5 ta test savoliga to'g'ri javob bering. O'tish bali: 80%.",
+                "passingScorePercentage": 80,
+                "questions": [
+                    {
+                        "id": "en-b2-u5-l2-q1",
+                        "question": "Choose the formal academic synonym for 'pulled down completely' when referring to old buildings on a map:",
+                        "options": [
+                            "demolished",
+                            "conveyed",
+                            "stagnated",
+                            "plateaued"
+                        ],
+                        "correctAnswerIndex": 0,
+                        "explanation": "Binolarni buzib tashlash akademik tilda 'demolished' deyiladi."
+                    },
+                    {
+                        "id": "en-b2-u5-l2-q2",
+                        "question": "Once the raw clay is filtered, it _______ shaped into bricks using mechanical molds.",
+                        "options": [
+                            "is",
+                            "has",
+                            "was",
+                            "been"
+                        ],
+                        "correctAnswerIndex": 0,
+                        "explanation": "Present Simple Passive: 'it is shaped'."
+                    },
+                    {
+                        "id": "en-b2-u5-l2-q3",
+                        "question": "A new ring road was constructed around the perimeter to _______ transit bottlenecks.",
+                        "options": [
+                            "alleviate",
+                            "demolish",
+                            "erect",
+                            "convey"
+                        ],
+                        "correctAnswerIndex": 0,
+                        "explanation": "Tirbandlikni yumshatish / yengillashtirish: 'alleviate bottlenecks'."
+                    },
+                    {
+                        "id": "en-b2-u5-l2-q4",
+                        "question": "Which compass phrase correctly describes a hospital located outside a city to its northern border?",
+                        "options": [
+                            "to the north of the city",
+                            "in the north of the city",
+                            "on the north inside the city",
+                            "at the north through the city"
+                        ],
+                        "correctAnswerIndex": 0,
+                        "explanation": "Hudud tashqarisidagi shimoliy yo'nalish: 'to the north of the city' ('in the north' esa shahar ichidagi shimoliy hudud)."
+                    },
+                    {
+                        "id": "en-b2-u5-l2-q5",
+                        "question": "In a manufacturing cycle diagram, sequencing words like 'Subsequently' and 'Simultaneously' enhance _______ .",
+                        "options": [
+                            "Coherence and Cohesion",
+                            "Word count penalties",
+                            "Task 2 arguments",
+                            "Spelling errors"
+                        ],
+                        "correctAnswerIndex": 0,
+                        "explanation": "Ketma-ketlik bog'lovchilari matnning mantiqiy ravonligi (Coherence and Cohesion) mezonini ko'taradi."
+                    }
+                ]
+            }
+        }
+    ]
+},
     {
-        "id": "en-b2-u5-l3",
-        "courseId": "english-b2",
-        "unitId": "en-b2-u5",
-        "unitTitle": "Unit 5: IELTS Writing Task 1 & 2 Mastery",
-        "language": "en",
-        "level": "B2",
-        "lessonNumber": 3,
-        "title": "IELTS Writing Task 2: Opinion (Agree / Disagree) Essay",
-        "description": "4 paragrafli insho strukturasi, tezis bayonoti (thesis statement) va dalillar keltirish.",
-        "estimatedDurationMinutes": 16,
-        "icon": "✍️",
-        "steps": [
-            {
-                "id": "en-b2-u5-l3-s1",
-                "title": "Insho Strukturasi",
-                "type": "learn",
-                "estimatedMinutes": 5,
-                "learnData": {
-                    "title": "4-Paragraph Opinion Essay Blueprint",
-                    "explanation": "1. Introduction: Mavzuni parafraz qilish + Aniq tezis (I completely agree with this viewpoint). 2. Body 1: Birinchi asosiy dalil + misol. 3. Body 2: Ikkinchi asosiy dalil + misol. 4. Conclusion: Asosiy fikrni qayta xulosalash.",
-                    "keyPoints": [
-                        "Minimum 250 so'z yozilishi shart (tavsiya etiladi: 260-280 so'z).",
-                        "Tezis aniq bo'lishi va butun insho davomida izchil saqlanishi kerak."
-                    ],
-                    "grammarRules": [
-                        {
-                            "pattern": "IELTS Writing Task 2: Opinion (Agree / Disagree) Essay",
-                            "meaning": "4 paragrafli insho strukturasi, tezis bayonoti (thesis statement) va dalillar keltirish.",
-                            "usageNotes": "1. Introduction: Mavzuni parafraz qilish + Aniq tezis (I completely agree with this viewpoint). 2. Body 1: Birinchi asosiy dalil + misol. 3. Body 2: Ikkinchi asosiy dalil + misol. 4. Conclusion: Asosiy fikrni qayta xulosalash.",
-                            "examples": [
-                                {
-                                    "sentence": "I study English every day with dedication.",
-                                    "translation": "Har kuni ingliz tilini astoydil o'rganaman."
-                                }
-                            ]
-                        }
-                    ],
-                    "vocabulary": [
-                        {
-                            "term": "Nuance",
-                            "reading": "/ˈnjuː.ɑːns/",
-                            "meaning": "Nozik farq, qirra",
-                            "exampleSentence": "She understood every subtle nuance of the language.",
-                            "exampleTranslation": "U tilning har bir nozik qirrasini tushundi."
-                        },
-                        {
-                            "term": "Coherence",
-                            "reading": "/kəʊˈhɪə.rəns/",
-                            "meaning": "Mantiqiy bogʻliqlik, izchillik",
-                            "exampleSentence": "Ensure structural coherence throughout your essay.",
-                            "exampleTranslation": "Inshoyingiz davomida tuzilmaviy izchillikni taʼminlang."
-                        },
-                        {
-                            "term": "Compelling",
-                            "reading": "/kəmˈpel.ɪŋ/",
-                            "meaning": "Juda ishonarli, maftunkor",
-                            "exampleSentence": "He presented a compelling argument in the debate.",
-                            "exampleTranslation": "U bahsda juda ishonarli dalil keltirdi."
-                        }
-                    ]
-                }
-            },
-            {
-                "id": "en-b2-u5-l3-s2",
-                "title": "Mashq",
-                "type": "practice",
-                "estimatedMinutes": 5,
-                "practiceData": {
-                    "instructions": "To'g'ri tezis jumlasini tanlang.",
-                    "exercises": [
-                        {
-                            "id": "en-b2-u5-l3-e1",
-                            "type": "multiple-choice",
-                            "prompt": "Which thesis statement clearly states the author's position for an Agree/Disagree prompt?",
-                            "options": [
-                                "This essay firmly agrees with the assertion that technological literacy is vital for modern employment.",
-                                "Technology is everywhere in the world today.",
-                                "Some people like technology but others do not like it.",
-                                "I will talk about computers and phones."
-                            ],
-                            "correctAnswer": 0,
-                            "explanation": "This essay firmly agrees..."
-                        },
-                        {
-                            "id": "en-b2-u5-l3-ex-2",
-                            "type": "multiple-choice",
-                            "prompt": "Choose the correct word to complete the sentence: \"Ensure structural coherence throughout your essay.\"",
-                            "options": [
-                                "Coherence",
-                                "reluctance",
-                                "doubt",
-                                "delay"
-                            ],
-                            "correctAnswer": 0,
-                            "explanation": "\"Coherence\" (Mantiqiy bogʻliqlik, izchillik) fits the context appropriately."
-                        }
-                    ]
-                }
-            },
-            {
-                "id": "en-b2-u5-l3-s3",
-                "title": "Test",
-                "type": "test",
-                "estimatedMinutes": 6,
-                "testData": {
-                    "instructions": "Savollarga javob bering.",
-                    "passingScorePercentage": 75,
-                    "questions": [
-                        {
-                            "id": "en-b2-u5-l3-q1",
-                            "question": "What is the recommended time allocation for IELTS Writing Task 2?",
-                            "options": [
-                                "40 minutes",
-                                "20 minutes",
-                                "60 minutes",
-                                "15 minutes"
-                            ],
-                            "correctAnswerIndex": 0,
-                            "explanation": "40 minutes (Task 1: 20 minutes)."
-                        },
-                        {
-                            "id": "en-b2-u5-l3-q2",
-                            "question": "What is the minimum word requirement for IELTS Writing Task 2?",
-                            "options": [
-                                "150 words",
-                                "350 words",
-                                "200 words",
-                                "250 words"
-                            ],
-                            "correctAnswerIndex": 3,
-                            "explanation": "250 words minimum."
-                        },
-                        {
-                            "id": "en-b2-u5-l3-q3",
-                            "question": "What is a \"Topic Sentence\" in a body paragraph?",
-                            "options": [
-                                "The opening sentence stating the central idea of that paragraph",
-                                "A quote from a celebrity",
-                                "A random fact",
-                                "The title of the essay"
-                            ],
-                            "correctAnswerIndex": 0,
-                            "explanation": "Opening sentence stating the central idea."
-                        },
-                        {
-                            "id": "en-b2-u5-l3-q4",
-                            "question": "Should you introduce completely new arguments in the conclusion paragraph?",
-                            "options": [
-                                "Yes, always add 3 new ideas",
-                                "No, never — the conclusion should only summarize and restate the established stance",
-                                "Only if you have extra time",
-                                "Yes, change your opinion completely"
-                            ],
-                            "correctAnswerIndex": 1,
-                            "explanation": "Never introduce new arguments in conclusion."
-                        }
-                    ]
-                }
+    "id": "en-b2-u5-l3",
+    "courseId": "english-b2",
+    "unitId": "en-b2-u5",
+    "unitTitle": "Unit 5: IELTS Writing Task 1 & 2 Mastery",
+    "language": "en",
+    "level": "B2",
+    "lessonNumber": 3,
+    "title": "IELTS Writing Task 2: Opinion (Agree / Disagree) Essay",
+    "description": "IELTS Writing Task 2: 'To what extent do you agree or disagree?' insho turi, aniq tezis bayonoti (Thesis Statement), muvozanatli konsessiya va 4 paragraflik arxitektura.",
+    "estimatedDurationMinutes": 18,
+    "icon": "✍️",
+    "steps": [
+        {
+            "id": "en-b2-u5-l3-s1",
+            "title": "Opinion Essay Strukturasi va Tezis",
+            "type": "learn",
+            "estimatedMinutes": 6,
+            "learnData": {
+                "title": "Crafting High-Scoring Opinion (Agree / Disagree) Essays (Band 7.0+ Architecture)",
+                "explanation": "IELTS Writing Task 2 da 'To what extent do you agree or disagree?' eng keng tarqalgan insho turidir. Nomzod kamida 250 ta so'zdan iborat akademik insho yozishi kerak (tavsiya etilgan vaqt: 40 daqiqa).\n\n1. 4 Paragraflik Benuqson Insho Arxitekturasi:\n- **1. Introduction (Kirish - 2 ta gap):**\n  • Gap 1: Mavzuni parafraz qilish (*'It is often argued that...'*)\n  • Gap 2: Aniq Tezis Bayonoti (Thesis Statement) — o'z pozitsiyangizni va asosiy 2 ta dalilingizni kirishdayoq ochiq ayting! (*'I completely agree with this viewpoint because X minimizes financial strain and Y fosters long-term innovation.'*)\n- **2. Body Paragraph 1 (1-asosiy dalil):**\n  • Topic sentence (Paragraf mavzusi)\n  • Explanation (Nega bunday ekanligini chuqur tushuntirish)\n  • Example (Aniq real misol yoki statistik tadqiqot)\n  • Concluding link (Xulosa)\n- **3. Body Paragraph 2 (2-asosiy dalil yoki muvozanatli konsessiya):**\n  • Ikkinchi kuchli dalil yoki qarama-qarshi tomonning bitta zaif tomonini tan olib, o'z fikringizni ustun qo'yish (Concession: *'Admittedly, opponents argue that...; nevertheless, this concern is outweighed by...'*).\n- **4. Conclusion (Yakuniy Xulosa - 1-2 ta gap):**\n  • Tezisni yangi so'zlar bilan takrorlash va yakuniy tavsiya berish (Hech qachon yangi dalil qo'shilmaydi!).\n\n2. Kuchli Tezis vs Zaif Tezis:\n- ❌ Zaif: *'I agree with this statement and I will discuss both sides in this essay.'* (Band 5.0 — qaysi sababga ko'ra rozi ekanligi aytilmagan).\n- ✅ Kuchli: *'I firmly concur with this perspective, as public investment in railways not only mitigates urban traffic congestion, but it also substantially curtails carbon emissions.'* (Band 7.5+ — aniq pozitsiya va 2 ta pishiq dalil).\n\n3. O'zbek o'rganuvchilari uchun xavfli tuzoqlar (Common Pitfalls):\n- ❌ *'I am agree.'* -> ✅ *'I AGREE.'* ('Agree' sifat emas, fe'l!).\n- ❌ Insho davomida pozitsiyani o'zgartirish: kirishda 'I agree' deb, xulosada 'Both sides have points' deb noaniq xulosa qilish Task Achievement ballini tushiradi.\n- ❌ So'z soni yetmasligi: 250 so'zdan kam yozish avtomatik jarimaga sabab bo'ladi (optimal hajm: 270–290 so'z).",
+                "vocabulary": [
+                    {
+                        "term": "concur",
+                        "reading": "/kənˈkɜːr/",
+                        "meaning": "hamfikr bo'lmoq, to'liq qo'shilmoq (formal: agree)",
+                        "exampleSentence": "I wholeheartedly concur with the assertion that primary education requires higher state subsidization.",
+                        "exampleTranslation": "Boshlang'ich ta'limga ko'proq davlat subsidiyalari zarurligi haqidagi fikrga to'liq qo'shilaman."
+                    },
+                    {
+                        "term": "concession",
+                        "reading": "/kənˈseʃ.ən/",
+                        "meaning": "yon berish, qarshi tomonning to'g'ri qismini tan olish (admittedly... nevertheless)",
+                        "exampleSentence": "Making a well-structured concession demonstrates intellectual balance in academic essays.",
+                        "exampleTranslation": "Mantiqiy yon berish akademik insholarda fikrlash muvozanatini ko'rsatadi."
+                    },
+                    {
+                        "term": "admittedly",
+                        "reading": "/ədˈmɪt.ɪd.li/",
+                        "meaning": "tan olish kerakki, to'g'ri (konsessiya boshida)",
+                        "exampleSentence": "Admittedly, expanding motorway lanes temporarily eases traffic; nevertheless, it invites more cars.",
+                        "exampleTranslation": "Tan olish kerakki, trassa qatorlarini kengaytirish tirbandlikni vaqtincha yengillashtiradi; shunday bo'lsa-da, u ko'proq mashinalarni jalb qiladi."
+                    },
+                    {
+                        "term": "outweigh",
+                        "reading": "/ˌaʊtˈweɪ/",
+                        "meaning": "ustun kelmoq, ahamiyati ko'proq bo'lmoq",
+                        "exampleSentence": "The socioeconomic dividends of higher education far outweigh the upfront financial cost.",
+                        "exampleTranslation": "Oliy ta'limning ijtimoiy-iqtisodiy foydalari uning dastlabki moliyaviy xarajatlaridan ancha ustundir."
+                    },
+                    {
+                        "term": "assertion",
+                        "reading": "/əˈsɜː.ʃən/",
+                        "meaning": "da'vo, qat'iy bayonot",
+                        "exampleSentence": "The author's assertion that technology fosters loneliness is partially substantiated.",
+                        "exampleTranslation": "Muallifning texnologiya yolg'izlikni kuchaytiradi degan da'vosi qisman asoslangan."
+                    },
+                    {
+                        "term": "subsidization",
+                        "reading": "/ˌsʌb.sɪ.daɪˈzeɪ.ʃən/",
+                        "meaning": "davlat tomonidan subsidiya ajratish, moliyaviy qo'llash",
+                        "exampleSentence": "Public subsidization of mass transit ensures affordable mobility for marginalized residents.",
+                        "exampleTranslation": "Jamoat transportini davlat tomonidan subsidiyalash aholining kam ta'minlangan qatlami uchun arzon harakatlanishni kafolatlaydi."
+                    },
+                    {
+                        "term": "unequivocal",
+                        "reading": "/ˌʌn.ɪˈkwɪv.ə.kəl/",
+                        "meaning": "aniq, shubhasiz, bir ma'noli (pozitsiya)",
+                        "exampleSentence": "A Band 8 essay establishes an unequivocal thesis from the introductory paragraph.",
+                        "exampleTranslation": "Band 8 insho kirish paragrafidan boshlab aniq va shubhasiz tezisni shakllantiradi."
+                    },
+                    {
+                        "term": "detriment",
+                        "reading": "/ˈdet.rɪ.mənt/",
+                        "meaning": "zarar, ziyon",
+                        "exampleSentence": "Prioritizing industrial manufacturing to the detriment of air purity is reckless.",
+                        "exampleTranslation": "Havo tozaligi ziyoniga sanoat ishlab chiqarishini ustun qo'yish mas'uliyatsizlikdir."
+                    }
+                ],
+                "grammarRules": [
+                    {
+                        "pattern": "Concession Architecture: Admittedly, Clause 1; nevertheless, Clause 2.",
+                        "meaning": "Muvozanatli insho yozish san'ati",
+                        "usageNotes": "Raqib fikrini tan olib, o'z pozitsiyangiz kuchliroq ekanini isbotlaydi.",
+                        "examples": [
+                            {
+                                "sentence": "Admittedly, space exploration incurs exorbitant expenses; nevertheless, satellite technology underpins modern telecommunications.",
+                                "translation": "Tan olish kerakki, koinotni tadqiq qilish katta xarajatlarni talab qiladi; shunday bo'lsa-da, sun'iy yo'ldosh texnologiyasi zamonaviy aloqa tizimlarining asosini tashkil etadi."
+                            }
+                        ]
+                    }
+                ]
             }
-        ]
-    },
+        },
+        {
+            "id": "en-b2-u5-l3-s2",
+            "title": "Amaliy Mashqlar",
+            "type": "practice",
+            "estimatedMinutes": 5,
+            "practiceData": {
+                "instructions": "Opinion essay strategiyalari va grammatikasiga mos variantlarni tanlang.",
+                "exercises": [
+                    {
+                        "id": "en-b2-u5-l3-e1",
+                        "type": "multiple-choice",
+                        "prompt": "Which thesis statement is most effective for an IELTS Band 7.5+ Opinion Essay?",
+                        "options": [
+                            "I agree with this topic and I will show why in my essay.",
+                            "I firmly concur with this view, as public transit investment mitigates carbon emissions and stimulates economic productivity.",
+                            "Some people agree and some people disagree, both are right.",
+                            "I am agree because it is good."
+                        ],
+                        "correctAnswer": 1,
+                        "explanation": "B varianti aniq pozitsiya ('firmly concur') va ikkita asosiy sababni aniq ko'rsatgan mukammal tezisdir."
+                    },
+                    {
+                        "id": "en-b2-u5-l3-e2",
+                        "type": "multiple-choice",
+                        "prompt": "Identify the grammatically correct sentence expressing agreement:",
+                        "options": [
+                            "I am agree with the author's assertion.",
+                            "I agree with the author's assertion.",
+                            "I am agreed with the author's assertion.",
+                            "I agreeing with the author's assertion."
+                        ],
+                        "correctAnswer": 1,
+                        "explanation": "'Agree' fe'l bo'lganligi sababli 'I agree' to'g'ri ('I am agree' qo'pol xato)."
+                    },
+                    {
+                        "id": "en-b2-u5-l3-e3",
+                        "type": "multiple-choice",
+                        "prompt": "_______ , tuition fees are expensive; nevertheless, higher education substantially enhances lifetime earnings.",
+                        "options": [
+                            "Admittedly",
+                            "Consequently",
+                            "Therefore",
+                            "Because"
+                        ],
+                        "correctAnswer": 0,
+                        "explanation": "Konsessiya (yon berish) kiritish uchun: 'Admittedly' (tan olish kerakki)."
+                    },
+                    {
+                        "id": "en-b2-u5-l3-e4",
+                        "type": "multiple-choice",
+                        "prompt": "What is the recommended overall word count range for an IELTS Writing Task 2 essay?",
+                        "options": [
+                            "150 to 180 words",
+                            "270 to 290 words",
+                            "450 to 600 words",
+                            "100 to 150 words"
+                        ],
+                        "correctAnswer": 1,
+                        "explanation": "Minimal chegara 250 so'z, eng optimal va xavfsiz hajm esa 270-290 so'zdir."
+                    },
+                    {
+                        "id": "en-b2-u5-l3-e5",
+                        "type": "multiple-choice",
+                        "prompt": "The societal advantages of early bilingualism far _______ the initial cognitive effort required.",
+                        "options": [
+                            "outweigh",
+                            "outweighs",
+                            "outweighed by",
+                            "are outweigh"
+                        ],
+                        "correctAnswer": 0,
+                        "explanation": "Ko'plikdagi ega ('advantages') uchun fe'l: 'outweigh'."
+                    }
+                ]
+            }
+        },
+        {
+            "id": "en-b2-u5-l3-s3",
+            "title": "Yakuniy Test",
+            "type": "test",
+            "estimatedMinutes": 5,
+            "testData": {
+                "instructions": "5 ta test savoliga to'g'ri javob bering. O'tish bali: 80%.",
+                "passingScorePercentage": 80,
+                "questions": [
+                    {
+                        "id": "en-b2-u5-l3-q1",
+                        "question": "Where should a candidate's personal position/thesis ideally be made clear in an Opinion essay?",
+                        "options": [
+                            "Only in the very last sentence of the conclusion.",
+                            "Right in the introduction (thesis statement) and maintained consistently throughout the essay.",
+                            "It should remain a secret so the examiner is surprised.",
+                            "In the title."
+                        ],
+                        "correctAnswerIndex": 1,
+                        "explanation": "IELTS Band 7+ uchun pozitsiya kirishdayoq aniq ko'rsatilib, butun insho davomida izchil saqlanishi shart."
+                    },
+                    {
+                        "id": "en-b2-u5-l3-q2",
+                        "question": "What happens to the Task Achievement score if a Task 2 essay contains fewer than 250 words?",
+                        "options": [
+                            "It receives a direct scoring penalty.",
+                            "The examiner awards bonus points for brevity.",
+                            "Nothing, word count is ignored.",
+                            "The essay is translated into another language."
+                        ],
+                        "correctAnswerIndex": 0,
+                        "explanation": "250 so'zdan kam yozish qat'iy ball pasaytirish jazosiga (penalty) olib keladi."
+                    },
+                    {
+                        "id": "en-b2-u5-l3-q3",
+                        "question": "Which transition phrase is ideal for introducing the concluding paragraph of a Task 2 essay?",
+                        "options": [
+                            "In conclusion, ...",
+                            "Finally at the end, ...",
+                            "To finish my talk, ...",
+                            "Lastly as I said before, ..."
+                        ],
+                        "correctAnswerIndex": 0,
+                        "explanation": "'In conclusion, ...' standart va eng nufuzli akademik xulosa kirishidir."
+                    },
+                    {
+                        "id": "en-b2-u5-l3-q4",
+                        "question": "Pursuing aggressive industrial production to the _______ of ecological preservation is counterproductive.",
+                        "options": [
+                            "detriment",
+                            "subsidization",
+                            "assertion",
+                            "quadrant"
+                        ],
+                        "correctAnswerIndex": 0,
+                        "explanation": "Biror narsaning ziyoniga / hisobiga: 'to the detriment of'."
+                    },
+                    {
+                        "id": "en-b2-u5-l3-q5",
+                        "question": "A well-developed body paragraph in Task 2 should follow the structure: _______ .",
+                        "options": [
+                            "Topic sentence -> Detailed Explanation -> Concrete Example -> Concluding Link",
+                            "Example -> Joke -> Random statement -> Nothing",
+                            "Dictionary definition -> Five questions -> Conclusion",
+                            "Just one single long sentence of 100 words"
+                        ],
+                        "correctAnswerIndex": 0,
+                        "explanation": "Mavzu gapi -> Tushuntirish -> Misol -> Mantiqiy bog'lovchi xulosa (PEEL/TEEL modeli)."
+                    }
+                ]
+            }
+        }
+    ]
+},
     {
-        "id": "en-b2-u5-l4",
-        "courseId": "english-b2",
-        "unitId": "en-b2-u5",
-        "unitTitle": "Unit 5: IELTS Writing Task 1 & 2 Mastery",
-        "language": "en",
-        "level": "B2",
-        "lessonNumber": 4,
-        "title": "IELTS Writing Task 2: Discussion (Discuss Both Views & Give Opinion)",
-        "description": "Ikki qarama-qarshi tomonni neytral tahlil qilish va o'z pozitsiyasini kiritish.",
-        "estimatedDurationMinutes": 16,
-        "icon": "⚖️",
-        "steps": [
-            {
-                "id": "en-b2-u5-l4-s1",
-                "title": "Both Views Insho Tizimi",
-                "type": "learn",
-                "estimatedMinutes": 5,
-                "learnData": {
-                    "title": "Discuss Both Views Framework",
-                    "explanation": "1. Introduction: Ikkala tomon qarashlarini aytish + o'z fikringiz. 2. Body 1: Birinchi tomonning dalillari (On the one hand, proponents argue that...). 3. Body 2: Ikkinchi tomonning dalillari (On the other hand, opponents contend that...). 4. Conclusion: Umumlashtirish va shaxsiy xulosa.",
-                    "keyPoints": [
-                        "Ikkala tomonga ham yetarli dalillar berilishi shart (muvozanat).",
-                        "O'z fikringiz kirish, asosiy qism va xulosada ravshan aks etishi lozim."
-                    ],
-                    "grammarRules": [
-                        {
-                            "pattern": "IELTS Writing Task 2: Discussion (Discuss Both Views & Give Opinion)",
-                            "meaning": "Ikki qarama-qarshi tomonni neytral tahlil qilish va o'z pozitsiyasini kiritish.",
-                            "usageNotes": "1. Introduction: Ikkala tomon qarashlarini aytish + o'z fikringiz. 2. Body 1: Birinchi tomonning dalillari (On the one hand, proponents argue that...). 3. Body 2: Ikkinchi tomonning dalillari (On the other hand, opponents contend that...). 4. Conclusion: Umumlashtirish va shaxsiy xulosa.",
-                            "examples": [
-                                {
-                                    "sentence": "I study English every day with dedication.",
-                                    "translation": "Har kuni ingliz tilini astoydil o'rganaman."
-                                }
-                            ]
-                        }
-                    ],
-                    "vocabulary": [
-                        {
-                            "term": "Coherence",
-                            "reading": "/kəʊˈhɪə.rəns/",
-                            "meaning": "Mantiqiy bogʻliqlik, izchillik",
-                            "exampleSentence": "Ensure structural coherence throughout your essay.",
-                            "exampleTranslation": "Inshoyingiz davomida tuzilmaviy izchillikni taʼminlang."
-                        },
-                        {
-                            "term": "Compelling",
-                            "reading": "/kəmˈpel.ɪŋ/",
-                            "meaning": "Juda ishonarli, maftunkor",
-                            "exampleSentence": "He presented a compelling argument in the debate.",
-                            "exampleTranslation": "U bahsda juda ishonarli dalil keltirdi."
-                        },
-                        {
-                            "term": "Substantiate",
-                            "reading": "/səbˈstæn.ʃi.eɪt/",
-                            "meaning": "Asoslab bermoq, isbotlamoq",
-                            "exampleSentence": "You must substantiate your claims with empirical evidence.",
-                            "exampleTranslation": "Siz oʻz daʼvolaringizni empirik dalillar bilan asoslab berishingiz kerak."
-                        }
-                    ]
-                }
-            },
-            {
-                "id": "en-b2-u5-l4-s2",
-                "title": "Mashq",
-                "type": "practice",
-                "estimatedMinutes": 5,
-                "practiceData": {
-                    "instructions": "To'g'ri o'tish iborasini tanlang.",
-                    "exercises": [
-                        {
-                            "id": "en-b2-u5-l4-e1",
-                            "type": "multiple-choice",
-                            "prompt": "\"On the one hand, advocates maintain that university education guarantees employment. _______, critics emphasize practical vocational skills.\"",
-                            "options": [
-                                "Furthermore",
-                                "For example",
-                                "On the other hand",
-                                "Consequently"
-                            ],
-                            "correctAnswer": 2,
-                            "explanation": "On the other hand (Ikkinchi tomondan)."
-                        },
-                        {
-                            "id": "en-b2-u5-l4-ex-2",
-                            "type": "multiple-choice",
-                            "prompt": "Choose the correct word to complete the sentence: \"He presented a compelling argument in the debate.\"",
-                            "options": [
-                                "doubt",
-                                "reluctance",
-                                "delay",
-                                "Compelling"
-                            ],
-                            "correctAnswer": 3,
-                            "explanation": "\"Compelling\" (Juda ishonarli, maftunkor) fits the context appropriately."
-                        }
-                    ]
-                }
-            },
-            {
-                "id": "en-b2-u5-l4-s3",
-                "title": "Test",
-                "type": "test",
-                "estimatedMinutes": 6,
-                "testData": {
-                    "instructions": "Savollarga javob bering.",
-                    "passingScorePercentage": 75,
-                    "questions": [
-                        {
-                            "id": "en-b2-u5-l4-q1",
-                            "question": "If the prompt says \"Discuss both views and give your opinion\", what happens if you only discuss ONE view?",
-                            "options": [
-                                "You will get Band 9",
-                                "Nothing happens",
-                                "Task Achievement score will be penalized heavily (maximum Band 5 for TR)",
-                                "The examiner will ignore it"
-                            ],
-                            "correctAnswerIndex": 2,
-                            "explanation": "Heavy penalty for not addressing all parts."
-                        },
-                        {
-                            "id": "en-b2-u5-l4-q2",
-                            "question": "\"Proponent\" so'zining ma'nosi nima?",
-                            "options": [
-                                "Biror fikr yoki g'oyani qo'llab-quvvatlovchi (tarafdor)",
-                                "Sudya",
-                                "Raqib / Dushman",
-                                "Befarq shaxs"
-                            ],
-                            "correctAnswerIndex": 0,
-                            "explanation": "Proponent — Tarafdor."
-                        },
-                        {
-                            "id": "en-b2-u5-l4-q3",
-                            "question": "Where should your opinion be stated in a \"Discuss both views\" essay?",
-                            "options": [
-                                "Hidden as a secret",
-                                "Nowhere at all",
-                                "Only in the very last word",
-                                "In the introduction, body (or conclusion) consistently"
-                            ],
-                            "correctAnswerIndex": 3,
-                            "explanation": "Stated clearly throughout the essay."
-                        },
-                        {
-                            "id": "en-b2-u5-l4-q4",
-                            "question": "What is the four assessment criteria for IELTS Writing?",
-                            "options": [
-                                "Vocabulary only",
-                                "Accent and pronunciation",
-                                "Task Achievement, Coherence & Cohesion, Lexical Resource, Grammatical Range & Accuracy",
-                                "Speed, Handwriting, Length, Ink color"
-                            ],
-                            "correctAnswerIndex": 2,
-                            "explanation": "The 4 standard criteria."
-                        }
-                    ]
-                }
+    "id": "en-b2-u5-l4",
+    "courseId": "english-b2",
+    "unitId": "en-b2-u5",
+    "unitTitle": "Unit 5: IELTS Writing Task 1 & 2 Mastery",
+    "language": "en",
+    "level": "B2",
+    "lessonNumber": 4,
+    "title": "IELTS Writing Task 2: Discussion (Discuss Both Views & Give Opinion)",
+    "description": "IELTS Writing Task 2: 'Discuss both views and give your opinion' insho turi, ikki tomonlama neytral tahlil, xolis ritorika va shaxsiy xulosani uyg'unlashtirish.",
+    "estimatedDurationMinutes": 18,
+    "icon": "⚖️",
+    "steps": [
+        {
+            "id": "en-b2-u5-l4-s1",
+            "title": "Discussion Essay Arxitekturasi",
+            "type": "learn",
+            "estimatedMinutes": 6,
+            "learnData": {
+                "title": "Discuss Both Views and Give Your Opinion (Symmetrical Balance and Critical Stance)",
+                "explanation": "IELTS Writing Task 2 da eng ko'p ehtiyotkorlik talab qiladigan insho turi bu — 'Discuss both views and give your opinion'dir. Bu turdagi inshoda ikkala qarama-qarshi tomon ham teng va xolis asoslanishi, shu bilan birga muallif o'zining shaxsiy tanlovini aniq ko'rsatishi shart.\n\n1. 4 Paragraflik Benuqson Tuzilma:\n- **Introduction:** Mavzuni parafraz qilish + Shaxsiy pozitsiyani bildirish (*'While proponents argue that X is beneficial, opponents maintain that Y is preferable; I side with the former due to...'*).\n- **Body Paragraph 1 (1-nuqtai nazar tahlili):**\n  • *'On the one hand, advocates of X emphasize that...'*\n  • Nima uchun ba'zi odamlar shunday o'ylashini tushuntiring va ishonchli misol keltiring.\n- **Body Paragraph 2 (2-nuqtai nazar tahlili + Shaxsiy ustunlik):**\n  • *'On the other hand, it is contended that Y offers greater merit...'* (Agar siz Y tomonida bo'lsangiz, nega bu tomon ustunroq ekanini chuqur asoslang).\n- **Conclusion:** Ikkala qarashni muvozanatli umumlashtirib, o'z fikringizni tasdiqlang.\n\n2. Xolis Ritorika (Neutral Attribution vs Personal Stance):\n- Boshqalarning fikrini yetkazishda: *'Proponents assert that...'*, *'It is argued by critics that...'*, *'Advocates maintain that...'*\n- O'z fikringizni bildirishda: *'In my estimation, however, ...'*, *'I am inclined to believe that...'*, *'I firmly endorse the view that...'*\n\n3. O'zbek Tili Bilan Qiyos (Uzbek Contrastive Analysis):\n- O'zbek o'quvchilari ko'pincha 1-tomonga faqat 2 qator yozib, o'zlari qo'llab-quvvatlaydigan 2-tomonga 10 qator yozishadi (Asimmetriya xatosi). IELTS talabi bo'yicha ikkala paragraf ham teng hajmda (taxminan 80-90 so'zdan) va teng mantiqiy kuchga ega bo'lishi shart!\n\n4. O'zbek o'rganuvchilari uchun xavfli tuzoqlar (Common Pitfalls):\n- ❌ Shaxsiy fikrni faqat xulosada bildirish (Kirishda shaxsiy fikr aytilmasa, Task Achievement 6.0 dan oshmaydi).\n- ❌ 'On the one hand' deb yozib, keyingi paragrafda 'On the other hand'ni unutib qo'yish (ular doimo juft bo'lib keladi!).\n- ❌ Boshqalarning fikri bilan o'z fikringizni qorishtirib yuborish.",
+                "vocabulary": [
+                    {
+                        "term": "proponent",
+                        "reading": "/prəˈpəʊ.nənt/",
+                        "meaning": "tarafdor, biror g'oyani qo'llovchi shaxs",
+                        "exampleSentence": "Proponents of remote instruction emphasize greater geographic accessibility.",
+                        "exampleTranslation": "Masofaviy ta'lim tarafdorlari geografik jihatdan qulaylikni alohida ta'kidlaydilar."
+                    },
+                    {
+                        "term": "contend",
+                        "reading": "/kənˈtend/",
+                        "meaning": "qat'iy ta'kidlamoq, bahsda dalil keltirmoq",
+                        "exampleSentence": "Opponents contend that physical socialization is irreplaceable in early childhood.",
+                        "exampleTranslation": "Raqiblar ilk bolalikda jonli ijtimoiy muloqotning o'rnini hech narsa bosa olmasligini ta'kidlaydilar."
+                    },
+                    {
+                        "term": "endorse",
+                        "reading": "/ɪnˈdɔːs/",
+                        "meaning": "ma'qullamoq, qo'llab-quvvatlamoq",
+                        "exampleSentence": "While both perspectives hold merit, I predominantly endorse the latter rationale.",
+                        "exampleTranslation": "Har ikkala nuqtai nazar o'z asosiga ega bo'lsa-da, men asosan keyingi mantiqni ma'qullayman."
+                    },
+                    {
+                        "term": "symmetrical",
+                        "reading": "/sɪˈmet.rɪ.kəl/",
+                        "meaning": "mutanosib, ikki tomoni teng",
+                        "exampleSentence": "Task 2 discussion essays require symmetrical paragraph weight across both views.",
+                        "exampleTranslation": "Task 2 discussion insholari har ikkala qarash bo'yicha mutanosib paragraf hajmini talab qiladi."
+                    },
+                    {
+                        "term": "rationale",
+                        "reading": "/ˌræʃ.əˈnɑːl/",
+                        "meaning": "mantiqiy asos, sabablar majmui",
+                        "exampleSentence": "The economic rationale behind state railway funding is self-evident.",
+                        "exampleTranslation": "Davlat temir yo'llarini moliyalashtirish ortidagi iqtisodiy mantiqiy asos o'z-o'zidan ravshandir."
+                    },
+                    {
+                        "term": "merit",
+                        "reading": "/ˈmer.ɪt/",
+                        "meaning": "afzallik, ijobiy xususiyat, qadr-qimmat",
+                        "exampleSentence": "Each perspective undeniably possesses substantive pedagogical merit.",
+                        "exampleTranslation": "Har bir nuqtai nazar inkor etib bo'lmas darajada jiddiy pedagogik afzallikka egadir."
+                    },
+                    {
+                        "term": "perspective",
+                        "reading": "/pəˈspek.tɪv/",
+                        "meaning": "nuqtai nazar, qarash",
+                        "exampleSentence": "A mature academic writer critically explores competing perspectives before concluding.",
+                        "exampleTranslation": "Yetuk akademik yozuvchi xulosa chiqarishdan oldin qarama-qarshi nuqtai nazarlarni tanqidiy tahlil qiladi."
+                    },
+                    {
+                        "term": "former",
+                        "reading": "/ˈfɔː.mər/",
+                        "meaning": "dastlabkisi, birinchi tilga olingani (the former)",
+                        "exampleSentence": "Between funding libraries and subsidizing cinemas, I firmly prioritize the former.",
+                        "exampleTranslation": "Kutubxonalarni moliyalashtirish va kinolarni subsidiyalash o'rtasida men birinchisini qat'iy ustun qo'yaman."
+                    }
+                ],
+                "grammarRules": [
+                    {
+                        "pattern": "While proponents argue that X, opponents maintain that Y; I side with [the former / the latter] because...",
+                        "meaning": "Discussion insho uchun ideal kirish tezisi",
+                        "usageNotes": "Ikkala tomonni tan olgan holda shaxsiy tanlovni birdaniga ko'rsatadi.",
+                        "examples": [
+                            {
+                                "sentence": "While proponents argue that uniforms foster discipline, opponents maintain that they stifle self-expression; I side with the former.",
+                                "translation": "Tarafdorlar forma intizomni kuchaytiradi deb hisoblasa, raqiblar u erkin ifodani bo'g'adi deb ta'kidlaydilar; men birinchi fikr tarafdoriman."
+                            }
+                        ]
+                    }
+                ]
             }
-        ]
-    },
+        },
+        {
+            "id": "en-b2-u5-l4-s2",
+            "title": "Amaliy Mashqlar",
+            "type": "practice",
+            "estimatedMinutes": 5,
+            "practiceData": {
+                "instructions": "Discussion essay qoidalariga mos to'g'ri variantlarni tanlang.",
+                "exercises": [
+                    {
+                        "id": "en-b2-u5-l4-e1",
+                        "type": "multiple-choice",
+                        "prompt": "If you write 'On the one hand' to introduce Body Paragraph 1, how MUST you introduce Body Paragraph 2?",
+                        "options": [
+                            "On the other hand",
+                            "Furthermore",
+                            "Consequently",
+                            "In conclusion"
+                        ],
+                        "correctAnswer": 0,
+                        "explanation": "'On the one hand' kiritilgandan so'ng, ikkinchi qarama-qarshi paragraf doimo 'On the other hand' bilan boshlanadi."
+                    },
+                    {
+                        "id": "en-b2-u5-l4-e2",
+                        "type": "multiple-choice",
+                        "prompt": "Between vocational training and theoretical degrees, I strongly prioritize the _______ , as practical skills ensure immediate employability.",
+                        "options": [
+                            "former",
+                            "latter",
+                            "firstly",
+                            "consequently"
+                        ],
+                        "correctAnswer": 0,
+                        "explanation": "Birinchi tilga olingan 'vocational training'ni nazarda tutish uchun 'the former' ishlatiladi."
+                    },
+                    {
+                        "id": "en-b2-u5-l4-e3",
+                        "type": "multiple-choice",
+                        "prompt": "Why is giving an asymmetrical argument (writing 150 words on your view and only 20 words on the other view) penalized in a Discussion essay?",
+                        "options": [
+                            "Because it violates the prompt requirement to 'Discuss BOTH views' thoroughly.",
+                            "Because examiners prefer short essays.",
+                            "Because it has too many commas.",
+                            "Because only one side can be discussed in IELTS."
+                        ],
+                        "correctAnswer": 0,
+                        "explanation": "Savol talabi ikkala tomonni to'liq muhokama qilishni talab etadi, shuning uchun mutanosiblik buzilishi Task Achievement ballini pasaytiradi."
+                    },
+                    {
+                        "id": "en-b2-u5-l4-e4",
+                        "type": "multiple-choice",
+                        "prompt": "Which attribution verb is ideal for presenting opposing arguments neutrally?",
+                        "options": [
+                            "Critics contend that...",
+                            "I shout that...",
+                            "Everyone knows that...",
+                            "Stupid people say that..."
+                        ],
+                        "correctAnswer": 0,
+                        "explanation": "'Critics contend that...' xolis va akademik til uslubiga to'liq mos keladi."
+                    },
+                    {
+                        "id": "en-b2-u5-l4-e5",
+                        "type": "multiple-choice",
+                        "prompt": "Can a candidate discuss both views and still clearly agree with one side?",
+                        "options": [
+                            "Yes, this is precisely what a Band 7+ Discussion essay requires.",
+                            "No, you are strictly forbidden from having an opinion.",
+                            "Only if you write 1000 words.",
+                            "Only in the Speaking exam."
+                        ],
+                        "correctAnswer": 0,
+                        "explanation": "Ikkala tomonni xolis tahlil qilib, o'zining asoslangan shaxsiy fikrini berish Band 7+ talabidir."
+                    }
+                ]
+            }
+        },
+        {
+            "id": "en-b2-u5-l4-s3",
+            "title": "Yakuniy Test",
+            "type": "test",
+            "estimatedMinutes": 5,
+            "testData": {
+                "instructions": "5 ta test savoliga to'g'ri javob bering. O'tish bali: 80%.",
+                "passingScorePercentage": 80,
+                "questions": [
+                    {
+                        "id": "en-b2-u5-l4-q1",
+                        "question": "In a 'Discuss both views and give your opinion' prompt, what constitutes the most common reason for a candidate scoring Band 5.0 in Task Achievement?",
+                        "options": [
+                            "Discussing only one view while completely ignoring the other view.",
+                            "Writing more than 280 words.",
+                            "Using too many paragraphs.",
+                            "Writing in black ink."
+                        ],
+                        "correctAnswerIndex": 0,
+                        "explanation": "Faqat bitta tomonni yozib, ikkinchi tomonni butunlay tashlab ketish savol talabini bajarmaslik sanaladi va 5.0 beriladi."
+                    },
+                    {
+                        "id": "en-b2-u5-l4-q2",
+                        "question": "While proponents advocate technological reliance, opponents _______ that it diminishes human creativity.",
+                        "options": [
+                            "contend",
+                            "contends",
+                            "contending",
+                            "contended"
+                        ],
+                        "correctAnswerIndex": 0,
+                        "explanation": "Ko'plikdagi ega ('opponents') uchun fe'l: 'contend'."
+                    },
+                    {
+                        "id": "en-b2-u5-l4-q3",
+                        "question": "What does 'the latter' refer to in academic comparisons?",
+                        "options": [
+                            "The second of two things previously mentioned.",
+                            "The first thing mentioned.",
+                            "Something completely irrelevant.",
+                            "The conclusion."
+                        ],
+                        "correctAnswerIndex": 0,
+                        "explanation": "'The latter' avval tilga olingan ikkita narsaning ikkinchisini bildiradi."
+                    },
+                    {
+                        "id": "en-b2-u5-l4-q4",
+                        "question": "Which phrase expresses a refined personal stance in Body Paragraph 2?",
+                        "options": [
+                            "In my estimation, however, the benefits of the latter are far more compelling.",
+                            "I think you are wrong.",
+                            "Both are bad so forget it.",
+                            "My friend told me that..."
+                        ],
+                        "correctAnswerIndex": 0,
+                        "explanation": "'In my estimation, however, the benefits of the latter are far more compelling' a'lo darajadagi akademik iboradir."
+                    },
+                    {
+                        "id": "en-b2-u5-l4-q5",
+                        "question": "The underlying _______ for compulsory physical education in schools is public cardiovascular health.",
+                        "options": [
+                            "rationale",
+                            "fringe",
+                            "nadir",
+                            "discrepancy"
+                        ],
+                        "correctAnswerIndex": 0,
+                        "explanation": "Mantiqiy asos / sabab: 'underlying rationale'."
+                    }
+                ]
+            }
+        }
+    ]
+},
     {
-        "id": "en-b2-u5-l5",
-        "courseId": "english-b2",
-        "unitId": "en-b2-u5",
-        "unitTitle": "Unit 5: IELTS Writing Task 1 & 2 Mastery",
-        "language": "en",
-        "level": "B2",
-        "lessonNumber": 5,
-        "title": "IELTS Writing Task 2: Problem & Solution Essay",
-        "description": "Muammo va yechim insholari: sabablarni tahlil qilish va amaliy yechimlar taklif etish.",
-        "estimatedDurationMinutes": 16,
-        "icon": "💡",
-        "steps": [
-            {
-                "id": "en-b2-u5-l5-s1",
-                "title": "Problem & Solution Tizimi",
-                "type": "learn",
-                "estimatedMinutes": 5,
-                "learnData": {
-                    "title": "Problem and Solution Structure",
-                    "explanation": "1. Introduction: Muammoni parafraz qilish. 2. Body 1: Muammoning asosiy sabablari (The primary driver behind this issue is...). 3. Body 2: Amaliy yechimlar (To tackle this dilemma, policymakers should...). 4. Conclusion: Xulosa.",
-                    "vocabulary": [
-                        {
-                            "term": "Mitigate",
-                            "reading": "/ˈmɪt.ɪ.ɡeɪt/",
-                            "meaning": "Yumshatmoq / Yechim orqali kamaytirmoq",
-                            "exampleSentence": "Urgent measures are required to mitigate urban pollution.",
-                            "exampleTranslation": "Shahar ifloslanishini yumshatish uchun tezkor choralar zarur."
-                        },
-                        {
-                            "term": "Substantiate",
-                            "reading": "/səbˈstæn.ʃi.eɪt/",
-                            "meaning": "Asoslab bermoq, isbotlamoq",
-                            "exampleSentence": "You must substantiate your claims with empirical evidence.",
-                            "exampleTranslation": "Siz oʻz daʼvolaringizni empirik dalillar bilan asoslab berishingiz kerak."
-                        },
-                        {
-                            "term": "Nuance",
-                            "reading": "/ˈnjuː.ɑːns/",
-                            "meaning": "Nozik farq, qirra",
-                            "exampleSentence": "She understood every subtle nuance of the language.",
-                            "exampleTranslation": "U tilning har bir nozik qirrasini tushundi."
-                        }
-                    ],
-                    "grammarRules": [
-                        {
-                            "pattern": "IELTS Writing Task 2: Problem & Solution Essay",
-                            "meaning": "Muammo va yechim insholari: sabablarni tahlil qilish va amaliy yechimlar taklif etish.",
-                            "usageNotes": "1. Introduction: Muammoni parafraz qilish. 2. Body 1: Muammoning asosiy sabablari (The primary driver behind this issue is...). 3. Body 2: Amaliy yechimlar (To tackle this dilemma, policymakers should...). 4. Conclusion: Xulosa.",
-                            "examples": [
-                                {
-                                    "sentence": "Urgent measures are required to mitigate urban pollution.",
-                                    "translation": "Shahar ifloslanishini yumshatish uchun tezkor choralar zarur."
-                                }
-                            ]
-                        }
-                    ]
-                }
-            },
-            {
-                "id": "en-b2-u5-l5-s2",
-                "title": "Mashq",
-                "type": "practice",
-                "estimatedMinutes": 5,
-                "practiceData": {
-                    "instructions": "To'g'ri yechim iborasini tanlang.",
-                    "exercises": [
-                        {
-                            "id": "en-b2-u5-l5-e1",
-                            "type": "multiple-choice",
-                            "prompt": "\"To address this crisis effectively, municipal authorities must _______ stricter environmental regulations.\"",
-                            "options": [
-                                "implement",
-                                "destroy",
-                                "cancel",
-                                "ignoring"
-                            ],
-                            "correctAnswer": 0,
-                            "explanation": "Implement regulations (qoidalarni tatbiq etmoq)."
-                        },
-                        {
-                            "id": "en-b2-u5-l5-ex-2",
-                            "type": "multiple-choice",
-                            "prompt": "Choose the correct word to complete the sentence: \"You must substantiate your claims with empirical evidence.\"",
-                            "options": [
-                                "Substantiate",
-                                "delay",
-                                "reluctance",
-                                "doubt"
-                            ],
-                            "correctAnswer": 0,
-                            "explanation": "\"Substantiate\" (Asoslab bermoq, isbotlamoq) fits the context appropriately."
-                        }
-                    ]
-                }
-            },
-            {
-                "id": "en-b2-u5-l5-s3",
-                "title": "Test",
-                "type": "test",
-                "estimatedMinutes": 6,
-                "testData": {
-                    "instructions": "Savollarga javob bering.",
-                    "passingScorePercentage": 75,
-                    "questions": [
-                        {
-                            "id": "en-b2-u5-l5-q1",
-                            "question": "Which phrase introduces a practical solution?",
-                            "options": [
-                                "A viable solution would be to...",
-                                "No one cares about this",
-                                "It will forever be a disaster",
-                                "This is totally impossible to fix"
-                            ],
-                            "correctAnswerIndex": 0,
-                            "explanation": "A viable solution would be to..."
-                        },
-                        {
-                            "id": "en-b2-u5-l5-q2",
-                            "question": "\"Tackle a problem\" nimani bildiradi?",
-                            "options": [
-                                "Muammodan qochmoq",
-                                "Muammoni hal qilishga kirishmoq",
-                                "Muammoni unutmoq",
-                                "Muammo yaratmoq"
-                            ],
-                            "correctAnswerIndex": 1,
-                            "explanation": "Tackle — Hal qilishga kirishmoq."
-                        },
-                        {
-                            "id": "en-b2-u5-l5-q3",
-                            "question": "Should solutions directly match the causes discussed in Body 1?",
-                            "options": [
-                                "It doesn't matter",
-                                "No, solutions should be about something completely unrelated",
-                                "Yes, solutions must directly correspond to the identified causes",
-                                "Only write one sentence"
-                            ],
-                            "correctAnswerIndex": 2,
-                            "explanation": "Must directly correspond to identified causes."
-                        },
-                        {
-                            "id": "en-b2-u5-l5-q4",
-                            "question": "Choose the most cohesive sentence for introducing an effect:",
-                            "options": [
-                                "And so health down.",
-                                "Bad health happen next.",
-                                "Because why not, health is bad.",
-                                "As a direct consequence of this trend, public health has suffered."
-                            ],
-                            "correctAnswerIndex": 3,
-                            "explanation": "As a direct consequence of this trend..."
-                        }
-                    ]
-                }
+    "id": "en-b2-u5-l5",
+    "courseId": "english-b2",
+    "unitId": "en-b2-u5",
+    "unitTitle": "Unit 5: IELTS Writing Task 1 & 2 Mastery",
+    "language": "en",
+    "level": "B2",
+    "lessonNumber": 5,
+    "title": "IELTS Writing Task 2: Problem & Solution Essay",
+    "description": "IELTS Writing Task 2: 'Causes and Solutions' insho turi, muammolarning tub ildizlarini tahlil qilish, amaliy davlat va shaxsiy yechimlarni taklif etish arxitekturasi.",
+    "estimatedDurationMinutes": 18,
+    "icon": "💡",
+    "steps": [
+        {
+            "id": "en-b2-u5-l5-s1",
+            "title": "Causes & Solutions Essay Arxitekturasi",
+            "type": "learn",
+            "estimatedMinutes": 6,
+            "learnData": {
+                "title": "Analyzing Root Causes and Formulating Viable Solutions in Task 2",
+                "explanation": "IELTS Task 2 da yana bir ko'p uchraydigan format bu — 'What are the causes of this problem, and what solutions can be suggested?' insho turidir.\n\n1. Insho Arxitekturasi:\n- **Introduction:** Muammoning dolzarbligini parafraz qilish + Kirishdayoq asosiy sabab va asosiy yechim yo'nalishini ko'rsatish (*'This crisis is primarily driven by X; however, it can be mitigated through comprehensive Y.'*)\n- **Body Paragraph 1 (Asosiy Sabablar - Causes):**\n  • Muammoning 1-2 ta tub sababini chuqur tahlil qiling (yuzaki sanab o'tmasdan, sabab-oqibat mexanizmini tushuntiring).\n- **Body Paragraph 2 (Amaliy Yechimlar - Solutions):**\n  • ⚠️ Eng muhim qoida: 2-paragrafdagi yechimlar 1-paragrafda ko'rsatilgan sabablarga BEVOSITA JAVOB berishi kerak!\n  • Agar 1-paragrafda sabab sifatida 'transport qimmatligi' ko'rsatilsa, 2-paragrafda 'maktab ta'limini yaxshilash kerak' deb bog'liq bo'lmagan yechim yozish qo'pol xatodir.\n- **Conclusion:** Sabablar va taklif qilingan choralarni umumlashtirish.\n\n2. Sabab va Yechim Leksikasi:\n- Sababni ifodalash: *'stem from', 'be triggered by', 'precipitate', 'attribute to'*\n  • *'Urban congestion largely stems from obsolete road infrastructure and inadequate public transit.'*\n- Yechimni taklif qilish: *'tackle this predicament', 'implement stringent measures', 'curb the crisis', 'devise proactive strategies'*\n  • *'To tackle this predicament, municipal authorities should implement congestion pricing.'*\n\n3. O'zbek Tili Bilan Qiyos (Uzbek Contrastive Analysis):\n- O'zbek tilida 'buni yechish uchun odamlar yaxshi bo'lishi kerak' kabi noaniq, idealistik gaplar aytiladi.\n- Ingliz akademik inshosida har doim **AMALIY va REAL** (feasible, actionable) yechimlar talab qilinadi: qonun qabul qilish, soliq imtiyozlari berish, jamoat transportini subsidiyalash va hk.",
+                "vocabulary": [
+                    {
+                        "term": "stem from",
+                        "reading": "/stem frɒm/",
+                        "meaning": "...dan kelib chiqmoq, ildizi ...ga borib taqalmoq",
+                        "exampleSentence": "Youth unemployment largely stems from a mismatch between academic curricula and industry needs.",
+                        "exampleTranslation": "Yoshlar ishsizligi asosan o'quv dasturlari va sanoat ehtiyojlari o'rtasidagi nomutanosiblikdan kelib chiqadi."
+                    },
+                    {
+                        "term": "actionable",
+                        "reading": "/ˈæk.ʃən.ə.bəl/",
+                        "meaning": "amalda qo'llasa bo'ladigan, real chora-tadbirlar",
+                        "exampleSentence": "A high-scoring essay must offer actionable and pragmatic solutions rather than vague ideals.",
+                        "exampleTranslation": "Yuqori ball oladigan insho mavhum ideallarni emas, amalda qo'llasa bo'ladigan va amaliy yechimlarni taklif qilishi shart."
+                    },
+                    {
+                        "term": "obsolete",
+                        "reading": "/ˈɒb.səl.iːt/",
+                        "meaning": "eskirgan, zamondan orqada qolgan",
+                        "exampleSentence": "Metropolitan traffic bottlenecks are exacerbated by obsolete urban layouts.",
+                        "exampleTranslation": "Shahar tirbandliklari eskirgan shahar tuzilishi sababli yanada og'irlashadi."
+                    },
+                    {
+                        "term": "precipitate",
+                        "reading": "/prɪˈsɪp.ɪ.teɪt/",
+                        "meaning": "to'satdan keltirib chiqarmoq, tezlashtirib yubormoq",
+                        "exampleSentence": "Sudden factory closures precipitated widespread economic depression across the valley.",
+                        "exampleTranslation": "Fabrikalarning to'satdan yopilishi vodiy bo'ylab keng ko'lamli iqtisodiy tushkunlikni keltirib chiqardi."
+                    },
+                    {
+                        "term": "feasible",
+                        "reading": "/ˈfiː.zə.bəl/",
+                        "meaning": "amalga oshirsa bo'ladigan, maqsadga muvofiq",
+                        "exampleSentence": "Subsidizing electric bicycles represents a highly feasible urban transportation remedy.",
+                        "exampleTranslation": "Elektr velosipedlarini subsidiyalash shahar transporti uchun juda qulay va amalga oshirsa bo'ladigan yechimdir."
+                    },
+                    {
+                        "term": "mismatch",
+                        "reading": "/ˈmɪs.mætʃ/",
+                        "meaning": "nomutanosiblik, bir-biriga to'g'ri kelmaslik",
+                        "exampleSentence": "The skills mismatch in engineering sectors leaves thousands of high-paying jobs unfilled.",
+                        "exampleTranslation": "Muhandislik sohasidagi ko'nikmalar nomutanosibligi minglab yuqori maoshli o'rinlarni bo'sh qoldirmoqda."
+                    },
+                    {
+                        "term": "pragmatic",
+                        "reading": "/præɡˈmæt.ɪk/",
+                        "meaning": "amaliy, real hayotga asoslangan",
+                        "exampleSentence": "Policymakers must adopt a pragmatic approach to environmental waste management.",
+                        "exampleTranslation": "Siyosatchilar ekologik chiqindilarni boshqarishga amaliy yondashuvni qabul qilishlari shart."
+                    },
+                    {
+                        "term": "proactive",
+                        "reading": "/prəʊˈæk.tɪv/",
+                        "meaning": "faol, oldindan harakat qiladigan (muammo chiqishini kutmasdan)",
+                        "exampleSentence": "Proactive investment in flood barriers prevented millions in infrastructural damage.",
+                        "exampleTranslation": "To'g'onlarga kiritilgan oldindan qilingan faol sarmoya infratuzilmaga yetadigan millionlab zararning oldini oldi."
+                    }
+                ],
+                "grammarRules": [
+                    {
+                        "pattern": "Cause-and-Solution Linking: Problem + stems from + Cause; to address this, Government must + Solution",
+                        "meaning": "Sabab va unga mos yechim o'rtasidagi bevosita mantiqiy aloqa",
+                        "usageNotes": "Yechim ko'rsatilgan sababni to'g'ridan-to'g'ri bartaraf etishi shart.",
+                        "examples": [
+                            {
+                                "sentence": "Traffic congestion stems from excessive private vehicle dependency; to tackle this, municipal councils should subsidize public transit.",
+                                "translation": "Tirbandlik shaxsiy avtomobillarga haddan tashqari qaramlikdan kelib chiqadi; buni hal qilish uchun shahar kengashlari jamoat transportini subsidiyalashi lozim."
+                            }
+                        ]
+                    }
+                ]
             }
-        ]
-    },
+        },
+        {
+            "id": "en-b2-u5-l5-s2",
+            "title": "Amaliy Mashqlar",
+            "type": "practice",
+            "estimatedMinutes": 5,
+            "practiceData": {
+                "instructions": "Problem and Solution essay strategiyalari bo'yicha to'g'ri variantlarni tanlang.",
+                "exercises": [
+                    {
+                        "id": "en-b2-u5-l5-e1",
+                        "type": "multiple-choice",
+                        "prompt": "Severe water shortages in arid regions largely _______ obsolete agricultural irrigation methods.",
+                        "options": [
+                            "stem from",
+                            "stem of",
+                            "stem at",
+                            "stem by"
+                        ],
+                        "correctAnswer": 0,
+                        "explanation": "...dan kelib chiqmoq: 'stem from'."
+                    },
+                    {
+                        "id": "en-b2-u5-l5-e2",
+                        "type": "multiple-choice",
+                        "prompt": "What is the most common flaw in low-scoring Problem & Solution essays?",
+                        "options": [
+                            "The solutions offered do not directly solve the specific causes identified in the previous paragraph.",
+                            "Writing in paragraphs.",
+                            "Using formal linking words.",
+                            "Writing more than 250 words."
+                        ],
+                        "correctAnswer": 0,
+                        "explanation": "Eng katta xato — 1-paragrafda keltirilgan sabablarga 2-paragrafdagi yechimlarning mos kelmasligidir."
+                    },
+                    {
+                        "id": "en-b2-u5-l5-e3",
+                        "type": "multiple-choice",
+                        "prompt": "Subsidizing rooftop solar installations provides a highly _______ remedy for residential energy costs.",
+                        "options": [
+                            "feasible",
+                            "obsolete",
+                            "derelict",
+                            "volatile"
+                        ],
+                        "correctAnswer": 0,
+                        "explanation": "Amalga oshirsa bo'ladigan / qulay yechim: 'feasible remedy'."
+                    },
+                    {
+                        "id": "en-b2-u5-l5-e4",
+                        "type": "multiple-choice",
+                        "prompt": "Instead of proposing vague ideals like 'people should be nicer', candidates must propose _______ steps.",
+                        "options": [
+                            "actionable and pragmatic",
+                            "obsolete and passive",
+                            "volatile and tentative",
+                            "dormant and fictional"
+                        ],
+                        "correctAnswer": 0,
+                        "explanation": "Inshoda amaliy va real qo'llasa bo'ladigan ('actionable and pragmatic') yechimlar talab etiladi."
+                    },
+                    {
+                        "id": "en-b2-u5-l5-e5",
+                        "type": "multiple-choice",
+                        "prompt": "The sudden closure of regional coal mines _______ severe localized economic distress.",
+                        "options": [
+                            "precipitated",
+                            "stemmed from",
+                            "stagnated",
+                            "mitigated"
+                        ],
+                        "correctAnswer": 0,
+                        "explanation": "Muammoni to'satdan keltirib chiqarmoq / tezlashtirmoq: 'precipitated distress'."
+                    }
+                ]
+            }
+        },
+        {
+            "id": "en-b2-u5-l5-s3",
+            "title": "Yakuniy Test",
+            "type": "test",
+            "estimatedMinutes": 5,
+            "testData": {
+                "instructions": "Unit 5 bo'yicha yakuniy sinov testidan o'ting. O'tish bali: 80%.",
+                "passingScorePercentage": 80,
+                "questions": [
+                    {
+                        "id": "en-b2-u5-l5-q1",
+                        "question": "In an IELTS Causes and Solutions essay, how many body paragraphs are standardly recommended?",
+                        "options": [
+                            "Two (Body 1 for Causes, Body 2 for Solutions)",
+                            "Ten very short paragraphs",
+                            "One single giant paragraph",
+                            "None"
+                        ],
+                        "correctAnswerIndex": 0,
+                        "explanation": "Standart va eng samarali arxitektura: 1-asosiy paragraf sabablar uchun, 2-asosiy paragraf yechimlar uchun."
+                    },
+                    {
+                        "id": "en-b2-u5-l5-q2",
+                        "question": "The graduate unemployment dilemma is exacerbated by an acute skills _______ .",
+                        "options": [
+                            "mismatch",
+                            "plateau",
+                            "nadir",
+                            "quadrant"
+                        ],
+                        "correctAnswerIndex": 0,
+                        "explanation": "Ko'nikmalar nomutanosibligi: 'skills mismatch'."
+                    },
+                    {
+                        "id": "en-b2-u5-l5-q3",
+                        "question": "Which verb collocation means 'to directly deal with and resolve a difficult issue'?",
+                        "options": [
+                            "tackle a predicament",
+                            "make a predicament",
+                            "do a predicament",
+                            "stand a predicament"
+                        ],
+                        "correctAnswerIndex": 0,
+                        "explanation": "Muammoni hal qilish: 'tackle a predicament'."
+                    },
+                    {
+                        "id": "en-b2-u5-l5-q4",
+                        "question": "Replacing _______ heating boilers with heat pumps reduces household emissions significantly.",
+                        "options": [
+                            "obsolete",
+                            "proactive",
+                            "actionable",
+                            "feasible"
+                        ],
+                        "correctAnswerIndex": 0,
+                        "explanation": "Eskirgan uskunalar 'obsolete boilers' deyiladi."
+                    },
+                    {
+                        "id": "en-b2-u5-l5-q5",
+                        "question": "A proactive government strategy should anticipate problems _______ they escalate into crises.",
+                        "options": [
+                            "before",
+                            "although",
+                            "whereas",
+                            "notwithstanding"
+                        ],
+                        "correctAnswerIndex": 0,
+                        "explanation": "Muammo inqirozga aylanishidan oldin (before): 'before they escalate'."
+                    }
+                ]
+            }
+        }
+    ]
+},
     {
         "id": "en-b2-u6-l1",
         "courseId": "english-b2",
