@@ -6,7 +6,7 @@ export const SUPER_ADMIN_EMAILS = [
 
 export const DEFAULT_ADMIN_EMAILS = [
     'fsoyilov@gmail.com',
-    'admin@nihongo-talk.jp'
+    'admin@ielts-talk.com'
 ];
 
 // Check if user is Super Admin

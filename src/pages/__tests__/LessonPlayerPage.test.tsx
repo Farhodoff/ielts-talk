@@ -62,7 +62,7 @@ describe('LessonPlayerPage', () => {
         fireEvent.click(nextBtn);
 
         // Now in Practice step (real curriculum content)
-        expect(screen.getByText(/To'g'ri inversiya shaklini tanlang/i)).toBeInTheDocument();
+        expect(screen.getByText(/Inversiya qoidalariga mos/i)).toBeInTheDocument();
 
         // Select the first (correct) option
         const optionA = screen.getByText(/have I heard/i);

@@ -5,7 +5,7 @@ import { initTelegramAuth } from '../utils/telegramAuth';
 /**
  * TelegramMiniAppPage:
  * Seamlessly authenticates Telegram WebApp users and immediately routes
- * them to the actual, full Nihongo Talk application (/jlpt).
+ * them to the actual, full IELTS Talk application (/jlpt).
  */
 export const TelegramMiniAppPage: React.FC = () => {
   const navigate = useNavigate();

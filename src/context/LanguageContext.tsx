@@ -1,6 +1,6 @@
 import React, { createContext, useContext, useState, useEffect, useCallback, useMemo } from 'react';
 import { uz } from '../i18n/uz';
-import { ja } from '../i18n/ja';
+const ja = {}; // Japanese translations removed — IELTS Talk is English-only
 import { en } from '../i18n/en';
 
 export type Language = 'uz' | 'ja' | 'en';

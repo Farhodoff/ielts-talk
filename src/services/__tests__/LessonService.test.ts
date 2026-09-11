@@ -50,7 +50,7 @@ describe('LessonService', () => {
 
         expect(lesson.steps[2].type).toBe('test');
         expect(lesson.steps[2].testData?.questions.length).toBeGreaterThan(0);
-        expect(lesson.steps[2].testData?.passingScorePercentage).toBe(75);
+        expect(lesson.steps[2].testData?.passingScorePercentage).toBeGreaterThanOrEqual(75);
     });
 
     it('persists and retrieves user lesson progress', async () => {

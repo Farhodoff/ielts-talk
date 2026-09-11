@@ -12,7 +12,7 @@ const AIProviderSection: React.FC = () => {
                     <div className="flex items-center justify-between">
                         <h3 className="text-base font-bold text-gray-900 dark:text-white flex items-center gap-2">
                             <Cpu size={18} className="text-indigo-600 dark:text-indigo-400" />
-                            Nihongo Talk Engine
+                            IELTS Talk Engine
                         </h3>
                         <p className="text-xs text-muted-foreground mt-0.5">
                             DeepSeek V3 & R1 Powered · Avtomatlashtirilgan
@@ -22,7 +22,7 @@ const AIProviderSection: React.FC = () => {
 
                 <div className="p-4 rounded-xl bg-muted/40 border border-border/60 text-xs text-muted-foreground leading-relaxed">
                     <p>
-                        Barcha AI xizmatlari (Shaxsiy Reja, Speaking Coach, Lug‘at va Tahlillar) Nihongo Talk markaziy serveri orqali xavfsiz va barqaror ishlaydi.
+                        Barcha AI xizmatlari (Shaxsiy Reja, Speaking Coach, Lug‘at va Tahlillar) IELTS Talk markaziy serveri orqali xavfsiz va barqaror ishlaydi.
                     </p>
                     <div className="pt-2 flex items-center gap-2 text-xs font-semibold text-emerald-600 dark:text-emerald-400">
                         <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />

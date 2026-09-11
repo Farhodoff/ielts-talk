@@ -139,7 +139,7 @@ export const PricingPage: React.FC = () => {
 
       {/* Simple footer */}
       <div className="mx-auto w-full max-w-4xl py-4 text-center text-xs text-muted-foreground">
-        © 2026 Nihongo Talk · Barcha o'quvchilar uchun 100% bepul
+        © 2026 IELTS Talk · Barcha o'quvchilar uchun 100% bepul
       </div>
     </div>
   );

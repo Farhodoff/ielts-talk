@@ -183,7 +183,7 @@ export async function downloadReportAsPNG(
   const canvas = generateReportShareCard(report, personaTitle);
   const dataUrl = canvas.toDataURL('image/png');
   const link = document.createElement('a');
-  link.download = `nihongo-talk-report-${Date.now()}.png`;
+  link.download = `ielts-talk-report-${Date.now()}.png`;
   link.href = dataUrl;
   document.body.appendChild(link);
   link.click();
@@ -232,7 +232,7 @@ export function printReportViaIframe(report: SessionAnalysisReport, personaTitle
       </style>
     </head>
     <body>
-      <h1>🌸 Nihongo Talk — Speaking Coach Tahlil Hisoboti</h1>
+      <h1>🌸 IELTS Talk — Speaking Coach Tahlil Hisoboti</h1>
       <div class="subtitle">Ssenariy: <strong>${eT}</strong> | Sana: ${new Date().toLocaleDateString('uz-UZ')}</div>
 
       <div class="score-card">

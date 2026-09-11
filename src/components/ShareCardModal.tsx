@@ -239,7 +239,7 @@ const ShareCardModal: React.FC<ShareCardModalProps> = ({ isOpen, onClose }) => {
                                         <Sparkles size={18} style={{ color: theme.accent }} />
                                     </div>
                                     <div>
-                                        <p className="text-sm font-bold" style={{ color: theme.text }}>Nihongo Talk</p>
+                                        <p className="text-sm font-bold" style={{ color: theme.text }}>IELTS Talk</p>
                                         <p className="text-[10px]" style={{ color: theme.muted }}>{dateStr}</p>
                                     </div>
                                 </div>

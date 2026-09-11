@@ -45,8 +45,7 @@ import { SpeakingVocabularyService } from '../services/SpeakingVocabularyService
 import { AudioStorageService } from '../services/AudioStorageService';
 import { getOrEnsureSpeakingDeck } from '../utils/subjectResolver';
 import { supabase } from '../lib/supabase';
-import { PitchAccentService, PitchAccentInfo } from '../services/PitchAccentService';
-import { PitchAccentModal } from '../components/speaking/PitchAccentModal';
+
 
 const PROMPT_SUGGESTIONS_BY_LANG: Record<
   'en' | 'ja',
@@ -268,12 +267,6 @@ const SpeakingCoachPage: React.FC = () => {
     return `${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
   };
 
-  // Pitch Accent inspection modal state
-  const [inspectingPitch, setInspectingPitch] = useState<PitchAccentInfo | null>(null);
-  const handleInspectPitch = useCallback((word: string, kanaHint?: string) => {
-    const info = PitchAccentService.getPitchAccent(word, kanaHint);
-    setInspectingPitch(info);
-  }, []);
 
   // Fullscreen Toggle Support (⛶ Zoom/Fullscreen mode)
   const containerRef = useRef<HTMLDivElement>(null);
@@ -1407,7 +1400,7 @@ const SpeakingCoachPage: React.FC = () => {
               speakText={speakText}
               setChatHistory={setChatHistory}
               onAddVocabulary={handleAddVocabToFlashcards}
-              onInspectPitch={handleInspectPitch}
+
               activeScenario={activeScenario}
               onSelectHint={handleSendUserText}
             />
@@ -1468,12 +1461,6 @@ const SpeakingCoachPage: React.FC = () => {
         onRetry={() => startSession()}
       />
 
-      {/* PITCH ACCENT MODAL */}
-      <PitchAccentModal
-        isOpen={!!inspectingPitch}
-        onClose={() => setInspectingPitch(null)}
-        accentInfo={inspectingPitch}
-      />
     </div>
   );
 };

@@ -66,17 +66,17 @@ const GoogleCalendarSection: React.FC = () => {
             let icsContent = [
                 'BEGIN:VCALENDAR',
                 'VERSION:2.0',
-                'PRODID:-//Nihongo Talk//UZ',
+                'PRODID:-//IELTS Talk//UZ',
                 'CALSCALE:GREGORIAN',
                 'METHOD:PUBLISH',
-                'X-WR-CALNAME:Nihongo Talk Calendar',
+                'X-WR-CALNAME:IELTS Talk Calendar',
                 'X-WR-TIMEZONE:Asia/Tashkent',
             ];
 
             const allItems = [
                 ...tasks.filter(t => t.dueDate).map(t => ({
                     title: t.title,
-                    description: `Nihongo Talk vazifasi (Muhimlik: ${t.priority || 'o\'rta'})`,
+                    description: `IELTS Talk vazifasi (Muhimlik: ${t.priority || 'o\'rta'})`,
                     date: new Date(t.dueDate!)
                 })),
                 ...(events || []).map(e => ({
