@@ -1164,160 +1164,229 @@ export const ENGLISH_A2_LESSONS: Lesson[] = [
         "language": "en",
         "level": "A2",
         "lessonNumber": 1,
-        "title": "Future: Going to for Intentions",
-        "description": "Rejalashtirilgan niyatlar va maqsadlar (be going to + V).",
-        "estimatedDurationMinutes": 14,
+        "title": "Future: Going to for Intentions & Evidence",
+        "description": "Rejalashtirilgan niyatlar (be going to) va ko'z o'ngimizdagi dalilga asoslangan taxminlar.",
+        "estimatedDurationMinutes": 15,
         "icon": "🎯",
         "steps": [
-            {
-                "id": "en-a2-u2-l1-s1",
-                "title": "Be Going To Qoidasi",
-                "type": "learn",
-                "estimatedMinutes": 4,
-                "learnData": {
-                    "title": "Be Going to (Qilishni rejalashtirmoq)",
-                    "explanation": "Oldindan o'ylangan niyatlar yoki ko'rinib turgan dalil asosidagi bashoratlar uchun ishlatiladi.",
-                    "keyPoints": [
-                        "I am going to study abroad.",
-                        "Look at the dark clouds! It is going to rain."
-                    ],
-                    "vocabulary": [
-                        {
-                            "term": "Intention",
-                            "reading": "/ɪnˈten.ʃən/",
-                            "meaning": "Niyat, maqsad",
-                            "exampleSentence": "My intention is to learn English.",
-                            "exampleTranslation": "Mening niyatim ingliz tilini o'rganish."
-                        },
-                        {
-                            "term": "Opportunity",
-                            "reading": "/ˌɒp.əˈtʃuː.nə.ti/",
-                            "meaning": "Imkoniyat",
-                            "exampleSentence": "This is a great opportunity to learn.",
-                            "exampleTranslation": "Bu oʻrganish uchun ajoyib imkoniyat."
-                        },
-                        {
-                            "term": "Confidence",
-                            "reading": "/ˈkɒn.fɪ.dəns/",
-                            "meaning": "Ishonch",
-                            "exampleSentence": "Practice gives you confidence in speaking.",
-                            "exampleTranslation": "Mashq qilish gapirishda ishonch bagʻishlaydi."
+                {
+                        "id": "en-a2-u2-l1-s1",
+                        "title": "Be Going To Qoidasi",
+                        "type": "learn",
+                        "estimatedMinutes": 5,
+                        "learnData": {
+                                "title": "Future Intentions and Predictions with Evidence",
+                                "explanation": "Kelasi zamonda 'Be going to' konstruksiyasi ikki asosiy holatda qo'llaniladi:\n\n1. Oldindan o'ylangan Niyat va Rejalar (Prior Intentions):\n- Gapirishdan oldin qabul qilingan qarorlar:\n  • Formula: Ega + am / is / are + GOING TO + Fe'l (boshlang'ich shakl)\n  • \"I am going to study abroad next academic year.\" (Kelasi o'quv yilida chet elda o'qimoqchiman).\n  • \"She is going to buy a new electric car.\" (U yangi elektromobil sotib olmoqchi).\n  • Inkor: \"We aren't going to sell our old house.\"\n  • So'roq: \"Are you going to attend the seminar tomorrow?\"\n\n2. Ko'z o'ngimizdagi aniq dalilga asoslangan taxmin (Prediction with Evidence):\n- Hozirgi ko'rinib turgan belgiga qarab bo'ladigan voqea:\n  • \"Look at those dark clouds! It is going to rain.\" (Qora bulutlarga qara! Hozir yomg'ir yog'adi).\n  • \"Be careful! That fragile vase is going to fall!\" (Ehtiyot bo'l! Nozik vaza tushib ketadi!).\n\n3. O'zbek o'rganuvchilari uchun xavfli tuzoqlar (Common Pitfalls):\n- ❌ \"I going to buy a car.\" -> ✅ \"I AM going to buy a car.\" ('to be' yordamchisi tushib qolmasin!).\n- ❌ \"I will going to...\" -> ✅ \"I am going to...\" (Ikkita kelasi zamonni aralashtirib yubormang!).\n- ❌ \"She is going to buys.\" -> ✅ \"She is going to BUY.\" ('Going to' dan keyin fe'l hech qanday -s yoki -ed olmaydi).\n\n4. IELTS Speaking Foundation Corner:\n- Topic: Future Goals & Ambitions (Part 1)\n- Examiner: \"What are your plans for the next few years?\"\n- Model Band 6.0+ Answer: \"In the near future, I am going to graduate from university and apply for a master's degree abroad. I am also going to sit the IELTS exam to achieve an overall band 7.0.\"\n- Examiner Tip: \"In the near future\" (yaqin kelajakda) va \"apply for a master's degree\" (magistratura uchun hujjat topshirmoq) iboralari nutqingizni boyitadi.",
+                                "vocabulary": [
+                                        {
+                                                "term": "intend to",
+                                                "reading": "/ɪnˈtend tuː/",
+                                                "meaning": "niyat qilmoq, rejalashtirmoq",
+                                                "exampleSentence": "I intend to complete my academic research by the end of this month.",
+                                                "exampleTranslation": "Men shu oy oxirigacha akademik tadqiqotimni yakunlashni niyat qilganman."
+                                        },
+                                        {
+                                                "term": "abroad",
+                                                "reading": "/əˈbrɔːd/",
+                                                "meaning": "chet elda, xorijda",
+                                                "exampleSentence": "She is going to study software engineering abroad next autumn.",
+                                                "exampleTranslation": "U kelasi kuzda xorijda dasturiy ta'minot muhandisligini o'rganmoqchi."
+                                        },
+                                        {
+                                                "term": "prediction",
+                                                "reading": "/prɪˈdɪkʃən/",
+                                                "meaning": "taxmin, oldindan aytish",
+                                                "exampleSentence": "His weather prediction was accurate; it snowed heavily.",
+                                                "exampleTranslation": "Uning ob-havo haqidagi taxmini to'g'ri chiqdi; qalin qor yog'di."
+                                        },
+                                        {
+                                                "term": "dark clouds",
+                                                "reading": "/dɑːk klaʊdz/",
+                                                "meaning": "qora bulutlar (yomg'ir belgisi)",
+                                                "exampleSentence": "Look at the dark clouds gathering over the hills; a storm is coming.",
+                                                "exampleTranslation": "Tepaliklar uzra to'planayotgan qora bulutlarga qara; bo'ron kelyapti."
+                                        },
+                                        {
+                                                "term": "graduate",
+                                                "reading": "/ˈɡrædʒueɪt/",
+                                                "meaning": "universitetni tamomlamoq",
+                                                "exampleSentence": "They are going to graduate with honors this coming June.",
+                                                "exampleTranslation": "Ular shu yilning iyun oyida o'qishni a'lo baholar bilan tamomlamoqchilar."
+                                        },
+                                        {
+                                                "term": "fragile",
+                                                "reading": "/ˈfrædʒaɪl/",
+                                                "meaning": "nozik, oson sinadigan",
+                                                "exampleSentence": "Handle the fragile porcelain cups with extreme caution.",
+                                                "exampleTranslation": "Nozik chinni finjonlarni o'ta ehtiyotkorlik bilan ushlang."
+                                        },
+                                        {
+                                                "term": "ambition",
+                                                "reading": "/æmˈbɪʃən/",
+                                                "meaning": "ulkan maqsad, intilish",
+                                                "exampleSentence": "Her greatest ambition is to establish a modern language academy.",
+                                                "exampleTranslation": "Uning eng katta maqsadi — zamonaviy til akademiyasini tashkil etishdir."
+                                        },
+                                        {
+                                                "term": "fall over",
+                                                "reading": "/fɔːl ˈəʊvə/",
+                                                "meaning": "yiqilib tushmoq, ag'darilmoq",
+                                                "exampleSentence": "The ladder is wobbling; it is going to fall over if nobody holds it.",
+                                                "exampleTranslation": "Narvon tebranyapti; agar hech kim ushlab turmasa, u yiqilib tushadi."
+                                        }
+                                ]
                         }
-                    ],
-                    "grammarRules": [
-                        {
-                            "pattern": "Future: Going to for Intentions",
-                            "meaning": "Rejalashtirilgan niyatlar va maqsadlar (be going to + V).",
-                            "usageNotes": "Oldindan o'ylangan niyatlar yoki ko'rinib turgan dalil asosidagi bashoratlar uchun ishlatiladi.",
-                            "examples": [
-                                {
-                                    "sentence": "My intention is to learn English.",
-                                    "translation": "Mening niyatim ingliz tilini o'rganish."
-                                }
-                            ]
+                },
+                {
+                        "id": "en-a2-u2-l1-s2",
+                        "title": "Going To Mashqlari",
+                        "type": "practice",
+                        "estimatedMinutes": 5,
+                        "practiceData": {
+                                "instructions": "To'g'ri 'be going to' shaklini tanlang.",
+                                "exercises": [
+                                        {
+                                                "id": "en-a2-u2-l1-e1",
+                                                "type": "multiple-choice",
+                                                "prompt": "Bo'sh joyni to'ldiring: 'Look at that boy on the wall! He ___ fall.'",
+                                                "options": [
+                                                        "is going to",
+                                                        "are going to",
+                                                        "will going to",
+                                                        "going to"
+                                                ],
+                                                "correctAnswer": 0,
+                                                "explanation": "Ko'z o'ngimizdagi dalilga asoslangan taxmin uchun 'is going to fall' to'g'ri ('He' birlik)."
+                                        },
+                                        {
+                                                "id": "en-a2-u2-l1-e2",
+                                                "type": "multiple-choice",
+                                                "prompt": "Qaysi jumla grammatik jihatdan to'g'ri?",
+                                                "options": [
+                                                        "I going to visit my family next weekend.",
+                                                        "I am going to visit my family next weekend.",
+                                                        "I am going to visiting my family next weekend.",
+                                                        "I will going to visit my family next weekend."
+                                                ],
+                                                "correctAnswer": 1,
+                                                "explanation": "'I am going to visit...' - 'am' yordamchisi va fe'lning boshlang'ich shakli to'liq qo'llangan."
+                                        },
+                                        {
+                                                "id": "en-a2-u2-l1-e3",
+                                                "type": "multiple-choice",
+                                                "prompt": "Inkor gapni to'ldiring: 'We ___ move to another city this year.'",
+                                                "options": [
+                                                        "aren't going to",
+                                                        "isn't going to",
+                                                        "not going to",
+                                                        "don't going to"
+                                                ],
+                                                "correctAnswer": 0,
+                                                "explanation": "'We' ko'plik olmoshi bilan inkor 'aren't going to' bo'ladi."
+                                        },
+                                        {
+                                                "id": "en-a2-u2-l1-e4",
+                                                "type": "multiple-choice",
+                                                "prompt": "'Siz universitetdan keyin nima qilmoqchisiz?' so'roq gapi qaysi?",
+                                                "options": [
+                                                        "What you are going to do after university?",
+                                                        "What are you going to do after university?",
+                                                        "What do you going to do after university?",
+                                                        "What will you going to do after university?"
+                                                ],
+                                                "correctAnswer": 1,
+                                                "explanation": "'What are you going to do...?' - so'roq gapda 'are' yordamchisi egadan oldinda bo'ladi."
+                                        },
+                                        {
+                                                "id": "en-a2-u2-l1-e5",
+                                                "type": "multiple-choice",
+                                                "prompt": "'The sky is completely clear; it ___ rain today.'",
+                                                "options": [
+                                                        "is going to",
+                                                        "isn't going to",
+                                                        "aren't going to",
+                                                        "not is going to"
+                                                ],
+                                                "correctAnswer": 1,
+                                                "explanation": "Osmon mutlaqo musaffo bo'lgani uchun yomg'ir yog'maydi: 'isn't going to rain'."
+                                        }
+                                ]
                         }
-                    ]
+                },
+                {
+                        "id": "en-a2-u2-l1-s3",
+                        "title": "Dars Testi: Be Going To",
+                        "type": "test",
+                        "estimatedMinutes": 5,
+                        "testData": {
+                                "instructions": "Savollarga to'g'ri javob berib, mavzuni mustahkamlang.",
+                                "passingScorePercentage": 80,
+                                "questions": [
+                                        {
+                                                "id": "en-a2-u2-l1-q1",
+                                                "question": "'Be going to' konstruksiyasining asosiy vazifasi nima?",
+                                                "options": [
+                                                        "O'tgan zamondagi odatlarni aytish",
+                                                        "Oldindan rejalashtirilgan niyatlar va ko'z o'ngidagi dalilga asoslangan taxminlarni ifodalash",
+                                                        "Ayni paytda sodir bo'layotgan jarayonni bildirish",
+                                                        "Qat'iy ilmiy haqiqatlarni bayon qilish"
+                                                ],
+                                                "correctAnswerIndex": 1,
+                                                "explanation": "'Be going to' oldindan niyat qilingan rejalar va mavjud dalilga asoslangan taxminlar uchun xizmat qiladi."
+                                        },
+                                        {
+                                                "id": "en-a2-u2-l1-q2",
+                                                "question": "Qaysi jumla grammatik jihatdan XATO tuzilgan?",
+                                                "options": [
+                                                        "She is going to start a new job next month.",
+                                                        "They are going to buy a holiday apartment.",
+                                                        "He is going to learns German.",
+                                                        "Are you going to attend the lecture?"
+                                                ],
+                                                "correctAnswerIndex": 2,
+                                                "explanation": "'He is going to learns' xato, chunki 'going to' dan keyin fe'lga hech qanday -s qo'shilmaydi: 'learn'."
+                                        },
+                                        {
+                                                "id": "en-a2-u2-l1-q3",
+                                                "question": "'Be careful! You ___ spill the hot coffee!'",
+                                                "options": [
+                                                        "are going to",
+                                                        "is going to",
+                                                        "am going to",
+                                                        "going to"
+                                                ],
+                                                "correctAnswerIndex": 0,
+                                                "explanation": "'You' uchun 'are going to spill' to'g'ri."
+                                        },
+                                        {
+                                                "id": "en-a2-u2-l1-q4",
+                                                "question": "'Intend to' iborasi nimani anglatadi?",
+                                                "options": [
+                                                        "Afzal ko'rmoq",
+                                                        "Niyat qilmoq / rejalashtirmoq",
+                                                        "Eslab qolmoq",
+                                                        "Xalaqit bermoq"
+                                                ],
+                                                "correctAnswerIndex": 1,
+                                                "explanation": "'Intend to' - niyat qilmoq, ko'zlamoq."
+                                        },
+                                        {
+                                                "id": "en-a2-u2-l1-q5",
+                                                "question": "IELTS Speaking: 'What are your career plans after graduation?' savoliga qaysi javob 'going to' ni eng to'g'ri qo'llagan?",
+                                                "options": [
+                                                        "I am work in bank.",
+                                                        "After I graduate, I am going to apply for an internship at a multinational financial company because I am eager to gain practical industry experience.",
+                                                        "I will going to bank.",
+                                                        "Going to work is my plan."
+                                                ],
+                                                "correctAnswerIndex": 1,
+                                                "explanation": "'I am going to apply for an internship... because I am eager to gain practical industry experience' - Band 6.5+ darajasidagi maqsadli va asoslangan javob."
+                                        }
+                                ]
+                        }
                 }
-            },
-            {
-                "id": "en-a2-u2-l1-s2",
-                "title": "Mashq",
-                "type": "practice",
-                "estimatedMinutes": 5,
-                "practiceData": {
-                    "instructions": "To'g'ri shaklni tanlang.",
-                    "exercises": [
-                        {
-                            "id": "en-a2-u2-l1-e1",
-                            "type": "multiple-choice",
-                            "prompt": "\"We _______ (buy) a new car next month.\"",
-                            "options": [
-                                "are going to buy",
-                                "going to buy",
-                                "are buy",
-                                "is going to buy"
-                            ],
-                            "correctAnswer": 0,
-                            "explanation": "We are going to buy."
-                        },
-                        {
-                            "id": "en-a2-u2-l1-ex-2",
-                            "type": "multiple-choice",
-                            "prompt": "Choose the correct word to complete the sentence: \"This is a great opportunity to learn.\"",
-                            "options": [
-                                "reluctance",
-                                "delay",
-                                "Opportunity",
-                                "doubt"
-                            ],
-                            "correctAnswer": 2,
-                            "explanation": "\"Opportunity\" (Imkoniyat) fits the context appropriately."
-                        }
-                    ]
-                }
-            },
-            {
-                "id": "en-a2-u2-l1-s3",
-                "title": "Test",
-                "type": "test",
-                "estimatedMinutes": 5,
-                "testData": {
-                    "instructions": "Savollarga javob bering.",
-                    "passingScorePercentage": 75,
-                    "questions": [
-                        {
-                            "id": "en-a2-u2-l1-q1",
-                            "question": "She _______ start her own business soon.",
-                            "options": [
-                                "is going to",
-                                "going to",
-                                "is go to",
-                                "are going to"
-                            ],
-                            "correctAnswerIndex": 0,
-                            "explanation": "She is going to start."
-                        },
-                        {
-                            "id": "en-a2-u2-l1-q2",
-                            "question": "What _______ you going to do this weekend?",
-                            "options": [
-                                "is",
-                                "are",
-                                "did",
-                                "do"
-                            ],
-                            "correctAnswerIndex": 1,
-                            "explanation": "What are you going to do?"
-                        },
-                        {
-                            "id": "en-a2-u2-l1-q3",
-                            "question": "I am not going to _______ late tomorrow.",
-                            "options": [
-                                "was",
-                                "being",
-                                "be",
-                                "am"
-                            ],
-                            "correctAnswerIndex": 2,
-                            "explanation": "Going to be late."
-                        },
-                        {
-                            "id": "en-a2-u2-l1-q4",
-                            "question": "They _______ to move to another city.",
-                            "options": [
-                                "going",
-                                "go",
-                                "is going",
-                                "are going"
-                            ],
-                            "correctAnswerIndex": 3,
-                            "explanation": "They are going to move."
-                        }
-                    ]
-                }
-            }
         ]
-    },
+},
     {
         "id": "en-a2-u2-l2",
         "courseId": "english-a2",
@@ -1326,160 +1395,229 @@ export const ENGLISH_A2_LESSONS: Lesson[] = [
         "language": "en",
         "level": "A2",
         "lessonNumber": 2,
-        "title": "Future: Will for Instant Decisions & Promises",
-        "description": "Shu lahzada qabul qilingan qarorlar va va'dalar (will / won't).",
-        "estimatedDurationMinutes": 12,
-        "icon": "⚡",
+        "title": "Future: Will for Instant Decisions, Offers & Promises",
+        "description": "Kutilmaganda gapirish paytida qabul qilingan qarorlar (will), yordam taklif qilish va va'da berish (won't).",
+        "estimatedDurationMinutes": 15,
+        "icon": "💡",
         "steps": [
-            {
-                "id": "en-a2-u2-l2-s1",
-                "title": "Will Qoidasi",
-                "type": "learn",
-                "estimatedMinutes": 4,
-                "learnData": {
-                    "title": "Will & Won't",
-                    "explanation": "Suhbat paytida to'satdan qaror qilganda, va'da berganda yoki kelajak haqida o'z fikringizni aytganda \"will\" ishlatiladi.",
-                    "keyPoints": [
-                        "\"The door is ringing.\" -> \"I will open it!\"",
-                        "\"I promise I will call you tomorrow.\""
-                    ],
-                    "vocabulary": [
-                        {
-                            "term": "Promise",
-                            "reading": "/ˈprɒm.ɪs/",
-                            "meaning": "Va'da bermoq",
-                            "exampleSentence": "I promise to help you.",
-                            "exampleTranslation": "Sizga yordam berishga va'da beraman."
-                        },
-                        {
-                            "term": "Confidence",
-                            "reading": "/ˈkɒn.fɪ.dəns/",
-                            "meaning": "Ishonch",
-                            "exampleSentence": "Practice gives you confidence in speaking.",
-                            "exampleTranslation": "Mashq qilish gapirishda ishonch bagʻishlaydi."
-                        },
-                        {
-                            "term": "Schedule",
-                            "reading": "/ˈʃedʒ.uːl/",
-                            "meaning": "Jadval, reja",
-                            "exampleSentence": "Let me check my schedule for tomorrow.",
-                            "exampleTranslation": "Ertangi kun jadvalimni tekshirib koʻray."
+                {
+                        "id": "en-a2-u2-l2-s1",
+                        "title": "Will va Won't Qoidalari",
+                        "type": "learn",
+                        "estimatedMinutes": 5,
+                        "learnData": {
+                                "title": "Using 'Will' for Instant Decisions, Offers, and Promises",
+                                "explanation": "'Will' modal fe'lining o'ziga xos asosiy vazifalari:\n\n1. Aynan gapirish paytida paydo bo'lgan qaror (Instant / Spontaneous Decision):\n- Oldindan reja yo'q, qaror shu daqiqada qabul qilinadi:\n  • \"The doorbell is ringing. I'll get it!\" (Eshik jiringlayapti. Men ochaman!).\n  • Kafeda: \"I will have a cappuccino and a slice of cheesecake, please.\"\n\n2. Yordam taklif qilish (Offers):\n- \"That suitcase looks heavy. I will carry it for you.\" (U chamadon og'ir ko'rinyapti. Men ko'tarib beraman).\n\n3. Va'da berish (Promises):\n- \"I will never disclose your secret to anyone.\" (Siringni hech kimga aytmayman, va'da beraman).\n- \"I won't be late for the meeting, I promise.\"\n\n4. Dalilsiz shaxsiy taxminlar (I think / I believe / probably):\n- \"I think our national team will win the championship.\"\n\n5. Qisqartmalar va Talaffuz:\n- I will -> I'll (/aɪl/), You will -> You'll (/juːl/), He will -> He'll (/hiːl/), They will -> They'll (/ðeɪl/).\n- will not -> won't (/wəʊnt/). 'want' (/wɒnt/) bilan adashtirmang!\n\n6. O'zbek o'rganuvchilari uchun xavfli tuzoqlar (Common Pitfalls):\n- ❌ Restoranda: \"I am going to have a soup.\" -> ✅ \"I WILL have a soup.\" (Buyurtma paytidagi qaror har doim 'will' bo'ladi!).\n- ❌ \"I will to help you.\" -> ✅ \"I will HELP you.\" ('Will' dan keyin 'to' qo'yilmaydi).\n- ❌ \"Won't\" (/wəʊnt/) talaffuzini \"want\" (/wɒnt/) bilan adashtirish.\n\n7. IELTS Speaking Foundation Corner:\n- Topic: Future Predictions / Helping Others\n- Examiner: \"Do you think artificial intelligence will change education in the future?\"\n- Model Band 6.0+ Answer: \"In my personal view, artificial intelligence will undoubtedly transform education by providing tailored learning experiences for individual students.\"\n- Examiner Tip: \"In my personal view\" (mening shaxsiy fikrimcha) va \"will undoubtedly transform\" (shubhasiz o'zgartirib yuboradi) iboralari yuqori leksik ball olib keladi.",
+                                "vocabulary": [
+                                        {
+                                                "term": "spontaneous",
+                                                "reading": "/spɒnˈteɪniəs/",
+                                                "meaning": "o'z-o'zidan, rejalashtirilmagan, to'satdan qabul qilingan",
+                                                "exampleSentence": "Taking a weekend road trip was a spontaneous decision.",
+                                                "exampleTranslation": "Dam olish kunida sayohatga chiqish kutilmagan to'satdan qaror bo'ldi."
+                                        },
+                                        {
+                                                "term": "promise",
+                                                "reading": "/ˈprɒmɪs/",
+                                                "meaning": "va'da bermoq / va'da",
+                                                "exampleSentence": "I promise I will return your textbook first thing tomorrow morning.",
+                                                "exampleTranslation": "Va'da beraman, ertaga ertalab birinchi navbatda darsligingizni qaytaraman."
+                                        },
+                                        {
+                                                "term": "carry",
+                                                "reading": "/ˈkæri/",
+                                                "meaning": "ko'tarib yurmoq, ko'tarmoq",
+                                                "exampleSentence": "Let me carry those heavy bags to your car.",
+                                                "exampleTranslation": "Anavi og'ir sumkalarni mashinangizgacha ko'tarib berishga ruxsat bering."
+                                        },
+                                        {
+                                                "term": "won't",
+                                                "reading": "/wəʊnt/",
+                                                "meaning": "qilmaydi (will not ning qisqartmasi)",
+                                                "exampleSentence": "Don't worry, we won't reveal your confidential information.",
+                                                "exampleTranslation": "Xavotir olmang, biz sizning maxfiy ma'lumotlaringizni oshkor qilmaymiz."
+                                        },
+                                        {
+                                                "term": "disclose",
+                                                "reading": "/dɪsˈkləʊz/",
+                                                "meaning": "oshkor qilmoq, sirlarni ochmoq",
+                                                "exampleSentence": "I will not disclose confidential client data under any circumstances.",
+                                                "exampleTranslation": "Men hech qanday holatda mijozning maxfiy ma'lumotlarini oshkor qilmayman."
+                                        },
+                                        {
+                                                "term": "undoubtedly",
+                                                "reading": "/ʌnˈdaʊtɪdli/",
+                                                "meaning": "shubhasiz, so'zsiz",
+                                                "exampleSentence": "Modern technology will undoubtedly play a pivotal role in healthcare.",
+                                                "exampleTranslation": "Zamonaviy texnologiya sog'liqni saqlashda shubhasiz hal qiluvchi rol o'ynaydi."
+                                        },
+                                        {
+                                                "term": "transform",
+                                                "reading": "/trænsˈfɔːm/",
+                                                "meaning": "butunlay o'zgartirmoq, tubdan isloh qilmoq",
+                                                "exampleSentence": "Renewable solar energy will transform remote villages.",
+                                                "exampleTranslation": "Qayta tiklanuvchi quyosh energiyasi chekka qishloqlarni tubdan o'zgartiradi."
+                                        },
+                                        {
+                                                "term": "tailored",
+                                                "reading": "/ˈteɪləd/",
+                                                "meaning": "maxsus moslashtirilgan (ehtiyojga qarab)",
+                                                "exampleSentence": "Our software offers tailored lessons adapted to each student's pace.",
+                                                "exampleTranslation": "Dasturimiz har bir talabaning o'zlashtirish sur'atiga moslashtirilgan darslarni taqdim etadi."
+                                        }
+                                ]
                         }
-                    ],
-                    "grammarRules": [
-                        {
-                            "pattern": "Future: Will for Instant Decisions & Promises",
-                            "meaning": "Shu lahzada qabul qilingan qarorlar va va'dalar (will / won't).",
-                            "usageNotes": "Suhbat paytida to'satdan qaror qilganda, va'da berganda yoki kelajak haqida o'z fikringizni aytganda \"will\" ishlatiladi.",
-                            "examples": [
-                                {
-                                    "sentence": "I promise to help you.",
-                                    "translation": "Sizga yordam berishga va'da beraman."
-                                }
-                            ]
+                },
+                {
+                        "id": "en-a2-u2-l2-s2",
+                        "title": "Will Mashqlari",
+                        "type": "practice",
+                        "estimatedMinutes": 5,
+                        "practiceData": {
+                                "instructions": "Will va Won't bo'yicha to'g'ri variantni tanlang.",
+                                "exercises": [
+                                        {
+                                                "id": "en-a2-u2-l2-e1",
+                                                "type": "multiple-choice",
+                                                "prompt": "Kafeda ofitsiantga buyurtma berish paytida qaysi jumla to'g'ri?",
+                                                "options": [
+                                                        "I will have a black coffee, please.",
+                                                        "I am going to have a black coffee right now.",
+                                                        "I will to have a black coffee, please.",
+                                                        "I have black coffee tomorrow."
+                                                ],
+                                                "correctAnswer": 0,
+                                                "explanation": "Shu onning o'zida qabul qilingan buyurtma qarorlari 'will' bilan aytiladi: 'I will have a black coffee, please'."
+                                        },
+                                        {
+                                                "id": "en-a2-u2-l2-e2",
+                                                "type": "multiple-choice",
+                                                "prompt": "'Xavotir olmang, darsga kechikmayman, va'da beraman.' Bo'sh joyni to'ldiring: 'Don't worry, I ___ be late, I promise.'",
+                                                "options": [
+                                                        "won't",
+                                                        "am not",
+                                                        "don't",
+                                                        "will to not"
+                                                ],
+                                                "correctAnswer": 0,
+                                                "explanation": "Kelasi zamon va'dasi inkor shaklda 'won't' bo'ladi."
+                                        },
+                                        {
+                                                "id": "en-a2-u2-l2-e3",
+                                                "type": "multiple-choice",
+                                                "prompt": "Yordam taklif qilishda qaysi gap tabiiy eshitiladi?",
+                                                "options": [
+                                                        "I will help you with those heavy bags.",
+                                                        "I am helping you heavy bags.",
+                                                        "I will to help your bags.",
+                                                        "I help you bags yesterday."
+                                                ],
+                                                "correctAnswer": 0,
+                                                "explanation": "Spontan yordam taklifi: 'I will help you with...'."
+                                        },
+                                        {
+                                                "id": "en-a2-u2-l2-e4",
+                                                "type": "multiple-choice",
+                                                "prompt": "'Won't' so'zining to'g'ri talaffuzi qaysi?",
+                                                "options": [
+                                                        "/wɒnt/ ('want' kabi)",
+                                                        "/wəʊnt/ (diffong 'ou' bilan)",
+                                                        "/wɪnt/",
+                                                        "/wʌnt/"
+                                                ],
+                                                "correctAnswer": 1,
+                                                "explanation": "'Won't' /wəʊnt/ deb talaffuz qilinadi. 'Want' (xohlamoq) esa /wɒnt/ bo'ladi."
+                                        },
+                                        {
+                                                "id": "en-a2-u2-l2-e5",
+                                                "type": "multiple-choice",
+                                                "prompt": "'Telefon jiringlayapti. Men javob beraman.' Qaysi ifoda to'g'ri?",
+                                                "options": [
+                                                        "The phone is ringing. I'll answer it.",
+                                                        "The phone is ringing. I am going to answer it.",
+                                                        "The phone is ringing. I answer it.",
+                                                        "The phone is ringing. I will to answer."
+                                                ],
+                                                "correctAnswer": 0,
+                                                "explanation": "Kutilmagan daqiqalik qaror: 'I'll answer it'."
+                                        }
+                                ]
                         }
-                    ]
+                },
+                {
+                        "id": "en-a2-u2-l2-s3",
+                        "title": "Dars Testi: Will & Won't",
+                        "type": "test",
+                        "estimatedMinutes": 5,
+                        "testData": {
+                                "instructions": "Savollarga to'g'ri javob berib, mavzuni mustahkamlang.",
+                                "passingScorePercentage": 80,
+                                "questions": [
+                                        {
+                                                "id": "en-a2-u2-l2-q1",
+                                                "question": "'Will' modal fe'li qaysi vaziyatda ishlatilmaydi?",
+                                                "options": [
+                                                        "Kutilmagan daqiqalik qarorlarda (instant decisions)",
+                                                        "Yordam taklif qilish va va'dalarda",
+                                                        "Oldindan puxta rejalashtirilgan va bilet olingan rasmiy uchrashuvlarda",
+                                                        "Shaxsiy shubha va ishonchlarga asoslangan taxminlarda (I think...)"
+                                                ],
+                                                "correctAnswerIndex": 2,
+                                                "explanation": "Oldindan barcha tayyorgarligi ko'rilgan qat'iy kelishuvlar uchun Present Continuous yoki Going to ishlatiladi, 'will' emas."
+                                        },
+                                        {
+                                                "id": "en-a2-u2-l2-q2",
+                                                "question": "Qaysi jumla grammatik jihatdan to'g'ri tuzilgan?",
+                                                "options": [
+                                                        "I will definitely to call you tomorrow.",
+                                                        "I will definitely call you tomorrow.",
+                                                        "I will calling you tomorrow.",
+                                                        "I will calls you tomorrow."
+                                                ],
+                                                "correctAnswerIndex": 1,
+                                                "explanation": "'Will' dan keyin faqat fe'lning sof shakli (to siz) keladi: 'I will definitely call you'."
+                                        },
+                                        {
+                                                "id": "en-a2-u2-l2-q3",
+                                                "question": "'I feel dizzy. I think I ___ sit down for a while.'",
+                                                "options": [
+                                                        "will",
+                                                        "am going",
+                                                        "was",
+                                                        "did"
+                                                ],
+                                                "correctAnswerIndex": 0,
+                                                "explanation": "Shu paytda paydo bo'lgan qaror: 'I think I will sit down'."
+                                        },
+                                        {
+                                                "id": "en-a2-u2-l2-q4",
+                                                "question": "'Won't' so'zi qaysi so'zlarning qisqartmasi?",
+                                                "options": [
+                                                        "would not",
+                                                        "will not",
+                                                        "was not",
+                                                        "were not"
+                                                ],
+                                                "correctAnswerIndex": 1,
+                                                "explanation": "will not -> won't."
+                                        },
+                                        {
+                                                "id": "en-a2-u2-l2-q5",
+                                                "question": "IELTS Speaking: 'Do you think people will read paper books in the future?' savoliga eng yaxshi javob qaysi?",
+                                                "options": [
+                                                        "Yes, paper book is good.",
+                                                        "In my opinion, despite the popularity of e-books, traditional paper books will certainly survive because many readers cherish the tactile sensation and aroma of real pages.",
+                                                        "People will to read book always.",
+                                                        "No paper book future."
+                                                ],
+                                                "correctAnswerIndex": 1,
+                                                "explanation": "'will certainly survive because many readers cherish the tactile sensation and aroma...' - Band 7.0 darajasidagi yuqori leksika va to'liq fikr."
+                                        }
+                                ]
+                        }
                 }
-            },
-            {
-                "id": "en-a2-u2-l2-s2",
-                "title": "Mashq",
-                "type": "practice",
-                "estimatedMinutes": 4,
-                "practiceData": {
-                    "instructions": "To'g'ri shaklni tanlang.",
-                    "exercises": [
-                        {
-                            "id": "en-a2-u2-l2-e1",
-                            "type": "multiple-choice",
-                            "prompt": "\"I'm cold.\" — \"I _______ (close) the window.\"",
-                            "options": [
-                                "am close",
-                                "closing",
-                                "closed",
-                                "will close"
-                            ],
-                            "correctAnswer": 3,
-                            "explanation": "To'satdan qaror: I will close."
-                        },
-                        {
-                            "id": "en-a2-u2-l2-ex-2",
-                            "type": "multiple-choice",
-                            "prompt": "Choose the correct word to complete the sentence: \"Practice gives you confidence in speaking.\"",
-                            "options": [
-                                "doubt",
-                                "Confidence",
-                                "delay",
-                                "reluctance"
-                            ],
-                            "correctAnswer": 1,
-                            "explanation": "\"Confidence\" (Ishonch) fits the context appropriately."
-                        }
-                    ]
-                }
-            },
-            {
-                "id": "en-a2-u2-l2-s3",
-                "title": "Test",
-                "type": "test",
-                "estimatedMinutes": 4,
-                "testData": {
-                    "instructions": "Savollarga javob bering.",
-                    "passingScorePercentage": 75,
-                    "questions": [
-                        {
-                            "id": "en-a2-u2-l2-q1",
-                            "question": "Don't worry, I _______ tell anyone your secret.",
-                            "options": [
-                                "will",
-                                "don't",
-                                "not",
-                                "won't"
-                            ],
-                            "correctAnswerIndex": 3,
-                            "explanation": "Won't (will not) tell."
-                        },
-                        {
-                            "id": "en-a2-u2-l2-q2",
-                            "question": "I think it _______ be a sunny day tomorrow.",
-                            "options": [
-                                "is",
-                                "did",
-                                "will",
-                                "is going"
-                            ],
-                            "correctAnswerIndex": 2,
-                            "explanation": "I think it will be."
-                        },
-                        {
-                            "id": "en-a2-u2-l2-q3",
-                            "question": "\"Will you marry me?\" — \"Yes, I _______.\"",
-                            "options": [
-                                "did",
-                                "will",
-                                "do",
-                                "am"
-                            ],
-                            "correctAnswerIndex": 1,
-                            "explanation": "Yes, I will."
-                        },
-                        {
-                            "id": "en-a2-u2-l2-q4",
-                            "question": "I am thirsty. I _______ drink some water.",
-                            "options": [
-                                "will",
-                                "am",
-                                "was",
-                                "have"
-                            ],
-                            "correctAnswerIndex": 0,
-                            "explanation": "I will drink."
-                        }
-                    ]
-                }
-            }
         ]
-    },
+},
     {
         "id": "en-a2-u2-l3",
         "courseId": "english-a2",
@@ -1489,159 +1627,228 @@ export const ENGLISH_A2_LESSONS: Lesson[] = [
         "level": "A2",
         "lessonNumber": 3,
         "title": "Present Continuous for Fixed Arrangements",
-        "description": "Aniq belgilangan uchrashuv va kelishuvlar (I am meeting).",
-        "estimatedDurationMinutes": 12,
+        "description": "Kelasi zamonda qat'iy belgilangan rejalar (bilet olingan, vaqt tayinlangan, kelishilgan uchrashuvlar).",
+        "estimatedDurationMinutes": 15,
         "icon": "📅",
         "steps": [
-            {
-                "id": "en-a2-u2-l3-s1",
-                "title": "Belgilangan Rejalar",
-                "type": "learn",
-                "estimatedMinutes": 4,
-                "learnData": {
-                    "title": "Present Continuous for Future",
-                    "explanation": "Boshqa insonlar bilan oldindan aniq vaqt va joyi kelishilgan uchrashuvlar uchun Present Continuous ishlatiladi.",
-                    "keyPoints": [
-                        "I am flying to Dubai on Friday (chipta olingan).",
-                        "We are having a team meeting tomorrow at 10 AM."
-                    ],
-                    "vocabulary": [
-                        {
-                            "term": "Appointment",
-                            "reading": "/əˈpɔɪnt.mənt/",
-                            "meaning": "Uchrashuv / Qabul",
-                            "exampleSentence": "I have a doctor's appointment on Monday.",
-                            "exampleTranslation": "Dushanba kuni shifokor qabulim bor."
-                        },
-                        {
-                            "term": "Schedule",
-                            "reading": "/ˈʃedʒ.uːl/",
-                            "meaning": "Jadval, reja",
-                            "exampleSentence": "Let me check my schedule for tomorrow.",
-                            "exampleTranslation": "Ertangi kun jadvalimni tekshirib koʻray."
-                        },
-                        {
-                            "term": "Improve",
-                            "reading": "/ɪmˈpruːv/",
-                            "meaning": "Yaxshilamoq, rivojlantirmoq",
-                            "exampleSentence": "Reading books will improve your vocabulary.",
-                            "exampleTranslation": "Kitob oʻqish soʻz boyligingizni oshiradi."
+                {
+                        "id": "en-a2-u2-l3-s1",
+                        "title": "Kelasi Zamon Uchun Present Continuous",
+                        "type": "learn",
+                        "estimatedMinutes": 5,
+                        "learnData": {
+                                "title": "Present Continuous for Future Fixed Arrangements",
+                                "explanation": "Hozirgi davomli zamon (am/is/are + V-ing) kelasi zamon uchun qachon ishlatiladi?\n\n1. Qat'iy Belgilangan Kelishuvlar (Fixed Arrangements):\n- Boshqa shaxs bilan vaqti va joyi kelishib qo'yilgan yoki chipta xarid qilingan aniq rejalar:\n  • \"I am flying to London tomorrow morning.\" (Chiptam qo'limda, samolyot ertalab uchadi).\n  • \"She is seeing the dentist at 3:00 PM on Friday.\" (Tish shifokoriga yozilgan, vaqt tayinlangan).\n  • \"We are meeting the marketing team for lunch.\" (Joy va vaqt kelishilgan).\n\n2. 'Be Going to' bilan farqi:\n- Be going to: Faqat shaxsiy niyat (hali chipta olinmagan yoki uchrashuv vaqti tasdiqlanmagan bo'lishi mumkin).\n  • \"I am going to visit Paris one day.\" (Niyatim bor).\n- Present Continuous: Aniq barcha detallar kelishilgan va amalga oshishi 99% muqarrar.\n  • \"I am visiting Paris next week; here are my plane tickets!\" (Biletlarim bor, aniq ketyapman).\n\n3. Kelasi zamon vaqt ko'rsatkichlari (Future Time Signals):\n- tomorrow morning (ertaga ertalab)\n- on Friday afternoon (juma kuni tushdan keyin)\n- next weekend (kelasi dam olish kunlari)\n- tonight at 8:00 (bugun kechqurun soat 8 da).\n\n4. O'zbek o'rganuvchilari uchun xavfli tuzoqlar (Common Pitfalls):\n- ❌ \"Tomorrow I fly to London.\" -> ✅ \"Tomorrow I AM FLYING to London.\" (Shaxsiy belgilangan reja Present Continuous da aytiladi!).\n- ❌ \"I meeting him tomorrow.\" -> ✅ \"I AM meeting him tomorrow.\" ('to be' tushib qolmasin).\n\n5. IELTS Speaking Foundation Corner:\n- Topic: Upcoming Events / Diary Plans\n- Examiner: \"Do you have any plans for the upcoming weekend?\"\n- Model Band 6.0+ Answer: \"Yes, indeed. I am attending a close friend's wedding reception on Saturday evening, and on Sunday, I am catching up with my cousins at a cafe.\"\n- Examiner Tip: \"I am attending...\" va \"I am catching up with...\" konstruktsiyalari sizning kelishilgan rejalaringizni tabiiy inglizcha ifodalaydi.",
+                                "vocabulary": [
+                                        {
+                                                "term": "arrangement",
+                                                "reading": "/əˈreɪndʒmənt/",
+                                                "meaning": "kelishuv, oldindan belgilangan reja",
+                                                "exampleSentence": "We have finalized all travel arrangements for the corporate retreat.",
+                                                "exampleTranslation": "Biz kompaniya jamoaviy safari uchun barcha sayohat kelishuvlarini yakunladik."
+                                        },
+                                        {
+                                                "term": "appointment",
+                                                "reading": "/əˈpɔɪntmənt/",
+                                                "meaning": "belgilangan uchrashuv (shifokor, rasmiy shaxs bilan)",
+                                                "exampleSentence": "I have an appointment with my dentist at ten o'clock tomorrow.",
+                                                "exampleTranslation": "Ertaga soat o'nda tish shifokori bilan belgilangan qabulim bor."
+                                        },
+                                        {
+                                                "term": "flying",
+                                                "reading": "/ˈflaɪɪŋ/",
+                                                "meaning": "uchib ketayotgan / uchadi",
+                                                "exampleSentence": "The delegates are flying to Geneva on Monday morning.",
+                                                "exampleTranslation": "Delegatlar dushanba tongida Jenevaga uchib ketmoqdalar."
+                                        },
+                                        {
+                                                "term": "wedding reception",
+                                                "reading": "/ˈwedɪŋ rɪˈsepʃən/",
+                                                "meaning": "to'y ziyofati / bazmi",
+                                                "exampleSentence": "We are attending our cousin's wedding reception this coming Saturday.",
+                                                "exampleTranslation": "Biz shu kelayotgan shanba kuni xolavachchamizning to'y ziyofatiga boryapmiz."
+                                        },
+                                        {
+                                                "term": "catching up",
+                                                "reading": "/ˈkætʃɪŋ ʌp/",
+                                                "meaning": "ko'rishib suhbatlashmoq, yangiliklar almashmoq",
+                                                "exampleSentence": "I am catching up with my former university classmates on Friday.",
+                                                "exampleTranslation": "Men juma kuni sobiq kursdoshlarim bilan ko'rishib suhbatlashyapman."
+                                        },
+                                        {
+                                                "term": "confirmed",
+                                                "reading": "/kənˈfɜːmd/",
+                                                "meaning": "tasdiqlangan, qat'iy",
+                                                "exampleSentence": "Our hotel booking is fully confirmed by the travel agency.",
+                                                "exampleTranslation": "Bizning mehmonxona buyurtmamiz sayyohlik agentligi tomonidan to'liq tasdiqlandi."
+                                        },
+                                        {
+                                                "term": "upcoming",
+                                                "reading": "/ˌʌpˈkʌmɪŋ/",
+                                                "meaning": "yaqinlashib kelayotgan, kelgusi",
+                                                "exampleSentence": "Everyone is eager about the upcoming music festival.",
+                                                "exampleTranslation": "Hamma yaqinlashib kelayotgan musiqa festivalini intiqlik bilan kutyapti."
+                                        },
+                                        {
+                                                "term": "schedule",
+                                                "reading": "/ˈʃedʒuːl/ yoki /ˈskedʒuːl/",
+                                                "meaning": "jadval, kun tartibi",
+                                                "exampleSentence": "My schedule is extremely tight for the rest of this week.",
+                                                "exampleTranslation": "Mening jadvalim haftaning qolgan qismi uchun o'ta tig'iz."
+                                        }
+                                ]
                         }
-                    ],
-                    "grammarRules": [
-                        {
-                            "pattern": "Present Continuous for Fixed Arrangements",
-                            "meaning": "Aniq belgilangan uchrashuv va kelishuvlar (I am meeting).",
-                            "usageNotes": "Boshqa insonlar bilan oldindan aniq vaqt va joyi kelishilgan uchrashuvlar uchun Present Continuous ishlatiladi.",
-                            "examples": [
-                                {
-                                    "sentence": "I have a doctor's appointment on Monday.",
-                                    "translation": "Dushanba kuni shifokor qabulim bor."
-                                }
-                            ]
+                },
+                {
+                        "id": "en-a2-u2-l3-s2",
+                        "title": "Belgilangan Rejalar Mashqlari",
+                        "type": "practice",
+                        "estimatedMinutes": 5,
+                        "practiceData": {
+                                "instructions": "Kelasi zamon uchrashuvlari uchun to'g'ri Present Continuous shaklini tanlang.",
+                                "exercises": [
+                                        {
+                                                "id": "en-a2-u2-l3-e1",
+                                                "type": "multiple-choice",
+                                                "prompt": "'Ertaga soat 10 da tish shifokori qabulidaman' (vaqt belgilangan). Qaysi gap to'g'ri?",
+                                                "options": [
+                                                        "I see the dentist at 10 AM tomorrow.",
+                                                        "I am seeing the dentist at 10 AM tomorrow.",
+                                                        "I will see maybe the dentist.",
+                                                        "I saw the dentist at 10 AM tomorrow."
+                                                ],
+                                                "correctAnswer": 1,
+                                                "explanation": "Shifokor bilan vaqti tayinlangan rasmiy uchrashuv: 'I am seeing the dentist at 10 AM tomorrow'."
+                                        },
+                                        {
+                                                "id": "en-a2-u2-l3-e2",
+                                                "type": "multiple-choice",
+                                                "prompt": "Bo'sh joyni to'ldiring: 'We ___ to Istanbul on Thursday; we already have our boarding passes.'",
+                                                "options": [
+                                                        "fly",
+                                                        "are flying",
+                                                        "will to fly",
+                                                        "flying"
+                                                ],
+                                                "correctAnswer": 1,
+                                                "explanation": "Chiptalar olingan qat'iy safar uchun Present Continuous ishlatiladi: 'are flying'."
+                                        },
+                                        {
+                                                "id": "en-a2-u2-l3-e3",
+                                                "type": "multiple-choice",
+                                                "prompt": "'U juma oqshomida do'stlari bilan uchrashyapti.'",
+                                                "options": [
+                                                        "He is meeting his friends on Friday evening.",
+                                                        "He meeting his friends on Friday evening.",
+                                                        "He meets his friends on Friday evening.",
+                                                        "He will meets his friends."
+                                                ],
+                                                "correctAnswer": 0,
+                                                "explanation": "'He is meeting his friends on Friday evening' - kelishilgan ijtimoiy reja."
+                                        },
+                                        {
+                                                "id": "en-a2-u2-l3-e4",
+                                                "type": "multiple-choice",
+                                                "prompt": "'What are you doing tonight?' savoli nimani anglatadi?",
+                                                "options": [
+                                                        "Odatda har kechqurun nima qilasiz?",
+                                                        "Bugun kechqurun qanday belgilangan rejalaringiz bor?",
+                                                        "Kecha tunda nima qildingiz?",
+                                                        "Nega uyda o'tiribsiz?"
+                                                ],
+                                                "correctAnswer": 1,
+                                                "explanation": "'What are you doing tonight?' - bugungi oqshomgi rejalarni so'rash uchun kundalik standart iboradir."
+                                        },
+                                        {
+                                                "id": "en-a2-u2-l3-e5",
+                                                "type": "multiple-choice",
+                                                "prompt": "Inkor shaklini to'ldiring: 'She ___ to the party tomorrow because of her exams.'",
+                                                "options": [
+                                                        "isn't coming",
+                                                        "doesn't coming",
+                                                        "not is coming",
+                                                        "won't to come"
+                                                ],
+                                                "correctAnswer": 0,
+                                                "explanation": "'She isn't coming' - kelasi zamon uchrashuvi inkori."
+                                        }
+                                ]
                         }
-                    ]
+                },
+                {
+                        "id": "en-a2-u2-l3-s3",
+                        "title": "Dars Testi: Present Continuous for Future",
+                        "type": "test",
+                        "estimatedMinutes": 5,
+                        "testData": {
+                                "instructions": "Savollarga to'g'ri javob berib, mavzuni mustahkamlang.",
+                                "passingScorePercentage": 80,
+                                "questions": [
+                                        {
+                                                "id": "en-a2-u2-l3-q1",
+                                                "question": "Kelasi zamon uchun Present Continuous zamoni qachon qo'llaniladi?",
+                                                "options": [
+                                                        "Faqat bir zumlik kutilmagan qarorlarda",
+                                                        "Vaqti va joyi boshqa odamlar bilan qat'iy kelishilgan rasmiy uchrashuv va safarlarda",
+                                                        "Faqat dalilsiz taxminlarda",
+                                                        "O'tmishdagi esdaliklarda"
+                                                ],
+                                                "correctAnswerIndex": 1,
+                                                "explanation": "Present Continuous kelasi zamonda aniq vaqti va joyi belgilangan 'fixed arrangements' (uchrashuvlar, to'ylar, samolyot reyslari) uchun ishlatiladi."
+                                        },
+                                        {
+                                                "id": "en-a2-u2-l3-q2",
+                                                "question": "Qaysi jumla to'g'ri tuzilgan?",
+                                                "options": [
+                                                        "I am having dinner with Sarah at 8 PM tonight.",
+                                                        "I have dinner with Sarah at 8 PM tonight.",
+                                                        "I having dinner with Sarah at 8 PM tonight.",
+                                                        "I will having dinner with Sarah at 8 PM tonight."
+                                                ],
+                                                "correctAnswerIndex": 0,
+                                                "explanation": "'I am having dinner with Sarah at 8 PM tonight' - vaqti kelishilgan qat'iy reja."
+                                        },
+                                        {
+                                                "id": "en-a2-u2-l3-q3",
+                                                "question": "'Catching up with someone' iborasi nima ma'noni bildiradi?",
+                                                "options": [
+                                                        "Biror kishining orqasidan quvib yetmoq",
+                                                        "Biror kishi bilan ancha vaqtdan so'ng uchrashib yangiliklarni gaplashmoq",
+                                                        "Kasal bo'lib qolmoq",
+                                                        "Avtobusga kechikmoq"
+                                                ],
+                                                "correctAnswerIndex": 1,
+                                                "explanation": "'Catch up with someone' - uzoq ko'rishmagan odam bilan diydorlashib hol-ahvol so'rashish."
+                                        },
+                                        {
+                                                "id": "en-a2-u2-l3-q4",
+                                                "question": "'They ___ their wedding anniversary at a luxury restaurant on Friday.'",
+                                                "options": [
+                                                        "are celebrating",
+                                                        "is celebrating",
+                                                        "celebrates",
+                                                        "will to celebrate"
+                                                ],
+                                                "correctAnswerIndex": 0,
+                                                "explanation": "'They' ko'plik olmoshi: 'are celebrating'."
+                                        },
+                                        {
+                                                "id": "en-a2-u2-l3-q5",
+                                                "question": "IELTS Speaking: 'What are you doing this weekend?' savoliga eng to'liq javob qaysi?",
+                                                "options": [
+                                                        "Weekend good.",
+                                                        "On Saturday morning, I am playing tennis with my colleague, and later that evening, we are attending an acoustic concert downtown.",
+                                                        "I am play tennis.",
+                                                        "Tomorrow sleep all day."
+                                                ],
+                                                "correctAnswerIndex": 1,
+                                                "explanation": "'I am playing tennis with my colleague, and later... we are attending...' - Present Continuous ning kelasi zamon uchun namunaviy qo'llanilishi."
+                                        }
+                                ]
+                        }
                 }
-            },
-            {
-                "id": "en-a2-u2-l3-s2",
-                "title": "Mashq",
-                "type": "practice",
-                "estimatedMinutes": 4,
-                "practiceData": {
-                    "instructions": "To'g'ri shaklni tanlang.",
-                    "exercises": [
-                        {
-                            "id": "en-a2-u2-l3-e1",
-                            "type": "multiple-choice",
-                            "prompt": "\"I _______ (see) the dentist tomorrow morning at 9:00.\"",
-                            "options": [
-                                "saw",
-                                "see",
-                                "am seeing",
-                                "have seen"
-                            ],
-                            "correctAnswer": 2,
-                            "explanation": "Aniq rejalashtirilgan uchrashuv: am seeing."
-                        },
-                        {
-                            "id": "en-a2-u2-l3-ex-2",
-                            "type": "multiple-choice",
-                            "prompt": "Choose the correct word to complete the sentence: \"Let me check my schedule for tomorrow.\"",
-                            "options": [
-                                "Schedule",
-                                "reluctance",
-                                "doubt",
-                                "delay"
-                            ],
-                            "correctAnswer": 0,
-                            "explanation": "\"Schedule\" (Jadval, reja) fits the context appropriately."
-                        }
-                    ]
-                }
-            },
-            {
-                "id": "en-a2-u2-l3-s3",
-                "title": "Test",
-                "type": "test",
-                "estimatedMinutes": 4,
-                "testData": {
-                    "instructions": "Savollarga javob bering.",
-                    "passingScorePercentage": 75,
-                    "questions": [
-                        {
-                            "id": "en-a2-u2-l3-q1",
-                            "question": "We _______ dinner with clients on Thursday evening.",
-                            "options": [
-                                "had",
-                                "have",
-                                "are having",
-                                "has"
-                            ],
-                            "correctAnswerIndex": 2,
-                            "explanation": "Are having dinner."
-                        },
-                        {
-                            "id": "en-a2-u2-l3-q2",
-                            "question": "Alex _______ next Saturday.",
-                            "options": [
-                                "got married",
-                                "marry",
-                                "gets married",
-                                "is getting married"
-                            ],
-                            "correctAnswerIndex": 3,
-                            "explanation": "Is getting married."
-                        },
-                        {
-                            "id": "en-a2-u2-l3-q3",
-                            "question": "What time _______ you meeting the manager?",
-                            "options": [
-                                "are",
-                                "will",
-                                "did",
-                                "do"
-                            ],
-                            "correctAnswerIndex": 0,
-                            "explanation": "Are you meeting...?"
-                        },
-                        {
-                            "id": "en-a2-u2-l3-q4",
-                            "question": "I _______ to London tonight on the 9 PM flight.",
-                            "options": [
-                                "fly",
-                                "flown",
-                                "am flying",
-                                "flew"
-                            ],
-                            "correctAnswerIndex": 2,
-                            "explanation": "Am flying."
-                        }
-                    ]
-                }
-            }
         ]
-    },
+},
     {
         "id": "en-a2-u2-l4",
         "courseId": "english-a2",
@@ -1650,165 +1857,229 @@ export const ENGLISH_A2_LESSONS: Lesson[] = [
         "language": "en",
         "level": "A2",
         "lessonNumber": 4,
-        "title": "A2 Listening: Railway Station Announcements",
-        "description": "Vokzal e'lonlari va poyezdlar jadvalini tinglab tushunish.",
-        "estimatedDurationMinutes": 12,
-        "icon": "🚆",
+        "title": "Future Comparison: Will vs Going to vs Present Continuous",
+        "description": "Kelasi zamon shakllarining solishtirma jadvali, kontekstga qarab eng to'g'ri variantni tanlash san'ati.",
+        "estimatedDurationMinutes": 15,
+        "icon": "⚖️",
         "steps": [
-            {
-                "id": "en-a2-u2-l4-s1",
-                "title": "E'lon Matni",
-                "type": "learn",
-                "estimatedMinutes": 4,
-                "learnData": {
-                    "title": "Station Announcement",
-                    "explanation": "Poyezd bekatidagi rasmiy bildirishnomalar.",
-                    "keyPoints": [
-                        "\"The 14:30 high-speed train to Samarkand will depart from Platform 2.\"",
-                        "\"Passengers are requested to have their tickets ready.\"",
-                        "\"The train to Bukhara is delayed by 15 minutes due to maintenance.\""
-                    ],
-                    "vocabulary": [
-                        {
-                            "term": "Platform",
-                            "reading": "/ˈplæt.fɔːm/",
-                            "meaning": "Peron / Platforma",
-                            "exampleSentence": "The train is on platform 3.",
-                            "exampleTranslation": "Poyezd 3-peronda."
-                        },
-                        {
-                            "term": "Delayed",
-                            "reading": "/dɪˈleɪd/",
-                            "meaning": "Kechiktirilgan",
-                            "exampleSentence": "The flight is delayed.",
-                            "exampleTranslation": "Parvoz kechiktirildi."
-                        },
-                        {
-                            "term": "Opportunity",
-                            "reading": "/ˌɒp.əˈtʃuː.nə.ti/",
-                            "meaning": "Imkoniyat",
-                            "exampleSentence": "This is a great opportunity to learn.",
-                            "exampleTranslation": "Bu oʻrganish uchun ajoyib imkoniyat."
+                {
+                        "id": "en-a2-u2-l4-s1",
+                        "title": "Kelasi Zamonlar Matritsasi",
+                        "type": "learn",
+                        "estimatedMinutes": 5,
+                        "learnData": {
+                                "title": "The Ultimate Future Forms Comparison Guide",
+                                "explanation": "Ingliz tilida kelasi zamonni ifodalovchi 3 asosiy shaklning aniq farqlari:\n\n1. Taqqoslash Matritsasi (Comparison Matrix):\n- WILL (Spontan qaror / Va'da / Fikr):\n  • \"I'm thirsty. I'll get some cold water.\" (Shu lahzadagi qaror).\n  • \"I will always support you.\" (Va'da).\n  • \"I think robots will teach in schools.\" (Shaxsiy taxmin).\n- BE GOING TO (Niyat / Ko'rinib turgan dalil):\n  • \"I am going to learn Spanish this year.\" (Mening rejam/niyatim bor).\n  • \"Watch out! You are going to drop those plates!\" (Hozir tushib ketishi ko'rinib turibdi).\n- PRESENT CONTINUOUS (Aniq kelishuv / Chipta / Rasmiy uchrashuv):\n  • \"I am having lunch with the director at 1:00 PM.\" (Vaqt va joy tasdiqlangan).\n  • \"We are flying to Rome tomorrow.\" (Chiptalar olingan).\n\n2. Jadval va Transport (Present Simple for Timetables):\n- Poezdlar, samolyotlar va dars jadvallari kabi rasmiy vaqtlar uchun Present Simple ishlatiladi:\n  • \"The flight departs at 6:45 AM tomorrow.\"\n\n3. O'zbek tili bilan qiyosiy tahlil va Xavfli tuzoqlar:\n- O'zbek tilida \"Ertaga boraman\" barcha holatlarda bir xil aytilaveradi. Lekin ingliz tilida vaziyatga qarab shakl qat'iy tanlanadi!\n- ❌ \"Look at the dark clouds, it will rain.\" -> ✅ \"It IS GOING TO rain.\" (Dalil bor!).\n- ❌ \"I didn't plan it, but I am going to help you now.\" -> ✅ \"I WILL help you now.\" (Shu onning o'zidagi qaror).\n\n4. IELTS Speaking Foundation Corner:\n- Topic: Career Prospects & Society in 10 Years\n- Examiner: \"Where do you see yourself in five years' time?\"\n- Model Band 6.5+ Answer: \"In five years, I am confident that I will have built a rewarding career in digital marketing. Before that, I am going to complete my postgraduate studies abroad.\"\n- Examiner-Friendly Transition: \"I am confident that I will...\" (ishonchim komilki) va \"Before that, I am going to...\" (Undan oldin esa... niyatim bor).",
+                                "vocabulary": [
+                                        {
+                                                "term": "rewarding",
+                                                "reading": "/rɪˈwɔːdɪŋ/",
+                                                "meaning": "mamnuniyat bag'ishlovchi, foydali (kasb, mehnat)",
+                                                "exampleSentence": "Teaching is an exceptionally demanding yet deeply rewarding profession.",
+                                                "exampleTranslation": "O'qituvchilik nihoyatda mashaqqatli, ammo chuqur mamnuniyat bag'ishlovchi kasbdir."
+                                        },
+                                        {
+                                                "term": "postgraduate",
+                                                "reading": "/ˌpəʊstˈɡrædʒuət/",
+                                                "meaning": "magistratura yoki doktorantura ta'limi",
+                                                "exampleSentence": "She is going to pursue postgraduate studies in renewable energy.",
+                                                "exampleTranslation": "U qayta tiklanuvchi energiya sohasida magistratura ta'limini davom ettirmoqchi."
+                                        },
+                                        {
+                                                "term": "timetable",
+                                                "reading": "/ˈtaɪmteɪbəl/",
+                                                "meaning": "qatnov jadvali / dars jadvali",
+                                                "exampleSentence": "According to the official timetable, the bus arrives at nine sharp.",
+                                                "exampleTranslation": "Rasmiy jadvalga ko'ra, avtobus roppa-rosa soat to'qqizda yetib keladi."
+                                        },
+                                        {
+                                                "term": "spontaneous",
+                                                "reading": "/spɒnˈteɪniəs/",
+                                                "meaning": "to'satdan, rejasiz yuzaga kelgan",
+                                                "exampleSentence": "Spontaneous decisions often lead to unexpected adventures.",
+                                                "exampleTranslation": "To'satdan qabul qilingan qarorlar ko'pincha kutilmagan sarguzashtlarga olib keladi."
+                                        },
+                                        {
+                                                "term": "evidence",
+                                                "reading": "/ˈevɪdəns/",
+                                                "meaning": "dalil, ko'rinib turgan isbot",
+                                                "exampleSentence": "There is clear scientific evidence that global temperatures are rising.",
+                                                "exampleTranslation": "Global harorat ko'tarilayotgani haqida aniq ilmiy dalillar mavjud."
+                                        },
+                                        {
+                                                "term": "confident",
+                                                "reading": "/ˈkɒnfɪdənt/",
+                                                "meaning": "ishonchi komil, dadil",
+                                                "exampleSentence": "I am confident that hard work will yield positive results.",
+                                                "exampleTranslation": "Men mashaqqatli mehnat ijobiy natijalar berishiga qat'iy ishonaman."
+                                        },
+                                        {
+                                                "term": "departs",
+                                                "reading": "/dɪˈpɑːts/",
+                                                "meaning": "jo'naydi (jadval bo'yicha)",
+                                                "exampleSentence": "The high-speed rail departs every morning at seven thirty.",
+                                                "exampleTranslation": "Tezyurar poyezd har tong soat yetti yarimda yo'lga chiqadi."
+                                        },
+                                        {
+                                                "term": "pursue",
+                                                "reading": "/pəˈsjuː/",
+                                                "meaning": "ketidan bormoq, davom ettirmoq (karyera, ta'lim)",
+                                                "exampleSentence": "He decided to pursue a professional career in civil engineering.",
+                                                "exampleTranslation": "U qurilish muhandisligi sohasida professional martaba ortidan borishga qaror qildi."
+                                        }
+                                ]
                         }
-                    ],
-                    "grammarRules": [
-                        {
-                            "pattern": "A2 Listening: Railway Station Announcements",
-                            "meaning": "Vokzal e'lonlari va poyezdlar jadvalini tinglab tushunish.",
-                            "usageNotes": "Poyezd bekatidagi rasmiy bildirishnomalar.",
-                            "examples": [
-                                {
-                                    "sentence": "The train is on platform 3.",
-                                    "translation": "Poyezd 3-peronda."
-                                },
-                                {
-                                    "sentence": "The flight is delayed.",
-                                    "translation": "Parvoz kechiktirildi."
-                                }
-                            ]
+                },
+                {
+                        "id": "en-a2-u2-l4-s2",
+                        "title": "Kelasi Zamonlarni Solishtirish Mashqlari",
+                        "type": "practice",
+                        "estimatedMinutes": 5,
+                        "practiceData": {
+                                "instructions": "Contextga mos keluvchi eng to'g'ri kelasi zamon shaklini tanlang.",
+                                "exercises": [
+                                        {
+                                                "id": "en-a2-u2-l4-e1",
+                                                "type": "multiple-choice",
+                                                "prompt": "'I forgot my wallet!' — 'Don't worry, I ___ for lunch.'",
+                                                "options": [
+                                                        "will pay",
+                                                        "am paying",
+                                                        "am going to pay",
+                                                        "pay"
+                                                ],
+                                                "correctAnswer": 0,
+                                                "explanation": "Shu lahzadagi spontan yordam qarori: 'I will pay'."
+                                        },
+                                        {
+                                                "id": "en-a2-u2-l4-e2",
+                                                "type": "multiple-choice",
+                                                "prompt": "'Why are you holding that paint bucket?' — 'I ___ repaint my bedroom.'",
+                                                "options": [
+                                                        "will",
+                                                        "am going to",
+                                                        "paint",
+                                                        "am painting"
+                                                ],
+                                                "correctAnswer": 1,
+                                                "explanation": "Qo'lida bo'yoq idishi borligi — oldindan o'ylangan reja va dalil mavjudligini ko'rsatadi: 'I am going to repaint'."
+                                        },
+                                        {
+                                                "id": "en-a2-u2-l4-e3",
+                                                "type": "multiple-choice",
+                                                "prompt": "Poyezd jadvali (timetable) uchun qaysi jumla to'g'ri?",
+                                                "options": [
+                                                        "The train will depart at 8:00 AM.",
+                                                        "The train is going to depart at 8:00 AM.",
+                                                        "The train departs at 8:00 AM.",
+                                                        "The train is depart at 8:00 AM."
+                                                ],
+                                                "correctAnswer": 2,
+                                                "explanation": "Rasmiy jadvallar (timetables) uchun Present Simple ishlatiladi: 'The train departs at 8:00 AM'."
+                                        },
+                                        {
+                                                "id": "en-a2-u2-l4-e4",
+                                                "type": "multiple-choice",
+                                                "prompt": "'Here are our flight tickets. We ___ to Dubai next week.'",
+                                                "options": [
+                                                        "are flying",
+                                                        "will fly",
+                                                        "flying",
+                                                        "fly"
+                                                ],
+                                                "correctAnswer": 0,
+                                                "explanation": "Chiptalari olingan, kelishilgan aniq safar Present Continuous da: 'are flying'."
+                                        },
+                                        {
+                                                "id": "en-a2-u2-l4-e5",
+                                                "type": "multiple-choice",
+                                                "prompt": "'I think it ___ snow in December.' (shaxsiy taxmin)",
+                                                "options": [
+                                                        "will",
+                                                        "is going to",
+                                                        "snows",
+                                                        "is snowing"
+                                                ],
+                                                "correctAnswer": 0,
+                                                "explanation": "'I think' bilan bildirilgan shaxsiy taxmin 'will' oladi: 'I think it will snow'."
+                                        }
+                                ]
                         }
-                    ]
+                },
+                {
+                        "id": "en-a2-u2-l4-s3",
+                        "title": "Dars Testi: Future Forms Comparison",
+                        "type": "test",
+                        "estimatedMinutes": 5,
+                        "testData": {
+                                "instructions": "Savollarga to'g'ri javob berib, mavzuni mustahkamlang.",
+                                "passingScorePercentage": 80,
+                                "questions": [
+                                        {
+                                                "id": "en-a2-u2-l4-q1",
+                                                "question": "Ko'z o'ngimizdagi ko'rinib turgan dalilga asoslangan taxminlar uchun qaysi shakl qo'llaniladi?",
+                                                "options": [
+                                                        "will + V1",
+                                                        "be going to + V1",
+                                                        "Present Simple",
+                                                        "Past Simple"
+                                                ],
+                                                "correctAnswerIndex": 1,
+                                                "explanation": "Mavjud dalil bo'lsa (masalan, qora bulutlar, sinayotgan daraxt shoxi), 'be going to' ishlatiladi."
+                                        },
+                                        {
+                                                "id": "en-a2-u2-l4-q2",
+                                                "question": "'I haven't got any cash.' — 'No problem, I ___ lend you some.'",
+                                                "options": [
+                                                        "am lending",
+                                                        "will",
+                                                        "am going to",
+                                                        "lend"
+                                                ],
+                                                "correctAnswerIndex": 1,
+                                                "explanation": "Shu onning o'zida yordam taklifi: 'I will lend you some'."
+                                        },
+                                        {
+                                                "id": "en-a2-u2-l4-q3",
+                                                "question": "Jamoat transporti va darslarning rasmiy vaqt jadvali qaysi zamonda ifodalanadi?",
+                                                "options": [
+                                                        "Present Simple",
+                                                        "Present Continuous",
+                                                        "Past Continuous",
+                                                        "Will Future"
+                                                ],
+                                                "correctAnswerIndex": 0,
+                                                "explanation": "Rasmiy harakat jadvallari (timetables) har doim Present Simple zamonida bo'ladi."
+                                        },
+                                        {
+                                                "id": "en-a2-u2-l4-q4",
+                                                "question": "Qaysi gapda xato kelasi zamon shakli tanlangan?",
+                                                "options": [
+                                                        "Look out! That car is going to crash!",
+                                                        "I have decided: I will quit smoking tomorrow.",
+                                                        "I have decided: I am going to quit smoking next month.",
+                                                        "We are meeting the doctor tomorrow at 11."
+                                                ],
+                                                "correctAnswerIndex": 1,
+                                                "explanation": "'I have decided' (qaror qabul qilib bo'lganman) deyilganda, bu endi spontan qaror emas, reja hisoblanadi va 'I am going to quit' bo'lishi kerak."
+                                        },
+                                        {
+                                                "id": "en-a2-u2-l4-q5",
+                                                "question": "IELTS Speaking: 'How will technology change our lives in the future?' savoliga eng yaxshi javob qaysi?",
+                                                "options": [
+                                                        "Technology will change everything good.",
+                                                        "Undoubtedly, advanced automation and green energy will dramatically change our daily lives, making public transit cleaner and urban environments far more sustainable.",
+                                                        "I am going to use computer tomorrow.",
+                                                        "Technology is good for people."
+                                                ],
+                                                "correctAnswerIndex": 1,
+                                                "explanation": "'Undoubtedly, advanced automation and green energy will dramatically change our daily lives...' - Band 7.0 darajasidagi mukammal bashorat va boy leksika."
+                                        }
+                                ]
+                        }
                 }
-            },
-            {
-                "id": "en-a2-u2-l4-s2",
-                "title": "Mashq",
-                "type": "practice",
-                "estimatedMinutes": 4,
-                "practiceData": {
-                    "instructions": "E'lon bo'yicha to'g'ri javobni tanlang.",
-                    "exercises": [
-                        {
-                            "id": "en-a2-u2-l4-e1",
-                            "type": "multiple-choice",
-                            "prompt": "Which platform will the Samarkand train depart from?",
-                            "options": [
-                                "Platform 8",
-                                "Platform 2",
-                                "Platform 1",
-                                "Platform 5"
-                            ],
-                            "correctAnswer": 1,
-                            "explanation": "Depart from Platform 2."
-                        },
-                        {
-                            "id": "en-a2-u2-l4-ex-2",
-                            "type": "multiple-choice",
-                            "prompt": "Choose the correct word to complete the sentence: \"The flight is delayed.\"",
-                            "options": [
-                                "doubt",
-                                "reluctance",
-                                "delay",
-                                "Delayed"
-                            ],
-                            "correctAnswer": 3,
-                            "explanation": "\"Delayed\" (Kechiktirilgan) fits the context appropriately."
-                        }
-                    ]
-                }
-            },
-            {
-                "id": "en-a2-u2-l4-s3",
-                "title": "Test",
-                "type": "test",
-                "estimatedMinutes": 4,
-                "testData": {
-                    "instructions": "Savollarga javob bering.",
-                    "passingScorePercentage": 75,
-                    "questions": [
-                        {
-                            "id": "en-a2-u2-l4-q1",
-                            "question": "How long is the Bukhara train delayed?",
-                            "options": [
-                                "5 minutes",
-                                "15 minutes",
-                                "30 minutes",
-                                "1 hour"
-                            ],
-                            "correctAnswerIndex": 1,
-                            "explanation": "Delayed by 15 minutes."
-                        },
-                        {
-                            "id": "en-a2-u2-l4-q2",
-                            "question": "What time is the Samarkand train scheduled to leave?",
-                            "options": [
-                                "14:30",
-                                "15:00",
-                                "12:00",
-                                "16:45"
-                            ],
-                            "correctAnswerIndex": 0,
-                            "explanation": "14:30 train."
-                        },
-                        {
-                            "id": "en-a2-u2-l4-q3",
-                            "question": "\"Depart\" so'zining ma'nosi nima?",
-                            "options": [
-                                "Yetib kelmoq",
-                                "Kechikmoq",
-                                "Chipta sotib olmoq",
-                                "Jo'nab ketmoq"
-                            ],
-                            "correctAnswerIndex": 3,
-                            "explanation": "Depart — Jo'nab ketmoq."
-                        },
-                        {
-                            "id": "en-a2-u2-l4-q4",
-                            "question": "\"Passenger\" kim?",
-                            "options": [
-                                "Yo'lovchi",
-                                "Kassir",
-                                "Pazanda",
-                                "Haydovchi"
-                            ],
-                            "correctAnswerIndex": 0,
-                            "explanation": "Passenger — Yo'lovchi."
-                        }
-                    ]
-                }
-            }
         ]
-    },
+},
     {
         "id": "en-a2-u2-l5",
         "courseId": "english-a2",
@@ -1817,161 +2088,229 @@ export const ENGLISH_A2_LESSONS: Lesson[] = [
         "language": "en",
         "level": "A2",
         "lessonNumber": 5,
-        "title": "A2 Structured Writing: Informal Email to a Friend",
-        "description": "Do'stga norasmiy xat yozish va taklif bildirish.",
+        "title": "Making Invitations, Suggestions & Responding",
+        "description": "Taklif bildirish (Shall we...?, Let's..., Would you like to...?) va ularga xushmuomala javob qaytarish.",
         "estimatedDurationMinutes": 15,
-        "icon": "✉️",
+        "icon": "🎉",
         "steps": [
-            {
-                "id": "en-a2-u2-l5-s1",
-                "title": "Norasmiy Xat Strukturasi",
-                "type": "learn",
-                "estimatedMinutes": 5,
-                "learnData": {
-                    "title": "Writing an Informal Email",
-                    "explanation": "Xatni boshlash (Hi Alex / Dear Sarah), asosiy qism (kelasi hafta dam olish rejalari), tugatish (Best wishes / Write back soon).",
-                    "keyPoints": [
-                        "Opening: \"Hi Mark! How are you doing? Hope you are well.\"",
-                        "Body: \"I am writing to invite you to my birthday party next Saturday.\"",
-                        "Closing: \"Let me know if you can come. Best wishes, Jasur.\""
-                    ],
-                    "vocabulary": [
-                        {
-                            "term": "Invite",
-                            "reading": "/ɪnˈvaɪt/",
-                            "meaning": "Taklif qilmoq",
-                            "exampleSentence": "I want to invite you to dinner.",
-                            "exampleTranslation": "Sizni kechki ovqatga taklif qilmoqchiman."
-                        },
-                        {
-                            "term": "Opportunity",
-                            "reading": "/ˌɒp.əˈtʃuː.nə.ti/",
-                            "meaning": "Imkoniyat",
-                            "exampleSentence": "This is a great opportunity to learn.",
-                            "exampleTranslation": "Bu oʻrganish uchun ajoyib imkoniyat."
-                        },
-                        {
-                            "term": "Confidence",
-                            "reading": "/ˈkɒn.fɪ.dəns/",
-                            "meaning": "Ishonch",
-                            "exampleSentence": "Practice gives you confidence in speaking.",
-                            "exampleTranslation": "Mashq qilish gapirishda ishonch bagʻishlaydi."
+                {
+                        "id": "en-a2-u2-l5-s1",
+                        "title": "Taklif va Maslahat Iboralari",
+                        "type": "learn",
+                        "estimatedMinutes": 5,
+                        "learnData": {
+                                "title": "Social English: Invitations, Offers, and Polite Responses",
+                                "explanation": "Do'stlar, hamkasblar va tanishlar bilan birgalikda reja tuzish va taklif bildirish:\n\n1. Taklif bildirish qoliplari (Making Suggestions & Invitations):\n- \"Shall we + Fe'l?\" (Boshlaylikmi? / Qilaylikmi? - rasmiy va xushmuomala):\n  • \"Shall we go for a walk in the park?\"\n  • \"Shall I help you with your presentation?\"\n- \"Why don't we + Fe'l?\" (Keling, birgalikda... qilaylik):\n  • \"Why don't we order some pizza for dinner?\"\n- \"Let's + Fe'l\" (Keling...):\n  • \"Let's meet at the subway station at 6:00 PM.\"\n- \"Would you like to + Fe'l?\" (Xohlarmidingiz?):\n  • \"Would you like to join us for coffee this afternoon?\"\n- \"How about / What about + Fe'l-ing?\" (...qilsak nima deysiz?):\n  • \"How about going cycling by the lake?\"\n\n2. Xushmuomala javob qaytarish (Accepting & Declining Politely):\n- Qabul qilish (Accepting):\n  • \"That sounds fantastic! I'd love to.\" (Ajoyib eshitilyapti! Jon deb).\n  • \"Sure, that would be great.\"\n- Rad etish (Declining Politely — O'ta muhim odob!):\n  • ❌ Qo'pol: \"No, I don't want.\"\n  • ✅ Madaniyatli: \"I'd love to, but I'm afraid I have another commitment.\" (Jon deb borardim-ku, ammo afsuski boshqa ishim bor edi).\n  • \"I'm sorry, I can't make it today. How about next weekend?\"\n\n3. O'zbek o'rganuvchilari uchun xavfli tuzoqlar (Common Pitfalls):\n- ❌ \"Let's to go to the cinema.\" -> ✅ \"Let's GO to the cinema.\" ('Let's' dan keyin 'to' qo'yilmaydi!).\n- ❌ \"How about go to the park?\" -> ✅ \"How about GOING to the park?\" ('How about' dan so'ng har doim fe'l-ing keladi).\n- ❌ \"Would you like go?\" -> ✅ \"Would you like TO go?\" ('Would like' dan so'ng 'to' bo'lishi shart).\n\n4. IELTS Speaking Foundation Corner:\n- Topic: Spending Time with Friends & Socializing\n- Examiner: \"How do you usually arrange to meet your friends?\"\n- Model Band 6.0+ Answer: \"Typically, we set up a group chat to coordinate our schedules. Someone usually suggests: 'How about catching up over coffee this Saturday?', and if everyone is available, we confirm the venue.\"\n- Examiner Tip: \"coordinate our schedules\" (jadvallarimizni muvofiqlashtirmoq) va \"confirm the venue\" (uchrashuv joyini tasdiqlamoq) - so'zlashuvni yuqori pog'onaga olib chiqadi.",
+                                "vocabulary": [
+                                        {
+                                                "term": "shall we",
+                                                "reading": "/ʃæl wiː/",
+                                                "meaning": "...qilaylikmi? (birgalikda reja tuzish)",
+                                                "exampleSentence": "Shall we book the cinema tickets online in advance?",
+                                                "exampleTranslation": "Kino chiptalarini oldindan onlayn band qilaylikmi?"
+                                        },
+                                        {
+                                                "term": "why don't we",
+                                                "reading": "/waɪ dəʊnt wiː/",
+                                                "meaning": "keling, ...qilaylikchi (taklif)",
+                                                "exampleSentence": "Why don't we explore that authentic Italian restaurant downtown?",
+                                                "exampleTranslation": "Keling, shahar markazidagi o'sha haqiqiy italyan restoraniga borib ko'raylikchi?"
+                                        },
+                                        {
+                                                "term": "how about",
+                                                "reading": "/haʊ əˈbaʊt/",
+                                                "meaning": "...qilsak nima deysiz? (har doim V-ing oladi)",
+                                                "exampleSentence": "How about having a barbecue in the countryside this Saturday?",
+                                                "exampleTranslation": "Bu shanba kuni qishloqda barbekyu qilsak nima deysiz?"
+                                        },
+                                        {
+                                                "term": "commitment",
+                                                "reading": "/kəˈmɪtmənt/",
+                                                "meaning": "majburiyat, oldindan belgilangan muhim ish",
+                                                "exampleSentence": "I would love to come, but I have a prior business commitment.",
+                                                "exampleTranslation": "Jon deb borardim, ammo menda oldindan belgilangan ish majburiyati bor."
+                                        },
+                                        {
+                                                "term": "make it",
+                                                "reading": "/meɪk ɪt/",
+                                                "meaning": "yetib kelmoq, ulgurmoq (uchrashuvga)",
+                                                "exampleSentence": "I am terribly sorry, but I won't be able to make it to your party.",
+                                                "exampleTranslation": "Juda xijolatdaman, lekin sizning ziyofatingizga bora olmayman."
+                                        },
+                                        {
+                                                "term": "coordinate",
+                                                "reading": "/kəʊˈɔːdɪneɪt/",
+                                                "meaning": "muvofiqlashtirmoq, kelishmoq",
+                                                "exampleSentence": "We need to coordinate our schedules before booking the flights.",
+                                                "exampleTranslation": "Reyslarni band qilishdan oldin jadvallarimizni muvofiqlashtirib olishimiz kerak."
+                                        },
+                                        {
+                                                "term": "venue",
+                                                "reading": "/ˈvenjuː/",
+                                                "meaning": "tadbir yoki uchrashuv o'tkaziladigan joy",
+                                                "exampleSentence": "The open-air amphitheater is an ideal venue for live music.",
+                                                "exampleTranslation": "Ochiq havodagi amfiteatr jonli musiqa uchun ajoyib uchrashuv joyidir."
+                                        },
+                                        {
+                                                "term": "sounds fantastic",
+                                                "reading": "/saʊndz fænˈtæstɪk/",
+                                                "meaning": "juda ajoyib eshitilyapti (taklifni qabul qilish)",
+                                                "exampleSentence": "A weekend road trip? That sounds fantastic!",
+                                                "exampleTranslation": "Dam olish kunidagi sayohat? Juda ajoyib eshitilyapti!"
+                                        }
+                                ]
                         }
-                    ],
-                    "grammarRules": [
-                        {
-                            "pattern": "A2 Structured Writing: Informal Email to a Friend",
-                            "meaning": "Do'stga norasmiy xat yozish va taklif bildirish.",
-                            "usageNotes": "Xatni boshlash (Hi Alex / Dear Sarah), asosiy qism (kelasi hafta dam olish rejalari), tugatish (Best wishes / Write back soon).",
-                            "examples": [
-                                {
-                                    "sentence": "I want to invite you to dinner.",
-                                    "translation": "Sizni kechki ovqatga taklif qilmoqchiman."
-                                }
-                            ]
+                },
+                {
+                        "id": "en-a2-u2-l5-s2",
+                        "title": "Taklif Mashqlari",
+                        "type": "practice",
+                        "estimatedMinutes": 5,
+                        "practiceData": {
+                                "instructions": "Taklif va javoblar bo'yicha to'g'ri grammatik variantni tanlang.",
+                                "exercises": [
+                                        {
+                                                "id": "en-a2-u2-l5-e1",
+                                                "type": "multiple-choice",
+                                                "prompt": "Bo'sh joyni to'ldiring: 'How about ___ some sushi for lunch today?'",
+                                                "options": [
+                                                        "order",
+                                                        "ordering",
+                                                        "to order",
+                                                        "ordered"
+                                                ],
+                                                "correctAnswer": 1,
+                                                "explanation": "'How about' predlogli ibora bo'lgani uchun o'zidan keyin fe'l-ing oladi: 'How about ordering...'."
+                                        },
+                                        {
+                                                "id": "en-a2-u2-l5-e2",
+                                                "type": "multiple-choice",
+                                                "prompt": "Qaysi jumla to'g'ri tuzilgan?",
+                                                "options": [
+                                                        "Let's to go to the park.",
+                                                        "Let's go to the park.",
+                                                        "Let's going to the park.",
+                                                        "Let's goes to the park."
+                                                ],
+                                                "correctAnswer": 1,
+                                                "explanation": "'Let's' dan keyin 'to' qo'yilmaydi: 'Let's go to the park'."
+                                        },
+                                        {
+                                                "id": "en-a2-u2-l5-e3",
+                                                "type": "multiple-choice",
+                                                "prompt": "Taklifni xushmuomalalik bilan rad etishning eng odobli shakli qaysi?",
+                                                "options": [
+                                                        "No, I hate that idea.",
+                                                        "I don't want to come.",
+                                                        "I'd love to, but I'm afraid I have another commitment.",
+                                                        "Never invite me again."
+                                                ],
+                                                "correctAnswer": 2,
+                                                "explanation": "'I'd love to, but I'm afraid I have another commitment' - xalqaro etiket bo'yicha eng xushmuomala rad javobi."
+                                        },
+                                        {
+                                                "id": "en-a2-u2-l5-e4",
+                                                "type": "multiple-choice",
+                                                "prompt": "Bo'sh joyni to'ldiring: 'Would you like ___ a cup of hot chocolate?'",
+                                                "options": [
+                                                        "have",
+                                                        "to have",
+                                                        "having",
+                                                        "had"
+                                                ],
+                                                "correctAnswer": 1,
+                                                "explanation": "'Would you like' o'zidan keyin 'to + infinitive' oladi: 'Would you like to have...'."
+                                        },
+                                        {
+                                                "id": "en-a2-u2-l5-e5",
+                                                "type": "multiple-choice",
+                                                "prompt": "'Shall we ___ a break now?' (Keling, tanaffus qilaylikmi?)",
+                                                "options": [
+                                                        "take",
+                                                        "taking",
+                                                        "to take",
+                                                        "took"
+                                                ],
+                                                "correctAnswer": 0,
+                                                "explanation": "'Shall we' dan keyin fe'lning sof asosi keladi: 'Shall we take a break?'."
+                                        }
+                                ]
                         }
-                    ]
+                },
+                {
+                        "id": "en-a2-u2-l5-s3",
+                        "title": "Dars Testi: Making Invitations",
+                        "type": "test",
+                        "estimatedMinutes": 5,
+                        "testData": {
+                                "instructions": "Savollarga to'g'ri javob berib, mavzuni mustahkamlang.",
+                                "passingScorePercentage": 80,
+                                "questions": [
+                                        {
+                                                "id": "en-a2-u2-l5-q1",
+                                                "question": "'How about' va 'What about' iboralaridan keyin fe'l qaysi shaklda kelishi shart?",
+                                                "options": [
+                                                        "to + Fe'l",
+                                                        "Fe'l-ing (gerund)",
+                                                        "Fe'lning o'tgan zamon shakli",
+                                                        "Fe'l-s"
+                                                ],
+                                                "correctAnswerIndex": 1,
+                                                "explanation": "'How about' / 'What about' dan keyin har doim gerundiy (-ing) keladi (masalan: How about playing football?)."
+                                        },
+                                        {
+                                                "id": "en-a2-u2-l5-q2",
+                                                "question": "Qaysi jumla grammatik jihatdan XATO?",
+                                                "options": [
+                                                        "Why don't we invite Sarah to the cinema?",
+                                                        "Shall we leave our coats here?",
+                                                        "Let's to buy some snacks.",
+                                                        "Would you like to join our study group?"
+                                                ],
+                                                "correctAnswerIndex": 2,
+                                                "explanation": "'Let's to buy' xato, chunki 'Let's' dan so'ng 'to' yuklamasi ishlatilmaydi: 'Let's buy'."
+                                        },
+                                        {
+                                                "id": "en-a2-u2-l5-q3",
+                                                "question": "'I won't be able to make it' iborasi nima ma'noni bildiradi?",
+                                                "options": [
+                                                        "Men buni tayyorlay olmayman",
+                                                        "Men uchrashuvga yoki tadbirga bora olmayman / ulgura olmayman",
+                                                        "Men pul to'lamayman",
+                                                        "Men xat yozolmayman"
+                                                ],
+                                                "correctAnswerIndex": 1,
+                                                "explanation": "'I can't make it' - uchrashuvga yoki taklif qilingan joyga kela olmaslikni bildiradi."
+                                        },
+                                        {
+                                                "id": "en-a2-u2-l5-q4",
+                                                "question": "'Why don't we ___ early tomorrow to avoid the morning traffic?'",
+                                                "options": [
+                                                        "depart",
+                                                        "departing",
+                                                        "to depart",
+                                                        "departs"
+                                                ],
+                                                "correctAnswerIndex": 0,
+                                                "explanation": "'Why don't we' dan keyin fe'lning boshlang'ich shakli keladi: 'Why don't we depart early...'."
+                                        },
+                                        {
+                                                "id": "en-a2-u2-l5-q5",
+                                                "question": "IELTS Speaking: 'How do you usually spend your free evenings?' savoliga qaysi javob taklif va do'stona muloqotni chiroyli ifodalagan?",
+                                                "options": [
+                                                        "I go home and sleep.",
+                                                        "Occasionally, my friends and I text each other saying 'Why don't we grab dinner together?'. We then pick a cozy cafe downtown where we can unwind and chat.",
+                                                        "Evening is free time.",
+                                                        "No friends evening."
+                                                ],
+                                                "correctAnswerIndex": 1,
+                                                "explanation": "'Occasionally, my friends and I text each other saying Why don't we grab dinner together?... where we can unwind and chat' - xushmuomala, tabiiy va boy leksika."
+                                        }
+                                ]
+                        }
                 }
-            },
-            {
-                "id": "en-a2-u2-l5-s2",
-                "title": "Mashq",
-                "type": "practice",
-                "estimatedMinutes": 5,
-                "practiceData": {
-                    "instructions": "Xatdagi to'g'ri iborani tanlang.",
-                    "exercises": [
-                        {
-                            "id": "en-a2-u2-l5-e1",
-                            "type": "multiple-choice",
-                            "prompt": "Which closing phrase is suitable for an informal email to a friend?",
-                            "options": [
-                                "Best wishes / See you soon",
-                                "To whom it may concern",
-                                "Dear Sir or Madam",
-                                "Yours faithfully"
-                            ],
-                            "correctAnswer": 0,
-                            "explanation": "Do'stga xatda \"Best wishes / See you soon\" ishlatiladi."
-                        },
-                        {
-                            "id": "en-a2-u2-l5-ex-2",
-                            "type": "multiple-choice",
-                            "prompt": "Choose the correct word to complete the sentence: \"This is a great opportunity to learn.\"",
-                            "options": [
-                                "Opportunity",
-                                "delay",
-                                "reluctance",
-                                "doubt"
-                            ],
-                            "correctAnswer": 0,
-                            "explanation": "\"Opportunity\" (Imkoniyat) fits the context appropriately."
-                        }
-                    ]
-                }
-            },
-            {
-                "id": "en-a2-u2-l5-s3",
-                "title": "Test",
-                "type": "test",
-                "estimatedMinutes": 5,
-                "testData": {
-                    "instructions": "Savollarga javob bering.",
-                    "passingScorePercentage": 75,
-                    "questions": [
-                        {
-                            "id": "en-a2-u2-l5-q1",
-                            "question": "How do you greet a friend in an informal email?",
-                            "options": [
-                                "Hi [Name],",
-                                "Sincerely,",
-                                "To Whom It May Concern,",
-                                "Dear Sir/Madam,"
-                            ],
-                            "correctAnswerIndex": 0,
-                            "explanation": "Hi [Name]."
-                        },
-                        {
-                            "id": "en-a2-u2-l5-q2",
-                            "question": "\"Let me know\" nimani bildiradi?",
-                            "options": [
-                                "Meni unuting",
-                                "Kechiring",
-                                "Menga xabarini bering / aytib yuboring",
-                                "Ruxsat bering"
-                            ],
-                            "correctAnswerIndex": 2,
-                            "explanation": "Let me know — Xabar ber."
-                        },
-                        {
-                            "id": "en-a2-u2-l5-q3",
-                            "question": "Which sentence correctly expresses an invitation?",
-                            "options": [
-                                "Would you like to come with us?",
-                                "Do you have come with us?",
-                                "Are you coming with us not?",
-                                "Must you come with us?"
-                            ],
-                            "correctAnswerIndex": 0,
-                            "explanation": "Would you like to come...?"
-                        },
-                        {
-                            "id": "en-a2-u2-l5-q4",
-                            "question": "Choose the correct sign-off phrase for friends:",
-                            "options": [
-                                "Yours sincerely,",
-                                "Regards Sir,",
-                                "Yours obediently,",
-                                "Take care,"
-                            ],
-                            "correctAnswerIndex": 3,
-                            "explanation": "Take care (O'zingni ehtiyot qil)."
-                        }
-                    ]
-                }
-            }
         ]
-    },
+},
     {
         "id": "en-a2-u3-l1",
         "courseId": "english-a2",
