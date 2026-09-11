@@ -3474,55 +3474,112 @@ export const ENGLISH_A2_LESSONS: Lesson[] = [
         "language": "en",
         "level": "A2",
         "lessonNumber": 1,
-        "title": "Travel, Airport & Hotel Check-in",
-        "description": "Aeroport va mehmonxonada ro'yxatdan o'tish so'zlashuvi.",
-        "estimatedDurationMinutes": 14,
-        "icon": "🏨",
+        "title": "Travel, Airport Navigation & Hotel Check-in",
+        "description": "Aeroportda ro'yxatdan o'tish, parvoz ma'lumotlari, bagaj va mehmonxona xizmatlarida erkin muloqot.",
+        "estimatedDurationMinutes": 15,
+        "icon": "✈️",
         "steps": [
             {
                 "id": "en-a2-u4-l1-s1",
-                "title": "Mehmonxona va Aeroport",
+                "title": "Aeroport va Mehmonxona Muloqoti",
                 "type": "learn",
                 "estimatedMinutes": 5,
                 "learnData": {
-                    "title": "Hotel Check-in & Airport Language",
-                    "explanation": "Sayohatdagi eng kerakli iboralar: \"I have a reservation under the name of...\", \"Where is the boarding gate?\"",
+                    "title": "Navigating Airports & Hotels in English",
+                    "explanation": "Xalqaro sayohatlarda aeroport va mehmonxona xodimlariga murojaat qilish, parvoz holatini bilish va xizmatlardan to'g'ri foydalanish:\n\n1. Aeroportdagi Asosiy Jarayonlar va So'zlar:\n- Check-in desk (ro'yxatdan o'tish peshtaxtasi): Chipta ko'rsatiladi, yuk topshiriladi va 'boarding pass' (parvoz taloni) olinadi.\n- Gate (chiqish darvozasi): Samolyotga chiqish joyi: 'Flight TK365 is now boarding at Gate 14'.\n- Delay (kechikish) vs On time (o'z vaqtida): 'Our flight is delayed by 45 minutes'.\n- Luggage / Baggage (bagaj): Sanalmaydigan ot! Hech qachon 'luggages' deb ko'plik qo'shimchasi qo'shilmaydi.\n\n2. Mehmonxonada Ro'yxatdan O'tish (Check-in & Check-out):\n- 'I have a reservation under the name of ...' (Falonchi nomiga bronim bor).\n- 'Is breakfast included in the room price?' (Nonushta xona narxi ichidami?).\n- 'Could I request a wake-up call at 7 AM?' (Ertalab 7 ga uyg'otish qo'ng'irog'ini so'rasam bo'ladimi?).\n\n3. O'zbek o'rganuvchilari uchun xavfli tuzoqlar (Common Pitfalls):\n- ❌ 'We arrived to London / to the airport.' -> ✅ 'We arrived IN London' (shahar/mamlakat uchun in) / 'We arrived AT the airport' (aniq bino/manzil uchun at). Ingliz tilida 'arrive' fe'li bilan HECH QACHON 'to' ishlatilmaydi!\n- ❌ 'I have two luggages.' -> ✅ 'I have two pieces of luggage' yoki 'I have two bags/suitcases'.\n- ❌ 'Take a fly.' -> ✅ 'Take a flight' ('fly' fe'l, 'flight' ot).\n\n4. IELTS Speaking Foundation Corner:\n- Topic: Holidays and Travel (Speaking Part 1)\n- Examiner: 'Do you prefer traveling by plane or by train?'\n- Model Band 6.0+ Answer: 'Personally, I prefer traveling by plane, especially for long-distance journeys, because it saves a massive amount of time and feels much more comfortable. However, when I want to enjoy picturesque countryside views, taking a train is definitely a delightful experience.'\n- Intonation Tip: Aeroport yoki mehmonxonada so'rov berganda xushmuomalalik ohangi (polite rising intonation ↗) bilan gapiring: 'Could you tell me where Gate 4 is, please? ↗'",
                     "vocabulary": [
                         {
-                            "term": "Reservation",
-                            "reading": "/ˌrez.əˈveɪ.ʃən/",
-                            "meaning": "Oldindan band qilish (bron)",
-                            "exampleSentence": "I have a reservation for two nights.",
-                            "exampleTranslation": "Menda ikki kechaga band qilingan joy bor."
-                        },
-                        {
-                            "term": "Boarding pass",
+                            "term": "boarding pass",
                             "reading": "/ˈbɔː.dɪŋ ˌpɑːs/",
-                            "meaning": "Samolyotga chiqish taloni",
-                            "exampleSentence": "Please show your passport and boarding pass.",
-                            "exampleTranslation": "Iltimos, pasport va chiqish talonini ko'rsating."
+                            "meaning": "samolyotga chiqish taloni (posadochniy talon)",
+                            "exampleSentence": "Please have your passport and boarding pass ready for inspection.",
+                            "exampleTranslation": "Iltimos, tekshiruv uchun pasport va chiqish taloningizni tayyorlab qo'ying."
                         },
                         {
-                            "term": "Improve",
-                            "reading": "/ɪmˈpruːv/",
-                            "meaning": "Yaxshilamoq, rivojlantirmoq",
-                            "exampleSentence": "Reading books will improve your vocabulary.",
-                            "exampleTranslation": "Kitob oʻqish soʻz boyligingizni oshiradi."
+                            "term": "luggage",
+                            "reading": "/ˈlʌɡ.ɪdʒ/",
+                            "meaning": "bagaj, yuk (sanalmaydigan ot)",
+                            "exampleSentence": "Passengers are allowed to bring one small piece of hand luggage into the cabin.",
+                            "exampleTranslation": "Yo'lovchilarga samolyot saloniga bitta kichik qo'l yuki olib kirishga ruxsat etiladi."
+                        },
+                        {
+                            "term": "delay",
+                            "reading": "/dɪˈleɪ/",
+                            "meaning": "kechikish, kechiktirmoq",
+                            "exampleSentence": "The departure of our flight was delayed due to heavy snowfall.",
+                            "exampleTranslation": "Qalin qor yog'ishi sababli reysimizning jo'nab ketishi kechiktirildi."
+                        },
+                        {
+                            "term": "gate",
+                            "reading": "/ɡeɪt/",
+                            "meaning": "chiqish eshigi / darvozasi (aeroportda)",
+                            "exampleSentence": "Boarding for flight 402 starts in ten minutes at Gate 12.",
+                            "exampleTranslation": "402-reysga chiqish o'n daqiqadan so'ng 12-darvozada boshlanadi."
+                        },
+                        {
+                            "term": "reservation",
+                            "reading": "/ˌrez.əˈveɪ.ʃən/",
+                            "meaning": "oldindan band qilish (bron)",
+                            "exampleSentence": "We made a hotel reservation two weeks in advance to get a discount.",
+                            "exampleTranslation": "Chegirma olish uchun mehmonxonani ikki hafta oldin band qildik."
+                        },
+                        {
+                            "term": "passport control",
+                            "reading": "/ˈpɑːs.pɔːt kənˌtrəʊl/",
+                            "meaning": "pasport nazorati",
+                            "exampleSentence": "The queue at passport control moved surprisingly fast this morning.",
+                            "exampleTranslation": "Bugun ertalab pasport nazoratidagi navbat kutilmaganda tez harakatlandi."
+                        },
+                        {
+                            "term": "check-in desk",
+                            "reading": "/ˈtʃek.ɪn ˌdesk/",
+                            "meaning": "ro'yxatdan o'tish peshtaxtasi",
+                            "exampleSentence": "Go straight to the check-in desk to drop off your heavy suitcases.",
+                            "exampleTranslation": "Og'ir chamadonlaringizni topshirish uchun to'g'ri ro'yxatdan o'tish peshtaxtasiga boring."
+                        },
+                        {
+                            "term": "destination",
+                            "reading": "/ˌdes.tɪˈneɪ.ʃən/",
+                            "meaning": "borish manzili",
+                            "exampleSentence": "Samarkand is one of the most famous tourist destinations in Central Asia.",
+                            "exampleTranslation": "Samarqand Markaziy Osiyodagi eng mashhur sayyohlik manzillaridan biridir."
+                        },
+                        {
+                            "term": "complimentary",
+                            "reading": "/ˌkɒm.plɪˈmen.tər.i/",
+                            "meaning": "bepul taqdim etiladigan (xizmat yoki noz-ne'mat)",
+                            "exampleSentence": "The hotel provides complimentary bottled water and breakfast every morning.",
+                            "exampleTranslation": "Mehmonxona har kuni ertalab bepul shisha suv va nonushta taqdim etadi."
                         }
                     ],
                     "grammarRules": [
                         {
-                            "pattern": "Travel, Airport & Hotel Check-in",
-                            "meaning": "Aeroport va mehmonxonada ro'yxatdan o'tish so'zlashuvi.",
-                            "usageNotes": "Sayohatdagi eng kerakli iboralar: \"I have a reservation under the name of...\", \"Where is the boarding gate?\"",
+                            "pattern": "Polite Requests: Could I / Would it be possible to + base verb",
+                            "meaning": "Aeroport va mehmonxonada xushmuomala so'rov berish",
+                            "usageNotes": "Mijoz sifatida xodimlardan iltimos qilganda 'I want' deyish qo'pol hisoblanadi. 'Could I have...', 'Could you please check...' formulasi qo'llaniladi.",
                             "examples": [
                                 {
-                                    "sentence": "I have a reservation for two nights.",
-                                    "translation": "Menda ikki kechaga band qilingan joy bor."
+                                    "sentence": "Could I have an aisle seat instead of a window seat?",
+                                    "translation": "Deraza yonidagi o'rindiq o'rniga yo'lak yonidagi o'rindiqni olsam bo'ladimi?"
                                 },
                                 {
-                                    "sentence": "Please show your passport and boarding pass.",
-                                    "translation": "Iltimos, pasport va chiqish talonini ko'rsating."
+                                    "sentence": "Would it be possible to check in two hours earlier?",
+                                    "translation": "Ikki soat oldinroq ro'yxatdan o'tishning imkoni bormi?"
+                                }
+                            ]
+                        },
+                        {
+                            "pattern": "Prepositions of Arrival: Arrive in (city/country) vs Arrive at (station/airport/hotel)",
+                            "meaning": "Manzilga yetib kelishda to'g'ri predlog tanlash",
+                            "usageNotes": "Ingliz tilida arrive bilan 'to' ISHLATILMAYDI. Katta hududlar (shahar, davlat) uchun 'in', kichik aniq binolar (aeroport, mehmonxona, vokzal) uchun 'at' ishlatiladi.",
+                            "examples": [
+                                {
+                                    "sentence": "Our plane arrived in Istanbul on schedule.",
+                                    "translation": "Samolyotimiz jadval bo'yicha Istanbulga yetib bordi."
+                                },
+                                {
+                                    "sentence": "We arrived at the hotel just before midnight.",
+                                    "translation": "Biz mehmonxonaga yarim tundan sal oldin yetib keldik."
                                 }
                             ]
                         }
@@ -3531,97 +3588,148 @@ export const ENGLISH_A2_LESSONS: Lesson[] = [
             },
             {
                 "id": "en-a2-u4-l1-s2",
-                "title": "Mashq",
+                "title": "Amaliy Mashqlar",
                 "type": "practice",
-                "estimatedMinutes": 4,
+                "estimatedMinutes": 5,
                 "practiceData": {
-                    "instructions": "To'g'ri iborani tanlang.",
+                    "instructions": "Sayohat va aeroport vaziyatlariga mos to'g'ri so'z va grammatik shaklni tanlang.",
                     "exercises": [
                         {
                             "id": "en-a2-u4-l1-e1",
                             "type": "multiple-choice",
-                            "prompt": "\"What time is _______ at this hotel?\" — \"At 11:00 AM.\"",
+                            "prompt": "\"Excuse me, which _______ does the flight to Istanbul depart from?\"",
                             "options": [
-                                "check-out",
-                                "boarding",
-                                "depart",
-                                "reserve"
+                                "gate",
+                                "station",
+                                "shelf",
+                                "stop"
                             ],
                             "correctAnswer": 0,
-                            "explanation": "Check-out (mehmonxonadan chiqish)."
+                            "explanation": "Aeroportda samolyotga chiqish joyi 'gate' (chiqish darvozasi) deb ataladi."
                         },
                         {
-                            "id": "en-a2-u4-l1-ex-2",
+                            "id": "en-a2-u4-l1-e2",
                             "type": "multiple-choice",
-                            "prompt": "Choose the correct word to complete the sentence: \"Please show your passport and boarding pass.\"",
+                            "prompt": "\"I'm sorry, sir, but your suitcase exceeds the weight limit. You must pay an excess _______ fee.\"",
                             "options": [
-                                "Boarding pass",
-                                "doubt",
-                                "reluctance",
-                                "delay"
+                                "delay",
+                                "ticket",
+                                "luggage",
+                                "reservation"
+                            ],
+                            "correctAnswer": 2,
+                            "explanation": "Ortiqcha yuk uchun to'lov: excess luggage / baggage fee."
+                        },
+                        {
+                            "id": "en-a2-u4-l1-e3",
+                            "type": "multiple-choice",
+                            "prompt": "\"We finally arrived _______ London Heathrow Airport after a ten-hour flight.\"",
+                            "options": [
+                                "to",
+                                "at",
+                                "in",
+                                "on"
+                            ],
+                            "correctAnswer": 1,
+                            "explanation": "Aeroport yoki bino kabi aniq nuqtaga yetib kelishda 'arrive at' ishlatiladi ('arrive to' xato)."
+                        },
+                        {
+                            "id": "en-a2-u4-l1-e4",
+                            "type": "multiple-choice",
+                            "prompt": "\"Hello, I have a hotel _______ under the name of Farrukh for three nights.\"",
+                            "options": [
+                                "boarding pass",
+                                "prescription",
+                                "receipt",
+                                "reservation"
+                            ],
+                            "correctAnswer": 3,
+                            "explanation": "Mehmonxonada oldindan band qilingan joy 'reservation' deyiladi."
+                        },
+                        {
+                            "id": "en-a2-u4-l1-e5",
+                            "type": "multiple-choice",
+                            "prompt": "\"Is continental breakfast _______ in the price of the double room?\"",
+                            "options": [
+                                "included",
+                                "including",
+                                "includes",
+                                "include"
                             ],
                             "correctAnswer": 0,
-                            "explanation": "\"Boarding pass\" (Samolyotga chiqish taloni) fits the context appropriately."
+                            "explanation": "'Is breakfast included...?' (Nonushta narx ichiga kiritilganmi?). Passive voice shakli."
                         }
                     ]
                 }
             },
             {
                 "id": "en-a2-u4-l1-s3",
-                "title": "Test",
+                "title": "Yakuniy Test",
                 "type": "test",
                 "estimatedMinutes": 5,
                 "testData": {
-                    "instructions": "Savollarga javob bering.",
-                    "passingScorePercentage": 75,
+                    "instructions": "Aeroport, sayohat va mehmonxona muloqotiga oid savollarga javob bering.",
+                    "passingScorePercentage": 80,
                     "questions": [
                         {
                             "id": "en-a2-u4-l1-q1",
-                            "question": "Where do you go to get on the airplane?",
+                            "question": "Qaysi gapda 'arrive' fe'li bilan predlog to'g'ri qo'llanilgan?",
                             "options": [
-                                "Boarding gate",
-                                "Check-out desk",
-                                "Reception",
-                                "Baggage claim"
+                                "We arrived to Tashkent yesterday evening.",
+                                "We arrived in Tashkent yesterday evening.",
+                                "We arrived at Uzbekistan yesterday evening.",
+                                "We arrived into Tashkent yesterday evening."
                             ],
-                            "correctAnswerIndex": 0,
-                            "explanation": "Boarding gate."
+                            "correctAnswerIndex": 1,
+                            "explanation": "Katta shaharlar va mamlakatlar bilan 'arrive in' ishlatiladi. 'Arrive to' qo'pol xatodir."
                         },
                         {
                             "id": "en-a2-u4-l1-q2",
-                            "question": "Can I have a wake-up _______ at 6 AM, please?",
+                            "question": "Bagaj so'zi to'g'ri ishlatilgan grammatik to'g'ri gapni tanlang:",
                             "options": [
-                                "shout",
-                                "call",
-                                "ring",
-                                "phone"
+                                "I bought three new luggages for our family vacation.",
+                                "How many luggages did you bring with you?",
+                                "I have two large pieces of luggage to check in.",
+                                "All our luggages is waiting outside the terminal."
                             ],
-                            "correctAnswerIndex": 1,
-                            "explanation": "Wake-up call (uyg'otish qo'ng'irog'i)."
+                            "correctAnswerIndex": 2,
+                            "explanation": "'Luggage' sanalmaydigan ot bo'lib, donalab ifodalash uchun 'pieces of luggage' birikmasi qo'llaniladi."
                         },
                         {
                             "id": "en-a2-u4-l1-q3",
-                            "question": "\"Luggage / Baggage\" nimani bildiradi?",
+                            "question": "Where do airline passengers show their tickets, weigh luggage, and receive their boarding passes?",
                             "options": [
-                                "Samolyot",
-                                "Pasport",
-                                "Yuk / Bagaj",
-                                "Chipta"
+                                "At the baggage carousel",
+                                "At the check-in desk",
+                                "At the duty-free shop",
+                                "At the security checkpoint"
                             ],
-                            "correctAnswerIndex": 2,
-                            "explanation": "Luggage — Yuk."
+                            "correctAnswerIndex": 1,
+                            "explanation": "Yo'lovchilar chiptani ko'rsatib, yuk topshirib talon oladigan joy 'check-in desk' hisoblanadi."
                         },
                         {
                             "id": "en-a2-u4-l1-q4",
-                            "question": "Is breakfast _______ in the room rate?",
+                            "question": "If an announcement says: 'Flight 708 is delayed by two hours', what does it mean?",
                             "options": [
-                                "including",
-                                "include",
-                                "includes",
-                                "included"
+                                "The flight is completely cancelled and won't depart today.",
+                                "The flight will take off two hours later than scheduled.",
+                                "The flight arrived two hours earlier than expected.",
+                                "The flight ticket price is reduced by two dollars."
                             ],
-                            "correctAnswerIndex": 3,
-                            "explanation": "Included in the room rate (xonaga kiritilgan)."
+                            "correctAnswerIndex": 1,
+                            "explanation": "'Delayed' reysning rejalashtirilgan vaqtdan kechroq uchishini anglatadi."
+                        },
+                        {
+                            "id": "en-a2-u4-l1-q5",
+                            "question": "At the hotel reception: 'Could I request a late _______? My flight does not leave until 8 PM.'",
+                            "options": [
+                                "check-in",
+                                "check-out",
+                                "reservation",
+                                "destination"
+                            ],
+                            "correctAnswerIndex": 1,
+                            "explanation": "Xonani odatdagidan kechroq topshirib chiqib ketish 'late check-out' deb ataladi."
                         }
                     ]
                 }
@@ -3637,54 +3745,118 @@ export const ENGLISH_A2_LESSONS: Lesson[] = [
         "level": "A2",
         "lessonNumber": 2,
         "title": "Health, Illness & Doctor's Appointment",
-        "description": "Sog'liq, kasallik belgilari va shifokor qabulida so'zlashuv.",
-        "estimatedDurationMinutes": 14,
+        "description": "Salomatlik, kasallik belgilari, shifokor qabulida shikoyatlarni bayon qilish va davolanish bo'yicha tavsiyalar.",
+        "estimatedDurationMinutes": 15,
         "icon": "🩺",
         "steps": [
             {
                 "id": "en-a2-u4-l2-s1",
-                "title": "Shifokor Huzurida",
+                "title": "Salomatlik va Shifokor Qabulida",
                 "type": "learn",
                 "estimatedMinutes": 5,
                 "learnData": {
-                    "title": "Talking about Symptoms",
-                    "explanation": "O'zini qanday his qilayotganini tushuntirish: \"I have a headache\", \"I have a sore throat\", \"I feel dizzy\".",
+                    "title": "Talking About Health, Symptoms & Treatments",
+                    "explanation": "Salomatlik holatini ifodalash, shifokor qabuliga yozilish va dori-darmon tavsiyalarini tushunish:\n\n1. Kasallik va Og'riqlarni Ifodalash Tuzilmalari:\n- 'have / have got + a/an + ot': 'I have a headache' (bosh og'rig'i), 'She has a sore throat' (tomoq og'rig'i), 'He has a high fever' (yuqori harorat/isitma).\n- 'feel + sifat': 'I feel dizzy' (boshim aylanyapti), 'I feel sick' (ko'nglim ayniyapti / o'zimni yomon his qilyapman), 'I feel exhausted' (holdan toydim).\n- 'hurt' (og'rimoq fe'li): 'My shoulder hurts', 'My feet hurt after walking all day'.\n\n2. Shifokor Qabulida Kerakli Iboralar:\n- 'I would like to make / book an appointment with Dr. Smith.' (Qabulga yozilmoq).\n- 'What are your symptoms?' (Qanday shikoyat/belgilaringiz bor?).\n- 'How long have you been feeling like this?' (Qachondan beri o'zingizni shunday his qilyapsiz?).\n- 'Here is a prescription for antibiotics.' (Mana antibiotik uchun shifokor retsepti).\n\n3. O'zbek o'rganuvchilari uchun xavfli tuzoqlar (Common Pitfalls):\n- ❌ 'I have temperature.' -> ✅ 'I have a fever' yoki 'I have a high temperature.' (Ingliz tilida har bir tirik insonning 'temperature'i bor. Kasal bo'lib isitma chiqqanda faqat 'a fever' yoki 'a high temperature' deyiladi).\n- ❌ 'My head is paining.' -> ✅ 'I have a headache' yoki 'My head hurts.' ('Pain' asosan ot; harakat sifatida 'hurt' yoki 'have an ache' ishlatiladi).\n- ❌ 'I need to open a doctor appointment.' -> ✅ 'I need to make / book an appointment.'\n\n4. IELTS Speaking Foundation Corner:\n- Topic: Health and Lifestyle (Speaking Part 1)\n- Examiner: 'What do you usually do when you catch a cold or feel unwell?'\n- Model Band 6.0+ Answer: 'Whenever I catch a cold, the first thing I do is rest at home and drink plenty of warm herbal tea with honey. However, if I develop a severe cough or a persistent high fever, I immediately make an appointment with my doctor to get a proper prescription.'\n- Linking Tip: 'Whenever...', 'the first thing I do is...', 'however, if...' kabi mantiqiy bog'lovchilarni qo'llash javobingizni ravon va professional qiladi.",
                     "vocabulary": [
                         {
-                            "term": "Headache",
+                            "term": "headache",
                             "reading": "/ˈhed.eɪk/",
-                            "meaning": "Bosh og'rig'i",
-                            "exampleSentence": "I have a terrible headache.",
-                            "exampleTranslation": "Menda qattiq bosh og'rig'i bor."
+                            "meaning": "bosh og'rig'i",
+                            "exampleSentence": "I stared at the computer screen for eight hours and got a terrible headache.",
+                            "exampleTranslation": "Kompyuter ekraniga sakkiz soat tikilib qarab, qattiq bosh og'rig'iga yo'liqdim."
                         },
                         {
-                            "term": "Fever",
+                            "term": "fever",
                             "reading": "/ˈfiː.vər/",
-                            "meaning": "Isitma",
-                            "exampleSentence": "The child has a high fever.",
-                            "exampleTranslation": "Bolada yuqori isitma bor."
+                            "meaning": "yuqori harorat, isitma",
+                            "exampleSentence": "The doctor advised him to drink lots of water and stay in bed until the fever goes down.",
+                            "exampleTranslation": "Shifokor unga isitma tushguncha ko'p suv ichishni va o'rinda yotishni maslahat berdi."
                         },
                         {
-                            "term": "Medicine",
-                            "reading": "/ˈmed.sən/",
-                            "meaning": "Dori-darmon",
-                            "exampleSentence": "Take this medicine twice a day.",
-                            "exampleTranslation": "Bu dorini kuniga ikki marta iching."
+                            "term": "sore throat",
+                            "reading": "/ˌsɔː ˈθrəʊt/",
+                            "meaning": "tomoq og'rig'i",
+                            "exampleSentence": "She had a sore throat, so she couldn't give her presentation.",
+                            "exampleTranslation": "Tomog'i og'riyotgani sababli u o'z taqdimotini o'tkaza olmadi."
+                        },
+                        {
+                            "term": "cough",
+                            "reading": "/kɒf/",
+                            "meaning": "yo'tal, yo'talmoq",
+                            "exampleSentence": "He has had a dry cough for over three days.",
+                            "exampleTranslation": "U uch kundan beri quruq yo'talmoqda."
+                        },
+                        {
+                            "term": "prescription",
+                            "reading": "/prɪˈskrɪp.ʃən/",
+                            "meaning": "shifokor retsepti (dorilar uchun)",
+                            "exampleSentence": "You cannot buy these strong antibiotics without an official doctor's prescription.",
+                            "exampleTranslation": "Ushbu kuchli antibiotiklarni rasmiy shifokor retseptisiz sotib ololmaysiz."
+                        },
+                        {
+                            "term": "painkiller",
+                            "reading": "/ˈpeɪnˌkɪl.ər/",
+                            "meaning": "og'riq qoldiruvchi dori",
+                            "exampleSentence": "She took a mild painkiller to relieve her severe toothache.",
+                            "exampleTranslation": "U qattiq tish og'rig'ini yengillashtirish uchun yengil og'riq qoldiruvchi dori ichdi."
+                        },
+                        {
+                            "term": "symptom",
+                            "reading": "/ˈsɪmp.təm/",
+                            "meaning": "kasallik belgisi, simptom",
+                            "exampleSentence": "A high temperature and loss of taste are common symptoms of this virus.",
+                            "exampleTranslation": "Yuqori tana harorati va ta'm bilmaslik ushbu virusning odatiy belgilaridir."
+                        },
+                        {
+                            "term": "dizzy",
+                            "reading": "/ˈdɪz.i/",
+                            "meaning": "boshi aylanayotgan (sifat)",
+                            "exampleSentence": "When I stood up suddenly after sitting for hours, I felt quite dizzy.",
+                            "exampleTranslation": "Soatlab o'tirgandan keyin to'satdan o'rnimdan turganimda, boshim ancha aylanib ketdi."
+                        },
+                        {
+                            "term": "recover",
+                            "reading": "/rɪˈkʌv.ər/",
+                            "meaning": "sog'aymoq, tuzalmoq",
+                            "exampleSentence": "It usually takes about a week to recover completely from the seasonal flu.",
+                            "exampleTranslation": "Mavsumiy grippdan butunlay sog'ayish uchun odatda taxminan bir hafta kerak bo'ladi."
+                        },
+                        {
+                            "term": "appointment",
+                            "reading": "/əˈpɔɪnt.mənt/",
+                            "meaning": "belgilangan qabul / uchrashuv",
+                            "exampleSentence": "I have an appointment with my dentist tomorrow at 10 AM.",
+                            "exampleTranslation": "Ertaga ertalab soat 10 da stomatolog qabulim bor."
                         }
                     ],
                     "grammarRules": [
                         {
-                            "pattern": "Health, Illness & Doctor's Appointment",
-                            "meaning": "Sog'liq, kasallik belgilari va shifokor qabulida so'zlashuv.",
-                            "usageNotes": "O'zini qanday his qilayotganini tushuntirish: \"I have a headache\", \"I have a sore throat\", \"I feel dizzy\".",
+                            "pattern": "Giving Health Advice: Should / Shouldn't + base verb",
+                            "meaning": "Bemorga tavsiya va maslahat berish",
+                            "usageNotes": "Kasallikda kimgadir nima qilish yoki qilmaslikni maslahat berishda 'should' va 'shouldn't' ishlatiladi. Undan keyin 'to' yuklamasi kelmaydi.",
                             "examples": [
                                 {
-                                    "sentence": "I have a terrible headache.",
-                                    "translation": "Menda qattiq bosh og'rig'i bor."
+                                    "sentence": "You should drink plenty of fluids and get adequate rest.",
+                                    "translation": "Ko'p suyuqlik ichishingiz va yetarlicha dam olishingiz kerak."
                                 },
                                 {
-                                    "sentence": "The child has a high fever.",
-                                    "translation": "Bolada yuqori isitma bor."
+                                    "sentence": "You shouldn't take aspirin on an empty stomach.",
+                                    "translation": "Och qoringa aspirin ichmasligingiz kerak."
+                                }
+                            ]
+                        },
+                        {
+                            "pattern": "Expressing Ailments: have a + noun vs feel + adjective vs part + hurts",
+                            "meaning": "Og'riq va noqulaylikni turli grammatik yo'llar bilan aytish",
+                            "usageNotes": "Ot bilan 'have a headache', sifat bilan 'feel dizzy/sick', tana a'zosi bilan 'my leg hurts'.",
+                            "examples": [
+                                {
+                                    "sentence": "I have a sore throat and feel dizzy.",
+                                    "translation": "Tomog'im og'riyapti va boshim aylanyapti."
+                                },
+                                {
+                                    "sentence": "My left ankle hurts when I walk.",
+                                    "translation": "Yurganimda chap to'pig'im og'riyapti."
                                 }
                             ]
                         }
@@ -3693,97 +3865,148 @@ export const ENGLISH_A2_LESSONS: Lesson[] = [
             },
             {
                 "id": "en-a2-u4-l2-s2",
-                "title": "Mashq",
+                "title": "Amaliy Mashqlar",
                 "type": "practice",
-                "estimatedMinutes": 4,
+                "estimatedMinutes": 5,
                 "practiceData": {
-                    "instructions": "To'g'ri tibbiy so'zni tanlang.",
+                    "instructions": "Salomatlik va shifokor qabuliga doir to'g'ri so'z va iboralarni tanlang.",
                     "exercises": [
                         {
                             "id": "en-a2-u4-l2-e1",
                             "type": "multiple-choice",
-                            "prompt": "\"I have a sore _______, so it hurts when I swallow.\"",
+                            "prompt": "\"I can barely swallow food today because I have a terrible _______.\"",
                             "options": [
-                                "knee",
-                                "stomach",
-                                "head",
-                                "throat"
+                                "fever",
+                                "sore throat",
+                                "prescription",
+                                "dizzy"
                             ],
-                            "correctAnswer": 3,
-                            "explanation": "Sore throat (tomoq og'rig'i)."
+                            "correctAnswer": 1,
+                            "explanation": "Ovqat yutish qiyin bo'lishi tomoq og'rig'i ('sore throat') belgisidir."
                         },
                         {
-                            "id": "en-a2-u4-l2-ex-2",
+                            "id": "en-a2-u4-l2-e2",
                             "type": "multiple-choice",
-                            "prompt": "Choose the correct word to complete the sentence: \"The child has a high fever.\"",
+                            "prompt": "\"If you have a high fever and a chest cough, you _______ go to work; you must stay home.\"",
                             "options": [
-                                "doubt",
-                                "delay",
-                                "Fever",
-                                "reluctance"
+                                "should",
+                                "shouldn't",
+                                "must",
+                                "ought to"
+                            ],
+                            "correctAnswer": 1,
+                            "explanation": "Isitma va yo'tal bo'lganda ishga bormaslik tavsiya qilinadi: 'you shouldn't go to work'."
+                        },
+                        {
+                            "id": "en-a2-u4-l2-e3",
+                            "type": "multiple-choice",
+                            "prompt": "\"The doctor gave me a _______ for ear drops, which I need to take to the pharmacy.\"",
+                            "options": [
+                                "receipt",
+                                "recipe",
+                                "prescription",
+                                "menu"
                             ],
                             "correctAnswer": 2,
-                            "explanation": "\"Fever\" (Isitma) fits the context appropriately."
+                            "explanation": "Dorixonadan dori olish uchun shifokor yozib beradigan qog'oz 'prescription' (retsept) deyiladi."
+                        },
+                        {
+                            "id": "en-a2-u4-l2-e4",
+                            "type": "multiple-choice",
+                            "prompt": "\"I haven't eaten anything since yesterday and I feel quite _______.\"",
+                            "options": [
+                                "dizzy",
+                                "headache",
+                                "cough",
+                                "painkiller"
+                            ],
+                            "correctAnswer": 0,
+                            "explanation": "'Feel' fe'lidan keyin sifat keladi: 'feel dizzy' (boshi aylanmoq)."
+                        },
+                        {
+                            "id": "en-a2-u4-l2-e5",
+                            "type": "multiple-choice",
+                            "prompt": "\"I would like to _______ an appointment with Dr. Johnson for next Tuesday afternoon.\"",
+                            "options": [
+                                "make",
+                                "do",
+                                "take",
+                                "have got"
+                            ],
+                            "correctAnswer": 0,
+                            "explanation": "Shifokor qabuliga yozilish uchun 'make an appointment' yoki 'book an appointment' ishlatiladi."
                         }
                     ]
                 }
             },
             {
                 "id": "en-a2-u4-l2-s3",
-                "title": "Test",
+                "title": "Yakuniy Test",
                 "type": "test",
                 "estimatedMinutes": 5,
                 "testData": {
-                    "instructions": "Savollarga javob bering.",
-                    "passingScorePercentage": 75,
+                    "instructions": "Salomatlik, kasallik shikoyatlari va tibbiy muloqot bo'yicha savollarga javob bering.",
+                    "passingScorePercentage": 80,
                     "questions": [
                         {
                             "id": "en-a2-u4-l2-q1",
-                            "question": "You should see a doctor if your _______ lasts more than 3 days.",
+                            "question": "Yuqori tana harorati ko'tarilganini to'g'ri ifodalovchi inglizcha gapni toping:",
                             "options": [
-                                "prescription",
-                                "pills",
-                                "appointment",
-                                "fever"
+                                "I have temperature of 38 degrees.",
+                                "I have a high fever.",
+                                "My body is heating high.",
+                                "I got high temperature degree."
                             ],
-                            "correctAnswerIndex": 3,
-                            "explanation": "Fever (isitma)."
+                            "correctAnswerIndex": 1,
+                            "explanation": "'I have a fever' yoki 'I have a high temperature' to'g'ri ifodadir. Oddiygina 'I have temperature' xato."
                         },
                         {
                             "id": "en-a2-u4-l2-q2",
-                            "question": "\"Prescription\" nimani bildiradi?",
+                            "question": "Bosh og'rig'ini ifodalovchi eng tabiiy va grammatik to'g'ri gap qaysi?",
                             "options": [
-                                "Qon bosimi",
-                                "Kasalxona to'lovi",
-                                "Shifokor yozib bergan dori retsepti",
-                                "Tashxis"
+                                "My head is paining very strongly.",
+                                "I have pain in head.",
+                                "I have a splitting headache.",
+                                "My head makes me painful."
                             ],
                             "correctAnswerIndex": 2,
-                            "explanation": "Prescription — Retsept."
+                            "explanation": "'I have a headache' (yoki kuchli bosh og'rig'i uchun 'splitting headache') tabiiy ifodadir."
                         },
                         {
                             "id": "en-a2-u4-l2-q3",
-                            "question": "I have a stomach ache. I _______ eat spicy food.",
+                            "question": "Doctor: 'Take one tablet of this _______ if your muscle pain becomes severe.'",
                             "options": [
-                                "must",
-                                "shouldn't",
-                                "have to",
-                                "can"
+                                "prescription",
+                                "symptom",
+                                "painkiller",
+                                "appointment"
                             ],
-                            "correctAnswerIndex": 1,
-                            "explanation": "Shouldn't eat."
+                            "correctAnswerIndex": 2,
+                            "explanation": "Og'riqni qoldiruvchi dori 'painkiller' deyiladi."
                         },
                         {
                             "id": "en-a2-u4-l2-q4",
-                            "question": "Take this pill _______ meals.",
+                            "question": "Qaysi gapda 'should' orqali berilgan tibbiy maslahat grammatik to'g'ri tuzilgan?",
                             "options": [
-                                "after",
-                                "into",
-                                "under",
-                                "over"
+                                "You should to stay in bed for three days.",
+                                "You should resting until you feel better.",
+                                "You should drink plenty of water and avoid strenuous exercise.",
+                                "You shouldn't taking any pills without consulting a doctor."
                             ],
-                            "correctAnswerIndex": 0,
-                            "explanation": "After meals (ovqatdan keyin)."
+                            "correctAnswerIndex": 2,
+                            "explanation": "'Should' va 'shouldn't' dan keyin fe'lning sof asosi (bare infinitive: drink, avoid) keladi, 'to' yoki '-ing' qo'shilmaydi."
+                        },
+                        {
+                            "id": "en-a2-u4-l2-q5",
+                            "question": "If a patient says: 'It took me nearly two weeks to recover from the flu', what does 'recover' mean?",
+                            "options": [
+                                "To become sick again",
+                                "To return to normal health after an illness",
+                                "To visit the hospital emergency room",
+                                "To pay the medical bill"
+                            ],
+                            "correctAnswerIndex": 1,
+                            "explanation": "'Recover' kasallikdan so'ng sog'ayish, asl sog'lom holatga qaytishni bildiradi."
                         }
                     ]
                 }
@@ -3799,54 +4022,118 @@ export const ENGLISH_A2_LESSONS: Lesson[] = [
         "level": "A2",
         "lessonNumber": 3,
         "title": "Shopping, Sizing & Returning Items",
-        "description": "Do'konda xarid qilish, kiyim o'lchami va buyumni almashtirish.",
-        "estimatedDurationMinutes": 12,
+        "description": "Do'konda xarid qilish, kiyim o'lchamlarini so'rash, kiyib ko'rish va mahsulotni almashtirish yoki qaytarish.",
+        "estimatedDurationMinutes": 15,
         "icon": "🛍️",
         "steps": [
             {
                 "id": "en-a2-u4-l3-s1",
-                "title": "Xarid Tilini O'rganish",
+                "title": "Do'konda Muloqot va Qaytarish",
                 "type": "learn",
-                "estimatedMinutes": 4,
+                "estimatedMinutes": 5,
                 "learnData": {
-                    "title": "Shopping & Returns",
-                    "explanation": "Kiyim sinab ko'rish va o'lcham so'rash: \"Can I try this on?\", \"Do you have this in a medium size?\", \"Can I get a refund?\"",
+                    "title": "Shopping, Sizing, Exchanges & Refunds",
+                    "explanation": "Kiyim va tovarlar xarid qilishda to'g'ri so'rovlar berish, o'lchamlarni aniqlash va buyumni almashtirish:\n\n1. O'lcham va Kiyib Ko'rish (Sizing & Trying On):\n- 'Could I try this jacket on?' (Ushbu kurtkani kiyib ko'rsam bo'ladimi?).\n- 'Where are the fitting rooms?' (Kiyib ko'rish xonalari qayerda?).\n- 'Do you have this shirt in a medium / large size?' (Bu ko'ylakning M yoki L o'lchami bormi?).\n- 'It is too tight / too loose / too small / too big.' (Juda tor / juda keng / juda kichik / juda katta).\n\n2. 'Fit' va 'Suit' Fe'llarining Muhim Farqi:\n- Fit = O'lchami (size) to'g'ri kelishi: 'These shoes fit me perfectly.' (O'lchami oyog'imga loyiq).\n- Suit = Uslubi yoki rangi inson husniga yarashishi: 'That green dress really suits you!' (Bu yashil ko'ylak sizga juda yarashibdi!).\n\n3. Qaytarish va Almashtirish (Returns & Exchanges):\n- 'Can I get a refund?' (Pulimni qaytarib olsam bo'ladimi? - Faqat to'lov cheki bo'lganda).\n- 'Could I exchange this for a different size or color?' (Buni boshqa o'lcham yoki rangga almashtirsam bo'ladimi?).\n- 'Receipt' (/rɪˈsiːt/) so'zida 'p' harfi mutlaqo talaffuz qilinmaydi!\n\n4. O'zbek o'rganuvchilari uchun xavfli tuzoqlar (Common Pitfalls):\n- ❌ 'This red coat fits you, you look beautiful!' -> ✅ 'This red coat SUITS you, you look beautiful!' (Yarashish ma'nosida 'suit' ishlatiladi. 'Fit' faqat o'lcham mos kelishini bildiradi).\n- ❌ 'Receipt' so'zini /resept/ deb talaffuz qilish -> ✅ /rɪˈsiːt/ deb aytiladi. Taom tayyorlash retsepti esa 'recipe' /ˈres.ɪ.pi/ deb ataladi.\n- ❌ 'I want my money back.' (Juda qo'pol) -> ✅ 'Could I get a refund, please? Here is the receipt.'\n\n5. IELTS Speaking Foundation Corner:\n- Topic: Shopping and Clothes (Speaking Part 1)\n- Examiner: 'Do you prefer shopping in shopping malls or online?'\n- Model Band 6.0+ Answer: 'I definitely prefer shopping in physical stores or shopping malls, especially when it comes to clothes. The primary reason is that I can use the fitting room to verify whether the clothes fit comfortably and whether the colors truly suit me before making a purchase.'\n- Lexical Tip: 'Fit comfortably' va 'truly suit me' kollokatsiyalarini to'g'ri farqlab ishlatish lug'at boyligi bo'yicha yuqori ball keltiradi.",
                     "vocabulary": [
                         {
-                            "term": "Size",
-                            "reading": "/saɪz/",
-                            "meaning": "O'lcham",
-                            "exampleSentence": "What size do you wear?",
-                            "exampleTranslation": "Qaysi o'lchamni kiyasiz?"
+                            "term": "fitting room",
+                            "reading": "/ˈfɪt.ɪŋ ˌruːm/",
+                            "meaning": "kiyim kiyib ko'rish xonasi (primerka)",
+                            "exampleSentence": "The fitting rooms are located at the back of the store on the left.",
+                            "exampleTranslation": "Kiyim kiyib ko'rish xonalari do'konning orqa tomonida, chapda joylashgan."
                         },
                         {
-                            "term": "Receipt",
+                            "term": "receipt",
                             "reading": "/rɪˈsiːt/",
-                            "meaning": "Chek / Kvitansiya",
-                            "exampleSentence": "Keep your receipt for returns.",
-                            "exampleTranslation": "Qaytarib berish uchun chekni saqlang."
+                            "meaning": "to'lov cheki ('p' harfi o'qilmaydi)",
+                            "exampleSentence": "Always keep your receipt in case you want to return or exchange the item.",
+                            "exampleTranslation": "Mahsulotni qaytarish yoki almashtirishni xohlasangiz, doimo to'lov chekingizni saqlang."
                         },
                         {
-                            "term": "Confidence",
-                            "reading": "/ˈkɒn.fɪ.dəns/",
-                            "meaning": "Ishonch",
-                            "exampleSentence": "Practice gives you confidence in speaking.",
-                            "exampleTranslation": "Mashq qilish gapirishda ishonch bagʻishlaydi."
+                            "term": "refund",
+                            "reading": "/ˈriː.fʌnd/",
+                            "meaning": "pulni qaytarib berish",
+                            "exampleSentence": "The store gave me a full refund because the electronic device was faulty.",
+                            "exampleTranslation": "Elektron moslama nuqsonli bo'lgani uchun do'kon pulimni to'liq qaytarib berdi."
+                        },
+                        {
+                            "term": "exchange",
+                            "reading": "/ɪksˈtʃeɪndʒ/",
+                            "meaning": "almashtirmoq (boshqa o'lcham yoki rangga)",
+                            "exampleSentence": "These trousers are too long; can I exchange them for a shorter pair?",
+                            "exampleTranslation": "Bu shim juda uzun ekan; uni kaltarog'iga almashtirsam bo'ladimi?"
+                        },
+                        {
+                            "term": "discount",
+                            "reading": "/ˈdɪs.kaʊnt/",
+                            "meaning": "chegirma",
+                            "exampleSentence": "Students get a 15% discount on all books in this store.",
+                            "exampleTranslation": "Talabalar ushbu do'kondagi barcha kitoblarga 15% chegirma oladilar."
+                        },
+                        {
+                            "term": "affordable",
+                            "reading": "/əˈfɔː.də.bəl/",
+                            "meaning": "hamyonbop, narxi qulay",
+                            "exampleSentence": "This local brand offers high-quality shoes at very affordable prices.",
+                            "exampleTranslation": "Bu mahalliy brend juda hamyonbop narxlarda yuqori sifatli poyabzallar taqdim etadi."
+                        },
+                        {
+                            "term": "fit",
+                            "reading": "/fɪt/",
+                            "meaning": "o'lchami to'g'ri kelmoq (o'lcham bo'yicha mos)",
+                            "exampleSentence": "This medium size fits me like a glove; it is neither too tight nor too loose.",
+                            "exampleTranslation": "Bu M o'lcham menga ayni loyiq keldi; u na juda tor va na juda keng."
+                        },
+                        {
+                            "term": "suit",
+                            "reading": "/suːt/",
+                            "meaning": "yarashmoq (husn, uslub yoki rang haqida)",
+                            "exampleSentence": "Dark blue really suits you; it makes you look very professional.",
+                            "exampleTranslation": "To'q ko'k rang sizga juda yarashadi; u sizni ancha jiddiy va professional ko'rsatadi."
+                        },
+                        {
+                            "term": "damaged",
+                            "reading": "/ˈdæm.ɪdʒd/",
+                            "meaning": "shikastlangan, zararlangan",
+                            "exampleSentence": "I noticed the box was damaged when the delivery courier arrived.",
+                            "exampleTranslation": "Yetkazib beruvchi kurer kelganida quti shikastlanganini payqadim."
+                        },
+                        {
+                            "term": "customer service",
+                            "reading": "/ˌkʌs.tə.mə ˈsɜː.vɪs/",
+                            "meaning": "mijozlarga xizmat ko'rsatish bo'limi",
+                            "exampleSentence": "If you have any complaints, please contact our customer service desk.",
+                            "exampleTranslation": "Agar e'tirozlaringiz bo'lsa, iltimos mijozlarga xizmat ko'rsatish peshtaxtasiga murojaat qiling."
                         }
                     ],
                     "grammarRules": [
                         {
-                            "pattern": "Shopping, Sizing & Returning Items",
-                            "meaning": "Do'konda xarid qilish, kiyim o'lchami va buyumni almashtirish.",
-                            "usageNotes": "Kiyim sinab ko'rish va o'lcham so'rash: \"Can I try this on?\", \"Do you have this in a medium size?\", \"Can I get a refund?\"",
+                            "pattern": "Fit (size) vs Suit (appearance/style)",
+                            "meaning": "O'lcham mosligi va yarashishni to'g'ri ifodalash",
+                            "usageNotes": "'Fit' kiyimning tanadagi o'lchami haqida (tor/keng). 'Suit' esa rang, fason va tashqi ko'rinishga mos kelishi haqida.",
                             "examples": [
                                 {
-                                    "sentence": "What size do you wear?",
-                                    "translation": "Qaysi o'lchamni kiyasiz?"
+                                    "sentence": "The shoes fit well, but the bright pink color doesn't suit me.",
+                                    "translation": "Poyabzal o'lchami yaxshi tushdi, lekin yorqin pushti rang menga unchalik yarashmayapti."
                                 },
                                 {
-                                    "sentence": "Keep your receipt for returns.",
-                                    "translation": "Qaytarib berish uchun chekni saqlang."
+                                    "sentence": "Does this jacket fit you properly across the shoulders?",
+                                    "translation": "Bu kurtka yelkangizga to'g'ri loyiq kelyaptimi?"
+                                }
+                            ]
+                        },
+                        {
+                            "pattern": "Could I / Can I + exchange / get a refund",
+                            "meaning": "Tovarni qaytarish yoki almashtirish bo'yicha xushmuomala so'rov",
+                            "usageNotes": "Do'konda nizosiz xizmat olish uchun muloyim modal fe'llar ishlatiladi.",
+                            "examples": [
+                                {
+                                    "sentence": "Could I exchange this sweater for a larger size, please?",
+                                    "translation": "Ushbu sviterni kattaroq o'lchamga almashtirsam bo'ladimi, iltimos?"
+                                },
+                                {
+                                    "sentence": "Can I get a full refund if I bring the original receipt?",
+                                    "translation": "Asl to'lov chekini olib kelsam, to'liq pulimni qaytarib olsam bo'ladimi?"
                                 }
                             ]
                         }
@@ -3855,97 +4142,148 @@ export const ENGLISH_A2_LESSONS: Lesson[] = [
             },
             {
                 "id": "en-a2-u4-l3-s2",
-                "title": "Mashq",
+                "title": "Amaliy Mashqlar",
                 "type": "practice",
-                "estimatedMinutes": 4,
+                "estimatedMinutes": 5,
                 "practiceData": {
-                    "instructions": "To'g'ri iborani tanlang.",
+                    "instructions": "Xarid qilish, o'lchamlar va qaytarish qoidalariga oid to'g'ri so'zlarni tanlang.",
                     "exercises": [
                         {
                             "id": "en-a2-u4-l3-e1",
                             "type": "multiple-choice",
-                            "prompt": "\"Where is the _______ room? I want to try these jeans on.\"",
+                            "prompt": "\"I like these jeans, but they are too tight. Where can I try on a larger size? Where is the _______?\"",
                             "options": [
-                                "living",
-                                "kitchen",
-                                "fitting",
-                                "sleeping"
+                                "waiting room",
+                                "fitting room",
+                                "living room",
+                                "restroom"
                             ],
-                            "correctAnswer": 2,
-                            "explanation": "Fitting room (kiyib ko'rish xonasi)."
+                            "correctAnswer": 1,
+                            "explanation": "Kiyimni kiyib ko'rish xonasi 'fitting room' deyiladi."
                         },
                         {
-                            "id": "en-a2-u4-l3-ex-2",
+                            "id": "en-a2-u4-l3-e2",
                             "type": "multiple-choice",
-                            "prompt": "Choose the correct word to complete the sentence: \"Keep your receipt for returns.\"",
+                            "prompt": "\"You cannot get a cash refund unless you present the original purchase _______.\"",
                             "options": [
-                                "Receipt",
-                                "reluctance",
-                                "delay",
-                                "doubt"
+                                "recipe",
+                                "prescription",
+                                "receipt",
+                                "menu"
+                            ],
+                            "correctAnswer": 2,
+                            "explanation": "To'lov cheki ingliz tilida 'receipt' (/rɪˈsiːt/) deb yoziladi."
+                        },
+                        {
+                            "id": "en-a2-u4-l3-e3",
+                            "type": "multiple-choice",
+                            "prompt": "\"That beige coat looks fabulous on you; the cut and color really _______ you!\"",
+                            "options": [
+                                "fit",
+                                "suit",
+                                "tighten",
+                                "measure"
+                            ],
+                            "correctAnswer": 1,
+                            "explanation": "Insonning husniga, bo'y-bastiga yarashishi 'suit' fe'li bilan ifodalanadi."
+                        },
+                        {
+                            "id": "en-a2-u4-l3-e4",
+                            "type": "multiple-choice",
+                            "prompt": "\"These shoes are size 40, but my feet are size 42. They do not _______ me at all.\"",
+                            "options": [
+                                "suit",
+                                "fit",
+                                "match",
+                                "look"
+                            ],
+                            "correctAnswer": 1,
+                            "explanation": "O'lchamning mos kelmasligi 'fit' fe'li bilan aytiladi: 'They do not fit me'."
+                        },
+                        {
+                            "id": "en-a2-u4-l3-e5",
+                            "type": "multiple-choice",
+                            "prompt": "\"This shirt arrived with a broken button. Can I _______ it for an undamaged one?\"",
+                            "options": [
+                                "exchange",
+                                "refund",
+                                "borrow",
+                                "discount"
                             ],
                             "correctAnswer": 0,
-                            "explanation": "\"Receipt\" (Chek / Kvitansiya) fits the context appropriately."
+                            "explanation": "Bitta mahsulotni boshqasiga almashtirish 'exchange' fe'lidir."
                         }
                     ]
                 }
             },
             {
                 "id": "en-a2-u4-l3-s3",
-                "title": "Test",
+                "title": "Yakuniy Test",
                 "type": "test",
-                "estimatedMinutes": 4,
+                "estimatedMinutes": 5,
                 "testData": {
-                    "instructions": "Savollarga javob bering.",
-                    "passingScorePercentage": 75,
+                    "instructions": "Xarid, o'lchamlar va tovarlarni qaytarish muloqotiga oid test savollariga javob bering.",
+                    "passingScorePercentage": 80,
                     "questions": [
                         {
                             "id": "en-a2-u4-l3-q1",
-                            "question": "These shoes are too tight. Do you have a _______ size?",
+                            "question": "Qaysi gapda 'suit' fe'li o'zining to'g'ri semantik ma'nosida ishlatilgan?",
                             "options": [
-                                "largest",
-                                "more large",
-                                "larger",
-                                "large"
+                                "These trousers suit me because they are size 32.",
+                                "That stylish hat really suits you; it matches your coat perfectly.",
+                                "I need a bigger size because this jacket doesn't suit my shoulders.",
+                                "Do these shoes suit my feet size?"
                             ],
-                            "correctAnswerIndex": 2,
-                            "explanation": "A larger size (kattaroq o'lcham)."
+                            "correctAnswerIndex": 1,
+                            "explanation": "'Suit' insonning tashqi qiyofasiga, uslubiga yarashishni bildiradi. O'lcham uchun esa 'fit' ishlatiladi."
                         },
                         {
                             "id": "en-a2-u4-l3-q2",
-                            "question": "\"Can I get a refund?\" nimani anglatadi?",
+                            "question": "'Receipt' (to'lov cheki) so'zining to'g'ri xalqaro fonetik transkripsiyasi qaysi?",
                             "options": [
-                                "Yana bitta sotib olsam maylimi?",
-                                "Karta qabul qilasizmi?",
-                                "Chegirma bormi?",
-                                "Pulimni qaytarib olsam bo'ladimi?"
+                                "/ˈres.ɪ.pi/",
+                                "/rɪˈsiːpt/",
+                                "/rɪˈsiːt/",
+                                "/rɪˈsept/"
                             ],
-                            "correctAnswerIndex": 3,
-                            "explanation": "Refund — Pulni qaytarish."
+                            "correctAnswerIndex": 2,
+                            "explanation": "'Receipt' so'zida 'p' harfi aytilmaydi, to'g'ri talaffuzi /rɪˈsiːt/ dir."
                         },
                         {
                             "id": "en-a2-u4-l3-q3",
-                            "question": "Are you paying by cash or by _______?",
+                            "question": "Customer: 'Excuse me, I bought this jacket yesterday, but it is torn. Can I get a full _______?'",
                             "options": [
-                                "credit card",
                                 "discount",
                                 "receipt",
-                                "fitting"
+                                "refund",
+                                "preservation"
                             ],
-                            "correctAnswerIndex": 0,
-                            "explanation": "By credit card."
+                            "correctAnswerIndex": 2,
+                            "explanation": "Nuqsonli tovar uchun to'langan pulni to'liq qaytarib olish 'full refund' deb ataladi."
                         },
                         {
                             "id": "en-a2-u4-l3-q4",
-                            "question": "This jacket _______ you perfectly!",
+                            "question": "Savdo kontekstida 'affordable' so'zi qanday ma'noni anglatadi?",
                             "options": [
-                                "fit",
-                                "is fit",
-                                "fits",
-                                "fitting"
+                                "Juda qimmat va hashamatli",
+                                "Hamyonbop, narxi qulay va sotib olishga arziydigan",
+                                "Eskirgan va sifatsiz",
+                                "Butunlay tekin"
+                            ],
+                            "correctAnswerIndex": 1,
+                            "explanation": "'Affordable' inson byudjetiga og'irlik qilmaydigan, qulay narxdagi tovar yoki xizmatni bildiradi."
+                        },
+                        {
+                            "id": "en-a2-u4-l3-q5",
+                            "question": "Shopper to sales assistant: 'Excuse me, do you have this dress in a _______ size? It feels slightly tight.'",
+                            "options": [
+                                "more larger",
+                                "most large",
+                                "larger",
+                                "largest"
                             ],
                             "correctAnswerIndex": 2,
-                            "explanation": "Fits you perfectly (sizga juda yarashdi/mos keldi)."
+                            "explanation": "Hozirgisidan kattaroq o'lcham so'rashda qiyosiy daraja ishlatiladi: 'in a larger size'."
                         }
                     ]
                 }
@@ -3961,54 +4299,118 @@ export const ENGLISH_A2_LESSONS: Lesson[] = [
         "level": "A2",
         "lessonNumber": 4,
         "title": "Functional Speaking: Asking for Help & Clarification",
-        "description": "Tushunmay qolganda qayta so'rash va yordam so'rash iboralari.",
-        "estimatedDurationMinutes": 12,
+        "description": "Muloqotda tushunmay qolganda qayta so'rash, aniqlashtirish, so'zlarning ma'nosini va imlosini so'rash strategiyalari.",
+        "estimatedDurationMinutes": 15,
         "icon": "🗣️",
         "steps": [
             {
                 "id": "en-a2-u4-l4-s1",
-                "title": "Aniqlashtirish Iboralari",
+                "title": "Muloqotni Qayta Tiklash va Aniqlashtirish",
                 "type": "learn",
-                "estimatedMinutes": 4,
+                "estimatedMinutes": 5,
                 "learnData": {
-                    "title": "Clarification & Help",
-                    "explanation": "Suhbatdosh tez yoki tushunarsiz gapirganda: \"Could you repeat that, please?\", \"Could you speak more slowly?\", \"What does ... mean?\"",
+                    "title": "Repairing Communication & Seeking Clarification",
+                    "explanation": "Ingliz tilida suhbatlashganda so'zlarni ilg'ay olmaslik yoki ma'nosini bilmay qolish mutlaqo tabiiy holat. Muhimi — jim qolmasdan yoki qo'pol ohangga kirmasdan muloqotni tiklash:\n\n1. Tez yoki Sekin Gapirganda Qo'llaniladigan Iboralar:\n- 'Could you speak a little more slowly, please?' (Iltimos, sal sekinroq gapira olasizmi?).\n- 'Could you speak up a bit? It is very noisy here.' (Biroz balandroq gapira olasizmi? Bu yer juda shovqin).\n\n2. Qayta Aytishni So'rash (Asking for Repetition):\n- 'Pardon?' yoki 'Sorry?' (Kechirasiz? - Qisqa va tabiiy).\n- 'I'm sorry, I didn't quite catch that. Could you say that again?' (Kechirasiz, gapirganingizni ilg'ay olmadim. Yana bir bor ayta olasizmi?).\n\n3. So'z Ma'nosi va Imlosini So'rash (Meaning & Spelling):\n- 'What does ... mean?' (Falon so'z nimani anglatadi?).\n- 'How do you spell your surname, please?' (Familiyangiz qanday harflanadi?).\n- 'Could you explain that in different words?' (Shuni boshqacha so'zlar bilan tushuntira olasizmi?).\n\n4. O'zbek o'rganuvchilari uchun xavfli tuzoqlar (Common Pitfalls):\n- ❌ 'What?' yoki 'Huh?' deb baqirish (Ingliz tilida bu nihoyatda qo'pol, madaniyatsiz va agressiv tuyuladi) -> ✅ 'Pardon?', 'Sorry, could you repeat that?' deb muloyim ohangda murojaat qiling.\n- ❌ 'Explain me this word.' -> ✅ 'Explain this word TO me.' ('Explain' fe'lidan keyin shaxs kelganda 'to' predlogi shart).\n- ❌ 'How you spell it?' -> ✅ 'How DO you spell it?' (Maxsus so'roqda 'do' yordamchi fe'li tushib qolmasin).\n\n5. IELTS Speaking Foundation Corner (O'ta muhim imtihon ko'nikmasi!):\n- Imtihon oluvchi (examiner) savolini tushunmay qolsangiz yoki yaxshi eshitmay qolsangiz, HECH QACHON jim turmang yoki tavakkal noto'g'ri mavzuda gapirmang!\n- IELTS qoidalariga ko'ra, savolni qayta so'rashga to'liq ruxsat etiladi va bu sizning balingizni tushirmaydi:\n  • 'I'm sorry, could you repeat the question, please?'\n  • 'I didn't quite catch the last phrase. Could you paraphrase it for me, please?'\n- Ushbu iboralarni erkin qo'llay olishingiz sizning faol muloqot qobiliyatingiz (interactive communication) yuqoriligini ko'rsatadi.",
                     "vocabulary": [
                         {
-                            "term": "Repeat",
+                            "term": "repeat",
                             "reading": "/rɪˈpiːt/",
-                            "meaning": "Takrorlamoq",
-                            "exampleSentence": "Could you repeat the question?",
-                            "exampleTranslation": "Savolni takrorlay olasizmi?"
+                            "meaning": "takrorlamoq, qaytarmoq",
+                            "exampleSentence": "Could you please repeat your phone number once more?",
+                            "exampleTranslation": "Iltimos, telefon raqamingizni yana bir bor takrorlay olasizmi?"
                         },
                         {
-                            "term": "Slowly",
-                            "reading": "/ˈsləʊ.li/",
-                            "meaning": "Sekinroq",
-                            "exampleSentence": "Please speak more slowly.",
-                            "exampleTranslation": "Iltimos, sekinroq gapiring."
+                            "term": "clarify",
+                            "reading": "/ˈklær.ɪ.faɪ/",
+                            "meaning": "oydinlik kiritmoq, aniqlashtirmoq",
+                            "exampleSentence": "Could you clarify what you mean by the word 'affordable'?",
+                            "exampleTranslation": "'Affordable' so'zi bilan nimani nazarda tutganingizga oydinlik kirita olasizmi?"
                         },
                         {
-                            "term": "Schedule",
-                            "reading": "/ˈʃedʒ.uːl/",
-                            "meaning": "Jadval, reja",
-                            "exampleSentence": "Let me check my schedule for tomorrow.",
-                            "exampleTranslation": "Ertangi kun jadvalimni tekshirib koʻray."
+                            "term": "pardon",
+                            "reading": "/ˈpɑː.dən/",
+                            "meaning": "kechirasiz (eshitmay qolganda qayta so'rash)",
+                            "exampleSentence": "Pardon? Did you say twenty dollars or twelve dollars?",
+                            "exampleTranslation": "Kechirasiz? Yigirma dollar dedingizmi yoki o'n ikki dollar?"
+                        },
+                        {
+                            "term": "catch",
+                            "reading": "/kætʃ/",
+                            "meaning": "ilg'ab olmoq, eshitib tushunmoq",
+                            "exampleSentence": "The train announcement was muffled, so I didn't catch the platform number.",
+                            "exampleTranslation": "Poyezd e'loni xira eshitildi, shu bois perron raqamini ilg'ay olmadim."
+                        },
+                        {
+                            "term": "spell",
+                            "reading": "/spel/",
+                            "meaning": "harflab aytmoq / yozmoq",
+                            "exampleSentence": "Could you spell your street name so I can enter it into the navigation system?",
+                            "exampleTranslation": "Ko'changiz nomini harflab ayta olasizmi, navigatorga kiritib olay?"
+                        },
+                        {
+                            "term": "mean",
+                            "reading": "/miːn/",
+                            "meaning": "anglatmoq, nazarda tutmoq",
+                            "exampleSentence": "What does this medical term mean in simple words?",
+                            "exampleTranslation": "Bu tibbiy atama oddiy so'zlar bilan aytganda nimani anglatadi?"
+                        },
+                        {
+                            "term": "speak up",
+                            "reading": "/spiːk ʌp/",
+                            "meaning": "ovozini balandlatib gapirmoq",
+                            "exampleSentence": "Please speak up a little; the air conditioner is making a loud noise.",
+                            "exampleTranslation": "Iltimos, ovozingizni sal balandroq chiqaring; konditsioner qattiq shovqin solyapti."
+                        },
+                        {
+                            "term": "explanation",
+                            "reading": "/ˌek.spləˈneɪ.ʃən/",
+                            "meaning": "tushuntirish, izoh",
+                            "exampleSentence": "Thank you for your clear explanation; now I understand the process completely.",
+                            "exampleTranslation": "Aniq tushuntirganingiz uchun rahmat; endi bu jarayonni to'liq tushundim."
+                        },
+                        {
+                            "term": "misunderstand",
+                            "reading": "/ˌmɪs.ʌn.dəˈstænd/",
+                            "meaning": "noto'g'ri tushunmoq",
+                            "exampleSentence": "I misunderstood your message and went to the wrong terminal.",
+                            "exampleTranslation": "Xabaringizni noto'g'ri tushunibman va boshqa terminalga boribman."
+                        },
+                        {
+                            "term": "slow down",
+                            "reading": "/sləʊ daʊn/",
+                            "meaning": "sekinlashmoq (gapirishda)",
+                            "exampleSentence": "When speaking to beginner language learners, it is helpful to slow down.",
+                            "exampleTranslation": "Tilni endi o'rganayotganlar bilan gaplashganda, biroz sekinroq gapirish juda foydalidir."
                         }
                     ],
                     "grammarRules": [
                         {
-                            "pattern": "Functional Speaking: Asking for Help & Clarification",
-                            "meaning": "Tushunmay qolganda qayta so'rash va yordam so'rash iboralari.",
-                            "usageNotes": "Suhbatdosh tez yoki tushunarsiz gapirganda: \"Could you repeat that, please?\", \"Could you speak more slowly?\", \"What does ... mean?\"",
+                            "pattern": "Polite Indirect Clarification: Could you please + verb / Would you mind + V-ing",
+                            "meaning": "Hurmat bilan tushunmagan joyni so'rash",
+                            "usageNotes": "'Would you mind repeating...' yoki 'Could you please repeat...' bevosita buyruq ohangidan qochishning eng yaxshi yo'lidir.",
                             "examples": [
                                 {
-                                    "sentence": "Could you repeat the question?",
-                                    "translation": "Savolni takrorlay olasizmi?"
+                                    "sentence": "Would you mind repeating your last sentence, please?",
+                                    "translation": "Oxirgi gapingizni takrorlashga erinmaysizmi, iltimos?"
                                 },
                                 {
-                                    "sentence": "Please speak more slowly.",
-                                    "translation": "Iltimos, sekinroq gapiring."
+                                    "sentence": "Could you please explain that rule to me again?",
+                                    "translation": "Ushbu qoidani menga yana bir bor tushuntirib bera olasizmi?"
+                                }
+                            ]
+                        },
+                        {
+                            "pattern": "Asking for Meaning: What does [word/phrase] mean? vs What do you mean by [X]?",
+                            "meaning": "So'z ma'nosini va suhbatdosh niyatini aniqlash",
+                            "usageNotes": "Lug'aviy ma'no uchun 'What does ... mean?', insonning fikrini aniqlashtirish uchun 'What do you mean by that?' qo'llaniladi.",
+                            "examples": [
+                                {
+                                    "sentence": "What does 'complimentary' mean in this hotel brochure?",
+                                    "translation": "Mehmonxona risolasida 'complimentary' so'zi nimani bildiradi?"
+                                },
+                                {
+                                    "sentence": "What do you mean by saying we might be late?",
+                                    "translation": "Kech qolishimiz mumkin deganda nimani nazarda tutyapsiz?"
                                 }
                             ]
                         }
@@ -4017,97 +4419,148 @@ export const ENGLISH_A2_LESSONS: Lesson[] = [
             },
             {
                 "id": "en-a2-u4-l4-s2",
-                "title": "Mashq",
+                "title": "Amaliy Mashqlar",
                 "type": "practice",
-                "estimatedMinutes": 4,
+                "estimatedMinutes": 5,
                 "practiceData": {
-                    "instructions": "To'g'ri iborani tanlang.",
+                    "instructions": "Muloqotni tiklash va aniqlashtirishga doir to'g'ri iboralarni tanlang.",
                     "exercises": [
                         {
                             "id": "en-a2-u4-l4-e1",
                             "type": "multiple-choice",
-                            "prompt": "\"I didn't catch that. Could you please say that _______?\"",
+                            "prompt": "\"I'm sorry, the café is extremely noisy. Could you please speak _______?\"",
                             "options": [
-                                "more",
-                                "again",
-                                "soon",
-                                "already"
+                                "up",
+                                "down",
+                                "away",
+                                "off"
                             ],
-                            "correctAnswer": 1,
-                            "explanation": "Say that again (yana bir bor aytib yuboring)."
+                            "correctAnswer": 0,
+                            "explanation": "'Speak up' frazeologik fe'li ovozini balandroq chiqarib gapirishni bildiradi."
                         },
                         {
-                            "id": "en-a2-u4-l4-ex-2",
+                            "id": "en-a2-u4-l4-e2",
                             "type": "multiple-choice",
-                            "prompt": "Choose the correct word to complete the sentence: \"Please speak more slowly.\"",
+                            "prompt": "\"How do you _______ your surname, please? Is it with a 'C' or a 'K'?\"",
                             "options": [
-                                "doubt",
-                                "delay",
-                                "reluctance",
-                                "Slowly"
+                                "speak",
+                                "spell",
+                                "mean",
+                                "talk"
                             ],
-                            "correctAnswer": 3,
-                            "explanation": "\"Slowly\" (Sekinroq) fits the context appropriately."
+                            "correctAnswer": 1,
+                            "explanation": "So'zning harflab yozilishini so'rash 'spell' fe'li bilan ifodalanadi."
+                        },
+                        {
+                            "id": "en-a2-u4-l4-e3",
+                            "type": "multiple-choice",
+                            "prompt": "\"Sorry, I didn't quite _______ that. Could you say that once more?\"",
+                            "options": [
+                                "hold",
+                                "bring",
+                                "catch",
+                                "take"
+                            ],
+                            "correctAnswer": 2,
+                            "explanation": "'I didn't quite catch that' (gapirganingizni yaxshi ilg'ay/eshita olmadim) turg'un iboradir."
+                        },
+                        {
+                            "id": "en-a2-u4-l4-e4",
+                            "type": "multiple-choice",
+                            "prompt": "\"Excuse me, what does this symbol on the ticket _______?\"",
+                            "options": [
+                                "mean",
+                                "means",
+                                "meaning",
+                                "meant"
+                            ],
+                            "correctAnswer": 0,
+                            "explanation": "'What does ... mean?' so'rog'ida 'does' bo'lgani uchun fe'l asosi 'mean' keladi."
+                        },
+                        {
+                            "id": "en-a2-u4-l4-e5",
+                            "type": "multiple-choice",
+                            "prompt": "\"Could you please explain this difficult sentence _______ me?\"",
+                            "options": [
+                                "for",
+                                "to",
+                                "at",
+                                "with"
+                            ],
+                            "correctAnswer": 1,
+                            "explanation": "'Explain something TO someone' to'g'ri grammatik modeldir ('explain me' xato)."
                         }
                     ]
                 }
             },
             {
                 "id": "en-a2-u4-l4-s3",
-                "title": "Test",
+                "title": "Yakuniy Test",
                 "type": "test",
-                "estimatedMinutes": 4,
+                "estimatedMinutes": 5,
                 "testData": {
-                    "instructions": "Savollarga javob bering.",
-                    "passingScorePercentage": 75,
+                    "instructions": "Muloqotdagi tushunmovchiliklarni bartaraf etish bo'yicha savollarga javob bering.",
+                    "passingScorePercentage": 80,
                     "questions": [
                         {
                             "id": "en-a2-u4-l4-q1",
-                            "question": "\"What does this word mean?\" nima ma'noda aytiladi?",
+                            "question": "Suhbatdosh tez gapirib tushunarsiz bo'lganda, qaysi so'rov eng muloyim va to'g'ri hisoblanadi?",
                             "options": [
-                                "Bu so'z qanday yoziladi?",
-                                "Bu so'z nimani bildiradi?",
-                                "Bu so'z noto'g'rimi?",
-                                "Bu so'zni kim aytdi?"
+                                "Hey, stop talking so fast!",
+                                "Could you speak a little more slowly, please?",
+                                "What? I don't know your language.",
+                                "Repeat everything right now!"
                             ],
                             "correctAnswerIndex": 1,
-                            "explanation": "So'z ma'nosini so'rash."
+                            "explanation": "'Could you speak a little more slowly, please?' eng xushmuomala va tabiiy iboradir."
                         },
                         {
                             "id": "en-a2-u4-l4-q2",
-                            "question": "Could you _______ me a hand with this heavy box?",
+                            "question": "Qaysi gapda 'explain' fe'lining sintaktik bog'lanishi to'g'ri berilgan?",
                             "options": [
-                                "give",
-                                "do",
-                                "take",
-                                "make"
+                                "Please explain me how to get to the station.",
+                                "Please explain how to get to the station to me.",
+                                "Please explain for me how to get to the station.",
+                                "Please explain with me how to get to the station."
                             ],
-                            "correctAnswerIndex": 0,
-                            "explanation": "Give someone a hand (yordamlashmoq)."
+                            "correctAnswerIndex": 1,
+                            "explanation": "Ingliz tilida 'explain something to someone' shaklida 'to' predlogi ishlatiladi."
                         },
                         {
                             "id": "en-a2-u4-l4-q3",
-                            "question": "How do you _______ your surname?",
+                            "question": "IELTS Speaking imtihonida imtihon oluvchining savolini eshitmay qolsangiz nima qilish to'g'ri?",
                             "options": [
-                                "speak",
-                                "talk",
-                                "tell",
-                                "spell"
+                                "Indamay jim o'tirish kerak, aks holda bal tushadi.",
+                                "'Could you repeat the question, please?' deb muloyim so'rash kerak.",
+                                "'What did you say?' deb qattiq ovozda so'rash kerak.",
+                                "Savolni tushunmasdan o'z bilganingizcha ixtiyoriy mavzuda gapirish kerak."
                             ],
-                            "correctAnswerIndex": 3,
-                            "explanation": "Spell (harflab aytmoq)."
+                            "correctAnswerIndex": 1,
+                            "explanation": "IELTS Speakingda savolni qayta so'rash to'liq ruxsat etilgan va to'g'ri strategiya hisoblanadi."
                         },
                         {
                             "id": "en-a2-u4-l4-q4",
-                            "question": "Sorry, I don't _______. Could you explain it differently?",
+                            "question": "'Pardon?' so'zi qanday vaziyatda ishlatiladi?",
                             "options": [
-                                "understand",
-                                "knowing",
-                                "hear",
-                                "learn"
+                                "Xayrlashayotganda",
+                                "Birovning gapini eshitmay yoki ilg'ay olmay qolganda qaytarishni so'rash uchun",
+                                "Rahmat aytganda javob sifatida",
+                                "Do'konda to'lov qilayotganda"
                             ],
-                            "correctAnswerIndex": 0,
-                            "explanation": "I don't understand."
+                            "correctAnswerIndex": 1,
+                            "explanation": "'Pardon?' suhbatdoshning gapini ilg'ay olmaganda qayta aytishni so'rash uchun xushmuomala so'zdir."
+                        },
+                        {
+                            "id": "en-a2-u4-l4-q5",
+                            "question": "Ism yoki so'zning qanday yozilishini so'rashda qaysi grammatik tuzilma to'g'ri?",
+                            "options": [
+                                "How you spell that word?",
+                                "How do you spell that word?",
+                                "How are you spell that word?",
+                                "How spell you that word?"
+                            ],
+                            "correctAnswerIndex": 1,
+                            "explanation": "Present Simple so'roq shaklida: 'How do you spell that word?'"
                         }
                     ]
                 }
@@ -4122,155 +4575,269 @@ export const ENGLISH_A2_LESSONS: Lesson[] = [
         "language": "en",
         "level": "A2",
         "lessonNumber": 5,
-        "title": "A2 Capstone Mastery & Progression Assessment",
-        "description": "A2 darajasini to'liq yakunlash va B1 ga o'tish imtihoni.",
+        "title": "Conditionals in Action: Zero & First Conditional",
+        "description": "Zero va First Conditional: umumiy haqiqatlar, tabiat qonunlari va kelajakdagi real shartli holatlar (If + Present, will + Verb).",
         "estimatedDurationMinutes": 16,
-        "icon": "🏆",
+        "icon": "🔀",
         "steps": [
             {
                 "id": "en-a2-u4-l5-s1",
-                "title": "A2 Daraja Xulosasi",
+                "title": "Shart Ergash Gaplar: Zero va First Conditional",
                 "type": "learn",
-                "estimatedMinutes": 5,
+                "estimatedMinutes": 6,
                 "learnData": {
-                    "title": "A2 Pre-Intermediate Summary",
-                    "explanation": "A2 darajasida siz o'tgan zamon (Past Simple, Past Continuous), kelasi zamon (will, going to), sifat darajalari va kundalik erkin muloqotni egalladingiz.",
-                    "keyPoints": [
-                        "Past vs Present vs Future comparison",
-                        "Modal verbs: must, have to, should, can",
-                        "Travel, hotel, doctor, shopping communications"
+                    "title": "Zero and First Conditionals in Everyday English",
+                    "explanation": "Ingliz tilida shart va uning natijasini ifodalashning ikki asosiy A2 daraja modeli:\n\n1. Zero Conditional (Umumiy Haqiqatlar va Doimiy Qoidalar):\n- Formula: `If / When + Present Simple, ... Present Simple`\n- Qachon ishlatiladi: Ilmiy haqiqatlar, qonun-qoidalar yoki doimiy takrorlanuvchi odatlar haqida gapirilganda (har doim 100% to'g'ri bo'ladigan natija).\n- Misollar:\n  • 'If you heat water to 100°C, it boils.' (Suvni 100°C gacha qizdirsangiz, u qaynaydi).\n  • 'When people don't sleep enough, they feel exhausted.' (Insonlar yetarlicha uxlamasa, o'zlarini holdan toygan his qilishadi).\n\n2. First Conditional (Kelajakdagi Real Shart va Ehtimoliy Natija):\n- Formula: `If + Present Simple, ... will / won't + Verb (base form)`\n- Qachon ishlatiladi: Kelajakda sodir bo'lishi real va ehtimoliy bo'lgan aniq bir vaziyat va uning kelajakdagi natijasi haqida.\n- Misollar:\n  • 'If it rains tomorrow, we will take an umbrella.' (Agar ertaga yomg'ir yog'sa, biz soyabon olamiz).\n  • 'If you don't hurry, you will miss your flight.' (Agar shoshilmasangiz, reysingizga kechikib qolasiz).\n\n3. 'Unless' So'zining Ishlatilishi:\n- 'Unless' = 'If not' (agar ... bo'lmasa / qilmasa):\n- 'Unless you study, you won't pass.' = 'If you don't study, you won't pass.'\n- Eslatma: 'Unless' o'zida inkor ma'nosiga ega bo'lgani uchun, uning ergash gapida yana 'don't/doesn't' qo'shilmaydi!\n\n4. O'zbek o'rganuvchilari uchun eng katta tuzoq (Crucial Pitfall!):\n- ❌ 'If it will rain tomorrow, I will stay at home.' -> ✅ 'If it RAINS tomorrow, I will stay at home.'\n- O'zbek tilida 'Ertaga yomg'ir yog'SA (kelasi ma'no)... uyda qolaman' deyiladi. Shu bois ko'pchilik 'if' qismiga ham 'will' qo'yadi. Yodingizda saqlang: ingliz tilida 'if' yoki 'when' dan keyingi shart qismida KELASI ZAMONDA HAM 'will' ISHLATILMAYDI! Doimo Present Simple qo'yiladi!\n\n5. IELTS Speaking Foundation Corner:\n- Topic: Giving Conditional Opinions (Speaking Part 1 & Part 2)\n- Examiner: 'What will you do if the weather is rainy this weekend?'\n- Model Band 6.0+ Answer: 'Well, if the weather is terrible this weekend, I will probably stay indoors, read books, and cook a warm meal. However, if the weather turns out to be sunny, my family and I will definitely go on a picnic in the mountains.'\n- Grammar Tip: First conditional bilan birga 'probably' va 'definitely' kabi ehtimollik ravishlarini qo'llash javobingizga tabiiy inglizcha jilo beradi.",
+                    "vocabulary": [
+                        {
+                            "term": "condition",
+                            "reading": "/kənˈdɪʃ.ən/",
+                            "meaning": "shart, holat",
+                            "exampleSentence": "Living in good conditions helps people stay healthy.",
+                            "exampleTranslation": "Yaxshi sharoitlarda yashash insonlarga sog'lom bo'lishga yordam beradi."
+                        },
+                        {
+                            "term": "consequence",
+                            "reading": "/ˈkɒn.sɪ.kwəns/",
+                            "meaning": "oqibat, natija",
+                            "exampleSentence": "Missing a flight can have expensive financial consequences.",
+                            "exampleTranslation": "Reysni o'tkazib yuborish qimmat moliyaviy oqibatlarga olib kelishi mumkin."
+                        },
+                        {
+                            "term": "predict",
+                            "reading": "/prɪˈdɪkt/",
+                            "meaning": "oldindan aytmoq, bashorat qilmoq",
+                            "exampleSentence": "It is difficult to predict how the weather will change tomorrow.",
+                            "exampleTranslation": "Ertaga ob-havo qanday o'zgarishini oldindan bashorat qilish qiyin."
+                        },
+                        {
+                            "term": "melt",
+                            "reading": "/melt/",
+                            "meaning": "erimoq (muz, qor haqida)",
+                            "exampleSentence": "If you leave ice cream in the sun, it melts very quickly.",
+                            "exampleTranslation": "Muzqaymoqni quyoshda qoldirsangiz, u juda tez eriydi."
+                        },
+                        {
+                            "term": "boil",
+                            "reading": "/bɔɪl/",
+                            "meaning": "qaynamoq",
+                            "exampleSentence": "Water boils at 100 degrees Celsius at sea level.",
+                            "exampleTranslation": "Suv dengiz sathida 100 daraja Selsiyda qaynaydi."
+                        },
+                        {
+                            "term": "unless",
+                            "reading": "/ənˈles/",
+                            "meaning": "agar ... bo'lmasa (if ... not)",
+                            "exampleSentence": "Unless you book in advance, you won't find a hotel room during peak season.",
+                            "exampleTranslation": "Oldindan band qilmasangiz, qizg'in mavsumda mehmonxonadan xona topa olmaysiz."
+                        },
+                        {
+                            "term": "probably",
+                            "reading": "/ˈprɒb.ə.bli/",
+                            "meaning": "katta ehtimol bilan, ehtimol",
+                            "exampleSentence": "If the rain stops soon, we will probably go for an evening walk.",
+                            "exampleTranslation": "Agar yomg'ir tezda to'xtasa, biz katta ehtimol bilan kechki sayrga chiqamiz."
+                        },
+                        {
+                            "term": "pack",
+                            "reading": "/pæk/",
+                            "meaning": "yuklarni taxlamoq / joylamoq",
+                            "exampleSentence": "If you pack your suitcase tonight, tomorrow morning will be stress-free.",
+                            "exampleTranslation": "Chamadoningizni bugun kechqurun taxlab qo'ysangiz, ertaga ertalab xotirjam bo'ladi."
+                        },
+                        {
+                            "term": "umbrella",
+                            "reading": "/ʌmˈbrel.ə/",
+                            "meaning": "soyabon",
+                            "exampleSentence": "Don't forget your umbrella; the dark clouds suggest it will rain.",
+                            "exampleTranslation": "Soyaboningizni unutmang; qora bulutlar yomg'ir yog'ishidan darak beryapti."
+                        },
+                        {
+                            "term": "catch a cold",
+                            "reading": "/kætʃ ə kəʊld/",
+                            "meaning": "shamollab qolmoq",
+                            "exampleSentence": "If you walk outside without a jacket in winter, you will catch a cold.",
+                            "exampleTranslation": "Qishda ko'chada kurtkasiz yursangiz, shamollab qolasiz."
+                        }
                     ],
                     "grammarRules": [
                         {
-                            "pattern": "A2 Capstone Mastery & Progression Assessment",
-                            "meaning": "A2 darajasini to'liq yakunlash va B1 ga o'tish imtihoni.",
-                            "usageNotes": "A2 darajasida siz o'tgan zamon (Past Simple, Past Continuous), kelasi zamon (will, going to), sifat darajalari va kundalik erkin muloqotni egalladingiz.",
+                            "pattern": "Zero Conditional: If / When + Present Simple, ... Present Simple",
+                            "meaning": "Umumiy qoidalar, tabiat qonunlari va doimiy haqiqatlar",
+                            "usageNotes": "Ikkala qismda ham fe'l Present Simple shaklida bo'ladi.",
                             "examples": [
                                 {
-                                    "sentence": "I study English every day with dedication.",
-                                    "translation": "Har kuni ingliz tilini astoydil o'rganaman."
+                                    "sentence": "If you mix blue and yellow, you get green.",
+                                    "translation": "Ko'k va sariq ranglarni aralashtirsangiz, yashil rang hosil bo'ladi."
+                                },
+                                {
+                                    "sentence": "When baby birds are hungry, they make loud noises.",
+                                    "translation": "Polaponlar och qolganda, baland ovozda shovqin qilishadi."
                                 }
                             ]
-                        }
-                    ],
-                    "vocabulary": [
-                        {
-                            "term": "Confidence",
-                            "reading": "/ˈkɒn.fɪ.dəns/",
-                            "meaning": "Ishonch",
-                            "exampleSentence": "Practice gives you confidence in speaking.",
-                            "exampleTranslation": "Mashq qilish gapirishda ishonch bagʻishlaydi."
                         },
                         {
-                            "term": "Schedule",
-                            "reading": "/ˈʃedʒ.uːl/",
-                            "meaning": "Jadval, reja",
-                            "exampleSentence": "Let me check my schedule for tomorrow.",
-                            "exampleTranslation": "Ertangi kun jadvalimni tekshirib koʻray."
-                        },
-                        {
-                            "term": "Improve",
-                            "reading": "/ɪmˈpruːv/",
-                            "meaning": "Yaxshilamoq, rivojlantirmoq",
-                            "exampleSentence": "Reading books will improve your vocabulary.",
-                            "exampleTranslation": "Kitob oʻqish soʻz boyligingizni oshiradi."
+                            "pattern": "First Conditional: If + Present Simple, ... will / won't + base verb",
+                            "meaning": "Kelajakdagi real shart va ehtimoliy natija",
+                            "usageNotes": "If qismida 'will' ISHLATILMAYDI. Faqat natija (bosh gap) qismida 'will' keladi.",
+                            "examples": [
+                                {
+                                    "sentence": "If the flight arrives on time, we will reach the hotel by 9 PM.",
+                                    "translation": "Agar reys o'z vaqtida yetib borsa, biz soat 21:00 gacha mehmonxonaga yetib olamiz."
+                                },
+                                {
+                                    "sentence": "Unless we leave right now, we will be stuck in heavy traffic.",
+                                    "translation": "Agar hoziroq yo'lga chiqmasak, qattiq tirbandlikda qolib ketamiz."
+                                }
+                            ]
                         }
                     ]
                 }
             },
             {
                 "id": "en-a2-u4-l5-s2",
-                "title": "Imtihon Oldi Mashqi",
+                "title": "Amaliy Mashqlar",
                 "type": "practice",
                 "estimatedMinutes": 5,
                 "practiceData": {
-                    "instructions": "Xatolarni toping va to'g'ri jumlani tanlang.",
+                    "instructions": "Zero va First conditional qoidalariga mos to'g'ri fe'l shakllarini tanlang.",
                     "exercises": [
                         {
                             "id": "en-a2-u4-l5-e1",
                             "type": "multiple-choice",
-                            "prompt": "Which sentence is 100% correct?",
+                            "prompt": "\"If you heat ice on a stove, it _______ into water.\"",
                             "options": [
-                                "While I was walking, I saw an accident.",
-                                "While I walked, I was seeing an accident.",
-                                "While I was walking, I see an accident.",
-                                "I was see an accident while walking."
+                                "melts",
+                                "will melt",
+                                "melted",
+                                "is melting"
                             ],
                             "correctAnswer": 0,
-                            "explanation": "While I was walking, I saw an accident."
+                            "explanation": "Tabiat qonuni va ilmiy haqiqat bo'lgani uchun Zero conditional: 'melts'."
                         },
                         {
-                            "id": "en-a2-u4-l5-ex-2",
+                            "id": "en-a2-u4-l5-e2",
                             "type": "multiple-choice",
-                            "prompt": "Choose the correct word to complete the sentence: \"Let me check my schedule for tomorrow.\"",
+                            "prompt": "\"If our flight _______ delayed, we will notify the hotel immediately.\"",
                             "options": [
-                                "reluctance",
-                                "doubt",
-                                "Schedule",
-                                "delay"
+                                "will be",
+                                "is",
+                                "was",
+                                "be"
                             ],
-                            "correctAnswer": 2,
-                            "explanation": "\"Schedule\" (Jadval, reja) fits the context appropriately."
+                            "correctAnswer": 1,
+                            "explanation": "First conditionalda 'if' qismida Present Simple qo'yiladi: 'is' ('will be' xato)."
+                        },
+                        {
+                            "id": "en-a2-u4-l5-e3",
+                            "type": "multiple-choice",
+                            "prompt": "\"You will not recover quickly _______ you take your prescribed medicine and get plenty of sleep.\"",
+                            "options": [
+                                "unless",
+                                "if",
+                                "because",
+                                "when"
+                            ],
+                            "correctAnswer": 0,
+                            "explanation": "'Unless' = agar ... qilmasangiz. 'Doringizni ichib dam olmasangiz, tez tuzalmaysiz'."
+                        },
+                        {
+                            "id": "en-a2-u4-l5-e4",
+                            "type": "multiple-choice",
+                            "prompt": "\"If she _______ diligently every day, she will easily pass the exam.\"",
+                            "options": [
+                                "study",
+                                "studies",
+                                "will study",
+                                "studied"
+                            ],
+                            "correctAnswer": 1,
+                            "explanation": "Uchinchi shaxs birlik (she) uchun Present Simpleda -s/-es qo'shiladi: 'studies'."
+                        },
+                        {
+                            "id": "en-a2-u4-l5-e5",
+                            "type": "multiple-choice",
+                            "prompt": "\"What will you do if the airline _______ your luggage?\"",
+                            "options": [
+                                "loses",
+                                "will lose",
+                                "lost",
+                                "is losing"
+                            ],
+                            "correctAnswer": 0,
+                            "explanation": "If qismida Present Simple (the airline loses)."
                         }
                     ]
                 }
             },
             {
                 "id": "en-a2-u4-l5-s3",
-                "title": "A2 Yakuniy Sinov",
+                "title": "Yakuniy Test",
                 "type": "test",
-                "estimatedMinutes": 6,
+                "estimatedMinutes": 5,
                 "testData": {
-                    "instructions": "A2 darajasini muvaffaqiyatli yakunlash uchun barcha savollarga javob bering.",
-                    "passingScorePercentage": 75,
+                    "instructions": "Zero va First Conditional qoidalariga oid test savollariga javob bering.",
+                    "passingScorePercentage": 80,
                     "questions": [
                         {
                             "id": "en-a2-u4-l5-q1",
-                            "question": "Where _______ you go on holiday last year?",
+                            "question": "First Conditional grammatik qoidasiga to'liq mos keladigan to'g'ri gapni tanlang:",
                             "options": [
-                                "did",
-                                "were",
-                                "do",
-                                "have"
+                                "If it will snow tomorrow, we will build a snowman.",
+                                "If it snows tomorrow, we will build a snowman.",
+                                "If it snows tomorrow, we build a snowman.",
+                                "If it will snow tomorrow, we build a snowman."
                             ],
-                            "correctAnswerIndex": 0,
-                            "explanation": "Where did you go...?"
+                            "correctAnswerIndex": 1,
+                            "explanation": "First conditional qoidasi: If + Present Simple (snows), will + verb (will build)."
                         },
                         {
                             "id": "en-a2-u4-l5-q2",
-                            "question": "This is the _______ restaurant in town.",
+                            "question": "Zero Conditional asosan qanday mazmundagi gaplar uchun ishlatiladi?",
                             "options": [
-                                "goodest",
-                                "most good",
-                                "best",
-                                "better"
+                                "O'tgan zamondagi bajarilmay qolgan orzu-umidlar uchun",
+                                "Ilmiy faktlar, tabiat qonunlari va har doim bir xil sodir bo'ladigan holatlar uchun",
+                                "Faqat xayoliy va bo'lishi mumkin bo'lmagan voqealar uchun",
+                                "O'tmishdagi afsuslar va pushaymonliklar uchun"
                             ],
-                            "correctAnswerIndex": 2,
-                            "explanation": "The best restaurant."
+                            "correctAnswerIndex": 1,
+                            "explanation": "Zero conditional umumiy haqiqatlar, tabiat qonunlari va qoidalar uchun ishlatiladi."
                         },
                         {
                             "id": "en-a2-u4-l5-q3",
-                            "question": "You _______ pay for the museum on Sundays; it is free.",
+                            "question": "'Unless you set an alarm, you will oversleep.' gapi qanday ma'noni bildiradi?",
                             "options": [
-                                "don't have to",
-                                "can't to",
-                                "should",
-                                "mustn't"
+                                "Agar budilnik qo'ysangiz, uxlab qolasiz.",
+                                "Agar budilnik qo'ymasangiz, uxlab qolasiz.",
+                                "Budilnik qo'yishingizga hojat yo'q.",
+                                "Siz allaqachon uxlab qoldingiz."
                             ],
-                            "correctAnswerIndex": 0,
-                            "explanation": "Don't have to pay (tekin bo'lsa majburiyat yo'q)."
+                            "correctAnswerIndex": 1,
+                            "explanation": "'Unless' inkor ma'noli shart yuklamasi bo'lib, 'Agar budilnik qo'ymasangiz (if you don't set an alarm)...' deganidir."
                         },
                         {
                             "id": "en-a2-u4-l5-q4",
-                            "question": "Look at those dark clouds! It _______ rain.",
+                            "question": "If you _______ exhausted after the journey, I will drive the rental car.",
                             "options": [
-                                "is rain",
-                                "shall",
-                                "will to",
-                                "is going to"
+                                "will feel",
+                                "felt",
+                                "feel",
+                                "are feeling to"
                             ],
-                            "correctAnswerIndex": 3,
-                            "explanation": "Ko'rinib turgan dalil: is going to rain."
+                            "correctAnswerIndex": 2,
+                            "explanation": "If qismida Present Simple: 'If you feel exhausted...' ('will feel' xato)."
+                        },
+                        {
+                            "id": "en-a2-u4-l5-q5",
+                            "question": "Qaysi gapda grammatik xatolik YO'Q?",
+                            "options": [
+                                "If I will have free time tonight, I will call you.",
+                                "Unless you don't hurry, you will miss the flight.",
+                                "If you mix red and white, you get pink.",
+                                "When water boils, it will turn into steam always."
+                            ],
+                            "correctAnswerIndex": 2,
+                            "explanation": "'If you mix red and white, you get pink' - mukammal Zero conditional (haqiqat)."
                         }
                     ]
                 }
