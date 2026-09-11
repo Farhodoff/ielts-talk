@@ -10,158 +10,228 @@ export const ENGLISH_C1_LESSONS: Lesson[] = [
         "level": "C1",
         "lessonNumber": 1,
         "title": "Formal Inverted Conditionals (Had I known, Were you to, Should you need)",
-        "description": "If so'zisiz tuziladigan oliy darajadagi rasmiy shart ergash gaplar.",
-        "estimatedDurationMinutes": 16,
+        "description": "Rasmiy va akademik yozuvda 'if' so'zisiz inversiya orqali tuziladigan 1-, 2- va 3-tur shart ergash gaplar sintaksisi.",
+        "estimatedDurationMinutes": 20,
         "icon": "🏛️",
         "steps": [
             {
                 "id": "en-c1-u1-l1-s1",
-                "title": "Inverted Conditionals Qoidasi",
+                "title": "Inverted Conditionals va Qiyosiy Sintaksis",
                 "type": "learn",
-                "estimatedMinutes": 5,
+                "estimatedMinutes": 7,
                 "learnData": {
-                    "title": "Inversion in Conditional Clauses",
-                    "explanation": "Rasmiy va adabiy ingliz tilida \"if\" tushirib qoldirilib, Had / Were / Should gap boshiga o'tkaziladi.",
-                    "keyPoints": [
-                        "Type 1: \"Should you require further assistance, do not hesitate to contact us.\" (If you should require...)",
-                        "Type 2: \"Were the government to reduce taxes, consumer spending would escalate.\" (If the government were to...)",
-                        "Type 3: \"Had we anticipated the logistical bottlenecks, we would have altered the schedule.\" (If we had anticipated...)"
-                    ],
+                    "title": "Formal Inverted Conditionals (Oliy Registrdagi Shart Inversiyasi)",
+                    "explanation": "C1 va IELTS Band 8.0+ darajasida shart ergash gaplarda oddiy 'if' o'rniga yordamchi fe'lni gap boshiga olib chiqish (inversion) orqali uslubga yuqori akademik va diplomatik jiddiylik baxsh etiladi.\n\nUchta asosiy inversiya modeli mavjud:\n1. **First Conditional (Should + Subject + Base Verb)**:\n   - Oddiy: *If you require any further assistance, please notify us.*\n   - Inverted: *Should you require any further assistance, please notify us.*\n   - O'zbek tilida: 'Mabodo qo'shimcha yordam kerak bo'lib qolsa, bizga xabar bering.' ('Should' ehtimollik kamligini yoki rasmiy iltifotni bildiradi).\n\n2. **Second Conditional (Were + Subject + to-Infinitive / Were + Subject + Complement)**:\n   - Oddiy: *If the government increased taxes, the public would protest.*\n   - Inverted: *Were the government to increase taxes, the public would protest.*\n   - Sifat/holat bilan: *Were I in your position, I would renegotiate the contract.*\n   - O'zbek tilida: 'Basharti hukumat soliqlarni oshiradigan bo'lsa...' (faraziy, nohaqiqiy hozirgi/kelasi zamon).\n\n3. **Third Conditional (Had + Subject + Past Participle)**:\n   - Oddiy: *If the authorities had foreseen the crisis, they could have averted it.*\n   - Inverted: *Had the authorities foreseen the crisis, they could have averted it.*\n   - Inkor shakli: *Had it not been for their timely intervention...* (Ularning o'z vaqtidagi aralashuvi bo'lmaganida edi...).\n\n⚠️ **O'zbek o'rganuvchilari uchun xavfli tuzoqlar (Common Pitfalls)**:\n- ❌ *Had if I known earlier, I would have warned you.* (Qo'shaloq xato: inversiyada 'if' aslo ishlatilmaydi!).\n  ✅ *Had I known earlier, I would have warned you.*\n- ❌ *Were they not intervened, catastrophe would ensue.* ('Were' bilan harakat fe'li kelsa, albatta 'to-infinitive' qo'yiladi).\n  ✅ *Were they not to intervene, catastrophe would ensue.*\n- ❌ *Had not he checked the data, errors would persist.* (Inversiyada inkor qisqartirilmaydi: 'Hadn't he' deb bo'lmaydi, faqat 'Had he not').\n  ✅ *Had he not checked the data, errors would persist.*\n\n🎯 **IELTS Speaking & Writing Band 8.5 Masterclass**:\n- **Prompt**: Writing Task 2 / Speaking Part 3: Discuss the consequences of ignoring climate change protocols.\n- **Model Answer (Band 8.0-8.5)**: Were governments worldwide to procrastinate on carbon emission quotas, irreparable ecological degradation would ensue. Indeed, had international coalitions implemented binding fiscal penalties two decades ago, the present climate volatility could have been substantially mitigated. Should policy makers fail to act collaboratively at this juncture, future generations will inherit an uninhabitable biosphere.\n- **Discourse Markers**: Were governments to..., Had international coalitions implemented..., Should policy makers fail to...\n- **Examiner / Intonation Tip**: Akademik yozuvda inversiya fikringizning ilmiy va nufuzli vaznini bir zumda oshiradi. Og'zaki nutqda esa urg'uni 'Had', 'Were', 'Should' yordamchi fe'llariga biroz balandroq ohangda berib, keyingi fojiali oqibatni pastroq qat'iy intonatsiyada yakunlang.",
                     "vocabulary": [
                         {
-                            "term": "Bottleneck",
-                            "reading": "/ˈbɒt.əl.nek/",
-                            "meaning": "To'siq / Tiqilinch / Cheklovchi omil",
-                            "exampleSentence": "Supply chain bottlenecks delayed production.",
-                            "exampleTranslation": "Ta'minot zanjiridagi to'siqlar ishlab chiqarishni kechiktirdi."
+                            "term": "Foresee",
+                            "reading": "/fɔːˈsiː/",
+                            "meaning": "Oldindan ko'ra bilmoq, bashorat qilmoq",
+                            "exampleSentence": "Had the economists foreseen the market crash, fiscal interventions would have been implemented.",
+                            "exampleTranslation": "Iqtisodchilar bozor inqirozini oldindan ko'ra bilganlarida edi, moliyaviy choralar qo'llangan bo'lardi."
+                        },
+                        {
+                            "term": "Avert",
+                            "reading": "/əˈvɜːt/",
+                            "meaning": "Oldini olmoq, bartaraf etmoq",
+                            "exampleSentence": "Had decisive actions been taken earlier, the environmental calamity could have been averted.",
+                            "exampleTranslation": "Agar qat'iy choralar erta ko'rilganda edi, ekologik falokatning oldini olish mumkin bo'lardi."
+                        },
+                        {
+                            "term": "Contingency",
+                            "reading": "/kənˈtɪn.dʒən.si/",
+                            "meaning": "Kutilmagan favqulodda vaziyat, ehtimoliy holat",
+                            "exampleSentence": "Should any unforeseen contingency arise, our crisis management protocol will take effect immediately.",
+                            "exampleTranslation": "Mabodo biron bir kutilmagan favqulodda holat yuzaga kelgudek bo'lsa, inqirozni boshqarish rejamiz zudlik bilan ishga tushadi."
                         },
                         {
                             "term": "Escalate",
                             "reading": "/ˈes.kə.leɪt/",
-                            "meaning": "Keskin oshmoq / Kuchaymoq",
-                            "exampleSentence": "Tensions began to escalate.",
-                            "exampleTranslation": "Keskinlik kuchaya boshladi."
+                            "meaning": "Kuchaymoq, keskinlashmoq (mojaro yoki narxlar)",
+                            "exampleSentence": "Were tensions along the border to escalate, regional trade routes would be disrupted.",
+                            "exampleTranslation": "Chegara bo'ylab ziddiyatlar kuchaygudek bo'lsa, mintaqaviy savdo yo'llari izdan chiqqan bo'lardi."
                         },
                         {
-                            "term": "Pervasive",
-                            "reading": "/pəˈveɪ.sɪv/",
-                            "meaning": "Keng tarqalgan, singib ketgan",
-                            "exampleSentence": "Digital transformation has a pervasive impact on society.",
-                            "exampleTranslation": "Raqamli transformatsiya jamiyatga chuqur singib borgan taʼsir koʻrsatadi."
+                            "term": "Discrepancy",
+                            "reading": "/dɪˈskrep.ən.si/",
+                            "meaning": "Tafovut, nomuvofiqlik",
+                            "exampleSentence": "Should the auditors identify any discrepancy in the financial statements, legal ramifications will follow.",
+                            "exampleTranslation": "Mabodo auditorlar moliyaviy hisobotlarda tafovut aniqlasa, huquqiy oqibatlar kelib chiqadi."
+                        },
+                        {
+                            "term": "Imminent",
+                            "reading": "/ˈɪm.ɪ.nənt/",
+                            "meaning": "Yaqinlashib kelayotgan, muqarrar sodir bo'lish arafasidagi",
+                            "exampleSentence": "Had the meteorologists warned of the imminent blizzard, flight cancellations would have been arranged.",
+                            "exampleTranslation": "Meteorologlar yaqinlashib kelayotgan qor bo'roni haqida ogohlantirganida edi, reyslarni bekor qilish rejalashtirilgan bo'lardi."
+                        },
+                        {
+                            "term": "Preclude",
+                            "reading": "/prɪˈkluːd/",
+                            "meaning": "Monelik qilmoq, imkonsiz qilmoq",
+                            "exampleSentence": "Were stringent regulations to be enforced, improper corporate practices would be precluded.",
+                            "exampleTranslation": "Qat'iy me'yorlar joriy etilgudek bo'lsa, nomaqbul korporativ amaliyotlarga chek qo'yilgan bo'lardi."
+                        },
+                        {
+                            "term": "Viable",
+                            "reading": "/ˈvaɪ.ə.bəl/",
+                            "meaning": "Yashovchan, amaliy jihatdan o'zini oqlaydigan",
+                            "exampleSentence": "Were a more viable technological solution available, the enterprise would transition immediately.",
+                            "exampleTranslation": "Mabodo yanada amaliyroq texnologik yechim mavjud bo'lganida, korxona darhol o'tgan bo'lardi."
                         }
                     ],
-                    "grammarRules": [
-                        {
-                            "pattern": "Formal Inverted Conditionals (Had I known, Were you to, Should you need)",
-                            "meaning": "If so'zisiz tuziladigan oliy darajadagi rasmiy shart ergash gaplar.",
-                            "usageNotes": "Rasmiy va adabiy ingliz tilida \"if\" tushirib qoldirilib, Had / Were / Should gap boshiga o'tkaziladi.",
-                            "examples": [
-                                {
-                                    "sentence": "Supply chain bottlenecks delayed production.",
-                                    "translation": "Ta'minot zanjiridagi to'siqlar ishlab chiqarishni kechiktirdi."
-                                },
-                                {
-                                    "sentence": "Tensions began to escalate.",
-                                    "translation": "Keskinlik kuchaya boshladi."
-                                }
-                            ]
-                        }
+                    "keyPoints": [
+                        "Type 1 Inversion: Should + Subject + bare infinitive (e.g. Should you require...)",
+                        "Type 2 Inversion: Were + Subject + to-infinitive (harakat fe'llarida) yoki Were + Subject + noun/adj (holatda)",
+                        "Type 3 Inversion: Had + Subject + past participle (e.g. Had we been notified...)",
+                        "Negative Inversion qoidasi: Inkor qisqartirilmaydi, faqat 'Had he not...', 'Were they not to...', 'Should it not...'"
                     ]
                 }
             },
             {
                 "id": "en-c1-u1-l1-s2",
-                "title": "Inversiya Mashqi",
+                "title": "Inverted Conditionals Amaliyoti",
                 "type": "practice",
-                "estimatedMinutes": 5,
+                "estimatedMinutes": 6,
                 "practiceData": {
-                    "instructions": "To'g'ri inversiyalangan shaklni tanlang.",
+                    "instructions": "Inversiya qoidalariga asoslanib eng to'g'ri grammatik va leksik javobni tanlang.",
                     "exercises": [
                         {
                             "id": "en-c1-u1-l1-e1",
                             "type": "multiple-choice",
-                            "prompt": "\"_______ you have any inquiries, our support team is available 24/7.\"",
+                            "prompt": "Choose the correctly constructed formal inverted conditional sentence:",
+                            "options": [
+                                "Had if the CEO signed the merger, stocks would have soared.",
+                                "Had the CEO signed the merger, stocks would have soared.",
+                                "Hadn't the CEO signed the merger, stocks would have plummeted.",
+                                "Were the CEO had signed the merger, stocks would soar."
+                            ],
+                            "correctAnswer": 1,
+                            "explanation": "Type 3 inversiyasida 'if' mutlaqo qo'shilmaydi va inkor bo'lsa 'Had the CEO not signed' ko'rinishida yoziladi. Shuning uchun 'Had the CEO signed...' yagona to'g'ri variant."
+                        },
+                        {
+                            "id": "en-c1-u1-l1-e2",
+                            "type": "multiple-choice",
+                            "prompt": "Fill in the blank: '_______ any discrepancy arise during the audit, external investigators will be dispatched.'",
                             "options": [
                                 "Should",
                                 "Were",
                                 "Had",
-                                "If should"
+                                "Unless"
                             ],
                             "correctAnswer": 0,
-                            "explanation": "Should you have inquiries..."
+                            "explanation": "Harakat fe'li asosiy shaklda ('arise') kelgani va bosh gap kelasi zamonda ('will be dispatched') bo'lgani uchun 1-tur shart inversiyasi bo'lib, 'Should' ishlatiladi."
                         },
                         {
-                            "id": "en-c1-u1-l1-ex-2",
+                            "id": "en-c1-u1-l1-e3",
                             "type": "multiple-choice",
-                            "prompt": "Choose the correct word to complete the sentence: \"Tensions began to escalate.\"",
+                            "prompt": "Which sentence correctly expresses a hypothetical future/present scenario using inversion?",
                             "options": [
-                                "Escalate",
-                                "doubt",
-                                "reluctance",
-                                "delay"
+                                "Were the committee vote against the proposal, funding would cease.",
+                                "Were the committee to vote against the proposal, funding would cease.",
+                                "Was the committee to vote against the proposal, funding would cease.",
+                                "Were to the committee vote against the proposal, funding would cease."
+                            ],
+                            "correctAnswer": 1,
+                            "explanation": "2-tur shart inversiyasida harakat fe'li bilan 'Were + ega + to-infinitive' sintaktik modeli talab qilinadi: 'Were the committee to vote...'."
+                        },
+                        {
+                            "id": "en-c1-u1-l1-e4",
+                            "type": "multiple-choice",
+                            "prompt": "Identify the correct negative inverted conditional structure:",
+                            "options": [
+                                "Had he not examined the metallurgical flaws, the aviation disaster would have recurred.",
+                                "Hadn't he examined the metallurgical flaws, the aviation disaster would have recurred.",
+                                "Had he examined not the metallurgical flaws, the aviation disaster would have recurred.",
+                                "Were he not examined the metallurgical flaws, the aviation disaster would have recurred."
                             ],
                             "correctAnswer": 0,
-                            "explanation": "\"Escalate\" (Keskin oshmoq / Kuchaymoq) fits the context appropriately."
+                            "explanation": "Rasmiy inversiyada inkor hech qachon qisqartirilmaydi ('Hadn't' xato) va 'not' egadan keyin qo'yiladi: 'Had he not examined...'."
+                        },
+                        {
+                            "id": "en-c1-u1-l1-e5",
+                            "type": "multiple-choice",
+                            "prompt": "Transform: 'If it had not been for your prompt intervention, we would have suffered bankruptcy.'",
+                            "options": [
+                                "Were it not for your prompt intervention, we would have suffered bankruptcy.",
+                                "Had it not been for your prompt intervention, we would have suffered bankruptcy.",
+                                "Should it not have been for your prompt intervention, we would have suffered bankruptcy.",
+                                "Had it been not for your prompt intervention, we would have suffered bankruptcy."
+                            ],
+                            "correctAnswer": 1,
+                            "explanation": "'If it had not been for...' iborasining inversiya shakli 'Had it not been for...' hisoblanadi (o'tmishdagi sababiyat)."
                         }
                     ]
                 }
             },
             {
                 "id": "en-c1-u1-l1-s3",
-                "title": "Test",
+                "title": "Inverted Conditionals Baholash Testi",
                 "type": "test",
-                "estimatedMinutes": 6,
+                "estimatedMinutes": 7,
                 "testData": {
-                    "instructions": "Savollarga javob bering.",
-                    "passingScorePercentage": 75,
+                    "instructions": "C1 darajasidagi sintaksis va inversiya qoidalarini tekshiruvchi test savollariga javob bering.",
+                    "passingScorePercentage": 80,
                     "questions": [
                         {
                             "id": "en-c1-u1-l1-q1",
-                            "question": "_______ I realized the full consequences of the deal, I would never have signed it.",
+                            "question": "Which sentence demonstrates proper C1 academic inversion?",
                             "options": [
-                                "Had",
-                                "Should",
-                                "Were",
-                                "Did"
+                                "Had the researchers adhered to safety protocols, contamination would not have occurred.",
+                                "Had if the researchers adhered to safety protocols, contamination had not occurred.",
+                                "Were the researchers adhered to safety protocols, contamination would not occur.",
+                                "Should the researchers had adhered to safety protocols, contamination would not occur."
                             ],
                             "correctAnswerIndex": 0,
-                            "explanation": "Had I realized..."
+                            "explanation": "'Had + Subject + V3' o'tmishdagi real bo'lmagan shartni bildiradi va asosiy gapda 'would not have occurred' bilan to'liq mos keladi."
                         },
                         {
                             "id": "en-c1-u1-l1-q2",
-                            "question": "_______ they to reject our proposal, what would our alternative strategy be?",
+                            "question": "'Were a general strike _______ by the labor unions, the national supply chain would face total paralysis.'",
                             "options": [
-                                "Had",
-                                "If were",
-                                "Should",
-                                "Were"
+                                "to be declared",
+                                "declared",
+                                "had declared",
+                                "being declared"
                             ],
-                            "correctAnswerIndex": 3,
-                            "explanation": "Were they to reject..."
+                            "correctAnswerIndex": 0,
+                            "explanation": "2-tur inversiyasida passiv harakat fe'li 'to be + V3' ('to be declared') shaklida qo'yilishi shart."
                         },
                         {
                             "id": "en-c1-u1-l1-q3",
-                            "question": "Had it not been for his prompt intervention, the crisis _______ escalated into disaster.",
+                            "question": "What is the primary stylistic function of using conditional inversion in formal writing?",
                             "options": [
-                                "had",
-                                "would be",
-                                "would have",
-                                "will have"
+                                "To reduce the number of words by creating informal contractions.",
+                                "To elevate the register, heighten rhetorical gravity, and vary syntactic rhythm.",
+                                "To make the sentence strictly mean that the condition is guaranteed to happen.",
+                                "To replace past continuous tenses with simple present structures."
                             ],
-                            "correctAnswerIndex": 2,
-                            "explanation": "Would have escalated."
+                            "correctAnswerIndex": 1,
+                            "explanation": "Inversiya akademik va rasmiy yozuvda matn uslubini (register) oshiradi, ritorik jiddiylik va sintaktik xilma-xillik bag'ishlaydi."
                         },
                         {
                             "id": "en-c1-u1-l1-q4",
-                            "question": "\"Should circumstances change, we shall notify you.\" Ushbu jumla qaysi uslubga tegishli?",
+                            "question": "'Should unforeseen circumstances prevent your attendance, _______.' Complete the sentence appropriately:",
                             "options": [
-                                "Broken English",
-                                "Highly formal / Professional",
-                                "Slang / Informal",
-                                "Childish"
+                                "you would have phoned the committee immediately.",
+                                "kindly inform the symposium secretariat at your earliest convenience.",
+                                "you will be punished by international law.",
+                                "you are attending yesterday's lecture."
                             ],
                             "correctAnswerIndex": 1,
-                            "explanation": "Highly formal/professional."
+                            "explanation": "'Should + ega + bare verb' 1-tur shart inversiyasi bo'lib, buyruq yoki kelasi zamon iltimosi bilan tugaydi ('kindly inform...')."
+                        },
+                        {
+                            "id": "en-c1-u1-l1-q5",
+                            "question": "Find the sentence with an error in inversion syntax:",
+                            "options": [
+                                "Had we possessed the requisite computational power, the simulation would have concluded earlier.",
+                                "Were she eligible for the professorship, the board would approve her tenure.",
+                                "Had not the central bank lowered interest rates, inflation would have skyrocketed.",
+                                "Should you encounter technical anomalies, consult the engineering documentation."
+                            ],
+                            "correctAnswerIndex": 2,
+                            "explanation": "'Had not the central bank' xato, chunki inkor 'not' egadan keyin turishi kerak: 'Had the central bank not lowered...'."
                         }
                     ]
                 }
@@ -177,153 +247,228 @@ export const ENGLISH_C1_LESSONS: Lesson[] = [
         "level": "C1",
         "lessonNumber": 2,
         "title": "Fronting, Ellipsis & Substitution in Academic Discourse",
-        "description": "Gap bo'laklarini oldinga surish (fronting) va ortiqcha so'zlarni qisqartirish (ellipsis).",
-        "estimatedDurationMinutes": 15,
-        "icon": "✒️",
+        "description": "Akademik matnlarda urg'uni ko'chirish (fronting), takroriylikni yo'qotish (ellipsis) va so'z o'rnini bosish (substitution) orqali yozuvni ixchamlashtirish.",
+        "estimatedDurationMinutes": 20,
+        "icon": "⚡",
         "steps": [
             {
                 "id": "en-c1-u1-l2-s1",
-                "title": "Fronting va Ellipsis",
+                "title": "Fronting va Ellipsis Mexanizmlari",
                 "type": "learn",
-                "estimatedMinutes": 5,
+                "estimatedMinutes": 7,
                 "learnData": {
-                    "title": "Stylistic Fronting and Ellipsis",
-                    "explanation": "Fronting: Urg'u berilayotgan bo'lakni gap boshiga olib chiqish (\"Much more significant is the economic impact\", \"Directly opposite the plaza stood the grand library\"). Ellipsis: Ma'nosi tushunarli bo'lgan so'zlarni takrorlamaslik (\"She wanted to attend, but couldn't [attend]\").",
-                    "keyPoints": [
-                        "Fronting adjectives: \"Crucial to this argument is the assumption that...\"",
-                        "Substitution: \"Do you think interest rates will rise?\" — \"I expect so / I fear not.\""
-                    ],
-                    "grammarRules": [
-                        {
-                            "pattern": "Fronting, Ellipsis & Substitution in Academic Discourse",
-                            "meaning": "Gap bo'laklarini oldinga surish (fronting) va ortiqcha so'zlarni qisqartirish (ellipsis).",
-                            "usageNotes": "Fronting: Urg'u berilayotgan bo'lakni gap boshiga olib chiqish (\"Much more significant is the economic impact\", \"Directly opposite the plaza stood the grand library\"). Ellipsis: Ma'nosi tushunarli bo'lgan so'zlarni takrorlamaslik (\"She wanted to attend, but couldn't [attend]\").",
-                            "examples": [
-                                {
-                                    "sentence": "I study English every day with dedication.",
-                                    "translation": "Har kuni ingliz tilini astoydil o'rganaman."
-                                }
-                            ]
-                        }
-                    ],
+                    "title": "Fronting, Ellipsis & Substitution in Academic Writing",
+                    "explanation": "Yuqori akademik uslubda har bir jumla bir xil 'Ega + Kesim + To'ldiruvchi' qolipi bilan boshlanaversa, matn zerikarli va mexanik bo'lib qoladi. C1 darajasida uslubiy rang-baranglikni oshirish uchun uchta kuchli vositadan foydalaniladi:\n\n1. **Fronting (Fikriy elementni boshga olib chiqish)**:\n   - Gapning odatda o'rtasida yoki oxirida keladigan to'ldiruvchi, sifat yoki hol qismi maxsus urg'u berish yoki oldingi jumlaga ulanish (thematic progression) uchun gap boshiga suriladi.\n   - *Participle Fronting*: *Lying at the heart of quantum mechanics is the wave-particle duality.* (Quantum mechanics markazida to'lqin-zarra dualligi yotadi).\n   - *Adverbial Fronting with Inversion*: *Seldom has a technological breakthrough provoked such intense ethical dispute.*\n   - *Adjective Fronting*: *Remarkable though the initial results were, peer reviewers remained skeptical.*\n\n2. **Ellipsis (Keraksiz takrorlangan so'zlarni tushirib qoldirish)**:\n   - Kontekst orqali aniq bo'lgan so'zlarni qayta-qayta yozmasdan tashlab ketish:\n   - *Textual Ellipsis*: *Some participants favored cognitive behavioral therapy; others [favored] psychoanalysis.*\n   - *Reduced Clauses*: *When [she was] confronted with contradictory empirical evidence, the researcher re-examined the hypothesis.*\n\n3. **Substitution (O'rinbosar so'zlar)**:\n   - So'zni tushirib qoldirish imkoni bo'lmaganda uning o'rniga *so, do so, that/those, neither, the former/the latter* qo'yiladi:\n   - *Will synthetic fuel replace fossil fuels entirely? The majority of scientists do not believe so [that it will].*\n   - *The carbon footprint of aviation is immense, but that of container shipping is equally alarming.* ('that' = 'the carbon footprint').\n\n⚠️ **O'zbek o'rganuvchilari uchun xavfli tuzoqlar (Common Pitfalls)**:\n- ❌ *The economy of Germany is larger than Uzbekistan.* (Taqqoslash xatosi: mamlakat iqtisodiyoti butun bir mamlakatga emas, uning iqtisodiyotiga taqqoslanishi kerak!).\n  ✅ *The economy of Germany is larger than that of Uzbekistan.*\n- ❌ *Although was tired, the scholar finished the dissertation.* (Ergash gapda 'although'dan keyin ega va 'to be' birga tushib qolishi kerak yoki sifatning o'zi qolishi kerak).\n  ✅ *Although tired, the scholar finished the dissertation.*\n\n🎯 **IELTS Academic Writing Task 1 & 2 Cohesion Mastery**:\n- **Prompt**: Task 1 Data Comparison: Comparing education expenditure in Sweden and Greece.\n- **Model Answer (Band 8.0-8.5)**: In 2020, Sweden allocated approximately 7.2% of its GDP to tertiary education, whereas that of Greece lingered below 3.5%. Remarkable though this discrepancy may seem, historical budget analyses explain the divergence: while the former invested aggressively in digital infrastructure, the latter directed limited resources toward recurrent administrative overheads.\n- **Discourse Markers**: whereas that of..., Remarkable though this discrepancy may seem..., while the former..., the latter...\n- **Examiner / Intonation Tip**: Fronting orqali gap boshiga chiqarilgan so'zlar tinglovchi e'tiborini 'yangi axborot'dan 'bog'lovchi ko'prik'ka qaratadi. IELTS Writing'da 'that of / those of' konstruksiyasini qo'llash Coherence & Cohesion mezonida darhol 8.0+ ballni kafolatlaydi.",
                     "vocabulary": [
                         {
-                            "term": "Pragmatic",
-                            "reading": "/præɡˈmæt.ɪk/",
-                            "meaning": "Amaliy, pragmatik",
-                            "exampleSentence": "We adopted a pragmatic approach to problem-solving.",
-                            "exampleTranslation": "Biz muammoni hal qilishda amaliy yondashuvni qoʻlladik."
+                            "term": "Duality",
+                            "reading": "/dʒuːˈæl.ə.ti/",
+                            "meaning": "Ikkilik, duallik, ikki qirrali tabiat",
+                            "exampleSentence": "Lying at the core of human consciousness is the duality between rational logic and emotional impulse.",
+                            "exampleTranslation": "Inson ongi markazida mantiqiy aql va hissiy tuyg'ular o'rtasidagi ikkilik yotadi."
                         },
                         {
-                            "term": "Pervasive",
-                            "reading": "/pəˈveɪ.sɪv/",
-                            "meaning": "Keng tarqalgan, singib ketgan",
-                            "exampleSentence": "Digital transformation has a pervasive impact on society.",
-                            "exampleTranslation": "Raqamli transformatsiya jamiyatga chuqur singib borgan taʼsir koʻrsatadi."
+                            "term": "Juxtaposition",
+                            "reading": "/ˌdʒʌk.stə.pəˈzɪʃ.ən/",
+                            "meaning": "Yonma-yon qo'yish, qiyoslash uchun qator joylashtirish",
+                            "exampleSentence": "Striking indeed is the juxtaposition of opulent skyscrapers and destitute slums in modern megacities.",
+                            "exampleTranslation": "Zamonaviy megapolislarda dabdabali osmono'par binolar va qashshoq xarobalarning yonma-yon joylashishi haqiqatan ham hayratlanarlidir."
                         },
                         {
-                            "term": "Exemplify",
-                            "reading": "/ɪɡˈzem.plɪ.faɪ/",
-                            "meaning": "Yorqin misol boʻlmoq",
-                            "exampleSentence": "Recent discoveries exemplify the power of modern physics.",
-                            "exampleTranslation": "Soʻnggi kashfiyotlar zamonaviy fizika qudratini yaqqol namoyon etadi."
+                            "term": "Conciseness",
+                            "reading": "/kənˈsaɪs.nəs/",
+                            "meaning": "Lo'ndalilik, ixchamlik, qisqalik",
+                            "exampleSentence": "Academic journals demand both terminological precision and stylistic conciseness from authors.",
+                            "exampleTranslation": "Akademik jurnallar mualliflardan terminologik aniqlik bilan birga uslubiy lo'ndalilikni ham talab qiladi."
+                        },
+                        {
+                            "term": "The former",
+                            "reading": "/ðə ˈfɔː.mər/",
+                            "meaning": "Dastlabkisi, birinchi tilga olingani",
+                            "exampleSentence": "The committee deliberated on nuclear energy and solar alternatives, heavily endorsing the former.",
+                            "exampleTranslation": "Qo'mita yadro energiyasi va quyosh muqobillarini muhokama qilib, dastlabkisini qat'iy ma'qulladi."
+                        },
+                        {
+                            "term": "The latter",
+                            "reading": "/ðə ˈlæt.ər/",
+                            "meaning": "Keyingisi, ikkinchi tilga olingani",
+                            "exampleSentence": "Between qualitative fieldwork and quantitative modeling, our laboratory prioritized the latter.",
+                            "exampleTranslation": "Sifatli dala tadqiqoti va miqdoriy modellashtirish o'rtasida laboratoriyamiz keyingisiga ustuvorlik berdi."
+                        },
+                        {
+                            "term": "Anaphora",
+                            "reading": "/əˈnæf.ər.ə/",
+                            "meaning": "Anafora (oldingi gapdagi so'zga ishora qiluvchi til birligi)",
+                            "exampleSentence": "Pronoun substitution acts as an anaphoric device to prevent tedious repetition.",
+                            "exampleTranslation": "Olmoshlar bilan almashtirish zerikarli takrorlanishning oldini oluvchi anaforik vosita vazifasini bajaradi."
+                        },
+                        {
+                            "term": "Preponderance",
+                            "reading": "/prɪˈpɒn.dər.əns/",
+                            "meaning": "Ustunlik, ko'pchilikni tashkil etish, ustun miqdor",
+                            "exampleSentence": "Overwhelming is the preponderance of data supporting the anthropogenic origins of climate shift.",
+                            "exampleTranslation": "Iqlim o'zgarishining inson omili bilan bog'liqligini tasdiqlovchi ma'lumotlarning ustunligi shubhasizdir."
+                        },
+                        {
+                            "term": "Omission",
+                            "reading": "/əʊˈmɪʃ.ən/",
+                            "meaning": "Tushirib qoldirish, istisno qilish",
+                            "exampleSentence": "Syntactic ellipsis relies on the calculated omission of predictable grammatical components.",
+                            "exampleTranslation": "Sintaktik ellips oldindan bashorat qilsa bo'ladigan grammatik komponentlarni hisob-kitobli tushirib qoldirishga tayanadi."
                         }
+                    ],
+                    "keyPoints": [
+                        "Participle/Adjective Fronting + Inversion: [Adjective/Participle phrase] + Verb + Subject (e.g. Lying on the desk was the confidential report).",
+                        "Noun Phrase Substitution: Use 'that of' (birlik uchun) va 'those of' (ko'plik uchun) to avoid repetition in comparisons.",
+                        "Predicate Substitution: Use 'do so', 'did so', 'done so' for repeating an action verb phrase.",
+                        "Clause Ellipsis: When/While/Although + Participle or Adjective (tushirilgan 'Subject + be')."
                     ]
                 }
             },
             {
                 "id": "en-c1-u1-l2-s2",
-                "title": "Mashq",
+                "title": "Fronting va Substitution Amaliyoti",
                 "type": "practice",
-                "estimatedMinutes": 5,
+                "estimatedMinutes": 6,
                 "practiceData": {
-                    "instructions": "To'g'ri fronting tuzilishini tanlang.",
+                    "instructions": "Gaplardagi uslubiy moslik, fronting va o'rinbosar olmoshlarni to'g'ri tanlang.",
                     "exercises": [
                         {
                             "id": "en-c1-u1-l2-e1",
                             "type": "multiple-choice",
-                            "prompt": "\"_______ of paramount importance is the integrity of our empirical data.\"",
+                            "prompt": "Complete the academic comparison correctly: 'The thermal efficiency of modern solar panels is considerably superior to _______ developed in the 1990s.'",
                             "options": [
-                                "Equal",
-                                "Equally",
-                                "Equality",
-                                "More equal"
+                                "that of panels",
+                                "those",
+                                "these of them",
+                                "the ones that"
                             ],
                             "correctAnswer": 1,
-                            "explanation": "Equally of paramount importance is..."
+                            "explanation": "'The thermal efficiency' birlik bo'lsa-da, gapda 1990-yillarda ishlab chiqilgan panellarga nisbatan taqqoslash ketmoqda ('those developed' = 'panels developed'). Agar samaradorlik taqqoslansa 'that of panels developed in...' bo'lardi. Bu yerda 'those developed...' to'g'ri o'rinbosar."
                         },
                         {
-                            "id": "en-c1-u1-l2-ex-2",
+                            "id": "en-c1-u1-l2-e2",
                             "type": "multiple-choice",
-                            "prompt": "Choose the correct word to complete the sentence: \"Digital transformation has a pervasive impact on society.\"",
+                            "prompt": "Select the correct fronted adjective construction:",
                             "options": [
-                                "doubt",
-                                "delay",
-                                "Pervasive",
-                                "reluctance"
+                                "Though brilliant the proposal was, the board rejected it.",
+                                "Brilliant though the proposal was, the board rejected it.",
+                                "Although brilliant was the proposal, the board rejected it.",
+                                "Brilliant although the proposal was, the board rejected it."
                             ],
-                            "correctAnswer": 2,
-                            "explanation": "\"Pervasive\" (Keng tarqalgan, singib ketgan) fits the context appropriately."
+                            "correctAnswer": 1,
+                            "explanation": "Sifatni oldinga olib chiqib 'garchi shunday bo'lsa-da' ma'nosini berish uchun 'Adjective + though/as + Subject + Verb' formulasi qo'llaniladi: 'Brilliant though the proposal was...'."
+                        },
+                        {
+                            "id": "en-c1-u1-l2-e3",
+                            "type": "multiple-choice",
+                            "prompt": "Identify the sentence featuring correct participle fronting with subject-verb inversion:",
+                            "options": [
+                                "Hanging on the museum wall the priceless masterpiece was.",
+                                "Hanging on the museum wall was the priceless masterpiece.",
+                                "Was hanging on the museum wall the priceless masterpiece.",
+                                "Hanging was on the museum wall the priceless masterpiece."
+                            ],
+                            "correctAnswer": 1,
+                            "explanation": "Participle fronting'da harakat-holat iborasi oldinga chiqadi va 'Verb + Subject' inversiyasi yuz beradi: 'Hanging on the museum wall was the priceless masterpiece'."
+                        },
+                        {
+                            "id": "en-c1-u1-l2-e4",
+                            "type": "multiple-choice",
+                            "prompt": "Choose the sentence containing correct verbal substitution using 'do so':",
+                            "options": [
+                                "The board requested the CFO to resign, and after intense deliberation, he did so.",
+                                "The board requested the CFO to resign, and he did it so after intense deliberation.",
+                                "The board requested the CFO to resign, and he did so resignation.",
+                                "The board requested the CFO to resign, but he did such after deliberation."
+                            ],
+                            "correctAnswer": 0,
+                            "explanation": "'Do so' oldingi jumlada aytilgan butun harakat iborasini ('to resign') takrorlamaslik uchun ishlatiladi: 'he did so'."
+                        },
+                        {
+                            "id": "en-c1-u1-l2-e5",
+                            "type": "multiple-choice",
+                            "prompt": "Select the sentence with grammatically correct ellipsis in an adverbial clause:",
+                            "options": [
+                                "When was writing the monograph, Professor Clark discovered an archival forgery.",
+                                "When writing the monograph, Professor Clark discovered an archival forgery.",
+                                "When wrote the monograph, Professor Clark discovered an archival forgery.",
+                                "While written the monograph, Professor Clark discovered an archival forgery."
+                            ],
+                            "correctAnswer": 1,
+                            "explanation": "'When [he was] writing...' qisqartirilib, 'When writing the monograph...' ko'rinishida qo'llaniladi (Active participle ellipsis)."
                         }
                     ]
                 }
             },
             {
                 "id": "en-c1-u1-l2-s3",
-                "title": "Test",
+                "title": "Fronting va Substitution Testi",
                 "type": "test",
-                "estimatedMinutes": 5,
+                "estimatedMinutes": 7,
                 "testData": {
-                    "instructions": "Savollarga javob bering.",
-                    "passingScorePercentage": 75,
+                    "instructions": "C1 uslubiy vositalari va sintaktik qisqartirishlar bo'yicha bilimlaringizni sinang.",
+                    "passingScorePercentage": 80,
                     "questions": [
                         {
                             "id": "en-c1-u1-l2-q1",
-                            "question": "Central to this hypothesis _______ the notion of quantum entanglement.",
+                            "question": "'The architectural design of the modern library mirrors _______ of ancient Roman basilicas.' Choose the correct pronoun:",
                             "options": [
-                                "are",
-                                "is",
-                                "being",
-                                "were"
+                                "that",
+                                "those",
+                                "this",
+                                "these"
                             ],
-                            "correctAnswerIndex": 1,
-                            "explanation": "Central to this hypothesis is..."
+                            "correctAnswerIndex": 0,
+                            "explanation": "'The architectural design' sanalmaydigan birlik ot bo'lgani sababli, uning o'rnini 'that' egallaydi ('that of ancient Roman basilicas')."
                         },
                         {
                             "id": "en-c1-u1-l2-q2",
-                            "question": "\"Will the treaty be ratified?\" — \"We certainly hope _______.\"",
+                            "question": "Which sentence correctly contrasts two subjects using 'the former' and 'the latter'?",
                             "options": [
-                                "that",
-                                "it",
-                                "so",
-                                "such"
+                                "Both hydrogen and lithium batteries are promising, but the former requires substantially lower charging times than the latter.",
+                                "Both hydrogen and lithium batteries are promising, but former requires lower time than latter.",
+                                "Hydrogen and lithium are promising, but the former one is cheaper than the latter one.",
+                                "Between hydrogen and lithium, the first is clean and the second is dirty."
                             ],
-                            "correctAnswerIndex": 2,
-                            "explanation": "We hope so."
+                            "correctAnswerIndex": 0,
+                            "explanation": "'The former' (birinchisi - hydrogen) va 'the latter' (ikkinchisi - lithium) har doim aniq artikl 'the' bilan ishlatiladi."
                         },
                         {
                             "id": "en-c1-u1-l2-q3",
-                            "question": "What is the purpose of fronting in academic writing?",
+                            "question": "Which sentence demonstrates fronting used for heightened emphasis?",
                             "options": [
-                                "To replace punctuation",
-                                "To reduce word count to zero",
-                                "To make sentences intentionally confusing",
-                                "To create emphasis and establish smooth cohesion between paragraphs"
+                                "We rarely witness such monumental astronomical occurrences in our lifetimes.",
+                                "Rarely do we witness such monumental astronomical occurrences in our lifetimes.",
+                                "Such monumental astronomical occurrences we rarely witness in our lifetimes do.",
+                                "Do we rarely witness such monumental occurrences in our lifetimes."
                             ],
-                            "correctAnswerIndex": 3,
-                            "explanation": "Emphasis and cohesion."
+                            "correctAnswerIndex": 1,
+                            "explanation": "'Rarely' inkor ma'noli ravish gap boshiga chiqishi (fronting) yordamchi fe'l bilan inversiyani keltirib chiqaradi: 'Rarely do we witness...'."
                         },
                         {
                             "id": "en-c1-u1-l2-q4",
-                            "question": "Choose the sentence with correct ellipsis:",
+                            "question": "Identify the flawed sentence containing incorrect substitution or comparison:",
                             "options": [
-                                "Some scholars supported the reform, while others did not.",
-                                "Some scholars did, other no.",
-                                "Some scholars supported, other not.",
-                                "Some scholars supported the reform, while others did not supported the reform."
+                                "The energy consumption of electric vehicles is lower than that of internal combustion cars.",
+                                "The metabolic rates of hummingbirds are vastly higher than those of ostriches.",
+                                "The crime rates in metropolitan areas are rising faster than rural regions.",
+                                "If requested to present evidence, the witness agreed to do so."
+                            ],
+                            "correctAnswerIndex": 2,
+                            "explanation": "Uchinchi gapda taqqoslash xatosi mavjud: jinoyatchilik darajasi qishloq hududlariga taqqoslangan. To'g'risi: '...faster than those of rural regions'."
+                        },
+                        {
+                            "id": "en-c1-u1-l2-q5",
+                            "question": "'Important _______ the preliminary findings may be, rigorous replication studies are non-negotiable.' Complete the concessive fronting:",
+                            "options": [
+                                "as",
+                                "like",
+                                "even",
+                                "despite"
                             ],
                             "correctAnswerIndex": 0,
-                            "explanation": "... while others did not."
+                            "explanation": "'Important as/though the preliminary findings may be...' - sifat oldinga chiqqanda 'as' yoki 'though' bog'lovchisi qo'yiladi."
                         }
                     ]
                 }
@@ -339,155 +484,228 @@ export const ENGLISH_C1_LESSONS: Lesson[] = [
         "level": "C1",
         "lessonNumber": 3,
         "title": "Nominalisation in High-Level Academic Writing",
-        "description": "Fe'l va sifatlarni ot birikmalariga aylantirish orqali akademik zichlik (density) yaratish.",
-        "estimatedDurationMinutes": 16,
-        "icon": "🏛️",
+        "description": "Fe'l va sifatlarni ot birikmalariga aylantirish (nominalization) orqali matnning ilmiy zichligi va obyektivlik darajasini oshirish.",
+        "estimatedDurationMinutes": 20,
+        "icon": "📚",
         "steps": [
             {
                 "id": "en-c1-u1-l3-s1",
-                "title": "Nominalizatsiya San'ati",
+                "title": "Nominalisation va Ilmiy Zichlik",
                 "type": "learn",
-                "estimatedMinutes": 5,
+                "estimatedMinutes": 7,
                 "learnData": {
-                    "title": "Academic Density via Nominalisation",
-                    "explanation": "Og'zaki tildagi fe'lli jumlalarni ilmiy va ixcham otli konstruktsiyalarga aylantirish.",
-                    "keyPoints": [
-                        "Informal: \"Because the climate is changing rapidly, glaciers are melting faster.\"",
-                        "Nominalised (C1/C2): \"Rapid climatic shifts have accelerated glacial depletion.\"",
-                        "Informal: \"They investigated the matter thoroughly.\"",
-                        "Nominalised: \"A rigorous investigation into the matter was undertaken.\""
-                    ],
+                    "title": "Nominalisation: Packing Information for Academic Rigour",
+                    "explanation": "Nominalizatsiya (otlashtirish) — bu fe'llar, sifatlar yoki butun gap bo'laklarini otga (noun phrase) aylantirish jarayonidir. Bu usul C1/C2 darajasidagi akademik va ilmiy matnlarning ajralmas xususiyati hisoblanadi.\n\nNega nominalizatsiya kerak?\n1. **Axborot zichligini oshiradi (Lexical Density)**:\n   - Oddiy (B1): *Because the population in cities is expanding rapidly, the government needs to build more roads.*\n   - Akademik (C1): *The rapid expansion of urban populations necessitates extensive infrastructural development.*\n2. **Obyektivlik va neytrallik (Depersonalisation)**:\n   - Shaxsiy harakat o'rniga hodisaning o'ziga e'tibor qaratiladi: *We analyzed the data and discovered that...* emas, balki *Data analysis revealed...*\n3. **Mantiqiy zanjir yaratish (Flow & Cohesion)**:\n   - Oldingi gapdagi harakat keyingi gapda ot bo'lib keladi:\n     *The glaciers melted at an unprecedented rate. This accelerated melting resulted in sea level rises.*\n\nQo'llaniladigan prefiks va suffikslar:\n- Fe'ldan otga: -tion (*evaluate* -> *evaluation*), -ment (*develop* -> *development*), -ance/-ence (*persist* -> *persistence*), -al (*refuse* -> *refusal*).\n- Sifatdan otga: -ity (*vulnerable* -> *vulnerability*), -ness (*aware* -> *awareness*).\n\n⚠️ **O'zbek o'rganuvchilari uchun xavfli tuzoqlar (Common Pitfalls)**:\n- ❌ *The government's fastly increasing of taxes caused poverty.* (O'zbek tilidagi '-ishi' qo'shimchasini to'g'ridan-to'g'ri ravish+V-ing deb tarjima qilish xatosi).\n  ✅ *The rapid escalation of taxation precipitated widespread poverty.*\n- ❌ *Over-nominalisation (G'aliz matn)*: Haddan tashqari ko'p otlarni ketma-ket qo'yib tashlash o'qishni tushunarsiz qiladi (*The realization of the implementation of the plan...*). Muvozanatni saqlash shart!\n\n🎯 **IELTS Writing Task 2 Lexical Resource & Grammatical Range**:\n- **Prompt**: Task 2 Prompt: Some believe globalization destroys local cultures. Discuss and give your opinion.\n- **Model Answer (Band 8.0-8.5)**: Rather than causing the outright obliteration of indigenous traditions, globalization facilitates intercultural hybridization. The pervasive penetration of Western media certainly challenges cultural insularity; nevertheless, the resilience of local linguistic practices demonstrates an ongoing process of contextual adaptation rather than passive assimilation.\n- **Discourse Markers**: outright obliteration of..., intercultural hybridization, pervasive penetration of..., ongoing process of contextual adaptation\n- **Examiner / Intonation Tip**: Nominal iboralar yozma nutqni og'ir va professional qiladi. Ammo Speaking'da juda ko'p nominalizatsiyadan qoching, chunki og'zaki nutqda tabiiy dinamik fe'llar ('expand', 'escalate') ko'proq eshitishga qulay.",
                     "vocabulary": [
                         {
-                            "term": "Depletion",
-                            "reading": "/dɪˈpliː.ʃən/",
-                            "meaning": "Tugash / Kamayib ketish",
-                            "exampleSentence": "Resource depletion threatens ecological stability.",
-                            "exampleTranslation": "Resurslarning tugashi ekologik barqarorlikka tahdid soladi."
+                            "term": "Necessitate",
+                            "reading": "/nəˈses.ɪ.teɪt/",
+                            "meaning": "Taqozo etmoq, zarur qilmoq",
+                            "exampleSentence": "The sudden escalation of fuel costs necessitated a drastic restructuring of corporate logistics.",
+                            "exampleTranslation": "Yoqilg'i narxining keskin ko'tarilishi korporativ logistikani tubdan qayta qurishni taqozo etdi."
                         },
                         {
-                            "term": "Exemplify",
-                            "reading": "/ɪɡˈzem.plɪ.faɪ/",
-                            "meaning": "Yorqin misol boʻlmoq",
-                            "exampleSentence": "Recent discoveries exemplify the power of modern physics.",
-                            "exampleTranslation": "Soʻnggi kashfiyotlar zamonaviy fizika qudratini yaqqol namoyon etadi."
+                            "term": "Precipitate",
+                            "reading": "/prɪˈsɪp.ɪ.teɪt/",
+                            "meaning": "Tezlashtirib yubormoq, kutilmaganda keltirib chiqarmoq",
+                            "exampleSentence": "The abrupt cessation of state subsidies precipitated an economic downturn.",
+                            "exampleTranslation": "Davlat subsidiyalarining kutilmaganda to'xtatilishi iqtisodiy pasayishni keltirib chiqardi."
                         },
                         {
-                            "term": "Nominalisation",
-                            "reading": "/ˌnɒmɪnəlaɪˈzeɪʃən/",
-                            "meaning": "Feʼlni otga aylantirish (akademik uslub)",
-                            "exampleSentence": "Nominalisation lends academic weight to scientific discourse.",
-                            "exampleTranslation": "Nominalizatsiya ilmiy matnga akademik salmoq beradi."
+                            "term": "Proliferation",
+                            "reading": "/prəˌlɪf.ərˈeɪ.ʃən/",
+                            "meaning": "Jadal ko'payish, keng tarqalish",
+                            "exampleSentence": "The uncontrolled proliferation of misinformation poses an existential threat to democratic discourse.",
+                            "exampleTranslation": "Yolg'on ma'lumotlarning nazoratsiz keng tarqalishi demokratik muloqotga jiddiy tahdid solmoqda."
+                        },
+                        {
+                            "term": "Degradation",
+                            "reading": "/ˌdeɡ.rəˈdeɪ.ʃən/",
+                            "meaning": "Yemirilish, sifatning pasayishi, degradatsiya",
+                            "exampleSentence": "Industrial pollution has resulted in severe environmental degradation throughout the river basin.",
+                            "exampleTranslation": "Sanoat ifloslanishi daryo havzasi bo'ylab jiddiy ekologik yemirilishga olib keldi."
+                        },
+                        {
+                            "term": "Impediment",
+                            "reading": "/ɪmˈped.ɪ.mənt/",
+                            "meaning": "To'siq, g'ov",
+                            "exampleSentence": "Bureaucratic inertia serves as a primary impediment to administrative efficiency.",
+                            "exampleTranslation": "Byurokratik loqaydlik ma'muriy samaradorlik yo'lidagi asosiy to'siq bo'lib xizmat qiladi."
+                        },
+                        {
+                            "term": "Deterioration",
+                            "reading": "/dɪˌtɪə.ri.əˈreɪ.ʃən/",
+                            "meaning": "Yomonlashish, ahvolning og'irlashishi",
+                            "exampleSentence": "The rapid deterioration of public health infrastructure triggered an emergency parliamentary session.",
+                            "exampleTranslation": "Sog'liqni saqlash infratuzilmasining tezkor yomonlashishi favqulodda parlament majlisini chaqirishga sabab bo'ldi."
+                        },
+                        {
+                            "term": "Disparity",
+                            "reading": "/dɪˈspær.ə.ti/",
+                            "meaning": "Tengsizlik, tafovut",
+                            "exampleSentence": "The widening wealth disparity between metropolitan and agrarian regions fuels political discontent.",
+                            "exampleTranslation": "Metropoliten va qishloq hududlari o'rtasida tobora kengayib borayotgan boylik tafovuti siyosiy norozilikni kuchaytirmoqda."
+                        },
+                        {
+                            "term": "Consolidation",
+                            "reading": "/kənˌsɒl.ɪˈdeɪ.ʃən/",
+                            "meaning": "Mustahkamlanish, birlashish",
+                            "exampleSentence": "The consolidation of market power among major tech giants has stifled entrepreneurial competition.",
+                            "exampleTranslation": "Yirik texnologik gigantlar o'rtasida bozor kuchining birlashishi tadbirkorlik raqobatini bo'g'ib qo'ydi."
                         }
                     ],
-                    "grammarRules": [
-                        {
-                            "pattern": "Nominalisation in High-Level Academic Writing",
-                            "meaning": "Fe'l va sifatlarni ot birikmalariga aylantirish orqali akademik zichlik (density) yaratish.",
-                            "usageNotes": "Og'zaki tildagi fe'lli jumlalarni ilmiy va ixcham otli konstruktsiyalarga aylantirish.",
-                            "examples": [
-                                {
-                                    "sentence": "Resource depletion threatens ecological stability.",
-                                    "translation": "Resurslarning tugashi ekologik barqarorlikka tahdid soladi."
-                                }
-                            ]
-                        }
+                    "keyPoints": [
+                        "Verb -> Noun phrase conversion: Subject + Verb + Object => [Nominalization of verb] + of + [Object] + by + [Subject].",
+                        "Adverb + Verb -> Adjective + Noun: 'expanded rapidly' => 'rapid expansion'.",
+                        "Causal linking with nominal subjects: Instead of 'Because X happened, Y resulted', write 'The occurrence of X triggered Y'.",
+                        "Avoid nominalization stacking: Do not chain more than 3 prepositional phrases ('of the... of the... in the...') together."
                     ]
                 }
             },
             {
                 "id": "en-c1-u1-l3-s2",
-                "title": "Mashq",
+                "title": "Nominalisation Amaliyoti",
                 "type": "practice",
-                "estimatedMinutes": 5,
+                "estimatedMinutes": 6,
                 "practiceData": {
-                    "instructions": "Eng yaxshi nominalizatsiyalangan akademik variantni tanlang.",
+                    "instructions": "Berilgan jumlalarni akademik darajada nominalizatsiya qilingan to'g'ri variantini tanlang.",
                     "exercises": [
                         {
                             "id": "en-c1-u1-l3-e1",
                             "type": "multiple-choice",
-                            "prompt": "Convert: \"When people migrate from rural areas to cities, cities grow rapidly.\"",
+                            "prompt": "Transform into formal academic register: 'Because companies increasingly automate their warehouses, many manual laborers are losing their jobs.'",
                             "options": [
-                                "When humans go to city, buildings increase.",
-                                "Moving causes large cities.",
-                                "Rural-to-urban migration drives unprecedented urban expansion.",
-                                "People moving makes cities big."
+                                "Companies automating their warehouses causes workers to lose jobs.",
+                                "The increasing automation of warehouse operations has precipitated widespread displacement of manual labor.",
+                                "Warehouse automation is happening fast, so manual workers lose jobs severely.",
+                                "Due to the fact that automation is done by warehouses, labor loss is seen."
                             ],
-                            "correctAnswer": 2,
-                            "explanation": "Rural-to-urban migration drives urban expansion."
+                            "correctAnswer": 1,
+                            "explanation": "'Automate' -> 'automation' va 'lose their jobs' -> 'displacement of manual labor' ga aylantirilib, 'precipitated' fe'li orqali sabab-oqibat akademik darajada ifodalangan."
                         },
                         {
-                            "id": "en-c1-u1-l3-ex-2",
+                            "id": "en-c1-u1-l3-e2",
                             "type": "multiple-choice",
-                            "prompt": "Choose the correct word to complete the sentence: \"Recent discoveries exemplify the power of modern physics.\"",
+                            "prompt": "Which sentence effectively turns an adjective into a sophisticated nominal subject?",
                             "options": [
-                                "Exemplify",
-                                "reluctance",
-                                "delay",
-                                "doubt"
+                                "Because the coastline is vulnerable, floods happen often.",
+                                "The extreme vulnerability of the coastline exacerbates flood-related perils.",
+                                "The coastal being vulnerable makes floods very dangerous.",
+                                "Coastal vulnerability is because the ocean rises fast."
+                            ],
+                            "correctAnswer": 1,
+                            "explanation": "'Vulnerable' sifati 'vulnerability' otiga aylantirilib, 'exacerbates flood-related perils' bilan ilmiy jihatdan boyitilgan."
+                        },
+                        {
+                            "id": "en-c1-u1-l3-e3",
+                            "type": "multiple-choice",
+                            "prompt": "Choose the best nominalized version of: 'When people consume sugar excessively, their health deteriorates.'",
+                            "options": [
+                                "Excessive sugar consumption leads to physiological deterioration.",
+                                "People consuming excessive sugar causes deteriorating health.",
+                                "The excessiveness of sugar intake makes health deteriorate.",
+                                "Consuming of sugar excessively brings health deterioration."
                             ],
                             "correctAnswer": 0,
-                            "explanation": "\"Exemplify\" (Yorqin misol boʻlmoq) fits the context appropriately."
+                            "explanation": "'Excessive sugar consumption' (ot birikmasi) va 'physiological deterioration' (ot birikmasi) mukammal akademik uslub yaratadi."
+                        },
+                        {
+                            "id": "en-c1-u1-l3-e4",
+                            "type": "multiple-choice",
+                            "prompt": "Identify the sentence that suffers from awkward 'over-nominalisation' (excessive grammatical sludge):",
+                            "options": [
+                                "The realization of the establishment of an investigation into the allegations was delayed.",
+                                "Investigators delayed establishing the formal inquiry into the allegations.",
+                                "The committee swiftly initiated an inquiry into the financial allegations.",
+                                "A formal inquiry into the allegations was established without delay."
+                            ],
+                            "correctAnswer": 0,
+                            "explanation": "'The realization of the establishment of an investigation into...' ketma-ket 4 ta ot va 'of' bilan to'lib ketgan bo'lib, o'ta g'aliz va samarasiz over-nominalisation hisoblanadi."
+                        },
+                        {
+                            "id": "en-c1-u1-l3-e5",
+                            "type": "multiple-choice",
+                            "prompt": "Convert: 'The city expanded rapidly, which placed intense strain on water supplies.'",
+                            "options": [
+                                "The rapid expansion of the city placed immense strain on municipal water supplies.",
+                                "Expanding rapidly of the city strained water supplies immensely.",
+                                "The city's fast expansion was straining the supplies of water.",
+                                "Due to rapid city expansion, water supplies were under strain."
+                            ],
+                            "correctAnswer": 0,
+                            "explanation": "'Expanded rapidly' -> 'The rapid expansion of the city' shakliga o'tkazilib, 'immense strain' bilan bog'langan."
                         }
                     ]
                 }
             },
             {
                 "id": "en-c1-u1-l3-s3",
-                "title": "Test",
+                "title": "Nominalisation Baholash Testi",
                 "type": "test",
-                "estimatedMinutes": 6,
+                "estimatedMinutes": 7,
                 "testData": {
-                    "instructions": "Savollarga javob bering.",
-                    "passingScorePercentage": 75,
+                    "instructions": "Akademik nominalizatsiya qoidalari va jumlalarni qayta shakllantirish bo'yicha test.",
+                    "passingScorePercentage": 80,
                     "questions": [
                         {
                             "id": "en-c1-u1-l3-q1",
-                            "question": "Original: \"Because technology evolved so fast, market dynamics changed.\" Best C1 nominalization:",
+                            "question": "What is the primary benefit of nominalisation in academic writing?",
                             "options": [
-                                "Because of tech evolution, things changed.",
-                                "Technology evolved fast and changed stuff.",
-                                "Rapid technological evolution transformed market dynamics.",
-                                "Tech was fast so market moved."
+                                "It eliminates all auxiliary verbs and renders sentences informal.",
+                                "It condenses complex clauses into dense conceptual units, facilitating impersonal academic objectivity.",
+                                "It replaces nouns with personal pronouns to increase emotional resonance.",
+                                "It ensures that sentences follow a strictly active subject-verb-object order."
                             ],
-                            "correctAnswerIndex": 2,
-                            "explanation": "Rapid technological evolution transformed market dynamics."
+                            "correctAnswerIndex": 1,
+                            "explanation": "Nominalizatsiya murakkab ergash gaplarni ixcham tushunchalarga aylantirib, akademik xolislik va mantiqiy zichlikni ta'minlaydi."
                         },
                         {
                             "id": "en-c1-u1-l3-q2",
-                            "question": "Which noun is the nominalized form of \"proliferate\"?",
+                            "question": "'The government intervened decisively, and this prevented market collapse.' Nominalize this statement:",
                             "options": [
-                                "Proliferated",
-                                "Proliferation",
-                                "Proliferatingly",
-                                "Proliferative"
+                                "Decisive governmental intervention averted total market collapse.",
+                                "The government's decisive intervening was preventing market collapsing.",
+                                "Because of decisive intervention of government, the market did not collapse.",
+                                "Market collapse prevention was due to government intervening decisively."
                             ],
-                            "correctAnswerIndex": 1,
-                            "explanation": "Proliferation (keskin ko'payish)."
+                            "correctAnswerIndex": 0,
+                            "explanation": "'Decisive governmental intervention' (ega) + 'averted' (fe'l) + 'total market collapse' (to'ldiruvchi) eng yuqori C1 akademik ifodasidir."
                         },
                         {
                             "id": "en-c1-u1-l3-q3",
-                            "question": "What is a major benefit of nominalisation in IELTS Band 8+ writing?",
+                            "question": "Which suffix is typically employed to transform an adjective indicating a quality or state into a noun?",
                             "options": [
-                                "It increases lexical density and academic formality",
-                                "It makes the essay rhyme",
-                                "It makes sentences sound like poems",
-                                "It uses fewer letters"
+                                "-ify (e.g. solidify)",
+                                "-ity (e.g. scarce -> scarcity)",
+                                "-ize (e.g. prioritize)",
+                                "-ate (e.g. deliberate)"
                             ],
-                            "correctAnswerIndex": 0,
-                            "explanation": "Increases lexical density and formality."
+                            "correctAnswerIndex": 1,
+                            "explanation": "'-ity' suffiksi sifatdan ot yasaydi: scarce -> scarcity, vulnerable -> vulnerability, feasible -> feasibility."
                         },
                         {
                             "id": "en-c1-u1-l3-q4",
-                            "question": "Convert: \"They failed to comply with regulations.\" -> \"Non-compliance with regulations resulted in...\" This is an example of:",
+                            "question": "Select the sentence where nominalisation produces the most cohesive flow between consecutive thoughts:",
                             "options": [
-                                "A grammatical error",
-                                "Slang creation",
-                                "Passive inversion",
-                                "Nominalisation of the verb fail/comply"
+                                "The committee approved the budget. Because of this, managers began hiring engineers.",
+                                "The committee approved the budget. This approval facilitated the immediate recruitment of specialized engineers.",
+                                "The committee approved the budget. Approving the budget made hiring happen quickly.",
+                                "The committee approved the budget, and the budget approval was an action that made hiring start."
                             ],
-                            "correctAnswerIndex": 3,
-                            "explanation": "Nominalisation."
+                            "correctAnswerIndex": 1,
+                            "explanation": "Oldingi gapdagi 'approved' fe'li keyingi gap boshida 'This approval' ot birikmasiga aylanib, matnda uzviy 'anaphoric cohesion' hosil qilmoqda."
+                        },
+                        {
+                            "id": "en-c1-u1-l3-q5",
+                            "question": "Find the sentence with an unnatural nominalisation error:",
+                            "options": [
+                                "The implementation of renewable energy initiatives has accelerated.",
+                                "The making of the determination regarding employee dismissals took hours.",
+                                "Public skepticism regarding technological interventions remains pervasive.",
+                                "Regulatory scrutiny has intensified across the fintech sector."
+                            ],
+                            "correctAnswerIndex": 1,
+                            "explanation": "'The making of the determination regarding...' o'rniga 'Reaching a decision regarding...' yoki 'Determining employee dismissals...' deb yozish tabiiydir ('making of determination' sun'iy va noo'rin)."
                         }
                     ]
                 }
@@ -503,149 +721,228 @@ export const ENGLISH_C1_LESSONS: Lesson[] = [
         "level": "C1",
         "lessonNumber": 4,
         "title": "Complex Conditionals & Concessions (In the event of, Provided that, Albeit)",
-        "description": "Murakkab shart va yon berish bog'lovchilari (Albeit, In the event of, On condition that).",
-        "estimatedDurationMinutes": 15,
-        "icon": "🔀",
+        "description": "Murakkab shart va to'siqsiz ergash gap bog'lovchilari: 'in the event of', 'provided that', 'albeit', 'notwithstanding' va 'on condition that'.",
+        "estimatedDurationMinutes": 20,
+        "icon": "⚖️",
         "steps": [
             {
                 "id": "en-c1-u1-l4-s1",
-                "title": "Murakkab Bog'lovchilar",
+                "title": "Complex Conditionals va Concessives",
                 "type": "learn",
-                "estimatedMinutes": 5,
+                "estimatedMinutes": 7,
                 "learnData": {
-                    "title": "Advanced Conditional & Concessive Markers",
-                    "explanation": "Albeit (/ɔːlˈbiː.ɪt/) — garchi ... bo'lsa-da (sifat yoki ibora oldidan: \"an effective, albeit expensive, solution\"). Provided / Providing that — sharti bilan. In the event of + noun — sodir bo'lgan taqdirda.",
+                    "title": "Advanced Conditionals & Concessive Structures",
+                    "explanation": "C1 darajasida 'if' va 'although' so'zlarining o'zi yetarli emas. Yuqori martabali shartnomalar, diplomatik bayonotlar va ilmiy maqolalarda aniq huquqiy va sintaktik ma'no tuslariga ega bog'lovchilar talab qilinadi.\n\n1. **Formal Conditional Connectors**:\n   - **Provided that / Providing that**: 'Faqat shu shart bilanki' (*Tax incentives will remain active provided that corporations reinvest 30% of profits into domestic R&D*).\n   - **On condition that**: Qat'iy huquqiy shart (*The loan was sanctioned on condition that the sovereign debt ratio did not exceed statutory caps*).\n   - **In the event of / In the event that**: '...sodir bo'lgan taqdirda' (*In the event of an unscheduled power grid outage, backup generators are configured to ignite automatically*).\n   - **As long as / So long as**: '...davom etar ekan' (*Economic growth is sustainable so long as inflationary pressures are subdued*).\n\n2. **Nuanced Concessives (To'siqsiz ergash bog'lovchilar)**:\n   - **Albeit**: 'Garchi ... bo'lsa-da' (faqat sifat, ravish yoki qisqa iboralar oldidan keladi, butun gap boshlamaydi!):\n     *The recovery was noticeable, albeit fragile.* (Tiklanish sezilarli edi, garchi mo'rt bo'lsa-da).\n   - **Notwithstanding**: '...ga qaramasdan' (predlog yoki bog'lovchi sifatida):\n     *Notwithstanding substantial infrastructural investments, regional disparities persist.* (Katta investitsiyalarga qaramasdan...).\n   - **Much as**: 'Qanchalik ... bo'lmasin' (*Much as I sympathize with the strikers, their demands remain economically unfeasible*).\n\n⚠️ **O'zbek o'rganuvchilari uchun xavfli tuzoqlar (Common Pitfalls)**:\n- ❌ *Albeit it was expensive, they purchased the laboratory equipment.* ('Albeit'dan keyin to'liq gap (ega+kesim) kelmaydi! Faqat sifat/iboralar keladi).\n  ✅ *Albeit expensive, the laboratory equipment was procured.*\n- ❌ *Notwithstanding with the opposition, the treaty was ratified.* ('Notwithstanding' o'zidan keyin 'with' talab qilmaydi, u to'g'ridan-to'g'ri ot oladi).\n  ✅ *Notwithstanding the opposition, the treaty was ratified.*\n- ❌ *Although the weather was harsh, but the mission continued.* (Qo'shaloq bog'lovchi xatosi: 'Although' bor joyda 'but' aslo ishlatilmaydi!).\n  ✅ *Although the weather was harsh, the mission continued.*\n\n🎯 **IELTS Academic Writing & Speaking Precision Register**:\n- **Prompt**: Task 2: Should sovereign nations prioritize economic growth over environmental sustainability?\n- **Model Answer (Band 8.0-8.5)**: Nations can continue to pursue economic expansion provided that such development is contingent upon stringent circular-economy metrics. Notwithstanding the inevitable short-term capital expenditures, transitioning to sustainable power generates long-term prosperity. Rapid industrialization, albeit tempting for developing economies, inevitably incurs devastating ecological costs if environmental governance is neglected.\n- **Discourse Markers**: provided that..., Notwithstanding the inevitable..., albeit tempting for..., contingent upon...\n- **Examiner / Intonation Tip**: 'Albeit' so'zidan keyingi sifatni qisqa pauza (intonational micro-break) bilan ayting: 'Rapid industrialization, [pauza] albeit tempting, [pauza] incurs devastating costs'. Bu nutqingizga tug'ma ingliz tili elitasiga xos ohang beradi.",
                     "vocabulary": [
                         {
                             "term": "Albeit",
                             "reading": "/ɔːlˈbiː.ɪt/",
-                            "meaning": "Garchi ... bo'lsa-da",
-                            "exampleSentence": "He made significant, albeit slow, progress.",
-                            "exampleTranslation": "U sekin bo'lsa-da, sezilarli yutuqqa erishdi."
+                            "meaning": "Garchi ... bo'lsa-da, har qalay",
+                            "exampleSentence": "The pharmaceutical trial achieved statistically significant progress, albeit over an extended timeframe.",
+                            "exampleTranslation": "Farmatsevtika sinovi uzoq vaqt davomida bo'lsa-da, statistik jihatdan sezilarli muvaffaqiyatga erishdi."
                         },
                         {
-                            "term": "Nominalisation",
-                            "reading": "/ˌnɒmɪnəlaɪˈzeɪʃən/",
-                            "meaning": "Feʼlni otga aylantirish (akademik uslub)",
-                            "exampleSentence": "Nominalisation lends academic weight to scientific discourse.",
-                            "exampleTranslation": "Nominalizatsiya ilmiy matnga akademik salmoq beradi."
+                            "term": "Notwithstanding",
+                            "reading": "/ˌnɒt.wɪðˈstæn.dɪŋ/",
+                            "meaning": "...ga qaramasdan, qaramay",
+                            "exampleSentence": "Notwithstanding initial logistical impediments, the international summit concluded with unanimous consensus.",
+                            "exampleTranslation": "Dastlabki logistika to'siqlariga qaramay, xalqaro sammit bir ovozdan yakunlandi."
                         },
                         {
-                            "term": "Pragmatic",
-                            "reading": "/præɡˈmæt.ɪk/",
-                            "meaning": "Amaliy, pragmatik",
-                            "exampleSentence": "We adopted a pragmatic approach to problem-solving.",
-                            "exampleTranslation": "Biz muammoni hal qilishda amaliy yondashuvni qoʻlladik."
+                            "term": "Sanction",
+                            "reading": "/ˈsæŋk.ʃən/",
+                            "meaning": "1. Rasman ruxsat bermoq / ma'qullamoq; 2. Sanksiya qo'llamoq",
+                            "exampleSentence": "The central ethics board will sanction the medical study on condition that patient anonymity is rigorously preserved.",
+                            "exampleTranslation": "Markaziy etika kengashi bemorlarning anonimligi qat'iy saqlanishi sharti bilan tibbiy tadqiqotga ruxsat beradi."
+                        },
+                        {
+                            "term": "Stipulate",
+                            "reading": "/ˈstɪp.jə.leɪt/",
+                            "meaning": "Shart qilib qo'ymoq, band qilib kiritmoq",
+                            "exampleSentence": "The bilateral accord explicitly stipulates that maritime boundaries must remain demilitarized.",
+                            "exampleTranslation": "Ikki tomonlama bitimda dengiz chegaralari harbiylashtirilmagan bo'lishi kerakligi ochiq-oydin shart qilib qo'yilgan."
+                        },
+                        {
+                            "term": "Subdued",
+                            "reading": "/səbˈdʒuːd/",
+                            "meaning": "Bosilgan, pasaytirilgan, mo''tadil",
+                            "exampleSentence": "Consumer borrowing will rebound provided that interest rates remain subdued.",
+                            "exampleTranslation": "Foiz stavkalari mo''tadil saqlanib qolsa, iste'mol kreditlari yana jonlanadi."
+                        },
+                        {
+                            "term": "Outage",
+                            "reading": "/ˈaʊ.tɪdʒ/",
+                            "meaning": "Tizim uzilishi, elektr yoki tarmoq to'xtashi",
+                            "exampleSentence": "In the event of an electrical grid outage, vital hospital life-support machinery relies on redundant diesel generators.",
+                            "exampleTranslation": "Elektr tarmog'i uzilgan taqdirda, shifoxonaning hayotiy ta'minot uskunalari zaxira dizel generatorlariga tayanadi."
+                        },
+                        {
+                            "term": "Feasible",
+                            "reading": "/ˈfiː.zə.bəl/",
+                            "meaning": "Amalga oshirsa bo'ladigan, maqbul",
+                            "exampleSentence": "Much as the theoretical model seems attractive, engineering experts deem it commercially unfeasible.",
+                            "exampleTranslation": "Nazariy model qanchalik jozibador ko'rinmasin, muhandislik ekspertlari uni tijorat nuqtai nazaridan amalga oshirib bo'lmaydi deb hisoblaydilar."
+                        },
+                        {
+                            "term": "Contingent",
+                            "reading": "/kənˈtɪn.dʒənt/",
+                            "meaning": "...ga bog'liq bo'lgan, shartli",
+                            "exampleSentence": "Final ratification of the trade pact is strictly contingent upon legislative consent from all member states.",
+                            "exampleTranslation": "Savdo paktining yakuniy ratifikatsiyasi barcha a'zo davlatlarning qonunchilik roziligiga qat'iy bog'liqdir."
                         }
                     ],
-                    "grammarRules": [
-                        {
-                            "pattern": "Complex Conditionals & Concessions (In the event of, Provided that, Albeit)",
-                            "meaning": "Murakkab shart va yon berish bog'lovchilari (Albeit, In the event of, On condition that).",
-                            "usageNotes": "Albeit (/ɔːlˈbiː.ɪt/) — garchi ... bo'lsa-da (sifat yoki ibora oldidan: \"an effective, albeit expensive, solution\"). Provided / Providing that — sharti bilan. In the event of + noun — sodir bo'lgan taqdirda.",
-                            "examples": [
-                                {
-                                    "sentence": "He made significant, albeit slow, progress.",
-                                    "translation": "U sekin bo'lsa-da, sezilarli yutuqqa erishdi."
-                                }
-                            ]
-                        }
+                    "keyPoints": [
+                        "Provided that / As long as + full clause: Acts like conditional 'if', requiring present tense for future events.",
+                        "In the event of + Noun Phrase (e.g. In the event of fire...) vs In the event that + Subject + Verb.",
+                        "Albeit + Adjective / Adverb / Prepositional phrase: Never followed by a subject and finite verb!",
+                        "Notwithstanding + Noun phrase (e.g. Notwithstanding the delay, we completed the audit)."
                     ]
                 }
             },
             {
                 "id": "en-c1-u1-l4-s2",
-                "title": "Mashq",
+                "title": "Complex Conditionals Amaliyoti",
                 "type": "practice",
-                "estimatedMinutes": 5,
+                "estimatedMinutes": 6,
                 "practiceData": {
-                    "instructions": "To'g'ri bog'lovchini tanlang.",
+                    "instructions": "Murakkab shart va to'siqsiz bog'lovchilar sintaksisini to'g'ri qo'llang.",
                     "exercises": [
                         {
                             "id": "en-c1-u1-l4-e1",
                             "type": "multiple-choice",
-                            "prompt": "\"The project was approved, _______ on condition that budget limits are strictly respected.\"",
+                            "prompt": "Identify the grammatically correct sentence using 'albeit':",
                             "options": [
-                                "provided",
-                                "unless",
-                                "in the event",
-                                "albeit"
+                                "The treaty represents a positive step forward, albeit it does not resolve all territorial disputes.",
+                                "The treaty represents a positive step forward, albeit flawed in several territorial clauses.",
+                                "Albeit the treaty was signed yesterday, protests continued outside the embassy.",
+                                "The treaty represents an albeit positive step forward for diplomacy."
                             ],
-                            "correctAnswer": 3,
-                            "explanation": "Albeit on condition that..."
+                            "correctAnswer": 1,
+                            "explanation": "'Albeit' to'liq gap olmaydi; u bevosita sifat yoki sifatdosh ('albeit flawed in several territorial clauses') bilan keladi."
                         },
                         {
-                            "id": "en-c1-u1-l4-ex-2",
+                            "id": "en-c1-u1-l4-e2",
                             "type": "multiple-choice",
-                            "prompt": "Choose the correct word to complete the sentence: \"Nominalisation lends academic weight to scientific discourse.\"",
+                            "prompt": "Choose the correct prepositional conditional link: '_______ an emergency system failure, manual override keys are stored in vault B.'",
                             "options": [
-                                "doubt",
-                                "delay",
-                                "reluctance",
-                                "Nominalisation"
+                                "In the event of",
+                                "Provided with",
+                                "On condition that",
+                                "Albeit"
                             ],
-                            "correctAnswer": 3,
-                            "explanation": "\"Nominalisation\" (Feʼlni otga aylantirish (akademik uslub)) fits the context appropriately."
+                            "correctAnswer": 0,
+                            "explanation": "Ot birikmasi ('an emergency system failure') oldidan 'In the event of' ('...yuz bergan taqdirda') ishlatiladi."
+                        },
+                        {
+                            "id": "en-c1-u1-l4-e3",
+                            "type": "multiple-choice",
+                            "prompt": "Select the sentence with proper use of 'notwithstanding':",
+                            "options": [
+                                "Notwithstanding his profound lack of experience, the candidate performed exceptionally during the interview.",
+                                "Notwithstanding with his lack of experience, the candidate was hired.",
+                                "The candidate was hired notwithstanding he did not have experience.",
+                                "He had no experience notwithstanding was hired anyway."
+                            ],
+                            "correctAnswer": 0,
+                            "explanation": "'Notwithstanding' o'zidan keyin predlogsiz to'g'ridan-to'g'ri ot birikmasi oladi: 'Notwithstanding his profound lack of experience...'."
+                        },
+                        {
+                            "id": "en-c1-u1-l4-e4",
+                            "type": "multiple-choice",
+                            "prompt": "Fill in the blank: 'Foreign investors will continue funding infrastructure projects _______ corporate transparency standards are upheld.'",
+                            "options": [
+                                "provided that",
+                                "albeit that",
+                                "in the event of",
+                                "notwithstanding"
+                            ],
+                            "correctAnswer": 0,
+                            "explanation": "'Faqat shu shart bilanki' ma'nosida to'liq gap bilan 'provided that' bog'lovchisi ishlatiladi."
+                        },
+                        {
+                            "id": "en-c1-u1-l4-e5",
+                            "type": "multiple-choice",
+                            "prompt": "Which structure correctly expresses: 'Garchi men ularning fikriga qisman qo'shilsam ham, taklif juda qimmat'?",
+                            "options": [
+                                "Much as I concur with their perspective, the proposal remains prohibitively expensive.",
+                                "Although I concur with their perspective, but the proposal is prohibitively expensive.",
+                                "Albeit I concur with their perspective, the proposal is expensive.",
+                                "Notwithstanding I concur with their perspective, the proposal is expensive."
+                            ],
+                            "correctAnswer": 0,
+                            "explanation": "'Much as I concur...' - 'qanchalik qo'shilsam ham' ma'nosidagi oliy darajali to'siqsiz bog'lovchi hisoblanadi."
                         }
                     ]
                 }
             },
             {
                 "id": "en-c1-u1-l4-s3",
-                "title": "Test",
+                "title": "Complex Conditionals Baholash Testi",
                 "type": "test",
-                "estimatedMinutes": 5,
+                "estimatedMinutes": 7,
                 "testData": {
-                    "instructions": "Savollarga javob bering.",
-                    "passingScorePercentage": 75,
+                    "instructions": "C1 darajasidagi shart va konsessiv sintaktik qoliplar bo'yicha yakuniy test.",
+                    "passingScorePercentage": 80,
                     "questions": [
                         {
                             "id": "en-c1-u1-l4-q1",
-                            "question": "_______ an emergency, press the alarm button immediately.",
+                            "question": "Which sentence contains a syntactical violation involving concessive conjunctions?",
                             "options": [
-                                "Albeit",
-                                "Notwithstanding that",
-                                "Provided that",
-                                "In the event of"
+                                "The project advanced according to schedule, albeit with marginal budgetary deficits.",
+                                "Although the climate delegates reached a preliminary consensus, but enforcement mechanisms were omitted.",
+                                "The research grant will be renewed on condition that quarterly milestone reports are submitted.",
+                                "In the event that the CEO steps down, the board will convene an extraordinary session."
                             ],
-                            "correctAnswerIndex": 3,
-                            "explanation": "In the event of an emergency."
+                            "correctAnswerIndex": 1,
+                            "explanation": "'Although' va 'but' birga ishlatilishi qat'iyan man etiladi (double-conjunction error)."
                         },
                         {
                             "id": "en-c1-u1-l4-q2",
-                            "question": "You may access the restricted laboratory, _______ you wear protective gear.",
+                            "question": "'The enterprise agreed to supply raw materials _______ payment is remitted within thirty calendar days.'",
                             "options": [
-                                "provided that",
-                                "unless not",
+                                "on condition that",
                                 "in the event of",
-                                "albeit"
+                                "albeit",
+                                "much as"
                             ],
                             "correctAnswerIndex": 0,
-                            "explanation": "Provided that (sharti bilan)."
+                            "explanation": "To'lov 30 kun ichida amalga oshirilishi sharti bilan — yuridik shart bo'lgani uchun 'on condition that' to'g'ri."
                         },
                         {
                             "id": "en-c1-u1-l4-q3",
-                            "question": "\"The expedition was successful, albeit grueling.\" What does \"albeit grueling\" mean?",
+                            "question": "What is the key grammatical distinction between 'in the event of' and 'in the event that'?",
                             "options": [
-                                "Because it was fun",
-                                "It failed miserably",
-                                "Even though it was extremely exhausting and difficult",
-                                "It was completely easy"
+                                "'In the event of' is followed by a noun phrase, whereas 'in the event that' introduces a full finite clause.",
+                                "'In the event of' is only used in past hypothetical scenarios, whereas 'in the event that' is used in the future.",
+                                "There is no grammatical difference; they are completely interchangeable in any syntactic slot.",
+                                "'In the event that' requires inversion of the auxiliary verb and subject."
                             ],
-                            "correctAnswerIndex": 2,
-                            "explanation": "Even though it was grueling."
+                            "correctAnswerIndex": 0,
+                            "explanation": "'In the event of' predlog bo'lib ot/ot birikmasi oladi; 'in the event that' bog'lovchi bo'lib to'liq ega+kesimli gap kiritadi."
                         },
                         {
                             "id": "en-c1-u1-l4-q4",
-                            "question": "As long as / So long as are synonyms for:",
+                            "question": "'The reform produced tangible socioeconomic improvements, _______ slow and uneven.' Complete with the most natural C1 concessive:",
                             "options": [
-                                "Provided that / On condition that",
-                                "Despite",
-                                "Although",
-                                "Because"
+                                "albeit",
+                                "although",
+                                "in spite",
+                                "even"
                             ],
                             "correctAnswerIndex": 0,
-                            "explanation": "Provided that."
+                            "explanation": "Qisqa sifat iborasi ('slow and uneven') oldidan 'albeit' so'zi eng nafis va aniq tanlovdir."
+                        },
+                        {
+                            "id": "en-c1-u1-l4-q5",
+                            "question": "Rewrite using 'so long as': 'If market stability persists, investment will flourish.'",
+                            "options": [
+                                "Investment will flourish so long as market stability persists.",
+                                "Investment will flourish so long as will market stability persist.",
+                                "So long as will persist market stability, investment flourishes.",
+                                "Investment will flourish so long that market stability persists."
+                            ],
+                            "correctAnswerIndex": 0,
+                            "explanation": "'So long as' shart bog'lovchisi bo'lib, kelasi zamon ma'nosida hozirgi oddiy zamon ('persists') talab qiladi."
                         }
                     ]
                 }
@@ -661,159 +958,228 @@ export const ENGLISH_C1_LESSONS: Lesson[] = [
         "level": "C1",
         "lessonNumber": 5,
         "title": "C1 Reading: Critical Discourse Analysis & Epistemology",
-        "description": "Falsafa, bilim nazariyasi va matnlardagi yashirin noaniqliklarni fosh etuvchi tahliliy o'qish.",
-        "estimatedDurationMinutes": 18,
-        "icon": "📖",
+        "description": "Murakkab akademik matnlarni tahlil qilish, muallifning yashirin pozitsiyasini (stance) aniqlash va epistemik ehtiyotkorlik (hedging).",
+        "estimatedDurationMinutes": 22,
+        "icon": "🧐",
         "steps": [
             {
                 "id": "en-c1-u1-l5-s1",
-                "title": "Falsafiy Matn",
+                "title": "Critical Discourse & Epistemic Stance",
                 "type": "learn",
-                "estimatedMinutes": 5,
+                "estimatedMinutes": 8,
                 "learnData": {
-                    "title": "Epistemology and Algorithmic Epistemic Bubbles",
-                    "explanation": "Matnni chuqur tahlil qiling.",
-                    "keyPoints": [
-                        "Epistemology investigates the foundational criteria demarcating justified belief from mere subjective opinion.",
-                        "The proliferation of predictive recommendation algorithms has precipitated the emergence of epistemic filter bubbles.",
-                        "Within these digital enclaves, dissenting viewpoints are systematically filtered out, reinforcing cognitive confirmation bias.",
-                        "Consequently, intellectual resilience necessitates deliberate exposure to dialectical counter-arguments."
-                    ],
+                    "title": "Deconstructing Epistemological Stance in Academic Texts",
+                    "explanation": "C1 va IELTS Band 8.0+ darajasidagi o'quvchi matnni shunchaki ma'lumot olish uchun o'qimaydi. U matn ortidagi muallifning niyatini, ilmiy ehtiyotkorligini (hedging) va g'oyaviy pozitsiyasini (stance) tahlil qiladi.\n\nUshbu darsda 3 ta muhim akademik ko'nikma shakllantiriladi:\n\n1. **Epistemic Modality & Hedging (Haqiqat darajasini ehtiyotkorlik bilan bildirish)**:\n   - Ilm-fanda hech bir fakt 100% mutlaq da'vo qilinmaydi. Shuning uchun mualliflar maxsus so'zlardan foydalanadilar:\n   - *Plausibly*: 'ehtimolki, aqlga sig'adigan darajada' (*The data plausibly indicates a correlation rather than direct causation*).\n   - *Ostensibly*: 'zohiran, sirtdan qaraganda (ammo ichkarida boshqacha bo'lishi mumkin)' (*The reform was ostensibly intended to curb corruption, yet it entrenched monopoly*).\n   - *Purportedly*: 'da'vo qilinishicha (isbotlanmagan)' (*The artifact was purportedly discovered in Mesopotamia*).\n\n2. **Identifying Authorial Bias & Ideological Framing**:\n   - Muallif qaysi leksikani tanlayapti? Masalan, iqtisodiy o'zgarishni 'disruption' (ijobiy yangilanish) deb atayaptimi yoki 'destabilization' (salbiy xavf)? Tanlangan so'z muallifning yashirin bahosini fosh qiladi.\n\n3. **Syntactic Density in C1 Texts**:\n   - O'qish tezligini oshirish uchun oldingi darslarda o'rganilgan inversiya, ellipsis va nominalizatsiyani bitta matnda o'qib, uning mohiyatini darhol anglay olish.\n\n⚠️ **O'zbek o'rganuvchilari uchun xavfli tuzoqlar (Common Pitfalls)**:\n- ❌ Matndagi *purportedly* yoki *ostensibly* so'zlarini e'tiborsiz qoldirib, muallif bu da'voni haqiqat deb hisoblaydi deb tushunish (IELTS True/False/Not Given testlaridagi eng asosiy tuzoq!).\n- ❌ *Claim* va *Prove* fe'llarini chalkashtirish: Muallif biror narsani 'claims' (da'vo qilmoqda) desa, bu hali 'proves' (isbotladi) degani emas.\n\n🎯 **IELTS Academic Reading Band 8.5 Masterclass**:\n- **Prompt**: Reading Passage Question: 'Does the author endorse the deployment of algorithmic sentencing in judicial courts?'\n- **Model Answer (Band 8.0-8.5)**: Critical analysis of the passage reveals subtle authorial skepticism. Although the writer concedes that algorithmic tools 'ostensibly minimize human prejudice,' they swiftly counterpoise this by highlighting 'deeply entrenched bias within training datasets.' The use of 'ostensibly' and 'unsubstantiated claims of objectivity' indicates that the author firmly distances themselves from uncritical tech-optimism.\n- **Discourse Markers**: authorial skepticism, Although the writer concedes that..., they swiftly counterpoise this by..., distances themselves from...\n- **Examiner / Intonation Tip**: IELTS Reading'da 8.0+ ball olishning siri lug'at ma'nosida emas, balki muallifning munosabatini (tone/stance) bildiruvchi 'ostensibly', 'purportedly', 'alleged' kabi so'zlarni payqashdadir.",
                     "vocabulary": [
                         {
-                            "term": "Demarcate",
-                            "reading": "/ˈdiː.mɑː.keɪt/",
-                            "meaning": "Chegara ajratmoq / Farqlamoq",
-                            "exampleSentence": "It is vital to demarcate science from pseudoscience.",
-                            "exampleTranslation": "Ilmni soxta ilmdan farqlash zarur."
+                            "term": "Epistemology",
+                            "reading": "/ɪˌpɪs.tɪˈmɒl.ə.dʒi/",
+                            "meaning": "Epistemologiya (bilish nazariyasi, bilimlarning kelib chiqishi va asosliligini o'rganuvchi falsafiy fan)",
+                            "exampleSentence": "Scientific epistemology dictates that hypotheses must remain falsifiable to retain validity.",
+                            "exampleTranslation": "Ilmiy epistemologiya farazlarning haqiqiyligini saqlab qolish uchun ular rad etilishi mumkin (falsifiable) bo'lishini taqozo etadi."
                         },
                         {
-                            "term": "Resilience",
-                            "reading": "/rɪˈzɪl.jəns/",
-                            "meaning": "Chidamlilik / Tiklanuvchanlik",
-                            "exampleSentence": "Intellectual resilience enables critical inquiry.",
-                            "exampleTranslation": "Aqliy chidamlilik tanqidiy izlanishga imkon beradi."
+                            "term": "Hedging",
+                            "reading": "/ˈhedʒ.ɪŋ/",
+                            "meaning": "Ilmiy ehtiyotkorlik (mutlaq qat'iy hukm chiqarmasdan, ehtimollik darajasini ko'rsatish)",
+                            "exampleSentence": "Academic hedging using modal adverbs prevents researchers from overstating their conclusions.",
+                            "exampleTranslation": "Modal ravishlar orqali ilmiy ehtiyotkorlik tadqiqotchilarni xulosalarini bo'rttirib yuborishdan asraydi."
                         },
                         {
-                            "term": "Pervasive",
-                            "reading": "/pəˈveɪ.sɪv/",
-                            "meaning": "Keng tarqalgan, singib ketgan",
-                            "exampleSentence": "Digital transformation has a pervasive impact on society.",
-                            "exampleTranslation": "Raqamli transformatsiya jamiyatga chuqur singib borgan taʼsir koʻrsatadi."
+                            "term": "Ostensibly",
+                            "reading": "/ɒsˈten.sɪ.bli/",
+                            "meaning": "Zohiran, sirtdan qaraganda",
+                            "exampleSentence": "The legislation was ostensibly designed to protect domestic agriculture, but critics argue it merely shielded monopolies.",
+                            "exampleTranslation": "Qonunchilik zohiran mahalliy qishloq xo'jaligini himoya qilish uchun ishlab chiqilgandek ko'rinsa-da, tanqidchilar u shunchaki monopoliyalarni himoya qilgan deb ta'kidlamoqda."
+                        },
+                        {
+                            "term": "Purportedly",
+                            "reading": "/pəˈpɔː.tɪd.li/",
+                            "meaning": "Da'vo qilinishicha, aytilishicha (lekin isbotsiz)",
+                            "exampleSentence": "The leak purportedly originated from within the intelligence agency's confidential division.",
+                            "exampleTranslation": "Xabar tarqalishi da'vo qilinishicha razvedka agentligining maxfiy bo'limi ichidan chiqqan."
+                        },
+                        {
+                            "term": "Plausible",
+                            "reading": "/ˈplɔː.zə.bəl/",
+                            "meaning": "Aqlga sig'adigan, haqiqatga yaqin, ishonarli",
+                            "exampleSentence": "Anthropologists formulated a plausible explanation for the sudden abandonment of the ancient citadel.",
+                            "exampleTranslation": "Antropologlar qadimiy qo'rg'onning to'satdan tark etilishi bo'yicha aqlga sig'adigan tushuntirish ishlab chiqdilar."
+                        },
+                        {
+                            "term": "Fallacy",
+                            "reading": "/ˈfæl.ə.si/",
+                            "meaning": "Mantiqiy xato, yanglish qarash",
+                            "exampleSentence": "Equating financial wealth with cognitive intelligence is a rampant sociopolitical fallacy.",
+                            "exampleTranslation": "Moliyaviy boylikni aqliy zakovatga tenglashtirish keng tarqalgan ijtimoiy-siyosiy mantiqiy xatodir."
+                        },
+                        {
+                            "term": "Entrenched",
+                            "reading": "/ɪnˈtrentʃt/",
+                            "meaning": "Chuqur ildiz otgan, mustahkamlangan",
+                            "exampleSentence": "Deeply entrenched institutional biases continue to impede progressive educational reforms.",
+                            "exampleTranslation": "Chuqur ildiz otgan institutsional tarafkashliklar ilg'or ta'lim islohotlariga to'siq bo'lishda davom etmoqda."
+                        },
+                        {
+                            "term": "Substantiate",
+                            "reading": "/səbˈstæn.ʃi.eɪt/",
+                            "meaning": "Dalillar bilan asoslamoq, isbotlamoq",
+                            "exampleSentence": "Without empirical trials to substantiate these theoretical conjectures, peer-reviewed journals will reject the manuscript.",
+                            "exampleTranslation": "Ushbu nazariy taxminlarni asoslaydigan empirik sinovlarsiz, nufuzli jurnallar qo'lyozmani rad etadi."
                         }
                     ],
-                    "grammarRules": [
-                        {
-                            "pattern": "C1 Reading: Critical Discourse Analysis & Epistemology",
-                            "meaning": "Falsafa, bilim nazariyasi va matnlardagi yashirin noaniqliklarni fosh etuvchi tahliliy o'qish.",
-                            "usageNotes": "Matnni chuqur tahlil qiling.",
-                            "examples": [
-                                {
-                                    "sentence": "It is vital to demarcate science from pseudoscience.",
-                                    "translation": "Ilmni soxta ilmdan farqlash zarur."
-                                },
-                                {
-                                    "sentence": "Intellectual resilience enables critical inquiry.",
-                                    "translation": "Aqliy chidamlilik tanqidiy izlanishga imkon beradi."
-                                }
-                            ]
-                        }
+                    "keyPoints": [
+                        "Levels of Epistemic Stance: Certainty (undeniably, indisputably) -> Probability (plausibly, presumably) -> Distancing/Skepticism (allegedly, ostensibly, purportedly).",
+                        "Syntactic Hedging: It appears that..., The evidence points towards..., Tend to exhibit...",
+                        "Critical Reading Identification: Recognize when an author attributes a claim to others ('Proponents assert that...') versus asserting it as established fact.",
+                        "Recognizing concessive counter-arguments: Look for 'While X is undeniably true, Y presents an insurmountable dilemma'."
                     ]
                 }
             },
             {
                 "id": "en-c1-u1-l5-s2",
-                "title": "Matn Tahlili",
+                "title": "Critical Discourse Amaliyoti",
                 "type": "practice",
                 "estimatedMinutes": 6,
                 "practiceData": {
-                    "instructions": "Matn bo'yicha to'g'ri javobni tanlang.",
+                    "instructions": "Matnlardagi epistemik modalik, muallif pozitsiyasi va hedging usullarini to'g'ri aniqlang.",
                     "exercises": [
                         {
                             "id": "en-c1-u1-l5-e1",
                             "type": "multiple-choice",
-                            "prompt": "According to the passage, what precipitates the emergence of epistemic bubbles?",
+                            "prompt": "Read the sentence: 'The merger was ostensibly executed to streamline logistics, yet insiders reported severe cost-cutting.' What does 'ostensibly' imply about the author's stance?",
                             "options": [
-                                "The proliferation of predictive recommendation algorithms",
-                                "Reading printed philosophical books",
-                                "Exercising in nature",
-                                "A total lack of internet access"
+                                "The author fully believes the official reason without any doubt.",
+                                "The author implies that the stated official reason was merely a pretext or superficial facade.",
+                                "The author proves that the merger failed completely.",
+                                "The author suggests that the insiders were lying."
                             ],
-                            "correctAnswer": 0,
-                            "explanation": "Proliferation of predictive algorithms."
+                            "correctAnswer": 1,
+                            "explanation": "'Ostensibly' so'zi zohiran shunday ko'rsatilganini, biroq asl sabab boshqa (yoki shubhali) ekanini bildirish uchun ishlatiladi."
                         },
                         {
-                            "id": "en-c1-u1-l5-ex-2",
+                            "id": "en-c1-u1-l5-e2",
                             "type": "multiple-choice",
-                            "prompt": "Choose the correct word to complete the sentence: \"Intellectual resilience enables critical inquiry.\"",
+                            "prompt": "Which sentence demonstrates proper scientific hedging (cautious, peer-review-ready phrasing)?",
                             "options": [
-                                "reluctance",
-                                "doubt",
-                                "Resilience",
-                                "delay"
+                                "This study completely proves that screen time causes permanent cognitive decay in infants.",
+                                "The empirical data tentatively suggests a correlation between excessive screen exposure and developmental delays.",
+                                "Everyone knows that screens ruin children's brains beyond any repair.",
+                                "Our laboratory without doubt settled the debate on infant screen addiction."
+                            ],
+                            "correctAnswer": 1,
+                            "explanation": "'Tentatively suggests a correlation' iborasi akademik ehtiyotkorlikning (hedging) eng oliy namunasidir; fan mutlaq va o'rinsiz yakuniy da'volardan qochadi."
+                        },
+                        {
+                            "id": "en-c1-u1-l5-e3",
+                            "type": "multiple-choice",
+                            "prompt": "What does the word 'purportedly' indicate in: 'The rare manuscript was purportedly authored by Shakespeare'?",
+                            "options": [
+                                "It is historically proven and undisputed that Shakespeare wrote it.",
+                                "It is claimed or rumored to have been written by Shakespeare, but lacks conclusive verification.",
+                                "The manuscript was certainly a modern fabrication.",
+                                "Shakespeare denied writing the manuscript."
+                            ],
+                            "correctAnswer": 1,
+                            "explanation": "'Purportedly' — 'da'vo qilinishicha', lekin qat'iy isbotlanmagan holatlarda masofa saqlash (distancing) uchun xizmat qiladi."
+                        },
+                        {
+                            "id": "en-c1-u1-l5-e4",
+                            "type": "multiple-choice",
+                            "prompt": "Identify the author's tone when using the phrase 'unsubstantiated conjectures':",
+                            "options": [
+                                "Highly admiring and supportive.",
+                                "Objective, factual and fully neutral.",
+                                "Skeptical and dismissive of the claims.",
+                                "Enthusiastic about future discoveries."
                             ],
                             "correctAnswer": 2,
-                            "explanation": "\"Resilience\" (Chidamlilik / Tiklanuvchanlik) fits the context appropriately."
+                            "explanation": "'Unsubstantiated conjectures' (asossiz taxminlar) iborasi o'rganilayotgan g'oyaga nisbatan muallifning tanqidiy va skeptik munosabatini ifodalaydi."
+                        },
+                        {
+                            "id": "en-c1-u1-l5-e5",
+                            "type": "multiple-choice",
+                            "prompt": "Which verb attribution distances the writer furthest from the cited argument?",
+                            "options": [
+                                "Dr. Vance demonstrates that...",
+                                "Dr. Vance contends that...",
+                                "Dr. Vance acknowledges that...",
+                                "Dr. Vance clarifies that..."
+                            ],
+                            "correctAnswer": 1,
+                            "explanation": "'Contends that' (da'vo qilmoqda/bahslashmoqda) betaraf bo'lib, muallif bu fikrga qo'shilmasligi yoki masofa saqlashini bildiradi. 'Demonstrates' esa isbotlanganini tan oladi."
                         }
                     ]
                 }
             },
             {
                 "id": "en-c1-u1-l5-s3",
-                "title": "Test",
+                "title": "Critical Discourse Baholash Testi",
                 "type": "test",
                 "estimatedMinutes": 7,
                 "testData": {
-                    "instructions": "Savollarga javob bering.",
-                    "passingScorePercentage": 75,
+                    "instructions": "C1 darajasidagi diskurs tahlili va epistemik leksika bo'yicha imtihon.",
+                    "passingScorePercentage": 80,
                     "questions": [
                         {
                             "id": "en-c1-u1-l5-q1",
-                            "question": "What is epistemology primarily concerned with?",
+                            "question": "In critical discourse analysis, what is the significance of identifying 'hedging' devices?",
                             "options": [
-                                "The criteria demarcating justified belief from mere opinion",
-                                "The study of ancient rocks",
-                                "Calculating software speeds",
-                                "Analyzing animal migration"
+                                "To detect grammar errors made by non-native speakers.",
+                                "To distinguish between established empirical facts and probabilistic hypotheses or cautious assertions.",
+                                "To verify if the text adheres to British English orthography.",
+                                "To determine the word count of an abstract."
                             ],
-                            "correctAnswerIndex": 0,
-                            "explanation": "Justified belief vs opinion."
+                            "correctAnswerIndex": 1,
+                            "explanation": "Hedging orqali o'quvchi muallif qaysi da'volarni mutlaq haqiqat va qaysilarini ehtimoliy gipoteza sifatida taqdim etayotganini aniqlaydi."
                         },
                         {
                             "id": "en-c1-u1-l5-q2",
-                            "question": "What happens inside digital epistemic enclaves?",
+                            "question": "'The company's philanthropic initiatives were _______ intended to alleviate rural poverty, but internal memos revealed they served as tax write-offs.'",
                             "options": [
-                                "People only speak Latin",
-                                "Algorithms delete all data",
-                                "Everyone becomes unbiased",
-                                "Dissenting viewpoints are filtered out and confirmation bias is reinforced"
+                                "ostensibly",
+                                "conclusively",
+                                "irrefutably",
+                                "permanently"
                             ],
-                            "correctAnswerIndex": 3,
-                            "explanation": "Dissenting viewpoints filtered out."
+                            "correctAnswerIndex": 0,
+                            "explanation": "Zohiran bir narsa uchun, amalda boshqa narsa uchun xizmat qilganda 'ostensibly' tanlanadi."
                         },
                         {
                             "id": "en-c1-u1-l5-q3",
-                            "question": "\"Dialectical\" so'zining falsafiy ma'nosi:",
+                            "question": "Which of the following sentences exhibits an epistemic fallacy (overgeneralization)?",
                             "options": [
-                                "Qarama-qarshi fikrlarni taqqoslash va mantiqiy sintez qilish orqali haqiqatga yetishish",
-                                "Matnni yodlash",
-                                "Raqamlarni hisoblash",
-                                "Yolg'on gapirish"
+                                "Initial surveys plausibly suggest an emergent preference for telecommuting.",
+                                "The introduction of automation will without question lead to the complete extermination of all human professions within a decade.",
+                                "Epidemiological studies indicate that dietary patterns correlate with longevity.",
+                                "Preliminary trials point towards moderate therapeutic potential."
                             ],
-                            "correctAnswerIndex": 0,
-                            "explanation": "Dialectic inquiry."
+                            "correctAnswerIndex": 1,
+                            "explanation": "'Without question will lead to the complete extermination...' mutlaq ilmiy asossiz, bo'rttirilgan haddan tashqari umumlashtirishdir (overgeneralization fallacy)."
                         },
                         {
                             "id": "en-c1-u1-l5-q4",
-                            "question": "What does the author suggest to foster intellectual resilience?",
+                            "question": "What does the phrase 'falsifiable hypothesis' mean in scientific epistemology?",
                             "options": [
-                                "Avoiding all books",
-                                "Deliberate exposure to counter-arguments",
-                                "Blocking opposing news outlets",
-                                "Only interacting with like-minded peers"
+                                "A hypothesis that has already been proven fake.",
+                                "A statement framed such that empirical evidence could potentially refute it if it were false.",
+                                "A hypothesis created by corrupt researchers.",
+                                "A mathematical formula that contains no variables."
                             ],
                             "correctAnswerIndex": 1,
-                            "explanation": "Deliberate exposure to counter-arguments."
+                            "explanation": "'Falsifiable hypothesis' (rad etilishi mumkin bo'lgan gipoteza) — agar noto'g'ri bo'lsa, uni tajribada rad etish imkoni bo'lgan ilmiy gipotezani bildiradi (Karl Popper mezonlari)."
+                        },
+                        {
+                            "id": "en-c1-u1-l5-q5",
+                            "question": "'While the policy proposal is undeniably well-intentioned, its underlying econometric model remains questionable.' What is the author doing?",
+                            "options": [
+                                "Fully praising the economic model.",
+                                "Dismissing both the intentions and the model.",
+                                "Conceding the good intentions while critically challenging the empirical model.",
+                                "Suggesting that econometric models are illegal."
+                            ],
+                            "correctAnswerIndex": 2,
+                            "explanation": "Muallif 'concession' (yaxshi niyatni tan olish) qilib, so'ngra asosiy diqqatni iqtisodiy modelning shubhaliligiga qaratmoqda."
                         }
                     ]
                 }
