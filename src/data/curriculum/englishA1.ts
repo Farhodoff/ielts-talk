@@ -9,168 +9,254 @@ export const ENGLISH_A1_LESSONS: Lesson[] = [
         "language": "en",
         "level": "A1",
         "lessonNumber": 1,
-        "title": "Greetings & Introductions",
-        "description": "Present Simple: To Be (Am, Is, Are) va asosiy shaxs olmoshlari bilan tanishuv.",
-        "estimatedDurationMinutes": 12,
+        "title": "Greetings & Introductions (To Be)",
+        "description": "Salomlashish, o'zini tanishtirish va To Be (am, is, are) fe'li yordamida gap tuzish poydevori.",
+        "estimatedDurationMinutes": 15,
         "icon": "👋",
         "steps": [
             {
                 "id": "en-a1-u1-l1-s1",
-                "title": "Yangi So'zlar & Qoida",
+                "title": "Yangi So'zlar & Qoidalar",
                 "type": "learn",
-                "estimatedMinutes": 4,
+                "estimatedMinutes": 5,
                 "learnData": {
-                    "title": "Salomlashish va To Be Fe'li",
-                    "subtitle": "Boshlang'ich ingliz tili asoslari",
-                    "explanation": "Ingliz tilida gap tuzishning asosi \"to be\" (bo'lmoq) fe'lidir. Hozirgi zamonda u am, is, are shakllariga ega.",
+                    "title": "Salomlashish va To Be Fe'li Poydevori",
+                    "subtitle": "Unit 1 • 1-Dars: Shaxsiy tanishtiruv va asosiy sintaksis",
+                    "explanation": "Ingliz tilida har qanday to'liq gapda albatta fe'l (verb) bo'lishi shart. Kimdir kim yoki qanday ekanligini aytishda \"To Be\" (am, is, are) fe'li ishlatiladi. O'zbek tilida bu fe'l ko'pincha aytilmaydi (masalan: \"Men talabaman\"), biroq ingliz tilida \"I am a student\" shaklida aniq ko'rsatilishi shart.",
                     "keyPoints": [
-                        "I -> am (I am a student)",
-                        "He / She / It -> is (She is a doctor)",
-                        "You / We / They -> are (They are friends)"
+                        "I -> am | I'm from Uzbekistan (Men O'zbekistondanman)",
+                        "He / She / It -> is | She is a doctor (U shifokor)",
+                        "You / We / They -> are | They are students (Ular talabalar)",
+                        "Inkor shaklida: am not / is not (isn't) / are not (aren't)",
+                        "Savol shaklida To Be oldinga chiqadi: Are you ready? / Is he your friend?",
+                        "⚠️ Keng tarqalgan xato: Fe'lni tashlab ketish xato! \"I student\" emas, \"I AM a student\" bo'ladi."
                     ],
                     "vocabulary": [
                         {
                             "term": "Hello",
                             "reading": "/həˈloʊ/",
-                            "meaning": "Salom",
-                            "exampleSentence": "Hello! My name is John.",
-                            "exampleTranslation": "Salom! Mening ismim Jon."
+                            "meaning": "Salom (rasmiy va do'stona)",
+                            "exampleSentence": "Hello! My name is Farhod.",
+                            "exampleTranslation": "Salom! Mening ismim Farhod."
                         },
                         {
                             "term": "Goodbye",
                             "reading": "/ɡʊdˈbaɪ/",
-                            "meaning": "Xayr",
-                            "exampleSentence": "Goodbye, see you tomorrow!",
-                            "exampleTranslation": "Xayr, ertagacha!"
+                            "meaning": "Xayr, salomat bo'ling",
+                            "exampleSentence": "Goodbye, see you tomorrow morning!",
+                            "exampleTranslation": "Xayr, ertaga ertalab ko'rishguncha!"
                         },
                         {
                             "term": "Name",
                             "reading": "/neɪm/",
                             "meaning": "Ism",
-                            "exampleSentence": "What is your name?",
-                            "exampleTranslation": "Ismingiz nima?"
+                            "exampleSentence": "What is your full name?",
+                            "exampleTranslation": "To'liq ismingiz nima?"
                         },
                         {
-                            "term": "Friend",
-                            "reading": "/frend/",
-                            "meaning": "Do'st",
-                            "exampleSentence": "Alex is my best friend.",
-                            "exampleTranslation": "Alek mening eng yaqin do'stim."
+                            "term": "Student",
+                            "reading": "/ˈstjuː.dənt/",
+                            "meaning": "Talaba, o'quvchi",
+                            "exampleSentence": "I am an enthusiastic IELTS student.",
+                            "exampleTranslation": "Men intiluvchan IELTS o'quvchisiman."
+                        },
+                        {
+                            "term": "Teacher",
+                            "reading": "/ˈtiː.tʃər/",
+                            "meaning": "O'qituvchi, murabbiy",
+                            "exampleSentence": "Mr. Smith is our English teacher.",
+                            "exampleTranslation": "Janob Smit bizning ingliz tili o'qituvchimiz."
+                        },
+                        {
+                            "term": "City",
+                            "reading": "/ˈsɪt.i/",
+                            "meaning": "Shahar",
+                            "exampleSentence": "Samarkand is an ancient city.",
+                            "exampleTranslation": "Samarqand qadimiy shahar."
+                        },
+                        {
+                            "term": "Country",
+                            "reading": "/ˈkʌn.tri/",
+                            "meaning": "Mamlakat, yurt",
+                            "exampleSentence": "Uzbekistan is a beautiful country.",
+                            "exampleTranslation": "O'zbekiston go'zal mamlakat."
+                        },
+                        {
+                            "term": "Nice to meet you",
+                            "reading": "/naɪs tuː miːt juː/",
+                            "meaning": "Tanishganimdan xursandman",
+                            "exampleSentence": "Nice to meet you, welcome to our group!",
+                            "exampleTranslation": "Tanishganimdan xursandman, guruhimizga xush kelibsiz!"
                         }
                     ],
                     "grammarRules": [
                         {
-                            "pattern": "Subject + am/is/are + Noun/Adjective",
-                            "meaning": "Kimdir yoki nimadir kim/qanday ekanligini bildiradi",
-                            "usageNotes": "Inkor shaklida am not / is not (isn't) / are not (aren't) ishlatiladi.",
+                            "pattern": "Subject + am / is / are + Complement (Noun / Adjective / Place)",
+                            "meaning": "Shaxsning kasbi, holati yoki qayerdan ekanligini ifodalash",
+                            "usageNotes": "I -> am; He/She/It -> is; You/We/They -> are. Qisqartma shakllari: I'm, He's, She's, It's, You're, We're, They're.",
                             "examples": [
                                 {
-                                    "sentence": "I am from Uzbekistan.",
-                                    "translation": "Men O'zbekistondanman."
+                                    "sentence": "I am from Tashkent, the capital of Uzbekistan.",
+                                    "translation": "Men O'zbekiston poytaxti Toshkentdanman."
                                 },
                                 {
-                                    "sentence": "She is very happy today.",
-                                    "translation": "U bugun juda xursand."
+                                    "sentence": "She is not tired; she is very energetic.",
+                                    "translation": "U charchagan emas; u juda g'ayratli."
+                                },
+                                {
+                                    "sentence": "Are you ready to start your learning journey?",
+                                    "translation": "O'quv sayohatingizni boshlashga tayyormisiz?"
                                 }
                             ]
                         }
                     ],
-                    "culturalNotes": "Ingliz tilida tanishganda \"Nice to meet you\" (Tanishganimdan xursandman) deb qo'l berib ko'rishish odat tusiga kirgan."
+                    "culturalNotes": "🎙️ IELTS Speaking Part 1 Foundation Corner:\nImtihon oluvchi dastlab \"What is your name?\" va \"Where are you from?\" deb so'raydi. Faqat bitta so'z bilan javob bermang. To'liq gap bilan: \"My name is Farhod, but you can call me Farhod. I am from Samarkand, Uzbekistan.\" deb javob berish Band 6.0+ poydevorini yaratadi."
                 }
             },
             {
                 "id": "en-a1-u1-l1-s2",
-                "title": "Amaliy Mashq",
+                "title": "Interaktiv Amaliy Mashq",
                 "type": "practice",
-                "estimatedMinutes": 4,
+                "estimatedMinutes": 5,
                 "practiceData": {
-                    "instructions": "To'g'ri \"to be\" fe'lini tanlang.",
+                    "instructions": "Gaplarning mazmuni va qoidalariga qarab to'g'ri javobni tanlang.",
                     "exercises": [
                         {
                             "id": "en-a1-u1-l1-e1",
                             "type": "multiple-choice",
-                            "prompt": "\"He _______ a teacher.\" Qaysi shakl to'g'ri?",
+                            "prompt": "\"He _______ an English teacher at our language center.\" Bo'sh joyga qaysi to'g'ri fe'l qo'yiladi?",
                             "options": [
                                 "is",
-                                "be",
+                                "am",
                                 "are",
-                                "am"
+                                "be"
                             ],
                             "correctAnswer": 0,
-                            "explanation": "He/She/It olmoshlari bilan \"is\" ishlatiladi."
+                            "explanation": "Uchinchi shaxs birlik (He/She/It) bilan doim \"is\" ishlatiladi."
                         },
                         {
                             "id": "en-a1-u1-l1-e2",
                             "type": "multiple-choice",
-                            "prompt": "\"They _______ from Spain.\" Qaysi shakl to'g'ri?",
+                            "prompt": "\"They _______ from Tashkent, Uzbekistan.\" Qaysi shakl to'g'ri?",
                             "options": [
                                 "is",
-                                "being",
                                 "are",
-                                "am"
+                                "am",
+                                "being"
+                            ],
+                            "correctAnswer": 1,
+                            "explanation": "Ko'plik olmoshi (They/We/You) bilan \"are\" fe'li ishlatiladi."
+                        },
+                        {
+                            "id": "en-a1-u1-l1-e3",
+                            "type": "multiple-choice",
+                            "prompt": "Dialog: \"— Nice to meet you! — Nice to meet you, _______!\"",
+                            "options": [
+                                "too",
+                                "two",
+                                "to",
+                                "also"
+                            ],
+                            "correctAnswer": 0,
+                            "explanation": "\"Men ham tanishganimdan xursandman\" ma'nosida gap oxirida \"too\" qo'llaniladi."
+                        },
+                        {
+                            "id": "en-a1-u1-l1-e4",
+                            "type": "multiple-choice",
+                            "prompt": "Qaysi gapda grammatik xatolik bor?",
+                            "options": [
+                                "I am a motivated student.",
+                                "She is very kind.",
+                                "We is from Uzbekistan.",
+                                "They are ready for the test."
                             ],
                             "correctAnswer": 2,
-                            "explanation": "They ko'plik olmoshi bilan \"are\" ishlatiladi."
+                            "explanation": "\"We\" ko'plik olmoshi bo'lgani sababli \"We are...\" bo'lishi kerak, \"We is...\" xato."
+                        },
+                        {
+                            "id": "en-a1-u1-l1-e5",
+                            "type": "multiple-choice",
+                            "prompt": "\"— Are you ready for the IELTS exam? — Yes, I _______.\"",
+                            "options": [
+                                "am",
+                                "are",
+                                "is",
+                                "do"
+                            ],
+                            "correctAnswer": 0,
+                            "explanation": "I olmoshi uchun qisqa tasdiq javobi: \"Yes, I am.\""
                         }
                     ]
                 }
             },
             {
                 "id": "en-a1-u1-l1-s3",
-                "title": "Dars Testi",
+                "title": "Dars Sinov Testi",
                 "type": "test",
-                "estimatedMinutes": 4,
+                "estimatedMinutes": 5,
                 "testData": {
-                    "instructions": "Savollarga javob berib mavzuni mustahkamlang.",
-                    "passingScorePercentage": 75,
+                    "instructions": "Savollarga javob bering va o'zlashtirish darajangizni tekshiring.",
+                    "passingScorePercentage": 80,
                     "questions": [
                         {
                             "id": "en-a1-u1-l1-q1",
-                            "question": "I _______ a student at university.",
+                            "question": "I _______ a dedicated student at university.",
                             "options": [
                                 "am",
-                                "be",
+                                "is",
                                 "are",
-                                "is"
+                                "be"
                             ],
                             "correctAnswerIndex": 0,
-                            "explanation": "I olmoshi bilan faqat \"am\" ishlatiladi."
+                            "explanation": "Birinchi shaxs birlik \"I\" bilan faqat \"am\" ishlatiladi."
                         },
                         {
                             "id": "en-a1-u1-l1-q2",
-                            "question": "_______ you ready for the lesson?",
+                            "question": "_______ you from London or Manchester?",
                             "options": [
-                                "Is",
-                                "Do",
                                 "Are",
-                                "Am"
+                                "Is",
+                                "Am",
+                                "Do"
                             ],
-                            "correctAnswerIndex": 2,
-                            "explanation": "You bilan so'roq shaklida \"Are you...?\" ishlatiladi."
+                            "correctAnswerIndex": 0,
+                            "explanation": "\"You\" bilan so'roq gaplarda \"Are you...?\" strukturasi qo'llaniladi."
                         },
                         {
                             "id": "en-a1-u1-l1-q3",
-                            "question": "\"Xayr\" so'zining to'g'ri inglizcha tarjimasi qaysi?",
+                            "question": "She _______ not at home right now; she is at university.",
                             "options": [
-                                "Goodbye",
-                                "Thank you",
-                                "Please",
-                                "Welcome"
+                                "is",
+                                "are",
+                                "am",
+                                "be"
                             ],
                             "correctAnswerIndex": 0,
-                            "explanation": "Goodbye — Xayr."
+                            "explanation": "\"She\" birlikda bo'lgani uchun inkor shakli \"is not\" (isn't) bo'ladi."
                         },
                         {
                             "id": "en-a1-u1-l1-q4",
-                            "question": "She _______ not at home right now.",
+                            "question": "\"Tanishganimdan xursandman\" iborasining to'g'ri inglizcha ekvivalenti qaysi?",
+                            "options": [
+                                "Nice to meet you",
+                                "See you tomorrow",
+                                "Thank you very much",
+                                "Good morning sir"
+                            ],
+                            "correctAnswerIndex": 0,
+                            "explanation": "\"Nice to meet you\" — yangi tanishganda aytiladigan standart xushmuomalalik iborasi."
+                        },
+                        {
+                            "id": "en-a1-u1-l1-q5",
+                            "question": "Toshkent va Samarqand go'zal shaharlar. \"Tashkent and Samarkand _______ beautiful cities.\"",
                             "options": [
                                 "are",
-                                "be",
+                                "is",
                                 "am",
-                                "is"
+                                "be"
                             ],
-                            "correctAnswerIndex": 3,
-                            "explanation": "She bilan \"is not\" (isn't) ishlatiladi."
+                            "correctAnswerIndex": 0,
+                            "explanation": "Ikkita shahar birgalikda ko'plikni (They) hosil qiladi, shuning uchun \"are\" to'g'ri."
                         }
                     ]
                 }
@@ -185,164 +271,250 @@ export const ENGLISH_A1_LESSONS: Lesson[] = [
         "language": "en",
         "level": "A1",
         "lessonNumber": 2,
-        "title": "Daily Objects & Numbers",
-        "description": "Oddiy narsa-buyumlar va 1-100 gacha sonlar.",
-        "estimatedDurationMinutes": 10,
+        "title": "Daily Objects & Numbers (Plurals)",
+        "description": "Kundalik kerakli buyumlar, 1-100 gacha sonlar va otlarning ko'plik shakli (-s/-es).",
+        "estimatedDurationMinutes": 15,
         "icon": "🔢",
         "steps": [
             {
                 "id": "en-a1-u1-l2-s1",
-                "title": "Yangi So'zlar",
+                "title": "Lug'at & Grammatik Qoidalar",
                 "type": "learn",
-                "estimatedMinutes": 4,
+                "estimatedMinutes": 5,
                 "learnData": {
-                    "title": "Sonlar va Kundalik Buyumlar",
-                    "explanation": "Ingliz tilida 1 dan 100 gacha sonlar va kundalik buyumlar nomlarini o'rganamiz.",
+                    "title": "Kundalik Buyumlar va 1-100 Gacha Sonlar",
+                    "subtitle": "Unit 1 • 2-Dars: Otlarning ko'plik shakli va sanoq hisobi",
+                    "explanation": "Kundalik hayotimizda narsalarni nomlash va ularning sonini to'g'ri aytish eng muhim amaliy ko'nikmalardan biridir. Ingliz tilida otlarning ko'pligi so'z oxiriga \"-s\" yoki \"-es\" qo'shish orqali yasaladi.",
+                    "keyPoints": [
+                        "Odatdagi otlar: book -> books, pen -> pens, phone -> phones",
+                        "-s, -sh, -ch, -x bilan tugasa: box -> boxes, watch -> watches",
+                        "O'zbek tili bilan muhim farqi: O'zbek tilida \"beshta kitob\" (birlikda) aytilsa, ingliz tilida majburiy ko'plik bo'ladi: \"five books\"",
+                        "Sonlar: 1-10 (one, two, three...), 13-19 (-teen bilan: fifteen, sixteen...)",
+                        "O'nliklar: 20-90 (-ty bilan: twenty, thirty, forty, fifty...)",
+                        "100 soni: one hundred (yoki a hundred)"
+                    ],
                     "vocabulary": [
                         {
                             "term": "Book",
                             "reading": "/bʊk/",
                             "meaning": "Kitob",
-                            "exampleSentence": "This is an English book.",
-                            "exampleTranslation": "Bu ingliz tili kitobi."
+                            "exampleSentence": "I read an IELTS preparation book every evening.",
+                            "exampleTranslation": "Men har oqshom IELTS ga tayyorgarlik kitobini o'qiyman."
                         },
                         {
                             "term": "Pen",
                             "reading": "/pen/",
                             "meaning": "Ruchka",
-                            "exampleSentence": "I need a blue pen.",
-                            "exampleTranslation": "Menga ko'k ruchka kerak."
+                            "exampleSentence": "Do you have a spare black pen for the test?",
+                            "exampleTranslation": "Test uchun ortiqcha qora ruchkangiz bormi?"
                         },
                         {
-                            "term": "Ten",
-                            "reading": "/ten/",
-                            "meaning": "O'n (10)",
-                            "exampleSentence": "There are ten students.",
-                            "exampleTranslation": "O'nta talaba bor."
+                            "term": "Bag",
+                            "reading": "/bæɡ/",
+                            "meaning": "Sumka, ryukzak",
+                            "exampleSentence": "My laptop and notebooks are inside my bag.",
+                            "exampleTranslation": "Mening noutbukim va daftarlarim sumkam ichida."
                         },
                         {
-                            "term": "Twenty",
-                            "reading": "/ˈtwen.ti/",
-                            "meaning": "Yigirma (20)",
-                            "exampleSentence": "Page twenty is interesting.",
-                            "exampleTranslation": "Yigirmanchi sahifa qiziq."
+                            "term": "Key",
+                            "reading": "/kiː/",
+                            "meaning": "Kalit",
+                            "exampleSentence": "Here are the keys to our classroom.",
+                            "exampleTranslation": "Mana sinf xonamizning kalitlari."
+                        },
+                        {
+                            "term": "Phone",
+                            "reading": "/foʊn/",
+                            "meaning": "Telefon, smartfon",
+                            "exampleSentence": "Please turn off your mobile phone during the exam.",
+                            "exampleTranslation": "Iltimos, imtihon paytida telefoningizni o'chirib qo'ying."
+                        },
+                        {
+                            "term": "Fifteen",
+                            "reading": "/fɪfˈtiːn/",
+                            "meaning": "O'n besh (15) [urg'u -teen bo'g'inida]",
+                            "exampleSentence": "The lesson lasts for fifteen minutes.",
+                            "exampleTranslation": "Dars o'n besh daqiqa davom etadi."
+                        },
+                        {
+                            "term": "Fifty",
+                            "reading": "/ˈfɪf.ti/",
+                            "meaning": "Ellik (50) [urg'u fif- bo'g'inida]",
+                            "exampleSentence": "There are fifty new words in this vocabulary unit.",
+                            "exampleTranslation": "Ushbu lug'at bo'limida ellikta yangi so'z bor."
+                        },
+                        {
+                            "term": "Hundred",
+                            "reading": "/ˈhʌn.drəd/",
+                            "meaning": "Yuz (100)",
+                            "exampleSentence": "A full Band score test has one hundred points.",
+                            "exampleTranslation": "To'liq balli test yuz balldan iborat."
                         }
-                    ],
-                    "keyPoints": [
-                        "Sonlar: One(1), Two(2), Three(3), Ten(10), Twenty(20), Hundred(100)."
                     ],
                     "grammarRules": [
                         {
-                            "pattern": "Daily Objects & Numbers",
-                            "meaning": "Oddiy narsa-buyumlar va 1-100 gacha sonlar.",
-                            "usageNotes": "Ingliz tilida 1 dan 100 gacha sonlar va kundalik buyumlar nomlarini o'rganamiz.",
+                            "pattern": "Singular Noun + -s / -es -> Plural Noun",
+                            "meaning": "Narsa-buyumlarning bittadan ko'p ekanligini bildirish",
+                            "usageNotes": "Undosh yoki oddiy unli bilan tugagan so'zlarga \"-s\" qo'shiladi (one pen -> two pens). Agar so'z -s, -sh, -ch, -x tovushlari bilan tugasa, talaffuz qulayligi uchun \"-es\" qo'shiladi (watch -> watches, box -> boxes).",
                             "examples": [
                                 {
-                                    "sentence": "This is an English book.",
-                                    "translation": "Bu ingliz tili kitobi."
+                                    "sentence": "I have three notebooks and two pens on my desk.",
+                                    "translation": "Stolim ustida uchta daftar va ikkita ruchka bor."
                                 },
                                 {
-                                    "sentence": "I need a blue pen.",
-                                    "translation": "Menga ko'k ruchka kerak."
+                                    "sentence": "There are four watches in the jewelry shop.",
+                                    "translation": "Zargarlik do'konida to'rtta qo'l soati bor."
                                 }
                             ]
                         }
-                    ]
+                    ],
+                    "culturalNotes": "🎙️ IELTS Speaking Part 1 Foundation Corner:\nImtihon oluvchi: \"What do you carry in your bag every day?\" deb so'rashi mumkin.\nNamunaviy javob: \"I always carry a few essential items, including my smartphone, my apartment keys, and an English vocabulary notebook. They are very useful for my daily study.\""
                 }
             },
             {
                 "id": "en-a1-u1-l2-s2",
-                "title": "Amaliy Mashq",
+                "title": "Interaktiv Amaliy Mashq",
                 "type": "practice",
-                "estimatedMinutes": 3,
+                "estimatedMinutes": 5,
                 "practiceData": {
-                    "instructions": "Son va buyum so'zlarini moslashtiring.",
+                    "instructions": "Otlarning ko'plik shakli va sonlar bo'yicha to'g'ri variantni tanlang.",
                     "exercises": [
                         {
                             "id": "en-a1-u1-l2-e1",
                             "type": "multiple-choice",
-                            "prompt": "\"Kitob\" so'zining inglizcha tarjimasi nima?",
+                            "prompt": "\"I have three _______ in my study backpack.\" Bo'sh o'ringa to'g'ri so'zni tanlang:",
                             "options": [
-                                "Table",
-                                "Chair",
-                                "Door",
-                                "Book"
+                                "books",
+                                "book",
+                                "bookes",
+                                "bookies"
                             ],
-                            "correctAnswer": 3,
-                            "explanation": "Book — Kitob."
+                            "correctAnswer": 0,
+                            "explanation": "Raqamdan keyin ingliz tilida ot ko'plik shaklida keladi: three books."
                         },
                         {
                             "id": "en-a1-u1-l2-e2",
                             "type": "multiple-choice",
-                            "prompt": "\"15\" soni qanday yoziladi?",
+                            "prompt": "\"Watch\" (qo'l soati) so'zining to'g'ri ko'plik shakli qaysi?",
                             "options": [
-                                "Fifteen",
-                                "Five",
-                                "Fifth",
-                                "Fifty"
+                                "watches",
+                                "watchs",
+                                "watchies",
+                                "watch"
                             ],
                             "correctAnswer": 0,
-                            "explanation": "15 — Fifteen."
+                            "explanation": "-ch bilan tugagan otlarga \"-es\" qo'shiladi: watches."
+                        },
+                        {
+                            "id": "en-a1-u1-l2-e3",
+                            "type": "multiple-choice",
+                            "prompt": "\"50\" sonining to'g'ri yozilishi qaysi?",
+                            "options": [
+                                "Fifty",
+                                "Fifteen",
+                                "Five",
+                                "Fifth"
+                            ],
+                            "correctAnswer": 0,
+                            "explanation": "50 — Fifty. 15 esa — Fifteen."
+                        },
+                        {
+                            "id": "en-a1-u1-l2-e4",
+                            "type": "multiple-choice",
+                            "prompt": "Qaysi gapda xatolik BOR?",
+                            "options": [
+                                "I have two phones.",
+                                "She has three pen.",
+                                "There are four keys.",
+                                "We need five books."
+                            ],
+                            "correctAnswer": 1,
+                            "explanation": "\"three pen\" xato, chunki son 1 dan ortiq bo'lsa otga -s qo'shilishi shart: \"three pens\"."
+                        },
+                        {
+                            "id": "en-a1-u1-l2-e5",
+                            "type": "multiple-choice",
+                            "prompt": "\"Hundred\" so'zi qaysi sonni bildiradi?",
+                            "options": [
+                                "100",
+                                "1000",
+                                "10",
+                                "50"
+                            ],
+                            "correctAnswer": 0,
+                            "explanation": "Hundred — 100 soni."
                         }
                     ]
                 }
             },
             {
                 "id": "en-a1-u1-l2-s3",
-                "title": "Dars Testi",
+                "title": "Dars Sinov Testi",
                 "type": "test",
-                "estimatedMinutes": 3,
+                "estimatedMinutes": 5,
                 "testData": {
-                    "instructions": "Savollarga javob bering.",
-                    "passingScorePercentage": 75,
+                    "instructions": "Savollarga javob berib, o'tilgan darsni mukammal o'zlashtiring.",
+                    "passingScorePercentage": 80,
                     "questions": [
                         {
                             "id": "en-a1-u1-l2-q1",
-                            "question": "Which word means \"Ruchka\"?",
+                            "question": "There are twelve (12) _______ in the classroom.",
                             "options": [
-                                "Pencil",
-                                "Bag",
-                                "Desk",
-                                "Pen"
+                                "students",
+                                "student",
+                                "studentes",
+                                "studenties"
                             ],
-                            "correctAnswerIndex": 3,
-                            "explanation": "Pen — Ruchka."
+                            "correctAnswerIndex": 0,
+                            "explanation": "12 soni bilan ot ko'plikda qo'llanadi: students."
                         },
                         {
                             "id": "en-a1-u1-l2-q2",
-                            "question": "How do you write 50 in English?",
+                            "question": "\"Box\" (quti) so'zining to'g'ri ko'plik shakli qaysi?",
                             "options": [
-                                "Fifty",
-                                "Five",
-                                "Fifth",
-                                "Fifteen"
+                                "boxes",
+                                "boxs",
+                                "boxies",
+                                "box"
                             ],
                             "correctAnswerIndex": 0,
-                            "explanation": "50 — Fifty."
+                            "explanation": "-x bilan tugaydigan otlarga \"-es\" qo'shiladi: boxes."
                         },
                         {
                             "id": "en-a1-u1-l2-q3",
-                            "question": "I have _______ notebooks on my desk.",
+                            "question": "\"15\" soni ingliz tilida qanday yoziladi?",
                             "options": [
-                                "to",
-                                "two",
-                                "tow",
-                                "too"
+                                "Fifteen",
+                                "Fifty",
+                                "Five",
+                                "Fiveteen"
                             ],
-                            "correctAnswerIndex": 1,
-                            "explanation": "Two — 2 soni."
+                            "correctAnswerIndex": 0,
+                            "explanation": "15 — Fifteen."
                         },
                         {
                             "id": "en-a1-u1-l2-q4",
-                            "question": "\"Bag\" so'zining ma'nosi nima?",
+                            "question": "Where are my apartment _______? I cannot open the door.",
                             "options": [
-                                "Xona",
-                                "Stol",
-                                "Sumka / Portfel",
-                                "Daftar"
+                                "keys",
+                                "keyes",
+                                "key",
+                                "keyses"
                             ],
-                            "correctAnswerIndex": 2,
-                            "explanation": "Bag — Sumka."
+                            "correctAnswerIndex": 0,
+                            "explanation": "Key so'ziga oddiy -s qo'shiladi: keys."
+                        },
+                        {
+                            "id": "en-a1-u1-l2-q5",
+                            "question": "He has one hundred (100) _______ in his personal library.",
+                            "options": [
+                                "books",
+                                "book",
+                                "bookes",
+                                "a book"
+                            ],
+                            "correctAnswerIndex": 0,
+                            "explanation": "100 soni bilan ko'plik olinadi: one hundred books."
                         }
                     ]
                 }
@@ -358,159 +530,249 @@ export const ENGLISH_A1_LESSONS: Lesson[] = [
         "level": "A1",
         "lessonNumber": 3,
         "title": "Demonstratives: This, That, These, Those",
-        "description": "Yaqin va uzoqdagi narsalarni ko'rsatish olmoshlari.",
-        "estimatedDurationMinutes": 10,
+        "description": "Yaqin va uzoqdagi narsalarni ko'rsatish olmoshlari hamda ularning birlik/ko'plik fe'l moslashuvi.",
+        "estimatedDurationMinutes": 15,
         "icon": "👉",
         "steps": [
             {
                 "id": "en-a1-u1-l3-s1",
-                "title": "Ko'rsatish Olmoshlari",
+                "title": "Ko'rsatish Olmoshlari Qoidasi",
                 "type": "learn",
-                "estimatedMinutes": 4,
+                "estimatedMinutes": 5,
                 "learnData": {
-                    "title": "This, That, These, Those",
-                    "explanation": "Yaqindagi bitta narsaga \"This\", uzoqdagi bittasiga \"That\", yaqindagi ko'plikka \"These\", uzoqdagi ko'plikka \"Those\" ishlatiladi.",
+                    "title": "This, That, These, Those Farqlari",
+                    "subtitle": "Unit 1 • 3-Dars: Fazoviy masofa va son bo'yicha ko'rsatish",
+                    "explanation": "Ingliz tilida narsa-buyumlar sizga yaqin yoki uzoqligiga hamda ularning soni birlik yoki ko'plikdaligiga qarab to'rtta ko'rsatish olmoshidan biri tanlanadi.",
                     "keyPoints": [
-                        "This is my pen (yaqin birlik)",
-                        "That is your car (uzoq birlik)",
-                        "These are my books (yaqin ko'plik)",
-                        "Those are birds (uzoq ko'plik)"
+                        "THIS (Bu) -> Yaqindagi bitta narsa: This is my laptop (qo'limdagi/oldimdagi).",
+                        "THAT (Ana u) -> Uzoqdagi bitta narsa: That is a tall building (naridagi).",
+                        "THESE (Bular) -> Yaqindagi ko'plik narsalar: These are my study notes.",
+                        "THOSE (Ana ular) -> Uzoqdagi ko'plik narsalar: Those are cars on the street.",
+                        "⚠️ Fe'l moslashuvi: This/That bilan IS; These/Those bilan ARE ishlatiladi!",
+                        "⚠️ Tipik xato: \"These is my keys\" (XATO) -> \"These ARE my keys\" (TO'G'RI)."
                     ],
                     "vocabulary": [
                         {
                             "term": "This",
                             "reading": "/ðɪs/",
-                            "meaning": "Bu (yaqindagi birlik)",
-                            "exampleSentence": "This is my coffee.",
-                            "exampleTranslation": "Bu mening qahvam."
+                            "meaning": "Bu (yaqindagi 1 ta narsa)",
+                            "exampleSentence": "This is my favorite English dictionary.",
+                            "exampleTranslation": "Bu mening eng sevimli ingliz tili lug'atim."
                         },
                         {
                             "term": "That",
                             "reading": "/ðæt/",
-                            "meaning": "U / Ana u (uzoqdagi birlik)",
-                            "exampleSentence": "That building is high.",
-                            "exampleTranslation": "Ana u bino baland."
+                            "meaning": "U / Ana u (uzoqdagi 1 ta narsa)",
+                            "exampleSentence": "That building over there is our university.",
+                            "exampleTranslation": "Ana u yerdagi bino bizning universitetimiz."
                         },
                         {
-                            "term": "Welcome",
-                            "reading": "/ˈwel.kəm/",
-                            "meaning": "Xush kelibsiz",
-                            "exampleSentence": "Welcome to our English class.",
-                            "exampleTranslation": "Ingliz tili darsimizga xush kelibsiz."
+                            "term": "These",
+                            "reading": "/ðiːz/",
+                            "meaning": "Bular (yaqindagi ko'plik narsalar)",
+                            "exampleSentence": "These documents are very important for the visa.",
+                            "exampleTranslation": "Ushbu hujjatlar viza uchun juda muhim."
+                        },
+                        {
+                            "term": "Those",
+                            "reading": "/ðoʊz/",
+                            "meaning": "Ana ular (uzoqdagi ko'plik narsalar)",
+                            "exampleSentence": "Those trees in the park look very beautiful.",
+                            "exampleTranslation": "Bog'dagi ana u daraxtlar juda chiroyli ko'rinadi."
+                        },
+                        {
+                            "term": "Table",
+                            "reading": "/ˈteɪ.bəl/",
+                            "meaning": "Stol",
+                            "exampleSentence": "Please place your passport on this table.",
+                            "exampleTranslation": "Iltimos, pasportingizni ushbu stol ustiga qo'ying."
+                        },
+                        {
+                            "term": "Chair",
+                            "reading": "/tʃeər/",
+                            "meaning": "Stul, o'rindiq",
+                            "exampleSentence": "That chair near the window is comfortable.",
+                            "exampleTranslation": "Deraza yonidagi ana u stul qulay."
+                        },
+                        {
+                            "term": "Picture",
+                            "reading": "/ˈpɪk.tʃər/",
+                            "meaning": "Rasm, surat, fotosurat",
+                            "exampleSentence": "These pictures show my hometown.",
+                            "exampleTranslation": "Bu suratlar mening ona shahrimni ko'rsatadi."
+                        },
+                        {
+                            "term": "Over there",
+                            "reading": "/ˈoʊ.vər ðeər/",
+                            "meaning": "Ana u yerda, narigi tomonda",
+                            "exampleSentence": "The library is located over there.",
+                            "exampleTranslation": "Kutubxona ana u yerda joylashgan."
                         }
                     ],
                     "grammarRules": [
                         {
-                            "pattern": "Demonstratives: This, That, These, Those",
-                            "meaning": "Yaqin va uzoqdagi narsalarni ko'rsatish olmoshlari.",
-                            "usageNotes": "Yaqindagi bitta narsaga \"This\", uzoqdagi bittasiga \"That\", yaqindagi ko'plikka \"These\", uzoqdagi ko'plikka \"Those\" ishlatiladi.",
+                            "pattern": "This / That + is + Singular Noun | These / Those + are + Plural Noun",
+                            "meaning": "Yaqin va uzoqdagi narsalarni to'g'ri ko'rsatish va tasvirlash",
+                            "usageNotes": "Yaqin (qo'lingiz yetadigan yoki ko'z o'ngingizdagi): This (birlik) / These (ko'plik). Uzoq (naridagi, ko'rsatkich barmog'i bilan ishora qilinadigan): That (birlik) / Those (ko'plik).",
                             "examples": [
                                 {
-                                    "sentence": "This is my coffee.",
-                                    "translation": "Bu mening qahvam."
+                                    "sentence": "This is my new laptop, and those are my notebooks over there.",
+                                    "translation": "Bu mening yangi noutbukim, ana u yerdagilar esa mening daftarlarim."
                                 },
                                 {
-                                    "sentence": "That building is high.",
-                                    "translation": "Ana u bino baland."
+                                    "sentence": "Are these your sunglasses on the table?",
+                                    "translation": "Stol ustidagi bular sizning quyoshdan saqlovchi ko'zoynagingizmi?"
                                 }
                             ]
                         }
-                    ]
+                    ],
+                    "culturalNotes": "🎙️ IELTS Speaking Part 1 Foundation Corner:\nImtihon oluvchi: \"Do you prefer paper books or electronic books?\" deb so'rashi mumkin.\nNamunaviy javob: \"I definitely prefer this smartphone and e-books because these digital tools allow me to read anywhere without carrying heavy bags.\""
                 }
             },
             {
                 "id": "en-a1-u1-l3-s2",
-                "title": "Mashq",
+                "title": "Interaktiv Amaliy Mashq",
                 "type": "practice",
-                "estimatedMinutes": 3,
+                "estimatedMinutes": 5,
                 "practiceData": {
-                    "instructions": "To'g'ri ko'rsatish olmoshini tanlang.",
+                    "instructions": "Masofa va son bo'yicha to'g'ri ko'rsatish olmoshini tanlang.",
                     "exercises": [
                         {
                             "id": "en-a1-u1-l3-e1",
                             "type": "multiple-choice",
-                            "prompt": "\"_______ are my keys in my hand.\"",
+                            "prompt": "\"Look at _______ tall building over there across the river.\" Qaysi olmosh to'g'ri?",
                             "options": [
-                                "These",
-                                "That",
-                                "This",
-                                "Those"
+                                "that",
+                                "this",
+                                "these",
+                                "those"
                             ],
                             "correctAnswer": 0,
-                            "explanation": "Qo'ldagi (yaqin) ko'plik uchun \"These\" ishlatiladi."
+                            "explanation": "Uzoqdagi bitta narsaga ishora qilinganda \"that\" ishlatiladi."
                         },
                         {
-                            "id": "en-a1-u1-l3-ex-2",
+                            "id": "en-a1-u1-l3-e2",
                             "type": "multiple-choice",
-                            "prompt": "Choose the correct word to complete the sentence: \"That building is high.\"",
+                            "prompt": "\"_______ are my keys right here in my hand.\" Qaysi olmosh to'g'ri?",
                             "options": [
-                                "reluctance",
-                                "doubt",
-                                "That",
-                                "delay"
+                                "These",
+                                "Those",
+                                "This",
+                                "That"
                             ],
-                            "correctAnswer": 2,
-                            "explanation": "\"That\" (U / Ana u (uzoqdagi birlik)) fits the context appropriately."
+                            "correctAnswer": 0,
+                            "explanation": "Qo'ldagi (yaqin) ko'plik narsalar uchun \"These\" olinadi."
+                        },
+                        {
+                            "id": "en-a1-u1-l3-e3",
+                            "type": "multiple-choice",
+                            "prompt": "\"These books _______ very helpful for my IELTS preparation.\"",
+                            "options": [
+                                "are",
+                                "is",
+                                "am",
+                                "be"
+                            ],
+                            "correctAnswer": 0,
+                            "explanation": "\"These books\" ko'plik bo'lgani sababli \"are\" fe'li bilan moslashadi."
+                        },
+                        {
+                            "id": "en-a1-u1-l3-e4",
+                            "type": "multiple-choice",
+                            "prompt": "Qaysi gap to'g'ri tuzilgan?",
+                            "options": [
+                                "Those shoes are very stylish.",
+                                "Those shoes is very stylish.",
+                                "This shoes are very stylish.",
+                                "That shoes is very stylish."
+                            ],
+                            "correctAnswer": 0,
+                            "explanation": "\"Shoes\" ko'plik, u bilan \"Those\" va \"are\" to'g'ri uyg'unlashgan."
+                        },
+                        {
+                            "id": "en-a1-u1-l3-e5",
+                            "type": "multiple-choice",
+                            "prompt": "\"Who is _______ person standing over there near the entrance?\"",
+                            "options": [
+                                "that",
+                                "this",
+                                "these",
+                                "those"
+                            ],
+                            "correctAnswer": 0,
+                            "explanation": "Uzoqda turgan bitta kishi haqida so'ralganda: that person."
                         }
                     ]
                 }
             },
             {
                 "id": "en-a1-u1-l3-s3",
-                "title": "Test",
+                "title": "Dars Sinov Testi",
                 "type": "test",
-                "estimatedMinutes": 3,
+                "estimatedMinutes": 5,
                 "testData": {
-                    "instructions": "Test savollariga javob bering.",
-                    "passingScorePercentage": 75,
+                    "instructions": "Test savollariga javob berib, mavzuni mustahkamlang.",
+                    "passingScorePercentage": 80,
                     "questions": [
                         {
                             "id": "en-a1-u1-l3-q1",
-                            "question": "_______ is a laptop on the table over there.",
+                            "question": "_______ is my new phone here in my pocket.",
                             "options": [
-                                "That",
                                 "This",
+                                "That",
                                 "These",
                                 "Those"
                             ],
                             "correctAnswerIndex": 0,
-                            "explanation": "Uzoqdagi bitta buyum uchun \"That\" ishlatiladi."
+                            "explanation": "Yaqindagi (cho'ntakdagi) bitta buyum: This."
                         },
                         {
                             "id": "en-a1-u1-l3-q2",
-                            "question": "Look at _______ flowers right here in front of us!",
+                            "question": "Are _______ your bags over there near the counter?",
                             "options": [
                                 "those",
-                                "this",
+                                "these",
                                 "that",
-                                "these"
+                                "this"
                             ],
-                            "correctAnswerIndex": 3,
-                            "explanation": "Yaqindagi ko'plik gullar uchun \"these\"."
+                            "correctAnswerIndex": 0,
+                            "explanation": "Uzoqdagi ko'plik buyumlar: those."
                         },
                         {
                             "id": "en-a1-u1-l3-q3",
-                            "question": "What is _______ over there in the sky?",
+                            "question": "_______ pictures on the wall here are from my family album.",
                             "options": [
-                                "this",
-                                "those",
-                                "that",
-                                "these"
+                                "These",
+                                "This",
+                                "That",
+                                "Those"
                             ],
-                            "correctAnswerIndex": 2,
-                            "explanation": "Osmondagi uzoq narsa uchun \"that\"."
+                            "correctAnswerIndex": 0,
+                            "explanation": "Yaqindagi ko'plik suratlar: These pictures."
                         },
                         {
                             "id": "en-a1-u1-l3-q4",
-                            "question": "_______ shoes are very comfortable.",
+                            "question": "That car parked across the street _______ very expensive.",
                             "options": [
-                                "A",
-                                "These",
-                                "This",
-                                "That"
+                                "is",
+                                "are",
+                                "am",
+                                "be"
                             ],
-                            "correctAnswerIndex": 1,
-                            "explanation": "Poyabzal (shoes) ko'plikda bo'lgani uchun \"These\"."
+                            "correctAnswerIndex": 0,
+                            "explanation": "That car birlikda: is."
+                        },
+                        {
+                            "id": "en-a1-u1-l3-q5",
+                            "question": "What are _______ strange lights high in the sky?",
+                            "options": [
+                                "those",
+                                "these",
+                                "this",
+                                "that"
+                            ],
+                            "correctAnswerIndex": 0,
+                            "explanation": "Osmondagi (uzoq) ko'plik chiroqlar: those lights."
                         }
                     ]
                 }
@@ -525,159 +787,249 @@ export const ENGLISH_A1_LESSONS: Lesson[] = [
         "language": "en",
         "level": "A1",
         "lessonNumber": 4,
-        "title": "Articles: A, An, The",
-        "description": "Noaniq (A, An) va aniq (The) artikllarni to'g'ri qo'llash.",
-        "estimatedDurationMinutes": 12,
+        "title": "Articles: A, An, The (Foundations)",
+        "description": "Noaniq (A, An) va aniq (The) artikllarni tovushlar va qoidalar asosida to'g'ri qo'llash.",
+        "estimatedDurationMinutes": 15,
         "icon": "🔤",
         "steps": [
             {
                 "id": "en-a1-u1-l4-s1",
-                "title": "Artikllar Qoidasi",
+                "title": "Artikllar Qoidasi va Tovushlar",
                 "type": "learn",
-                "estimatedMinutes": 4,
+                "estimatedMinutes": 5,
                 "learnData": {
-                    "title": "A, An va The Artikllari",
-                    "explanation": "Undosh tovush bilan boshlangan birlik otlarga \"a\", unli tovush bilan boshlanganlarga \"an\" qo'yiladi. Aniq narsalar uchun \"the\" ishlatiladi.",
+                    "title": "A, An va The Artikllarini To'g'ri Qo'llash",
+                    "subtitle": "Unit 1 • 4-Dars: Tovush qoidalari va aniqlik kategoriyasi",
+                    "explanation": "O'zbek tilida artikl umuman mavjud emas, shu sababli bu mavzu o'zbek o'quvchilari uchun eng ko'p e'tibor talab qiladigan sohadir. Ingliz tilida sanoqli birlik ot oldidan doim artikl bo'lishi kerak. A va An tanlovi harfga emas, balki so'zning boshidagi TOVUSHGA bog'liq!",
                     "keyPoints": [
-                        "a car, a student, a university (/j/ undosh tovush)",
-                        "an apple, an hour (/aʊər/ unli tovush)",
-                        "the sun, the president (aniq/yagona narsalar)"
+                        "A -> Undosh tovush oldidan: a car, a book, a student, a university (/j/ tovushi!)",
+                        "AN -> Unli tovush oldidan: an apple, an engineer, an hour (h o'qilmaydi, /aʊ/ tovushi!)",
+                        "THE -> Aniq, oldin aytilgan yoki dunyoda yagona bo'lgan narsalar: the sun, the moon, the capital",
+                        "Kasblar bilan doim: I am A teacher; She is AN architect",
+                        "⚠️ Oltin qoida: \"He is doctor\" deb bo'lmaydi! Doim \"He is A doctor\" deyiladi."
                     ],
                     "vocabulary": [
                         {
                             "term": "Apple",
                             "reading": "/ˈæp.əl/",
-                            "meaning": "Olma",
-                            "exampleSentence": "I eat an apple daily.",
-                            "exampleTranslation": "Men har kuni bitta olma yeyman."
+                            "meaning": "Olma (unli tovush oldidan: an apple)",
+                            "exampleSentence": "I eat an apple every morning for breakfast.",
+                            "exampleTranslation": "Men har kuni nonushtaga bitta olma yeyman."
                         },
                         {
-                            "term": "Car",
-                            "reading": "/kɑːr/",
-                            "meaning": "Mashina",
-                            "exampleSentence": "He drives a car.",
-                            "exampleTranslation": "U mashina haydaydi."
+                            "term": "University",
+                            "reading": "/ˌjuː.nɪˈvɜː.sə.ti/",
+                            "meaning": "Universitet (/j/ undosh tovushi: a university)",
+                            "exampleSentence": "She is a student at a top international university.",
+                            "exampleTranslation": "U nufuzli xalqaro universitetda talaba."
                         },
                         {
-                            "term": "Friend",
-                            "reading": "/frend/",
-                            "meaning": "Doʻst",
-                            "exampleSentence": "She is my best friend.",
-                            "exampleTranslation": "U mening eng yaxshi doʻstim."
+                            "term": "Hour",
+                            "reading": "/aʊər/",
+                            "meaning": "Soat (vaqt o'lchovi; unli tovush: an hour)",
+                            "exampleSentence": "The speaking mock test takes an hour.",
+                            "exampleTranslation": "Speaking mock testi bir soat davom etadi."
+                        },
+                        {
+                            "term": "Doctor",
+                            "reading": "/ˈdɒk.tər/",
+                            "meaning": "Shifokor, doktor",
+                            "exampleSentence": "My father is a doctor at the central hospital.",
+                            "exampleTranslation": "Otam markaziy shifoxonada shifokor."
+                        },
+                        {
+                            "term": "Engineer",
+                            "reading": "/ˌen.dʒɪˈnɪər/",
+                            "meaning": "Muhandis (unli tovush: an engineer)",
+                            "exampleSentence": "Rustam is an experienced software engineer.",
+                            "exampleTranslation": "Rustam tajribali dasturiy ta'minot muhandisi."
+                        },
+                        {
+                            "term": "Sun",
+                            "reading": "/sʌn/",
+                            "meaning": "Quyosh (yagona narsa: the sun)",
+                            "exampleSentence": "The sun is shining brightly today.",
+                            "exampleTranslation": "Bugun quyosh charoqlab porlamoqda."
+                        },
+                        {
+                            "term": "World",
+                            "reading": "/wɜːld/",
+                            "meaning": "Dunyo, olam (yagona: the world)",
+                            "exampleSentence": "English is spoken all over the world.",
+                            "exampleTranslation": "Ingliz tili butun dunyo bo'ylab gapiriladi."
+                        },
+                        {
+                            "term": "Apartment",
+                            "reading": "/əˈpɑːt.mənt/",
+                            "meaning": "Kvartira, xonadon (unli: an apartment)",
+                            "exampleSentence": "I live in an apartment in the city center.",
+                            "exampleTranslation": "Men shahar markazidagi kvartirada yashayman."
                         }
                     ],
                     "grammarRules": [
                         {
-                            "pattern": "Articles: A, An, The",
-                            "meaning": "Noaniq (A, An) va aniq (The) artikllarni to'g'ri qo'llash.",
-                            "usageNotes": "Undosh tovush bilan boshlangan birlik otlarga \"a\", unli tovush bilan boshlanganlarga \"an\" qo'yiladi. Aniq narsalar uchun \"the\" ishlatiladi.",
+                            "pattern": "a + Consonant Sound | an + Vowel Sound | the + Specific / Unique Noun",
+                            "meaning": "Noaniq (birinchi marta eslatilgan) va aniq (yagona yoki ma'lum) otlarni belgilash",
+                            "usageNotes": "Muhim: Tovushga e'tibor bering! 'University' harfi unli (u) bo'lsa ham, tovushi /j/ (undosh) bo'lgani uchun 'a university'. 'Hour' harfi undosh (h) bo'lsa ham, tovushi /aʊ/ (unli) bo'lgani uchun 'an hour'.",
                             "examples": [
                                 {
-                                    "sentence": "I eat an apple daily.",
-                                    "translation": "Men har kuni bitta olma yeyman."
+                                    "sentence": "I bought a book yesterday. The book is very interesting.",
+                                    "translation": "Men kecha kitob sotib oldim. Kitob (o'sha kitob) juda qiziqarli."
                                 },
                                 {
-                                    "sentence": "He drives a car.",
-                                    "translation": "U mashina haydaydi."
+                                    "sentence": "He is an honest man who works as a teacher.",
+                                    "translation": "U o'qituvchi bo'lib ishlaydigan halol inson."
                                 }
                             ]
                         }
-                    ]
+                    ],
+                    "culturalNotes": "🎙️ IELTS Speaking Part 1 Foundation Corner:\nImtihon oluvchi: \"Do you live in a house or an apartment?\"\nNamunaviy javob: \"I live in an apartment in Tashkent. It is on the fifth floor of a modern building, and the view from the balcony is wonderful.\""
                 }
             },
             {
                 "id": "en-a1-u1-l4-s2",
-                "title": "Mashq",
+                "title": "Interaktiv Amaliy Mashq",
                 "type": "practice",
-                "estimatedMinutes": 4,
+                "estimatedMinutes": 5,
                 "practiceData": {
-                    "instructions": "To'g'ri artiklni tanlang.",
+                    "instructions": "Tovush va aniqlik qoidalariga binoan to'g'ri artiklni tanlang.",
                     "exercises": [
                         {
                             "id": "en-a1-u1-l4-e1",
                             "type": "multiple-choice",
-                            "prompt": "\"She is _______ architect.\"",
+                            "prompt": "\"She wants to become _______ architect in the future.\" Qaysi artikl to'g'ri?",
+                            "options": [
+                                "an",
+                                "a",
+                                "the",
+                                "— (no article)"
+                            ],
+                            "correctAnswer": 0,
+                            "explanation": "\"Architect\" unli /ɑː/ tovushi bilan boshlanadi: an architect."
+                        },
+                        {
+                            "id": "en-a1-u1-l4-e2",
+                            "type": "multiple-choice",
+                            "prompt": "\"It takes _______ hour to complete the reading section.\" Qaysi variant to'g'ri?",
+                            "options": [
+                                "an",
+                                "a",
+                                "the",
+                                "two"
+                            ],
+                            "correctAnswer": 0,
+                            "explanation": "\"Hour\" so'zidagi 'h' o'qilmaydi, unli tovush /aʊ/ bilan boshlanadi: an hour."
+                        },
+                        {
+                            "id": "en-a1-u1-l4-e3",
+                            "type": "multiple-choice",
+                            "prompt": "\"He studies at _______ university in London.\" Qaysi variant to'g'ri?",
                             "options": [
                                 "a",
                                 "an",
-                                "no article",
-                                "the"
+                                "the",
+                                "—"
                             ],
-                            "correctAnswer": 1,
-                            "explanation": "\"Architect\" unli /ɑː/ tovushi bilan boshlangani uchun \"an\" olinadi."
+                            "correctAnswer": 0,
+                            "explanation": "\"University\" so'zi /j/ undosh tovushi bilan boshlanadi: a university."
                         },
                         {
-                            "id": "en-a1-u1-l4-ex-2",
+                            "id": "en-a1-u1-l4-e4",
                             "type": "multiple-choice",
-                            "prompt": "Choose the correct word to complete the sentence: \"He drives a car.\"",
+                            "prompt": "\"_______ moon moves around the Earth.\" Qaysi artikl to'g'ri?",
                             "options": [
-                                "delay",
-                                "Car",
-                                "doubt",
-                                "reluctance"
+                                "The",
+                                "A",
+                                "An",
+                                "Those"
+                            ],
+                            "correctAnswer": 0,
+                            "explanation": "Oy (moon) va Yer (Earth) koinotda yagona bo'lgani uchun \"The\" olinadi."
+                        },
+                        {
+                            "id": "en-a1-u1-l4-e5",
+                            "type": "multiple-choice",
+                            "prompt": "Qaysi gapda artikl XATO ishlatilgan?",
+                            "options": [
+                                "She is a doctor.",
+                                "He is an teacher.",
+                                "I have an apple.",
+                                "The sun is bright."
                             ],
                             "correctAnswer": 1,
-                            "explanation": "\"Car\" (Mashina) fits the context appropriately."
+                            "explanation": "\"Teacher\" /t/ undosh tovush bilan boshlanadi, shuning uchun \"a teacher\" bo'lishi shart."
                         }
                     ]
                 }
             },
             {
                 "id": "en-a1-u1-l4-s3",
-                "title": "Test",
+                "title": "Dars Sinov Testi",
                 "type": "test",
-                "estimatedMinutes": 4,
+                "estimatedMinutes": 5,
                 "testData": {
-                    "instructions": "Savollarga javob bering.",
-                    "passingScorePercentage": 75,
+                    "instructions": "Savollarga javob berib, darsni yakunlang.",
+                    "passingScorePercentage": 80,
                     "questions": [
                         {
                             "id": "en-a1-u1-l4-q1",
-                            "question": "I saw _______ interesting movie yesterday.",
+                            "question": "My father works as _______ engineer at an IT firm.",
                             "options": [
-                                "a",
                                 "an",
-                                "these",
-                                "the"
+                                "a",
+                                "the",
+                                "no article"
                             ],
-                            "correctAnswerIndex": 1,
-                            "explanation": "Interesting unli bilan boshlanadi: an."
+                            "correctAnswerIndex": 0,
+                            "explanation": "Engineer unli tovush bilan boshlangani uchun: an engineer."
                         },
                         {
                             "id": "en-a1-u1-l4-q2",
-                            "question": "_______ moon is very bright tonight.",
+                            "question": "Can I ask _______ quick question, please?",
                             "options": [
-                                "An",
-                                "A",
-                                "The",
-                                "This"
+                                "a",
+                                "an",
+                                "the",
+                                "these"
                             ],
-                            "correctAnswerIndex": 2,
-                            "explanation": "Oy yagona bo'lgani uchun: The moon."
+                            "correctAnswerIndex": 0,
+                            "explanation": "Quick undosh bilan boshlanadi: a quick question."
                         },
                         {
                             "id": "en-a1-u1-l4-q3",
-                            "question": "He is _______ university professor.",
+                            "question": "We visited _______ capital of France last summer.",
                             "options": [
                                 "the",
-                                "those",
+                                "a",
                                 "an",
-                                "a"
+                                "this"
                             ],
-                            "correctAnswerIndex": 3,
-                            "explanation": "University /j/ undosh tovushi bilan boshlanadi: a university."
+                            "correctAnswerIndex": 0,
+                            "explanation": "Fransiyaning poytaxti aniq bitta (Parij), shuning uchun: the capital."
                         },
                         {
                             "id": "en-a1-u1-l4-q4",
-                            "question": "Can I have _______ glass of water?",
+                            "question": "She lives in _______ modern apartment with two rooms.",
                             "options": [
                                 "a",
-                                "any",
+                                "an",
                                 "the",
-                                "an"
+                                "these"
                             ],
                             "correctAnswerIndex": 0,
-                            "explanation": "A glass of water."
+                            "explanation": "Modern undosh tovush /m/ bilan boshlanadi: a modern apartment."
+                        },
+                        {
+                            "id": "en-a1-u1-l4-q5",
+                            "question": "He has _______ uniform for school.",
+                            "options": [
+                                "a",
+                                "an",
+                                "the",
+                                "these"
+                            ],
+                            "correctAnswerIndex": 0,
+                            "explanation": "Uniform /j/ undosh tovush bilan boshlanadi: a uniform."
                         }
                     ]
                 }
@@ -692,139 +1044,218 @@ export const ENGLISH_A1_LESSONS: Lesson[] = [
         "language": "en",
         "level": "A1",
         "lessonNumber": 5,
-        "title": "Possessives: My, Your, His, Her",
-        "description": "Egalik olmoshlari va narsalarning kimga tegishli ekanligini bildirish.",
-        "estimatedDurationMinutes": 10,
+        "title": "Possessives: My, Your, His, Her & 's",
+        "description": "Egalik olmoshlari (my, your, his, her, our, their) va kishilik egalik qo'shimchasi ('s) bilan to'g'ri munosabat qurish.",
+        "estimatedDurationMinutes": 15,
         "icon": "🏷️",
         "steps": [
             {
                 "id": "en-a1-u1-l5-s1",
-                "title": "Egalik Olmoshlari",
+                "title": "Egalik Shakllari & Qoidalar",
                 "type": "learn",
-                "estimatedMinutes": 4,
+                "estimatedMinutes": 5,
                 "learnData": {
-                    "title": "My, Your, His, Her, Its, Our, Their",
-                    "explanation": "Kimning narsasi ekanligini aytish uchun egalik olmoshlaridan foydalanamiz.",
+                    "title": "Egalik Olmoshlari va 's Qo'shimchasi",
+                    "subtitle": "Unit 1 • 5-Dars: Narsalarning kimga tegishli ekanligini ifodalash",
+                    "explanation": "Ingliz tilida narsalarning kimga tegishli ekanligini aytish uchun ikki asosiy usuldan foydalanamiz: egalik olmoshlari (my, your, his, her, our, their) hamda shaxs ismlariga qo'shiladigan \" 's \" qo'shimchasi.",
                     "keyPoints": [
-                        "My (mening), Your (sening/sizning)",
-                        "His (uning - o'g'il bola), Her (uning - qiz bola)",
-                        "Our (bizning), Their (ularning)"
+                        "My (mening) | Your (sening / sizning)",
+                        "His (uning — erkak kishiga!) | Her (uning — ayol kishiga!) | Its (uning — jonsiz/hayvon)",
+                        "Our (bizning) | Their (ularning)",
+                        "Egalik 's: Davron's book (Davronning kitobi), My sister's name (Singlimning ismi)",
+                        "⚠️ O'zbek tili bilan farqi: O'zbek tilida erkak va ayolga birdek \"uning\" deyiladi. Ingliz tilida adashmang: John -> HIS name; Mary -> HER name!",
+                        "⚠️ Tipik xato: \"Her name is John\" (XATO) -> \"His name is John\" (TO'G'RI)."
                     ],
                     "vocabulary": [
                         {
-                            "term": "Passport",
-                            "reading": "/ˈpɑːs.pɔːt/",
-                            "meaning": "Pasport",
-                            "exampleSentence": "Where is my passport?",
-                            "exampleTranslation": "Mening pasportim qayerda?"
+                            "term": "My",
+                            "reading": "/maɪ/",
+                            "meaning": "Mening",
+                            "exampleSentence": "My favorite subject is English.",
+                            "exampleTranslation": "Mening sevimli fanim ingliz tili."
                         },
                         {
-                            "term": "Phone",
-                            "reading": "/foʊn/",
-                            "meaning": "Telefon",
-                            "exampleSentence": "Her phone is new.",
-                            "exampleTranslation": "Uning telefoni yangi."
+                            "term": "Your",
+                            "reading": "/jɔːr/",
+                            "meaning": "Sening / Sizning",
+                            "exampleSentence": "What is your target IELTS score?",
+                            "exampleTranslation": "Sizning maqsadli IELTS balingiz necha?"
+                        },
+                        {
+                            "term": "His",
+                            "reading": "/hɪz/",
+                            "meaning": "Uning (erkak kishi)",
+                            "exampleSentence": "His father is a high school teacher.",
+                            "exampleTranslation": "Uning otasi yuqori sinf o'qituvchisi."
+                        },
+                        {
+                            "term": "Her",
+                            "reading": "/hɜːr/",
+                            "meaning": "Uning (ayol kishi)",
+                            "exampleSentence": "Her pronunciation is very clear.",
+                            "exampleTranslation": "Uning talaffuzi juda aniq va ravon."
+                        },
+                        {
+                            "term": "Our",
+                            "reading": "/aʊər/",
+                            "meaning": "Bizning",
+                            "exampleSentence": "Our study group practices speaking every day.",
+                            "exampleTranslation": "Bizning o'quv guruhimiz har kuni speaking mashq qiladi."
+                        },
+                        {
+                            "term": "Their",
+                            "reading": "/ðeər/",
+                            "meaning": "Ularning",
+                            "exampleSentence": "Their apartment is close to the station.",
+                            "exampleTranslation": "Ularning xonadoni bekatga yaqin."
                         },
                         {
                             "term": "Family",
                             "reading": "/ˈfæm.əl.i/",
                             "meaning": "Oila",
-                            "exampleSentence": "I love my family.",
-                            "exampleTranslation": "Men oilamni yaxshi koʻraman."
+                            "exampleSentence": "My family is very supportive of my goals.",
+                            "exampleTranslation": "Oilam mening maqsadlarimni juda qo'llab-quvvatlaydi."
+                        },
+                        {
+                            "term": "Passport",
+                            "reading": "/ˈpɑːs.pɔːt/",
+                            "meaning": "Pasport",
+                            "exampleSentence": "Do not forget your passport for the IELTS test.",
+                            "exampleTranslation": "IELTS testi uchun pasportingizni unutmang."
                         }
                     ],
                     "grammarRules": [
                         {
-                            "pattern": "Possessives: My, Your, His, Her",
-                            "meaning": "Egalik olmoshlari va narsalarning kimga tegishli ekanligini bildirish.",
-                            "usageNotes": "Kimning narsasi ekanligini aytish uchun egalik olmoshlaridan foydalanamiz.",
+                            "pattern": "Possessive Determiner + Noun | Person's + Noun",
+                            "meaning": "Mulkiy egalik va munosabatlarni aniqlash",
+                            "usageNotes": "Egalik olmoshlaridan keyin doim ot keladi (my book, her car). 's qo'shimchasi shaxs ismiga qo'shiladi: Anna's bag (Annaning sumkasi).",
                             "examples": [
                                 {
-                                    "sentence": "Where is my passport?",
-                                    "translation": "Mening pasportim qayerda?"
+                                    "sentence": "This is Alex's notebook, and that is his laptop.",
+                                    "translation": "Bu Aleksning daftari, ana u esa uning noutbuki."
                                 },
                                 {
-                                    "sentence": "Her phone is new.",
-                                    "translation": "Uning telefoni yangi."
+                                    "sentence": "Our teacher always checks our homework carefully.",
+                                    "translation": "Bizning o'qituvchimiz uy vazifamizni doim diqqat bilan tekshiradi."
                                 }
                             ]
                         }
-                    ]
+                    ],
+                    "culturalNotes": "🎙️ IELTS Speaking Part 1 Foundation Corner:\nImtihon oluvchi: \"Tell me about a close friend of yours.\"\nNamunaviy javob: \"My best friend is Jasur. His personality is very friendly and energetic. Our friendship started at university, and we often practice English together.\""
                 }
             },
             {
                 "id": "en-a1-u1-l5-s2",
-                "title": "Mashq",
+                "title": "Interaktiv Amaliy Mashq",
                 "type": "practice",
-                "estimatedMinutes": 3,
+                "estimatedMinutes": 5,
                 "practiceData": {
-                    "instructions": "To'g'ri egalik olmoshini tanlang.",
+                    "instructions": "Gaplarga mos to'g'ri egalik olmoshini tanlang.",
                     "exercises": [
                         {
                             "id": "en-a1-u1-l5-e1",
                             "type": "multiple-choice",
-                            "prompt": "\"John has a dog. _______ dog is brown.\"",
+                            "prompt": "\"Davron is studying hard. _______ goal is to get IELTS 7.5.\" Qaysi olmosh to'g'ri?",
                             "options": [
-                                "Their",
-                                "My",
                                 "His",
-                                "Her"
-                            ],
-                            "correctAnswer": 2,
-                            "explanation": "John erkak kishi bo'lgani uchun \"His\" ishlatiladi."
-                        },
-                        {
-                            "id": "en-a1-u1-l5-ex-2",
-                            "type": "multiple-choice",
-                            "prompt": "Choose the correct word to complete the sentence: \"Her phone is new.\"",
-                            "options": [
-                                "Phone",
-                                "delay",
-                                "reluctance",
-                                "doubt"
+                                "Her",
+                                "Their",
+                                "My"
                             ],
                             "correctAnswer": 0,
-                            "explanation": "\"Phone\" (Telefon) fits the context appropriately."
+                            "explanation": "Davron erkak kishi bo'lgani uchun \"His\" (uning) ishlatiladi."
+                        },
+                        {
+                            "id": "en-a1-u1-l5-e2",
+                            "type": "multiple-choice",
+                            "prompt": "\"Madina is an architect. _______ office is located in downtown Tashkent.\"",
+                            "options": [
+                                "Her",
+                                "His",
+                                "Their",
+                                "Our"
+                            ],
+                            "correctAnswer": 0,
+                            "explanation": "Madina ayol kishi bo'lgani sababli \"Her\" to'g'ri."
+                        },
+                        {
+                            "id": "en-a1-u1-l5-e3",
+                            "type": "multiple-choice",
+                            "prompt": "\"We love _______ English teacher because she explains everything clearly.\"",
+                            "options": [
+                                "our",
+                                "we",
+                                "us",
+                                "their"
+                            ],
+                            "correctAnswer": 0,
+                            "explanation": "\"We\" (biz) ning egalik shakli: our (bizning)."
+                        },
+                        {
+                            "id": "en-a1-u1-l5-e4",
+                            "type": "multiple-choice",
+                            "prompt": "\"This is my _______ car.\" (Akamning mashinasi)",
+                            "options": [
+                                "brother's",
+                                "brothers",
+                                "brother",
+                                "brother is"
+                            ],
+                            "correctAnswer": 0,
+                            "explanation": "Egalikni bildirish uchun 's qo'shiladi: brother's car."
+                        },
+                        {
+                            "id": "en-a1-u1-l5-e5",
+                            "type": "multiple-choice",
+                            "prompt": "\"The students are preparing _______ presentations for class tomorrow.\"",
+                            "options": [
+                                "their",
+                                "there",
+                                "they",
+                                "them"
+                            ],
+                            "correctAnswer": 0,
+                            "explanation": "The students (ular) ning egalik shakli: their (ularning)."
                         }
                     ]
                 }
             },
             {
                 "id": "en-a1-u1-l5-s3",
-                "title": "Test",
+                "title": "Dars Sinov Testi",
                 "type": "test",
-                "estimatedMinutes": 3,
+                "estimatedMinutes": 5,
                 "testData": {
-                    "instructions": "Savollarga javob bering.",
-                    "passingScorePercentage": 75,
+                    "instructions": "Savollarga javob bering va Unit 1 ni muvaffaqiyatli yakunlang.",
+                    "passingScorePercentage": 80,
                     "questions": [
                         {
                             "id": "en-a1-u1-l5-q1",
-                            "question": "Sarah is an engineer. _______ office is in downtown.",
+                            "question": "Sarah left _______ bag in the library yesterday.",
                             "options": [
-                                "Our",
-                                "Their",
-                                "Her",
-                                "His"
+                                "her",
+                                "his",
+                                "its",
+                                "their"
                             ],
-                            "correctAnswerIndex": 2,
-                            "explanation": "Sarah ayol kishi: Her office."
+                            "correctAnswerIndex": 0,
+                            "explanation": "Sarah ayol kishi: her bag."
                         },
                         {
                             "id": "en-a1-u1-l5-q2",
-                            "question": "We love _______ new apartment.",
+                            "question": "Is this _______ passport on the registration desk, David?",
                             "options": [
-                                "they",
-                                "our",
-                                "we",
-                                "us"
+                                "your",
+                                "you",
+                                "yours",
+                                "he"
                             ],
-                            "correctAnswerIndex": 1,
-                            "explanation": "We uchun egalik: our."
+                            "correctAnswerIndex": 0,
+                            "explanation": "Sizning / sening pasporting: your passport."
                         },
                         {
                             "id": "en-a1-u1-l5-q3",
-                            "question": "The students are doing _______ homework.",
+                            "question": "Jack and Jill live with _______ parents in London.",
                             "options": [
                                 "their",
                                 "there",
@@ -832,19 +1263,31 @@ export const ENGLISH_A1_LESSONS: Lesson[] = [
                                 "them"
                             ],
                             "correctAnswerIndex": 0,
-                            "explanation": "Students ko'plik: their."
+                            "explanation": "Jack and Jill (ular) ning ota-onasi: their parents."
                         },
                         {
                             "id": "en-a1-u1-l5-q4",
-                            "question": "Is this _______ coat, David?",
+                            "question": "What is your _______ occupation? (Otangizning kasbi)",
                             "options": [
-                                "you",
-                                "yours",
-                                "he",
-                                "your"
+                                "father's",
+                                "fathers",
+                                "father",
+                                "father is"
                             ],
-                            "correctAnswerIndex": 3,
-                            "explanation": "Sening paltongmi: your coat."
+                            "correctAnswerIndex": 0,
+                            "explanation": "Otangizning: father's."
+                        },
+                        {
+                            "id": "en-a1-u1-l5-q5",
+                            "question": "We really enjoy _______ lessons at IELTS Talk platform.",
+                            "options": [
+                                "our",
+                                "us",
+                                "we",
+                                "they"
+                            ],
+                            "correctAnswerIndex": 0,
+                            "explanation": "Bizning darslarimiz: our lessons."
                         }
                     ]
                 }
