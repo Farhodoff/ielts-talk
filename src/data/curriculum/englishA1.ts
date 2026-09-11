@@ -3734,164 +3734,228 @@ export const ENGLISH_A1_LESSONS: Lesson[] = [
         "level": "A1",
         "lessonNumber": 1,
         "title": "Modal Verb: Can for Ability & Permission",
-        "description": "Imkoniyat va qobiliyatni ifodalash (I can swim).",
-        "estimatedDurationMinutes": 12,
+        "description": "Qobiliyat, imkoniyat va ruxsat so'rashda 'can' hamda 'can't' modal fe'llarining qo'llanilishi.",
+        "estimatedDurationMinutes": 14,
         "icon": "🏊",
         "steps": [
-            {
-                "id": "en-a1-u4-l1-s1",
-                "title": "Can / Can't Qoidasi",
-                "type": "learn",
-                "estimatedMinutes": 4,
-                "learnData": {
-                    "title": "Can and Can't",
-                    "explanation": "Biror ishni bajara olish qobiliyati yoki ruxsat uchun \"can\" ishlatiladi. Barcha shaxslar uchun shakli bir xil.",
-                    "keyPoints": [
-                        "I can speak English.",
-                        "He can swim.",
-                        "Can you help me?"
-                    ],
-                    "vocabulary": [
-                        {
-                            "term": "Swim",
-                            "reading": "/swɪm/",
-                            "meaning": "Suzmoq",
-                            "exampleSentence": "I can swim fast.",
-                            "exampleTranslation": "Men tez suza olaman."
-                        },
-                        {
-                            "term": "Drive",
-                            "reading": "/draɪv/",
-                            "meaning": "Haydamoq",
-                            "exampleSentence": "Can you drive a car?",
-                            "exampleTranslation": "Mashina hayday olasizmi?"
-                        },
-                        {
-                            "term": "Friend",
-                            "reading": "/frend/",
-                            "meaning": "Doʻst",
-                            "exampleSentence": "She is my best friend.",
-                            "exampleTranslation": "U mening eng yaxshi doʻstim."
+                {
+                        "id": "en-a1-u4-l1-s1",
+                        "title": "Can va Can't Qoidalari",
+                        "type": "learn",
+                        "estimatedMinutes": 5,
+                        "learnData": {
+                                "title": "Expressing Ability and Asking Permission with 'Can'",
+                                "explanation": "Modal fe'llar — harakatni bajarish qobiliyati yoki ruxsatni bildiradi:\n\n1. Grammatik xususiyatlari:\n- 'Can' barcha shaxslar uchun bir xil (he/she uchun -s qo'shilmaydi: He can, She can).\n- 'Can' dan keyin fe'l har doim boshlang'ich (infinitive) shaklda 'TO' siz keladi:\n  • ✅ \"I can swim.\" / \"She can speak English.\"\n  • ❌ \"She cans speak\" yoki \"I can to swim\".\n- Inkor shakli: cannot yoki qisqartmasi \"can't\" (/kɑːnt/ yoki AQSH: /kænt/):\n  • \"He can't drive a car.\"\n- So'roq shakli: 'Can' egadan oldinga o'tadi:\n  • \"Can you play the guitar?\" -> \"Yes, I can.\" / \"No, I can't.\"\n\n2. Ruxsat va iltimos so'rash (Permission & Requests):\n- \"Can I open the window, please?\" (Derazani ochsam maylimi?)\n- \"Can you help me with this heavy bag?\" (Menga bu og'ir sumka bilan yordam bera olasizmi?).\n\n3. O'zbek o'rganuvchilari uchun xavfli tuzoqlar (Common Pitfalls):\n- ❌ \"He cans play chess.\" -> ✅ \"He CAN play chess.\" ('Can' hech qachon -s olmaydi).\n- ❌ \"I can to dance.\" -> ✅ \"I can dance.\" ('Can' dan keyin 'to' qo'yilmaydi).\n- ❌ \"Do you can swim?\" -> ✅ \"CAN you swim?\" (Modal fe'llar 'do/does' yordamchisiz savol yasaydi).\n\n4. IELTS Speaking Part 1 Foundation Corner:\n- Topic: Skills & Talents\n- Examiner: \"What skills or abilities are you proud of?\"\n- Model Band 6.0+ Answer: \"Well, I can speak two foreign languages fluently, and I can also code simple computer programs. I believe acquiring practical skills is essential for my future career.\"\n- Pronunciation Tip: Darak gapda \"can\" odatda kuchsiz talaffuz qilinadi: /kən/ (\"I can swim\" -> /aɪ kən swɪm/). Inkor \"can't\" esa urg'u bilan jarangli aytiladi: /kɑːnt/.",
+                                "vocabulary": [
+                                        {
+                                                "term": "swim",
+                                                "reading": "/swɪm/",
+                                                "meaning": "suzmoq",
+                                                "exampleSentence": "She can swim across the pool in just thirty seconds.",
+                                                "exampleTranslation": "U hovuzni atigi o'ttiz soniyada suzib o'ta oladi."
+                                        },
+                                        {
+                                                "term": "drive",
+                                                "reading": "/draɪv/",
+                                                "meaning": "mashina haydamoq",
+                                                "exampleSentence": "My brother can drive both manual and automatic cars.",
+                                                "exampleTranslation": "Akam ham mexanik, ham avtomat mashinalarni hayday oladi."
+                                        },
+                                        {
+                                                "term": "play the guitar",
+                                                "reading": "/pleɪ ðə ɡɪˈtɑː/",
+                                                "meaning": "gitara chalmoq (cholg'u oldidan 'the' keladi)",
+                                                "exampleSentence": "He can play the acoustic guitar beautifully.",
+                                                "exampleTranslation": "U akustik gitarani juda chiroyli chala oladi."
+                                        },
+                                        {
+                                                "term": "fluently",
+                                                "reading": "/ˈfluːəntli/",
+                                                "meaning": "ravon, to'xtalmasdan (gapirmoq)",
+                                                "exampleSentence": "Aziza can communicate in English fluently with tourists.",
+                                                "exampleTranslation": "Aziza sayyohlar bilan ingliz tilida ravon muloqot qila oladi."
+                                        },
+                                        {
+                                                "term": "skill",
+                                                "reading": "/skɪl/",
+                                                "meaning": "mahorat, ko'nikma",
+                                                "exampleSentence": "Cooking is a vital practical skill for every young adult.",
+                                                "exampleTranslation": "Taom tayyorlash har bir yosh inson uchun muhim hayotiy ko'nikmadir."
+                                        },
+                                        {
+                                                "term": "solve",
+                                                "reading": "/sɒlv/",
+                                                "meaning": "yechmoq, hal qilmoq (masala, muammo)",
+                                                "exampleSentence": "He can solve complex mathematical equations easily.",
+                                                "exampleTranslation": "U murakkab matematik tenglamalarni osonlikcha yecha oladi."
+                                        },
+                                        {
+                                                "term": "climb",
+                                                "reading": "/klaɪm/",
+                                                "meaning": "tirmashib chiqmoq (b harfi o'qilmaydi)",
+                                                "exampleSentence": "Experienced mountaineers can climb this steep rocky mountain.",
+                                                "exampleTranslation": "Tajribali alpinistlar bu tik qoyali toqqa chiqa oladilar."
+                                        },
+                                        {
+                                                "term": "permission",
+                                                "reading": "/pəˈmɪʃən/",
+                                                "meaning": "ruxsat, ijozat",
+                                                "exampleSentence": "You need official permission before recording videos here.",
+                                                "exampleTranslation": "Bu yerda video tasvirga olishdan oldin sizga rasmiy ruxsat kerak bo'ladi."
+                                        }
+                                ]
                         }
-                    ],
-                    "grammarRules": [
-                        {
-                            "pattern": "Modal Verb: Can for Ability & Permission",
-                            "meaning": "Imkoniyat va qobiliyatni ifodalash (I can swim).",
-                            "usageNotes": "Biror ishni bajara olish qobiliyati yoki ruxsat uchun \"can\" ishlatiladi. Barcha shaxslar uchun shakli bir xil.",
-                            "examples": [
-                                {
-                                    "sentence": "I can swim fast.",
-                                    "translation": "Men tez suza olaman."
-                                },
-                                {
-                                    "sentence": "Can you drive a car?",
-                                    "translation": "Mashina hayday olasizmi?"
-                                }
-                            ]
+                },
+                {
+                        "id": "en-a1-u4-l1-s2",
+                        "title": "Can Mashqlari",
+                        "type": "practice",
+                        "estimatedMinutes": 4,
+                        "practiceData": {
+                                "instructions": "Bo'sh joylarni to'ldiring yoki eng to'g'ri grammatik javobni tanlang.",
+                                "exercises": [
+                                        {
+                                                "id": "en-a1-u4-l1-e1",
+                                                "type": "multiple-choice",
+                                                "prompt": "Qaysi jumla grammatik jihatdan MUTLAQO TO'G'RI?",
+                                                "options": [
+                                                        "He cans speak German very well.",
+                                                        "He can to speak German very well.",
+                                                        "He can speak German very well.",
+                                                        "He does can speak German very well."
+                                                ],
+                                                "correctAnswer": 2,
+                                                "explanation": "'Can' barcha shaxslar uchun o'zgarmaydi va o'zidan keyin 'to' siz asosiy fe'lni talab qiladi: 'He can speak'."
+                                        },
+                                        {
+                                                "id": "en-a1-u4-l1-e2",
+                                                "type": "multiple-choice",
+                                                "prompt": "'Siz shaxmat o'ynay olasizmi?' savolining to'g'ri inglizcha shakli qaysi?",
+                                                "options": [
+                                                        "Do you can play chess?",
+                                                        "Can you play chess?",
+                                                        "Are you can play chess?",
+                                                        "Can you to play chess?"
+                                                ],
+                                                "correctAnswer": 1,
+                                                "explanation": "'Can' bilan so'roq 'Can + ega + fe'l' formulasida yasaladi: 'Can you play chess?'."
+                                        },
+                                        {
+                                                "id": "en-a1-u4-l1-e3",
+                                                "type": "multiple-choice",
+                                                "prompt": "Inkor gapni to'g'ri to'ldiring: 'Sarah is only three years old, so she ___ ride a bicycle.'",
+                                                "options": [
+                                                        "can't",
+                                                        "doesn't can",
+                                                        "isn't can",
+                                                        "cannots"
+                                                ],
+                                                "correctAnswer": 0,
+                                                "explanation": "'Can' ning inkori 'can't' (yoki cannot) bo'ladi."
+                                        },
+                                        {
+                                                "id": "en-a1-u4-l1-e4",
+                                                "type": "multiple-choice",
+                                                "prompt": "Musiqa asboblari oldidan qaysi artikl qo'llaniladi? 'He can play ___ piano.'",
+                                                "options": [
+                                                        "a",
+                                                        "an",
+                                                        "the",
+                                                        "artikl kerak emas"
+                                                ],
+                                                "correctAnswer": 2,
+                                                "explanation": "Ingliz tilida cholg'u asboblarini chalish haqida gapirganda 'play the + asbob' (play the piano, play the guitar) ishlatiladi."
+                                        },
+                                        {
+                                                "id": "en-a1-u4-l1-e5",
+                                                "type": "multiple-choice",
+                                                "prompt": "'Kechirasiz, qalamingizni olib tursam maylimi?' so'rovi qanday aytiladi?",
+                                                "options": [
+                                                        "Can I borrow your pencil, please?",
+                                                        "Do I can take your pencil?",
+                                                        "I can borrow your pencil?",
+                                                        "Can borrow your pencil me?"
+                                                ],
+                                                "correctAnswer": 0,
+                                                "explanation": "Ruxsat so'rash: 'Can I borrow..., please?'."
+                                        }
+                                ]
                         }
-                    ]
+                },
+                {
+                        "id": "en-a1-u4-l1-s3",
+                        "title": "Dars Testi: Modal Verb Can",
+                        "type": "test",
+                        "estimatedMinutes": 5,
+                        "testData": {
+                                "instructions": "Savollarga to'g'ri javob berib, mavzuni mustahkamlang.",
+                                "passingScorePercentage": 80,
+                                "questions": [
+                                        {
+                                                "id": "en-a1-u4-l1-q1",
+                                                "question": "Modal fe'l 'can' haqidagi qaysi qoida to'g'ri?",
+                                                "options": [
+                                                        "Uchinchi shaxs birlikda (he/she/it) -s qo'shimchasini oladi.",
+                                                        "O'zidan keyingi fe'l bilan 'to' yuklamasi orqali bog'lanadi.",
+                                                        "Barcha shaxslar bilan bir xil shaklda va 'to' siz fe'l bilan qo'llanadi.",
+                                                        "Savol tuzishda 'do/does' yordamchi fe'liga muhtoj bo'ladi."
+                                                ],
+                                                "correctAnswerIndex": 2,
+                                                "explanation": "'Can' modal fe'li barcha shaxslar uchun bir xil va fe'lning sof asosi (bare infinitive) bilan keladi."
+                                        },
+                                        {
+                                                "id": "en-a1-u4-l1-q2",
+                                                "question": "'Climb' (tirmashib chiqmoq) so'zidagi qaysi harf talaffuz qilinmaydi (silent letter)?",
+                                                "options": [
+                                                        "c",
+                                                        "l",
+                                                        "m",
+                                                        "b"
+                                                ],
+                                                "correctAnswerIndex": 3,
+                                                "explanation": "'Climb' /klaɪm/ so'zida oxirgi 'b' harfi talaffuz etilmaydi."
+                                        },
+                                        {
+                                                "id": "en-a1-u4-l1-q3",
+                                                "question": "'Can you speak French?' savoliga qisqa inkor javob qanday beriladi?",
+                                                "options": [
+                                                        "No, I don't.",
+                                                        "No, I can't.",
+                                                        "No, I'm not.",
+                                                        "No, I not can."
+                                                ],
+                                                "correctAnswerIndex": 1,
+                                                "explanation": "'Can' bilan berilgan savolga inkor: 'No, I can't'."
+                                        },
+                                        {
+                                                "id": "en-a1-u4-l1-q4",
+                                                "question": "'My grandmother can knit warm sweaters.' Ushbu jumlada 'can' nima ma'noni bildiradi?",
+                                                "options": [
+                                                        "Ruxsat so'rash",
+                                                        "Jismoniy/aqliy mahorat va qobiliyat",
+                                                        "Majburiyat",
+                                                        "Iltimos"
+                                                ],
+                                                "correctAnswerIndex": 1,
+                                                "explanation": "Bu yerda buvisining to'qish mahorati va qobiliyati (ability) ifodalangan."
+                                        },
+                                        {
+                                                "id": "en-a1-u4-l1-q5",
+                                                "question": "IELTS Speaking: 'Is there any skill you would like to learn in the future?' savoliga qaysi javob eng maqbul?",
+                                                "options": [
+                                                        "I can swim already.",
+                                                        "In the future, I would definitely love to learn how to play the guitar because music helps me unwind after a hectic day.",
+                                                        "Future skill is no need.",
+                                                        "I am learn computer maybe."
+                                                ],
+                                                "correctAnswerIndex": 1,
+                                                "explanation": "'I would definitely love to learn how to play the guitar because music helps me unwind after a hectic day' - Band 6.5+ darajasidagi tabiiy va asosli javob."
+                                        }
+                                ]
+                        }
                 }
-            },
-            {
-                "id": "en-a1-u4-l1-s2",
-                "title": "Mashq",
-                "type": "practice",
-                "estimatedMinutes": 4,
-                "practiceData": {
-                    "instructions": "To'g'ri shaklni tanlang.",
-                    "exercises": [
-                        {
-                            "id": "en-a1-u4-l1-e1",
-                            "type": "multiple-choice",
-                            "prompt": "\"She _______ (can) play the piano beautifully.\"",
-                            "options": [
-                                "cans",
-                                "is can",
-                                "can",
-                                "can to"
-                            ],
-                            "correctAnswer": 2,
-                            "explanation": "Can fe'li o'zgarmaydi: She can play."
-                        },
-                        {
-                            "id": "en-a1-u4-l1-ex-2",
-                            "type": "multiple-choice",
-                            "prompt": "Choose the correct word to complete the sentence: \"Can you drive a car?\"",
-                            "options": [
-                                "doubt",
-                                "delay",
-                                "reluctance",
-                                "Drive"
-                            ],
-                            "correctAnswer": 3,
-                            "explanation": "\"Drive\" (Haydamoq) fits the context appropriately."
-                        }
-                    ]
-                }
-            },
-            {
-                "id": "en-a1-u4-l1-s3",
-                "title": "Test",
-                "type": "test",
-                "estimatedMinutes": 4,
-                "testData": {
-                    "instructions": "Savollarga javob bering.",
-                    "passingScorePercentage": 75,
-                    "questions": [
-                        {
-                            "id": "en-a1-u4-l1-q1",
-                            "question": "I _______ speak French, but I can speak English.",
-                            "options": [
-                                "am not",
-                                "no",
-                                "can't",
-                                "don't can"
-                            ],
-                            "correctAnswerIndex": 2,
-                            "explanation": "I can't speak French."
-                        },
-                        {
-                            "id": "en-a1-u4-l1-q2",
-                            "question": "_______ you swim across the river?",
-                            "options": [
-                                "Can",
-                                "Is",
-                                "Are",
-                                "Do"
-                            ],
-                            "correctAnswerIndex": 0,
-                            "explanation": "Can you swim...?"
-                        },
-                        {
-                            "id": "en-a1-u4-l1-q3",
-                            "question": "He can _______ very fast.",
-                            "options": [
-                                "to run",
-                                "running",
-                                "runs",
-                                "run"
-                            ],
-                            "correctAnswerIndex": 3,
-                            "explanation": "Can dan keyin oddiy fe'l keladi: run."
-                        },
-                        {
-                            "id": "en-a1-u4-l1-q4",
-                            "question": "\"Can I open the window?\" nima ma'noni bildiradi?",
-                            "options": [
-                                "Derazani kim ochdi?",
-                                "Deraza ochiqmi?",
-                                "Derazani ochsam maylimi? (Ruxsat)",
-                                "Deraza buzilganmi?"
-                            ],
-                            "correctAnswerIndex": 2,
-                            "explanation": "Ruxsat so'rash iborasi."
-                        }
-                    ]
-                }
-            }
         ]
-    },
+},
     {
         "id": "en-a1-u4-l2",
         "courseId": "english-a1",
@@ -3901,159 +3965,228 @@ export const ENGLISH_A1_LESSONS: Lesson[] = [
         "level": "A1",
         "lessonNumber": 2,
         "title": "Hobbies & Free Time Activities",
-        "description": "Qiziqishlar va bo'sh vaqtdagi mashg'ulotlar haqida so'zlashuv.",
-        "estimatedDurationMinutes": 12,
+        "description": "Bo'sh vaqt mashg'ulotlari, sevimli qiziqishlar va fe'llar uyg'unligi (play, go, do).",
+        "estimatedDurationMinutes": 14,
         "icon": "🎨",
         "steps": [
-            {
-                "id": "en-a1-u4-l2-s1",
-                "title": "Qiziqishlar",
-                "type": "learn",
-                "estimatedMinutes": 4,
-                "learnData": {
-                    "title": "Hobbies & Interests",
-                    "explanation": "Bo'sh vaqtda nimalar bilan shug'ullanish: I like reading books, playing video games, listening to music.",
-                    "vocabulary": [
-                        {
-                            "term": "Music",
-                            "reading": "/ˈmjuː.zɪk/",
-                            "meaning": "Musiqa",
-                            "exampleSentence": "I listen to classical music.",
-                            "exampleTranslation": "Men mumtoz musiqa tinglayman."
-                        },
-                        {
-                            "term": "Travel",
-                            "reading": "/ˈtræv.əl/",
-                            "meaning": "Sayohat qilmoq",
-                            "exampleSentence": "They love to travel in summer.",
-                            "exampleTranslation": "Ular yozda sayohat qilishni yaxshi ko'radi."
-                        },
-                        {
-                            "term": "Cooking",
-                            "reading": "/ˈkʊk.ɪŋ/",
-                            "meaning": "Pazandachilik",
-                            "exampleSentence": "Cooking is my relaxing hobby.",
-                            "exampleTranslation": "Ovqat pishirish mening hordiq chiqaruvchi mashg'ulotim."
+                {
+                        "id": "en-a1-u4-l2-s1",
+                        "title": "Xobbi va Fe'llar Uyg'unligi",
+                        "type": "learn",
+                        "estimatedMinutes": 5,
+                        "learnData": {
+                                "title": "Free Time Activities: Play, Go, Do",
+                                "explanation": "Bo'sh vaqt va sevimli mashg'ulotlarni ifodalashda fe'llarning to'g'ri ishlatilishi:\n\n1. Uch asosiy xobbi fe'li (Play, Go, Do qoidasi):\n- PLAY: To'p bilan o'ynaladigan sport turlari va raqobatli o'yinlar uchun:\n  • play football, play tennis, play chess, play video games.\n- GO: -ing bilan tugaydigan ochiq havoda harakatlanish faoliyatlari uchun:\n  • go swimming, go running, go cycling, go hiking, go fishing.\n- DO: Yakkama-yakka sport, jang san'atlari va gimnastika uchun (to'psiz):\n  • do karate, do yoga, do gymnastics, do judo.\n\n2. Boshqa sevimli mashg'ulotlar:\n- read fiction books (badiiy kitoblar o'qimoq)\n- listen to acoustic music (musiqa tinglamoq - 'listen to' har doim 'to' bilan!)\n- take artistic photos (suratga olmoq)\n- watch documentary movies (hujjatli filmlar tomosha qilmoq).\n\n3. O'zbek o'rganuvchilari uchun xavfli tuzoqlar (Common Pitfalls):\n- ❌ \"I play swimming on Sundays.\" -> ✅ \"I GO swimming on Sundays.\" (-ing bilan tugaydigan sportlar 'go' oladi).\n- ❌ \"I listen music.\" -> ✅ \"I listen TO music.\" ('Listen' fe'lidan keyin 'to' tushib qolmasligi shart).\n- ❌ \"I do football.\" -> ✅ \"I PLAY football.\" (To'pli o'yinlar 'play' bo'ladi).\n\n4. IELTS Speaking Part 1 Foundation Corner:\n- Topic: Hobbies and Leisure Time\n- Examiner: \"What do you enjoy doing in your spare time?\"\n- Model Band 6.0+ Answer: \"In my leisure time, I am quite keen on reading historical fiction and cycling in the local park. Doing outdoor activities helps me recharge my batteries after a long study week.\"\n- Examiner-Approved Idiom: \"recharge my batteries\" (kuch to'plab dam olmoq), \"in my spare/leisure time\" (bo'sh vaqtimda).",
+                                "vocabulary": [
+                                        {
+                                                "term": "leisure",
+                                                "reading": "/ˈleʒə/",
+                                                "meaning": "bo'sh vaqt, dam olish vaqti",
+                                                "exampleSentence": "Most working adults have very little leisure time during the week.",
+                                                "exampleTranslation": "Aksariyat ishlaydigan insonlarda hafta davomida juda oz bo'sh vaqt bo'ladi."
+                                        },
+                                        {
+                                                "term": "cycling",
+                                                "reading": "/ˈsaɪklɪŋ/",
+                                                "meaning": "velosiped haydash",
+                                                "exampleSentence": "I regularly go cycling around the quiet city lake.",
+                                                "exampleTranslation": "Men sokin shahar ko'li atrofida muntazam velosiped haydashga boraman."
+                                        },
+                                        {
+                                                "term": "hiking",
+                                                "reading": "/ˈhaɪkɪŋ/",
+                                                "meaning": "tog'da piyoda sayr qilish / yurish",
+                                                "exampleSentence": "We are planning to go hiking in the Chimgan mountains this weekend.",
+                                                "exampleTranslation": "Biz bu dam olish kunlarida Chimyon tog'larida piyoda sayr qilishni rejalashtiryapmiz."
+                                        },
+                                        {
+                                                "term": "photography",
+                                                "reading": "/fəˈtɒɡrəfi/",
+                                                "meaning": "fotosurat olish san'ati",
+                                                "exampleSentence": "Landscape photography requires plenty of patience and good natural light.",
+                                                "exampleTranslation": "Manzara fotosurati juda ko'p sabr va yaxshi tabiiy yorug'likni talab qiladi."
+                                        },
+                                        {
+                                                "term": "gardening",
+                                                "reading": "/ˈɡɑːdnɪŋ/",
+                                                "meaning": "bog'dorchilik",
+                                                "exampleSentence": "My grandfather finds peace and joy in gardening.",
+                                                "exampleTranslation": "Bobom bog'dorchilikdan xotirjamlik va quvonch topadi."
+                                        },
+                                        {
+                                                "term": "board game",
+                                                "reading": "/bɔːd ɡeɪm/",
+                                                "meaning": "stol usti o'yini (shaxmat, monopoliyaga o'xshash)",
+                                                "exampleSentence": "Playing board games with close friends is entertaining.",
+                                                "exampleTranslation": "Yaqin do'stlar bilan stol usti o'yinlarini o'ynash maroqli."
+                                        },
+                                        {
+                                                "term": "listen to",
+                                                "reading": "/ˈlɪs.ən tuː/",
+                                                "meaning": "tinglamoq, quloq solmoq ('to' bilan ishlatiladi)",
+                                                "exampleSentence": "I always listen to podcasts while preparing breakfast.",
+                                                "exampleTranslation": "Men har doim nonushta tayyorlayotganda podkastlarni tinglayman."
+                                        },
+                                        {
+                                                "term": "martial arts",
+                                                "reading": "/ˌmɑːʃəl ˈɑːts/",
+                                                "meaning": "jang san'atlari (karate, taekvondo)",
+                                                "exampleSentence": "Practising martial arts builds physical strength and mental discipline.",
+                                                "exampleTranslation": "Jang san'ati bilan shug'ullanish jismoniy kuch va ruhiy intizomni tarbiyalaydi."
+                                        }
+                                ]
                         }
-                    ],
-                    "grammarRules": [
-                        {
-                            "pattern": "Hobbies & Free Time Activities",
-                            "meaning": "Qiziqishlar va bo'sh vaqtdagi mashg'ulotlar haqida so'zlashuv.",
-                            "usageNotes": "Bo'sh vaqtda nimalar bilan shug'ullanish: I like reading books, playing video games, listening to music.",
-                            "examples": [
-                                {
-                                    "sentence": "I listen to classical music.",
-                                    "translation": "Men mumtoz musiqa tinglayman."
-                                },
-                                {
-                                    "sentence": "They love to travel in summer.",
-                                    "translation": "Ular yozda sayohat qilishni yaxshi ko'radi."
-                                }
-                            ]
+                },
+                {
+                        "id": "en-a1-u4-l2-s2",
+                        "title": "Xobbi Mashqlari",
+                        "type": "practice",
+                        "estimatedMinutes": 4,
+                        "practiceData": {
+                                "instructions": "Play, Go, Do va xobbilar bo'yicha to'g'ri variantni tanlang.",
+                                "exercises": [
+                                        {
+                                                "id": "en-a1-u4-l2-e1",
+                                                "type": "multiple-choice",
+                                                "prompt": "Bo'sh joyni to'g'ri fe'l bilan to'ldiring: 'Every Saturday morning, I ___ swimming at the sports club.'",
+                                                "options": [
+                                                        "play",
+                                                        "go",
+                                                        "do",
+                                                        "make"
+                                                ],
+                                                "correctAnswer": 1,
+                                                "explanation": "-ing bilan tugaydigan sport turlari (swimming, cycling, running) 'go' bilan ishlatiladi."
+                                        },
+                                        {
+                                                "id": "en-a1-u4-l2-e2",
+                                                "type": "multiple-choice",
+                                                "prompt": "Judo va karate kabi yakkama-yakka jang san'atlari uchun qaysi fe'l mos?",
+                                                "options": [
+                                                        "do",
+                                                        "play",
+                                                        "go",
+                                                        "have"
+                                                ],
+                                                "correctAnswer": 0,
+                                                "explanation": "Yakkama-yakka to'psiz sportlar 'do' bilan ishlatiladi: 'do judo', 'do karate'."
+                                        },
+                                        {
+                                                "id": "en-a1-u4-l2-e3",
+                                                "type": "multiple-choice",
+                                                "prompt": "Qaysi jumla grammatik jihatdan to'g'ri?",
+                                                "options": [
+                                                        "I love listening music.",
+                                                        "I love listening to music.",
+                                                        "I love listen music.",
+                                                        "I love to listening music."
+                                                ],
+                                                "correctAnswer": 1,
+                                                "explanation": "'Listen' fe'lidan keyin obyekt kelsa, 'to' predlogi bo'lishi shart: 'listening to music'."
+                                        },
+                                        {
+                                                "id": "en-a1-u4-l2-e4",
+                                                "type": "multiple-choice",
+                                                "prompt": "'Chess' (shaxmat) o'yini uchun qaysi fe'l mos keladi?",
+                                                "options": [
+                                                        "go chess",
+                                                        "do chess",
+                                                        "play chess",
+                                                        "make chess"
+                                                ],
+                                                "correctAnswer": 2,
+                                                "explanation": "Stol o'yinlari va musobaqa o'yinlari uchun 'play' ishlatiladi: 'play chess'."
+                                        },
+                                        {
+                                                "id": "en-a1-u4-l2-e5",
+                                                "type": "multiple-choice",
+                                                "prompt": "'Dam olish kunlarida nima bilan shug'ullanishni yoqtirasiz?' savoli qaysi?",
+                                                "options": [
+                                                        "What do you like doing on weekends?",
+                                                        "What you like do on weekends?",
+                                                        "What are you like do on weekends?",
+                                                        "How do you doing on weekends?"
+                                                ],
+                                                "correctAnswer": 0,
+                                                "explanation": "'What do you like doing on weekends?' - grammatik jihatdan mukammal tuzilgan savol."
+                                        }
+                                ]
                         }
-                    ]
+                },
+                {
+                        "id": "en-a1-u4-l2-s3",
+                        "title": "Dars Testi: Free Time Activities",
+                        "type": "test",
+                        "estimatedMinutes": 5,
+                        "testData": {
+                                "instructions": "Savollarga to'g'ri javob berib, mavzuni mustahkamlang.",
+                                "passingScorePercentage": 80,
+                                "questions": [
+                                        {
+                                                "id": "en-a1-u4-l2-q1",
+                                                "question": "Qaysi juftlikda fe'l va faoliyat mosligi xato berilgan?",
+                                                "options": [
+                                                        "play football",
+                                                        "go hiking",
+                                                        "do gymnastics",
+                                                        "play yoga"
+                                                ],
+                                                "correctAnswerIndex": 3,
+                                                "explanation": "Yoga to'p o'yini emas, shuning uchun 'play yoga' xato; to'g'risi: 'do yoga'."
+                                        },
+                                        {
+                                                "id": "en-a1-u4-l2-q2",
+                                                "question": "'Photography' so'zida urg'u nechanchi bo'g'inga tushadi?",
+                                                "options": [
+                                                        "1-bo'g'inga (PHO-tography)",
+                                                        "2-bo'g'inga (pho-TO-graphy)",
+                                                        "3-bo'g'inga (photo-GRA-phy)",
+                                                        "4-bo'g'inga (photogra-PHY)"
+                                                ],
+                                                "correctAnswerIndex": 1,
+                                                "explanation": "'Photography' /fəˈtɒɡrəfi/ so'zida urg'u 2-bo'g'inga tushadi."
+                                        },
+                                        {
+                                                "id": "en-a1-u4-l2-q3",
+                                                "question": "'Bo'sh vaqtimda' ma'nosidagi eng tabiiy akademik ifoda qaysi?",
+                                                "options": [
+                                                        "in my leisure time",
+                                                        "in my empty clock",
+                                                        "at my zero time",
+                                                        "on my free hour"
+                                                ],
+                                                "correctAnswerIndex": 0,
+                                                "explanation": "'In my leisure time' yoki 'in my spare time' - bo'sh vaqt ma'nosidagi sof tabiiy iboralar."
+                                        },
+                                        {
+                                                "id": "en-a1-u4-l2-q4",
+                                                "question": "'He ___ cycling along the river bank every morning.' Bo'sh joyga qaysi fe'l qo'yiladi?",
+                                                "options": [
+                                                        "go",
+                                                        "goes",
+                                                        "plays",
+                                                        "does"
+                                                ],
+                                                "correctAnswerIndex": 1,
+                                                "explanation": "'He' uchinchi shaxs birlik bo'lgani sababli fe'lga -es qo'shiladi: 'goes cycling'."
+                                        },
+                                        {
+                                                "id": "en-a1-u4-l2-q5",
+                                                "question": "IELTS Speaking: 'Why do you think having a hobby is important?' savoliga qaysi javob kuchli dalil keltiradi?",
+                                                "options": [
+                                                        "Hobby is good because no work.",
+                                                        "Having a hobby is crucial because it reduces mental stress, keeps the mind engaged, and helps maintain a healthy work-life balance.",
+                                                        "I have many hobbies like sleep.",
+                                                        "People must have hobby."
+                                                ],
+                                                "correctAnswerIndex": 1,
+                                                "explanation": "'Having a hobby is crucial because it reduces mental stress, keeps the mind engaged, and helps maintain a healthy work-life balance' - Band 7.0 darajasidagi yuqori saviyali javob."
+                                        }
+                                ]
+                        }
                 }
-            },
-            {
-                "id": "en-a1-u4-l2-s2",
-                "title": "Mashq",
-                "type": "practice",
-                "estimatedMinutes": 4,
-                "practiceData": {
-                    "instructions": "To'g'ri birikmani tanlang.",
-                    "exercises": [
-                        {
-                            "id": "en-a1-u4-l2-e1",
-                            "type": "multiple-choice",
-                            "prompt": "\"I like _______ to music in the evening.\"",
-                            "options": [
-                                "listening",
-                                "listen",
-                                "listens",
-                                "to listening"
-                            ],
-                            "correctAnswer": 0,
-                            "explanation": "Like listening to music."
-                        },
-                        {
-                            "id": "en-a1-u4-l2-ex-2",
-                            "type": "multiple-choice",
-                            "prompt": "Choose the correct word to complete the sentence: \"They love to travel in summer.\"",
-                            "options": [
-                                "reluctance",
-                                "doubt",
-                                "Travel",
-                                "delay"
-                            ],
-                            "correctAnswer": 2,
-                            "explanation": "\"Travel\" (Sayohat qilmoq) fits the context appropriately."
-                        }
-                    ]
-                }
-            },
-            {
-                "id": "en-a1-u4-l2-s3",
-                "title": "Test",
-                "type": "test",
-                "estimatedMinutes": 4,
-                "testData": {
-                    "instructions": "Savollarga javob bering.",
-                    "passingScorePercentage": 75,
-                    "questions": [
-                        {
-                            "id": "en-a1-u4-l2-q1",
-                            "question": "What are your _______ in your free time?",
-                            "options": [
-                                "hobbies",
-                                "hobby",
-                                "works",
-                                "jobs"
-                            ],
-                            "correctAnswerIndex": 0,
-                            "explanation": "What are your hobbies?"
-                        },
-                        {
-                            "id": "en-a1-u4-l2-q2",
-                            "question": "He likes playing _______ on weekends.",
-                            "options": [
-                                "footballing",
-                                "football",
-                                "a football",
-                                "the footballs"
-                            ],
-                            "correctAnswerIndex": 1,
-                            "explanation": "Play football."
-                        },
-                        {
-                            "id": "en-a1-u4-l2-q3",
-                            "question": "\"Free time\" nimani bildiradi?",
-                            "options": [
-                                "Ertalabki vaqt",
-                                "Dars vaqti",
-                                "Bo'sh vaqt",
-                                "Ish vaqti"
-                            ],
-                            "correctAnswerIndex": 2,
-                            "explanation": "Free time — Bo'sh vaqt."
-                        },
-                        {
-                            "id": "en-a1-u4-l2-q4",
-                            "question": "She enjoys _______ photographs of nature.",
-                            "options": [
-                                "take",
-                                "took",
-                                "takes",
-                                "taking"
-                            ],
-                            "correctAnswerIndex": 3,
-                            "explanation": "Enjoy taking photographs."
-                        }
-                    ]
-                }
-            }
         ]
-    },
+},
     {
         "id": "en-a1-u4-l3",
         "courseId": "english-a1",
@@ -4062,162 +4195,229 @@ export const ENGLISH_A1_LESSONS: Lesson[] = [
         "language": "en",
         "level": "A1",
         "lessonNumber": 3,
-        "title": "A1 Reading: My Daily Life",
-        "description": "Qisqa sodda matnni o'qish va savollarga javob berish.",
-        "estimatedDurationMinutes": 12,
-        "icon": "📖",
+        "title": "Likes, Dislikes & Preferences",
+        "description": "Yoqtirish, yoqtirmaslik va afzal ko'rish darajalari (like, love, enjoy, hate + V-ing).",
+        "estimatedDurationMinutes": 14,
+        "icon": "❤️",
         "steps": [
-            {
-                "id": "en-a1-u4-l3-s1",
-                "title": "Matnni O'qish",
-                "type": "learn",
-                "estimatedMinutes": 5,
-                "learnData": {
-                    "title": "Reading Passage: Anvar's Daily Routine",
-                    "explanation": "Quyidagi matnni diqqat bilan o'qing va tushuning.",
-                    "keyPoints": [
-                        "Anvar is a 20-year-old student from Tashkent.",
-                        "He wakes up at 7:00 AM and drinks green tea.",
-                        "He takes the metro to university at 8:15 AM.",
-                        "In the evening, he plays chess with his brother and reads books."
-                    ],
-                    "vocabulary": [
-                        {
-                            "term": "Routine",
-                            "reading": "/ruːˈtiːn/",
-                            "meaning": "Kun tartibi",
-                            "exampleSentence": "A healthy routine is good.",
-                            "exampleTranslation": "Sog'lom kun tartibi foydali."
-                        },
-                        {
-                            "term": "Family",
-                            "reading": "/ˈfæm.əl.i/",
-                            "meaning": "Oila",
-                            "exampleSentence": "I love my family.",
-                            "exampleTranslation": "Men oilamni yaxshi koʻraman."
-                        },
-                        {
-                            "term": "Morning",
-                            "reading": "/ˈmɔː.nɪŋ/",
-                            "meaning": "Tong, ertalab",
-                            "exampleSentence": "Good morning, everyone!",
-                            "exampleTranslation": "Hammaga xayrli tong!"
+                {
+                        "id": "en-a1-u4-l3-s1",
+                        "title": "Xohish-istak va Gerund (V-ing)",
+                        "type": "learn",
+                        "estimatedMinutes": 5,
+                        "learnData": {
+                                "title": "Expressing Preferences: Love, Like, Prefer, Hate + Verb-ing",
+                                "explanation": "Ingliz tilida biror faoliyatni yoqtirish yoki yoqtirmaslik darajalari:\n\n1. His-tuyg'u shkalasi (The Preference Scale):\n- ❤️ Love (juda qattiq yaxshi ko'rmoq): \"I love cooking delicious meals.\"\n- 😊 Like / Enjoy (yoqtirmoq / rohatlanmoq): \"She likes reading detective novels.\" / \"We enjoy spending time together.\"\n- ⚖️ Prefer ... to ... (afzal ko'rmoq): \"I prefer tea to coffee.\" / \"I prefer walking to driving.\"\n- 😐 Don't mind (farqi yo'q / qarshi emasman): \"I don't mind washing the dishes.\"\n- 👎 Dislike / Don't like (yoqtirmaslik): \"He doesn't like waking up early.\"\n- 💔 Hate (nafratlanmoq / yomon ko'rmoq): \"I hate standing in long queues.\"\n\n2. Asosiy Grammatik Qoida — Gerund (V-ing):\n- Ushbu his-tuyg'u fe'llaridan keyin harakat fe'li kelsa, unga **-ing** qo'shimchasi qo'shiladi:\n  • ✅ \"I enjoy swimming.\" (NOT: \"I enjoy to swim\" ❌).\n  • ✅ \"She hates cleaning her room.\"\n\n3. O'zbek tili bilan qiyosiy tahlil va Xavfli tuzoqlar:\n- O'zbek tilida \"Men kitob o'qishni yoqtiraman\" deyiladi ('o'qish' harakat nomi). Ingliz tilida bu 'reading' gerundiysi bilan to'liq mos keladi.\n- ❌ \"I like play video games.\" -> ✅ \"I like PLAYING video games.\" (Harakat bo'lsa -ing qo'shilishi shart).\n- ❌ \"I prefer tea than coffee.\" -> ✅ \"I prefer tea TO coffee.\" ('Prefer' bilan 'than' emas, 'to' ishlatiladi!).\n- ❌ \"I very like this song.\" -> ✅ \"I like this song VERY MUCH.\" ('Very' to'g'ridan-to'g'ri 'like' oldidan kelmaydi!).\n\n4. IELTS Speaking Part 1 Foundation Corner:\n- Topic: Preferences & Daily Choices\n- Examiner: \"Do you prefer tea or coffee?\"\n- Model Band 6.0+ Answer: \"To be frank, I strongly prefer green tea to coffee. Drinking tea in the morning keeps me alert and energetic without the sudden crash that coffee sometimes gives.\"\n- Advanced Linker: \"To be frank\" (ochig'ini aytganda), \"strongly prefer X to Y\" (X ni Y dan keskin ustun ko'rmoq).",
+                                "vocabulary": [
+                                        {
+                                                "term": "enjoy",
+                                                "reading": "/ɪnˈdʒɔɪ/",
+                                                "meaning": "rohatlanmoq, maroq olmoq (har doim V-ing oladi)",
+                                                "exampleSentence": "I truly enjoy listening to classical music in the evenings.",
+                                                "exampleTranslation": "Men oqshomlari mumtoz musiqa tinglashdan chin dildan rohatlanaman."
+                                        },
+                                        {
+                                                "term": "hate",
+                                                "reading": "/heɪt/",
+                                                "meaning": "nafratlanmoq, umuman yoqtirmaslik",
+                                                "exampleSentence": "Most people hate waiting in traffic jams on hot days.",
+                                                "exampleTranslation": "Ko'pchilik issiq kunlarda tirbandlikda kutishni yomon ko'radi."
+                                        },
+                                        {
+                                                "term": "prefer",
+                                                "reading": "/prɪˈfɜː/",
+                                                "meaning": "afzal ko'rmoq (prefer X to Y)",
+                                                "exampleSentence": "I prefer working in a quiet space to studying in a crowded cafe.",
+                                                "exampleTranslation": "Men gavjum kafeda o'qishdan ko'ra sokin joyda ishlashni afzal ko'raman."
+                                        },
+                                        {
+                                                "term": "don't mind",
+                                                "reading": "/dəʊnt maɪnd/",
+                                                "meaning": "qarshi emasman, menga farqi yo'q",
+                                                "exampleSentence": "I don't mind helping you with the household chores.",
+                                                "exampleTranslation": "Menga uy yumushlarida yordam berish qiyin emas / qarshi emasman."
+                                        },
+                                        {
+                                                "term": "keen on",
+                                                "reading": "/kiːn ɒn/",
+                                                "meaning": "juda qiziqmoq, ishqibozi bo'lmoq",
+                                                "exampleSentence": "My brother is exceptionally keen on learning foreign languages.",
+                                                "exampleTranslation": "Akam xorijiy tillarni o'rganishga o'ta qiziqadi."
+                                        },
+                                        {
+                                                "term": "fond of",
+                                                "reading": "/fɒnd əv/",
+                                                "meaning": "yaxshi ko'rmoq, mehr qo'ymoq",
+                                                "exampleSentence": "She is extremely fond of taking care of stray animals.",
+                                                "exampleTranslation": "U qarovsiz hayvonlarga g'amxo'rlik qilishni juda yaxshi ko'radi."
+                                        },
+                                        {
+                                                "term": "fan of",
+                                                "reading": "/fæn əv/",
+                                                "meaning": "ishqibozi / muhlisi bo'lmoq",
+                                                "exampleSentence": "I am a big fan of historical documentary films.",
+                                                "exampleTranslation": "Men tarixiy hujjatli filmlarning katta ishqiboziman."
+                                        },
+                                        {
+                                                "term": "queue",
+                                                "reading": "/kjuː/",
+                                                "meaning": "navbat (Britaniya inglizchasida)",
+                                                "exampleSentence": "Nobody likes standing in a long queue at the supermarket checkout.",
+                                                "exampleTranslation": "Supermarket kassasida uzun navbatda turishni hech kim yoqtirmaydi."
+                                        }
+                                ]
                         }
-                    ],
-                    "grammarRules": [
-                        {
-                            "pattern": "A1 Reading: My Daily Life",
-                            "meaning": "Qisqa sodda matnni o'qish va savollarga javob berish.",
-                            "usageNotes": "Quyidagi matnni diqqat bilan o'qing va tushuning.",
-                            "examples": [
-                                {
-                                    "sentence": "A healthy routine is good.",
-                                    "translation": "Sog'lom kun tartibi foydali."
-                                }
-                            ]
+                },
+                {
+                        "id": "en-a1-u4-l3-s2",
+                        "title": "Likes va Dislikes Mashqlari",
+                        "type": "practice",
+                        "estimatedMinutes": 4,
+                        "practiceData": {
+                                "instructions": "Bo'sh joylarni to'g'ri fe'l shakli bilan to'ldiring.",
+                                "exercises": [
+                                        {
+                                                "id": "en-a1-u4-l3-e1",
+                                                "type": "multiple-choice",
+                                                "prompt": "Bo'sh joyni to'ldiring: 'She really enjoys ___ modern art exhibitions.'",
+                                                "options": [
+                                                        "visit",
+                                                        "visiting",
+                                                        "to visit",
+                                                        "visited"
+                                                ],
+                                                "correctAnswer": 1,
+                                                "explanation": "'Enjoy' fe'li o'zidan keyin har doim gerundiy (V-ing) shaklini oladi: 'enjoys visiting'."
+                                        },
+                                        {
+                                                "id": "en-a1-u4-l3-e2",
+                                                "type": "multiple-choice",
+                                                "prompt": "'Men qahvadan ko'ra choyni afzal ko'raman' jumlasiga qaysi bog'lovchi kerak? 'I prefer tea ___ coffee.'",
+                                                "options": [
+                                                        "than",
+                                                        "to",
+                                                        "from",
+                                                        "over than"
+                                                ],
+                                                "correctAnswer": 1,
+                                                "explanation": "'Prefer' bilan ikki narsani taqqoslaganda 'to' predlogi ishlatiladi: 'prefer tea to coffee'."
+                                        },
+                                        {
+                                                "id": "en-a1-u4-l3-e3",
+                                                "type": "multiple-choice",
+                                                "prompt": "Qaysi jumla ingliz tili qoidalariga ko'ra TO'G'RI?",
+                                                "options": [
+                                                        "I very like apple juice.",
+                                                        "I like very apple juice.",
+                                                        "I like apple juice very much.",
+                                                        "I like very much apple juice."
+                                                ],
+                                                "correctAnswer": 2,
+                                                "explanation": "'Very' so'zi to'g'ridan-to'g'ri 'like' bilan kelmaydi; 'very much' gapning oxiriga qo'yiladi: 'I like apple juice very much'."
+                                        },
+                                        {
+                                                "id": "en-a1-u4-l3-e4",
+                                                "type": "multiple-choice",
+                                                "prompt": "'Menga qorong'uda yolg'iz yurish yoqmaydi.' Qaysi variant to'g'ri?",
+                                                "options": [
+                                                        "I don't like walk alone in the dark.",
+                                                        "I don't like walking alone in the dark.",
+                                                        "I not like walking alone in the dark.",
+                                                        "I don't liking walk alone in the dark."
+                                                ],
+                                                "correctAnswer": 1,
+                                                "explanation": "'Don't like + V-ing': 'I don't like walking alone in the dark'."
+                                        },
+                                        {
+                                                "id": "en-a1-u4-l3-e5",
+                                                "type": "multiple-choice",
+                                                "prompt": "'He is keen ___ learning how to program in Python.' Bo'sh joyga qaysi predlog mos keladi?",
+                                                "options": [
+                                                        "in",
+                                                        "at",
+                                                        "on",
+                                                        "with"
+                                                ],
+                                                "correctAnswer": 2,
+                                                "explanation": "'Keen on' - biror narsaga qattiq qiziqmoq iborasidir."
+                                        }
+                                ]
                         }
-                    ]
+                },
+                {
+                        "id": "en-a1-u4-l3-s3",
+                        "title": "Dars Testi: Likes & Preferences",
+                        "type": "test",
+                        "estimatedMinutes": 5,
+                        "testData": {
+                                "instructions": "Savollarga to'g'ri javob berib, mavzuni mustahkamlang.",
+                                "passingScorePercentage": 80,
+                                "questions": [
+                                        {
+                                                "id": "en-a1-u4-l3-q1",
+                                                "question": "Qaysi fe'ldan keyin faqat V-ing (gerund) shakli ishlatiladi?",
+                                                "options": [
+                                                        "want",
+                                                        "need",
+                                                        "enjoy",
+                                                        "decide"
+                                                ],
+                                                "correctAnswerIndex": 2,
+                                                "explanation": "'Enjoy' fe'lidan keyin faqat gerund (V-ing) qo'llanadi (I enjoy reading)."
+                                        },
+                                        {
+                                                "id": "en-a1-u4-l3-q2",
+                                                "question": "'I don't mind washing the car.' Bu jumla nimani anglatadi?",
+                                                "options": [
+                                                        "Mashinani yuvishni yomon ko'raman.",
+                                                        "Mashinani yuvishga qarshi emasman / farqi yo'q.",
+                                                        "Mashina yuvishni juda yaxshi ko'raman.",
+                                                        "Mashina yuvishni xohlamayman."
+                                                ],
+                                                "correctAnswerIndex": 1,
+                                                "explanation": "'Don't mind' - muammo yo'q, qarshiligim yo'q, xursandchilik bilan bajara olaman ma'nosini bildiradi."
+                                        },
+                                        {
+                                                "id": "en-a1-u4-l3-q3",
+                                                "question": "'She ___ playing video games; she thinks they are a waste of time.' Bo'sh joyga qaysi so'z mos?",
+                                                "options": [
+                                                        "loves",
+                                                        "enjoys",
+                                                        "hates",
+                                                        "keen on"
+                                                ],
+                                                "correctAnswerIndex": 2,
+                                                "explanation": "U vaqtni behuda sarflash deb hisoblagani sababli, 'hates' (yomon ko'radi) so'zi mos keladi."
+                                        },
+                                        {
+                                                "id": "en-a1-u4-l3-q4",
+                                                "question": "'Fond' sifati qaysi predlog bilan birikib 'yaxshi ko'rmoq' ma'nosini beradi?",
+                                                "options": [
+                                                        "fond in",
+                                                        "fond of",
+                                                        "fond with",
+                                                        "fond at"
+                                                ],
+                                                "correctAnswerIndex": 1,
+                                                "explanation": "'Fond of' (she is fond of music) - yaxshi ko'rmoq, mehr qo'ymoq."
+                                        },
+                                        {
+                                                "id": "en-a1-u4-l3-q5",
+                                                "question": "IELTS Speaking: 'What kind of music do you dislike?' savoliga qaysi javob madaniyatli va yuqori saviyali?",
+                                                "options": [
+                                                        "I hate loud music very bad.",
+                                                        "To be completely honest, I am not particularly fond of heavy rock music because I find it rather jarring and difficult to relax to.",
+                                                        "Music dislike is rock.",
+                                                        "No dislike music, all like."
+                                                ],
+                                                "correctAnswerIndex": 1,
+                                                "explanation": "'I am not particularly fond of... because I find it rather jarring...' - xushmuomala, boy leksika va to'liq grammatik aniqlik namoyishi."
+                                        }
+                                ]
+                        }
                 }
-            },
-            {
-                "id": "en-a1-u4-l3-s2",
-                "title": "Matn Savollari",
-                "type": "practice",
-                "estimatedMinutes": 3,
-                "practiceData": {
-                    "instructions": "Matn bo'yicha to'g'ri javobni tanlang.",
-                    "exercises": [
-                        {
-                            "id": "en-a1-u4-l3-e1",
-                            "type": "multiple-choice",
-                            "prompt": "How does Anvar go to university?",
-                            "options": [
-                                "On foot",
-                                "By bicycle",
-                                "By car",
-                                "By metro"
-                            ],
-                            "correctAnswer": 3,
-                            "explanation": "Matnda \"takes the metro\" deyilgan."
-                        },
-                        {
-                            "id": "en-a1-u4-l3-ex-2",
-                            "type": "multiple-choice",
-                            "prompt": "Choose the correct word to complete the sentence: \"I love my family.\"",
-                            "options": [
-                                "delay",
-                                "Family",
-                                "doubt",
-                                "reluctance"
-                            ],
-                            "correctAnswer": 1,
-                            "explanation": "\"Family\" (Oila) fits the context appropriately."
-                        }
-                    ]
-                }
-            },
-            {
-                "id": "en-a1-u4-l3-s3",
-                "title": "Test",
-                "type": "test",
-                "estimatedMinutes": 4,
-                "testData": {
-                    "instructions": "Matn bo'yicha test savollariga javob bering.",
-                    "passingScorePercentage": 75,
-                    "questions": [
-                        {
-                            "id": "en-a1-u4-l3-q1",
-                            "question": "What time does Anvar wake up?",
-                            "options": [
-                                "6:00 AM",
-                                "9:00 AM",
-                                "8:15 AM",
-                                "7:00 AM"
-                            ],
-                            "correctAnswerIndex": 3,
-                            "explanation": "He wakes up at 7:00 AM."
-                        },
-                        {
-                            "id": "en-a1-u4-l3-q2",
-                            "question": "What does he drink in the morning?",
-                            "options": [
-                                "Orange juice",
-                                "Coffee",
-                                "Green tea",
-                                "Milk"
-                            ],
-                            "correctAnswerIndex": 2,
-                            "explanation": "Drinks green tea."
-                        },
-                        {
-                            "id": "en-a1-u4-l3-q3",
-                            "question": "What game does he play in the evening?",
-                            "options": [
-                                "Football",
-                                "Chess",
-                                "Basketball",
-                                "Tennis"
-                            ],
-                            "correctAnswerIndex": 1,
-                            "explanation": "Plays chess with his brother."
-                        },
-                        {
-                            "id": "en-a1-u4-l3-q4",
-                            "question": "Where is Anvar from?",
-                            "options": [
-                                "Tashkent",
-                                "Samarkand",
-                                "New York",
-                                "London"
-                            ],
-                            "correctAnswerIndex": 0,
-                            "explanation": "Student from Tashkent."
-                        }
-                    ]
-                }
-            }
         ]
-    },
+},
     {
         "id": "en-a1-u4-l4",
         "courseId": "english-a1",
@@ -4226,166 +4426,229 @@ export const ENGLISH_A1_LESSONS: Lesson[] = [
         "language": "en",
         "level": "A1",
         "lessonNumber": 4,
-        "title": "A1 Listening: Dialogues at the Grocery Store",
-        "description": "Do'konda xarid qilish suhbatini tinglab tushunish.",
-        "estimatedDurationMinutes": 12,
-        "icon": "🎧",
+        "title": "Present Continuous: Actions Happening Now",
+        "description": "Hozirgi davomli zamon (am / is / are + V-ing), imlo qoidalari va vaqt ko'rsatkichlari.",
+        "estimatedDurationMinutes": 14,
+        "icon": "⚡",
         "steps": [
-            {
-                "id": "en-a1-u4-l4-s1",
-                "title": "Suhbat Matni",
-                "type": "learn",
-                "estimatedMinutes": 4,
-                "learnData": {
-                    "title": "Dialogue: At the Grocery Store",
-                    "explanation": "Kassir va xaridor o'rtasidagi suhbat.",
-                    "keyPoints": [
-                        "Cashier: \"Good afternoon! Can I help you?\"",
-                        "Customer: \"Yes, I need two bottles of milk and one loaf of bread.\"",
-                        "Cashier: \"That will be 5 dollars in total.\"",
-                        "Customer: \"Here you go. Thank you!\""
-                    ],
-                    "vocabulary": [
-                        {
-                            "term": "Bottle",
-                            "reading": "/ˈbɒt.əl/",
-                            "meaning": "Shisha idish",
-                            "exampleSentence": "A bottle of milk.",
-                            "exampleTranslation": "Bir shisha sut."
-                        },
-                        {
-                            "term": "Total",
-                            "reading": "/ˈtəʊ.təl/",
-                            "meaning": "Jami summa",
-                            "exampleSentence": "How much in total?",
-                            "exampleTranslation": "Jami qancha bo'ladi?"
-                        },
-                        {
-                            "term": "Welcome",
-                            "reading": "/ˈwel.kəm/",
-                            "meaning": "Xush kelibsiz",
-                            "exampleSentence": "Welcome to our English class.",
-                            "exampleTranslation": "Ingliz tili darsimizga xush kelibsiz."
+                {
+                        "id": "en-a1-u4-l4-s1",
+                        "title": "Hozirgi Davomli Zamon Asoslari",
+                        "type": "learn",
+                        "estimatedMinutes": 5,
+                        "learnData": {
+                                "title": "Present Continuous: Form, Meaning, and Spelling",
+                                "explanation": "Ayni gapirilayotgan vaqtda sodir bo'layotgan harakatlarni ifodalash:\n\n1. Grammatik Formulalar:\n- Darak gap: Ega + am / is / are + Fe'l-ing\n  • I am reading a book right now.\n  • He / She / It is writing an email.\n  • We / You / They are studying in the library.\n- Inkor gap: Ega + am not / isn't / aren't + Fe'l-ing\n  • \"She isn't sleeping; she is preparing for the test.\"\n- So'roq gap: Am / Is / Are + Ega + Fe'l-ing?\n  • \"Are you listening to the teacher?\" -> \"Yes, I am.\" / \"No, I'm not.\"\n\n2. Fe'lga -ing qo'shilishining imlo qoidalari (Spelling Rules):\n- Odatiy holat: read -> reading, play -> playing, study -> studying.\n- So'nggi 'e' harfi tushib qoladi: write -> writing, take -> taking, make -> making.\n- Qisqa unli + bitta undosh bilan tugagan bir bo'g'inli fe'llarda oxirgi undosh ikkilanadi:\n  • run -> running, sit -> sitting, swim -> swimming, stop -> stopping.\n- 'ie' bilan tugasa 'y' ga aylanadi: lie -> lying, die -> dying.\n\n3. Vaqt ko'rsatkichlari (Time Markers):\n- now (hozir), right now (aynan hozir), at the moment (ayni paytda), currently (hozirda), Look! (Qara!), Listen! (Eshit!).\n\n4. O'zbek o'rganuvchilari uchun xavfli tuzoqlar (Common Pitfalls):\n- ❌ \"I writing an essay now.\" -> ✅ \"I AM writing an essay now.\" ('to be' yordamchisi tushib qolmasligi shart!).\n- ❌ \"He is runing.\" -> ✅ \"He is RUNNING.\" (Imloda qo'shaloq undosh qoidasi!).\n- ❌ \"Look! The bus comes.\" -> ✅ \"Look! The bus IS COMING.\" (Ko'z o'ngingizdagi harakat Present Continuous da bo'ladi).\n\n5. IELTS Speaking Part 1 Foundation Corner:\n- Topic: Current Activities / Studies\n- Examiner: \"What are you currently studying or working on?\"\n- Model Band 6.0+ Answer: \"At the moment, I am preparing intensively for my university entrance examinations, so I am spending most of my evenings at the public library.\"\n- Examiner Tip: \"At the moment\" va \"Currently\" iboralari imtihonda 'hozirgi bosqichdagi hayot' haqida gapirganda tabiiy akademik jilo beradi.",
+                                "vocabulary": [
+                                        {
+                                                "term": "right now",
+                                                "reading": "/raɪt naʊ/",
+                                                "meaning": "aynan hozir, shu onning o'zida",
+                                                "exampleSentence": "I cannot take your call because I am driving right now.",
+                                                "exampleTranslation": "Qo'ng'irog'ingizga javob bera olmayman, chunki aynan hozir mashina haydayapman."
+                                        },
+                                        {
+                                                "term": "at the moment",
+                                                "reading": "/ət ðə ˈməʊmənt/",
+                                                "meaning": "ayni paytda, hozirgi vaqtda",
+                                                "exampleSentence": "The manager is speaking with an important client at the moment.",
+                                                "exampleTranslation": "Menejer ayni paytda muhim mijoz bilan gaplashyapti."
+                                        },
+                                        {
+                                                "term": "currently",
+                                                "reading": "/ˈkʌrəntli/",
+                                                "meaning": "hozirgi kunlarda, ayni davrda",
+                                                "exampleSentence": "She is currently working on an innovative environmental project.",
+                                                "exampleTranslation": "U hozirgi kunda innovatsion ekologik loyiha ustida ishlayapti."
+                                        },
+                                        {
+                                                "term": "lie",
+                                                "reading": "/laɪ/",
+                                                "meaning": "yotmoq (ing qo'shilganda: lying)",
+                                                "exampleSentence": "The tired cat is lying in the sunshine on the balcony.",
+                                                "exampleTranslation": "Charchagan mushuk balkonda quyosh nuri ostida yotibdi."
+                                        },
+                                        {
+                                                "term": "prepare",
+                                                "reading": "/prɪˈpeə/",
+                                                "meaning": "tayyorgarlik ko'rmoq, tayyorlamoq",
+                                                "exampleSentence": "We are preparing a delicious dinner for our arriving guests.",
+                                                "exampleTranslation": "Biz yetib kelayotgan mehmonlarimiz uchun mazali kechki ovqat tayyorlayapmiz."
+                                        },
+                                        {
+                                                "term": "deliver",
+                                                "reading": "/dɪˈlɪvə/",
+                                                "meaning": "yetkazib bermoq (kuryer)",
+                                                "exampleSentence": "The courier is delivering your ordered parcel right now.",
+                                                "exampleTranslation": "Kuryer siz buyurtma qilgan posilkani aynan hozir yetkazib beryapti."
+                                        },
+                                        {
+                                                "term": "look",
+                                                "reading": "/lʊk/",
+                                                "meaning": "qaramoq (Look! diqqatni tortish)",
+                                                "exampleSentence": "Look! The heavy snow is falling over the garden.",
+                                                "exampleTranslation": "Qara! Bog' uzra qalin qor yog'yapti."
+                                        },
+                                        {
+                                                "term": "listen",
+                                                "reading": "/ˈlɪs.ən/",
+                                                "meaning": "eshitmoq / quloq solmoq",
+                                                "exampleSentence": "Listen! Someone is knocking loudly on the front door.",
+                                                "exampleTranslation": "Eshit! Kimdir old eshikni qattiq taqillatyapti."
+                                        }
+                                ]
                         }
-                    ],
-                    "grammarRules": [
-                        {
-                            "pattern": "A1 Listening: Dialogues at the Grocery Store",
-                            "meaning": "Do'konda xarid qilish suhbatini tinglab tushunish.",
-                            "usageNotes": "Kassir va xaridor o'rtasidagi suhbat.",
-                            "examples": [
-                                {
-                                    "sentence": "A bottle of milk.",
-                                    "translation": "Bir shisha sut."
-                                },
-                                {
-                                    "sentence": "How much in total?",
-                                    "translation": "Jami qancha bo'ladi?"
-                                }
-                            ]
+                },
+                {
+                        "id": "en-a1-u4-l4-s2",
+                        "title": "Present Continuous Mashqlari",
+                        "type": "practice",
+                        "estimatedMinutes": 4,
+                        "practiceData": {
+                                "instructions": "To'g'ri fe'l shakli va yordamchi fe'lni tanlang.",
+                                "exercises": [
+                                        {
+                                                "id": "en-a1-u4-l4-e1",
+                                                "type": "multiple-choice",
+                                                "prompt": "Bo'sh joyni to'ldiring: 'Listen! The baby ___ in the nursery room.'",
+                                                "options": [
+                                                        "cries",
+                                                        "is crying",
+                                                        "are crying",
+                                                        "crying"
+                                                ],
+                                                "correctAnswer": 1,
+                                                "explanation": "'Listen!' so'zi harakat ayni paytda sodir bo'layotganini bildiradi. 'The baby' birlikda, shuning uchun 'is crying'."
+                                        },
+                                        {
+                                                "id": "en-a1-u4-l4-e2",
+                                                "type": "multiple-choice",
+                                                "prompt": "'Swim' fe'liga -ing qo'shilganda to'g'ri imlo qaysi?",
+                                                "options": [
+                                                        "swiming",
+                                                        "swimming",
+                                                        "swimeing",
+                                                        "swimmying"
+                                                ],
+                                                "correctAnswer": 1,
+                                                "explanation": "Qisqa unli va bitta undosh bilan tugagan bir bo'g'inli so'zda oxirgi undosh ikkilanadi: 'swimming'."
+                                        },
+                                        {
+                                                "id": "en-a1-u4-l4-e3",
+                                                "type": "multiple-choice",
+                                                "prompt": "Qaysi jumla grammatik jihatdan to'g'ri?",
+                                                "options": [
+                                                        "They is watching a documentary right now.",
+                                                        "They are watching a documentary right now.",
+                                                        "They watching a documentary right now.",
+                                                        "They are watch a documentary right now."
+                                                ],
+                                                "correctAnswer": 1,
+                                                "explanation": "'They' ko'plik olmoshi 'are' bilan keladi va fe'lga -ing qo'shiladi: 'They are watching'."
+                                        },
+                                        {
+                                                "id": "en-a1-u4-l4-e4",
+                                                "type": "multiple-choice",
+                                                "prompt": "'Siz hozir nima qilyapsiz?' savoli qanday tuziladi?",
+                                                "options": [
+                                                        "What do you do right now?",
+                                                        "What are you doing right now?",
+                                                        "What you are doing right now?",
+                                                        "What is you doing right now?"
+                                                ],
+                                                "correctAnswer": 1,
+                                                "explanation": "Ayni damdagi harakat uchun Present Continuous so'roq shakli: 'What are you doing right now?'."
+                                        },
+                                        {
+                                                "id": "en-a1-u4-l4-e5",
+                                                "type": "multiple-choice",
+                                                "prompt": "'Lie' (yotmoq) fe'lining Present Continuous shakli qaysi?",
+                                                "options": [
+                                                        "lieing",
+                                                        "lying",
+                                                        "liying",
+                                                        "laying"
+                                                ],
+                                                "correctAnswer": 1,
+                                                "explanation": "'ie' bilan tugovchi fe'llarda 'ie' harflari 'y' ga aylanadi: lie -> lying."
+                                        }
+                                ]
                         }
-                    ]
+                },
+                {
+                        "id": "en-a1-u4-l4-s3",
+                        "title": "Dars Testi: Present Continuous",
+                        "type": "test",
+                        "estimatedMinutes": 5,
+                        "testData": {
+                                "instructions": "Savollarga to'g'ri javob berib, mavzuni mustahkamlang.",
+                                "passingScorePercentage": 80,
+                                "questions": [
+                                        {
+                                                "id": "en-a1-u4-l4-q1",
+                                                "question": "Present Continuous zamonining asosiy tuzilish formulasi qaysi?",
+                                                "options": [
+                                                        "Ega + do/does + Fe'l",
+                                                        "Ega + am/is/are + Fe'l-ing",
+                                                        "Ega + have/has + Fe'l",
+                                                        "Ega + Fe'l-s"
+                                                ],
+                                                "correctAnswerIndex": 1,
+                                                "explanation": "Present Continuous: Ega + to be (am/is/are) + Verb-ing."
+                                        },
+                                        {
+                                                "id": "en-a1-u4-l4-q2",
+                                                "question": "'Run' fe'lining to'g'ri -ing shakli qaysi?",
+                                                "options": [
+                                                        "runing",
+                                                        "running",
+                                                        "runeing",
+                                                        "runnying"
+                                                ],
+                                                "correctAnswerIndex": 1,
+                                                "explanation": "'Run' so'zida oxirgi 'n' ikkilanadi: 'running'."
+                                        },
+                                        {
+                                                "id": "en-a1-u4-l4-q3",
+                                                "question": "Qaysi so'z Present Continuous zamonining kalit vaqt ko'rsatkichi hisoblanadi?",
+                                                "options": [
+                                                        "yesterday",
+                                                        "always",
+                                                        "at the moment",
+                                                        "last year"
+                                                ],
+                                                "correctAnswerIndex": 2,
+                                                "explanation": "'At the moment' (ayni paytda) - hozirgi davomli zamon belgisidir."
+                                        },
+                                        {
+                                                "id": "en-a1-u4-l4-q4",
+                                                "question": "'Look! It ___ heavily outside.' Bo'sh joyni to'g'ri to'ldiring:",
+                                                "options": [
+                                                        "snows",
+                                                        "is snowing",
+                                                        "are snowing",
+                                                        "is snow"
+                                                ],
+                                                "correctAnswerIndex": 1,
+                                                "explanation": "'Look!' ko'z o'ngimizdagi ayni damdagi jarayon: 'It is snowing'."
+                                        },
+                                        {
+                                                "id": "en-a1-u4-l4-q5",
+                                                "question": "IELTS Speaking: 'What are people in your city doing nowadays?' savoliga eng to'liq javob qaysi?",
+                                                "options": [
+                                                        "People are work.",
+                                                        "Currently, many citizens are adopting healthier lifestyles, so lots of people are exercising in parks and riding bicycles.",
+                                                        "In city people walking always.",
+                                                        "They does exercise now."
+                                                ],
+                                                "correctAnswerIndex": 1,
+                                                "explanation": "'Currently, many citizens are adopting... lots of people are exercising...' - hozirgi davrdagi trendlarni to'g'ri grammatik ifodalaydi."
+                                        }
+                                ]
+                        }
                 }
-            },
-            {
-                "id": "en-a1-u4-l4-s2",
-                "title": "Mashq",
-                "type": "practice",
-                "estimatedMinutes": 4,
-                "practiceData": {
-                    "instructions": "Suhbat bo'yicha savollarga javob bering.",
-                    "exercises": [
-                        {
-                            "id": "en-a1-u4-l4-e1",
-                            "type": "multiple-choice",
-                            "prompt": "How much is the total price?",
-                            "options": [
-                                "2 dollars",
-                                "15 dollars",
-                                "5 dollars",
-                                "10 dollars"
-                            ],
-                            "correctAnswer": 2,
-                            "explanation": "That will be 5 dollars in total."
-                        },
-                        {
-                            "id": "en-a1-u4-l4-ex-2",
-                            "type": "multiple-choice",
-                            "prompt": "Choose the correct word to complete the sentence: \"How much in total?\"",
-                            "options": [
-                                "Total",
-                                "delay",
-                                "reluctance",
-                                "doubt"
-                            ],
-                            "correctAnswer": 0,
-                            "explanation": "\"Total\" (Jami summa) fits the context appropriately."
-                        }
-                    ]
-                }
-            },
-            {
-                "id": "en-a1-u4-l4-s3",
-                "title": "Test",
-                "type": "test",
-                "estimatedMinutes": 4,
-                "testData": {
-                    "instructions": "Savollarga javob bering.",
-                    "passingScorePercentage": 75,
-                    "questions": [
-                        {
-                            "id": "en-a1-u4-l4-q1",
-                            "question": "How many bottles of milk did the customer buy?",
-                            "options": [
-                                "Three",
-                                "Four",
-                                "Two",
-                                "One"
-                            ],
-                            "correctAnswerIndex": 2,
-                            "explanation": "Two bottles of milk."
-                        },
-                        {
-                            "id": "en-a1-u4-l4-q2",
-                            "question": "What else did the customer buy besides milk?",
-                            "options": [
-                                "Apples",
-                                "Cheese",
-                                "Coffee",
-                                "A loaf of bread"
-                            ],
-                            "correctAnswerIndex": 3,
-                            "explanation": "One loaf of bread."
-                        },
-                        {
-                            "id": "en-a1-u4-l4-q3",
-                            "question": "\"Here you go\" iborasi qachon ishlatiladi?",
-                            "options": [
-                                "Pul yoki buyumni uzatayotganda",
-                                "Xayrlashganda",
-                                "Salomlashganda",
-                                "Kechirim so'raganda"
-                            ],
-                            "correctAnswerIndex": 0,
-                            "explanation": "Buyumni uzatganda \"Marhamat\"."
-                        },
-                        {
-                            "id": "en-a1-u4-l4-q4",
-                            "question": "Where does the conversation take place?",
-                            "options": [
-                                "At the airport",
-                                "At a car station",
-                                "In a grocery store",
-                                "In a hospital"
-                            ],
-                            "correctAnswerIndex": 2,
-                            "explanation": "In a grocery store."
-                        }
-                    ]
-                }
-            }
         ]
-    },
+},
     {
         "id": "en-a1-u4-l5",
         "courseId": "english-a1",
@@ -4394,162 +4657,229 @@ export const ENGLISH_A1_LESSONS: Lesson[] = [
         "language": "en",
         "level": "A1",
         "lessonNumber": 5,
-        "title": "A1 Capstone Review & Self-Introduction",
-        "description": "A1 darajasini umumlashtirish va o'zini tanishtirish nutqi.",
-        "estimatedDurationMinutes": 15,
-        "icon": "🎓",
+        "title": "Present Simple vs Present Continuous",
+        "description": "Doimiy odatlar (Present Simple) va ayni damdagi harakatlar (Present Continuous) farqi, holat fe'llari (Stative Verbs).",
+        "estimatedDurationMinutes": 14,
+        "icon": "⚖️",
         "steps": [
-            {
-                "id": "en-a1-u4-l5-s1",
-                "title": "O'zini Tanishtirish Namunalari",
-                "type": "learn",
-                "estimatedMinutes": 5,
-                "learnData": {
-                    "title": "Self-Introduction Template",
-                    "explanation": "A1 darajasida to'liq o'zini tanishtirish strukturasi.",
-                    "keyPoints": [
-                        "Name & Origin: \"Hello, my name is Jasur and I am from Uzbekistan.\"",
-                        "Profession/Study: \"I am a student at university.\"",
-                        "Hobbies: \"In my free time, I like playing football and reading.\"",
-                        "Routine: \"I wake up at 7:00 and study English every day.\""
-                    ],
-                    "vocabulary": [
-                        {
-                            "term": "Introduce",
-                            "reading": "/ˌɪn.trəˈdʒuːs/",
-                            "meaning": "Tanishtirmoq",
-                            "exampleSentence": "Let me introduce myself.",
-                            "exampleTranslation": "O'zimni tanishtirishga ijozat bering."
-                        },
-                        {
-                            "term": "Welcome",
-                            "reading": "/ˈwel.kəm/",
-                            "meaning": "Xush kelibsiz",
-                            "exampleSentence": "Welcome to our English class.",
-                            "exampleTranslation": "Ingliz tili darsimizga xush kelibsiz."
-                        },
-                        {
-                            "term": "Friend",
-                            "reading": "/frend/",
-                            "meaning": "Doʻst",
-                            "exampleSentence": "She is my best friend.",
-                            "exampleTranslation": "U mening eng yaxshi doʻstim."
+                {
+                        "id": "en-a1-u4-l5-s1",
+                        "title": "Oddiy Zamon va Davomli Zamon Qiyosi",
+                        "type": "learn",
+                        "estimatedMinutes": 5,
+                        "learnData": {
+                                "title": "Present Simple vs Continuous & Stative Verbs",
+                                "explanation": "Ikki muhim hozirgi zamonning farqlanishi:\n\n1. Ma'no jihatidan asosiy farq:\n- PRESENT SIMPLE (Doimiy tartib / Odatlar / Faktlar):\n  • Har kuni, haftada, odatda takrorlanadigan ish-harakatlar.\n  • Signal so'zlar: always, usually, often, sometimes, never, every day.\n  • Misol: \"I drink coffee every morning.\" (Odatim, har tong ichaman).\n- PRESENT CONTINUOUS (Ayni paytdagi yoki vaqtinchalik harakat):\n  • Ayni damda yoki faqat shu kunlarda bo'layotgan ish.\n  • Signal so'zlar: now, right now, at the moment, this week, currently.\n  • Misol: \"Look! I am drinking green tea right now.\" (Ayni shu daqiqada ichyapman).\n\n2. Holat fe'llari (STATIVE VERBS — O'ta muhim qoida!):\n- Ayrim fe'llar jismoniy harakatni emas, aqliy holat, his-tuyg'u yoki egalikni bildiradi.\n- Bu fe'llar xatto ayni paytda sodir bo'layotgan bo'lsa ham, HECH QACHON davomli zamonda (-ing bilan) ishlatilmaydi!\n  • Aqliy holat: know (bilmoq), understand (tushunmoq), remember (eslamoq), believe (ishonmoq).\n  • Xohish / His: want (xohlamoq), need (muhtoj bo'lmoq), like, love, hate.\n  • Egalik: have (egalik ma'nosida), own, belong to.\n  • ❌ \"I am knowing the answer now.\" -> ✅ \"I KNOW the answer now.\"\n  • ❌ \"Are you wanting water?\" -> ✅ \"Do you WANT water?\"\n  • ❌ \"I am understanding you.\" -> ✅ \"I UNDERSTAND you.\"\n\n3. O'zbek o'rganuvchilari uchun xavfli tuzoqlar (Common Pitfalls):\n- ❌ \"I am living in Tashkent always.\" -> ✅ \"I live in Tashkent.\" (Doimiy yashash joyi - Present Simple!).\n- ❌ \"What do you do now?\" -> ✅ \"What are you doing now?\" (Ayni paytda nima qilayotganini so'raganda Continuous kerak; \"What do you do?\" esa kasbni bildiradi!).\n\n4. IELTS Speaking Part 1 Foundation Corner:\n- Topic: Work / Study vs Current Projects\n- Examiner: \"What do you do, and what are you working on at the moment?\"\n- Model Band 6.0+ Answer: \"Normally, I work as an accountant at a local firm, but this week I am attending an intensive professional development seminar.\"\n- Grammar Mastery: \"Normally I work... but this week I am attending...\" - bu ikki zamonning kontrastini namoyish etish imtihon oluvchini hayratda qoldiradi.",
+                                "vocabulary": [
+                                        {
+                                                "term": "understand",
+                                                "reading": "/ˌʌndəˈstænd/",
+                                                "meaning": "tushunmoq (holat fe'li, -ing olmaydi)",
+                                                "exampleSentence": "I understand the grammar explanation perfectly now.",
+                                                "exampleTranslation": "Men hozir grammatika tushuntirishini juda yaxshi tushunib turibman."
+                                        },
+                                        {
+                                                "term": "believe",
+                                                "reading": "/bɪˈliːv/",
+                                                "meaning": "ishonmoq (holat fe'li)",
+                                                "exampleSentence": "I truly believe that daily practice leads to fluency.",
+                                                "exampleTranslation": "Men har kungi amaliyot ravonlikka olib kelishiga chin dildan ishonaman."
+                                        },
+                                        {
+                                                "term": "remember",
+                                                "reading": "/rɪˈmembə/",
+                                                "meaning": "eslamoq, yodda tutmoq (holat fe'li)",
+                                                "exampleSentence": "Do you remember the teacher's instructions?",
+                                                "exampleTranslation": "O'qituvchining ko'rsatmalarini eslay olasizmi?"
+                                        },
+                                        {
+                                                "term": "temporary",
+                                                "reading": "/ˈtempərəri/",
+                                                "meaning": "vaqtinchalik",
+                                                "exampleSentence": "He is staying in a hotel as a temporary arrangement.",
+                                                "exampleTranslation": "U vaqtinchalik chora sifatida mehmonxonada yashab turibdi."
+                                        },
+                                        {
+                                                "term": "permanent",
+                                                "reading": "/ˈpɜːmənənt/",
+                                                "meaning": "doimiy, o'zgarmas",
+                                                "exampleSentence": "They have a permanent home in the suburbs of the city.",
+                                                "exampleTranslation": "Ularning shahar chekkasida doimiy uylari bor."
+                                        },
+                                        {
+                                                "term": "belong to",
+                                                "reading": "/bɪˈlɒŋ tuː/",
+                                                "meaning": "tegishli bo'lmoq (holat fe'li)",
+                                                "exampleSentence": "This leather wallet belongs to my colleague.",
+                                                "exampleTranslation": "Bu charm hamyon mening hamkasbimga tegishli."
+                                        },
+                                        {
+                                                "term": "attend",
+                                                "reading": "/əˈtend/",
+                                                "meaning": "qatnashmoq (kursda, seminarda)",
+                                                "exampleSentence": "This month, I am attending evening IELTS classes.",
+                                                "exampleTranslation": "Shu oyda men kechki IELTS darslariga qatnayapman."
+                                        },
+                                        {
+                                                "term": "routine",
+                                                "reading": "/ruːˈtiːn/",
+                                                "meaning": "kun tartibi, odatiy jadval",
+                                                "exampleSentence": "Regular physical exercise is a vital part of my daily routine.",
+                                                "exampleTranslation": "Muntazam jismoniy mashqlar mening kundalik tartibimning muhim qismidir."
+                                        }
+                                ]
                         }
-                    ],
-                    "grammarRules": [
-                        {
-                            "pattern": "A1 Capstone Review & Self-Introduction",
-                            "meaning": "A1 darajasini umumlashtirish va o'zini tanishtirish nutqi.",
-                            "usageNotes": "A1 darajasida to'liq o'zini tanishtirish strukturasi.",
-                            "examples": [
-                                {
-                                    "sentence": "Let me introduce myself.",
-                                    "translation": "O'zimni tanishtirishga ijozat bering."
-                                }
-                            ]
+                },
+                {
+                        "id": "en-a1-u4-l5-s2",
+                        "title": "Zamonlar Qiyosi Mashqlari",
+                        "type": "practice",
+                        "estimatedMinutes": 4,
+                        "practiceData": {
+                                "instructions": "Contextga qarab Present Simple yoki Present Continuous shaklini tanlang.",
+                                "exercises": [
+                                        {
+                                                "id": "en-a1-u4-l5-e1",
+                                                "type": "multiple-choice",
+                                                "prompt": "Bo'sh joyni to'ldiring: 'I ___ an apple every day, but right now I ___ a banana.'",
+                                                "options": [
+                                                        "eat / am eating",
+                                                        "am eating / eat",
+                                                        "eat / eat",
+                                                        "am eating / am eating"
+                                                ],
+                                                "correctAnswer": 0,
+                                                "explanation": "'Every day' odat (eat - Present Simple), 'right now' ayni paytdagi harakat (am eating - Present Continuous)."
+                                        },
+                                        {
+                                                "id": "en-a1-u4-l5-e2",
+                                                "type": "multiple-choice",
+                                                "prompt": "Holat fe'li (stative verb) bo'yicha qaysi jumla to'g'ri?",
+                                                "options": [
+                                                        "I am needing a glass of water right now.",
+                                                        "I need a glass of water right now.",
+                                                        "I am need a glass of water right now.",
+                                                        "I needing a glass of water right now."
+                                                ],
+                                                "correctAnswer": 1,
+                                                "explanation": "'Need' holat fe'li bo'lib, 'right now' kelsa ham faqat Present Simple da 'I need' bo'ladi."
+                                        },
+                                        {
+                                                "id": "en-a1-u4-l5-e3",
+                                                "type": "multiple-choice",
+                                                "prompt": "'What do you do?' savoli nimani anglatadi?",
+                                                "options": [
+                                                        "Ayni paytda nima ish qilyapsiz?",
+                                                        "Sizning kasbingiz/asosiy faoliyatingiz nima?",
+                                                        "Kecha nima qildingiz?",
+                                                        "Qayerga ketyapsiz?"
+                                                ],
+                                                "correctAnswer": 1,
+                                                "explanation": "'What do you do?' - kasb-kor haqidagi savol ('What is your job?'). Hozir nima qilyapsiz deyish uchun 'What are you doing?' deyiladi."
+                                        },
+                                        {
+                                                "id": "en-a1-u4-l5-e4",
+                                                "type": "multiple-choice",
+                                                "prompt": "'Do you ___ what the lecturer is saying?' (tushunyapsizmi?)",
+                                                "options": [
+                                                        "understanding",
+                                                        "understand",
+                                                        "are understanding",
+                                                        "understands"
+                                                ],
+                                                "correctAnswer": 1,
+                                                "explanation": "'Understand' stative verb bo'lgani uchun 'Do you understand?' deb so'raladi."
+                                        },
+                                        {
+                                                "id": "en-a1-u4-l5-e5",
+                                                "type": "multiple-choice",
+                                                "prompt": "Vaqtinchalik holat uchun to'g'ri gapni tanlang: 'He usually lives in Samarkand, but this month he ___ in Tashkent.'",
+                                                "options": [
+                                                        "lives",
+                                                        "is living",
+                                                        "live",
+                                                        "lived"
+                                                ],
+                                                "correctAnswer": 1,
+                                                "explanation": "'This month' vaqtinchalik holatni bildiradi, shuning uchun Present Continuous 'is living' to'g'ri."
+                                        }
+                                ]
                         }
-                    ]
+                },
+                {
+                        "id": "en-a1-u4-l5-s3",
+                        "title": "Dars Testi: Simple vs Continuous",
+                        "type": "test",
+                        "estimatedMinutes": 5,
+                        "testData": {
+                                "instructions": "Savollarga to'g'ri javob berib, mavzuni mustahkamlang.",
+                                "passingScorePercentage": 80,
+                                "questions": [
+                                        {
+                                                "id": "en-a1-u4-l5-q1",
+                                                "question": "Qaysi fe'l holat fe'li (stative verb) bo'lib, odatda Continuous zamonda ishlatilmaydi?",
+                                                "options": [
+                                                        "run",
+                                                        "know",
+                                                        "write",
+                                                        "cook"
+                                                ],
+                                                "correctAnswerIndex": 1,
+                                                "explanation": "'Know' (bilmoq) - aqliy holat fe'li bo'lib, davomli zamonda qo'llanilmaydi."
+                                        },
+                                        {
+                                                "id": "en-a1-u4-l5-q2",
+                                                "question": "Qaysi jumla grammatik jihatdan XATO?",
+                                                "options": [
+                                                        "I am believing your story.",
+                                                        "I believe your story.",
+                                                        "She is playing the piano.",
+                                                        "They go to school by bus."
+                                                ],
+                                                "correctAnswerIndex": 0,
+                                                "explanation": "'Believe' stative verb bo'lgani uchun 'I am believing' deb bo'lmaydi, 'I believe' bo'lishi shart."
+                                        },
+                                        {
+                                                "id": "en-a1-u4-l5-q3",
+                                                "question": "'Shhh! The manager ___ with a client right now.'",
+                                                "options": [
+                                                        "talks",
+                                                        "is talking",
+                                                        "talk",
+                                                        "are talking"
+                                                ],
+                                                "correctAnswerIndex": 1,
+                                                "explanation": "'Right now' - ayni damdagi harakat, 'The manager is talking'."
+                                        },
+                                        {
+                                                "id": "en-a1-u4-l5-q4",
+                                                "question": "'This backpack ___ to my younger brother.'",
+                                                "options": [
+                                                        "is belonging",
+                                                        "belongs",
+                                                        "belong",
+                                                        "are belonging"
+                                                ],
+                                                "correctAnswerIndex": 1,
+                                                "explanation": "'Belong' holat fe'li va 'backpack' birlikda bo'lgani uchun 'belongs' to'g'ri."
+                                        },
+                                        {
+                                                "id": "en-a1-u4-l5-q5",
+                                                "question": "IELTS Speaking: 'Do you prefer to study in the morning or at night?' savoliga eng yaxshi javob qaysi?",
+                                                "options": [
+                                                        "I am study night.",
+                                                        "Generally speaking, I study much better in the early morning because my mind is fresh, although currently I am having to study at night due to my work schedule.",
+                                                        "Morning good, night bad.",
+                                                        "I study always morning."
+                                                ],
+                                                "correctAnswerIndex": 1,
+                                                "explanation": "'Generally speaking, I study... although currently I am having to study...' - ikkala zamonning tabiiy uyg'unligini yuqori darajada ko'rsatib beradi."
+                                        }
+                                ]
+                        }
                 }
-            },
-            {
-                "id": "en-a1-u4-l5-s2",
-                "title": "Mashq",
-                "type": "practice",
-                "estimatedMinutes": 5,
-                "practiceData": {
-                    "instructions": "O'zini tanishtirishdagi to'g'ri jumlalarni aniqlang.",
-                    "exercises": [
-                        {
-                            "id": "en-a1-u4-l5-e1",
-                            "type": "multiple-choice",
-                            "prompt": "\"Let me _______ myself.\"",
-                            "options": [
-                                "introducing",
-                                "introduce",
-                                "introduces",
-                                "introduced"
-                            ],
-                            "correctAnswer": 1,
-                            "explanation": "Let me introduce myself."
-                        },
-                        {
-                            "id": "en-a1-u4-l5-ex-2",
-                            "type": "multiple-choice",
-                            "prompt": "Choose the correct word to complete the sentence: \"Welcome to our English class.\"",
-                            "options": [
-                                "doubt",
-                                "reluctance",
-                                "delay",
-                                "Welcome"
-                            ],
-                            "correctAnswer": 3,
-                            "explanation": "\"Welcome\" (Xush kelibsiz) fits the context appropriately."
-                        }
-                    ]
-                }
-            },
-            {
-                "id": "en-a1-u4-l5-s3",
-                "title": "A1 Yakuniy Test",
-                "type": "test",
-                "estimatedMinutes": 5,
-                "testData": {
-                    "instructions": "A1 darajasini to'liq tasdiqlash uchun yakuniy test savollariga javob bering.",
-                    "passingScorePercentage": 75,
-                    "questions": [
-                        {
-                            "id": "en-a1-u4-l5-q1",
-                            "question": "Which sentence is grammatically correct?",
-                            "options": [
-                                "She live in London with her family.",
-                                "She lives in London with her family.",
-                                "She living in London.",
-                                "She is live in London."
-                            ],
-                            "correctAnswerIndex": 1,
-                            "explanation": "She lives in London."
-                        },
-                        {
-                            "id": "en-a1-u4-l5-q2",
-                            "question": "Do you _______ a cup of coffee?",
-                            "options": [
-                                "want",
-                                "wanting",
-                                "is want",
-                                "wants"
-                            ],
-                            "correctAnswerIndex": 0,
-                            "explanation": "Do you want...?"
-                        },
-                        {
-                            "id": "en-a1-u4-l5-q3",
-                            "question": "There are _______ books on the shelf.",
-                            "options": [
-                                "much",
-                                "a",
-                                "an",
-                                "many"
-                            ],
-                            "correctAnswerIndex": 3,
-                            "explanation": "Many books (ko'p kitoblar)."
-                        },
-                        {
-                            "id": "en-a1-u4-l5-q4",
-                            "question": "He _______ swim very well.",
-                            "options": [
-                                "can",
-                                "cans",
-                                "is can",
-                                "can to"
-                            ],
-                            "correctAnswerIndex": 0,
-                            "explanation": "He can swim."
-                        }
-                    ]
-                }
-            }
         ]
-    },
+},
     {
         "id": "en-a1-u5-l1",
         "courseId": "english-a1",
