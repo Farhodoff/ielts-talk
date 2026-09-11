@@ -2320,164 +2320,228 @@ export const ENGLISH_A2_LESSONS: Lesson[] = [
         "level": "A2",
         "lessonNumber": 1,
         "title": "Comparatives & Superlatives (better, best)",
-        "description": "Sifat darajalari: qiyosiy va orttirma daraja.",
-        "estimatedDurationMinutes": 14,
+        "description": "Sifat darajalari: qiyosiy (-er / more) va orttirma (-est / most) darajalar, istisno sifatlar va 'as... as' qolipi.",
+        "estimatedDurationMinutes": 15,
         "icon": "📊",
         "steps": [
-            {
-                "id": "en-a2-u3-l1-s1",
-                "title": "Sifat Darajalari",
-                "type": "learn",
-                "estimatedMinutes": 4,
-                "learnData": {
-                    "title": "Comparative and Superlative Adjectives",
-                    "explanation": "Qisqa sifatlarga -er / -est qo'shiladi (faster, fastest). Uzun sifatlarga more / most qo'yiladi (more modern, most modern).",
-                    "keyPoints": [
-                        "good -> better -> the best",
-                        "bad -> worse -> the worst",
-                        "big -> bigger -> the biggest"
-                    ],
-                    "vocabulary": [
-                        {
-                            "term": "Better",
-                            "reading": "/ˈbet.ər/",
-                            "meaning": "Yaxshiroq",
-                            "exampleSentence": "This phone is better than my old one.",
-                            "exampleTranslation": "Bu telefon eskisidan yaxshiroq."
-                        },
-                        {
-                            "term": "Worse",
-                            "reading": "/wɜːs/",
-                            "meaning": "Yomonroq",
-                            "exampleSentence": "The traffic is worse today.",
-                            "exampleTranslation": "Bugun tirbandlik yomonroq."
-                        },
-                        {
-                            "term": "Schedule",
-                            "reading": "/ˈʃedʒ.uːl/",
-                            "meaning": "Jadval, reja",
-                            "exampleSentence": "Let me check my schedule for tomorrow.",
-                            "exampleTranslation": "Ertangi kun jadvalimni tekshirib koʻray."
+                {
+                        "id": "en-a2-u3-l1-s1",
+                        "title": "Sifat Darajalari Asoslari",
+                        "type": "learn",
+                        "estimatedMinutes": 5,
+                        "learnData": {
+                                "title": "Comparative and Superlative Adjectives",
+                                "explanation": "Narsa-buyumlar va shaxslarni o'zaro taqqoslash qoidalari:\n\n1. Qisqa (bir bo'g'inli) sifatlar:\n- Qiyosiy daraja: sifatga **-er + THAN** qo'shiladi: fast -> faster than, tall -> taller than, cheap -> cheaper than.\n  • Qisqa unli + bitta undosh: big -> bigger than, hot -> hotter than.\n- Orttirma daraja: **THE + sifat + -est**: fast -> the fastest, big -> the biggest.\n\n2. 'y' bilan tugovchi ikki bo'g'inli sifatlar:\n- 'y' harfi 'i' ga aylanadi: easy -> easier than / the easiest, happy -> happier than / the happiest.\n\n3. Uzun (ikki va undan ortiq bo'g'inli) sifatlar:\n- Qiyosiy: **MORE + sifat + THAN**: more expensive than, more modern than, more comfortable than.\n- Orttirma: **THE MOST + sifat**: the most expensive, the most comfortable.\n\n4. Noto'g'ri (Irregular) sifatlar — Yod olinishi shart!\n- good -> BETTER than (yaxshiroq) -> THE BEST (eng yaxshi)\n- bad -> WORSE than (yomonroq) -> THE WORST (eng yomon)\n- far -> FURTHER / FARTHER than (uzoqroq) -> THE FURTHEST (eng uzoq).\n\n5. Tenglik ifodasi (AS ... AS):\n- \"My new laptop is as fast as my desktop computer.\" (Mening yangi noutbukim kompyuterim kabi tez).\n- Inkor: \"This apartment is not as spacious as our old house.\"\n\n6. O'zbek o'rganuvchilari uchun xavfli tuzoqlar (Common Pitfalls):\n- ❌ \"more better\" -> ✅ \"BETTER\" (Ikkita qiyosiy shaklni aralashtirmang!).\n- ❌ \"the most biggest\" -> ✅ \"THE BIGGEST\".\n- ❌ \"He is taller then me.\" -> ✅ \"He is taller THAN me.\" ('Then' vaqtni, 'than' taqqoslashni bildiradi).\n\n7. IELTS Speaking Foundation Corner:\n- Topic: Comparing Places & Life Choices (Part 1)\n- Examiner: \"Do you prefer living in a big city or a small town?\"\n- Model Band 6.0+ Answer: \"Without doubt, I prefer living in a bustling metropolis because it offers far more career opportunities and superior healthcare facilities than a quiet small town.\"\n- Examiner Tip: \"far more career opportunities\" (ancha ko'p martaba imkoniyatlari) va \"superior healthcare\" (ancha ustun tibbiy xizmat) iboralari yuqori ballga yo'l ochadi.",
+                                "vocabulary": [
+                                        {
+                                                "term": "superior",
+                                                "reading": "/suːˈpɪəriə/",
+                                                "meaning": "ancha ustun, yuqoriroq sifatga ega",
+                                                "exampleSentence": "The audio quality of these headphones is distinctly superior.",
+                                                "exampleTranslation": "Ushbu quloqchinlarning ovoz sifati yaqqol ustundir."
+                                        },
+                                        {
+                                                "term": "spacious",
+                                                "reading": "/ˈspeɪʃəs/",
+                                                "meaning": "keng, maydoni katta",
+                                                "exampleSentence": "Our new family apartment is far more spacious than our previous flat.",
+                                                "exampleTranslation": "Bizning yangi oilaviy kvartiramiz avvalgisiga qaraganda ancha kengroq."
+                                        },
+                                        {
+                                                "term": "hectic",
+                                                "reading": "/ˈhektɪk/",
+                                                "meaning": "o'ta gavjum, tig'iz, shovqin-suronli",
+                                                "exampleSentence": "Life in modern megacities is noticeably more hectic than in rural areas.",
+                                                "exampleTranslation": "Zamonaviy megapolislardagi hayot qishloq joylariga qaraganda sezilarli darajada tig'izroqdir."
+                                        },
+                                        {
+                                                "term": "further",
+                                                "reading": "/ˈfɜːðə/",
+                                                "meaning": "uzoqroq / qo'shimcha (far ning qiyosiy darajasi)",
+                                                "exampleSentence": "The international airport is situated further than the central bus station.",
+                                                "exampleTranslation": "Xalqaro aeroport markaziy avtovokzalga qaraganda uzoqroqda joylashgan."
+                                        },
+                                        {
+                                                "term": "worse",
+                                                "reading": "/wɜːs/",
+                                                "meaning": "yomonroq (bad ning qiyosiy darajasi)",
+                                                "exampleSentence": "The morning traffic was considerably worse today due to heavy snowfall.",
+                                                "exampleTranslation": "Qalin qor sababli bugun ertalabki tirbandlik ancha yomonroq bo'ldi."
+                                        },
+                                        {
+                                                "term": "the worst",
+                                                "reading": "/ðə wɜːst/",
+                                                "meaning": "eng yomon (bad ning orttirma darajasi)",
+                                                "exampleSentence": "This is undoubtedly the worst storm our district has seen in a decade.",
+                                                "exampleTranslation": "Bu tumanimizda so'nggi o'n yillikdagi shubhasiz eng yomon bo'rondir."
+                                        },
+                                        {
+                                                "term": "convenient",
+                                                "reading": "/kənˈviːniənt/",
+                                                "meaning": "qulay, foydalanishga oson",
+                                                "exampleSentence": "Traveling by subway is the most convenient option during rush hour.",
+                                                "exampleTranslation": "Tig'iz vaqtda metroda harakatlanish eng qulay tanlov hisoblanadi."
+                                        },
+                                        {
+                                                "term": "affordable",
+                                                "reading": "/əˈfɔːdəbəl/",
+                                                "meaning": "cho'ntakbop, arzonroq",
+                                                "exampleSentence": "Living on campus is generally more affordable for international students.",
+                                                "exampleTranslation": "Universitet hududida yashash xalqaro talabalar uchun odatda arzonroq tushadi."
+                                        }
+                                ]
                         }
-                    ],
-                    "grammarRules": [
-                        {
-                            "pattern": "Comparatives & Superlatives (better, best)",
-                            "meaning": "Sifat darajalari: qiyosiy va orttirma daraja.",
-                            "usageNotes": "Qisqa sifatlarga -er / -est qo'shiladi (faster, fastest). Uzun sifatlarga more / most qo'yiladi (more modern, most modern).",
-                            "examples": [
-                                {
-                                    "sentence": "This phone is better than my old one.",
-                                    "translation": "Bu telefon eskisidan yaxshiroq."
-                                },
-                                {
-                                    "sentence": "The traffic is worse today.",
-                                    "translation": "Bugun tirbandlik yomonroq."
-                                }
-                            ]
+                },
+                {
+                        "id": "en-a2-u3-l1-s2",
+                        "title": "Sifat Darajalari Mashqlari",
+                        "type": "practice",
+                        "estimatedMinutes": 5,
+                        "practiceData": {
+                                "instructions": "Bo'sh joylarni sifatning to'g'ri darajasi bilan to'ldiring.",
+                                "exercises": [
+                                        {
+                                                "id": "en-a2-u3-l1-e1",
+                                                "type": "multiple-choice",
+                                                "prompt": "Bo'sh joyni to'ldiring: 'This laptop is ___ than my previous one.' (fast)",
+                                                "options": [
+                                                        "more faster",
+                                                        "faster",
+                                                        "fastest",
+                                                        "more fast"
+                                                ],
+                                                "correctAnswer": 1,
+                                                "explanation": "Qisqa sifatlar qiyosiy darajada faqat -er oladi: 'faster than'."
+                                        },
+                                        {
+                                                "id": "en-a2-u3-l1-e2",
+                                                "type": "multiple-choice",
+                                                "prompt": "'Good' sifatining qiyosiy va orttirma darajalari qaysi?",
+                                                "options": [
+                                                        "gooder / the goodest",
+                                                        "better / the best",
+                                                        "more good / the most good",
+                                                        "worse / the worst"
+                                                ],
+                                                "correctAnswer": 1,
+                                                "explanation": "'Good' noto'g'ri sifat: good -> better -> the best."
+                                        },
+                                        {
+                                                "id": "en-a2-u3-l1-e3",
+                                                "type": "multiple-choice",
+                                                "prompt": "'Shahardagi eng qimmat mehmonxona' jumlasi qanday aytiladi?",
+                                                "options": [
+                                                        "the most expensive hotel in town",
+                                                        "the expensive hotel in town",
+                                                        "the more expensive hotel in town",
+                                                        "the expensivest hotel in town"
+                                                ],
+                                                "correctAnswer": 0,
+                                                "explanation": "Ko'p bo'g'inli sifat orttirma darajada 'the most expensive' bo'ladi."
+                                        },
+                                        {
+                                                "id": "en-a2-u3-l1-e4",
+                                                "type": "multiple-choice",
+                                                "prompt": "Taqqoslashda 'than' so'zining to'g'ri yozilishi qaysi? 'He is taller ___ his brother.'",
+                                                "options": [
+                                                        "then",
+                                                        "than",
+                                                        "that",
+                                                        "as"
+                                                ],
+                                                "correctAnswer": 1,
+                                                "explanation": "Taqqoslashda 'than' qo'llanadi ('then' esa 'keyin' degani)."
+                                        },
+                                        {
+                                                "id": "en-a2-u3-l1-e5",
+                                                "type": "multiple-choice",
+                                                "prompt": "'Mening do'stim men kabi tirishqoq' (as... as tenglik qolipi):",
+                                                "options": [
+                                                        "My friend is as hardworking as me.",
+                                                        "My friend is more hardworking as me.",
+                                                        "My friend is as hardworking than me.",
+                                                        "My friend is so hardworking like me."
+                                                ],
+                                                "correctAnswer": 0,
+                                                "explanation": "Tenglik strukturasi: 'as + sifat + as' (as hardworking as me)."
+                                        }
+                                ]
                         }
-                    ]
+                },
+                {
+                        "id": "en-a2-u3-l1-s3",
+                        "title": "Dars Testi: Comparatives & Superlatives",
+                        "type": "test",
+                        "estimatedMinutes": 5,
+                        "testData": {
+                                "instructions": "Savollarga to'g'ri javob berib, mavzuni mustahkamlang.",
+                                "passingScorePercentage": 80,
+                                "questions": [
+                                        {
+                                                "id": "en-a2-u3-l1-q1",
+                                                "question": "Qaysi jumla grammatik jihatdan XATO?",
+                                                "options": [
+                                                        "This phone is much better than that one.",
+                                                        "She is more taller than her sister.",
+                                                        "Mount Everest is the highest mountain in the world.",
+                                                        "Health is more important than wealth."
+                                                ],
+                                                "correctAnswerIndex": 1,
+                                                "explanation": "'more taller' qo'pol xato, chunki bir bo'g'inli sifatga 'more' qo'shilmaydi; faqat 'taller' bo'lishi kerak."
+                                        },
+                                        {
+                                                "id": "en-a2-u3-l1-q2",
+                                                "question": "'Bad' sifatining orttirma (superlative) darajasi qaysi?",
+                                                "options": [
+                                                        "the baddest",
+                                                        "the worst",
+                                                        "the worse",
+                                                        "the most bad"
+                                                ],
+                                                "correctAnswerIndex": 1,
+                                                "explanation": "bad -> worse -> the worst."
+                                        },
+                                        {
+                                                "id": "en-a2-u3-l1-q3",
+                                                "question": "'Today's weather is ___ than yesterday.'",
+                                                "options": [
+                                                        "warmmer",
+                                                        "warmer",
+                                                        "more warm",
+                                                        "warmest"
+                                                ],
+                                                "correctAnswerIndex": 1,
+                                                "explanation": "'Warm' sifatiga -er qo'shiladi: 'warmer'."
+                                        },
+                                        {
+                                                "id": "en-a2-u3-l1-q4",
+                                                "question": "'His house is far ___ from the school than mine.' (masofa jihatdan uzoqroq)",
+                                                "options": [
+                                                        "further",
+                                                        "more far",
+                                                        "farest",
+                                                        "farer"
+                                                ],
+                                                "correctAnswerIndex": 0,
+                                                "explanation": "'Far' sifatining qiyosiy darajasi 'further' (yoki 'farther')."
+                                        },
+                                        {
+                                                "id": "en-a2-u3-l1-q5",
+                                                "question": "IELTS Speaking: 'Do you prefer studying alone or in a group?' savoliga qaysi javob taqqoslashni eng professional ochib bergan?",
+                                                "options": [
+                                                        "Alone is more good.",
+                                                        "Personally, I find studying independently far more productive than working in a group, because it allows me to concentrate without unnecessary distractions.",
+                                                        "Group is best for me.",
+                                                        "I like both same."
+                                                ],
+                                                "correctAnswerIndex": 1,
+                                                "explanation": "'far more productive than working in a group, because it allows me to concentrate without unnecessary distractions' - Band 7.0 darajasidagi kuchli taqqoslash va asos."
+                                        }
+                                ]
+                        }
                 }
-            },
-            {
-                "id": "en-a2-u3-l1-s2",
-                "title": "Mashq",
-                "type": "practice",
-                "estimatedMinutes": 5,
-                "practiceData": {
-                    "instructions": "To'g'ri sifat shaklini tanlang.",
-                    "exercises": [
-                        {
-                            "id": "en-a2-u3-l1-e1",
-                            "type": "multiple-choice",
-                            "prompt": "\"Tokyo is _______ (expensive) than Tashkent.\"",
-                            "options": [
-                                "expensiver",
-                                "more expensive",
-                                "as expensive",
-                                "most expensive"
-                            ],
-                            "correctAnswer": 1,
-                            "explanation": "More expensive than."
-                        },
-                        {
-                            "id": "en-a2-u3-l1-ex-2",
-                            "type": "multiple-choice",
-                            "prompt": "Choose the correct word to complete the sentence: \"The traffic is worse today.\"",
-                            "options": [
-                                "doubt",
-                                "Worse",
-                                "delay",
-                                "reluctance"
-                            ],
-                            "correctAnswer": 1,
-                            "explanation": "\"Worse\" (Yomonroq) fits the context appropriately."
-                        }
-                    ]
-                }
-            },
-            {
-                "id": "en-a2-u3-l1-s3",
-                "title": "Test",
-                "type": "test",
-                "estimatedMinutes": 5,
-                "testData": {
-                    "instructions": "Savollarga javob bering.",
-                    "passingScorePercentage": 75,
-                    "questions": [
-                        {
-                            "id": "en-a2-u3-l1-q1",
-                            "question": "Mount Everest is the _______ mountain in the world.",
-                            "options": [
-                                "higher",
-                                "highest",
-                                "high",
-                                "most high"
-                            ],
-                            "correctAnswerIndex": 1,
-                            "explanation": "The highest mountain."
-                        },
-                        {
-                            "id": "en-a2-u3-l1-q2",
-                            "question": "She is _______ than her brother.",
-                            "options": [
-                                "more tall",
-                                "tallest",
-                                "taller",
-                                "most tall"
-                            ],
-                            "correctAnswerIndex": 2,
-                            "explanation": "Taller than."
-                        },
-                        {
-                            "id": "en-a2-u3-l1-q3",
-                            "question": "What is the comparative form of \"good\"?",
-                            "options": [
-                                "best",
-                                "more good",
-                                "gooder",
-                                "better"
-                            ],
-                            "correctAnswerIndex": 3,
-                            "explanation": "Good -> better."
-                        },
-                        {
-                            "id": "en-a2-u3-l1-q4",
-                            "question": "This is the _______ delicious meal I have ever had.",
-                            "options": [
-                                "most",
-                                "many",
-                                "much",
-                                "more"
-                            ],
-                            "correctAnswerIndex": 0,
-                            "explanation": "The most delicious."
-                        }
-                    ]
-                }
-            }
         ]
-    },
+},
     {
         "id": "en-a2-u3-l2",
         "courseId": "english-a2",
@@ -2486,161 +2550,229 @@ export const ENGLISH_A2_LESSONS: Lesson[] = [
         "language": "en",
         "level": "A2",
         "lessonNumber": 2,
-        "title": "Countable & Uncountable Nouns (much, many, some, any)",
-        "description": "Sanaladigan va sanalmaydigan otlar, miqdor so'zlari.",
-        "estimatedDurationMinutes": 14,
+        "title": "Quantifiers: Much, Many, A lot of, A few, A little",
+        "description": "Miqdor ko'rsatkichlari: sanaladigan va sanalmaydigan otlar, a few va few, a little va little farqlari.",
+        "estimatedDurationMinutes": 15,
         "icon": "🍎",
         "steps": [
-            {
-                "id": "en-a2-u3-l2-s1",
-                "title": "Sanaladigan va Sanalmaydigan Otlar",
-                "type": "learn",
-                "estimatedMinutes": 4,
-                "learnData": {
-                    "title": "Much, Many, A lot of, Some, Any",
-                    "explanation": "Sanaladigan otlar (apples, books) bilan many/a few, sanalmaydiganlar (water, money) bilan much/a little ishlatiladi. Darak gapda \"some\", inkor va so'roqda \"any\".",
-                    "keyPoints": [
-                        "How many brothers do you have?",
-                        "How much milk is in the fridge?",
-                        "I have some money, but I don't have any cash."
-                    ],
-                    "vocabulary": [
-                        {
-                            "term": "Enough",
-                            "reading": "/ɪˈnʌf/",
-                            "meaning": "Yetarli",
-                            "exampleSentence": "Do we have enough time?",
-                            "exampleTranslation": "Bizda yetarli vaqt bormi?"
-                        },
-                        {
-                            "term": "Schedule",
-                            "reading": "/ˈʃedʒ.uːl/",
-                            "meaning": "Jadval, reja",
-                            "exampleSentence": "Let me check my schedule for tomorrow.",
-                            "exampleTranslation": "Ertangi kun jadvalimni tekshirib koʻray."
-                        },
-                        {
-                            "term": "Improve",
-                            "reading": "/ɪmˈpruːv/",
-                            "meaning": "Yaxshilamoq, rivojlantirmoq",
-                            "exampleSentence": "Reading books will improve your vocabulary.",
-                            "exampleTranslation": "Kitob oʻqish soʻz boyligingizni oshiradi."
+                {
+                        "id": "en-a2-u3-l2-s1",
+                        "title": "Miqdor Ko'rsatkichlari Qoidalari",
+                        "type": "learn",
+                        "estimatedMinutes": 5,
+                        "learnData": {
+                                "title": "Quantifiers with Countable and Uncountable Nouns",
+                                "explanation": "Narsalarning miqdorini to'g'ri ifodalash qoidalari:\n\n1. Sanaladigan otlar bilan (Countable Nouns — books, friends, apples):\n- MANY: Ko'p (asosan inkor va so'roqda): \"There aren't many students today.\" / \"How many apples do you need?\"\n- A FEW: Bir nechta, ozgina bor (ijobiy ma'noda): \"I have a few close friends.\" (Yetarli, xursandman).\n- FEW: Deyarli yo'q, yetarli emas (salbiy ma'noda): \"He has few friends and feels lonely.\"\n\n2. Sanalmaydigan otlar bilan (Uncountable Nouns — water, money, time, milk):\n- MUCH: Ko'p (asosan inkor va so'roqda): \"I don't have much time.\" / \"How much money does it cost?\"\n- A LITTLE: Ozgina bor (ijobiy ma'noda): \"I have a little money, let's grab coffee.\"\n- LITTLE: Juda kam, deyarli yo'q (salbiy ma'noda): \"We have little milk left; we can't make tea.\"\n\n3. Ikkala turdagi otlar bilan qo'llanuvchilar:\n- A LOT OF / LOTS OF: Ko'p (asosan darak gaplarda): \"There are a lot of cars on the road.\" / \"We drink a lot of water.\"\n- SOME: Biroz, bir nechta (darak gaplar va xushmuomala takliflarda): \"I need some information.\"\n- ANY: Hech qanday (inkor gaplar va umumiy savollarda): \"We don't have any bread.\"\n\n4. O'zbek o'rganuvchilari uchun xavfli tuzoqlar (Common Pitfalls):\n- ❌ \"I have many homeworks.\" -> ✅ \"I have A LOT OF HOMEWORK.\" ('Homework' sanalmaydi, hech qachon -s olmaydi va 'many' bilan kelmaydi!).\n- ❌ \"I have a few money.\" -> ✅ \"I have A LITTLE money.\" (Pul sanalmaydi, shuning uchun 'a little').\n- ❌ \"Can you give me an advice?\" -> ✅ \"Can you give me SOME advice / a piece of advice?\" ('Advice' sanalmaydi!).\n\n5. IELTS Speaking Foundation Corner:\n- Topic: Daily Nutrition & Free Time\n- Examiner: \"Do you have much free time during the week?\"\n- Model Band 6.0+ Answer: \"To be frank, I have very little free time on weekdays due to my hectic university schedule. However, I make sure to carve out a few hours on Sundays to recharge.\"\n- Examiner Tip: \"very little free time\" (juda oz bo'sh vaqt) va \"carve out a few hours\" (bir necha soat vaqt ajratmoq) - ravon va tabiiy til namoyishi.",
+                                "vocabulary": [
+                                        {
+                                                "term": "plenty of",
+                                                "reading": "/ˈplenti əv/",
+                                                "meaning": "yetarlidan ham ko'p, mo'l-ko'l",
+                                                "exampleSentence": "Take your time; we have plenty of time before the train departs.",
+                                                "exampleTranslation": "Shoshilmang; poyezd jo'nashidan oldin bizda mo'l-ko'l vaqt bor."
+                                        },
+                                        {
+                                                "term": "a few",
+                                                "reading": "/ə fjuː/",
+                                                "meaning": "bir nechta (sanaladigan otlar uchun, yetarli darajada)",
+                                                "exampleSentence": "I invited a few reliable friends over for dinner.",
+                                                "exampleTranslation": "Men kechki ovqatga bir nechta ishonchli do'stlarimni taklif qildim."
+                                        },
+                                        {
+                                                "term": "a little",
+                                                "reading": "/ə ˈlɪtəl/",
+                                                "meaning": "ozgina (sanalmaydigan otlar uchun, yetarli darajada)",
+                                                "exampleSentence": "Could you please add a little milk to my coffee?",
+                                                "exampleTranslation": "Qahvamga ozgina sut qo'shib yubora olasizmi?"
+                                        },
+                                        {
+                                                "term": "portion",
+                                                "reading": "/ˈpɔːʃən/",
+                                                "meaning": "porsiya, qism (taomda)",
+                                                "exampleSentence": "The restaurant serves generous portions of healthy salad.",
+                                                "exampleTranslation": "Restoran foydali salatning katta porsiyalarini taqdim etadi."
+                                        },
+                                        {
+                                                "term": "nutritious",
+                                                "reading": "/njuːˈtrɪʃəs/",
+                                                "meaning": "to'yimli, ozuqaviy moddalarga boy",
+                                                "exampleSentence": "Fresh vegetables and nuts provide nutritious energy throughout the day.",
+                                                "exampleTranslation": "Yangi sabzavotlar va yong'oqlar kun davomida to'yimli energiya bag'ishlaydi."
+                                        },
+                                        {
+                                                "term": "leftovers",
+                                                "reading": "/ˈleftˌəʊvəz/",
+                                                "meaning": "ortib qolgan ovqat",
+                                                "exampleSentence": "We stored the dinner leftovers neatly in glass containers.",
+                                                "exampleTranslation": "Biz kechki ovqatdan ortib qolgan taomni shisha idishlarga joylab saqlab qo'ydik."
+                                        },
+                                        {
+                                                "term": "hectic",
+                                                "reading": "/ˈhektɪk/",
+                                                "meaning": "o'ta tig'iz, band",
+                                                "exampleSentence": "I rarely get enough sleep during hectic exam weeks.",
+                                                "exampleTranslation": "Tig'iz imtihon haftalarida men kamdan-kam to'yib uxlayman."
+                                        },
+                                        {
+                                                "term": "quantity",
+                                                "reading": "/ˈkwɒntəti/",
+                                                "meaning": "miqdor, hajm",
+                                                "exampleSentence": "In language learning, study quality always surpasses quantity.",
+                                                "exampleTranslation": "Til o'rganishda o'qish sifati har doim miqdordan ustun turadi."
+                                        }
+                                ]
                         }
-                    ],
-                    "grammarRules": [
-                        {
-                            "pattern": "Countable & Uncountable Nouns (much, many, some, any)",
-                            "meaning": "Sanaladigan va sanalmaydigan otlar, miqdor so'zlari.",
-                            "usageNotes": "Sanaladigan otlar (apples, books) bilan many/a few, sanalmaydiganlar (water, money) bilan much/a little ishlatiladi. Darak gapda \"some\", inkor va so'roqda \"any\".",
-                            "examples": [
-                                {
-                                    "sentence": "Do we have enough time?",
-                                    "translation": "Bizda yetarli vaqt bormi?"
-                                }
-                            ]
+                },
+                {
+                        "id": "en-a2-u3-l2-s2",
+                        "title": "Miqdor Mashqlari",
+                        "type": "practice",
+                        "estimatedMinutes": 5,
+                        "practiceData": {
+                                "instructions": "Bo'sh joylarni to'g'ri miqdor so'zi bilan to'ldiring.",
+                                "exercises": [
+                                        {
+                                                "id": "en-a2-u3-l2-e1",
+                                                "type": "multiple-choice",
+                                                "prompt": "Bo'sh joyni to'ldiring: 'How ___ sugar do you put in your tea?'",
+                                                "options": [
+                                                        "many",
+                                                        "much",
+                                                        "few",
+                                                        "any"
+                                                ],
+                                                "correctAnswer": 1,
+                                                "explanation": "Shakar sanalmaydigan ot bo'lgani uchun 'How much sugar' deb so'raladi."
+                                        },
+                                        {
+                                                "id": "en-a2-u3-l2-e2",
+                                                "type": "multiple-choice",
+                                                "prompt": "'Men bu mavzuda bir nechta kitob o'qidim.' Qaysi ifoda to'g'ri?",
+                                                "options": [
+                                                        "I read a little books on this subject.",
+                                                        "I read a few books on this subject.",
+                                                        "I read much books on this subject.",
+                                                        "I read little books on this subject."
+                                                ],
+                                                "correctAnswer": 1,
+                                                "explanation": "Kitoblar sanaladi, shuning uchun 'a few books'."
+                                        },
+                                        {
+                                                "id": "en-a2-u3-l2-e3",
+                                                "type": "multiple-choice",
+                                                "prompt": "Inkor gapni to'ldiring: 'We don't have ___ fresh milk left in the fridge.'",
+                                                "options": [
+                                                        "some",
+                                                        "any",
+                                                        "no",
+                                                        "many"
+                                                ],
+                                                "correctAnswer": 1,
+                                                "explanation": "Inkor gaplarda (don't have) 'any' ishlatiladi."
+                                        },
+                                        {
+                                                "id": "en-a2-u3-l2-e4",
+                                                "type": "multiple-choice",
+                                                "prompt": "'Unda vaqt juda oz edi (deyarli yo'q edi).' Qaysi so'z mos keladi? 'He had ___ time to catch the train.'",
+                                                "options": [
+                                                        "a few",
+                                                        "few",
+                                                        "little",
+                                                        "a little"
+                                                ],
+                                                "correctAnswer": 2,
+                                                "explanation": "Vaqt sanalmaydi va yetarli emas degan salbiy ma'noda 'little time' bo'ladi."
+                                        },
+                                        {
+                                                "id": "en-a2-u3-l2-e5",
+                                                "type": "multiple-choice",
+                                                "prompt": "Xushmuomala taklifda qaysi so'z ishlatiladi? 'Would you like ___ orange juice?'",
+                                                "options": [
+                                                        "any",
+                                                        "some",
+                                                        "many",
+                                                        "few"
+                                                ],
+                                                "correctAnswer": 1,
+                                                "explanation": "Xushmuomala taklifda savol bo'lsa ham 'some' qo'llanadi: 'Would you like some orange juice?'."
+                                        }
+                                ]
                         }
-                    ]
+                },
+                {
+                        "id": "en-a2-u3-l2-s3",
+                        "title": "Dars Testi: Quantifiers",
+                        "type": "test",
+                        "estimatedMinutes": 5,
+                        "testData": {
+                                "instructions": "Savollarga to'g'ri javob berib, mavzuni mustahkamlang.",
+                                "passingScorePercentage": 80,
+                                "questions": [
+                                        {
+                                                "id": "en-a2-u3-l2-q1",
+                                                "question": "Qaysi ot sanalmaydi va 'many' so'zi bilan qo'llanilishi XATO?",
+                                                "options": [
+                                                        "cars",
+                                                        "information",
+                                                        "questions",
+                                                        "chairs"
+                                                ],
+                                                "correctAnswerIndex": 1,
+                                                "explanation": "'Information' (ma'lumot) sanalmaydigan ot bo'lib, uning oldidan 'many' qo'yilmaydi ('much' yoki 'a lot of' bo'ladi)."
+                                        },
+                                        {
+                                                "id": "en-a2-u3-l2-q2",
+                                                "question": "'A few' va 'few' o'rtasidagi asosiy farq nima?",
+                                                "options": [
+                                                        "'A few' ko'plik otlar bilan, 'few' birlik otlar bilan keladi.",
+                                                        "'A few' ijobiy (yetarli darajada bir nechta) ma'noda, 'few' esa salbiy (deyarli yo'q, kam) ma'noda ishlatiladi.",
+                                                        "'Few' faqat sanalmaydigan otlar bilan ishlatiladi.",
+                                                        "Hech qanday farq yo'q, ikkalasi bir xil."
+                                                ],
+                                                "correctAnswerIndex": 1,
+                                                "explanation": "'A few' = bir nechta (ijobiy); 'few' = juda oz, deyarli yo'q (salbiy)."
+                                        },
+                                        {
+                                                "id": "en-a2-u3-l2-q3",
+                                                "question": "'Don't worry, we have ___ of time before the show begins.'",
+                                                "options": [
+                                                        "many",
+                                                        "plenty",
+                                                        "few",
+                                                        "a few"
+                                                ],
+                                                "correctAnswerIndex": 1,
+                                                "explanation": "'Plenty of time' - yetarlidan ham ko'p, bemalol vaqt bor deganidir."
+                                        },
+                                        {
+                                                "id": "en-a2-u3-l2-q4",
+                                                "question": "'There were ___ people waiting at the bus stop because it was midnight.' (juda kam, deyarli hech kim yo'q)",
+                                                "options": [
+                                                        "a few",
+                                                        "few",
+                                                        "little",
+                                                        "a little"
+                                                ],
+                                                "correctAnswerIndex": 1,
+                                                "explanation": "'People' sanaladi va yarim tunda odam deyarli yo'qligi salbiy 'few' orqali ifodalanadi."
+                                        },
+                                        {
+                                                "id": "en-a2-u3-l2-q5",
+                                                "question": "IELTS Speaking: 'Do you drink much water every day?' savoliga qaysi javob miqdor so'zlarini tabiiy qo'llagan?",
+                                                "options": [
+                                                        "I drink many water.",
+                                                        "Yes, I make an effort to drink plenty of water throughout the day. I usually keep a refillable water bottle on my desk so I always have some handy.",
+                                                        "No water, water is much.",
+                                                        "I am drink two waters."
+                                                ],
+                                                "correctAnswerIndex": 1,
+                                                "explanation": "'plenty of water', 'some handy' - sanalmaydigan otlar bilan tabiiy ravon ifodalangan."
+                                        }
+                                ]
+                        }
                 }
-            },
-            {
-                "id": "en-a2-u3-l2-s2",
-                "title": "Mashq",
-                "type": "practice",
-                "estimatedMinutes": 5,
-                "practiceData": {
-                    "instructions": "To'g'ri miqdor so'zini tanlang.",
-                    "exercises": [
-                        {
-                            "id": "en-a2-u3-l2-e1",
-                            "type": "multiple-choice",
-                            "prompt": "\"How _______ sugar do you want in your tea?\"",
-                            "options": [
-                                "few",
-                                "any",
-                                "much",
-                                "many"
-                            ],
-                            "correctAnswer": 2,
-                            "explanation": "Sugar sanalmaydi: How much."
-                        },
-                        {
-                            "id": "en-a2-u3-l2-ex-2",
-                            "type": "multiple-choice",
-                            "prompt": "Choose the correct word to complete the sentence: \"Let me check my schedule for tomorrow.\"",
-                            "options": [
-                                "reluctance",
-                                "delay",
-                                "Schedule",
-                                "doubt"
-                            ],
-                            "correctAnswer": 2,
-                            "explanation": "\"Schedule\" (Jadval, reja) fits the context appropriately."
-                        }
-                    ]
-                }
-            },
-            {
-                "id": "en-a2-u3-l2-s3",
-                "title": "Test",
-                "type": "test",
-                "estimatedMinutes": 5,
-                "testData": {
-                    "instructions": "Savollarga javob bering.",
-                    "passingScorePercentage": 75,
-                    "questions": [
-                        {
-                            "id": "en-a2-u3-l2-q1",
-                            "question": "How _______ students are in your classroom?",
-                            "options": [
-                                "little",
-                                "any",
-                                "many",
-                                "much"
-                            ],
-                            "correctAnswerIndex": 2,
-                            "explanation": "Students sanaladi: How many."
-                        },
-                        {
-                            "id": "en-a2-u3-l2-q2",
-                            "question": "We don't have _______ milk left in the fridge.",
-                            "options": [
-                                "many",
-                                "any",
-                                "some",
-                                "no"
-                            ],
-                            "correctAnswerIndex": 1,
-                            "explanation": "Inkor gapda: any."
-                        },
-                        {
-                            "id": "en-a2-u3-l2-q3",
-                            "question": "I would like _______ information about the course.",
-                            "options": [
-                                "some",
-                                "a",
-                                "an",
-                                "many"
-                            ],
-                            "correctAnswerIndex": 0,
-                            "explanation": "Information sanalmaydi: some information."
-                        },
-                        {
-                            "id": "en-a2-u3-l2-q4",
-                            "question": "There are only a _______ people waiting outside.",
-                            "options": [
-                                "little",
-                                "much",
-                                "any",
-                                "few"
-                            ],
-                            "correctAnswerIndex": 3,
-                            "explanation": "A few people."
-                        }
-                    ]
-                }
-            }
         ]
-    },
+},
     {
         "id": "en-a2-u3-l3",
         "courseId": "english-a2",
@@ -2649,161 +2781,229 @@ export const ENGLISH_A2_LESSONS: Lesson[] = [
         "language": "en",
         "level": "A2",
         "lessonNumber": 3,
-        "title": "Modals: Must, Have to, Should for Rules & Advice",
-        "description": "Majburiyat (must / have to) va maslahat (should) berish.",
-        "estimatedDurationMinutes": 14,
+        "title": "Modals: Must, Have to, Should (Rules & Advice)",
+        "description": "Qat'iy majburiyat (must), tashqi zaruriyat (have to), taqiq (mustn't vs don't have to) va maslahat (should).",
+        "estimatedDurationMinutes": 15,
         "icon": "⚠️",
         "steps": [
-            {
-                "id": "en-a2-u3-l3-s1",
-                "title": "Modal Fe'llar",
-                "type": "learn",
-                "estimatedMinutes": 4,
-                "learnData": {
-                    "title": "Must, Have to, Should",
-                    "explanation": "Must / Have to — Qat'iy majburiyat yoki qoida. Should — Do'stona maslahat (\"qilsangiz yaxshi bo'lardi\").",
-                    "keyPoints": [
-                        "You must wear a seatbelt (qonun/qoida).",
-                        "You should drink more water (foydali maslahat).",
-                        "You don't have to pay (majbur emassiz)."
-                    ],
-                    "vocabulary": [
-                        {
-                            "term": "Advice",
-                            "reading": "/ədˈvaɪs/",
-                            "meaning": "Maslahat",
-                            "exampleSentence": "Thank you for your useful advice.",
-                            "exampleTranslation": "Foydali maslahatingiz uchun rahmat."
-                        },
-                        {
-                            "term": "Improve",
-                            "reading": "/ɪmˈpruːv/",
-                            "meaning": "Yaxshilamoq, rivojlantirmoq",
-                            "exampleSentence": "Reading books will improve your vocabulary.",
-                            "exampleTranslation": "Kitob oʻqish soʻz boyligingizni oshiradi."
-                        },
-                        {
-                            "term": "Opportunity",
-                            "reading": "/ˌɒp.əˈtʃuː.nə.ti/",
-                            "meaning": "Imkoniyat",
-                            "exampleSentence": "This is a great opportunity to learn.",
-                            "exampleTranslation": "Bu oʻrganish uchun ajoyib imkoniyat."
+                {
+                        "id": "en-a2-u3-l3-s1",
+                        "title": "Majburiyat va Maslahat Modal Fe'llari",
+                        "type": "learn",
+                        "estimatedMinutes": 5,
+                        "learnData": {
+                                "title": "Obligation, Prohibition, and Advice: Must, Have to, Should",
+                                "explanation": "Modal fe'llarning ma'no va vazifalariga ko'ra farqlanishi:\n\n1. MUST (Qat'iy Majburiyat & Qonun):\n- So'zlovchining shaxsiy qat'iy fikri yoki yozma rasmiy qonun:\n  • \"You must wear a seatbelt while driving.\" (Qonuniy qoida).\n  • \"I must study harder for my exam.\" (Shaxsiy ichki qaror).\n- INKORI: MUSTN'T (/ˈmʌsənt/) — QAT'IYAN TAQIQLANADI! (T harfi o'qilmaydi!):\n  • \"You mustn't take photographs inside the embassy.\" (Rasmga olish qat'iyan man etiladi!).\n\n2. HAVE TO (Tashqi Shart-sharoit Majburiyati):\n- Shaxsning o'z xohishi emas, tashqi tartib-qoida talab qilganda:\n  • \"Doctors have to work long night shifts.\" (Kasbiy majburiyat).\n  • 3-shaxs birlikda: \"She HAS TO submit her thesis today.\"\n- INKORI: DON'T HAVE TO / DOESN'T HAVE TO — MAJBUR EMASSIZ (Ixtiyoriy):\n  • \"Tomorrow is Sunday, so I don't have to get up early.\" (Majburiyat yo'q, xohlasam uxlayman).\n  • ⚠️ MUSTN'T (taqiq) bilan DON'T HAVE TO (majburiy emas) orasidagi farqni aslo adashtirmang!\n\n3. SHOULD / SHOULDN'T (Foydali Maslahat):\n- Majburiyat emas, balki 'qilsangiz maqsadga muvofiq bo'lardi' degan tavsiya:\n  • \"You should drink more fresh water and get enough sleep.\"\n  • \"You shouldn't spend so many hours looking at screens.\"\n\n4. O'zbek o'rganuvchilari uchun xavfli tuzoqlar (Common Pitfalls):\n- ❌ \"You mustn't pay, it is free.\" -> ✅ \"You DON'T HAVE TO pay, it is free.\" (Bepul bo'lsa to'lash taqiqlanmagan, shunchaki to'lashga majbur emassiz!).\n- ❌ \"She has to study?\" -> ✅ \"DOES she have to study?\" (Have to 'do/does' bilan savol yasaydi).\n- ❌ \"Mustn't\" so'zidagi 't' ni o'qish -> /ˈmʌsənt/ deb talaffuz etiladi, 't' ovozsiz.\n\n5. IELTS Speaking Foundation Corner:\n- Topic: Rules, School & Healthy Lifestyle\n- Examiner: \"What rules do students have to follow at schools in your country?\"\n- Model Band 6.0+ Answer: \"In most Uzbek schools, students have to adhere to a strict dress code and arrive punctually before the morning bell. Mobile phones must be kept on silent throughout lessons.\"\n- Examiner Tip: \"adhere to a strict dress code\" (qat'iy kiyinish qoidasiga rioya qilmoq) va \"arrive punctually\" (aniq vaqtida yetib kelmoq) - juda boy akademik ifodalardir.",
+                                "vocabulary": [
+                                        {
+                                                "term": "obligation",
+                                                "reading": "/ˌɒblɪˈɡeɪʃən/",
+                                                "meaning": "majburiyat, burch",
+                                                "exampleSentence": "Citizens have a civic obligation to participate in community elections.",
+                                                "exampleTranslation": "Fuqarolar jamoat saylovlarida ishtirok etish fuqarolik burchiga egadirlar."
+                                        },
+                                        {
+                                                "term": "prohibited",
+                                                "reading": "/prəˈhɪbɪtɪd/",
+                                                "meaning": "taqiqlangan, man etilgan",
+                                                "exampleSentence": "Smoking is strictly prohibited in all closed public areas.",
+                                                "exampleTranslation": "Barcha yopiq jamoat joylarida chekish qat'iyan taqiqlangan."
+                                        },
+                                        {
+                                                "term": "mandatory",
+                                                "reading": "/ˈmændətəri/",
+                                                "meaning": "majburiy (qonun yoki nizom bo'yicha)",
+                                                "exampleSentence": "Wearing a protective safety helmet is mandatory on construction sites.",
+                                                "exampleTranslation": "Qurilish maydonchalarida xavfsizlik shlemini kiyish majburiydir."
+                                        },
+                                        {
+                                                "term": "punctual",
+                                                "reading": "/ˈpʌŋktʃuəl/",
+                                                "meaning": "o'z vaqtida keladigan, kechikmaydigan",
+                                                "exampleSentence": "Being punctual demonstrates respect towards colleagues and clients.",
+                                                "exampleTranslation": "Vaqtga qat'iy rioya qilish hamkasblar va mijozlarga hurmatni namoyon etadi."
+                                        },
+                                        {
+                                                "term": "adhere to",
+                                                "reading": "/ədˈhɪə tuː/",
+                                                "meaning": "qat'iy amal qilmoq, rioya etmoq (qoidaga)",
+                                                "exampleSentence": "All motorists must adhere to the urban speed limits.",
+                                                "exampleTranslation": "Barcha haydovchilar shahar tezlik cheklovlariga qat'iy rioya etishlari shart."
+                                        },
+                                        {
+                                                "term": "recommend",
+                                                "reading": "/ˌrekəˈmend/",
+                                                "meaning": "tavsiya qilmoq, maslahat bermoq",
+                                                "exampleSentence": "Doctors strongly recommend daily exercise to reduce cardiovascular risk.",
+                                                "exampleTranslation": "Shifokorlar yurak xastaliklari xavfini kamaytirish uchun har kungi jismoniy mashqlarni tavsiya qiladilar."
+                                        },
+                                        {
+                                                "term": "beneficial",
+                                                "reading": "/ˌbenɪˈfɪʃəl/",
+                                                "meaning": "foydali, ijobiy ta'sirga ega",
+                                                "exampleSentence": "Regular physical activity is exceptionally beneficial for mental wellbeing.",
+                                                "exampleTranslation": "Muntazam jismoniy faollik ruhiy salomatlik uchun nihoyatda foydalidir."
+                                        },
+                                        {
+                                                "term": "restriction",
+                                                "reading": "/rɪˈstrɪkʃən/",
+                                                "meaning": "cheklov, taqiq",
+                                                "exampleSentence": "There are certain baggage weight restrictions on budget airline flights.",
+                                                "exampleTranslation": "Arzon aviakompaniya reyslarida yuk vazniga nisbatan muayyan cheklovlar mavjud."
+                                        }
+                                ]
                         }
-                    ],
-                    "grammarRules": [
-                        {
-                            "pattern": "Modals: Must, Have to, Should for Rules & Advice",
-                            "meaning": "Majburiyat (must / have to) va maslahat (should) berish.",
-                            "usageNotes": "Must / Have to — Qat'iy majburiyat yoki qoida. Should — Do'stona maslahat (\"qilsangiz yaxshi bo'lardi\").",
-                            "examples": [
-                                {
-                                    "sentence": "Thank you for your useful advice.",
-                                    "translation": "Foydali maslahatingiz uchun rahmat."
-                                }
-                            ]
+                },
+                {
+                        "id": "en-a2-u3-l3-s2",
+                        "title": "Modal Fe'llar Mashqlari",
+                        "type": "practice",
+                        "estimatedMinutes": 5,
+                        "practiceData": {
+                                "instructions": "Contextga mos keluvchi to'g'ri modal fe'lni tanlang.",
+                                "exercises": [
+                                        {
+                                                "id": "en-a2-u3-l3-e1",
+                                                "type": "multiple-choice",
+                                                "prompt": "'Ertaga ta'til kuni, shuning uchun erta turishga majbur emasmiz.' Bo'sh joyni to'ldiring: 'Tomorrow is a holiday, so we ___ wake up early.'",
+                                                "options": [
+                                                        "mustn't",
+                                                        "don't have to",
+                                                        "shouldn't",
+                                                        "haven't to"
+                                                ],
+                                                "correctAnswer": 1,
+                                                "explanation": "Majburiyat yo'qligi 'don't have to' bilan ifodalanadi ('mustn't' esa taqiqni bildiradi)."
+                                        },
+                                        {
+                                                "id": "en-a2-u3-l3-e2",
+                                                "type": "multiple-choice",
+                                                "prompt": "Kasalxonada telefon bilan gaplashish qat'iyan taqiqlangan holat uchun qaysi jumla to'g'ri?",
+                                                "options": [
+                                                        "You don't have to use mobile phones here.",
+                                                        "You mustn't use mobile phones here.",
+                                                        "You shouldn't to use mobile phones.",
+                                                        "You must use not mobile phones."
+                                                ],
+                                                "correctAnswer": 1,
+                                                "explanation": "Qat'iy taqiq: 'You mustn't use mobile phones here'."
+                                        },
+                                        {
+                                                "id": "en-a2-u3-l3-e3",
+                                                "type": "multiple-choice",
+                                                "prompt": "'Siz juda charchagan ko'rinasiz. Bir oz dam olishingiz kerak (maslahat).' Qaysi modal fe'l mos?",
+                                                "options": [
+                                                        "You must",
+                                                        "You should",
+                                                        "You have",
+                                                        "You are"
+                                                ],
+                                                "correctAnswer": 1,
+                                                "explanation": "Do'stona maslahat uchun 'You should take some rest' ishlatiladi."
+                                        },
+                                        {
+                                                "id": "en-a2-u3-l3-e4",
+                                                "type": "multiple-choice",
+                                                "prompt": "So'roq gapni to'g'ri tuzing: '___ she have to wear a uniform at work?'",
+                                                "options": [
+                                                        "Is",
+                                                        "Does",
+                                                        "Has",
+                                                        "Must"
+                                                ],
+                                                "correctAnswer": 1,
+                                                "explanation": "'Have to' so'rog'i 'do/does' bilan yasaladi: 'Does she have to wear...?'."
+                                        },
+                                        {
+                                                "id": "en-a2-u3-l3-e5",
+                                                "type": "multiple-choice",
+                                                "prompt": "'Mustn't' so'zining to'g'ri talaffuzi qaysi?",
+                                                "options": [
+                                                        "/ˈmʌst.nɒt/ (t harfi eshitiladi)",
+                                                        "/ˈmʌs.ənt/ (t harfi aytilmaydi)",
+                                                        "/ˈmjuːst.ənt/",
+                                                        "/ˈmʌs.tɪnt/"
+                                                ],
+                                                "correctAnswer": 1,
+                                                "explanation": "'Mustn't' da o'rtadagi 't' tovushi talaffuz qilinmaydi: /ˈmʌsənt/."
+                                        }
+                                ]
                         }
-                    ]
+                },
+                {
+                        "id": "en-a2-u3-l3-s3",
+                        "title": "Dars Testi: Modals of Obligation",
+                        "type": "test",
+                        "estimatedMinutes": 5,
+                        "testData": {
+                                "instructions": "Savollarga to'g'ri javob berib, mavzuni mustahkamlang.",
+                                "passingScorePercentage": 80,
+                                "questions": [
+                                        {
+                                                "id": "en-a2-u3-l3-q1",
+                                                "question": "'Mustn't' va 'don't have to' o'rtasidagi farq qaysi javobda to'g'ri ko'rsatilgan?",
+                                                "options": [
+                                                        "'Mustn't' - qat'iy taqiq (qilish mumkin emas); 'don't have to' - majburiyat yo'qligi (qilish ixtiyoriy).",
+                                                        "'Mustn't' - faqat o'tgan zamonda, 'don't have to' esa kelasi zamonda ishlatiladi.",
+                                                        "'Mustn't' - maslahat, 'don't have to' - qonun.",
+                                                        "Ikkala ibora mutlaqo bir xil ma'noga ega."
+                                                ],
+                                                "correctAnswerIndex": 0,
+                                                "explanation": "'Mustn't' qat'iy taqiq, 'don't have to' esa majburiyat yo'qligini bildiradi."
+                                        },
+                                        {
+                                                "id": "en-a2-u3-l3-q2",
+                                                "question": "'The museum admission is free today, so you ___ buy a ticket.'",
+                                                "options": [
+                                                        "mustn't",
+                                                        "don't have to",
+                                                        "should to",
+                                                        "must"
+                                                ],
+                                                "correctAnswerIndex": 1,
+                                                "explanation": "Kirish bepul, demak chipta sotib olish majburiyati yo'q: 'don't have to'."
+                                        },
+                                        {
+                                                "id": "en-a2-u3-l3-q3",
+                                                "question": "Samolyot qo'nayotganda xavfsizlik kamarini taqish qoidasi qaysi?",
+                                                "options": [
+                                                        "You should to wear a seatbelt.",
+                                                        "You must wear your seatbelt.",
+                                                        "You don't have to wear your seatbelt.",
+                                                        "You might wear seatbelt."
+                                                ],
+                                                "correctAnswerIndex": 1,
+                                                "explanation": "Qonuniy qat'iy talab: 'You must wear your seatbelt'."
+                                        },
+                                        {
+                                                "id": "en-a2-u3-l3-q4",
+                                                "question": "'He has a severe cough. He ___ see a doctor immediately.'",
+                                                "options": [
+                                                        "should",
+                                                        "has",
+                                                        "don't have to",
+                                                        "should to"
+                                                ],
+                                                "correctAnswerIndex": 0,
+                                                "explanation": "Foydali tavsiya/maslahat: 'He should see a doctor immediately'."
+                                        },
+                                        {
+                                                "id": "en-a2-u3-l3-q5",
+                                                "question": "IELTS Speaking: 'What should people do to protect the environment?' savoliga eng yaxshi tavsiyaviy javob qaysi?",
+                                                "options": [
+                                                        "People must to clean.",
+                                                        "In my opinion, individuals should reduce single-use plastic consumption, while local governments must enforce stricter recycling regulations across cities.",
+                                                        "Environment is must clean.",
+                                                        "Nobody don't have to care."
+                                                ],
+                                                "correctAnswerIndex": 1,
+                                                "explanation": "'individuals should reduce... while local governments must enforce...' - should va must modal fe'llarining namunali uyg'unligi."
+                                        }
+                                ]
+                        }
                 }
-            },
-            {
-                "id": "en-a2-u3-l3-s2",
-                "title": "Mashq",
-                "type": "practice",
-                "estimatedMinutes": 5,
-                "practiceData": {
-                    "instructions": "To'g'ri modal fe'lni tanlang.",
-                    "exercises": [
-                        {
-                            "id": "en-a2-u3-l3-e1",
-                            "type": "multiple-choice",
-                            "prompt": "\"You look exhausted. You _______ go to bed early.\"",
-                            "options": [
-                                "have",
-                                "don't",
-                                "must to",
-                                "should"
-                            ],
-                            "correctAnswer": 3,
-                            "explanation": "Maslahat berish: You should."
-                        },
-                        {
-                            "id": "en-a2-u3-l3-ex-2",
-                            "type": "multiple-choice",
-                            "prompt": "Choose the correct word to complete the sentence: \"Reading books will improve your vocabulary.\"",
-                            "options": [
-                                "reluctance",
-                                "delay",
-                                "doubt",
-                                "Improve"
-                            ],
-                            "correctAnswer": 3,
-                            "explanation": "\"Improve\" (Yaxshilamoq, rivojlantirmoq) fits the context appropriately."
-                        }
-                    ]
-                }
-            },
-            {
-                "id": "en-a2-u3-l3-s3",
-                "title": "Test",
-                "type": "test",
-                "estimatedMinutes": 5,
-                "testData": {
-                    "instructions": "Savollarga javob bering.",
-                    "passingScorePercentage": 75,
-                    "questions": [
-                        {
-                            "id": "en-a2-u3-l3-q1",
-                            "question": "Passengers _______ show their passports at border control.",
-                            "options": [
-                                "can to",
-                                "might",
-                                "should",
-                                "must"
-                            ],
-                            "correctAnswerIndex": 3,
-                            "explanation": "Qat'iy qoida: must."
-                        },
-                        {
-                            "id": "en-a2-u3-l3-q2",
-                            "question": "Tomorrow is Sunday, so I _______ wake up early.",
-                            "options": [
-                                "don't have to",
-                                "have to not",
-                                "should",
-                                "mustn't"
-                            ],
-                            "correctAnswerIndex": 0,
-                            "explanation": "Majburiyat yo'q: don't have to."
-                        },
-                        {
-                            "id": "en-a2-u3-l3-q3",
-                            "question": "You _______ eat too much sugary food.",
-                            "options": [
-                                "must",
-                                "don't should",
-                                "shouldn't",
-                                "have to"
-                            ],
-                            "correctAnswerIndex": 2,
-                            "explanation": "Shouldn't."
-                        },
-                        {
-                            "id": "en-a2-u3-l3-q4",
-                            "question": "Does she _______ wear a uniform at school?",
-                            "options": [
-                                "have to",
-                                "has to",
-                                "must",
-                                "should to"
-                            ],
-                            "correctAnswerIndex": 0,
-                            "explanation": "Does she have to...?"
-                        }
-                    ]
-                }
-            }
         ]
-    },
+},
     {
         "id": "en-a2-u3-l4",
         "courseId": "english-a2",
@@ -2812,160 +3012,229 @@ export const ENGLISH_A2_LESSONS: Lesson[] = [
         "language": "en",
         "level": "A2",
         "lessonNumber": 4,
-        "title": "Adverbs of Frequency & Manner (always, quickly)",
-        "description": "Takroriylik (always, usually, never) va harakat tarzi ravishlari (slowly, carefully).",
-        "estimatedDurationMinutes": 12,
+        "title": "Adverbs of Frequency & Manner (always, quickly, carefully)",
+        "description": "Takroriylik ravishlari o'rni (always, rarely, never) va harakat tarzi ravishlari (-ly imlosi, fast/hard istisnolari).",
+        "estimatedDurationMinutes": 15,
         "icon": "⚡",
         "steps": [
-            {
-                "id": "en-a2-u3-l4-s1",
-                "title": "Ravishlar",
-                "type": "learn",
-                "estimatedMinutes": 4,
-                "learnData": {
-                    "title": "Adverbs: Frequency and Manner",
-                    "explanation": "Chastota ravishlari asosiy fe'ldan oldin (to be dan keyin) keladi: I always arrive on time. He is always happy. Tarz ravishlari -ly bilan tugaydi: drives carefully.",
-                    "keyPoints": [
-                        "always (100%), usually (80%), often (60%), sometimes (40%), never (0%)",
-                        "quick -> quickly, careful -> carefully, fast -> fast (istisno)"
-                    ],
-                    "vocabulary": [
-                        {
-                            "term": "Carefully",
-                            "reading": "/ˈkeə.fəl.i/",
-                            "meaning": "Ehtiyotkorlik bilan",
-                            "exampleSentence": "Drive carefully on icy roads.",
-                            "exampleTranslation": "Muzlama yo'llarda ehtiyotkorlik bilan haydang."
-                        },
-                        {
-                            "term": "Opportunity",
-                            "reading": "/ˌɒp.əˈtʃuː.nə.ti/",
-                            "meaning": "Imkoniyat",
-                            "exampleSentence": "This is a great opportunity to learn.",
-                            "exampleTranslation": "Bu oʻrganish uchun ajoyib imkoniyat."
-                        },
-                        {
-                            "term": "Confidence",
-                            "reading": "/ˈkɒn.fɪ.dəns/",
-                            "meaning": "Ishonch",
-                            "exampleSentence": "Practice gives you confidence in speaking.",
-                            "exampleTranslation": "Mashq qilish gapirishda ishonch bagʻishlaydi."
+                {
+                        "id": "en-a2-u3-l4-s1",
+                        "title": "Ravishlar Qoidalari va Joylashuvi",
+                        "type": "learn",
+                        "estimatedMinutes": 5,
+                        "learnData": {
+                                "title": "Mastering Frequency & Manner Adverbs",
+                                "explanation": "Harakatning qanchalik tez-tez va qanday tarzda bajarilishini ifodalash:\n\n1. Takroriylik Ravishlari (Adverbs of Frequency):\n- Always (100%), Usually (80%), Often (60%), Sometimes (40%), Rarely / Seldom (10%), Never (0%).\n- Gapdagi O'rni:\n  • Asosiy fe'ldan OLDIN keladi: \"I ALWAYS arrive on time.\" / \"She NEVER eats junk food.\"\n  • LEKIN 'to be' fe'lidan KEYIN keladi: \"He is OFTEN tired.\" / \"They are ALWAYS friendly.\"\n\n2. Harakat Tarzi Ravishlari (Adverbs of Manner):\n- Harakat qanday usulda bajarilishini bildiradi va ko'pincha sifatga **-ly** qo'shib yasaladi:\n  • quick -> quickly, careful -> carefully, fluent -> fluently, quiet -> quietly, patient -> patiently.\n- O'ta muhim istisnolar (Irregular Adverbs):\n  • good (sifat) -> **WELL** (ravish): \"She speaks English WELL\" (❌ speaks English good EMAS!).\n  • fast (sifat) -> **FAST** (ravish): \"He runs FAST\" (❌ fastly deb so'z yo'q!).\n  • hard (sifat) -> **HARD** (ravish): \"He works HARD\" (⚠️ 'hardly' deyarli yo'q degani!).\n\n3. O'zbek o'rganuvchilari uchun xavfli tuzoqlar (Common Pitfalls):\n- ❌ \"She speaks English very good.\" -> ✅ \"She speaks English very WELL.\"\n- ❌ \"He drives fastly.\" -> ✅ \"He drives FAST.\"\n- ❌ \"Always I wake up early.\" -> ✅ \"I ALWAYS wake up early.\" (Ravish gap o'rtasida, fe'ldan oldin bo'ladi).\n\n4. IELTS Speaking Foundation Corner:\n- Topic: Personal Habits & Communication Style\n- Examiner: \"How do you usually communicate with your colleagues?\"\n- Model Band 6.0+ Answer: \"I frequently communicate via instant messaging apps because they allow me to exchange project updates quickly and clearly without interrupting my colleagues' work.\"\n- Examiner Tip: \"frequently communicate\" (tez-tez muloqot qilmoq) va \"quickly and clearly\" (tez va tushunarli tarzda) iboralari nutq sifatini oshiradi.",
+                                "vocabulary": [
+                                        {
+                                                "term": "seldom",
+                                                "reading": "/ˈseldəm/",
+                                                "meaning": "kamdan-kam, kam hollarda (rarely ning sinonimi)",
+                                                "exampleSentence": "She seldom complains despite having an overwhelming workload.",
+                                                "exampleTranslation": "U og'ir ish yuklamasiga ega bo'lishiga qaramay, kamdan-kam shikoyat qiladi."
+                                        },
+                                        {
+                                                "term": "flawlessly",
+                                                "reading": "/ˈflɔːləsli/",
+                                                "meaning": "benuqson, bexato, mukammal tarzda",
+                                                "exampleSentence": "The pianist performed the intricate classical piece flawlessly.",
+                                                "exampleTranslation": "Pianinochi murakkab mumtoz kuyni benuqson ijro etdi."
+                                        },
+                                        {
+                                                "term": "gradually",
+                                                "reading": "/ˈɡrædʒuəli/",
+                                                "meaning": "sekin-asta, qadamma-qadam",
+                                                "exampleSentence": "With steady practice, her pronunciation improved gradually.",
+                                                "exampleTranslation": "Muntazam mashqlar bilan uning talaffuzi sekin-asta yaxshilandi."
+                                        },
+                                        {
+                                                "term": "precisely",
+                                                "reading": "/prɪˈsaɪsli/",
+                                                "meaning": "aniq, batamom to'g'ri",
+                                                "exampleSentence": "Please follow the laboratory instructions precisely.",
+                                                "exampleTranslation": "Iltimos, laboratoriya ko'rsatmalariga aniq rioya qiling."
+                                        },
+                                        {
+                                                "term": "frequently",
+                                                "reading": "/ˈfriːkwəntli/",
+                                                "meaning": "tez-tez, muntazam ravishda",
+                                                "exampleSentence": "We frequently organize weekend outings to the nearby lakes.",
+                                                "exampleTranslation": "Biz yaqin atrofdagi ko'llarga tez-tez dam olish sayrlarini uyushtiramiz."
+                                        },
+                                        {
+                                                "term": "well",
+                                                "reading": "/wel/",
+                                                "meaning": "yaxshi tarzda (good ning ravish shakli)",
+                                                "exampleSentence": "He explained the complex economic concept exceptionally well.",
+                                                "exampleTranslation": "U murakkab iqtisodiy tushunchani g'oyat yaxshi tushuntirib berdi."
+                                        },
+                                        {
+                                                "term": "fast",
+                                                "reading": "/fɑːst/",
+                                                "meaning": "tez, chaqqon tarzda (ravishda ham fast bo'ladi)",
+                                                "exampleSentence": "Modern bullet trains travel remarkably fast between major cities.",
+                                                "exampleTranslation": "Zamonaviy tezyurar poyezdlar yirik shaharlar orasida hayratlanarli darajada tez harakatlanadi."
+                                        },
+                                        {
+                                                "term": "hard",
+                                                "reading": "/hɑːd/",
+                                                "meaning": "qattiq, astoydil (hardly emas!)",
+                                                "exampleSentence": "Our dedicated team worked hard to launch the application on time.",
+                                                "exampleTranslation": "Fidoyi jamoamiz ilovani o'z vaqtida ishga tushirish uchun astoydil mehnat qildi."
+                                        }
+                                ]
                         }
-                    ],
-                    "grammarRules": [
-                        {
-                            "pattern": "Adverbs of Frequency & Manner (always, quickly)",
-                            "meaning": "Takroriylik (always, usually, never) va harakat tarzi ravishlari (slowly, carefully).",
-                            "usageNotes": "Chastota ravishlari asosiy fe'ldan oldin (to be dan keyin) keladi: I always arrive on time. He is always happy. Tarz ravishlari -ly bilan tugaydi: drives carefully.",
-                            "examples": [
-                                {
-                                    "sentence": "Drive carefully on icy roads.",
-                                    "translation": "Muzlama yo'llarda ehtiyotkorlik bilan haydang."
-                                }
-                            ]
+                },
+                {
+                        "id": "en-a2-u3-l4-s2",
+                        "title": "Ravishlar Mashqlari",
+                        "type": "practice",
+                        "estimatedMinutes": 5,
+                        "practiceData": {
+                                "instructions": "To'g'ri ravish shakli va o'rnini tanlang.",
+                                "exercises": [
+                                        {
+                                                "id": "en-a2-u3-l4-e1",
+                                                "type": "multiple-choice",
+                                                "prompt": "Qaysi gapda chastota ravishining o'rni to'g'ri?",
+                                                "options": [
+                                                        "Always he is happy.",
+                                                        "He is always happy.",
+                                                        "He always is happy.",
+                                                        "He is happy always."
+                                                ],
+                                                "correctAnswer": 1,
+                                                "explanation": "'To be' fe'lidan keyin ravish keladi: 'He is always happy'."
+                                        },
+                                        {
+                                                "id": "en-a2-u3-l4-e2",
+                                                "type": "multiple-choice",
+                                                "prompt": "'U ingliz tilida juda yaxshi gapiradi.' Qaysi jumla grammatik jihatdan to'g'ri?",
+                                                "options": [
+                                                        "She speaks English very good.",
+                                                        "She speaks English very well.",
+                                                        "She speaks English very goodly.",
+                                                        "She speaks English very better."
+                                                ],
+                                                "correctAnswer": 1,
+                                                "explanation": "Fe'lni tasvirlash uchun ravish kerak: 'well' ('good' sifat hisoblanadi)."
+                                        },
+                                        {
+                                                "id": "en-a2-u3-l4-e3",
+                                                "type": "multiple-choice",
+                                                "prompt": "'U mashinani juda ehtiyotkorlik bilan haydaydi.' Bo'sh joyni to'ldiring: 'He drives very ___.'",
+                                                "options": [
+                                                        "careful",
+                                                        "carefully",
+                                                        "carefulness",
+                                                        "caring"
+                                                ],
+                                                "correctAnswer": 1,
+                                                "explanation": "Harakat tarzini ifodalash: 'carefully'."
+                                        },
+                                        {
+                                                "id": "en-a2-u3-l4-e4",
+                                                "type": "multiple-choice",
+                                                "prompt": "'Fast' (tez) so'zining ravish shakli qaysi?",
+                                                "options": [
+                                                        "fastly",
+                                                        "fasterly",
+                                                        "fast",
+                                                        "fastness"
+                                                ],
+                                                "correctAnswer": 2,
+                                                "explanation": "'Fast' so'zi ravish bo'lganda ham o'zgarmaydi: 'He runs fast'."
+                                        },
+                                        {
+                                                "id": "en-a2-u3-l4-e5",
+                                                "type": "multiple-choice",
+                                                "prompt": "'U kechki ovqatda deyarli go'sht yemaydi (kamdan-kam).' Bo'sh joyni to'ldiring: 'He ___ eats meat for dinner.'",
+                                                "options": [
+                                                        "rarely",
+                                                        "always",
+                                                        "rare",
+                                                        "rarelyly"
+                                                ],
+                                                "correctAnswer": 0,
+                                                "explanation": "Kamdan-kam hollarda: 'rarely eats'."
+                                        }
+                                ]
                         }
-                    ]
+                },
+                {
+                        "id": "en-a2-u3-l4-s3",
+                        "title": "Dars Testi: Adverbs",
+                        "type": "test",
+                        "estimatedMinutes": 5,
+                        "testData": {
+                                "instructions": "Savollarga to'g'ri javob berib, mavzuni mustahkamlang.",
+                                "passingScorePercentage": 80,
+                                "questions": [
+                                        {
+                                                "id": "en-a2-u3-l4-q1",
+                                                "question": "Chastota ravishlari (always, usually, never) asosiy fe'lga nisbatan qayerda joylashadi?",
+                                                "options": [
+                                                        "Gapning eng oxirida",
+                                                        "Asosiy fe'ldan oldin (To be dan keyin)",
+                                                        "Har doim gapning birinchi so'zi sifatida",
+                                                        "Ega oldidan"
+                                                ],
+                                                "correctAnswerIndex": 1,
+                                                "explanation": "Chastota ravishlari asosiy fe'ldan oldin (I never drink), lekin To be dan keyin (I am never late) keladi."
+                                        },
+                                        {
+                                                "id": "en-a2-u3-l4-q2",
+                                                "question": "Qaysi jumla grammatik jihatdan XATO?",
+                                                "options": [
+                                                        "He works hard every single day.",
+                                                        "She speaks Spanish fluently.",
+                                                        "The athlete ran fastly to win the race.",
+                                                        "They listened to the speaker attentively."
+                                                ],
+                                                "correctAnswerIndex": 2,
+                                                "explanation": "'ran fastly' xato, chunki ingliz tilida 'fastly' so'zi yo'q; to'g'risi: 'ran fast'."
+                                        },
+                                        {
+                                                "id": "en-a2-u3-l4-q3",
+                                                "question": "'Hardly' so'zi nimani anglatadi?",
+                                                "options": [
+                                                        "Juda qattiq va astoydil",
+                                                        "Deyarli yo'q / arang (deyarli hech qachon)",
+                                                        "Baland ovozda",
+                                                        "Osonlik bilan"
+                                                ],
+                                                "correctAnswerIndex": 1,
+                                                "explanation": "'Hardly' 'hard' ning ravishi emas, u 'deyarli yo'q' (hardly ever, hardly any) ma'nosini beradi."
+                                        },
+                                        {
+                                                "id": "en-a2-u3-l4-q4",
+                                                "question": "'The children were playing ___ in the garden.' (shovqin solib, baxtli)",
+                                                "options": [
+                                                        "happy",
+                                                        "happily",
+                                                        "happiness",
+                                                        "happier"
+                                                ],
+                                                "correctAnswerIndex": 1,
+                                                "explanation": "'Play' fe'lini tasvirlash uchun ravish shakli 'happily' kerak."
+                                        },
+                                        {
+                                                "id": "en-a2-u3-l4-q5",
+                                                "question": "IELTS Speaking: 'How often do you go out with your family?' savoliga qaysi javob chastota ravishlarini eng to'g'ri qo'llagan?",
+                                                "options": [
+                                                        "I go family always.",
+                                                        "We usually dine out together on Sunday evenings, and we occasionally take weekend road trips to the countryside when our schedules allow.",
+                                                        "Family is good out.",
+                                                        "Always we eat food."
+                                                ],
+                                                "correctAnswerIndex": 1,
+                                                "explanation": "'We usually dine out... and we occasionally take weekend road trips...' - chastota ravishlari to'g'ri o'rinda va boy leksika bilan ifodalangan."
+                                        }
+                                ]
+                        }
                 }
-            },
-            {
-                "id": "en-a2-u3-l4-s2",
-                "title": "Mashq",
-                "type": "practice",
-                "estimatedMinutes": 4,
-                "practiceData": {
-                    "instructions": "To'g'ri ravish o'rnini tanlang.",
-                    "exercises": [
-                        {
-                            "id": "en-a2-u3-l4-e1",
-                            "type": "multiple-choice",
-                            "prompt": "\"He _______ (never / eat) meat.\"",
-                            "options": [
-                                "never eats",
-                                "eats never",
-                                "never eat",
-                                "is never eat"
-                            ],
-                            "correctAnswer": 0,
-                            "explanation": "He never eats."
-                        },
-                        {
-                            "id": "en-a2-u3-l4-ex-2",
-                            "type": "multiple-choice",
-                            "prompt": "Choose the correct word to complete the sentence: \"This is a great opportunity to learn.\"",
-                            "options": [
-                                "Opportunity",
-                                "doubt",
-                                "reluctance",
-                                "delay"
-                            ],
-                            "correctAnswer": 0,
-                            "explanation": "\"Opportunity\" (Imkoniyat) fits the context appropriately."
-                        }
-                    ]
-                }
-            },
-            {
-                "id": "en-a2-u3-l4-s3",
-                "title": "Test",
-                "type": "test",
-                "estimatedMinutes": 4,
-                "testData": {
-                    "instructions": "Savollarga javob bering.",
-                    "passingScorePercentage": 75,
-                    "questions": [
-                        {
-                            "id": "en-a2-u3-l4-q1",
-                            "question": "She speaks English very _______.",
-                            "options": [
-                                "fluently",
-                                "fluent",
-                                "more fluent",
-                                "fluentlyness"
-                            ],
-                            "correctAnswerIndex": 0,
-                            "explanation": "Fluently (ravon tarzda)."
-                        },
-                        {
-                            "id": "en-a2-u3-l4-q2",
-                            "question": "I _______ drink coffee before going to bed.",
-                            "options": [
-                                "neverly",
-                                "ever",
-                                "always not",
-                                "never"
-                            ],
-                            "correctAnswerIndex": 3,
-                            "explanation": "I never drink."
-                        },
-                        {
-                            "id": "en-a2-u3-l4-q3",
-                            "question": "He runs very _______.",
-                            "options": [
-                                "fast",
-                                "fasterly",
-                                "quick",
-                                "fastly"
-                            ],
-                            "correctAnswerIndex": 0,
-                            "explanation": "Fast ravishi -ly olmaydi."
-                        },
-                        {
-                            "id": "en-a2-u3-l4-q4",
-                            "question": "They are _______ late for the morning meeting.",
-                            "options": [
-                                "rare",
-                                "rarely",
-                                "rarer",
-                                "rarelyly"
-                            ],
-                            "correctAnswerIndex": 1,
-                            "explanation": "Are rarely late."
-                        }
-                    ]
-                }
-            }
         ]
-    },
+},
     {
         "id": "en-a2-u3-l5",
         "courseId": "english-a2",
@@ -2974,165 +3243,229 @@ export const ENGLISH_A2_LESSONS: Lesson[] = [
         "language": "en",
         "level": "A2",
         "lessonNumber": 5,
-        "title": "Common Phrasal Verbs (wake up, look for, turn on)",
-        "description": "Kundalik hayotda eng ko'p ishlatiladigan iborali fe'llar.",
-        "estimatedDurationMinutes": 14,
+        "title": "Common Phrasal Verbs in Daily Life",
+        "description": "Kundalik hayotda eng ko'p qo'llaniladigan iborali fe'llar (look forward to, give up, run out of, turn on/off).",
+        "estimatedDurationMinutes": 16,
         "icon": "🔌",
         "steps": [
-            {
-                "id": "en-a2-u3-l5-s1",
-                "title": "Phrasal Verbs",
-                "type": "learn",
-                "estimatedMinutes": 5,
-                "learnData": {
-                    "title": "Phrasal Verbs Asoslari",
-                    "explanation": "Fe'l va predlog birikib yangi ma'no hosil qiladi.",
-                    "keyPoints": [
-                        "Turn on / off (chiroq yoki asbobni yoqmoq/o'chirmoq)",
-                        "Look for (qidirmoq), Look after (parvarish qilmoq)",
-                        "Give up (taslim bo'lmoq / tashlamoq), Put on (kiymoq)"
-                    ],
-                    "vocabulary": [
-                        {
-                            "term": "Look for",
-                            "reading": "/lʊk fɔːr/",
-                            "meaning": "Qidirmoq",
-                            "exampleSentence": "I am looking for my keys.",
-                            "exampleTranslation": "Men kalitlarimni qidiryapman."
-                        },
-                        {
-                            "term": "Turn on",
-                            "reading": "/tɜːn ɒn/",
-                            "meaning": "Yoqmoq (asbobni)",
-                            "exampleSentence": "Please turn on the light.",
-                            "exampleTranslation": "Iltimos, chiroqni yoqing."
-                        },
-                        {
-                            "term": "Schedule",
-                            "reading": "/ˈʃedʒ.uːl/",
-                            "meaning": "Jadval, reja",
-                            "exampleSentence": "Let me check my schedule for tomorrow.",
-                            "exampleTranslation": "Ertangi kun jadvalimni tekshirib koʻray."
+                {
+                        "id": "en-a2-u3-l5-s1",
+                        "title": "Frazeologik Fe'llar Asoslari",
+                        "type": "learn",
+                        "estimatedMinutes": 5,
+                        "learnData": {
+                                "title": "Everyday Phrasal Verbs & Separation Rules",
+                                "explanation": "Frazeologik fe'llar (Phrasal Verbs) — Fe'l + predlog yoki ravish birikib, yangi ko'chma ma'no hosil qiladi:\n\n1. Eng Muhim 8 ta Kundalik Frazeologik Fe'l:\n- LOOK FORWARD TO + V-ing: Intiqlik bilan kutmoq (har doim -ing oladi!):\n  • \"I am looking forward to meeting you.\" (Siz bilan uchrashishni intiqlik bilan kutyapman).\n- GIVE UP + V-ing: Biror odatni tashlamoq yoki taslim bo'lmoq:\n  • \"Never give up on your dreams.\" / \"He gave up smoking.\"\n- RUN OUT OF: Tugab qolmoq (choy, shakar, vaqt):\n  • \"We have run out of printer paper.\" (Bizda qog'oz tugab qoldi).\n- FIGURE OUT: Tushunib yetmoq, yechim topmoq:\n  • \"I can't figure out how to solve this math puzzle.\"\n- PUT OFF: Keyinga qoldirmoq (chalg'itmoq / kechiktirmoq):\n  • \"Don't put off until tomorrow what you can do today.\"\n- SET UP: O'rnatmoq, tashkil qilmoq, asos solmoq:\n  • \"They are setting up a new tech startup.\"\n- CARRY ON: Davom ettirmoq:\n  • \"Please carry on with your reading.\"\n- TURN ON / TURN OFF: Yoqmoq / o'chirmoq (chiroq, texnika):\n  • \"Turn off the lights before leaving.\"\n\n2. Ajralish qoidasi (Separable vs Inseparable):\n- Ba'zi fe'llarda olmosh (it, them) o'rtaga kiradi:\n  • \"Turn it on\" (❌ Turn on it EMAS!).\n  • \"Pick them up\" (ularni olib ket).\n- Uch so'zli frazeologik fe'llar ajralmaydi: look forward to, run out of.\n\n3. O'zbek o'rganuvchilari uchun xavfli tuzoqlar (Common Pitfalls):\n- ❌ \"I look forward to see you.\" -> ✅ \"I look forward to SEEING you.\" ('Look forward to' dan keyin har doim gerund -ing bo'ladi!).\n- ❌ \"Turn off it.\" -> ✅ \"Turn IT off.\" (Olmosh har doim o'rtaga tushadi!).\n- ❌ \"He gave up to smoke.\" -> ✅ \"He gave up SMOKING.\"\n\n4. IELTS Speaking Foundation Corner:\n- Topic: Overcoming Challenges & Ambitions\n- Examiner: \"What do you do when you face a challenging task?\"\n- Model Band 6.5+ Answer: \"Whenever I confront a difficult problem, I never give up easily. Instead, I break the challenge down into manageable steps until I can figure out the most effective solution.\"\n- Examiner-Approved Phrasals: \"give up easily\" (osonlikcha taslim bo'lmoq), \"break down\" (mayda qismlarga ajratmoq), \"figure out a solution\" (yechim topmoq).",
+                                "vocabulary": [
+                                        {
+                                                "term": "figure out",
+                                                "reading": "/ˈfɪɡər aʊt/",
+                                                "meaning": "tushunib yetmoq, yo'lini topmoq",
+                                                "exampleSentence": "It took several hours to figure out why the computer code had bugs.",
+                                                "exampleTranslation": "Kompyuter kodida nega xatolik borligini tushunib yetish bir necha soat vaqt oldi."
+                                        },
+                                        {
+                                                "term": "give up",
+                                                "reading": "/ɡɪv ʌp/",
+                                                "meaning": "taslim bo'lmoq, tashlamoq",
+                                                "exampleSentence": "Regardless of obstacles, determined individuals never give up on their goals.",
+                                                "exampleTranslation": "To'siqlarga qaramay, qat'iyatli insonlar hech qachon o'z maqsadlaridan voz kechmaydilar."
+                                        },
+                                        {
+                                                "term": "look forward to",
+                                                "reading": "/lʊk ˈfɔːwəd tuː/",
+                                                "meaning": "intiqlik bilan kutmoq (har doim V-ing oladi)",
+                                                "exampleSentence": "I am truly looking forward to starting my new university course.",
+                                                "exampleTranslation": "Men yangi universitet kursimni boshlashni chin dildan intiqlik bilan kutyapman."
+                                        },
+                                        {
+                                                "term": "put off",
+                                                "reading": "/pʊt ɒf/",
+                                                "meaning": "keyinga qoldirmoq, kechiktirmoq",
+                                                "exampleSentence": "Never put off urgent medical appointments.",
+                                                "exampleTranslation": "Zarur shifokor qabullarini hech qachon keyinga qoldirmang."
+                                        },
+                                        {
+                                                "term": "run out of",
+                                                "reading": "/rʌn aʊt əv/",
+                                                "meaning": "tugab qolmoq (biror resurs)",
+                                                "exampleSentence": "We need to visit the supermarket because we have run out of milk.",
+                                                "exampleTranslation": "Biz supermarketga borishimiz kerak, chunki sutimiz tugab qoldi."
+                                        },
+                                        {
+                                                "term": "set up",
+                                                "reading": "/set ʌp/",
+                                                "meaning": "o'rnatmoq, asos solmoq, tashkil etmoq",
+                                                "exampleSentence": "The young entrepreneur set up an innovative digital design agency.",
+                                                "exampleTranslation": "Yosh tadbirkor innovatsion raqamli dizayn agentligini tashkil etdi."
+                                        },
+                                        {
+                                                "term": "carry on",
+                                                "reading": "/ˈkæri ɒn/",
+                                                "meaning": "davom ettirmoq",
+                                                "exampleSentence": "Please carry on working while I distribute the test materials.",
+                                                "exampleTranslation": "Men test materiallarini tarqatgunimcha, iltimos, ishlashda davom eting."
+                                        },
+                                        {
+                                                "term": "turn down",
+                                                "reading": "/tɜːn daʊn/",
+                                                "meaning": "rad etmoq (taklifni) / ovozini pasaytirmoq",
+                                                "exampleSentence": "He decided to turn down the job offer due to long commute times.",
+                                                "exampleTranslation": "U uzoq qatnov vaqti tufayli ish taklifini rad etishga qaror qildi."
+                                        }
+                                ]
                         }
-                    ],
-                    "grammarRules": [
-                        {
-                            "pattern": "Common Phrasal Verbs (wake up, look for, turn on)",
-                            "meaning": "Kundalik hayotda eng ko'p ishlatiladigan iborali fe'llar.",
-                            "usageNotes": "Fe'l va predlog birikib yangi ma'no hosil qiladi.",
-                            "examples": [
-                                {
-                                    "sentence": "I am looking for my keys.",
-                                    "translation": "Men kalitlarimni qidiryapman."
-                                },
-                                {
-                                    "sentence": "Please turn on the light.",
-                                    "translation": "Iltimos, chiroqni yoqing."
-                                }
-                            ]
+                },
+                {
+                        "id": "en-a2-u3-l5-s2",
+                        "title": "Frazeologik Fe'llar Mashqlari",
+                        "type": "practice",
+                        "estimatedMinutes": 5,
+                        "practiceData": {
+                                "instructions": "Bo'sh joylarni to'g'ri frazeologik fe'l shakli bilan to'ldiring.",
+                                "exercises": [
+                                        {
+                                                "id": "en-a2-u3-l5-e1",
+                                                "type": "multiple-choice",
+                                                "prompt": "Bo'sh joyni to'ldiring: 'I am really looking forward to ___ you next week.'",
+                                                "options": [
+                                                        "see",
+                                                        "seeing",
+                                                        "saw",
+                                                        "to see"
+                                                ],
+                                                "correctAnswer": 1,
+                                                "explanation": "'Look forward to' predlogli iboradan keyin har doim gerundiy (V-ing) keladi: 'seeing you'."
+                                        },
+                                        {
+                                                "id": "en-a2-u3-l5-e2",
+                                                "type": "multiple-choice",
+                                                "prompt": "Chiroqni o'chirish bo'yicha qaysi jumla to'g'ri?",
+                                                "options": [
+                                                        "Turn off it please.",
+                                                        "Turn it off please.",
+                                                        "Turn off them please for it.",
+                                                        "Turn on it off."
+                                                ],
+                                                "correctAnswer": 1,
+                                                "explanation": "Olmosh (it) frazeologik fe'l o'rtasiga kiradi: 'Turn it off please'."
+                                        },
+                                        {
+                                                "id": "en-a2-u3-l5-e3",
+                                                "type": "multiple-choice",
+                                                "prompt": "'Bizda benzin tugab qoldi' jumlasining to'g'ri tarjimasi qaysi?",
+                                                "options": [
+                                                        "We ran out of petrol.",
+                                                        "We gave up petrol.",
+                                                        "We put off petrol.",
+                                                        "We figured out petrol."
+                                                ],
+                                                "correctAnswer": 0,
+                                                "explanation": "'Run out of' - biror narsaning tugab qolishi: 'ran out of petrol'."
+                                        },
+                                        {
+                                                "id": "en-a2-u3-l5-e4",
+                                                "type": "multiple-choice",
+                                                "prompt": "'Ishni keyinga qoldirmang.' Bo'sh joyni to'ldiring: 'Don't ___ the project until the last day.'",
+                                                "options": [
+                                                        "put off",
+                                                        "give up",
+                                                        "carry on",
+                                                        "turn on"
+                                                ],
+                                                "correctAnswer": 0,
+                                                "explanation": "'Put off' - keyinga qoldirmoq, kechiktirmoq."
+                                        },
+                                        {
+                                                "id": "en-a2-u3-l5-e5",
+                                                "type": "multiple-choice",
+                                                "prompt": "'Figure out' iborasining ma'nosi nima?",
+                                                "options": [
+                                                        "Taslim bo'lmoq",
+                                                        "Tushunib yetmoq / yechimini topmoq",
+                                                        "Bekor qilmoq",
+                                                        "Qo'ng'iroq qilmoq"
+                                                ],
+                                                "correctAnswer": 1,
+                                                "explanation": "'Figure out' - tushunmoq, muammoning yechimini aql bilan topmoq."
+                                        }
+                                ]
                         }
-                    ]
+                },
+                {
+                        "id": "en-a2-u3-l5-s3",
+                        "title": "Dars Testi: Phrasal Verbs",
+                        "type": "test",
+                        "estimatedMinutes": 5,
+                        "testData": {
+                                "instructions": "Savollarga to'g'ri javob berib, mavzuni mustahkamlang.",
+                                "passingScorePercentage": 80,
+                                "questions": [
+                                        {
+                                                "id": "en-a2-u3-l5-q1",
+                                                "question": "'Look forward to' iborasidan keyin fe'l qaysi shaklda keladi?",
+                                                "options": [
+                                                        "Boshlang'ich shaklda (V1)",
+                                                        "Gerund (-ing) shaklida",
+                                                        "O'tgan zamon shaklida (V2)",
+                                                        "Past Participle (V3)"
+                                                ],
+                                                "correctAnswerIndex": 1,
+                                                "explanation": "'Look forward to' dagi 'to' predlog bo'lgani sababli undan keyin har doim ot yoki gerund (-ing) keladi (e.g., looking forward to hearing from you)."
+                                        },
+                                        {
+                                                "id": "en-a2-u3-l5-q2",
+                                                "question": "Qaysi jumla grammatik jihatdan XATO?",
+                                                "options": [
+                                                        "Please turn it on.",
+                                                        "He gave up smoking last month.",
+                                                        "I look forward to meet your family.",
+                                                        "We have run out of coffee."
+                                                ],
+                                                "correctAnswerIndex": 2,
+                                                "explanation": "'I look forward to meet' xato, to'g'risi: 'I look forward to MEETING your family'."
+                                        },
+                                        {
+                                                "id": "en-a2-u3-l5-q3",
+                                                "question": "'Carry on' iborasining eng to'g'ri sinonimi qaysi?",
+                                                "options": [
+                                                        "stop",
+                                                        "continue",
+                                                        "refuse",
+                                                        "delay"
+                                                ],
+                                                "correctAnswerIndex": 1,
+                                                "explanation": "'Carry on' = continue (davom ettirmoq)."
+                                        },
+                                        {
+                                                "id": "en-a2-u3-l5-q4",
+                                                "question": "'She had to ___ the prestigious scholarship because she couldn't travel abroad.' (rad etdi)",
+                                                "options": [
+                                                        "turn down",
+                                                        "turn on",
+                                                        "set up",
+                                                        "look for"
+                                                ],
+                                                "correctAnswerIndex": 0,
+                                                "explanation": "'Turn down' - taklifni rad etmoq."
+                                        },
+                                        {
+                                                "id": "en-a2-u3-l5-q5",
+                                                "question": "IELTS Speaking: 'What are your goals for learning English?' savoliga qaysi javob phrasal verblarni boy qo'llagan?",
+                                                "options": [
+                                                        "I want learn English.",
+                                                        "My primary goal is to master speaking so that I can communicate effortlessly abroad. I am really looking forward to studying at an international university and expanding my horizons.",
+                                                        "English is good for work.",
+                                                        "I never give English."
+                                                ],
+                                                "correctAnswerIndex": 1,
+                                                "explanation": "'looking forward to studying at an international university and expanding my horizons' - xalqaro imtihonda yuqori ball keltiruvchi tabiiy ifoda."
+                                        }
+                                ]
+                        }
                 }
-            },
-            {
-                "id": "en-a2-u3-l5-s2",
-                "title": "Mashq",
-                "type": "practice",
-                "estimatedMinutes": 4,
-                "practiceData": {
-                    "instructions": "To'g'ri phrasal verbni tanlang.",
-                    "exercises": [
-                        {
-                            "id": "en-a2-u3-l5-e1",
-                            "type": "multiple-choice",
-                            "prompt": "\"It is dark in here. Please _______ the lamp.\"",
-                            "options": [
-                                "turn off",
-                                "give up",
-                                "turn on",
-                                "look for"
-                            ],
-                            "correctAnswer": 2,
-                            "explanation": "Turn on the lamp."
-                        },
-                        {
-                            "id": "en-a2-u3-l5-ex-2",
-                            "type": "multiple-choice",
-                            "prompt": "Choose the correct word to complete the sentence: \"Please turn on the light.\"",
-                            "options": [
-                                "doubt",
-                                "delay",
-                                "Turn on",
-                                "reluctance"
-                            ],
-                            "correctAnswer": 2,
-                            "explanation": "\"Turn on\" (Yoqmoq (asbobni)) fits the context appropriately."
-                        }
-                    ]
-                }
-            },
-            {
-                "id": "en-a2-u3-l5-s3",
-                "title": "Test",
-                "type": "test",
-                "estimatedMinutes": 5,
-                "testData": {
-                    "instructions": "Savollarga javob bering.",
-                    "passingScorePercentage": 75,
-                    "questions": [
-                        {
-                            "id": "en-a2-u3-l5-q1",
-                            "question": "Don't _______ your dreams! Keep trying.",
-                            "options": [
-                                "give in",
-                                "look after",
-                                "give up",
-                                "turn off"
-                            ],
-                            "correctAnswerIndex": 2,
-                            "explanation": "Give up (taslim bo'lmoq)."
-                        },
-                        {
-                            "id": "en-a2-u3-l5-q2",
-                            "question": "She _______ her little brother while her parents work.",
-                            "options": [
-                                "looks after",
-                                "turns on",
-                                "looks for",
-                                "wakes up"
-                            ],
-                            "correctAnswerIndex": 0,
-                            "explanation": "Looks after (parvarishlaydi)."
-                        },
-                        {
-                            "id": "en-a2-u3-l5-q3",
-                            "question": "\"Put on your coat\" nimani bildiradi?",
-                            "options": [
-                                "Paltoyingizni yeching",
-                                "Paltongizni yuvib qo'ying",
-                                "Palto sotib oling",
-                                "Paltoyingizni kiying"
-                            ],
-                            "correctAnswerIndex": 3,
-                            "explanation": "Put on — Kiymoq."
-                        },
-                        {
-                            "id": "en-a2-u3-l5-q4",
-                            "question": "I need to _______ early tomorrow for my flight.",
-                            "options": [
-                                "turn on",
-                                "give up",
-                                "wake up",
-                                "look for"
-                            ],
-                            "correctAnswerIndex": 2,
-                            "explanation": "Wake up (uyg'onmoq)."
-                        }
-                    ]
-                }
-            }
         ]
-    },
+},
     {
         "id": "en-a2-u4-l1",
         "courseId": "english-a2",
