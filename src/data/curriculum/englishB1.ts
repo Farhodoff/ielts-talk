@@ -2755,56 +2755,119 @@ export const ENGLISH_B1_LESSONS: Lesson[] = [
         "language": "en",
         "level": "B1",
         "lessonNumber": 1,
-        "title": "Passive Voice: Present & Past Simple",
-        "description": "Majhul nisbat (am/is/are + V3, was/were + V3) — harakat bajaruvchisidan ko'ra harakat natijasi muhim bo'lganda.",
-        "estimatedDurationMinutes": 15,
+        "title": "Passive Voice: Present & Past Simple in Academic Contexts",
+        "description": "Majhul nisbat (am/is/are + V3, was/were + V3) — harakat obyekti va natijasi harakat bajaruvchisidan muhim bo'lganda.",
+        "estimatedDurationMinutes": 16,
         "icon": "⚙️",
         "steps": [
             {
                 "id": "en-b1-u3-l1-s1",
-                "title": "Majhul Nisbat Qoidasi",
+                "title": "Majhul Nisbat Qoidasi va Qo'llanishi",
                 "type": "learn",
-                "estimatedMinutes": 5,
+                "estimatedMinutes": 6,
                 "learnData": {
-                    "title": "Passive Voice: Be + V3",
-                    "explanation": "Ish-harakatni kim bajargani noma'lum yoki muhim bo'lmaganda majhul nisbat qo'llaniladi.",
-                    "keyPoints": [
-                        "Present Simple: English is spoken all over the world.",
-                        "Past Simple: This castle was built in the 15th century.",
-                        "By + agent: The telephone was invented by Alexander Graham Bell."
-                    ],
+                    "title": "Mastering the Passive Voice: Present & Past Simple",
+                    "explanation": "Ingliz tilida ish-harakatni kim bajargani noma'lum bo'lganda, ahamiyatsiz bo'lganda yoki diqqat markazida bajaruvchi emas, balki harakat obyekti turganida majhul nisbat (Passive Voice) ishlatiladi:\n\n1. Grammatik Formulalar:\n- Present Simple Passive: Ega + am / is / are + Past Participle (V3 / -ed)\n  • 'English is spoken as an official language in dozens of countries.' (Ingliz tili o'nlab mamlakatlarda rasmiy til sifatida so'zlashiladi).\n  • 'Millions of barrels of oil are exported annually.'\n- Past Simple Passive: Ega + was / were + Past Participle (V3 / -ed)\n  • 'The historic Registan complex was built centuries ago in Samarkand.'\n  • 'The electric lightbulb was patented by Thomas Edison in 1879.'\n\n2. 'By + shaxs' va 'With + qurol/vosita' Farqi:\n- Harakatni kim bajarganini aytmoqchi bo'lsak, 'by' ishlatiladi: 'The Mona Lisa was painted by Leonardo da Vinci.'\n- Harakat qaysi asbob yoki xomashyo bilan bajarilganini aytsak, 'with' ishlatiladi: 'The soup was seasoned with black pepper and herbs.'\n\n3. O'zbek Tili Bilan Qiyosiy Tahlil (Uzbek Contrastive Syntax):\n- O'zbek tilida majhul nisbat fe'l o'zagiga '-il / -ilmoq' qo'shimchasini qo'shish orqali hosil qilinadi (qurmoq -> qurildi; yozmoq -> yozildi).\n- Ingliz tilida esa maxsus qo'shimcha yo'q: 'to be' yordamchi fe'lining mos zamon shakli (is/are/was/were) qo'yilib, asosiy fe'lning 3-shakli (Past Participle) ulanadi.\n\n4. O'zbek o'rganuvchilari uchun xavfli tuzoqlar (Common Pitfalls):\n- ❌ 'English speaks all over the world.' -> ✅ 'English IS SPOKEN all over the world.' ('To be' tushirib qoldirilsa, go'yoki tilning o'zi gapiradigandek kulgili ma'no kelib chiqadi).\n- ❌ 'This novel was written with Charles Dickens.' -> ✅ 'This novel was written BY Charles Dickens.' (Muallif oldidan 'by' qo'yiladi).\n- ❌ 'The car was damaged by a stone.' -> ✅ 'The car was damaged WITH / BY a falling stone.' (Jonli agent uchun 'by', jonsiz asbob uchun 'with').\n\n5. IELTS Speaking & Writing Task 1 Foundation Corner:\n- Topic: Describing Monuments, Processes & Historical Architecture (Speaking Part 2 & Writing Task 1)\n- Examiner: 'Can you describe a historic landmark in your hometown?'\n- Model Band 6.0+ Answer: 'One of the most magnificent historical landmarks in my country is the Bibi-Khanym Mosque in Samarkand. It was commissioned by Amir Timur in 1399 and was constructed by the finest architects brought from all corners of his empire. Nowadays, it is carefully preserved by heritage organizations and is admired by tourists from all over the world.'\n- Formal Passive Fluency: 'It was commissioned...', 'was constructed by...', 'is carefully preserved by...' kabi majhul nisbat shakllari akademik uslub talablariga 100% javob beradi.",
                     "vocabulary": [
                         {
-                            "term": "Invent",
-                            "reading": "/ɪnˈvent/",
-                            "meaning": "Kashf / Ixtiro qilmoq",
-                            "exampleSentence": "The wheel was invented thousands of years ago.",
-                            "exampleTranslation": "G'ildirak ming yillar oldin ixtiro qilingan."
+                            "term": "manufacture",
+                            "reading": "/ˌmæn.jəˈfæk.tʃər/",
+                            "meaning": "ishlab chiqarmoq (zavod/fabrikada)",
+                            "exampleSentence": "These high-precision surgical instruments are manufactured in Germany.",
+                            "exampleTranslation": "Ushbu yuqori aniqlikdagi jarrohlik asboblari Germaniyada ishlab chiqariladi."
                         },
                         {
-                            "term": "Requirement",
-                            "reading": "/rɪˈkwaɪə.mənt/",
-                            "meaning": "Talab, shart",
-                            "exampleSentence": "Fluency is a core requirement for this role.",
-                            "exampleTranslation": "Ravonlik bu lavozim uchun asosiy talabdir."
+                            "term": "construct",
+                            "reading": "/kənˈstrʌkt/",
+                            "meaning": "bino qurmoq, bunyod etmoq",
+                            "exampleSentence": "The modern suspension bridge was constructed in less than three years.",
+                            "exampleTranslation": "Zamonaviy osma ko'prik uch yildan kamroq vaqt ichida qurib bitkazildi."
                         },
                         {
-                            "term": "Significantly",
-                            "reading": "/sɪɡˈnɪf.ɪ.kənt.li/",
-                            "meaning": "Sezilarli darajada",
-                            "exampleSentence": "Her grades improved significantly this term.",
-                            "exampleTranslation": "Bu semestrda uning baholari sezilarli darajada yaxshilandi."
+                            "term": "investigate",
+                            "reading": "/ɪnˈves.tɪ.ɡeɪt/",
+                            "meaning": "tergov qilmoq, sinchkovlik bilan o'rganmoq",
+                            "exampleSentence": "The sudden financial discrepancy is currently being investigated by auditors.",
+                            "exampleTranslation": "To'satdan yuzaga kelgan moliyaviy tafovut ayni paytda auditorlar tomonidan o'rganilmoqda."
+                        },
+                        {
+                            "term": "distribute",
+                            "reading": "/dɪˈstrɪb.juːt/",
+                            "meaning": "tarqatmoq, taqsimlamoq",
+                            "exampleSentence": "Emergency food rations were distributed to flood victims yesterday morning.",
+                            "exampleTranslation": "Kecha ertalab toshqindan jabrlanganlarga shoshilinch oziq-ovqat posilkalari tarqatildi."
+                        },
+                        {
+                            "term": "publish",
+                            "reading": "/ˈpʌb.lɪʃ/",
+                            "meaning": "nashr etmoq, chop etmoq",
+                            "exampleSentence": "The groundbreaking scientific paper was published in a prestigious journal.",
+                            "exampleTranslation": "Olamshumul ilmiy maqola nufuzli jurnalda nashr etildi."
+                        },
+                        {
+                            "term": "agent",
+                            "reading": "/ˈeɪ.dʒənt/",
+                            "meaning": "ish-harakatni bajargan shaxs/kuch (by + agent)",
+                            "exampleSentence": "In passive sentences, the agent is introduced using the preposition 'by'.",
+                            "exampleTranslation": "Majhul nisbatdagi gaplarda harakat bajaruvchisi 'by' predlogi orqali kiritiladi."
+                        },
+                        {
+                            "term": "preserve",
+                            "reading": "/prɪˈzɜːv/",
+                            "meaning": "asrab qolmoq, saqlamoq (tarixiy merosni)",
+                            "exampleSentence": "Centuries-old manuscripts are preserved under strictly controlled humidity levels.",
+                            "exampleTranslation": "Asriy qo'lyozmalar qat'iy nazorat ostidagi namlik sharoitida saqlanadi."
+                        },
+                        {
+                            "term": "establish",
+                            "reading": "/ɪˈstæb.lɪʃ/",
+                            "meaning": "asos solmoq, tashkil etmoq",
+                            "exampleSentence": "The national university was established more than a century ago.",
+                            "exampleTranslation": "Milliy universitetga bir asrdan ko'proq vaqt oldin asos solingan."
+                        },
+                        {
+                            "term": "renovate",
+                            "reading": "/ˈren.ə.veɪt/",
+                            "meaning": "ta'mirlamoq, yangilamoq (binoni)",
+                            "exampleSentence": "The municipal opera theater was completely renovated last summer.",
+                            "exampleTranslation": "Shahar opera teatri o'tgan yozda butunlay ta'mirlandi."
+                        },
+                        {
+                            "term": "export",
+                            "reading": "/ɪkˈspɔːt/",
+                            "meaning": "chetga chiqarmoq, eksport qilmoq",
+                            "exampleSentence": "Fresh agricultural produce is exported to neighboring countries by rail.",
+                            "exampleTranslation": "Yangi qishloq xo'jaligi mahsulotlari temir yo'l orqali qo'shni davlatlarga eksport qilinadi."
                         }
                     ],
                     "grammarRules": [
                         {
-                            "pattern": "Passive Voice: Present & Past Simple",
-                            "meaning": "Majhul nisbat (am/is/are + V3, was/were + V3) — harakat bajaruvchisidan ko'ra harakat natijasi muhim bo'lganda.",
-                            "usageNotes": "Ish-harakatni kim bajargani noma'lum yoki muhim bo'lmaganda majhul nisbat qo'llaniladi.",
+                            "pattern": "Present Simple Passive: am / is / are + Past Participle (V3)",
+                            "meaning": "Hozirgi umumiy faktlar va doimiy jarayonlarda majhul nisbat",
+                            "usageNotes": "Obyekt birlikda bo'lsa 'is', ko'plikda bo'lsa 'are' qo'yilib, fe'l 3-shaklda keladi.",
                             "examples": [
                                 {
-                                    "sentence": "The wheel was invented thousands of years ago.",
-                                    "translation": "G'ildirak ming yillar oldin ixtiro qilingan."
+                                    "sentence": "Millions of electronic emails are sent across the globe every minute.",
+                                    "translation": "Har daqiqada dunyo bo'ylab millionlab elektron xatlar yuboriladi."
+                                },
+                                {
+                                    "sentence": "Fresh bread is baked in this local bakery every morning.",
+                                    "translation": "Ushbu mahalliy novvoyxonada har kuni ertalab yangi non yopiladi."
+                                }
+                            ]
+                        },
+                        {
+                            "pattern": "Past Simple Passive: was / were + Past Participle (V3)",
+                            "meaning": "O'tmishdagi tugallangan harakatlar majhul nisbati",
+                            "usageNotes": "Birlik uchun 'was', ko'plik uchun 'were' ishlatiladi.",
+                            "examples": [
+                                {
+                                    "sentence": "The Eiffel Tower was built for the 1889 Universal Exposition.",
+                                    "translation": "Eyfel minorasi 1889-yilgi Butunjahon ko'rgazmasi uchun qurilgan edi."
+                                },
+                                {
+                                    "sentence": "All flight passengers were notified about the weather delay.",
+                                    "translation": "Barcha reys yo'lovchilari ob-havo kechikishi haqida ogohlantirildi."
                                 }
                             ]
                         }
@@ -2813,97 +2876,148 @@ export const ENGLISH_B1_LESSONS: Lesson[] = [
             },
             {
                 "id": "en-b1-u3-l1-s2",
-                "title": "Mashq",
+                "title": "Amaliy Mashqlar",
                 "type": "practice",
                 "estimatedMinutes": 5,
                 "practiceData": {
-                    "instructions": "To'g'ri majhul nisbat shaklini tanlang.",
+                    "instructions": "Present va Past Simple majhul nisbat qoidalariga mos to'g'ri shakllarni tanlang.",
                     "exercises": [
                         {
                             "id": "en-b1-u3-l1-e1",
                             "type": "multiple-choice",
-                            "prompt": "\"Millions of emails _______ (send) every minute.\"",
+                            "prompt": "\"Millions of smartphones _______ in modern automated factories in Asia every month.\"",
                             "options": [
-                                "is sent",
-                                "were sent",
-                                "are send",
-                                "are sent"
+                                "are manufactured",
+                                "is manufactured",
+                                "manufactures",
+                                "were manufactured"
                             ],
-                            "correctAnswer": 3,
-                            "explanation": "Emails ko'plik: are sent."
+                            "correctAnswer": 0,
+                            "explanation": "'Smartphones' ko'plik ot bo'lib, hozirgi odatiy harakat bo'lgani uchun 'are manufactured' to'g'ri."
                         },
                         {
-                            "id": "en-b1-u3-l1-ex-2",
+                            "id": "en-b1-u3-l1-e2",
                             "type": "multiple-choice",
-                            "prompt": "Choose the correct word to complete the sentence: \"Fluency is a core requirement for this role.\"",
+                            "prompt": "\"The famous historical novel _______ by Abdulla Qodiriy in the early twentieth century.\"",
                             "options": [
-                                "reluctance",
-                                "delay",
-                                "doubt",
-                                "Requirement"
+                                "wrote",
+                                "was written",
+                                "is written",
+                                "has written"
                             ],
-                            "correctAnswer": 3,
-                            "explanation": "\"Requirement\" (Talab, shart) fits the context appropriately."
+                            "correctAnswer": 1,
+                            "explanation": "O'tgan asrda sodir bo'lgan tarixiy harakat: 'was written'."
+                        },
+                        {
+                            "id": "en-b1-u3-l1-e3",
+                            "type": "multiple-choice",
+                            "prompt": "\"The Mona Lisa portrait was painted _______ Leonardo da Vinci.\"",
+                            "options": [
+                                "with",
+                                "by",
+                                "from",
+                                "of"
+                            ],
+                            "correctAnswer": 1,
+                            "explanation": "Asar muallifi va jonli harakat bajaruvchisi 'by' predlogi bilan ifodalanadi."
+                        },
+                        {
+                            "id": "en-b1-u3-l1-e4",
+                            "type": "multiple-choice",
+                            "prompt": "\"The locked wooden door was opened _______ a rusty iron key.\"",
+                            "options": [
+                                "by",
+                                "with",
+                                "at",
+                                "from"
+                            ],
+                            "correctAnswer": 1,
+                            "explanation": "Harakat bajarilgan asbob/vosita 'with' predlogi orqali aytiladi: 'with a rusty key'."
+                        },
+                        {
+                            "id": "en-b1-u3-l1-e5",
+                            "type": "multiple-choice",
+                            "prompt": "\"Active: 'They clean the hotel suites thoroughly every afternoon.' -> Passive: 'The hotel suites _______ thoroughly every afternoon.'\"",
+                            "options": [
+                                "cleaned",
+                                "are cleaned",
+                                "were cleaned",
+                                "is cleaned"
+                            ],
+                            "correctAnswer": 1,
+                            "explanation": "Present Simple ko'plik majhul nisbati: 'are cleaned'."
                         }
                     ]
                 }
             },
             {
                 "id": "en-b1-u3-l1-s3",
-                "title": "Test",
+                "title": "Yakuniy Test",
                 "type": "test",
                 "estimatedMinutes": 5,
                 "testData": {
-                    "instructions": "Savollarga javob bering.",
-                    "passingScorePercentage": 75,
+                    "instructions": "Passive Voice grammatikasi va lug'atiga oid test savollariga javob bering.",
+                    "passingScorePercentage": 80,
                     "questions": [
                         {
                             "id": "en-b1-u3-l1-q1",
-                            "question": "The Mona Lisa _______ painted by Leonardo da Vinci.",
+                            "question": "Qaysi gapda majhul nisbat grammatik jihatdan to'g'ri qo'llanilgan?",
                             "options": [
-                                "is",
-                                "were",
-                                "has",
-                                "was"
+                                "English speaks in many schools.",
+                                "These traditional carpets are made by hand.",
+                                "The book was wrote by a famous author.",
+                                "The castle is build in 1450."
                             ],
-                            "correctAnswerIndex": 3,
-                            "explanation": "Was painted."
+                            "correctAnswerIndex": 1,
+                            "explanation": "'These traditional carpets are made by hand' mutlaqo to'g'ri (are + V3). Boshqalarda 'speaks', 'wrote', 'is build' xatodir."
                         },
                         {
                             "id": "en-b1-u3-l1-q2",
-                            "question": "These products _______ in Germany.",
+                            "question": "Muallif va vosita uchun 'by' va 'with' predloglarining to'g'ri ishlatilishini tanlang:",
                             "options": [
-                                "are manufactured",
-                                "manufactures",
-                                "manufactured",
-                                "is manufactured"
+                                "The letter was signed by a blue pen with the director.",
+                                "The letter was signed by the director with a blue pen.",
+                                "The letter was signed with the director by a blue pen.",
+                                "The letter signed the director with a blue pen."
                             ],
-                            "correctAnswerIndex": 0,
-                            "explanation": "Are manufactured."
+                            "correctAnswerIndex": 1,
+                            "explanation": "Shaxs/ijrochi uchun 'by the director', ishlatilgan qurol/asbob uchun 'with a blue pen'."
                         },
                         {
                             "id": "en-b1-u3-l1-q3",
-                            "question": "The window _______ broken by the strong storm yesterday.",
+                            "question": "The university library _______ thoroughly last summer to add digital reading rooms.",
                             "options": [
-                                "is",
-                                "was",
-                                "had",
-                                "were"
+                                "renovated",
+                                "was renovated",
+                                "is renovated",
+                                "were renovated"
                             ],
                             "correctAnswerIndex": 1,
-                            "explanation": "Was broken."
+                            "explanation": "'Last summer' o'tgan zamon bo'lib, kutubxona birlikda: 'was renovated'."
                         },
                         {
                             "id": "en-b1-u3-l1-q4",
-                            "question": "Active: \"They clean the rooms daily.\" -> Passive: \"The rooms _______ daily.\"",
+                            "question": "Why is the passive voice preferred in scientific and academic reports?",
                             "options": [
-                                "cleaned",
-                                "were cleaned",
-                                "are cleaned",
-                                "is cleaned"
+                                "Chunki olimlar o'z ismlarini yashirishni xohlashadi.",
+                                "Chunki ilmiy matnlarda tadqiqot natijasi va jarayonning o'zi uni kim bajarganidan ko'ra muhimroqdir.",
+                                "Chunki faol nisbat faqat og'zaki nutqda ishlatiladi.",
+                                "Chunki majhul nisbatda grammatik qoidalar yo'q."
                             ],
-                            "correctAnswerIndex": 2,
-                            "explanation": "The rooms are cleaned."
+                            "correctAnswerIndex": 1,
+                            "explanation": "Akademik matnlarda harakatning xolisligi va natijasi birinchi o'ringa chiqadi."
+                        },
+                        {
+                            "id": "en-b1-u3-l1-q5",
+                            "question": "Fresh organic fruits _______ to European markets every autumn.",
+                            "options": [
+                                "are exported",
+                                "is exported",
+                                "exported",
+                                "were exporting"
+                            ],
+                            "correctAnswerIndex": 0,
+                            "explanation": "Fruits ko'plikda bo'lib, har kuzda takrorlanuvchi harakat uchun 'are exported' to'g'ri."
                         }
                     ]
                 }
@@ -2918,56 +3032,119 @@ export const ENGLISH_B1_LESSONS: Lesson[] = [
         "language": "en",
         "level": "B1",
         "lessonNumber": 2,
-        "title": "Reported Speech: Statements & Backshift",
-        "description": "O'zlashtirma gap: zamonlarning bir pog'ona orqaga siljishi (backshift).",
-        "estimatedDurationMinutes": 15,
+        "title": "Reported Speech: Statements & Tense Backshift",
+        "description": "O'zlashtirma gap qoidalari: asosiy fe'l o'tgan zamonda bo'lganda ichki zamonlarning bir pog'ona orqaga siljishi (backshift).",
+        "estimatedDurationMinutes": 16,
         "icon": "💬",
         "steps": [
             {
                 "id": "en-b1-u3-l2-s1",
-                "title": "O'zlashtirma Gap Qoidasi",
+                "title": "O'zlashtirma Gap va Zamonlarning Siljishi",
                 "type": "learn",
-                "estimatedMinutes": 5,
+                "estimatedMinutes": 6,
                 "learnData": {
-                    "title": "Reported Speech (Said that...)",
-                    "explanation": "Birovning gapini boshqaga yetkazganda asosiy fe'l o'tgan zamonda bo'lsa (He said...), ichki zamonlar bir pog'ona o'tmishga suriladi.",
-                    "keyPoints": [
-                        "Present Simple -> Past Simple: \"I am tired\" -> He said he was tired.",
-                        "Present Continuous -> Past Continuous: \"I am studying\" -> She said she was studying.",
-                        "Will -> Would: \"I will call\" -> He said he would call."
-                    ],
+                    "title": "Mastering Reported Speech: The Rule of Tense Backshift",
+                    "explanation": "Boshqa birovning aytgan so'zlarini o'z nutqimizda yetkazib berish (Reported Speech):\n\n1. Zamonlarning Bir Pog'ona O'tmishga Siljishi (Tense Backshift):\nAgar asosiy fe'l o'tgan zamonda bo'lsa (`He said that...`, `She told me that...`), to'g'ridan-to'g'ri nutqdagi barcha zamonlar bir qadam orqaga suriladi:\n- Present Simple -> Past Simple: 'I need a visa' -> He said he needed a visa.\n- Present Continuous -> Past Continuous: 'I am studying' -> She said she was studying.\n- Past Simple -> Past Perfect: 'I bought a laptop' -> He explained that he had bought a laptop.\n- Present Perfect -> Past Perfect: 'I have lost my passport' -> She admitted that she had lost her passport.\n- Will -> Would: 'I will call you tomorrow' -> He promised he would call me the next day.\n- Can -> Could: 'I can speak German' -> She claimed she could speak German.\n\n2. Vaqt va Makon Ko'rsatkichlarining O'zgarishi (Time & Place Shifts):\n- now -> then\n- today -> that day\n- yesterday -> the previous day / the day before\n- tomorrow -> the following day / the next day\n- last week -> the previous week\n- next month -> the following month\n- here -> there\n- this -> that\n\n3. 'Say' va 'Tell' O'rtasidagi O'ta Muhim Farq:\n- SAY (kimgaligi aytilmaydi): 'She said (that) she was exhausted.' (❌ 'She said me' — QO'POL XATO!).\n- TELL (shaxs kiritilishi shart!): 'She told ME (that) she was exhausted.' (❌ 'She told that' yoki 'She told to me' — XATO!).\n\n4. O'zbek o'rganuvchilari uchun xavfli tuzoqlar (Common Pitfalls):\n- ❌ 'He told to me that...' -> ✅ 'He told ME that...' ('Tell' dan keyin 'to' ISHLATILMAYDI!).\n- ❌ 'She said me that...' -> ✅ 'She said TO me...' yoki 'She TOLD me...'.\n- ❌ Zamonni orqaga surmaslik: 'He said he will come tomorrow.' -> ✅ 'He said he WOULD come the NEXT DAY.'\n\n5. IELTS Speaking Foundation Corner:\n- Topic: Retelling Advice or Conversations (Speaking Part 2)\n- Examiner: 'Describe some useful advice someone gave you about learning English.'\n- Model Band 6.0+ Answer: 'When I first started preparing for language exams, my English tutor told me that memorizing long vocabulary lists without context was counterproductive. She advised me that I should read international news articles daily, and she assured me that my reading comprehension would improve significantly within months.'\n- Narrative Sophistication: 'My tutor told me that... was...', 'She advised me that I should...', 'she assured me that... would improve' kabi bog'lanishlar o'zlashtirma gapning mukammal namunasidir.",
                     "vocabulary": [
                         {
-                            "term": "Tell",
-                            "reading": "/tel/",
-                            "meaning": "Aytmoq (kimga: tell me)",
-                            "exampleSentence": "He told me the good news.",
-                            "exampleTranslation": "U menga xushxabarni aytdi."
+                            "term": "claim",
+                            "reading": "/kleɪm/",
+                            "meaning": "da'vo qilmoq, ta'kidlamoq",
+                            "exampleSentence": "The company claimed that their new battery lasted twice as long as competitors'.",
+                            "exampleTranslation": "Kompaniya o'zlarining yangi batareyasi raqobatchilarnikiga qaraganda ikki barobar uzoqroq ishlashini ta'kidladi."
                         },
                         {
-                            "term": "Significantly",
-                            "reading": "/sɪɡˈnɪf.ɪ.kənt.li/",
-                            "meaning": "Sezilarli darajada",
-                            "exampleSentence": "Her grades improved significantly this term.",
-                            "exampleTranslation": "Bu semestrda uning baholari sezilarli darajada yaxshilandi."
+                            "term": "mention",
+                            "reading": "/ˈmen.ʃən/",
+                            "meaning": "eslatib o'tmoq, tilga olmoq",
+                            "exampleSentence": "During the interview, he mentioned that he had previously worked in finance.",
+                            "exampleTranslation": "Suhbat davomida u ilgari moliya sohasida ishlaganini eslatib o'tdi."
                         },
                         {
-                            "term": "Perspective",
-                            "reading": "/pəˈspek.tɪv/",
-                            "meaning": "Nuqtayi nazar",
-                            "exampleSentence": "Traveling gives you a broader perspective on life.",
-                            "exampleTranslation": "Sayohat qilish hayotga kengroq nuqtayi nazar beradi."
+                            "term": "admit",
+                            "reading": "/ədˈmɪt/",
+                            "meaning": "tan olmoq, iqror bo'lmoq",
+                            "exampleSentence": "The student admitted that he hadn't prepared thoroughly for the test.",
+                            "exampleTranslation": "Talaba testga puxta tayyorgarlik ko'rmaganini tan oldi."
+                        },
+                        {
+                            "term": "announce",
+                            "reading": "/əˈnaʊns/",
+                            "meaning": "rasman e'lon qilmoq",
+                            "exampleSentence": "The university announced that all autumn classes would be held in person.",
+                            "exampleTranslation": "Universitet barcha kuzgi darslar an'anaviy tarzda o'tkazilishini e'lon qildi."
+                        },
+                        {
+                            "term": "explain",
+                            "reading": "/ɪkˈspleɪn/",
+                            "meaning": "tushuntirmoq, izoh bermoq",
+                            "exampleSentence": "The professor explained that gravity warped both space and time.",
+                            "exampleTranslation": "Professor gravitatsiya ham fazoni, ham vaqtni egrilantirishini tushuntirdi."
+                        },
+                        {
+                            "term": "confirm",
+                            "reading": "/kənˈfɜːm/",
+                            "meaning": "tasdiqlamoq",
+                            "exampleSentence": "The travel agency confirmed that our hotel reservation was guaranteed.",
+                            "exampleTranslation": "Sayyohlik agentligi mehmonxona bronimiz kafolatlanganini tasdiqladi."
+                        },
+                        {
+                            "term": "previous",
+                            "reading": "/ˈpriː.vi.əs/",
+                            "meaning": "oldingi, avvalgi (the previous day)",
+                            "exampleSentence": "She said she had completed the lab assignment the previous evening.",
+                            "exampleTranslation": "U laboratoriya vazifasini o'tgan oqshomda yakunlaganini aytdi."
+                        },
+                        {
+                            "term": "following",
+                            "reading": "/ˈfɒl.əʊ.ɪŋ/",
+                            "meaning": "keyingi, kelgusi (the following week)",
+                            "exampleSentence": "The manager promised that decisions would be communicated the following week.",
+                            "exampleTranslation": "Menejer qarorlar keyingi hafta yetkazilishini va'da qildi."
+                        },
+                        {
+                            "term": "assure",
+                            "reading": "/əˈʃɔːr/",
+                            "meaning": "ishontirmoq, ko'nglini xotirjam qilmoq",
+                            "exampleSentence": "The airline assured passengers that their delayed luggage would be delivered soon.",
+                            "exampleTranslation": "Aviakompaniya yo'lovchilarni kechikkan bagajlari tez orada yetkazilishiga ishontirdi."
+                        },
+                        {
+                            "term": "statement",
+                            "reading": "/ˈsteɪt.mənt/",
+                            "meaning": "bayonot, rasmiy fikr",
+                            "exampleSentence": "The ministry issued a formal statement regarding the revised visa regulations.",
+                            "exampleTranslation": "Vazirlik qayta ko'rib chiqilgan viza qoidalari yuzasidan rasmiy bayonot berdi."
                         }
                     ],
                     "grammarRules": [
                         {
-                            "pattern": "Reported Speech: Statements & Backshift",
-                            "meaning": "O'zlashtirma gap: zamonlarning bir pog'ona orqaga siljishi (backshift).",
-                            "usageNotes": "Birovning gapini boshqaga yetkazganda asosiy fe'l o'tgan zamonda bo'lsa (He said...), ichki zamonlar bir pog'ona o'tmishga suriladi.",
+                            "pattern": "Say that... vs Tell someone that...",
+                            "meaning": "Xabarni yetkazuvchi asosiy fe'llar farqi",
+                            "usageNotes": "'Say'dan so'ng to'g'ridan-to'g'ri shaxs kelmaydi (say that). 'Tell'dan so'ng tinglovchi shaxs predlogsiz kelishi shart (tell me that).",
                             "examples": [
                                 {
-                                    "sentence": "He told me the good news.",
-                                    "translation": "U menga xushxabarni aytdi."
+                                    "sentence": "He said that he was ready to take the exam.",
+                                    "translation": "U imtihon topshirishga tayyor ekanini aytdi."
+                                },
+                                {
+                                    "sentence": "She told the doctor that her chest hurt.",
+                                    "translation": "U shifokorga ko'kragi og'riyotganini aytdi."
+                                }
+                            ]
+                        },
+                        {
+                            "pattern": "Tense Backshift: Present -> Past; Past/Present Perfect -> Past Perfect; Will -> Would",
+                            "meaning": "O'zlashtirma gapda zamonlarning bir bosqich o'tmishga surilishi",
+                            "usageNotes": "Asosiy fe'l o'tgan zamonda bo'lsa, ichki gapdagi zamonlar moslashtiriladi.",
+                            "examples": [
+                                {
+                                    "sentence": "\"I am moving to London next month\" -> He said that he was moving to London the following month.",
+                                    "translation": "U keyingi oyda Londonga ko'chib ketayotganini aytdi."
+                                },
+                                {
+                                    "sentence": "\"I have already seen this movie\" -> She said that she had already seen that movie.",
+                                    "translation": "U o'sha filmni allaqachon ko'rganini aytdi."
                                 }
                             ]
                         }
@@ -2976,97 +3153,148 @@ export const ENGLISH_B1_LESSONS: Lesson[] = [
             },
             {
                 "id": "en-b1-u3-l2-s2",
-                "title": "Mashq",
+                "title": "Amaliy Mashqlar",
                 "type": "practice",
                 "estimatedMinutes": 5,
                 "practiceData": {
-                    "instructions": "To'g'ri o'zlashtirilgan shaklni tanlang.",
+                    "instructions": "O'zlashtirma gap (Reported Speech) qoidalariga mos to'g'ri variantlarni tanlang.",
                     "exercises": [
                         {
                             "id": "en-b1-u3-l2-e1",
                             "type": "multiple-choice",
-                            "prompt": "\"I live in Tokyo.\" -> He said that he _______ in Tokyo.",
+                            "prompt": "\"Direct: 'I am preparing for the IELTS exam.' -> Reported: He said that he _______ for the IELTS exam.\"",
                             "options": [
-                                "lived",
-                                "has lived",
-                                "lives",
-                                "is living"
+                                "is preparing",
+                                "was preparing",
+                                "has prepared",
+                                "prepared"
                             ],
-                            "correctAnswer": 0,
-                            "explanation": "Present Simple -> Past Simple: lived."
+                            "correctAnswer": 1,
+                            "explanation": "Present Continuous o'zlashtirma gapda Past Continuous'ga aylanadi: 'was preparing'."
                         },
                         {
-                            "id": "en-b1-u3-l2-ex-2",
+                            "id": "en-b1-u3-l2-e2",
                             "type": "multiple-choice",
-                            "prompt": "Choose the correct word to complete the sentence: \"Her grades improved significantly this term.\"",
+                            "prompt": "\"Farrukh told _______ that he had passed his driving test on the first attempt.\"",
                             "options": [
-                                "Significantly",
-                                "doubt",
-                                "reluctance",
-                                "delay"
+                                "to me",
+                                "me",
+                                "I",
+                                "myself"
+                            ],
+                            "correctAnswer": 1,
+                            "explanation": "'Told me' to'g'ri shakl ('told to me' xato)."
+                        },
+                        {
+                            "id": "en-b1-u3-l2-e3",
+                            "type": "multiple-choice",
+                            "prompt": "\"Direct: 'We will launch the new software tomorrow.' -> Reported: They announced that they _______ the new software _______.\"",
+                            "options": [
+                                "will launch / tomorrow",
+                                "would launch / the following day",
+                                "would launch / yesterday",
+                                "had launched / tomorrow"
+                            ],
+                            "correctAnswer": 1,
+                            "explanation": "Will -> would; tomorrow -> the following day."
+                        },
+                        {
+                            "id": "en-b1-u3-l2-e4",
+                            "type": "multiple-choice",
+                            "prompt": "\"Direct: 'I have lost my apartment keys.' -> Reported: She admitted that she _______ her apartment keys.\"",
+                            "options": [
+                                "had lost",
+                                "has lost",
+                                "lost",
+                                "loses"
                             ],
                             "correctAnswer": 0,
-                            "explanation": "\"Significantly\" (Sezilarli darajada) fits the context appropriately."
+                            "explanation": "Present Perfect -> Past Perfect: 'had lost'."
+                        },
+                        {
+                            "id": "en-b1-u3-l2-e5",
+                            "type": "multiple-choice",
+                            "prompt": "\"The research team _______ that their breakthrough findings were verified by peer reviewers.\"",
+                            "options": [
+                                "confirmed",
+                                "told to",
+                                "say to",
+                                "speaking"
+                            ],
+                            "correctAnswer": 0,
+                            "explanation": "'Confirmed that...' (tasdiqladi) to'g'ri akademik fe'ldir."
                         }
                     ]
                 }
             },
             {
                 "id": "en-b1-u3-l2-s3",
-                "title": "Test",
+                "title": "Yakuniy Test",
                 "type": "test",
                 "estimatedMinutes": 5,
                 "testData": {
-                    "instructions": "Savollarga javob bering.",
-                    "passingScorePercentage": 75,
+                    "instructions": "Reported Speech va zamonlar siljishiga oid test savollariga javob bering.",
+                    "passingScorePercentage": 80,
                     "questions": [
                         {
                             "id": "en-b1-u3-l2-q1",
-                            "question": "\"I will help you tomorrow.\" -> She said that she _______ help me the next day.",
+                            "question": "Qaysi gapda o'zlashtirma gap qoidalari buzilmagan va to'g'ri tuzilgan?",
                             "options": [
-                                "would",
-                                "could",
-                                "will",
-                                "can"
+                                "He told to me that he was feeling ill.",
+                                "He said me that he was feeling ill.",
+                                "He told me that he was feeling ill.",
+                                "He said that he is feeling ill yesterday."
                             ],
-                            "correctAnswerIndex": 0,
-                            "explanation": "Will -> would."
+                            "correctAnswerIndex": 2,
+                            "explanation": "'He told me that...' to'g'ri. 'Told to me' va 'said me' qo'pol grammatik xatolardir."
                         },
                         {
                             "id": "en-b1-u3-l2-q2",
-                            "question": "He told _______ that he had passed the exam.",
+                            "question": "To'g'ri nutqdagi 'tomorrow' o'zlashtirma gapda nimaga aylanadi?",
                             "options": [
-                                "to me",
-                                "myself",
-                                "I",
-                                "me"
+                                "the following day / the next day",
+                                "yesterday",
+                                "the previous day",
+                                "that day"
                             ],
-                            "correctAnswerIndex": 3,
-                            "explanation": "Told me (told to me EMAS)."
+                            "correctAnswerIndex": 0,
+                            "explanation": "Tomorrow -> the following day yoki the next day."
                         },
                         {
                             "id": "en-b1-u3-l2-q3",
-                            "question": "\"We are working on a new project.\" -> They said they _______ on a new project.",
+                            "question": "\"I can help you with your homework tonight.\" -> She said that she _______ help me with my homework that night.",
                             "options": [
-                                "worked",
-                                "have worked",
-                                "were working",
-                                "are working"
+                                "can",
+                                "could",
+                                "would",
+                                "might"
                             ],
-                            "correctAnswerIndex": 2,
-                            "explanation": "Are working -> were working."
+                            "correctAnswerIndex": 1,
+                            "explanation": "Modal fe'l 'can' o'zlashtirma gapda 'could'ga aylanadi."
                         },
                         {
                             "id": "en-b1-u3-l2-q4",
-                            "question": "\"I have lost my passport.\" -> He explained that he _______ his passport.",
+                            "question": "Direct: 'I finished my bachelor's degree in 2020.' -> Reported: He stated that he _______ his degree in 2020.",
                             "options": [
-                                "loses",
-                                "had lost",
-                                "has lost",
-                                "lost"
+                                "had finished",
+                                "has finished",
+                                "finishes",
+                                "will finish"
                             ],
-                            "correctAnswerIndex": 1,
-                            "explanation": "Have lost -> had lost."
+                            "correctAnswerIndex": 0,
+                            "explanation": "Past Simple o'zlashtirilganda Past Perfect ('had finished') shakliga o'tadi."
+                        },
+                        {
+                            "id": "en-b1-u3-l2-q5",
+                            "question": "What is the key difference between 'He said that he was busy' and 'He told me that he was busy'?",
+                            "options": [
+                                "Ikkala gap ham grammatik to'g'ri, faqat 'told' bilan eshituvchi shaxs ('me') kiritilishi shart, 'said'da esa shaxs kiritilmaydi.",
+                                "'He said' xato gap.",
+                                "'He told' faqat kelajakda ishlatiladi.",
+                                "Hech qanday farqi yo'q."
+                            ],
+                            "correctAnswerIndex": 0,
+                            "explanation": "'Tell' fe'li eshituvchi obyektni (me, him, them) talab qiladi, 'say' esa bevosita 'that' bilan keladi."
                         }
                     ]
                 }
@@ -3081,154 +3309,269 @@ export const ENGLISH_B1_LESSONS: Lesson[] = [
         "language": "en",
         "level": "B1",
         "lessonNumber": 3,
-        "title": "Reported Questions & Commands (asked if / told to)",
-        "description": "So'roq va buyruq gaplarni o'zlashtirish (asked where I lived, told me to wait).",
-        "estimatedDurationMinutes": 14,
+        "title": "Reported Questions, Commands & Requests",
+        "description": "So'roq va buyruq gaplarni o'zlashtirish: asked if/whether, to'g'ri so'z tartibi va told/asked to do tuzilmalari.",
+        "estimatedDurationMinutes": 16,
         "icon": "📢",
         "steps": [
             {
                 "id": "en-b1-u3-l3-s1",
-                "title": "O'zlashtirma Savollar",
+                "title": "O'zlashtirma Savollar va Buyruqlar",
                 "type": "learn",
-                "estimatedMinutes": 4,
+                "estimatedMinutes": 6,
                 "learnData": {
-                    "title": "Reported Questions & Imperatives",
-                    "explanation": "Yes/No savollarda \"if/whether\" qo'yiladi va gap darak tartibiga o'tadi (He asked if I was ready). Buyruqlarda \"told to / asked to\" ishlatiladi (He told me to sit down).",
-                    "keyPoints": [
-                        "\"Where do you live?\" -> He asked me where I lived.",
-                        "\"Don't touch!\" -> The teacher told us not to touch."
+                    "title": "Reported Questions & Imperatives (Word Order & To-Infinitive)",
+                    "explanation": "Savollar va buyruqlarni o'zlashtirma gapga aylantirishda maxsus qoidalar mavjud:\n\n1. O'zlashtirma Savollarda So'z Tartibi (ENG MUHIM IMTIHON QOIDASI!):\n- O'zlashtirilgan savolda so'roq so'z tartibi (yordamchi fe'l egadan oldin kelishi) YO'QOLADI va DARAK SO'Z TARTIBIGA (Ega + Fe'l) aylanadi!\n- Oxiriga so'roq belgisi emas, nuqta qo'yiladi:\n  • To'g'ri savol: 'Where do you live?'\n  • O'zlashtirilgan savol: 'He asked me where I lived.' (❌ 'He asked me where did I live' — QO'POL XATO!).\n  • To'g'ri savol: 'What time does the train leave?'\n  • O'zlashtirilgan savol: 'She inquired what time the train left.'\n\n2. Umumiy Savollar (Yes/No Questions) -> If / Whether:\n- Agar savol yordamchi fe'l bilan boshlangan bo'lsa (Do you...? Are you...? Have you...?), o'zlashtirishda 'IF' yoki 'WHETHER' qo'yiladi:\n  • 'Are you ready?' -> 'He asked IF I was ready.'\n  • 'Have you visited Samarkand?' -> 'She asked WHETHER I had visited Samarkand.'\n\n3. O'zlashtirma Buyruqlar va Iltimoslar (Commands & Requests):\n- Formulalar: `told / asked / instructed / warned + shaxs + TO + fe'l asosi`\n  • 'Please close the window.' -> 'She asked me TO close the window.'\n  • 'Sit down and be quiet!' -> 'The teacher told the students TO sit down and be quiet.'\n- Inkor buyruqlarda: `NOT TO + fe'l asosi`:\n  • 'Don't touch the glass.' -> 'The guard warned us NOT TO touch the glass.' (❌ 'told us to not touch' yoki 'told us don't touch' — XATO!).\n\n4. O'zbek o'rganuvchilari uchun xavfli tuzoqlar (Common Pitfalls):\n- ❌ 'She asked me where was my house.' -> ✅ 'She asked me where my house WAS.' (Darak so'z tartibi: ega (my house) + fe'l (was)).\n- ❌ 'He told me don't go.' -> ✅ 'He told me NOT TO go.'\n- ❌ 'She asked if did I know him.' -> ✅ 'She asked IF I KNEW him.' ('did' yordamchi fe'li olib tashlanadi).\n\n5. IELTS Speaking Foundation Corner:\n- Topic: Job Interviews and Official Meetings (Speaking Part 2 & 3)\n- Examiner: 'Describe a time when you were asked challenging questions in an interview.'\n- Model Band 6.0+ Answer: 'Last year, during my scholarship interview, the panel asked me why I wanted to pursue data science and whether I had any previous coding experience. Afterward, the committee chair told me to expect their decision within a fortnight. Maintaining composure and answering accurately made a very favorable impression.'\n- Structural Mastery: 'The panel asked me why I wanted... and whether I had...' va 'told me to expect...' konstruktsiyalari intervyu va muloqotni hikoya qilishda eng yuqori darajani ta'minlaydi.",
+                    "vocabulary": [
+                        {
+                            "term": "inquire",
+                            "reading": "/ɪnˈkwaɪər/",
+                            "meaning": "surishtirmoq, rasman so'ramoq",
+                            "exampleSentence": "The foreign tourist inquired whether credit cards were accepted in the taxi.",
+                            "exampleTranslation": "Xorijiy sayyoh taksida kredit kartalari qabul qilinish-qilinmasligini surishtirdi."
+                        },
+                        {
+                            "term": "whether",
+                            "reading": "/ˈweð.ər/",
+                            "meaning": "...-mi yoki yo'q (if kabi)",
+                            "exampleSentence": "She asked whether breakfast was included in our room reservation.",
+                            "exampleTranslation": "U xona bronimiz narxiga nonushta kiritilgan-kiritilmaganligini so'radi."
+                        },
+                        {
+                            "term": "instruct",
+                            "reading": "/ɪnˈstrʌkt/",
+                            "meaning": "ko'rsatma bermoq, buyurmoq",
+                            "exampleSentence": "The flight attendant instructed passengers to fasten their seatbelts.",
+                            "exampleTranslation": "Styuardessa yo'lovchilarga xavfsizlik kamarlarini taqish bo'yicha ko'rsatma berdi."
+                        },
+                        {
+                            "term": "remind",
+                            "reading": "/rɪˈmaɪnd/",
+                            "meaning": "eslatmoq (remind someone to do something)",
+                            "exampleSentence": "My mother reminded me to double-check my passport before leaving.",
+                            "exampleTranslation": "Onam jo'nab ketishdan oldin pasportimni qayta tekshirib olishimni eslatdi."
+                        },
+                        {
+                            "term": "forbid",
+                            "reading": "/fəˈbɪd/",
+                            "meaning": "taqiqlamoq, man etmoq",
+                            "exampleSentence": "The security officers forbade visitors from taking photographs inside the vault.",
+                            "exampleTranslation": "Xavfsizlik xodimlari tashrif buyuruvchilarga ombor ichida suratga tushishni taqiqlashdi."
+                        },
+                        {
+                            "term": "urge",
+                            "reading": "/ɜːdʒ/",
+                            "meaning": "qat'iy chaqirmoq, undamoq",
+                            "exampleSentence": "The doctor urged him to adopt a healthier diet and exercise regularly.",
+                            "exampleTranslation": "Shifokor uni sog'lomroq parhez tutishga va muntazam mashq qilishga qat'iy undadi."
+                        },
+                        {
+                            "term": "warn",
+                            "reading": "/wɔːn/",
+                            "meaning": "ogohlantirmoq (warn someone not to do something)",
+                            "exampleSentence": "The police warned citizens not to walk alone in dark alleys at night.",
+                            "exampleTranslation": "Politsiya fuqarolarni tunda qorong'i xiyobonlarda yolg'iz yurmaslik haqida ogohlantirdi."
+                        },
+                        {
+                            "term": "order",
+                            "reading": "/ˈwɔː.dər/",
+                            "meaning": "buyruq bermoq, amr etmoq",
+                            "exampleSentence": "The commanding officer ordered the soldiers to stand at attention.",
+                            "exampleTranslation": "Komandir askarlarga tik turishga buyruq berdi."
+                        },
+                        {
+                            "term": "demand",
+                            "reading": "/dɪˈmɑːnd/",
+                            "meaning": "talab qilmoq",
+                            "exampleSentence": "The customer demanded to speak directly with the store manager.",
+                            "exampleTranslation": "Mijoz to'g'ridan-to'g'ri do'kon boshqaruvchisi bilan gaplashishni talab qildi."
+                        },
+                        {
+                            "term": "permission",
+                            "reading": "/pəˈmɪʃ.ən/",
+                            "meaning": "ruxsat, ijozat",
+                            "exampleSentence": "You must obtain written permission before republishing these materials.",
+                            "exampleTranslation": "Ushbu materiallarni qayta nashr etishdan oldin yozma ruxsat olishingiz shart."
+                        }
                     ],
                     "grammarRules": [
                         {
-                            "pattern": "Reported Questions & Commands (asked if / told to)",
-                            "meaning": "So'roq va buyruq gaplarni o'zlashtirish (asked where I lived, told me to wait).",
-                            "usageNotes": "Yes/No savollarda \"if/whether\" qo'yiladi va gap darak tartibiga o'tadi (He asked if I was ready). Buyruqlarda \"told to / asked to\" ishlatiladi (He told me to sit down).",
+                            "pattern": "Reported Wh-Questions: Asked (someone) + Wh-word + Subject + Verb",
+                            "meaning": "Maxsus so'roq gaplarni o'zlashtirish (Darak so'z tartibi)",
+                            "usageNotes": "Yordamchi fe'l (did/do/does) olib tashlanadi va gap darak shakliga o'tadi.",
                             "examples": [
                                 {
-                                    "sentence": "I study English every day with dedication.",
-                                    "translation": "Har kuni ingliz tilini astoydil o'rganaman."
+                                    "sentence": "\"Where did you study?\" -> She asked me where I had studied.",
+                                    "translation": "U mendan qayerda o'qiganimni so'radi."
+                                },
+                                {
+                                    "sentence": "\"Why are you late?\" -> The teacher asked why he was late.",
+                                    "translation": "O'qituvchi undan nega kechikkanini so'radi."
                                 }
                             ]
-                        }
-                    ],
-                    "vocabulary": [
-                        {
-                            "term": "Significantly",
-                            "reading": "/sɪɡˈnɪf.ɪ.kənt.li/",
-                            "meaning": "Sezilarli darajada",
-                            "exampleSentence": "Her grades improved significantly this term.",
-                            "exampleTranslation": "Bu semestrda uning baholari sezilarli darajada yaxshilandi."
                         },
                         {
-                            "term": "Perspective",
-                            "reading": "/pəˈspek.tɪv/",
-                            "meaning": "Nuqtayi nazar",
-                            "exampleSentence": "Traveling gives you a broader perspective on life.",
-                            "exampleTranslation": "Sayohat qilish hayotga kengroq nuqtayi nazar beradi."
-                        },
-                        {
-                            "term": "Efficient",
-                            "reading": "/ɪˈfɪʃ.ənt/",
-                            "meaning": "Samarali",
-                            "exampleSentence": "We need to find a more efficient solution.",
-                            "exampleTranslation": "Biz yanada samaraliroq yechim topishimiz kerak."
+                            "pattern": "Reported Commands: Told / Warned / Asked + person + (NOT) TO + base verb",
+                            "meaning": "Buyruq va iltimoslarni 'to / not to' orqali o'zlashtirish",
+                            "usageNotes": "Inkor buyruqlarda 'not to + verb' shakli qo'llaniladi.",
+                            "examples": [
+                                {
+                                    "sentence": "\"Please don't be late.\" -> He asked us not to be late.",
+                                    "translation": "U bizdan kechikmaslikni iltimos qildi."
+                                },
+                                {
+                                    "sentence": "\"Submit your essays by Friday.\" -> The professor told them to submit their essays by Friday.",
+                                    "translation": "Professor ularga insholarini jumagacha topshirishni buyurdi."
+                                }
+                            ]
                         }
                     ]
                 }
             },
             {
                 "id": "en-b1-u3-l3-s2",
-                "title": "Mashq",
+                "title": "Amaliy Mashqlar",
                 "type": "practice",
                 "estimatedMinutes": 5,
                 "practiceData": {
-                    "instructions": "To'g'ri so'z tartibini tanlang.",
+                    "instructions": "O'zlashtirma so'roq va buyruq gaplar qoidalariga mos to'g'ri javoblarni tanlang.",
                     "exercises": [
                         {
                             "id": "en-b1-u3-l3-e1",
                             "type": "multiple-choice",
-                            "prompt": "\"Are you hungry?\" -> She asked me if I _______ hungry.",
+                            "prompt": "\"Direct: 'Where do you work?' -> Reported: He asked me where I _______.\"",
                             "options": [
-                                "am",
-                                "was",
-                                "had been",
-                                "were"
+                                "did work",
+                                "worked",
+                                "do work",
+                                "was work"
                             ],
                             "correctAnswer": 1,
-                            "explanation": "She asked me if I was hungry."
+                            "explanation": "Darak so'z tartibi: ega (I) + fe'l (worked)."
                         },
                         {
-                            "id": "en-b1-u3-l3-ex-2",
+                            "id": "en-b1-u3-l3-e2",
                             "type": "multiple-choice",
-                            "prompt": "Choose the correct word to complete the sentence: \"Traveling gives you a broader perspective on life.\"",
+                            "prompt": "\"Direct: 'Do you have a valid passport?' -> Reported: The border official asked me _______ a valid passport.\"",
                             "options": [
-                                "doubt",
-                                "delay",
-                                "Perspective",
-                                "reluctance"
+                                "that I have",
+                                "if I had",
+                                "did I have",
+                                "whether had I"
                             ],
-                            "correctAnswer": 2,
-                            "explanation": "\"Perspective\" (Nuqtayi nazar) fits the context appropriately."
+                            "correctAnswer": 1,
+                            "explanation": "Yes/No savolda 'if' + darak tartib: 'if I had'."
+                        },
+                        {
+                            "id": "en-b1-u3-l3-e3",
+                            "type": "multiple-choice",
+                            "prompt": "\"Direct: 'Don't make any noise in the examination hall.' -> Reported: The supervisor told the students _______ any noise.\"",
+                            "options": [
+                                "to not make",
+                                "not to make",
+                                "don't make",
+                                "not making"
+                            ],
+                            "correctAnswer": 1,
+                            "explanation": "Inkor buyruqda 'not to + base verb': 'not to make'."
+                        },
+                        {
+                            "id": "en-b1-u3-l3-e4",
+                            "type": "multiple-choice",
+                            "prompt": "\"Direct: 'What time does the meeting start?' -> Reported: She asked _______.\"",
+                            "options": [
+                                "what time did the meeting start",
+                                "what time the meeting started",
+                                "what time does the meeting start",
+                                "what time was the meeting starting"
+                            ],
+                            "correctAnswer": 1,
+                            "explanation": "Darak tartibi: 'what time the meeting started'."
+                        },
+                        {
+                            "id": "en-b1-u3-l3-e5",
+                            "type": "multiple-choice",
+                            "prompt": "\"The doctor strongly _______ the patient to give up smoking immediately.\"",
+                            "options": [
+                                "urged",
+                                "forbade to",
+                                "demanded of",
+                                "said"
+                            ],
+                            "correctAnswer": 0,
+                            "explanation": "'Urged the patient to give up' (bemorga qat'iy maslahat berdi/undadi) to'g'ri birikmadir."
                         }
                     ]
                 }
             },
             {
                 "id": "en-b1-u3-l3-s3",
-                "title": "Test",
+                "title": "Yakuniy Test",
                 "type": "test",
                 "estimatedMinutes": 5,
                 "testData": {
-                    "instructions": "Savollarga javob bering.",
-                    "passingScorePercentage": 75,
+                    "instructions": "O'zlashtirma savollar va buyruqlar bo'yicha test savollariga javob bering.",
+                    "passingScorePercentage": 80,
                     "questions": [
                         {
                             "id": "en-b1-u3-l3-q1",
-                            "question": "The doctor advised me _______ drink more water.",
+                            "question": "Qaysi gapda o'zlashtirma savol so'z tartibi to'g'ri berilgan?",
                             "options": [
-                                "for",
-                                "to",
-                                "should",
-                                "that"
+                                "She asked me where did I buy that coat.",
+                                "She asked me where I bought that coat.",
+                                "She asked me where was I buying that coat.",
+                                "She asked me where I do buy that coat."
                             ],
                             "correctAnswerIndex": 1,
-                            "explanation": "Advised me to drink."
+                            "explanation": "O'zlashtirma savolda so'roq yordamchi fe'li (did) olib tashlanib, darak tartib 'where I bought' bo'ladi."
                         },
                         {
                             "id": "en-b1-u3-l3-q2",
-                            "question": "\"Where is the station?\" -> He asked me where the station _______.",
+                            "question": "\"Don't touch that wire!\" jumlasining to'g'ri o'zlashtirilgan shakli qaysi?",
                             "options": [
-                                "did",
-                                "is",
-                                "was",
-                                "was it"
+                                "He warned me don't touch that wire.",
+                                "He warned me not to touch that wire.",
+                                "He warned me to not touch that wire.",
+                                "He warned me no touching that wire."
                             ],
-                            "correctAnswerIndex": 2,
-                            "explanation": "Darak so'z tartibi: where the station was."
+                            "correctAnswerIndex": 1,
+                            "explanation": "Inkor buyruqda 'not to touch' to'g'ri grammatik shakldir."
                         },
                         {
                             "id": "en-b1-u3-l3-q3",
-                            "question": "Mom told me _______ make noise.",
+                            "question": "The customs officer asked the traveler _______ he had anything to declare.",
                             "options": [
-                                "don't",
-                                "no to",
-                                "to not",
-                                "not to"
+                                "that",
+                                "whether",
+                                "what",
+                                "did"
                             ],
-                            "correctAnswerIndex": 3,
-                            "explanation": "Not to make noise."
+                            "correctAnswerIndex": 1,
+                            "explanation": "Yes/No savolda 'whether / if' qo'yiladi."
                         },
                         {
                             "id": "en-b1-u3-l3-q4",
-                            "question": "She asked me if I _______ ever visited Samarkand.",
+                            "question": "\"Can you help me with this heavy suitcase?\" -> She asked me _______ help her with that heavy suitcase.",
                             "options": [
-                                "had",
-                                "was",
-                                "did",
-                                "have"
+                                "if I could",
+                                "could I",
+                                "can I",
+                                "that I could"
                             ],
                             "correctAnswerIndex": 0,
-                            "explanation": "If I had ever visited."
+                            "explanation": "'If I could' (darak so'z tartibi va can -> could)."
+                        },
+                        {
+                            "id": "en-b1-u3-l3-q5",
+                            "question": "Which sentence is grammatically INCORRECT?",
+                            "options": [
+                                "He asked me what was my telephone number.",
+                                "He asked me what my telephone number was.",
+                                "He asked me where I lived.",
+                                "He told me to sit down."
+                            ],
+                            "correctAnswerIndex": 0,
+                            "explanation": "'He asked me what was my telephone number' noto'g'ri, chunki so'z tartibi 'what my telephone number was' bo'lishi kerak."
                         }
                     ]
                 }
@@ -3243,51 +3586,111 @@ export const ENGLISH_B1_LESSONS: Lesson[] = [
         "language": "en",
         "level": "B1",
         "lessonNumber": 4,
-        "title": "B1 Formal Letter of Inquiry",
-        "description": "Rasmiy ma'lumot so'rash xati va xushmuomala iboralar.",
-        "estimatedDurationMinutes": 15,
+        "title": "Formal Correspondence: Letters of Inquiry & Polite Indirect Requests",
+        "description": "Rasmiy ma'lumot so'rash xatlari, 'Dear Sir/Madam', 'Yours faithfully/sincerely' va bilvosita muloyim so'rovlar.",
+        "estimatedDurationMinutes": 16,
         "icon": "📜",
         "steps": [
             {
                 "id": "en-b1-u3-l4-s1",
-                "title": "Rasmiy Xat Yozish",
+                "title": "Rasmiy Xat Yozish Me'yorlari",
                 "type": "learn",
-                "estimatedMinutes": 5,
+                "estimatedMinutes": 6,
                 "learnData": {
-                    "title": "Letter of Inquiry Template",
-                    "explanation": "Salomlashish: Dear Mr./Ms. [Surname] yoki Dear Sir/Madam. Xat maqsadi: I am writing to inquire about... Xulosa: I look forward to hearing from you. Tugatish: Yours sincerely (nom ma'lum bo'lsa) / Yours faithfully (nom noma'lum bo'lsa).",
+                    "title": "Professional Letters of Inquiry & Diplomatic Language",
+                    "explanation": "IELTS General Writing Task 1 va professional ish yozishmalarida rasmiy xat (Formal Letter) yozishning qat'iy qoidalari mavjud:\n\n1. Salomlashish va Xatni Yakunlash Qoidalari (Oltin Qoida!):\n- A) Xat oluvchining familiyasi NOMA'LUM bo'lsa:\n  • Salomlashish: 'Dear Sir / Madam,' yoki 'Dear Sir or Madam,'\n  • Yakunlash imzosi: 'Yours faithfully,' (Faqatgina 'faithfully' bo'ladi!).\n- B) Xat oluvchining familiyasi MA'LUM bo'lsa:\n  • Salomlashish: 'Dear Mr. Davies,' / 'Dear Ms. Johnson,'\n  • Yakunlash imzosi: 'Yours sincerely,'\n\n2. Xatning Maqsadini Bayon Qilish (Opening Statement):\n- 'I am writing to inquire about...' (Falon masala bo'yicha ma'lumot so'rab yozyapman).\n- 'I am writing in response to your advertisement published in...'\n\n3. Bilvosita Muloyim So'rovlar (Polite Indirect Requests):\n- To'g'ridan-to'g'ri 'Tell me the price' yoki 'How much is it?' deyish rasmiy xatda qo'pol hisoblanadi!\n- Quyidagi diplomatiyaga asoslangan qoliplarni qo'llang:\n  • 'I would be extremely grateful if you could provide further details regarding tuition fees.'\n  • 'Could you please inform me whether accommodation is provided for international students?'\n  • 'I would appreciate it if you could confirm the exact dates of the examination.'\n\n4. Xulosa Qismi (Sign-off Sentences):\n- 'I look forward to hearing from you at your earliest convenience.' ('hearing' - fe'lga -ing qo'shiladi!).\n- 'Should you require any further information, please do not hesitate to contact me.'\n\n5. O'zbek o'rganuvchilari uchun xavfli tuzoqlar (Common Pitfalls):\n- ❌ 'Dear Sir' bilan 'Yours sincerely' yozish -> ✅ 'Yours faithfully'.\n- ❌ 'I look forward to hear from you.' -> ✅ 'I look forward to HEARING from you.' ('Look forward to' dan so'ng Gerund -ing keladi!).\n- ❌ Qisqartmalardan foydalanish: Rasmiy xatda 'I'm', 'don't', 'can't' ISHLATILMAYDI! 'I am', 'do not', 'cannot' deb to'liq yoziladi.\n\n6. IELTS General Task 1 Foundation Corner:\n- Examiner Criteria: Tone Consistency (Butun xat davomida rasmiy ohangni saqlash), Lexical Precision va Paragraphing.\n- Formal Opening: 'I am writing to inquire about the postgraduate scholarship programs offered by your university...'",
                     "vocabulary": [
                         {
-                            "term": "Inquire",
-                            "reading": "/ɪnˈkwaɪər/",
-                            "meaning": "Surishtirmoq / Ma'lumot so'ramoq",
-                            "exampleSentence": "I am writing to inquire about the course fees.",
-                            "exampleTranslation": "Kurs to'lovlari haqida ma'lumot so'rab yozyapman."
+                            "term": "inquiry",
+                            "reading": "/ɪnˈkwaɪə.ri/",
+                            "meaning": "rasmiy ma'lumot so'rovi, surishtiruv",
+                            "exampleSentence": "We received numerous inquiries regarding the new online master's program.",
+                            "exampleTranslation": "Biz yangi onlayn magistratura dasturi bo'yicha ko'plab rasmiy so'rovlarni qabul qildik."
                         },
                         {
-                            "term": "Efficient",
-                            "reading": "/ɪˈfɪʃ.ənt/",
-                            "meaning": "Samarali",
-                            "exampleSentence": "We need to find a more efficient solution.",
-                            "exampleTranslation": "Biz yanada samaraliroq yechim topishimiz kerak."
+                            "term": "grateful",
+                            "reading": "/ˈɡreɪt.fəl/",
+                            "meaning": "minnatdor (I would be grateful if...)",
+                            "exampleSentence": "I would be grateful if you could send me an updated copy of the course prospectus.",
+                            "exampleTranslation": "Kurs dasturining yangilangan nusxasini yuborib bersangiz, minnatdor bo'lardim."
                         },
                         {
-                            "term": "Requirement",
-                            "reading": "/rɪˈkwaɪə.mənt/",
-                            "meaning": "Talab, shart",
-                            "exampleSentence": "Fluency is a core requirement for this role.",
-                            "exampleTranslation": "Ravonlik bu lavozim uchun asosiy talabdir."
+                            "term": "recipient",
+                            "reading": "/rɪˈsɪp.i.ənt/",
+                            "meaning": "qabul qiluvchi shaxs (xat yoki posilkani)",
+                            "exampleSentence": "Verify the recipient's official job title before dispatching the formal letter.",
+                            "exampleTranslation": "Rasmiy xatni jo'natishdan oldin qabul qiluvchining rasmiy lavozimini tekshiring."
+                        },
+                        {
+                            "term": "promptly",
+                            "reading": "/ˈprɒmpt.li/",
+                            "meaning": "kechiktirmasdan, tez fursatda",
+                            "exampleSentence": "Thank you for responding so promptly to our email inquiry.",
+                            "exampleTranslation": "Bizning elektron so'rovimizga shunchalik tezkorlik bilan javob berganingiz uchun tashakkur."
+                        },
+                        {
+                            "term": "sincerely",
+                            "reading": "/sɪnˈsɪə.li/",
+                            "meaning": "samimiyat bilan (Yours sincerely)",
+                            "exampleSentence": "'Yours sincerely' is used when the sender knows the recipient's name.",
+                            "exampleTranslation": "'Yours sincerely' jo'natuvchi qabul qiluvchining ism-familiyasini bilganida ishlatiladi."
+                        },
+                        {
+                            "term": "faithfully",
+                            "reading": "/ˈfeɪθ.fəl.i/",
+                            "meaning": "sadoqat bilan (Yours faithfully)",
+                            "exampleSentence": "'Yours faithfully' concludes formal letters beginning with 'Dear Sir/Madam'.",
+                            "exampleTranslation": "'Yours faithfully' 'Dear Sir/Madam' bilan boshlangan rasmiy xatlarni yakunlaydi."
+                        },
+                        {
+                            "term": "curriculum",
+                            "reading": "/kəˈrɪk.jə.ləm/",
+                            "meaning": "o'quv dasturi, reja",
+                            "exampleSentence": "The academic curriculum is updated annually to meet industry standards.",
+                            "exampleTranslation": "O'quv dasturi soha talablariga javob berishi uchun har yili yangilanadi."
+                        },
+                        {
+                            "term": "hesitate",
+                            "reading": "/ˈhez.ɪ.teɪt/",
+                            "meaning": "ikkilanmoq, tortinmoq (do not hesitate)",
+                            "exampleSentence": "Should you need further assistance, please do not hesitate to contact our office.",
+                            "exampleTranslation": "Yana yordam kerak bo'lsa, iltimos ofisimizga murojaat qilishdan tortinmang."
+                        },
+                        {
+                            "term": "clarification",
+                            "reading": "/ˌklær.ɪ.fɪˈkeɪ.ʃən/",
+                            "meaning": "oydinlik kiritish, aniqlashtirish",
+                            "exampleSentence": "I am seeking clarification on the admission eligibility criteria.",
+                            "exampleTranslation": "Qabulga qo'yiladigan talablar mezoniga oydinlik kiritishingizni so'rayman."
+                        },
+                        {
+                            "term": "furthermore",
+                            "reading": "/ˌfɜː.ðəˈmɔːr/",
+                            "meaning": "bundan tashqari (rasmiy bog'lovchi)",
+                            "exampleSentence": "Furthermore, I would like to know if financial aid is available.",
+                            "exampleTranslation": "Bundan tashqari, moliyaviy yordam mavjud yoki yo'qligini bilishni xohlar edim."
                         }
                     ],
                     "grammarRules": [
                         {
-                            "pattern": "B1 Formal Letter of Inquiry",
-                            "meaning": "Rasmiy ma'lumot so'rash xati va xushmuomala iboralar.",
-                            "usageNotes": "Salomlashish: Dear Mr./Ms. [Surname] yoki Dear Sir/Madam. Xat maqsadi: I am writing to inquire about... Xulosa: I look forward to hearing from you. Tugatish: Yours sincerely (nom ma'lum bo'lsa) / Yours faithfully (nom noma'lum bo'lsa).",
+                            "pattern": "I would be grateful if you could + base verb",
+                            "meaning": "Rasmiy xatda eng xushmuomala so'rov berish",
+                            "usageNotes": "Buyruq ohangidan qochish uchun shartli ikkinchi mayl 'would be grateful if you could' qo'llanadi.",
                             "examples": [
                                 {
-                                    "sentence": "I am writing to inquire about the course fees.",
-                                    "translation": "Kurs to'lovlari haqida ma'lumot so'rab yozyapman."
+                                    "sentence": "I would be grateful if you could clarify the entry requirements.",
+                                    "translation": "Qabul talablariga oydinlik kiritib bersangiz, minnatdor bo'lar edim."
+                                }
+                            ]
+                        },
+                        {
+                            "pattern": "Look forward to + Verb-ing",
+                            "meaning": "Intizorlik bilan kutib qolmoq",
+                            "usageNotes": "Bu yerda 'to' predlog bo'lib, undan so'ng fe'lga -ing qo'shilishi shart.",
+                            "examples": [
+                                {
+                                    "sentence": "I look forward to hearing from you at your earliest convenience.",
+                                    "translation": "Tez fursatda sizdan javob eshitishni intizorlik bilan kutib qolaman."
                                 }
                             ]
                         }
@@ -3296,97 +3699,148 @@ export const ENGLISH_B1_LESSONS: Lesson[] = [
             },
             {
                 "id": "en-b1-u3-l4-s2",
-                "title": "Rasmiy Iboralar Mashqi",
+                "title": "Amaliy Mashqlar",
                 "type": "practice",
                 "estimatedMinutes": 5,
                 "practiceData": {
-                    "instructions": "To'g'ri rasmiy iborani tanlang.",
+                    "instructions": "Rasmiy xat yozish me'yorlariga mos to'g'ri iboralarni tanlang.",
                     "exercises": [
                         {
                             "id": "en-b1-u3-l4-e1",
                             "type": "multiple-choice",
-                            "prompt": "Which phrase is appropriate for ending a formal letter addressed to \"Dear Sir/Madam\"?",
+                            "prompt": "\"A formal letter begins with 'Dear Sir/Madam,'. Which sign-off phrase MUST be used at the end?\"",
                             "options": [
-                                "Best wishes,",
-                                "Cheers,",
+                                "Yours sincerely,",
                                 "Yours faithfully,",
-                                "Yours sincerely,"
+                                "Best regards,",
+                                "Warm wishes,"
                             ],
-                            "correctAnswer": 2,
-                            "explanation": "Dear Sir/Madam bilan \"Yours faithfully\" ishlatiladi."
+                            "correctAnswer": 1,
+                            "explanation": "Ism-familiya noma'lum bo'lganda (Dear Sir/Madam) faqat 'Yours faithfully' ishlatiladi."
                         },
                         {
-                            "id": "en-b1-u3-l4-ex-2",
+                            "id": "en-b1-u3-l4-e2",
                             "type": "multiple-choice",
-                            "prompt": "Choose the correct word to complete the sentence: \"We need to find a more efficient solution.\"",
+                            "prompt": "\"I look forward to _______ your reply at your earliest convenience.\"",
                             "options": [
-                                "Efficient",
-                                "reluctance",
-                                "delay",
-                                "doubt"
+                                "receive",
+                                "receiving",
+                                "received",
+                                "be receiving"
+                            ],
+                            "correctAnswer": 1,
+                            "explanation": "'Look forward to' predlogidan so'ng Gerund keladi: 'receiving'."
+                        },
+                        {
+                            "id": "en-b1-u3-l4-e3",
+                            "type": "multiple-choice",
+                            "prompt": "\"Which sentence expresses an inquiry in the most polite and formal manner?\"",
+                            "options": [
+                                "Send me the prices immediately.",
+                                "Tell me how much the course is.",
+                                "I would be grateful if you could provide the tuition fee schedule.",
+                                "I want to know the tuition price now."
+                            ],
+                            "correctAnswer": 2,
+                            "explanation": "'I would be grateful if you could provide...' eng odobli va rasmiy qolipdir."
+                        },
+                        {
+                            "id": "en-b1-u3-l4-e4",
+                            "type": "multiple-choice",
+                            "prompt": "\"A letter addressed to 'Dear Ms. Robinson,' should end with:\"",
+                            "options": [
+                                "Yours faithfully,",
+                                "Yours sincerely,",
+                                "Cheers,",
+                                "See you later,"
+                            ],
+                            "correctAnswer": 1,
+                            "explanation": "Qabul qiluvchi ismi ma'lum bo'lsa (Dear Ms. Robinson), 'Yours sincerely' qo'yiladi."
+                        },
+                        {
+                            "id": "en-b1-u3-l4-e5",
+                            "type": "multiple-choice",
+                            "prompt": "\"Should you require any further documentation, please do not _______ to contact me.\"",
+                            "options": [
+                                "hesitate",
+                                "presume",
+                                "complain",
+                                "demand"
                             ],
                             "correctAnswer": 0,
-                            "explanation": "\"Efficient\" (Samarali) fits the context appropriately."
+                            "explanation": "'Please do not hesitate to contact me' rasmiy xatlarning barqaror jumlasi hisoblanadi."
                         }
                     ]
                 }
             },
             {
                 "id": "en-b1-u3-l4-s3",
-                "title": "Test",
+                "title": "Yakuniy Test",
                 "type": "test",
                 "estimatedMinutes": 5,
                 "testData": {
-                    "instructions": "Savollarga javob bering.",
-                    "passingScorePercentage": 75,
+                    "instructions": "Rasmiy xatlar va professional muloqot qoidalariga oid test savollariga javob bering.",
+                    "passingScorePercentage": 80,
                     "questions": [
                         {
                             "id": "en-b1-u3-l4-q1",
-                            "question": "I look forward to _______ from you soon.",
+                            "question": "Nima uchun rasmiy xatda 'I'm writing to ask...' o'rniga 'I am writing to inquire about...' yozish tavsiya etiladi?",
                             "options": [
-                                "heard",
-                                "be heard",
-                                "hearing",
-                                "hear"
+                                "Chunki rasmiy yozishmada qisqartmalar ('I'm') taqiqlanadi va 'inquire' rasmiyroq lug'at hisoblanadi.",
+                                "Chunki 'ask' so'zi ingliz tilida mavjud emas.",
+                                "Chunki xat uzunroq ko'rinishi kerak.",
+                                "Hech qanday farqi yo'q."
                             ],
-                            "correctAnswerIndex": 2,
-                            "explanation": "Look forward to + V-ing: hearing."
+                            "correctAnswerIndex": 0,
+                            "explanation": "Rasmiy matnlarda qisqartmalardan saqlanish va yuqori darajadagi akademik so'zlarni qo'llash talab etiladi."
                         },
                         {
                             "id": "en-b1-u3-l4-q2",
-                            "question": "\"Could you please provide further details?\" Bu nima?",
+                            "question": "'Dear Sir/Madam' bilan boshlangan xat qaysi ibora bilan tugashi SHART?",
                             "options": [
-                                "Xayrlashuv",
-                                "Xushmuomala rasmiy so'rov",
-                                "Do'stona hazil",
-                                "Norozilik shikoyati"
+                                "Yours sincerely,",
+                                "Yours faithfully,",
+                                "Warmest regards,",
+                                "Best wishes,"
                             ],
                             "correctAnswerIndex": 1,
-                            "explanation": "Polite formal request."
+                            "explanation": "Qabul qiluvchi ismi noma'lum bo'lganda 'Yours faithfully' yoziladi."
                         },
                         {
                             "id": "en-b1-u3-l4-q3",
-                            "question": "Which opening is correct when you know the recipient's name?",
+                            "question": "Qaysi jumla grammatik jihatdan to'g'ri tuzilgan?",
                             "options": [
-                                "Dear Ms. Johnson,",
-                                "Dear Johnson,",
-                                "Hi Ms. Johnson,",
-                                "Dear Madam Johnson,"
+                                "I look forward to hear from you soon.",
+                                "I look forward to hearing from you soon.",
+                                "I look forward for hearing from you soon.",
+                                "I am looking forward to heard from you soon."
                             ],
-                            "correctAnswerIndex": 0,
-                            "explanation": "Dear Ms. Johnson."
+                            "correctAnswerIndex": 1,
+                            "explanation": "'Look forward to' predlogidan so'ng 'hearing' (-ing) bo'lishi shart."
                         },
                         {
                             "id": "en-b1-u3-l4-q4",
-                            "question": "Choose the most formal sentence:",
+                            "question": "I would appreciate it if you _______ confirm the meeting venue.",
                             "options": [
-                                "Send me the brochure quickly.",
-                                "Give me the info please.",
-                                "Can you chuck me the brochure?",
-                                "I would be grateful if you could send me the brochure."
+                                "could",
+                                "will can",
+                                "are able",
+                                "can to"
                             ],
-                            "correctAnswerIndex": 3,
-                            "explanation": "I would be grateful if you could..."
+                            "correctAnswerIndex": 0,
+                            "explanation": "'I would appreciate it if you could confirm...' to'g'ri shartli model."
+                        },
+                        {
+                            "id": "en-b1-u3-l4-q5",
+                            "question": "What is the primary objective of a 'Letter of Inquiry'?",
+                            "options": [
+                                "Birov ustidan shikoyat qilish",
+                                "Rasmiy tashkilot yoki muassasadan xushmuomalalik bilan ma'lumot so'rash",
+                                "Do'stini mehmonga taklif qilish",
+                                "Ishdan bo'shash haqida ariza berish"
+                            ],
+                            "correctAnswerIndex": 1,
+                            "explanation": "'Letter of Inquiry' — aniq masalalar yuzasidan rasmiy ma'lumot so'rash xatidir."
                         }
                     ]
                 }
@@ -3401,51 +3855,119 @@ export const ENGLISH_B1_LESSONS: Lesson[] = [
         "language": "en",
         "level": "B1",
         "lessonNumber": 5,
-        "title": "B1 Speaking: Expressing Opinions & Agreeing/Disagreeing",
-        "description": "Mavzular bo'yicha o'z fikrini bildirish, rozi bo'lish va xushmuomalalik bilan rad etish.",
-        "estimatedDurationMinutes": 14,
+        "title": "Advanced Passive with Modals & Reporting Verbs",
+        "description": "Modal fe'llar majhul nisbati (can be done, must be submitted) va ilg'or o'zlashtirma fe'llar (recommended, denied, promised).",
+        "estimatedDurationMinutes": 18,
         "icon": "🗣️",
         "steps": [
             {
                 "id": "en-b1-u3-l5-s1",
-                "title": "Muzokara Iboralari",
+                "title": "Modal Majhul Nisbat va Ilg'or O'zlashtirma Fe'llar",
                 "type": "learn",
-                "estimatedMinutes": 4,
+                "estimatedMinutes": 6,
                 "learnData": {
-                    "title": "Expressing Opinions & Nuanced Agreement",
-                    "explanation": "O'z fikrini bildirish: In my opinion, From my perspective, As far as I am concerned. Rozilik: I completely agree, That is a valid point. E'tiroz: I see your point, but... / I'm afraid I disagree.",
+                    "title": "Modal Passives & Nuanced Reporting Verbs (Deny, Recommend, Promise)",
+                    "explanation": "B1 darajasining ushbu yakuniy darsida majhul nisbat va o'zlashtirma gaplarning professional darajasi birlashadi:\n\n1. Modal Fe'llarning Majhul Nisbati (Modal Passives):\n- Formula: `Modal (must / can / should / might / have to) + BE + Past Participle (V3)`\n- Must be done: 'All assignments must be submitted before Friday afternoon.' (Barcha vazifalar topshirilishi shart).\n- Cannot be changed: 'Once the flight ticket is issued, the passenger name cannot be changed.'\n- Should be preserved: 'Historical manuscripts should be preserved carefully.'\n\n2. Oddiy 'Say' va 'Tell'dan Ilg'or 'Reporting Verbs'ga O'tish:\n- B1+ va IELTS imtihonida har doim 'He said' deb takrorlash past ball olib keladi. Maxsus fe'llardan foydalaning:\n  A) Fe'l + to-infinitive (promise, refuse, threaten, agree, offer):\n  • 'He promised to submit the report on time.' (Vaqtida topshirishga va'da berdi).\n  • 'She refused to sign the contract.' (Imzolashdan bosh tortdi).\n  B) Fe'l + shaxs + to-infinitive (advise, remind, warn, encourage):\n  • 'The doctor advised me to exercise regularly.'\n  • 'The teacher warned the students not to cheat.'\n  C) Fe'l + -ing (admit, deny, recommend, apologize for):\n  • 'The driver denied speeding.' (Haydovchi tezlikni oshirganini rad etdi).\n  • 'The tutor recommended reading authentic English literature.'\n  • 'He apologized for being late.'\n\n3. O'zbek o'rganuvchilari uchun xavfli tuzoqlar (Common Pitfalls):\n- ❌ 'It must be submit.' -> ✅ 'It must be SUBMITTED.' ('be' dan so'ng fe'lning 3-shakli shart!).\n- ❌ 'He denied to steal the car.' -> ✅ 'He denied STEALING the car.' ('deny' fe'lidan keyin doimo Gerund -ing keladi!).\n- ❌ 'She apologized to be late.' -> ✅ 'She apologized FOR BEING late.'\n\n4. IELTS Speaking Part 3 & Academic Writing Corner:\n- Topic: Government Regulations and Public Policies (Speaking Part 3)\n- Examiner: 'What measures should be taken to reduce urban traffic congestion?'\n- Model Band 6.0+ Answer: 'First and foremost, public transportation networks should be modernized and significantly subsidized by the government. Furthermore, city councils must restrict private vehicle access in central historical zones. Experts have strongly recommended introducing high-frequency electric bus lanes to encourage greener commuting habits.'\n- Masterful Structures: 'Public transport should be modernized...', 'must be restricted...', 'Experts have recommended introducing...' kabi modal majhul va ilg'or o'zlashtirma shakllar Band 6.5–7.0 talablariga mos keladi.",
                     "vocabulary": [
                         {
-                            "term": "Perspective",
-                            "reading": "/pəˈspek.tɪv/",
-                            "meaning": "Nuqtai nazar",
-                            "exampleSentence": "From my perspective, this is effective.",
-                            "exampleTranslation": "Mening nazarimda, bu juda samarali."
+                            "term": "recommend",
+                            "reading": "/ˌrek.əˈmend/",
+                            "meaning": "tavsiya qilmoq (recommend + V-ing / that...)",
+                            "exampleSentence": "Career advisors strongly recommend building a professional portfolio early.",
+                            "exampleTranslation": "Karyera maslahatchilari professional portfolioni barvaqt shakllantirishni qat'iy tavsiya etadilar."
                         },
                         {
-                            "term": "Requirement",
-                            "reading": "/rɪˈkwaɪə.mənt/",
-                            "meaning": "Talab, shart",
-                            "exampleSentence": "Fluency is a core requirement for this role.",
-                            "exampleTranslation": "Ravonlik bu lavozim uchun asosiy talabdir."
+                            "term": "deny",
+                            "reading": "/dɪˈnaɪ/",
+                            "meaning": "inkor qilmoq, rad etmoq (deny + V-ing)",
+                            "exampleSentence": "The suspect vehemently denied having any connection to the corporate fraud.",
+                            "exampleTranslation": "Gumonlanuvchi korporativ firibgarlikka aloqadorligini keskin inkor qildi."
                         },
                         {
-                            "term": "Significantly",
-                            "reading": "/sɪɡˈnɪf.ɪ.kənt.li/",
-                            "meaning": "Sezilarli darajada",
-                            "exampleSentence": "Her grades improved significantly this term.",
-                            "exampleTranslation": "Bu semestrda uning baholari sezilarli darajada yaxshilandi."
+                            "term": "apologize",
+                            "reading": "/əˈpɒl.ə.dʒaɪz/",
+                            "meaning": "uzr so'ramoq (apologize for + V-ing)",
+                            "exampleSentence": "The manager apologized sincerely for the unexpected delay in delivery.",
+                            "exampleTranslation": "Menejer yetkazib berishdagi kutilmagan kechikish uchun chin dildan uzr so'radi."
+                        },
+                        {
+                            "term": "refuse",
+                            "reading": "/rɪˈfjuːz/",
+                            "meaning": "bosh tortmoq, rad etmoq (refuse + to do)",
+                            "exampleSentence": "The whistleblower refused to disclose the confidential identity of his sources.",
+                            "exampleTranslation": "Axborot beruvchi o'z manbalarining maxfiy shaxsini oshkor qilishdan bosh tortdi."
+                        },
+                        {
+                            "term": "threaten",
+                            "reading": "/ˈθret.ən/",
+                            "meaning": "po'pisa qilmoq, tahdid solmoq",
+                            "exampleSentence": "Rising global sea levels threaten countless coastal communities worldwide.",
+                            "exampleTranslation": "Global dengiz sathining ko'tarilishi butun dunyo bo'ylab son-sanoqsiz sohilbo'yi jamoalariga tahdid solmoqda."
+                        },
+                        {
+                            "term": "compulsory",
+                            "reading": "/kəmˈpʌl.sər.i/",
+                            "meaning": "majburiy, qonuniy talab qilingan",
+                            "exampleSentence": "Secondary education is compulsory for all children under sixteen.",
+                            "exampleTranslation": "O'n olti yoshgacha bo'lgan barcha bolalar uchun o'rta ta'lim majburiydir."
+                        },
+                        {
+                            "term": "confidential",
+                            "reading": "/ˌkɒn.fɪˈden.ʃəl/",
+                            "meaning": "mutlaqo maxfiy, daxlsiz",
+                            "exampleSentence": "Patient medical records must be kept completely confidential at all times.",
+                            "exampleTranslation": "Bemorlarning tibbiy kartalari har doim mutlaqo maxfiy saqlanishi shart."
+                        },
+                        {
+                            "term": "implement",
+                            "reading": "/ˈɪm.plɪ.ment/",
+                            "meaning": "joriy etmoq, amalga oshirmoq",
+                            "exampleSentence": "The municipality plans to implement new pedestrian safety zones downtown.",
+                            "exampleTranslation": "Munitsipalitet shahar markazida yangi piyodalar xavfsizlik hududlarini joriy etishni rejalashtirmoqda."
+                        },
+                        {
+                            "term": "prohibit",
+                            "reading": "/prəˈhɪb.ɪt/",
+                            "meaning": "taqiqlamoq (qonunan)",
+                            "exampleSentence": "Smoking is strictly prohibited inside all public buildings and terminals.",
+                            "exampleTranslation": "Barcha jamoat binolari va terminallar ichida chekish qat'iyan taqiqlanadi."
+                        },
+                        {
+                            "term": "advise",
+                            "reading": "/ədˈvaɪz/",
+                            "meaning": "maslahat bermoq (advise someone to do)",
+                            "exampleSentence": "Financial experts advise young professionals to start saving for retirement early.",
+                            "exampleTranslation": "Moliyaviy ekspertlar yosh mutaxassislarga pensiya uchun barvaqt jamg'arishni maslahat berishadi."
                         }
                     ],
                     "grammarRules": [
                         {
-                            "pattern": "B1 Speaking: Expressing Opinions & Agreeing/Disagreeing",
-                            "meaning": "Mavzular bo'yicha o'z fikrini bildirish, rozi bo'lish va xushmuomalalik bilan rad etish.",
-                            "usageNotes": "O'z fikrini bildirish: In my opinion, From my perspective, As far as I am concerned. Rozilik: I completely agree, That is a valid point. E'tiroz: I see your point, but... / I'm afraid I disagree.",
+                            "pattern": "Modal Passive: Modal + be + Past Participle (V3)",
+                            "meaning": "Qoidalar, majburiyatlar va imkoniyatlar majhul nisbati",
+                            "usageNotes": "'Must be done', 'should be discussed', 'can be seen' konstruksiyalari.",
                             "examples": [
                                 {
-                                    "sentence": "From my perspective, this is effective.",
-                                    "translation": "Mening nazarimda, bu juda samarali."
+                                    "sentence": "Seatbelts must be worn at all times while the vehicle is in motion.",
+                                    "translation": "Avtomobil harakatlanayotgan paytda xavfsizlik kamarlari doimo taqilgan bo'lishi shart."
+                                },
+                                {
+                                    "sentence": "This issue should be discussed thoroughly in our next department meeting.",
+                                    "translation": "Bu masala keyingi bo'lim yig'ilishimizda atroflicha muhokama qilinishi kerak."
+                                }
+                            ]
+                        },
+                        {
+                            "pattern": "Reporting Verbs: verb + to-do vs verb + -ing",
+                            "meaning": "So'zlarni yetkazuvchi maxsus fe'llarning grammatik boshqaruvi",
+                            "usageNotes": "Refuse/promise + to do; deny/admit/recommend + doing.",
+                            "examples": [
+                                {
+                                    "sentence": "He refused to accept the bribe.",
+                                    "translation": "U porani qabul qilishdan qat'iyan bosh tortdi."
+                                },
+                                {
+                                    "sentence": "She recommended consulting an independent financial advisor.",
+                                    "translation": "U mustaqil moliyaviy maslahatchiga murojaat qilishni tavsiya qildi."
                                 }
                             ]
                         }
@@ -3454,97 +3976,148 @@ export const ENGLISH_B1_LESSONS: Lesson[] = [
             },
             {
                 "id": "en-b1-u3-l5-s2",
-                "title": "Mashq",
+                "title": "Amaliy Mashqlar",
                 "type": "practice",
                 "estimatedMinutes": 5,
                 "practiceData": {
-                    "instructions": "To'g'ri iborani tanlang.",
+                    "instructions": "Modal majhul nisbat va reporting fe'llariga oid to'g'ri shakllarni tanlang.",
                     "exercises": [
                         {
                             "id": "en-b1-u3-l5-e1",
                             "type": "multiple-choice",
-                            "prompt": "Which phrase politely expresses disagreement?",
+                            "prompt": "\"All scholarship application forms _______ to the admissions office before May 1st.\"",
                             "options": [
-                                "That is stupid.",
-                                "No, never!",
-                                "You are totally wrong!",
-                                "I see what you mean, but..."
+                                "must submit",
+                                "must be submitted",
+                                "must be submit",
+                                "must submitting"
                             ],
-                            "correctAnswer": 3,
-                            "explanation": "I see what you mean, but... (Xushmuomala e'tiroz)."
+                            "correctAnswer": 1,
+                            "explanation": "Modal passive: must be + V3 ('must be submitted')."
                         },
                         {
-                            "id": "en-b1-u3-l5-ex-2",
+                            "id": "en-b1-u3-l5-e2",
                             "type": "multiple-choice",
-                            "prompt": "Choose the correct word to complete the sentence: \"Fluency is a core requirement for this role.\"",
+                            "prompt": "\"The politician vehemently denied _______ confidential government files to journalists.\"",
                             "options": [
-                                "doubt",
-                                "delay",
-                                "reluctance",
-                                "Requirement"
+                                "leaking",
+                                "to leak",
+                                "leaked",
+                                "leak"
                             ],
-                            "correctAnswer": 3,
-                            "explanation": "\"Requirement\" (Talab, shart) fits the context appropriately."
+                            "correctAnswer": 0,
+                            "explanation": "'Deny' fe'lidan so'ng Gerund (-ing) keladi: 'denied leaking'."
+                        },
+                        {
+                            "id": "en-b1-u3-l5-e3",
+                            "type": "multiple-choice",
+                            "prompt": "\"The contractor promised _______ the house renovation by next Friday.\"",
+                            "options": [
+                                "finish",
+                                "finishing",
+                                "to finish",
+                                "finished"
+                            ],
+                            "correctAnswer": 2,
+                            "explanation": "'Promise' fe'lidan so'ng to-infinitive keladi: 'promised to finish'."
+                        },
+                        {
+                            "id": "en-b1-u3-l5-e4",
+                            "type": "multiple-choice",
+                            "prompt": "\"Confidential passwords should never _______ with third parties.\"",
+                            "options": [
+                                "be shared",
+                                "share",
+                                "are shared",
+                                "sharing"
+                            ],
+                            "correctAnswer": 0,
+                            "explanation": "Modal passive: should never be shared."
+                        },
+                        {
+                            "id": "en-b1-u3-l5-e5",
+                            "type": "multiple-choice",
+                            "prompt": "\"He apologized sincerely for _______ so late to the official board meeting.\"",
+                            "options": [
+                                "arrive",
+                                "arriving",
+                                "to arrive",
+                                "arrived"
+                            ],
+                            "correctAnswer": 1,
+                            "explanation": "'Apologize for + V-ing': 'apologized for arriving'."
                         }
                     ]
                 }
             },
             {
                 "id": "en-b1-u3-l5-s3",
-                "title": "Test",
+                "title": "Yakuniy Test",
                 "type": "test",
                 "estimatedMinutes": 5,
                 "testData": {
-                    "instructions": "Savollarga javob bering.",
-                    "passingScorePercentage": 75,
+                    "instructions": "Modal passives va ilg'or o'zlashtirma fe'llariga oid test savollariga javob bering.",
+                    "passingScorePercentage": 80,
                     "questions": [
                         {
                             "id": "en-b1-u3-l5-q1",
-                            "question": "\"As far as I am concerned\" iborasi nima maqsadda ishlatiladi?",
+                            "question": "Qaysi gapda modal fe'lning majhul nisbati to'g'ri qo'llanilgan?",
                             "options": [
-                                "Kechirim so'raganda",
-                                "Vaqtni belgilaganda",
-                                "Xayrlashganda",
-                                "Shaxsiy fikr bildirishda"
+                                "Plastic waste can be recycled into useful building materials.",
+                                "Plastic waste can recycle into useful materials.",
+                                "Plastic waste can be recycle into useful materials.",
+                                "Plastic waste can to be recycled."
                             ],
-                            "correctAnswerIndex": 3,
-                            "explanation": "Mening fikrimcha / Qolversa."
+                            "correctAnswerIndex": 0,
+                            "explanation": "'can be recycled' (modal + be + V3) to'g'ri tuzilgan."
                         },
                         {
                             "id": "en-b1-u3-l5-q2",
-                            "question": "I _______ agree with your proposal; it makes complete sense.",
+                            "question": "'Deny' fe'lidan keyin qaysi grammatik shakl keladi?",
                             "options": [
-                                "entirely",
-                                "barely",
-                                "hardly",
-                                "rarely"
+                                "To-infinitive (to do)",
+                                "Gerund (Verb-ing)",
+                                "Fe'lning o'tgan zamon shakli (V2)",
+                                "Faqat ot so'z turkumi"
                             ],
-                            "correctAnswerIndex": 0,
-                            "explanation": "I entirely agree."
+                            "correctAnswerIndex": 1,
+                            "explanation": "'Deny' fe'lidan so'ng Gerund (-ing) keladi (He denied taking the money)."
                         },
                         {
                             "id": "en-b1-u3-l5-q3",
-                            "question": "Choose the most natural agreement phrase:",
+                            "question": "The manager refused _______ any discounts on the newly released smartphones.",
                             "options": [
-                                "I am point you.",
-                                "It is agreed by me.",
-                                "That's a great point.",
-                                "You have agree."
+                                "giving",
+                                "to give",
+                                "give",
+                                "gave"
                             ],
-                            "correctAnswerIndex": 2,
-                            "explanation": "That's a great point."
+                            "correctAnswerIndex": 1,
+                            "explanation": "'Refuse + to-infinitive': 'refused to give'."
                         },
                         {
                             "id": "en-b1-u3-l5-q4",
-                            "question": "Which word completes: \"To be _______, I have never thought about that.\"",
+                            "question": "Smoking is strictly _______ inside public educational institutions.",
                             "options": [
-                                "honest",
-                                "honesty",
-                                "honor",
-                                "honestly"
+                                "prohibited",
+                                "recommended",
+                                "threatened",
+                                "inquired"
                             ],
                             "correctAnswerIndex": 0,
-                            "explanation": "To be honest (To'g'risini aytsam)."
+                            "explanation": "Qonunan taqiqlangan harakat uchun 'prohibited' ishlatiladi."
+                        },
+                        {
+                            "id": "en-b1-u3-l5-q5",
+                            "question": "Which sentence is grammatically INCORRECT?",
+                            "options": [
+                                "He promised to call me tomorrow.",
+                                "The doctor recommended to take a vacation.",
+                                "The doctor recommended taking a vacation.",
+                                "She apologized for breaking the glass."
+                            ],
+                            "correctAnswerIndex": 1,
+                            "explanation": "'Recommend' to'g'ridan-to'g'ri 'to take' olmaydi: 'recommended taking' yoki 'recommended that he take' bo'lishi kerak."
                         }
                     ]
                 }
