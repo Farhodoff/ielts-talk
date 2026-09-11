@@ -3,7 +3,7 @@
 > An open, 100% free comprehensive IELTS preparation ecosystem combining Real-time AI Voice Examiner Gordon (Speaking Coach), Spaced Repetition (Anki SM-2) flashcards, Writing Task 1 & 2 Evaluator, complete Cambridge-style Reading and Listening mocks, and Telegram Mini-App integration.
 
 - Website: https://ielts-talk.vercel.app
-- Telegram Mini App & Bot: https://t.me/study_plannerr_bot
+- Telegram Mini App & Bot: https://t.me/ielts_superapp_bot
 - Open Source Repository: https://github.com/Farhodoff/ielts-talk
 - Supported Languages: Uzbek (O'zbekcha), English
 

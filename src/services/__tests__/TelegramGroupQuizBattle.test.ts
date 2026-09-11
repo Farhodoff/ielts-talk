@@ -343,7 +343,7 @@ describe('Telegram Group Quiz Battle System', () => {
           message: {
             chat: { id: -100888, type: 'supergroup', title: 'Toshkent JLPT Guruh' },
             from: { id: 777001, first_name: 'Akbar' },
-            text: '/battle@study_plannerr_bot',
+            text: '/battle@ielts_superapp_bot',
           },
         },
       };

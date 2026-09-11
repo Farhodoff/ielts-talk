@@ -226,7 +226,7 @@ const TelegramSection: React.FC = () => {
         return `${minutes} daqiqa`;
     };
 
-    const botUsername = import.meta.env.VITE_TELEGRAM_BOT_USERNAME || 'study_plannerr_bot';
+    const botUsername = import.meta.env.VITE_TELEGRAM_BOT_USERNAME || 'ielts_superapp_bot';
 
     const botCommands = [
         { cmd: '/today', desc: 'Bugungi bajarilmagan rejalarni ko\'rish va tugma orqali bajarish' },
