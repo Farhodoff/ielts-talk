@@ -9,166 +9,229 @@ export const ENGLISH_A2_LESSONS: Lesson[] = [
         "language": "en",
         "level": "A2",
         "lessonNumber": 1,
-        "title": "Past Simple: Regular Verbs (-ed)",
-        "description": "To'g'ri fe'llarning o'tgan zamon shakllari va -ed talaffuzi.",
-        "estimatedDurationMinutes": 14,
+        "title": "Past Simple: Regular Verbs & -ed Pronunciation",
+        "description": "To'g'ri fe'llarning o'tgan zamoni, -ed qo'shilish imlosi va talaffuzning 3 xil qoidasi (/t/, /d/, /ɪd/).",
+        "estimatedDurationMinutes": 15,
         "icon": "⏳",
         "steps": [
-            {
-                "id": "en-a2-u1-l1-s1",
-                "title": "O'tgan Zamon Qoidasi",
-                "type": "learn",
-                "estimatedMinutes": 4,
-                "learnData": {
-                    "title": "Past Simple: Regular Verbs",
-                    "explanation": "O'tgan zamonda sodir bo'lib tugagan harakatlar uchun fe'lga -ed qo'shimchasi qo'shiladi.",
-                    "keyPoints": [
-                        "work -> worked",
-                        "play -> played",
-                        "watch -> watched",
-                        "live -> lived"
-                    ],
-                    "vocabulary": [
-                        {
-                            "term": "Yesterday",
-                            "reading": "/ˈjes.tə.deɪ/",
-                            "meaning": "Kecha",
-                            "exampleSentence": "I worked late yesterday.",
-                            "exampleTranslation": "Men kecha kechgacha ishladim."
-                        },
-                        {
-                            "term": "Last week",
-                            "reading": "/lɑːst wiːk/",
-                            "meaning": "O'tgan hafta",
-                            "exampleSentence": "We visited our grandparents last week.",
-                            "exampleTranslation": "Biz o'tgan hafta buva-buvimiznikiga bordik."
-                        },
-                        {
-                            "term": "Opportunity",
-                            "reading": "/ˌɒp.əˈtʃuː.nə.ti/",
-                            "meaning": "Imkoniyat",
-                            "exampleSentence": "This is a great opportunity to learn.",
-                            "exampleTranslation": "Bu oʻrganish uchun ajoyib imkoniyat."
+                {
+                        "id": "en-a2-u1-l1-s1",
+                        "title": "To'g'ri Fe'llar va -ed Talaffuzi",
+                        "type": "learn",
+                        "estimatedMinutes": 5,
+                        "learnData": {
+                                "title": "Past Simple: Regular Verbs & The Three '-ed' Sounds",
+                                "explanation": "O'tgan zamonda tugallangan harakatlar va to'g'ri fe'llarning -ed qo'shimchasi:\n\n1. Imlo qoidalari (Spelling Rules for -ed):\n- Asosiy qoida: fe'lga -ed qo'shiladi: work -> worked, play -> played, visit -> visited.\n- 'e' bilan tugasa, faqat -d qo'shiladi: live -> lived, decide -> decided.\n- Undosh + 'y' bilan tugasa, 'y' harfi 'i' ga aylanadi: study -> studied, try -> tried (LEKIN unli + y: play -> played).\n- Qisqa unli + bitta undosh bilan tugagan bir bo'g'inli fe'llarda oxirgi undosh ikkilanadi: stop -> stopped, plan -> planned.\n\n2. '-ed' Qo'shimchasining 3 Xil Talaffuzi (O'ta muhim fonetik qoida!):\n- /ɪd/ tovushi: Faqat fe'l asosi /t/ yoki /d/ tovushlari bilan tugasa aytiladi:\n  • want -> wanted (/ˈwɒntɪd/), visit -> visited (/ˈvɪzɪtɪd/), need -> needed (/ˈniːdɪd/).\n- /t/ tovushi: Jarangsiz undoshlardan so'ng (/p/, /k/, /s/, /ʃ/, /tʃ/, /f/):\n  • watch -> watched (/wɒtʃt/), wash -> washed (/wɒʃt/), look -> looked (/lʊkt/), laugh -> laughed (/lɑːft/).\n- /d/ tovushi: Jarangli undoshlar va barcha unlilardan so'ng:\n  • clean -> cleaned (/kliːnd/), play -> played (/pleɪd/), live -> lived (/lɪvd/).\n\n3. O'zbek o'rganuvchilari uchun xavfli tuzoqlar (Common Pitfalls):\n- ❌ Hamma fe'lga /ed/ deb talaffuz qilish (masalan: \"work-ed\", \"watch-ed\"). -> ✅ /wɜːkt/, /wɒtʃt/ deb oxirida bitta /t/ tovushi bilan talaffuz qilinadi. Faqat 't' yoki 'd' bilan tugagan fe'llardagina /ɪd/ qo'shiladi!\n- ❌ \"Yesterday I work late.\" -> ✅ \"Yesterday I WORKED late.\" (O'tgan zamon signallari bor joyda -ed tushib qolmasin).\n\n4. IELTS Speaking Foundation Corner:\n- Topic: Talking about Recent Activities (Part 1)\n- Examiner: \"What did you do last weekend?\"\n- Model Band 6.0+ Answer: \"Last weekend was quite productive. On Saturday, I cleaned my apartment, visited my cousins, and watched an interesting historical documentary in the evening.\"\n- Pronunciation Tip: \"cleaned\" (/d/), \"visited\" (/ɪd/), va \"watched\" (/t/) so'zlaridagi -ed tovushlarining to'g'ri farqlanishi talaffuz ballingizni oshiradi.",
+                                "vocabulary": [
+                                        {
+                                                "term": "visited",
+                                                "reading": "/ˈvɪzɪtɪd/",
+                                                "meaning": "ziyorat qildi, mehmonga bordi (-ed /ɪd/ deb o'qiladi)",
+                                                "exampleSentence": "We visited our grandparents in the countryside last Sunday.",
+                                                "exampleTranslation": "Biz o'tgan yakshanba kuni qishloqdagi buva-buvimiznikiga mehmonga bordik."
+                                        },
+                                        {
+                                                "term": "decided",
+                                                "reading": "/dɪˈsaɪdɪd/",
+                                                "meaning": "qaror qildi (-ed /ɪd/ deb o'qiladi)",
+                                                "exampleSentence": "She decided to study computer engineering at university.",
+                                                "exampleTranslation": "U universitetda kompyuter muhandisligini o'rganishga qaror qildi."
+                                        },
+                                        {
+                                                "term": "watched",
+                                                "reading": "/wɒtʃt/",
+                                                "meaning": "tomosha qildi (-ed /t/ deb o'qiladi)",
+                                                "exampleSentence": "They watched the football match live at the stadium.",
+                                                "exampleTranslation": "Ular stadionda futbol uchrashuvini jonli tomosha qildilar."
+                                        },
+                                        {
+                                                "term": "worked",
+                                                "reading": "/wɜːkt/",
+                                                "meaning": "ishladi (-ed /t/ deb o'qiladi)",
+                                                "exampleSentence": "Farhod worked hard all day to meet the project deadline.",
+                                                "exampleTranslation": "Farhod loyiha muddatiga ulgurish uchun kun bo'yi qattiq ishladi."
+                                        },
+                                        {
+                                                "term": "cleaned",
+                                                "reading": "/kliːnd/",
+                                                "meaning": "tozaladi (-ed /d/ deb o'qiladi)",
+                                                "exampleSentence": "I cleaned the windows and organised my bookshelf yesterday.",
+                                                "exampleTranslation": "Men kecha derazalarni tozaladim va kitob javonimni tartibga keltirdim."
+                                        },
+                                        {
+                                                "term": "planned",
+                                                "reading": "/plænd/",
+                                                "meaning": "rejalashtirdi (oxirgi n ikkilanadi)",
+                                                "exampleSentence": "We planned the entire summer holiday together as a family.",
+                                                "exampleTranslation": "Biz butun yozgi ta'tilni oilaviy birgalikda rejalashtirdik."
+                                        },
+                                        {
+                                                "term": "stayed",
+                                                "reading": "/steɪd/",
+                                                "meaning": "turdi, vaqtincha yashadi",
+                                                "exampleSentence": "They stayed at a charming hotel near the city centre.",
+                                                "exampleTranslation": "Ular shahar markazi yaqinidagi shinam mehmonxonada turdilar."
+                                        },
+                                        {
+                                                "term": "received",
+                                                "reading": "/rɪˈsiːvd/",
+                                                "meaning": "qabul qilib oldi",
+                                                "exampleSentence": "I received a formal letter of acceptance from the college.",
+                                                "exampleTranslation": "Men kollejdan rasmiy qabul maktubini oldim."
+                                        }
+                                ]
                         }
-                    ],
-                    "grammarRules": [
-                        {
-                            "pattern": "Past Simple: Regular Verbs (-ed)",
-                            "meaning": "To'g'ri fe'llarning o'tgan zamon shakllari va -ed talaffuzi.",
-                            "usageNotes": "O'tgan zamonda sodir bo'lib tugagan harakatlar uchun fe'lga -ed qo'shimchasi qo'shiladi.",
-                            "examples": [
-                                {
-                                    "sentence": "I worked late yesterday.",
-                                    "translation": "Men kecha kechgacha ishladim."
-                                },
-                                {
-                                    "sentence": "We visited our grandparents last week.",
-                                    "translation": "Biz o'tgan hafta buva-buvimiznikiga bordik."
-                                }
-                            ]
+                },
+                {
+                        "id": "en-a2-u1-l1-s2",
+                        "title": "To'g'ri Fe'llar Mashqlari",
+                        "type": "practice",
+                        "estimatedMinutes": 5,
+                        "practiceData": {
+                                "instructions": "To'g'ri fe'l shakli va talaffuz qoidasini tanlang.",
+                                "exercises": [
+                                        {
+                                                "id": "en-a2-u1-l1-e1",
+                                                "type": "multiple-choice",
+                                                "prompt": "Qaysi fe'ldagi '-ed' qo'shimchasi /ɪd/ deb talaffuz qilinadi?",
+                                                "options": [
+                                                        "worked",
+                                                        "cleaned",
+                                                        "invited",
+                                                        "played"
+                                                ],
+                                                "correctAnswer": 2,
+                                                "explanation": "'Invite' fe'li /t/ tovushi bilan tugagani uchun unga -ed qo'shilganda /ɪd/ deb aytiladi: 'invited' (/ɪnˈvaɪtɪd/)."
+                                        },
+                                        {
+                                                "id": "en-a2-u1-l1-e2",
+                                                "type": "multiple-choice",
+                                                "prompt": "Qaysi fe'lda '-ed' qo'shilganda oxirgi undosh ikkilanadi?",
+                                                "options": [
+                                                        "open",
+                                                        "stop",
+                                                        "listen",
+                                                        "clean"
+                                                ],
+                                                "correctAnswer": 1,
+                                                "explanation": "'Stop' bir bo'g'inli bo'lib, bitta qisqa unli va undosh bilan tugaydi: stop -> stopped."
+                                        },
+                                        {
+                                                "id": "en-a2-u1-l1-e3",
+                                                "type": "multiple-choice",
+                                                "prompt": "'Study' fe'lining o'tgan zamon to'g'ri imlosi qaysi?",
+                                                "options": [
+                                                        "studyed",
+                                                        "studied",
+                                                        "studying",
+                                                        "studid"
+                                                ],
+                                                "correctAnswer": 1,
+                                                "explanation": "Undosh + y bilan tugagan fe'llarda 'y' harfi 'i' ga aylanadi: study -> studied."
+                                        },
+                                        {
+                                                "id": "en-a2-u1-l1-e4",
+                                                "type": "multiple-choice",
+                                                "prompt": "Bo'sh joyni to'ldiring: 'We ___ at home and watched a documentary last night.'",
+                                                "options": [
+                                                        "stay",
+                                                        "stayed",
+                                                        "staying",
+                                                        "staied"
+                                                ],
+                                                "correctAnswer": 1,
+                                                "explanation": "Unli + y bo'lsa 'y' o'zgarmaydi va o'tgan zamonda -ed oladi: 'stayed'."
+                                        },
+                                        {
+                                                "id": "en-a2-u1-l1-e5",
+                                                "type": "multiple-choice",
+                                                "prompt": "'Watched' so'zidagi '-ed' qanday talaffuz qilinadi?",
+                                                "options": [
+                                                        "/ɪd/ (watch-id)",
+                                                        "/t/ (watch-t)",
+                                                        "/d/ (watch-d)",
+                                                        "/ed/ (watch-ed)"
+                                                ],
+                                                "correctAnswer": 1,
+                                                "explanation": "'Watch' jarangsiz /tʃ/ bilan tugagani sababli -ed /t/ kabi talaffuz qilinadi: /wɒtʃt/."
+                                        }
+                                ]
                         }
-                    ]
+                },
+                {
+                        "id": "en-a2-u1-l1-s3",
+                        "title": "Dars Testi: Regular Past Verbs",
+                        "type": "test",
+                        "estimatedMinutes": 5,
+                        "testData": {
+                                "instructions": "Savollarga to'g'ri javob berib, mavzuni mustahkamlang.",
+                                "passingScorePercentage": 80,
+                                "questions": [
+                                        {
+                                                "id": "en-a2-u1-l1-q1",
+                                                "question": "'-ed' qo'shimchasi faqat qaysi tovushlar bilan tugagan fe'llarga qo'shilganda /ɪd/ deb o'qiladi?",
+                                                "options": [
+                                                        "/p/ va /k/",
+                                                        "/t/ va /d/",
+                                                        "/s/ va /ʃ/",
+                                                        "/m/ va /n/"
+                                                ],
+                                                "correctAnswerIndex": 1,
+                                                "explanation": "Faqat /t/ va /d/ tovushlaridan so'ng -ed /ɪd/ deb o'qiladi (masalan: wanted, needed)."
+                                        },
+                                        {
+                                                "id": "en-a2-u1-l1-q2",
+                                                "question": "Qaysi jumla imlo jihatdan xato yozilgan?",
+                                                "options": [
+                                                        "She planned a surprise birthday party.",
+                                                        "He stoped the car at the red light.",
+                                                        "They arrived safely at the station.",
+                                                        "I carried the heavy grocery bags."
+                                                ],
+                                                "correctAnswerIndex": 1,
+                                                "explanation": "'Stoped' xato, to'g'ri imlosi qo'shaloq 'p' bilan yoziladi: 'stopped'."
+                                        },
+                                        {
+                                                "id": "en-a2-u1-l1-q3",
+                                                "question": "'Decided' so'zidagi -ed qanday tovush beradi?",
+                                                "options": [
+                                                        "/t/",
+                                                        "/d/",
+                                                        "/ɪd/",
+                                                        "/s/"
+                                                ],
+                                                "correctAnswerIndex": 2,
+                                                "explanation": "'Decide' /d/ tovushi bilan tugagani sababli -ed /ɪd/ tovushini beradi: /dɪˈsaɪdɪd/."
+                                        },
+                                        {
+                                                "id": "en-a2-u1-l1-q4",
+                                                "question": "'Yesterday evening, I ___ for three hours for my English test.'",
+                                                "options": [
+                                                        "revised",
+                                                        "revise",
+                                                        "revising",
+                                                        "revises"
+                                                ],
+                                                "correctAnswerIndex": 0,
+                                                "explanation": "'Yesterday evening' o'tgan zamon bo'lgani uchun 'revised' to'g'ri."
+                                        },
+                                        {
+                                                "id": "en-a2-u1-l1-q5",
+                                                "question": "IELTS Speaking: 'What was your favourite subject at school?' savoliga qaysi javob to'g'ri o'tgan zamon to'g'ri fe'llarini qo'llagan?",
+                                                "options": [
+                                                        "I like history because fun.",
+                                                        "When I was in school, I really loved history. We explored ancient civilisations and discussed historical events with our passionate teacher.",
+                                                        "I am study history school.",
+                                                        "History is my favourite subject now."
+                                                ],
+                                                "correctAnswerIndex": 1,
+                                                "explanation": "'loved', 'explored', 'discussed' - barchasi to'g'ri o'tgan zamonda qo'llangan va Band 6.0+ talablariga to'liq javob beradi."
+                                        }
+                                ]
+                        }
                 }
-            },
-            {
-                "id": "en-a2-u1-l1-s2",
-                "title": "Mashq",
-                "type": "practice",
-                "estimatedMinutes": 5,
-                "practiceData": {
-                    "instructions": "To'g'ri o'tgan zamon shaklini tanlang.",
-                    "exercises": [
-                        {
-                            "id": "en-a2-u1-l1-e1",
-                            "type": "multiple-choice",
-                            "prompt": "\"She _______ (watch) a movie last night.\"",
-                            "options": [
-                                "watch",
-                                "watching",
-                                "watches",
-                                "watched"
-                            ],
-                            "correctAnswer": 3,
-                            "explanation": "Regular verb: watched."
-                        },
-                        {
-                            "id": "en-a2-u1-l1-ex-2",
-                            "type": "multiple-choice",
-                            "prompt": "Choose the correct word to complete the sentence: \"We visited our grandparents last week.\"",
-                            "options": [
-                                "reluctance",
-                                "delay",
-                                "doubt",
-                                "Last week"
-                            ],
-                            "correctAnswer": 3,
-                            "explanation": "\"Last week\" (O'tgan hafta) fits the context appropriately."
-                        }
-                    ]
-                }
-            },
-            {
-                "id": "en-a2-u1-l1-s3",
-                "title": "Test",
-                "type": "test",
-                "estimatedMinutes": 5,
-                "testData": {
-                    "instructions": "Savollarga javob bering.",
-                    "passingScorePercentage": 75,
-                    "questions": [
-                        {
-                            "id": "en-a2-u1-l1-q1",
-                            "question": "They _______ football in the park yesterday.",
-                            "options": [
-                                "play",
-                                "playing",
-                                "plays",
-                                "played"
-                            ],
-                            "correctAnswerIndex": 3,
-                            "explanation": "Played football."
-                        },
-                        {
-                            "id": "en-a2-u1-l1-q2",
-                            "question": "I _______ my room on Saturday morning.",
-                            "options": [
-                                "cleaned",
-                                "cleaning",
-                                "cleans",
-                                "clean"
-                            ],
-                            "correctAnswerIndex": 0,
-                            "explanation": "Cleaned my room."
-                        },
-                        {
-                            "id": "en-a2-u1-l1-q3",
-                            "question": "He _______ in Berlin two years ago.",
-                            "options": [
-                                "live",
-                                "lived",
-                                "lives",
-                                "living"
-                            ],
-                            "correctAnswerIndex": 1,
-                            "explanation": "Lived in Berlin."
-                        },
-                        {
-                            "id": "en-a2-u1-l1-q4",
-                            "question": "We _______ dinner together last evening.",
-                            "options": [
-                                "cooking",
-                                "cook",
-                                "cooked",
-                                "cooks"
-                            ],
-                            "correctAnswerIndex": 2,
-                            "explanation": "Cooked dinner."
-                        }
-                    ]
-                }
-            }
         ]
-    },
+},
     {
         "id": "en-a2-u1-l2",
         "courseId": "english-a2",
@@ -178,166 +241,228 @@ export const ENGLISH_A2_LESSONS: Lesson[] = [
         "level": "A2",
         "lessonNumber": 2,
         "title": "Past Simple: Common Irregular Verbs",
-        "description": "Eng ko'p uchraydigan noto'g'ri fe'llar (went, saw, bought, had).",
+        "description": "Kundalik eng ko'p ishlatiladigan noto'g'ri fe'llar (went, saw, had, bought, made, took) va ularning qo'llanilishi.",
         "estimatedDurationMinutes": 15,
-        "icon": "📚",
+        "icon": "⚡",
         "steps": [
-            {
-                "id": "en-a2-u1-l2-s1",
-                "title": "Noto'g'ri Fe'llar",
-                "type": "learn",
-                "estimatedMinutes": 5,
-                "learnData": {
-                    "title": "Irregular Verbs (2-ustun)",
-                    "explanation": "Noto'g'ri fe'llar -ed olmaydi, ularning shakli butunlay o'zgaradi.",
-                    "keyPoints": [
-                        "go -> went",
-                        "see -> saw",
-                        "buy -> bought",
-                        "have -> had",
-                        "make -> made"
-                    ],
-                    "vocabulary": [
-                        {
-                            "term": "Went",
-                            "reading": "/went/",
-                            "meaning": "Bordi (go fe'lining o'tgan zamoni)",
-                            "exampleSentence": "He went to the cinema.",
-                            "exampleTranslation": "U kinoga bordi."
-                        },
-                        {
-                            "term": "Bought",
-                            "reading": "/bɔːt/",
-                            "meaning": "Sotib oldi",
-                            "exampleSentence": "I bought a new jacket.",
-                            "exampleTranslation": "Men yangi kurtka sotib oldim."
-                        },
-                        {
-                            "term": "Confidence",
-                            "reading": "/ˈkɒn.fɪ.dəns/",
-                            "meaning": "Ishonch",
-                            "exampleSentence": "Practice gives you confidence in speaking.",
-                            "exampleTranslation": "Mashq qilish gapirishda ishonch bagʻishlaydi."
+                {
+                        "id": "en-a2-u1-l2-s1",
+                        "title": "Noto'g'ri Fe'llar (Irregular Verbs)",
+                        "type": "learn",
+                        "estimatedMinutes": 5,
+                        "learnData": {
+                                "title": "Essential Irregular Verbs in Past Simple",
+                                "explanation": "Ingliz tilidagi eng faol fe'llarning aksariyati noto'g'ri (irregular) bo'lib, ularga -ed qo'shilmaydi, balki ildizi butunlay o'zgaradi:\n\n1. Eng muhim kundalik 10 ta noto'g'ri fe'l (V1 -> V2):\n- go -> WENT (/went/ - bordi): \"I went to the bazaar yesterday.\"\n- have -> HAD (/hæd/ - bor edi / ega bo'ldi): \"We had a delicious lunch.\"\n- see -> SAW (/sɔː/ - ko'rdi): \"I saw an interesting bird in the garden.\"\n- buy -> BOUGHT (/bɔːt/ - sotib oldi): \"She bought a new laptop.\"\n- take -> TOOK (/tʊk/ - oldi / vaqt ketdi): \"It took two hours to finish.\"\n- make -> MADE (/meɪd/ - tayyorladi / qildi): \"My mother made fresh bread.\"\n- write -> WROTE (/rəʊt/ - yozdi): \"He wrote an impressive essay.\"\n- give -> GAVE (/ɡeɪv/ - berdi): \"The teacher gave us helpful feedback.\"\n- meet -> MET (/met/ - uchrashdi): \"I met my best friend after two years.\"\n- come -> CAME (/keɪm/ - keldi): \"They came to our home last night.\"\n\n2. O'zbek tili bilan qiyosiy tahlil va Xavfli tuzoqlar:\n- ❌ Noto'g'ri fe'lga -ed qo'shish xatosi: \"goed\", \"buyed\", \"seed\" kabi so'zlar ingliz tilida MUTLAQO MAVJUD EMAS!\n- ❌ \"I boughted a car.\" -> ✅ \"I BOUGHT a car.\"\n- ❌ \"Saw\" so'zini /so/ deb o'qish -> /sɔː/ deb cho'ziq 'o' bilan aytiladi, 'w' o'qilmaydi.\n\n3. IELTS Speaking Foundation Corner:\n- Topic: Memorable Trips & Experiences\n- Examiner: \"Tell me about a memorable trip you took recently.\"\n- Model Band 6.0+ Answer: \"A few months ago, I went to Samarkand with my close friends. We saw magnificent historical monuments, had traditional kebabs, and took hundreds of stunning photographs.\"\n- Fluent Linkers: \"A few months ago\" (bir necha oy oldin), \"magnificent historical monuments\" (muhtasham tarixiy obidalar).",
+                                "vocabulary": [
+                                        {
+                                                "term": "went",
+                                                "reading": "/went/",
+                                                "meaning": "bordi (go fe'lining o'tgan zamoni)",
+                                                "exampleSentence": "We went to the mountain resort for the weekend.",
+                                                "exampleTranslation": "Biz dam olish kunlarida tog' kurortiga bordik."
+                                        },
+                                        {
+                                                "term": "saw",
+                                                "reading": "/sɔː/",
+                                                "meaning": "ko'rdi (see fe'lining o'tgan zamoni)",
+                                                "exampleSentence": "I saw an extraordinary art exhibition at the national gallery.",
+                                                "exampleTranslation": "Men milliy galereyada g'ayritabiiy san'at ko'rgazmasini ko'rdim."
+                                        },
+                                        {
+                                                "term": "bought",
+                                                "reading": "/bɔːt/",
+                                                "meaning": "sotib oldi (buy fe'lining o'tgan zamoni)",
+                                                "exampleSentence": "She bought a comfortable pair of running shoes on sale.",
+                                                "exampleTranslation": "U chegirmada qulay yugurish poyabzalini sotib oldi."
+                                        },
+                                        {
+                                                "term": "took",
+                                                "reading": "/tʊk/",
+                                                "meaning": "oldi, olib ketdi (take fe'lining o'tgan zamoni)",
+                                                "exampleSentence": "It took approximately forty minutes to reach the station.",
+                                                "exampleTranslation": "Vokzalga yetib borish taxminan qirq daqiqa vaqt oldi."
+                                        },
+                                        {
+                                                "term": "made",
+                                                "reading": "/meɪd/",
+                                                "meaning": "tayyorladi, qildi (make fe'lining o'tgan zamoni)",
+                                                "exampleSentence": "My grandmother made delicious pumpkin dumplings yesterday.",
+                                                "exampleTranslation": "Buvim kecha mazali oshqovoqli manti tayyorladilar."
+                                        },
+                                        {
+                                                "term": "wrote",
+                                                "reading": "/rəʊt/",
+                                                "meaning": "yozdi (write fe'lining o'tgan zamoni)",
+                                                "exampleSentence": "The young author wrote an inspiring story about perseverance.",
+                                                "exampleTranslation": "Yosh yozuvchi sabot-matonat haqida ilhomlantiruvchi hikoya yozdi."
+                                        },
+                                        {
+                                                "term": "met",
+                                                "reading": "/met/",
+                                                "meaning": "uchrashdi, tanishdi (meet fe'lining o'tgan zamoni)",
+                                                "exampleSentence": "We met our university professor at the international conference.",
+                                                "exampleTranslation": "Biz xalqaro konferensiyada universitet professori bilan uchrashdik."
+                                        },
+                                        {
+                                                "term": "gave",
+                                                "reading": "/ɡeɪv/",
+                                                "meaning": "berdi (give fe'lining o'tgan zamoni)",
+                                                "exampleSentence": "My mentor gave me valuable advice on exam preparation.",
+                                                "exampleTranslation": "Mening ustozim imtihonga tayyorgarlik bo'yicha qimmatli maslahat berdi."
+                                        }
+                                ]
                         }
-                    ],
-                    "grammarRules": [
-                        {
-                            "pattern": "Past Simple: Common Irregular Verbs",
-                            "meaning": "Eng ko'p uchraydigan noto'g'ri fe'llar (went, saw, bought, had).",
-                            "usageNotes": "Noto'g'ri fe'llar -ed olmaydi, ularning shakli butunlay o'zgaradi.",
-                            "examples": [
-                                {
-                                    "sentence": "He went to the cinema.",
-                                    "translation": "U kinoga bordi."
-                                },
-                                {
-                                    "sentence": "I bought a new jacket.",
-                                    "translation": "Men yangi kurtka sotib oldim."
-                                }
-                            ]
+                },
+                {
+                        "id": "en-a2-u1-l2-s2",
+                        "title": "Noto'g'ri Fe'llar Mashqlari",
+                        "type": "practice",
+                        "estimatedMinutes": 5,
+                        "practiceData": {
+                                "instructions": "Fe'lning to'g'ri o'tgan zamon shaklini tanlang.",
+                                "exercises": [
+                                        {
+                                                "id": "en-a2-u1-l2-e1",
+                                                "type": "multiple-choice",
+                                                "prompt": "Bo'sh joyni to'ldiring: 'Yesterday afternoon, we ___ to the central park.' (go)",
+                                                "options": [
+                                                        "goed",
+                                                        "went",
+                                                        "gone",
+                                                        "goes"
+                                                ],
+                                                "correctAnswer": 1,
+                                                "explanation": "'Go' fe'lining o'tgan zamoni 'went' bo'ladi ('goed' mavjud emas)."
+                                        },
+                                        {
+                                                "id": "en-a2-u1-l2-e2",
+                                                "type": "multiple-choice",
+                                                "prompt": "'She ___ a new smartphone last Friday.' (buy)",
+                                                "options": [
+                                                        "buyed",
+                                                        "bought",
+                                                        "buys",
+                                                        "brought"
+                                                ],
+                                                "correctAnswer": 1,
+                                                "explanation": "'Buy' ning o'tgan zamoni 'bought' (/bɔːt/). 'Brought' esa 'bring' (olib kelmoq) fe'lidan kelib chiqadi."
+                                        },
+                                        {
+                                                "id": "en-a2-u1-l2-e3",
+                                                "type": "multiple-choice",
+                                                "prompt": "'Saw' so'zining to'g'ri talaffuzi qaysi?",
+                                                "options": [
+                                                        "/so/ (w o'qiladi)",
+                                                        "/sɔː/ (cho'ziq 'o')",
+                                                        "/sæv/ (v tovushi bilan)",
+                                                        "/siːd/"
+                                                ],
+                                                "correctAnswer": 1,
+                                                "explanation": "'Saw' /sɔː/ deb talaffuz etiladi, uning tarkibida hech qanday 'v' yoki 'w' tovushi eshitilmaydi."
+                                        },
+                                        {
+                                                "id": "en-a2-u1-l2-e4",
+                                                "type": "multiple-choice",
+                                                "prompt": "'Ular kecha oilaviy mazali nonushta qildilar.' Qaysi fe'l to'g'ri? 'They ___ a delicious breakfast yesterday.'",
+                                                "options": [
+                                                        "have",
+                                                        "had",
+                                                        "has",
+                                                        "haved"
+                                                ],
+                                                "correctAnswer": 1,
+                                                "explanation": "'Have' fe'lining o'tgan zamoni barcha shaxslar uchun 'had' bo'ladi."
+                                        },
+                                        {
+                                                "id": "en-a2-u1-l2-e5",
+                                                "type": "multiple-choice",
+                                                "prompt": "'I ___ my childhood friend at the train station.' (meet)",
+                                                "options": [
+                                                        "meet",
+                                                        "met",
+                                                        "meeted",
+                                                        "meeting"
+                                                ],
+                                                "correctAnswer": 1,
+                                                "explanation": "'Meet' noto'g'ri fe'l bo'lib, o'tgan zamoni bitta 'e' bilan 'met' bo'ladi."
+                                        }
+                                ]
                         }
-                    ]
+                },
+                {
+                        "id": "en-a2-u1-l2-s3",
+                        "title": "Dars Testi: Irregular Verbs",
+                        "type": "test",
+                        "estimatedMinutes": 5,
+                        "testData": {
+                                "instructions": "Savollarga to'g'ri javob berib, mavzuni mustahkamlang.",
+                                "passingScorePercentage": 80,
+                                "questions": [
+                                        {
+                                                "id": "en-a2-u1-l2-q1",
+                                                "question": "Qaysi qatordagi barcha fe'llar noto'g'ri (irregular) fe'llar hisoblanadi?",
+                                                "options": [
+                                                        "work, play, visit",
+                                                        "went, saw, bought",
+                                                        "clean, decide, plan",
+                                                        "live, watch, study"
+                                                ],
+                                                "correctAnswerIndex": 1,
+                                                "explanation": "Went (go), saw (see), bought (buy) - barchasi noto'g'ri fe'llarning 2-shaklidir."
+                                        },
+                                        {
+                                                "id": "en-a2-u1-l2-q2",
+                                                "question": "Qaysi jumla grammatik jihatdan MUTLAQO TO'G'RI?",
+                                                "options": [
+                                                        "I seed an old photograph.",
+                                                        "I saw an old photograph.",
+                                                        "I sawed an old photograph.",
+                                                        "I have see an old photograph yesterday."
+                                                ],
+                                                "correctAnswerIndex": 1,
+                                                "explanation": "'See' fe'lining o'tgan zamoni 'saw' bo'ladi."
+                                        },
+                                        {
+                                                "id": "en-a2-u1-l2-q3",
+                                                "question": "'Take' (olmoq, vaqt sarflamoq) fe'lining o'tgan zamon shakli qaysi?",
+                                                "options": [
+                                                        "taked",
+                                                        "took",
+                                                        "taken",
+                                                        "take"
+                                                ],
+                                                "correctAnswerIndex": 1,
+                                                "explanation": "'Take' ning 2-shakli 'took' (/tʊk/). 'Taken' esa 3-shakl (Past Participle)."
+                                        },
+                                        {
+                                                "id": "en-a2-u1-l2-q4",
+                                                "question": "'He ___ an email to his supervisor two hours ago.'",
+                                                "options": [
+                                                        "wrote",
+                                                        "writed",
+                                                        "written",
+                                                        "writes"
+                                                ],
+                                                "correctAnswerIndex": 0,
+                                                "explanation": "'Write' fe'lining o'tgan zamoni 'wrote' bo'ladi."
+                                        },
+                                        {
+                                                "id": "en-a2-u1-l2-q5",
+                                                "question": "IELTS Speaking: 'What was the best gift you ever received?' savoliga qaysi javob noto'g'ri fe'llarni tabiiy va to'g'ri qo'llagan?",
+                                                "options": [
+                                                        "My dad buy me phone.",
+                                                        "On my sixteenth birthday, my parents gave me a professional camera. I was over the moon and took it with me everywhere.",
+                                                        "I receive a gift yesterday good.",
+                                                        "Parents gived me money."
+                                                ],
+                                                "correctAnswerIndex": 1,
+                                                "explanation": "'gave', 'was', 'took' - barcha o'tgan zamon noto'g'ri fe'llari mukammal qo'llangan va 'over the moon' (juda xursand bo'lmoq) idiomi ishlatilgan."
+                                        }
+                                ]
+                        }
                 }
-            },
-            {
-                "id": "en-a2-u1-l2-s2",
-                "title": "Mashq",
-                "type": "practice",
-                "estimatedMinutes": 5,
-                "practiceData": {
-                    "instructions": "To'g'ri noto'g'ri fe'lni tanlang.",
-                    "exercises": [
-                        {
-                            "id": "en-a2-u1-l2-e1",
-                            "type": "multiple-choice",
-                            "prompt": "\"I _______ (see) David at the market yesterday.\"",
-                            "options": [
-                                "saw",
-                                "seen",
-                                "seed",
-                                "seeing"
-                            ],
-                            "correctAnswer": 0,
-                            "explanation": "See -> saw."
-                        },
-                        {
-                            "id": "en-a2-u1-l2-ex-2",
-                            "type": "multiple-choice",
-                            "prompt": "Choose the correct word to complete the sentence: \"I bought a new jacket.\"",
-                            "options": [
-                                "Bought",
-                                "doubt",
-                                "reluctance",
-                                "delay"
-                            ],
-                            "correctAnswer": 0,
-                            "explanation": "\"Bought\" (Sotib oldi) fits the context appropriately."
-                        }
-                    ]
-                }
-            },
-            {
-                "id": "en-a2-u1-l2-s3",
-                "title": "Test",
-                "type": "test",
-                "estimatedMinutes": 5,
-                "testData": {
-                    "instructions": "Savollarga javob bering.",
-                    "passingScorePercentage": 75,
-                    "questions": [
-                        {
-                            "id": "en-a2-u1-l2-q1",
-                            "question": "We _______ to Samarkand by train last weekend.",
-                            "options": [
-                                "went",
-                                "gone",
-                                "goed",
-                                "going"
-                            ],
-                            "correctAnswerIndex": 0,
-                            "explanation": "Go -> went."
-                        },
-                        {
-                            "id": "en-a2-u1-l2-q2",
-                            "question": "She _______ a delicious cake yesterday.",
-                            "options": [
-                                "maked",
-                                "making",
-                                "make",
-                                "made"
-                            ],
-                            "correctAnswerIndex": 3,
-                            "explanation": "Make -> made."
-                        },
-                        {
-                            "id": "en-a2-u1-l2-q3",
-                            "question": "I _______ my keys on the bus.",
-                            "options": [
-                                "lose",
-                                "losing",
-                                "lost",
-                                "losed"
-                            ],
-                            "correctAnswerIndex": 2,
-                            "explanation": "Lose -> lost."
-                        },
-                        {
-                            "id": "en-a2-u1-l2-q4",
-                            "question": "They _______ breakfast at 8:00 AM.",
-                            "options": [
-                                "having",
-                                "had",
-                                "haved",
-                                "have"
-                            ],
-                            "correctAnswerIndex": 1,
-                            "explanation": "Have -> had."
-                        }
-                    ]
-                }
-            }
         ]
-    },
+},
     {
         "id": "en-a2-u1-l3",
         "courseId": "english-a2",
@@ -346,160 +471,229 @@ export const ENGLISH_A2_LESSONS: Lesson[] = [
         "language": "en",
         "level": "A2",
         "lessonNumber": 3,
-        "title": "Past Simple: Questions & Negatives (Did you...?)",
-        "description": "O'tgan zamonda so'roq va inkor gaplar (didn't + V1).",
-        "estimatedDurationMinutes": 14,
+        "title": "Past Simple: Questions & Negatives (Did & Didn't)",
+        "description": "Past Simple da inkor (didn't) va so'roq (Did you...?) gaplar, fe'lning boshlang'ich shaklga qaytish qoidasi.",
+        "estimatedDurationMinutes": 15,
         "icon": "❓",
         "steps": [
-            {
-                "id": "en-a2-u1-l3-s1",
-                "title": "Didn't va Did you...?",
-                "type": "learn",
-                "estimatedMinutes": 4,
-                "learnData": {
-                    "title": "Did & Didn't",
-                    "explanation": "Past Simple inkorida \"didn't\", so'rog'ida \"did\" ishlatiladi. E'tibor bering: did/didn't dan keyin fe'l asl 1-shakliga qaytadi!",
-                    "keyPoints": [
-                        "I didn't go (didn't went EMAS)",
-                        "Did you see him? -> Yes, I did. / No, I didn't."
-                    ],
-                    "vocabulary": [
-                        {
-                            "term": "Vacation",
-                            "reading": "/veɪˈkeɪ.ʃən/",
-                            "meaning": "Ta'til",
-                            "exampleSentence": "Where did you go for vacation?",
-                            "exampleTranslation": "Ta'tilga qayerga bordingiz?"
-                        },
-                        {
-                            "term": "Confidence",
-                            "reading": "/ˈkɒn.fɪ.dəns/",
-                            "meaning": "Ishonch",
-                            "exampleSentence": "Practice gives you confidence in speaking.",
-                            "exampleTranslation": "Mashq qilish gapirishda ishonch bagʻishlaydi."
-                        },
-                        {
-                            "term": "Schedule",
-                            "reading": "/ˈʃedʒ.uːl/",
-                            "meaning": "Jadval, reja",
-                            "exampleSentence": "Let me check my schedule for tomorrow.",
-                            "exampleTranslation": "Ertangi kun jadvalimni tekshirib koʻray."
+                {
+                        "id": "en-a2-u1-l3-s1",
+                        "title": "Did va Didn't Qoidasi",
+                        "type": "learn",
+                        "estimatedMinutes": 5,
+                        "learnData": {
+                                "title": "Past Simple: Negatives & Question Syntax",
+                                "explanation": "Past Simple zamonida inkor va so'roq gap tuzishning 'Oltin Qoidasi':\n\n1. Oltin Qoida (The Golden Rule):\n- Darak gapda fe'l o'tgan zamonda bo'ladi: \"She went home.\" / \"I watched a movie.\"\n- LEKIN inkor (didn't) yoki so'roq (did) kelgan zahoti, asosiy fe'l O'ZINING BOSHLANG'ICH (V1) SHAKLIGA QAYTADI! Chunki o'tgan zamon yukini 'DID' o'z zimmasiga oladi!\n  • Darak: I saw him.\n  • Inkor: I didn't SEE him (❌ I didn't saw him EMAS!).\n  • So'roq: Did you SEE him? (❌ Did you saw him EMAS!).\n\n2. Formulalar:\n- Inkor gap: Ega + didn't + Fe'l (boshlang'ich shakl)\n  • \"He didn't sleep well last night.\"\n  • \"We didn't buy the expensive tickets.\"\n- Umumiy so'roq: Did + Ega + Fe'l (boshlang'ich shakl)?\n  • \"Did you finish the assignment?\" -> \"Yes, I did.\" / \"No, I didn't.\"\n- Maxsus (Wh-) so'roq: Wh- so'z + did + Ega + Fe'l (boshlang'ich shakl)?\n  • \"Where did you go on vacation?\"\n  • \"What time did the train arrive?\"\n\n3. O'zbek o'rganuvchilari uchun xavfli tuzoqlar (Common Pitfalls):\n- ❌ \"I didn't went to university.\" -> ✅ \"I didn't GO to university.\" (O'zbek o'quvchilarining 70% qiladigan eng katta xatosi!).\n- ❌ \"Did you saw the news?\" -> ✅ \"Did you SEE the news?\"\n- ❌ \"Did you was at home?\" -> ✅ \"WERE you at home?\" ('To be' fe'li bilan 'did' ishlatilmaydi!).\n\n4. IELTS Speaking Foundation Corner:\n- Topic: Historical Events / Past Conversations\n- Examiner: \"Did you enjoy your primary school days?\"\n- Model Band 6.0+ Answer: \"Yes, I truly did. Although I didn't always get top marks in mathematics, I thoroughly enjoyed our art and literature classes, where our teachers encouraged our creativity.\"\n- Fluency Linker: \"Yes, I truly did... Although I didn't always... I thoroughly enjoyed...\" (Kontrast va aniqlik).",
+                                "vocabulary": [
+                                        {
+                                                "term": "didn't",
+                                                "reading": "/ˈdɪdənt/",
+                                                "meaning": "qilmadi (did not ning qisqartmasi, o'zidan keyin V1 oladi)",
+                                                "exampleSentence": "I didn't hear your call because my phone was on silent.",
+                                                "exampleTranslation": "Telefonim ovozsiz rejimda bo'lgani uchun qo'ng'irog'ingizni eshitmadim."
+                                        },
+                                        {
+                                                "term": "did you",
+                                                "reading": "/ˈdɪd juː/ yoki /dɪdʒuː/",
+                                                "meaning": "qildingizmi? (og'zaki nutqda /dɪdʒuː/ deb qo'shilib aytiladi)",
+                                                "exampleSentence": "Did you manage to catch the morning express bus?",
+                                                "exampleTranslation": "Ertalabki tezyurar avtobusga yetib olishga ulgurdingizmi?"
+                                        },
+                                        {
+                                                "term": "vacation",
+                                                "reading": "/veɪˈkeɪʃən/",
+                                                "meaning": "ta'til, hordiq kunlari",
+                                                "exampleSentence": "Where did your family go on vacation last summer?",
+                                                "exampleTranslation": "O'tgan yozda oilangiz ta'tilga qayerga bordi?"
+                                        },
+                                        {
+                                                "term": "recognise",
+                                                "reading": "/ˈrekəɡnaɪz/",
+                                                "meaning": "tanimoq (yuz ko'rishganda)",
+                                                "exampleSentence": "I didn't recognise him at first because he grew a beard.",
+                                                "exampleTranslation": "U soqol qo'ygani sababli men avvaliga uni tanimadim."
+                                        },
+                                        {
+                                                "term": "attend",
+                                                "reading": "/əˈtend/",
+                                                "meaning": "qatnashmoq, bormoq",
+                                                "exampleSentence": "Why didn't you attend the meeting yesterday afternoon?",
+                                                "exampleTranslation": "Kecha tushdan keyin nima uchun yig'ilishga qatnashmadingiz?"
+                                        },
+                                        {
+                                                "term": "realise",
+                                                "reading": "/ˈrɪəlaɪz/",
+                                                "meaning": "anglab yetmoq, tushunib qolmoq",
+                                                "exampleSentence": "She didn't realise that the shop was already closed.",
+                                                "exampleTranslation": "U do'kon allaqachon yopilganini anglamabdi."
+                                        },
+                                        {
+                                                "term": "assignment",
+                                                "reading": "/əˈsaɪnmənt/",
+                                                "meaning": "topshiriq, uy vazifasi",
+                                                "exampleSentence": "Did you submit your history assignment on time?",
+                                                "exampleTranslation": "Tarix fanidan topshirig'ingizni o'z vaqtida topshirdingizmi?"
+                                        },
+                                        {
+                                                "term": "thoroughly",
+                                                "reading": "/ˈθʌrəli/",
+                                                "meaning": "butunlay, to'liq, astoydil",
+                                                "exampleSentence": "We thoroughly enjoyed every minute of the theatrical performance.",
+                                                "exampleTranslation": "Biz teatr tomoshasining har bir daqiqasidan astoydil zavqlandik."
+                                        }
+                                ]
                         }
-                    ],
-                    "grammarRules": [
-                        {
-                            "pattern": "Past Simple: Questions & Negatives (Did you...?)",
-                            "meaning": "O'tgan zamonda so'roq va inkor gaplar (didn't + V1).",
-                            "usageNotes": "Past Simple inkorida \"didn't\", so'rog'ida \"did\" ishlatiladi. E'tibor bering: did/didn't dan keyin fe'l asl 1-shakliga qaytadi!",
-                            "examples": [
-                                {
-                                    "sentence": "Where did you go for vacation?",
-                                    "translation": "Ta'tilga qayerga bordingiz?"
-                                }
-                            ]
+                },
+                {
+                        "id": "en-a2-u1-l3-s2",
+                        "title": "Did va Didn't Mashqlari",
+                        "type": "practice",
+                        "estimatedMinutes": 5,
+                        "practiceData": {
+                                "instructions": "Bo'sh joylarni fe'lning to'g'ri shakli bilan to'ldiring.",
+                                "exercises": [
+                                        {
+                                                "id": "en-a2-u1-l3-e1",
+                                                "type": "multiple-choice",
+                                                "prompt": "Bo'sh joyni to'ldiring: 'I didn't ___ to the gym yesterday because I was exhausted.'",
+                                                "options": [
+                                                        "went",
+                                                        "go",
+                                                        "going",
+                                                        "goes"
+                                                ],
+                                                "correctAnswer": 1,
+                                                "explanation": "'Didn't' dan keyin fe'l boshlang'ich shaklga qaytadi: 'didn't go' ('didn't went' xato)."
+                                        },
+                                        {
+                                                "id": "en-a2-u1-l3-e2",
+                                                "type": "multiple-choice",
+                                                "prompt": "To'g'ri so'roq gapni tanlang:",
+                                                "options": [
+                                                        "Did you saw the news?",
+                                                        "Did you see the news?",
+                                                        "Did you seen the news?",
+                                                        "Did you seeing the news?"
+                                                ],
+                                                "correctAnswer": 1,
+                                                "explanation": "'Did you see...?' - 'did' bor joyda fe'l boshlang'ich shakl 'see' bo'ladi."
+                                        },
+                                        {
+                                                "id": "en-a2-u1-l3-e3",
+                                                "type": "multiple-choice",
+                                                "prompt": "'Where ___ you buy that stylish jacket?'",
+                                                "options": [
+                                                        "were",
+                                                        "did",
+                                                        "are",
+                                                        "do"
+                                                ],
+                                                "correctAnswer": 1,
+                                                "explanation": "O'tgan zamondagi harakat fe'li (buy) uchun maxsus savol yordamchisi 'did' bo'ladi: 'Where did you buy...?'."
+                                        },
+                                        {
+                                                "id": "en-a2-u1-l3-e4",
+                                                "type": "multiple-choice",
+                                                "prompt": "Qaysi gapda 'to be' fe'li va 'did' xato aralashtirilgan?",
+                                                "options": [
+                                                        "Were you at home yesterday?",
+                                                        "Did you was at home yesterday?",
+                                                        "Did you stay at home yesterday?",
+                                                        "Was he at the library yesterday?"
+                                                ],
+                                                "correctAnswer": 1,
+                                                "explanation": "'Did you was' - qo'pol grammatik xato. 'To be' o'tgan zamonda o'zi savol yasaydi: 'Were you at home?'."
+                                        },
+                                        {
+                                                "id": "en-a2-u1-l3-e5",
+                                                "type": "multiple-choice",
+                                                "prompt": "'Did they finish the project?' savoliga qisqa tasdiq javob qaysi?",
+                                                "options": [
+                                                        "Yes, they finished.",
+                                                        "Yes, they did.",
+                                                        "Yes, they were.",
+                                                        "Yes, they do."
+                                                ],
+                                                "correctAnswer": 1,
+                                                "explanation": "'Did' bilan berilgan savolga qisqa javob: 'Yes, they did'."
+                                        }
+                                ]
                         }
-                    ]
+                },
+                {
+                        "id": "en-a2-u1-l3-s3",
+                        "title": "Dars Testi: Questions & Negatives",
+                        "type": "test",
+                        "estimatedMinutes": 5,
+                        "testData": {
+                                "instructions": "Savollarga to'g'ri javob berib, mavzuni mustahkamlang.",
+                                "passingScorePercentage": 80,
+                                "questions": [
+                                        {
+                                                "id": "en-a2-u1-l3-q1",
+                                                "question": "Past Simple inkor gapida fe'l qaysi shaklda keladi?",
+                                                "options": [
+                                                        "O'tgan zamon shaklida (V2: went, bought)",
+                                                        "Asosiy boshlang'ich shaklida (V1: go, buy)",
+                                                        "Fe'l-ing shaklida",
+                                                        "Fe'l-s shaklida"
+                                                ],
+                                                "correctAnswerIndex": 1,
+                                                "explanation": "'Didn't' yordamchisi o'tgan zamon ma'nosini o'ziga olgani sababli asosiy fe'l boshlang'ich shaklga (V1) qaytadi."
+                                        },
+                                        {
+                                                "id": "en-a2-u1-l3-q2",
+                                                "question": "Qaysi jumla grammatik jihatdan XATO?",
+                                                "options": [
+                                                        "She didn't tell me about the schedule.",
+                                                        "Did you find your lost keys?",
+                                                        "We didn't understood the last question.",
+                                                        "What time did the plane land?"
+                                                ],
+                                                "correctAnswerIndex": 2,
+                                                "explanation": "'We didn't understood' xato, to'g'risi: 'We didn't understand'."
+                                        },
+                                        {
+                                                "id": "en-a2-u1-l3-q3",
+                                                "question": "'What ___ you do when the electricity went out?'",
+                                                "options": [
+                                                        "did",
+                                                        "were",
+                                                        "was",
+                                                        "have"
+                                                ],
+                                                "correctAnswerIndex": 0,
+                                                "explanation": "'What did you do...?' - o'tgan zamondagi so'roq shakli."
+                                        },
+                                        {
+                                                "id": "en-a2-u1-l3-q4",
+                                                "question": "'Ular kecha biz bilan tushlik qilmadilar' jumlasining to'g'ri tarjimasi qaysi?",
+                                                "options": [
+                                                        "They didn't had lunch with us yesterday.",
+                                                        "They didn't have lunch with us yesterday.",
+                                                        "They weren't have lunch with us yesterday.",
+                                                        "They didn't ate lunch with us yesterday."
+                                                ],
+                                                "correctAnswerIndex": 1,
+                                                "explanation": "'They didn't have lunch...' - 'didn't' dan keyin 'have' boshlang'ich shaklda."
+                                        },
+                                        {
+                                                "id": "en-a2-u1-l3-q5",
+                                                "question": "IELTS Speaking: 'Did you have a pet when you were a child?' savoliga eng to'liq javob qaysi?",
+                                                "options": [
+                                                        "No pet.",
+                                                        "Unfortunately, I didn't have any pets when I was growing up because our apartment was quite small, but I always wanted to adopt a dog.",
+                                                        "I didn't had dog.",
+                                                        "Yes, I was have cat."
+                                                ],
+                                                "correctAnswerIndex": 1,
+                                                "explanation": "'Unfortunately, I didn't have any pets when I was growing up because... but I always wanted to adopt...' - boy sintaksis va benuqson grammatika."
+                                        }
+                                ]
+                        }
                 }
-            },
-            {
-                "id": "en-a2-u1-l3-s2",
-                "title": "Mashq",
-                "type": "practice",
-                "estimatedMinutes": 5,
-                "practiceData": {
-                    "instructions": "To'g'ri grammatik shaklni tanlang.",
-                    "exercises": [
-                        {
-                            "id": "en-a2-u1-l3-e1",
-                            "type": "multiple-choice",
-                            "prompt": "\"Did you _______ (sleep) well last night?\"",
-                            "options": [
-                                "slept",
-                                "sleep",
-                                "sleeps",
-                                "sleeping"
-                            ],
-                            "correctAnswer": 1,
-                            "explanation": "Did bilan fe'lning 1-shakli: sleep."
-                        },
-                        {
-                            "id": "en-a2-u1-l3-ex-2",
-                            "type": "multiple-choice",
-                            "prompt": "Choose the correct word to complete the sentence: \"Practice gives you confidence in speaking.\"",
-                            "options": [
-                                "doubt",
-                                "delay",
-                                "Confidence",
-                                "reluctance"
-                            ],
-                            "correctAnswer": 2,
-                            "explanation": "\"Confidence\" (Ishonch) fits the context appropriately."
-                        }
-                    ]
-                }
-            },
-            {
-                "id": "en-a2-u1-l3-s3",
-                "title": "Test",
-                "type": "test",
-                "estimatedMinutes": 5,
-                "testData": {
-                    "instructions": "Testni yeching.",
-                    "passingScorePercentage": 75,
-                    "questions": [
-                        {
-                            "id": "en-a2-u1-l3-q1",
-                            "question": "I _______ go to the concert yesterday because I was sick.",
-                            "options": [
-                                "don't",
-                                "didn't",
-                                "not",
-                                "wasn't"
-                            ],
-                            "correctAnswerIndex": 1,
-                            "explanation": "I didn't go."
-                        },
-                        {
-                            "id": "en-a2-u1-l3-q2",
-                            "question": "_______ they finish the project on time?",
-                            "options": [
-                                "Were",
-                                "Do",
-                                "Did",
-                                "Are"
-                            ],
-                            "correctAnswerIndex": 2,
-                            "explanation": "Did they finish...?"
-                        },
-                        {
-                            "id": "en-a2-u1-l3-q3",
-                            "question": "She didn't _______ the email.",
-                            "options": [
-                                "receiving",
-                                "receives",
-                                "received",
-                                "receive"
-                            ],
-                            "correctAnswerIndex": 3,
-                            "explanation": "Didn't receive (1-shakl)."
-                        },
-                        {
-                            "id": "en-a2-u1-l3-q4",
-                            "question": "\"Did you call me?\" — \"No, I _______.\"",
-                            "options": [
-                                "didn't",
-                                "not",
-                                "wasn't",
-                                "don't"
-                            ],
-                            "correctAnswerIndex": 0,
-                            "explanation": "No, I didn't."
-                        }
-                    ]
-                }
-            }
         ]
-    },
+},
     {
         "id": "en-a2-u1-l4",
         "courseId": "english-a2",
@@ -508,160 +702,229 @@ export const ENGLISH_A2_LESSONS: Lesson[] = [
         "language": "en",
         "level": "A2",
         "lessonNumber": 4,
-        "title": "Past Continuous: I was doing",
-        "description": "O'tgan zamonda davom etayotgan harakatlar (was/were + V-ing).",
-        "estimatedDurationMinutes": 14,
-        "icon": "🔄",
+        "title": "Past Continuous: Actions in Progress (Was/Were + V-ing)",
+        "description": "O'tgan davomli zamon (was/were doing), o'tgan zamonda biror vaqtda davom etayotgan harakatlar va parallel jarayonlar.",
+        "estimatedDurationMinutes": 15,
+        "icon": "🌊",
         "steps": [
-            {
-                "id": "en-a2-u1-l4-s1",
-                "title": "Past Continuous Qoidasi",
-                "type": "learn",
-                "estimatedMinutes": 4,
-                "learnData": {
-                    "title": "Was / Were + Verb-ing",
-                    "explanation": "O'tgan zamondagi ma'lum bir paytda davom etayotgan jarayonni bildiradi.",
-                    "keyPoints": [
-                        "At 8:00 PM yesterday, I was watching TV.",
-                        "While I was walking home, it started to rain."
-                    ],
-                    "vocabulary": [
-                        {
-                            "term": "While",
-                            "reading": "/waɪl/",
-                            "meaning": "... davomida / paytida",
-                            "exampleSentence": "While I was cooking, the phone rang.",
-                            "exampleTranslation": "Men ovqat pishirayotgan paytda telefon jiringladi."
-                        },
-                        {
-                            "term": "Schedule",
-                            "reading": "/ˈʃedʒ.uːl/",
-                            "meaning": "Jadval, reja",
-                            "exampleSentence": "Let me check my schedule for tomorrow.",
-                            "exampleTranslation": "Ertangi kun jadvalimni tekshirib koʻray."
-                        },
-                        {
-                            "term": "Improve",
-                            "reading": "/ɪmˈpruːv/",
-                            "meaning": "Yaxshilamoq, rivojlantirmoq",
-                            "exampleSentence": "Reading books will improve your vocabulary.",
-                            "exampleTranslation": "Kitob oʻqish soʻz boyligingizni oshiradi."
+                {
+                        "id": "en-a2-u1-l4-s1",
+                        "title": "O'tgan Davomli Zamon Asoslari",
+                        "type": "learn",
+                        "estimatedMinutes": 5,
+                        "learnData": {
+                                "title": "Past Continuous: Form, Meaning, and Usage",
+                                "explanation": "O'tgan zamondagi ma'lum bir vaqt nuqtasida davom etayotgan harakatlar:\n\n1. Grammatik Formulalar:\n- Darak: Ega + was / were + Fe'l-ing\n  • I / He / She / It -> WAS doing\n  • We / You / They -> WERE doing\n  • \"At eight o'clock yesterday evening, I was studying for my biology exam.\"\n  • \"They were driving through the mountains at noon.\"\n- Inkor: Ega + wasn't / weren't + Fe'l-ing\n  • \"He wasn't paying attention during the lecture.\"\n- So'roq: Was / Were + Ega + Fe'l-ing?\n  • \"What were you doing at ten o'clock last night?\"\n\n2. Asosiy Qo'llanilish Vaziyatlari:\n- O'tgan zamondagi aniq bir daqiqadagi jarayon: \"At 7:30 AM, I was having breakfast.\"\n- Bir vaqtda parallel davom etgan ikkita harakat (WHILE bilan):\n  • \"While my brother was cooking dinner, I was cleaning the dining room.\" (Akam ovqat pishirayotgan paytda, men xonani tozalayotgan edim).\n\n3. O'zbek o'rganuvchilari uchun xavfli tuzoqlar (Common Pitfalls):\n- ❌ \"Yesterday at 8 PM I watched TV.\" -> ✅ \"Yesterday at 8 PM I WAS WATCHING TV.\" (Aniq vaqt nuqtasidagi davomiy jarayon uchun Past Continuous talab etiladi).\n- ❌ \"I was work when he called.\" -> ✅ \"I was WORKING when he called.\" (-ing unutilmasligi shart).\n- ❌ \"We was studying.\" -> ✅ \"We WERE studying.\" (We bilan were!).\n\n4. IELTS Speaking Foundation Corner:\n- Topic: Daily Life / Unforgettable Days\n- Examiner: \"What were you doing this time yesterday?\"\n- Model Band 6.0+ Answer: \"At this exact time yesterday, I was commuting home on the subway while listening to an English educational podcast. It was a rather typical evening for me.\"\n- Examiner Tip: \"At this exact time yesterday\" (aynan shu vaqtda kecha) va \"while listening to\" (tinglayotgan bir paytda) iboralari nutqqa akademik ravonlik baxsh etadi.",
+                                "vocabulary": [
+                                        {
+                                                "term": "commuting",
+                                                "reading": "/kəˈmjuːtɪŋ/",
+                                                "meaning": "uy va ish/o'qish orasida qatnash",
+                                                "exampleSentence": "I was commuting on the electric train when the power outage occurred.",
+                                                "exampleTranslation": "Elektr uzilishi yuz berganda men poyezdda yo'lda qatnab kelayotgan edim."
+                                        },
+                                        {
+                                                "term": "sleeping",
+                                                "reading": "/ˈsliːpɪŋ/",
+                                                "meaning": "uxlayotgan",
+                                                "exampleSentence": "The children were sleeping soundly despite the loud storm outside.",
+                                                "exampleTranslation": "Tashqaridagi kuchli bo'ronga qaramay, bolalar qattiq uxlayotgan edilar."
+                                        },
+                                        {
+                                                "term": "paying attention",
+                                                "reading": "/ˈpeɪ.ɪŋ əˈten.ʃən/",
+                                                "meaning": "diqqat qilayotgan, e'tibor berayotgan",
+                                                "exampleSentence": "He was not paying attention, so he missed the key instruction.",
+                                                "exampleTranslation": "U e'tibor bermayotgan edi, shuning uchun muhim ko'rsatmani o'tkazib yubordi."
+                                        },
+                                        {
+                                                "term": "discussing",
+                                                "reading": "/dɪˈskʌsɪŋ/",
+                                                "meaning": "muhokama qilayotgan",
+                                                "exampleSentence": "The directors were discussing the annual budget for over two hours.",
+                                                "exampleTranslation": "Direktorlar yillik byudjetni ikki soatdan ko'proq muhokama qilayotgan edilar."
+                                        },
+                                        {
+                                                "term": "raining heavily",
+                                                "reading": "/ˈreɪnɪŋ ˈhevɪli/",
+                                                "meaning": "sharros yomg'ir yog'ayotgan",
+                                                "exampleSentence": "It was raining heavily when we stepped outside the terminal.",
+                                                "exampleTranslation": "Biz terminaldan tashqariga chiqqanimizda sharros yomg'ir yog'ayotgan edi."
+                                        },
+                                        {
+                                                "term": "soundly",
+                                                "reading": "/ˈsaʊndli/",
+                                                "meaning": "qattiq, xotirjam (uxlamoq)",
+                                                "exampleSentence": "The exhausted baby was sleeping soundly in the cradle.",
+                                                "exampleTranslation": "Holdan toygan chaqaloq beshikda qattiq uxlab yotgan edi."
+                                        },
+                                        {
+                                                "term": "preparing",
+                                                "reading": "/prɪˈpeərɪŋ/",
+                                                "meaning": "tayyorlanayotgan",
+                                                "exampleSentence": "We were preparing the laboratory equipment for the experiment.",
+                                                "exampleTranslation": "Biz tajriba uchun laboratoriya jihozlarini tayyorlayotgan edik."
+                                        },
+                                        {
+                                                "term": "while",
+                                                "reading": "/waɪl/",
+                                                "meaning": "...ayotgan paytda, davomida (parallel jarayonlar)",
+                                                "exampleSentence": "While I was studying in my room, my sister was practising the violin.",
+                                                "exampleTranslation": "Men xonamda dars qilayotganimda, singlim skripka mashq qilayotgan edi."
+                                        }
+                                ]
                         }
-                    ],
-                    "grammarRules": [
-                        {
-                            "pattern": "Past Continuous: I was doing",
-                            "meaning": "O'tgan zamonda davom etayotgan harakatlar (was/were + V-ing).",
-                            "usageNotes": "O'tgan zamondagi ma'lum bir paytda davom etayotgan jarayonni bildiradi.",
-                            "examples": [
-                                {
-                                    "sentence": "While I was cooking, the phone rang.",
-                                    "translation": "Men ovqat pishirayotgan paytda telefon jiringladi."
-                                }
-                            ]
+                },
+                {
+                        "id": "en-a2-u1-l4-s2",
+                        "title": "Past Continuous Mashqlari",
+                        "type": "practice",
+                        "estimatedMinutes": 5,
+                        "practiceData": {
+                                "instructions": "Bo'sh joylarni to'g'ri 'was/were + V-ing' shakli bilan to'ldiring.",
+                                "exercises": [
+                                        {
+                                                "id": "en-a2-u1-l4-e1",
+                                                "type": "multiple-choice",
+                                                "prompt": "Bo'sh joyni to'ldiring: 'At 9:00 PM last night, I ___ an interesting mystery novel.'",
+                                                "options": [
+                                                        "was reading",
+                                                        "were reading",
+                                                        "readed",
+                                                        "am reading"
+                                                ],
+                                                "correctAnswer": 0,
+                                                "explanation": "'I' uchun 'was' va fe'lga -ing: 'was reading'."
+                                        },
+                                        {
+                                                "id": "en-a2-u1-l4-e2",
+                                                "type": "multiple-choice",
+                                                "prompt": "'They ___ dinner when the doorbell rang.'",
+                                                "options": [
+                                                        "was having",
+                                                        "were having",
+                                                        "have had",
+                                                        "had having"
+                                                ],
+                                                "correctAnswer": 1,
+                                                "explanation": "'They' ko'plik olmoshi 'were' bilan keladi: 'were having dinner'."
+                                        },
+                                        {
+                                                "id": "en-a2-u1-l4-e3",
+                                                "type": "multiple-choice",
+                                                "prompt": "'Kecha soat 3 da nima ish bilan band edingiz?' savoli qaysi?",
+                                                "options": [
+                                                        "What did you do at 3 PM yesterday?",
+                                                        "What were you doing at 3 PM yesterday?",
+                                                        "What was you doing at 3 PM yesterday?",
+                                                        "What are you doing at 3 PM yesterday?"
+                                                ],
+                                                "correctAnswer": 1,
+                                                "explanation": "O'tgan zamondagi aniq vaqtdagi davomiy harakat: 'What were you doing at 3 PM yesterday?'."
+                                        },
+                                        {
+                                                "id": "en-a2-u1-l4-e4",
+                                                "type": "multiple-choice",
+                                                "prompt": "Parallel harakatlar uchun 'while' bilan to'g'ri gapni tanlang:",
+                                                "options": [
+                                                        "While he cooked, I was sleep.",
+                                                        "While he was cooking, I was sleeping.",
+                                                        "While he is cooking, I were sleeping.",
+                                                        "While he was cook, I was sleep."
+                                                ],
+                                                "correctAnswer": 1,
+                                                "explanation": "Ikkala jarayon bir vaqtda davom etgan: 'While he was cooking, I was sleeping'."
+                                        },
+                                        {
+                                                "id": "en-a2-u1-l4-e5",
+                                                "type": "multiple-choice",
+                                                "prompt": "'Tashqarida yomg'ir yog'mayotgan edi.' Inkor jumlani tanlang:",
+                                                "options": [
+                                                        "It wasn't raining outside.",
+                                                        "It weren't raining outside.",
+                                                        "It didn't raining outside.",
+                                                        "It wasn't rain outside."
+                                                ],
+                                                "correctAnswer": 0,
+                                                "explanation": "'It' uchun inkor 'wasn't raining' bo'ladi."
+                                        }
+                                ]
                         }
-                    ]
+                },
+                {
+                        "id": "en-a2-u1-l4-s3",
+                        "title": "Dars Testi: Past Continuous",
+                        "type": "test",
+                        "estimatedMinutes": 5,
+                        "testData": {
+                                "instructions": "Savollarga to'g'ri javob berib, mavzuni mustahkamlang.",
+                                "passingScorePercentage": 80,
+                                "questions": [
+                                        {
+                                                "id": "en-a2-u1-l4-q1",
+                                                "question": "Past Continuous zamonining asosiy grammatik formulasi qaysi?",
+                                                "options": [
+                                                        "Ega + did + Fe'l",
+                                                        "Ega + was/were + Fe'l-ing",
+                                                        "Ega + have/has + V3",
+                                                        "Ega + was/were + Fe'l"
+                                                ],
+                                                "correctAnswerIndex": 1,
+                                                "explanation": "Past Continuous formulasi: Ega + was/were + Verb-ing."
+                                        },
+                                        {
+                                                "id": "en-a2-u1-l4-q2",
+                                                "question": "Qaysi gapda olmosh va to be fe'li mosligi xato berilgan?",
+                                                "options": [
+                                                        "She was driving carefully.",
+                                                        "We was walking along the avenue.",
+                                                        "They were studying together.",
+                                                        "I was listening to music."
+                                                ],
+                                                "correctAnswerIndex": 1,
+                                                "explanation": "'We was' xato, 'We were walking' bo'lishi shart."
+                                        },
+                                        {
+                                                "id": "en-a2-u1-l4-q3",
+                                                "question": "'What ___ you ___ when the fire alarm sounded?'",
+                                                "options": [
+                                                        "were / doing",
+                                                        "was / doing",
+                                                        "did / do",
+                                                        "are / doing"
+                                                ],
+                                                "correctAnswerIndex": 0,
+                                                "explanation": "'You' uchun so'roq: 'What were you doing...?'."
+                                        },
+                                        {
+                                                "id": "en-a2-u1-l4-q4",
+                                                "question": "'While' bog'lovchisi odatda qanday harakatlar bilan ishlatiladi?",
+                                                "options": [
+                                                        "Faqat bir zumda tugaydigan qisqa harakatlar",
+                                                        "O'sha paytda davom etayotgan jarayonlar (continuous)",
+                                                        "Faqat kelasi zamon rejalari",
+                                                        "Inkor bo'lmagan buyruq gaplar"
+                                                ],
+                                                "correctAnswerIndex": 1,
+                                                "explanation": "'While' (davomida, o'sha paytda) asosan davom etuvchi jarayonlar (Past Continuous) bilan qo'llanadi."
+                                        },
+                                        {
+                                                "id": "en-a2-u1-l4-q5",
+                                                "question": "IELTS Speaking: 'Tell me about a time when you received surprising news.' savoliga eng yaxshi fon tasviri qaysi?",
+                                                "options": [
+                                                        "News is come yesterday.",
+                                                        "I remember that moment vividly. It was a cold winter afternoon, and I was quietly reading a book in my living room when my phone suddenly rang.",
+                                                        "I read book and telephone is ring.",
+                                                        "I was read news."
+                                                ],
+                                                "correctAnswerIndex": 1,
+                                                "explanation": "'I was quietly reading a book... when my phone suddenly rang' - voqeaning orqa fonini (background) Past Continuous orqali mahorat bilan ochib beradi."
+                                        }
+                                ]
+                        }
                 }
-            },
-            {
-                "id": "en-a2-u1-l4-s2",
-                "title": "Mashq",
-                "type": "practice",
-                "estimatedMinutes": 5,
-                "practiceData": {
-                    "instructions": "To'g'ri shaklni tanlang.",
-                    "exercises": [
-                        {
-                            "id": "en-a2-u1-l4-e1",
-                            "type": "multiple-choice",
-                            "prompt": "\"What were you doing at 3 PM?\" — \"I _______ (study) in the library.\"",
-                            "options": [
-                                "studied",
-                                "am studying",
-                                "was studying",
-                                "were studying"
-                            ],
-                            "correctAnswer": 2,
-                            "explanation": "I was studying."
-                        },
-                        {
-                            "id": "en-a2-u1-l4-ex-2",
-                            "type": "multiple-choice",
-                            "prompt": "Choose the correct word to complete the sentence: \"Let me check my schedule for tomorrow.\"",
-                            "options": [
-                                "Schedule",
-                                "reluctance",
-                                "delay",
-                                "doubt"
-                            ],
-                            "correctAnswer": 0,
-                            "explanation": "\"Schedule\" (Jadval, reja) fits the context appropriately."
-                        }
-                    ]
-                }
-            },
-            {
-                "id": "en-a2-u1-l4-s3",
-                "title": "Test",
-                "type": "test",
-                "estimatedMinutes": 5,
-                "testData": {
-                    "instructions": "Savollarga javob bering.",
-                    "passingScorePercentage": 75,
-                    "questions": [
-                        {
-                            "id": "en-a2-u1-l4-q1",
-                            "question": "They _______ dinner when I arrived.",
-                            "options": [
-                                "had",
-                                "have",
-                                "were having",
-                                "was having"
-                            ],
-                            "correctAnswerIndex": 2,
-                            "explanation": "They were having dinner."
-                        },
-                        {
-                            "id": "en-a2-u1-l4-q2",
-                            "question": "It _______ heavily when we woke up.",
-                            "options": [
-                                "rains",
-                                "was raining",
-                                "were raining",
-                                "rained"
-                            ],
-                            "correctAnswerIndex": 1,
-                            "explanation": "It was raining."
-                        },
-                        {
-                            "id": "en-a2-u1-l4-q3",
-                            "question": "What _______ you doing at midnight?",
-                            "options": [
-                                "were",
-                                "was",
-                                "did",
-                                "are"
-                            ],
-                            "correctAnswerIndex": 0,
-                            "explanation": "What were you doing?"
-                        },
-                        {
-                            "id": "en-a2-u1-l4-q4",
-                            "question": "She _______ driving to work when the accident occurred.",
-                            "options": [
-                                "were",
-                                "is",
-                                "did",
-                                "was"
-                            ],
-                            "correctAnswerIndex": 3,
-                            "explanation": "She was driving."
-                        }
-                    ]
-                }
-            }
         ]
-    },
+},
     {
         "id": "en-a2-u1-l5",
         "courseId": "english-a2",
@@ -670,166 +933,229 @@ export const ENGLISH_A2_LESSONS: Lesson[] = [
         "language": "en",
         "level": "A2",
         "lessonNumber": 5,
-        "title": "A2 Reading: My Travel Diary",
-        "description": "O'tgan zamon fe'llari bilan yozilgan sayohat kundaligi matni.",
-        "estimatedDurationMinutes": 14,
-        "icon": "✈️",
+        "title": "Past Simple vs Past Continuous & Storytelling",
+        "description": "Hikoya qilish san'ati: Davom etayotgan harakatni to'satdan bo'lgan voqea bo'lib qo'yishi (When / While) va hikoya bog'lovchilari.",
+        "estimatedDurationMinutes": 16,
+        "icon": "📖",
         "steps": [
-            {
-                "id": "en-a2-u1-l5-s1",
-                "title": "Sayohat Kundaligi",
-                "type": "learn",
-                "estimatedMinutes": 5,
-                "learnData": {
-                    "title": "Diary Entry: Trip to Bukhara",
-                    "explanation": "Quyidagi sayohat matnini o'qing.",
-                    "keyPoints": [
-                        "Last summer, Malika visited Bukhara for the first time.",
-                        "She stayed in a traditional boutique hotel near Po-i-Kalyan.",
-                        "She bought handmade souvenirs and took hundreds of photos.",
-                        "The local food was delicious and the people were hospitable."
-                    ],
-                    "vocabulary": [
-                        {
-                            "term": "Souvenir",
-                            "reading": "/ˌsuː.vənˈɪər/",
-                            "meaning": "Esdalik sovg'a",
-                            "exampleSentence": "I bought souvenirs for my friends.",
-                            "exampleTranslation": "Do'stlarimga esdalik sovg'alari sotib oldim."
-                        },
-                        {
-                            "term": "Hospitable",
-                            "reading": "/hɒsˈpɪt.ə.bəl/",
-                            "meaning": "Mehmondo'st",
-                            "exampleSentence": "The locals were very hospitable.",
-                            "exampleTranslation": "Mahalliy aholi juda mehmondo'st edi."
-                        },
-                        {
-                            "term": "Opportunity",
-                            "reading": "/ˌɒp.əˈtʃuː.nə.ti/",
-                            "meaning": "Imkoniyat",
-                            "exampleSentence": "This is a great opportunity to learn.",
-                            "exampleTranslation": "Bu oʻrganish uchun ajoyib imkoniyat."
+                {
+                        "id": "en-a2-u1-l5-s1",
+                        "title": "Hikoya Tuzish: When va While Qoidalari",
+                        "type": "learn",
+                        "estimatedMinutes": 5,
+                        "learnData": {
+                                "title": "Narrative Interruption & Storytelling Connectors",
+                                "explanation": "Ingliz tilida o'tgan voqealarni hikoya qilish (Storytelling):\n\n1. Bo'lib qo'yilgan harakat qoidasi (Interrupted Action):\n- O'tmishda bir UZOQ JARAYON davom etayotgan bo'ladi (Past Continuous).\n- To'satdan uning o'rtasida QISQA BIR HARAKAT sodir bo'ladi (Past Simple).\n- Bog'lovchilar qoidasi:\n  • WHEN + Past Simple (qisqa harakat oldidan): \"I was walking in the park WHEN it suddenly started to rain.\"\n  • WHILE + Past Continuous (uzoq jarayon oldidan): \"WHILE I was walking in the park, it suddenly started to rain.\"\n\n2. Voqealar ketma-ketligi bog'lovchilari (Sequencing Connectors):\n- First / Initially (avvaliga, birinchi navbatda)\n- Then / Next / Subsequently (keyin, so'ngra)\n- Suddenly / All of a sudden (to'satdan, birdaniga)\n- Fortunately / Luckily (baxtimizga)\n- Unfortunately (afsuski)\n- Finally / In the end (oxir-oqibat, nihoyat).\n\n3. O'zbek o'rganuvchilari uchun xavfli tuzoqlar (Common Pitfalls):\n- ❌ \"When I was walk home, I saw an accident.\" -> ✅ \"When I was WALKING home, I saw an accident.\"\n- ❌ \"While the phone rang, I was having lunch.\" -> ✅ \"WHEN the phone rang, I was having lunch.\" (Qisqa chalinish oldidan 'when', uzoq ovqatlanish oldidan 'while').\n\n4. IELTS Speaking Foundation Corner:\n- Topic: Storytelling (IELTS Speaking Part 2 Foundation)\n- Examiner: \"Describe an unforgettable experience from your past.\"\n- Model Band 6.5+ Answer: \"I would like to talk about an unexpected adventure I had two years ago. Initially, my friend and I were hiking peacefully up a mountain trail. However, all of a sudden, thick fog surrounded the peak. Fortunately, we had a compass and safely found our way back to the campsite.\"\n- Examiner-Approved Story Structure: Fon holati (were hiking) -> To'satdan o'zgarish (all of a sudden, fog surrounded) -> Yechim (fortunately, we found).",
+                                "vocabulary": [
+                                        {
+                                                "term": "suddenly",
+                                                "reading": "/ˈsʌdənli/",
+                                                "meaning": "to'satdan, birdaniga",
+                                                "exampleSentence": "Suddenly, the thunderstorm caused a total blackout across the town.",
+                                                "exampleTranslation": "To'satdan chaqmoqli bo'ron butun shahar bo'ylab elektr uzilishiga sabab bo'ldi."
+                                        },
+                                        {
+                                                "term": "all of a sudden",
+                                                "reading": "/ɔːl əv ə ˈsʌdən/",
+                                                "meaning": "kutilmaganda, birdaniga (idiomatik)",
+                                                "exampleSentence": "All of a sudden, a stray puppy ran towards us on the street.",
+                                                "exampleTranslation": "Kutilmaganda ko'chada qarovsiz kuchukcha biz tomon yugurib keldi."
+                                        },
+                                        {
+                                                "term": "fortunately",
+                                                "reading": "/ˈfɔːtʃənətli/",
+                                                "meaning": "baxtimizga, yaxshiyamki",
+                                                "exampleSentence": "Fortunately, nobody was hurt during the sudden traffic accident.",
+                                                "exampleTranslation": "Baxtimizga, to'satdan yuz bergan yo'l-transport hodisasida hech kim jarohatlanmadi."
+                                        },
+                                        {
+                                                "term": "unfortunately",
+                                                "reading": "/ʌnˈfɔːtʃənətli/",
+                                                "meaning": "afsuski, badbaxtlikka ko'ra",
+                                                "exampleSentence": "Unfortunately, our return flight was delayed due to dense fog.",
+                                                "exampleTranslation": "Afsuski, qalin tuman sababli qaytish reysimiz kechiktirildi."
+                                        },
+                                        {
+                                                "term": "in the end",
+                                                "reading": "/ɪn ði end/",
+                                                "meaning": "oxir-oqibat, oxirida",
+                                                "exampleSentence": "In the end, all team members agreed on the final proposal.",
+                                                "exampleTranslation": "Oxir-oqibat barcha jamoa a'zolari yakuniy taklif bo'yicha bir qarorga keldilar."
+                                        },
+                                        {
+                                                "term": "interrupted",
+                                                "reading": "/ˌɪntəˈrʌptɪd/",
+                                                "meaning": "bo'lib qo'yildi, xalaqit berildi",
+                                                "exampleSentence": "The online lecture was interrupted by a weak internet connection.",
+                                                "exampleTranslation": "Onlayn ma'ruza kuchsiz internet aloqasi tufayli to'xtab qoldi."
+                                        },
+                                        {
+                                                "term": "unexpected",
+                                                "reading": "/ˌʌnɪkˈspektɪd/",
+                                                "meaning": "kutilmagan, tasodifiy",
+                                                "exampleSentence": "Meeting my former schoolmate at the airport was totally unexpected.",
+                                                "exampleTranslation": "Aeroportda sobiq maktabdoshimni uchratib qolish mutlaqo kutilmagan holat bo'ldi."
+                                        },
+                                        {
+                                                "term": "campsite",
+                                                "reading": "/ˈkæmpsaɪt/",
+                                                "meaning": "lager o'rnatiladigan joy / chodir maydoni",
+                                                "exampleSentence": "We set up our waterproof tents at the scenic mountain campsite.",
+                                                "exampleTranslation": "Biz suv o'tkazmaydigan chodirlarimizni go'zal tog' lagerida o'rnatdik."
+                                        }
+                                ]
                         }
-                    ],
-                    "grammarRules": [
-                        {
-                            "pattern": "A2 Reading: My Travel Diary",
-                            "meaning": "O'tgan zamon fe'llari bilan yozilgan sayohat kundaligi matni.",
-                            "usageNotes": "Quyidagi sayohat matnini o'qing.",
-                            "examples": [
-                                {
-                                    "sentence": "I bought souvenirs for my friends.",
-                                    "translation": "Do'stlarimga esdalik sovg'alari sotib oldim."
-                                },
-                                {
-                                    "sentence": "The locals were very hospitable.",
-                                    "translation": "Mahalliy aholi juda mehmondo'st edi."
-                                }
-                            ]
+                },
+                {
+                        "id": "en-a2-u1-l5-s2",
+                        "title": "Storytelling Mashqlari",
+                        "type": "practice",
+                        "estimatedMinutes": 5,
+                        "practiceData": {
+                                "instructions": "When, While va hikoya bog'lovchilari bo'yicha to'g'ri variantni tanlang.",
+                                "exercises": [
+                                        {
+                                                "id": "en-a2-u1-l5-e1",
+                                                "type": "multiple-choice",
+                                                "prompt": "Bo'sh joyni to'ldiring: 'I was cooking dinner ___ the electricity suddenly went out.'",
+                                                "options": [
+                                                        "when",
+                                                        "while",
+                                                        "during",
+                                                        "as long as"
+                                                ],
+                                                "correctAnswer": 0,
+                                                "explanation": "To'satdan sodir bo'lgan qisqa harakat (the electricity went out) oldidan 'when' ishlatiladi."
+                                        },
+                                        {
+                                                "id": "en-a2-u1-l5-e2",
+                                                "type": "multiple-choice",
+                                                "prompt": "Bo'sh joyni to'ldiring: '___ we were driving to the beach, it started to pour with rain.'",
+                                                "options": [
+                                                        "While",
+                                                        "When",
+                                                        "Suddenly",
+                                                        "Then"
+                                                ],
+                                                "correctAnswer": 0,
+                                                "explanation": "Uzoq davom etayotgan jarayon (were driving) oldidan 'While' ishlatiladi."
+                                        },
+                                        {
+                                                "id": "en-a2-u1-l5-e3",
+                                                "type": "multiple-choice",
+                                                "prompt": "'He fell off his bike while he ___ too fast.'",
+                                                "options": [
+                                                        "rode",
+                                                        "was riding",
+                                                        "rides",
+                                                        "is riding"
+                                                ],
+                                                "correctAnswer": 1,
+                                                "explanation": "'While' dan so'ng jarayon keladi: 'was riding'."
+                                        },
+                                        {
+                                                "id": "en-a2-u1-l5-e4",
+                                                "type": "multiple-choice",
+                                                "prompt": "Hikoyani ijobiy yakunlash uchun qaysi bog'lovchi mos? '___, the police officer found my missing passport.'",
+                                                "options": [
+                                                        "Unfortunately",
+                                                        "Fortunately",
+                                                        "Suddenly",
+                                                        "While"
+                                                ],
+                                                "correctAnswer": 1,
+                                                "explanation": "'Fortunately' (baxtimizga, xayriyatki) - ijobiy va xushxabar voqealarda qo'llanadi."
+                                        },
+                                        {
+                                                "id": "en-a2-u1-l5-e5",
+                                                "type": "multiple-choice",
+                                                "prompt": "Qaysi jumla to'g'ri tuzilgan?",
+                                                "options": [
+                                                        "When I was sleep, the phone rang.",
+                                                        "I was sleeping when the phone rang.",
+                                                        "I slept when the phone was ringing.",
+                                                        "While the phone rang, I slept."
+                                                ],
+                                                "correctAnswer": 1,
+                                                "explanation": "'I was sleeping (uzoq jarayon) when the phone rang (qisqa voqea)' - mutlaqo to'g'ri sintaksis."
+                                        }
+                                ]
                         }
-                    ]
+                },
+                {
+                        "id": "en-a2-u1-l5-s3",
+                        "title": "Dars Testi: Past Simple vs Continuous",
+                        "type": "test",
+                        "estimatedMinutes": 5,
+                        "testData": {
+                                "instructions": "Savollarga to'g'ri javob berib, mavzuni mustahkamlang.",
+                                "passingScorePercentage": 80,
+                                "questions": [
+                                        {
+                                                "id": "en-a2-u1-l5-q1",
+                                                "question": "'When' va 'While' qoidasiga ko'ra qaysi ifoda to'g'ri?",
+                                                "options": [
+                                                        "'When' odatda Past Continuous bilan, 'While' esa Past Simple bilan keladi.",
+                                                        "'When' odatda bo'lib qo'yuvchi qisqa harakat (Past Simple) oldidan, 'While' esa davom etayotgan jarayon (Past Continuous) oldidan keladi.",
+                                                        "Ikkalasi ham faqat Present Simple da ishlatiladi.",
+                                                        "'While' hech qachon gap boshida kela olmaydi."
+                                                ],
+                                                "correctAnswerIndex": 1,
+                                                "explanation": "'When' qisqa harakat (when the bell rang), 'While' esa uzoq jarayon (while I was reading) oldidan keladi."
+                                        },
+                                        {
+                                                "id": "en-a2-u1-l5-q2",
+                                                "question": "'She was crossing the street when a motorcycle ___ by.'",
+                                                "options": [
+                                                        "sped",
+                                                        "was speeding",
+                                                        "speeds",
+                                                        "speeding"
+                                                ],
+                                                "correctAnswerIndex": 0,
+                                                "explanation": "'When' dan keyin qisqa sodir bo'lgan voqea Past Simple da bo'ladi: 'sped' (speed fe'lining o'tgan zamoni)."
+                                        },
+                                        {
+                                                "id": "en-a2-u1-l5-q3",
+                                                "question": "'All of a sudden' idiomatik iborasi nimani bildiradi?",
+                                                "options": [
+                                                        "Rejalashtirilgan tarzda",
+                                                        "To'satdan, kutilmaganda",
+                                                        "Sekin-asta",
+                                                        "Ertalab barvaqt"
+                                                ],
+                                                "correctAnswerIndex": 1,
+                                                "explanation": "'All of a sudden' - to'satdan, birdaniga (suddenly) deganidir."
+                                        },
+                                        {
+                                                "id": "en-a2-u1-l5-q4",
+                                                "question": "'We were having a picnic in the park ___ it began to snow.'",
+                                                "options": [
+                                                        "while",
+                                                        "when",
+                                                        "during",
+                                                        "because"
+                                                ],
+                                                "correctAnswerIndex": 1,
+                                                "explanation": "Qisqa harakat (it began to snow) oldidan 'when' qo'yiladi."
+                                        },
+                                        {
+                                                "id": "en-a2-u1-l5-q5",
+                                                "question": "IELTS Speaking: 'Describe a time you got lost.' savoliga qaysi hikoya kirishi eng professional?",
+                                                "options": [
+                                                        "I lost yesterday in city.",
+                                                        "A few years ago, while I was visiting Istanbul, I got lost in the bustling Grand Bazaar. I was admiring the hand-made carpets when I realized I was separated from my tour group.",
+                                                        "Lost is bad experience for me.",
+                                                        "I was lose in bazaar."
+                                                ],
+                                                "correctAnswerIndex": 1,
+                                                "explanation": "'while I was visiting... I got lost... I was admiring... when I realized...' - IELTS Speaking Part 2 darajasidagi mukammal hikoya sintaksisi."
+                                        }
+                                ]
+                        }
                 }
-            },
-            {
-                "id": "en-a2-u1-l5-s2",
-                "title": "Tushunish Mashqi",
-                "type": "practice",
-                "estimatedMinutes": 4,
-                "practiceData": {
-                    "instructions": "Matn bo'yicha to'g'ri javobni tanlang.",
-                    "exercises": [
-                        {
-                            "id": "en-a2-u1-l5-e1",
-                            "type": "multiple-choice",
-                            "prompt": "Where did Malika stay in Bukhara?",
-                            "options": [
-                                "In a camping tent",
-                                "At an airport motel",
-                                "At a friend's house",
-                                "In a traditional boutique hotel"
-                            ],
-                            "correctAnswer": 3,
-                            "explanation": "Matnda: stayed in a traditional boutique hotel."
-                        },
-                        {
-                            "id": "en-a2-u1-l5-ex-2",
-                            "type": "multiple-choice",
-                            "prompt": "Choose the correct word to complete the sentence: \"The locals were very hospitable.\"",
-                            "options": [
-                                "doubt",
-                                "delay",
-                                "reluctance",
-                                "Hospitable"
-                            ],
-                            "correctAnswer": 3,
-                            "explanation": "\"Hospitable\" (Mehmondo'st) fits the context appropriately."
-                        }
-                    ]
-                }
-            },
-            {
-                "id": "en-a2-u1-l5-s3",
-                "title": "Test",
-                "type": "test",
-                "estimatedMinutes": 5,
-                "testData": {
-                    "instructions": "Savollarga javob bering.",
-                    "passingScorePercentage": 75,
-                    "questions": [
-                        {
-                            "id": "en-a2-u1-l5-q1",
-                            "question": "When did Malika visit Bukhara?",
-                            "options": [
-                                "Last month",
-                                "Yesterday",
-                                "Two years ago",
-                                "Last summer"
-                            ],
-                            "correctAnswerIndex": 3,
-                            "explanation": "Last summer."
-                        },
-                        {
-                            "id": "en-a2-u1-l5-q2",
-                            "question": "What did she buy for her friends?",
-                            "options": [
-                                "Handmade souvenirs",
-                                "Books",
-                                "A laptop",
-                                "Clothes"
-                            ],
-                            "correctAnswerIndex": 0,
-                            "explanation": "Handmade souvenirs."
-                        },
-                        {
-                            "id": "en-a2-u1-l5-q3",
-                            "question": "\"Hospitable\" so'zining ma'nosi nima?",
-                            "options": [
-                                "Balandparvoz",
-                                "Qadimiy",
-                                "Mehmondo'st",
-                                "Qimmat"
-                            ],
-                            "correctAnswerIndex": 2,
-                            "explanation": "Hospitable — Mehmondo'st."
-                        },
-                        {
-                            "id": "en-a2-u1-l5-q4",
-                            "question": "How was the local food according to the text?",
-                            "options": [
-                                "Delicious",
-                                "Spicy",
-                                "Terrible",
-                                "Cold"
-                            ],
-                            "correctAnswerIndex": 0,
-                            "explanation": "The local food was delicious."
-                        }
-                    ]
-                }
-            }
         ]
-    },
+},
     {
         "id": "en-a2-u2-l1",
         "courseId": "english-a2",
