@@ -9,6 +9,7 @@ import telegramService, { TelegramUser } from '../../services/TelegramService';
 import { useStudyData } from '../../context/StudyPlannerContext';
 import { toast } from '../../hooks/use-toast';
 import { motion, AnimatePresence } from 'framer-motion';
+import { safeLocalStorage } from '../../utils/storage/safeLocalStorage';
 
 const TelegramSection: React.FC = () => {
     const { user, flashcards } = useStudyData();
@@ -23,9 +24,14 @@ const TelegramSection: React.FC = () => {
 
     const dueCardsCount = flashcards.filter(f => !f.nextReviewDate || new Date(f.nextReviewDate) <= new Date()).length;
 
-    // Get user ID strictly from authenticated user
+    // Get user ID strictly from authenticated user or local session cache
     const getEffectiveUserId = useCallback(() => {
-        return user?.id || null;
+        if (user?.id) return user.id;
+        try {
+            const cached = safeLocalStorage.getJSON<{ id?: string } | null>('study_planner_user_cache', null);
+            if (cached?.id) return cached.id;
+        } catch {}
+        return null;
     }, [user]);
 
     const effectiveUserId = getEffectiveUserId();

@@ -1,10 +1,40 @@
-import { Loader2, Lock, Mail, User, Eye, EyeOff, ArrowLeft } from 'lucide-react';
+import { Loader2, Lock, Mail, User, Eye, EyeOff, ArrowLeft, Sparkles } from 'lucide-react';
 import React, { useState, useEffect } from 'react';
 import { useNavigate, useLocation, useSearchParams } from 'react-router-dom';
 import { supabase } from '../lib/supabase';
 import ForgotPasswordModal from '../components/auth/ForgotPasswordModal';
 import { AppLogo } from '../components/AppLogo';
 import { motion, AnimatePresence } from 'framer-motion';
+import { safeLocalStorage } from '../utils/storage/safeLocalStorage';
+
+const formatAuthError = (err: unknown): string => {
+    if (!err) return 'Xatolik yuz berdi';
+    const message = err instanceof Error ? err.message : String(err);
+    const lower = message.toLowerCase();
+
+    if (lower.includes('invalid login credentials') || lower.includes('invalid credentials')) {
+        return "Email yoki parol noto'g'ri kiritildi. Iltimos, ma'lumotlarni qaytadan tekshirib kiring.";
+    }
+    if (lower.includes('email not confirmed')) {
+        return "Email manzilingiz hali tasdiqlanmagan. Pochtangizga yuborilgan tasdiqlash xatini oching yoki quyidagi 'Mehmon sifatida davom etish' orqali darhol foydalaning.";
+    }
+    if (lower.includes('user already registered') || lower.includes('already registered')) {
+        return "Bu email manzil bilan allaqachon hisob ochilgan. 'Kirish' bo'limi orqali parolingiz bilan kiring.";
+    }
+    if (lower.includes('password should be at least') || lower.includes('password is too short')) {
+        return "Parol kamida 6 ta belgidan iborat bo'lishi kerak.";
+    }
+    if (lower.includes('rate limit') || lower.includes('over_email_send_rate_limit')) {
+        return "Xavfsizlik chegarasi: juda ko'p urinish bo'ldi. Biroz kuting yoki Mehmon sifatida kiring.";
+    }
+    if (lower.includes('network') || lower.includes('failed to fetch')) {
+        return "Internet ulanishida uzilish yuz berdi. Iltimos, tarmoq aloqangizni tekshiring.";
+    }
+    if (lower.includes('signup requires a valid password')) {
+        return "Iltimos, haqiqiy va xavfsiz parol kiriting.";
+    }
+    return message;
+};
 
 const AuthPage: React.FC = () => {
     const navigate = useNavigate();
@@ -57,6 +87,24 @@ const AuthPage: React.FC = () => {
     const [showForgotPassword, setShowForgotPassword] = useState(false);
     const [isRegistered, setIsRegistered] = useState(false);
 
+    const handleGuestLogin = () => {
+        const guestId = 'guest-' + Math.random().toString(36).substring(2, 9);
+        const guestUser = {
+            id: guestId,
+            email: 'guest@ieltstalk.uz',
+            user_metadata: {
+                full_name: "Mehmon O'quvchi",
+                avatar_url: `https://api.dicebear.com/7.x/avataaars/svg?seed=${guestId}`,
+            },
+            aud: 'authenticated',
+            role: 'authenticated',
+            created_at: new Date().toISOString(),
+        };
+        safeLocalStorage.setJSON('study_planner_user_cache', guestUser);
+        safeLocalStorage.setItem('study_planner_user_email', guestUser.email);
+        window.location.href = '/ielts';
+    };
+
     const handleAuth = async (e: React.FormEvent) => {
         e.preventDefault();
         setError('');
@@ -85,38 +133,55 @@ const AuthPage: React.FC = () => {
             }
 
             if (isLogin) {
-                const { error } = await supabase.auth.signInWithPassword({
-                    email,
+                const { data: signInData, error: signInErr } = await supabase.auth.signInWithPassword({
+                    email: email.trim(),
                     password,
                 });
-                if (error) throw error;
+                if (signInErr) throw signInErr;
+
+                if (signInData?.session?.user) {
+                    safeLocalStorage.setJSON('study_planner_user_cache', signInData.session.user);
+                    if (signInData.session.user.email) {
+                        safeLocalStorage.setItem('study_planner_user_email', signInData.session.user.email);
+                    }
+                    window.location.href = '/ielts';
+                    return;
+                }
             } else {
                 const { data: signUpData, error: signUpError } = await supabase.auth.signUp({
-                    email,
+                    email: email.trim(),
                     password,
                     options: {
                         emailRedirectTo: window.location.origin,
                         data: {
-                            full_name: fullName,
-                            avatar_url: `https://api.dicebear.com/7.x/avataaars/svg?seed=${encodeURIComponent(fullName || email)}`,
+                            full_name: fullName.trim(),
+                            avatar_url: `https://api.dicebear.com/7.x/avataaars/svg?seed=${encodeURIComponent(fullName.trim() || email.trim())}`,
                         },
                     },
                 });
                 if (signUpError) throw signUpError;
 
-                if (signUpData?.session) {
-                    navigate('/');
+                if (signUpData?.session?.user) {
+                    safeLocalStorage.setJSON('study_planner_user_cache', signUpData.session.user);
+                    if (signUpData.session.user.email) {
+                        safeLocalStorage.setItem('study_planner_user_email', signUpData.session.user.email);
+                    }
+                    window.location.href = '/ielts';
                     return;
                 }
 
                 // Try automatic sign in
                 try {
                     const { data: loginData, error: loginErr } = await supabase.auth.signInWithPassword({
-                        email,
+                        email: email.trim(),
                         password,
                     });
-                    if (!loginErr && loginData?.session) {
-                        navigate('/');
+                    if (!loginErr && loginData?.session?.user) {
+                        safeLocalStorage.setJSON('study_planner_user_cache', loginData.session.user);
+                        if (loginData.session.user.email) {
+                            safeLocalStorage.setItem('study_planner_user_email', loginData.session.user.email);
+                        }
+                        window.location.href = '/ielts';
                         return;
                     }
                 } catch {
@@ -125,8 +190,8 @@ const AuthPage: React.FC = () => {
 
                 setIsRegistered(true);
             }
-        } catch (error: unknown) {
-            setError(error instanceof Error ? error.message : 'Xatolik yuz berdi');
+        } catch (authError: unknown) {
+            setError(formatAuthError(authError));
         } finally {
             setLoading(false);
         }
@@ -186,7 +251,7 @@ const AuthPage: React.FC = () => {
                             Biz <span className="text-foreground font-semibold">{email}</span> manziliga tasdiqlash xatini yubordik. 
                             Akkauntingizni faollashtirish uchun xatdagi link ustiga bosing va tizimga kiring.
                         </p>
-                        <div className="pt-4">
+                        <div className="pt-4 space-y-2.5">
                             <button 
                                 onClick={() => {
                                     setIsRegistered(false);
@@ -196,6 +261,14 @@ const AuthPage: React.FC = () => {
                                 className="w-full h-12 bg-primary hover:bg-primary/90 text-primary-foreground font-bold rounded-xl shadow-md shadow-primary/25 transition-all flex items-center justify-center text-sm cursor-pointer"
                             >
                                 Kirish sahifasiga qaytish
+                            </button>
+                            <button 
+                                type="button"
+                                onClick={handleGuestLogin}
+                                className="w-full h-11 bg-secondary/80 hover:bg-secondary text-foreground font-semibold rounded-xl border border-border transition-all flex items-center justify-center gap-2 text-xs cursor-pointer"
+                            >
+                                <Sparkles size={15} className="text-[#C9A961]" />
+                                <span>Xat kutmasdan mehmon sifatida darhol boshlash</span>
                             </button>
                         </div>
                     </motion.div>
@@ -389,7 +462,7 @@ const AuthPage: React.FC = () => {
                             )}
 
                             {/* Submit Button */}
-                            <div className="pt-2">
+                            <div className="pt-2 space-y-3">
                                 <button
                                     type="submit"
                                     disabled={loading}
@@ -403,6 +476,24 @@ const AuthPage: React.FC = () => {
                                             : (isLogin ? 'Kirish' : "Ro'yxatdan o'tish")
                                     )}
                                 </button>
+
+                                {!isResetPassword && (
+                                    <>
+                                        <div className="relative flex items-center justify-center py-1">
+                                            <div className="border-t border-border w-full" />
+                                            <span className="bg-card px-3 text-[11px] font-medium text-muted-foreground uppercase tracking-wider">yoki</span>
+                                        </div>
+
+                                        <button
+                                            type="button"
+                                            onClick={handleGuestLogin}
+                                            className="w-full h-12 rounded-xl font-bold text-xs sm:text-sm text-foreground bg-secondary/70 hover:bg-secondary border border-border hover:border-primary/40 active:scale-[0.99] transition-all flex items-center justify-center gap-2 cursor-pointer shadow-xs"
+                                        >
+                                            <Sparkles size={16} className="text-[#C9A961]" />
+                                            <span>Mehmon sifatida davom etish (Tezkor kirish)</span>
+                                        </button>
+                                    </>
+                                )}
                             </div>
                         </form>
 
