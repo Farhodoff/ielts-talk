@@ -3854,811 +3854,1225 @@ export const ENGLISH_B2_LESSONS: Lesson[] = [
     ]
 },
     {
-        "id": "en-b2-u4-l1",
-        "courseId": "english-b2",
-        "unitId": "en-b2-u4",
-        "unitTitle": "Unit 4: IELTS Reading & Listening Mastery",
-        "language": "en",
-        "level": "B2",
-        "lessonNumber": 1,
-        "title": "IELTS Reading: True / False / Not Given Mastery",
-        "description": "Faktga asoslangan savollarni ajratish: TRUE (mos), FALSE (qarama-qarshi), NOT GIVEN (ma'lumot yo'q).",
-        "estimatedDurationMinutes": 16,
-        "icon": "🎯",
-        "steps": [
-            {
-                "id": "en-b2-u4-l1-s1",
-                "title": "T/F/NG Strategiyasi",
-                "type": "learn",
-                "estimatedMinutes": 5,
-                "learnData": {
-                    "title": "True, False, Not Given Framework",
-                    "explanation": "TRUE: Matndagi ma'no bilan 100% mos keladi. FALSE: Matndagi fikrga to'g'ridan-to'g'ri zid keladi (qarama-qarshi). NOT GIVEN: Matnda bu haqda ma'lumot berilmagan yoki xulosa chiqarishga yetarli dalil yo'q.",
-                    "keyPoints": [
-                        "Taxmin qilmang! Faqat matnda yozilganidan kelib chiqing.",
-                        "Ehtiyot bo'ling: \"always\", \"only\", \"all\" kabi mutlaq so'zlar ko'pincha FALSE yoki NOT GIVEN bo'ladi."
-                    ],
-                    "grammarRules": [
-                        {
-                            "pattern": "IELTS Reading: True / False / Not Given Mastery",
-                            "meaning": "Faktga asoslangan savollarni ajratish: TRUE (mos), FALSE (qarama-qarshi), NOT GIVEN (ma'lumot yo'q).",
-                            "usageNotes": "TRUE: Matndagi ma'no bilan 100% mos keladi. FALSE: Matndagi fikrga to'g'ridan-to'g'ri zid keladi (qarama-qarshi). NOT GIVEN: Matnda bu haqda ma'lumot berilmagan yoki xulosa chiqarishga yetarli dalil yo'q.",
-                            "examples": [
-                                {
-                                    "sentence": "I study English every day with dedication.",
-                                    "translation": "Har kuni ingliz tilini astoydil o'rganaman."
-                                }
-                            ]
-                        }
-                    ],
-                    "vocabulary": [
-                        {
-                            "term": "Coherence",
-                            "reading": "/kəʊˈhɪə.rəns/",
-                            "meaning": "Mantiqiy bogʻliqlik, izchillik",
-                            "exampleSentence": "Ensure structural coherence throughout your essay.",
-                            "exampleTranslation": "Inshoyingiz davomida tuzilmaviy izchillikni taʼminlang."
-                        },
-                        {
-                            "term": "Compelling",
-                            "reading": "/kəmˈpel.ɪŋ/",
-                            "meaning": "Juda ishonarli, maftunkor",
-                            "exampleSentence": "He presented a compelling argument in the debate.",
-                            "exampleTranslation": "U bahsda juda ishonarli dalil keltirdi."
-                        },
-                        {
-                            "term": "Substantiate",
-                            "reading": "/səbˈstæn.ʃi.eɪt/",
-                            "meaning": "Asoslab bermoq, isbotlamoq",
-                            "exampleSentence": "You must substantiate your claims with empirical evidence.",
-                            "exampleTranslation": "Siz oʻz daʼvolaringizni empirik dalillar bilan asoslab berishingiz kerak."
-                        }
-                    ]
-                }
-            },
-            {
-                "id": "en-b2-u4-l1-s2",
-                "title": "Amaliy Tahlil",
-                "type": "practice",
-                "estimatedMinutes": 5,
-                "practiceData": {
-                    "instructions": "Matn bo'yicha to'g'ri hukmni belgilang.",
-                    "exercises": [
-                        {
-                            "id": "en-b2-u4-l1-e1",
-                            "type": "multiple-choice",
-                            "prompt": "Text: \"Alexander Fleming discovered penicillin in 1928 by accidental contamination of a petri dish.\" Question: \"Fleming spent decades intentionally searching for penicillin.\" -> ?",
-                            "options": [
-                                "TRUE",
-                                "FALSE",
-                                "NOT GIVEN"
-                            ],
-                            "correctAnswer": 1,
-                            "explanation": "Matnda tasodifan (accidental) topgani aytilgan, shuning uchun \"spent decades intentionally searching\" FALSE."
-                        },
-                        {
-                            "id": "en-b2-u4-l1-ex-2",
-                            "type": "multiple-choice",
-                            "prompt": "Choose the correct word to complete the sentence: \"He presented a compelling argument in the debate.\"",
-                            "options": [
-                                "doubt",
-                                "delay",
-                                "Compelling",
-                                "reluctance"
-                            ],
-                            "correctAnswer": 2,
-                            "explanation": "\"Compelling\" (Juda ishonarli, maftunkor) fits the context appropriately."
-                        }
-                    ]
-                }
-            },
-            {
-                "id": "en-b2-u4-l1-s3",
-                "title": "Test",
-                "type": "test",
-                "estimatedMinutes": 6,
-                "testData": {
-                    "instructions": "Savollarga javob bering.",
-                    "passingScorePercentage": 75,
-                    "questions": [
-                        {
-                            "id": "en-b2-u4-l1-q1",
-                            "question": "Text: \"Solar panels convert approximately 20% of sunlight into electricity.\" Statement: \"All solar panels achieve over 50% efficiency.\"",
-                            "options": [
-                                "TRUE",
-                                "FALSE",
-                                "NOT GIVEN"
-                            ],
-                            "correctAnswerIndex": 1,
-                            "explanation": "FALSE (20% is far below 50%)."
-                        },
-                        {
-                            "id": "en-b2-u4-l1-q2",
-                            "question": "Text: \"The library was founded in 1845 and expanded in 1910.\" Statement: \"The library architect was born in Scotland.\"",
-                            "options": [
-                                "FALSE",
-                                "TRUE",
-                                "NOT GIVEN"
-                            ],
-                            "correctAnswerIndex": 2,
-                            "explanation": "NOT GIVEN (arxitektorning vatani haqida ma'lumot yo'q)."
-                        },
-                        {
-                            "id": "en-b2-u4-l1-q3",
-                            "question": "Text: \"Regular aerobic exercise reduces the risk of cardiovascular disease.\" Statement: \"Cardiovascular health benefits from aerobic workouts.\"",
-                            "options": [
-                                "NOT GIVEN",
-                                "TRUE",
-                                "FALSE"
-                            ],
-                            "correctAnswerIndex": 1,
-                            "explanation": "TRUE (parafraz qilingan fakt)."
-                        },
-                        {
-                            "id": "en-b2-u4-l1-q4",
-                            "question": "What is the golden rule of NOT GIVEN?",
-                            "options": [
-                                "If you cannot find clear confirmation or direct contradiction in the passage, it is NOT GIVEN",
-                                "If it sounds logical in real life, mark it TRUE",
-                                "Always guess FALSE",
-                                "NOT GIVEN is never the correct answer"
-                            ],
-                            "correctAnswerIndex": 0,
-                            "explanation": "No confirmation or direct contradiction."
-                        }
-                    ]
-                }
+    "id": "en-b2-u4-l1",
+    "courseId": "english-b2",
+    "unitId": "en-b2-u4",
+    "unitTitle": "Unit 4: IELTS Reading & Listening Mastery",
+    "language": "en",
+    "level": "B2",
+    "lessonNumber": 1,
+    "title": "IELTS Reading: True / False / Not Given Mastery",
+    "description": "IELTS Academic Reading: True, False va Not Given savol turlarini 100% aniqlik bilan ajratish, matndagi parafrazlarni ilg'ash va tuzoqlarga tushmaslik strategiyalari.",
+    "estimatedDurationMinutes": 18,
+    "icon": "📖",
+    "steps": [
+        {
+            "id": "en-b2-u4-l1-s1",
+            "title": "T/F/NG Strategiyasi va Qoidalari",
+            "type": "learn",
+            "estimatedMinutes": 6,
+            "learnData": {
+                "title": "Mastering True / False / Not Given and Yes / No / Not Given",
+                "explanation": "IELTS Reading bo'limida nomzodlar eng ko'p ball yo'qotadigan savol turi — 'True / False / Not Given' (faktlarga asoslangan) va 'Yes / No / Not Given' (muallif fikriga asoslangan) savollaridir.\n\n1. Oltin Qoidalar va Farqlar:\n- **TRUE (to'g'ri):** Savoldagi barcha ma'no matndagi axborotga 100% mos keladi (odatda boshqa sinonim va parafrazlar bilan beriladi).\n- **FALSE (noto'g'ri):** Savoldagi ma'no matnga BEVOSITA QARAMA-QARSHI (matnda A desa, savolda uning aksi aytilgan bo'ladi).\n- **NOT GIVEN (berilmagan):** Savoldagi fikr matnda UMUMAN AYTILMAGAN yoki matn asosida bu xulosani 100% tasdiqlab ham, inkor qilib ham bo'lmaydi (haqiqat bo'lishi mumkin, ammo aynan o'sha matnda isboti yo'q!).\n\n2. Eng Katta Tuzoqlar (Common Traps):\n- **1. Modifikatorlar (Qualifiers / Quantifiers):**\n  • Matnda: *'Some students passed.'*\n  • Savolda: *'ALL students passed.'* -> **FALSE** (chunki 'some' 'all'ga ziddir).\n  • Matnda: *'The experiment is likely to succeed.'*\n  • Savolda: *'The experiment will definitely succeed.'* -> **FALSE** ('likely' 100% kafolat emas!).\n- **2. Shaxsiy Bilimga Tayanib Qolish (Assumption Trap):**\n  • Savolda aytilgan gap umumiy hayotda to'g'ri bo'lsa ham, agar matnda bu haqda gapirilmagan bo'lsa — bu **NOT GIVEN** bo'ladi! Siz faqat va faqat matn ichidagi so'zlarga ishonishingiz shart.\n- **3. Not Given va False o'rtasidagi chegara:**\n  • Agar savol matnni yolg'onga chiqarsa -> FALSE.\n  • Agar savoldagi fakt to'g'ri yoki noto'g'ri ekanini bilish uchun sizga qo'shimcha ma'lumot kerak bo'lsa -> NOT GIVEN.\n\n3. Skimming va Scanning Texnikasi:\n- Savoldagi o'zgarmas kalit so'zlarni (raqamlar, ismlar, geografik joylar) topib, matndan skaner qilib joyni aniqlang, so'ngra o'sha gapni sinchkovlik bilan (intensive reading) tahlil qiling.",
+                "vocabulary": [
+                    {
+                        "term": "contradict",
+                        "reading": "/ˌkɒn.trəˈdɪkt/",
+                        "meaning": "zid kelmoq, inkor qilmoq (False bo'lish mezoni)",
+                        "exampleSentence": "If a statement directly contradicts the passage facts, the answer is False.",
+                        "exampleTranslation": "Agar bayonot matndagi faktlarga bevosita zid kelsa, javob False bo'ladi."
+                    },
+                    {
+                        "term": "substantiated",
+                        "reading": "/səbˈstæn.ʃi.eɪ.tɪd/",
+                        "meaning": "matndagi dalil bilan isbotlangan (True bo'lish mezoni)",
+                        "exampleSentence": "A True response must be fully substantiated by textual evidence.",
+                        "exampleTranslation": "True javobi matndagi dalillar bilan to'liq asoslangan bo'lishi shart."
+                    },
+                    {
+                        "term": "unwarranted",
+                        "reading": "/ʌnˈwɒr.ən.tɪd/",
+                        "meaning": "asossiz, dalilsiz (o'quvchi o'zidan to'qigan)",
+                        "exampleSentence": "Drawing unwarranted assumptions outside the text leads directly to Not Given errors.",
+                        "exampleTranslation": "Matndan tashqaridagi asossiz taxminlarga tayanish to'g'ridan-to'g'ri Not Given xatolariga olib keladi."
+                    },
+                    {
+                        "term": "qualifier",
+                        "reading": "/ˈkwɒl.ɪ.faɪ.ər/",
+                        "meaning": "cheklovchi so'z (some, all, always, likely)",
+                        "exampleSentence": "Pay meticulous attention to qualifiers like 'frequently' or 'exclusively'.",
+                        "exampleTranslation": "'Frequently' yoki 'exclusively' kabi cheklovchi so'zlarga o'ta sinchkov e'tibor bering."
+                    },
+                    {
+                        "term": "meticulous",
+                        "reading": "/məˈtɪk.jə.ləs/",
+                        "meaning": "o'ta sinchkov, mayda detallarga e'tiborli",
+                        "exampleSentence": "IELTS Academic Reading demands meticulous scrutiny of sentence syntax.",
+                        "exampleTranslation": "IELTS Academic Reading gap sintaksisini o'ta sinchkovlik bilan tekshirishni talab qiladi."
+                    },
+                    {
+                        "term": "scrutiny",
+                        "reading": "/ˈskruː.tɪ.ni/",
+                        "meaning": "sinchkovlik bilan tekshirish, chuqur tahlil",
+                        "exampleSentence": "Under careful scrutiny, the two statements proved mutually exclusive.",
+                        "exampleTranslation": "Sinchkov tahlil ostida bu ikki bayonot bir-birini inkor etuvchi ekanligi ma'lum bo'ldi."
+                    },
+                    {
+                        "term": "mutually exclusive",
+                        "reading": "/ˈmjuː.tʃu.ə.li ɪkˈskluː.sɪv/",
+                        "meaning": "bir-birini mutlaqo inkor etuvchi (False mezoni)",
+                        "exampleSentence": "Being a full-time volunteer and working sixty hours weekly are mutually exclusive.",
+                        "exampleTranslation": "To'liq kunlik ko'ngilli bo'lish va haftasiga 60 soat ishlash bir-birini inkor etuvchi holatlardir."
+                    },
+                    {
+                        "term": "unambiguous",
+                        "reading": "/ˌʌn.æmˈbɪɡ.ju.əs/",
+                        "meaning": "aniq, shubhasiz, ikki xil talqin qilib bo'lmaydigan",
+                        "exampleSentence": "A True classification requires unambiguous alignment between question and text.",
+                        "exampleTranslation": "True tasnifi savol va matn o'rtasida shubhasiz to'liq moslikni talab qiladi."
+                    }
+                ],
+                "grammarRules": [
+                    {
+                        "pattern": "Degree Modifiers in IELTS Reading: likely vs certain; all vs majority",
+                        "meaning": "Cheklovchi daraja so'zlari orqali to'g'ri/noto'g'rilikni aniqlash",
+                        "usageNotes": "Savoldagi 'always' matndagi 'often'ga zid bo'lib, javob FALSE bo'ladi.",
+                        "examples": [
+                            {
+                                "sentence": "Text: \"The drug is considered predominantly safe.\" -> Question: \"The drug is 100% risk-free.\" -> Answer: FALSE.",
+                                "translation": "Matnda: 'asosan xavfsiz', savolda: '100% xavfsiz' -> FALSE."
+                            }
+                        ]
+                    }
+                ]
             }
-        ]
-    },
+        },
+        {
+            "id": "en-b2-u4-l1-s2",
+            "title": "Amaliy Mashqlar",
+            "type": "practice",
+            "estimatedMinutes": 5,
+            "practiceData": {
+                "instructions": "Quyidagi matn parchasi asosida T/F/NG savollariga to'g'ri javoblarni tanlang.\n\nMatn parchasi:\n'Archaeological excavations at the ancient settlement of Marakanda revealed sophisticated subterranean water channels constructed in the 5th century BC. While some Soviet historians argued that these irrigation systems were inspired exclusively by Persian engineering, recent isotopic soil analyses indicate that local Central Asian builders developed their own indigenous hydraulic techniques concurrently.'",
+                "exercises": [
+                    {
+                        "id": "en-b2-u4-l1-e1",
+                        "type": "multiple-choice",
+                        "prompt": "Statement: 'Subterranean water channels in Marakanda were built prior to the 4th century BC.'",
+                        "options": [
+                            "TRUE",
+                            "FALSE",
+                            "NOT GIVEN",
+                            "CANNOT BE DETERMINED"
+                        ],
+                        "correctAnswer": 0,
+                        "explanation": "Matnda kanallar miloddan avvalgi 5-asrda (5th century BC) qurilgani aytilgan. Miloddan avvalgi 5-asr 4-asrdan oldin keladi, shuning uchun javob: TRUE."
+                    },
+                    {
+                        "id": "en-b2-u4-l1-e2",
+                        "type": "multiple-choice",
+                        "prompt": "Statement: 'Recent scientific tests proved that Persian engineers personally supervised the construction of Marakanda's water channels.'",
+                        "options": [
+                            "TRUE",
+                            "FALSE",
+                            "NOT GIVEN",
+                            "IRRELEVANT"
+                        ],
+                        "correctAnswer": 1,
+                        "explanation": "Matnda so'nggi izotop tahlillari mahalliy ustalar o'zlarining mustaqil texnikasini yaratganini ko'rsatmoqda, fors muhandislari nazorat qilgani haqidagi gap esa bunga ziddir: FALSE."
+                    },
+                    {
+                        "id": "en-b2-u4-l1-e3",
+                        "type": "multiple-choice",
+                        "prompt": "Statement: 'Excavations in Marakanda cost over three million dollars to complete.'",
+                        "options": [
+                            "TRUE",
+                            "FALSE",
+                            "NOT GIVEN",
+                            "FALSE ACCORDING TO SOVIET SOURCES"
+                        ],
+                        "correctAnswer": 2,
+                        "explanation": "Matnda qazish ishlarining moliyaviy qiymati haqida umuman hech narsa aytilmagan: NOT GIVEN."
+                    },
+                    {
+                        "id": "en-b2-u4-l1-e4",
+                        "type": "multiple-choice",
+                        "prompt": "What is the primary condition for an answer to be classified as 'NOT GIVEN'?",
+                        "options": [
+                            "The statement directly contradicts the reading text.",
+                            "The statement contains spelling mistakes.",
+                            "The text does not contain enough information to confirm or deny the statement.",
+                            "The statement is written in the passive voice."
+                        ],
+                        "correctAnswer": 2,
+                        "explanation": "Matnda bayonotni tasdiqlash yoki inkor qilish uchun yetarli ma'lumot bo'lmasa, bu NOT GIVEN bo'ladi."
+                    },
+                    {
+                        "id": "en-b2-u4-l1-e5",
+                        "type": "multiple-choice",
+                        "prompt": "If a text states 'Consumption often peaks in December' and the question states 'Consumption ALWAYS peaks in December', the answer is:",
+                        "options": [
+                            "TRUE",
+                            "FALSE",
+                            "NOT GIVEN",
+                            "PARTIALLY TRUE"
+                        ],
+                        "correctAnswer": 1,
+                        "explanation": "'Often' (tez-tez) va 'always' (har doim) modifikatorlari bir-biriga ziddir, shuning uchun javob FALSE."
+                    }
+                ]
+            }
+        },
+        {
+            "id": "en-b2-u4-l1-s3",
+            "title": "Yakuniy Test",
+            "type": "test",
+            "estimatedMinutes": 5,
+            "testData": {
+                "instructions": "5 ta test savoliga to'g'ri javob bering. O'tish bali: 80%.",
+                "passingScorePercentage": 80,
+                "questions": [
+                    {
+                        "id": "en-b2-u4-l1-q1",
+                        "question": "Text: 'Alexander the Great conquered Samarkand in 329 BC.' -> Question: 'Alexander visited Samarkand during the fourth century BC.'",
+                        "options": [
+                            "TRUE",
+                            "FALSE",
+                            "NOT GIVEN",
+                            "INSUFFICIENT DATA"
+                        ],
+                        "correctAnswerIndex": 0,
+                        "explanation": "Miloddan avvalgi 329-yil miloddan avvalgi 4-asrga to'g'ri keladi, shuning uchun TRUE."
+                    },
+                    {
+                        "id": "en-b2-u4-l1-q2",
+                        "question": "Text: 'Some native bird species survived the severe winter.' -> Question: 'No native bird species perished during the winter.'",
+                        "options": [
+                            "TRUE",
+                            "FALSE",
+                            "NOT GIVEN",
+                            "PROBABLE"
+                        ],
+                        "correctAnswerIndex": 1,
+                        "explanation": "'Some survived' degani boshqalari nobud bo'lganini anglatadi. 'No birds perished' (hech biri o'lmadi) degan gap bunga zid: FALSE."
+                    },
+                    {
+                        "id": "en-b2-u4-l1-q3",
+                        "question": "Text: 'Professor Clark published five monographs on cognitive grammar.' -> Question: 'Professor Clark won an international prize for his third monograph.'",
+                        "options": [
+                            "TRUE",
+                            "FALSE",
+                            "NOT GIVEN",
+                            "FALSE ACCORDING TO CLARK"
+                        ],
+                        "correctAnswerIndex": 2,
+                        "explanation": "Mukofot olgan yoki olmaganligi haqida matnda hech qanday ma'lumot yo'q: NOT GIVEN."
+                    },
+                    {
+                        "id": "en-b2-u4-l1-q4",
+                        "question": "Why should test-takers never use outside knowledge to answer IELTS Reading questions?",
+                        "options": [
+                            "Because outside knowledge may be outdated.",
+                            "Because the test exclusively assesses comprehension of the given text, not general trivia.",
+                            "Because outside knowledge is penalized by computer software.",
+                            "Because examiners verify your internet search history."
+                        ],
+                        "correctAnswerIndex": 1,
+                        "explanation": "IELTS Reading faqat berilgan matnni tushunishni baholaydi, tashqi bilimlar esa noto'g'ri taxminlarga olib keladi."
+                    },
+                    {
+                        "id": "en-b2-u4-l1-q5",
+                        "question": "If a statement directly inverts the cause-and-effect relationship given in the passage, the answer is _______ .",
+                        "options": [
+                            "TRUE",
+                            "FALSE",
+                            "NOT GIVEN",
+                            "INAPPLICABLE"
+                        ],
+                        "correctAnswerIndex": 1,
+                        "explanation": "Sabab va oqibat o'rni almashtirib yuborilsa, bayonot matn mazmuniga zid bo'lib, FALSE bo'ladi."
+                    }
+                ]
+            }
+        }
+    ]
+},
     {
-        "id": "en-b2-u4-l2",
-        "courseId": "english-b2",
-        "unitId": "en-b2-u4",
-        "unitTitle": "Unit 4: IELTS Reading & Listening Mastery",
-        "language": "en",
-        "level": "B2",
-        "lessonNumber": 2,
-        "title": "IELTS Reading: Headings Matching & Skimming",
-        "description": "Paragraf sarlavhalarini moslashtirish, tezkor ko'zdan kechirish (skimming) texnikasi.",
-        "estimatedDurationMinutes": 16,
-        "icon": "📑",
-        "steps": [
-            {
-                "id": "en-b2-u4-l2-s1",
-                "title": "Matching Headings Strategiyasi",
-                "type": "learn",
-                "estimatedMinutes": 5,
-                "learnData": {
-                    "title": "Skimming and Topic Sentences",
-                    "explanation": "Paragrafning birinchi va oxirgi 1-2 gapini o'qib, asosiy g'oyani (gist) aniqlang. Faqat bitta so'z o'xshashligiga aldanmang — butun paragrafning maqsadini tushuning.",
-                    "keyPoints": [
-                        "Sarlavhalardagi kalit so'zlarni belgilang.",
-                        "Paragraf detallariga emas, umumiy xulosasiga e'tibor bering."
-                    ],
-                    "grammarRules": [
-                        {
-                            "pattern": "IELTS Reading: Headings Matching & Skimming",
-                            "meaning": "Paragraf sarlavhalarini moslashtirish, tezkor ko'zdan kechirish (skimming) texnikasi.",
-                            "usageNotes": "Paragrafning birinchi va oxirgi 1-2 gapini o'qib, asosiy g'oyani (gist) aniqlang. Faqat bitta so'z o'xshashligiga aldanmang — butun paragrafning maqsadini tushuning.",
-                            "examples": [
-                                {
-                                    "sentence": "I study English every day with dedication.",
-                                    "translation": "Har kuni ingliz tilini astoydil o'rganaman."
-                                }
-                            ]
-                        }
-                    ],
-                    "vocabulary": [
-                        {
-                            "term": "Compelling",
-                            "reading": "/kəmˈpel.ɪŋ/",
-                            "meaning": "Juda ishonarli, maftunkor",
-                            "exampleSentence": "He presented a compelling argument in the debate.",
-                            "exampleTranslation": "U bahsda juda ishonarli dalil keltirdi."
-                        },
-                        {
-                            "term": "Substantiate",
-                            "reading": "/səbˈstæn.ʃi.eɪt/",
-                            "meaning": "Asoslab bermoq, isbotlamoq",
-                            "exampleSentence": "You must substantiate your claims with empirical evidence.",
-                            "exampleTranslation": "Siz oʻz daʼvolaringizni empirik dalillar bilan asoslab berishingiz kerak."
-                        },
-                        {
-                            "term": "Nuance",
-                            "reading": "/ˈnjuː.ɑːns/",
-                            "meaning": "Nozik farq, qirra",
-                            "exampleSentence": "She understood every subtle nuance of the language.",
-                            "exampleTranslation": "U tilning har bir nozik qirrasini tushundi."
-                        }
-                    ]
-                }
-            },
-            {
-                "id": "en-b2-u4-l2-s2",
-                "title": "Mashq",
-                "type": "practice",
-                "estimatedMinutes": 5,
-                "practiceData": {
-                    "instructions": "Paragrafga mos sarlavhani tanlang.",
-                    "exercises": [
-                        {
-                            "id": "en-b2-u4-l2-e1",
-                            "type": "multiple-choice",
-                            "prompt": "Paragraph: \"Despite initial funding shortages and public skepticism, the urban metro project was completed ahead of schedule and generated unprecedented passenger volume.\" Best Heading:",
-                            "options": [
-                                "Why passengers avoid public trains",
-                                "The financial collapse of city transit",
-                                "An unexpected infrastructure success",
-                                "Technological failures in construction"
-                            ],
-                            "correctAnswer": 2,
-                            "explanation": "An unexpected infrastructure success."
-                        },
-                        {
-                            "id": "en-b2-u4-l2-ex-2",
-                            "type": "multiple-choice",
-                            "prompt": "Choose the correct word to complete the sentence: \"You must substantiate your claims with empirical evidence.\"",
-                            "options": [
-                                "Substantiate",
-                                "doubt",
-                                "reluctance",
-                                "delay"
-                            ],
-                            "correctAnswer": 0,
-                            "explanation": "\"Substantiate\" (Asoslab bermoq, isbotlamoq) fits the context appropriately."
-                        }
-                    ]
-                }
-            },
-            {
-                "id": "en-b2-u4-l2-s3",
-                "title": "Test",
-                "type": "test",
-                "estimatedMinutes": 6,
-                "testData": {
-                    "instructions": "Savollarga javob bering.",
-                    "passingScorePercentage": 75,
-                    "questions": [
-                        {
-                            "id": "en-b2-u4-l2-q1",
-                            "question": "What is the primary goal of skimming in IELTS Reading?",
-                            "options": [
-                                "To memorize all numbers",
-                                "To count every comma",
-                                "To quickly understand the general theme and structure without reading every word",
-                                "To find grammar mistakes"
-                            ],
-                            "correctAnswerIndex": 2,
-                            "explanation": "Understand general theme quickly."
-                        },
-                        {
-                            "id": "en-b2-u4-l2-q2",
-                            "question": "Where is the main idea of a paragraph most frequently located?",
-                            "options": [
-                                "In the margin",
-                                "In the title of the book",
-                                "In the footnote",
-                                "In the opening 1-2 sentences (topic sentence)"
-                            ],
-                            "correctAnswerIndex": 3,
-                            "explanation": "Opening sentences."
-                        },
-                        {
-                            "id": "en-b2-u4-l2-q3",
-                            "question": "If two headings seem similar, what should you do?",
-                            "options": [
-                                "Analyze the specific focus and nuance of each heading against the text",
-                                "Skip the question",
-                                "Choose randomly",
-                                "Pick the longest one"
-                            ],
-                            "correctAnswerIndex": 0,
-                            "explanation": "Analyze specific focus."
-                        },
-                        {
-                            "id": "en-b2-u4-l2-q4",
-                            "question": "What is scanning used for in IELTS Reading?",
-                            "options": [
-                                "Understanding abstract poetry",
-                                "Enjoying a novel",
-                                "Locating specific facts, numbers, dates or names rapidly",
-                                "Translating every word"
-                            ],
-                            "correctAnswerIndex": 2,
-                            "explanation": "Locating specific facts rapidly."
-                        }
-                    ]
-                }
+    "id": "en-b2-u4-l2",
+    "courseId": "english-b2",
+    "unitId": "en-b2-u4",
+    "unitTitle": "Unit 4: IELTS Reading & Listening Mastery",
+    "language": "en",
+    "level": "B2",
+    "lessonNumber": 2,
+    "title": "IELTS Reading: Headings Matching & Skimming",
+    "description": "Paragraph Headings (sarlavhalarni moslashtirish) va tezkor o'qish (Skimming): asosiy g'oyani ikkinchi darajali detallardan ajratish san'ati.",
+    "estimatedDurationMinutes": 18,
+    "icon": "📑",
+    "steps": [
+        {
+            "id": "en-b2-u4-l2-s1",
+            "title": "Matching Headings & Skimming Texnikasi",
+            "type": "learn",
+            "estimatedMinutes": 6,
+            "learnData": {
+                "title": "Paragraph Headings Matching: Identifying Gist vs Supporting Detail",
+                "explanation": "Matching Headings (har bir paragrafga mos sarlavhani tanlash) savol turi butun matnning g'oyaviy arxitekturasini tushunishni sinaydi. Bu yerda eng asosiy xato — paragrafdagi bitta so'zni sarlavhadagi so'z bilan ko'rib, shoshib belgilab qo'yishdir (Word-spotting trap).\n\n1. Asosiy Strategik Qadamlar:\n- **1. Avval Sarlavhalar ro'yxatini (List of Headings) ko'zdan kechiring:** Har bir sarlavhaning asosiy kalit so'zini aniqlang va ulardagi farqlarni farqlang (biri sabab haqida, biri oqibat haqida, biri tarixiy fon haqida).\n- **2. Topic Sentence (Mavzu Gapi)ni qidiring:** Ko'pgina akademik paragraflarda asosiy g'oya paragrafning birinchi yoki ikkinchi gapida (ba'zan esa xulosa qiluvchi oxirgi gapida) beriladi.\n- **3. Asosiy G'oya (Gist) vs Detal (Supporting Evidence):**\n  • Masalan, paragrafda 'In 1994, a drought destroyed 40% of crops in California' deb aytilgan bo'lsa, bu shunchaki misol/detaldir. Paragrafning asl mavzusi esa 'The vulnerability of modern agriculture to climatic volatility' bo'lishi mumkin. Sarlavha butun paragrafni o'z ichiga qamrab olishi kerak!\n\n2. Skimming Qoidalari:\n- Matndagi har bir so'zni tarjima qilishga urinmang. Ko'zingizni paragraf bo'ylab tez yurgizib, olmoshlar, otlar va fe'llar orqali 'Bu paragraf nima haqida?' degan savolga 10 soniyada javob bering.\n- Distraktor sarlavhalar: Imtihonda doimo paragraflar sonidan 2-3 ta ko'p sarlavha beriladi. Ular odatda paragrafdagi arzimas bitta faktni olib, sarlavha qilib qo'yilgan bo'ladi.",
+                "vocabulary": [
+                    {
+                        "term": "gist",
+                        "reading": "/dʒɪst/",
+                        "meaning": "asosiy mazmun, mohiyat (paragrafning bosh g'oyasi)",
+                        "exampleSentence": "Skimming enables the candidate to comprehend the central gist within seconds.",
+                        "exampleTranslation": "Ko'z yugurtirib o'qish nomzodga asosiy mazmunni bir necha soniyada ilg'ash imkonini beradi."
+                    },
+                    {
+                        "term": "skim",
+                        "reading": "/skɪm/",
+                        "meaning": "ko'z yugurtirib tez o'qimoq (asosiy fikrni olish uchun)",
+                        "exampleSentence": "Do not read every syllable; skim the paragraph to identify the overarching thesis.",
+                        "exampleTranslation": "Har bir bo'g'inni o'qimang; umumiy tezisni aniqlash uchun paragrafga ko'z yugurtiring."
+                    },
+                    {
+                        "term": "overarching",
+                        "reading": "/ˌəʊ.vərˈɑː.tʃɪŋ/",
+                        "meaning": "umumiy, barchasini qamrab oluvchi",
+                        "exampleSentence": "The heading must capture the overarching theme rather than isolated statistics.",
+                        "exampleTranslation": "Sarlavha alohida statistikani emas, umumiy qamrovli mavzuni aks ettirishi shart."
+                    },
+                    {
+                        "term": "distractor",
+                        "reading": "/dɪˈstræk.tər/",
+                        "meaning": "chalg'ituvchi variant (tuzoq sarlavha)",
+                        "exampleSentence": "Test creators deliberately plant distractors that replicate isolated paragraph words.",
+                        "exampleTranslation": "Test tuzuvchilar ataylab paragrafdagi ayrim so'zlarni takrorlovchi chalg'ituvchi variantlarni qo'yishadi."
+                    },
+                    {
+                        "term": "subordinate",
+                        "reading": "/səˈbɔː.dɪ.nət/",
+                        "meaning": "ikkinchi darajali, bo'ysunuvchi (detal)",
+                        "exampleSentence": "Do not confuse subordinate examples with the core topic sentence.",
+                        "exampleTranslation": "Ikkinchi darajali misollarni asosiy mavzu gapi bilan adashtirib yubormang."
+                    },
+                    {
+                        "term": "synthesis",
+                        "reading": "/ˈsɪn.θə.sɪs/",
+                        "meaning": "umumlashtirish, sintez",
+                        "exampleSentence": "The concluding sentence of the paragraph often provides a concise synthesis.",
+                        "exampleTranslation": "Paragrafning yakunlovchi gapi ko'pincha qisqa umumlashtirishni taqdim etadi."
+                    },
+                    {
+                        "term": "vulnerability",
+                        "reading": "/ˌvʌl.nər.əˈbɪl.ə.ti/",
+                        "meaning": "zaiflik, himoyasizlik",
+                        "exampleSentence": "The text explores the economic vulnerability of mono-crop agrarian systems.",
+                        "exampleTranslation": "Matn bir ekinli agrar tizimlarning iqtisodiy zaifligini o'rganadi."
+                    },
+                    {
+                        "term": "scrutinize",
+                        "reading": "/ˈskruː.tɪ.naɪz/",
+                        "meaning": "sinchkovlik bilan tahlil qilmoq",
+                        "exampleSentence": "Scrutinize the topic sentence before selecting a matching heading.",
+                        "exampleTranslation": "Mos sarlavhani tanlashdan oldin mavzu gapini sinchkovlik bilan tahlil qiling."
+                    }
+                ],
+                "grammarRules": [
+                    {
+                        "pattern": "Topic Sentence Structure: Lead Noun + Controlling Idea",
+                        "meaning": "Paragraf mavzu gapi tuzilishi",
+                        "usageNotes": "Mavzu gapi paragraf nima haqida ekanligini va qaysi yo'nalishda ochilishini belgilab beradi.",
+                        "examples": [
+                            {
+                                "sentence": "\"Urban vertical farming represents a viable remedy for metropolitan food shortages.\"",
+                                "translation": "Shaharda vertikal dehqonchilik oziq-ovqat tanqisligi uchun o'zini oqlaydigan yechimdir."
+                            }
+                        ]
+                    }
+                ]
             }
-        ]
-    },
+        },
+        {
+            "id": "en-b2-u4-l2-s2",
+            "title": "Amaliy Mashqlar",
+            "type": "practice",
+            "estimatedMinutes": 5,
+            "practiceData": {
+                "instructions": "Quyidagi paragraf uchun eng to'g'ri sarlavhani tanlang.\n\nParagraf:\n'While the immediate financial expenditures of transitioning to solar energy infrastructure are undeniably substantial, prolonged economic analyses reveal significant multi-decade dividends. Municipal utilities that phased out coal turbines in favor of photovoltaic solar grids observed operational maintenance outlays fall by 45% over a fifteen-year horizon, simultaneously shielding local consumers from volatile global fossil fuel price spikes.'",
+                "exercises": [
+                    {
+                        "id": "en-b2-u4-l2-e1",
+                        "type": "multiple-choice",
+                        "prompt": "Which heading best encapsulates the overarching gist of the paragraph?",
+                        "options": [
+                            "The catastrophic costs of coal power generation",
+                            "Long-term financial dividends of solar energy adoption",
+                            "How global fossil fuel prices fluctuate annually",
+                            "The engineering design of photovoltaic solar panels"
+                        ],
+                        "correctAnswer": 1,
+                        "explanation": "Paragraf boshida 'prolonged economic analyses reveal significant multi-decade dividends' deb umumiy mavzu aniq berilgan: quyosh energiyasining uzoq muddatli moliyaviy foydalari."
+                    },
+                    {
+                        "id": "en-b2-u4-l2-e2",
+                        "type": "multiple-choice",
+                        "prompt": "Why is 'How global fossil fuel prices fluctuate annually' an incorrect heading?",
+                        "options": [
+                            "Because fossil fuels are not mentioned at all.",
+                            "Because it is merely a subordinate detail mentioned at the end, not the central thesis of the paragraph.",
+                            "Because it uses informal vocabulary.",
+                            "Because headings cannot contain adjectives."
+                        ],
+                        "correctAnswer": 1,
+                        "explanation": "Yoqilg'i narxi shunchaki paragraf oxiridagi ikkinchi darajali detaldir, butun paragrafning mohiyati emas."
+                    },
+                    {
+                        "id": "en-b2-u4-l2-e3",
+                        "type": "multiple-choice",
+                        "prompt": "Where is the 'Topic Sentence' most frequently located in standard academic paragraphs?",
+                        "options": [
+                            "Strictly in the exact middle of the paragraph.",
+                            "Typically in the first or second sentence, or occasionally the concluding sentence.",
+                            "In the footnote references.",
+                            "Always in the title only."
+                        ],
+                        "correctAnswer": 1,
+                        "explanation": "Akademik paragraflarda mavzu gapi ko'pincha birinchi yoki ikkinchi gapda joylashadi."
+                    },
+                    {
+                        "id": "en-b2-u4-l2-e4",
+                        "type": "multiple-choice",
+                        "prompt": "What common trap occurs when candidates choose a heading based solely on matching a single identical word?",
+                        "options": [
+                            "The word-spotting distractor trap",
+                            "The skimming speed trap",
+                            "The punctuation omission trap",
+                            "The antonym trap"
+                        ],
+                        "correctAnswer": 0,
+                        "explanation": "Aynan bitta so'zga qarab chalg'ib qolish 'word-spotting distractor trap' deb ataladi."
+                    },
+                    {
+                        "id": "en-b2-u4-l2-e5",
+                        "type": "multiple-choice",
+                        "prompt": "What does the reading strategy of 'skimming' primarily prioritize?",
+                        "options": [
+                            "Memorizing every grammatical particle.",
+                            "Grasping the overarching main idea quickly without getting bogged down by details.",
+                            "Checking dictionary definitions of unfamiliar adjectives.",
+                            "Counting the total number of words."
+                        ],
+                        "correctAnswer": 1,
+                        "explanation": "Skimming — ikkinchi darajali detallarga to'xtalmasdan, umumiy asosiy fikrni tezkor ilg'ashdir."
+                    }
+                ]
+            }
+        },
+        {
+            "id": "en-b2-u4-l2-s3",
+            "title": "Yakuniy Test",
+            "type": "test",
+            "estimatedMinutes": 5,
+            "testData": {
+                "instructions": "5 ta test savoliga to'g'ri javob bering. O'tish bali: 80%.",
+                "passingScorePercentage": 80,
+                "questions": [
+                    {
+                        "id": "en-b2-u4-l2-q1",
+                        "question": "A suitable heading for an academic paragraph must represent the _______ .",
+                        "options": [
+                            "entire paragraph's core central thesis",
+                            "single most surprising statistic",
+                            "name of the first person mentioned",
+                            "longest sentence in the passage"
+                        ],
+                        "correctAnswerIndex": 0,
+                        "explanation": "Sarlavha butun paragrafning markaziy asosiy g'oyasini qamrab olishi shart."
+                    },
+                    {
+                        "id": "en-b2-u4-l2-q2",
+                        "question": "If two headings seem extremely similar, candidates should differentiate them by _______ .",
+                        "options": [
+                            "flipping a coin",
+                            "identifying specific qualifying words like causes vs solutions, or theory vs practical application",
+                            "selecting the shorter heading",
+                            "leaving both blank"
+                        ],
+                        "correctAnswerIndex": 1,
+                        "explanation": "O'xshash sarlavhalar ulardagi modifikatorlar (sababmi yoki yechim, nazariyami yoki amaliyot) orqali farqlanadi."
+                    },
+                    {
+                        "id": "en-b2-u4-l2-q3",
+                        "question": "Paragraph: 'Early childhood language acquisition differs fundamentally from adult foreign language learning due to neurobiological synaptic pruning in developing brains.' -> Best heading:",
+                        "options": [
+                            "Biological distinctions between infant and adult language mastery",
+                            "Why all adults fail to learn foreign languages",
+                            "The history of synaptic surgery",
+                            "How kindergarten teachers teach vocabulary"
+                        ],
+                        "correctAnswerIndex": 0,
+                        "explanation": "Variant A bola va kattalar tili o'rtasidagi biologik farqni to'liq qamrab olgan."
+                    },
+                    {
+                        "id": "en-b2-u4-l2-q4",
+                        "question": "Skimming should take approximately how long per paragraph in IELTS Reading?",
+                        "options": [
+                            "Around 15 to 30 seconds",
+                            "Five to seven minutes",
+                            "Half an hour",
+                            "Exactly two seconds"
+                        ],
+                        "correctAnswerIndex": 0,
+                        "explanation": "Skimming bitta paragraf uchun o'rtacha 15-30 soniya vaqt oladi."
+                    },
+                    {
+                        "id": "en-b2-u4-l2-q5",
+                        "question": "Why are there more headings in the list than paragraphs in the text?",
+                        "options": [
+                            "Because the printing press made an error.",
+                            "To act as deliberate distractors that test true comprehension versus superficial word matching.",
+                            "Because headings are chosen at random.",
+                            "To allow candidates to pick two headings per paragraph."
+                        ],
+                        "correctAnswerIndex": 1,
+                        "explanation": "Qo'shimcha sarlavhalar yuzaki so'z qidiruvchilarni elash uchun mo'ljallangan maxsus chalg'ituvchilardir."
+                    }
+                ]
+            }
+        }
+    ]
+},
     {
-        "id": "en-b2-u4-l3",
-        "courseId": "english-b2",
-        "unitId": "en-b2-u4",
-        "unitTitle": "Unit 4: IELTS Reading & Listening Mastery",
-        "language": "en",
-        "level": "B2",
-        "lessonNumber": 3,
-        "title": "IELTS Listening: Form Completion & Distractors",
-        "description": "1-qism eshitish testi: anketalarni to'ldirish, raqamlar, harflar va chalg'ituvchi (distractor) javoblar.",
-        "estimatedDurationMinutes": 15,
-        "icon": "🎧",
-        "steps": [
-            {
-                "id": "en-b2-u4-l3-s1",
-                "title": "Distractorlardan Saqlanish",
-                "type": "learn",
-                "estimatedMinutes": 5,
-                "learnData": {
-                    "title": "Form Completion & Auditory Distractors",
-                    "explanation": "IELTS Listeningda so'zlovchilar ko'pincha dastlab bitta ma'lumot aytib, so'ng tuzatish kiritadilar: \"My number is 5543... oh sorry, that is my old number, it is 5548\". To'g'ri javob doim so'nggi tuzatilgan variant bo'ladi!",
-                    "keyPoints": [
-                        "Imloga (spelling) va katta harflarga e'tibor bering.",
-                        "So'zlar chegarasini tekshiring (NO MORE THAN TWO WORDS AND/OR A NUMBER)."
-                    ],
-                    "grammarRules": [
-                        {
-                            "pattern": "IELTS Listening: Form Completion & Distractors",
-                            "meaning": "1-qism eshitish testi: anketalarni to'ldirish, raqamlar, harflar va chalg'ituvchi (distractor) javoblar.",
-                            "usageNotes": "IELTS Listeningda so'zlovchilar ko'pincha dastlab bitta ma'lumot aytib, so'ng tuzatish kiritadilar: \"My number is 5543... oh sorry, that is my old number, it is 5548\". To'g'ri javob doim so'nggi tuzatilgan variant bo'ladi!",
-                            "examples": [
-                                {
-                                    "sentence": "I study English every day with dedication.",
-                                    "translation": "Har kuni ingliz tilini astoydil o'rganaman."
-                                }
-                            ]
-                        }
-                    ],
-                    "vocabulary": [
-                        {
-                            "term": "Substantiate",
-                            "reading": "/səbˈstæn.ʃi.eɪt/",
-                            "meaning": "Asoslab bermoq, isbotlamoq",
-                            "exampleSentence": "You must substantiate your claims with empirical evidence.",
-                            "exampleTranslation": "Siz oʻz daʼvolaringizni empirik dalillar bilan asoslab berishingiz kerak."
-                        },
-                        {
-                            "term": "Nuance",
-                            "reading": "/ˈnjuː.ɑːns/",
-                            "meaning": "Nozik farq, qirra",
-                            "exampleSentence": "She understood every subtle nuance of the language.",
-                            "exampleTranslation": "U tilning har bir nozik qirrasini tushundi."
-                        },
-                        {
-                            "term": "Coherence",
-                            "reading": "/kəʊˈhɪə.rəns/",
-                            "meaning": "Mantiqiy bogʻliqlik, izchillik",
-                            "exampleSentence": "Ensure structural coherence throughout your essay.",
-                            "exampleTranslation": "Inshoyingiz davomida tuzilmaviy izchillikni taʼminlang."
-                        }
-                    ]
-                }
-            },
-            {
-                "id": "en-b2-u4-l3-s2",
-                "title": "Eshitish Mashqi",
-                "type": "practice",
-                "estimatedMinutes": 5,
-                "practiceData": {
-                    "instructions": "Tinglab to'g'ri javobni tanlang.",
-                    "exercises": [
-                        {
-                            "id": "en-b2-u4-l3-e1",
-                            "type": "multiple-choice",
-                            "prompt": "Speaker: \"We initially planned to meet on Tuesday, but the room is booked, so let's meet on Thursday at 4 PM.\" When is the meeting?",
-                            "options": [
-                                "Friday",
-                                "Thursday",
-                                "Tuesday",
-                                "Wednesday"
-                            ],
-                            "correctAnswer": 1,
-                            "explanation": "Tuzatilgan yakuniy sana: Thursday."
-                        },
-                        {
-                            "id": "en-b2-u4-l3-ex-2",
-                            "type": "multiple-choice",
-                            "prompt": "Choose the correct word to complete the sentence: \"She understood every subtle nuance of the language.\"",
-                            "options": [
-                                "reluctance",
-                                "delay",
-                                "doubt",
-                                "Nuance"
-                            ],
-                            "correctAnswer": 3,
-                            "explanation": "\"Nuance\" (Nozik farq, qirra) fits the context appropriately."
-                        }
-                    ]
-                }
-            },
-            {
-                "id": "en-b2-u4-l3-s3",
-                "title": "Test",
-                "type": "test",
-                "estimatedMinutes": 5,
-                "testData": {
-                    "instructions": "Savollarga javob bering.",
-                    "passingScorePercentage": 75,
-                    "questions": [
-                        {
-                            "id": "en-b2-u4-l3-q1",
-                            "question": "Speaker: \"My post code is SW19... wait, no, my new address is SW14 8NP.\" What is the correct postcode?",
-                            "options": [
-                                "SW14",
-                                "SW14 8NP",
-                                "SW19",
-                                "SW19 8NP"
-                            ],
-                            "correctAnswerIndex": 1,
-                            "explanation": "SW14 8NP."
-                        },
-                        {
-                            "id": "en-b2-u4-l3-q2",
-                            "question": "If the instruction says \"NO MORE THAN ONE WORD\", which answer is acceptable?",
-                            "options": [
-                                "Hospital",
-                                "A hospital",
-                                "The big hospital",
-                                "City hospital center"
-                            ],
-                            "correctAnswerIndex": 0,
-                            "explanation": "Faqat bitta so'z: Hospital."
-                        },
-                        {
-                            "id": "en-b2-u4-l3-q3",
-                            "question": "What should you do during the 30 seconds preparation time before each section?",
-                            "options": [
-                                "Close your eyes and wait",
-                                "Think about lunch",
-                                "Erase previous answers",
-                                "Read the questions and predict what type of information (noun, date, number) is missing"
-                            ],
-                            "correctAnswerIndex": 3,
-                            "explanation": "Predict information type."
-                        },
-                        {
-                            "id": "en-b2-u4-l3-q4",
-                            "question": "How are plural nouns scored if the audio specifies a plural (e.g. \"books\" instead of \"book\")?",
-                            "options": [
-                                "Singular is marked wrong if plural was required",
-                                "It doesn't matter",
-                                "Spelling is ignored",
-                                "They give half marks"
-                            ],
-                            "correctAnswerIndex": 0,
-                            "explanation": "Must match singular/plural accurately."
-                        }
-                    ]
-                }
+    "id": "en-b2-u4-l3",
+    "courseId": "english-b2",
+    "unitId": "en-b2-u4",
+    "unitTitle": "Unit 4: IELTS Listening & Speaking Integration",
+    "language": "en",
+    "level": "B2",
+    "lessonNumber": 3,
+    "title": "IELTS Listening: Form Completion & Distractors",
+    "description": "IELTS Listening Section 1 & 2: so'zlovchining o'z xatosini to'g'irlashi (self-correction), raqamlar, harflar va chalg'ituvchilarni aniqlash mahorati.",
+    "estimatedDurationMinutes": 18,
+    "icon": "🎧",
+    "steps": [
+        {
+            "id": "en-b2-u4-l3-s1",
+            "title": "Listening Distractors va Self-Correction",
+            "type": "learn",
+            "estimatedMinutes": 6,
+            "learnData": {
+                "title": "Tackling Auditory Distractors, Self-Corrections, and Precise Formatting",
+                "explanation": "IELTS Listening bo'limining 1 va 2-qismlarida (Section 1 & 2) kundalik ijtimoiy muloqot, anketalarni to'ldirish (form completion) va xizmatlarga yozilish suhbatlari beriladi. Bu yerda eng ko'p qo'llaniladigan usul — **Distractor** (chalg'ituvchi) va **Self-Correction** (so'zlovchining o'z fikrini to'g'irlashi)dir.\n\n1. Ovozli Tuzoqlar (Auditory Distractor Patterns):\n- **1. O'z xatosini to'g'irlash (Self-Correction):**\n  • Audio: *'My phone number is 07894 551... oh, wait, sorry, that's my old SIM card. My current number is 07894 552631.'*\n  • Qoida: Agar shoshilib birinchi eshitgan raqamingizni yozsangiz, xato qilasiz! So'zlovchining 'sorry', 'actually', 'no, hold on', 'let me double-check' kabi so'zlaridan keyin aytilgan yakuniy variant to'g'ri javob bo'ladi.\n- **2. Kelishuv va Rad etish (Negotiation & Rejection):**\n  • Suhbatdosh 1: *'Shall we meet on Thursday afternoon?'*\n  • Suhbatdosh 2: *'I have a dental appointment then. Let's make it Friday morning instead.'*\n  • To'g'ri javob: Friday (Thursday EMAS!).\n\n2. So'z Soni Cheklovi (Word Count Limit):\n- Har doim ko'rsatmani sinchiklab o'qing: **'NO MORE THAN TWO WORDS AND/OR A NUMBER'**.\n  • Agar javobingiz 'the central modern hospital' bo'lib, 3 ta so'z bo'lsa — bu 100% nol ball oladi! Aniq javob: 'central hospital'.\n\n3. Harflar va Raqamlar (Spelling & Accents):\n- Ingliz alifbosidagi eng ko'p adashtiriladigan harflar juftligi: **A - E - I**, **G - J**, **B - V**, **P - B**.\n- Britaniya, Avstraliya va Amerika aksentlarida raqamlarning talaffuzi: masalan, '15' (fifTEEN - oxiri cho'ziq urg'uli) vs '50' (FIFty - boshida urg'u).",
+                "vocabulary": [
+                    {
+                        "term": "self-correction",
+                        "reading": "/ˌself.kəˈrek.ʃən/",
+                        "meaning": "so'zlovchining o'z xatosini nutq davomida to'g'irlab ketishi",
+                        "exampleSentence": "Listen attentively for self-corrections introduced by phrases like 'actually, no'.",
+                        "exampleTranslation": "'Actually, no' kabi iboralar bilan kiritiladigan o'zini to'g'irlashlarga diqqat bilan quloq soling."
+                    },
+                    {
+                        "term": "distractor",
+                        "reading": "/dɪˈstræk.tər/",
+                        "meaning": "chalg'ituvchi noto'g'ri ma'lumot",
+                        "exampleSentence": "The speaker initially offered an incorrect date as a deliberate distractor.",
+                        "exampleTranslation": "So'zlovchi dastlab ataylab qilingan chalg'ituvchi sifatida noto'g'ri sanani aytdi."
+                    },
+                    {
+                        "term": "auditory",
+                        "reading": "/ˈɔː.dɪ.tər.i/",
+                        "meaning": "eshitishga oid, ovozli",
+                        "exampleSentence": "The IELTS listening module tests acute auditory discernment under strict timing.",
+                        "exampleTranslation": "IELTS listening moduli qat'iy vaqt ostida o'tkir eshitish zehnini sinaydi."
+                    },
+                    {
+                        "term": "discernment",
+                        "reading": "/dɪˈsɜːn.mənt/",
+                        "meaning": "farqlay olish qobiliyati, zehn, ziyraklik",
+                        "exampleSentence": "Auditory discernment is essential to separate genuine answers from false leads.",
+                        "exampleTranslation": "To'g'ri javoblarni soxta ma'lumotlardan ajratish uchun eshitish ziyrakligi zarurdir."
+                    },
+                    {
+                        "term": "itinerary",
+                        "reading": "/aɪˈtɪn.ər.ər.i/",
+                        "meaning": "sayohat rejasi, yo'nalish xaritasi",
+                        "exampleSentence": "The travel consultant finalized the flight itinerary after two alterations.",
+                        "exampleTranslation": "Sayyohlik maslahatchisi ikki marta o'zgartirishdan so'ng parvoz rejasini yakunladi."
+                    },
+                    {
+                        "term": "confirmation",
+                        "reading": "/ˌkɒn.fəˈmeɪ.ʃən/",
+                        "meaning": "tasdiq, tasdiqnoma",
+                        "exampleSentence": "Always wait for the speaker's final confirmation before writing the booking reference.",
+                        "exampleTranslation": "Bron kodini yozishdan oldin doimo so'zlovchining yakuniy tasdiqini kuting."
+                    },
+                    {
+                        "term": "spelling",
+                        "reading": "/ˈspel.ɪŋ/",
+                        "meaning": "harflab to'g'ri yozish (orfoepiya)",
+                        "exampleSentence": "Minor spelling errors in proper nouns forfeit the entire mark in Listening.",
+                        "exampleTranslation": "Taniqli otlardagi kichik orfografik xatolar Listeningda butun ballni yo'qotadi."
+                    },
+                    {
+                        "term": "overhear",
+                        "reading": "/ˌəʊ.vəˈhɪər/",
+                        "meaning": "boshqalarning suhbatini tasodifan eshitib qolmoq",
+                        "exampleSentence": "Section 1 often mirrors conversations one might overhear in administrative offices.",
+                        "exampleTranslation": "1-qism ko'pincha ma'muriy idoralarda eshitib qolish mumkin bo'lgan suhbatlarni aks ettiradi."
+                    }
+                ],
+                "grammarRules": [
+                    {
+                        "pattern": "Self-Correction Markers: \"...actually...\", \"sorry, I meant...\", \"hold on, it's...\"",
+                        "meaning": "Ovozli to'g'irlash belgilari",
+                        "usageNotes": "Ushbu iboralardan keyin aytilgan fakt haqiqiy to'g'ri javob hisoblanadi.",
+                        "examples": [
+                            {
+                                "sentence": "\"We departure at 8:15... oh, excuse me, the timetable says 8:45.\"",
+                                "translation": "Biz 8:15 da jo'naymiz... kechirasiz, jadvalda 8:45 yozilgan ekan."
+                            }
+                        ]
+                    }
+                ]
             }
-        ]
-    },
+        },
+        {
+            "id": "en-b2-u4-l3-s2",
+            "title": "Amaliy Mashqlar",
+            "type": "practice",
+            "estimatedMinutes": 5,
+            "practiceData": {
+                "instructions": "IELTS Listening Section 1 & 2 holatlari bo'yicha to'g'ri variantlarni tanlang.",
+                "exercises": [
+                    {
+                        "id": "en-b2-u4-l3-e1",
+                        "type": "multiple-choice",
+                        "prompt": "Audio script: 'Receptionist: Let's book your induction for Tuesday the 14th. Customer: I am flying back from Madrid then. Could we make it Thursday the 16th? Receptionist: Certainly, Thursday morning is confirmed.' What is the correct date?",
+                        "options": [
+                            "Tuesday 14th",
+                            "Thursday 16th",
+                            "Madrid 14th",
+                            "Friday 17th"
+                        ],
+                        "correctAnswer": 1,
+                        "explanation": "Dastlabki seshanba sanasi rad etildi va yakuniy tasdiqlangan sana payshanba 16-sanadir: 'Thursday 16th'."
+                    },
+                    {
+                        "id": "en-b2-u4-l3-e2",
+                        "type": "multiple-choice",
+                        "prompt": "If the word limit is 'ONE WORD AND/OR A NUMBER', which answer is grammatically and instructionally valid?",
+                        "options": [
+                            "The 25th September",
+                            "25 September",
+                            "25th",
+                            "On 25th September"
+                        ],
+                        "correctAnswer": 2,
+                        "explanation": "'25th' bitta raqam/so'z bo'lib, 'ONE WORD AND/OR A NUMBER' chekloviga to'liq mos keladi ('25 September' esa ikki so'z bo'lib qoladi)."
+                    },
+                    {
+                        "id": "en-b2-u4-l3-e3",
+                        "type": "multiple-choice",
+                        "prompt": "Audio script: 'Caller: My surname is Featherstone. That is F - E - A - T - H - E - R - S - T - O - N - E.' Which spelling is correct?",
+                        "options": [
+                            "Fetherston",
+                            "Featherstone",
+                            "Fatherstone",
+                            "Featherstowne"
+                        ],
+                        "correctAnswer": 1,
+                        "explanation": "Aytilgan harflar bo'yicha aniq yozilishi: 'Featherstone'."
+                    },
+                    {
+                        "id": "en-b2-u4-l3-e4",
+                        "type": "multiple-choice",
+                        "prompt": "Audio script: 'The annual membership fee was 60 pounds last year, but inflation has pushed it up to 75 pounds now.' What is the CURRENT membership fee?",
+                        "options": [
+                            "60 pounds",
+                            "75 pounds",
+                            "135 pounds",
+                            "Free"
+                        ],
+                        "correctAnswer": 1,
+                        "explanation": "O'tgan yilgi narx (60) bu chalg'ituvchi distraktordir; joriy narx esa '75 pounds'."
+                    },
+                    {
+                        "id": "en-b2-u4-l3-e5",
+                        "type": "multiple-choice",
+                        "prompt": "Why is writing 'in the morning' marked WRONG if the instruction states 'NO MORE THAN TWO WORDS'?",
+                        "options": [
+                            "Because 'morning' is misspelled.",
+                            "Because 'in the morning' consists of three words, directly breaching the two-word limit.",
+                            "Because prepositions are banned in IELTS.",
+                            "Because capital letters are mandatory."
+                        ],
+                        "correctAnswer": 1,
+                        "explanation": "'in the morning' 3 ta so'zdan iborat bo'lib, 2 so'zlik cheklovni buzadi."
+                    }
+                ]
+            }
+        },
+        {
+            "id": "en-b2-u4-l3-s3",
+            "title": "Yakuniy Test",
+            "type": "test",
+            "estimatedMinutes": 5,
+            "testData": {
+                "instructions": "5 ta test savoliga to'g'ri javob bering. O'tish bali: 80%.",
+                "passingScorePercentage": 80,
+                "questions": [
+                    {
+                        "id": "en-b2-u4-l3-q1",
+                        "question": "Audio: 'The lecture will begin at 9:00 sharp... apologies, the professor requested a 9:30 start.' Correct answer:",
+                        "options": [
+                            "9:00",
+                            "9:30",
+                            "9:15",
+                            "10:00"
+                        ],
+                        "correctAnswerIndex": 1,
+                        "explanation": "O'zini to'g'irlash: 9:30."
+                    },
+                    {
+                        "id": "en-b2-u4-l3-q2",
+                        "question": "What is the critical rule regarding spelling of common English words in the Listening section?",
+                        "options": [
+                            "Spelling errors are overlooked if the meaning is obvious.",
+                            "Any misspelled word, even by a single letter, receives zero credit.",
+                            "American spelling is completely banned.",
+                            "Numbers must always be written in Roman numerals."
+                        ],
+                        "correctAnswerIndex": 1,
+                        "explanation": "IELTS Listeningda bitta harf xato bo'lsa ham butun ball nolga tenglashtiriladi."
+                    },
+                    {
+                        "id": "en-b2-u4-l3-q3",
+                        "question": "Audio: 'We planned to renovate the library, but due to budget constraints, we decided to refurbish the gym instead.' What will be renovated?",
+                        "options": [
+                            "The library",
+                            "The gym",
+                            "Both the library and gym",
+                            "Neither"
+                        ],
+                        "correctAnswerIndex": 1,
+                        "explanation": "Kutubxona bekor qilingan reja (distraktor), ta'mirlanadigani esa 'gym'dir."
+                    },
+                    {
+                        "id": "en-b2-u4-l3-q4",
+                        "question": "Under 'NO MORE THAN ONE WORD AND/OR A NUMBER', which format is accepted for 'twenty-five books'?",
+                        "options": [
+                            "25 books",
+                            "twenty five books",
+                            "twenty-five books total",
+                            "a collection of 25 books"
+                        ],
+                        "correctAnswerIndex": 0,
+                        "explanation": "'25 books' = 1 ta raqam (25) + 1 ta so'z (books), qoidaga to'liq mos."
+                    },
+                    {
+                        "id": "en-b2-u4-l3-q5",
+                        "question": "How can candidates effectively prepare during the 30-second silence before each listening audio segment?",
+                        "options": [
+                            "Close their eyes and rest.",
+                            "Pre-read the questions, predict the word type (noun, number, date), and identify key focus areas.",
+                            "Check their mobile phone notifications.",
+                            "Start writing random guesses."
+                        ],
+                        "correctAnswerIndex": 1,
+                        "explanation": "Ajratilgan 30 soniyada savollarni oldindan o'qib, qanday so'z turi (ot, sana, raqam) tushishini bashorat qilish lozim."
+                    }
+                ]
+            }
+        }
+    ]
+},
     {
-        "id": "en-b2-u4-l4",
-        "courseId": "english-b2",
-        "unitId": "en-b2-u4",
-        "unitTitle": "Unit 4: IELTS Reading & Listening Mastery",
-        "language": "en",
-        "level": "B2",
-        "lessonNumber": 4,
-        "title": "IELTS Listening: Section 3 & 4 Academic Discussions",
-        "description": "Talabalar va professorlar o'rtasidagi murakkab akademik munozaralarni tahlil qilish.",
-        "estimatedDurationMinutes": 16,
-        "icon": "🎓",
-        "steps": [
-            {
-                "id": "en-b2-u4-l4-s1",
-                "title": "Akademik Munozara Tahlili",
-                "type": "learn",
-                "estimatedMinutes": 5,
-                "learnData": {
-                    "title": "Section 3 & 4 Strategies",
-                    "explanation": "Section 3 da 2-3 kishi tadqiqot yoki topshiriqni muhokama qiladi. Section 4 da 1 kishi akademik ma'ruza o'qiydi. So'zlovchilarning fikri, roziligi yoki e'tiroziga e'tibor qaratish kerak.",
-                    "keyPoints": [
-                        "Sinonimlar orqali javoblarni topish (Audio: \"investigate thoroughly\" -> Option: \"conduct comprehensive research\").",
-                        "Belgilar (signpost words): \"Turning now to...\", \"Furthermore...\", \"In conclusion...\"."
-                    ],
-                    "grammarRules": [
-                        {
-                            "pattern": "IELTS Listening: Section 3 & 4 Academic Discussions",
-                            "meaning": "Talabalar va professorlar o'rtasidagi murakkab akademik munozaralarni tahlil qilish.",
-                            "usageNotes": "Section 3 da 2-3 kishi tadqiqot yoki topshiriqni muhokama qiladi. Section 4 da 1 kishi akademik ma'ruza o'qiydi. So'zlovchilarning fikri, roziligi yoki e'tiroziga e'tibor qaratish kerak.",
-                            "examples": [
-                                {
-                                    "sentence": "I study English every day with dedication.",
-                                    "translation": "Har kuni ingliz tilini astoydil o'rganaman."
-                                }
-                            ]
-                        }
-                    ],
-                    "vocabulary": [
-                        {
-                            "term": "Nuance",
-                            "reading": "/ˈnjuː.ɑːns/",
-                            "meaning": "Nozik farq, qirra",
-                            "exampleSentence": "She understood every subtle nuance of the language.",
-                            "exampleTranslation": "U tilning har bir nozik qirrasini tushundi."
-                        },
-                        {
-                            "term": "Coherence",
-                            "reading": "/kəʊˈhɪə.rəns/",
-                            "meaning": "Mantiqiy bogʻliqlik, izchillik",
-                            "exampleSentence": "Ensure structural coherence throughout your essay.",
-                            "exampleTranslation": "Inshoyingiz davomida tuzilmaviy izchillikni taʼminlang."
-                        },
-                        {
-                            "term": "Compelling",
-                            "reading": "/kəmˈpel.ɪŋ/",
-                            "meaning": "Juda ishonarli, maftunkor",
-                            "exampleSentence": "He presented a compelling argument in the debate.",
-                            "exampleTranslation": "U bahsda juda ishonarli dalil keltirdi."
-                        }
-                    ]
-                }
-            },
-            {
-                "id": "en-b2-u4-l4-s2",
-                "title": "Mashq",
-                "type": "practice",
-                "estimatedMinutes": 5,
-                "practiceData": {
-                    "instructions": "To'g'ri xulosani tanlang.",
-                    "exercises": [
-                        {
-                            "id": "en-b2-u4-l4-e1",
-                            "type": "multiple-choice",
-                            "prompt": "Professor: \"While your survey data is adequate, your statistical methodology requires substantial refinement.\" What does the professor mean?",
-                            "options": [
-                                "The statistical methods need improvement",
-                                "No changes are required",
-                                "The student failed the whole course",
-                                "The survey was completely useless"
-                            ],
-                            "correctAnswer": 0,
-                            "explanation": "Statistical methodology requires refinement."
-                        },
-                        {
-                            "id": "en-b2-u4-l4-ex-2",
-                            "type": "multiple-choice",
-                            "prompt": "Choose the correct word to complete the sentence: \"Ensure structural coherence throughout your essay.\"",
-                            "options": [
-                                "reluctance",
-                                "delay",
-                                "Coherence",
-                                "doubt"
-                            ],
-                            "correctAnswer": 2,
-                            "explanation": "\"Coherence\" (Mantiqiy bogʻliqlik, izchillik) fits the context appropriately."
-                        }
-                    ]
-                }
-            },
-            {
-                "id": "en-b2-u4-l4-s3",
-                "title": "Test",
-                "type": "test",
-                "estimatedMinutes": 6,
-                "testData": {
-                    "instructions": "Savollarga javob bering.",
-                    "passingScorePercentage": 75,
-                    "questions": [
-                        {
-                            "id": "en-b2-u4-l4-q1",
-                            "question": "What are \"signpost words\" in academic lectures?",
-                            "options": [
-                                "Transition words that signal a change of topic or structure",
-                                "Difficult Greek words",
-                                "Spelling mistakes",
-                                "Road traffic words"
-                            ],
-                            "correctAnswerIndex": 0,
-                            "explanation": "Transition words signaling topic structure."
-                        },
-                        {
-                            "id": "en-b2-u4-l4-q2",
-                            "question": "In Section 4, how many times is the lecture played?",
-                            "options": [
-                                "Twice",
-                                "As many times as you want",
-                                "Once only",
-                                "Three times"
-                            ],
-                            "correctAnswerIndex": 2,
-                            "explanation": "IELTS da audio faqat 1 marta eshittiriladi."
-                        },
-                        {
-                            "id": "en-b2-u4-l4-q3",
-                            "question": "If you miss one question during the audio, what should you do immediately?",
-                            "options": [
-                                "Move on immediately to the next question to avoid losing the track",
-                                "Ask the invigilator to rewind",
-                                "Panic and stop listening",
-                                "Leave the exam room"
-                            ],
-                            "correctAnswerIndex": 0,
-                            "explanation": "Move on to the next question."
-                        },
-                        {
-                            "id": "en-b2-u4-l4-q4",
-                            "question": "Audio: \"The primary impediment to expansion was inadequate logistics.\" What is the answer for: \"Main obstacle was _______\"?",
-                            "options": [
-                                "rich investors",
-                                "fast trains",
-                                "sunny weather",
-                                "inadequate logistics"
-                            ],
-                            "correctAnswerIndex": 3,
-                            "explanation": "Impediment = obstacle -> inadequate logistics."
-                        }
-                    ]
-                }
+    "id": "en-b2-u4-l4",
+    "courseId": "english-b2",
+    "unitId": "en-b2-u4",
+    "unitTitle": "Unit 4: IELTS Listening & Speaking Integration",
+    "language": "en",
+    "level": "B2",
+    "lessonNumber": 4,
+    "title": "IELTS Listening: Section 3 & 4 Academic Discussions",
+    "description": "IELTS Listening Section 3 & 4: talabalar va professorlar o'rtasidagi ilmiy bahslar, monolog ma'ruzalar, 'signposting' so'zlari va konspekt olish.",
+    "estimatedDurationMinutes": 18,
+    "icon": "🎓",
+    "steps": [
+        {
+            "id": "en-b2-u4-l4-s1",
+            "title": "Akademik Ma'ruzalar va Signposting Tili",
+            "type": "learn",
+            "estimatedMinutes": 6,
+            "learnData": {
+                "title": "Academic Lectures, Multi-Speaker Discussions, and Signposting Language",
+                "explanation": "IELTS Listeningning 3 va 4-qismlari (Section 3 va 4) to'liq akademik muhitga bag'ishlangan bo'lib, Band 7.0+ olishni maqsad qilganlar uchun eng hal qiluvchi bosqichdir.\n\n1. Bo'limlarning Xarakteri:\n- **Section 3:** Universitet talabalari va ilmiy rahbar (tutor) o'rtasidagi akademik loyiha yoki dissertatsiya muhokamasi (2-4 kishilik suhbat). Bu yerda turli so'zlovchilarning fikrlarini ajrata olish kerak (Who said what?).\n- **Section 4:** Universitet professori tomonidan o'qiladigan 10 daqiqalik uzluksiz ilmiy ma'ruza (monolog). Hech qanday oraliq tanaffus bo'lmaydi!\n\n2. Signposting Language (Ma'ruza Yo'naltiruvchi So'zlar):\nProfessorlar ma'ruza davomida yangi mavzuga o'tayotganini maxsus iboralar orqali bildirishadi. Ushbu so'zlarni eshitishingiz bilan keyingi savolga diqqatni qaratishingiz kerak:\n- **Kirish va yo'nalish:** *'I would like to commence by examining...'* / *'Today's lecture will focus predominantly on...'*.\n- **Yangi qismga o'tish:** *'Moving on to the next dimension...'* / *'Turning our attention to the archaeological findings...'*\n- **Misol va tushuntirish:** *'To illustrate this phenomenon...'* / *'A prime exemplar of this theory is...'*\n- **Qarama-qarshi fikr:** *'On the other hand, sceptics contend that...'* / *'However, this hypothesis was subsequently refuted...'*\n- **Xulosa:** *'To recap the primary arguments...'* / *'In conclusion, the findings suggest...'*\n\n3. Eshitish Davomida Eslatma Olish (Academic Note-taking):\n- Qisqartmalardan foydalaning: 'b/c' (because), 'w/' (with), 'govt' (government), 'info' (information).\n- Matndagi so'zlar savol varaqasida 100% bir xil berilmaydi, doimo sinonimlar va parafrazlar bilan beriladi: agar savolda 'reduce pollution' bo'lsa, audioda 'mitigate environmental contamination' deb aytiladi.",
+                "vocabulary": [
+                    {
+                        "term": "signposting",
+                        "reading": "/ˈsaɪnˌpəʊ.stɪŋ/",
+                        "meaning": "nutqda yo'nalishni ko'rsatuvchi so'zlar (moving on, turning to)",
+                        "exampleSentence": "Signposting language signals transitions between separate academic lecture themes.",
+                        "exampleTranslation": "Yo'naltiruvchi so'zlar alohida akademik ma'ruza mavzulari orasidagi o'tishlarni bildiradi."
+                    },
+                    {
+                        "term": "refute",
+                        "reading": "/rɪˈfjuːt/",
+                        "meaning": "inkor etmoq, xatoligini isbotlamoq (nazariyaning)",
+                        "exampleSentence": "Subsequent empirical measurements completely refuted the professor's preliminary hypothesis.",
+                        "exampleTranslation": "Keyingi amaliy o'lchovlar professorning dastlabki gipotezasini butunlay inkor etdi."
+                    },
+                    {
+                        "term": "dissertation",
+                        "reading": "/ˌdɪs.əˈteɪ.ʃən/",
+                        "meaning": "magistrlik yoki doktorlik dissertatsiyasi",
+                        "exampleSentence": "In Section 3, two postgraduate students frequently discuss draft dissertations.",
+                        "exampleTranslation": "3-qismda ikki magistrant ko'pincha dissertatsiya qoralamalarini muhokama qilishadi."
+                    },
+                    {
+                        "term": "commence",
+                        "reading": "/kəˈmens/",
+                        "meaning": "boshlamoq, start bermoq (formal)",
+                        "exampleSentence": "The lecturer commenced by outlining three distinct cognitive theories.",
+                        "exampleTranslation": "Ma'ruzachi uchta alohida kognitiv nazariyani bayon qilish bilan boshladi."
+                    },
+                    {
+                        "term": "monograph",
+                        "reading": "/ˈmɒn.ə.ɡrɑːf/",
+                        "meaning": "ilmiy monografiya, alohida mavzuga bag'ishlangan kitob",
+                        "exampleSentence": "The speaker cited a seminal monograph published by Cambridge University Press.",
+                        "exampleTranslation": "So'zlovchi Kembrij universiteti nashriyoti tomonidan chop etilgan fundamental monografiyaga tayandi."
+                    },
+                    {
+                        "term": "seminal",
+                        "reading": "/ˈsem.ɪ.nəl/",
+                        "meaning": "fundamental, yangi yo'l ochib bergan (asar, kashfiyot)",
+                        "exampleSentence": "Albert Einstein's seminal 1905 papers revolutionized theoretical physics.",
+                        "exampleTranslation": "Albert Eynshteynning 1905-yildagi fundamental maqolalari nazariy fizikada inqilob qildi."
+                    },
+                    {
+                        "term": "recap",
+                        "reading": "/ˈriː.kæp/",
+                        "meaning": "qisqacha takrorlash, xulosa qilib aytmoq",
+                        "exampleSentence": "Before concluding the seminar, let us briefly recap the primary methodologies.",
+                        "exampleTranslation": "Seminarni yakunlashdan oldin asosiy metodologiyalarni qisqacha xulosa qilib olaylik."
+                    },
+                    {
+                        "term": "paraphrase",
+                        "reading": "/ˈpær.ə.freɪz/",
+                        "meaning": "boshqacha so'zlar bilan qayta ifodalash",
+                        "exampleSentence": "Audio information is routinely paraphrased in Section 4 question prompts.",
+                        "exampleTranslation": "Audio axborot 4-qism savollarida doimiy ravishda parafrazlab beriladi."
+                    }
+                ],
+                "grammarRules": [
+                    {
+                        "pattern": "Signposting phrases: \"Turning our attention to...\", \"Having examined X, let us consider Y...\"",
+                        "meaning": "Ilmiy ma'ruzada bir mavzudan ikkinchisiga o'tish",
+                        "usageNotes": "Ushbu iboralar tinglovchiga yangi savol boshlanayotganini bildiradi.",
+                        "examples": [
+                            {
+                                "sentence": "\"Turning our attention to marine mammals, we observe similar acoustic behaviors.\"",
+                                "translation": "Diqqatimizni dengiz sutemizuvchilariga qaratsak, shunga o'xshash akustik xatti-harakatlarni ko'ramiz."
+                            }
+                        ]
+                    }
+                ]
             }
-        ]
-    },
+        },
+        {
+            "id": "en-b2-u4-l4-s2",
+            "title": "Amaliy Mashqlar",
+            "type": "practice",
+            "estimatedMinutes": 5,
+            "practiceData": {
+                "instructions": "IELTS Listening Section 3 & 4 strategiyalari bo'yicha to'g'ri variantlarni tanlang.",
+                "exercises": [
+                    {
+                        "id": "en-b2-u4-l4-e1",
+                        "type": "multiple-choice",
+                        "prompt": "When a lecturer says 'Now, turning our attention to the socioeconomic repercussions...', what should the candidate do?",
+                        "options": [
+                            "Stop listening and check previous answers.",
+                            "Immediately shift visual attention to the next section or question on socioeconomic effects.",
+                            "Write down the word 'turning'.",
+                            "Raise their hand to ask a question."
+                        ],
+                        "correctAnswer": 1,
+                        "explanation": "Signposting iborasi ma'ruza keyingi mavzuga o'tganini bildiradi, shuning uchun darhol keyingi savolga o'tish lozim."
+                    },
+                    {
+                        "id": "en-b2-u4-l4-e2",
+                        "type": "multiple-choice",
+                        "prompt": "In Section 3 multi-speaker dialogues, how can test-takers avoid confusing which speaker holds a specific viewpoint?",
+                        "options": [
+                            "By tracking the speakers' names and noting distinct vocal pitches.",
+                            "By assuming female speakers are always tutors.",
+                            "By guessing randomly.",
+                            "By only reading the final line."
+                        ],
+                        "correctAnswer": 0,
+                        "explanation": "So'zlovchilarning ismlari va ovoz tembrlarini diqqat bilan ajratib borish xatolarni oldini oladi."
+                    },
+                    {
+                        "id": "en-b2-u4-l4-e3",
+                        "type": "multiple-choice",
+                        "prompt": "Question prompt: 'The researcher attributes the project's success to _______ .' Audio: 'What made this endeavor triumphant was not funding, but rather relentless perseverance.' What is the answer?",
+                        "options": [
+                            "funding",
+                            "perseverance",
+                            "relentless funding",
+                            "endeavor"
+                        ],
+                        "correctAnswer": 1,
+                        "explanation": "'Funding' rad etilgan (distraktor); muvaffaqiyat sababi esa 'perseverance'dir."
+                    },
+                    {
+                        "id": "en-b2-u4-l4-e4",
+                        "type": "multiple-choice",
+                        "prompt": "Why is Section 4 often considered the most mentally demanding part of IELTS Listening?",
+                        "options": [
+                            "Because it is played at triple speed.",
+                            "Because it is a ten-minute continuous academic monologue with zero interruptions or pauses.",
+                            "Because candidates must write answers in Latin.",
+                            "Because the audio contains loud background sirens."
+                        ],
+                        "correctAnswer": 1,
+                        "explanation": "Section 4 hech qanday oraliq tanaffussiz 10 ta savol ketma-ket keladigan yaxlit akademik monologdir."
+                    },
+                    {
+                        "id": "en-b2-u4-l4-e5",
+                        "type": "multiple-choice",
+                        "prompt": "Which signposting phrase indicates that the lecturer is about to provide a summary of the main points?",
+                        "options": [
+                            "To recap the fundamental findings...",
+                            "Turning to the first point...",
+                            "Conversely, sceptics argue...",
+                            "Having introduced the theory..."
+                        ],
+                        "correctAnswer": 0,
+                        "explanation": "'To recap...' (xulosa qilib takrorlash) yakuniy xulosani bildiradi."
+                    }
+                ]
+            }
+        },
+        {
+            "id": "en-b2-u4-l4-s3",
+            "title": "Yakuniy Test",
+            "type": "test",
+            "estimatedMinutes": 5,
+            "testData": {
+                "instructions": "5 ta test savoliga to'g'ri javob bering. O'tish bali: 80%.",
+                "passingScorePercentage": 80,
+                "questions": [
+                    {
+                        "id": "en-b2-u4-l4-q1",
+                        "question": "What is the primary function of signposting language in academic lectures?",
+                        "options": [
+                            "To entertain the audience with jokes.",
+                            "To guide listeners through the structural transitions of the presentation.",
+                            "To define difficult grammatical terminology.",
+                            "To test the candidate's spelling speed."
+                        ],
+                        "correctAnswerIndex": 1,
+                        "explanation": "Signposting nutqning tuzilmaviy o'tishlarini tinglovchiga ko'rsatib turish uchun xizmat qiladi."
+                    },
+                    {
+                        "id": "en-b2-u4-l4-q2",
+                        "question": "If a speaker in Section 3 says 'I couldn't agree more with your assessment', the speaker _______ .",
+                        "options": [
+                            "totally disagrees",
+                            "agrees 100% enthusiastically",
+                            "wants to leave the room",
+                            "is confused by the assessment"
+                        ],
+                        "correctAnswerIndex": 1,
+                        "explanation": "'I couldn't agree more' = men bundan ortiq rozi bo'la olmasdim, ya'ni 100% to'liq roziman."
+                    },
+                    {
+                        "id": "en-b2-u4-l4-q3",
+                        "question": "Audio: 'Initially, archaeologists believed the citadel was constructed for defense; however, subsequent digs indicate it served a strictly ceremonial function.' The citadel was built for:",
+                        "options": [
+                            "defense",
+                            "ceremonial purposes",
+                            "agricultural storage",
+                            "residential housing"
+                        ],
+                        "correctAnswerIndex": 1,
+                        "explanation": "'Defense' dastlabki inkor etilgan taxmin; haqiqiy maqsad esa 'ceremonial' (marosimlar uchun)."
+                    },
+                    {
+                        "id": "en-b2-u4-l4-q4",
+                        "question": "In Section 4 note completion, if the word limit is ONE WORD ONLY and you write 'green energy', your score is:",
+                        "options": [
+                            "1 mark",
+                            "0.5 marks",
+                            "0 marks",
+                            "Full marks"
+                        ],
+                        "correctAnswerIndex": 2,
+                        "explanation": "Cheklov 1 ta so'z bo'lgani uchun 2 ta so'z yozish 0 ball bilan baholanadi."
+                    },
+                    {
+                        "id": "en-b2-u4-l4-q5",
+                        "question": "The term 'seminal' in academic discourse describes a study or book that is _______ .",
+                        "options": [
+                            "outdated and forgotten",
+                            "highly influential and foundational in its field",
+                            "written by anonymous students",
+                            "strictly fictional"
+                        ],
+                        "correctAnswerIndex": 1,
+                        "explanation": "'Seminal' o'z sohasida yangi yo'l ochib bergan va o'ta kuchli ta'sirga ega fundamental asarni bildiradi."
+                    }
+                ]
+            }
+        }
+    ]
+},
     {
-        "id": "en-b2-u4-l5",
-        "courseId": "english-b2",
-        "unitId": "en-b2-u4",
-        "unitTitle": "Unit 4: IELTS Reading & Listening Mastery",
-        "language": "en",
-        "level": "B2",
-        "lessonNumber": 5,
-        "title": "B2 / IELTS 6.5 Reading & Listening Integrated Drill",
-        "description": "O'qish va eshitish ko'nikmalarini birlashtiruvchi B2 darajadagi amaliy test.",
-        "estimatedDurationMinutes": 18,
-        "icon": "🏆",
-        "steps": [
-            {
-                "id": "en-b2-u4-l5-s1",
-                "title": "Kompleks Tahlil",
-                "type": "learn",
-                "estimatedMinutes": 5,
-                "learnData": {
-                    "title": "Integrated IELTS 6.5 Competencies",
-                    "explanation": "Reading va Listening bo'limlarida 40 tadan savol beriladi. Band 6.5 olish uchun kamida 26-29 ta to'g'ri javob talab etiladi.",
-                    "keyPoints": [
-                        "Time management: 20 minutes per reading passage.",
-                        "Paraphrasing recognition across all skills."
-                    ],
-                    "grammarRules": [
-                        {
-                            "pattern": "B2 / IELTS 6.5 Reading & Listening Integrated Drill",
-                            "meaning": "O'qish va eshitish ko'nikmalarini birlashtiruvchi B2 darajadagi amaliy test.",
-                            "usageNotes": "Reading va Listening bo'limlarida 40 tadan savol beriladi. Band 6.5 olish uchun kamida 26-29 ta to'g'ri javob talab etiladi.",
-                            "examples": [
-                                {
-                                    "sentence": "I study English every day with dedication.",
-                                    "translation": "Har kuni ingliz tilini astoydil o'rganaman."
-                                }
-                            ]
-                        }
-                    ],
-                    "vocabulary": [
-                        {
-                            "term": "Coherence",
-                            "reading": "/kəʊˈhɪə.rəns/",
-                            "meaning": "Mantiqiy bogʻliqlik, izchillik",
-                            "exampleSentence": "Ensure structural coherence throughout your essay.",
-                            "exampleTranslation": "Inshoyingiz davomida tuzilmaviy izchillikni taʼminlang."
-                        },
-                        {
-                            "term": "Compelling",
-                            "reading": "/kəmˈpel.ɪŋ/",
-                            "meaning": "Juda ishonarli, maftunkor",
-                            "exampleSentence": "He presented a compelling argument in the debate.",
-                            "exampleTranslation": "U bahsda juda ishonarli dalil keltirdi."
-                        },
-                        {
-                            "term": "Substantiate",
-                            "reading": "/səbˈstæn.ʃi.eɪt/",
-                            "meaning": "Asoslab bermoq, isbotlamoq",
-                            "exampleSentence": "You must substantiate your claims with empirical evidence.",
-                            "exampleTranslation": "Siz oʻz daʼvolaringizni empirik dalillar bilan asoslab berishingiz kerak."
-                        }
-                    ]
-                }
-            },
-            {
-                "id": "en-b2-u4-l5-s2",
-                "title": "Sinov Mashqi",
-                "type": "practice",
-                "estimatedMinutes": 6,
-                "practiceData": {
-                    "instructions": "To'g'ri javobni tanlang.",
-                    "exercises": [
-                        {
-                            "id": "en-b2-u4-l5-e1",
-                            "type": "multiple-choice",
-                            "prompt": "Which skill is vital across both IELTS Reading and Listening?",
-                            "options": [
-                                "Translating into native language word-for-word",
-                                "Writing quickly with a pencil",
-                                "Memorizing the dictionary",
-                                "Recognizing paraphrases and synonyms"
-                            ],
-                            "correctAnswer": 3,
-                            "explanation": "Recognizing paraphrases and synonyms."
-                        },
-                        {
-                            "id": "en-b2-u4-l5-ex-2",
-                            "type": "multiple-choice",
-                            "prompt": "Choose the correct word to complete the sentence: \"He presented a compelling argument in the debate.\"",
-                            "options": [
-                                "doubt",
-                                "Compelling",
-                                "delay",
-                                "reluctance"
-                            ],
-                            "correctAnswer": 1,
-                            "explanation": "\"Compelling\" (Juda ishonarli, maftunkor) fits the context appropriately."
-                        }
-                    ]
-                }
-            },
-            {
-                "id": "en-b2-u4-l5-s3",
-                "title": "B2 Yakuniy Test",
-                "type": "test",
-                "estimatedMinutes": 7,
-                "testData": {
-                    "instructions": "Savollarga javob bering.",
-                    "passingScorePercentage": 75,
-                    "questions": [
-                        {
-                            "id": "en-b2-u4-l5-q1",
-                            "question": "How many passages are there in the IELTS Academic Reading test?",
-                            "options": [
-                                "2 passages",
-                                "4 passages",
-                                "5 passages",
-                                "3 passages"
-                            ],
-                            "correctAnswerIndex": 3,
-                            "explanation": "3 passages."
-                        },
-                        {
-                            "id": "en-b2-u4-l5-q2",
-                            "question": "How many total questions are in the IELTS Reading test?",
-                            "options": [
-                                "40 questions",
-                                "50 questions",
-                                "25 questions",
-                                "30 questions"
-                            ],
-                            "correctAnswerIndex": 0,
-                            "explanation": "40 questions."
-                        },
-                        {
-                            "id": "en-b2-u4-l5-q3",
-                            "question": "Is extra time given to transfer answers in IELTS Reading on paper?",
-                            "options": [
-                                "Yes, 10 minutes are provided",
-                                "No, answers must be written directly onto the answer sheet within the 60 minutes",
-                                "Yes, 15 minutes",
-                                "Yes, 5 minutes are provided"
-                            ],
-                            "correctAnswerIndex": 1,
-                            "explanation": "Readingda qo'shimcha transfer vaqti berilmaydi (Listeningda 10 daqiqa bor)."
-                        },
-                        {
-                            "id": "en-b2-u4-l5-q4",
-                            "question": "What is the total duration of the IELTS Academic Reading test?",
-                            "options": [
-                                "90 minutes",
-                                "45 minutes",
-                                "60 minutes",
-                                "30 minutes"
-                            ],
-                            "correctAnswerIndex": 2,
-                            "explanation": "60 minutes."
-                        }
-                    ]
-                }
+    "id": "en-b2-u4-l5",
+    "courseId": "english-b2",
+    "unitId": "en-b2-u4",
+    "unitTitle": "Unit 4: IELTS Reading & Listening Mastery",
+    "language": "en",
+    "level": "B2",
+    "lessonNumber": 5,
+    "title": "B2 / IELTS 6.5 Reading & Listening Integrated Drill",
+    "description": "IELTS Academic Reading & Listening integratsiyalashgan simulyatsiyasi: vaqtni boshqarish, axborotni filtratsiyalash va kognitiv chidamlilik.",
+    "estimatedDurationMinutes": 18,
+    "icon": "🎯",
+    "steps": [
+        {
+            "id": "en-b2-u4-l5-s1",
+            "title": "Integratsiyalashgan Receptive Skills Sintezi",
+            "type": "learn",
+            "estimatedMinutes": 6,
+            "learnData": {
+                "title": "Cognitive Stamina, Time Management, and Error Auditing in IELTS Receptive Modules",
+                "explanation": "Ushbu darsda Unit 4 da o'rganilgan barcha o'qish va eshitish strategiyalari (True/False/Not Given, Matching Headings, Auditory Distractors, Signposting Language) yagona integratsiyalashgan sintezda birlashtiriladi.\n\n1. Vaqtni Boshqarish Strategiyasi (Time Management Architecture):\n- **Reading (60 daqiqa - 3 ta matn, 40 ta savol):**\n  • Passage 1: 15 daqiqa (oddiyroq deskriptiv matn)\n  • Passage 2: 20 daqiqa (ijtimoiy/ilmiy tahliliy matn)\n  • Passage 3: 25 daqiqa (murakkab falsafiy yoki akademik munozarali matn)\n  • ⚠️ Javob varaqasiga ko'chirish uchun qo'shimcha vaqt BERILMAYDI! Shuning uchun javoblarni to'g'ridan-to'g'ri varaqaga belgilab borish shart.\n- **Listening (30 daqiqa audio + 10 daqiqa javob varaqasiga ko'chirish vaqti):**\n  • 10 daqiqalik ko'chirish vaqtidan orfografik xatolarni (spelling), birlik/ko'plik shakllarini (-s qo'shimchalari) va so'z soni cheklovlarini qayta tekshirish uchun unumli foydalaning.\n\n2. Kognitiv Chidamlilik (Cognitive Stamina):\n- 2 soatu 45 daqiqalik uzluksiz IELTS imtihonida diqqat susayishi eng katta dushmandir. Eshitish jarayonida bitta savolni o'tkazib yuborsangiz, aslo o'sha savol haqida o'ylab to'xtab qolmang! Aks holda keyingi 3 ta savolni ham o'tkazib yuborasiz. O'tib ketgan savolga taxminiy javob qo'yib, darhol keyingisiga diqqatni jamlang.",
+                "vocabulary": [
+                    {
+                        "term": "stamina",
+                        "reading": "/ˈstæm.ɪ.nə/",
+                        "meaning": "chidamlilik, bardoshlilik (uzoq imtihonda diqqatni saqlash)",
+                        "exampleSentence": "Completing forty Reading questions under sixty minutes requires cognitive stamina.",
+                        "exampleTranslation": "60 daqiqa ichida qirqta Reading savolini yechish aqliy chidamlilikni talab qiladi."
+                    },
+                    {
+                        "term": "receptive",
+                        "reading": "/rɪˈsep.tɪv/",
+                        "meaning": "qabul qiluvchi ko'nikmalar (Reading va Listening)",
+                        "exampleSentence": "Reading and Listening constitute the receptive language domains in IELTS.",
+                        "exampleTranslation": "O'qish va tinglab tushunish IELTS imtihonida qabul qiluvchi til sohalarini tashkil etadi."
+                    },
+                    {
+                        "term": "scrutiny",
+                        "reading": "/ˈskruː.tɪ.ni/",
+                        "meaning": "sinchkovlik bilan tekshirish, nazorat",
+                        "exampleSentence": "Each question requires meticulous scrutiny of grammatical qualifiers.",
+                        "exampleTranslation": "Har bir savol grammatik cheklovchilarni sinchkovlik bilan tahlil qilishni talab etadi."
+                    },
+                    {
+                        "term": "disposition",
+                        "reading": "/ˌdɪs.pəˈzɪʃ.ən/",
+                        "meaning": "moyillik, ichki fe'l-atvor",
+                        "exampleSentence": "Maintaining a calm disposition during listening lapses prevents compound score loss.",
+                        "exampleTranslation": "Eshitishdagi kichik xatolar paytida xotirjamlikni saqlash ketma-ket ball yo'qotishning oldini oladi."
+                    },
+                    {
+                        "term": "allocation",
+                        "reading": "/ˌæl.əˈkeɪ.ʃən/",
+                        "meaning": "taqsimot, ajratish (vaqt yoki resurs)",
+                        "exampleSentence": "Prudent time allocation across the three reading passages guarantees full completion.",
+                        "exampleTranslation": "Uchta o'qish matni bo'ylab vaqtni oqilona taqsimlash barcha savollarni to'liq yakunlashni kafolatlaydi."
+                    },
+                    {
+                        "term": "transfer",
+                        "reading": "/trænsˈfɜːr/",
+                        "meaning": "ko'chirib o'tkazish (javoblar varaqasiga)",
+                        "exampleSentence": "Unlike Reading, Listening provides ten minutes to transfer responses to the official sheet.",
+                        "exampleTranslation": "Readingdan farqli o'laroq, Listening javoblarni rasmiy varaqaga ko'chirish uchun 10 daqiqa beradi."
+                    },
+                    {
+                        "term": "omission",
+                        "reading": "/əʊˈmɪʃ.ən/",
+                        "meaning": "tushirib qoldirish, e'tibordan chetda qoldirish",
+                        "exampleSentence": "The accidental omission of the plural 's' renders a listening answer invalid.",
+                        "exampleTranslation": "Ko'plik 's' qo'shimchasining tasodifan tushirib qoldirilishi tinglash javobini bekor qiladi."
+                    },
+                    {
+                        "term": "benchmark",
+                        "reading": "/ˈbentʃ.mɑːk/",
+                        "meaning": "namuna, o'lchov standarti (Band 6.5 / 7.0)",
+                        "exampleSentence": "Achieving twenty-seven correct answers out of forty secures a solid Band 6.5 benchmark.",
+                        "exampleTranslation": "Qirqtadan 27 ta to'g'ri javob to'plash mustahkam Band 6.5 darajasini kafolatlaydi."
+                    }
+                ],
+                "grammarRules": [
+                    {
+                        "pattern": "Imperative Exam Rule: Verify Word Count Limits",
+                        "meaning": "So'z chegarasini qat'iy nazorat qilish",
+                        "usageNotes": "Grammatik jihatdan to'g'ri bo'lsa ham, bitta so'z ortiqcha bo'lsa nol ball qo'yiladi.",
+                        "examples": [
+                            {
+                                "sentence": "\"NO MORE THAN TWO WORDS\" -> \"solar power\" (valid); \"the solar power system\" (invalid - 4 words).",
+                                "translation": "Ikki so'zdan oshmasin deganda 4 ta so'z yozish qat'iyan man etiladi."
+                            }
+                        ]
+                    }
+                ]
             }
-        ]
-    },
+        },
+        {
+            "id": "en-b2-u4-l5-s2",
+            "title": "Amaliy Mashqlar",
+            "type": "practice",
+            "estimatedMinutes": 5,
+            "practiceData": {
+                "instructions": "IELTS Receptive ko'nikmalari bo'yicha integratsiyalashgan amaliy mashqlarni bajaring.",
+                "exercises": [
+                    {
+                        "id": "en-b2-u4-l5-e1",
+                        "type": "multiple-choice",
+                        "prompt": "In IELTS Academic Reading, how much extra time is provided at the end to transfer answers to the answer sheet?",
+                        "options": [
+                            "10 minutes",
+                            "Zero minutes (answers must be written directly onto the sheet within 60 minutes)",
+                            "5 minutes",
+                            "15 minutes"
+                        ],
+                        "correctAnswer": 1,
+                        "explanation": "Readingda javoblarni ko'chirish uchun qo'shimcha vaqt BERILMAYDI! 60 daqiqa ichida hamma narsa yozib ulgurilishi shart."
+                    },
+                    {
+                        "id": "en-b2-u4-l5-e2",
+                        "type": "multiple-choice",
+                        "prompt": "If you miss an answer during an audio track in Section 4, what is the best immediate strategy?",
+                        "options": [
+                            "Keep thinking about the missed question for the next two minutes.",
+                            "Quickly make an educated guess, let it go, and immediately focus on the upcoming keyword prompt.",
+                            "Ask the examiner to rewind the audio.",
+                            "Erase all your previous answers."
+                        ],
+                        "correctAnswer": 1,
+                        "explanation": "O'tkazib yuborilgan savolga to'xtalib qolmasdan, darhol keyingi savolga diqqatni qaratish eng to'g'ri strategiyadir."
+                    },
+                    {
+                        "id": "en-b2-u4-l5-e3",
+                        "type": "multiple-choice",
+                        "prompt": "Which time distribution across the 3 Reading passages is widely recommended by expert tutors?",
+                        "options": [
+                            "20 min / 20 min / 20 min",
+                            "15 min (Passage 1) / 20 min (Passage 2) / 25 min (Passage 3)",
+                            "30 min / 15 min / 15 min",
+                            "10 min / 10 min / 40 min"
+                        ],
+                        "correctAnswer": 1,
+                        "explanation": "Matnlarning qiyinlik darajasi ortib borishi sababli 15 / 20 / 25 daqiqalik taqsimot eng optimal hisoblanadi."
+                    },
+                    {
+                        "id": "en-b2-u4-l5-e4",
+                        "type": "multiple-choice",
+                        "prompt": "In Listening, why is writing 'guitars' marked incorrect if the audio specifically said 'guitar'?",
+                        "options": [
+                            "Because the plural 's' alters the exact auditory token and violates precision scoring.",
+                            "Because IELTS does not recognize string instruments.",
+                            "Because all nouns must be singular in English.",
+                            "Because it is an American spelling."
+                        ],
+                        "correctAnswer": 0,
+                        "explanation": "Listeningda birlik va ko'plikni adashtirish butun javobni xato qiladi."
+                    },
+                    {
+                        "id": "en-b2-u4-l5-e5",
+                        "type": "multiple-choice",
+                        "prompt": "What does a score of 27 out of 40 in Academic Reading correspond to on the IELTS 9-band scale?",
+                        "options": [
+                            "Band 5.0",
+                            "Band 6.5",
+                            "Band 8.0",
+                            "Band 9.0"
+                        ],
+                        "correctAnswer": 1,
+                        "explanation": "Readingda 27 ta to'g'ri javob qat'iy Band 6.5 darajasiga to'g'ri keladi."
+                    }
+                ]
+            }
+        },
+        {
+            "id": "en-b2-u4-l5-s3",
+            "title": "Yakuniy Test",
+            "type": "test",
+            "estimatedMinutes": 5,
+            "testData": {
+                "instructions": "Unit 4 bo'yicha yakuniy sinov testidan o'ting. O'tish bali: 80%.",
+                "passingScorePercentage": 80,
+                "questions": [
+                    {
+                        "id": "en-b2-u4-l5-q1",
+                        "question": "In the True/False/Not Given section, if a question statement directly contradicts information in the text, the correct answer is _______ .",
+                        "options": [
+                            "TRUE",
+                            "FALSE",
+                            "NOT GIVEN",
+                            "PARTIAL"
+                        ],
+                        "correctAnswerIndex": 1,
+                        "explanation": "Matndagi faktga bevosita zid keluvchi bayonot — FALSE."
+                    },
+                    {
+                        "id": "en-b2-u4-l5-q2",
+                        "question": "How much transfer time is officially allocated at the end of the 30-minute Listening audio test?",
+                        "options": [
+                            "Zero minutes",
+                            "5 minutes",
+                            "10 minutes",
+                            "15 minutes"
+                        ],
+                        "correctAnswerIndex": 2,
+                        "explanation": "Listening oxirida javoblarni ko'chirish uchun roppa-rosa 10 daqiqa beriladi."
+                    },
+                    {
+                        "id": "en-b2-u4-l5-q3",
+                        "question": "When matching headings, what does the 'word-spotting trap' involve?",
+                        "options": [
+                            "Selecting a heading simply because it contains a single keyword identical to a word in the paragraph, ignoring the overarching meaning.",
+                            "Writing words in capital letters.",
+                            "Reading without wearing glasses.",
+                            "Translating text into one's native language."
+                        ],
+                        "correctAnswerIndex": 0,
+                        "explanation": "Umumiy ma'noni tushunmasdan, shunchaki bitta so'z o'xshashligiga qarab sarlavha tanlash bu 'word-spotting trap'dir."
+                    },
+                    {
+                        "id": "en-b2-u4-l5-q4",
+                        "question": "If a speaker says 'Let's meet at 4:00... actually, make it 4:30', which time must be recorded?",
+                        "options": [
+                            "4:00",
+                            "4:30",
+                            "Both 4:00 and 4:30",
+                            "5:00"
+                        ],
+                        "correctAnswerIndex": 1,
+                        "explanation": "O'zini to'g'irlashdan keyin aytilgan 4:30 to'g'ri javobdir."
+                    },
+                    {
+                        "id": "en-b2-u4-l5-q5",
+                        "question": "What is the primary function of signposting words like 'Turning now to...' in Section 4 lectures?",
+                        "options": [
+                            "To announce that the lecture has concluded.",
+                            "To indicate a structural transition to a new key topic or question area.",
+                            "To signal that the speaker made a mistake.",
+                            "To ask the audience to applaud."
+                        ],
+                        "correctAnswerIndex": 1,
+                        "explanation": "Signposting so'zlari ma'ruzaning yangi bo'limi yoki savoliga o'tilganini bildiradi."
+                    }
+                ]
+            }
+        }
+    ]
+},
     {
         "id": "en-b2-u5-l1",
         "courseId": "english-b2",
