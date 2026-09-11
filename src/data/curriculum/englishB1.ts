@@ -1390,54 +1390,115 @@ export const ENGLISH_B1_LESSONS: Lesson[] = [
         "language": "en",
         "level": "B1",
         "lessonNumber": 1,
-        "title": "Zero & First Conditionals (Real Possibilities)",
-        "description": "Ilmiy faktlar (Zero) va kelajakdagi real ehtimollar (First Conditional).",
-        "estimatedDurationMinutes": 15,
-        "icon": "🔀",
+        "title": "Zero & First Conditionals with Advanced Conjunctions",
+        "description": "Real shartli holatlar, tabiat qonunlari va zamonaviy bog'lovchilar (unless, as long as, provided that, in case).",
+        "estimatedDurationMinutes": 16,
+        "icon": "⚡",
         "steps": [
             {
                 "id": "en-b1-u2-l1-s1",
-                "title": "Zero & First Conditional",
+                "title": "Kengaytirilgan Real Shart Ergash Gaplar",
                 "type": "learn",
-                "estimatedMinutes": 5,
+                "estimatedMinutes": 6,
                 "learnData": {
-                    "title": "Conditionals: Zero vs First",
-                    "explanation": "Zero Conditional (umumiy haqiqat): If + Present Simple, Present Simple (If you heat ice, it melts). First Conditional (real kelajak): If + Present Simple, Will + V (If it rains tomorrow, we will stay home).",
-                    "keyPoints": [
-                        "If qismida HECH QACHON \"will\" ishlatilmaydi: If you study hard, you will pass."
-                    ],
+                    "title": "Zero & First Conditionals: Unless, As Long As, Provided That & In Case",
+                    "explanation": "B1 darajasida shart ergash gaplar nafaqat oddiy 'if' bilan, balki nutqni boyituvchi ilg'or bog'lovchilar bilan qo'llaniladi:\n\n1. Kengaytirilgan Shart Bog'lovchilari:\n- As long as / Provided that (sharti bilan, faqatgina ... bo'lsa):\n  • 'You can borrow my car as long as you return it with a full tank.' (To'liq bak bilan qaytarish sharti bilan mashinamni olib turishingiz mumkin).\n  • 'Provided that weather conditions remain stable, the space shuttle will launch tomorrow morning.'\n- Unless (agar ... bo'lmasa / if not):\n  • 'Unless you book in advance, you won't get a front-row ticket.' = 'If you don't book in advance...'\n  • Eslatma: 'Unless' inkor ma'nosiga ega bo'lgani sababli, uning gapida yana 'don't/doesn't' qo'shilmaydi!\n- In case (har ehtimolga qarshi, ehtiyot yuzasidan):\n  • 'Take an extra battery in case your phone runs out of power.' (Harakat har qanday holatda ham bajariladi, chunki ehtiyot chorasidir).\n\n2. 'In case' va 'If' O'rtasidagi O'ta Muhim Farq:\n- 'I will buy an umbrella if it rains.' -> Faqat yomg'ir yog'sagina do'konga borib soyabon sotib olaman.\n- 'I will take an umbrella in case it rains.' -> Yomg'ir hali yoqqani yo'q, lekin yog'ib qolishi ehtimolini hisobga olib, hozirdan soyabonni o'zim bilan olib ketaman!\n\n3. O'zbek o'rganuvchilari uchun xavfli tuzoqlar (Common Pitfalls):\n- ❌ 'I will take warm clothes in case it will be cold.' -> ✅ 'I will take warm clothes in case it IS cold.' ('In case' dan keyin ham 'if' kabi 'will' ISHLATILMAYDI, Present Simple qo'yiladi!).\n- ❌ 'Unless you don't study hard, you will fail.' -> ✅ 'Unless you STUDY hard, you will fail.' (Ikkita inkor xatosi).\n\n4. IELTS Speaking Foundation Corner:\n- Topic: Planning, Preparations and Contingencies (Speaking Part 1 & 3)\n- Examiner: 'What preparations do you normally make before traveling to a new city?'\n- Model Band 6.0+ Answer: 'Before setting off, I always save offline digital maps on my smartphone in case I lose internet connectivity. Furthermore, provided that I have enough time, I read up on local customs and public transport systems so that I can navigate the city smoothly.'\n- Advanced Linkers: 'In case I lose...', 'Provided that I have...' kabi tuzilmalarni qo'llash imtihon oluvchiga grammatik bilimlaringiz B1+ darajasida ekanini darhol ko'rsatadi.",
                     "vocabulary": [
                         {
-                            "term": "Melt",
-                            "reading": "/melt/",
-                            "meaning": "Erish / Erimoq",
-                            "exampleSentence": "Ice melts at 0 degrees Celsius.",
-                            "exampleTranslation": "Muz 0 darajada eriydi."
+                            "term": "provided that",
+                            "reading": "/prəˈvaɪ.dɪd ðæt/",
+                            "meaning": "sharti bilan, faqatgina ... bo'lsa",
+                            "exampleSentence": "You may enter the research laboratory provided that you wear a protective coat.",
+                            "exampleTranslation": "Himoya xalatini kiyish sharti bilan tadqiqot laboratoriyasiga kirishingiz mumkin."
                         },
                         {
-                            "term": "Efficient",
-                            "reading": "/ɪˈfɪʃ.ənt/",
-                            "meaning": "Samarali",
-                            "exampleSentence": "We need to find a more efficient solution.",
-                            "exampleTranslation": "Biz yanada samaraliroq yechim topishimiz kerak."
+                            "term": "as long as",
+                            "reading": "/æz lɒŋ æz/",
+                            "meaning": "modomiki ... ekan, sharti bilan",
+                            "exampleSentence": "As long as you practice speaking regularly, your pronunciation will improve rapidly.",
+                            "exampleTranslation": "Muntazam gapirishni mashq qilar ekansiz, talaffuzingiz tez sur'atlarda yaxshilanadi."
                         },
                         {
-                            "term": "Requirement",
-                            "reading": "/rɪˈkwaɪə.mənt/",
-                            "meaning": "Talab, shart",
-                            "exampleSentence": "Fluency is a core requirement for this role.",
-                            "exampleTranslation": "Ravonlik bu lavozim uchun asosiy talabdir."
+                            "term": "in case",
+                            "reading": "/ɪn keɪs/",
+                            "meaning": "har ehtimolga qarshi, ehtiyot yuzasidan",
+                            "exampleSentence": "Write down my mobile number in case you get lost in the crowded bazaar.",
+                            "exampleTranslation": "Gavjum bozorda adashib qolishingiz ehtimoliga qarshi telefon raqamimni yozib oling."
+                        },
+                        {
+                            "term": "unless",
+                            "reading": "/ənˈles/",
+                            "meaning": "agar ... bo'lmasa (if not)",
+                            "exampleSentence": "Unless you present a valid student ID, you will not receive the discounted price.",
+                            "exampleTranslation": "Amaldagi talabalik guvohnomasini ko'rsatmasangiz, chegirmali narxni ololmaysiz."
+                        },
+                        {
+                            "term": "guarantee",
+                            "reading": "/ˌɡær.ənˈtiː/",
+                            "meaning": "kafolat bermoq, kafolat",
+                            "exampleSentence": "Hard work alone cannot guarantee success, but it certainly increases your odds.",
+                            "exampleTranslation": "Faqatgina mehnatning o'zi muvaffaqiyatni kafolatlay olmaydi, ammo u imkoniyatlaringizni oshiradi."
+                        },
+                        {
+                            "term": "circumstance",
+                            "reading": "/ˈsɜː.kəm.stɑːns/",
+                            "meaning": "vaziyat, holat, sharoit",
+                            "exampleSentence": "Under normal circumstances, customer orders are delivered within forty-eight hours.",
+                            "exampleTranslation": "Odatdagi sharoitlarda mijozlar buyurtmalari qirq sakkiz soat ichida yetkazib beriladi."
+                        },
+                        {
+                            "term": "precaution",
+                            "reading": "/prɪˈkɔː.ʃən/",
+                            "meaning": "ehtiyot chorasi",
+                            "exampleSentence": "Wearing a seatbelt is a basic safety precaution that saves lives.",
+                            "exampleTranslation": "Xavfsizlik kamarini taqish inson hayotini saqlab qoluvchi asosiy ehtiyot chorasidir."
+                        },
+                        {
+                            "term": "valid",
+                            "reading": "/ˈvæl.ɪd/",
+                            "meaning": "yaroqli, amaldagi (hujjat yoki chipta)",
+                            "exampleSentence": "Your international passport must remain valid for at least six months prior to travel.",
+                            "exampleTranslation": "Sayohatdan oldin xorijiy pasportingiz kamida olti oy davomida yaroqli bo'lishi shart."
+                        },
+                        {
+                            "term": "contract",
+                            "reading": "/ˈkɒn.trækt/",
+                            "meaning": "shartnoma, bitim",
+                            "exampleSentence": "Carefully read all terms and conditions before signing any employment contract.",
+                            "exampleTranslation": "Har qanday mehnat shartnomasini imzolashdan oldin uning barcha shartlarini diqqat bilan o'qing."
+                        },
+                        {
+                            "term": "emergency",
+                            "reading": "/ɪˈmɜː.dʒən.si/",
+                            "meaning": "favqulodda vaziyat",
+                            "exampleSentence": "Keep an emergency first-aid kit in your car at all times.",
+                            "exampleTranslation": "Avtomobilingizda doimo favqulodda birinchi yordam qutisini saqlang."
                         }
                     ],
                     "grammarRules": [
                         {
-                            "pattern": "Zero & First Conditionals (Real Possibilities)",
-                            "meaning": "Ilmiy faktlar (Zero) va kelajakdagi real ehtimollar (First Conditional).",
-                            "usageNotes": "Zero Conditional (umumiy haqiqat): If + Present Simple, Present Simple (If you heat ice, it melts). First Conditional (real kelajak): If + Present Simple, Will + V (If it rains tomorrow, we will stay home).",
+                            "pattern": "Provided that / As long as + Present Simple, ... will + base verb",
+                            "meaning": "Shart bajarilsagina kelajakda natija yuzaga kelishi",
+                            "usageNotes": "Shart qismida 'will' kelmaydi. Present Simple qo'llaniladi.",
                             "examples": [
                                 {
-                                    "sentence": "Ice melts at 0 degrees Celsius.",
-                                    "translation": "Muz 0 darajada eriydi."
+                                    "sentence": "Provided that we reach the airport by 7 AM, we will not miss our flight.",
+                                    "translation": "Aeroportga ertalab 7 gacha yetib borish sharti bilan, reysimizga kechikmaymiz."
+                                },
+                                {
+                                    "sentence": "You will pass the test as long as you follow the study schedule.",
+                                    "translation": "O'quv jadvaliga amal qilar ekansiz, testdan albatta o'tasiz."
+                                }
+                            ]
+                        },
+                        {
+                            "pattern": "In case + Present Simple (precautionary action)",
+                            "meaning": "Ehtimoliy xavfning oldini olish uchun oldindan qilinadigan harakat",
+                            "usageNotes": "'In case' ehtiyot chorasi bo'lib, uning ergash gapida 'will' ISHLATILMAYDI.",
+                            "examples": [
+                                {
+                                    "sentence": "Take an umbrella in case it rains later this afternoon.",
+                                    "translation": "Kunning ikkinchi yarmida yomg'ir yog'ib qolishi ehtimoliga qarshi soyabon ol."
                                 }
                             ]
                         }
@@ -1446,97 +1507,148 @@ export const ENGLISH_B1_LESSONS: Lesson[] = [
             },
             {
                 "id": "en-b1-u2-l1-s2",
-                "title": "Mashq",
+                "title": "Amaliy Mashqlar",
                 "type": "practice",
                 "estimatedMinutes": 5,
                 "practiceData": {
-                    "instructions": "To'g'ri shaklni tanlang.",
+                    "instructions": "Ilg'or shart ergash gaplar qoidalariga mos to'g'ri bog'lovchi va fe'llarni tanlang.",
                     "exercises": [
                         {
                             "id": "en-b1-u2-l1-e1",
                             "type": "multiple-choice",
-                            "prompt": "\"If it _______ (snow) tomorrow, we will go skiing.\"",
+                            "prompt": "\"I will lend you my laptop _______ that you take good care of it.\"",
                             "options": [
-                                "snows",
-                                "will snow",
-                                "snowed",
-                                "is snow"
+                                "provided",
+                                "unless",
+                                "in case",
+                                "without"
                             ],
                             "correctAnswer": 0,
-                            "explanation": "If qismida Present Simple: snows."
+                            "explanation": "'Provided that' (sharti bilan) to'g'ri bog'lovchidir."
                         },
                         {
-                            "id": "en-b1-u2-l1-ex-2",
+                            "id": "en-b1-u2-l1-e2",
                             "type": "multiple-choice",
-                            "prompt": "Choose the correct word to complete the sentence: \"We need to find a more efficient solution.\"",
+                            "prompt": "\"Take a bottle of water with you _______ you get thirsty during the hike.\"",
                             "options": [
-                                "Efficient",
-                                "reluctance",
-                                "doubt",
-                                "delay"
+                                "unless",
+                                "in case",
+                                "if not",
+                                "as long"
                             ],
-                            "correctAnswer": 0,
-                            "explanation": "\"Efficient\" (Samarali) fits the context appropriately."
+                            "correctAnswer": 1,
+                            "explanation": "Chanqab qolish ehtimolini hisobga olib oldindan suv olish: 'in case'."
+                        },
+                        {
+                            "id": "en-b1-u2-l1-e3",
+                            "type": "multiple-choice",
+                            "prompt": "\"You will not be allowed to take the exam _______ you bring your student identification card.\"",
+                            "options": [
+                                "as long as",
+                                "provided that",
+                                "unless",
+                                "in case"
+                            ],
+                            "correctAnswer": 2,
+                            "explanation": "'Unless you bring...' (agar guvohnomani olib kelmasangiz) inkor shartidir."
+                        },
+                        {
+                            "id": "en-b1-u2-l1-e4",
+                            "type": "multiple-choice",
+                            "prompt": "\"As long as the weather _______ sunny tomorrow, we will have a family barbecue in the yard.\"",
+                            "options": [
+                                "will be",
+                                "is",
+                                "was",
+                                "is being"
+                            ],
+                            "correctAnswer": 1,
+                            "explanation": "Shart ergash gaplarida 'will' ishlatilmaydi, Present Simple 'is' qo'yiladi."
+                        },
+                        {
+                            "id": "en-b1-u2-l1-e5",
+                            "type": "multiple-choice",
+                            "prompt": "\"Wearing a helmet is an essential safety _______ when riding a motorcycle.\"",
+                            "options": [
+                                "contract",
+                                "precaution",
+                                "circumstance",
+                                "emergency"
+                            ],
+                            "correctAnswer": 1,
+                            "explanation": "Xavfsizlik ehtiyot chorasi: 'safety precaution'."
                         }
                     ]
                 }
             },
             {
                 "id": "en-b1-u2-l1-s3",
-                "title": "Test",
+                "title": "Yakuniy Test",
                 "type": "test",
                 "estimatedMinutes": 5,
                 "testData": {
-                    "instructions": "Savollarga javob bering.",
-                    "passingScorePercentage": 75,
+                    "instructions": "Zero va First conditionallarning ilg'or bog'lovchilariga oid test savollariga javob bering.",
+                    "passingScorePercentage": 80,
                     "questions": [
                         {
                             "id": "en-b1-u2-l1-q1",
-                            "question": "If you _______ water to 100°C, it boils.",
+                            "question": "'Take an umbrella in case it rains' va 'Take an umbrella if it rains' farqi nima?",
                             "options": [
-                                "heat",
-                                "will heat",
-                                "heated",
-                                "heating"
+                                "'In case' yomg'ir yog'ishi ehtimolini hisobga olib oldindan olib ketishni, 'if' esa faqat yomg'ir yog'sagina olishni bildiradi.",
+                                "Ikkala gap mutlaqo bir xil ma'noni beradi.",
+                                "'In case' faqat o'tgan zamonda ishlatiladi.",
+                                "'If' bo'lgan gap grammatik jihatdan xato."
                             ],
                             "correctAnswerIndex": 0,
-                            "explanation": "Zero conditional: heat."
+                            "explanation": "'In case' ehtiyot chorasi bo'lib, harakat yomg'ir yog'ishidan oldinroq bajarilishini anglatadi."
                         },
                         {
                             "id": "en-b1-u2-l1-q2",
-                            "question": "If she passes the exam, she _______ celebrate with friends.",
+                            "question": "Qaysi gapda grammatik xatolik mavjud?",
                             "options": [
-                                "did",
-                                "will",
-                                "would",
-                                "is"
+                                "Provided that you submit the form today, your application will be reviewed.",
+                                "Unless you don't wear a coat, you will catch a cold outside.",
+                                "As long as you drive carefully, you can borrow my car.",
+                                "Keep this medication near your bed in case of an emergency."
                             ],
                             "correctAnswerIndex": 1,
-                            "explanation": "First conditional: will celebrate."
+                            "explanation": "'Unless you don't wear' xato, chunki 'unless' o'zida 'if not' inkorini saqlaydi ('Unless you wear a coat' bo'lishi kerak)."
                         },
                         {
                             "id": "en-b1-u2-l1-q3",
-                            "question": "Unless you _______ now, you will be late for your flight.",
+                            "question": "I will buy extra snacks _______ our friends arrive hungry.",
                             "options": [
-                                "left",
-                                "don't leave",
-                                "leave",
-                                "will leave"
+                                "in case",
+                                "unless",
+                                "as long",
+                                "provided"
                             ],
-                            "correctAnswerIndex": 2,
-                            "explanation": "Unless (agar ...-masa): leave."
+                            "correctAnswerIndex": 0,
+                            "explanation": "Do'stlar och kelib qolishi ehtimoliga qarshi gazak sotib olish: 'in case'."
                         },
                         {
                             "id": "en-b1-u2-l1-q4",
-                            "question": "What will you do if he _______ invite you?",
+                            "question": "What does 'Provided that tickets remain affordable, many students will attend the concert' mean?",
                             "options": [
-                                "won't",
-                                "isn't",
-                                "didn't",
-                                "doesn't"
+                                "Chiptalar juda qimmat bo'lsa ham hamma boradi.",
+                                "Chiptalar hamyonbop bo'lishi sharti bilangina ko'plab talabalar konsertga boradi.",
+                                "Konsert bekor qilindi.",
+                                "Talabalar konsertni yoqtirmaydi."
                             ],
-                            "correctAnswerIndex": 3,
-                            "explanation": "If he doesn't invite..."
+                            "correctAnswerIndex": 1,
+                            "explanation": "'Provided that' (sharti bilan) narx hamyonbop bo'lsagina talabalar borishini bildiradi."
+                        },
+                        {
+                            "id": "en-b1-u2-l1-q5",
+                            "question": "Choose the grammatically correct sentence:",
+                            "options": [
+                                "I will stay at home in case it will rain.",
+                                "I will call you as long as I will arrive.",
+                                "Unless you hurry up, you will miss the train.",
+                                "Provided that he will pass the test, he gets a certificate."
+                            ],
+                            "correctAnswerIndex": 2,
+                            "explanation": "'Unless you hurry up, you will miss the train' to'liq grammatik qoidalarga mos keladi."
                         }
                     ]
                 }
@@ -1551,55 +1663,115 @@ export const ENGLISH_B1_LESSONS: Lesson[] = [
         "language": "en",
         "level": "B1",
         "lessonNumber": 2,
-        "title": "Second Conditional (Unreal Present & Dreams)",
-        "description": "Hozirgi paytdagi noaniq yoki faraziy vaziyatlar (If + Past Simple, Would + V).",
-        "estimatedDurationMinutes": 15,
+        "title": "Second Conditional: Unreal Present, Dreams & Advice",
+        "description": "Hozirgi paytdagi xayoliy va nohaqiqiy holatlar, orzular va maslahat berish ('If I were you, I would...').",
+        "estimatedDurationMinutes": 16,
         "icon": "💭",
         "steps": [
             {
                 "id": "en-b1-u2-l2-s1",
-                "title": "Second Conditional Qoidasi",
+                "title": "Second Conditional: Xayoliy Hozirgi Zamon",
                 "type": "learn",
-                "estimatedMinutes": 5,
+                "estimatedMinutes": 6,
                 "learnData": {
-                    "title": "Second Conditional: If I were you...",
-                    "explanation": "Hozirgi paytda ro'y bermaydigan faraziy xayollar va maslahat uchun: If + Past Simple, Would + Verb. To be fe'li barcha shaxslar uchun ko'pincha \"were\" bo'ladi.",
-                    "keyPoints": [
-                        "If I had a million dollars, I would travel around the world.",
-                        "If I were you, I would consult a doctor (maslahat berish)."
-                    ],
+                    "title": "Hypothetical Scenarios, Dreams & Advice (If + Past, would + Verb)",
+                    "explanation": "Second Conditional hozirgi paytda yoki kelajakda haqiqatga to'g'ri kelmaydigan (xayoliy, faraziy) vaziyatlar va ularning taxminiy oqibatlari haqida gapirish uchun ishlatiladi:\n\n1. Grammatik Formulalar:\n- If + Past Simple, ... would / could / might + Verb (base form)\n  • 'If I won a million dollars, I would donate half of it to charity.' (Agar million dollar yutib olsam, yarmini xayriyaga berardim - ammo hozir menda million dollar yo'q, bu shunchaki orzu!).\n  • 'If she had more free time, she could learn to play the violin.'\n\n2. 'Were' Subjunctive Qoidasi (Barcha Shaxslar Uchun):\n- Rasmiy ingliz tilida va xalqaro imtihonlarda (IELTS, CEFR) barcha shaxslar (I, he, she, it) uchun 'was' o'rniga 'WERE' qo'llaniladi:\n  • 'If I WERE you, I would take that prestigious job offer.' (Sizning o'rningizda bo'lganimda, bu ishni qabul qilardim - maslahat berishning oltin qolipi).\n  • 'If he WERE taller, he would play professional basketball.'\n\n3. First Conditional va Second Conditional Farqi:\n- First: Real ehtimol: 'If I study hard, I will pass the exam.' (O'qishim real, o'tishim ham real).\n- Second: Xayoliy orzu: 'If I were the president, I would make public transport free.' (Hozir prezident emasman, bu faraz).\n\n4. O'zbek o'rganuvchilari uchun xavfli tuzoqlar (Common Pitfalls):\n- ❌ 'If I will have money, I would buy...' -> ✅ 'If I HAD money, I would buy...' ('if' qismida 'will' yoki 'would' ISHLATILMAYDI! Past Simple qo'yiladi).\n- ❌ 'If I had money, I will travel.' -> ✅ 'If I had money, I WOULD travel.' (Past Simple bilan 'will' emas, 'would' juftlashadi).\n- ❌ 'If I was you...' -> ✅ 'If I WERE you...' (Imtihonda 'were' kutiladi).\n\n5. IELTS Speaking Foundation Corner:\n- Topic: Speculating on Hypothetical Questions (Speaking Part 2 & 3)\n- Examiner: 'If you had the chance to live in any city in the world, which one would you choose?'\n- Model Band 6.0+ Answer: 'If I had the freedom to choose any city, I would undoubtedly pick Melbourne. It is renowned for its world-class cultural diversity and exceptional livability standards. If I lived there, I could experience a vibrant lifestyle while expanding my professional engineering networks.'\n- Subjunctive Fluency: 'If I had... I would undoubtedly pick...' va 'If I lived there, I could experience...' kabi faraziy gaplar grammatik diapazon (Grammatical Range) bo'yicha Band 6.5–7.0 talabiga to'liq mos keladi.",
                     "vocabulary": [
                         {
-                            "term": "Imaginary",
+                            "term": "hypothetical",
+                            "reading": "/ˌhaɪ.pəˈθet.ɪ.kəl/",
+                            "meaning": "taxminiy, faraziy, xayoliy",
+                            "exampleSentence": "Let us consider a hypothetical situation where clean energy is virtually free.",
+                            "exampleTranslation": "Toza energiya deyarli tekin bo'lgan faraziy vaziyatni ko'rib chiqaylik."
+                        },
+                        {
+                            "term": "imaginary",
                             "reading": "/ɪˈmædʒ.ɪ.nər.i/",
-                            "meaning": "Xayoliy / Faraziy",
-                            "exampleSentence": "This is an imaginary situation.",
-                            "exampleTranslation": "Bu xayoliy vaziyat."
+                            "meaning": "xayoliy, to'qima",
+                            "exampleSentence": "Children often invent imaginary friends to keep themselves entertained.",
+                            "exampleTranslation": "Bolalar o'zlarini ovutish uchun ko'pincha xayoliy do'stlar o'ylab topishadi."
                         },
                         {
-                            "term": "Requirement",
-                            "reading": "/rɪˈkwaɪə.mənt/",
-                            "meaning": "Talab, shart",
-                            "exampleSentence": "Fluency is a core requirement for this role.",
-                            "exampleTranslation": "Ravonlik bu lavozim uchun asosiy talabdir."
+                            "term": "fortune",
+                            "reading": "/ˈfɔː.tʃuːn/",
+                            "meaning": "ulkan boylik, davlat",
+                            "exampleSentence": "If he inherited a large fortune, he would invest in cutting-edge tech startups.",
+                            "exampleTranslation": "Agar u katta boylikni meros qilib olsa, ilg'or texnologik startaplarga sarmoya kiritardi."
                         },
                         {
-                            "term": "Significantly",
-                            "reading": "/sɪɡˈnɪf.ɪ.kənt.li/",
-                            "meaning": "Sezilarli darajada",
-                            "exampleSentence": "Her grades improved significantly this term.",
-                            "exampleTranslation": "Bu semestrda uning baholari sezilarli darajada yaxshilandi."
+                            "term": "donate",
+                            "reading": "/dəʊˈneɪt/",
+                            "meaning": "xayriya qilmoq, ehson qilmoq",
+                            "exampleSentence": "Wealthy philanthropists often donate significant funds to educational institutions.",
+                            "exampleTranslation": "Boy saxovatpeshalar ta'lim muassasalariga tez-tez katta mablag'lar xayriya qilishadi."
+                        },
+                        {
+                            "term": "charity",
+                            "reading": "/ˈtʃær.ə.ti/",
+                            "meaning": "xayriya tashkiloti, saxovat",
+                            "exampleSentence": "All proceeds from the charity marathon will support children's healthcare.",
+                            "exampleTranslation": "Xayriya marafonidan tushgan barcha mablag'lar bolalar salomatligini qo'llab-quvvatlashga yo'naltiriladi."
+                        },
+                        {
+                            "term": "hesitate",
+                            "reading": "/ˈhez.ɪ.teɪt/",
+                            "meaning": "ikkilanmoq, tortinmoq",
+                            "exampleSentence": "If I were in your position, I wouldn't hesitate for a second to accept.",
+                            "exampleTranslation": "Sizning o'rningizda bo'lganimda, qabul qilishga bir soniya ham ikkilanmasdim."
+                        },
+                        {
+                            "term": "unrealistic",
+                            "reading": "/ˌʌn.rɪəˈlɪs.tɪk/",
+                            "meaning": "haqiqatga to'g'ri kelmaydigan, xomxayol",
+                            "exampleSentence": "Expecting to master a foreign language in two weeks is entirely unrealistic.",
+                            "exampleTranslation": "Xorijiy tilni ikki haftada mukammal o'rganishni kutish mutlaqo haqiqatga to'g'ri kelmaydi."
+                        },
+                        {
+                            "term": "quit",
+                            "reading": "/kwɪt/",
+                            "meaning": "ishni tashlamoq, tark etmoq",
+                            "exampleSentence": "If she won the lottery, she wouldn't quit her scientific research career.",
+                            "exampleTranslation": "Lotereyada yutsa ham, u o'z ilmiy tadqiqotchilik faoliyatini tashlab ketmasdi."
+                        },
+                        {
+                            "term": "pursue",
+                            "reading": "/pəˈsjuː/",
+                            "meaning": "orqasidan quvmoq, intilmoq (maqsad/orzu)",
+                            "exampleSentence": "If you had adequate financial backing, which dream career would you pursue?",
+                            "exampleTranslation": "Yetarli moliyaviy yordamingiz bo'lsa, qaysi orzuingizdagi kasbga intilardingiz?"
+                        },
+                        {
+                            "term": "opportunity",
+                            "reading": "/ˌɒp.əˈtʃuː.nə.ti/",
+                            "meaning": "imkoniyat, qulay vaziyat",
+                            "exampleSentence": "Studying abroad provides a unique opportunity to experience diverse cultures.",
+                            "exampleTranslation": "Xorijda o'qish turli madaniyatlarni his qilish uchun noyob imkoniyat beradi."
                         }
                     ],
                     "grammarRules": [
                         {
-                            "pattern": "Second Conditional (Unreal Present & Dreams)",
-                            "meaning": "Hozirgi paytdagi noaniq yoki faraziy vaziyatlar (If + Past Simple, Would + V).",
-                            "usageNotes": "Hozirgi paytda ro'y bermaydigan faraziy xayollar va maslahat uchun: If + Past Simple, Would + Verb. To be fe'li barcha shaxslar uchun ko'pincha \"were\" bo'ladi.",
+                            "pattern": "Second Conditional: If + Past Simple, ... would/could + base verb",
+                            "meaning": "Hozirgi paytdagi xayoliy holatlar va orzular",
+                            "usageNotes": "If qismida fe'l Past Simple bo'ladi, natija qismida esa 'would / could / might + base verb' qo'yiladi.",
                             "examples": [
                                 {
-                                    "sentence": "This is an imaginary situation.",
-                                    "translation": "Bu xayoliy vaziyat."
+                                    "sentence": "If I had a private jet, I would fly to Tokyo for the weekend.",
+                                    "translation": "Shaxsiy samolyotim bo'lganida, dam olish kunlari Tokioga uchib borardim."
+                                },
+                                {
+                                    "sentence": "What would you do if you found a wallet full of cash on the street?",
+                                    "translation": "Ko'chada ichi naqd pulga to'la hamyon topib olsangiz, nima qilardingiz?"
+                                }
+                            ]
+                        },
+                        {
+                            "pattern": "If I were you, I would + base verb (Giving Advice)",
+                            "meaning": "Birovning o'rnida o'zini tasavvur qilib maslahat berish",
+                            "usageNotes": "Maslahat berishda 'was' o'rniga doimo 'were' ishlatiladi.",
+                            "examples": [
+                                {
+                                    "sentence": "If I were you, I would consult an experienced lawyer before signing.",
+                                    "translation": "Sizning o'rningizda bo'lganimda, imzolashdan oldin tajribali yurist bilan maslahatlashardim."
                                 }
                             ]
                         }
@@ -1608,97 +1780,148 @@ export const ENGLISH_B1_LESSONS: Lesson[] = [
             },
             {
                 "id": "en-b1-u2-l2-s2",
-                "title": "Mashq",
+                "title": "Amaliy Mashqlar",
                 "type": "practice",
                 "estimatedMinutes": 5,
                 "practiceData": {
-                    "instructions": "To'g'ri shaklni tanlang.",
+                    "instructions": "Second Conditional qoidalariga mos to'g'ri fe'l shakllarini tanlang.",
                     "exercises": [
                         {
                             "id": "en-b1-u2-l2-e1",
                             "type": "multiple-choice",
-                            "prompt": "\"If I _______ (know) his number, I would call him.\"",
+                            "prompt": "\"If I _______ you, I would apply for that international scholarship right away.\"",
                             "options": [
-                                "had known",
-                                "will know",
-                                "know",
-                                "knew"
+                                "am",
+                                "were",
+                                "will be",
+                                "had been"
                             ],
-                            "correctAnswer": 3,
-                            "explanation": "Second conditional: knew."
+                            "correctAnswer": 1,
+                            "explanation": "Maslahat berish qolipida barcha shaxslar uchun 'were' qo'yiladi: 'If I were you'."
                         },
                         {
-                            "id": "en-b1-u2-l2-ex-2",
+                            "id": "en-b1-u2-l2-e2",
                             "type": "multiple-choice",
-                            "prompt": "Choose the correct word to complete the sentence: \"Fluency is a core requirement for this role.\"",
+                            "prompt": "\"If Nodir had more free time, he _______ learn how to speak Spanish fluently.\"",
                             "options": [
-                                "doubt",
-                                "reluctance",
-                                "delay",
-                                "Requirement"
+                                "will",
+                                "would",
+                                "can",
+                                "shall"
                             ],
-                            "correctAnswer": 3,
-                            "explanation": "\"Requirement\" (Talab, shart) fits the context appropriately."
+                            "correctAnswer": 1,
+                            "explanation": "Second conditional natija qismida 'would + base verb' ishlatiladi."
+                        },
+                        {
+                            "id": "en-b1-u2-l2-e3",
+                            "type": "multiple-choice",
+                            "prompt": "\"What _______ you do if you won ten million dollars in the state lottery?\"",
+                            "options": [
+                                "will",
+                                "would",
+                                "did",
+                                "do"
+                            ],
+                            "correctAnswer": 1,
+                            "explanation": "Xayoliy holat haqidagi so'roqda 'What would you do...' qo'llaniladi."
+                        },
+                        {
+                            "id": "en-b1-u2-l2-e4",
+                            "type": "multiple-choice",
+                            "prompt": "\"If she _______ closer to the university, she wouldn't spend two hours commuting every day.\"",
+                            "options": [
+                                "lives",
+                                "lived",
+                                "will live",
+                                "would live"
+                            ],
+                            "correctAnswer": 1,
+                            "explanation": "Second conditional shart qismida Past Simple shakli keladi: 'lived'."
+                        },
+                        {
+                            "id": "en-b1-u2-l2-e5",
+                            "type": "multiple-choice",
+                            "prompt": "\"If I were in your position, I wouldn't _______ to take that golden opportunity.\"",
+                            "options": [
+                                "hesitate",
+                                "donate",
+                                "quit",
+                                "pursue"
+                            ],
+                            "correctAnswer": 0,
+                            "explanation": "'I wouldn't hesitate' (ikkilanmasdim/tortinmasdim) kontekstga to'liq mos keladi."
                         }
                     ]
                 }
             },
             {
                 "id": "en-b1-u2-l2-s3",
-                "title": "Test",
+                "title": "Yakuniy Test",
                 "type": "test",
                 "estimatedMinutes": 5,
                 "testData": {
-                    "instructions": "Savollarga javob bering.",
-                    "passingScorePercentage": 75,
+                    "instructions": "Second Conditional grammatikasi va lug'atiga oid test savollariga javob bering.",
+                    "passingScorePercentage": 80,
                     "questions": [
                         {
                             "id": "en-b1-u2-l2-q1",
-                            "question": "If I _______ you, I wouldn't accept that risky offer.",
+                            "question": "Second Conditional qaysi holatlarni ifodalash uchun xizmat qiladi?",
                             "options": [
-                                "was to",
-                                "be",
-                                "am",
-                                "were"
+                                "O'tmishdagi real tugallangan xronologik voqealarni aytish uchun",
+                                "Hozirgi paytdagi xayoliy, haqiqatga to'g'ri kelmaydigan farazlar va maslahatlarni berish uchun",
+                                "Tabiat qonunlari va doimiy ilmiy qoidalarni ifodalash uchun",
+                                "Kelajakda aniq bo'ladigan poyezd jadvalini aytish uchun"
                             ],
-                            "correctAnswerIndex": 3,
-                            "explanation": "If I were you."
+                            "correctAnswerIndex": 1,
+                            "explanation": "Second Conditional nohaqiqiy hozirgi zamon (unreal present) va faraziy orzular uchun xizmat qiladi."
                         },
                         {
                             "id": "en-b1-u2-l2-q2",
-                            "question": "Where would you live if you _______ choose any country?",
+                            "question": "Maslahat berishda nima uchun 'If I were you...' shakli ishlatiladi?",
                             "options": [
-                                "will",
-                                "can",
-                                "could",
-                                "can have"
+                                "Chunki bu ingliz tilida rasmiy subjunktiv (faraziy) mayl bo'lib, 'were' barcha shaxslar uchun me'yor hisoblanadi.",
+                                "Chunki 'was' so'zi ingliz tilida mavjud emas.",
+                                "Chunki gap ko'plikdagi odamlarga qaratilgan.",
+                                "Bu gapda xatolik bor, 'If I am you' bo'lishi kerak."
                             ],
-                            "correctAnswerIndex": 2,
-                            "explanation": "If you could choose."
+                            "correctAnswerIndex": 0,
+                            "explanation": "Subjunctive mood (faraziy mayl) qoidasiga ko'ra, gipotezada 'were' ishlatiladi."
                         },
                         {
                             "id": "en-b1-u2-l2-q3",
-                            "question": "She _______ happier if she had more free time.",
+                            "question": "Qaysi gapda grammatik xatolik YO'Q?",
                             "options": [
-                                "will be",
-                                "would be",
-                                "was",
-                                "is"
+                                "If I would have a car, I would drive to work.",
+                                "If I had a car, I will drive to work.",
+                                "If I had a car, I would drive to work.",
+                                "If I have a car, I would drive to work."
                             ],
-                            "correctAnswerIndex": 1,
-                            "explanation": "She would be."
+                            "correctAnswerIndex": 2,
+                            "explanation": "'If + Past Simple, would + Verb' modeli faqat 3-variantda mukammal tuzilgan."
                         },
                         {
                             "id": "en-b1-u2-l2-q4",
-                            "question": "If they _______ the truth, they wouldn't be angry.",
+                            "question": "If he _______ fluent in English, he would easily get hired by multinational corporations.",
                             "options": [
-                                "understood",
-                                "will understand",
-                                "are understand",
-                                "understand"
+                                "is",
+                                "were",
+                                "will be",
+                                "would be"
                             ],
-                            "correctAnswerIndex": 0,
-                            "explanation": "Understood."
+                            "correctAnswerIndex": 1,
+                            "explanation": "Second conditional shart qismida subjunktiv 'were' qo'yiladi."
+                        },
+                        {
+                            "id": "en-b1-u2-l2-q5",
+                            "question": "What does 'If I were in your shoes, I would apologize' mean?",
+                            "options": [
+                                "Agar poyabzalingizni kiysam, kechirim so'rayman.",
+                                "Sizning o'rningizda bo'lganimda, albatta kechirim so'ragan bo'lardim.",
+                                "Siz menga yangi poyabzal sotib olishingiz kerak.",
+                                "Men hech qachon kechirim so'ramayman."
+                            ],
+                            "correctAnswerIndex": 1,
+                            "explanation": "'In your shoes' — sizning vaziyatingizda / o'rningizda degan iboradir."
                         }
                     ]
                 }
@@ -1713,154 +1936,269 @@ export const ENGLISH_B1_LESSONS: Lesson[] = [
         "language": "en",
         "level": "B1",
         "lessonNumber": 3,
-        "title": "I wish & If only for Present Regrets",
-        "description": "Hozirgi holatdan norozilik yoki orzularni ifodalash (I wish + Past Simple).",
-        "estimatedDurationMinutes": 14,
+        "title": "I Wish & If Only: Expressing Desires & Present Regrets",
+        "description": "Hozirgi holatdan norozilik va afsuslanish ('wish + Past Simple') hamda boshqalarning fe'l-atvoridan noliydigan istaklar ('wish + would').",
+        "estimatedDurationMinutes": 16,
         "icon": "🌠",
         "steps": [
             {
                 "id": "en-b1-u2-l3-s1",
-                "title": "Wish Qoidalari",
+                "title": "Wish va If Only Qoidalari",
                 "type": "learn",
-                "estimatedMinutes": 4,
+                "estimatedMinutes": 6,
                 "learnData": {
-                    "title": "I Wish & If Only",
-                    "explanation": "Hozirgi holat boshqacha bo'lishini istaganda: I wish + Past Simple ishlatiladi (I wish I had more time = I don't have enough time).",
-                    "keyPoints": [
-                        "I wish I lived near the sea (now I live far).",
-                        "I wish I could speak Chinese."
+                    "title": "Expressing Wishes and Frustrations with 'Wish' & 'If Only'",
+                    "explanation": "Hozirgi kundagi holatdan qoniqmaslik, orzu qilish yoki boshqalarning xatti-harakatlaridan g'ashlanishni ifodalash:\n\n1. Wish / If only + Past Simple (Hozirgi Holatni O'zgartirish Istagi):\n- Hozirgi mavjud vaziyatdan norozi bo'lganda va uning teskarisini xohlaganda qo'llaniladi:\n  • 'I wish I had a car.' (Koshkiydi moshinam bo'lsa - ammo hozir moshinam yo'q!).\n  • 'If only we lived closer to the city center.' (Qaniydi shahar markaziga yaqinroq yashasak edi).\n  • 'I wish I were taller.' (To be fe'li uchun 'were' afzal ko'riladi).\n- Qobiliyat haqida gapirganda: 'I wish I could speak Japanese.' (Koshkiydi yaponcha gapira olsam).\n\n2. Wish + would + fe'l asosi (Boshqalarning Xatti-Harakatidan Nolish):\n- Boshqa bir inson yoki atrof-muhit sizning asabingizga tegayotgan bo'lsa va uni o'zgartirishini istasangiz ishlatiladi:\n  • 'I wish you wouldn't interrupt me while I am studying.' (O'qiyotganimda xalaqit bermasang edi!).\n  • 'I wish the rain would stop.' (Qaniydi yomg'ir to'xtasa edi).\n- DIQQAT: O'zimiz haqimizda 'I wish I would...' HECH QACHON ISHLATILMAYDI! Faqat 'I wish I could...' yoki 'I wish I had...' deyiladi.\n\n3. 'If only' vs 'I wish':\n- 'If only' 'I wish'ga qaraganda ancha kuchliroq va emotsional his-tuyg'uni (chin dildan nolish yoki orzu) ifodalaydi.\n\n4. O'zbek o'rganuvchilari uchun xavfli tuzoqlar (Common Pitfalls):\n- ❌ 'I wish I have more money.' -> ✅ 'I wish I HAD more money.' (O'zbek tilida 'Koshkiydi ko'proq pulim bo'lsa' deb hozirgi zamonda aytiladi. Ingliz tilida esa 'wish'dan keyin doimo zamon bir pog'ona orqaga suriladi: Past Simple!).\n- ❌ 'I wish I will pass.' -> ✅ 'I hope I will pass.' (Kelajakdagi yaxshi niyat uchun 'wish' emas, 'hope' ishlatiladi!).\n- ❌ 'I wish I would be rich.' -> ✅ 'I wish I were rich.' (O'zimiz uchun 'would' ishlatilmaydi).\n\n5. IELTS Speaking Foundation Corner:\n- Topic: Personal Skills, Talents and Regrets (Speaking Part 1 & 2)\n- Examiner: 'Is there any skill or foreign language you wish you had learned earlier?'\n- Model Band 6.0+ Answer: 'I really wish I had learned to play a musical instrument like the guitar in my childhood. Playing music is such a wonderful creative outlet for stress relief. Nowadays, I also wish I could dedicate more hours to practicing foreign languages, but my academic schedule is quite tight.'\n- Expressive Accuracy: 'I really wish I could dedicate...' va 'If only I had more free time...' kabi jumlalar sizning nozik his-tuyg'ularni ingliz tilida aniq yetkaza olishingizni isbotlaydi.",
+                    "vocabulary": [
+                        {
+                            "term": "regret",
+                            "reading": "/rɪˈɡret/",
+                            "meaning": "afsus, pushaymonlik, afsuslanmoq",
+                            "exampleSentence": "Living with constant regret prevents you from embracing new opportunities.",
+                            "exampleTranslation": "Doimiy pushaymonlik bilan yashash yangi imkoniyatlarni quchoq ochib kutib olishga to'sqinlik qiladi."
+                        },
+                        {
+                            "term": "frustration",
+                            "reading": "/frʌsˈtreɪ.ʃən/",
+                            "meaning": "norozilik, hafsala pir bo'lishi",
+                            "exampleSentence": "Constant flight delays caused immense frustration among the passengers.",
+                            "exampleTranslation": "Reyslarning tinimsiz kechikishi yo'lovchilar orasida ulkan norozilikka sabab bo'ldi."
+                        },
+                        {
+                            "term": "irritating",
+                            "reading": "/ˈɪr.ɪ.teɪ.tɪŋ/",
+                            "meaning": "g'ashga tegadigan, asabni buzuvchi",
+                            "exampleSentence": "His habit of tapping the desk with a pen during exams is quite irritating.",
+                            "exampleTranslation": "Imtihon paytida ruchka bilan partani taqillatish odati ancha asabni buzadi."
+                        },
+                        {
+                            "term": "interrupt",
+                            "reading": "/ˌɪn.təˈrʌpt/",
+                            "meaning": "gapni bo'lmoq, xalaqit bermoq",
+                            "exampleSentence": "Please do not interrupt the speaker until he has concluded his presentation.",
+                            "exampleTranslation": "Iltimos, ma'ruzachi o'z taqdimotini yakunlamaguncha uning gapini bo'lmang."
+                        },
+                        {
+                            "term": "patience",
+                            "reading": "/ˈpeɪ.ʃəns/",
+                            "meaning": "sabr, toqat",
+                            "exampleSentence": "Learning a new language demands discipline, dedication, and immense patience.",
+                            "exampleTranslation": "Yangi tilni o'rganish intizom, fidoyilik va ulkan sabr-toqatni talab qiladi."
+                        },
+                        {
+                            "term": "fluent",
+                            "reading": "/ˈfluː.ənt/",
+                            "meaning": "ravon, qiynalmasdan so'zlashuvchi",
+                            "exampleSentence": "I wish I were fluent in three international languages.",
+                            "exampleTranslation": "Koshkiydi uchta xalqaro tilda ravon gapira olsaydim."
+                        },
+                        {
+                            "term": "afford",
+                            "reading": "/əˈfɔːd/",
+                            "meaning": "qurbi yetmoq (moliyaviy jihatdan)",
+                            "exampleSentence": "I wish we could afford to buy a house in this beautiful neighborhood.",
+                            "exampleTranslation": "Qaniydi ushbu go'zal mahalladan uy sotib olishga qurbimiz yetsa edi."
+                        },
+                        {
+                            "term": "complaint",
+                            "reading": "/kəmˈpleɪnt/",
+                            "meaning": "shikoyat, e'tiroz",
+                            "exampleSentence": "The hotel manager responded politely to every customer complaint.",
+                            "exampleTranslation": "Mehmonxona menejeri har bir mijoz shikoyatiga xushmuomalalik bilan javob qaytardi."
+                        },
+                        {
+                            "term": "annoying",
+                            "reading": "/əˈnɔɪ.ɪŋ/",
+                            "meaning": "joniga tegadigan, zerikarli",
+                            "exampleSentence": "Pop-up advertisements on free websites can be extremely annoying.",
+                            "exampleTranslation": "Bepul veb-saytlardagi qalqib chiquvchi reklamalar odamning joniga juda tegishi mumkin."
+                        },
+                        {
+                            "term": "talent",
+                            "reading": "/ˈtæl.ənt/",
+                            "meaning": "iste'dod, tug'ma qobiliyat",
+                            "exampleSentence": "He possesses a remarkable natural talent for landscape painting.",
+                            "exampleTranslation": "U manzarali rasmlar chizish bo'yicha ajoyib tabiiy iste'dodga ega."
+                        }
                     ],
                     "grammarRules": [
                         {
-                            "pattern": "I wish & If only for Present Regrets",
-                            "meaning": "Hozirgi holatdan norozilik yoki orzularni ifodalash (I wish + Past Simple).",
-                            "usageNotes": "Hozirgi holat boshqacha bo'lishini istaganda: I wish + Past Simple ishlatiladi (I wish I had more time = I don't have enough time).",
+                            "pattern": "Wish / If only + Past Simple (Present Desire/Regret)",
+                            "meaning": "Hozirgi holatning teskarisini orzu qilish",
+                            "usageNotes": "Hozirgi zamondagi kamchilikdan norozilikni ifodalash uchun fe'l Past Simple shaklida yoziladi.",
                             "examples": [
                                 {
-                                    "sentence": "I study English every day with dedication.",
-                                    "translation": "Har kuni ingliz tilini astoydil o'rganaman."
+                                    "sentence": "I wish I knew the answer to this complex question.",
+                                    "translation": "Koshkiydi bu murakkab savolning javobini bilsam edi (ammo bilmayman)."
+                                },
+                                {
+                                    "sentence": "If only I didn't have to work this Saturday.",
+                                    "translation": "Qaniydi bu shanba kuni ishlashimga to'g'ri kelmasa edi."
                                 }
                             ]
-                        }
-                    ],
-                    "vocabulary": [
-                        {
-                            "term": "Requirement",
-                            "reading": "/rɪˈkwaɪə.mənt/",
-                            "meaning": "Talab, shart",
-                            "exampleSentence": "Fluency is a core requirement for this role.",
-                            "exampleTranslation": "Ravonlik bu lavozim uchun asosiy talabdir."
                         },
                         {
-                            "term": "Significantly",
-                            "reading": "/sɪɡˈnɪf.ɪ.kənt.li/",
-                            "meaning": "Sezilarli darajada",
-                            "exampleSentence": "Her grades improved significantly this term.",
-                            "exampleTranslation": "Bu semestrda uning baholari sezilarli darajada yaxshilandi."
-                        },
-                        {
-                            "term": "Perspective",
-                            "reading": "/pəˈspek.tɪv/",
-                            "meaning": "Nuqtayi nazar",
-                            "exampleSentence": "Traveling gives you a broader perspective on life.",
-                            "exampleTranslation": "Sayohat qilish hayotga kengroq nuqtayi nazar beradi."
+                            "pattern": "Wish + would + base verb (Complaint about others/things)",
+                            "meaning": "Birovning xulq-atvori yoki vaziyatdan shikoyat qilish",
+                            "usageNotes": "Faqat boshqa shaxslar yoki obyektlar uchun qo'llaniladi. O'zimiz uchun 'would' ishlatilmaydi.",
+                            "examples": [
+                                {
+                                    "sentence": "I wish my roommate would wash the dishes after dinner.",
+                                    "translation": "Xonadoshim kechki ovqatdan keyin idishlarni yuvsa edi (yuvmayapti, asabim buzilyapti)."
+                                },
+                                {
+                                    "sentence": "I wish it would stop snowing so heavily.",
+                                    "translation": "Qaniydi bu qalin qor yog'ishi to'xtasa edi."
+                                }
+                            ]
                         }
                     ]
                 }
             },
             {
                 "id": "en-b1-u2-l3-s2",
-                "title": "Mashq",
+                "title": "Amaliy Mashqlar",
                 "type": "practice",
                 "estimatedMinutes": 5,
                 "practiceData": {
-                    "instructions": "To'g'ri shaklni tanlang.",
+                    "instructions": "'Wish' va 'If only' qoidalariga mos to'g'ri grammatik shakllarni tanlang.",
                     "exercises": [
                         {
                             "id": "en-b1-u2-l3-e1",
                             "type": "multiple-choice",
-                            "prompt": "\"I wish I _______ (can) drive a car.\"",
+                            "prompt": "\"I have to wake up at 5:30 AM every morning. I wish I _______ wake up so early!\"",
                             "options": [
-                                "was can",
-                                "will can",
-                                "could",
-                                "can"
+                                "don't have to",
+                                "didn't have to",
+                                "won't have to",
+                                "haven't had to"
                             ],
-                            "correctAnswer": 2,
-                            "explanation": "I wish I could."
+                            "correctAnswer": 1,
+                            "explanation": "Hozirgi holatdan norozilik uchun 'wish + Past Simple': 'didn't have to'."
                         },
                         {
-                            "id": "en-b1-u2-l3-ex-2",
+                            "id": "en-b1-u2-l3-e2",
                             "type": "multiple-choice",
-                            "prompt": "Choose the correct word to complete the sentence: \"Her grades improved significantly this term.\"",
+                            "prompt": "\"My neighbors are playing extremely loud music. I wish they _______ turn it down!\"",
                             "options": [
-                                "Significantly",
-                                "delay",
-                                "reluctance",
-                                "doubt"
+                                "would",
+                                "will",
+                                "can",
+                                "shall"
                             ],
                             "correctAnswer": 0,
-                            "explanation": "\"Significantly\" (Sezilarli darajada) fits the context appropriately."
+                            "explanation": "Boshqalarning asabga teguvchi harakatidan nolish uchun 'wish + would': 'they would turn it down'."
+                        },
+                        {
+                            "id": "en-b1-u2-l3-e3",
+                            "type": "multiple-choice",
+                            "prompt": "\"I can't play the guitar. If only I _______ how to play it!\"",
+                            "options": [
+                                "know",
+                                "knew",
+                                "will know",
+                                "am knowing"
+                            ],
+                            "correctAnswer": 1,
+                            "explanation": "Hozirgi orzu uchun 'If only + Past Simple': 'knew'."
+                        },
+                        {
+                            "id": "en-b1-u2-l3-e4",
+                            "type": "multiple-choice",
+                            "prompt": "\"I am so short. I wish I _______ at least five centimeters taller.\"",
+                            "options": [
+                                "am",
+                                "were",
+                                "will be",
+                                "have been"
+                            ],
+                            "correctAnswer": 1,
+                            "explanation": "'To be' fe'li uchun subjunktiv 'were' shakli ishlatiladi."
+                        },
+                        {
+                            "id": "en-b1-u2-l3-e5",
+                            "type": "multiple-choice",
+                            "prompt": "\"I wish you wouldn't _______ me every time I try to say something.\"",
+                            "options": [
+                                "interrupt",
+                                "donate",
+                                "guarantee",
+                                "hesitate"
+                            ],
+                            "correctAnswer": 0,
+                            "explanation": "'Interrupt' (gapni bo'lmoq, xalaqit bermoq) mazmunga mos keladi."
                         }
                     ]
                 }
             },
             {
                 "id": "en-b1-u2-l3-s3",
-                "title": "Test",
+                "title": "Yakuniy Test",
                 "type": "test",
                 "estimatedMinutes": 5,
                 "testData": {
-                    "instructions": "Savollarga javob bering.",
-                    "passingScorePercentage": 75,
+                    "instructions": "'Wish' va 'If only' tuzilmalari bo'yicha test savollariga javob bering.",
+                    "passingScorePercentage": 80,
                     "questions": [
                         {
                             "id": "en-b1-u2-l3-q1",
-                            "question": "I wish I _______ taller.",
+                            "question": "Qaysi gapda 'wish' bilan birga 'would' xato ishlatilgan?",
                             "options": [
-                                "will be",
-                                "have been",
-                                "were",
-                                "am"
+                                "I wish the dog next door would stop barking all night.",
+                                "I wish I would be taller and stronger.",
+                                "I wish my brother would clean his bedroom.",
+                                "I wish the rain would stop so we could go outside."
                             ],
-                            "correctAnswerIndex": 2,
-                            "explanation": "I wish I were."
+                            "correctAnswerIndex": 1,
+                            "explanation": "Inson o'zi haqida 'I wish I would...' deya olmaydi, to'g'risi: 'I wish I were taller'."
                         },
                         {
                             "id": "en-b1-u2-l3-q2",
-                            "question": "If only we _______ enough money to travel to Australia.",
+                            "question": "Kelajakdagi yaxshi umid va tilaklar uchun qaysi fe'l ishlatiladi?",
                             "options": [
-                                "have",
-                                "will have",
-                                "having",
-                                "had"
+                                "Faqat 'wish' ishlatiladi",
+                                "'Hope' fe'li ishlatiladi (I hope you pass your exam)",
+                                "'If only' doimo ishlatiladi",
+                                "'Unless' ishlatiladi"
                             ],
-                            "correctAnswerIndex": 3,
-                            "explanation": "If only we had."
+                            "correctAnswerIndex": 1,
+                            "explanation": "Kelajakdagi real umid va tilaklar uchun 'hope' qo'llanadi. 'Wish' esa faqat amalga oshishi qiyin xayollar uchundir."
                         },
                         {
                             "id": "en-b1-u2-l3-q3",
-                            "question": "She wishes she _______ have to work on weekends.",
+                            "question": "'If only we could afford a larger flat' gapi nimani bildiradi?",
                             "options": [
-                                "didn't",
-                                "not",
-                                "doesn't",
-                                "won't"
+                                "Biz allaqachon katta uy sotib oldik.",
+                                "Hozir kattaroq uy olishga pulimiz yetmaydi va bundan afsusdamiz.",
+                                "Kattaroq uy sotib olishni xohlamaymiz.",
+                                "Uy narxlari pasaymoqda."
                             ],
-                            "correctAnswerIndex": 0,
-                            "explanation": "Wishes she didn't have to."
+                            "correctAnswerIndex": 1,
+                            "explanation": "Hozirgi moliyaviy imkoniyat yetmasligidan pushaymonlik bildirilmoqda."
                         },
                         {
                             "id": "en-b1-u2-l3-q4",
-                            "question": "\"I wish it stopped raining.\" Bu nimani bildiradi?",
+                            "question": "I wish I _______ more time to read literature, but university homework takes all my evenings.",
                             "options": [
-                                "Yomg'ir yog'mayapti",
-                                "Ertaga yomg'ir yog'adi",
-                                "Yomg'ir yog'yapti va men to'xtashini xohlayman",
-                                "Kecha yomg'ir yog'di"
+                                "have",
+                                "had",
+                                "will have",
+                                "have had"
                             ],
-                            "correctAnswerIndex": 2,
-                            "explanation": "Hozirgi holatdan norozilik."
+                            "correctAnswerIndex": 1,
+                            "explanation": "Hozirgi orzu uchun 'wish + Past Simple': 'had'."
+                        },
+                        {
+                            "id": "en-b1-u2-l3-q5",
+                            "question": "Which sentence correctly expresses frustration about someone's annoying habit?",
+                            "options": [
+                                "I wish you wouldn't smoke inside the house.",
+                                "I wish you didn't smoke tomorrow.",
+                                "I wish you won't smoke.",
+                                "I wish you wouldn't to smoke."
+                            ],
+                            "correctAnswerIndex": 0,
+                            "explanation": "'I wish you wouldn't smoke...' boshqalarning odatidan nolish uchun to'g'ri modeldir."
                         }
                     ]
                 }
@@ -1875,60 +2213,115 @@ export const ENGLISH_B1_LESSONS: Lesson[] = [
         "language": "en",
         "level": "B1",
         "lessonNumber": 4,
-        "title": "B1 Listening: Podcast on Behavioral Psychology",
-        "description": "Odamlarning qaror qabul qilish psixologiyasi haqidagi podkastni tinglash.",
-        "estimatedDurationMinutes": 14,
-        "icon": "🧠",
+        "title": "Third Conditional: Past Hypotheticals & Life Regrets",
+        "description": "O'tmishdagi amalga oshmagan vaziyatlar va ularning o'tmishdagi xayoliy oqibatlari ('If + had V3, would have V3').",
+        "estimatedDurationMinutes": 16,
+        "icon": "🔙",
         "steps": [
             {
                 "id": "en-b1-u2-l4-s1",
-                "title": "Podkast Skripti",
+                "title": "Third Conditional Qoidalari",
                 "type": "learn",
-                "estimatedMinutes": 5,
+                "estimatedMinutes": 6,
                 "learnData": {
-                    "title": "Podcast: How Habits Shape Our Success",
-                    "explanation": "Psixolog doktor Robertsning odatlar haqidagi fikrlari.",
-                    "keyPoints": [
-                        "\"Small daily habits compound into massive achievements over time.\"",
-                        "\"If you repeat a behavior in the same context for 66 days, it becomes automatic.\"",
-                        "\"Eliminating friction makes good habits much easier to maintain.\""
-                    ],
+                    "title": "Third Conditional: Reflecting on Past Outcomes & Regrets",
+                    "explanation": "O'tmishdagi allaqachon tugab ketgan va o'zgartirib bo'lmaydigan voqealarga nisbatan 'Agar o'shanda unday bo'lmaganida, bunday bo'lardi' deb xayoliy baho berish:\n\n1. Grammatik Formulalar:\n- If + Past Perfect (had + V3), ... would have / could have / might have + V3\n  • 'If I had studied harder, I would have passed the university entrance exam.' (O'shanda astoydil o'qiganimda edi, imtihondan o'tgan bo'lardim - ammo o'qimaganman va yiqilganman!).\n  • 'If we hadn't caught the morning train, we would have missed the international conference.' (Xayriyat poyezdga chiqdik va kechikmadik!).\n- Inkor shakllari:\n  • 'If you had listened to the warning, you wouldn't have made such an expensive mistake.'\n\n2. Would have vs Could have vs Might have:\n- Would have + V3: 100% ishonch bilan bo'ladigan o'tmish natijasi ('bo'lar edi').\n- Could have + V3: O'tmishdagi imkoniyat yoki qobiliyat ('qila olgan bo'lar edi').\n- Might have + V3: O'tmishdagi ehtimol ('bo'lishi mumkin edi').\n\n3. O'zbek o'rganuvchilari uchun xavfli tuzoqlar (Common Pitfalls):\n- ❌ 'If I would have known, I would have told you.' -> ✅ 'If I HAD known, I would have told you.' ('If' qismida 'would have' HECH QACHON ishlatilmaydi! Faqat Past Perfect 'had known' bo'ladi!).\n- ❌ 'If you told me, I would have helped you.' -> ✅ 'If you HAD told me, I would have helped you.' (Third conditionalda 'if' qismida Past Simple emas, Past Perfect bo'lishi shart).\n- ❌ Talaffuzda 'would of' deb yozish (og'zaki nutqda /wʊdəv/ eshitilsa-da, yozuvda faqat 'would have' to'g'ri!).\n\n4. IELTS Speaking Foundation Corner:\n- Topic: Learning from Past Mistakes & Decisions (Speaking Part 2 & 3)\n- Examiner: 'Can you describe a past mistake from which you learned an important lesson?'\n- Model Band 6.0+ Answer: 'A few years ago, during my secondary school exams, I procrastinated on my math revision until the final night. If I had managed my time more sensibly, I wouldn't have experienced such overwhelming panic and anxiety. That experience was a wake-up call, and ever since, I have prioritized structured daily planning.'\n- Advanced Syntax: 'If I had managed... I wouldn't have experienced...' konstruksiyasi IELTS'da Grammatical Range bo'yicha Band 7.0 mezonlariga to'liq javob beradi.",
                     "vocabulary": [
                         {
-                            "term": "Compound",
-                            "reading": "/ˈkɒm.paʊnd/",
-                            "meaning": "Vaqt o'tishi bilan jamlanib ko'paymoq",
-                            "exampleSentence": "Knowledge compounds like interest.",
-                            "exampleTranslation": "Bilim foiz kabi jamlanib oshadi."
+                            "term": "unavoidable",
+                            "reading": "/ˌʌn.əˈvɔɪ.də.bəl/",
+                            "meaning": "muqarrar, qochib qutulib bo'lmaydigan",
+                            "exampleSentence": "Without adequate preparation, failure on this rigorous exam was practically unavoidable.",
+                            "exampleTranslation": "Yetarli tayyorgarliksiz bu murakkab imtihonda muvaffaqiyatsizlikka uchrash deyarli muqarrar edi."
                         },
                         {
-                            "term": "Friction",
-                            "reading": "/ˈfrɪk.ʃən/",
-                            "meaning": "Qarshilik / To'siq",
-                            "exampleSentence": "Reduce friction to build good habits.",
-                            "exampleTranslation": "Yaxshi odatlarni shakllantirish uchun to'siqlarni kamaytiring."
+                            "term": "miss",
+                            "reading": "/mɪs/",
+                            "meaning": "o'tkazib yubormoq, kechikmoq",
+                            "exampleSentence": "If we had left the house ten minutes earlier, we wouldn't have missed our flight.",
+                            "exampleTranslation": "Uydan o'n daqiqa oldinroq chiqqanimizda, reysimizni o'tkazib yubormagan bo'lardik."
                         },
                         {
-                            "term": "Efficient",
-                            "reading": "/ɪˈfɪʃ.ənt/",
-                            "meaning": "Samarali",
-                            "exampleSentence": "We need to find a more efficient solution.",
-                            "exampleTranslation": "Biz yanada samaraliroq yechim topishimiz kerak."
+                            "term": "qualify",
+                            "reading": "/ˈkwɒl.ɪ.faɪ/",
+                            "meaning": "saralashdan o'tmoq, malakaga ega bo'lmoq",
+                            "exampleSentence": "If he had scored two more points, he would have qualified for the finals.",
+                            "exampleTranslation": "Yana ikki ochko to'plaganida edi, u final bosqichiga saralangan bo'lardi."
+                        },
+                        {
+                            "term": "warning",
+                            "reading": "/ˈwɔː.nɪŋ/",
+                            "meaning": "ogohlantirish",
+                            "exampleSentence": "The weather forecast had issued a severe storm warning earlier that morning.",
+                            "exampleTranslation": "Ob-havo ma'lumoti o'sha kuni ertalabroq kuchli bo'ron haqida ogohlantirish bergan edi."
+                        },
+                        {
+                            "term": "disaster",
+                            "reading": "/dɪˈzɑː.stər/",
+                            "meaning": "falokat, kulfat, musibat",
+                            "exampleSentence": "Quick intervention by emergency workers prevented an environmental disaster.",
+                            "exampleTranslation": "Qutqaruvchilarning tezkor aralashuvi ekologik falokatning oldini oldi."
+                        },
+                        {
+                            "term": "neglect",
+                            "reading": "/nɪˈɡlekt/",
+                            "meaning": "e'tiborsiz qoldirmoq, parvo qilmaslik",
+                            "exampleSentence": "He had neglected his dental health for years, which caused severe tooth decay.",
+                            "exampleTranslation": "U yillar davomida tish salomatligiga e'tiborsiz qaragan edi, bu esa jiddiy kariesga olib keldi."
+                        },
+                        {
+                            "term": "consequence",
+                            "reading": "/ˈkɒn.sɪ.kwəns/",
+                            "meaning": "oqibat, natija",
+                            "exampleSentence": "Every careless decision carries unexpected and costly consequences.",
+                            "exampleTranslation": "Har bir ehtiyotsiz qaror kutilmagan va qimmatga tushuvchi oqibatlarga olib keladi."
+                        },
+                        {
+                            "term": "prevent",
+                            "reading": "/prɪˈvent/",
+                            "meaning": "oldini olmoq, to'sqinlik qilmoq",
+                            "exampleSentence": "Wearing safety goggles would have prevented the eye injury completely.",
+                            "exampleTranslation": "Himoya ko'zoynagini taqish ko'z jarohatining butunlay oldini olgan bo'lardi."
+                        },
+                        {
+                            "term": "revision",
+                            "reading": "/rɪˈvɪʒ.ən/",
+                            "meaning": "takrorlash (imtihon oldidan o'rganish)",
+                            "exampleSentence": "Consistent daily revision is far more effective than cramming before an exam.",
+                            "exampleTranslation": "Har kungi muntazam takrorlash imtihon oldidan bir kechada yodlashdan ancha samaralidir."
+                        },
+                        {
+                            "term": "fortunate",
+                            "reading": "/ˈfɔː.tʃən.ət/",
+                            "meaning": "omadli, baxtli",
+                            "exampleSentence": "We were extremely fortunate that the mechanical malfunction happened on the ground.",
+                            "exampleTranslation": "Texnik nosozlik yerda yuz berganidan biz juda ham omadli edik."
                         }
                     ],
                     "grammarRules": [
                         {
-                            "pattern": "B1 Listening: Podcast on Behavioral Psychology",
-                            "meaning": "Odamlarning qaror qabul qilish psixologiyasi haqidagi podkastni tinglash.",
-                            "usageNotes": "Psixolog doktor Robertsning odatlar haqidagi fikrlari.",
+                            "pattern": "Third Conditional: If + had + V3, ... would have + V3",
+                            "meaning": "O'tmishdagi amalga oshmagan holat va uning faraziy natijasi",
+                            "usageNotes": "O'tmishni o'zgartirib bo'lmaydi. Faqat afsuslanish yoki taxmin qilish uchun qo'llaniladi.",
                             "examples": [
                                 {
-                                    "sentence": "Knowledge compounds like interest.",
-                                    "translation": "Bilim foiz kabi jamlanib oshadi."
+                                    "sentence": "If they had offered a higher salary, he would have accepted the contract.",
+                                    "translation": "Agar ular yuqoriroq oylik taklif qilishganida edi, u shartnomani qabul qilgan bo'lardi."
                                 },
                                 {
-                                    "sentence": "Reduce friction to build good habits.",
-                                    "translation": "Yaxshi odatlarni shakllantirish uchun to'siqlarni kamaytiring."
+                                    "sentence": "If I hadn't lost my keys, I wouldn't have waited outside for two hours.",
+                                    "translation": "Kalitlarimni yo'qotib qo'ymaganimda, ikki soat tashqarida kutib o'tirmagan bo'lardim."
+                                }
+                            ]
+                        },
+                        {
+                            "pattern": "Modal variations: could have + V3 / might have + V3",
+                            "meaning": "O'tmishdagi imkoniyat yoki noaniq ehtimolni ifodalash",
+                            "usageNotes": "'Would have' o'rniga 'could have' (qila olgan bo'lardi) yoki 'might have' (ehtimol bo'lardi) qo'yilishi mumkin.",
+                            "examples": [
+                                {
+                                    "sentence": "If you had warned us earlier, we could have changed our travel plans.",
+                                    "translation": "Bizni oldinroq ogohlantirganingizda, sayohat rejalarimizni o'zgartira olgan bo'lardik."
                                 }
                             ]
                         }
@@ -1937,97 +2330,148 @@ export const ENGLISH_B1_LESSONS: Lesson[] = [
             },
             {
                 "id": "en-b1-u2-l4-s2",
-                "title": "Tinglash Mashqi",
+                "title": "Amaliy Mashqlar",
                 "type": "practice",
-                "estimatedMinutes": 4,
+                "estimatedMinutes": 5,
                 "practiceData": {
-                    "instructions": "Podkast bo'yicha to'g'ri javobni tanlang.",
+                    "instructions": "Third Conditional grammatik qoidalariga mos to'g'ri fe'l shakllarini tanlang.",
                     "exercises": [
                         {
                             "id": "en-b1-u2-l4-e1",
                             "type": "multiple-choice",
-                            "prompt": "According to the research, approximately how many days does it take to automate a habit?",
+                            "prompt": "\"If we _______ the taxi earlier, we wouldn't have missed our flight to London.\"",
                             "options": [
-                                "21 days",
-                                "66 days",
-                                "100 days",
-                                "10 days"
+                                "ordered",
+                                "had ordered",
+                                "would order",
+                                "have ordered"
                             ],
                             "correctAnswer": 1,
-                            "explanation": "Matnda 66 kun ko'rsatilgan."
+                            "explanation": "Third conditional 'if' qismida Past Perfect 'had ordered' ishlatiladi."
                         },
                         {
-                            "id": "en-b1-u2-l4-ex-2",
+                            "id": "en-b1-u2-l4-e2",
                             "type": "multiple-choice",
-                            "prompt": "Choose the correct word to complete the sentence: \"Reduce friction to build good habits.\"",
+                            "prompt": "\"If you had told me about your dilemma, I _______ helped you resolve it.\"",
                             "options": [
-                                "delay",
-                                "Friction",
-                                "doubt",
-                                "reluctance"
+                                "would have",
+                                "will have",
+                                "would",
+                                "had"
                             ],
-                            "correctAnswer": 1,
-                            "explanation": "\"Friction\" (Qarshilik / To'siq) fits the context appropriately."
+                            "correctAnswer": 0,
+                            "explanation": "Natija qismida 'would have + V3' shakli bo'ladi: 'would have helped'."
+                        },
+                        {
+                            "id": "en-b1-u2-l4-e3",
+                            "type": "multiple-choice",
+                            "prompt": "\"She _______ the exam if she hadn't panicked during the oral section.\"",
+                            "options": [
+                                "would pass",
+                                "passed",
+                                "would have passed",
+                                "will pass"
+                            ],
+                            "correctAnswer": 2,
+                            "explanation": "O'tmishdagi amalga oshmagan oqibat: 'would have passed'."
+                        },
+                        {
+                            "id": "en-b1-u2-l4-e4",
+                            "type": "multiple-choice",
+                            "prompt": "\"Wearing a helmet _______ prevented severe head injuries in the bicycle crash.\"",
+                            "options": [
+                                "would have",
+                                "will have",
+                                "must",
+                                "is to"
+                            ],
+                            "correctAnswer": 0,
+                            "explanation": "'Would have prevented' — jarohatning oldini olgan bo'lardi."
+                        },
+                        {
+                            "id": "en-b1-u2-l4-e5",
+                            "type": "multiple-choice",
+                            "prompt": "\"If the company hadn't _______ the product quality, customers wouldn't have complained.\"",
+                            "options": [
+                                "neglected",
+                                "guaranteed",
+                                "donated",
+                                "pursued"
+                            ],
+                            "correctAnswer": 0,
+                            "explanation": "'Neglect' (e'tiborsiz qoldirmoq) sifatni nazorat qilmaslik ma'nosiga to'g'ri keladi."
                         }
                     ]
                 }
             },
             {
                 "id": "en-b1-u2-l4-s3",
-                "title": "Test",
+                "title": "Yakuniy Test",
                 "type": "test",
                 "estimatedMinutes": 5,
                 "testData": {
-                    "instructions": "Savollarga javob bering.",
-                    "passingScorePercentage": 75,
+                    "instructions": "Third Conditional va o'tmishdagi gipotetik holatlarga oid test savollariga javob bering.",
+                    "passingScorePercentage": 80,
                     "questions": [
                         {
                             "id": "en-b1-u2-l4-q1",
-                            "question": "What makes good habits easier to maintain?",
+                            "question": "Qaysi gapda Third Conditional xatosiz va to'g'ri tuzilgan?",
                             "options": [
-                                "Making tasks harder",
-                                "Eliminating friction",
-                                "Ignoring the environment",
-                                "Working without sleep"
+                                "If I would have known about the traffic, I had taken the subway.",
+                                "If I had known about the traffic, I would have taken the subway.",
+                                "If I knew about the traffic, I would have taken the subway.",
+                                "If I had known about the traffic, I will take the subway."
                             ],
                             "correctAnswerIndex": 1,
-                            "explanation": "Eliminating friction."
+                            "explanation": "'If + Past Perfect (had known), would have + V3 (would have taken)' to'g'ri qoidadir."
                         },
                         {
                             "id": "en-b1-u2-l4-q2",
-                            "question": "How do small habits lead to massive results?",
+                            "question": "Third Conditional asosan qanday mazmunni ifodalash uchun ishlatiladi?",
                             "options": [
-                                "By compounding over time",
-                                "Through pure luck",
-                                "By giving up early",
-                                "Instantly in one hour"
+                                "Kelajakdagi real ehtimolliklar uchun",
+                                "O'tmishda sodir bo'lgan va endi o'zgartirib bo'lmaydigan voqealarga nisbatan afsus yoki xayoliy baho berish uchun",
+                                "Har doim ro'y beradigan tabiat qonunlari uchun",
+                                "Hozirgi paytdagi orzular uchun"
                             ],
-                            "correctAnswerIndex": 0,
-                            "explanation": "By compounding over time."
+                            "correctAnswerIndex": 1,
+                            "explanation": "Third Conditional o'tmishdagi o'zgarmas voqealarning nohaqiqiy farazi (past unreal) hisoblanadi."
                         },
                         {
                             "id": "en-b1-u2-l4-q3",
-                            "question": "\"Automatic\" nimani bildiradi?",
+                            "question": "Nima uchun 'If I would have studied, I would have passed' jumlasi xato?",
                             "options": [
-                                "Qiyin",
-                                "Noma'lum",
-                                "Zararli",
-                                "O'z-o'zidan (beixtiyor) sodir bo'ladigan"
+                                "Chunki 'if' ergash gapida 'would have' ishlatilishi qat'iyan man etiladi; uning o'rniga Past Perfect ('had studied') qo'yiladi.",
+                                "Chunki 'passed' so'zidan keyin 'exam' bo'lishi kerak.",
+                                "Chunki gap o'tgan zamonda bo'lmasligi kerak.",
+                                "Bu gap mutlaqo to'g'ri."
                             ],
-                            "correctAnswerIndex": 3,
-                            "explanation": "Automatic — Avtomatik/O'z-o'zidan."
+                            "correctAnswerIndex": 0,
+                            "explanation": "'If' qismida 'would have' bo'lishi qo'pol xatodir, 'had + V3' bo'lishi shart."
                         },
                         {
                             "id": "en-b1-u2-l4-q4",
-                            "question": "Who is the speaker in the podcast?",
+                            "question": "'If we hadn't bought insurance, we would have lost all our money.' Bu gap nimani anglatadi?",
                             "options": [
-                                "A psychologist",
-                                "A car driver",
-                                "A chef",
-                                "A computer programmer"
+                                "Biz sug'urta sotib olmadik va pulimizni yo'qotdik.",
+                                "Biz sug'urta sotib oldik va pulimizni yo'qotmadik.",
+                                "Biz sug'urtaga ishonmaymiz.",
+                                "Sug'urta juda qimmat edi."
+                            ],
+                            "correctAnswerIndex": 1,
+                            "explanation": "Xayriyatki sug'urta olgan edik, natijada pulimiz yo'qolmadi degan ma'nodir."
+                        },
+                        {
+                            "id": "en-b1-u2-l4-q5",
+                            "question": "If you _______ me that the road was closed, I would have chosen another route.",
+                            "options": [
+                                "had warned",
+                                "would warn",
+                                "warned",
+                                "have warned"
                             ],
                             "correctAnswerIndex": 0,
-                            "explanation": "Psychologist Dr. Roberts."
+                            "explanation": "Third conditional shart qismida 'had warned' qo'yiladi."
                         }
                     ]
                 }
@@ -2042,56 +2486,111 @@ export const ENGLISH_B1_LESSONS: Lesson[] = [
         "language": "en",
         "level": "B1",
         "lessonNumber": 5,
-        "title": "B1 Structured Writing: Opinion Paragraph",
-        "description": "Fikrni mantiqiy dalillar va bog'lovchilar bilan asoslab paragraf yozish.",
-        "estimatedDurationMinutes": 15,
+        "title": "B1 Structured Writing & Speaking: Opinion & Hypothetical Argumentation",
+        "description": "Murakkab shart ergash gaplar yordamida dalillarni asoslash, insho va og'zaki nutqda fikrni ishonarli himoya qilish.",
+        "estimatedDurationMinutes": 18,
         "icon": "✍️",
         "steps": [
             {
                 "id": "en-b1-u2-l5-s1",
-                "title": "Fikr Paragrafi Strukturasi",
+                "title": "Akademik Argumentatsiya va PEEL Usuli",
                 "type": "learn",
-                "estimatedMinutes": 5,
+                "estimatedMinutes": 6,
                 "learnData": {
-                    "title": "Structuring an Opinion Paragraph",
-                    "explanation": "1. Topic sentence (asosiy fikr), 2. Supporting reasons & examples (sabablar va misollar), 3. Concluding sentence (xulosa). Bog'lovchilar: Firstly, Furthermore, In addition, Therefore.",
-                    "keyPoints": [
-                        "Topic sentence: \"In my view, remote work provides substantial benefits for employees.\"",
-                        "Support: \"Firstly, it eliminates long commuting times. Furthermore, it allows for flexible scheduling.\"",
-                        "Conclusion: \"In conclusion, working from home boosts overall productivity.\""
-                    ],
+                    "title": "Structuring Persuasive Arguments with Conditionals & Linking Words",
+                    "explanation": "IELTS Speaking Part 3 va Writing Task 2 da yuqori ball olish uchun shunchaki shaxsiy fikrni aytish yetarli emas. Fikrni shart ergash gaplar va mantiqiy bog'lovchilar bilan asoslash kerak:\n\n1. PEEL Argumentatsiya Modeli:\n- P - Point (Asosiy tezis): 'In my perspective, investment in renewable energy is crucial for long-term economic growth.'\n- E - Explanation (Sabab va tushuntirish): 'This is because traditional fossil fuels are rapidly depleting and causing severe environmental degradation.'\n- E - Example / Hypothetical Condition (Misol yoki Shartli Faraz):\n  • 'If governments subsidized solar panel installations for private homes, millions of families would dramatically reduce their electricity bills.' (Second Conditional farazi orqali isbotlash!).\n- L - Link (Xulosa qilib asosiy fikrga qaytish): 'Consequently, sustainable energy transition benefits both the economy and nature.'\n\n2. Shart Ergash Gaplarning Argumentatsiyadagi O'rni:\n- 1st Conditional: Kelajakdagi real oqibatni bashorat qilish: 'If we invest in digital literacy today, our future workforce will be much more competitive.'\n- 2nd Conditional: Muqobil nohaqiqiy yechimni ko'rsatish: 'If every citizen utilized public transport, urban air pollution would decrease exponentially.'\n- 3rd Conditional: O'tmishdagi xatodan saboq chiqarish: 'If policymakers had introduced stricter vehicle emission standards a decade ago, our air quality would have remained significantly cleaner.'\n\n3. Ilg'or Mantiqiy Bog'lovchilar (Academic Discourse Markers):\n- Qo'shimcha fikr: 'Furthermore', 'Moreover', 'In addition'.\n- Qarama-qarshilik: 'However', 'On the other hand', 'Conversely'.\n- Natija va xulosa: 'Consequently', 'As a result', 'Therefore'.\n\n4. O'zbek o'rganuvchilari uchun xavfli tuzoqlar (Common Pitfalls):\n- ❌ Fikrlarni faqat 'and / but / so' bilan bog'lash (Lug'at boyligini oddiy ko'rsatadi).\n- ❌ Fikr bildirganda faqat 'I think' deb takrorlash -> ✅ 'In my perspective', 'From my point of view', 'I strongly advocate that...'.\n\n5. IELTS Speaking & Writing Foundation Corner:\n- Topic: Free Higher Education Debate (Speaking Part 3 Simulation)\n- Examiner: 'Should higher education be fully funded by governments?'\n- Model Band 6.0+ Answer: 'In my view, tertiary education should be largely funded by the state. If university tuition were free, exceptionally talented students from modest socio-economic backgrounds could pursue prestigious careers without accumulating crippling debts. Furthermore, if a nation cultivates an educated populace, its overall economy will inevitably flourish in the global market.'",
                     "vocabulary": [
                         {
-                            "term": "Furthermore",
+                            "term": "furthermore",
                             "reading": "/ˌfɜː.ðəˈmɔːr/",
-                            "meaning": "Bundan tashqari / Qolaversa",
-                            "exampleSentence": "Furthermore, it saves money.",
-                            "exampleTranslation": "Qolaversa, bu pulni tejaydi."
+                            "meaning": "bundan tashqari, shuningdek",
+                            "exampleSentence": "The proposal is financially viable; furthermore, it offers tremendous environmental benefits.",
+                            "exampleTranslation": "Taklif moliyaviy jihatdan foydali; bundan tashqari, u ulkan ekologik afzalliklarni taqdim etadi."
                         },
                         {
-                            "term": "Efficient",
-                            "reading": "/ɪˈfɪʃ.ənt/",
-                            "meaning": "Samarali",
-                            "exampleSentence": "We need to find a more efficient solution.",
-                            "exampleTranslation": "Biz yanada samaraliroq yechim topishimiz kerak."
+                            "term": "on the other hand",
+                            "reading": "/ɒn ði ˈʌð.ər hænd/",
+                            "meaning": "boshqa tomondan esa (qarama-qarshi fikr)",
+                            "exampleSentence": "Living in a metropolis offers diverse career opportunities; on the other hand, the cost of living is steep.",
+                            "exampleTranslation": "Katta shaharda yashash xilma-xil martaba imkoniyatlarini beradi; boshqa tomondan esa, hayot kechirish xarajati juda qimmat."
                         },
                         {
-                            "term": "Requirement",
-                            "reading": "/rɪˈkwaɪə.mənt/",
-                            "meaning": "Talab, shart",
-                            "exampleSentence": "Fluency is a core requirement for this role.",
-                            "exampleTranslation": "Ravonlik bu lavozim uchun asosiy talabdir."
+                            "term": "consequently",
+                            "reading": "/ˈkɒn.sɪ.kwənt.li/",
+                            "meaning": "oqibatda, natijada",
+                            "exampleSentence": "He failed to submit the required visa documents on time; consequently, his trip was cancelled.",
+                            "exampleTranslation": "U talab qilingan viza hujjatlarini vaqtida topshira olmadi; oqibatda, uning safari bekor qilindi."
+                        },
+                        {
+                            "term": "substantiate",
+                            "reading": "/səbˈstæn.ʃi.eɪt/",
+                            "meaning": "dalillar bilan asoslamoq, isbotlamoq",
+                            "exampleSentence": "You must substantiate your academic essay claims with verified empirical research.",
+                            "exampleTranslation": "Akademik insho da'volaringizni tasdiqlangan empirik tadqiqotlar bilan asoslashingiz shart."
+                        },
+                        {
+                            "term": "perspective",
+                            "reading": "/pəˈspek.tɪv/",
+                            "meaning": "qarash, nuqtai nazar",
+                            "exampleSentence": "Traveling abroad provides young people with an enlightened global perspective.",
+                            "exampleTranslation": "Xorijga sayohat qilish yoshlarga keng dunyoqarash va global nuqtai nazar beradi."
+                        },
+                        {
+                            "term": "counterargument",
+                            "reading": "/ˈkaʊn.tərˌɑːɡ.jə.mənt/",
+                            "meaning": "qarshi dalil, e'tirozli asos",
+                            "exampleSentence": "A compelling argumentative essay acknowledges and refutes the main counterargument.",
+                            "exampleTranslation": "Ishonarli bahs-munozara inshosi asosiy qarshi dalilni tan oladi va uni asosli ravishda rad etadi."
+                        },
+                        {
+                            "term": "convincing",
+                            "reading": "/kənˈvɪn.sɪŋ/",
+                            "meaning": "ishonarli, qanoatlantiruvchi",
+                            "exampleSentence": "She delivered a very convincing speech that persuaded the committee members.",
+                            "exampleTranslation": "U qo'mita a'zolarini ishontirgan juda ishonarli nutq so'zladi."
+                        },
+                        {
+                            "term": "conclusion",
+                            "reading": "/kənˈkluː.ʒən/",
+                            "meaning": "xulosa, yakun",
+                            "exampleSentence": "In conclusion, both individual effort and government policies are necessary.",
+                            "exampleTranslation": "Xulosa qilib aytganda, ham individual sa'y-harakatlar, ham hukumat siyosati zarurdir."
+                        },
+                        {
+                            "term": "essential",
+                            "reading": "/ɪˈsen.ʃəl/",
+                            "meaning": "o'ta muhim, hal qiluvchi, ajralmas",
+                            "exampleSentence": "Continuous vocabulary expansion is an essential prerequisite for IELTS success.",
+                            "exampleTranslation": "Uzluksiz so'z boyligini kengaytirish IELTS'dagi muvaffaqiyatning ajralmas talabidir."
+                        },
+                        {
+                            "term": "illustrate",
+                            "reading": "/ˈɪl.ə.streɪt/",
+                            "meaning": "misol keltirib ko'rsatmoq, oydinlashtirmoq",
+                            "exampleSentence": "Let me provide a real-life example to illustrate how this principle operates.",
+                            "exampleTranslation": "Ushbu qoida amalda qanday ishlashini ko'rsatish uchun hayotiy bir misol keltirib o'tay."
                         }
                     ],
                     "grammarRules": [
                         {
-                            "pattern": "B1 Structured Writing: Opinion Paragraph",
-                            "meaning": "Fikrni mantiqiy dalillar va bog'lovchilar bilan asoslab paragraf yozish.",
-                            "usageNotes": "1. Topic sentence (asosiy fikr), 2. Supporting reasons & examples (sabablar va misollar), 3. Concluding sentence (xulosa). Bog'lovchilar: Firstly, Furthermore, In addition, Therefore.",
+                            "pattern": "Conditionals as Rhetorical Support (Hypothetical Illustration)",
+                            "meaning": "Shart ergash gaplar yordamida dalilni isbotlash",
+                            "usageNotes": "Insholarda fikrni tasdiqlash uchun 'If + Present, will' (kelajak natijasi) yoki 'If + Past, would' (faraziy foyda) qo'llaniladi.",
                             "examples": [
                                 {
-                                    "sentence": "Furthermore, it saves money.",
-                                    "translation": "Qolaversa, bu pulni tejaydi."
+                                    "sentence": "If cities expanded bike lanes, fewer commuters would rely on automobiles.",
+                                    "translation": "Agar shaharlar veloyo'laklarni kengaytirsa edi, kamroq yo'lovchilar avtomobillarga tayanar edi."
+                                }
+                            ]
+                        },
+                        {
+                            "pattern": "Cohesive Transition Signals: Furthermore, Conversely, Consequently",
+                            "meaning": "Akademik matnlarda gaplarni mantiqiy bog'lash",
+                            "usageNotes": "Ushbu bog'lovchilar gap boshida kelganda vergul bilan ajratiladi.",
+                            "examples": [
+                                {
+                                    "sentence": "The initial cost is high. Consequently, some investors remain hesitant.",
+                                    "translation": "Dastlabki xarajat yuqori. Oqibatda, ba'zi sarmoyadorlar ikkilanmoqdalar."
                                 }
                             ]
                         }
@@ -2100,97 +2599,148 @@ export const ENGLISH_B1_LESSONS: Lesson[] = [
             },
             {
                 "id": "en-b1-u2-l5-s2",
-                "title": "Bog'lovchilar Mashqi",
+                "title": "Amaliy Mashqlar",
                 "type": "practice",
                 "estimatedMinutes": 5,
                 "practiceData": {
-                    "instructions": "To'g'ri bog'lovchini tanlang.",
+                    "instructions": "Akademik argumentatsiya va bog'lovchilarga oid to'g'ri so'zlarni tanlang.",
                     "exercises": [
                         {
                             "id": "en-b1-u2-l5-e1",
                             "type": "multiple-choice",
-                            "prompt": "\"He trained every day; _______, he won first place.\"",
+                            "prompt": "\"Solar energy reduces carbon emissions. _______, it decreases reliance on imported fossil fuels.\"",
                             "options": [
-                                "therefore",
-                                "however",
-                                "although",
-                                "despite"
+                                "Furthermore",
+                                "However",
+                                "Unless",
+                                "Consequently"
                             ],
                             "correctAnswer": 0,
-                            "explanation": "Natija bog'lovchisi: therefore (shuning uchun)."
+                            "explanation": "Qo'shimcha ijobiy dalil qo'shish uchun 'Furthermore' (bundan tashqari) ishlatiladi."
                         },
                         {
-                            "id": "en-b1-u2-l5-ex-2",
+                            "id": "en-b1-u2-l5-e2",
                             "type": "multiple-choice",
-                            "prompt": "Choose the correct word to complete the sentence: \"We need to find a more efficient solution.\"",
+                            "prompt": "\"Urban life offers abundant entertainment. _______, the level of air pollution can be distressing.\"",
                             "options": [
-                                "reluctance",
-                                "doubt",
-                                "Efficient",
-                                "delay"
+                                "Consequently",
+                                "On the other hand",
+                                "Furthermore",
+                                "Provided that"
                             ],
-                            "correctAnswer": 2,
-                            "explanation": "\"Efficient\" (Samarali) fits the context appropriately."
+                            "correctAnswer": 1,
+                            "explanation": "Qarama-qarshi tomonni ko'rsatish uchun 'On the other hand' to'g'ri keladi."
+                        },
+                        {
+                            "id": "en-b1-u2-l5-e3",
+                            "type": "multiple-choice",
+                            "prompt": "\"The government raised the fuel tax; _______, public transit ridership increased significantly.\"",
+                            "options": [
+                                "consequently",
+                                "however",
+                                "although",
+                                "in case"
+                            ],
+                            "correctAnswer": 0,
+                            "explanation": "Natijani ifodalash uchun 'consequently' (oqibatda) qo'yiladi."
+                        },
+                        {
+                            "id": "en-b1-u2-l5-e4",
+                            "type": "multiple-choice",
+                            "prompt": "\"If every citizen _______ small amounts of plastic, our oceans would be much cleaner.\"",
+                            "options": [
+                                "recycled",
+                                "will recycle",
+                                "would recycle",
+                                "recycles"
+                            ],
+                            "correctAnswer": 0,
+                            "explanation": "Second conditional faraziy argumenti: 'If every citizen recycled...'."
+                        },
+                        {
+                            "id": "en-b1-u2-l5-e5",
+                            "type": "multiple-choice",
+                            "prompt": "\"To write a high-scoring academic paragraph, you must _______ your arguments with concrete examples.\"",
+                            "options": [
+                                "substantiate",
+                                "hesitate",
+                                "neglect",
+                                "interrupt"
+                            ],
+                            "correctAnswer": 0,
+                            "explanation": "'Substantiate' dalillar bilan asoslashni bildiradi."
                         }
                     ]
                 }
             },
             {
                 "id": "en-b1-u2-l5-s3",
-                "title": "Test",
+                "title": "Yakuniy Test",
                 "type": "test",
                 "estimatedMinutes": 5,
                 "testData": {
-                    "instructions": "Savollarga javob bering.",
-                    "passingScorePercentage": 75,
+                    "instructions": "Argumentatsiya strukturasi va shartli gaplar sinteziga oid test savollariga javob bering.",
+                    "passingScorePercentage": 80,
                     "questions": [
                         {
                             "id": "en-b1-u2-l5-q1",
-                            "question": "Which transition expresses an additional supporting point?",
+                            "question": "Insholarda PEEL modelining 'E' (Example / Evidence) qismida shart ergash gap qanday maqsadga xizmat qiladi?",
                             "options": [
-                                "In addition",
-                                "In contrast",
-                                "However",
-                                "Despite this"
+                                "Grammatik xatolarni yashirish uchun",
+                                "Muammoning xayoliy yoki real yechimi qanday oqibat berishini ko'rsatib, dalilni mantiqiy isbotlash uchun",
+                                "So'zlar sonini sun'iy ravishda ko'paytirish uchun",
+                                "Faqat o'tmishdagi afsuslarni bayon qilish uchun"
                             ],
-                            "correctAnswerIndex": 0,
-                            "explanation": "In addition (Qo'shimcha ravishda)."
+                            "correctAnswerIndex": 1,
+                            "explanation": "Shart ergash gaplar dalilning ijobiy yoki salbiy oqibatini isbotlashda kuchli mantiqiy vositadir."
                         },
                         {
                             "id": "en-b1-u2-l5-q2",
-                            "question": "Where is the topic sentence usually placed in an opinion paragraph?",
+                            "question": "Qaysi bog'lovchi matnda 'sabab va uning natijasi' munosabatini ifodalash uchun qo'llaniladi?",
                             "options": [
-                                "In the middle",
-                                "Nowhere",
-                                "At the very beginning",
-                                "At the very end"
+                                "Furthermore",
+                                "Consequently",
+                                "Nevertheless",
+                                "In contrast"
                             ],
-                            "correctAnswerIndex": 2,
-                            "explanation": "At the beginning."
+                            "correctAnswerIndex": 1,
+                            "explanation": "'Consequently' natija va oqibatni (as a result) ifodalaydi."
                         },
                         {
                             "id": "en-b1-u2-l5-q3",
-                            "question": "\"In conclusion\" iborasi qachon ishlatiladi?",
+                            "question": "Which sentence provides the most sophisticated hypothetical argument for an IELTS exam?",
                             "options": [
-                                "Xulosa chiqarishda",
-                                "Qarshi fikr bildirganda",
-                                "Birinchi dalilni kiritganda",
-                                "Salomlashganda"
+                                "If universities were free, talented students from poor families could study without debt.",
+                                "If university is free, people go there and it is good.",
+                                "I think free university is nice because I like free things.",
+                                "University should be free if students want it."
                             ],
                             "correctAnswerIndex": 0,
-                            "explanation": "Xulosalashda."
+                            "explanation": "Birinchi gapda Second conditional va aniq akademik lug'at ('talented students', 'without debt') professional qo'llangan."
                         },
                         {
                             "id": "en-b1-u2-l5-q4",
-                            "question": "Choose the correct sentence:",
+                            "question": "In academic writing, what is a 'counterargument'?",
                             "options": [
-                                "Despite it was raining, they enjoyed.",
-                                "In spite it was raining, they enjoyed.",
-                                "Although it was raining, but they enjoyed the hike.",
-                                "Although it was raining, they enjoyed the hike."
+                                "Muallifning o'z fikrini to'liq rad etishi",
+                                "Opponentlarning (qarama-qarshi tomonning) ehtimoliy e'tirozi yoki dalili",
+                                "Lug'atdagi xato so'z",
+                                "Inshoning birinchi kirish jumlasi"
                             ],
-                            "correctAnswerIndex": 3,
-                            "explanation": "Although + Clause (but ishlatilmaydi)."
+                            "correctAnswerIndex": 1,
+                            "explanation": "'Counterargument' — qarama-qarshi tomonning e'tirozli dalilidir."
+                        },
+                        {
+                            "id": "en-b1-u2-l5-q5",
+                            "question": "The experiment failed; _______, the scientific team gained invaluable insights into the chemical reaction.",
+                            "options": [
+                                "consequently",
+                                "nevertheless",
+                                "furthermore",
+                                "as long as"
+                            ],
+                            "correctAnswerIndex": 1,
+                            "explanation": "'Nevertheless' (shunga qaramay / ammo) kutilmagan ijobiy tomonni ko'rsatishda ishlatiladi."
                         }
                     ]
                 }
