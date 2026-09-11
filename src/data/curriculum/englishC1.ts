@@ -3565,153 +3565,228 @@ export const ENGLISH_C1_LESSONS: Lesson[] = [
         "level": "C1",
         "lessonNumber": 1,
         "title": "IELTS C1 Reading: Inference, Subtext & Author's Stance",
-        "description": "Matndagi bevosita aytilmagan yashirin ma'nolarni (inference) va muallifning kinoyali yoki tanqidiy pozitsiyasini anglash.",
-        "estimatedDurationMinutes": 16,
-        "icon": "🔍",
+        "description": "IELTS Reading 3-qismdagi eng murakkab falsafiy va ilmiy matnlarni tahlil qilish, submatn (subtext), kesatiq (irony) va muallifning haqiqiy pozitsiyasini o'qiy olish.",
+        "estimatedDurationMinutes": 22,
+        "icon": "📖",
         "steps": [
             {
                 "id": "en-c1-u4-l1-s1",
-                "title": "Inference va Subtext",
+                "title": "Inference, Subtext & Authorial Stance",
                 "type": "learn",
-                "estimatedMinutes": 5,
+                "estimatedMinutes": 8,
                 "learnData": {
-                    "title": "Decoding Implicit Meaning in Band 8.0+ Texts",
-                    "explanation": "Muallif to'g'ridan-to'g'ri \"men rozi emasman\" demaydi, balki kinoyali sifatlar (\"questionable assumptions\", \"purported benefits\", \"ostensible breakthroughs\") orqali o'z shubhasini bildiradi.",
-                    "keyPoints": [
-                        "Author tone: skeptical, enthusiastic, neutral, critical, or ambivalent.",
-                        "Detecting underlying ideological bias through word choices."
-                    ],
-                    "grammarRules": [
-                        {
-                            "pattern": "IELTS C1 Reading: Inference, Subtext & Author's Stance",
-                            "meaning": "Matndagi bevosita aytilmagan yashirin ma'nolarni (inference) va muallifning kinoyali yoki tanqidiy pozitsiyasini anglash.",
-                            "usageNotes": "Muallif to'g'ridan-to'g'ri \"men rozi emasman\" demaydi, balki kinoyali sifatlar (\"questionable assumptions\", \"purported benefits\", \"ostensible breakthroughs\") orqali o'z shubhasini bildiradi.",
-                            "examples": [
-                                {
-                                    "sentence": "I study English every day with dedication.",
-                                    "translation": "Har kuni ingliz tilini astoydil o'rganaman."
-                                }
-                            ]
-                        }
-                    ],
+                    "title": "Decoding Subtext and Authorial Stance in IELTS Reading",
+                    "explanation": "IELTS Reading testida 8.0 va 9.0 ball oluvchi nomzodlar bilan 6.5 oluvchilar o'rtasidagi asosiy farq — matnning sirtqi ma'nosini emas, balki qatorlar orasidagi submatnni (subtext) va muallifning yashirin kinoyasini (irony/detachment) o'qiy olish qobiliyatidir.\n\nAsosiy ko'nikmalar:\n1. **Muallif Pozitsiyasini Ajratish (Authorial Stance vs External Citations)**:\n   - Ko'pincha muallif boshqalarning fikrini keltiradi: *Proponents enthusiastically hail algorithmic justice as flawless...* Ammo keyingi jumlada o'zining masofasini ko'rsatadi: *...yet this optimism blithely overlooks ingrained training bias.*\n   - Savol berilganda: 'Muallif bu texnologiyani ma'qullaydimi?' Javob: YO'Q! Muallif unga shubha bilan qaraydi.\n\n2. **Inference (Mantiqiy Xulosa Chiqarish)**:\n   - Matnda to'g'ridan-to'g'ri 'A causes B' deb aytilmagan bo'lsa-da, keltirilgan dalillardan 'A va B o'rtasida bog'liqlik bor' degan xulosani chiqarish talab etiladi (*inference*).\n   - *Construe*: Biror so'z yoki xatti-harakatni ma'lum bir ma'noda talqin qilmoq.\n\n3. **Subtle Irony & Skepticism**:\n   - Qavslar ichidagi so'zlar yoki *so-called, supposedly, ostensibly* kabi kamsituvchi (pejorative/hedging) leksika muallifning noroziligini yoki kinoyasini bildiradi.\n\n⚠️ **O'zbek o'rganuvchilari uchun xavfli tuzoqlar (Common Pitfalls)**:\n- ❌ *Yes/No/Not Given savollarida matndagi iqtibosni muallifning o'z fikri deb o'ylash.* (Iqtibos kimga tegishli ekanini qat'iy tekshiring!).\n- ❌ *Extrapolating beyond the text.* O'zingizning dunyoqarashingizdan kelib chiqib taxmin qilmang; xulosa faqat matnda berilgan submatnga tayanishi shart.\n\n🎯 **IELTS Speaking & Writing Band 8.5 Masterclass**:\n- **Prompt**: Reading Passage Question: 'Which statement best reflects the author's attitude toward geo-engineering?'\n- **Model Answer (Band 8.0-8.5)**: Close reading reveals that the author regards atmospheric aerosol injection not as a panacea, but as an act of profound desperation. While they concede that solar radiation management could ostensibly depress global temperatures, their emphasis on 'unquantifiable meteorological fallout' demonstrates a fundamentally cautionary stance.\n- **Discourse Markers**: regarded not as a panacea, but as an act of..., While they concede that..., their emphasis on... demonstrates a fundamentally cautionary stance\n- **Examiner / Intonation Tip**: Matndagi *panacea* (hamma dardga davo), *desperation*, *ostensibly* kabi baholovchi sifat va ravishlarni qalam bilan belgilab boring; IELTS Reading Part 3 savollarining 70% aynan shu so'zlar atrofida aylanadi.",
                     "vocabulary": [
                         {
-                            "term": "Exemplify",
-                            "reading": "/ɪɡˈzem.plɪ.faɪ/",
-                            "meaning": "Yorqin misol boʻlmoq",
-                            "exampleSentence": "Recent discoveries exemplify the power of modern physics.",
-                            "exampleTranslation": "Soʻnggi kashfiyotlar zamonaviy fizika qudratini yaqqol namoyon etadi."
+                            "term": "Inference",
+                            "reading": "/ˈɪn.fər.əns/",
+                            "meaning": "Mantiqiy xulosa (ochiq aytilmagan, lekin faktlardan kelib chiquvchi)",
+                            "exampleSentence": "The reader must draw a logical inference from the author's subtle character descriptions.",
+                            "exampleTranslation": "Kitobxon muallifning nozik xarakter tasvirlaridan mantiqiy xulosa chiqarishi kerak."
                         },
                         {
-                            "term": "Nominalisation",
-                            "reading": "/ˌnɒmɪnəlaɪˈzeɪʃən/",
-                            "meaning": "Feʼlni otga aylantirish (akademik uslub)",
-                            "exampleSentence": "Nominalisation lends academic weight to scientific discourse.",
-                            "exampleTranslation": "Nominalizatsiya ilmiy matnga akademik salmoq beradi."
+                            "term": "Subtext",
+                            "reading": "/ˈsʌb.tekst/",
+                            "meaning": "Submatn, qatorlar orasidagi yashirin ma'no",
+                            "exampleSentence": "Beneath the polite diplomatic phrasing lurked a chilling subtext of impending conflict.",
+                            "exampleTranslation": "Xushmuomala diplomatik iboralar ostida yaqinlashib kelayotgan mojaroning dahshatli submatni yashiringan edi."
                         },
                         {
-                            "term": "Pragmatic",
-                            "reading": "/præɡˈmæt.ɪk/",
-                            "meaning": "Amaliy, pragmatik",
-                            "exampleSentence": "We adopted a pragmatic approach to problem-solving.",
-                            "exampleTranslation": "Biz muammoni hal qilishda amaliy yondashuvni qoʻlladik."
+                            "term": "Construe",
+                            "reading": "/kənˈstruː/",
+                            "meaning": "Ma'lum ma'noda talqin qilmoq, tushunmoq",
+                            "exampleSentence": "Silence from the regulatory commission should not be construed as blanket tacit approval.",
+                            "exampleTranslation": "Nazorat komissiyasining sukut saqlashini so'zsiz to'liq ma'qullash deb talqin qilmaslik kerak."
+                        },
+                        {
+                            "term": "Detachment",
+                            "reading": "/dɪˈtætʃ.mənt/",
+                            "meaning": "Xolislik, his-tuyg'usiz chetdan turib qarash",
+                            "exampleSentence": "Scientific journalists must maintain clinical detachment when reporting on emotive public health disputes.",
+                            "exampleTranslation": "Ilmiy jurnalistlar hissiy jamoat salomatligi bahslarini yoritishda sovuqqon xolislikni saqlashlari shart."
+                        },
+                        {
+                            "term": "Blithely",
+                            "reading": "/ˈblaɪð.li/",
+                            "meaning": "Parvosizlarcha, xavfni o'ylamasdan beparvo",
+                            "exampleSentence": "Tech investors blithely disregarded environmental risks in their race to build power-hungry data centers.",
+                            "exampleTranslation": "Texnologiya investorlari ulkan energiya talab qiluvchi data-markazlar qurish poygasida ekologik xavflarga parvosizlarcha ko'z yumdilar."
+                        },
+                        {
+                            "term": "Panacea",
+                            "reading": "/ˌpæn.əˈsiː.ə/",
+                            "meaning": "Hamma dardga davo, universal davo vositasi",
+                            "exampleSentence": "Remote work is a productive evolution, but it is hardly a panacea for poor managerial leadership.",
+                            "exampleTranslation": "Masofaviy ish samarali evolyutsiya, ammo u yomon boshqaruvchilik rahbariyati uchun hamma dardga davo emas."
+                        },
+                        {
+                            "term": "Cautionary",
+                            "reading": "/ˈkɔː.ʃən.ər.i/",
+                            "meaning": "Ogohlantiruvchi, hushyorlikka chaqiruvchi",
+                            "exampleSentence": "The historical collapse of Easter Island serves as a cautionary tale of resource depletion.",
+                            "exampleTranslation": "Pasxa orolining tarixiy inqirozi resurslarning tugab bitishi bo'yicha ogohlantiruvchi ibrat bo'lib xizmat qiladi."
+                        },
+                        {
+                            "term": "Fallout",
+                            "reading": "/ˈfɔːl.aʊt/",
+                            "meaning": "Salbiy oqibat, noxush asorat",
+                            "exampleSentence": "The geopolitical fallout of the currency devaluation triggered protests across the continent.",
+                            "exampleTranslation": "Valyuta qadrsizlanishining geosiyosiy salbiy oqibatlari butun qit'a bo'ylab namoyishlarga sabab bo'ldi."
                         }
+                    ],
+                    "keyPoints": [
+                        "Distinguish between what is explicitly stated versus what is logically inferred from tone and diction.",
+                        "Identify lexical markers of authorial detachment: 'supposedly', 'allegedly', 'ostensibly', 'so-called'.",
+                        "Be vigilant in IELTS Yes/No/Not Given tasks: differentiate between third-party perspectives and the author's own conclusion.",
+                        "Pay close attention to concession-counterweight pairings ('While X is true, Y remains perilous')."
                     ]
                 }
             },
             {
                 "id": "en-c1-u4-l1-s2",
-                "title": "Mashq",
+                "title": "IELTS Reading Inference Amaliyoti",
                 "type": "practice",
-                "estimatedMinutes": 5,
+                "estimatedMinutes": 6,
                 "practiceData": {
-                    "instructions": "Muallif pozitsiyasini aniqlang.",
+                    "instructions": "Matn tahlili va muallif pozitsiyasiga oid to'g'ri xulosalarni tanlang.",
                     "exercises": [
                         {
                             "id": "en-c1-u4-l1-e1",
                             "type": "multiple-choice",
-                            "prompt": "Text: \"The company boasted of a revolutionary green initiative, yet independent audits revealed negligible carbon reductions.\" The author's stance is:",
+                            "prompt": "Read the excerpt: 'Corporate advocates triumphantly heralded the AI diagnostic tool as infallible; however, hospital administrators noted that it blithely misdiagnosed rare auto-immune conditions.' What is the author's stance on the tool?",
                             "options": [
-                                "Completely indifferent",
-                                "Confused",
-                                "Enthusiastic and supportive",
-                                "Skeptical / Critical of the company's claims"
+                                "The author enthusiastically endorses its perfection.",
+                                "The author demonstrates critical skepticism, highlighting dangerous flaws overlooked by marketing advocates.",
+                                "The author demands that all hospitals be closed immediately.",
+                                "The author claims auto-immune conditions do not exist."
                             ],
-                            "correctAnswer": 3,
-                            "explanation": "Skeptical / Critical."
+                            "correctAnswer": 1,
+                            "explanation": "'Blithely misdiagnosed' va 'advocates triumphantly heralded... however' orqali muallif texnologiyaning xatarli nuqsonlarini tanqidiy fosh qilmoqda."
                         },
                         {
-                            "id": "en-c1-u4-l1-ex-2",
+                            "id": "en-c1-u4-l1-e2",
                             "type": "multiple-choice",
-                            "prompt": "Choose the correct word to complete the sentence: \"Nominalisation lends academic weight to scientific discourse.\"",
+                            "prompt": "What does the word 'panacea' mean in: 'Blockchain technology was touted as a panacea for supply chain inefficiency'?",
                             "options": [
-                                "reluctance",
-                                "delay",
-                                "doubt",
-                                "Nominalisation"
+                                "A universal remedy or solution for all difficulties",
+                                "A computer virus",
+                                "A type of ancient cryptocurrency",
+                                "A hazardous chemical compound"
                             ],
-                            "correctAnswer": 3,
-                            "explanation": "\"Nominalisation\" (Feʼlni otga aylantirish (akademik uslub)) fits the context appropriately."
+                            "correctAnswer": 0,
+                            "explanation": "'Panacea' — hamma muammo va qiyinchiliklarga universal davo deb qaraladigan yechimni bildiradi."
+                        },
+                        {
+                            "id": "en-c1-u4-l1-e3",
+                            "type": "multiple-choice",
+                            "prompt": "Fill in the blank: 'The university spokesman's evasive statement was _______ by journalists as an implicit admission of administrative negligence.'",
+                            "options": [
+                                "construed",
+                                "replicated",
+                                "subdued",
+                                "glossed"
+                            ],
+                            "correctAnswer": 0,
+                            "explanation": "Bayonotni ma'lum bir ma'noda tushunish va talqin qilish 'construed as an admission' deb yoziladi."
+                        },
+                        {
+                            "id": "en-c1-u4-l1-e4",
+                            "type": "multiple-choice",
+                            "prompt": "What does reading 'subtext' entail in advanced IELTS reading?",
+                            "options": [
+                                "Checking spelling mistakes in every paragraph.",
+                                "Discerning underlying, implied meanings and implicit motivations that are not explicitly stated on the page.",
+                                "Reading the text backwards.",
+                                "Translating every single word into one's native language."
+                            ],
+                            "correctAnswer": 1,
+                            "explanation": "Submatnni o'qish (reading subtext) — to'g'ridan-to'g'ri ochiq aytilmagan, lekin matn tagida yotgan yashirin ma'no va niyatlarni anglash demakdir."
+                        },
+                        {
+                            "id": "en-c1-u4-l1-e5",
+                            "type": "multiple-choice",
+                            "prompt": "Choose the sentence where the author clearly distances themselves from an unverified claim:",
+                            "options": [
+                                "The startup purportedly discovered a revolutionary superconductor at ambient temperatures.",
+                                "The startup definitely discovered a revolutionary superconductor at ambient temperatures.",
+                                "The startup indisputably discovered a revolutionary superconductor at ambient temperatures.",
+                                "The startup unquestionably discovered a revolutionary superconductor at ambient temperatures."
+                            ],
+                            "correctAnswer": 0,
+                            "explanation": "'Purportedly' so'zi muallifning da'voga nisbatan masofa saqlab, unga kafolat bermayotganini bildiradi."
                         }
                     ]
                 }
             },
             {
                 "id": "en-c1-u4-l1-s3",
-                "title": "Test",
+                "title": "IELTS Reading Inference Baholash Testi",
                 "type": "test",
-                "estimatedMinutes": 6,
+                "estimatedMinutes": 7,
                 "testData": {
-                    "instructions": "Savollarga javob bering.",
-                    "passingScorePercentage": 75,
+                    "instructions": "IELTS C1 darajasidagi o'qish, submatn va muallif pozitsiyasini tahlil qilish imtihoni.",
+                    "passingScorePercentage": 80,
                     "questions": [
                         {
                             "id": "en-c1-u4-l1-q1",
-                            "question": "What does \"inference\" mean in IELTS Reading?",
+                            "question": "In an IELTS Passage 3, the text states: 'While fossil fuel lobbies spend millions portraying carbon capture as their savior, atmospheric scientists warn that the technology captures less than 1% of annual industrial emissions.' What does this contrast infer?",
                             "options": [
-                                "Guessing randomly",
-                                "Reading backwards",
-                                "Copying a sentence word for word",
-                                "Drawing a logical conclusion based on evidence and reasoning rather than explicit statements"
+                                "The fossil fuel lobby's claims are heavily misleading and commercially motivated.",
+                                "Atmospheric scientists work for the fossil fuel lobby.",
+                                "Carbon capture technology captures 100% of emissions.",
+                                "Industrial emissions have completely stopped."
                             ],
-                            "correctAnswerIndex": 3,
-                            "explanation": "Drawing logical conclusions from evidence."
+                            "correctAnswerIndex": 0,
+                            "explanation": "Lobbining 'qutqaruvchi' deb maqtagani va olimlarning '1% dan kamini tutadi' degan fojiali xulosasi lobbining aldovini mantiqan ko'rsatib beradi."
                         },
                         {
                             "id": "en-c1-u4-l1-q2",
-                            "question": "If an author describes a theory as \"audacious yet empirically fragile\", their attitude is:",
+                            "question": "'The catastrophic meltdown of the Chernobyl reactor served as an enduring _______ tale for the global nuclear industry.'",
                             "options": [
-                                "Total anger",
-                                "100% agreement",
-                                "Appreciating its boldness while acknowledging its lack of solid proof",
-                                "Complete boredom"
+                                "cautionary",
+                                "sentient",
+                                "opaque",
+                                "permissive"
                             ],
-                            "correctAnswerIndex": 2,
-                            "explanation": "Appreciating boldness while noting lack of proof."
+                            "correctAnswerIndex": 0,
+                            "explanation": "Ogohlantiruvchi ibrat darsi 'a cautionary tale' deb ataladi."
                         },
                         {
                             "id": "en-c1-u4-l1-q3",
-                            "question": "\"Ambivalent\" means:",
+                            "question": "What is the consequence of 'blithely' dismissing expert ecological warnings?",
                             "options": [
-                                "Extremely angry",
-                                "Having mixed feelings or contradictory ideas about something",
-                                "Asleep",
-                                "Completely certain"
+                                "Acting with complete nonchalance and reckless unconcern for impending disasters.",
+                                "Conducting careful scientific trials.",
+                                "Paying high legal taxes.",
+                                "Studying historical anthropology."
                             ],
-                            "correctAnswerIndex": 1,
-                            "explanation": "Having mixed/contradictory feelings."
+                            "correctAnswerIndex": 0,
+                            "explanation": "'Blithely' — xavf-xatarga parvo qilmasdan, xotirjam beparvolik bilan harakat qilishni bildiradi."
                         },
                         {
                             "id": "en-c1-u4-l1-q4",
-                            "question": "How do Band 8+ candidates tackle difficult matching features questions?",
+                            "question": "Which of the following is a classic trap in IELTS 'Yes / No / Not Given' questions?",
                             "options": [
-                                "By identifying parallel concepts rather than looking for identical keywords",
-                                "By skimming without reading questions",
-                                "By translating the whole text into their native language",
-                                "By choosing option A for every question"
+                                "Mistaking a perspective held by an interviewed researcher for the overarching view of the passage's author.",
+                                "Reading the title of the article.",
+                                "Looking at paragraph letters.",
+                                "Noticing that sentences have verbs."
                             ],
                             "correctAnswerIndex": 0,
-                            "explanation": "Identifying parallel concepts."
+                            "explanation": "Intervyu bergan uchinchi shaxsning fikrini muallifning o'z xulosasi deb chalkashtirib yuborish eng mashhur IELTS tuzog'idir."
+                        },
+                        {
+                            "id": "en-c1-u4-l1-q5",
+                            "question": "'The unexpected economic _______ following the abrupt bank collapse affected commercial lending across the region.'",
+                            "options": [
+                                "fallout",
+                                "anaphora",
+                                "syllogism",
+                                "tricolon"
+                            ],
+                            "correctAnswerIndex": 0,
+                            "explanation": "Bank inqirozidan keyingi noxush asoratlar va salbiy oqibatlar 'economic fallout' birikmasi bilan ifodalanadi."
                         }
                     ]
                 }
@@ -3727,152 +3802,228 @@ export const ENGLISH_C1_LESSONS: Lesson[] = [
         "level": "C1",
         "lessonNumber": 2,
         "title": "IELTS C1 Listening: High-Speed Multi-Speaker Debates",
-        "description": "Tezkor sur'atdagi bir nechta akademik so'zlovchilarning fikriy to'qnashuvlarini tushunish.",
-        "estimatedDurationMinutes": 16,
+        "description": "IELTS Listening 3- va 4-qismlaridagi tezkor ilmiy seminarlar, talabalar va professorlar bahsi, fikr o'zgarishlari va chalg'ituvchi tuzoqlarni yengish.",
+        "estimatedDurationMinutes": 20,
         "icon": "🎧",
         "steps": [
             {
                 "id": "en-c1-u4-l2-s1",
-                "title": "Tezkor Eshitish Tahlili",
+                "title": "Section 3 & 4 Academic Listening Mastery",
                 "type": "learn",
-                "estimatedMinutes": 5,
+                "estimatedMinutes": 7,
                 "learnData": {
-                    "title": "Section 3 & 4 Complex Debate Tracking",
-                    "explanation": "Talabalar va tadqiqotchilar o'rtasidagi tez almashuvchi fikrlar: kim qaysi dalilni taklif qildi, kim rad etdi va oxir-oqibat nimaga kelishildi.",
-                    "keyPoints": [
-                        "Track agreement markers: \"I wouldn't go that far\", \"I am inclined to agree\", \"That premise holds water\"."
-                    ],
-                    "grammarRules": [
-                        {
-                            "pattern": "IELTS C1 Listening: High-Speed Multi-Speaker Debates",
-                            "meaning": "Tezkor sur'atdagi bir nechta akademik so'zlovchilarning fikriy to'qnashuvlarini tushunish.",
-                            "usageNotes": "Talabalar va tadqiqotchilar o'rtasidagi tez almashuvchi fikrlar: kim qaysi dalilni taklif qildi, kim rad etdi va oxir-oqibat nimaga kelishildi.",
-                            "examples": [
-                                {
-                                    "sentence": "I study English every day with dedication.",
-                                    "translation": "Har kuni ingliz tilini astoydil o'rganaman."
-                                }
-                            ]
-                        }
-                    ],
+                    "title": "Navigating Fast-Paced Academic Seminars in IELTS Listening",
+                    "explanation": "IELTS Listening Section 3 da odatda 2 dan 4 nafargacha akademik suhbatdosh (professor, tadqiqotchi, talabalar) qatnashadi. Bu qismdagi eng katta qiyinchilik — gapiruvchilarning bir-birining gapini bo'lishi, dastlab rozi bo'lib keyin fikridan qaytishi (distractors), va nozik kelishmovchiliklardir (polite dissent).\n\nAsosiy tinglash strategiyalari:\n1. **Fikr O'zgarishini Aniqlash (Signaling a Retraction)**:\n   - Suhbatdosh avval rozi bo'lgandek eshitiladi: *'Yes, that would be the most obvious route... but actually, now that I look at the budget, it's totally unfeasible.'*\n   - Agar birinchi aytilgan javobni belgilab qo'ysangiz — xato qilasiz! Har doim 'but actually, on second thought, having said that' kabi burilishlarni kuting.\n\n2. **Xushmuomala E'tiroz (Polite Academic Dissent)**:\n   - Ingliz akademik muhitida *'I disagree'* deyilmaydi. Buning o'rniga:\n     *'I see what you mean, though I wonder if we might be overlooking...'* (Men bu fikrga e'tiroz bildirmoqdaman degani!).\n     *'Up to a point, yes, but wouldn't that create a bottleneck?'*\n\n3. **Section 4 Monologue: Konspekt Qilish va Kalit So'z Signallari**:\n   - Ma'ruzachi mavzudan mavzuga o'tayotganda maxsus leksik belgilardan foydalanadi: *'Moving on to the pedagogical implications...'* yoki *'What is particularly striking here is...'* Bu iboralar keyingi savolning javobi kelayotganidan ogohlantiradi.\n\n⚠️ **O'zbek o'rganuvchilari uchun xavfli tuzoqlar (Common Pitfalls)**:\n- ❌ *Selecting the first number or date heard.* (Section 3/4 da birinchi aytilgan sana deyarli har doim chalg'ituvchi bo'ladi: *'We initially scheduled it for Tuesday, but postponed it to Thursday.'*)\n- ❌ *Losing track after missing one question.* Bitta savolni o'tkazib yuborsangiz, darhol keyingisiga o'ting; to'xtab qolsangiz, ketma-ket 3 ta savolni boy berasiz.\n\n🎯 **IELTS Speaking & Writing Band 8.5 Masterclass**:\n- **Prompt**: Listening Section 3 Dialog Analysis: 'Do both students agree on the methodology for their joint sociology dissertation?'\n- **Model Answer (Band 8.0-8.5)**: Careful listening reveals that although Jack initially champions quantitative questionnaires, Sarah gently dissents, emphasizing that qualitative semi-structured interviews yield far richer thematic nuance. Jack concedes her point ('I hadn't considered participant reticence...'), culminating in a shared consensus to adopt a mixed-methods design.\n- **Discourse Markers**: although Jack initially champions..., Sarah gently dissents, emphasizing that..., Jack concedes her point, culminating in a shared consensus\n- **Examiner / Intonation Tip**: Tinglash paytida suhbatdoshlarning ovoz ohangidagi shubhani (hesitant rising intonation) payqashni o'rganing. Bu ularning aytilayotgan taklifga to'liq qo'shilmayotganini fosh qiladi.",
                     "vocabulary": [
                         {
-                            "term": "Nominalisation",
-                            "reading": "/ˌnɒmɪnəlaɪˈzeɪʃən/",
-                            "meaning": "Feʼlni otga aylantirish (akademik uslub)",
-                            "exampleSentence": "Nominalisation lends academic weight to scientific discourse.",
-                            "exampleTranslation": "Nominalizatsiya ilmiy matnga akademik salmoq beradi."
+                            "term": "Dissent",
+                            "reading": "/dɪˈsent/",
+                            "meaning": "E'tiroz bildirmoq, ko'pchilik fikriga qo'shilmaslik",
+                            "exampleSentence": "Two committee members dissented from the majority verdict, citing procedural irregularities.",
+                            "exampleTranslation": "Qo'mitaning ikki a'zosi protsessual qonunbuzarliklarni ko'rsatib, ko'pchilikning qaroriga e'tiroz bildirdilar."
                         },
                         {
-                            "term": "Pragmatic",
-                            "reading": "/præɡˈmæt.ɪk/",
-                            "meaning": "Amaliy, pragmatik",
-                            "exampleSentence": "We adopted a pragmatic approach to problem-solving.",
-                            "exampleTranslation": "Biz muammoni hal qilishda amaliy yondashuvni qoʻlladik."
+                            "term": "Consensus",
+                            "reading": "/kənˈsen.səs/",
+                            "meaning": "Konsensus, umumiy yakdil kelishuv",
+                            "exampleSentence": "After intense deliberation, the research faculty reached a consensus regarding the curriculum update.",
+                            "exampleTranslation": "Qizg'in muhokamadan so'ng, ilmiy fakultet o'quv dasturini yangilash bo'yicha umumiy kelishuvga erishdi."
                         },
                         {
-                            "term": "Pervasive",
-                            "reading": "/pəˈveɪ.sɪv/",
-                            "meaning": "Keng tarqalgan, singib ketgan",
-                            "exampleSentence": "Digital transformation has a pervasive impact on society.",
-                            "exampleTranslation": "Raqamli transformatsiya jamiyatga chuqur singib borgan taʼsir koʻrsatadi."
+                            "term": "Retraction",
+                            "reading": "/rɪˈtræk.ʃən/",
+                            "meaning": "Fikrini yoki xatosini qaytarib olish, inkor etish",
+                            "exampleSentence": "The journal issued a formal retraction of the flawed genetic study.",
+                            "exampleTranslation": "Jurnal xatoga yo'l qo'yilgan genetik tadqiqotni rasman qaytarib olish to'g'risida e'lon berdi."
+                        },
+                        {
+                            "term": "Reticence",
+                            "reading": "/ˈret.ɪ.səns/",
+                            "meaning": "Gapirishdan o'zini tiyish, iymanish, sirlilik",
+                            "exampleSentence": "Participant reticence during group interviews prompted researchers to conduct one-on-one sessions.",
+                            "exampleTranslation": "Guruhli intervyular davomida ishtirokchilarning iymanib gapirmasligi tadqiqotchilarni yakkama-yakka suhbatlar o'tkazishga undadi."
+                        },
+                        {
+                            "term": "Overrule",
+                            "reading": "/ˌəʊ.vəˈruːl/",
+                            "meaning": "Qarorni bekor qilmoq, rad etib o'z fikrini o'tkazmoq",
+                            "exampleSentence": "The department head overruled the committee's decision to cancel the field expedition.",
+                            "exampleTranslation": "Kafedra mudiri qo'mitaning dala ekspeditsiyasini bekor qilish to'g'risidagi qarorini rad etib, bekor qildi."
+                        },
+                        {
+                            "term": "Concur",
+                            "reading": "/kənˈkɜː/",
+                            "meaning": "Fikrga to'liq qo'shilmoq, hamfikr bo'lmoq",
+                            "exampleSentence": "Peer reviewers concurred that the statistical modeling was robust and mathematically sound.",
+                            "exampleTranslation": "Taqrizchilar statistik modellashtirish puxta va matematik jihatdan mustahkam ekanligiga to'liq qo'shildilar."
+                        },
+                        {
+                            "term": "Interlocutor",
+                            "reading": "/ˌɪn.təˈlɒk.jə.tər/",
+                            "meaning": "Suhbatdosh, muloqot ishtirokchisi",
+                            "exampleSentence": "An adept debater listens intently to their interlocutor before formulating an incisive response.",
+                            "exampleTranslation": "Mohir debatchi o'tkir javob qaytarishdan oldin o'z suhbatdoshini diqqat bilan tinglaydi."
+                        },
+                        {
+                            "term": "Distractor",
+                            "reading": "/dɪˈstræk.tər/",
+                            "meaning": "Chalg'ituvchi noto'g'ri variant (testlarda)",
+                            "exampleSentence": "IELTS listening recordings embed clever distractors to test whether candidates listen through to the end.",
+                            "exampleTranslation": "IELTS listening audioyozuvlari nomzodlarning oxirigacha tinglashini sinash uchun ustalik bilan chalg'ituvchi variantlarni joylashtiradi."
                         }
+                    ],
+                    "keyPoints": [
+                        "Never lock in the first answer you hear in Section 3: wait for possible corrections ('Actually, on second thought...').",
+                        "Listen for polite academic dissent: 'I see your point, but wouldn't that...', 'Up to a point, though...'.",
+                        "Track shift markers in Section 4 monologues: 'Turning now to...', 'What struck the researchers most was...'.",
+                        "If you lose your place in a high-speed audio stream, immediately scan ahead to the next question's anchor keywords."
                     ]
                 }
             },
             {
                 "id": "en-c1-u4-l2-s2",
-                "title": "Mashq",
+                "title": "IELTS Listening Mastery Amaliyoti",
                 "type": "practice",
-                "estimatedMinutes": 5,
+                "estimatedMinutes": 6,
                 "practiceData": {
-                    "instructions": "To'g'ri xulosani aniqlang.",
+                    "instructions": "Akademik suhbatlar va tinglab tushunish strategiyalari bo'yicha to'g'ri tahlilni tanlang.",
                     "exercises": [
                         {
                             "id": "en-c1-u4-l2-e1",
                             "type": "multiple-choice",
-                            "prompt": "Speaker A: \"Should we discard the third dataset?\" Speaker B: \"I wouldn't go that far; it merely requires re-calibration.\" Speaker B believes:",
+                            "prompt": "Listen to the dialogue cue: 'Student A: We should submit the drafts by Monday. Student B: Monday sounds ideal, though Professor Higgins did mention she'd be away until Wednesday.' What day will they likely submit?",
                             "options": [
-                                "The project is over",
-                                "Speaker A is always right",
-                                "The third dataset should be kept and re-calibrated",
-                                "The dataset must be thrown away"
+                                "Monday morning",
+                                "Wednesday or later, because the professor is unavailable on Monday",
+                                "Two weeks earlier",
+                                "Immediately during the weekend"
                             ],
-                            "correctAnswer": 2,
-                            "explanation": "Keep and re-calibrate."
+                            "correctAnswer": 1,
+                            "explanation": "Student B 'Monday sounds ideal' degan bo'lsa-da, 'though Professor Higgins did mention she'd be away until Wednesday' orqali dushanba kunini bekor qildi (distractor)."
                         },
                         {
-                            "id": "en-c1-u4-l2-ex-2",
+                            "id": "en-c1-u4-l2-e2",
                             "type": "multiple-choice",
-                            "prompt": "Choose the correct word to complete the sentence: \"We adopted a pragmatic approach to problem-solving.\"",
+                            "prompt": "Which phrase signals a polite academic disagreement?",
                             "options": [
-                                "reluctance",
-                                "delay",
-                                "Pragmatic",
-                                "doubt"
+                                "You are completely insane.",
+                                "I follow your reasoning, yet I wonder if we might consider an alternative paradigm.",
+                                "Yes, absolutely, I agree with everything 100%.",
+                                "Whatever you say is always right."
                             ],
-                            "correctAnswer": 2,
-                            "explanation": "\"Pragmatic\" (Amaliy, pragmatik) fits the context appropriately."
+                            "correctAnswer": 1,
+                            "explanation": "'I follow your reasoning, yet I wonder if...' iborasi oliy akademik xushmuomala e'tiroz namunasidir."
+                        },
+                        {
+                            "id": "en-c1-u4-l2-e3",
+                            "type": "multiple-choice",
+                            "prompt": "What is the primary function of a 'distractor' in IELTS Listening tests?",
+                            "options": [
+                                "To provide the correct answer immediately.",
+                                "To mention an option that appears plausible initially, but is subsequently corrected, rejected, or contradicted.",
+                                "To increase the volume of the audio file.",
+                                "To teach students Australian slang."
+                            ],
+                            "correctAnswer": 1,
+                            "explanation": "'Distractor' dastlab to'g'ridek eshitiladigan, biroq keyingi gapda inkor qilinadigan yoki o'zgartiriladigan chalg'ituvchi variantdir."
+                        },
+                        {
+                            "id": "en-c1-u4-l2-e4",
+                            "type": "multiple-choice",
+                            "prompt": "Fill in the blank: 'After reviewing the econometric data, both research fellows _______ with the senior professor's thesis.'",
+                            "options": [
+                                "concurred",
+                                "encroached",
+                                "dismantled",
+                                "postured"
+                            ],
+                            "correctAnswer": 0,
+                            "explanation": "Fikrga qo'shilmoq, hamfikr bo'lmoq — 'concurred with the thesis' deb yoziladi."
+                        },
+                        {
+                            "id": "en-c1-u4-l2-e5",
+                            "type": "multiple-choice",
+                            "prompt": "What should a test-taker do immediately if they miss an answer in Section 4?",
+                            "options": [
+                                "Panic and stop listening for the rest of the test.",
+                                "Disregard the missed item and immediately focus on the upcoming keywords for the next questions.",
+                                "Raise their hand and ask the examiner to rewind the audio tape.",
+                                "Close the test booklet."
+                            ],
+                            "correctAnswer": 1,
+                            "explanation": "Tushib qolgan savolga to'xtalmasdan, darhol keyingi savolning kalit so'zlariga e'tiborni qaratish zarur."
                         }
                     ]
                 }
             },
             {
                 "id": "en-c1-u4-l2-s3",
-                "title": "Test",
+                "title": "IELTS Listening Mastery Baholash Testi",
                 "type": "test",
-                "estimatedMinutes": 6,
+                "estimatedMinutes": 7,
                 "testData": {
-                    "instructions": "Savollarga javob bering.",
-                    "passingScorePercentage": 75,
+                    "instructions": "IELTS C1 tinglab tushunish va akademik munozaralarni tahlil qilish imtihoni.",
+                    "passingScorePercentage": 80,
                     "questions": [
                         {
                             "id": "en-c1-u4-l2-q1",
-                            "question": "\"That premise holds water\" means the idea is:",
+                            "question": "In a dialogue: 'Dr. Evans: The survey sample was 500 households. Mark: Actually, Dr. Evans, the final cohort was trimmed to 380 after removing incomplete responses.' How many households were in the final analyzed cohort?",
                             "options": [
-                                "Wet and ruined",
-                                "Silly",
-                                "Logical, valid and sound",
-                                "Full of leaks and bad"
+                                "380",
+                                "500",
+                                "880",
+                                "120"
                             ],
-                            "correctAnswerIndex": 2,
-                            "explanation": "Logical, valid and sound."
+                            "correctAnswerIndex": 0,
+                            "explanation": "500 dastlabki son (distractor), yakuniy tahlil qilingan haqiqiy guruh esa 'trimmed to 380' (380) bo'ldi."
                         },
                         {
                             "id": "en-c1-u4-l2-q2",
-                            "question": "If speaker A proposes Tuesday and speaker B says \"I have an immovable seminar then, but Wednesday afternoon is clear\", which day is selected?",
+                            "question": "What does a speaker mean when they say: 'I wouldn't go quite that far, although...'?",
                             "options": [
-                                "Tuesday",
-                                "Monday",
-                                "Friday",
-                                "Wednesday"
+                                "They are planning to travel to a distant foreign city.",
+                                "They partially agree, but consider the previous speaker's claim to be an overstatement.",
+                                "They refuse to walk any further.",
+                                "They agree completely without any reservation."
                             ],
-                            "correctAnswerIndex": 3,
-                            "explanation": "Wednesday."
+                            "correctAnswerIndex": 1,
+                            "explanation": "'I wouldn't go quite that far...' — qisman qo'shilaman, ammo fikringiz haddan tashqari bo'rttirilgan degan ma'noni beradi."
                         },
                         {
                             "id": "en-c1-u4-l2-q3",
-                            "question": "How many questions correct out of 40 are needed for Band 8.0 in IELTS Listening?",
+                            "question": "'The academic department reached a unanimous _______ regarding the appointment of the new dean.'",
                             "options": [
-                                "Approximately 35-36 correct",
-                                "15 correct",
-                                "20 correct",
-                                "40 only"
+                                "consensus",
+                                "retraction",
+                                "distractor",
+                                "posturing"
                             ],
                             "correctAnswerIndex": 0,
-                            "explanation": "35-36 correct."
+                            "explanation": "Bir ovozdan yakdil qarorga kelish 'a unanimous consensus' birikmasi bilan beriladi."
                         },
                         {
                             "id": "en-c1-u4-l2-q4",
-                            "question": "\"I am inclined to agree with Professor Miller.\" This denotes:",
+                            "question": "Why is recognizing intonational cues essential in Section 3 multiple-choice questions?",
                             "options": [
-                                "Complete rejection",
-                                "Mockery",
-                                "Tendency towards agreement",
-                                "Total ignorance"
+                                "Intonation signals whether a speaker is genuinely affirming, hesitantly doubting, or diplomatically countering an idea.",
+                                "Intonation determines which country the speaker was born in.",
+                                "Intonation tells you what pencil to use.",
+                                "Intonation indicates when the test audio will end."
                             ],
-                            "correctAnswerIndex": 2,
-                            "explanation": "Tendency towards agreement."
+                            "correctAnswerIndex": 0,
+                            "explanation": "Intonatsiya suhbatdoshning samimiy rozi ekani, ikkilanayotgani yoki muloyimlik bilan rad etayotganini fosh qiladi."
+                        },
+                        {
+                            "id": "en-c1-u4-l2-q5",
+                            "question": "'The journal editor demanded a formal _______ after uncovering manipulated western blot images in the submission.'",
+                            "options": [
+                                "retraction",
+                                "concurrence",
+                                "consensus",
+                                "cadence"
+                            ],
+                            "correctAnswerIndex": 0,
+                            "explanation": "Soxta maqolani rasman bekor qilib qaytarib olish 'formal retraction' deb ataladi."
                         }
                     ]
                 }
@@ -3888,153 +4039,228 @@ export const ENGLISH_C1_LESSONS: Lesson[] = [
         "level": "C1",
         "lessonNumber": 3,
         "title": "IELTS Writing Task 1: Multi-Chart Synthesis & Nuanced Comparison",
-        "description": "Bir vaqtning o'zida 2 xil grafik (masalan, jadval va pirog diagrammasi) berilganda ma'lumotlarni mahorat bilan sintez qilish.",
-        "estimatedDurationMinutes": 16,
+        "description": "IELTS Writing Task 1 da bir nechta murakkab grafik va jadvallarni (multi-chart) sintez qilish, umumiy tendensiyalarni guruhlash va Band 8.5+ tavsifi.",
+        "estimatedDurationMinutes": 22,
         "icon": "📊",
         "steps": [
             {
                 "id": "en-c1-u4-l3-s1",
-                "title": "Ko'p Grafiklar Sintezi",
+                "title": "Multi-Chart Synthesis & Band 8.5+ Architecture",
                 "type": "learn",
-                "estimatedMinutes": 5,
+                "estimatedMinutes": 8,
                 "learnData": {
-                    "title": "Synthesizing Multiple Data Sources in Task 1",
-                    "explanation": "Ikkita alohida grafikni shunchaki ketma-ket aytib berish emas, balki ular orasidagi bog'liqlikni ko'rsatish: \"The table indicates higher car ownership, which directly correlates with the pie chart demonstrating a 40% share of private transport emissions.\"",
-                    "keyPoints": [
-                        "Grouping logically: Body 1 (Chart 1 + correlation), Body 2 (Chart 2 + contrast).",
-                        "Overview that connects both charts in 1-2 sophisticated sentences."
-                    ],
-                    "grammarRules": [
-                        {
-                            "pattern": "IELTS Writing Task 1: Multi-Chart Synthesis & Nuanced Comparison",
-                            "meaning": "Bir vaqtning o'zida 2 xil grafik (masalan, jadval va pirog diagrammasi) berilganda ma'lumotlarni mahorat bilan sintez qilish.",
-                            "usageNotes": "Ikkita alohida grafikni shunchaki ketma-ket aytib berish emas, balki ular orasidagi bog'liqlikni ko'rsatish: \"The table indicates higher car ownership, which directly correlates with the pie chart demonstrating a 40% share of private transport emissions.\"",
-                            "examples": [
-                                {
-                                    "sentence": "I study English every day with dedication.",
-                                    "translation": "Har kuni ingliz tilini astoydil o'rganaman."
-                                }
-                            ]
-                        }
-                    ],
+                    "title": "Mastering Multi-Chart Synthesis in IELTS Writing Task 1",
+                    "explanation": "IELTS Academic Writing Task 1 da ikkita har xil vizual ma'lumot (masalan: bitta bar chart va bitta pie chart, yoki jadval va chiziqli grafik) berilganda, o'quvchilar ko'pincha ularni alohida-alohida, mexanik ravishda sanab chiqadilar. Bu Task Achievement mezonida 6.0-6.5 balldan oshmaydi. Band 8.5+ olish uchun bu ikki ma'lumot manbai o'rtasidagi o'zaro bog'liqlikni (cross-chart synthesis) ko'rsatib berish shart!\n\nBand 8.5+ Insho Tuzilishi:\n1. **Introduction (1 gap)**:\n   - Ikkala vizual manbani bitta mukammal murakkab gapda parafraza qilish:\n     *The bar chart delineates renewable energy generation across four European nations between 2010 and 2020, while the accompanying pie chart illustrates their respective carbon emission trajectories over the identical decade.*\n2. **Overview (2 gap — Eng muhim qism!)**:\n   - Har bir grafikning eng asosiy trendi va ular o'rtasidagi bog'liqlik:\n     *Overall, it is manifest that while renewable energy output experienced an upward trajectory across all surveyed countries, wind energy outstripped solar alternatives. Crucially, nations with the most pronounced renewable expansion registered the most precipitous declines in aggregate carbon footprints.*\n3. **Body Paragraph 1: Birinchi manba va asosiy tendensiyalar**:\n   - Raqamlarni shunchaki sanamasdan, o'sish va pasayish dinamikasini qiyoslang (*surged to a peak of..., plateaued before plunging*).\n4. **Body Paragraph 2: Ikkinchi manba va sintez**:\n   - Birinchi paragrafdagi ma'lumotlarga bog'lab tahlil qiling (*This expansion directly correlates with the data in Table 2, wherein...*).\n\n⚠️ **O'zbek o'rganuvchilari uchun xavfli tuzoqlar (Common Pitfalls)**:\n- ❌ *No overview or placing the overview at the very end.* (Overview bo'lmasa, Task Achievement avtomatik ravishda 5.0 ga tushadi! Uni doimo kirishdan keyin qo'ying).\n- ❌ *Listing every single number.* (Har bir sonni sanab o'tirmang; faqat eng yuqori, eng past va keskin burilish nuqtalarini saralab oling).\n- ❌ *Saying 'the graph goes up fastly'.* (O'rniga: *witnessed a precipitous ascent / surged exponentially*).\n\n🎯 **IELTS Speaking & Writing Band 8.5 Masterclass**:\n- **Prompt**: Task 1: A bar chart showing car ownership rates and a pie chart showing urban air pollution sources.\n- **Model Overview (Band 8.5+)**: Overall, private vehicular ownership escalated substantially across all income brackets over the twenty-year span. Concurrently, road transportation emerged as the preeminent contributor to urban air quality degradation, outstripping industrial emissions by a considerable margin.\n- **Discourse Markers**: escalated substantially across all..., Concurrently,..., emerged as the preeminent contributor to..., outstripping industrial emissions by a considerable margin\n- **Examiner / Intonation Tip**: Sintez qilayotganda *outstripped* (ortda qoldirdi), *precipitous decline* (keskin qulash), *plateaued* (barqarorlashdi) kabi boy leksikadan foydalaning.",
                     "vocabulary": [
                         {
-                            "term": "Pragmatic",
-                            "reading": "/præɡˈmæt.ɪk/",
-                            "meaning": "Amaliy, pragmatik",
-                            "exampleSentence": "We adopted a pragmatic approach to problem-solving.",
-                            "exampleTranslation": "Biz muammoni hal qilishda amaliy yondashuvni qoʻlladik."
+                            "term": "Outstrip",
+                            "reading": "/ˌaʊtˈstrɪp/",
+                            "meaning": "Ortda qoldirmoq, o'zib ketmoq (miqdor yoki tezlikda)",
+                            "exampleSentence": "By 2025, renewable energy investment had outstripped fossil fuel expenditures worldwide.",
+                            "exampleTranslation": "2025 yilga kelib, qayta tiklanuvchi energiya investitsiyalari global miqyosda qazilma yoqilg'i xarajatlarini ortda qoldirdi."
                         },
                         {
-                            "term": "Pervasive",
-                            "reading": "/pəˈveɪ.sɪv/",
-                            "meaning": "Keng tarqalgan, singib ketgan",
-                            "exampleSentence": "Digital transformation has a pervasive impact on society.",
-                            "exampleTranslation": "Raqamli transformatsiya jamiyatga chuqur singib borgan taʼsir koʻrsatadi."
+                            "term": "Precipitous",
+                            "reading": "/prɪˈsɪp.ɪ.təs/",
+                            "meaning": "O'ta keskin, tik (qulash yoki pasayish haqida)",
+                            "exampleSentence": "The sudden introduction of import tariffs caused a precipitous plunge in trade volumes.",
+                            "exampleTranslation": "Import bojlarining to'satdan joriy etilishi savdo hajmida o'ta keskin pasayishni keltirib chiqardi."
                         },
                         {
-                            "term": "Exemplify",
-                            "reading": "/ɪɡˈzem.plɪ.faɪ/",
-                            "meaning": "Yorqin misol boʻlmoq",
-                            "exampleSentence": "Recent discoveries exemplify the power of modern physics.",
-                            "exampleTranslation": "Soʻnggi kashfiyotlar zamonaviy fizika qudratini yaqqol namoyon etadi."
+                            "term": "Plateau",
+                            "reading": "/ˈplæt.əʊ/",
+                            "meaning": "Bir maromda to'xtab qolmoq, o'sishdan to'xtab turg'unlashmoq",
+                            "exampleSentence": "After five years of rapid escalation, smartphone shipments plateaued at approximately eighty million units.",
+                            "exampleTranslation": "Besh yillik jadal o'sishdan so'ng, smartfon jo'natmalari taxminan sakson million donada barqarorlashib to'xtadi."
+                        },
+                        {
+                            "term": "Juxtapose",
+                            "reading": "/ˌdʒʌk.stəˈpəʊz/",
+                            "meaning": "Qiyoslash uchun yonma-yon qo'ymoq",
+                            "exampleSentence": "When juxtaposed against secondary education figures, tertiary graduation rates appear modest.",
+                            "exampleTranslation": "O'rta ta'lim ko'rsatkichlari bilan yonma-yon qiyoslanganda, oliy ta'lim bitiruvchilarining ulushi kamtarona ko'rinadi."
+                        },
+                        {
+                            "term": "Trajectory",
+                            "reading": "/trəˈdʒek.tər.i/",
+                            "meaning": "Rivojlanish yo'nalishi, traektoriya",
+                            "exampleSentence": "The economic trajectory of developing economies underwent marked deceleration during the fiscal crisis.",
+                            "exampleTranslation": "Rivojlanayotgan iqtisodiyotlarning rivojlanish traektoriyasi moliyaviy inqiroz paytida sezilarli sekinlashuvga uchradi."
+                        },
+                        {
+                            "term": "Preeminent",
+                            "reading": "/priːˈem.ɪ.nənt/",
+                            "meaning": "Eng ustun, yetakchi, birinchi darajali",
+                            "exampleSentence": "Solar photovoltaics emerged as the preeminent source of new power generation capacity.",
+                            "exampleTranslation": "Quyosh fotovoltaikasi yangi energiya ishlab chiqarish quvvatining eng yetakchi manbai sifatida namoyon bo'ldi."
+                        },
+                        {
+                            "term": "Correlate",
+                            "reading": "/ˈkɒr.ə.leɪt/",
+                            "meaning": "O'zaro bog'liq bo'lmoq, mutanosib ravishda o'zgarmoq",
+                            "exampleSentence": "High educational attainment directly correlates with enhanced lifetime earning potential.",
+                            "exampleTranslation": "Yuqori ta'lim darajasi butun umrlik daromad salohiyatining oshishi bilan to'g'ridan-to'g'ri bog'liqdir."
+                        },
+                        {
+                            "term": "Aggregate",
+                            "reading": "/ˈæɡ.rɪ.ɡət/",
+                            "meaning": "Umumiy, jami, jamlangan",
+                            "exampleSentence": "The aggregate carbon output of the industrial sector fell by twelve percent over the period.",
+                            "exampleTranslation": "Sanoat sektorining jami uglerod chiqindilari davr mobaynida o'n ikki foizga kamaydi."
                         }
+                    ],
+                    "keyPoints": [
+                        "Structure: Introduction (paraphrase both charts) -> Comprehensive Overview (macro-trends & correlation) -> Body 1 (primary trends) -> Body 2 (synthesis & secondary trends).",
+                        "Synthesize relationships between multiple charts (e.g. 'This increase in car ownership directly mirrors the surge in emissions in Figure 2').",
+                        "Selectivity: Highlight key extremes (peaks, troughs, plateaus) and omit redundant minutiae.",
+                        "Use sophisticated trend verbs: 'outstripped', 'precipitous decline', 'plateaued at', 'underwent an upward trajectory'."
                     ]
                 }
             },
             {
                 "id": "en-c1-u4-l3-s2",
-                "title": "Mashq",
+                "title": "IELTS Writing Task 1 Amaliyoti",
                 "type": "practice",
-                "estimatedMinutes": 5,
+                "estimatedMinutes": 6,
                 "practiceData": {
-                    "instructions": "To'g'ri bog'lanish jumlasini tanlang.",
+                    "instructions": "IELTS Writing Task 1 tahlili va grafiklar sinteziga mos eng to'g'ri jumlalarni tanlang.",
                     "exercises": [
                         {
                             "id": "en-c1-u4-l3-e1",
                             "type": "multiple-choice",
-                            "prompt": "Which sentence best links a table showing population rise with a bar chart showing water usage?",
+                            "prompt": "Choose the most academically rigorous sentence to describe a sudden steep drop in figures:",
                             "options": [
-                                "Here is chart 1 and there is chart 2.",
-                                "This demographic expansion is mirrored in the bar chart, which depicts a corresponding 25% surge in municipal water extraction.",
-                                "Both charts have numbers on them.",
-                                "People drink water because they exist."
+                                "Numbers went down very fast and badly.",
+                                "The metric registered a precipitous plunge before stabilizing.",
+                                "The numbers had a quick sad drop.",
+                                "Downwards it fell with big speed."
                             ],
                             "correctAnswer": 1,
-                            "explanation": "This demographic expansion is mirrored in..."
+                            "explanation": "'Registered a precipitous plunge before stabilizing' — grafikdagi keskin qulashni ifodalovchi eng yuqori darajadagi akademik iboradir."
                         },
                         {
-                            "id": "en-c1-u4-l3-ex-2",
+                            "id": "en-c1-u4-l3-e2",
                             "type": "multiple-choice",
-                            "prompt": "Choose the correct word to complete the sentence: \"Digital transformation has a pervasive impact on society.\"",
+                            "prompt": "What is the primary requirement of a Band 8.0+ Task 1 Overview?",
                             "options": [
-                                "doubt",
-                                "Pervasive",
-                                "delay",
-                                "reluctance"
+                                "Listing every single raw number from the chart in chronological order.",
+                                "Highlighting key macro-trends, overarching contrasts, and significant turning points without getting bogged down in individual data points.",
+                                "Expressing personal opinions on why the data is good or bad.",
+                                "Writing a concluding moral lesson for the reader."
                             ],
                             "correctAnswer": 1,
-                            "explanation": "\"Pervasive\" (Keng tarqalgan, singib ketgan) fits the context appropriately."
+                            "explanation": "Overview barcha asosiy tendensiyalar va global qiyosiy xulosalarni individual raqamlarga ko'milib ketmasdan umumlashtirib berishi shart."
+                        },
+                        {
+                            "id": "en-c1-u4-l3-e3",
+                            "type": "multiple-choice",
+                            "prompt": "Complete the sentence: 'Hydroelectric capacity _______ that of coal power by a margin of 15% in 2018.'",
+                            "options": [
+                                "outstripped",
+                                "glossed over",
+                                "precluded",
+                                "dismantled"
+                            ],
+                            "correctAnswer": 0,
+                            "explanation": "Bir miqdor boshqasidan o'zib ketganda 'outstripped' fe'li ishlatiladi."
+                        },
+                        {
+                            "id": "en-c1-u4-l3-e4",
+                            "type": "multiple-choice",
+                            "prompt": "What does it mean if a sales trend 'plateaued' between 2015 and 2018?",
+                            "options": [
+                                "It fluctuated wildly every day.",
+                                "It remained at a stable, consistent level without notable growth or decline.",
+                                "It dropped to zero immediately.",
+                                "It increased tenfold each year."
+                            ],
+                            "correctAnswer": 1,
+                            "explanation": "'Plateaued' — o'sishdan to'xtab, bir xil tekis darajada saqlanib qolishni anglatadi."
+                        },
+                        {
+                            "id": "en-c1-u4-l3-e5",
+                            "type": "multiple-choice",
+                            "prompt": "Select the correct connective to link two complementary charts: 'Urban bicycle infrastructure expanded rapidly; _______, hospitalizations from traffic collisions declined.'",
+                            "options": [
+                                "concurrently",
+                                "notwithstanding with",
+                                "albeit that",
+                                "whereas but"
+                            ],
+                            "correctAnswer": 0,
+                            "explanation": "'Concurrently' (bir vaqtning o'zida, parallel ravishda) ikki grafikdagi o'zaro bog'liq hodisalarni mukammal bog'laydi."
                         }
                     ]
                 }
             },
             {
                 "id": "en-c1-u4-l3-s3",
-                "title": "Test",
+                "title": "IELTS Writing Task 1 Baholash Testi",
                 "type": "test",
-                "estimatedMinutes": 6,
+                "estimatedMinutes": 7,
                 "testData": {
-                    "instructions": "Savollarga javob bering.",
-                    "passingScorePercentage": 75,
+                    "instructions": "IELTS Task 1 ma'lumotlar sintezi va akademik taqqoslash bo'yicha imtihon.",
+                    "passingScorePercentage": 80,
                     "questions": [
                         {
                             "id": "en-c1-u4-l3-q1",
-                            "question": "When Task 1 includes two different charts (e.g. a bar chart and a pie chart), how should the Overview be structured?",
+                            "question": "What is the consequence of omitting an Overview paragraph in IELTS Writing Task 1?",
                             "options": [
-                                "Only talk about the first chart and ignore the second",
-                                "It must identify the key global trend or relationship from both visual representations",
-                                "Write 50 numbers in a list",
-                                "Do not write an overview"
+                                "The examiner will award bonus points for conciseness.",
+                                "The Task Achievement criterion score cannot exceed Band 5.0.",
+                                "The candidate is asked to rewrite the test.",
+                                "Grammar score drops automatically by two bands."
                             ],
                             "correctAnswerIndex": 1,
-                            "explanation": "Identify key global trends from both visuals."
+                            "explanation": "Rasmiy IELTS rubrikasiga ko'ra, agar umumiy xulosa (overview) bo'lmasa, Task Achievement mezonidan 5.0 dan yuqori ball qo'yilmaydi."
                         },
                         {
                             "id": "en-c1-u4-l3-q2",
-                            "question": "\"Correlates with\" nimani bildiradi?",
+                            "question": "'When _______ against domestic sales metrics, export performance exhibited remarkable resilience.'",
                             "options": [
-                                "O'zaro mutanosiblik / Bog'liqlikni aks ettiradi",
-                                "Yo'q bo'ladi",
-                                "Kamaytiradi",
-                                "Zid keladi"
+                                "juxtaposed",
+                                "precluded",
+                                "dismantled",
+                                "postured"
                             ],
                             "correctAnswerIndex": 0,
-                            "explanation": "Correlates with — Mutanosiblik/bog'liqlik."
+                            "explanation": "'When juxtaposed against...' — ...bilan yonma-yon qiyoslanganda degan oliy akademik iboradir."
                         },
                         {
                             "id": "en-c1-u4-l3-q3",
-                            "question": "What is the danger of listing every single figure from a dense table?",
+                            "question": "Which of the following describes an acceptable use of data in Body Paragraphs?",
                             "options": [
-                                "Examiners love reading all 200 numbers",
-                                "It guarantees Band 9",
-                                "Nothing",
-                                "It lacks synthesis and turns into a mere list of data, capping Task Achievement at Band 5 or 6"
+                                "Quoting selective, key numerical points that validate and illustrate the overarching trends described in the overview.",
+                                "Copying every single number from every row and column.",
+                                "Inventing imaginary figures that sound scientific.",
+                                "Refusing to write any numbers to save time."
                             ],
-                            "correctAnswerIndex": 3,
-                            "explanation": "Lacks synthesis and caps Task Achievement."
+                            "correctAnswerIndex": 0,
+                            "explanation": "Asosiy trendlarni tasdiqlovchi eng muhim, saralangan raqamlarni keltirish kerak."
                         },
                         {
                             "id": "en-c1-u4-l3-q4",
-                            "question": "Choose the most sophisticated adverb for \"dramatic\":",
+                            "question": "'The _______ emissions of the transportation sector accounted for nearly two-thirds of municipal pollution.'",
                             "options": [
-                                "Substantially / Precipitous / Remarkable",
-                                "Bigly",
-                                "Very very",
-                                "Greatest"
+                                "aggregate",
+                                "sentient",
+                                "opaque",
+                                "subservient"
                             ],
                             "correctAnswerIndex": 0,
-                            "explanation": "Substantially / Precipitous / Remarkable."
+                            "explanation": "Jami, umumiy jamlangan chiqindilar 'aggregate emissions' deb ataladi."
+                        },
+                        {
+                            "id": "en-c1-u4-l3-q5",
+                            "question": "Identify the flawed sentence containing a non-academic expression for data trends:",
+                            "options": [
+                                "The figures experienced an erratic fluctuation throughout the decade.",
+                                "The line graph zoomed up crazily like a rocket.",
+                                "Wind generation surpassed solar energy by a margin of 12%.",
+                                "Agricultural output plateaued in the subsequent three-year cycle."
+                            ],
+                            "correctAnswerIndex": 1,
+                            "explanation": "'Zoomed up crazily like a rocket' norasmiy va bolalarcha ibora bo'lib, IELTS Task 1 da qat'iyan man etiladi."
                         }
                     ]
                 }
@@ -4050,149 +4276,228 @@ export const ENGLISH_C1_LESSONS: Lesson[] = [
         "level": "C1",
         "lessonNumber": 4,
         "title": "IELTS Writing Task 2: Sophisticated Cohesion & Counter-Argumentation",
-        "description": "Band 8.0 insho: chuqur qarshi dalil (counter-argument) va uni rad etish (rebuttal) orqali mukammal fikr bildirish.",
-        "estimatedDurationMinutes": 18,
+        "description": "IELTS Insho (Task 2) da Band 8.5+ darajasidagi makro-bog'liqlik (cohesion), qarshi argumentlarni keltirib parchalash (concession & counter-argument).",
+        "estimatedDurationMinutes": 22,
         "icon": "✍️",
         "steps": [
             {
                 "id": "en-c1-u4-l4-s1",
-                "title": "Band 8.0 Insho Arxitekturasi",
+                "title": "Macro-Cohesion & Counter-Argumentation",
                 "type": "learn",
-                "estimatedMinutes": 5,
+                "estimatedMinutes": 8,
                 "learnData": {
-                    "title": "Counter-argument & Rebuttal Paragraph Structure",
-                    "explanation": "1. Counter-claim: \"Admittedly, proponents of censorship contend that it preserves moral standards.\" 2. Refutation: \"However, this assertion collapses upon scrutiny because granting central authorities unchecked discretionary power inevitably stifles legitimate democratic discourse.\" 3. Resolution: \"Thus, independent media literacy remains a far superior remedy.\"",
+                    "title": "Mastering Band 8.5+ Cohesion & Dialectical Paragraph Architecture",
+                    "explanation": "IELTS Writing Task 2 insholarida Band 8.5+ olish uchun har bir gap boshida yodlangan oddiy bog'lovchilarni (*Firstly, Secondly, In addition, In conclusion*) qalashtirib tashlash tavsiya etilmaydi. Bunday mexanik bog'lovchilar Coherence & Cohesion mezonini Band 6.5-7.0 da cheklab qo'yadi. Band 8.5+ darajasi **lexical cohesion**, **anaphoric reference** va **dialectical counter-argumentation**ga tayanadi.\n\nBand 8.5+ Paragraf Mantiqi (The Counter-Argument Paradigm):\n1. **Topic Sentence (Fikrning asosiy qozig'i)**:\n   - *Advocates of unbridled economic industrialization assert that fiscal growth must take precedence over environmental conservation.*\n2. **Concession (Raqib fikrining jozibador qismini tan olish)**:\n   - *Admittedly, rapid industrial expansion has historically lifted millions out of generational penury by generating manufacturing employment and bolstering sovereign tax revenues.*\n3. **Decisive Counter-Argument (Hal qiluvchi qarshi zarba)**:\n   - *Nevertheless, this short-term economic calculus remains fundamentally myopic. Unchecked ecological degradation inevitably incurs catastrophic long-term remediation costs that dwarf initial fiscal windfalls.*\n4. **Concrete Evidence / Impact (Dalil va xulosa)**:\n   - *Recent econometric metastudies demonstrate that climate-induced soil depletion and health crises reduce annual global output by over 4%, thereby neutralizing purported economic gains.*\n\nMantiqiy Zanjir (Flow & Theme Progression):\n- Har bir keyingi gap oldingi gapdagi tushunchani ot birikmasi yoki olmosh orqali ilib oladi: *Industrial expansion lifted millions... Nevertheless, this short-term calculus...*\n\n⚠️ **O'zbek o'rganuvchilari uchun xavfli tuzoqlar (Common Pitfalls)**:\n- ❌ *Using robotic linkers in every sentence.* (*Furthermore, Moreover, In addition* ketma-ket qo'yilsa, matn sun'iy robotdek chiqadi).\n- ❌ *Presenting a one-sided essay without addressing opposing viewpoints.* (Band 8.0+ uchun inshoda muvozanatli qarshi fikr va uning inkori bo'lishi shart).\n\n🎯 **IELTS Speaking & Writing Band 8.5 Masterclass**:\n- **Prompt**: Task 2: Some people believe that technology has made human communication less personal. To what extent do you agree?\n- **Model Body Paragraph (Band 8.5+)**: It is often argued that ubiquitous digital connectivity corrodes the depth of interpersonal relationships. Admittedly, text-based micro-messaging platforms frequently encourage superficial interactions, reducing nuanced human dialogue to algorithmic emojis and abbreviations. Nevertheless, to equate digital mediation with emotional detachment is to fundamentally misapprehend human social adaptability. Far from isolating individuals, encrypted communication ecosystems enable geographically dispersed families to maintain continuous emotional intimacy that was historically unattainable.\n- **Discourse Markers**: It is often argued that..., Admittedly, text-based micro-messaging..., Nevertheless, to equate... is to fundamentally misapprehend..., Far from isolating individuals...\n- **Examiner / Intonation Tip**: *Admittedly* (to'g'ri, tan olish kerakki) orqali raqibga yon bering, so'ng *Nevertheless* orqali o'z fikringizning ustunligini ko'rsating. Bu 'Band 9.0 dialectical argumentation' qolipidir.",
                     "vocabulary": [
                         {
-                            "term": "Discretionary",
-                            "reading": "/dɪˈskreʃ.ən.ər.i/",
-                            "meaning": "O'z xohishiga ko'ra / Ixtiyoriy vakolat",
-                            "exampleSentence": "Judges possess discretionary powers.",
-                            "exampleTranslation": "Sudyalar ixtiyoriy vakolatlarga ega."
+                            "term": "Myopic",
+                            "reading": "/maɪˈɒp.ɪk/",
+                            "meaning": "Kaltabin, uzoqni ko'ra olmaydigan, tor qarashli",
+                            "exampleSentence": "Prioritizing quarterly shareholder dividends over R&D investment is a dangerously myopic corporate strategy.",
+                            "exampleTranslation": "Tadqiqot va ishlanmalar o'rniga choraklik aksiyadorlar dividendlarini ustun qo'yish xatarli darajada kaltabin korporativ strategiyadir."
                         },
                         {
-                            "term": "Exemplify",
-                            "reading": "/ɪɡˈzem.plɪ.faɪ/",
-                            "meaning": "Yorqin misol boʻlmoq",
-                            "exampleSentence": "Recent discoveries exemplify the power of modern physics.",
-                            "exampleTranslation": "Soʻnggi kashfiyotlar zamonaviy fizika qudratini yaqqol namoyon etadi."
+                            "term": "Penury",
+                            "reading": "/ˈpen.jʊr.i/",
+                            "meaning": "O'ta qashshoqlik, yo'qsillik",
+                            "exampleSentence": "Targeted micro-finance initiatives aim to liberate agrarian households from generational penury.",
+                            "exampleTranslation": "Mo'ljalli mikro-moliya tashabbuslari qishloq oilalarini avloddan-avlodga o'tib kelayotgan o'ta qashshoqlikdan qutqarishga qaratilgan."
                         },
                         {
-                            "term": "Nominalisation",
-                            "reading": "/ˌnɒmɪnəlaɪˈzeɪʃən/",
-                            "meaning": "Feʼlni otga aylantirish (akademik uslub)",
-                            "exampleSentence": "Nominalisation lends academic weight to scientific discourse.",
-                            "exampleTranslation": "Nominalizatsiya ilmiy matnga akademik salmoq beradi."
+                            "term": "Remediation",
+                            "reading": "/rɪˌmiː.diˈeɪ.ʃən/",
+                            "meaning": "Zararni tuzatish, zararsizlantirish, tiklash",
+                            "exampleSentence": "The chemical company was mandated to pay millions toward environmental soil remediation.",
+                            "exampleTranslation": "Kimyoviy kompaniyaga tuproqni ekologik zararsizlantirish va tiklash uchun millionlab mablag' to'lash majburiyati yuklandi."
+                        },
+                        {
+                            "term": "Windfall",
+                            "reading": "/ˈwɪnd.fɔːl/",
+                            "meaning": "Kutilmagan katta boylik yoki foyda",
+                            "exampleSentence": "The sovereign wealth fund reaped an unprecedented fiscal windfall following oil price surges.",
+                            "exampleTranslation": "Neft narxining ko'tarilishidan so'ng, suveren boylik fondi misli ko'rilmagan kutilmagan moliyaviy daromadga ega bo'ldi."
+                        },
+                        {
+                            "term": "Ubiquitous",
+                            "reading": "/juːˈbɪk.wɪ.təs/",
+                            "meaning": "Har qadamda uchraydigan, hamma joyda hoziru nozir",
+                            "exampleSentence": "Smartphones have become ubiquitous across every stratum of modern global society.",
+                            "exampleTranslation": "Smartfonlar zamonaviy global jamiyatning har bir qatlamida har qadamda uchraydigan buyumga aylandi."
+                        },
+                        {
+                            "term": "Corrode",
+                            "reading": "/kəˈrəʊd/",
+                            "meaning": "Yemirmoq, putur yetkazmoq (ishonch yoki munosabatlarga)",
+                            "exampleSentence": "Systemic political corruption steadily corrodes public trust in democratic institutions.",
+                            "exampleTranslation": "Tizimli siyosiy korrupsiya demokratik institutlarga bo'lgan xalq ishonchini asta-sekin yemirib boradi."
+                        },
+                        {
+                            "term": "Misapprehend",
+                            "reading": "/ˌmɪs.æp.rɪˈhend/",
+                            "meaning": "Noto'g'ri tushunmoq, yanglish talqin qilmoq",
+                            "exampleSentence": "To dismiss renewable power as intermittent is to fundamentally misapprehend modern battery storage advancements.",
+                            "exampleTranslation": "Qayta tiklanuvchi energiyani beqaror deb chetga surish zamonaviy batareya saqlash yutuqlarini tubdan noto'g'ri tushunish demakdir."
+                        },
+                        {
+                            "term": "Dialectical",
+                            "reading": "/ˌdaɪ.əˈlek.tɪ.kəl/",
+                            "meaning": "Dialektik (qarama-qarshi fikrlarni sintez qilishga asoslangan)",
+                            "exampleSentence": "A rigorous essay employs a dialectical structure to reconcile thesis and antithesis.",
+                            "exampleTranslation": "Puxta insho tezis va antitezani yarashtirish uchun dialektik strukturadan foydalanadi."
                         }
                     ],
-                    "grammarRules": [
-                        {
-                            "pattern": "IELTS Writing Task 2: Sophisticated Cohesion & Counter-Argumentation",
-                            "meaning": "Band 8.0 insho: chuqur qarshi dalil (counter-argument) va uni rad etish (rebuttal) orqali mukammal fikr bildirish.",
-                            "usageNotes": "1. Counter-claim: \"Admittedly, proponents of censorship contend that it preserves moral standards.\" 2. Refutation: \"However, this assertion collapses upon scrutiny because granting central authorities unchecked discretionary power inevitably stifles legitimate democratic discourse.\" 3. Resolution: \"Thus, independent media literacy remains a far superior remedy.\"",
-                            "examples": [
-                                {
-                                    "sentence": "Judges possess discretionary powers.",
-                                    "translation": "Sudyalar ixtiyoriy vakolatlarga ega."
-                                }
-                            ]
-                        }
+                    "keyPoints": [
+                        "Band 8.5+ Cohesion avoids mechanical linking adverbs ('Firstly, In addition') in favor of thematic progression and anaphoric nouns.",
+                        "Dialectical Paragraph Formula: Topic Claim -> Concession (Admittedly,...) -> Counter-Argument (Nevertheless,...) -> Evidence/Synthesis.",
+                        "Integrate advanced academic vocabulary that carries precise emotional and analytical weight: 'myopic', 'corrode', 'penury'.",
+                        "Ensure every sentence flows naturally from the subject or predicate of the preceding thought."
                     ]
                 }
             },
             {
                 "id": "en-c1-u4-l4-s2",
-                "title": "Mashq",
+                "title": "IELTS Writing Task 2 Cohesion Amaliyoti",
                 "type": "practice",
                 "estimatedMinutes": 6,
                 "practiceData": {
-                    "instructions": "Eng mukammal qarshi dalil strukturasini tanlang.",
+                    "instructions": "Insho strukturasi va murakkab bog'liqlik vositalariga mos eng to'g'ri ifodani tanlang.",
                     "exercises": [
                         {
                             "id": "en-c1-u4-l4-e1",
                             "type": "multiple-choice",
-                            "prompt": "Which sentence serves as an exemplary academic concession for Task 2?",
+                            "prompt": "Which transition word is best suited to introduce a strategic concession before dismantling an opposing view?",
                             "options": [
-                                "While it is understandable that detractors cite exorbitant implementation costs, these expenses are vastly outweighed by future productivity gains.",
-                                "Money is bad but we have to spend.",
-                                "Some people say it costs money and they are wrong.",
-                                "I don't care about cost."
+                                "Admittedly",
+                                "Firstly",
+                                "Therefore",
+                                "In a nutshell"
                             ],
                             "correctAnswer": 0,
-                            "explanation": "While it is understandable that detractors cite..."
+                            "explanation": "'Admittedly' (to'g'ri, tan olish kerakki) raqib dalilining qisman haqiqat ekanini tan olib, so'ng qarshi zarba berish uchun eng mukammal so'zdir."
                         },
                         {
-                            "id": "en-c1-u4-l4-ex-2",
+                            "id": "en-c1-u4-l4-e2",
                             "type": "multiple-choice",
-                            "prompt": "Choose the correct word to complete the sentence: \"Recent discoveries exemplify the power of modern physics.\"",
+                            "prompt": "Choose the most sophisticated replacement for: 'Their plan is short-sighted and doesn't look at the future.'",
                             "options": [
-                                "Exemplify",
-                                "reluctance",
-                                "doubt",
-                                "delay"
+                                "Their strategic proposal is profoundly myopic and discounts long-term ramifications.",
+                                "Their plan is blind to tomorrow.",
+                                "They cannot see with their eyes into the future times.",
+                                "The proposal has small eyes for future days."
                             ],
                             "correctAnswer": 0,
-                            "explanation": "\"Exemplify\" (Yorqin misol boʻlmoq) fits the context appropriately."
+                            "explanation": "'Profoundly myopic and discounts long-term ramifications' oliy C1 darajasidagi akademik tildir."
+                        },
+                        {
+                            "id": "en-c1-u4-l4-e3",
+                            "type": "multiple-choice",
+                            "prompt": "What does the word 'ubiquitous' signify in: 'Digital surveillance cameras have become ubiquitous in metropolitan spaces'?",
+                            "options": [
+                                "Present, appearing, or found everywhere",
+                                "Completely broken and defunct",
+                                "Prohibitively expensive to maintain",
+                                "Manufactured from recycled glass"
+                            ],
+                            "correctAnswer": 0,
+                            "explanation": "'Ubiquitous' — hamma joyda uchraydigan, keng tarqalgan degani."
+                        },
+                        {
+                            "id": "en-c1-u4-l4-e4",
+                            "type": "multiple-choice",
+                            "prompt": "Select the sentence featuring the smoothest lexical cohesion without mechanical linkers:",
+                            "options": [
+                                "Firstly cities expand. Secondly traffic gets bad. Thirdly air gets dirty.",
+                                "The accelerating expansion of urban conglomerates has triggered unprecedented traffic bottlenecks. This vehicular gridlock, in turn, severely degrades municipal air quality.",
+                                "Cities expand and also traffic gets bad and moreover the air gets bad too.",
+                                "Furthermore cities are big, in addition traffic is high, additionally air is bad."
+                            ],
+                            "correctAnswer": 1,
+                            "explanation": "Ikkinchi variantda oldingi gapdagi 'traffic bottlenecks' keyingi gapda 'This vehicular gridlock' ot birikmasiga aylanib, matnda mexanik bog'lovchilarsiz tabiiy oqim hosil qilmoqda."
+                        },
+                        {
+                            "id": "en-c1-u4-l4-e5",
+                            "type": "multiple-choice",
+                            "prompt": "Complete the counter-argument: 'The state provided generous mining subsidies. _______, the catastrophic environmental damage far outweighed these transient fiscal windfalls.'",
+                            "options": [
+                                "Nevertheless",
+                                "Admittedly",
+                                "Similarly",
+                                "Because"
+                            ],
+                            "correctAnswer": 0,
+                            "explanation": "Oldingi fikrga qarama-qarshi hal qiluvchi dalilni kiritish uchun 'Nevertheless' (shunday bo'lsa-da) ishlatiladi."
                         }
                     ]
                 }
             },
             {
                 "id": "en-c1-u4-l4-s3",
-                "title": "Test",
+                "title": "IELTS Writing Task 2 Baholash Testi",
                 "type": "test",
                 "estimatedMinutes": 7,
                 "testData": {
-                    "instructions": "Savollarga javob bering.",
-                    "passingScorePercentage": 75,
+                    "instructions": "IELTS Task 2 insho arxitekturasi va argumentatsiya mezonlari bo'yicha imtihon.",
+                    "passingScorePercentage": 80,
                     "questions": [
                         {
                             "id": "en-c1-u4-l4-q1",
-                            "question": "What characterizes Band 8.0 Coherence and Cohesion?",
+                            "question": "What is the primary stylistic flaw of over-using mechanical sentence openers ('Firstly, Furthermore, Moreover, In conclusion')?",
                             "options": [
-                                "Sequences information logically and uses a wide range of cohesive devices seamlessly and unobtrusively",
-                                "Writing one 250-word sentence with no punctuation",
-                                "Using \"Firstly, Secondly, Thirdly\" in every sentence",
-                                "Starting every sentence with \"Moreover\""
+                                "It makes the essay appear formulaic and robotic, capping Coherence & Cohesion at Band 6.5-7.0.",
+                                "It causes the essay to violate word count limits.",
+                                "It forces the examiner to check spelling dictionaries.",
+                                "It is considered an illegal plagiarism violation."
                             ],
                             "correctAnswerIndex": 0,
-                            "explanation": "Seamless and unobtrusive cohesion."
+                            "explanation": "Mexanik bog'lovchilarni har gap boshida qalashtirish inshoni sun'iy va qolipli qilib, ballni cheklaydi."
                         },
                         {
                             "id": "en-c1-u4-l4-q2",
-                            "question": "\"Detractor\" so'zining ma'nosi nima?",
+                            "question": "'The chemical manufacturing plant was forced to close and fund the comprehensive _______ of the polluted wetlands.'",
                             "options": [
-                                "Muxlis",
-                                "Homiy",
-                                "Tanqidchi / Qarshi chiquvchi shaxs",
-                                "Quruvchi"
+                                "remediation",
+                                "penury",
+                                "posturing",
+                                "syllogism"
                             ],
-                            "correctAnswerIndex": 2,
-                            "explanation": "Detractor — Tanqidchi."
+                            "correctAnswerIndex": 0,
+                            "explanation": "Ifloslangan yerlarni zararsizlantirish va qayta tiklash 'remediation' deb ataladi."
                         },
                         {
                             "id": "en-c1-u4-l4-q3",
-                            "question": "What happens if you use overly convoluted vocabulary incorrectly in IELTS Task 2?",
+                            "question": "Which argumentative element directly follows the 'Admittedly...' concession clause in a Band 8.5+ dialectical body paragraph?",
                             "options": [
-                                "Lexical Resource score drops due to lack of natural precision and inappropriate collocation",
-                                "Grammar score rises",
-                                "The examiner gives extra points for effort",
-                                "You get automatic Band 9"
+                                "A decisive counter-argument introduced by 'Nevertheless' or 'However' that refutes or contextualizes the concession.",
+                                "A five-sentence apology to the reader.",
+                                "An informal colloquial joke.",
+                                "A repetition of the introduction word-for-word."
                             ],
                             "correctAnswerIndex": 0,
-                            "explanation": "Lexical score drops for unnatural precision."
+                            "explanation": "Yon berishdan ('Admittedly') so'ng darhol 'Nevertheless' bilan boshlanuvchi qat'iy qarshi dalil kelishi shart."
                         },
                         {
                             "id": "en-c1-u4-l4-q4",
-                            "question": "Which linking device denotes an indisputable fact?",
+                            "question": "'Widespread cynicism regarding judicial independence steadily _______ citizens' faith in the constitutional republic.'",
                             "options": [
-                                "Questionably",
-                                "Supposedly",
-                                "Dubiously",
-                                "Inarguably / Indisputably"
+                                "corrodes",
+                                "elucidates",
+                                "delineates",
+                                "substantiates"
                             ],
-                            "correctAnswerIndex": 3,
-                            "explanation": "Inarguably / Indisputably."
+                            "correctAnswerIndex": 0,
+                            "explanation": "Ishonch va qadriyatlarni sekin-asta yemirib putur yetkazish 'corrodes faith' birikmasi bilan ifodalanadi."
+                        },
+                        {
+                            "id": "en-c1-u4-l4-q5",
+                            "question": "Identify the sentence that misuses academic register in an argumentative conclusion:",
+                            "options": [
+                                "In conclusion, while industrial growth offers transient benefits, sustainable stewardship is non-negotiable.",
+                                "All in all, money is good but nature is cool so people should just stop being bad.",
+                                "To synthesize, the evidence overwhelmingly points towards the adoption of circular economic models.",
+                                "Ultimately, the long-term remediation costs far outstrip initial commercial gains."
+                            ],
+                            "correctAnswerIndex": 1,
+                            "explanation": "Ikkinchi variant bolalarcha, o'ta sodda va C1 inshosiga mutlaqo noloyiqdir."
                         }
                     ]
                 }
@@ -4208,153 +4513,228 @@ export const ENGLISH_C1_LESSONS: Lesson[] = [
         "level": "C1",
         "lessonNumber": 5,
         "title": "IELTS Speaking Band 8.0+: Idiomatic Eloquence & Spontaneous Depth",
-        "description": "Imtihon oluvchi bilan tabiiy, chuqur va ravon suhbat: pauzasiz murakkab g'oyalarni shakllantirish.",
-        "estimatedDurationMinutes": 18,
+        "description": "IELTS Speaking Part 3 da mavhum falsafiy mavzularda ravon, erkin, intellektual va chuqur fikrlash (spontaneous fluency & eloquence).",
+        "estimatedDurationMinutes": 22,
         "icon": "🎙️",
         "steps": [
             {
                 "id": "en-c1-u4-l5-s1",
-                "title": "Band 8.0+ Nutq Ko'nikmalari",
+                "title": "Band 8.0+ Speaking Mastery & Spontaneous Eloquence",
                 "type": "learn",
-                "estimatedMinutes": 5,
+                "estimatedMinutes": 8,
                 "learnData": {
-                    "title": "Native-Like Eloquence in Speaking Parts 2 & 3",
-                    "explanation": "Band 8.0+ darajasida nomzod so'z qidirib to'xtamaydi (effortless fluency), murakkab metaforalar va tabiiy kollokatsiyalardan foydalanadi, intonatsiya va urg'uni mohirona boshqaradi.",
-                    "keyPoints": [
-                        "Idiomatic precision: \"At the end of the day\", \"To take it with a pinch of salt\", \"A catalyst for change\".",
-                        "Handling unexpected abstract questions with poise."
-                    ],
-                    "grammarRules": [
-                        {
-                            "pattern": "IELTS Speaking Band 8.0+: Idiomatic Eloquence & Spontaneous Depth",
-                            "meaning": "Imtihon oluvchi bilan tabiiy, chuqur va ravon suhbat: pauzasiz murakkab g'oyalarni shakllantirish.",
-                            "usageNotes": "Band 8.0+ darajasida nomzod so'z qidirib to'xtamaydi (effortless fluency), murakkab metaforalar va tabiiy kollokatsiyalardan foydalanadi, intonatsiya va urg'uni mohirona boshqaradi.",
-                            "examples": [
-                                {
-                                    "sentence": "I study English every day with dedication.",
-                                    "translation": "Har kuni ingliz tilini astoydil o'rganaman."
-                                }
-                            ]
-                        }
-                    ],
+                    "title": "Spontaneous Depth and Idiomatic Eloquence for Speaking Band 8.0+",
+                    "explanation": "IELTS Speaking Part 3 imtihonning eng muhim qismi bo'lib, aynan shu yerda nomzodning Band 7.0 yoki Band 8.5-9.0 olishi hal bo'ladi. Band 8.5 oluvchi nomzod shunchaki 'ha/yo'q' deb javob bermaydi; u savolga makro-ijtimoiy, falsafiy va global prizma orqali yondashadi.\n\nBand 8.5+ Notiqlik Strategiyalari:\n1. **Spontaneous Thinking Time (Fikrlash uchun tabiiy vaqt yutish)**:\n   - Savol berilganda jimgina turib qolish yoki 'eeee...' deb ovoz chiqarish o'rniga nufuzli kirish iboralaridan foydalaning:\n     *That is an intriguing sociopolitical question; on the one hand...*\n     *Well, if we unpack the premise of that question...*\n     *It is widely assumed that X, but that strikes me as somewhat reductionist...*\n\n2. **Speculation about Future & Hypotheticals (Faraz va ehtimollik)**:\n   - *Were governments to dismantle social safety nets, we would conceivably witness...*\n   - *It is plausible that within two decades, quantum encryption will render current data protocols entirely obsolete.*\n\n3. **Unfaltering Flow & Avoiding Rehearsed Clichés**:\n   - 'Every coin has two sides' yoki 'Nowadays technology is everywhere' kabi yodlab olingan iboralardan qoching. Buning o'rniga: *'Technological ubiquity presents a double-edged sword'*, *'Striking a balance between modernization and historic preservation is paramount'*.\n\n⚠️ **O'zbek o'rganuvchilari uchun xavfli tuzoqlar (Common Pitfalls)**:\n- ❌ *Giving personal anecdotes in Part 3.* (Part 3 da o'zingiz yoki oilangiz haqida gapirmang! Bu yerda umumjamiyat, sotsiologiya va davlat miqyosida tahlil talab qilinadi).\n- ❌ *Monotone delivery without emotional commitment.* (Intonatsiyangizda qiziqish, intellektual ishtiyoq va urg'u sezilib turishi shart).\n\n🎯 **IELTS Speaking & Writing Band 8.5 Masterclass**:\n- **Prompt**: Speaking Part 3: Do you think artificial intelligence will eventually replace human artists and musicians?\n- **Model Answer (Band 8.5+)**: That strikes me as a rather reductionist dichotomy. While generative algorithms can undeniably mimic aesthetic conventions and synthesize complex harmonies, art is fundamentally an epistemological dialogue rooted in mortal, sentient vulnerability. An AI can simulate grief, but it cannot experience the existential anguish that inspired Beethoven or Van Gogh. Consequently, while commercial graphic design may be automated, authentic fine art will remain an inviolable sanctuary of human consciousness.\n- **Discourse Markers**: That strikes me as a rather reductionist dichotomy, While generative algorithms can undeniably mimic..., art is fundamentally an epistemological dialogue rooted in..., An AI can simulate..., but it cannot experience..., Consequently, while commercial... may be automated, authentic fine art will remain an inviolable sanctuary\n- **Examiner / Intonation Tip**: *Reductionist dichotomy* (o'ta jo'nlashtirilgan bo'linish) va *inviolable sanctuary* (daxlsiz maskan) kabi chuqur iboralarni erkin, tabiiy intonatsion to'lqin bilan talaffuz qiling. Bu imtihon oluvchida unutilmas taassurot qoldiradi.",
                     "vocabulary": [
                         {
-                            "term": "Exemplify",
-                            "reading": "/ɪɡˈzem.plɪ.faɪ/",
-                            "meaning": "Yorqin misol boʻlmoq",
-                            "exampleSentence": "Recent discoveries exemplify the power of modern physics.",
-                            "exampleTranslation": "Soʻnggi kashfiyotlar zamonaviy fizika qudratini yaqqol namoyon etadi."
+                            "term": "Eloquence",
+                            "reading": "/ˈel.ə.kwəns/",
+                            "meaning": "Notiqlik san'ati, so'zga chechanlik, fasohat",
+                            "exampleSentence": "The ambassador spoke with extraordinary eloquence, winning over a skeptical diplomatic audience.",
+                            "exampleTranslation": "Elchi g'ayritabiiy so'zga chechanlik bilan so'zlab, shubhali diplomatik auditoriyani o'z tomoniga og'dirdi."
                         },
                         {
-                            "term": "Nominalisation",
-                            "reading": "/ˌnɒmɪnəlaɪˈzeɪʃən/",
-                            "meaning": "Feʼlni otga aylantirish (akademik uslub)",
-                            "exampleSentence": "Nominalisation lends academic weight to scientific discourse.",
-                            "exampleTranslation": "Nominalizatsiya ilmiy matnga akademik salmoq beradi."
+                            "term": "Reductionist",
+                            "reading": "/rɪˈdʌk.ʃən.ɪst/",
+                            "meaning": "O'ta jo'nlashtiruvchi, murakkab masalani haddan tashqari soddalashtirib yuboradigan",
+                            "exampleSentence": "Attributing economic inflation entirely to greed is a simplistic and reductionist fallacy.",
+                            "exampleTranslation": "Iqtisodiy inflyatsiyani faqat ochko'zlikka bog'lash jo'nlashtiruvchi va mantiqan xato qarashdir."
                         },
                         {
-                            "term": "Pragmatic",
-                            "reading": "/præɡˈmæt.ɪk/",
-                            "meaning": "Amaliy, pragmatik",
-                            "exampleSentence": "We adopted a pragmatic approach to problem-solving.",
-                            "exampleTranslation": "Biz muammoni hal qilishda amaliy yondashuvni qoʻlladik."
+                            "term": "Unfaltering",
+                            "reading": "/ʌnˈfɔːl.tər.ɪŋ/",
+                            "meaning": "Duduqlanmasdan, to'xtab qolmaydigan, qat'iy va mustahkam",
+                            "exampleSentence": "She delivered the keynote address with unfaltering fluency and commanding poise.",
+                            "exampleTranslation": "U asosiy ma'ruzani to'xtab qolmaydigan mukammal ravonlik va salobatli vazminlik bilan taqdim etdi."
+                        },
+                        {
+                            "term": "Inviolable",
+                            "reading": "/ɪnˈvaɪ.ə.lə.bəl/",
+                            "meaning": "Daxlsiz, buzib yoki toptab bo'lmaydigan muqaddas",
+                            "exampleSentence": "Human dignity and fundamental bodily autonomy must remain inviolable principles.",
+                            "exampleTranslation": "Inson qadr-qimmati va tana daxlsizligi toptab bo'lmaydigan muqaddas tamoyillar bo'lib qolishi shart."
+                        },
+                        {
+                            "term": "Sanctuary",
+                            "reading": "/ˈsæŋk.tʃʊə.ri/",
+                            "meaning": "Panohgoh, daxlsiz maskan",
+                            "exampleSentence": "The library provided a tranquil sanctuary for scholars seeking refuge from urban chaos.",
+                            "exampleTranslation": "Kutubxona shahar tartibsizligidan panoh izlagan olimlar uchun sokin panohgoh bo'lib xizmat qildi."
+                        },
+                        {
+                            "term": "Spontaneity",
+                            "reading": "/ˌspɒn.təˈneɪ.ə.ti/",
+                            "meaning": "Tabiiylik, o'z-o'zidan samimiy va erkin chiqish",
+                            "exampleSentence": "The highest band scores in speaking require intellectual depth combined with natural conversational spontaneity.",
+                            "exampleTranslation": "Speaking'dagi eng yuqori ballar intellektual chuqurlik bilan birga tabiiy muloqot erkinligini talab qiladi."
+                        },
+                        {
+                            "term": "Dichotomy",
+                            "reading": "/daɪˈkɒt.ə.mi/",
+                            "meaning": "Dixotomiya, ikki qarama-qarshi qismga bo'linish",
+                            "exampleSentence": "The debate created a stark dichotomy between environmental purists and corporate industrialists.",
+                            "exampleTranslation": "Munozara ekologik idealistlar va korporativ sanoatchilar o'rtasida keskin dixotomiya hosil qildi."
+                        },
+                        {
+                            "term": "Anguish",
+                            "reading": "/ˈæŋ.ɡwɪʃ/",
+                            "meaning": "Ruhiy azob, chuqur iztirob",
+                            "exampleSentence": "Great dramatic playwrights channel existential anguish into enduring works of literature.",
+                            "exampleTranslation": "Buyuk dramaturglari mavjudlik iztiroblarini boqiy adabiy durdonalarga aylantiradilar."
                         }
+                    ],
+                    "keyPoints": [
+                        "Part 3 Speaking evaluates macro-sociological and philosophical reflection, not personal autobiographies.",
+                        "Use sophisticated thinking-time discourse markers: 'That strikes me as somewhat reductionist', 'If we unpack the premise...'.",
+                        "Demonstrate unfaltering fluency by linking complex clauses through advanced conditionals and hedging.",
+                        "Vary pitch and oratorical cadence to project intellectual confidence and engagement."
                     ]
                 }
             },
             {
                 "id": "en-c1-u4-l5-s2",
-                "title": "Mashq",
+                "title": "IELTS Speaking Band 8.0+ Amaliyoti",
                 "type": "practice",
                 "estimatedMinutes": 6,
                 "practiceData": {
-                    "instructions": "Eng yuqori darajadagi javobni tanlang.",
+                    "instructions": "IELTS Speaking Part 3 tahliliy javoblari va notiqlik mahorati bo'yicha eng to'g'ri variantlarni tanlang.",
                     "exercises": [
                         {
                             "id": "en-c1-u4-l5-e1",
                             "type": "multiple-choice",
-                            "prompt": "Examiner: \"Do you think modern architecture preserves historical identity?\" Best Band 8.0+ answer:",
+                            "prompt": "Choose the most intellectually sophisticated filler/opening to buy thinking time in Part 3:",
                             "options": [
-                                "No, skyscrapers are glass.",
-                                "Modern buildings are new and old buildings are old.",
-                                "I like towers.",
-                                "That is a profound question. In my view, it is a delicate balancing act. While avant-garde skyscrapers redefine urban skylines, sensitive historical preservation serves as an irreplaceable cultural anchor."
+                                "Uh, well, you know, um, that is hard...",
+                                "That is a multifaceted sociopolitical issue; if we unpack the underlying premise...",
+                                "My mother always says that...",
+                                "I memorized an answer for this yesterday."
                             ],
-                            "correctAnswer": 3,
-                            "explanation": "Flawless lexical range, metaphor, and rhetorical poise."
+                            "correctAnswer": 1,
+                            "explanation": "'That is a multifaceted sociopolitical issue; if we unpack the underlying premise...' imtihon oluvchiga yuqori saviyali tahlil boshlanayotganidan darak beradi."
                         },
                         {
-                            "id": "en-c1-u4-l5-ex-2",
+                            "id": "en-c1-u4-l5-e2",
                             "type": "multiple-choice",
-                            "prompt": "Choose the correct word to complete the sentence: \"Nominalisation lends academic weight to scientific discourse.\"",
+                            "prompt": "What does describing an argument as 'reductionist' imply?",
                             "options": [
-                                "doubt",
-                                "reluctance",
-                                "delay",
-                                "Nominalisation"
+                                "It oversimplifies a complex reality to the point of distorting the truth.",
+                                "It reduces mathematical fractions accurately.",
+                                "It is written in very small font size.",
+                                "It was created by a scientist."
                             ],
-                            "correctAnswer": 3,
-                            "explanation": "\"Nominalisation\" (Feʼlni otga aylantirish (akademik uslub)) fits the context appropriately."
+                            "correctAnswer": 0,
+                            "explanation": "'Reductionist' — murakkab ko'p qirrali hodisani o'ta jo'nlashtirib, mohiyatni buzib ko'rsatish demakdir."
+                        },
+                        {
+                            "id": "en-c1-u4-l5-e3",
+                            "type": "multiple-choice",
+                            "prompt": "Why should candidates avoid personal stories (e.g. 'Last week my brother...') in IELTS Speaking Part 3?",
+                            "options": [
+                                "Part 3 is specifically designed to evaluate abstract, general, and societal evaluation rather than personal experiences.",
+                                "Brothers are not allowed to be mentioned under test regulations.",
+                                "Examiners are required to check family birth certificates.",
+                                "It makes the test recording too loud."
+                            ],
+                            "correctAnswer": 0,
+                            "explanation": "Part 3 shaxsiy voqealarni emas, balki umumjamiyat, falsafa va global tendensiyalarni tahlil qilish darajasini baholaydi."
+                        },
+                        {
+                            "id": "en-c1-u4-l5-e4",
+                            "type": "multiple-choice",
+                            "prompt": "Complete: 'Human fundamental rights should remain an _______ standard that no authoritarian government may override.'",
+                            "options": [
+                                "inviolable",
+                                "opaque",
+                                "reductive",
+                                "subservient"
+                            ],
+                            "correctAnswer": 0,
+                            "explanation": "Toptab yoki buzib bo'lmaydigan muqaddas huquqlar 'inviolable rights' deb ataladi."
+                        },
+                        {
+                            "id": "en-c1-u4-l5-e5",
+                            "type": "multiple-choice",
+                            "prompt": "Which quality best defines 'unfaltering fluency' in the IELTS Speaking descriptors?",
+                            "options": [
+                                "Speaking without hesitation, unnatural pauses, or loss of coherence even when discussing complex abstract hypotheses.",
+                                "Speaking at 300 words per minute without taking a breath.",
+                                "Using words that nobody understands.",
+                                "Shouting loudly throughout the interview."
+                            ],
+                            "correctAnswer": 0,
+                            "explanation": "Murakkab abstrakt mavzularda ham tutilmasdan, duduqlanmasdan, tabiiy va uzviy fikrlay olish 'unfaltering fluency' deb baholanadi."
                         }
                     ]
                 }
             },
             {
                 "id": "en-c1-u4-l5-s3",
-                "title": "Test",
+                "title": "IELTS Speaking Band 8.0+ Baholash Testi",
                 "type": "test",
                 "estimatedMinutes": 7,
                 "testData": {
-                    "instructions": "Savollarga javob bering.",
-                    "passingScorePercentage": 75,
+                    "instructions": "IELTS Speaking Part 3 strategiyalari va notiqlik mezonlari bo'yicha yakuniy test.",
+                    "passingScorePercentage": 80,
                     "questions": [
                         {
                             "id": "en-c1-u4-l5-q1",
-                            "question": "What characterizes Band 8.0 Pronunciation in IELTS Speaking?",
+                            "question": "In Speaking Part 3, how should a candidate handle an unexpected or difficult question on abstract philosophy?",
                             "options": [
-                                "Sounds like a robotic dictionary",
-                                "Speaks extremely loudly",
-                                "Fakes an exaggerated accent unnaturally",
-                                "Uses a wide range of phonological features to convey precise subtle meaning, easily understood throughout"
+                                "Stay silent for two minutes.",
+                                "Frame the question sociologically by exploring contrasting perspectives using nuanced hedging and modal conditionals.",
+                                "Complain to the examiner that the question is unfair.",
+                                "Repeat 'I don't know' repeatedly."
                             ],
-                            "correctAnswerIndex": 3,
-                            "explanation": "Wide range of phonological features naturally."
+                            "correctAnswerIndex": 1,
+                            "explanation": "Savolga har xil nuqtai nazardan yondashib, shartli gaplar va ehtiyotkor baholash orqali sotsiologik tahlil berish kerak."
                         },
                         {
                             "id": "en-c1-u4-l5-q2",
-                            "question": "\"A delicate balancing act\" nimani bildiradi?",
+                            "question": "'Framing the debate as a stark _______ between economic prosperity and climate survival ignores modern green technologies.'",
                             "options": [
-                                "Nozik muvozanatni talab qiluvchi murakkab vaziyat",
-                                "Sirka o'yini",
-                                "Balandlikdan sakrash",
-                                "Shunchaki oson ish"
+                                "dichotomy",
+                                "anaphora",
+                                "sanctuary",
+                                "cadence"
                             ],
                             "correctAnswerIndex": 0,
-                            "explanation": "Nozik muvozanat talab qiluvchi holat."
+                            "explanation": "Masalani faqat ikki qutbga ajratish 'a stark dichotomy' deb nomlanadi."
                         },
                         {
                             "id": "en-c1-u4-l5-q3",
-                            "question": "How should a candidate buy 2-3 seconds to think about an abstract Part 3 question without losing Fluency points?",
+                            "question": "What distinguishes natural conversational 'spontaneity' from 'rehearsed robotic regurgitation'?",
                             "options": [
-                                "Close eyes and say nothing",
-                                "Use natural conversational fillers: \"That is an intriguing question with several multifaceted dimensions...\"",
-                                "Say \"Um... uh... um...\" for 20 seconds in total silence",
-                                "Ask the examiner to answer first"
+                                "Spontaneity responds directly to the prompt with dynamic intonation and adaptive vocabulary rather than reciting pre-memorized essay scripts.",
+                                "Spontaneity means making intentional grammar mistakes.",
+                                "Regurgitation always scores Band 9.0.",
+                                "There is no difference in the marking rubric."
                             ],
-                            "correctAnswerIndex": 1,
-                            "explanation": "Natural conversational fillers."
+                            "correctAnswerIndex": 0,
+                            "explanation": "Haqiqiy spontanlik savolga mos moslashuvchan leksika va jonli intonatsiya bilan javob berish demakdir; yodlangan skriptlar darhol fosh bo'ladi."
                         },
                         {
                             "id": "en-c1-u4-l5-q4",
-                            "question": "What does \"catalyst for change\" mean?",
+                            "question": "Choose the most sophisticated expression to conclude a Part 3 response about cultural globalization:",
                             "options": [
-                                "A barrier that stops change",
-                                "A legal contract",
-                                "An event, person or factor that accelerates significant transformation",
-                                "A chemistry test tube"
+                                "And that's why culture is good.",
+                                "Consequently, intercultural hybridization enriches global diversity rather than obliterating indigenous heritage.",
+                                "So yeah, everyone should travel and eat foreign food.",
+                                "That is the end of what I have to tell you."
                             ],
-                            "correctAnswerIndex": 2,
-                            "explanation": "Accelerates significant transformation."
+                            "correctAnswerIndex": 1,
+                            "explanation": "Ikkinchi variant C1/Band 8.5+ darajasidagi eng mazmunli va teran yakunlovchi xulosadir."
+                        },
+                        {
+                            "id": "en-c1-u4-l5-q5",
+                            "question": "'The historic botanical garden stands as a serene _______ amidst the unrelenting concrete sprawl of the megacity.'",
+                            "options": [
+                                "sanctuary",
+                                "bottleneck",
+                                "dichotomy",
+                                "fallacy"
+                            ],
+                            "correctAnswerIndex": 0,
+                            "explanation": "Shahar shovqini ichidagi sokin panohgoh va maskan 'sanctuary' so'zi orqali ifodalanadi."
                         }
                     ]
                 }
