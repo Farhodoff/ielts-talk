@@ -44,7 +44,7 @@ export const STATIC_CURRICULUM_MAP: Record<
   'en-a2-u1-l1': {
     title: 'Talking About Yesterday',
     skill: 'grammar',
-    route: '/ielts?topic=murphy_u05_past_simple',
+    route: '/ielts?tab=grammar&topic=murphy_u05_past_simple',
     contentId: 'murphy_u05_past_simple',
     sourceType: 'grammar',
   },
@@ -54,7 +54,7 @@ export const STATIC_CURRICULUM_MAP: Record<
   'en-b1-u1-l1': {
     title: 'Future Plans & Possibilities',
     skill: 'grammar',
-    route: '/ielts?topic=murphy_u18_future_continuous_and_perfect',
+    route: '/ielts?tab=grammar&topic=murphy_u18_future_continuous_and_perfect',
     contentId: 'murphy_u18_future_continuous_and_perfect',
     sourceType: 'grammar',
   },
@@ -68,7 +68,7 @@ export const STATIC_CURRICULUM_MAP: Record<
   'en-c1-u1-l1': {
     title: 'Complex Academic Discourse',
     skill: 'grammar',
-    route: '/ielts?topic=murphy_u33_inversion_structures',
+    route: '/ielts?tab=grammar&topic=murphy_u33_inversion_structures',
     contentId: 'murphy_u33_inversion_structures',
     sourceType: 'grammar',
   },
@@ -173,7 +173,7 @@ export const CurriculumLessonResolver = {
       return {
         lessonId: murphyTopic.id,
         sourceType: 'grammar',
-        route: `/ielts?topic=${murphyTopic.id}`,
+        route: `/ielts?tab=grammar&topic=${murphyTopic.id}`,
         contentId: murphyTopic.id,
         title: murphyTopic.title,
         language: 'en',
@@ -218,7 +218,7 @@ export const CurriculumLessonResolver = {
         return {
           lessonId,
           sourceType: 'grammar',
-          route: '/ielts?topic=murphy_u05_past_simple',
+          route: '/ielts?tab=grammar&topic=murphy_u05_past_simple',
           contentId: 'murphy_u05_past_simple',
           title: 'Past Simple & Irregular Verbs (A2)',
           language: 'en',
@@ -232,7 +232,7 @@ export const CurriculumLessonResolver = {
         return {
           lessonId,
           sourceType: 'grammar',
-          route: '/ielts?topic=murphy_u18_future_continuous_and_perfect',
+          route: '/ielts?tab=grammar&topic=murphy_u18_future_continuous_and_perfect',
           contentId: 'murphy_u18_future_continuous_and_perfect',
           title: 'Future Forms & Modals (B1)',
           language: 'en',
@@ -302,7 +302,7 @@ export const CurriculumLessonResolver = {
         return {
           lessonId,
           sourceType: 'grammar',
-          route: '/ielts?topic=murphy_u33_inversion_structures',
+          route: '/ielts?tab=grammar&topic=murphy_u33_inversion_structures',
           contentId: 'murphy_u33_inversion_structures',
           title: 'Complex Academic Inversion & Cleft Sentences (C1)',
           language: 'en',
@@ -330,7 +330,7 @@ export const CurriculumLessonResolver = {
         if (!staticNode.sourceType && !staticNode.route) {
           if (skill === 'grammar') {
             sourceType = 'grammar';
-            route = `/ielts?topic=${lessonId}`;
+            route = `/ielts?tab=grammar&topic=${lessonId}`;
           } else if (skill === 'vocabulary') {
             sourceType = 'vocabulary';
             route = '/vocabulary';

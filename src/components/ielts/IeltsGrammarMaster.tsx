@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useSearchParams } from 'react-router-dom';
 import {
   BookOpen,
   Sparkles,
@@ -27,6 +28,9 @@ export const IeltsGrammarMaster: React.FC = () => {
   const { topics: rawTopics } = useGrammarLessons('en');
   const { getItemStatus, setItemStatus, getStatsForLevel } = useEnglishGrammarMastery();
 
+  const [searchParams] = useSearchParams();
+  const topicParam = searchParams.get('topic');
+
   const [activeTab, setActiveTab] = useState<'grammar' | 'quiz'>('grammar');
   const [selectedLevel, setSelectedLevel] = useState<'ALL' | 'A1' | 'A2' | 'B1' | 'B2' | 'C1'>(
     'A1',
@@ -53,6 +57,34 @@ export const IeltsGrammarMaster: React.FC = () => {
   // Saved Flashcard Items Notification State
   const [savedCardIds, setSavedCardIds] = useState<string[]>([]);
 
+  // Use local comprehensive database if hook is still loading or for instant response
+  const topics: IeltsGrammarTopic[] = rawTopics.length > 0 ? rawTopics : fallbackTopics;
+
+  // If topicParam is present in URL, synchronize selectedLevel and auto-scroll to the topic card
+  useEffect(() => {
+    if (!topicParam || topics.length === 0) return;
+
+    const matched = topics.find((t) => t.id === topicParam);
+    if (matched) {
+      if (matched.level.includes('A1')) setSelectedLevel('A1');
+      else if (matched.level.includes('A2')) setSelectedLevel('A2');
+      else if (matched.level.includes('B1')) setSelectedLevel('B1');
+      else if (matched.level.includes('B2')) setSelectedLevel('B2');
+      else if (matched.level.includes('C1')) setSelectedLevel('C1');
+      else setSelectedLevel('ALL');
+
+      setStatusFilter('ALL');
+
+      const timer = setTimeout(() => {
+        const el = document.getElementById(`grammar-topic-${topicParam}`);
+        if (el) {
+          el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+      }, 300);
+      return () => clearTimeout(timer);
+    }
+  }, [topicParam, topics.length]);
+
   // Quiz State
   const [quizIndex, setQuizIndex] = useState(0);
   const [selectedOption, setSelectedOption] = useState<string | null>(null);
@@ -61,9 +93,6 @@ export const IeltsGrammarMaster: React.FC = () => {
   const [missedQuestions, setMissedQuestions] = useState<{ topic: IeltsGrammarTopic; q: any }[]>(
     [],
   );
-
-  // Use local comprehensive database if hook is still loading or for instant response
-  const topics: IeltsGrammarTopic[] = rawTopics.length > 0 ? rawTopics : fallbackTopics;
 
   if (isLoadingFallback && rawTopics.length === 0) {
     return (
@@ -258,6 +287,32 @@ export const IeltsGrammarMaster: React.FC = () => {
         </div>
       </div>
 
+      {/* Target Topic Quick Banner */}
+      {topicParam && (
+        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 rounded-2xl border border-amber-500/40 bg-amber-500/10 p-4 text-amber-300 shadow-lg">
+          <div className="flex items-center gap-3">
+            <Sparkles className="h-5 w-5 shrink-0 text-amber-400 animate-pulse" />
+            <div>
+              <p className="text-sm font-black text-white">
+                🎯 Shaxsiy Rejangizdagi Dars Ochildi
+              </p>
+              <p className="text-xs text-amber-300/80">
+                Ushbu dars qoidasi, audio talaffuzlari va mashqlarini to'liq o'rganib chiqing.
+              </p>
+            </div>
+          </div>
+          <button
+            onClick={() => {
+              const el = document.getElementById(`grammar-topic-${topicParam}`);
+              if (el) el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }}
+            className="rounded-xl bg-amber-500/20 border border-amber-500/40 px-3.5 py-1.5 text-xs font-black text-amber-200 hover:bg-amber-500/30 transition shadow-sm"
+          >
+            Darsga o'tish ↓
+          </button>
+        </div>
+      )}
+
       {/* Level & Search Controls (Matching user screenshot 4) */}
       {activeTab === 'grammar' && (
         <div className="space-y-4 rounded-2xl border border-slate-800 bg-slate-900/90 p-4 shadow-xl backdrop-blur-md">
@@ -364,16 +419,27 @@ export const IeltsGrammarMaster: React.FC = () => {
             filteredTopics.map((topic) => {
               const status = getItemStatus(topic.id);
               const isExported = savedCardIds.includes(topic.id);
+              const isTargetTopic = topic.id === topicParam;
 
               return (
                 <div
                   key={topic.id}
-                  className="group relative flex flex-col justify-between space-y-4 rounded-2xl border border-slate-800/80 bg-slate-900/80 p-5 shadow-lg backdrop-blur-md transition-all duration-300 hover:border-indigo-500/50"
+                  id={`grammar-topic-${topic.id}`}
+                  className={`group relative flex flex-col justify-between space-y-4 rounded-2xl border p-5 shadow-lg backdrop-blur-md transition-all duration-300 ${
+                    isTargetTopic
+                      ? 'border-amber-500 bg-gradient-to-b from-amber-500/10 via-slate-900/95 to-slate-900/95 ring-2 ring-amber-500/70 shadow-2xl shadow-amber-500/20'
+                      : 'border-slate-800/80 bg-slate-900/80 hover:border-indigo-500/50'
+                  }`}
                 >
                   <div>
                     {/* Header Row: Level Badge, Category, Audio & Flashcards */}
                     <div className="mb-3 flex items-center justify-between gap-2">
-                      <div className="flex items-center gap-2">
+                      <div className="flex items-center gap-2 flex-wrap">
+                        {isTargetTopic && (
+                          <span className="inline-flex items-center gap-1 rounded-full border border-amber-500/50 bg-amber-500/20 px-2.5 py-0.5 text-xs font-black text-amber-300 animate-pulse">
+                            🎯 Shaxsiy Rejangizdagi Dars
+                          </span>
+                        )}
                         <span
                           className={`rounded-full border px-2.5 py-0.5 text-xs font-bold ${
                             topic.level.startsWith('A')

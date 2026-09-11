@@ -747,6 +747,34 @@ ${prompt}`;
               resolvedRoute = '/ielts';
               sourceType = 'curriculum';
             }
+
+            // Smart Level Routing for English / IELTS skills
+            const effectiveSkill = t.skill || actualType;
+            if (
+              (effectiveSkill === 'reading' || effectiveSkill === 'listening') &&
+              !resolvedRoute.includes('tab=reading_listening')
+            ) {
+              resolvedRoute = '/ielts?tab=reading_listening';
+            } else if (effectiveSkill === 'writing' && !resolvedRoute.includes('tab=writing')) {
+              resolvedRoute = '/ielts?tab=writing';
+            } else if (
+              effectiveSkill === 'speaking' &&
+              (resolvedRoute === '/ielts' || !resolvedRoute.includes('speaking'))
+            ) {
+              resolvedRoute = '/ielts/speaking-mock';
+            } else if (effectiveSkill === 'vocabulary' && !resolvedRoute.startsWith('/vocabulary')) {
+              resolvedRoute = '/vocabulary';
+            } else if (effectiveSkill === 'grammar') {
+              if (actualContentId && actualContentId.startsWith('murphy_')) {
+                resolvedRoute = `/ielts?tab=grammar&topic=${actualContentId}`;
+              } else if (resolvedRoute.includes('topic=')) {
+                if (!resolvedRoute.includes('tab=grammar')) {
+                  resolvedRoute = resolvedRoute.replace('/ielts?', '/ielts?tab=grammar&');
+                }
+              } else if (!resolvedRoute.includes('tab=grammar') && resolvedRoute === '/ielts') {
+                resolvedRoute = '/ielts?tab=grammar';
+              }
+            }
           }
 
           // Strict route verification mapping

@@ -1112,16 +1112,42 @@ export const PersonalPlanPage: React.FC = () => {
 
                                 {/* Direct navigation action button */}
                                 <button
-                                  onClick={() =>
-                                    navigate(task.route, {
+                                  onClick={() => {
+                                    let targetRoute = task.route || '/ielts';
+                                    const isEnglishPlan =
+                                      activeGoal?.language === 'en' ||
+                                      activeGoal?.goalType === 'ielts' ||
+                                      selectedLang === 'en' ||
+                                      selectedGoalType === 'ielts';
+                                    if (isEnglishPlan) {
+                                      if (targetRoute === '/ielts' || !targetRoute) {
+                                        if (task.skill === 'reading' || task.skill === 'listening') {
+                                          targetRoute = '/ielts?tab=reading_listening';
+                                        } else if (task.skill === 'writing') {
+                                          targetRoute = '/ielts?tab=writing';
+                                        } else if (task.skill === 'speaking') {
+                                          targetRoute = '/ielts/speaking-mock';
+                                        } else if (task.skill === 'vocabulary') {
+                                          targetRoute = '/vocabulary';
+                                        } else if (task.skill === 'grammar') {
+                                          targetRoute = task.contentId
+                                            ? `/ielts?tab=grammar&topic=${task.contentId}`
+                                            : '/ielts?tab=grammar';
+                                        }
+                                      } else if (targetRoute.includes('topic=') && !targetRoute.includes('tab=')) {
+                                        targetRoute = targetRoute.replace('/ielts?', '/ielts?tab=grammar&');
+                                      }
+                                    }
+
+                                    navigate(targetRoute, {
                                       state: {
                                         personalPlanTask: {
                                           planId: currentPlan.id,
                                           taskId: task.id,
                                         },
                                       },
-                                    })
-                                  }
+                                    });
+                                  }}
                                   className="flex items-center gap-1 rounded-xl bg-primary/10 px-3.5 py-1.5 text-xs font-black text-primary transition-all hover:bg-primary/20"
                                 >
                                   <Play size={10} />

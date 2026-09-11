@@ -36,7 +36,9 @@ export const IeltsHubPage: React.FC = () => {
   });
 
   const [searchParams, setSearchParams] = useSearchParams();
-  const activeTab = searchParams.get('tab') || 'roadmap';
+  const tabParam = searchParams.get('tab');
+  const topicParam = searchParams.get('topic');
+  const activeTab = tabParam || (topicParam ? 'grammar' : 'roadmap');
 
   const [isReflectionOpen, setIsReflectionOpen] = useState(false);
 
