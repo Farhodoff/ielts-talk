@@ -8,6 +8,8 @@ import { SvgLineChart } from '../components/ui/SvgCharts';
 import { Task1GraphGenerator } from '../components/ielts/Task1GraphGenerator';
 import { WritingBandRadarChart } from '../components/ielts/WritingBandRadarChart';
 import { useStudyData } from '../context/StudyPlannerContext';
+import { IeltsTrfCertificateModal } from '../components/ielts/IeltsTrfCertificateModal';
+import { TrfCertificateService } from '../services/TrfCertificateService';
 
 const SAMPLE_PROMPTS = {
     task1: [
@@ -35,6 +37,7 @@ const IeltsWritingPage: React.FC = () => {
     const [errorMsg, setErrorMsg] = useState<string | null>(null);
     const [activeTab, setActiveTab] = useState<'scores' | 'errors' | 'model'>('scores');
     const [copied, setCopied] = useState(false);
+    const [isTrfModalOpen, setIsTrfModalOpen] = useState(false);
 
     // Timer States
     const TIMER_DURATION = taskType === 'task1' ? 20 * 60 : 40 * 60; // 20 or 40 minutes in seconds
@@ -482,6 +485,14 @@ const IeltsWritingPage: React.FC = () => {
                                         <span className="text-sm font-black text-foreground">{report.grammarScore.toFixed(1)}</span>
                                     </div>
                                 </div>
+
+                                <button
+                                    onClick={() => setIsTrfModalOpen(true)}
+                                    className="w-full py-3 bg-red-600 hover:bg-red-700 text-white font-black text-xs rounded-xl shadow-md shadow-red-600/20 transition-all flex items-center justify-center gap-2 cursor-pointer mt-3"
+                                >
+                                    <FileText size={15} />
+                                    <span>Writing TRF Sertifikatini Yuklab Olish (PDF)</span>
+                                </button>
                             </div>
 
                             {/* Tab Selection */}
@@ -617,6 +628,32 @@ const IeltsWritingPage: React.FC = () => {
                                         {report.modelAnswerBand8}
                                     </div>
                                 </div>
+                            )}
+
+                            {isTrfModalOpen && (
+                                <IeltsTrfCertificateModal
+                                    isOpen={isTrfModalOpen}
+                                    onClose={() => setIsTrfModalOpen(false)}
+                                    data={{
+                                        candidateName: user?.user_metadata?.full_name || user?.email?.split('@')[0] || 'IELTS Candidate',
+                                        testDate: new Date().toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' }),
+                                        testType: 'Academic',
+                                        module: 'Writing',
+                                        scores: {
+                                            writing: report.overallBand,
+                                            overall: report.overallBand,
+                                            cefrLevel: TrfCertificateService.getCefrFromBand(report.overallBand),
+                                        },
+                                        subCriteria: [
+                                            { label: 'Task Achievement / Response', score: report.taskResponseScore, feedback: report.taskResponseFeedback },
+                                            { label: 'Coherence & Cohesion', score: report.coherenceScore, feedback: report.coherenceFeedback },
+                                            { label: 'Lexical Resource', score: report.lexicalResourceScore, feedback: report.lexicalResourceFeedback },
+                                            { label: 'Grammatical Range & Accuracy', score: report.grammarScore, feedback: report.grammarFeedback },
+                                        ],
+                                        examinerNotes: `Candidate achieved Band ${report.overallBand.toFixed(1)} in IELTS Writing ${taskType.toUpperCase()}. ${report.taskResponseFeedback}`,
+                                        verificationCode: TrfCertificateService.generateVerificationCode('Writing'),
+                                    }}
+                                />
                             )}
                         </div>
                     )}

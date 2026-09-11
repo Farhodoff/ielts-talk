@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { ArrowLeft, Mic, MicOff, Award, Clock, Sparkles, AlertCircle, ChevronRight, RefreshCw, Volume2, Dices, List, Search, X, BookOpen, Bot } from 'lucide-react';
+import { ArrowLeft, Mic, MicOff, Award, Clock, Sparkles, AlertCircle, ChevronRight, RefreshCw, Volume2, Dices, List, Search, X, BookOpen, Bot, FileText } from 'lucide-react';
 import { Button } from '../components/ui/Button';
 import { evaluateIeltsSpeakingFullMock, SpeakingMockReport } from '../utils/ai';
 import { speakText } from '../utils/audioTts';
@@ -10,6 +10,8 @@ import { HistoryService } from '../services/HistoryService';
 import { MasteryEngine } from '../services/MasteryEngine';
 import { LearningSignalService } from '../services/LearningSignalService';
 import { toast } from '../hooks/use-toast';
+import { IeltsTrfCertificateModal } from '../components/ielts/IeltsTrfCertificateModal';
+import { TrfCertificateService } from '../services/TrfCertificateService';
 
 const SpeechRecognition = (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition;
 
@@ -23,6 +25,7 @@ export const IeltsSpeakingMockPage: React.FC = () => {
         return CAMBRIDGE_IELTS_TOPICS[randomIndex];
     });
     const [isTopicModalOpen, setIsTopicModalOpen] = useState(false);
+    const [isTrfModalOpen, setIsTrfModalOpen] = useState(false);
     const [topicSearchQuery, setTopicSearchQuery] = useState('');
     const [selectedCategoryFilter, setSelectedCategoryFilter] = useState('All');
 
@@ -610,9 +613,44 @@ export const IeltsSpeakingMockPage: React.FC = () => {
                         )}
                     </div>
 
-                    <Button onClick={() => setStep('intro')} className="w-full py-4 font-bold rounded-2xl">
-                        <RefreshCw className="mr-2" size={18} /> Qayta Test Topshirish
-                    </Button>
+                    <div className="flex flex-col sm:flex-row gap-3 pt-2">
+                        <button
+                            onClick={() => setIsTrfModalOpen(true)}
+                            className="flex-1 py-4 bg-red-600 hover:bg-red-700 text-white font-black text-xs sm:text-sm rounded-2xl shadow-lg shadow-red-600/20 transition-all flex items-center justify-center gap-2 cursor-pointer"
+                        >
+                            <FileText size={18} />
+                            <span>Rasmiy TRF Sertifikatini Olish (PDF)</span>
+                        </button>
+                        <Button onClick={() => setStep('intro')} variant="secondary" className="flex-1 py-4 font-bold rounded-2xl">
+                            <RefreshCw className="mr-2" size={18} /> Qayta Test Topshirish
+                        </Button>
+                    </div>
+
+                    {isTrfModalOpen && (
+                        <IeltsTrfCertificateModal
+                            isOpen={isTrfModalOpen}
+                            onClose={() => setIsTrfModalOpen(false)}
+                            data={{
+                                candidateName: user?.user_metadata?.full_name || user?.email?.split('@')[0] || 'IELTS Candidate',
+                                testDate: new Date().toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' }),
+                                testType: 'Academic',
+                                module: 'Speaking',
+                                scores: {
+                                    speaking: report.overallBand,
+                                    overall: report.overallBand,
+                                    cefrLevel: TrfCertificateService.getCefrFromBand(report.overallBand),
+                                },
+                                subCriteria: [
+                                    { label: 'Fluency & Coherence', score: report.fluencyScore, feedback: report.fluencyFeedback },
+                                    { label: 'Lexical Resource', score: report.lexicalResourceScore, feedback: report.lexicalResourceFeedback },
+                                    { label: 'Grammatical Range & Accuracy', score: report.grammarScore, feedback: report.grammarFeedback },
+                                    { label: 'Pronunciation', score: report.pronunciationScore, feedback: report.pronunciationFeedback },
+                                ],
+                                examinerNotes: `Candidate achieved Band ${report.overallBand.toFixed(1)} in Full Speaking Mock. ${report.fluencyFeedback}`,
+                                verificationCode: TrfCertificateService.generateVerificationCode('Speaking'),
+                            }}
+                        />
+                    )}
                 </div>
             )}
 

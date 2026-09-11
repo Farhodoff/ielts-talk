@@ -12,6 +12,8 @@ import { IELTS_READING_EXAMS, ReadingPassage } from '../data/ielts/reading_data'
 import { HistoryService } from '../services/HistoryService';
 import { useStudyData } from '../context/StudyPlannerContext';
 import { MasteryEngine } from '../services/MasteryEngine';
+import { IeltsTrfCertificateModal } from '../components/ielts/IeltsTrfCertificateModal';
+import { TrfCertificateService } from '../services/TrfCertificateService';
 
 interface Question {
     id: number;
@@ -60,6 +62,7 @@ export const IeltsReadingListeningMockPage: React.FC = () => {
     // User Answers State
     const [userAnswers, setUserAnswers] = useState<{ [qId: number]: string }>({});
     const [score, setScore] = useState(0);
+    const [isTrfModalOpen, setIsTrfModalOpen] = useState(false);
 
     // Listening section features
     const [showTranscriptDuringTest, setShowTranscriptDuringTest] = useState(false);
@@ -975,25 +978,62 @@ export const IeltsReadingListeningMockPage: React.FC = () => {
                             </div>
                         )}
 
-                        <div className="flex flex-col sm:flex-row gap-3 pt-2">
-                            <Button
-                                onClick={() => {
-                                    setStep('intro');
-                                    setUserAnswers({});
-                                    setTimeLeft(1200);
-                                }}
-                                className="flex-1 py-3.5 bg-indigo-600 hover:bg-indigo-700 text-white font-black text-xs rounded-xl shadow-md flex items-center justify-center gap-1.5"
+                        <div className="space-y-3 pt-2">
+                            <button
+                                onClick={() => setIsTrfModalOpen(true)}
+                                className="w-full py-3.5 bg-red-600 hover:bg-red-700 text-white font-black text-xs sm:text-sm rounded-xl shadow-lg shadow-red-600/20 transition-all flex items-center justify-center gap-2 cursor-pointer"
                             >
-                                <RefreshCw size={14} /> Boshqa test tanlash
-                            </Button>
-                            <Button
-                                onClick={() => navigate('/ielts')}
-                                variant="outline"
-                                className="flex-1 py-3.5 text-xs font-bold rounded-xl"
-                            >
-                                IELTS Hubga Qaytish
-                            </Button>
+                                <FileText size={16} />
+                                <span>Rasmiy TRF Sertifikatini Yuklab Olish (PDF)</span>
+                            </button>
+
+                            <div className="flex flex-col sm:flex-row gap-3">
+                                <Button
+                                    onClick={() => {
+                                        setStep('intro');
+                                        setUserAnswers({});
+                                        setTimeLeft(1200);
+                                    }}
+                                    className="flex-1 py-3.5 bg-indigo-600 hover:bg-indigo-700 text-white font-black text-xs rounded-xl shadow-md flex items-center justify-center gap-1.5"
+                                >
+                                    <RefreshCw size={14} /> Boshqa test tanlash
+                                </Button>
+                                <Button
+                                    onClick={() => navigate('/ielts')}
+                                    variant="outline"
+                                    className="flex-1 py-3.5 text-xs font-bold rounded-xl"
+                                >
+                                    IELTS Hubga Qaytish
+                                </Button>
+                            </div>
                         </div>
+
+                        {isTrfModalOpen && (
+                            <IeltsTrfCertificateModal
+                                isOpen={isTrfModalOpen}
+                                onClose={() => setIsTrfModalOpen(false)}
+                                data={{
+                                    candidateName: user?.user_metadata?.full_name || user?.email?.split('@')[0] || 'IELTS Candidate',
+                                    testDate: new Date().toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' }),
+                                    testType: 'Academic',
+                                    module: testType === 'reading' ? 'Reading' : 'Listening',
+                                    scores: {
+                                        reading: testType === 'reading' ? band : undefined,
+                                        listening: testType === 'listening' ? band : undefined,
+                                        overall: band,
+                                        cefrLevel: TrfCertificateService.getCefrFromBand(band),
+                                    },
+                                    subCriteria: [
+                                        { label: 'Raw Correct Answers', score: `${score} / ${currentPassage.questions.length}` },
+                                        { label: 'Accuracy Rate', score: `${Math.round((score / currentPassage.questions.length) * 100)}%` },
+                                        { label: 'Academic Material', score: currentPassage.title },
+                                        { label: 'Band Level', score: `Band ${band.toFixed(1)} (${descriptor.title})` },
+                                    ],
+                                    examinerNotes: `Candidate achieved Band ${band.toFixed(1)} in IELTS Academic ${testType === 'reading' ? 'Reading' : 'Listening'}. ${descriptor.feedback}`,
+                                    verificationCode: TrfCertificateService.generateVerificationCode(testType),
+                                }}
+                            />
+                        )}
                     </div>
                 );
             })()}

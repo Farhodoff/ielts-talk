@@ -12,6 +12,7 @@ import {
   Play,
   Volume2,
   Square,
+  FileText,
 } from 'lucide-react';
 import { useStudyData } from '../context/StudyPlannerContext';
 import { useLanguage } from '../context/LanguageContext';
@@ -24,6 +25,8 @@ import {
 } from '../types/diagnostic';
 import { MasteryEngine } from '../services/MasteryEngine';
 import { speakText, stopAllAudio } from '../utils/audioTts';
+import { IeltsTrfCertificateModal } from '../components/ielts/IeltsTrfCertificateModal';
+import { TrfCertificateService } from '../services/TrfCertificateService';
 
 export const getIeltsBandEquivalent = (level: string) => {
   const clean = level.toUpperCase();
@@ -55,6 +58,7 @@ export const DiagnosticPage: React.FC = () => {
   const [result, setResult] = useState<DiagnosticResult | null>(null);
   const [hasSavedSession, setHasSavedSession] = useState(false);
   const [isPlayingAudio, setIsPlayingAudio] = useState(false);
+  const [isTrfModalOpen, setIsTrfModalOpen] = useState(false);
 
   // Enforce Dark Theme on mount
   useEffect(() => {
@@ -659,7 +663,14 @@ export const DiagnosticPage: React.FC = () => {
                   <span>{isUz ? 'Qayta Test Topshirish' : 'Retake Assessment'}</span>
                 </button>
 
-                <div className="flex items-center gap-2 w-full sm:w-auto">
+                <div className="flex flex-wrap items-center gap-2 w-full sm:w-auto">
+                  <button
+                    onClick={() => setIsTrfModalOpen(true)}
+                    className="flex-1 sm:flex-initial flex items-center justify-center gap-1.5 rounded-xl bg-red-600 px-4 py-3 text-xs font-black text-white hover:bg-red-700 shadow-md shadow-red-600/20 transition-all cursor-pointer"
+                  >
+                    <FileText size={15} />
+                    <span>TRF Sertifikat (PDF)</span>
+                  </button>
                   <button
                     onClick={() => navigate('/personal-plan')}
                     className="flex-1 sm:flex-initial rounded-xl border border-border px-4 py-3 text-xs font-bold text-foreground hover:bg-muted"
@@ -676,6 +687,33 @@ export const DiagnosticPage: React.FC = () => {
                 </div>
               </div>
             </div>
+
+            {isTrfModalOpen && (
+              <IeltsTrfCertificateModal
+                isOpen={isTrfModalOpen}
+                onClose={() => setIsTrfModalOpen(false)}
+                data={{
+                  candidateName: user?.user_metadata?.full_name || user?.email?.split('@')[0] || 'IELTS Candidate',
+                  testDate: new Date().toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' }),
+                  testType: 'Diagnostic Assessment',
+                  module: 'Diagnostic',
+                  scores: {
+                    reading: result.skills?.reading?.score ? Math.round((result.skills.reading.score / 100) * 9 * 10) / 10 : undefined,
+                    listening: result.skills?.listening?.score ? Math.round((result.skills.listening.score / 100) * 9 * 10) / 10 : undefined,
+                    writing: result.skills?.grammar?.score ? Math.round((result.skills.grammar.score / 100) * 9 * 10) / 10 : undefined,
+                    speaking: result.skills?.vocabulary?.score ? Math.round((result.skills.vocabulary.score / 100) * 9 * 10) / 10 : undefined,
+                    overall: parseFloat(bandInfo.band.split('–')[0].trim()) || 6.5,
+                    cefrLevel: `${result.recommendedStartLevel} (${bandInfo.title})`,
+                  },
+                  subCriteria: Object.values(result.skills).map(sk => ({
+                    label: `${sk.skill.toUpperCase()} Competency`,
+                    score: `${sk.score}% (${sk.estimatedLevel})`,
+                  })),
+                  examinerNotes: `Diagnostic Placement confirmed candidate at CEFR ${result.recommendedStartLevel} (IELTS Band ${bandInfo.band}). Strengths: ${result.strengths.join(', ') || 'Solid Foundation'}.`,
+                  verificationCode: TrfCertificateService.generateVerificationCode('Diagnostic'),
+                }}
+              />
+            )}
           </div>
         );
       })()}
