@@ -2564,6 +2564,18 @@ export const ENGLISH_A1_LESSONS: Lesson[] = [
                             ],
                             "correctAnswerIndex": 0,
                             "explanation": "Do you like...?"
+                        },
+                        {
+                            "id": "en-a1-u2-l5-q5",
+                            "question": "What time _______ the bank open on Mondays?",
+                            "options": [
+                                "does",
+                                "do",
+                                "is",
+                                "are"
+                            ],
+                            "correctAnswerIndex": 0,
+                            "explanation": "The bank (it) birlikda bo'lgani uchun: What time does the bank open?"
                         }
                     ]
                 }
