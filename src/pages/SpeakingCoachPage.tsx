@@ -76,24 +76,24 @@ const PROMPT_SUGGESTIONS_BY_LANG: Record<
   ],
   ja: [
     {
-      title: '自己紹介 (Jikoshoukai)',
-      text: 'はじめまして。自己紹介の練習をしたいです。',
-      icon: '🙋',
+      title: 'IELTS Part 1 Warm-up',
+      text: "Hello! I'd like to practice IELTS Speaking Part 1. Could you ask me warm-up questions about my hometown, study, and hobbies?",
+      icon: '👋',
     },
     {
-      title: 'IT面接 (IT Mock Interview)',
-      text: '日本のIT企業の面接練習をお願いします。自己紹介からスタートしてください。',
-      icon: '💻',
+      title: 'Part 2 Cue Card Speech',
+      text: 'Please give me an IELTS Speaking Part 2 Cue Card topic. I will take 1 minute to prepare and speak for 2 minutes.',
+      icon: '📝',
     },
     {
-      title: '敬語チェック (Keigo Check)',
-      text: '私の敬語の使い方をチェックしてアドバイスをください。',
-      icon: '📖',
+      title: 'Part 3 Deep Discussion',
+      text: "Let's practice IELTS Speaking Part 3 abstract questions. Challenge my opinions with analytical follow-up questions.",
+      icon: '🧠',
     },
     {
-      title: '日常会話 (Daily Japanese)',
-      text: '日本語で楽しい日常会話をしましょう！',
-      icon: '🗣️',
+      title: 'Band 8+ Vocabulary Roast',
+      text: 'Act as a strict IELTS examiner. Point out every repetitive word and grammatical slip, and suggest Band 8+ academic idioms and collocations!',
+      icon: '🔥',
     },
   ],
 };

@@ -851,7 +851,7 @@ const StudyModePage: React.FC = () => {
           data-testid="study-card"
           style={cardStyle}
           {...swipeHandlers}
-          className="perspective-1000 relative h-96 cursor-pointer select-none"
+          className="perspective-1000 relative h-72 sm:h-96 cursor-pointer select-none"
         >
           {/* Visual Swipe Badges for Mobile */}
           {isDragging && swipeDirection === 'left' && (
@@ -877,7 +877,7 @@ const StudyModePage: React.FC = () => {
             className={`transform-style-3d relative h-full w-full transition-all duration-700 ${isFlipped ? 'rotate-y-180' : ''}`}
           >
             {/* Front Side */}
-            <div className="backface-hidden absolute inset-0 flex flex-col justify-between rounded-3xl border border-border bg-card p-8 shadow-xl">
+            <div className="backface-hidden absolute inset-0 flex flex-col justify-between rounded-2xl sm:rounded-3xl border border-border bg-card p-5 sm:p-8 shadow-xl">
               <div className="flex items-center justify-between">
                 {isAdmin ? (
                   <div className="flex items-center gap-2">
@@ -902,42 +902,42 @@ const StudyModePage: React.FC = () => {
                 <button
                   onClick={handleSpeak}
                   title="Talaffuzni eshitish"
-                  className="rounded-2xl bg-primary/10 p-3 text-primary shadow-xs transition-all hover:bg-primary/20 active:scale-95"
+                  className="rounded-2xl bg-primary/10 p-2.5 sm:p-3 text-primary shadow-xs transition-all hover:bg-primary/20 active:scale-95"
                 >
-                  <Volume2 size={24} />
+                  <Volume2 size={20} className="sm:h-6 sm:w-6" />
                 </button>
               </div>
               <div className="my-auto text-center">
-                <p className="text-4xl font-extrabold tracking-tight text-foreground">
+                <p className="text-2xl sm:text-4xl font-extrabold tracking-tight text-foreground">
                   {currentCard?.front}
                 </p>
               </div>
-              <p className="text-center text-xs font-medium text-muted-foreground">
+              <p className="text-center text-[11px] sm:text-xs font-medium text-muted-foreground">
                 👆 Kartani bosing yoki suring — Javobni ko'rish (Space)
               </p>
             </div>
 
             {/* Back Side */}
-            <div className="backface-hidden rotate-y-180 absolute inset-0 flex flex-col justify-between rounded-3xl border-2 border-primary/50 bg-gradient-to-br from-[#1A2028] via-[#222B36] to-[#1A2028] p-8 text-foreground shadow-2xl">
+            <div className="backface-hidden rotate-y-180 absolute inset-0 flex flex-col justify-between rounded-2xl sm:rounded-3xl border-2 border-primary/50 bg-gradient-to-br from-[#1A2028] via-[#222B36] to-[#1A2028] p-5 sm:p-8 text-foreground shadow-2xl">
               <div className="flex justify-end">
                 <button
                   onClick={handleSpeak}
-                  className="rounded-2xl border border-border bg-card p-3 text-foreground transition-all hover:bg-muted active:scale-95"
+                  className="rounded-2xl border border-border bg-card p-2.5 sm:p-3 text-foreground transition-all hover:bg-muted active:scale-95"
                 >
-                  <Volume2 size={24} />
+                  <Volume2 size={20} className="sm:h-6 sm:w-6" />
                 </button>
               </div>
-              <div className="custom-scrollbar my-auto max-h-[220px] space-y-3 overflow-y-auto px-2 text-center">
-                <div className="whitespace-pre-line text-xl font-black leading-relaxed tracking-wide text-primary md:text-2xl">
+              <div className="custom-scrollbar my-auto max-h-[180px] sm:max-h-[220px] space-y-2 sm:space-y-3 overflow-y-auto px-2 text-center">
+                <div className="whitespace-pre-line text-lg sm:text-xl md:text-2xl font-black leading-relaxed tracking-wide text-primary">
                   {currentCard?.back}
                 </div>
-                <div className="border-t border-border pt-3">
-                  <p className="text-xs font-semibold text-muted-foreground">
+                <div className="border-t border-border pt-2 sm:pt-3">
+                  <p className="text-[11px] sm:text-xs font-semibold text-muted-foreground">
                     {currentCard?.front}
                   </p>
                 </div>
               </div>
-              <div className="flex items-center justify-between text-xs font-medium text-muted-foreground">
+              <div className="flex items-center justify-between text-[11px] sm:text-xs font-medium text-muted-foreground">
                 <span className="font-extrabold text-primary sm:hidden">👈 Qayta | Yaxshi 👉</span>
                 <span className="hidden sm:inline">SuperMemo SM-2 bo'yicha baholang</span>
                 <span>(1-4 tugmalari)</span>
@@ -997,7 +997,7 @@ const StudyModePage: React.FC = () => {
                       key={b.v}
                       disabled={isProcessing}
                       onClick={() => handleRate(b.v)}
-                      className={`${b.c} rounded-2xl border p-3.5 text-center text-sm font-extrabold shadow-xs transition-all active:scale-95`}
+                      className={`${b.c} rounded-2xl border p-2.5 sm:p-3.5 text-center text-xs sm:text-sm font-extrabold shadow-xs transition-all active:scale-95`}
                     >
                       <div>{b.l}</div>
                       <span className="mt-0.5 block text-[11px] font-medium opacity-80">

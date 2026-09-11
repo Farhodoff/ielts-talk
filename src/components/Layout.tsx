@@ -252,51 +252,44 @@ const Layout: React.FC = () => {
       )}
 
       {/* Mobile Header */}
-      <header className="glass-card relative z-30 flex items-center justify-between border-b px-4 py-2.5 pt-[max(env(safe-area-inset-top),0.65rem)] md:hidden">
-        <div className="flex min-w-0 items-center gap-2">
-          <AppLogo size="sm" showText={false} />
-          <h1 className="text-gradient truncate text-lg font-bold">{getPageTitle()}</h1>
-        </div>
+      {!isFullScreenPage && (
+        <header className="glass-card relative z-30 flex items-center justify-between border-b px-4 py-2.5 pt-[max(env(safe-area-inset-top),0.65rem)] md:hidden">
+          <div className="flex min-w-0 items-center gap-2">
+            <AppLogo size="sm" showText={false} />
+            <h1 className="text-gradient truncate text-lg font-bold">{getPageTitle()}</h1>
+          </div>
 
-        <div className="flex shrink-0 items-center gap-1.5">
-          <button
-            type="button"
-            onClick={() => setLanguage(language === 'uz' ? 'en' : 'uz')}
-            className="flex items-center gap-1 rounded-xl border border-border/80 bg-muted/80 px-2 py-1 text-[11px] font-bold text-muted-foreground shadow-xs transition-all hover:bg-muted hover:text-foreground active:scale-95"
-            title={language === 'uz' ? 'English (EN)' : "O'zbekcha (UZ)"}
-          >
-            {language === 'uz' ? (
-              <>
-                <UzbekistanFlag className="h-2.5 w-3.5" />
-                <span>UZ</span>
-              </>
-            ) : (
-              <>
-                <UKFlag className="h-2.5 w-3.5" />
-                <span>EN</span>
-              </>
-            )}
-          </button>
+          <div className="flex shrink-0 items-center gap-1.5">
+            <button
+              type="button"
+              onClick={() => setLanguage(language === 'uz' ? 'en' : 'uz')}
+              className="flex items-center gap-1 rounded-xl border border-border/80 bg-muted/80 px-2 py-1 text-[11px] font-bold text-muted-foreground shadow-xs transition-all hover:bg-muted hover:text-foreground active:scale-95"
+              title={language === 'uz' ? 'English (EN)' : "O'zbekcha (UZ)"}
+            >
+              {language === 'uz' ? (
+                <>
+                  <UzbekistanFlag className="h-2.5 w-3.5" />
+                  <span>UZ</span>
+                </>
+              ) : (
+                <>
+                  <UKFlag className="h-2.5 w-3.5" />
+                  <span>EN</span>
+                </>
+              )}
+            </button>
 
-          <button
-            type="button"
-            onClick={() => openRatingModal()}
-            className="flex items-center justify-center rounded-xl border border-amber-500/25 bg-amber-500/10 p-1.5 text-amber-500 transition hover:bg-amber-500/20 active:scale-95"
-            title="Baholash"
-          >
-            <Star size={16} className="fill-amber-400" />
-          </button>
-
-          <button
-            type="button"
-            onClick={() => setSidebarOpen(true)}
-            className="flex items-center justify-center rounded-xl border border-border bg-muted/80 p-1.5 text-foreground transition hover:bg-muted active:scale-95"
-            aria-label="Menyu"
-          >
-            <Menu size={18} />
-          </button>
-        </div>
-      </header>
+            <button
+              type="button"
+              onClick={() => setSidebarOpen(true)}
+              className="flex items-center justify-center rounded-xl border border-border bg-muted/80 p-1.5 text-foreground transition hover:bg-muted active:scale-95"
+              aria-label="Menyu"
+            >
+              <Menu size={18} />
+            </button>
+          </div>
+        </header>
+      )}
 
       {/* Desktop Sidebar */}
       <aside
@@ -501,7 +494,7 @@ const Layout: React.FC = () => {
                   className="flex w-full items-center gap-2.5 rounded-xl border border-amber-500/25 bg-amber-500/10 px-3 py-2 text-xs font-bold text-amber-600 transition hover:bg-amber-500/20 active:scale-95 dark:text-amber-400"
                 >
                   <Star size={16} className="shrink-0 fill-amber-400 text-amber-500" />
-                  <span>{language === 'ja' ? '⭐ アプリを評価する' : '⭐ Ilovani baholash'}</span>
+                  <span>{language === 'en' ? '⭐ Rate App' : '⭐ Ilovani baholash'}</span>
                 </button>
 
                 {isAdmin && (

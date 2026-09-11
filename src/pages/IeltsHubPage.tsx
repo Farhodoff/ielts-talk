@@ -69,8 +69,8 @@ export const IeltsHubPage: React.FC = () => {
         </div>
       ) : (
         <>
-          {/* Header Banner with Oxford Navy & Cambridge Gold accents */}
-          <div className="relative overflow-hidden rounded-2xl sm:rounded-3xl border border-blue-500/20 bg-gradient-to-r from-slate-900 via-blue-950 to-indigo-950 p-4 sm:p-6 md:p-8 shadow-2xl backdrop-blur-xl">
+          {/* Header Banner: Desktop Full Banner */}
+          <div className="relative hidden md:block overflow-hidden rounded-3xl border border-blue-500/20 bg-gradient-to-r from-slate-900 via-blue-950 to-indigo-950 p-6 md:p-8 shadow-2xl backdrop-blur-xl">
             <div className="pointer-events-none absolute -right-12 -top-12 h-64 w-64 rounded-full bg-blue-500/15 blur-3xl" />
             <div className="pointer-events-none absolute -left-12 -bottom-12 h-48 w-48 rounded-full bg-amber-500/10 blur-3xl" />
 
@@ -93,7 +93,7 @@ export const IeltsHubPage: React.FC = () => {
                 </h1>
                 <p className="text-xs sm:text-sm leading-relaxed text-slate-300">
                   {activeTab === 'roadmap'
-                    ? 'Noldan boshlovchilar uchun Foundation (baza) dan tortib Makkar 2026 gacha to\'liq bosqichma-bosqich o\'quv dasturi.'
+                    ? "Noldan boshlovchilar uchun Foundation (baza) dan tortib Makkar 2026 gacha to'liq bosqichma-bosqich o'quv dasturi."
                     : activeTab === 'plan'
                       ? 'Sizning maqsadli Band ballingiz uchun adaptiv kunlik va haftalik vazifalar taqsimoti.'
                       : 'Band 7.5+ Grammatika Akademiyasi, Reading/Listening va Writing mock imtihonlari yagona markazda.'}
@@ -113,6 +113,33 @@ export const IeltsHubPage: React.FC = () => {
             </div>
           </div>
 
+          {/* Mobile Compact Header (Lightweight & Uncluttered) */}
+          <div className="flex items-center justify-between gap-2 rounded-2xl border border-blue-500/20 bg-gradient-to-r from-slate-900 to-blue-950 px-3.5 py-2.5 shadow-md md:hidden">
+            <div className="min-w-0">
+              <span className="text-[10px] font-extrabold uppercase tracking-wider text-amber-400">
+                IELTS Master
+              </span>
+              <h1 className="truncate text-sm font-black text-white">
+                {activeTab === 'roadmap'
+                  ? 'Bosqichlar Xaritasi'
+                  : activeTab === 'plan'
+                    ? 'Shaxsiy Rejam'
+                    : activeTab === 'writing'
+                      ? 'Writing Mock'
+                      : activeTab === 'reading_listening'
+                        ? 'Reading & Listening'
+                        : 'Band 7.5 Grammatika'}
+              </h1>
+            </div>
+            <Link
+              to="/ielts/speaking-mock"
+              className="flex shrink-0 items-center gap-1.5 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 px-3 py-1.5 text-xs font-black text-white shadow-sm active:scale-95"
+            >
+              <Mic size={14} />
+              <span>Mock</span>
+            </Link>
+          </div>
+
           {/* Unified IELTS Navigation Tabs */}
           <div className="scrollbar-none flex max-w-full items-center gap-1 sm:gap-1.5 overflow-x-auto rounded-xl sm:rounded-2xl border border-border/80 bg-muted/40 p-1 sm:p-1.5">
             <button
@@ -123,7 +150,8 @@ export const IeltsHubPage: React.FC = () => {
                   : 'text-muted-foreground hover:text-foreground'
               }`}
             >
-              <Compass size={15} /> 🗺️ Bosqichlar Xaritasi
+              <Compass size={15} />
+              <span>Bosqichlar Xaritasi</span>
             </button>
 
             <button
@@ -134,7 +162,8 @@ export const IeltsHubPage: React.FC = () => {
                   : 'text-muted-foreground hover:text-foreground'
               }`}
             >
-              <Target size={15} /> 🎯 Shaxsiy Rejam
+              <Target size={15} />
+              <span>Shaxsiy Rejam</span>
             </button>
 
             <button
@@ -145,7 +174,8 @@ export const IeltsHubPage: React.FC = () => {
                   : 'text-muted-foreground hover:text-foreground'
               }`}
             >
-              <BookOpen size={15} /> 📚 Band 7.5 Grammatika
+              <BookOpen size={15} />
+              <span>Grammatika</span>
             </button>
 
             <button
@@ -156,7 +186,8 @@ export const IeltsHubPage: React.FC = () => {
                   : 'text-muted-foreground hover:text-foreground'
               }`}
             >
-              <Headphones size={15} /> 🎧 Reading & Listening
+              <Headphones size={15} />
+              <span>Mock Testlar</span>
             </button>
 
             <button
@@ -167,7 +198,8 @@ export const IeltsHubPage: React.FC = () => {
                   : 'text-muted-foreground hover:text-foreground'
               }`}
             >
-              <PenTool size={15} /> ✍️ Writing Mock
+              <PenTool size={15} />
+              <span>Writing Mock</span>
             </button>
           </div>
         </>

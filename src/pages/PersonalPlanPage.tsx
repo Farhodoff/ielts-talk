@@ -911,7 +911,7 @@ export const PersonalPlanPage: React.FC = () => {
         /* ACTIVE DASHBOARD VIEW */
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
           {/* LEFT PANEL: Goal Summary & Evaluations */}
-          <div className="space-y-6 lg:col-span-1">
+          <div className="order-2 space-y-6 lg:order-1 lg:col-span-1">
             <div className="space-y-4 rounded-3xl border border-border bg-card p-6 shadow-xl">
               <div className="flex items-center justify-between">
                 <span className="rounded-full border border-primary/20 bg-primary/10 px-3 py-1 text-xs font-black uppercase tracking-wider text-primary">
@@ -993,7 +993,7 @@ export const PersonalPlanPage: React.FC = () => {
           </div>
 
           {/* RIGHT PANEL: 7-day checklist and active week view */}
-          <div className="space-y-6 lg:col-span-2">
+          <div className="order-1 space-y-6 lg:order-2 lg:col-span-2">
             {currentPlan ? (
               <div className="space-y-4">
                 <div className="space-y-2 rounded-3xl border border-border bg-card p-6 shadow-xl">
@@ -1148,7 +1148,7 @@ export const PersonalPlanPage: React.FC = () => {
                                       },
                                     });
                                   }}
-                                  className="flex items-center gap-1 rounded-xl bg-primary/10 px-3.5 py-1.5 text-xs font-black text-primary transition-all hover:bg-primary/20"
+                                  className="flex shrink-0 items-center gap-1 rounded-xl bg-primary/10 px-3 py-1.5 text-xs font-black text-primary transition-all hover:bg-primary/20 active:scale-95"
                                 >
                                   <Play size={10} />
                                   <span>Boshlash</span>

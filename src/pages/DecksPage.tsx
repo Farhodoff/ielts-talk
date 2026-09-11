@@ -521,32 +521,32 @@ const DecksPage: React.FC = () => {
                 onClick={() => setIsDocGeneratorOpen(true)}
                 className="flex items-center gap-1.5 rounded-xl border border-[#C9A961]/30 bg-[#C9A961]/20 px-3 py-2 text-xs font-extrabold text-[#C9A961] shadow-xs transition-all hover:bg-[#C9A961]/30 shrink-0"
                 title={
-                  language === 'ja'
-                    ? 'ノートや文章からQ&A・フラッシュカードを生成'
+                  language === 'en'
+                    ? 'Generate Q&A and flashcards from notes'
                     : 'Konspekt yoki matndan Q&A va test fleshkartalari tuzish'
                 }
               >
-                <Sparkles size={15} className="shrink-0" /> <span className="whitespace-nowrap">{language === 'ja' ? 'AIノート要約' : 'AI Konspekt & Quiz'}</span>
+                <Sparkles size={15} className="shrink-0" /> <span className="whitespace-nowrap">AI Konspekt & Quiz</span>
               </button>
               <button
                 onClick={() => setAiSubjectId('global')}
                 className="flex items-center gap-1.5 rounded-xl px-3 py-2 text-xs font-extrabold text-primary transition-all hover:bg-primary/10 shrink-0"
-                title={language === 'ja' ? 'AIでカードを自動生成' : 'AI bilan kartochka yaratish'}
+                title={language === 'en' ? 'Generate cards with AI' : 'AI bilan kartochka yaratish'}
               >
-                <Book size={15} className="shrink-0" /> <span className="whitespace-nowrap">{language === 'ja' ? 'AI自動生成' : 'AI Generator'}</span>
+                <Book size={15} className="shrink-0" /> <span className="whitespace-nowrap">AI Generator</span>
               </button>
               <button
                 onClick={() => setIsExtractModalOpen(true)}
                 className="flex items-center gap-1.5 rounded-xl px-3 py-2 text-xs font-extrabold text-muted-foreground transition-all hover:bg-muted/60 hover:text-foreground shrink-0"
-                title={language === 'ja' ? '文章から単語を抽出' : "Matndan lug'at ajratib olish"}
+                title={language === 'en' ? 'Extract vocabulary from text' : "Matndan lug'at ajratib olish"}
               >
-                <FileText size={15} className="shrink-0" /> <span className="whitespace-nowrap">{language === 'ja' ? '単語抽出' : 'Extractor'}</span>
+                <FileText size={15} className="shrink-0" /> <span className="whitespace-nowrap">Extractor</span>
               </button>
               <button
                 onClick={() => setImportModalOpen(true)}
                 className="flex items-center gap-1.5 rounded-xl px-3 py-2 text-xs font-extrabold text-muted-foreground transition-all hover:bg-muted/60 hover:text-foreground shrink-0"
                 title={
-                  language === 'ja' ? 'JSONファイルをインポート' : 'JSON formatida fayl yuklash'
+                  language === 'en' ? 'Import JSON file' : 'JSON formatida fayl yuklash'
                 }
               >
                 <Upload size={15} className="shrink-0" /> <span className="whitespace-nowrap">Import</span>

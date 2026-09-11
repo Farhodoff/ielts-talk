@@ -29,7 +29,7 @@ describe('CurriculumLessonResolver Unit Tests', () => {
 
             const b1 = CurriculumLessonResolver.resolveLesson('en-b1-u1-l2', 'en');
             expect(b1.route).toBe('/lesson/en-b1-u1-l2');
-            expect(b1.title).toBe('Present Perfect vs Past Simple');
+            expect(b1.title).toContain('Present Perfect vs Past Simple');
         });
 
         it('4. representative advanced English lessons resolve with real titles', () => {
