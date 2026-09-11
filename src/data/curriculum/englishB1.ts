@@ -9,60 +9,119 @@ export const ENGLISH_B1_LESSONS: Lesson[] = [
         "language": "en",
         "level": "B1",
         "lessonNumber": 1,
-        "title": "Present Perfect Simple: Life Experiences (have + V3)",
-        "description": "Hayotiy tajribalar, natijalar va noaniq o'tgan zamon (have / has + V3).",
-        "estimatedDurationMinutes": 15,
+        "title": "Present Perfect Simple: Life Experiences (have/has + V3)",
+        "description": "Hayotiy tajribalar, natijalar va noaniq o'tgan zamon (have/has + V3), ever/never va already/yet qoidalari.",
+        "estimatedDurationMinutes": 16,
         "icon": "🌟",
         "steps": [
             {
                 "id": "en-b1-u1-l1-s1",
-                "title": "Present Perfect Qoidasi",
+                "title": "Present Perfect: Hayotiy Tajribalar",
                 "type": "learn",
-                "estimatedMinutes": 5,
+                "estimatedMinutes": 6,
                 "learnData": {
-                    "title": "Present Perfect Simple",
-                    "explanation": "Hozirgi payt bilan bog'liq o'tgan zamon harakatlari yoki hayotiy tajribalarni bildirish uchun have/has + V3 (past participle) ishlatiladi.",
-                    "keyPoints": [
-                        "Tajriba (ever / never): Have you ever visited Japan? I have never tried sushi.",
-                        "Hozirgi natija (just / already / yet): I have just finished my homework.",
-                        "Boshlangan va davom etayotgan (for / since): She has lived here for five years."
-                    ],
+                    "title": "Present Perfect Simple for Experiences and Results",
+                    "explanation": "Ingliz tilida insonning hayotiy tajribalari, erishgan yutuqlari va hozirgi paytga bevosita ta'siri bo'lgan harakatlar Present Perfect Simple orqali ifodalanadi:\n\n1. Grammatik Tuzilishi:\n- Darak gap: Ega + have / has + Past Participle (V3 / -ed)\n  • 'I have visited five different countries.' (Men beshta turli mamlakatda bo'lganman).\n  • 'She has published her first poetry book.' (U o'zining birinchi she'riy kitobini nashr qildi).\n- Inkor gap: Ega + have not (haven't) / has not (hasn't) + V3\n  • 'We haven't met the new director yet.'\n- So'roq gap: Have / Has + ega + V3?\n  • 'Have you ever tried Japanese sushi?'\n\n2. Kalit So'zlar va Ularning O'rni:\n- Ever (biror marta): Faqat so'roq gaplarda egadan keyin keladi: 'Have you ever seen a shooting star?'\n- Never (hech qachon): Inkor ma'noli bo'lib, o'zi inkor yasaydi: 'I have never broken a bone.'\n- Already (allaqachon): Kutilgandan oldin sodir bo'lgan ish: 'I have already finished my project.'\n- Yet (hali, hanuz): Faqat inkor va so'roq gaplarning oxirida keladi: 'Has the train arrived yet?'\n\n3. 'Been to' va 'Gone to' O'rtasidagi O'ta Muhim Farq:\n- 'He has been to London.' -> U Londonda bo'lib qaytgan (hozir o'z yurtida, tajriba bor).\n- 'He has gone to London.' -> U Londonga ketgan (hozir hali o'sha yerda, qaytib kelmagan).\n\n4. O'zbek o'rganuvchilari uchun xavfli tuzoqlar (Common Pitfalls):\n- ❌ 'I have seen him yesterday.' -> ✅ 'I SAW him yesterday.' (Aniq o'tgan vaqt ko'rsatkichi — yesterday, last week, in 2020 — bo'lganda Present Perfect EMAS, Past Simple ishlatiladi!).\n- ❌ 'He has gone to Italy three times.' -> ✅ 'He has BEEN to Italy three times.' (Bir necha bor borib-qaytish tajribasi 'been to' bilan aytiladi).\n- ❌ 'I didn't finish yet.' -> ✅ 'I haven't finished yet.' ('Yet' bilan Present Perfect talab etiladi).\n\n5. IELTS Speaking Foundation Corner:\n- Topic: Travel and Novel Experiences (Speaking Part 1)\n- Examiner: 'Have you ever traveled to another country?'\n- Model Band 6.0+ Answer: 'Yes, I have actually been abroad once. Two years ago, I traveled to Turkey with my family. It was an unforgettable journey because we had the opportunity to explore ancient historical monuments in Istanbul and taste authentic Turkish kebabs.'\n- Tense Alternation Strategy: Dastlab umumiy tajribani Present Perfect bilan ayting ('I have been abroad once'), so'ngra aniq tafsilotlarni Past Simple bilan rivojlantiring ('Two years ago, I traveled...'). Bu uslub grammatik diapazon bo'yicha yuqori ball keltiradi.",
                     "vocabulary": [
                         {
-                            "term": "Experience",
+                            "term": "experience",
                             "reading": "/ɪkˈspɪə.ri.əns/",
-                            "meaning": "Tajriba",
-                            "exampleSentence": "Teaching is a rewarding experience.",
-                            "exampleTranslation": "O'qituvchilik maroqli tajriba."
+                            "meaning": "tajriba, hayotiy kechinma",
+                            "exampleSentence": "Traveling alone across Europe was a truly transformative experience for her.",
+                            "exampleTranslation": "Yevropa bo'ylab yolg'iz sayohat qilish u uchun chinakam hayotini o'zgartiruvchi tajriba bo'ldi."
                         },
                         {
-                            "term": "Already",
+                            "term": "abroad",
+                            "reading": "/əˈbrɔːd/",
+                            "meaning": "chet elda, xorijda",
+                            "exampleSentence": "He has lived abroad for over three years while pursuing his master's degree.",
+                            "exampleTranslation": "U magistraturada o'qiyotgan paytida uch yildan ortiq xorijda yashagan."
+                        },
+                        {
+                            "term": "achievement",
+                            "reading": "/əˈtʃiːv.mənt/",
+                            "meaning": "yutuq, muvaffaqiyat",
+                            "exampleSentence": "Winning the national math olympiad has been his greatest achievement so far.",
+                            "exampleTranslation": "Respublika matematika olimpiadasida g'olib chiqish hozirgacha uning eng buyuk yutug'i bo'ldi."
+                        },
+                        {
+                            "term": "already",
                             "reading": "/ɔːlˈred.i/",
-                            "meaning": "Allaqachon",
-                            "exampleSentence": "We have already sent the report.",
-                            "exampleTranslation": "Biz hisobotni allaqachon jo'natdik."
+                            "meaning": "allaqachon (kutilgandan oldinroq)",
+                            "exampleSentence": "I have already booked our flight tickets, so we don't need to worry about prices rising.",
+                            "exampleTranslation": "Men aviachiptalarimizni allaqachon bron qilib qo'ydim, shuning uchun narx ko'tarilishidan xavotir olmasak ham bo'ladi."
                         },
                         {
-                            "term": "Efficient",
-                            "reading": "/ɪˈfɪʃ.ənt/",
-                            "meaning": "Samarali",
-                            "exampleSentence": "We need to find a more efficient solution.",
-                            "exampleTranslation": "Biz yanada samaraliroq yechim topishimiz kerak."
+                            "term": "yet",
+                            "reading": "/jet/",
+                            "meaning": "hali, hanuz (inkor va so'roq gap oxirida)",
+                            "exampleSentence": "The package hasn't arrived yet; the postal courier is running late.",
+                            "exampleTranslation": "Posilka hali yetib kelmadi; pochta kuryeri kechikmoqda."
+                        },
+                        {
+                            "term": "recently",
+                            "reading": "/ˈriː.sənt.li/",
+                            "meaning": "yaqinda, yaqin orada",
+                            "exampleSentence": "Scientists have recently discovered a new species of deep-sea fish.",
+                            "exampleTranslation": "Olimlar yaqinda chuqur dengiz baliqlarining yangi turini kashf qilishdi."
+                        },
+                        {
+                            "term": "novel",
+                            "reading": "/ˈnɒv.əl/",
+                            "meaning": "roman (katta badiiy asar)",
+                            "exampleSentence": "She has written an engaging historical novel set in fifteenth-century Samarkand.",
+                            "exampleTranslation": "U o'n beshinchi asr Samarqandida kechadigan qiziqarli tarixiy roman yozdi."
+                        },
+                        {
+                            "term": "explore",
+                            "reading": "/ɪkˈsplɔːr/",
+                            "meaning": "kashf qilmoq, yangi joylarni kezmoq",
+                            "exampleSentence": "During our vacation, we explored narrow cobblestone streets in the old town.",
+                            "exampleTranslation": "Ta'tilimiz davomida qadimiy shaharchadagi tor tosh ko'chalarni kezib chiqdik."
+                        },
+                        {
+                            "term": "overcome",
+                            "reading": "/ˌəʊ.vəˈkʌm/",
+                            "meaning": "yengib o'tmoq (qiyinchilik yoki to'siqni)",
+                            "exampleSentence": "With persistence, she has overcome numerous obstacles in her academic journey.",
+                            "exampleTranslation": "Qat'iyat bilan u o'z akademik yo'lidagi ko'plab to'siqlarni yengib o'tdi."
+                        },
+                        {
+                            "term": "participate",
+                            "reading": "/pɑːˈtɪs.ɪ.peɪt/",
+                            "meaning": "ishtirok etmoq (in a competition/event)",
+                            "exampleSentence": "Have you ever participated in an international youth conference?",
+                            "exampleTranslation": "Biror marta xalqaro yoshlar anjumanida ishtirok etganmisiz?"
                         }
                     ],
                     "grammarRules": [
                         {
-                            "pattern": "Present Perfect Simple: Life Experiences (have + V3)",
-                            "meaning": "Hayotiy tajribalar, natijalar va noaniq o'tgan zamon (have / has + V3).",
-                            "usageNotes": "Hozirgi payt bilan bog'liq o'tgan zamon harakatlari yoki hayotiy tajribalarni bildirish uchun have/has + V3 (past participle) ishlatiladi.",
+                            "pattern": "Present Perfect Simple: Subject + have/has + Past Participle (V3)",
+                            "meaning": "Noaniq vaqtda sodir bo'lgan tajribalar va hozirgi natija",
+                            "usageNotes": "I, you, we, they uchun 'have', he, she, it uchun 'has' ishlatiladi. Fe'lning 3-shakli (Past Participle) qo'yiladi.",
                             "examples": [
                                 {
-                                    "sentence": "Teaching is a rewarding experience.",
-                                    "translation": "O'qituvchilik maroqli tajriba."
+                                    "sentence": "I have read all of Shakespeare's famous tragedies.",
+                                    "translation": "Men Shekspirning barcha mashhur fojialarini o'qib chiqqanman."
                                 },
                                 {
-                                    "sentence": "We have already sent the report.",
-                                    "translation": "Biz hisobotni allaqachon jo'natdik."
+                                    "sentence": "She has never flown in an airplane before.",
+                                    "translation": "U ilgari hech qachon samolyotda uchmagan."
+                                }
+                            ]
+                        },
+                        {
+                            "pattern": "Been to (visited and returned) vs Gone to (went and still there)",
+                            "meaning": "Borib qaytganlik va ketib hali qaytmaganlik farqi",
+                            "usageNotes": "Tajriba sifatida 'borib kelgan' deyishda 'have been to' qo'llaniladi. Agar inson hozir o'sha manzilda bo'lsa, 'have gone to' deyiladi.",
+                            "examples": [
+                                {
+                                    "sentence": "My parents have been to Mecca twice for pilgrimage.",
+                                    "translation": "Ota-onam ziyorat uchun Makkada ikki marta bo'lib qaytganlar."
+                                },
+                                {
+                                    "sentence": "Where is Kamron? — He has gone to the bank to deposit some cash.",
+                                    "translation": "Kamron qayerda? — U naqd pul qo'yish uchun bankka ketgan (hali qaytmadi)."
                                 }
                             ]
                         }
@@ -71,97 +130,148 @@ export const ENGLISH_B1_LESSONS: Lesson[] = [
             },
             {
                 "id": "en-b1-u1-l1-s2",
-                "title": "Mashq",
+                "title": "Amaliy Mashqlar",
                 "type": "practice",
                 "estimatedMinutes": 5,
                 "practiceData": {
-                    "instructions": "To'g'ri shaklni tanlang.",
+                    "instructions": "Present Perfect Simple qoidalariga mos to'g'ri shakllarni tanlang.",
                     "exercises": [
                         {
                             "id": "en-b1-u1-l1-e1",
                             "type": "multiple-choice",
-                            "prompt": "\"Have you ever _______ (eat) lobster?\"",
+                            "prompt": "\"_______ you ever traveled to an English-speaking country for summer school?\"",
                             "options": [
-                                "ate",
-                                "eating",
-                                "eat",
-                                "eaten"
+                                "Did",
+                                "Have",
+                                "Were",
+                                "Do"
                             ],
-                            "correctAnswer": 3,
-                            "explanation": "Have you ever eaten (V3)."
+                            "correctAnswer": 1,
+                            "explanation": "Hayotiy tajriba haqidagi 'ever'li so'roq gap Present Perfect yordamchi fe'li 'Have' bilan boshlanadi."
                         },
                         {
-                            "id": "en-b1-u1-l1-ex-2",
+                            "id": "en-b1-u1-l1-e2",
                             "type": "multiple-choice",
-                            "prompt": "Choose the correct word to complete the sentence: \"We have already sent the report.\"",
+                            "prompt": "\"Where is Anvar? — He isn't at home. He has _______ to the supermarket to buy groceries.\"",
                             "options": [
-                                "doubt",
-                                "delay",
-                                "Already",
-                                "reluctance"
+                                "been",
+                                "gone",
+                                "went",
+                                "be"
                             ],
-                            "correctAnswer": 2,
-                            "explanation": "\"Already\" (Allaqachon) fits the context appropriately."
+                            "correctAnswer": 1,
+                            "explanation": "Anvar hali uyga qaytmagan, u do'konga ketgan, shuning uchun 'gone to' ishlatiladi."
+                        },
+                        {
+                            "id": "en-b1-u1-l1-e3",
+                            "type": "multiple-choice",
+                            "prompt": "\"I haven't received the confirmation email from the university _______.\"",
+                            "options": [
+                                "already",
+                                "yet",
+                                "never",
+                                "ever"
+                            ],
+                            "correctAnswer": 1,
+                            "explanation": "Present Perfect inkor gapining oxirida 'hali/hanuz' ma'nosida 'yet' keladi."
+                        },
+                        {
+                            "id": "en-b1-u1-l1-e4",
+                            "type": "multiple-choice",
+                            "prompt": "\"Dilnoza _______ three international scientific articles this academic year.\"",
+                            "options": [
+                                "has published",
+                                "have published",
+                                "is publishing to",
+                                "publish"
+                            ],
+                            "correctAnswer": 0,
+                            "explanation": "Uchinchi shaxs birlik (Dilnoza) uchun 'has published' to'g'ri shakldir."
+                        },
+                        {
+                            "id": "en-b1-u1-l1-e5",
+                            "type": "multiple-choice",
+                            "prompt": "\"We have _______ submitted our application, so now we are waiting for the results.\"",
+                            "options": [
+                                "yet",
+                                "already",
+                                "ever",
+                                "ago"
+                            ],
+                            "correctAnswer": 1,
+                            "explanation": "Kutilgandan oldin bajarilgan tasdiq harakatlar uchun have va V3 o'rtasida 'already' keladi."
                         }
                     ]
                 }
             },
             {
                 "id": "en-b1-u1-l1-s3",
-                "title": "Test",
+                "title": "Yakuniy Test",
                 "type": "test",
                 "estimatedMinutes": 5,
                 "testData": {
-                    "instructions": "Savollarga javob bering.",
-                    "passingScorePercentage": 75,
+                    "instructions": "Present Perfect Simple grammatikasi va lug'atiga oid savollarga javob bering.",
+                    "passingScorePercentage": 80,
                     "questions": [
                         {
                             "id": "en-b1-u1-l1-q1",
-                            "question": "She _______ in London since 2018.",
+                            "question": "Qaysi gapda Present Perfect Simple xatosiz va to'g'ri ishlatilgan?",
                             "options": [
-                                "lives",
-                                "lived",
-                                "is living",
-                                "has lived"
+                                "I have seen that documentary film yesterday evening.",
+                                "She has already finished reading the assigned chapter.",
+                                "Did you ever have been to Canada?",
+                                "They have gone to London last summer and came back."
                             ],
-                            "correctAnswerIndex": 3,
-                            "explanation": "Since 2018 bilan Present Perfect: has lived."
+                            "correctAnswerIndex": 1,
+                            "explanation": "'She has already finished...' mukammal tuzilgan. Birinchi variantda 'yesterday' bilan Present Perfect ishlatilmaydi."
                         },
                         {
                             "id": "en-b1-u1-l1-q2",
-                            "question": "I haven't received the confirmation email _______.",
+                            "question": "'She has been to France' va 'She has gone to France' o'rtasidagi farq nimada?",
                             "options": [
-                                "yet",
-                                "already",
-                                "just",
-                                "ever"
+                                "'Been to' u Fransiyada bo'lib qaytganini, 'gone to' esa hozir ham Fransiyada ekanligini bildiradi.",
+                                "'Gone to' rasmiyroq uslub, 'been to' esa og'zaki uslub hisoblanadi.",
+                                "Ikkala jumlada hech qanday ma'no farqi yo'q.",
+                                "'Been to' faqat kelajak uchun, 'gone to' esa o'tmish uchun ishlatiladi."
                             ],
                             "correctAnswerIndex": 0,
-                            "explanation": "Inkor gap oxirida: yet."
+                            "explanation": "'Been to' ziyorat qilib qaytib kelingan tajribani, 'gone to' esa ketib hali qaytib kelmaganlikni anglatadi."
                         },
                         {
                             "id": "en-b1-u1-l1-q3",
-                            "question": "They _______ their luggage at the airport.",
+                            "question": "Nima uchun 'I have seen him yesterday' jumlasi grammatik jihatdan xato hisoblanadi?",
                             "options": [
-                                "losted",
-                                "have lost",
-                                "has lost",
-                                "losing"
+                                "Chunki 'seen' fe'li noto'g'ri fe'l emas.",
+                                "Chunki 'yesterday' aniq o'tgan vaqt bo'lib, u bilan Present Perfect emas, Past Simple (I saw him) ishlatilishi shart.",
+                                "Chunki 'yesterday' faqat kelasi zamonda keladi.",
+                                "Chunki gapda predlog tushib qolgan."
                             ],
                             "correctAnswerIndex": 1,
-                            "explanation": "They have lost."
+                            "explanation": "Aniq vaqt ko'rsatkichlari (yesterday, last night, in 2019) bilan Present Perfect ishlatilishi qat'iyan taqiqlanadi."
                         },
                         {
                             "id": "en-b1-u1-l1-q4",
-                            "question": "\"I have known him for ten years.\" Bu jumla nimani anglatadi?",
+                            "question": "Complete the question: 'Have you _______ tasted authentic Italian gelato?'",
                             "options": [
-                                "Uni 10 yildan keyin taniyman",
-                                "U 10 yoshda",
-                                "Uni 10 yildan beri taniyman va hozir ham taniyman",
-                                "Uni 10 yil oldin taniganman, hozir ko'rishmaymiz"
+                                "never",
+                                "ever",
+                                "yet",
+                                "already to"
                             ],
-                            "correctAnswerIndex": 2,
-                            "explanation": "Hozirgi paytgacha davom etayotgan holat."
+                            "correctAnswerIndex": 1,
+                            "explanation": "Hayotiy tajriba haqidagi so'roq gaplarda 'ever' (biror marta) qo'yiladi."
+                        },
+                        {
+                            "id": "en-b1-u1-l1-q5",
+                            "question": "What does 'She has overcome major obstacles' mean?",
+                            "options": [
+                                "U katta qiyinchilik va to'siqlarni yengib o'tdi.",
+                                "U katta to'siqlarga duch kelib taslim bo'ldi.",
+                                "U yangi to'siqlar yaratmoqda.",
+                                "U hech qanday qiyinchilik ko'rmagan."
+                            ],
+                            "correctAnswerIndex": 0,
+                            "explanation": "'Overcome obstacles' — qiyinchilik va to'siqlarni yengib o'tish ma'nosini bildiradi."
                         }
                     ]
                 }
@@ -176,155 +286,269 @@ export const ENGLISH_B1_LESSONS: Lesson[] = [
         "language": "en",
         "level": "B1",
         "lessonNumber": 2,
-        "title": "Present Perfect vs Past Simple",
-        "description": "Aniq vaqt (Past Simple) va noaniq vaqt/natija (Present Perfect) farqlari.",
-        "estimatedDurationMinutes": 15,
+        "title": "Present Perfect vs Past Simple: Finished vs Unfinished Time",
+        "description": "Tugallangan aniq o'tmish (Past Simple) va hozirgacha davom etayotgan yoki natijasi bor zamon (Present Perfect) farqlari.",
+        "estimatedDurationMinutes": 16,
         "icon": "⚖️",
         "steps": [
             {
                 "id": "en-b1-u1-l2-s1",
-                "title": "Farqlarni O'rganish",
+                "title": "Tugallangan va Tugallanmagan Zamon Tahlili",
                 "type": "learn",
-                "estimatedMinutes": 5,
+                "estimatedMinutes": 6,
                 "learnData": {
-                    "title": "Present Perfect vs Past Simple",
-                    "explanation": "Agar gapda aniq vaqt ko'rsatilgan bo'lsa (yesterday, in 2020, two days ago, when I was a child) — faqat Past Simple ishlatiladi! Noaniq tajriba bo'lsa — Present Perfect.",
-                    "keyPoints": [
-                        "I visited Paris in 2019. (Aniq vaqt -> Past Simple)",
-                        "I have visited Paris twice. (Hayotiy tajriba -> Present Perfect)",
-                        "Did you see him yesterday? / Have you seen him today?"
+                    "title": "Mastering the Boundary: Present Perfect vs Past Simple",
+                    "explanation": "Ingliz tilidagi eng nozik va xatolarga moyil grammatik chegaralardan biri — Past Simple va Present Perfect o'rtasidagi farqdir:\n\n1. Tugallangan Vaqt (Finished Time) -> Past Simple:\n- Harakat aniq o'tmishda tugagan va hozirgi payt bilan bog'lanmagan.\n- Aniq vaqt signallari: `yesterday`, `last night`, `in 2021`, `two years ago`, `when I was ten`.\n- Misol: 'I lived in Bukhara for three years (from 2018 to 2021).' -> Endi Buxoroda yashamayman, davr tugagan!\n- Savol formasi: 'When did you arrive?' ('When' doim aniq o'tgan vaqtni so'raydi, 'When have you arrived' deb bo'lmaydi!).\n\n2. Tugallanmagan Davr va Hozirgi Aloqa -> Present Perfect:\n- Harakat o'tmishda boshlangan va hozir ham davom etmoqda, yoki davr hali tugamagan.\n- Tugallanmagan vaqt signallari: `today`, `this morning` (agar hali ertalab bo'lsa), `this week`, `in my life`, `so far`.\n- Misol: 'I have lived in Tashkent for three years.' -> 3 yil oldin boshlangan va men HOZIR HAM Toshkentda yashayman!\n\n3. 'Since' va 'For' Qo'llanish Qoidasi:\n- 'Since' + Aniq boshlanish nuqtasi: since 2015, since Monday, since 9:00 AM, since childhood.\n- 'For' + Vaqt oralig'i (davomiyligi): for two days, for three months, for a decade, for centuries.\n\n4. O'zbek o'rganuvchilari uchun xavfli tuzoqlar (Common Pitfalls):\n- ❌ 'I live here since five years.' -> ✅ 'I have lived here FOR five years.' (O'zbek tilida '5 yildan beri yashayapman' deb hozirgi zamonda aytiladi. Ingliz tilida esa 'have lived' va davomiylik uchun 'for' ishlatiladi!).\n- ❌ 'When have you bought this laptop?' -> ✅ 'When DID you buy this laptop?' ('When' bilan Present Perfect HECH QACHON ishlatilmaydi!).\n- ❌ 'I have broken my leg when I was a child.' -> ✅ 'I BROKE my leg when I was a child.' ('When I was a child' aniq o'tgan davrdir).\n\n5. IELTS Speaking Foundation Corner:\n- Topic: Career and Hobbies Progression (Speaking Part 1 & 2)\n- Examiner: 'How long have you been interested in your current field of study?'\n- Model Band 6.0+ Answer: 'I have been passionate about software development for around four years. I originally became interested in programming back in 2021 when I created my first website in high school, and since then, I have developed several useful mobile applications.'\n- Tense Strategy: 'I have been passionate... for four years' (Present Perfect davomiylik) + 'I originally became interested... in 2021' (Past Simple boshlanish nuqtasi) + 'since then, I have developed' (Present Perfect natijalar). Bu uchlik IELTS baholovchisiga grammatik ustalikni namoyish etadi.",
+                    "vocabulary": [
+                        {
+                            "term": "specific",
+                            "reading": "/spəˈsɪf.ɪk/",
+                            "meaning": "aniq, muayyan",
+                            "exampleSentence": "You must mention a specific date when applying for the travel visa.",
+                            "exampleTranslation": "Sayohat vizasiga ariza topshirishda aniq sanani ko'rsatishingiz shart."
+                        },
+                        {
+                            "term": "indefinite",
+                            "reading": "/ɪnˈdef.ɪ.nət/",
+                            "meaning": "noaniq, chegaralanmagan",
+                            "exampleSentence": "Present Perfect is often used for indefinite past actions with present relevance.",
+                            "exampleTranslation": "Present Perfect ko'pincha hozirgi paytga aloqador noaniq o'tgan zamon harakatlari uchun ishlatiladi."
+                        },
+                        {
+                            "term": "duration",
+                            "reading": "/djʊəˈreɪ.ʃən/",
+                            "meaning": "davomiylik, muddat",
+                            "exampleSentence": "The preposition 'for' indicates the overall duration of an event.",
+                            "exampleTranslation": "'For' predlogi biror hodisaning umumiy davomiyligini bildiradi."
+                        },
+                        {
+                            "term": "since",
+                            "reading": "/sɪns/",
+                            "meaning": "...dan beri (boshlanish nuqtasi)",
+                            "exampleSentence": "We have been close friends since our first day at primary school.",
+                            "exampleTranslation": "Biz boshlang'ich maktabdagi birinchi kunimizdan beri qalin do'stmiz."
+                        },
+                        {
+                            "term": "for",
+                            "reading": "/fɔːr/",
+                            "meaning": "davomida, mobaynida (vaqt oralig'i)",
+                            "exampleSentence": "She worked as an English teacher in Seoul for seven years.",
+                            "exampleTranslation": "U yetti yil davomida Seulda ingliz tili o'qituvchisi bo'lib ishladi."
+                        },
+                        {
+                            "term": "decade",
+                            "reading": "/ˈdek.eɪd/",
+                            "meaning": "o'n yillik (10 yil)",
+                            "exampleSentence": "Over the past decade, internet speeds have increased exponentially.",
+                            "exampleTranslation": "O'tgan o'n yillik davomida internet tezligi misli ko'rilmagan darajada oshdi."
+                        },
+                        {
+                            "term": "publish",
+                            "reading": "/ˈpʌb.lɪʃ/",
+                            "meaning": "nashr etmoq, chop etmoq",
+                            "exampleSentence": "The research laboratory published its breakthrough findings last month.",
+                            "exampleTranslation": "Tadqiqot laboratoriyasi o'zining olamshumul xulosalarini o'tgan oyda nashr etdi."
+                        },
+                        {
+                            "term": "discover",
+                            "reading": "/dɪˈskʌv.ər/",
+                            "meaning": "kashf qilmoq",
+                            "exampleSentence": "Alexander Fleming discovered penicillin in 1928.",
+                            "exampleTranslation": "Aleksandr Fleming 1928-yilda penitsillinni kashf qilgan."
+                        },
+                        {
+                            "term": "so far",
+                            "reading": "/səʊ fɑːr/",
+                            "meaning": "hozirgacha, shu paytgacha",
+                            "exampleSentence": "We have interviewed ten qualified candidates so far this week.",
+                            "exampleTranslation": "Shu hafta hozirgacha o'nta malakali nomzod bilan suhbat o'tkazdik."
+                        },
+                        {
+                            "term": "passion",
+                            "reading": "/ˈpæʃ.ən/",
+                            "meaning": "kuchli qiziqish, ishtiyoq",
+                            "exampleSentence": "He discovered his passion for computer programming at a very young age.",
+                            "exampleTranslation": "U kompyuter dasturlashiga bo'lgan kuchli qiziqishini juda yoshligida kashf etdi."
+                        }
                     ],
                     "grammarRules": [
                         {
-                            "pattern": "Present Perfect vs Past Simple",
-                            "meaning": "Aniq vaqt (Past Simple) va noaniq vaqt/natija (Present Perfect) farqlari.",
-                            "usageNotes": "Agar gapda aniq vaqt ko'rsatilgan bo'lsa (yesterday, in 2020, two days ago, when I was a child) — faqat Past Simple ishlatiladi! Noaniq tajriba bo'lsa — Present Perfect.",
+                            "pattern": "Past Simple with Finished Time Triggers (yesterday, in 2020, ago)",
+                            "meaning": "Tugallangan o'tmish davri uchun Past Simple",
+                            "usageNotes": "Harakat qachon sodir bo'lgani aniq ko'rsatilganda yoki 'when' bilan so'ralganda Past Simple shart.",
                             "examples": [
                                 {
-                                    "sentence": "I study English every day with dedication.",
-                                    "translation": "Har kuni ingliz tilini astoydil o'rganaman."
+                                    "sentence": "When did you graduate from university? — I graduated in 2022.",
+                                    "translation": "Universitetni qachon bitirdingiz? — Men 2022-yilda bitirganman."
+                                },
+                                {
+                                    "sentence": "Shakespeare wrote dozens of plays during his lifetime.",
+                                    "translation": "Shekspir o'z hayoti davomida o'nlab pyesalar yozgan (hayoti tugagan)."
                                 }
                             ]
-                        }
-                    ],
-                    "vocabulary": [
-                        {
-                            "term": "Perspective",
-                            "reading": "/pəˈspek.tɪv/",
-                            "meaning": "Nuqtayi nazar",
-                            "exampleSentence": "Traveling gives you a broader perspective on life.",
-                            "exampleTranslation": "Sayohat qilish hayotga kengroq nuqtayi nazar beradi."
                         },
                         {
-                            "term": "Efficient",
-                            "reading": "/ɪˈfɪʃ.ənt/",
-                            "meaning": "Samarali",
-                            "exampleSentence": "We need to find a more efficient solution.",
-                            "exampleTranslation": "Biz yanada samaraliroq yechim topishimiz kerak."
-                        },
-                        {
-                            "term": "Requirement",
-                            "reading": "/rɪˈkwaɪə.mənt/",
-                            "meaning": "Talab, shart",
-                            "exampleSentence": "Fluency is a core requirement for this role.",
-                            "exampleTranslation": "Ravonlik bu lavozim uchun asosiy talabdir."
+                            "pattern": "Since (point in time) vs For (period of time) with Present Perfect",
+                            "meaning": "Boshlanish nuqtasi va davomiylikni to'g'ri ifodalash",
+                            "usageNotes": "'Since' dan so'ng aniq vaqt/yil (since 2019) yoki Past Simple gap keladi (since I graduated). 'For' dan so'ng vaqt o'lchovi keladi (for 3 hours).",
+                            "examples": [
+                                {
+                                    "sentence": "I have lived in this apartment since I got married.",
+                                    "translation": "Turmush qurganimdan beri shu kvartirada yashayman."
+                                },
+                                {
+                                    "sentence": "She has worked at this hospital for over fifteen years.",
+                                    "translation": "U o'n besh yildan ortiq vaqt davomida ushbu shifoxonada ishlab kelmoqda."
+                                }
+                            ]
                         }
                     ]
                 }
             },
             {
                 "id": "en-b1-u1-l2-s2",
-                "title": "Mashq",
+                "title": "Amaliy Mashqlar",
                 "type": "practice",
                 "estimatedMinutes": 5,
                 "practiceData": {
-                    "instructions": "To'g'ri zamon shaklini tanlang.",
+                    "instructions": "Present Perfect va Past Simple farqlariga doir to'g'ri fe'l shakllarini tanlang.",
                     "exercises": [
                         {
                             "id": "en-b1-u1-l2-e1",
                             "type": "multiple-choice",
-                            "prompt": "\"I _______ (buy) a new laptop last Friday.\"",
+                            "prompt": "\"I _______ in Samarkand for five years, from 2015 to 2020. Now I live in Tashkent.\"",
                             "options": [
-                                "bought",
-                                "was bought",
-                                "buying",
-                                "have bought"
+                                "have lived",
+                                "lived",
+                                "am living",
+                                "have been living"
                             ],
-                            "correctAnswer": 0,
-                            "explanation": "Last Friday aniq vaqt ko'rsatkichi bo'lgani uchun Past Simple: bought."
+                            "correctAnswer": 1,
+                            "explanation": "2015 dan 2020 gacha bo'lgan davr tugallangan, hozir boshqa joyda yashaydi, shuning uchun Past Simple: 'lived'."
                         },
                         {
-                            "id": "en-b1-u1-l2-ex-2",
+                            "id": "en-b1-u1-l2-e2",
                             "type": "multiple-choice",
-                            "prompt": "Choose the correct word to complete the sentence: \"We need to find a more efficient solution.\"",
+                            "prompt": "\"_______ did you first meet your best friend? — In high school five years ago.\"",
                             "options": [
-                                "Efficient",
-                                "reluctance",
-                                "delay",
-                                "doubt"
+                                "When have",
+                                "When did",
+                                "How long have",
+                                "Since when did"
                             ],
-                            "correctAnswer": 0,
-                            "explanation": "\"Efficient\" (Samarali) fits the context appropriately."
+                            "correctAnswer": 1,
+                            "explanation": "'When' o'tmishdagi aniq vaqtni so'raydi va Past Simple bilan ishlatiladi: 'When did you...'."
+                        },
+                        {
+                            "id": "en-b1-u1-l2-e3",
+                            "type": "multiple-choice",
+                            "prompt": "\"Aziz has worked for this international company _______ 2018.\"",
+                            "options": [
+                                "for",
+                                "since",
+                                "during",
+                                "in"
+                            ],
+                            "correctAnswer": 1,
+                            "explanation": "Aniq boshlanish yili (2018) oldidan 'since' ishlatiladi."
+                        },
+                        {
+                            "id": "en-b1-u1-l2-e4",
+                            "type": "multiple-choice",
+                            "prompt": "\"My brother _______ his mobile phone twice this year, and he just lost another one yesterday.\"",
+                            "options": [
+                                "lost",
+                                "has lost",
+                                "was losing",
+                                "loses"
+                            ],
+                            "correctAnswer": 1,
+                            "explanation": "'This year' hali tugamagan davr bo'lib, takrorlangan tajriba uchun Present Perfect 'has lost' qo'yiladi."
+                        },
+                        {
+                            "id": "en-b1-u1-l2-e5",
+                            "type": "multiple-choice",
+                            "prompt": "\"We _______ our flight tickets two days ago, but the hotel hasn't confirmed our room yet.\"",
+                            "options": [
+                                "have bought",
+                                "bought",
+                                "buy",
+                                "were buying"
+                            ],
+                            "correctAnswer": 1,
+                            "explanation": "'Two days ago' aniq o'tgan vaqt bo'lgani uchun Past Simple 'bought' ishlatiladi."
                         }
                     ]
                 }
             },
             {
                 "id": "en-b1-u1-l2-s3",
-                "title": "Test",
+                "title": "Yakuniy Test",
                 "type": "test",
                 "estimatedMinutes": 5,
                 "testData": {
-                    "instructions": "Savollarga javob bering.",
-                    "passingScorePercentage": 75,
+                    "instructions": "Present Perfect va Past Simple farqlari bo'yicha test savollariga javob bering.",
+                    "passingScorePercentage": 80,
                     "questions": [
                         {
                             "id": "en-b1-u1-l2-q1",
-                            "question": "When _______ you graduate from university?",
+                            "question": "Qaysi gapda 'since' va 'for' predloglari to'g'ri qo'llanilgan?",
                             "options": [
-                                "did",
-                                "had",
-                                "were",
-                                "have"
+                                "I have lived here since five years.",
+                                "I have lived here for 2019.",
+                                "I have lived here since 2019.",
+                                "I lived here since three months now."
                             ],
-                            "correctAnswerIndex": 0,
-                            "explanation": "When bilan Past Simple: When did you...?"
+                            "correctAnswerIndex": 2,
+                            "explanation": "Aniq yil oldidan 'since 2019' to'g'ri. Davomiylik uchun 'for five years' bo'lishi kerak edi."
                         },
                         {
                             "id": "en-b1-u1-l2-q2",
-                            "question": "Shakespeare _______ many famous plays.",
+                            "question": "Nima uchun 'When have you bought that car?' jumlasi xato hisoblanadi?",
                             "options": [
-                                "writes",
-                                "had wrote",
-                                "has written",
-                                "wrote"
+                                "Chunki 'when' so'roq olmoshi harakatning aniq paytini so'raydi va u bilan Past Simple ('When did you buy...') ishlatilishi shart.",
+                                "Chunki 'car' so'zidan oldin 'the' bo'lishi kerak edi.",
+                                "Chunki 'bought' 3-shaklda emas.",
+                                "Chunki gapda ega yo'q."
                             ],
-                            "correctAnswerIndex": 3,
-                            "explanation": "Tarixiy shaxs hayoti tugagan: wrote."
+                            "correctAnswerIndex": 0,
+                            "explanation": "'When' bilan Present Perfect ishlatilmaydi, chunki u aniq vaqt nuqtasini so'raydi."
                         },
                         {
                             "id": "en-b1-u1-l2-q3",
-                            "question": "I _______ my wallet! I can't find it anywhere right now.",
+                            "question": "'She lived in London for two years' va 'She has lived in London for two years' farqi nima?",
                             "options": [
-                                "losing",
-                                "lost",
-                                "have lost",
-                                "was lost"
+                                "Birinchi gapda u hozir Londonda yashamaydi (davr tugagan); ikkinchisida u hozir ham Londonda yashamoqda.",
+                                "Birinchi gap kelasi zamonni, ikkinchi gap esa o'tgan zamonni bildiradi.",
+                                "Hech qanday ma'no farqi yo'q, ikkalasi ham bir xil.",
+                                "Birinchi gap rasmiy, ikkinchisi norasmiy."
                             ],
-                            "correctAnswerIndex": 2,
-                            "explanation": "Hozirgi natija: have lost."
+                            "correctAnswerIndex": 0,
+                            "explanation": "Past Simple tugallangan davrni (hozir Londonda emas), Present Perfect esa davom etayotgan davrni bildiradi."
                         },
                         {
                             "id": "en-b1-u1-l2-q4",
-                            "question": "She _______ to Madrid three times this year.",
+                            "question": "Alexander Fleming _______ penicillin in 1928, which revolutionized medicine.",
                             "options": [
-                                "went",
-                                "has been",
-                                "goes",
-                                "was"
+                                "has discovered",
+                                "discovered",
+                                "discovers",
+                                "had been discovering"
                             ],
                             "correctAnswerIndex": 1,
-                            "explanation": "This year (tugallanmagan vaqt): has been."
+                            "explanation": "'In 1928' aniq tarixiy yil bo'lgani sababli Past Simple ('discovered') qo'yiladi."
+                        },
+                        {
+                            "id": "en-b1-u1-l2-q5",
+                            "question": "Choose the grammatically correct sentence:",
+                            "options": [
+                                "I have seen that movie last Friday night.",
+                                "I saw that movie last Friday night.",
+                                "I have saw that movie last Friday night.",
+                                "I did seen that movie last Friday night."
+                            ],
+                            "correctAnswerIndex": 1,
+                            "explanation": "'Last Friday night' aniq o'tgan zamon ko'rsatkichi, faqat Past Simple ('saw') ishlatiladi."
                         }
                     ]
                 }
@@ -339,55 +563,119 @@ export const ENGLISH_B1_LESSONS: Lesson[] = [
         "language": "en",
         "level": "B1",
         "lessonNumber": 3,
-        "title": "Present Perfect Continuous (have been doing)",
-        "description": "O'tmishda boshlanib hozirgacha davom etayotgan jarayonlar (have/has been + V-ing).",
-        "estimatedDurationMinutes": 15,
-        "icon": "⏳",
+        "title": "Present Perfect Continuous: Ongoing Actions & Visible Results",
+        "description": "Harakatning davomiyligi (have/has been + V-ing), hozirda yaqqol ko'rinib turgan oqibatlar va for/since qo'llanishi.",
+        "estimatedDurationMinutes": 16,
+        "icon": "⏱️",
         "steps": [
             {
                 "id": "en-b1-u1-l3-s1",
-                "title": "Present Perfect Continuous",
+                "title": "Present Perfect Continuous Qoidalari",
                 "type": "learn",
-                "estimatedMinutes": 5,
+                "estimatedMinutes": 6,
                 "learnData": {
-                    "title": "Have/Has Been + Verb-ing",
-                    "explanation": "Harakatning davomiyligiga urg'u berish yoki yaqindagina to'xtagan jarayonning ko'rinib turgan asoratini ifodalash.",
-                    "keyPoints": [
-                        "I have been studying English for three hours. (Jarayon davomiyligi)",
-                        "Why are your hands dirty? — I have been fixing my bicycle. (Yaqinda to'xtagan jarayon asorati)"
-                    ],
+                    "title": "Present Perfect Continuous: Action Duration & Evident Results",
+                    "explanation": "Harakatning o'zi qancha vaqtdan beri davom etayotganini (jarayonni) va hozirda ko'z oldimizda turgan jismoniy asoratini ifodalash:\n\n1. Grammatik Formulalar:\n- Darak: Ega + have / has + been + Verb-ing\n  • 'I have been studying English for four hours.' (To'rt soatdan beri o'qiyapman va hali ham davom etmoqda).\n  • 'It has been raining all morning.' (Ertalabdan beri yomg'ir yog'yapti).\n- Inkor: haven't / hasn't been + Verb-ing\n  • 'He hasn't been sleeping well recently.'\n- So'roq: How long + have/has + ega + been + Verb-ing?\n  • 'How long have you been waiting for the bus?'\n\n2. Qachon Present Perfect Continuous Ishlatiladi?\n- A) Davomiylikni ta'kidlash (How long / For / Since): Diqqat markazida ishning necha soat yoki yildan beri to'xtovsiz davom etayotgani turadi.\n- B) Yaqqol Ko'rinib Turgan Natija (Visible Physical Result): Harakat hozirgina to'xtagan, ammo uning oqibati ko'rinib turibdi:\n  • 'Why are your clothes dirty? — Because I have been repairing my car.' (Kiyimim kir, chunki mashinamni tuzatib yotgan edim).\n  • 'You look exhausted! — Yes, I have been running in the park.'\n\n3. Present Perfect Simple vs Continuous Farqi:\n- Simple = Natija va Miqdor (Result & Quantity): 'I have written three essays today.' (3 ta insho yozib bo'ldim - soni muhim).\n- Continuous = Jarayon va Davomiylik (Activity & Duration): 'I have been writing essays all morning.' (Ertalabdan beri yozyapman - nechtaligi noma'lum, jarayon muhim).\n\n4. Holat Fe'llari (Stative Verbs) Qoidasi:\n- Tuyg'u, fikr va egalik fe'llari (`know`, `like`, `understand`, `believe`, `belong`, `have` (egalik)) Continuous shaklida ISHLATILMAYDI!\n- ❌ 'I have been knowing him for 5 years.' -> ✅ 'I have known him for 5 years.'\n\n5. IELTS Speaking Foundation Corner:\n- Topic: Daily Routine, Work and Studies (Speaking Part 1 & 3)\n- Examiner: 'What projects have you been working on recently?'\n- Model Band 6.0+ Answer: 'Recently, I have been preparing intensively for the IELTS exam. In addition, my classmates and I have been developing an eco-friendly recycling project for our local community, which has taken up a lot of our evenings.'\n- Fluent Use of 'How long': 'I have been learning English since I was twelve, but I have only been preparing specifically for IELTS for the past six months.'",
                     "vocabulary": [
                         {
-                            "term": "Exhausted",
+                            "term": "exhausted",
                             "reading": "/ɪɡˈzɔː.stɪd/",
-                            "meaning": "Haddan tashqari charchagan",
-                            "exampleSentence": "I am exhausted because I have been running.",
-                            "exampleTranslation": "Men juda charchadim, chunki yugurayotgan edim."
+                            "meaning": "holdan toygan, o'ta charchagan",
+                            "exampleSentence": "He was exhausted because he had been working twelve hours without a break.",
+                            "exampleTranslation": "U o'n ikki soat tanaffussiz ishlagani sababli holdan toygan edi."
                         },
                         {
-                            "term": "Requirement",
-                            "reading": "/rɪˈkwaɪə.mənt/",
-                            "meaning": "Talab, shart",
-                            "exampleSentence": "Fluency is a core requirement for this role.",
-                            "exampleTranslation": "Ravonlik bu lavozim uchun asosiy talabdir."
+                            "term": "muddy",
+                            "reading": "/ˈmʌd.i/",
+                            "meaning": "loy, balchiqli",
+                            "exampleSentence": "The children's boots were muddy because they had been playing in the garden after rain.",
+                            "exampleTranslation": "Yomg'irdan keyin bog'da o'ynashgani uchun bolalarning etiklari loy bo'lib ketgan edi."
                         },
                         {
-                            "term": "Significantly",
-                            "reading": "/sɪɡˈnɪf.ɪ.kənt.li/",
-                            "meaning": "Sezilarli darajada",
-                            "exampleSentence": "Her grades improved significantly this term.",
-                            "exampleTranslation": "Bu semestrda uning baholari sezilarli darajada yaxshilandi."
+                            "term": "continuous",
+                            "reading": "/kənˈtɪn.ju.əs/",
+                            "meaning": "uzluksiz, davomiy",
+                            "exampleSentence": "Language mastery requires continuous practice and exposure.",
+                            "exampleTranslation": "Tilni chuqur egallash uzluksiz amaliyot va muloqot muhitini talab qiladi."
+                        },
+                        {
+                            "term": "sweat",
+                            "reading": "/swet/",
+                            "meaning": "terlamoq, ter",
+                            "exampleSentence": "He was sweating profusely because he had been running up the steep hill.",
+                            "exampleTranslation": "Tik qiyalikdan yugurib chiqqani uchun u tinimsiz terlardi."
+                        },
+                        {
+                            "term": "renovate",
+                            "reading": "/ˈren.ə.veɪt/",
+                            "meaning": "ta'mirlamoq, yangilamoq",
+                            "exampleSentence": "They have been renovating their kitchen for two weeks, so the house is messy.",
+                            "exampleTranslation": "Ular ikki haftadan beri oshxonalarini ta'mirlashmoqda, shuning uchun uy to'zg'igan."
+                        },
+                        {
+                            "term": "complain",
+                            "reading": "/kəmˈpleɪn/",
+                            "meaning": "shikoyat qilmoq, noliydigan bo'lmoq",
+                            "exampleSentence": "Neighbors have been complaining about the loud construction noise across the street.",
+                            "exampleTranslation": "Qo'shnilar ko'chaning narigi tomonidagi baland qurilish shovqinidan shikoyat qilib kelishmoqda."
+                        },
+                        {
+                            "term": "negotiate",
+                            "reading": "/nəˈɡəʊ.ʃi.eɪt/",
+                            "meaning": "muzokara olib bormoq",
+                            "exampleSentence": "The two companies have been negotiating the terms of the merger for months.",
+                            "exampleTranslation": "Ikki kompaniya oylardan beri birlashish shartlari bo'yicha muzokara olib bormoqda."
+                        },
+                        {
+                            "term": "consistently",
+                            "reading": "/kənˈsɪs.tənt.li/",
+                            "meaning": "muntazam ravishda, bir maromda",
+                            "exampleSentence": "She has been practicing piano consistently every evening to prepare for the concert.",
+                            "exampleTranslation": "U konsertga tayyorgarlik ko'rish uchun har oqshom muntazam ravishda pianino mashq qilmoqda."
+                        },
+                        {
+                            "term": "concentrate",
+                            "reading": "/ˈkɒn.sən.treɪt/",
+                            "meaning": "diqqatni jamlamoq (on something)",
+                            "exampleSentence": "I have been trying to concentrate on this scientific paper, but the noise is distracting.",
+                            "exampleTranslation": "Men bor diqqatimni ushbu ilmiy maqolaga qaratishga harakat qilyapman, ammo shovqin chalg'itmoqda."
+                        },
+                        {
+                            "term": "headache",
+                            "reading": "/ˈhed.eɪk/",
+                            "meaning": "bosh og'rig'i",
+                            "exampleSentence": "I have a headache because I have been staring at the monitor all day.",
+                            "exampleTranslation": "Kun bo'yi monitorga tikilib o'tirganim sababli boshim og'riyapti."
                         }
                     ],
                     "grammarRules": [
                         {
-                            "pattern": "Present Perfect Continuous (have been doing)",
-                            "meaning": "O'tmishda boshlanib hozirgacha davom etayotgan jarayonlar (have/has been + V-ing).",
-                            "usageNotes": "Harakatning davomiyligiga urg'u berish yoki yaqindagina to'xtagan jarayonning ko'rinib turgan asoratini ifodalash.",
+                            "pattern": "Present Perfect Continuous: have/has been + Verb-ing",
+                            "meaning": "Boshlangan va davom etayotgan harakat yoki yaqqol oqibat",
+                            "usageNotes": "Jarayonning qancha davom etgani (for/since) yoki hozirgi holat sababi (charchoq, kir kiyim) ko'rsatilganda ishlatiladi.",
                             "examples": [
                                 {
-                                    "sentence": "I am exhausted because I have been running.",
-                                    "translation": "Men juda charchadim, chunki yugurayotgan edim."
+                                    "sentence": "She is out of breath because she has been jogging.",
+                                    "translation": "U hansirab qolgan, chunki yugurib kelayotgan edi."
+                                },
+                                {
+                                    "sentence": "How long have you been studying German?",
+                                    "translation": "Qancha vaqtdan beri nemis tilini o'rganib kelyapsiz?"
+                                }
+                            ]
+                        },
+                        {
+                            "pattern": "Stative Verbs Restriction (No -ing in Perfect tenses)",
+                            "meaning": "Holat fe'llarining Continuous'da ishlatilmasligi",
+                            "usageNotes": "Know, believe, like, understand, own kabi fe'llar davomiylikda ham Present Perfect Simple shaklida bo'ladi.",
+                            "examples": [
+                                {
+                                    "sentence": "I have known Farrukh for more than ten years.",
+                                    "translation": "Men Farruxni o'n yildan ortiq vaqtdan beri taniyman."
+                                },
+                                {
+                                    "sentence": "They have owned this family restaurant since 1995.",
+                                    "translation": "Ular ushbu oilaviy restoranga 1995-yildan beri egalik qilishadi."
                                 }
                             ]
                         }
@@ -396,97 +684,148 @@ export const ENGLISH_B1_LESSONS: Lesson[] = [
             },
             {
                 "id": "en-b1-u1-l3-s2",
-                "title": "Mashq",
+                "title": "Amaliy Mashqlar",
                 "type": "practice",
                 "estimatedMinutes": 5,
                 "practiceData": {
-                    "instructions": "To'g'ri shaklni tanlang.",
+                    "instructions": "Present Perfect Continuous va Simple o'rtasidagi to'g'ri shaklni tanlang.",
                     "exercises": [
                         {
                             "id": "en-b1-u1-l3-e1",
                             "type": "multiple-choice",
-                            "prompt": "\"It _______ (rain) all morning; the ground is wet.\"",
+                            "prompt": "\"Why are your hands covered in grease? — Because I _______ my bicycle chain.\"",
                             "options": [
-                                "had rain",
-                                "has been raining",
-                                "rained",
-                                "is rain"
+                                "have been fixing",
+                                "fixed",
+                                "am fixing to",
+                                "have fixed already"
                             ],
-                            "correctAnswer": 1,
-                            "explanation": "Has been raining."
+                            "correctAnswer": 0,
+                            "explanation": "Qo'l moy bo'lib turgani — yaqindagina to'xtagan harakatning yaqqol oqibati: 'have been fixing'."
                         },
                         {
-                            "id": "en-b1-u1-l3-ex-2",
+                            "id": "en-b1-u1-l3-e2",
                             "type": "multiple-choice",
-                            "prompt": "Choose the correct word to complete the sentence: \"Fluency is a core requirement for this role.\"",
+                            "prompt": "\"How long _______ you _______ English at this language academy?\"",
                             "options": [
-                                "doubt",
-                                "delay",
-                                "reluctance",
-                                "Requirement"
+                                "have / been learning",
+                                "did / learn",
+                                "are / learning",
+                                "do / learn"
                             ],
-                            "correctAnswer": 3,
-                            "explanation": "\"Requirement\" (Talab, shart) fits the context appropriately."
+                            "correctAnswer": 0,
+                            "explanation": "'How long' bilan davom etayotgan harakat so'ralganda: 'have you been learning'."
+                        },
+                        {
+                            "id": "en-b1-u1-l3-e3",
+                            "type": "multiple-choice",
+                            "prompt": "\"I _______ Dilshod for ten years; we went to kindergarten together.\"",
+                            "options": [
+                                "have been knowing",
+                                "have known",
+                                "am knowing",
+                                "know"
+                            ],
+                            "correctAnswer": 1,
+                            "explanation": "'Know' stative (holat) fe'li bo'lib, Continuous shaklini olmaydi, 'have known' to'g'ri."
+                        },
+                        {
+                            "id": "en-b1-u1-l3-e4",
+                            "type": "multiple-choice",
+                            "prompt": "\"It _______ all day long, and the city streets are completely flooded.\"",
+                            "options": [
+                                "has been raining",
+                                "rains",
+                                "rained yesterday",
+                                "is raining to"
+                            ],
+                            "correctAnswer": 0,
+                            "explanation": "'All day long' davomiylikni bildiradi: 'has been raining'."
+                        },
+                        {
+                            "id": "en-b1-u1-l3-e5",
+                            "type": "multiple-choice",
+                            "prompt": "\"I _______ three chapters of this novel today, but my sister _______ all afternoon.\"",
+                            "options": [
+                                "have read / has been reading",
+                                "have been reading / has read",
+                                "read / read",
+                                "am reading / reads"
+                            ],
+                            "correctAnswer": 0,
+                            "explanation": "Birinchi qismda miqdor (3 ta bob - Simple: have read), ikkinchi qismda davomiylik (tushdan beri - Continuous: has been reading)."
                         }
                     ]
                 }
             },
             {
                 "id": "en-b1-u1-l3-s3",
-                "title": "Test",
+                "title": "Yakuniy Test",
                 "type": "test",
                 "estimatedMinutes": 5,
                 "testData": {
-                    "instructions": "Savollarga javob bering.",
-                    "passingScorePercentage": 75,
+                    "instructions": "Present Perfect Continuous qoidalari bo'yicha test savollariga javob bering.",
+                    "passingScorePercentage": 80,
                     "questions": [
                         {
                             "id": "en-b1-u1-l3-q1",
-                            "question": "How long _______ you been learning German?",
+                            "question": "Qaysi holatda Present Perfect Continuous ishlatilishi eng to'g'ri hisoblanadi?",
                             "options": [
-                                "are",
-                                "have",
-                                "has",
-                                "did"
+                                "Harakat o'tgan zamonda aniq sanada tugab ketgan bo'lsa",
+                                "Harakatning o'zi qancha vaqtdan beri davom etayotgani yoki hozirda yaqqol jismoniy asorati ko'rinib turganda",
+                                "Kitob necha marta nashr etilganini aytganda",
+                                "Faqat ertangi rejalashtirilgan ishlar uchun"
                             ],
                             "correctAnswerIndex": 1,
-                            "explanation": "How long have you been learning...?"
+                            "explanation": "Present Perfect Continuous davomiylik va hozirgi yaqqol oqibatlar uchun ishlatiladi."
                         },
                         {
                             "id": "en-b1-u1-l3-q2",
-                            "question": "He is tired because he _______ all night.",
+                            "question": "Nima uchun 'I have been knowing him for 5 years' gapi xato?",
                             "options": [
-                                "has drove",
-                                "is driving",
-                                "has been driving",
-                                "drives"
+                                "Chunki 'know' fe'li inson his-tuyg'usi/bilimi bilan bog'liq holat (stative) fe'li bo'lib, Continuous zamonlarda ishlatilmaydi.",
+                                "Chunki 'for' o'rniga 'since' qo'yilishi kerak edi.",
+                                "Chunki 'him' olmoshi xato.",
+                                "Bu gapda hech qanday xatolik yo'q."
                             ],
-                            "correctAnswerIndex": 2,
-                            "explanation": "Has been driving."
+                            "correctAnswerIndex": 0,
+                            "explanation": "'Know' stative fe'l bo'lgani sababli to'g'risi: 'I have known him for 5 years'."
                         },
                         {
                             "id": "en-b1-u1-l3-q3",
-                            "question": "We have been waiting for the bus _______ 40 minutes.",
+                            "question": "Speaker A: 'Why are you out of breath?' — Speaker B: 'Because I _______ for the bus.'",
                             "options": [
-                                "since",
-                                "from",
-                                "during",
-                                "for"
+                                "have run",
+                                "have been running",
+                                "ran yesterday",
+                                "am run"
                             ],
-                            "correctAnswerIndex": 3,
-                            "explanation": "Vaqt oralig'i uchun: for 40 minutes."
+                            "correctAnswerIndex": 1,
+                            "explanation": "Nafas qisishi (out of breath) hozirgina to'xtagan yugurish harakatining yaqqol oqibatidir: 'have been running'."
                         },
                         {
                             "id": "en-b1-u1-l3-q4",
-                            "question": "She _______ working on this project since 9 AM.",
+                            "question": "Choose the sentence that focuses on the COMPLETED RESULT rather than the activity:",
                             "options": [
-                                "has been",
-                                "is",
-                                "have been",
-                                "was"
+                                "I have been painting the bedroom walls all morning.",
+                                "I have painted the entire bedroom; now it looks brand new.",
+                                "I was painting the bedroom when you arrived.",
+                                "I have been wanting to paint the bedroom."
                             ],
-                            "correctAnswerIndex": 0,
-                            "explanation": "She has been working."
+                            "correctAnswerIndex": 1,
+                            "explanation": "'I have painted...' ishning to'liq yakunlangani va natijasini bildiradi (Present Perfect Simple)."
+                        },
+                        {
+                            "id": "en-b1-u1-l3-q5",
+                            "question": "What does 'The ground is wet because it has been raining' imply?",
+                            "options": [
+                                "Yomg'ir kecha yoqqan va bugun havo issiq.",
+                                "Yaqindagina yomg'ir yoqqan va uning asorati (ho'l yer) ko'z oldimizda turibdi.",
+                                "Ertaga yomg'ir yog'ishi kutilmoqda.",
+                                "Yomg'ir hech qachon yog'magan."
+                            ],
+                            "correctAnswerIndex": 1,
+                            "explanation": "Present Perfect Continuous harakatining ko'rinib turgan hozirgi natijasidir."
                         }
                     ]
                 }
@@ -501,55 +840,119 @@ export const ENGLISH_B1_LESSONS: Lesson[] = [
         "language": "en",
         "level": "B1",
         "lessonNumber": 4,
-        "title": "Used to & Would for Past Habits",
-        "description": "O'tmishdagi odatlar va endilikda mavjud bo'lmagan holatlar.",
-        "estimatedDurationMinutes": 14,
+        "title": "Used to & Would for Past Habits & States",
+        "description": "O'tmishdagi odatlar, hozir o'zgargan holatlar (used to) va xotiralar (would) grammatikasi.",
+        "estimatedDurationMinutes": 16,
         "icon": "🕰️",
         "steps": [
             {
                 "id": "en-b1-u1-l4-s1",
-                "title": "Used to va Would",
+                "title": "O'tmishdagi Odatlar va Holatlar",
                 "type": "learn",
-                "estimatedMinutes": 4,
+                "estimatedMinutes": 6,
                 "learnData": {
-                    "title": "Past Habits & States",
-                    "explanation": "\"Used to\" o'tmishdagi harakatlar va holatlar uchun ishlatiladi (I used to live in Samarkand). \"Would\" faqat takrorlangan harakatlar uchun ishlatiladi (Every summer we would swim in the river).",
-                    "keyPoints": [
-                        "I used to play guitar (now I don't).",
-                        "Did you use to wear glasses?"
-                    ],
+                    "title": "Expressing Past Habits and States: Used to vs Would",
+                    "explanation": "O'tmishda doimiy takrorlangan, ammo bugungi kunga kelib to'xtagan odatlar va o'zgargan hayotiy holatlarni ifodalash:\n\n1. 'Used to + asosiy fe'l' (Past Habits and States):\n- O'tmishdagi odatlar (Habits): 'I used to play table tennis every weekend, but now I don't have time.'\n- O'tmishdagi holatlar (States): 'There used to be a small grocery store on this corner.' / 'She used to have long curly hair.'\n- Inkor shakli: didn't use to + base verb ('I didn't use to like spicy food').\n- So'roq shakli: Did you use to + base verb? ('Did you use to walk to school?').\n\n2. 'Would + asosiy fe'l' (Past Repeated Actions ONLY):\n- 'Would' faqat o'tmishdagi takrorlangan harakatlar (nostalgiya, xotiralar) uchun ishlatiladi.\n- Misol: 'Every summer holiday, my grandmother would bake fresh berry pies for us.'\n- DIQQAT: 'Would' holatlar (past states) uchun MUTLAQO ISHLATILMAYDI!\n  • ❌ 'I would live in Paris when I was young.' -> ✅ 'I USED TO live in Paris.'\n  • ❌ 'He would be very shy.' -> ✅ 'He USED TO be very shy.'\n\n3. 'Used to do' vs 'Be used to doing' (O'ta muhim farq!):\n- 'Used to + fe'l asosi': O'tmishdagi odat (endi yo'q): 'I used to wake up late.'\n- 'Be used to + V-ing': Biror narsaga ko'nikib ketgan bo'lmoq (hozirgi odat): 'I am used to waking up early for work.'\n\n4. O'zbek o'rganuvchilari uchun xavfli tuzoqlar (Common Pitfalls):\n- ❌ 'I used to went there.' -> ✅ 'I used to GO there.' ('Used to' dan keyin fe'lning sof asosi keladi!).\n- ❌ 'I didn't used to...' -> ✅ 'I didn't USE to...' ('did' bo'lgani sababli 'use' yoziladi).\n- ❌ 'I would have a dog.' -> ✅ 'I used to have a dog.' ('Have a dog' holat bo'lgani uchun 'would' emas, 'used to' ishlatiladi).\n\n5. IELTS Speaking Foundation Corner:\n- Topic: Childhood Memories and Life Changes (Speaking Part 2 Foundation)\n- Examiner: 'Did you have any specific hobbies when you were a child?'\n- Model Band 6.0+ Answer: 'Yes, when I was in primary school, my friends and I used to play street football every afternoon until sunset. My grandfather would always watch us from the porch and cheer for our team. Sadly, I don't play anymore because I am too busy with university studies, but I still cherish those carefree days.'\n- Contrastive Fluency: O'tmishdagi odatni 'used to / would' bilan aytib, so'ngra hozirgi o'zgarishni 'Nowadays, however, I tend to...' bilan bog'lash Band 6.5+ darajadagi mantiqiy bog'liqlikni yaratadi.",
                     "vocabulary": [
                         {
-                            "term": "Habit",
+                            "term": "habit",
                             "reading": "/ˈhæb.ɪt/",
-                            "meaning": "Odat",
-                            "exampleSentence": "Reading daily is a good habit.",
-                            "exampleTranslation": "Har kuni mutolaa qilish yaxshi odat."
+                            "meaning": "odat, ko'nikma",
+                            "exampleSentence": "Waking up early and exercising is a healthy morning habit.",
+                            "exampleTranslation": "Erta turish va mashq qilish sog'lom ertalabki odatdir."
                         },
                         {
-                            "term": "Significantly",
-                            "reading": "/sɪɡˈnɪf.ɪ.kənt.li/",
-                            "meaning": "Sezilarli darajada",
-                            "exampleSentence": "Her grades improved significantly this term.",
-                            "exampleTranslation": "Bu semestrda uning baholari sezilarli darajada yaxshilandi."
+                            "term": "childhood",
+                            "reading": "/ˈtʃaɪld.hʊd/",
+                            "meaning": "bolalik davri",
+                            "exampleSentence": "He spent most of his childhood in a peaceful village surrounded by mountains.",
+                            "exampleTranslation": "U bolaligining ko'p qismini tog'lar bilan o'ralgan sokin qishloqda o'tkazdi."
                         },
                         {
-                            "term": "Perspective",
-                            "reading": "/pəˈspek.tɪv/",
-                            "meaning": "Nuqtayi nazar",
-                            "exampleSentence": "Traveling gives you a broader perspective on life.",
-                            "exampleTranslation": "Sayohat qilish hayotga kengroq nuqtayi nazar beradi."
+                            "term": "nostalgia",
+                            "reading": "/nɒsˈtæl.dʒə/",
+                            "meaning": "o'tmishni qo'msash, nostalgiya",
+                            "exampleSentence": "Looking at old family photographs filled her heart with sweet nostalgia.",
+                            "exampleTranslation": "Eski oilaviy suratlarga qarash uning qalbini shirin nostalgiya bilan to'ldirdi."
+                        },
+                        {
+                            "term": "neighborhood",
+                            "reading": "/ˈneɪ.bə.hʊd/",
+                            "meaning": "mahalla, atrof-muhit",
+                            "exampleSentence": "We used to ride bicycles together around our quiet neighborhood.",
+                            "exampleTranslation": "Biz tinch mahallamiz bo'ylab birgalikda velosiped minar edik."
+                        },
+                        {
+                            "term": "commute",
+                            "reading": "/kəˈmjuːt/",
+                            "meaning": "ishga qatnamoq (borib-kelmoq)",
+                            "exampleSentence": "He used to commute by train, but now he works remotely from home.",
+                            "exampleTranslation": "U poyezdda ishga qatnar edi, ammo hozir uydan masofaviy ishlaydi."
+                        },
+                        {
+                            "term": "rarely",
+                            "reading": "/ˈreə.li/",
+                            "meaning": "kamdan-kam, kam hollarda",
+                            "exampleSentence": "These days, people rarely write handwritten letters to each other.",
+                            "exampleTranslation": "Hozirgi kunlarda odamlar bir-birlariga kamdan-kam qo'lyozma xat yozishadi."
+                        },
+                        {
+                            "term": "spectacles",
+                            "reading": "/ˈspek.tə.kəlz/",
+                            "meaning": "ko'zoynak (glasses)",
+                            "exampleSentence": "My grandfather used to wear thick spectacles while reading newspapers.",
+                            "exampleTranslation": "Bobom gazeta o'qiyotganda qalin ko'zoynak taqar edilar."
+                        },
+                        {
+                            "term": "belong",
+                            "reading": "/bɪˈlɒŋ/",
+                            "meaning": "tegishli bo'lmoq",
+                            "exampleSentence": "This ancient carved wooden chest used to belong to my great-grandmother.",
+                            "exampleTranslation": "Ushbu qadimiy o'ymakor yog'och sandiq katta buvimga tegishli bo'lgan."
+                        },
+                        {
+                            "term": "tend",
+                            "reading": "/tend/",
+                            "meaning": "moyil bo'lmoq (tend to do something)",
+                            "exampleSentence": "Nowadays, teenagers tend to consume news via social media rather than television.",
+                            "exampleTranslation": "Hozirgi kunda o'smirlar yangiliklarni televizordan ko'ra ijtimoiy tarmoqlar orqali olishga moyildirlar."
+                        },
+                        {
+                            "term": "reminisce",
+                            "reading": "/ˌrem.ɪˈnɪs/",
+                            "meaning": "o'tmish xotiralarini eslamoq, suhbatlashmoq",
+                            "exampleSentence": "The old classmates sat in the café and reminisced about their school adventures.",
+                            "exampleTranslation": "Eski sinfdoshlar kafeda o'tirib, maktabdagi sarguzashtlarini eslashdi."
                         }
                     ],
                     "grammarRules": [
                         {
-                            "pattern": "Used to & Would for Past Habits",
-                            "meaning": "O'tmishdagi odatlar va endilikda mavjud bo'lmagan holatlar.",
-                            "usageNotes": "\"Used to\" o'tmishdagi harakatlar va holatlar uchun ishlatiladi (I used to live in Samarkand). \"Would\" faqat takrorlangan harakatlar uchun ishlatiladi (Every summer we would swim in the river).",
+                            "pattern": "Used to + base verb (Past Habits & Past States)",
+                            "meaning": "O'tmishdagi odat yoki hozir o'zgargan holat",
+                            "usageNotes": "Harakatlar (play, run) va holatlar (live, be, have) uchun ishlatiladi. Hozirda bu holat mavjud emas.",
                             "examples": [
                                 {
-                                    "sentence": "Reading daily is a good habit.",
-                                    "translation": "Har kuni mutolaa qilish yaxshi odat."
+                                    "sentence": "I used to drink five cups of coffee a day, but I quit last year.",
+                                    "translation": "Men kuniga besh finjon kofe ichar edim, lekin o'tgan yili tashladim."
+                                },
+                                {
+                                    "sentence": "There used to be a library here before the shopping mall was built.",
+                                    "translation": "Savdo markazi qurilishidan oldin bu yerda kutubxona bo'lgan edi."
+                                }
+                            ]
+                        },
+                        {
+                            "pattern": "Would + base verb (Past Actions ONLY, NOT states)",
+                            "meaning": "O'tmishdagi takrorlangan harakatlar va xotiralar",
+                            "usageNotes": "Faqat takrorlangan harakatlar uchun ishlatiladi. 'Be', 'have', 'live', 'know' kabi holat fe'llari bilan 'would' ishlatib bo'lmaydi.",
+                            "examples": [
+                                {
+                                    "sentence": "Every weekend, my father would take us hiking in the mountains.",
+                                    "translation": "Har dam olish kuni otam bizni tog'da sayr qilishga olib borardi."
+                                },
+                                {
+                                    "sentence": "Whenever it rained, we would sit by the window and read books.",
+                                    "translation": "Qachon yomg'ir yog'sa, biz deraza yonida o'tirib kitob o'qirdik."
                                 }
                             ]
                         }
@@ -558,97 +961,148 @@ export const ENGLISH_B1_LESSONS: Lesson[] = [
             },
             {
                 "id": "en-b1-u1-l4-s2",
-                "title": "Mashq",
+                "title": "Amaliy Mashqlar",
                 "type": "practice",
                 "estimatedMinutes": 5,
                 "practiceData": {
-                    "instructions": "To'g'ri shaklni tanlang.",
+                    "instructions": "'Used to' va 'would' grammatik qoidalariga oid to'g'ri variantlarni tanlang.",
                     "exercises": [
                         {
                             "id": "en-b1-u1-l4-e1",
                             "type": "multiple-choice",
-                            "prompt": "\"I _______ (use to) eat meat, but now I am vegetarian.\"",
+                            "prompt": "\"I _______ live in a quiet village, but two years ago I moved to Tashkent.\"",
                             "options": [
-                                "was used to",
-                                "use to",
+                                "would",
                                 "used to",
-                                "am used to"
+                                "am used to",
+                                "use to"
                             ],
-                            "correctAnswer": 2,
-                            "explanation": "Used to eat."
+                            "correctAnswer": 1,
+                            "explanation": "'Live' bu o'tmishdagi holat (state), holat uchun 'would' ishlatilmaydi, faqat 'used to' to'g'ri."
                         },
                         {
-                            "id": "en-b1-u1-l4-ex-2",
+                            "id": "en-b1-u1-l4-e2",
                             "type": "multiple-choice",
-                            "prompt": "Choose the correct word to complete the sentence: \"Her grades improved significantly this term.\"",
+                            "prompt": "\"Every summer vacation, our grandfather _______ take us fishing at the lake.\"",
                             "options": [
-                                "reluctance",
-                                "doubt",
-                                "Significantly",
-                                "delay"
+                                "would",
+                                "was used to",
+                                "use to",
+                                "is used to"
                             ],
-                            "correctAnswer": 2,
-                            "explanation": "\"Significantly\" (Sezilarli darajada) fits the context appropriately."
+                            "correctAnswer": 0,
+                            "explanation": "O'tmishda takrorlangan xotiraviy harakat uchun 'would + take' ishlatiladi."
+                        },
+                        {
+                            "id": "en-b1-u1-l4-e3",
+                            "type": "multiple-choice",
+                            "prompt": "\"Did you _______ play the guitar when you were in high school?\"",
+                            "options": [
+                                "used to",
+                                "use to",
+                                "would",
+                                "using to"
+                            ],
+                            "correctAnswer": 1,
+                            "explanation": "'Did' yordamchi fe'li bo'lgan so'roqda 'use to' shakli keladi."
+                        },
+                        {
+                            "id": "en-b1-u1-l4-e4",
+                            "type": "multiple-choice",
+                            "prompt": "\"I didn't _______ like seafood, but now I eat it almost every week.\"",
+                            "options": [
+                                "used to",
+                                "use to",
+                                "would",
+                                "use"
+                            ],
+                            "correctAnswer": 1,
+                            "explanation": "Inkor gapda 'didn't use to' to'g'ri grammatik qolipdir."
+                        },
+                        {
+                            "id": "en-b1-u1-l4-e5",
+                            "type": "multiple-choice",
+                            "prompt": "\"There _______ be a historic cinema theater opposite the central bazaar.\"",
+                            "options": [
+                                "would",
+                                "used to",
+                                "is used to",
+                                "use"
+                            ],
+                            "correctAnswer": 1,
+                            "explanation": "Bino mavjud bo'lgan holati (state) uchun 'there used to be' to'g'ri ('there would be' xato)."
                         }
                     ]
                 }
             },
             {
                 "id": "en-b1-u1-l4-s3",
-                "title": "Test",
+                "title": "Yakuniy Test",
                 "type": "test",
                 "estimatedMinutes": 5,
                 "testData": {
-                    "instructions": "Savollarga javob bering.",
-                    "passingScorePercentage": 75,
+                    "instructions": "'Used to' va 'would' qo'llanishiga doir test savollariga javob bering.",
+                    "passingScorePercentage": 80,
                     "questions": [
                         {
                             "id": "en-b1-u1-l4-q1",
-                            "question": "Did you _______ to live in a village when you were young?",
+                            "question": "Qaysi gapda 'would' grammatik jihatdan NOTO'G'RI ishlatilgan?",
                             "options": [
-                                "using",
-                                "used",
-                                "use",
-                                "uses"
+                                "Every morning, my father would drink black tea before going to work.",
+                                "When I was younger, I would have curly hair.",
+                                "On weekends, we would ride our bikes around the neighborhood.",
+                                "Whenever she was sad, she would listen to classical music."
                             ],
-                            "correctAnswerIndex": 2,
-                            "explanation": "Did bilan: use to."
+                            "correctAnswerIndex": 1,
+                            "explanation": "'Have curly hair' bu holat (state), holatlar bilan 'would' ishlatilmaydi, 'used to have' bo'lishi kerak."
                         },
                         {
                             "id": "en-b1-u1-l4-q2",
-                            "question": "There _______ be a cinema on this street ten years ago.",
+                            "question": "'I used to wake up early' va 'I am used to waking up early' o'rtasidagi farq nima?",
                             "options": [
-                                "would",
-                                "used to",
-                                "was used",
-                                "is used to"
+                                "Birinchisi o'tmishdagi odat (hozir yo'q); ikkinchisi esa hozir erta turishga ko'nikib ketganlikni bildiradi.",
+                                "Ikkala gap ham mutlaqo bir xil ma'noni beradi.",
+                                "Birinchi gap xato tuzilgan.",
+                                "Ikkinchisi o'tmishda sodir bo'lgan afsusni bildiradi."
                             ],
-                            "correctAnswerIndex": 1,
-                            "explanation": "Holat fe'li bilan faqat: used to be."
+                            "correctAnswerIndex": 0,
+                            "explanation": "'Used to + verb' — o'tmishdagi odat; 'Be used to + V-ing' — ko'nikib ketgan bo'lmoq."
                         },
                         {
                             "id": "en-b1-u1-l4-q3",
-                            "question": "He _______ smoke 20 cigarettes a day, but he quit.",
+                            "question": "Inkor shakl qaysi variantda to'g'ri berilgan?",
                             "options": [
-                                "used to",
-                                "get used to",
-                                "uses",
-                                "is used to"
+                                "I didn't used to eat spicy food.",
+                                "I didn't use to eat spicy food.",
+                                "I wasn't used to eat spicy food.",
+                                "I not used to eat spicy food."
                             ],
-                            "correctAnswerIndex": 0,
-                            "explanation": "Used to smoke."
+                            "correctAnswerIndex": 1,
+                            "explanation": "'didn't' yordamchi fe'lidan so'ng 'use to' keladi."
                         },
                         {
                             "id": "en-b1-u1-l4-q4",
-                            "question": "Every weekend, my grandfather _______ tell us interesting stories.",
+                            "question": "My grandfather _______ a pocket watch that had belonged to his own father.",
                             "options": [
-                                "used",
-                                "is used",
-                                "will",
-                                "would"
+                                "would have",
+                                "used to have",
+                                "was used to have",
+                                "is used to"
                             ],
-                            "correctAnswerIndex": 3,
-                            "explanation": "Takrorlangan harakat: would tell."
+                            "correctAnswerIndex": 1,
+                            "explanation": "Egalik holati (have) uchun 'used to have' to'g'ri."
+                        },
+                        {
+                            "id": "en-b1-u1-l4-q5",
+                            "question": "Which sentence correctly describes a past repeated action in childhood?",
+                            "options": [
+                                "During summer breaks, we would spend hours building treehouses in the backyard.",
+                                "During summer breaks, we used to had treehouses.",
+                                "During summer breaks, we did used to build treehouses.",
+                                "During summer breaks, we are used to build treehouses."
+                            ],
+                            "correctAnswerIndex": 0,
+                            "explanation": "'we would spend hours building...' o'tmishdagi takrorlangan harakat uchun namunaviy jumladir."
                         }
                     ]
                 }
@@ -663,61 +1117,115 @@ export const ENGLISH_B1_LESSONS: Lesson[] = [
         "language": "en",
         "level": "B1",
         "lessonNumber": 5,
-        "title": "B1 Reading: Technology & Social Innovation",
-        "description": "Zamonaviy innovatsiyalar va texnologiyalar haqidagi ilmiy-ommabop maqolani o'qib tushunish.",
-        "estimatedDurationMinutes": 15,
-        "icon": "💡",
+        "title": "Narrative Tenses & Technology Milestones",
+        "description": "O'tgan zamonlar sintezi (Past Simple, Continuous, Past Perfect) va texnologik yutuqlar tahlili.",
+        "estimatedDurationMinutes": 18,
+        "icon": "🚀",
         "steps": [
             {
                 "id": "en-b1-u1-l5-s1",
-                "title": "Matnni O'qish",
+                "title": "Hikoyalash Zamonlari va Texnologik Inqilob",
                 "type": "learn",
-                "estimatedMinutes": 5,
+                "estimatedMinutes": 6,
                 "learnData": {
-                    "title": "Article: The Evolution of Renewable Energy",
-                    "explanation": "Qayta tiklanuvchi energiya manbalari haqidagi maqolani o'qing.",
-                    "keyPoints": [
-                        "Over the past decade, solar energy technology has advanced dramatically.",
-                        "Engineers have developed more efficient photovoltaic panels with lower production costs.",
-                        "Many countries have reduced their carbon emissions by investing in wind farms.",
-                        "However, energy storage and battery capacity remain key challenges."
-                    ],
+                    "title": "Mastering Narrative Tenses in Academic & Tech Contexts",
+                    "explanation": "B1 darajasida hikoyalar va ilmiy-ommabop maqolalarni tushunish hamda tuzish uchun bir nechta o'tgan zamonlar birgalikda qo'llaniladi (Narrative Tenses):\n\n1. Hikoyalash Zamonlari Tizimi:\n- Past Simple: Voqealarning xronologik ketma-ketligi (asosiy syujet liniyasi):\n  • 'Engineers developed the prototype, tested it extensively, and launched the product in 2015.'\n- Past Continuous: O'tmishdagi aniq bir paytda yoki boshqa voqea sodir bo'layotganda davom etayotgan fon harakati:\n  • 'While researchers were experimenting with graphene, they discovered an unexpected electrical property.'\n- Past Perfect (had + V3): O'tmishdagi biror voqeadan ham OLDINROQ sodir bo'lib o'tgan harakat (o'tmishdan oldingi o'tmish):\n  • 'Before Apple introduced the iPhone in 2007, no company had successfully combined a multi-touch screen with internet capabilities.'\n- Present Perfect (have/has + V3): Ushbu o'tgan kashfiyotlarning bugungi kunimizga ko'rsatgan natijasi:\n  • 'Since then, smartphones have revolutionized modern communication.'\n\n2. Vaqt Bog'lovchilari (Time Linkers):\n- By the time + Past Simple, ... Past Perfect: 'By the time the team finished testing, competitors had already released a similar app.'\n- As soon as / Once: 'As soon as they published the research, global investors showed immense interest.'\n\n3. O'zbek o'rganuvchilari uchun xavfli tuzoqlar (Common Pitfalls):\n- ❌ Hamma voqeani faqat bitta Past Simple bilan aytib ketish (IELTS Speaking va Writingda bu uslub grammatik soddalik sifatida baholanib, ballni tushiradi).\n- ❌ Past Perfect'ni yolg'iz, ikkinchi o'tmish voqeasiz ishlatish: 'I had eaten dinner yesterday' (XATO -> 'I ate dinner yesterday' yoki 'When father came home, I had already eaten dinner').\n\n4. IELTS Speaking Foundation Corner:\n- Topic: Describing an Important Invention or Discovery (Speaking Part 2 Simulation)\n- Examiner: 'Describe an invention or technology that has changed your life.'\n- Model Band 6.0+ Answer: 'I would like to talk about the widespread adoption of high-speed fiber-optic internet. Before fast broadband was introduced to my hometown, we had struggled with slow dial-up connections for years. While I was preparing for university entrance exams, having reliable internet made a tremendous difference because I could access online lectures and research materials effortlessly. Since that milestone, it has completely transformed how I study and collaborate.'\n- Discourse Synthesis: 'Before... had struggled' (Past Perfect) + 'While I was preparing... made' (Past Continuous + Past Simple) + 'Since that milestone, it has transformed' (Present Perfect). Bu darajadagi sintaksis Band 6.5–7.0 ball olish garovidir.",
                     "vocabulary": [
                         {
-                            "term": "Renewable",
+                            "term": "breakthrough",
+                            "reading": "/ˈbreɪk.θruː/",
+                            "meaning": "ulkan kashfiyot, burilish yasagan yutuq",
+                            "exampleSentence": "The development of mRNA vaccines was a monumental breakthrough in modern medicine.",
+                            "exampleTranslation": "mRNA vaksinalarining yaratilishi zamonaviy tibbiyotdagi ulkan kashfiyot bo'ldi."
+                        },
+                        {
+                            "term": "innovative",
+                            "reading": "/ˈɪn.ə.və.tɪv/",
+                            "meaning": "yangilikka boy, ilg'or, innovatsion",
+                            "exampleSentence": "The young startup introduced an innovative solution for solar energy storage.",
+                            "exampleTranslation": "Yosh startap quyosh energiyasini saqlash bo'yicha innovatsion yechimni taqdim etdi."
+                        },
+                        {
+                            "term": "revolutionize",
+                            "reading": "/ˌrev.əˈluː.ʃən.aɪz/",
+                            "meaning": "tubdan o'zgartirmoq, inqilobiy yangilik kiritmoq",
+                            "exampleSentence": "Artificial intelligence algorithms have revolutionized automated data analysis.",
+                            "exampleTranslation": "Sun'iy intellekt algoritmlari ma'lumotlarni avtomatlashtirilgan tahlil qilishni tubdan o'zgartirdi."
+                        },
+                        {
+                            "term": "sustainable",
+                            "reading": "/səˈsteɪ.nə.bəl/",
+                            "meaning": "barqaror, ekologiyaga zarar yetkazmaydigan",
+                            "exampleSentence": "Cities worldwide are transitioning toward sustainable public transportation systems.",
+                            "exampleTranslation": "Dunyo bo'ylab shaharlar barqaror jamoat transporti tizimlariga o'tmoqda."
+                        },
+                        {
+                            "term": "adopt",
+                            "reading": "/əˈdɒpt/",
+                            "meaning": "qabul qilmoq, o'zlashtirmoq (texnologiyani)",
+                            "exampleSentence": "Many schools quickly adopted online video conferencing tools during the pandemic.",
+                            "exampleTranslation": "Pandemiya davrida ko'plab maktablar onlayn videokonferensiya vositalarini tezda o'zlashtirdilar."
+                        },
+                        {
+                            "term": "efficient",
+                            "reading": "/ɪˈfɪʃ.ənt/",
+                            "meaning": "yuqori samarali, tejamkor",
+                            "exampleSentence": "Modern electric vehicles feature far more efficient batteries than earlier models.",
+                            "exampleTranslation": "Zamonaviy elektromobillar dastlabki modellarga qaraganda ancha samaraliroq batareyalarga ega."
+                        },
+                        {
+                            "term": "obstacle",
+                            "reading": "/ˈɒb.stə.kəl/",
+                            "meaning": "to'siq, g'ov",
+                            "exampleSentence": "High production cost was the primary obstacle preventing commercial distribution.",
+                            "exampleTranslation": "Yuqori ishlab chiqarish tannarxi tijoriy tarqatishga to'sqinlik qilgan asosiy to'siq edi."
+                        },
+                        {
+                            "term": "transform",
+                            "reading": "/trænsˈfɔːm/",
+                            "meaning": "butunlay o'zgartirmoq, yangi qiyofaga kiritmoq",
+                            "exampleSentence": "Digital banking has transformed how consumers manage their daily finances.",
+                            "exampleTranslation": "Raqamli banking iste'molchilarning kundalik moliyalarini boshqarish usulini butunlay o'zgartirdi."
+                        },
+                        {
+                            "term": "renewable",
                             "reading": "/rɪˈnjuː.ə.bəl/",
-                            "meaning": "Qayta tiklanuvchi",
-                            "exampleSentence": "Solar power is a renewable energy source.",
-                            "exampleTranslation": "Quyosh quvvati qayta tiklanuvchi energiya manbaidir."
+                            "meaning": "qayta tiklanuvchi (energiya manbalari)",
+                            "exampleSentence": "Investing in renewable energy sources like wind and solar reduces carbon emissions.",
+                            "exampleTranslation": "Shamol va quyosh kabi qayta tiklanuvchi energiya manbalariga sarmoya kiritish karbonat chiqindilarini kamaytiradi."
                         },
                         {
-                            "term": "Efficient",
-                            "reading": "/ɪˈfɪʃ.ənt/",
-                            "meaning": "Samarali",
-                            "exampleSentence": "The new engine is much more efficient.",
-                            "exampleTranslation": "Yangi dvigatel ancha samarali."
-                        },
-                        {
-                            "term": "Efficient",
-                            "reading": "/ɪˈfɪʃ.ənt/",
-                            "meaning": "Samarali",
-                            "exampleSentence": "We need to find a more efficient solution.",
-                            "exampleTranslation": "Biz yanada samaraliroq yechim topishimiz kerak."
+                            "term": "impact",
+                            "reading": "/ˈɪm.pækt/",
+                            "meaning": "kuchli ta'sir ko'rsatmoq, ta'sir",
+                            "exampleSentence": "Technological advancements have had a profound impact on global employment trends.",
+                            "exampleTranslation": "Texnologik yutuqlar global bandlik tendensiyalariga chuqur ta'sir ko'rsatdi."
                         }
                     ],
                     "grammarRules": [
                         {
-                            "pattern": "B1 Reading: Technology & Social Innovation",
-                            "meaning": "Zamonaviy innovatsiyalar va texnologiyalar haqidagi ilmiy-ommabop maqolani o'qib tushunish.",
-                            "usageNotes": "Qayta tiklanuvchi energiya manbalari haqidagi maqolani o'qing.",
+                            "pattern": "Past Perfect (had + V3) for Earlier Past Action",
+                            "meaning": "O'tmishdagi ikkinchi harakatdan oldinroq sodir bo'lgan voqea",
+                            "usageNotes": "Odatda 'before', 'by the time', 'after' yoki 'when' bilan o'tmishdagi ikki voqeaning ketma-ketligini aniq ko'rsatish uchun ishlatiladi.",
                             "examples": [
                                 {
-                                    "sentence": "Solar power is a renewable energy source.",
-                                    "translation": "Quyosh quvvati qayta tiklanuvchi energiya manbaidir."
+                                    "sentence": "By the time the engineers fixed the server, thousands of users had reported the outage.",
+                                    "translation": "Muhandislar serverni tuzatgunlariga qadar, minglab foydalanuvchilar uzilish haqida xabar berib bo'lgan edilar."
                                 },
                                 {
-                                    "sentence": "The new engine is much more efficient.",
-                                    "translation": "Yangi dvigatel ancha samarali."
+                                    "sentence": "She had never used a laptop before she joined university.",
+                                    "translation": "Universitetga kirishidan oldin u hech qachon noutbukdan foydalanmagan edi."
+                                }
+                            ]
+                        },
+                        {
+                            "pattern": "Narrative Synthesis: Past Continuous (background) + Past Simple (interruption)",
+                            "meaning": "Fon harakati va kutilmagan voqeaning o'zaro bog'lanishi",
+                            "usageNotes": "Hikoya aytganda vaziyat fonini 'While + Past Continuous' bilan tasvirlab, to'satdan yuz bergan hodisa 'Past Simple' bilan beriladi.",
+                            "examples": [
+                                {
+                                    "sentence": "While they were analyzing the experiment data, they noticed an unusual pattern.",
+                                    "translation": "Ular tajriba ma'lumotlarini tahlil qilayotgan paytlarida g'ayrioddiy qonuniyatni payqab qolishdi."
                                 }
                             ]
                         }
@@ -726,97 +1234,148 @@ export const ENGLISH_B1_LESSONS: Lesson[] = [
             },
             {
                 "id": "en-b1-u1-l5-s2",
-                "title": "Tahlil Mashqi",
+                "title": "Amaliy Mashqlar",
                 "type": "practice",
                 "estimatedMinutes": 5,
                 "practiceData": {
-                    "instructions": "Matn bo'yicha to'g'ri javobni tanlang.",
+                    "instructions": "Hikoyalash zamonlari (Past Simple, Continuous, Past Perfect) bo'yicha to'g'ri javoblarni tanlang.",
                     "exercises": [
                         {
                             "id": "en-b1-u1-l5-e1",
                             "type": "multiple-choice",
-                            "prompt": "What remains a key challenge for renewable energy?",
+                            "prompt": "\"By the time the electric vehicle was released, researchers _______ the battery efficiency by 40%.\"",
                             "options": [
-                                "High sunlight costs",
-                                "Too many solar panels",
-                                "Lack of wind",
-                                "Energy storage and battery capacity"
+                                "had improved",
+                                "have improved",
+                                "were improving to",
+                                "improve"
                             ],
-                            "correctAnswer": 3,
-                            "explanation": "Matnda: energy storage and battery capacity remain key challenges."
+                            "correctAnswer": 0,
+                            "explanation": "'By the time + Past Simple' bo'lganda, undan oldingi harakat Past Perfect 'had improved' bilan beriladi."
                         },
                         {
-                            "id": "en-b1-u1-l5-ex-2",
+                            "id": "en-b1-u1-l5-e2",
                             "type": "multiple-choice",
-                            "prompt": "Choose the correct word to complete the sentence: \"The new engine is much more efficient.\"",
+                            "prompt": "\"While the scientific team _______ solar cells in the laboratory, a fire alarm went off.\"",
                             "options": [
-                                "delay",
-                                "Efficient",
-                                "doubt",
-                                "reluctance"
+                                "tested",
+                                "were testing",
+                                "had tested",
+                                "are testing"
                             ],
                             "correctAnswer": 1,
-                            "explanation": "\"Efficient\" (Samarali) fits the context appropriately."
+                            "explanation": "Fon jarayoni davom etayotgan payt: Past Continuous 'were testing'."
+                        },
+                        {
+                            "id": "en-b1-u1-l5-e3",
+                            "type": "multiple-choice",
+                            "prompt": "\"Before 2007, consumers _______ mobile internet with touchscreens.\"",
+                            "options": [
+                                "had never experienced",
+                                "have never experienced",
+                                "never experience",
+                                "were never experiencing"
+                            ],
+                            "correctAnswer": 0,
+                            "explanation": "2007-yildan oldingi davr uchun Past Perfect: 'had never experienced'."
+                        },
+                        {
+                            "id": "en-b1-u1-l5-e4",
+                            "type": "multiple-choice",
+                            "prompt": "\"The laboratory made a major _______ in renewable energy storage last year.\"",
+                            "options": [
+                                "breakthrough",
+                                "habit",
+                                "duration",
+                                "spectacle"
+                            ],
+                            "correctAnswer": 0,
+                            "explanation": "Ilmiy yutuq yoki ulkan kashfiyot 'breakthrough' deb ataladi."
+                        },
+                        {
+                            "id": "en-b1-u1-l5-e5",
+                            "type": "multiple-choice",
+                            "prompt": "\"Since the new technology was adopted, our carbon emissions _______ by 25%.\"",
+                            "options": [
+                                "decreased",
+                                "have decreased",
+                                "had decreased",
+                                "were decreasing"
+                            ],
+                            "correctAnswer": 1,
+                            "explanation": "'Since' ergash gapida Past Simple bo'lsa, bosh gapda Present Perfect ('have decreased') ishlatiladi."
                         }
                     ]
                 }
             },
             {
                 "id": "en-b1-u1-l5-s3",
-                "title": "Test",
+                "title": "Yakuniy Test",
                 "type": "test",
                 "estimatedMinutes": 5,
                 "testData": {
-                    "instructions": "Savollarga javob bering.",
-                    "passingScorePercentage": 75,
+                    "instructions": "Narrative tenses va texnologik mavzudagi test savollariga javob bering.",
+                    "passingScorePercentage": 80,
                     "questions": [
                         {
                             "id": "en-b1-u1-l5-q1",
-                            "question": "How has solar energy changed over the past decade?",
+                            "question": "Qaysi gapda o'tgan zamonlar xronologiyasi (Past Perfect va Past Simple) to'g'ri qo'llangan?",
                             "options": [
-                                "It has become more expensive",
-                                "It has declined in popularity",
-                                "It has stopped functioning",
-                                "It has advanced dramatically"
+                                "When the meeting started, the manager had already finished the presentation slides.",
+                                "When the meeting had started, the manager finished the slides.",
+                                "When the meeting starts, the manager had finished the slides.",
+                                "By the time he had arrived, we left."
                             ],
-                            "correctAnswerIndex": 3,
-                            "explanation": "Advanced dramatically."
+                            "correctAnswerIndex": 0,
+                            "explanation": "Taqdimot slaydlarini tayyorlash majlis boshlanishidan oldin yakunlangan, shuning uchun 'had already finished' to'g'ri."
                         },
                         {
                             "id": "en-b1-u1-l5-q2",
-                            "question": "\"Carbon emissions\" nimani anglatadi?",
+                            "question": "What is the primary function of Past Perfect (had + V3) in storytelling?",
                             "options": [
-                                "Uglerod chiqindilari (atmosferaga)",
-                                "Elektr toki",
-                                "Quyosh nurlari",
-                                "Suv zaxiralari"
+                                "Kelajakdagi shartli taxminlarni bildirish uchun",
+                                "O'tmishdagi asosiy voqeadan ham oldinroq sodir bo'lgan harakatni ko'rsatish uchun",
+                                "Hozirgi davom etayotgan harakatni aytish uchun",
+                                "Har kuni takrorlanadigan odatlarni tasvirlash uchun"
                             ],
-                            "correctAnswerIndex": 0,
-                            "explanation": "Uglerod chiqindilari."
+                            "correctAnswerIndex": 1,
+                            "explanation": "Past Perfect o'tmishdagi bir nuqtadan oldinroq yuz bergan voqeani (earlier past) ko'rsatadi."
                         },
                         {
                             "id": "en-b1-u1-l5-q3",
-                            "question": "Why have countries invested in wind farms?",
+                            "question": "Texnologiya sohasida 'sustainable energy' birikmasi nimani bildiradi?",
                             "options": [
-                                "To increase coal burning",
-                                "To stop electricity",
-                                "To reduce carbon emissions",
-                                "To build more roads"
+                                "Tez tugaydigan va qimmat yoqilg'i",
+                                "Atrof-muhitga zarar yetkazmaydigan, barqaror va qayta tiklanuvchi energiya",
+                                "Faqat qishda ishlatiladigan isitish tizimi",
+                                "Xavfli kimyoviy chiqindilar"
                             ],
-                            "correctAnswerIndex": 2,
-                            "explanation": "To reduce emissions."
+                            "correctAnswerIndex": 1,
+                            "explanation": "'Sustainable energy' ekologik toza va kelajak avlodlar uchun barqaror energiya manbalaridir."
                         },
                         {
                             "id": "en-b1-u1-l5-q4",
-                            "question": "\"Efficient\" so'zining ma'nodoshini toping:",
+                            "question": "While the programmer _______ the new software, she discovered a critical security bug.",
                             "options": [
-                                "Effective / Productive",
-                                "Dangerous",
-                                "Expensive",
-                                "Slow"
+                                "was debugging",
+                                "had debugged",
+                                "debugs",
+                                "is debugging to"
                             ],
                             "correctAnswerIndex": 0,
-                            "explanation": "Effective / Productive (samarali)."
+                            "explanation": "O'tmishda davom etayotgan fon harakati: 'While the programmer was debugging...'."
+                        },
+                        {
+                            "id": "en-b1-u1-l5-q5",
+                            "question": "Which sentence demonstrates the best grammatical range for an IELTS speaking test?",
+                            "options": [
+                                "Before I started university, I had never lived away from my family, but it taught me great independence.",
+                                "I started university and I never lived with family and it was good.",
+                                "Before I start university, I am never living with family.",
+                                "I had lived with family yesterday."
+                            ],
+                            "correctAnswerIndex": 0,
+                            "explanation": "Birinchi gapda Past Perfect ('had never lived') va Past Simple ('started', 'taught') uyg'unlashgan bo'lib, IELTS'da yuqori ball keltiradi."
                         }
                     ]
                 }
