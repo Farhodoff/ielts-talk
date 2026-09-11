@@ -2380,149 +2380,228 @@ export const ENGLISH_C1_LESSONS: Lesson[] = [
         "level": "C1",
         "lessonNumber": 1,
         "title": "Classical Rhetoric: Logos, Pathos & Ethos in Public Oratory",
-        "description": "Mantiq (logos), hissiy ta'sir (pathos) va notiqning nufuzi (ethos) orqali ishontirish san'ati.",
-        "estimatedDurationMinutes": 16,
+        "description": "Aristotel notiqlik san'ati (Ethos, Pathos, Logos), ritorik vositalar (Tricolon, Antithesis, Chiasmus) va jamoat oldida nutq so'zlash san'ati.",
+        "estimatedDurationMinutes": 20,
         "icon": "🏛️",
         "steps": [
             {
                 "id": "en-c1-u3-l1-s1",
-                "title": "Notiqlik Asoslari",
+                "title": "Classical Rhetoric & Oratorical Devices",
                 "type": "learn",
-                "estimatedMinutes": 5,
+                "estimatedMinutes": 7,
                 "learnData": {
-                    "title": "Aristotelian Rhetorical Triangle",
-                    "explanation": "Logos: Qat'iy mantiq, statistika va dalillar. Pathos: Tinglovchining hissiyoti va empatiyasiga ta'sir. Ethos: Notiqning ishonchliligi, axloqiy nufuzi va vakolati.",
+                    "title": "Aristotelian Rhetoric & Oratorical Mastery",
+                    "explanation": "C1 va Band 8.5+ darajasida notiq faqat grammatik to'g'ri gapirishi kifoya emas; u tinglovchini ishontira olishi (persuasion) va ritorik san'at vositalaridan ongli ravishda foydalana olishi lozim. Qadimgi yunon faylasufi Aristotel ishontirishning uchta ustunini belgilab bergan:\n\n1. **Ishontirishning Uch Ustuni (The Rhetorical Triangle)**:\n   - **Ethos (Ishonchlilik va Obro')**: Notiqning shaxsiy xarakteri, axloqiy nufuzi va mutaxassislik malakasi (*As an epidemiologist with two decades of field experience, I assure you...*).\n   - **Logos (Mantiq va Dalil)**: Ratsional dalillar, statistika, sabab-oqibat zanjiri va sillogizmlar (*The empirical data demonstrates an indisputable 40% reduction in mortality*).\n   - **Pathos (Hissiy Ta'sir)**: Tinglovchining qadriyatlari, orzu-umidlari yoki qo'rquvlariga murojaat qilish (*Picture a future where no child is deprived of clean water*).\n\n2. **Klassik Ritorik Figuralar (Rhetorical Devices)**:\n   - **Tricolon (Uchlik qoidasi)**: Fikrni uchta parallel so'z yoki ibora bilan kuchaytirish: *We must deliberate with prudence, act with resolve, and persevere with courage.*\n   - **Antithesis (Qarama-qarshilik)**: Ikki zid tushunchani parallel tuzilmada qiyoslash: *Ask not what your country can do for you; ask what you can do for your country.*\n   - **Anaphora (Gap boshida takror)**: Ketma-ket gaplar boshida bir xil iborani takrorlab emotsional cho'qqi yaratish: *We shall not falter, we shall not waver, and we shall not surrender.*\n\n⚠️ **O'zbek o'rganuvchilari uchun xavfli tuzoqlar (Common Pitfalls)**:\n- ❌ *Only using emotional stories without data in academic speeches.* (IELTS va ilmiy chiqishlarda faqat 'Pathos'ga tayanish subyektivlik hisoblanadi; 'Logos' ustun bo'lishi shart).\n- ❌ *Monotone delivery of tricolons.* (Uchlik qoidasida intonatsiya dastlabki ikkitasida ko'tarilib, uchinchisida qat'iy tushishi kerak: ↗️ ↗️ ↘️).\n\n🎯 **IELTS Speaking & Writing Band 8.5 Masterclass**:\n- **Prompt**: Speaking Part 3: What qualities distinguish an inspiring global leader?\n- **Model Answer (Band 8.0-8.5)**: An extraordinary statesman seamlessly integrates Ethos, Logos, and Pathos. Rather than merely citing econometric forecasts, they articulate a compelling vision that resonates with citizens' deepest aspirations. Through the mastery of antithesis and measured oratorical cadence, great leaders transform abstract policy debates into moral imperatives that galvanize collective action.\n- **Discourse Markers**: seamlessly integrates, resonates with citizens' deepest aspirations, measured oratorical cadence, galvanize collective action\n- **Examiner / Intonation Tip**: Antithesis qo'llaganda ikkita qarama-qarshi so'zga maxsus urg'u bering (*Not what your country CAN DO, but what YOU CAN DO*). Bu sizning ravonligingiz va leksik mahoratingizni ko'rsatadi.",
                     "vocabulary": [
                         {
-                            "term": "Oratory",
-                            "reading": "/ˈɒr.ə.tər.i/",
-                            "meaning": "Notiqlik san'ati",
-                            "exampleSentence": "His powerful oratory captivated the crowd.",
-                            "exampleTranslation": "Uning kuchli notiqligi ommani maftun etdi."
+                            "term": "Ethos",
+                            "reading": "/ˈiː.θɒs/",
+                            "meaning": "Etos (notiqning obro'si, ishonchliligi va axloqiy nufuzi)",
+                            "exampleSentence": "The surgeon's calm demeanor and decades of clinical research established undeniable ethos.",
+                            "exampleTranslation": "Jarrohning xotirjam o'zini tutishi va o'n yillik klinik tadqiqotlari unga rad etib bo'lmas etos (nufuz) bag'ishladi."
                         },
                         {
-                            "term": "Exemplify",
-                            "reading": "/ɪɡˈzem.plɪ.faɪ/",
-                            "meaning": "Yorqin misol boʻlmoq",
-                            "exampleSentence": "Recent discoveries exemplify the power of modern physics.",
-                            "exampleTranslation": "Soʻnggi kashfiyotlar zamonaviy fizika qudratini yaqqol namoyon etadi."
+                            "term": "Pathos",
+                            "reading": "/ˈpeɪ.θɒs/",
+                            "meaning": "Patos (hissiyotlarga, rahm-shafqatga yoki qadriyatlarga ta'sir qilish)",
+                            "exampleSentence": "The documentary relied heavily on pathos, depicting the harrowing struggles of displaced refugees.",
+                            "exampleTranslation": "Hujjatli film uy-joyidan ayrilgan qochqinlarning ayanchli qiyinchiliklarini tasvirlab, asosan patosga (hissiyotga) tayandi."
                         },
                         {
-                            "term": "Nominalisation",
-                            "reading": "/ˌnɒmɪnəlaɪˈzeɪʃən/",
-                            "meaning": "Feʼlni otga aylantirish (akademik uslub)",
-                            "exampleSentence": "Nominalisation lends academic weight to scientific discourse.",
-                            "exampleTranslation": "Nominalizatsiya ilmiy matnga akademik salmoq beradi."
+                            "term": "Logos",
+                            "reading": "/ˈlɒɡ.ɒs/",
+                            "meaning": "Logos (mantiqiy dalillar, faktlar va sababiyat zanjiri)",
+                            "exampleSentence": "Economists grounded their critique in logos, pointing to rigorous statistical regressions.",
+                            "exampleTranslation": "Iqtisodchilar o'z tanqidlarini qat'iy statistik regressiyalarga asoslab, logosga (mantiqqa) tayandilar."
+                        },
+                        {
+                            "term": "Tricolon",
+                            "reading": "/traɪˈkəʊ.lɒn/",
+                            "meaning": "Trikolon (uchta parallel qismdan iborat ritorik jumla)",
+                            "exampleSentence": "'Government of the people, by the people, for the people' is history's most famous tricolon.",
+                            "exampleTranslation": "'Xalq hukumati, xalq tomonidan, xalq uchun' iborasi tarixdagi eng mashhur trikolondir."
+                        },
+                        {
+                            "term": "Antithesis",
+                            "reading": "/ænˈtɪθ.ə.sɪs/",
+                            "meaning": "Antiteza (qarama-qarshi tushunchalarni yonma-yon qo'yish)",
+                            "exampleSentence": "The orator juxtaposed war and peace in a striking rhetorical antithesis.",
+                            "exampleTranslation": "Notiq hayratlanarli ritorik antiteza orqali urush va tinchlikni yonma-yon qo'ydi."
+                        },
+                        {
+                            "term": "Cadence",
+                            "reading": "/ˈkeɪ.dəns/",
+                            "meaning": "Nutq maromi, intonatsion ohang va ritm",
+                            "exampleSentence": "The measured cadence of her voice mesmerized the packed auditorium.",
+                            "exampleTranslation": "Uning ovozidagi o'lchovli nutq maromi liq to'la auditoriyani sehrlab qo'ydi."
+                        },
+                        {
+                            "term": "Galvanize",
+                            "reading": "/ˈɡæl.və.naɪz/",
+                            "meaning": "Harakatga keltirmoq, ruhlantirib uyg'otmoq",
+                            "exampleSentence": "The activist's impassioned address served to galvanize youth participation in civic politics.",
+                            "exampleTranslation": "Faolning jo'shqin nutqi fuqarolik siyosatida yoshlar ishtirokini harakatga keltirishga xizmat qildi."
+                        },
+                        {
+                            "term": "Persuasion",
+                            "reading": "/pəˈsweɪ.ʒən/",
+                            "meaning": "Ishontirish, ko'ndirish san'ati",
+                            "exampleSentence": "Diplomatic persuasion often achieves lasting peace where military coercion fails.",
+                            "exampleTranslation": "Harbiy majburlash muvaffaqiyatsizlikka uchragan joyda diplomatik ishontirish san'ati ko'pincha barqaror tinchlikka erishadi."
                         }
                     ],
-                    "grammarRules": [
-                        {
-                            "pattern": "Classical Rhetoric: Logos, Pathos & Ethos in Public Oratory",
-                            "meaning": "Mantiq (logos), hissiy ta'sir (pathos) va notiqning nufuzi (ethos) orqali ishontirish san'ati.",
-                            "usageNotes": "Logos: Qat'iy mantiq, statistika va dalillar. Pathos: Tinglovchining hissiyoti va empatiyasiga ta'sir. Ethos: Notiqning ishonchliligi, axloqiy nufuzi va vakolati.",
-                            "examples": [
-                                {
-                                    "sentence": "His powerful oratory captivated the crowd.",
-                                    "translation": "Uning kuchli notiqligi ommani maftun etdi."
-                                }
-                            ]
-                        }
+                    "keyPoints": [
+                        "Aristotle's Rhetorical Triangle: Ethos (credibility), Logos (logic/data), Pathos (emotional resonance).",
+                        "Classical stylistic devices: Tricolon (rule of three), Antithesis (contrasting parallelism), Anaphora (repeated openings).",
+                        "Effective C1 speech delivery balances objective data (Logos) with inspiring visionary conviction (Ethos & Pathos).",
+                        "Master intonational cadence: rise on the first two elements of a tricolon and resolve with a definitive falling tone on the third."
                     ]
                 }
             },
             {
                 "id": "en-c1-u3-l1-s2",
-                "title": "Mashq",
+                "title": "Classical Rhetoric Amaliyoti",
                 "type": "practice",
-                "estimatedMinutes": 5,
+                "estimatedMinutes": 6,
                 "practiceData": {
-                    "instructions": "To'g'ri ritorika vositasini aniqlang.",
+                    "instructions": "Ritorik vositalar va notiqlik san'ati prinsiplari bo'yicha to'g'ri tahlilni tanlang.",
                     "exercises": [
                         {
                             "id": "en-c1-u3-l1-e1",
                             "type": "multiple-choice",
-                            "prompt": "\"As a neurosurgeon with 25 years of clinical practice, I can attest to these medical risks.\" Which rhetorical appeal is used?",
+                            "prompt": "Identify the rhetorical device in: 'We cannot dedicate, we cannot consecrate, we cannot hallow this ground.'",
                             "options": [
-                                "Ethos (Credibility / Authority)",
-                                "Fallacy",
-                                "Logos only",
-                                "Pathos"
+                                "Tricolon paired with anaphora",
+                                "Metaphor paired with euphemism",
+                                "Chiasmus without repetition",
+                                "Subordinate concessive clause"
                             ],
                             "correctAnswer": 0,
-                            "explanation": "Ethos (shaxsiy nufuz va tajribaga tayanish)."
+                            "explanation": "Uchta parallel iboraning ketma-ket kelishi 'tricolon', va har birining 'we cannot' bilan boshlanishi 'anaphora' vositasidir."
                         },
                         {
-                            "id": "en-c1-u3-l1-ex-2",
+                            "id": "en-c1-u3-l1-e2",
                             "type": "multiple-choice",
-                            "prompt": "Choose the correct word to complete the sentence: \"Recent discoveries exemplify the power of modern physics.\"",
+                            "prompt": "Which component of Aristotle's rhetorical triangle is established when a speaker cites peer-reviewed statistical metastudies?",
                             "options": [
-                                "reluctance",
-                                "delay",
-                                "Exemplify",
-                                "doubt"
+                                "Logos",
+                                "Pathos",
+                                "Bathos",
+                                "Catharsis"
                             ],
-                            "correctAnswer": 2,
-                            "explanation": "\"Exemplify\" (Yorqin misol boʻlmoq) fits the context appropriately."
+                            "correctAnswer": 0,
+                            "explanation": "Ratsional dalillar, statistika va ilmiy tadqiqotlar 'Logos' (mantiqiy isbot) ustuniga kiradi."
+                        },
+                        {
+                            "id": "en-c1-u3-l1-e3",
+                            "type": "multiple-choice",
+                            "prompt": "Select the sentence that exemplifies 'antithesis':",
+                            "options": [
+                                "Better to reign in Hell than serve in Heaven.",
+                                "The rain fell heavily upon the parched earth.",
+                                "The corporation expanded its operations globally.",
+                                "Because of inflation, consumer spending plummeted."
+                            ],
+                            "correctAnswer": 0,
+                            "explanation": "'Reign in Hell' va 'serve in Heaven' o'rtasidagi parallel qarama-qarshilik klassik antitezadir."
+                        },
+                        {
+                            "id": "en-c1-u3-l1-e4",
+                            "type": "multiple-choice",
+                            "prompt": "What does a speaker establish when sharing their 25 years of medical expertise and credentials?",
+                            "options": [
+                                "Ethos (credibility & moral authority)",
+                                "Pathos (emotional appeal)",
+                                "Fallacy (logical error)",
+                                "Anaphora (grammatical repetition)"
+                            ],
+                            "correctAnswer": 0,
+                            "explanation": "O'zining kasbiy malakasi, tajribasi va ishonchliligini ko'rsatish 'Ethos' hisoblanadi."
+                        },
+                        {
+                            "id": "en-c1-u3-l1-e5",
+                            "type": "multiple-choice",
+                            "prompt": "Complete the tricolon with the most rhetorically balanced verb: 'To observe with curiosity, to question with skepticism, and to _______ with integrity.'",
+                            "options": [
+                                "conclude",
+                                "concluding",
+                                "conclusion",
+                                "having concluded"
+                            ],
+                            "correctAnswer": 0,
+                            "explanation": "Parallelizm qoidasiga ko'ra, oldingi ikkita infinitiv ('to observe', 'to question') kabi 'to conclude' shaklida bo'lishi shart."
                         }
                     ]
                 }
             },
             {
                 "id": "en-c1-u3-l1-s3",
-                "title": "Test",
+                "title": "Classical Rhetoric Baholash Testi",
                 "type": "test",
-                "estimatedMinutes": 6,
+                "estimatedMinutes": 7,
                 "testData": {
-                    "instructions": "Savollarga javob bering.",
-                    "passingScorePercentage": 75,
+                    "instructions": "Ritorika va jamoat oldida nutq so'zlash mezonlari bo'yicha imtihon.",
+                    "passingScorePercentage": 80,
                     "questions": [
                         {
                             "id": "en-c1-u3-l1-q1",
-                            "question": "Which rhetorical appeal relies strictly on empirical data, syllogisms and deductive reasoning?",
+                            "question": "What is the primary danger of relying exclusively on 'Pathos' in an academic or policy address?",
                             "options": [
-                                "Logos",
-                                "Mythos",
-                                "Ethos",
-                                "Pathos"
+                                "The speech will sound excessively dry and mathematical.",
+                                "The audience may perceive the argument as emotionally manipulative and devoid of empirical substance.",
+                                "It violates copyright law.",
+                                "It causes the speaker to speak too quietly."
                             ],
-                            "correctAnswerIndex": 0,
-                            "explanation": "Logos."
+                            "correctAnswerIndex": 1,
+                            "explanation": "Faqat hissiyotga (Pathos) tayanish dalillarning yetishmasligi va emotsional manipulyatsiya sifatida qabul qilinish xavfini tug'diradi."
                         },
                         {
                             "id": "en-c1-u3-l1-q2",
-                            "question": "Using vivid, emotional imagery of suffering children to raise charity funds is an appeal to:",
+                            "question": "'That's one small step for a man, one giant leap for mankind.' This iconic statement is a masterclass in _______.",
                             "options": [
-                                "Ethos",
-                                "Fallacy",
-                                "Logos",
-                                "Pathos"
+                                "antithesis",
+                                "bathos",
+                                "euphemism",
+                                "overgeneralization"
                             ],
-                            "correctAnswerIndex": 3,
-                            "explanation": "Pathos."
+                            "correctAnswerIndex": 0,
+                            "explanation": "'Small step' va 'giant leap' qarama-qarshiligi parallel tuzilgan antitezadir."
                         },
                         {
                             "id": "en-c1-u3-l1-q3",
-                            "question": "What is a \"straw man fallacy\"?",
+                            "question": "Which vocal technique best enhances the delivery of a rhetorical tricolon?",
                             "options": [
-                                "Speaking too loudly",
-                                "Quoting a famous scientist",
-                                "Misrepresenting an opponent's argument to make it easier to attack",
-                                "Using perfect grammar"
+                                "Speaking in an absolute monotone with zero pitch change.",
+                                "A rising vocal pitch on elements one and two, followed by a definitive falling intonational resolution on element three.",
+                                "Whispering the entire sentence.",
+                                "Shouting the first word and mumbling the rest."
                             ],
-                            "correctAnswerIndex": 2,
-                            "explanation": "Misrepresenting an argument."
+                            "correctAnswerIndex": 1,
+                            "explanation": "Uchlik figurasida birinchi va ikkinchi qismda ko'tariluvchi intonatsiya, uchinchi qismda esa tushuvchi qat'iy ohang qo'llanadi."
                         },
                         {
                             "id": "en-c1-u3-l1-q4",
-                            "question": "\"Ad hominem\" refers to an attack directed against:",
+                            "question": "What does the verb 'galvanize' mean in political discourse?",
                             "options": [
-                                "The statistics",
-                                "The person rather than their substantive argument",
-                                "The microphone",
-                                "The grammar of the text"
+                                "To coat metal in protective zinc.",
+                                "To shock, inspire, or stimulate people into concerted collective action.",
+                                "To formally adjourn a parliamentary session.",
+                                "To veto a proposed piece of legislation."
                             ],
                             "correctAnswerIndex": 1,
-                            "explanation": "Directed against the person."
+                            "explanation": "'Galvanize' — ommani ruhlantirib, birgalikda harakat qilishga undash degan ma'noni beradi."
+                        },
+                        {
+                            "id": "en-c1-u3-l1-q5",
+                            "question": "Identify the sentence that achieves persuasive balance by synthesizing Ethos and Logos:",
+                            "options": [
+                                "I am sad because nature is pretty and trees are dying.",
+                                "Drawing on twenty years of climatological modeling, our team can verify a statistically significant 1.5°C thermal rise.",
+                                "You must believe me because I am very famous on television.",
+                                "If we do not stop this right now, monsters will eat us."
+                            ],
+                            "correctAnswerIndex": 1,
+                            "explanation": "O'zining 20 yillik ilmiy tajribasi (Ethos) va statistik isbotlangan 1.5°C ko'tarilishi (Logos) mukammal akademik sintezdir."
                         }
                     ]
                 }
@@ -2538,153 +2617,228 @@ export const ENGLISH_C1_LESSONS: Lesson[] = [
         "level": "C1",
         "lessonNumber": 2,
         "title": "Spontaneous Debate Formulation & Rebuttal Techniques",
-        "description": "Muntazam bahs-munozarada raqib fikriga darhol mantiqiy e'tiroz bildirish usullari.",
-        "estimatedDurationMinutes": 16,
+        "description": "Debat va munozaralarda darhol raddiya berish (rebuttal), raqib dalilidagi mantiqiy xatolarni (fallacies) fosh qilish va dalilni mustahkamlash.",
+        "estimatedDurationMinutes": 20,
         "icon": "⚔️",
         "steps": [
             {
                 "id": "en-c1-u3-l2-s1",
-                "title": "E'tiroz San'ati",
+                "title": "Debate Dialectics & Rebuttal Strategies",
                 "type": "learn",
-                "estimatedMinutes": 5,
+                "estimatedMinutes": 7,
                 "learnData": {
-                    "title": "Constructing an Academic Rebuttal",
-                    "explanation": "1. Concession (Yon berish): \"While I concede that initial capital expenditure is high...\" 2. Counter-argument (Asosiy zarba): \"... this overlooks the exponential long-term cost reductions.\" 3. Substantiation (Isbot): \"Empirical benchmarks prove a return on investment within 36 months.\"",
+                    "title": "Spontaneous Rebuttal & Dialectical Argumentation",
+                    "explanation": "C1 darajasidagi munozarachi raqib fikrini shunchaki qo'pollik bilan inkor etmaydi. U dialektik raddiya texnikalaridan foydalanib, raqib argumentining poydevoridagi mantiqiy xatoni (logical fallacy) yoki noaniq farazni (flawed premise) ko'rsatib beradi.\n\nAsosiy raddiya bosqichlari (The Four-Step Rebuttal):\n1. **Iqtibos keltirish va tan olish (Quote & Acknowledge)**:\n   - *My opponent contends that universal basic income stifles worker motivation...*\n2. **Zid pozitsiyani bayon qilish (State Counter-Thesis)**:\n   - *However, empirical evidence from pilot programs contradicts this assertion...*\n3. **Mantiqiy dalil taqdim etish (Provide Supporting Logos)**:\n   - *In fact, recipients utilize financial security to pursue entrepreneurship and skill acquisition...*\n4. **Xulosalash va ahamiyatini ko'rsatish (Impact Synthesis)**:\n   - *Therefore, far from disincentivizing labor, basic income unleashes human potential.*\n\nKeng tarqalgan mantiqiy xatolar (Logical Fallacies to Expose):\n- **Strawman Fallacy**: Raqib fikrini ataylab o'ta soddalashtirib yoki buzib ko'rsatib, keyin o'sha soxta versiyani yiqitish.\n  *To counter: 'That is a strawman distortion; our proposal advocates targeted subsidies, not blanket nationalization.'*\n- **Ad Hominem**: Dalilga javob bermasdan shaxsga hujum qilish.\n- **Red Herring**: Asosiy mavzudan chalg'itish uchun boshqa mavzuni suqishtirish.\n- **False Dichotomy**: Masalani faqat ikkita o'ta keskin variantga bo'lib ko'rsatish (*Either we ban all cars, or the planet dies*).\n\n⚠️ **O'zbek o'rganuvchilari uchun xavfli tuzoqlar (Common Pitfalls)**:\n- ❌ *You are totally wrong and your idea is stupid.* (Shaxsga hujum va emotsional portlash debatlarda diskvalifikatsiyaga sabab bo'ladi).\n  ✅ *While I appreciate the perspective, the underlying premise rests upon an unverified assumption.*\n- ❌ *Contradicting without offering alternative evidence.* (Quruq inkor qilib o'rniga dalil keltirmaslik raddiyani kuchsiz qiladi).\n\n🎯 **IELTS Speaking & Writing Band 8.5 Masterclass**:\n- **Prompt**: Speaking Part 3: Some argue that higher education should be entirely free. Do you agree?\n- **Model Answer (Band 8.0-8.5)**: While I concede the ethical appeal of universal tuition waivers, the fiscal premise underpinning such proposals is frequently fallacious. If tertiary education were wholly state-funded without progressive taxation, institutions would suffer catastrophic budgetary constraints. Rather than implementing blanket subsidies, governments should deploy targeted means-tested bursaries that empower socioeconomically disadvantaged students without compromising pedagogical quality.\n- **Discourse Markers**: While I concede the ethical appeal of..., the fiscal premise underpinning..., Rather than implementing blanket subsidies, deploy targeted means-tested bursaries\n- **Examiner / Intonation Tip**: Raddiya berishda avval raqib dalilini tan oling (*While I concede...*), so'ng *However* yoki *Nevertheless* so'zidan keyin asosiy zarbani bering. Bu sizning xolis va mustahkam intellektual salohiyatingizni ko'rsatadi.",
                     "vocabulary": [
                         {
                             "term": "Rebuttal",
                             "reading": "/rɪˈbʌt.əl/",
-                            "meaning": "Raddiya / E'tirozli dalil",
-                            "exampleSentence": "She formulated a devastating rebuttal.",
-                            "exampleTranslation": "U kuchli raddiya keltirdi."
+                            "meaning": "Raddiya, dalilli e'tiroz",
+                            "exampleSentence": "The defense attorney delivered an incisive rebuttal that systematically dismantled the prosecution's timeline.",
+                            "exampleTranslation": "Himoyachi advokat prokurorning voqealar xronologiyasini muntazam ravishda parchalab tashlagan o'tkir raddiya berdi."
                         },
                         {
-                            "term": "Concede",
-                            "reading": "/kənˈsiːd/",
-                            "meaning": "Tan olmoq / Yon bermoq",
-                            "exampleSentence": "He conceded that the timeline was optimistic.",
-                            "exampleTranslation": "U muddat juda optimistik ekanini tan oldi."
+                            "term": "Refutation",
+                            "reading": "/ˌref.jʊˈteɪ.ʃən/",
+                            "meaning": "Inkor etish, noto'g'riligini isbotlash",
+                            "exampleSentence": "Galileo published a rigorous refutation of the geocentric celestial model.",
+                            "exampleTranslation": "Galiley geosentrik koinot modelining qat'iy ilmiy inkori va rad etilishini nashr ettirdi."
                         },
                         {
-                            "term": "Pragmatic",
-                            "reading": "/præɡˈmæt.ɪk/",
-                            "meaning": "Amaliy, pragmatik",
-                            "exampleSentence": "We adopted a pragmatic approach to problem-solving.",
-                            "exampleTranslation": "Biz muammoni hal qilishda amaliy yondashuvni qoʻlladik."
+                            "term": "Premise",
+                            "reading": "/ˈprem.ɪs/",
+                            "meaning": "Premissa, dastlabki asos/faraz",
+                            "exampleSentence": "Your entire economic hypothesis collapses if the underlying premise of constant inflation is flawed.",
+                            "exampleTranslation": "Agar doimiy inflyatsiya haqidagi dastlabki faraz xato bo'lsa, butun iqtisodiy gipotezangiz qulaydi."
+                        },
+                        {
+                            "term": "Fallacious",
+                            "reading": "/fəˈleɪ.ʃəs/",
+                            "meaning": "Mantiqan xato, yanglish, yolg'on",
+                            "exampleSentence": "Arguing that cold weather disproves global warming is fundamentally fallacious reasoning.",
+                            "exampleTranslation": "Sovuq ob-havo global isishni rad etadi deb ta'kidlash tubdan mantiqan xato mulohazadir."
+                        },
+                        {
+                            "term": "Strawman",
+                            "reading": "/ˈstrɔː.mæn/",
+                            "meaning": "Somon odam xatosi (raqib fikrini soxtalashtirib hujum qilish)",
+                            "exampleSentence": "By claiming we want to abolish the military, the senator constructed an absurd strawman.",
+                            "exampleTranslation": "Biz armiyani tugatmoqchimiz deb da'vo qilish orqali senator bema'ni soxta nishon (strawman) yasab oldi."
+                        },
+                        {
+                            "term": "Concession",
+                            "reading": "/kənˈseʃ.ən/",
+                            "meaning": "Yon berish, raqibning haqiqatga yaqin qismini tan olish",
+                            "exampleSentence": "Making a strategic concession disarms the opponent before you deliver the decisive counter-argument.",
+                            "exampleTranslation": "Strategik yon berish hal qiluvchi qarshi zarbani berishdan oldin raqibni qurolsizlantiradi."
+                        },
+                        {
+                            "term": "Syllogism",
+                            "reading": "/ˈsɪl.ə.dʒɪ.zəm/",
+                            "meaning": "Sillogizm (ikki premissadan mantiqiy xulosa chiqarish usuli)",
+                            "exampleSentence": "Aristotle's syllogism deduces mortality from the universality of human nature.",
+                            "exampleTranslation": "Aristotel sillogizmi inson tabiatining umumiyligidan foniylik (o'lim) xulosasini chiqaradi."
+                        },
+                        {
+                            "term": "Dismantle",
+                            "reading": "/dɪsˈmæn.təl/",
+                            "meaning": "Bo'laklarga ajratib parchalab tashlamoq (argumentni rad etmoq)",
+                            "exampleSentence": "The investigative journalist methodically dismantled the fraudulent investment scheme.",
+                            "exampleTranslation": "Surishtiruvchi jurnalist firibgar investitsiya sxemasini uslubiy ravishda parchalab fosh qildi."
                         }
                     ],
-                    "grammarRules": [
-                        {
-                            "pattern": "Spontaneous Debate Formulation & Rebuttal Techniques",
-                            "meaning": "Muntazam bahs-munozarada raqib fikriga darhol mantiqiy e'tiroz bildirish usullari.",
-                            "usageNotes": "1. Concession (Yon berish): \"While I concede that initial capital expenditure is high...\" 2. Counter-argument (Asosiy zarba): \"... this overlooks the exponential long-term cost reductions.\" 3. Substantiation (Isbot): \"Empirical benchmarks prove a return on investment within 36 months.\"",
-                            "examples": [
-                                {
-                                    "sentence": "She formulated a devastating rebuttal.",
-                                    "translation": "U kuchli raddiya keltirdi."
-                                },
-                                {
-                                    "sentence": "He conceded that the timeline was optimistic.",
-                                    "translation": "U muddat juda optimistik ekanini tan oldi."
-                                }
-                            ]
-                        }
+                    "keyPoints": [
+                        "Four-Step Rebuttal Model: Quote -> Disagree -> Substantiate with Logos -> Conclude on impact.",
+                        "Expose classical logical fallacies: Strawman, Ad Hominem, False Dichotomy, Slippery Slope.",
+                        "Use concession phrases to project intellectual composure: 'While I concede that X possesses merit, Y renders it unfeasible.'",
+                        "Maintain diplomatic non-aggressive register during high-stakes academic debates."
                     ]
                 }
             },
             {
                 "id": "en-c1-u3-l2-s2",
-                "title": "Mashq",
+                "title": "Debate Formulation Amaliyoti",
                 "type": "practice",
-                "estimatedMinutes": 5,
+                "estimatedMinutes": 6,
                 "practiceData": {
-                    "instructions": "Eng kuchli raddiya variantini tanlang.",
+                    "instructions": "Munozara qoidalari, raddiya berish va mantiqiy xatolarni to'g'ri aniqlang.",
                     "exercises": [
                         {
                             "id": "en-c1-u3-l2-e1",
                             "type": "multiple-choice",
-                            "prompt": "Opponent: \"Remote work reduces workplace productivity.\" Best C1 Rebuttal:",
+                            "prompt": "What logical fallacy is committed in: 'If we allow employees to work from home on Fridays, soon nobody will ever come to the office again and the company will go bankrupt'?",
                             "options": [
-                                "I like working in pajamas.",
-                                "While collaboration patterns undoubtedly shift, comprehensive metadata from Fortune 500 enterprises indicates a 14% net gain in individual output.",
-                                "No you are totally lying!",
-                                "Productivity is whatever people feel."
+                                "Slippery Slope fallacy",
+                                "Ad Hominem fallacy",
+                                "Tricolon",
+                                "Ethos"
                             ],
-                            "correctAnswer": 1,
-                            "explanation": "Nuanced concession followed by empirical refutation."
+                            "correctAnswer": 0,
+                            "explanation": "Bitta kichik hodisadan zanjirli ravishda eng fojiali yakungacha asossiz bog'lab borish 'Slippery Slope' (sirpanchiq nishablik) mantiqiy xatosidir."
                         },
                         {
-                            "id": "en-c1-u3-l2-ex-2",
+                            "id": "en-c1-u3-l2-e2",
                             "type": "multiple-choice",
-                            "prompt": "Choose the correct word to complete the sentence: \"He conceded that the timeline was optimistic.\"",
+                            "prompt": "Which phrase is the most effective strategic concession in an academic rebuttal?",
                             "options": [
-                                "reluctance",
-                                "delay",
-                                "doubt",
-                                "Concede"
+                                "You are totally stupid to think that.",
+                                "While I concede that initial capital outlay is substantial, long-term operational savings outweigh the cost.",
+                                "I refuse to listen to your opinions.",
+                                "Everyone knows that what you said is a lie."
                             ],
-                            "correctAnswer": 3,
-                            "explanation": "\"Concede\" (Tan olmoq / Yon bermoq) fits the context appropriately."
+                            "correctAnswer": 1,
+                            "explanation": "'While I concede that initial capital outlay is substantial...' iborasi raqibning to'g'ri qismini tan olib, so'ng o'zining ustun argumentini kiritadi."
+                        },
+                        {
+                            "id": "en-c1-u3-l2-e3",
+                            "type": "multiple-choice",
+                            "prompt": "Identify the 'Strawman' fallacy:",
+                            "options": [
+                                "Advocating for bicycle lanes means you want to ban all ambulances and let patients die in the streets.",
+                                "Urban cycling reduces carbon emissions based on municipal transport metrics.",
+                                "Bicycle infrastructure requires careful municipal budget allocation.",
+                                "Some cyclists disobey traffic regulations during rush hours."
+                            ],
+                            "correctAnswer": 0,
+                            "explanation": "Velosiped yo'laklari so'rashni 'tez yordam mashinalarini taqiqlash' deb bo'rttirib buzib ko'rsatish klassik 'Strawman' xatosidir."
+                        },
+                        {
+                            "id": "en-c1-u3-l2-e4",
+                            "type": "multiple-choice",
+                            "prompt": "What is the foundational starting point of an argument from which deductions are drawn called?",
+                            "options": [
+                                "Premise",
+                                "Rebuttal",
+                                "Cadence",
+                                "Omission"
+                            ],
+                            "correctAnswer": 0,
+                            "explanation": "Xulosa chiqarish uchun asos bo'lib xizmat qiladigan dastlabki fikr yoki faraz 'premise' (premissa) deb ataladi."
+                        },
+                        {
+                            "id": "en-c1-u3-l2-e5",
+                            "type": "multiple-choice",
+                            "prompt": "Complete the rebuttal: 'The claim that immigration drains public coffers is contradicted by empirical tax data; _______, foreign workers contribute a net surplus to the treasury.'",
+                            "options": [
+                                "on the contrary",
+                                "in spite of",
+                                "although",
+                                "unless"
+                            ],
+                            "correctAnswer": 0,
+                            "explanation": "Oldingi da'voga teskari, qarama-qarshi haqiqatni kiritish uchun 'on the contrary' (aksincha) ishlatiladi."
                         }
                     ]
                 }
             },
             {
                 "id": "en-c1-u3-l2-s3",
-                "title": "Test",
+                "title": "Debate Formulation Baholash Testi",
                 "type": "test",
-                "estimatedMinutes": 6,
+                "estimatedMinutes": 7,
                 "testData": {
-                    "instructions": "Savollarga javob bering.",
-                    "passingScorePercentage": 75,
+                    "instructions": "Raddiya usullari, dialektika va mantiqiy xatolar bo'yicha imtihon.",
+                    "passingScorePercentage": 80,
                     "questions": [
                         {
                             "id": "en-c1-u3-l2-q1",
-                            "question": "What is the purpose of making a partial concession in a debate?",
+                            "question": "In a formal competitive debate, what constitutes an 'Ad Hominem' fallacy?",
                             "options": [
-                                "It confuses the judges",
-                                "It demonstrates intellectual honesty and strengthens your counter-point",
-                                "It means you surrender immediately",
-                                "It wastes the opponent's time"
+                                "Attacking the opponent's personal background, morality, or appearance rather than addressing their actual substantive arguments.",
+                                "Presenting statistical evidence from a government census bureau.",
+                                "Speaking with excessive rhetorical eloquence.",
+                                "Using conditional inversion in the introduction."
                             ],
-                            "correctAnswerIndex": 1,
-                            "explanation": "Demonstrates intellectual honesty."
+                            "correctAnswerIndex": 0,
+                            "explanation": "'Ad Hominem' — dalilni muhokama qilish o'rniga gapiruvchining shaxsiga, tashqi ko'rinishiga yoki kelib chiqishiga hujum qilishdir."
                         },
                         {
                             "id": "en-c1-u3-l2-q2",
-                            "question": "Which phrase introduces a sharp counter-argument?",
+                            "question": "'Either we shut down all nuclear power plants today, or the world will be incinerated in a radioactive catastrophe.' This illustrates a _______.",
                             "options": [
-                                "Whatever you say",
-                                "I have no thoughts",
-                                "Be that as it may, this premise fails to account for...",
-                                "Yes I agree with everything"
+                                "False Dichotomy",
+                                "Valid Syllogism",
+                                "Tricolon",
+                                "Proper Hedging"
                             ],
-                            "correctAnswerIndex": 2,
-                            "explanation": "Be that as it may..."
+                            "correctAnswerIndex": 0,
+                            "explanation": "Murakkab masalani faqat ikkita o'ta keskin variantga qisqartirib ko'rsatish 'False Dichotomy' (soxta dilemma) xatosidir."
                         },
                         {
                             "id": "en-c1-u3-l2-q3",
-                            "question": "\"This argument is fundamentally premised on a false dichotomy.\" What is a false dichotomy?",
+                            "question": "What is the primary tactical advantage of granting a 'concession' before delivering a rebuttal?",
                             "options": [
-                                "A true fact",
-                                "A spelling error",
-                                "A type of animal",
-                                "Presenting only two extreme choices when other viable options exist"
+                                "It immediately forfeits the debate to the opposing team.",
+                                "It demonstrates intellectual honesty and objectivity, neutralizing the opponent's leverage before asserting a stronger counter-point.",
+                                "It extends the time limit of the speech.",
+                                "It allows the speaker to skip the conclusion."
                             ],
-                            "correctAnswerIndex": 3,
-                            "explanation": "Presenting only two extreme choices."
+                            "correctAnswerIndex": 1,
+                            "explanation": "Yon berish (concession) notiqning xolisligini ko'rsatadi va raqibning asosiy kozirini zararsizlantiradi."
                         },
                         {
                             "id": "en-c1-u3-l2-q4",
-                            "question": "To \"refute\" an allegation means to:",
+                            "question": "'The defense team methodically _______ the witness's testimony by proving he was out of the country during the incident.'",
                             "options": [
-                                "Prove it to be false through evidence and logic",
-                                "Write it down in a diary",
-                                "Accept it blindly",
-                                "Publish it in a poem"
+                                "dismantled",
+                                "proliferated",
+                                "encroached",
+                                "subdued"
                             ],
                             "correctAnswerIndex": 0,
-                            "explanation": "Prove false with evidence."
+                            "explanation": "Guvohning ko'rsatmasini asossizligini isbotlab parchalab tashlash 'dismantled the testimony' birikmasi bilan beriladi."
+                        },
+                        {
+                            "id": "en-c1-u3-l2-q5",
+                            "question": "Identify the valid formal syllogism:",
+                            "options": [
+                                "All mammals are warm-blooded. Whales are mammals. Therefore, whales are warm-blooded.",
+                                "Some dogs are friendly. Cats are friendly. Therefore, dogs are cats.",
+                                "If it rains, grass is wet. Grass is wet. Therefore, it rained from Mars.",
+                                "Birds can fly. Airplanes can fly. Therefore, airplanes lay eggs."
+                            ],
+                            "correctAnswerIndex": 0,
+                            "explanation": "Birinchi variant — klassik haqiqiy sillogizmdir: Katta premissa + Kichik premissa = Mantiqiy to'g'ri xulosa."
                         }
                     ]
                 }
@@ -2700,153 +2854,228 @@ export const ENGLISH_C1_LESSONS: Lesson[] = [
         "level": "C1",
         "lessonNumber": 3,
         "title": "Professional Presentation & High-Stakes Negotiation",
-        "description": "Xalqaro biznes muzokaralari, murosaga erishish va diplomatik bosim o'tkazish tili.",
-        "estimatedDurationMinutes": 16,
-        "icon": "💼",
+        "description": "Yuqori darajadagi biznes muzokaralari, shartli kelishuvlar, diplomatik takliflar va boshi berk ko'chalarni (deadlocks) hal qilish.",
+        "estimatedDurationMinutes": 20,
+        "icon": "🤝",
         "steps": [
             {
                 "id": "en-c1-u3-l3-s1",
-                "title": "Muzokara Taktikasi",
+                "title": "Negotiation Dynamics & Strategic Signaling",
                 "type": "learn",
-                "estimatedMinutes": 5,
+                "estimatedMinutes": 7,
                 "learnData": {
-                    "title": "High-Stakes Negotiation Strategies",
-                    "explanation": "Non-confrontational pushback: \"We appreciate your position; however, that valuation presents substantial compliance risks for our board.\" Win-win framing: \"If you could meet us halfway on licensing terms, we would be prepared to guarantee volume commitments.\"",
+                    "title": "High-Stakes Negotiation & Executive Communication",
+                    "explanation": "Boshqaruv kengashlari, xalqaro xaridlar va birlashish-yutilish (M&A) muzokaralarida to'g'ridan-to'g'ri 'No' deb aytish yoki qat'iy talab qo'yish munosabatlarni barbod qilishi mumkin. C1 darajasidagi muzokorachi shartli takliflar va strategik signallardan foydalanadi.\n\nAsosiy muzokara mexanizmlari:\n1. **Shartli Takliflar (Conditional Bargaining)**:\n   - *If you were prepared to expedite the delivery schedule, we might consider extending the contract duration by two fiscal years.*\n   - *Provided that intellectual property rights remain in our jurisdiction, we would be amenable to lowering our equity stake.*\n\n2. **Boshi berk ko'chani yorib o'tish (Breaking Deadlocks)**:\n   - **Deadlock / Stalemate**: Muzokaralarning boshi berk ko'chaga kirib qolishi (hech kim yon bermaydigan holat).\n   - **Leverage**: Muzokarada ustunlik beruvchi omil yoki bosim vositasi (*Our secondary supplier options provide substantial leverage*).\n   - **Tactical concession**: Katta maqsadga erishish uchun ikkinchi darajali masalada ataylab yon berish.\n\n3. **Diplomatik rad etish (Softened Refusal)**:\n   - To'g'ridan-to'g'ri *We refuse your price* o'rniga: *Regrettably, that valuation sits somewhat outside our current fiscal parameters; however, were you to restructure the licensing model, a mutually beneficial accord could be explored.*\n\n⚠️ **O'zbek o'rganuvchilari uchun xavfli tuzoqlar (Common Pitfalls)**:\n- ❌ *If you give us 20% discount, we buy today.* (O'ta sodda, bozor darajasidagi til; professional muzokaralarda noo'rin).\n  ✅ *Were you positioned to offer a 20% concession on unit volume, we would be inclined to finalize the procurement forthwith.*\n- ❌ *Using 'compulsory' instead of 'non-negotiable'.* ('Compulsory' qonun talabi; muzokarada o'zgartirib bo'lmaydigan band esa *non-negotiable clause* deb ataladi).\n\n🎯 **IELTS Speaking & Writing Band 8.5 Masterclass**:\n- **Prompt**: Speaking Part 3: What skills are vital for resolving commercial or international disputes?\n- **Model Answer (Band 8.0-8.5)**: The quintessential attribute of an accomplished negotiator is emotional self-regulation paired with cognitive empathy. When discussions reach an apparent stalemate, dogmatic posturing merely exacerbates tensions. Skillful mediators identify hidden leverage points and engineer reciprocal concessions, thereby transforming adversarial deadlock into collaborative value creation.\n- **Discourse Markers**: quintessential attribute of..., reach an apparent stalemate, dogmatic posturing merely exacerbates, engineer reciprocal concessions\n- **Examiner / Intonation Tip**: Muzokara takliflarida mayin, muloyim, ammo qat'iy intonatsiyadan foydalaning (*amenable to*, *inclined to consider*). Bu professional hurmat va o'ziga ishonchni ifodalaydi.",
                     "vocabulary": [
                         {
-                            "term": "Compromise",
-                            "reading": "/ˈkɒm.prə.maɪz/",
-                            "meaning": "Murosa",
-                            "exampleSentence": "Both parties reached a mutually beneficial compromise.",
-                            "exampleTranslation": "Har ikki tomon o'zaro manfaatli murosaga erishdi."
+                            "term": "Stalemate",
+                            "reading": "/ˈsteɪl.meɪt/",
+                            "meaning": "Boshi berk ko'cha, hech kim g'alaba qozona olmaydigan turg'unlik (pat)",
+                            "exampleSentence": "After thirty-six hours of continuous deliberation, negotiations reached an intractable stalemate.",
+                            "exampleTranslation": "O'ttiz olti soatlik uzluksiz muhokamalardan so'ng, muzokaralar boshi berk turg'unlikka kirib qoldi."
                         },
                         {
-                            "term": "Concession",
-                            "reading": "/kənˈseʃ.ən/",
-                            "meaning": "Yon berish (muzokarada)",
-                            "exampleSentence": "They made significant concessions on pricing.",
-                            "exampleTranslation": "Ular narx borasida sezilarli yon berdilar."
+                            "term": "Leverage",
+                            "reading": "/ˈliː.vər.ɪdʒ/",
+                            "meaning": "Muzokarada ustunlik beruvchi kuch, ta'sir richagi",
+                            "exampleSentence": "Holding exclusive patent rights granted the pharmaceutical startup immense negotiating leverage.",
+                            "exampleTranslation": "Eksklyuziv patent huquqlariga egalik farmatsevtika startapiga ulkan muzokara ustunligini (leverage) berdi."
                         },
                         {
-                            "term": "Pervasive",
-                            "reading": "/pəˈveɪ.sɪv/",
-                            "meaning": "Keng tarqalgan, singib ketgan",
-                            "exampleSentence": "Digital transformation has a pervasive impact on society.",
-                            "exampleTranslation": "Raqamli transformatsiya jamiyatga chuqur singib borgan taʼsir koʻrsatadi."
+                            "term": "Amenable",
+                            "reading": "/əˈmiː.nə.bəl/",
+                            "meaning": "Rozilik bildirishga moyil, qabul qilishga tayyor",
+                            "exampleSentence": "The board is amenable to adjusting the timeline, provided that quality benchmarks are preserved.",
+                            "exampleTranslation": "Kengash sifat mezonlari saqlanib qolishi sharti bilan muddatni o'zgartirishni qabul qilishga moyildir."
+                        },
+                        {
+                            "term": "Non-negotiable",
+                            "reading": "/ˌnɒn.nəˈɡəʊ.ʃə.bəl/",
+                            "meaning": "Muhokama qilinmaydigan, qat'iy, o'zgarmas shart",
+                            "exampleSentence": "Ensuring rigorous workplace cybersecurity remains a non-negotiable prerequisite for our partnership.",
+                            "exampleTranslation": "Ish joyida qat'iy kiberxavfsizlikni ta'minlash hamkorligimizning muhokama qilinmaydigan asosiy shartidir."
+                        },
+                        {
+                            "term": "Posturing",
+                            "reading": "/ˈpɒs.tʃər.ɪŋ/",
+                            "meaning": "Soxta viqor ko'rsatish, ko'zbo'yamachilik uchun o'zini qat'iy tutish",
+                            "exampleSentence": "Political analysts dismissed the trade minister's fiery speech as mere theatrical posturing.",
+                            "exampleTranslation": "Siyosiy tahlilchilar savdo vazirining o'tli nutqini shunchaki teatrallashgan ko'zbo'yamachilik deb baholadilar."
+                        },
+                        {
+                            "term": "Reciprocal",
+                            "reading": "/rɪˈsɪp.rə.kəl/",
+                            "meaning": "O'zaro, teng asosli, javob tariqasidagi",
+                            "exampleSentence": "The accord entails reciprocal tariff exemptions for agricultural imports between both nations.",
+                            "exampleTranslation": "Bitim har ikki davlat o'rtasida qishloq xo'jaligi importi bo'yicha o'zaro teng bojxona imtiyozlarini ko'zda tutadi."
+                        },
+                        {
+                            "term": "Adversarial",
+                            "reading": "/ˌæd.vəˈseə.ri.əl/",
+                            "meaning": "Dushmanona, qarama-qarshi tomonlar to'qnashuviga asoslangan",
+                            "exampleSentence": "We must abandon adversarial posturing in favor of collaborative joint-venture negotiations.",
+                            "exampleTranslation": "Biz hamkorlikdagi qo'shma korxona muzokaralari foydasiga dushmanona pozitsiyadan voz kechishimiz kerak."
+                        },
+                        {
+                            "term": "Forthwith",
+                            "reading": "/ˌfɔːθˈwɪð/",
+                            "meaning": "Darhol, zudlik bilan (rasmiy/yuridik registrlarda)",
+                            "exampleSentence": "Upon signature ratification, all asset freezes shall be rescinded forthwith.",
+                            "exampleTranslation": "Imzolar ratifikatsiya qilingach, barcha aktivlarni muzlatish choralari darhol bekor qilinadi."
                         }
                     ],
-                    "grammarRules": [
-                        {
-                            "pattern": "Professional Presentation & High-Stakes Negotiation",
-                            "meaning": "Xalqaro biznes muzokaralari, murosaga erishish va diplomatik bosim o'tkazish tili.",
-                            "usageNotes": "Non-confrontational pushback: \"We appreciate your position; however, that valuation presents substantial compliance risks for our board.\" Win-win framing: \"If you could meet us halfway on licensing terms, we would be prepared to guarantee volume commitments.\"",
-                            "examples": [
-                                {
-                                    "sentence": "Both parties reached a mutually beneficial compromise.",
-                                    "translation": "Har ikki tomon o'zaro manfaatli murosaga erishdi."
-                                },
-                                {
-                                    "sentence": "They made significant concessions on pricing.",
-                                    "translation": "Ular narx borasida sezilarli yon berdilar."
-                                }
-                            ]
-                        }
+                    "keyPoints": [
+                        "Use hypothetical conditionals (Were you to..., we would be inclined to...) to propose concessions safely.",
+                        "Identify negotiation terminology: stalemate/deadlock, leverage, reciprocal concessions, non-negotiable clauses.",
+                        "Softened diplomatic language preserves relationships during tense negotiations.",
+                        "Frame proposals as collaborative value creation rather than zero-sum adversarial victories."
                     ]
                 }
             },
             {
                 "id": "en-c1-u3-l3-s2",
-                "title": "Mashq",
+                "title": "High-Stakes Negotiation Amaliyoti",
                 "type": "practice",
-                "estimatedMinutes": 5,
+                "estimatedMinutes": 6,
                 "practiceData": {
-                    "instructions": "To'g'ri diplomatik iborani tanlang.",
+                    "instructions": "Muzokaralar va rasmiy kelishuvlar uslubiga mos eng to'g'ri ifodani tanlang.",
                     "exercises": [
                         {
                             "id": "en-c1-u3-l3-e1",
                             "type": "multiple-choice",
-                            "prompt": "Which phrase represents professional and diplomatic disagreement in a business meeting?",
+                            "prompt": "Choose the most sophisticated and diplomatic phrasing for: 'We won't accept your price.'",
                             "options": [
-                                "You are wasting our time.",
-                                "That is totally impossible and ridiculous.",
-                                "I have certain reservations regarding that timeline; perhaps we could examine intermediate milestones.",
-                                "No way will we ever do that."
+                                "Your proposed price is totally unacceptable and crazy.",
+                                "Regrettably, the proposed price falls outside our budgetary parameters; however, we remain open to discussing modified terms.",
+                                "No way we pay that price to you.",
+                                "We must decline because you are greedy."
                             ],
-                            "correctAnswer": 2,
-                            "explanation": "Diplomatic reservation."
+                            "correctAnswer": 1,
+                            "explanation": "Diplomatik rad etish muloyim, dalilli va kelgusi muloqotga yo'l qoldiruvchi ohangda beriladi."
                         },
                         {
-                            "id": "en-c1-u3-l3-ex-2",
+                            "id": "en-c1-u3-l3-e2",
                             "type": "multiple-choice",
-                            "prompt": "Choose the correct word to complete the sentence: \"They made significant concessions on pricing.\"",
+                            "prompt": "Fill in the blank: 'Holding three alternate bids from competitors provided the procurement officer with substantial _______.'",
                             "options": [
-                                "Concession",
-                                "doubt",
-                                "reluctance",
-                                "delay"
+                                "leverage",
+                                "stalemate",
+                                "posturing",
+                                "dissonance"
                             ],
                             "correctAnswer": 0,
-                            "explanation": "\"Concession\" (Yon berish (muzokarada)) fits the context appropriately."
+                            "explanation": "Muzokarada ustunlik beruvchi omil 'leverage' (ta'sir richagi) deb ataladi."
+                        },
+                        {
+                            "id": "en-c1-u3-l3-e3",
+                            "type": "multiple-choice",
+                            "prompt": "What does it mean if a contractual term is 'non-negotiable'?",
+                            "options": [
+                                "It is completely fixed and cannot be modified under any circumstances.",
+                                "It can be easily changed if you ask nicely.",
+                                "It is written in an ancient language.",
+                                "It has not yet been typed out."
+                            ],
+                            "correctAnswer": 0,
+                            "explanation": "'Non-negotiable' — o'zgartirishga yo'l qo'yilmaydigan mutlaq shart degani."
+                        },
+                        {
+                            "id": "en-c1-u3-l3-e4",
+                            "type": "multiple-choice",
+                            "prompt": "Select the sentence with proper conditional bargaining grammar:",
+                            "options": [
+                                "Were your team to expedite delivery, we would be amenable to increasing our order volume.",
+                                "If you expedited delivery, we are amenable to increase order volume.",
+                                "Had your team expedite delivery, we would be amenable to increase order volume.",
+                                "Were your team expedite delivery, we would be amenable to order volume."
+                            ],
+                            "correctAnswer": 0,
+                            "explanation": "'Were your team to expedite...' 2-tur shart inversiyasi bo'lib, rasmiy shartli takliflar uchun mukammal mos keladi."
+                        },
+                        {
+                            "id": "en-c1-u3-l3-e5",
+                            "type": "multiple-choice",
+                            "prompt": "What term describes a state where negotiations cannot proceed because neither party will compromise?",
+                            "options": [
+                                "Stalemate",
+                                "Tricolon",
+                                "Jurisprudence",
+                                "Neuroplasticity"
+                            ],
+                            "correctAnswer": 0,
+                            "explanation": "Har ikki tomon yon bermay qotib qolgan boshi berk ko'cha 'stalemate' (yoki deadlock) deb ataladi."
                         }
                     ]
                 }
             },
             {
                 "id": "en-c1-u3-l3-s3",
-                "title": "Test",
+                "title": "High-Stakes Negotiation Baholash Testi",
                 "type": "test",
-                "estimatedMinutes": 6,
+                "estimatedMinutes": 7,
                 "testData": {
-                    "instructions": "Savollarga javob bering.",
-                    "passingScorePercentage": 75,
+                    "instructions": "Professional muzokaralar va ijroviy muloqot mezonlari bo'yicha imtihon.",
+                    "passingScorePercentage": 80,
                     "questions": [
                         {
                             "id": "en-c1-u3-l3-q1",
-                            "question": "\"Meet someone halfway\" means:",
+                            "question": "What is the strategic purpose of making a 'reciprocal concession' during a deadlock?",
                             "options": [
-                                "To arrive 50% late",
-                                "To run into someone on the street",
-                                "To reach a compromise where each side makes concessions",
-                                "To cancel a contract"
+                                "To signal that you are willing to make a secondary compromise in return for a key concession from the other side.",
+                                "To surrender completely and pay all fines.",
+                                "To insult the opposing team's chief executive.",
+                                "To extend the meeting until midnight without reason."
                             ],
-                            "correctAnswerIndex": 2,
-                            "explanation": "Reach a compromise."
+                            "correctAnswerIndex": 0,
+                            "explanation": "O'zaro yon berish (reciprocal concession) asosiy maqsadga erishish uchun ikkinchi darajali masalada teng yon berish orqali boshi berk ko'chadan chiqishga yordam beradi."
                         },
                         {
                             "id": "en-c1-u3-l3-q2",
-                            "question": "What does \"BATNA\" stand for in professional negotiation theory?",
+                            "question": "'The managing director dismissed the competitor's hostile threats as mere rhetorical _______.'",
                             "options": [
-                                "Business And Tax National Association",
-                                "Best Alternative to a Negotiated Agreement",
-                                "Bank Account Transfer Number Access",
-                                "Better Action Towards New Assets"
+                                "posturing",
+                                "leverage",
+                                "arbitration",
+                                "consensus"
                             ],
-                            "correctAnswerIndex": 1,
-                            "explanation": "Best Alternative to a Negotiated Agreement."
+                            "correctAnswerIndex": 0,
+                            "explanation": "Qo'rqitish uchun qilingan soxta qat'iyat ko'rsatish 'rhetorical posturing' deyiladi."
                         },
                         {
                             "id": "en-c1-u3-l3-q3",
-                            "question": "Which sentence effectively de-escalates tension during intense negotiations?",
+                            "question": "Which word means 'willing to agree or be influenced by a proposal'?",
                             "options": [
-                                "Let us take a step back and revisit our overarching mutual objectives.",
-                                "You don't understand business at all.",
-                                "We are walking out forever.",
-                                "Stop shouting at us right now."
+                                "Amenable",
+                                "Opaque",
+                                "Pernicious",
+                                "Sentient"
                             ],
                             "correctAnswerIndex": 0,
-                            "explanation": "Revisiting mutual objectives."
+                            "explanation": "'Amenable' — taklifni ko'rib chiqish va qabul qilishga moyil/tayyor degan ma'noni beradi."
                         },
                         {
                             "id": "en-c1-u3-l3-q4",
-                            "question": "To \"have reservations\" about a plan means to:",
+                            "question": "Choose the correct formal word meaning 'immediately and without delay' in a contractual context:",
                             "options": [
-                                "Book hotel rooms for it",
-                                "Love it completely",
-                                "Sign it instantly",
-                                "Have doubts or hesitations regarding its viability"
+                                "Forthwith",
+                                "Fastly",
+                                "Sometimes",
+                                "Quickish"
                             ],
-                            "correctAnswerIndex": 3,
-                            "explanation": "Have doubts or hesitations."
+                            "correctAnswerIndex": 0,
+                            "explanation": "Yuridik va rasmiy shartnomalarda 'darhol' ma'nosi 'forthwith' so'zi orqali ifodalanadi."
+                        },
+                        {
+                            "id": "en-c1-u3-l3-q5",
+                            "question": "Identify the flawed sentence regarding professional negotiation:",
+                            "options": [
+                                "Negotiators must remain cognizant of cultural nuances during cross-border transactions.",
+                                "We told the foreign CEO that his company sucks and we want all their money right now.",
+                                "A constructive mediator reframes contentious issues into shared objectives.",
+                                "Both parties agreed to submit unresolved licensing disputes to independent arbitration."
+                            ],
+                            "correctAnswerIndex": 1,
+                            "explanation": "Ikkinchi variant o'ta qo'pol, madaniyatsiz va professional muzokara standartlariga mutlaqo ziddir."
                         }
                     ]
                 }
@@ -2862,149 +3091,228 @@ export const ENGLISH_C1_LESSONS: Lesson[] = [
         "level": "C1",
         "lessonNumber": 4,
         "title": "Advanced Academic Abstract & Executive Summary Writing",
-        "description": "Ilmiy tadqiqot anotatsiyasi (abstract) va biznes rahbariyati uchun qisqacha xulosa (executive summary).",
-        "estimatedDurationMinutes": 16,
-        "icon": "📑",
+        "description": "Ilmiy annotatsiya (abstract) va boshqaruv hisoboti (executive summary) yozish: axborot zichligi, IMRAD strukturasi va lakonizm.",
+        "estimatedDurationMinutes": 20,
+        "icon": "📝",
         "steps": [
             {
                 "id": "en-c1-u3-l4-s1",
-                "title": "Annotatsiya Tuzilishi",
+                "title": "Abstract Architecture & Executive Synthesis",
                 "type": "learn",
-                "estimatedMinutes": 5,
+                "estimatedMinutes": 7,
                 "learnData": {
-                    "title": "Academic Abstract Architecture",
-                    "explanation": "1. Background & Problem: Mavzu dolzarbligi. 2. Methodology: Tadqiqot usuli. 3. Results: Eng asosiy ilmiy natijalar. 4. Implications / Significance: Kengroq amaliy yoki nazariy xulosalar.",
+                    "title": "Synthesizing Complex Research into Rigorous Abstracts",
+                    "explanation": "C1 darajasidagi olim yoki tahlilchining eng muhim ko'nikmasi — 50 sahifalik ilmiy tadqiqotni yoki 100 sahifalik korporativ auditni 200 ta so'zdan iborat o'ta zich, aniq va jozibali qisqartmaga (Abstract / Executive Summary) aylantira olishidir.\n\nKlassik IMRAD Strukturasi:\n1. **Introduction / Context (1-2 gap)**: Muammoning dolzarbligi va fanda mavjud bo'shliq.\n   *While renewable energy adoption has accelerated, intermittency remains an acute obstacle to grid stability.*\n2. **Methods / Approach (1-2 gap)**: Qanday metodologiya yoki modellashtirish qo'llanildi?\n   *Utilizing longitudinal econometric modeling across forty OECD economies, this paper examines...*\n3. **Results / Findings (2-3 gap)**: Asosiy empirik kashfiyotlar nimalardan iborat?\n   *The empirical findings delineate a 28% efficiency surge following decentralization; nevertheless, regional variances persist.*\n4. **Discussion / Implications (1-2 gap)**: Bu natijalar siyosat yoki ilm-fan uchun nimani anglatadi?\n   *These salient outcomes underscore the imperative for synchronized cross-border energy storage protocols.*\n\nAxborotni Zichlashtirish Qoidalari (Lexical Compression):\n- Keraksiz kirish so'zlarni olib tashlang (*It is widely known that...* o'rniga to'g'ridan-to'g'ri faktni yozing).\n- Nominalizatsiya va murakkab sifatdosh birikmalardan foydalaning (*Researchers measured the variables over five years, which revealed...* emas, balki *A five-year longitudinal measurement revealed...*).\n\n⚠️ **O'zbek o'rganuvchilari uchun xavfli tuzoqlar (Common Pitfalls)**:\n- ❌ *Using personal pronouns in abstracts: 'In my study I wanted to see...'* (Akademik annotatsiyalarda 'I' yoki 'we'dan ko'ra, neytral uchinchi shaxs yoki passiv afzal: *This study investigates...*).\n- ❌ *Including citations or literature reviews in the abstract.* (Annotatsiyada boshqa kitoblarga havola berilmaydi; faqat tadqiqotning o'z natijasi yoziladi).\n\n🎯 **IELTS Speaking & Writing Band 8.5 Masterclass**:\n- **Prompt**: Writing Task 2: Writing concise introductory overviews and topic sentences.\n- **Model Answer (Band 8.0-8.5)**: This paper delineates the socioeconomic ramifications of generative artificial intelligence on labor markets. By synthesizing longitudinal employment metrics with algorithmic diffusion models, the analysis elucidates a pronounced shift toward task specialization. The salient findings suggest that while structural displacement is inevitable, targeted retraining mitigates long-term friction.\n- **Discourse Markers**: This paper delineates..., By synthesizing longitudinal employment metrics..., The salient findings suggest that..., targeted retraining mitigates\n- **Examiner / Intonation Tip**: Yozuvda ixchamlikka erishish uchun *delineates* (tasvirlab beradi), *elucidates* (oydinlashtiradi), *salient* (eng ko'zga ko'ringan) kabi qudratli C1 fe'l va sifatlaridan foydalaning.",
                     "vocabulary": [
                         {
-                            "term": "Abstract",
-                            "reading": "/ˈæb.strækt/",
-                            "meaning": "Ilmiy maqola annotatsiyasi / qisqa mazmuni",
-                            "exampleSentence": "The abstract encapsulates the whole paper.",
-                            "exampleTranslation": "Annotatsiya butun maqolani o'zida jamlaydi."
+                            "term": "Delineate",
+                            "reading": "/dɪˈlɪn.i.eɪt/",
+                            "meaning": "Aniq chizib bermoq, batafsil tasvirlab bayon etmoq",
+                            "exampleSentence": "The opening chapter delineates the historical evolution of constitutional jurisprudence.",
+                            "exampleTranslation": "Kirish bobi konstitutsiyaviy huquqshunoslikning tarixiy evolyutsiyasini aniq tasvirlab beradi."
                         },
                         {
-                            "term": "Pervasive",
-                            "reading": "/pəˈveɪ.sɪv/",
-                            "meaning": "Keng tarqalgan, singib ketgan",
-                            "exampleSentence": "Digital transformation has a pervasive impact on society.",
-                            "exampleTranslation": "Raqamli transformatsiya jamiyatga chuqur singib borgan taʼsir koʻrsatadi."
+                            "term": "Elucidate",
+                            "reading": "/iˈluː.sɪ.deɪt/",
+                            "meaning": "Oydinlashtirmoq, tushuntirib bermoq",
+                            "exampleSentence": "Subsequent laboratory experiments served to elucidate the molecular mechanism of viral entry.",
+                            "exampleTranslation": "Keyingi laboratoriya tajribalari virus kirib borishining molekulyar mexanizmini oydinlashtirishga xizmat qildi."
                         },
                         {
-                            "term": "Exemplify",
-                            "reading": "/ɪɡˈzem.plɪ.faɪ/",
-                            "meaning": "Yorqin misol boʻlmoq",
-                            "exampleSentence": "Recent discoveries exemplify the power of modern physics.",
-                            "exampleTranslation": "Soʻnggi kashfiyotlar zamonaviy fizika qudratini yaqqol namoyon etadi."
+                            "term": "Salient",
+                            "reading": "/ˈseɪ.li.ənt/",
+                            "meaning": "Eng ko'zga ko'ringan, eng muhim, asosiy",
+                            "exampleSentence": "The executive summary highlights the most salient financial metrics from the third-quarter audit.",
+                            "exampleTranslation": "Boshqaruv hisoboti (executive summary) uchinchi chorak auditining eng ko'zga ko'ringan moliyaviy ko'rsatkichlarini ta'kidlaydi."
+                        },
+                        {
+                            "term": "Distillation",
+                            "reading": "/ˌdɪs.tɪˈleɪ.ʃən/",
+                            "meaning": "Distillyatsiya, eng sara mohiyatini ajratib olish",
+                            "exampleSentence": "The abstract represents an elegant distillation of a five-hundred-page sociological investigation.",
+                            "exampleTranslation": "Annotatsiya besh yuz sahifalik sotsiologik tadqiqotning nafis saralangan mohiyatini ifodalaydi."
+                        },
+                        {
+                            "term": "Longitudinal",
+                            "reading": "/ˌlɒŋ.ɡɪˈtjuː.dɪ.nəl/",
+                            "meaning": "Longityudal (uzoq vaqt davomida bir xil guruhni kuzatuvchi tadqiqot)",
+                            "exampleSentence": "Longitudinal epidemiological surveys demonstrate that early childhood nutrition correlates with adult cognitive health.",
+                            "exampleTranslation": "Uzoq muddatli epidemiologik kuzatuvlar erta bolalikdagi ovqatlanish balog'atdagi aqliy salomatlik bilan bog'liqligini ko'rsatadi."
+                        },
+                        {
+                            "term": "Ramification",
+                            "reading": "/ˌræm.ɪ.fɪˈkeɪ.ʃən/",
+                            "meaning": "Oqibat, murakkab tarmoqlangan asorat",
+                            "exampleSentence": "Policymakers failed to anticipate the severe geopolitical ramifications of the trade embargo.",
+                            "exampleTranslation": "Siyosat ishlab chiquvchilar savdo embargosining jiddiy geosiyosiy asoratlari va oqibatlarini oldindan ko'ra olmadilar."
+                        },
+                        {
+                            "term": "Imperative",
+                            "reading": "/ɪmˈper.ə.tɪv/",
+                            "meaning": "Kechiktirib bo'lmas zaruriyat, majburiyat",
+                            "exampleSentence": "Decarbonizing heavy freight transport represents an urgent ecological imperative.",
+                            "exampleTranslation": "Og'ir yuk transportini karbonsizlantirish shoshilinch ekologik zaruriyat hisoblanadi."
+                        },
+                        {
+                            "term": "Underscore",
+                            "reading": "/ˌʌn.dəˈskɔː/",
+                            "meaning": "Alohida ta'kidlamoq, urg'u bermoq",
+                            "exampleSentence": "Recent seismic tremors underscore the vital necessity of strict building safety codes.",
+                            "exampleTranslation": "So'nggi seysmik tebranishlar binolarning qat'iy xavfsizlik qoidalariga rioya etish zarurligini alohida ta'kidlaydi."
                         }
                     ],
-                    "grammarRules": [
-                        {
-                            "pattern": "Advanced Academic Abstract & Executive Summary Writing",
-                            "meaning": "Ilmiy tadqiqot anotatsiyasi (abstract) va biznes rahbariyati uchun qisqacha xulosa (executive summary).",
-                            "usageNotes": "1. Background & Problem: Mavzu dolzarbligi. 2. Methodology: Tadqiqot usuli. 3. Results: Eng asosiy ilmiy natijalar. 4. Implications / Significance: Kengroq amaliy yoki nazariy xulosalar.",
-                            "examples": [
-                                {
-                                    "sentence": "The abstract encapsulates the whole paper.",
-                                    "translation": "Annotatsiya butun maqolani o'zida jamlaydi."
-                                }
-                            ]
-                        }
+                    "keyPoints": [
+                        "IMRAD Structure: Introduction/Context -> Methodology -> Results -> Discussion/Implications.",
+                        "Abstract writing demands extreme lexical density: avoid verbose conversational fluff.",
+                        "Use precise scholarly verbs: 'delineate', 'elucidate', 'substantiate', 'underscore'.",
+                        "Maintain an objective, third-person stance: 'This paper examines' rather than 'In this paper I will look at'."
                     ]
                 }
             },
             {
                 "id": "en-c1-u3-l4-s2",
-                "title": "Mashq",
+                "title": "Abstract & Executive Summary Amaliyoti",
                 "type": "practice",
-                "estimatedMinutes": 5,
+                "estimatedMinutes": 6,
                 "practiceData": {
-                    "instructions": "To'g'ri annotatsiya jumlasini tanlang.",
+                    "instructions": "Ilmiy annotatsiya va tahliliy hisobot uslubidagi eng to'g'ri jumlalarni tanlang.",
                     "exercises": [
                         {
                             "id": "en-c1-u3-l4-e1",
                             "type": "multiple-choice",
-                            "prompt": "\"This study _______ (investigate) the socio-economic ramifications of automation.\"",
+                            "prompt": "Choose the most appropriate academic phrasing for an abstract introduction:",
                             "options": [
-                                "was investigated",
-                                "investigating",
-                                "is investigate",
-                                "investigates"
+                                "I wanted to write this essay because climate change is super bad and interesting.",
+                                "This monograph delineates the fiscal ramifications of climate volatility across developing economies.",
+                                "In my research I will tell you about climate problems that happen.",
+                                "Here is an essay where climate issues are shown to people."
                             ],
-                            "correctAnswer": 3,
-                            "explanation": "This study investigates..."
+                            "correctAnswer": 1,
+                            "explanation": "'This monograph delineates the fiscal ramifications...' uchinchi shaxsda, ixcham va yuqori ilmiy leksika bilan tuzilgan."
                         },
                         {
-                            "id": "en-c1-u3-l4-ex-2",
+                            "id": "en-c1-u3-l4-e2",
                             "type": "multiple-choice",
-                            "prompt": "Choose the correct word to complete the sentence: \"Digital transformation has a pervasive impact on society.\"",
+                            "prompt": "What does the word 'salient' mean in 'The salient findings indicate an upward trend'?",
                             "options": [
-                                "doubt",
-                                "delay",
-                                "Pervasive",
-                                "reluctance"
+                                "Most prominent, noticeable, and important",
+                                "Completely wrong and fabricated",
+                                "Related to salt and marine biology",
+                                "Secret and confidential"
                             ],
-                            "correctAnswer": 2,
-                            "explanation": "\"Pervasive\" (Keng tarqalgan, singib ketgan) fits the context appropriately."
+                            "correctAnswer": 0,
+                            "explanation": "'Salient' — eng ko'zga ko'ringan, eng muhim va e'tiborga molik degani."
+                        },
+                        {
+                            "id": "en-c1-u3-l4-e3",
+                            "type": "multiple-choice",
+                            "prompt": "Fill in the blank: 'Further computational trials are warranted to _______ the precise causal pathway.'",
+                            "options": [
+                                "elucidate",
+                                "stifle",
+                                "posture",
+                                "wreak"
+                            ],
+                            "correctAnswer": 0,
+                            "explanation": "Sabab-oqibat yo'lini aniqlashtirish va tushuntirib berish uchun 'elucidate the causal pathway' ishlatiladi."
+                        },
+                        {
+                            "id": "en-c1-u3-l4-e4",
+                            "type": "multiple-choice",
+                            "prompt": "Identify the study type that tracks the same sample group over an extended multi-year duration:",
+                            "options": [
+                                "Longitudinal study",
+                                "Tricolon trial",
+                                "Ad hominem review",
+                                "Arbitration inquiry"
+                            ],
+                            "correctAnswer": 0,
+                            "explanation": "Uzoq yillar davomida bir xil obyektlarni kuzatuvchi tadqiqot 'longitudinal study' deb ataladi."
+                        },
+                        {
+                            "id": "en-c1-u3-l4-e5",
+                            "type": "multiple-choice",
+                            "prompt": "Select the verb meaning 'to strongly emphasize or draw attention to an important fact':",
+                            "options": [
+                                "Underscore",
+                                "Gloss over",
+                                "Encroach",
+                                "Subdue"
+                            ],
+                            "correctAnswer": 0,
+                            "explanation": "'Underscore' — alohida ta'kidlamoq, tagiga chizib ko'rsatmoq ma'nosini beradi."
                         }
                     ]
                 }
             },
             {
                 "id": "en-c1-u3-l4-s3",
-                "title": "Test",
+                "title": "Abstract Writing Baholash Testi",
                 "type": "test",
-                "estimatedMinutes": 6,
+                "estimatedMinutes": 7,
                 "testData": {
-                    "instructions": "Savollarga javob bering.",
-                    "passingScorePercentage": 75,
+                    "instructions": "Ilmiy annotatsiya yozish qoidalari va akademik lakonizm bo'yicha imtihon.",
+                    "passingScorePercentage": 80,
                     "questions": [
                         {
                             "id": "en-c1-u3-l4-q1",
-                            "question": "What is the primary function of an academic abstract?",
+                            "question": "What is the standard organizational framework for writing scientific abstracts?",
                             "options": [
-                                "To list all reference books",
-                                "To display the University logo",
-                                "To introduce the author's biography",
-                                "To provide a concise, comprehensive synthesis of the entire paper"
+                                "IMRAD (Introduction, Methods, Results, and Discussion)",
+                                "Chronological autobiography of the principal investigator",
+                                "A collection of informal jokes to engage the reader",
+                                "A comprehensive verbatim reproduction of the literature review"
                             ],
-                            "correctAnswerIndex": 3,
-                            "explanation": "Concise, comprehensive synthesis."
+                            "correctAnswerIndex": 0,
+                            "explanation": "Xalqaro ilmiy jurnallarda annotatsiya IMRAD (Kirish, Metodlar, Natijalar va Munozara) tuzilmasiga tayanadi."
                         },
                         {
                             "id": "en-c1-u3-l4-q2",
-                            "question": "What does \"ramifications\" mean in an academic context?",
+                            "question": "'The investigation reveals that corporate tax avoidance carries severe sociopolitical _______ for democratic governance.'",
                             "options": [
-                                "Complex consequences or secondary effects",
-                                "Simple mathematics",
-                                "Small tree branches only",
-                                "Office decorations"
+                                "ramifications",
+                                "syllogisms",
+                                "anaphoras",
+                                "concessions"
                             ],
                             "correctAnswerIndex": 0,
-                            "explanation": "Complex consequences or effects."
+                            "explanation": "Murakkab ijtimoiy-siyosiy asoratlar va oqibatlar 'sociopolitical ramifications' birikmasi bilan ifodalanadi."
                         },
                         {
                             "id": "en-c1-u3-l4-q3",
-                            "question": "Should an abstract contain extensive in-text citations and long quotes?",
+                            "question": "Why should informal first-person narratives ('In this paper I decided to...') be avoided in C1 abstracts?",
                             "options": [
-                                "Yes, fill it with 50 citations",
-                                "It must be written in bold",
-                                "No, an abstract should be self-contained and free of heavy citations",
-                                "Yes, only write quotes"
+                                "They are grammatically illegal under British law.",
+                                "They diminish objective scholarly tone and waste valuable word count with self-referential filler.",
+                                "They make the abstract too short.",
+                                "They are only permitted in mathematics papers."
                             ],
-                            "correctAnswerIndex": 2,
-                            "explanation": "Self-contained and free of citations."
+                            "correctAnswerIndex": 1,
+                            "explanation": "Birinchi shaxsda shaxsiy hikoya qilish ilmiy xolislikka putur yetkazadi va cheklangan so'z miqdorini zoe ketkazadi."
                         },
                         {
                             "id": "en-c1-u3-l4-q4",
-                            "question": "An Executive Summary is primarily tailored for:",
+                            "question": "Choose the most concise nominalized sentence suitable for an executive summary:",
                             "options": [
-                                "Decision-makers and leadership who need key findings rapidly",
-                                "Proofreaders checking commas only",
-                                "Librarians sorting shelves",
-                                "Children learning to read"
+                                "Because raw material prices fluctuated constantly, our quarterly revenue decreased by 12%.",
+                                "Raw material price volatility precipitated a 12% decline in quarterly revenue.",
+                                "Things like material prices moving up and down made the money go down 12%.",
+                                "We saw that prices of materials were fluctuating and so we lost 12% of cash."
+                            ],
+                            "correctAnswerIndex": 1,
+                            "explanation": "'Raw material price volatility precipitated a 12% decline in quarterly revenue' eng zich, lo'nda va professional korporativ ifodadir."
+                        },
+                        {
+                            "id": "en-c1-u3-l4-q5",
+                            "question": "'The executive committee recognized the modernization of outdated hospital wards as an urgent public health _______.'",
+                            "options": [
+                                "imperative",
+                                "bottleneck",
+                                "antithesis",
+                                "fallacy"
                             ],
                             "correctAnswerIndex": 0,
-                            "explanation": "Decision-makers and leadership."
+                            "explanation": "Kechiktirib bo'lmas hayotiy majburiyat va zaruriyat 'public health imperative' deb ataladi."
                         }
                     ]
                 }
@@ -3020,153 +3328,228 @@ export const ENGLISH_C1_LESSONS: Lesson[] = [
         "level": "C1",
         "lessonNumber": 5,
         "title": "Critical Essay Evaluation & Peer Review",
-        "description": "Akademik insholardagi mantiqiy bo'shliqlarni tahlil qilish va taqriz yozish.",
-        "estimatedDurationMinutes": 16,
-        "icon": "📝",
+        "description": "Akademik insholarni tanqidiy baholash, ilmiy taqriz (peer review) yozish, dalillarning mustahkamligini (defensibility) tekshirish.",
+        "estimatedDurationMinutes": 22,
+        "icon": "🔍",
         "steps": [
             {
                 "id": "en-c1-u3-l5-s1",
-                "title": "Taqriz San'ati",
+                "title": "Peer Review & Scholarly Critique",
                 "type": "learn",
-                "estimatedMinutes": 5,
+                "estimatedMinutes": 8,
                 "learnData": {
-                    "title": "Constructive Academic Peer Review",
-                    "explanation": "Baholash mezonlari: Cohesion, logical flow, claim substantiation, lexical appropriateness, and grammatical precision.",
-                    "keyPoints": [
-                        "Highlighting strengths: \"The author cogently demonstrates...\"",
-                        "Identifying weaknesses: \"However, the assertion lacks empirical validation...\""
-                    ],
-                    "grammarRules": [
-                        {
-                            "pattern": "Critical Essay Evaluation & Peer Review",
-                            "meaning": "Akademik insholardagi mantiqiy bo'shliqlarni tahlil qilish va taqriz yozish.",
-                            "usageNotes": "Baholash mezonlari: Cohesion, logical flow, claim substantiation, lexical appropriateness, and grammatical precision.",
-                            "examples": [
-                                {
-                                    "sentence": "I study English every day with dedication.",
-                                    "translation": "Har kuni ingliz tilini astoydil o'rganaman."
-                                }
-                            ]
-                        }
-                    ],
+                    "title": "Critical Essay Evaluation & Scholarly Peer Review",
+                    "explanation": "Ilm-fan va ilg'or akademik ta'limning asosiy kafolati — bu xolis taqriz (Peer Review) jarayonidir. C1 darajasidagi talaba yoki tadqiqotchi o'zgalarning insholarini o'qiganda shunchaki xato qidirmaydi; u argumentatsiyaning mantiqiy mustahkamligini (defensibility), metodologik aniqligini va xulosalarning qayta takrorlanuvchanligini (replicability) tekshiradi.\n\nTaqrizchining Asosiy Baholash Mezonlari:\n1. **Methodological Rigor (Metodologik qat'iyat)**:\n   - Tadqiqotda tanlangan namuna (sample size) yetarlimi? Boshqaruv guruhi (control group) bormi?\n   *The authors fail to account for confounding variables in their experimental cohort.*\n2. **Defensibility of Claims (Da'volarning himoyalana olishi)**:\n   - Xulosalar keltirilgan faktlardan tabiiy ravishda kelib chiqadimi yoki muallif asossiz sakrash (unwarranted leap) qilganmi?\n   *The assertion that diet solely dictates longevity remains intellectually indefensible without genomic controls.*\n3. **Constructive Critique (Konstruktiv, hurmatli taqriz tili)**:\n   - *The manuscript presents a compelling conceptual framework; nevertheless, the statistical analysis requires substantial recalibration to withstand peer scrutiny.*\n\n⚠️ **O'zbek o'rganuvchilari uchun xavfli tuzoqlar (Common Pitfalls)**:\n- ❌ *This essay is totally bad and the writer doesn't know anything.* (Hissiy, haqoratomuz taqriz; akademik jurnallar bunday sharhlarni qat'iyan rad etadi).\n  ✅ *While the premise is intriguing, the empirical evidence presented falls short of establishing a conclusive causal link.*\n- ❌ *Confusing 'criticism' (salbiy xato topish) with 'critique' (chuqur, xolis tahlil va baholash).* Inshoni baholaganda *a scholarly critique* so'zi ishlatiladi.",
                     "vocabulary": [
                         {
-                            "term": "Pervasive",
-                            "reading": "/pəˈveɪ.sɪv/",
-                            "meaning": "Keng tarqalgan, singib ketgan",
-                            "exampleSentence": "Digital transformation has a pervasive impact on society.",
-                            "exampleTranslation": "Raqamli transformatsiya jamiyatga chuqur singib borgan taʼsir koʻrsatadi."
+                            "term": "Critique",
+                            "reading": "/krɪˈtiːk/",
+                            "meaning": "Taqriz, chuqur tahliliy baholash (shunchaki xato qidirish emas)",
+                            "exampleSentence": "The peer reviewer submitted a rigorous critique detailing three methodological flaws in the dataset.",
+                            "exampleTranslation": "Taqrizchi ma'lumotlar to'plamidagi uchta metodologik nuqsonni batafsil ko'rsatib bergan qat'iy taqriz taqdim etdi."
                         },
                         {
-                            "term": "Exemplify",
-                            "reading": "/ɪɡˈzem.plɪ.faɪ/",
-                            "meaning": "Yorqin misol boʻlmoq",
-                            "exampleSentence": "Recent discoveries exemplify the power of modern physics.",
-                            "exampleTranslation": "Soʻnggi kashfiyotlar zamonaviy fizika qudratini yaqqol namoyon etadi."
+                            "term": "Rigor",
+                            "reading": "/ˈrɪɡ.ər/",
+                            "meaning": "Qat'iylik, yuksak aniqlik, ilmiy soflik",
+                            "exampleSentence": "Scholarly publications demand utmost methodological rigor before accepting submitted manuscripts.",
+                            "exampleTranslation": "Ilmiy nashrlar topshirilgan qo'lyozmalarni qabul qilishdan oldin eng yuqori metodologik qat'iyatni talab qiladi."
                         },
                         {
-                            "term": "Nominalisation",
-                            "reading": "/ˌnɒmɪnəlaɪˈzeɪʃən/",
-                            "meaning": "Feʼlni otga aylantirish (akademik uslub)",
-                            "exampleSentence": "Nominalisation lends academic weight to scientific discourse.",
-                            "exampleTranslation": "Nominalizatsiya ilmiy matnga akademik salmoq beradi."
+                            "term": "Defensibility",
+                            "reading": "/dɪˌfen.səˈbɪl.ə.ti/",
+                            "meaning": "Himoyalana olish qobiliyati, mantiqiy mustahkamlik",
+                            "exampleSentence": "The defensibility of the econometric model depends on the stability of consumer expenditure patterns.",
+                            "exampleTranslation": "Ekonometrik modelning himoyalana olish mustahkamligi iste'molchilar xarajatlari qoliplarining barqarorligiga bog'liqdir."
+                        },
+                        {
+                            "term": "Replicate",
+                            "reading": "/ˈrep.lɪ.keɪt/",
+                            "meaning": "Tajribani aynan qaytadan takrorlamoq (natijani tekshirish uchun)",
+                            "exampleSentence": "Independent laboratories failed to replicate the controversial cold fusion experiment.",
+                            "exampleTranslation": "Mustaqil laboratoriyalar bahsli sovuq yadroviy sintez tajribasini aynan qayta takrorlay olmadilar."
+                        },
+                        {
+                            "term": "Scrutiny",
+                            "reading": "/ˈskruː.tɪ.ni/",
+                            "meaning": "Sinchkovlik bilan tekshirish, qattiq nazorat",
+                            "exampleSentence": "The financial audit withstood intense regulatory scrutiny without a single violation.",
+                            "exampleTranslation": "Moliyaviy audit bittayam qonunbuzarliksiz kuchli nazorat tekshiruvidan muvaffaqiyatli o'tdi."
+                        },
+                        {
+                            "term": "Confounding",
+                            "reading": "/kənˈfaʊn.dɪŋ/",
+                            "meaning": "Chalg'ituvchi, natijani buzuvchi yashirin omil",
+                            "exampleSentence": "Researchers must control for confounding socioeconomic variables when measuring educational outcomes.",
+                            "exampleTranslation": "Tadqiqotchilar ta'lim natijalarini o'lchashda natijani chalg'ituvchi ijtimoiy-iqtisodiy omillarni nazorat qilishlari shart."
+                        },
+                        {
+                            "term": "Indefensible",
+                            "reading": "/ˌɪn.dɪˈfen.sə.bəl/",
+                            "meaning": "Oqlab bo'lmaydigan, himoyasiz, asossiz",
+                            "exampleSentence": "Claiming that smoking causes no cardiovascular harm is scientifically indefensible.",
+                            "exampleTranslation": "Chekish yurak-qon tomir tizimiga zarar keltirmaydi deb da'vo qilish ilmiy jihatdan asossiz va oqlab bo'lmaydigan fikrdir."
+                        },
+                        {
+                            "term": "Substantive",
+                            "reading": "/səbˈstæn.tɪv/",
+                            "meaning": "Moxiyatli, jiddiy, mustahkam asosga ega",
+                            "exampleSentence": "The revision addressed all substantive criticisms raised by the editorial board.",
+                            "exampleTranslation": "Qayta ko'rib chiqish tahririyat hay'ati tomonidan ko'tarilgan barcha jiddiy tanqidlarga to'liq javob berdi."
                         }
+                    ],
+                    "keyPoints": [
+                        "Peer review criteria: Methodological rigor, data integrity, replicability, and defensibility of conclusions.",
+                        "Constructive critique balances acknowledging intellectual contributions with identifying empirical vulnerabilities.",
+                        "Account for 'confounding variables' that distort causal deductions.",
+                        "Distinguish between a hostile insult and a calibrated 'scholarly critique'."
                     ]
                 }
             },
             {
                 "id": "en-c1-u3-l5-s2",
-                "title": "Mashq",
+                "title": "Peer Review Amaliyoti",
                 "type": "practice",
-                "estimatedMinutes": 5,
+                "estimatedMinutes": 6,
                 "practiceData": {
-                    "instructions": "To'g'ri taqriz jumlasini tanlang.",
+                    "instructions": "Ilmiy taqriz va insho tahliliga oid eng mos jumlalarni tanlang.",
                     "exercises": [
                         {
                             "id": "en-c1-u3-l5-e1",
                             "type": "multiple-choice",
-                            "prompt": "\"The essay presents a compelling thesis; _______, the transition between paragraphs 2 and 3 requires smoothing.\"",
+                            "prompt": "What does it mean if a scientific experiment cannot be 'replicated' by independent researchers?",
                             "options": [
-                                "nonetheless",
-                                "because",
-                                "namely",
-                                "furthermore"
+                                "Its conclusions cannot be verified or validated, casting severe doubt on the reliability of the findings.",
+                                "The experiment was printed on duplicate paper.",
+                                "The laboratory was closed for the weekend.",
+                                "The researchers spoke multiple languages."
                             ],
                             "correctAnswer": 0,
-                            "explanation": "Nonetheless (shunday bo'lsa-da)."
+                            "explanation": "Tajriba boshqalar tomonidan qayta takrorlana olmasa ('replicated'), uning ilmiy haqiqiyligi va ishonchliligi jiddiy shubha ostida qoladi."
                         },
                         {
-                            "id": "en-c1-u3-l5-ex-2",
+                            "id": "en-c1-u3-l5-e2",
                             "type": "multiple-choice",
-                            "prompt": "Choose the correct word to complete the sentence: \"Recent discoveries exemplify the power of modern physics.\"",
+                            "prompt": "Choose the most constructive peer review phrasing:",
                             "options": [
-                                "Exemplify",
-                                "reluctance",
-                                "delay",
-                                "doubt"
+                                "This paper is total rubbish and the author should quit research.",
+                                "While the qualitative analysis is compelling, the study would benefit from incorporating quantitative controls to substantiate the central hypothesis.",
+                                "I hate this article very much because it is too long.",
+                                "The author clearly has no brain."
+                            ],
+                            "correctAnswer": 1,
+                            "explanation": "Konstruktiv taqriz yaxshi tomonni e'tirof etib, qayerda yaxshilash kerakligini ilmiy taklif bilan beradi."
+                        },
+                        {
+                            "id": "en-c1-u3-l5-e3",
+                            "type": "multiple-choice",
+                            "prompt": "What is an uncontrolled hidden factor that influences both the supposed cause and effect called?",
+                            "options": [
+                                "A confounding variable",
+                                "A tricolon figure",
+                                "A non-negotiable clause",
+                                "A rhetorical cadence"
                             ],
                             "correctAnswer": 0,
-                            "explanation": "\"Exemplify\" (Yorqin misol boʻlmoq) fits the context appropriately."
+                            "explanation": "Natijaga ta'sir o'tkazib tahlilni chalg'ituvchi yashirin omil 'confounding variable' deb ataladi."
+                        },
+                        {
+                            "id": "en-c1-u3-l5-e4",
+                            "type": "multiple-choice",
+                            "prompt": "Complete: 'The author's audacious claim that automation creates zero unemployment remains intellectually _______.'",
+                            "options": [
+                                "indefensible",
+                                "sentient",
+                                "pervasive",
+                                "opaque"
+                            ],
+                            "correctAnswer": 0,
+                            "explanation": "Mantiqan va fakt jihatdan oqlab yoki himoya qilib bo'lmaydigan da'vo 'intellectually indefensible' deyiladi."
+                        },
+                        {
+                            "id": "en-c1-u3-l5-e5",
+                            "type": "multiple-choice",
+                            "prompt": "Select the noun meaning 'careful, critical, and thorough examination':",
+                            "options": [
+                                "Scrutiny",
+                                "Posturing",
+                                "Dissonance",
+                                "Outage"
+                            ],
+                            "correctAnswer": 0,
+                            "explanation": "'Scrutiny' — sinchkov, chuqur va qat'iy tekshiruv ma'nosini beradi."
                         }
                     ]
                 }
             },
             {
                 "id": "en-c1-u3-l5-s3",
-                "title": "Test",
+                "title": "Peer Review Baholash Testi",
                 "type": "test",
-                "estimatedMinutes": 6,
+                "estimatedMinutes": 7,
                 "testData": {
-                    "instructions": "Savollarga javob bering.",
-                    "passingScorePercentage": 75,
+                    "instructions": "Akademik taqriz va ilmiy tahlil mezonlari bo'yicha yakuniy test.",
+                    "passingScorePercentage": 80,
                     "questions": [
                         {
                             "id": "en-c1-u3-l5-q1",
-                            "question": "What does \"cogent\" mean in \"a cogent argument\"?",
+                            "question": "What is the primary role of anonymous peer review in academic science?",
                             "options": [
-                                "Clear, logical and convincing",
-                                "Very loud",
-                                "Comedic",
-                                "Weak and confusing"
+                                "To maintain scholastic rigor by subjecting research methodologies and data interpretations to independent expert scrutiny.",
+                                "To correct basic spelling errors and choose book cover images.",
+                                "To ensure only wealthy scientists get published.",
+                                "To delay publications so that competitors can steal ideas."
                             ],
                             "correctAnswerIndex": 0,
-                            "explanation": "Clear, logical and convincing."
+                            "explanation": "Anonim taqriz ilmiy metodologiyani mustaqil ekspert tekshiruvidan o'tkazib, ilmiy qat'iyat va sifatni ta'minlaydi."
                         },
                         {
                             "id": "en-c1-u3-l5-q2",
-                            "question": "What is a \"non-sequitur\"?",
+                            "question": "'The doctoral candidate's thesis successfully withstood rigorous _______ by the examination committee.'",
                             "options": [
-                                "A long paragraph",
-                                "A Latin proverb",
-                                "A grammar rule",
-                                "A conclusion or statement that does not logically follow from the previous argument"
+                                "scrutiny",
+                                "posturing",
+                                "concession",
+                                "outage"
                             ],
-                            "correctAnswerIndex": 3,
-                            "explanation": "Conclusion that does not logically follow."
+                            "correctAnswerIndex": 0,
+                            "explanation": "Imtihon komissiyasining qat'iy sinchkov tekshiruvidan muvaffaqiyatli o'tish 'withstood rigorous scrutiny' deyiladi."
                         },
                         {
                             "id": "en-c1-u3-l5-q3",
-                            "question": "Why is peer review fundamental to the scientific method?",
+                            "question": "Which of the following demonstrates a failure of methodological rigor?",
                             "options": [
-                                "It filters out methodological flaws, bias and unsubstantiated claims",
-                                "It is just a social ritual",
-                                "It makes papers expensive",
-                                "It prevents anyone from publishing"
+                                "Drawing sweeping conclusions about national demographics from a survey of five college students.",
+                                "Utilizing randomized double-blind trial protocols.",
+                                "Controlling for participant age, gender, and baseline health.",
+                                "Subjecting statistical calculations to third-party verification."
                             ],
                             "correctAnswerIndex": 0,
-                            "explanation": "Filters out flaws, bias, and errors."
+                            "explanation": "Besh nafar talaba asosida butun millat haqida umumiy xulosa chiqarish metodologik qat'iyatning qo'pol buzilishidir."
                         },
                         {
                             "id": "en-c1-u3-l5-q4",
-                            "question": "\"The findings are corroborated by independent clinical trials.\" What does \"corroborate\" mean?",
+                            "question": "What is the key difference between a casual 'criticism' and a scholarly 'critique'?",
                             "options": [
-                                "Hide",
-                                "Confirm or support with fresh evidence",
-                                "Disprove",
-                                "Cancel"
+                                "A criticism is often negative fault-finding, whereas a critique is an objective, structured evaluation of strengths and vulnerabilities.",
+                                "Criticism is only written in French, while critique is English.",
+                                "Critique is an informal slang term.",
+                                "There is no difference; both are emotional insults."
                             ],
-                            "correctAnswerIndex": 1,
-                            "explanation": "Confirm or support with evidence."
+                            "correctAnswerIndex": 0,
+                            "explanation": "'Criticism' — ko'pincha salbiy ayblov bo'lsa, 'critique' — obyektiv, tuzilmaviy ilmiy tahlil va baholashdir."
+                        },
+                        {
+                            "id": "en-c1-u3-l5-q5",
+                            "question": "'The revised manuscript effectively addresses all _______ flaws identified in the preliminary audit.'",
+                            "options": [
+                                "substantive",
+                                "sentient",
+                                "contingent",
+                                "subdued"
+                            ],
+                            "correctAnswerIndex": 0,
+                            "explanation": "Jiddiy, mohiyatli nuqsonlar 'substantive flaws' birikmasi bilan beriladi."
                         }
                     ]
                 }
