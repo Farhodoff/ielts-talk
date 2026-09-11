@@ -6316,815 +6316,1223 @@ export const ENGLISH_B2_LESSONS: Lesson[] = [
     ]
 },
     {
-        "id": "en-b2-u6-l1",
-        "courseId": "english-b2",
-        "unitId": "en-b2-u6",
-        "unitTitle": "Unit 6: IELTS Speaking & Capstone Synthesis",
-        "language": "en",
-        "level": "B2",
-        "lessonNumber": 1,
-        "title": "IELTS Speaking Part 1: Fluency & Lexical Range",
-        "description": "Kundalik savollarga to'liq, tabiiy va boy leksika bilan javob berish strategiyalari.",
-        "estimatedDurationMinutes": 14,
-        "icon": "🗣️",
-        "steps": [
-            {
-                "id": "en-b2-u6-l1-s1",
-                "title": "Part 1 Strategiyasi",
-                "type": "learn",
-                "estimatedMinutes": 4,
-                "learnData": {
-                    "title": "Extending Answers in Speaking Part 1",
-                    "explanation": "Hech qachon faqat \"Yes/No\" yoki 1 ta so'z bilan javob bermang! Formula: Javob (Direct answer) + Sabab (Reason) + Misol yoki Qo'shimcha detal (Example/Detail) -> 2-3 ta ravon gap.",
-                    "keyPoints": [
-                        "Question: \"Do you enjoy cooking?\"",
-                        "Band 5 answer: \"Yes, I like cooking food.\"",
-                        "Band 7 answer: \"To be completely honest, I find cooking exceptionally therapeutic, especially after an intense working day. I love experimenting with traditional pasta recipes.\""
-                    ],
-                    "grammarRules": [
-                        {
-                            "pattern": "IELTS Speaking Part 1: Fluency & Lexical Range",
-                            "meaning": "Kundalik savollarga to'liq, tabiiy va boy leksika bilan javob berish strategiyalari.",
-                            "usageNotes": "Hech qachon faqat \"Yes/No\" yoki 1 ta so'z bilan javob bermang! Formula: Javob (Direct answer) + Sabab (Reason) + Misol yoki Qo'shimcha detal (Example/Detail) -> 2-3 ta ravon gap.",
-                            "examples": [
-                                {
-                                    "sentence": "I study English every day with dedication.",
-                                    "translation": "Har kuni ingliz tilini astoydil o'rganaman."
-                                }
-                            ]
-                        }
-                    ],
-                    "vocabulary": [
-                        {
-                            "term": "Substantiate",
-                            "reading": "/səbˈstæn.ʃi.eɪt/",
-                            "meaning": "Asoslab bermoq, isbotlamoq",
-                            "exampleSentence": "You must substantiate your claims with empirical evidence.",
-                            "exampleTranslation": "Siz oʻz daʼvolaringizni empirik dalillar bilan asoslab berishingiz kerak."
-                        },
-                        {
-                            "term": "Nuance",
-                            "reading": "/ˈnjuː.ɑːns/",
-                            "meaning": "Nozik farq, qirra",
-                            "exampleSentence": "She understood every subtle nuance of the language.",
-                            "exampleTranslation": "U tilning har bir nozik qirrasini tushundi."
-                        },
-                        {
-                            "term": "Coherence",
-                            "reading": "/kəʊˈhɪə.rəns/",
-                            "meaning": "Mantiqiy bogʻliqlik, izchillik",
-                            "exampleSentence": "Ensure structural coherence throughout your essay.",
-                            "exampleTranslation": "Inshoyingiz davomida tuzilmaviy izchillikni taʼminlang."
-                        }
-                    ]
-                }
-            },
-            {
-                "id": "en-b2-u6-l1-s2",
-                "title": "Mashq",
-                "type": "practice",
-                "estimatedMinutes": 5,
-                "practiceData": {
-                    "instructions": "Eng yaxshi kengaytirilgan javobni tanlang.",
-                    "exercises": [
-                        {
-                            "id": "en-b2-u6-l1-e1",
-                            "type": "multiple-choice",
-                            "prompt": "Examiner: \"How often do you read books?\" Best response:",
-                            "options": [
-                                "Books are good.",
-                                "Sometimes books.",
-                                "Yes, I read.",
-                                "I make a conscious effort to read daily, usually dedicating at least thirty minutes before going to sleep to non-fiction or psychology."
-                            ],
-                            "correctAnswer": 3,
-                            "explanation": "Full, extended, nuanced answer."
-                        },
-                        {
-                            "id": "en-b2-u6-l1-ex-2",
-                            "type": "multiple-choice",
-                            "prompt": "Choose the correct word to complete the sentence: \"She understood every subtle nuance of the language.\"",
-                            "options": [
-                                "doubt",
-                                "Nuance",
-                                "delay",
-                                "reluctance"
-                            ],
-                            "correctAnswer": 1,
-                            "explanation": "\"Nuance\" (Nozik farq, qirra) fits the context appropriately."
-                        }
-                    ]
-                }
-            },
-            {
-                "id": "en-b2-u6-l1-s3",
-                "title": "Test",
-                "type": "test",
-                "estimatedMinutes": 5,
-                "testData": {
-                    "instructions": "Savollarga javob bering.",
-                    "passingScorePercentage": 75,
-                    "questions": [
-                        {
-                            "id": "en-b2-u6-l1-q1",
-                            "question": "How long does IELTS Speaking Part 1 last?",
-                            "options": [
-                                "1 minute",
-                                "20 minutes",
-                                "10 to 12 minutes",
-                                "4 to 5 minutes"
-                            ],
-                            "correctAnswerIndex": 3,
-                            "explanation": "4-5 minutes."
-                        },
-                        {
-                            "id": "en-b2-u6-l1-q2",
-                            "question": "What is the optimal length of an answer in Part 1?",
-                            "options": [
-                                "One word (\"Yes\")",
-                                "A 5-minute continuous speech",
-                                "2 to 4 sentences with clear elaboration",
-                                "Silence"
-                            ],
-                            "correctAnswerIndex": 2,
-                            "explanation": "2-4 sentences."
-                        },
-                        {
-                            "id": "en-b2-u6-l1-q3",
-                            "question": "What should you do if you don't hear a question clearly?",
-                            "options": [
-                                "Make up your own question",
-                                "Politely ask the examiner: \"Could you please repeat the question?\"",
-                                "Leave the room",
-                                "Remain completely silent"
-                            ],
-                            "correctAnswerIndex": 1,
-                            "explanation": "Politely ask to repeat."
-                        },
-                        {
-                            "id": "en-b2-u6-l1-q4",
-                            "question": "Which assessment criteria evaluate your smoothness and speed of speech?",
-                            "options": [
-                                "Fluency & Coherence",
-                                "Vocabulary spelling",
-                                "Writing task achievement",
-                                "Grammatical accuracy"
-                            ],
-                            "correctAnswerIndex": 0,
-                            "explanation": "Fluency & Coherence."
-                        }
-                    ]
-                }
+    "id": "en-b2-u6-l1",
+    "courseId": "english-b2",
+    "unitId": "en-b2-u6",
+    "unitTitle": "Unit 6: IELTS Speaking & Capstone Synthesis",
+    "language": "en",
+    "level": "B2",
+    "lessonNumber": 1,
+    "title": "IELTS Speaking Part 1: Fluency & Lexical Range",
+    "description": "IELTS Speaking Part 1: qisqa bir so'zli javoblardan qochish, spontan javobni kengaytirish, tabiiy frazeologik bloklar va ravonlik (Fluency) strategiyalari.",
+    "estimatedDurationMinutes": 18,
+    "icon": "🗣️",
+    "steps": [
+        {
+            "id": "en-b2-u6-l1-s1",
+            "title": "Part 1: Ravonlik va Leksik Diapazon",
+            "type": "learn",
+            "estimatedMinutes": 6,
+            "learnData": {
+                "title": "Mastering IELTS Speaking Part 1: Elaboration, Discourse Markers, and Idiomatic Naturalness",
+                "explanation": "IELTS Speaking Part 1 suhbati 4-5 daqiqa davom etadi va kundalik tanish mavzular (ish, o'qish, shahar, qiziqishlar, ob-havo) bo'yicha savollardan iborat. Ko'pchilik nomzodlar 'Yes, I do' deb 1-2 so'z bilan javob berib, Fluency bo'yicha past ball oladilar.\n\n1. Oltin Qoida — 'Answer + Reason + Example / Detail' (3-4 jumlali qolip):\n- **Savol:** *'Do you like reading books?'*\n- ❌ Zaif javob: *'Yes, I like reading books because it is interesting.'* (Band 5.0)\n- ✅ Band 7.5+ Javob: *'To be perfectly honest, I am an avid reader. Whenever I have a spare hour in the evening, I tend to immerse myself in historical fiction or biographies, as they offer a captivating escape from daily work routines.'*\n\n2. Qimmatli Diskurs Bog'lovchilari va O'ylash Iboralari (Natural Buying-Time Fillers):\n- *'To be completely frank, ...'* (Rostini aytsam)\n- *'Well, it really depends on the circumstances, but predominantly...'* (Holatga bog'liq, lekin asosan...)\n- *'Off the top of my head, I would say...'* (Darhol esimga kelgani shuki...)\n- *'I have never given it much conscious thought, but I suppose...'* (Bu haqda chuqur o'ylamagan ekanman, lekin menimcha...)\n\n3. Leksik Diapazon (Lexical Range) Oshirish:\n- 'I like' o'rniga: *I am passionate about, I am particularly fond of, I am a keen enthusiast of*\n- 'I don't like' o'rniga: *It's not really my cup of tea, I have never been particularly drawn to*\n- 'A lot' o'rniga: *immensely, substantially, considerably*\n\n4. O'zbek Tili Bilan Qiyos (Uzbek Contrastive Analysis):\n- O'zbek tilida savolga 'ha' yoki 'yo'q' deb qisqa javob berish odatiy hol. Ingliz tilida esa bu suhbatdoshga nisbatan qiziqishning yo'qligi deb baholanadi.\n- IELTS imtihonida imtihon oluvchining maqsadi sizdan ma'lumot olish emas, sizning TILINGIZNI tekshirishdir. Shuning uchun har bir oddiy savolga ham o'z leksik boyligingizni namoyish qilish uchun imkoniyat sifatida qarang.",
+                "vocabulary": [
+                    {
+                        "term": "avid",
+                        "reading": "/ˈæv.ɪd/",
+                        "meaning": "ashaddiy, g'ayratli, juda qiziqqan (an avid reader)",
+                        "exampleSentence": "I have always been an avid reader of scientific periodicals and historical biographies.",
+                        "exampleTranslation": "Men doimo ilmiy jurnallar va tarixiy biografiyalarning ashaddiy o'quvchisi bo'lganman."
+                    },
+                    {
+                        "term": "immerse",
+                        "reading": "/ɪˈmɜːs/",
+                        "meaning": "butunlay sho'ng'imoq, berilib ketmoq",
+                        "exampleSentence": "On weekends, I love to immerse myself in classical piano compositions.",
+                        "exampleTranslation": "Dam olish kunlarida men mumtoz fortepiano asarlariga butunlay sho'ng'ishni yaxshi ko'raman."
+                    },
+                    {
+                        "term": "captivating",
+                        "reading": "/ˈkæp.tɪ.veɪ.tɪŋ/",
+                        "meaning": "o'ziga rom etuvchi, maftunkor, juda qiziqarli",
+                        "exampleSentence": "The historical docudrama provided a captivating glimpse into medieval architecture.",
+                        "exampleTranslation": "Tarixiy hujjatli film o'rta asrlar me'morchiligiga maftunkor bir nazar tashladi."
+                    },
+                    {
+                        "term": "fond of",
+                        "reading": "/fɒnd ɒv/",
+                        "meaning": "juda yaxshi ko'rmoq, ishqibozi bo'lmoq",
+                        "exampleSentence": "I am particularly fond of outdoor trekking in the mountains during autumn.",
+                        "exampleTranslation": "Kuzda tog'larda piyoda sayr qilishni ayniqsa yaxshi ko'raman."
+                    },
+                    {
+                        "term": "not my cup of tea",
+                        "reading": "/nɒt maɪ kʌp ɒv tiː/",
+                        "meaning": "mening didimga mos emas, unchalik yoqtirmayman",
+                        "exampleSentence": "Competitive video gaming is entertaining for many, but it is not really my cup of tea.",
+                        "exampleTranslation": "Kiber sport ko'pchilik uchun qiziq, ammo bu mening didimga unchalik mos emas."
+                    },
+                    {
+                        "term": "spontaneous",
+                        "reading": "/spɒnˈteɪ.ni.əs/",
+                        "meaning": "tabiiy, yodlab olinmagan, erkin",
+                        "exampleSentence": "Examiners reward spontaneous and authentic speech rather than rehearsed scripts.",
+                        "exampleTranslation": "Imtihon oluvchilar yodlangan qoliplarni emas, tabiiy va erkin nutqni yuqori baholaydilar."
+                    },
+                    {
+                        "term": "elaboration",
+                        "reading": "/iˌlæb.əˈreɪ.ʃən/",
+                        "meaning": "fikrni batafsil kengaytirish, boyitish",
+                        "exampleSentence": "Providing a thoughtful elaboration prevents awkward conversational silences.",
+                        "exampleTranslation": "Fikrni o'rinli kengaytirish noqulay sukutlarning oldini oladi."
+                    },
+                    {
+                        "term": "intonation",
+                        "reading": "/ˌɪn.təˈneɪ.ʃən/",
+                        "meaning": "ohang, intonatsiya (nutq musiqiyligi)",
+                        "exampleSentence": "Natural expressive intonation distinguishes a Band 7 speaker from a robotic recital.",
+                        "exampleTranslation": "Tabiiy ifodali intonatsiya Band 7 sohibini mexanik yodlovchidan ajratib turadi."
+                    }
+                ],
+                "grammarRules": [
+                    {
+                        "pattern": "Answer Structure: Direct Answer + Reason (as / because) + Concrete Exemplification",
+                        "meaning": "Part 1 javoblarini 3-4 jumlada kengaytirish qolipi",
+                        "usageNotes": "Bir so'zli 'Yes/No' javoblardan butunlay qochish kerak.",
+                        "examples": [
+                            {
+                                "sentence": "\"Do you prefer mornings or evenings?\" -> \"Without a doubt, I am an evening person, as my creative concentration peaks late at night. For instance, I write all my academic drafts past midnight.\"",
+                                "translation": "Ertalabnimi yoki oqshomnimi afzal ko'rasiz? -> Shubhasiz oqshomni, chunki ijodiy diqqatim kechasi eng yuqori bo'ladi. Masalan, barcha maqolalarimni yarim tundan keyin yozaman."
+                            }
+                        ]
+                    }
+                ]
             }
-        ]
-    },
+        },
+        {
+            "id": "en-b2-u6-l1-s2",
+            "title": "Amaliy Mashqlar",
+            "type": "practice",
+            "estimatedMinutes": 5,
+            "practiceData": {
+                "instructions": "IELTS Speaking Part 1 strategiyalari bo'yicha to'g'ri variantlarni tanlang.",
+                "exercises": [
+                    {
+                        "id": "en-b2-u6-l1-e1",
+                        "type": "multiple-choice",
+                        "prompt": "Examiner: 'Do you enjoy cooking?' Which response demonstrates Band 7+ Lexical Range and Fluency?",
+                        "options": [
+                            "Yes, I like cooking very much, it is good food.",
+                            "To be frank, I find culinary preparation incredibly therapeutic. Whenever work stresses me out, I love concocting Italian pasta dishes from scratch.",
+                            "No, cooking is boring. My mother cooks.",
+                            "Yes, cooking delicious."
+                        ],
+                        "correctAnswer": 1,
+                        "explanation": "B varianti 'culinary preparation', 'therapeutic', 'concocting from scratch' kabi ajoyib B2 leksika va ravonlik bilan boyitilgan."
+                    },
+                    {
+                        "id": "en-b2-u6-l1-e2",
+                        "type": "multiple-choice",
+                        "prompt": "Which idiom naturally conveys that you do NOT enjoy a particular activity?",
+                        "options": [
+                            "It's not really my cup of tea.",
+                            "It costs an arm and a leg.",
+                            "Once in a blue moon.",
+                            "See eye to eye."
+                        ],
+                        "correctAnswer": 0,
+                        "explanation": "'It's not really my cup of tea' (bu mening didimga unchalik mos emas) tabiiy idiomadir."
+                    },
+                    {
+                        "id": "en-b2-u6-l1-e3",
+                        "type": "multiple-choice",
+                        "prompt": "What is the optimal length of a response in IELTS Speaking Part 1?",
+                        "options": [
+                            "A single word ('Yes' or 'No').",
+                            "Three to four well-developed sentences (around 15 to 25 seconds).",
+                            "A five-minute non-stop lecture.",
+                            "Remaining silent."
+                        ],
+                        "correctAnswer": 1,
+                        "explanation": "Part 1 da har bir savolga 3-4 gapdan iborat (15-25 soniyalik) aniq va kengaytirilgan javob berish maqsadga muvofiqdir."
+                    },
+                    {
+                        "id": "en-b2-u6-l1-e4",
+                        "type": "multiple-choice",
+                        "prompt": "I am an _______ enthusiast of classical literature and read poetry before bed.",
+                        "options": [
+                            "avid",
+                            "obsolete",
+                            "pervasive",
+                            "stagnant"
+                        ],
+                        "correctAnswer": 0,
+                        "explanation": "Ashaddiy / g'ayratli qiziqish: 'an avid enthusiast'."
+                    },
+                    {
+                        "id": "en-b2-u6-l1-e5",
+                        "type": "multiple-choice",
+                        "prompt": "Why should test-takers avoid memorizing full essay-like answers for Part 1?",
+                        "options": [
+                            "Examiners easily identify unnatural, robotic delivery and will disrupt your flow with follow-up questions.",
+                            "Because examiners do not speak English.",
+                            "Because Part 1 is not recorded.",
+                            "Because it is forbidden to speak fast."
+                        ],
+                        "correctAnswer": 0,
+                        "explanation": "Yodlangan javoblar intonatsiya va spontanlikni buzadi, imtihon oluvchi buni darhol sezib, boshqa savolga o'tib ketadi."
+                    }
+                ]
+            }
+        },
+        {
+            "id": "en-b2-u6-l1-s3",
+            "title": "Yakuniy Test",
+            "type": "test",
+            "estimatedMinutes": 5,
+            "testData": {
+                "instructions": "5 ta test savoliga to'g'ri javob bering. O'tish bali: 80%.",
+                "passingScorePercentage": 80,
+                "questions": [
+                    {
+                        "id": "en-b2-u6-l1-q1",
+                        "question": "Which discourse filler allows a speaker to pause naturally while thinking of an authentic answer?",
+                        "options": [
+                            "Off the top of my head, I would say...",
+                            "Stop talking right now...",
+                            "I have zero knowledge...",
+                            "Translate please..."
+                        ],
+                        "correctAnswerIndex": 0,
+                        "explanation": "'Off the top of my head, I would say...' tabiiy o'ylash iborasidir."
+                    },
+                    {
+                        "id": "en-b2-u6-l1-q2",
+                        "question": "If asked 'Where do you live?', which response shows appropriate B2 Lexical Range?",
+                        "options": [
+                            "I live in Tashkent, it is big.",
+                            "I reside in a bustling residential quarter of Tashkent, which is renowned for its leafy parks and convenient metro access.",
+                            "Tashkent city house.",
+                            "I am live in apartment."
+                        ],
+                        "correctAnswerIndex": 1,
+                        "explanation": "Variant B 'reside in a bustling residential quarter... renowned for' kabi yetuk B2 leksikani namoyish qilgan."
+                    },
+                    {
+                        "id": "en-b2-u6-l1-q3",
+                        "question": "The total duration of IELTS Speaking Part 1 is approximately _______ .",
+                        "options": [
+                            "1 minute",
+                            "4 to 5 minutes",
+                            "15 minutes",
+                            "Half an hour"
+                        ],
+                        "correctAnswerIndex": 1,
+                        "explanation": "Part 1 taxminan 4-5 daqiqa davom etadi."
+                    },
+                    {
+                        "id": "en-b2-u6-l1-q4",
+                        "question": "When an unexpected question arises, starting with 'To be completely frank, ...' conveys _______ .",
+                        "options": [
+                            "natural conversational fluency and authentic tone",
+                            "that you are lying",
+                            "that you want to end the test",
+                            "grammatical confusion"
+                        ],
+                        "correctAnswerIndex": 0,
+                        "explanation": "'To be completely frank...' nutqqa samimiylik va tabiiy ravonlik baxsh etadi."
+                    },
+                    {
+                        "id": "en-b2-u6-l1-q5",
+                        "question": "What is the primary evaluation criterion tested when a candidate speaks smoothly without excessive pauses or self-repetition?",
+                        "options": [
+                            "Fluency and Coherence",
+                            "Grammatical Range",
+                            "Handwriting",
+                            "Reading Speed"
+                        ],
+                        "correctAnswerIndex": 0,
+                        "explanation": "To'xtalmasdan, qaytariqlarsiz ravon gapirish — 'Fluency and Coherence' mezonidir."
+                    }
+                ]
+            }
+        }
+    ]
+},
     {
-        "id": "en-b2-u6-l2",
-        "courseId": "english-b2",
-        "unitId": "en-b2-u6",
-        "unitTitle": "Unit 6: IELTS Speaking & Capstone Synthesis",
-        "language": "en",
-        "level": "B2",
-        "lessonNumber": 2,
-        "title": "IELTS Speaking Part 2: 2-Minute Cue Card Strategy",
-        "description": "1 daqiqalik tayyorgarlik va 2 daqiqalik to'xtovsiz monolog strategiyasi.",
-        "estimatedDurationMinutes": 16,
-        "icon": "⏱️",
-        "steps": [
-            {
-                "id": "en-b2-u6-l2-s1",
-                "title": "Cue Card Texnikasi",
-                "type": "learn",
-                "estimatedMinutes": 5,
-                "learnData": {
-                    "title": "Mastering the 2-Minute Long Turn",
-                    "explanation": "1 daqiqa ichida barcha savollarga (Who, Where, What, Why) kalit so'zlar va ilg'or sifatlarni yozib oling. Hikoyangizni xronologik tartibda boy detallar bilan 2 daqiqa gapirib bering.",
-                    "keyPoints": [
-                        "Storytelling strukturasidan foydalaning (kirish, rivojlanish, kulminatsiya, xulosa).",
-                        "Imtihon oluvchi to'xtatmaguncha gapirishdan to'xtamang!"
-                    ],
-                    "grammarRules": [
-                        {
-                            "pattern": "IELTS Speaking Part 2: 2-Minute Cue Card Strategy",
-                            "meaning": "1 daqiqalik tayyorgarlik va 2 daqiqalik to'xtovsiz monolog strategiyasi.",
-                            "usageNotes": "1 daqiqa ichida barcha savollarga (Who, Where, What, Why) kalit so'zlar va ilg'or sifatlarni yozib oling. Hikoyangizni xronologik tartibda boy detallar bilan 2 daqiqa gapirib bering.",
-                            "examples": [
-                                {
-                                    "sentence": "I study English every day with dedication.",
-                                    "translation": "Har kuni ingliz tilini astoydil o'rganaman."
-                                }
-                            ]
-                        }
-                    ],
-                    "vocabulary": [
-                        {
-                            "term": "Nuance",
-                            "reading": "/ˈnjuː.ɑːns/",
-                            "meaning": "Nozik farq, qirra",
-                            "exampleSentence": "She understood every subtle nuance of the language.",
-                            "exampleTranslation": "U tilning har bir nozik qirrasini tushundi."
-                        },
-                        {
-                            "term": "Coherence",
-                            "reading": "/kəʊˈhɪə.rəns/",
-                            "meaning": "Mantiqiy bogʻliqlik, izchillik",
-                            "exampleSentence": "Ensure structural coherence throughout your essay.",
-                            "exampleTranslation": "Inshoyingiz davomida tuzilmaviy izchillikni taʼminlang."
-                        },
-                        {
-                            "term": "Compelling",
-                            "reading": "/kəmˈpel.ɪŋ/",
-                            "meaning": "Juda ishonarli, maftunkor",
-                            "exampleSentence": "He presented a compelling argument in the debate.",
-                            "exampleTranslation": "U bahsda juda ishonarli dalil keltirdi."
-                        }
-                    ]
-                }
-            },
-            {
-                "id": "en-b2-u6-l2-s2",
-                "title": "Mashq",
-                "type": "practice",
-                "estimatedMinutes": 5,
-                "practiceData": {
-                    "instructions": "To'g'ri monolog kirish jumlasini tanlang.",
-                    "exercises": [
-                        {
-                            "id": "en-b2-u6-l2-e1",
-                            "type": "multiple-choice",
-                            "prompt": "Prompt: \"Describe a memorable journey you took.\" Best opening sentence:",
-                            "options": [
-                                "A journey was good.",
-                                "Hello examiner, I traveled.",
-                                "I would like to talk about an unforgettable expedition I embarked upon two summers ago across the mountains of Uzbekistan.",
-                                "I will speak about journey."
-                            ],
-                            "correctAnswer": 2,
-                            "explanation": "Eng mukammal va boy ochilish jumlasi."
-                        },
-                        {
-                            "id": "en-b2-u6-l2-ex-2",
-                            "type": "multiple-choice",
-                            "prompt": "Choose the correct word to complete the sentence: \"Ensure structural coherence throughout your essay.\"",
-                            "options": [
-                                "reluctance",
-                                "delay",
-                                "Coherence",
-                                "doubt"
-                            ],
-                            "correctAnswer": 2,
-                            "explanation": "\"Coherence\" (Mantiqiy bogʻliqlik, izchillik) fits the context appropriately."
-                        }
-                    ]
-                }
-            },
-            {
-                "id": "en-b2-u6-l2-s3",
-                "title": "Test",
-                "type": "test",
-                "estimatedMinutes": 6,
-                "testData": {
-                    "instructions": "Savollarga javob bering.",
-                    "passingScorePercentage": 75,
-                    "questions": [
-                        {
-                            "id": "en-b2-u6-l2-q1",
-                            "question": "How much preparation time is given in IELTS Speaking Part 2?",
-                            "options": [
-                                "30 seconds",
-                                "No preparation time",
-                                "1 minute",
-                                "5 minutes"
-                            ],
-                            "correctAnswerIndex": 2,
-                            "explanation": "Exactly 1 minute."
-                        },
-                        {
-                            "id": "en-b2-u6-l2-q2",
-                            "question": "How long should you speak in Part 2?",
-                            "options": [
-                                "Exactly 30 seconds",
-                                "5 minutes",
-                                "10 minutes",
-                                "Up to 2 minutes continuously"
-                            ],
-                            "correctAnswerIndex": 3,
-                            "explanation": "1 to 2 minutes."
-                        },
-                        {
-                            "id": "en-b2-u6-l2-q3",
-                            "question": "Should you write full sentences or bullet points on your notes paper?",
-                            "options": [
-                                "Short bullet points and key vocabulary",
-                                "Draw pictures only",
-                                "Full essays",
-                                "Nothing"
-                            ],
-                            "correctAnswerIndex": 0,
-                            "explanation": "Short bullet points & vocabulary."
-                        },
-                        {
-                            "id": "en-b2-u6-l2-q4",
-                            "question": "What happens when the examiner stops you after 2 minutes?",
-                            "options": [
-                                "It means you failed",
-                                "You must argue with the examiner",
-                                "It is completely normal; it means you have spoken enough for the time limit",
-                                "You lost points"
-                            ],
-                            "correctAnswerIndex": 2,
-                            "explanation": "Normal time management."
-                        }
-                    ]
-                }
+    "id": "en-b2-u6-l2",
+    "courseId": "english-b2",
+    "unitId": "en-b2-u6",
+    "unitTitle": "Unit 6: IELTS Speaking & Capstone Synthesis",
+    "language": "en",
+    "level": "B2",
+    "lessonNumber": 2,
+    "title": "IELTS Speaking Part 2: 2-Minute Cue Card Strategy",
+    "description": "IELTS Speaking Part 2: 1 daqiqalik tayyorgarlik vaqtidan maksimal foydalanish, PPF (O'tmish - Hozir - Kelajak) hikoya qilish tuzilmasi va to'liq 120 soniya gapirish sirlari.",
+    "estimatedDurationMinutes": 18,
+    "icon": "⏱️",
+    "steps": [
+        {
+            "id": "en-b2-u6-l2-s1",
+            "title": "Cue Card: 120 Soniyalik Hikoya Strategiyasi",
+            "type": "learn",
+            "estimatedMinutes": 6,
+            "learnData": {
+                "title": "Mastering IELTS Speaking Part 2: The PPF Method, Sensory Imagery, and Sustained Fluency",
+                "explanation": "IELTS Speaking Part 2 da sizga bitta mavzu yozilgan Cue Card (kartochka), qalam va qog'oz beriladi. Sizda tayyorlanish uchun roppa-rosa 1 daqiqa va uzluksiz gapirish uchun 2 daqiqa (120 soniya) vaqt bo'ladi.\n\n1. 1 Daqiqalik Eslatma Olish (1-Minute Brainstorming):\n- Hech qachon to'liq gaplar yozmang! Faqat kalit so'zlar, noyob sifatlar va kollokatsiyalarni yozing (masalan: *exhilarating, breathtaking vistas, secluded hamlet, retrospect*).\n\n2. PPF (Past - Present - Future) Vaqt O'qi Strategiyasi:\nKo'pchilik nomzodlar 1 daqiqadan so'ng aytadigan gapi qolmay, to'xtab qolishadi. Buni bartaraf etishning eng kuchli formulasi — PPF metodidir:\n- **Past (O'tmish - 45 soniya):** Voqea qachon, qanday boshlangan edi? Dastlabki his-tuyg'ular qanday bo'lgan? (*'It happened roughly three years ago, while I was still completing my undergraduate coursework...'*\n- **Present (Hozir - 45 soniya):** Bu narsa hozir sizning hayotingizda qanday o'rin tutadi? Nega bugun ham bu haqda iliq eslaysiz? (*'At present, whenever I reflect on that experience, I realize how pivotal it was...'*\n- **Future (Kelajak / Gipoteza - 30 soniya):** Kelajakda shunga o'xshash ishni yana qilmoqchimisiz? Agar imkon bo'lsa nima qilgan bo'lardingiz? (*'Looking ahead, had I the opportunity, I would certainly revisit that secluded region...'* — Mixed / Inverted Conditional qo'llang!).\n\n3. Hissiy va Vizual Detallar (Sensory Details):\nShunchaki quruq fakt aytmang, vizual tasvir yarating:\n- *'The air was crisp and scented with pine needles.'*\n- *'The vibrant bustling bazaar resonated with laughter and melodic traditional music.'*\n\n4. Imtihon Oluvchi Sizni To'xtatguncha Gapiring:\n2 daqiqa to'lganida imtihon oluvchi o'zi *'Thank you'* deb sizni to'xtatadi. Aslo o'zingiz oldinroq to'xtab qolmang!",
+                "vocabulary": [
+                    {
+                        "term": "exhilarating",
+                        "reading": "/ɪɡˈzɪl.ə.reɪ.tɪŋ/",
+                        "meaning": "juda hayajonli, tetiklashtiruvchi, zavq bag'ishlovchi",
+                        "exampleSentence": "Reaching the mountain summit at sunrise was an exhilarating milestone.",
+                        "exampleTranslation": "Quyosh chiqishida tog' cho'qqisiga chiqish juda zavq bag'ishlovchi burilish nuqtasi bo'ldi."
+                    },
+                    {
+                        "term": "breathtaking",
+                        "reading": "/ˈbreθˌteɪ.kɪŋ/",
+                        "meaning": "aqlni shoshiradigan, nafasni ichga yutdiradigan (manzara)",
+                        "exampleSentence": "The alpine valley offered breathtaking panoramic vistas across snowy ridges.",
+                        "exampleTranslation": "Alp vodiysi qorli tizmalar bo'ylab nafasni ichga yutadigan panoramik manzaralarni namoyish etdi."
+                    },
+                    {
+                        "term": "secluded",
+                        "reading": "/sɪˈkluː.dɪd/",
+                        "meaning": "xilvat, shovqin-surondan uzoq, sokin",
+                        "exampleSentence": "We rented a secluded cottage tucked away deep in the forest.",
+                        "exampleTranslation": "Biz o'rmonning ichkarisida joylashgan xilvat, sokin kottejni ijaraga oldik."
+                    },
+                    {
+                        "term": "undergraduate",
+                        "reading": "/ˌʌn.dəˈɡrædʒ.u.ət/",
+                        "meaning": "bakalavr talabasi",
+                        "exampleSentence": "I vividly recall this incident during my second undergraduate academic year.",
+                        "exampleTranslation": "Men bu voqeani bakalavriatning ikkinchi o'quv yilida bo'lganini yorqin eslayman."
+                    },
+                    {
+                        "term": "vividly",
+                        "reading": "/ˈvɪv.ɪd.li/",
+                        "meaning": "kechagidek yorqin, aniq ravshan (eslamoq)",
+                        "exampleSentence": "I vividly remember the scent of fresh rain in that quaint provincial hamlet.",
+                        "exampleTranslation": "Men o'sha go'zal qishloqdagi toza yomg'ir iforini kechagidek yorqin eslayman."
+                    },
+                    {
+                        "term": "quaint",
+                        "reading": "/kweɪnt/",
+                        "meaning": "ajoyib, o'ziga xos qadimiy va shinam",
+                        "exampleSentence": "We explored quaint cobblestone alleyways adorned with artisan craft stalls.",
+                        "exampleTranslation": "Biz hunarmandchilik do'konlari bilan bezatilgan shinam toshko'chalarni aylandik."
+                    },
+                    {
+                        "term": "sustained",
+                        "reading": "/səˈsteɪnd/",
+                        "meaning": "uzluksiz davom etgan, to'xtovsiz",
+                        "exampleSentence": "Part 2 demands sustained fluency without repetitive hesitations.",
+                        "exampleTranslation": "2-qism takroriy ikkilanishlarsiz uzluksiz ravonlikni talab etadi."
+                    },
+                    {
+                        "term": "reminisce",
+                        "reading": "/ˌrem.ɪˈnɪs/",
+                        "meaning": "o'tgan yoqimli damlarni xotirlamoq",
+                        "exampleSentence": "My grandfather loves to reminisce about his youth in rural Samarkand.",
+                        "exampleTranslation": "Bobom qishloq Samarqandidagi yoshlik yillarini eslab suhbatlashishni yaxshi ko'radi."
+                    }
+                ],
+                "grammarRules": [
+                    {
+                        "pattern": "PPF Timeline: Past Narrative -> Present Reflection -> Future / Hypothetical Speculation",
+                        "meaning": "2 daqiqalik nutqni uzluksiz ushlab turish metodikasi",
+                        "usageNotes": "O'tmishdan hozirgi holatga va kelajakdagi orzuga o'tish sintaktik xilma-xillikni kafolatlaydi.",
+                        "examples": [
+                            {
+                                "sentence": "\"It occurred in 2021 (Past)... Even today, I cherish that memory (Present)... Had I the chance, I would repeat it tomorrow (Future/Hypothetical).\"",
+                                "translation": "Bu 2021-yilda bo'lgan edi... Hatto bugun ham bu xotirani qadrlayman... Imkonim bo'lsa, ertagayoq buni takrorlardim."
+                            }
+                        ]
+                    }
+                ]
             }
-        ]
-    },
+        },
+        {
+            "id": "en-b2-u6-l2-s2",
+            "title": "Amaliy Mashqlar",
+            "type": "practice",
+            "estimatedMinutes": 5,
+            "practiceData": {
+                "instructions": "IELTS Speaking Part 2 Cue Card strategiyalari bo'yicha to'g'ri variantlarni tanlang.",
+                "exercises": [
+                    {
+                        "id": "en-b2-u6-l2-e1",
+                        "type": "multiple-choice",
+                        "prompt": "What does the 'PPF' storytelling technique in IELTS Speaking Part 2 stand for?",
+                        "options": [
+                            "Past, Present, and Future / Hypothetical timeline expansion",
+                            "Passive, Participle, and Formal syntax",
+                            "Preposition, Pronoun, and Frequency",
+                            "Paper, Pencil, and Fluency"
+                        ],
+                        "correctAnswer": 0,
+                        "explanation": "PPF — nutqni 120 soniya davom ettirish uchun Past (o'tmish), Present (hozirgi ta'sir) va Future (kelajak/taxmin) zanjiridir."
+                    },
+                    {
+                        "id": "en-b2-u6-l2-e2",
+                        "type": "multiple-choice",
+                        "prompt": "How should a candidate utilize the 1-minute preparation time before speaking?",
+                        "options": [
+                            "Write full continuous sentences in essay format.",
+                            "Jot down high-level vocabulary, idioms, and bullet points mapping the narrative timeline.",
+                            "Draw pictures of the examiner.",
+                            "Close their eyes and say nothing."
+                        ],
+                        "correctAnswer": 1,
+                        "explanation": "1 daqiqada faqat kalit so'zlar, ilg'or kollokatsiyalar va reja bandlarini qisqacha yozib olish zarur."
+                    },
+                    {
+                        "id": "en-b2-u6-l2-e3",
+                        "type": "multiple-choice",
+                        "prompt": "I _______ remember the scent of pine needles during that trek in the Tien Shan mountains.",
+                        "options": [
+                            "vividly",
+                            "obsoletely",
+                            "stagnantly",
+                            "precipitously"
+                        ],
+                        "correctAnswer": 0,
+                        "explanation": "Xotirani yorqin eslash: 'vividly remember'."
+                    },
+                    {
+                        "id": "en-b2-u6-l2-e4",
+                        "type": "multiple-choice",
+                        "prompt": "When should the candidate stop speaking in Part 2?",
+                        "options": [
+                            "As soon as the four bullet points on the card are answered (e.g. after 45 seconds).",
+                            "Only when the examiner politely interrupts by saying 'Thank you'.",
+                            "When they feel thirsty.",
+                            "After exactly 30 seconds."
+                        ],
+                        "correctAnswer": 1,
+                        "explanation": "Nomzod imtihon oluvchi uni to'xtatguncha (to'liq 2 daqiqa) uzluksiz gapirishi shart."
+                    },
+                    {
+                        "id": "en-b2-u6-l2-e5",
+                        "type": "multiple-choice",
+                        "prompt": "The village had _______ cobblestone streets lined with artisan shops.",
+                        "options": [
+                            "quaint",
+                            "subsidized",
+                            "dormant",
+                            "culpable"
+                        ],
+                        "correctAnswer": 0,
+                        "explanation": "Go'zal, o'ziga xos qadimiy ko'chalar: 'quaint cobblestone streets'."
+                    }
+                ]
+            }
+        },
+        {
+            "id": "en-b2-u6-l2-s3",
+            "title": "Yakuniy Test",
+            "type": "test",
+            "estimatedMinutes": 5,
+            "testData": {
+                "instructions": "5 ta test savoliga to'g'ri javob bering. O'tish bali: 80%.",
+                "passingScorePercentage": 80,
+                "questions": [
+                    {
+                        "id": "en-b2-u6-l2-q1",
+                        "question": "What is the targeted speaking duration in IELTS Part 2?",
+                        "options": [
+                            "Up to 2 continuous minutes (120 seconds)",
+                            "30 seconds max",
+                            "Exactly 10 minutes",
+                            "45 seconds"
+                        ],
+                        "correctAnswerIndex": 0,
+                        "explanation": "Part 2 maqsadi 2 daqiqa (120 soniya) to'xtovsiz ravon gapirishdir."
+                    },
+                    {
+                        "id": "en-b2-u6-l2-q2",
+                        "question": "Reaching the mountain ridge was an _______ experience that bolstered my self-confidence.",
+                        "options": [
+                            "exhilarating",
+                            "obsolete",
+                            "precarious",
+                            "punitive"
+                        ],
+                        "correctAnswerIndex": 0,
+                        "explanation": "Zavq bag'ishlovchi, hayajonli: 'exhilarating experience'."
+                    },
+                    {
+                        "id": "en-b2-u6-l2-q3",
+                        "question": "If a candidate runs out of things to say after 60 seconds, what should they do immediately?",
+                        "options": [
+                            "Freeze and stare at the wall.",
+                            "Transition to the Present reflection or Future hypothetical perspective ('Looking back now...', 'In the future, had I the chance...')",
+                            "Ask the examiner for a different topic card.",
+                            "Recite the alphabet."
+                        ],
+                        "correctAnswerIndex": 1,
+                        "explanation": "Darhol voqeaning hozirgi hayotga ta'siriga yoki kelajakdagi gipotetik niyatga o'tish lozim."
+                    },
+                    {
+                        "id": "en-b2-u6-l2-q4",
+                        "question": "The cabin was situated in a _______ valley miles away from urban commotion.",
+                        "options": [
+                            "secluded",
+                            "stringent",
+                            "volatile",
+                            "mandative"
+                        ],
+                        "correctAnswerIndex": 0,
+                        "explanation": "Shahar shovqinidan uzoq sokin joy: 'secluded valley'."
+                    },
+                    {
+                        "id": "en-b2-u6-l2-q5",
+                        "question": "Sensory descriptions (sight, sound, atmosphere) in Part 2 primarily enhance _______ .",
+                        "options": [
+                            "Lexical Resource and authentic storytelling engagement",
+                            "Spelling accuracy in the booklet",
+                            "Mathematical speed",
+                            "Task 1 line graphs"
+                        ],
+                        "correctAnswerIndex": 0,
+                        "explanation": "Hissiy tasvirlar so'z boyligi (Lexical Resource) va hikoyaning jonli chiqishini ta'minlaydi."
+                    }
+                ]
+            }
+        }
+    ]
+},
     {
-        "id": "en-b2-u6-l3",
-        "courseId": "english-b2",
-        "unitId": "en-b2-u6",
-        "unitTitle": "Unit 6: IELTS Speaking & Capstone Synthesis",
-        "language": "en",
-        "level": "B2",
-        "lessonNumber": 3,
-        "title": "IELTS Speaking Part 3: Abstract Discussion & Speculation",
-        "description": "Jamiyat, kelajak va falsafiy mavzularda chuqur tahliliy fikr yuritish.",
-        "estimatedDurationMinutes": 16,
-        "icon": "💬",
-        "steps": [
-            {
-                "id": "en-b2-u6-l3-s1",
-                "title": "Part 3 Abstrakt Tahlil",
-                "type": "learn",
-                "estimatedMinutes": 5,
-                "learnData": {
-                    "title": "Analyzing Abstract Societal Issues",
-                    "explanation": "Part 3 da savollar shaxsiy hayotingiz haqida emas, balki jamiyat, texnologiya, ta'lim va kelajak haqida bo'ladi. Shaxsiy \"I\" o'rniga umumiy \"People in general\", \"Governments\", \"Societies\" iboralaridan foydalaning.",
-                    "keyPoints": [
-                        "Speculation: \"It is highly probable that in the upcoming decades...\"",
-                        "Generalization: \"Broadly speaking, urban populations tend to...\""
-                    ],
-                    "grammarRules": [
-                        {
-                            "pattern": "IELTS Speaking Part 3: Abstract Discussion & Speculation",
-                            "meaning": "Jamiyat, kelajak va falsafiy mavzularda chuqur tahliliy fikr yuritish.",
-                            "usageNotes": "Part 3 da savollar shaxsiy hayotingiz haqida emas, balki jamiyat, texnologiya, ta'lim va kelajak haqida bo'ladi. Shaxsiy \"I\" o'rniga umumiy \"People in general\", \"Governments\", \"Societies\" iboralaridan foydalaning.",
-                            "examples": [
-                                {
-                                    "sentence": "I study English every day with dedication.",
-                                    "translation": "Har kuni ingliz tilini astoydil o'rganaman."
-                                }
-                            ]
-                        }
-                    ],
-                    "vocabulary": [
-                        {
-                            "term": "Coherence",
-                            "reading": "/kəʊˈhɪə.rəns/",
-                            "meaning": "Mantiqiy bogʻliqlik, izchillik",
-                            "exampleSentence": "Ensure structural coherence throughout your essay.",
-                            "exampleTranslation": "Inshoyingiz davomida tuzilmaviy izchillikni taʼminlang."
-                        },
-                        {
-                            "term": "Compelling",
-                            "reading": "/kəmˈpel.ɪŋ/",
-                            "meaning": "Juda ishonarli, maftunkor",
-                            "exampleSentence": "He presented a compelling argument in the debate.",
-                            "exampleTranslation": "U bahsda juda ishonarli dalil keltirdi."
-                        },
-                        {
-                            "term": "Substantiate",
-                            "reading": "/səbˈstæn.ʃi.eɪt/",
-                            "meaning": "Asoslab bermoq, isbotlamoq",
-                            "exampleSentence": "You must substantiate your claims with empirical evidence.",
-                            "exampleTranslation": "Siz oʻz daʼvolaringizni empirik dalillar bilan asoslab berishingiz kerak."
-                        }
-                    ]
-                }
-            },
-            {
-                "id": "en-b2-u6-l3-s2",
-                "title": "Mashq",
-                "type": "practice",
-                "estimatedMinutes": 5,
-                "practiceData": {
-                    "instructions": "To'g'ri Part 3 javob iborasini tanlang.",
-                    "exercises": [
-                        {
-                            "id": "en-b2-u6-l3-e1",
-                            "type": "multiple-choice",
-                            "prompt": "Examiner: \"How will artificial intelligence impact education in the future?\" Best opening:",
-                            "options": [
-                                "I like my computer.",
-                                "From my perspective, AI will fundamentally revolutionize pedagogical methodologies by enabling customized learning paths.",
-                                "I don't know about future.",
-                                "AI is a robot."
-                            ],
-                            "correctAnswer": 1,
-                            "explanation": "High-level abstract analysis."
-                        },
-                        {
-                            "id": "en-b2-u6-l3-ex-2",
-                            "type": "multiple-choice",
-                            "prompt": "Choose the correct word to complete the sentence: \"He presented a compelling argument in the debate.\"",
-                            "options": [
-                                "reluctance",
-                                "delay",
-                                "doubt",
-                                "Compelling"
-                            ],
-                            "correctAnswer": 3,
-                            "explanation": "\"Compelling\" (Juda ishonarli, maftunkor) fits the context appropriately."
-                        }
-                    ]
-                }
-            },
-            {
-                "id": "en-b2-u6-l3-s3",
-                "title": "Test",
-                "type": "test",
-                "estimatedMinutes": 6,
-                "testData": {
-                    "instructions": "Savollarga javob bering.",
-                    "passingScorePercentage": 75,
-                    "questions": [
-                        {
-                            "id": "en-b2-u6-l3-q1",
-                            "question": "How does Part 3 differ from Part 1?",
-                            "options": [
-                                "Part 3 is written on paper",
-                                "Part 3 focuses on broad, abstract, societal issues rather than personal habits",
-                                "Part 3 is silent",
-                                "Part 3 is multiple choice"
-                            ],
-                            "correctAnswerIndex": 1,
-                            "explanation": "Abstract societal issues."
-                        },
-                        {
-                            "id": "en-b2-u6-l3-q2",
-                            "question": "How long does IELTS Speaking Part 3 last?",
-                            "options": [
-                                "4 to 5 minutes",
-                                "1 minute",
-                                "30 minutes",
-                                "15 minutes"
-                            ],
-                            "correctAnswerIndex": 0,
-                            "explanation": "4 to 5 minutes."
-                        },
-                        {
-                            "id": "en-b2-u6-l3-q3",
-                            "question": "\"Broadly speaking\" iborasi nima maqsadda ishlatiladi?",
-                            "options": [
-                                "Faqat o'zim haqimda",
-                                "Inkor qilganda",
-                                "Xayrlashganda",
-                                "Umumiy qilib aytganda / Keng ma'noda"
-                            ],
-                            "correctAnswerIndex": 3,
-                            "explanation": "Generalization."
-                        },
-                        {
-                            "id": "en-b2-u6-l3-q4",
-                            "question": "What gives a candidate Band 7+ in Lexical Resource during Speaking?",
-                            "options": [
-                                "Using precise collocations, idiomatic phrases naturally, and paraphrasing effectively",
-                                "Using very old medieval words unnaturally",
-                                "Speaking as fast as possible without pauses",
-                                "Repeating the examiner's question 5 times"
-                            ],
-                            "correctAnswerIndex": 0,
-                            "explanation": "Precise collocations and natural idiom."
-                        }
-                    ]
-                }
+    "id": "en-b2-u6-l3",
+    "courseId": "english-b2",
+    "unitId": "en-b2-u6",
+    "unitTitle": "Unit 6: IELTS Speaking & Capstone Synthesis",
+    "language": "en",
+    "level": "B2",
+    "lessonNumber": 3,
+    "title": "IELTS Speaking Part 3: Abstract Discussion & Speculation",
+    "description": "IELTS Speaking Part 3: shaxsiy 'men'dan butun jamiyat ko'lamidagi abstrakt tahlilga o'tish, gipotetik taxminlar va murakkab savollarga Band 7.5+ javob berish.",
+    "estimatedDurationMinutes": 18,
+    "icon": "🌐",
+    "steps": [
+        {
+            "id": "en-b2-u6-l3-s1",
+            "title": "Part 3: Abstrakt Ijtimoiy Bahs",
+            "type": "learn",
+            "estimatedMinutes": 6,
+            "learnData": {
+                "title": "Mastering IELTS Speaking Part 3: From Personal Anecdotes to Societal Analysis",
+                "explanation": "IELTS Speaking Part 3 suhbati 4-5 daqiqa davom etadi va Part 2 mavzusiga bog'liq bo'lgan keng ko'lamli ijtimoiy, falsafiy va global masalalarni qamrab oladi. Bu imtihonning eng murakkab qismidir.\n\n1. Eng Asosiy Qoida: Shaxsiy 'Men'dan Qochish (Generalization vs Personalization):\n- Part 1 va Part 2 da 'I, my family, my friend' deb o'zingiz haqingizda gapirasiz.\n- Ammo Part 3 da shaxsiy hayotingiz haqida gapirish QAT'IYAN TAVSIYA ETILMAYDI! Siz butun insoniyat, jamiyat, davlat siyosati va sotsiologik tendensiyalar darajasida gapirishingiz shart:\n  • ❌ *'Examiner: How has shopping changed? -> Student: I like shopping online because my brother bought me a jacket.'* (Band 5.0 — juda bolalarcha shaxsiy javob).\n  • ✅ Band 7.5+ Javob: *'From a macroeconomic standpoint, consumer purchasing habits have undergone a tectonic transformation. E-commerce platforms have largely superseded brick-and-mortar retail, enabling consumers to compare price structures globally.'*\n\n2. Gipotetik Taxmin va Ko'p Qirrali Tahlil (Evaluating Multiple Perspectives):\nMurakkab savollarga 'Ha' yoki 'Yo'q' deb bir tomonlama javob bermang, muammoni turli qatlamlar (yoshlar vs keksalar, shahar vs qishloq) bo'yicha tahlil qiling:\n- *'Well, this phenomenon manifests differently across generational demographics. While tech-savvy youths embrace digital payment ecosystems seamlessly, elderly demographics often harbor profound skepticism regarding cybersecurity.'*\n\n3. B2/C1 Gipotetik Konstruksiyalardan Foydalanish:\n- *'Had national authorities implemented strict regulation earlier, we wouldn't be witnessing...'* (Mixed conditional)\n- *'It could conceivably trigger severe socio-economic disparities.'* (Hedging modal)\n- *'What governments must urgently prioritize is...'* (Wh-cleft)",
+                "vocabulary": [
+                    {
+                        "term": "standpoint",
+                        "reading": "/ˈstænd.pɔɪnt/",
+                        "meaning": "nuqtai nazar, qarash (from a sociological standpoint)",
+                        "exampleSentence": "From a macroeconomic standpoint, inflation curtails consumer purchasing power.",
+                        "exampleTranslation": "Makroiqtisodiy nuqtai nazardan qaraganda, inflyatsiya iste'molchilarning xarid qobiliyatini cheklaydi."
+                    },
+                    {
+                        "term": "tectonic",
+                        "reading": "/tekˈtɒn.ɪk/",
+                        "meaning": "ulkan, tektonik, tubdan o'zgartiruvchi",
+                        "exampleSentence": "The proliferation of telecommuting triggered a tectonic shift in urban commercial leasing.",
+                        "exampleTranslation": "Masofaviy ishning kengayishi shahar tijorat ijarasida ulkan burilish yasadi."
+                    },
+                    {
+                        "term": "supersede",
+                        "reading": "/ˌsuː.pəˈsiːd/",
+                        "meaning": "o'rnini egallamoq, eskisini siqib chiqarmoq",
+                        "exampleSentence": "Online streaming platforms have largely superseded traditional broadcasting television.",
+                        "exampleTranslation": "Onlayn striming platformalari an'anaviy televideniyening o'rnini asosan egallab bo'ldi."
+                    },
+                    {
+                        "term": "brick-and-mortar",
+                        "reading": "/ˌbrɪk.ənˈmɔː.tər/",
+                        "meaning": "an'anaviy jismoniy binoga ega (onlayn bo'lmagan do'kon)",
+                        "exampleSentence": "Traditional brick-and-mortar retailers must innovate experiential shopping to stay viable.",
+                        "exampleTranslation": "An'anaviy jismoniy do'konlar omon qolish uchun xarid tajribasini innovatsiya qilishlari shart."
+                    },
+                    {
+                        "term": "demographic",
+                        "reading": "/ˌdem.əˈɡræf.ɪk/",
+                        "meaning": "demografik qatlam (masalan, yoshlar yoki keksalar)",
+                        "exampleSentence": "Different generational demographics perceive technological disruptions through distinct lenses.",
+                        "exampleTranslation": "Turli avlod demografik qatlamlari texnologik o'zgarishlarni turlicha nigoh bilan qabul qiladilar."
+                    },
+                    {
+                        "term": "harbor",
+                        "reading": "/ˈhɑː.bər/",
+                        "meaning": "ko'nglida saqlamoq (shubha, qo'rquvni: harbor doubts)",
+                        "exampleSentence": "Many senior citizens continue to harbor skepticism regarding cashless digital banking.",
+                        "exampleTranslation": "Ko'plab keksalar naqdsiz raqamli bank xizmatlariga nisbatan shubha saqlab qolmoqdalar."
+                    },
+                    {
+                        "term": "skepticism",
+                        "reading": "/ˈskep.tɪ.sɪ.zəm/",
+                        "meaning": "shubha, ishonchsizlik",
+                        "exampleSentence": "Widespread public skepticism surrounds autonomous self-driving vehicular safety.",
+                        "exampleTranslation": "Keng jamoatchilik ishonchsizligi haydovchisiz avtomobillar xavfsizligini o'rab turibdi."
+                    },
+                    {
+                        "term": "tech-savvy",
+                        "reading": "/ˌtek ˈsæv.i/",
+                        "meaning": "zamonaviy texnologiyalarni yaxshi tushunadigan",
+                        "exampleSentence": "Tech-savvy generations assimilate novel artificial intelligence tools with ease.",
+                        "exampleTranslation": "Texnologiyani yaxshi tushunadigan avlodlar yangi sun'iy intellekt vositalarini osonlikcha o'zlashtiradilar."
+                    }
+                ],
+                "grammarRules": [
+                    {
+                        "pattern": "Abstract Generalization: \"From a [societal / environmental / economic] perspective, this phenomenon reflects...\"",
+                        "meaning": "Part 3 da keng qamrovli ijtimoiy tahlil qilish iboralari",
+                        "usageNotes": "Shaxsiy hayotdan butun jamiyat miqyosiga ko'tarilish uchun ishlatiladi.",
+                        "examples": [
+                            {
+                                "sentence": "\"From a sociological perspective, urban migration weakens traditional extended family support structures.\"",
+                                "translation": "Sotsiologik nuqtai nazardan qaraganda, shaharga ko'chish an'anaviy katta oilaviy qo'llab-quvvatlash tizimlarini zaiflashtiradi."
+                            }
+                        ]
+                    }
+                ]
             }
-        ]
-    },
+        },
+        {
+            "id": "en-b2-u6-l3-s2",
+            "title": "Amaliy Mashqlar",
+            "type": "practice",
+            "estimatedMinutes": 5,
+            "practiceData": {
+                "instructions": "IELTS Speaking Part 3 abstrakt tahlil leksikasi va strategiyalariga mos variantlarni tanlang.",
+                "exercises": [
+                    {
+                        "id": "en-b2-u6-l3-e1",
+                        "type": "multiple-choice",
+                        "prompt": "Examiner: 'How has technological automation affected employment?' Which response reflects Band 7.5+ societal generalization?",
+                        "options": [
+                            "I bought a robot vacuum cleaner and my mother likes it.",
+                            "From an economic perspective, automation presents a complex paradigm; while routine manufacturing jobs are displaced, demand for specialized analytical roles surges.",
+                            "Technology makes jobs go away, which is bad for my uncle.",
+                            "Yes, automation."
+                        ],
+                        "correctAnswer": 1,
+                        "explanation": "B varianti 'From an economic perspective', 'complex paradigm', 'displaced vs specialized' kabi to'liq sotsiologik-iqtisodiy tahlilni bergan."
+                    },
+                    {
+                        "id": "en-b2-u6-l3-e2",
+                        "type": "multiple-choice",
+                        "prompt": "Digital e-commerce channels have largely _______ conventional high-street retail stores.",
+                        "options": [
+                            "superseded",
+                            "demolished",
+                            "stagnated",
+                            "liquidated"
+                        ],
+                        "correctAnswer": 0,
+                        "explanation": "Eskisining o'rnini egallab, siqib chiqarmoq: 'superseded'."
+                    },
+                    {
+                        "id": "en-b2-u6-l3-e3",
+                        "type": "multiple-choice",
+                        "prompt": "Why is relying heavily on personal anecdotes ('my brother, my father') discouraged in Part 3?",
+                        "options": [
+                            "Because the examiner does not know your family.",
+                            "Because Part 3 specifically evaluates your capability to discuss abstract concepts, societal trends, and hypothetical issues beyond individual experience.",
+                            "Because personal nouns are forbidden.",
+                            "Because it makes the recording file too large."
+                        ],
+                        "correctAnswer": 1,
+                        "explanation": "Part 3 shaxsiy voqealarni emas, balki keng qamrovli abstrakt va ijtimoiy tahlil qilish mahoratini baholaydi."
+                    },
+                    {
+                        "id": "en-b2-u6-l3-e4",
+                        "type": "multiple-choice",
+                        "prompt": "Many elderly citizens continue to _______ deep skepticism regarding cashless payment platforms.",
+                        "options": [
+                            "harbor",
+                            "erect",
+                            "convey",
+                            "deduce"
+                        ],
+                        "correctAnswer": 0,
+                        "explanation": "Shubha-gumonlarni ko'nglida saqlamoq: 'harbor skepticism'."
+                    },
+                    {
+                        "id": "en-b2-u6-l3-e5",
+                        "type": "multiple-choice",
+                        "prompt": "Physical retail stores operating in actual buildings are formally termed _______ businesses.",
+                        "options": [
+                            "brick-and-mortar",
+                            "furnace-and-mill",
+                            "high-speed",
+                            "nadir"
+                        ],
+                        "correctAnswer": 0,
+                        "explanation": "An'anaviy jismoniy do'konlar 'brick-and-mortar' deb nomlanadi."
+                    }
+                ]
+            }
+        },
+        {
+            "id": "en-b2-u6-l3-s3",
+            "title": "Yakuniy Test",
+            "type": "test",
+            "estimatedMinutes": 5,
+            "testData": {
+                "instructions": "5 ta test savoliga to'g'ri javob bering. O'tish bali: 80%.",
+                "passingScorePercentage": 80,
+                "questions": [
+                    {
+                        "id": "en-b2-u6-l3-q1",
+                        "question": "What is the primary stylistic difference between Speaking Part 1 and Speaking Part 3?",
+                        "options": [
+                            "Part 1 focuses on personal familiar matters; Part 3 demands abstract, analytical, and societal commentary.",
+                            "Part 1 is in English, while Part 3 is in French.",
+                            "Part 3 is written on paper.",
+                            "There is zero difference."
+                        ],
+                        "correctAnswerIndex": 0,
+                        "explanation": "Part 1 shaxsiy tanish mavzular haqida bo'lsa, Part 3 jamiyat miqyosidagi abstrakt va falsafiy tahlilni talab qiladi."
+                    },
+                    {
+                        "id": "en-b2-u6-l3-q2",
+                        "question": "The sudden transition towards remote instruction triggered a _______ shift in pedagogical methodology.",
+                        "options": [
+                            "tectonic",
+                            "dormant",
+                            "tentative",
+                            "negligent"
+                        ],
+                        "correctAnswerIndex": 0,
+                        "explanation": "Ulkan / tub burilish: 'tectonic shift'."
+                    },
+                    {
+                        "id": "en-b2-u6-l3-q3",
+                        "question": "Which phrase is ideal for contrasting different age groups in Part 3?",
+                        "options": [
+                            "This dynamic varies across generational demographics; while younger people...",
+                            "Everyone is same.",
+                            "Old people do not know.",
+                            "Nobody cares about age."
+                        ],
+                        "correctAnswerIndex": 0,
+                        "explanation": "Variant A 'varies across generational demographics' orqali yetuk akademik taqqoslashni kiritadi."
+                    },
+                    {
+                        "id": "en-b2-u6-l3-q4",
+                        "question": "Individuals who possess advanced skills and intuitive ease with digital platforms are described as _______ .",
+                        "options": [
+                            "tech-savvy",
+                            "obsolete",
+                            "derelict",
+                            "punitive"
+                        ],
+                        "correctAnswerIndex": 0,
+                        "explanation": "Texnologiyalarni yaxshi biladigan qatlam 'tech-savvy' deyiladi."
+                    },
+                    {
+                        "id": "en-b2-u6-l3-q5",
+                        "question": "Introducing an argument with 'From a sociological standpoint...' demonstrates which IELTS criterion?",
+                        "options": [
+                            "Lexical Resource and Coherence & Cohesion (Band 7.5+)",
+                            "Task 1 Line Graph skills",
+                            "Spelling accuracy",
+                            "Grammatical error"
+                        ],
+                        "correctAnswerIndex": 0,
+                        "explanation": "Bu ibora so'z boyligi (Lexical Resource) va mantiqiy bog'liqlik (Coherence) mezonlarini eng yuqori darajaga ko'taradi."
+                    }
+                ]
+            }
+        }
+    ]
+},
     {
-        "id": "en-b2-u6-l4",
-        "courseId": "english-b2",
-        "unitId": "en-b2-u6",
-        "unitTitle": "Unit 6: IELTS Speaking & Capstone Synthesis",
-        "language": "en",
-        "level": "B2",
-        "lessonNumber": 4,
-        "title": "B2 / IELTS 6.5 Mock Simulation & Error Analysis",
-        "description": "Eng ko'p uchraydigan xatolar tahlili va imtihon oldi to'liq tayyorgarlik.",
-        "estimatedDurationMinutes": 18,
-        "icon": "📝",
-        "steps": [
-            {
-                "id": "en-b2-u6-l4-s1",
-                "title": "Keng Tarqalgan Xatolar",
-                "type": "learn",
-                "estimatedMinutes": 5,
-                "learnData": {
-                    "title": "Top 5 Costly Errors in IELTS B2",
-                    "explanation": "1. Over-generalization without evidence. 2. Memorized robotic templates. 3. Ignoring word limits in Task 1/2. 4. Mishearing distractors in Listening. 5. Assuming NOT GIVEN is FALSE.",
-                    "keyPoints": [
-                        "Always allocate 3-5 minutes for proofreading essays.",
-                        "Focus on clarity and coherent flow over unnecessarily complex jargon."
-                    ],
-                    "grammarRules": [
-                        {
-                            "pattern": "B2 / IELTS 6.5 Mock Simulation & Error Analysis",
-                            "meaning": "Eng ko'p uchraydigan xatolar tahlili va imtihon oldi to'liq tayyorgarlik.",
-                            "usageNotes": "1. Over-generalization without evidence. 2. Memorized robotic templates. 3. Ignoring word limits in Task 1/2. 4. Mishearing distractors in Listening. 5. Assuming NOT GIVEN is FALSE.",
-                            "examples": [
-                                {
-                                    "sentence": "I study English every day with dedication.",
-                                    "translation": "Har kuni ingliz tilini astoydil o'rganaman."
-                                }
-                            ]
-                        }
-                    ],
-                    "vocabulary": [
-                        {
-                            "term": "Compelling",
-                            "reading": "/kəmˈpel.ɪŋ/",
-                            "meaning": "Juda ishonarli, maftunkor",
-                            "exampleSentence": "He presented a compelling argument in the debate.",
-                            "exampleTranslation": "U bahsda juda ishonarli dalil keltirdi."
-                        },
-                        {
-                            "term": "Substantiate",
-                            "reading": "/səbˈstæn.ʃi.eɪt/",
-                            "meaning": "Asoslab bermoq, isbotlamoq",
-                            "exampleSentence": "You must substantiate your claims with empirical evidence.",
-                            "exampleTranslation": "Siz oʻz daʼvolaringizni empirik dalillar bilan asoslab berishingiz kerak."
-                        },
-                        {
-                            "term": "Nuance",
-                            "reading": "/ˈnjuː.ɑːns/",
-                            "meaning": "Nozik farq, qirra",
-                            "exampleSentence": "She understood every subtle nuance of the language.",
-                            "exampleTranslation": "U tilning har bir nozik qirrasini tushundi."
-                        }
-                    ]
-                }
-            },
-            {
-                "id": "en-b2-u6-l4-s2",
-                "title": "Tuzatish Mashqi",
-                "type": "practice",
-                "estimatedMinutes": 6,
-                "practiceData": {
-                    "instructions": "Xatoni aniqlang va tuzating.",
-                    "exercises": [
-                        {
-                            "id": "en-b2-u6-l4-e1",
-                            "type": "multiple-choice",
-                            "prompt": "Which sentence avoids grammatical and lexical errors?",
-                            "options": [
-                                "Despite facing fierce competition, the company achieved remarkable growth.",
-                                "Although the fierce competition, the company achieved.",
-                                "Despite of fierce competition, the company made growth.",
-                                "In spite the competition was fierce, company grew."
-                            ],
-                            "correctAnswer": 0,
-                            "explanation": "Despite facing fierce competition..."
-                        },
-                        {
-                            "id": "en-b2-u6-l4-ex-2",
-                            "type": "multiple-choice",
-                            "prompt": "Choose the correct word to complete the sentence: \"You must substantiate your claims with empirical evidence.\"",
-                            "options": [
-                                "Substantiate",
-                                "doubt",
-                                "reluctance",
-                                "delay"
-                            ],
-                            "correctAnswer": 0,
-                            "explanation": "\"Substantiate\" (Asoslab bermoq, isbotlamoq) fits the context appropriately."
-                        }
-                    ]
-                }
-            },
-            {
-                "id": "en-b2-u6-l4-s3",
-                "title": "Test",
-                "type": "test",
-                "estimatedMinutes": 7,
-                "testData": {
-                    "instructions": "Savollarga javob bering.",
-                    "passingScorePercentage": 75,
-                    "questions": [
-                        {
-                            "id": "en-b2-u6-l4-q1",
-                            "question": "Why are memorized essay templates dangerous in IELTS?",
-                            "options": [
-                                "Examiners easily recognize them and reduce Task Achievement and Lexical scores",
-                                "They guarantee Band 9",
-                                "Examiners love memorized essays",
-                                "They are required by the exam"
-                            ],
-                            "correctAnswerIndex": 0,
-                            "explanation": "Examiners penalize memorized templates."
-                        },
-                        {
-                            "id": "en-b2-u6-l4-q2",
-                            "question": "What is the penalty for writing under 250 words in Task 2?",
-                            "options": [
-                                "Automatic zero",
-                                "You get extra points",
-                                "Deduction in Task Achievement score",
-                                "No penalty"
-                            ],
-                            "correctAnswerIndex": 2,
-                            "explanation": "Deduction in Task Achievement."
-                        },
-                        {
-                            "id": "en-b2-u6-l4-q3",
-                            "question": "What should you do if you finish your writing test with 4 minutes remaining?",
-                            "options": [
-                                "Carefully proofread for grammar, spelling, singular/plural and punctuation errors",
-                                "Start writing another essay",
-                                "Erase everything",
-                                "Put your pen down and look around"
-                            ],
-                            "correctAnswerIndex": 0,
-                            "explanation": "Proofread carefully."
-                        },
-                        {
-                            "id": "en-b2-u6-l4-q4",
-                            "question": "Which IELTS score corresponds to Upper-Intermediate B2 level?",
-                            "options": [
-                                "Band 9.0",
-                                "Band 4.0",
-                                "Band 2.0",
-                                "Band 5.5 to 6.5"
-                            ],
-                            "correctAnswerIndex": 3,
-                            "explanation": "Band 5.5 to 6.5."
-                        }
-                    ]
-                }
+    "id": "en-b2-u6-l4",
+    "courseId": "english-b2",
+    "unitId": "en-b2-u6",
+    "unitTitle": "Unit 6: IELTS Speaking & Capstone Synthesis",
+    "language": "en",
+    "level": "B2",
+    "lessonNumber": 4,
+    "title": "B2 / IELTS 6.5–7.0 Mock Simulation & Error Analysis",
+    "description": "To'liq IELTS Speaking simulyatsiyasi: eng ko'p uchraydigan grammatik va fonetik xatolar diagnostikasi, intonatsiya va pauzalarni bartaraf etish mashg'uloti.",
+    "estimatedDurationMinutes": 18,
+    "icon": "🎙️",
+    "steps": [
+        {
+            "id": "en-b2-u6-l4-s1",
+            "title": "Speaking Simulyatsiyasi va Xatolar Tahlili",
+            "type": "learn",
+            "estimatedMinutes": 6,
+            "learnData": {
+                "title": "Diagnostic Speaking Audit: Eliminating Fossilized Errors and Mastering Intonation",
+                "explanation": "B2 darajadagi ko'plab o'quvchilar barcha grammatik qoidalarni bilishsa-da, og'zaki nutqda shoshilish yoki ona tili interferensiyasi sababli 'fossilized errors' (ildiz otgan odatiy xatolar)ga yo'l qo'yadilar. Ushbu dars ularni to'liq bartaraf etishga bag'ishlanadi.\n\n1. O'zbek O'rganuvchilari Uchun Eng Xavfli 4 Ta Og'zaki Xato:\n- **1. Uchinchi Shaxs Birlikdagi '-s'ni Tushirib Qoldirish:**\n  • ❌ *'My brother work in a bank.'* -> ✅ *'My brother WORK-S in a bank.'*\n  • Boshqa paytda to'g'ri aytib, stress ostida '-s'ni unutish grammatik ballni 6.0 da ushlab qoladi.\n- **2. O'tgan Zamon Shakllarining Aralashib Ketishi:**\n  • ❌ *'Yesterday I go to university and then I met him.'* -> ✅ *'Yesterday I WENT... and MET him.'*\n- **3. Savolga Noto'g'ri Zamon Bilan Javob Berish:**\n  • Imtihon oluvchi: *'Did you use to play video games?'*\n  • ❌ Nomzod: *'Yes, I am playing video games.'*\n  • ✅ To'g'ri: *'Yes, I used to play video games, but now I don't.'*\n- **4. Soxta Bog'lovchilarni Haddan Tashqari Ko'p Takrorlash:**\n  • Har bir gap boshida *'Actually'*, *'You know'*, *'Like'* so'zlarini aytish nutqni jonsiz va sun'iy qiladi.\n\n2. Talaffuz va Fonetik Chunking (Pronunciation & Chunking):\n- IELTS Pronunciation mezoni sizdan britaniyalik yoki amerikalikdek bo'lishni talab qilmaydi; sizdan **TUSHUNARLILIK, TO'G'RI URG'U VA INTONATSIYA** talab qilinadi:\n  • **Thought Groups (Chunking):** Gapni alohida so'zlar bo'yicha emas, ma'noli bloklar bo'yicha ayting:\n  • *[In my perspective,] [technological integration in education] [is undeniably advantageous.]*\n  • **Rising vs Falling Intonation:** Ro'yxat keltirganda intonatsiya ko'tariladi (*books ↗, podcasts ↗*), gap oxirida esa tushadi (*and online documentaries ↘*).",
+                "vocabulary": [
+                    {
+                        "term": "fossilized",
+                        "reading": "/ˈfɒs.əl.aɪzd/",
+                        "meaning": "ildiz otgan, odat tusiga kirib qolgan (xatolar haqida)",
+                        "exampleSentence": "Targeted speaking drills help learners eliminate fossilized grammatical errors.",
+                        "exampleTranslation": "Maqsadli so'zlashuv mashqlari o'quvchilarga ildiz otgan grammatik xatolarni yo'qotishga yordam beradi."
+                    },
+                    {
+                        "term": "chunking",
+                        "reading": "/ˈtʃʌŋ.kɪŋ/",
+                        "meaning": "nutqni ma'noli so'z guruhlariga bo'lib talaffuz qilish",
+                        "exampleSentence": "Phonetic chunking creates a natural rhythm that enhances listener comprehension.",
+                        "exampleTranslation": "Fonetik bloklash tinglovchining tushunishini oshiradigan tabiiy ritmni yaratadi."
+                    },
+                    {
+                        "term": "articulation",
+                        "reading": "/ɑːˌtɪk.jəˈleɪ.ʃən/",
+                        "meaning": "tovushlarni aniq va ravon talaffuz qilish mahorati",
+                        "exampleSentence": "Clear consonant articulation prevents misinterpretations during the speaking interview.",
+                        "exampleTranslation": "Undosh tovushlarning aniq talaffuzi suhbat davomida noto'g'ri tushunilishlarning oldini oladi."
+                    },
+                    {
+                        "term": "monotonous",
+                        "reading": "/məˈnɒt.ən.əs/",
+                        "meaning": "bir xil ohangdagi, zerikarli, intonatsiyasiz",
+                        "exampleSentence": "Avoid delivering your Cue Card narrative in a flat, monotonous tone.",
+                        "exampleTranslation": "Cue Card hikoyangizni bir xil zerikarli, ohangsiz tonda aytishdan saqlaning."
+                    },
+                    {
+                        "term": "cadence",
+                        "reading": "/ˈkeɪ.dəns/",
+                        "meaning": "nutq ohangining ko'tarilib-tushish ritmi",
+                        "exampleSentence": "Expressive speakers vary their vocal cadence to emphasize vital arguments.",
+                        "exampleTranslation": "Ifodali so'zlovchilar muhim dalillarni ta'kidlash uchun o'z nutq ohangini o'zgartirib turadilar."
+                    },
+                    {
+                        "term": "repertoire",
+                        "reading": "/ˈrep.ə.twɑːr/",
+                        "meaning": "so'z boyligi yoki leksik zaxira doirasi",
+                        "exampleSentence": "Expanding your lexical repertoire allows you to deploy precise academic collocations.",
+                        "exampleTranslation": "Leksik zaxirangizni kengaytirish aniq akademik kollokatsiyalarni qo'llash imkonini beradi."
+                    },
+                    {
+                        "term": "discourse",
+                        "reading": "/ˈdɪs.kɔːs/",
+                        "meaning": "og'zaki yoki yozma nutq, muloqot tizimi",
+                        "exampleSentence": "Band 7.5 candidates demonstrate sophisticated mastery of spoken discourse markers.",
+                        "exampleTranslation": "Band 7.5 nomzodlari og'zaki nutq yo'naltiruvchi vositalarini yetuk egallaganliklarini ko'rsatadilar."
+                    },
+                    {
+                        "term": "inadvertent",
+                        "reading": "/ˌɪn.ədˈvɜː.tənt/",
+                        "meaning": "tasodifiy, bilmasdan qilingan (xato)",
+                        "exampleSentence": "Nervous test-takers frequently make inadvertent agreement lapses in third-person singulars.",
+                        "exampleTranslation": "Hayajonlangan nomzodlar ko'pincha 3-shaxs birlikda tasodifiy moslashuv xatolariga yo'l qo'yadilar."
+                    }
+                ],
+                "grammarRules": [
+                    {
+                        "pattern": "Third-person singular agreement: Subject (He / She / It) + Verb-s / Verb-es",
+                        "meaning": "3-shaxs birlik fe'l moslashuvi",
+                        "usageNotes": "Og'zaki nutqda hayajon sababli '-s'ni tushirib qoldirish 6.0 dan yuqori ball olishga to'sqinlik qiladi.",
+                        "examples": [
+                            {
+                                "sentence": "\"My supervisor encourages independent analytical inquiry.\"",
+                                "translation": "Rahbarim mustaqil tahliliy izlanishni rag'batlantiradi."
+                            }
+                        ]
+                    }
+                ]
             }
-        ]
-    },
+        },
+        {
+            "id": "en-b2-u6-l4-s2",
+            "title": "Amaliy Mashqlar",
+            "type": "practice",
+            "estimatedMinutes": 5,
+            "practiceData": {
+                "instructions": "Nutqdagi odatiy xatolarni bartaraf etish bo'yicha to'g'ri variantlarni tanlang.",
+                "exercises": [
+                    {
+                        "id": "en-b2-u6-l4-e1",
+                        "type": "multiple-choice",
+                        "prompt": "Examiner: 'What did you do last weekend?' Which response avoids common tense slips?",
+                        "options": [
+                            "Last weekend I went hiking in Chimgan and explored several alpine trails.",
+                            "Last weekend I go hiking in Chimgan and explore trails.",
+                            "Last weekend I have gone hiking and see mountains.",
+                            "Last weekend I am going to Chimgan."
+                        ],
+                        "correctAnswer": 0,
+                        "explanation": "O'tgan aniq vaqt ('last weekend') uchun Past Simple zamonlari izchil saqlanishi shart: 'went... and explored'."
+                    },
+                    {
+                        "id": "en-b2-u6-l4-e2",
+                        "type": "multiple-choice",
+                        "prompt": "My university mentor always _______ that precision in methodology determines research validity.",
+                        "options": [
+                            "emphasizes",
+                            "emphasize",
+                            "emphasizing",
+                            "is emphasize"
+                        ],
+                        "correctAnswer": 0,
+                        "explanation": "3-shaxs birlik (My mentor): 'emphasizes'."
+                    },
+                    {
+                        "id": "en-b2-u6-l4-e3",
+                        "type": "multiple-choice",
+                        "prompt": "What does delivering a speech in a completely flat, monotonous tone indicate to the examiner?",
+                        "options": [
+                            "A lack of expressive range and natural intonation control, limiting Pronunciation to Band 5.0.",
+                            "High intelligence.",
+                            "That the candidate is an expert translator.",
+                            "Nothing, intonation is not graded."
+                        ],
+                        "correctAnswer": 0,
+                        "explanation": "Bir xil tushkun monoton nutq intonatsiya mezonida past ballga sabab bo'ladi."
+                    },
+                    {
+                        "id": "en-b2-u6-l4-e4",
+                        "type": "multiple-choice",
+                        "prompt": "Group the words into natural phonetic chunks: 'In modern society, rapid urbanization poses environmental challenges.'",
+                        "options": [
+                            "[In modern society,] [rapid urbanization] [poses environmental challenges.]",
+                            "[In] [modern] [society] [rapid] [urbanization] [poses] [environmental] [challenges.]",
+                            "[In modern society rapid] [urbanization poses environmental challenges.]",
+                            "[In modern] [society rapid] [urbanization poses] [environmental challenges.]"
+                        ],
+                        "correctAnswer": 0,
+                        "explanation": "To'g'ri fonetik chunking ma'noli iboralar asosida amalga oshiriladi (A varianti)."
+                    },
+                    {
+                        "id": "en-b2-u6-l4-e5",
+                        "type": "multiple-choice",
+                        "prompt": "Examiner: 'Have you ever traveled to another continent?' Candidate: 'Yes, _______ .'",
+                        "options": [
+                            "I have traveled to Europe two years ago.",
+                            "I actually visited Europe two years ago; it was an unforgettable cultural journey.",
+                            "I am traveled to Europe.",
+                            "I have go to Europe."
+                        ],
+                        "correctAnswer": 1,
+                        "explanation": "Aniq o'tgan vaqt ('two years ago') bor bo'lgani sababli Past Simple ishlatiladi: 'I actually visited Europe two years ago'."
+                    }
+                ]
+            }
+        },
+        {
+            "id": "en-b2-u6-l4-s3",
+            "title": "Yakuniy Test",
+            "type": "test",
+            "estimatedMinutes": 5,
+            "testData": {
+                "instructions": "5 ta test savoliga to'g'ri javob bering. O'tish bali: 80%.",
+                "passingScorePercentage": 80,
+                "questions": [
+                    {
+                        "id": "en-b2-u6-l4-q1",
+                        "question": "Which of the following is a common grammatical pitfall among English learners in the Speaking test?",
+                        "options": [
+                            "Dropping the third-person singular '-s' (e.g. 'he understand')",
+                            "Using accurate vocabulary",
+                            "Speaking in complete sentences",
+                            "Maintaining natural eye contact"
+                        ],
+                        "correctAnswerIndex": 0,
+                        "explanation": "3-shaxs birlikdagi '-s'ni tushirib qoldirish eng keng tarqalgan odatiy xatodir."
+                    },
+                    {
+                        "id": "en-b2-u6-l4-q2",
+                        "question": "What is the primary objective of phonetic 'chunking' in spoken English?",
+                        "options": [
+                            "To pause at logical syntactic boundaries so the speech sounds rhythmic and intelligible.",
+                            "To speak as loudly as possible.",
+                            "To swallow word endings.",
+                            "To invent new accents."
+                        ],
+                        "correctAnswerIndex": 0,
+                        "explanation": "Chunking mantiqiy sintaktik chegaralarda to'xtab, nutqni ritmik va tushunarli qilish uchun xizmat qiladi."
+                    },
+                    {
+                        "id": "en-b2-u6-l4-q3",
+                        "question": "If you notice that you just made a minor slip of the tongue, what is the best approach?",
+                        "options": [
+                            "Panic, apologize profusely, and stop speaking.",
+                            "Calmly self-correct in a natural tone (e.g. '...or rather, she works...') and continue smoothly.",
+                            "Pretend nothing happened and switch languages.",
+                            "Argue with the examiner."
+                        ],
+                        "correctAnswerIndex": 1,
+                        "explanation": "Kichik til sirpanishini tabiiy tarzda o'zini to'g'irlab ('or rather...') davom etish yuqori malakani ko'rsatadi."
+                    },
+                    {
+                        "id": "en-b2-u6-l4-q4",
+                        "question": "A varied vocal _______ signals passion, intellectual engagement, and confidence.",
+                        "options": [
+                            "cadence",
+                            "quadrant",
+                            "deficit",
+                            "nadir"
+                        ],
+                        "correctAnswerIndex": 0,
+                        "explanation": "Ovoz ohangi va ritmining xilma-xilligi 'vocal cadence' deb ataladi."
+                    },
+                    {
+                        "id": "en-b2-u6-l4-q5",
+                        "question": "What does 'fossilized error' mean in applied second-language linguistics?",
+                        "options": [
+                            "A grammatical habit that has become deeply ingrained through repeated uncorrected usage.",
+                            "An ancient Latin dinosaur inscription.",
+                            "A correct sentence written on paper.",
+                            "A high-scoring idiom."
+                        ],
+                        "correctAnswerIndex": 0,
+                        "explanation": "To'g'irlanmasdan ko'p takrorlanishi oqibatida ong ostiga o'rnashib qolgan odatiy xatolar 'fossilized error' deyiladi."
+                    }
+                ]
+            }
+        }
+    ]
+},
     {
-        "id": "en-b2-u6-l5",
-        "courseId": "english-b2",
-        "unitId": "en-b2-u6",
-        "unitTitle": "Unit 6: IELTS Speaking & Capstone Synthesis",
-        "language": "en",
-        "level": "B2",
-        "lessonNumber": 5,
-        "title": "B2 Capstone Mastery & C1 Advancement Assessment",
-        "description": "B2 darajasining to'liq yakuni va C1 Advanced darajasiga o'tish sinovi.",
-        "estimatedDurationMinutes": 20,
-        "icon": "🏆",
-        "steps": [
-            {
-                "id": "en-b2-u6-l5-s1",
-                "title": "B2 / IELTS 6.5 Yakuniy Sertifikatsiya",
-                "type": "learn",
-                "estimatedMinutes": 5,
-                "learnData": {
-                    "title": "B2 Upper-Intermediate Full Competency",
-                    "explanation": "Siz Inversion, Cleft Sentences, Causatives, Participle Clauses, Mixed Conditionals, Past Modals of Deduction, IELTS Academic Writing va Speaking tahlillarini to'liq o'zlashtirdingiz!",
-                    "keyPoints": [
-                        "High grammatical complexity with strong accuracy",
-                        "Extensive academic lexicon and discourse management",
-                        "Ready for Advanced C1 (IELTS 7.0 - 8.0)"
-                    ],
-                    "grammarRules": [
-                        {
-                            "pattern": "B2 Capstone Mastery & C1 Advancement Assessment",
-                            "meaning": "B2 darajasining to'liq yakuni va C1 Advanced darajasiga o'tish sinovi.",
-                            "usageNotes": "Siz Inversion, Cleft Sentences, Causatives, Participle Clauses, Mixed Conditionals, Past Modals of Deduction, IELTS Academic Writing va Speaking tahlillarini to'liq o'zlashtirdingiz!",
-                            "examples": [
-                                {
-                                    "sentence": "I study English every day with dedication.",
-                                    "translation": "Har kuni ingliz tilini astoydil o'rganaman."
-                                }
-                            ]
-                        }
-                    ],
-                    "vocabulary": [
-                        {
-                            "term": "Substantiate",
-                            "reading": "/səbˈstæn.ʃi.eɪt/",
-                            "meaning": "Asoslab bermoq, isbotlamoq",
-                            "exampleSentence": "You must substantiate your claims with empirical evidence.",
-                            "exampleTranslation": "Siz oʻz daʼvolaringizni empirik dalillar bilan asoslab berishingiz kerak."
-                        },
-                        {
-                            "term": "Nuance",
-                            "reading": "/ˈnjuː.ɑːns/",
-                            "meaning": "Nozik farq, qirra",
-                            "exampleSentence": "She understood every subtle nuance of the language.",
-                            "exampleTranslation": "U tilning har bir nozik qirrasini tushundi."
-                        },
-                        {
-                            "term": "Coherence",
-                            "reading": "/kəʊˈhɪə.rəns/",
-                            "meaning": "Mantiqiy bogʻliqlik, izchillik",
-                            "exampleSentence": "Ensure structural coherence throughout your essay.",
-                            "exampleTranslation": "Inshoyingiz davomida tuzilmaviy izchillikni taʼminlang."
-                        }
-                    ]
-                }
-            },
-            {
-                "id": "en-b2-u6-l5-s2",
-                "title": "Kompleks Mashq",
-                "type": "practice",
-                "estimatedMinutes": 7,
-                "practiceData": {
-                    "instructions": "C1 darajaga o'tish uchun kompleks savolga javob bering.",
-                    "exercises": [
-                        {
-                            "id": "en-b2-u6-l5-e1",
-                            "type": "multiple-choice",
-                            "prompt": "\"Rarely _______ a technological innovation transformed human society so rapidly as the internet.\"",
-                            "options": [
-                                "have",
-                                "did",
-                                "was",
-                                "has"
-                            ],
-                            "correctAnswer": 3,
-                            "explanation": "Rarely has an innovation..."
-                        },
-                        {
-                            "id": "en-b2-u6-l5-ex-2",
-                            "type": "multiple-choice",
-                            "prompt": "Choose the correct word to complete the sentence: \"She understood every subtle nuance of the language.\"",
-                            "options": [
-                                "doubt",
-                                "delay",
-                                "Nuance",
-                                "reluctance"
-                            ],
-                            "correctAnswer": 2,
-                            "explanation": "\"Nuance\" (Nozik farq, qirra) fits the context appropriately."
-                        }
-                    ]
-                }
-            },
-            {
-                "id": "en-b2-u6-l5-s3",
-                "title": "B2 Yakuniy Sinov Imtihoni",
-                "type": "test",
-                "estimatedMinutes": 8,
-                "testData": {
-                    "instructions": "B2 darajasini muvaffaqiyatli yakunlash uchun barcha savollarga javob bering.",
-                    "passingScorePercentage": 75,
-                    "questions": [
-                        {
-                            "id": "en-b2-u6-l5-q1",
-                            "question": "Not only _______ the grant, but she was also invited to speak at the summit.",
-                            "options": [
-                                "she secured",
-                                "she had secure",
-                                "was she secure",
-                                "did she secure"
-                            ],
-                            "correctAnswerIndex": 3,
-                            "explanation": "Inversion: did she secure."
-                        },
-                        {
-                            "id": "en-b2-u6-l5-q2",
-                            "question": "If we had implemented those safeguards earlier, we _______ facing these legal hurdles today.",
-                            "options": [
-                                "wouldn't be",
-                                "wouldn't have been",
-                                "won't be",
-                                "aren't"
-                            ],
-                            "correctAnswerIndex": 0,
-                            "explanation": "Mixed conditional: wouldn't be."
-                        },
-                        {
-                            "id": "en-b2-u6-l5-q3",
-                            "question": "The ancient manuscript _______ by historians to date back to the 9th century.",
-                            "options": [
-                                "has considered",
-                                "is considered",
-                                "considers",
-                                "considering"
-                            ],
-                            "correctAnswerIndex": 1,
-                            "explanation": "Passive: is considered."
-                        },
-                        {
-                            "id": "en-b2-u6-l5-q4",
-                            "question": "Having _______ the preliminary experiments, the team published their findings.",
-                            "options": [
-                                "conclude",
-                                "been conclude",
-                                "concluded",
-                                "concluding"
-                            ],
-                            "correctAnswerIndex": 2,
-                            "explanation": "Having concluded."
-                        }
-                    ]
-                }
+    "id": "en-b2-u6-l5",
+    "courseId": "english-b2",
+    "unitId": "en-b2-u6",
+    "unitTitle": "Unit 6: IELTS Speaking & Capstone Synthesis",
+    "language": "en",
+    "level": "B2",
+    "lessonNumber": 5,
+    "title": "B2 Capstone Mastery & C1 Advancement Assessment",
+    "description": "B2 darajasining to'liq yakuniy imtihoni: barcha 6 unit sintaktik integratsiyasi, Negative Inversion, Clefts, Mixed Conditionals, Subjunctive va C1 bosqichiga ko'prik.",
+    "estimatedDurationMinutes": 20,
+    "icon": "🎓",
+    "steps": [
+        {
+            "id": "en-b2-u6-l5-s1",
+            "title": "B2 Yakuniy Sintez va C1 ga O'tish",
+            "type": "learn",
+            "estimatedMinutes": 6,
+            "learnData": {
+                "title": "B2 Capstone Comprehensive Synthesis: Academic Mastery and C1 Threshold",
+                "explanation": "Ulkan tabriklar! Siz CEFR B2 darajasining barcha 6 ta unitini (jami 30 ta dars) muvaffaqiyatli yakunladingiz. B2 darajasi — insonning erkin, mustaqil va akademik darajada ingliz tilida faoliyat yurita olishini (IELTS Band 6.5–7.5 ko'prigini) kafolatlovchi xalqaro oltin standartdir.\n\n1. O'zlashtirilgan B2 Grammatik & Ritorik Tizimlar Sintezi:\n- **Unit 1:** Negative Inversion (*Rarely have I seen...*), Cleft Sentences (*It was X that... / What we need is...*), Advanced Causative & Impersonal Passives (*have it done, is thought to have escaped*), Participle Clauses (*Having analyzed...*).\n- **Unit 2:** Third Conditionals & Inverted Conditionals (*Had I known...*), Mixed Conditionals (*If I had studied, I would be...*), Past Modals of Deduction (*must have been, can't have done, should have called*), Subjunctive & Unreal Past (*recommend that he be, It is high time we acted*).\n- **Unit 3:** Advanced Discourse Markers (*Conversely, Furthermore, Notwithstanding, In light of*), Hedging (*tends to, arguably, plausible*), Global Economics, Climate Solutions, Nominalisation.\n- **Unit 4:** IELTS Receptive Mastery (True/False/Not Given, Headings Matching, Auditory Distractors, Signposting Language).\n- **Unit 5:** IELTS Productive Writing (Task 1 Trend reports, Overviews, Process diagrams, Maps; Task 2 Opinion, Discussion & Problem-Solution essays).\n- **Unit 6:** IELTS Speaking Fluency, PPF 2-minute Cue Card storytelling, Abstract societal discussion in Part 3, and Diagnostic Error Eradication.\n\n2. C1 (Advanced) Bosqichiga Ko'tarilish:\nB2 darajasini to'liq egallagach, siz C1 darajasida murakkab adabiy uslublar, diplomatik ritorika, inkor inversiyasining barcha turlari va IELTS Band 8.0–8.5 darajasidagi akademik yetuklik sari dadil qadam qo'yasiz.",
+                "vocabulary": [
+                    {
+                        "term": "capstone",
+                        "reading": "/ˈkæp.stəʊn/",
+                        "meaning": "yakunlovchi cho'qqi, eng oliy yutuq (capstone course)",
+                        "exampleSentence": "This comprehensive evaluation serves as the capstone of your upper-intermediate studies.",
+                        "exampleTranslation": "Ushbu keng qamrovli baholash sizning yuqori o'rta (B2) bosqichingizning yakunlovchi cho'qqisi bo'lib xizmat qiladi."
+                    },
+                    {
+                        "term": "threshold",
+                        "reading": "/ˈθreʃ.həʊld/",
+                        "meaning": "bo'sag'a, yangi bosqich ostonasi (C1 threshold)",
+                        "exampleSentence": "You are standing on the threshold of fluent advanced C1 academic communication.",
+                        "exampleTranslation": "Siz ravon va ilg'or C1 akademik muloqot ostonasida turibsiz."
+                    },
+                    {
+                        "term": "proficiency",
+                        "reading": "/prəˈfɪʃ.ən.si/",
+                        "meaning": "til yetukligi, yuqori malaka darajasi",
+                        "exampleSentence": "Demonstrating B2 proficiency opens doors to prestigious international universities.",
+                        "exampleTranslation": "B2 til yetukligini isbotlash nufuzli xalqaro universitetlarga eshiklarni ochadi."
+                    },
+                    {
+                        "term": "versatile",
+                        "reading": "/ˈvɜː.sə.taɪl/",
+                        "meaning": "ko'p qirrali, har tomonlama universal",
+                        "exampleSentence": "A versatile speaker deploys diverse syntactic patterns across speaking and writing.",
+                        "exampleTranslation": "Ko'p qirrali so'zlovchi gapirish va yozishda rang-barang sintaktik tuzilmalardan unumli foydalanadi."
+                    },
+                    {
+                        "term": "eradicate",
+                        "reading": "/ɪˈræd.ɪ.keɪt/",
+                        "meaning": "butunlay yo'q qilmoq, ildizi bilan yo'qotmoq (xatolarni)",
+                        "exampleSentence": "Systematic revision eradicates persistent agreement and preposition lapses.",
+                        "exampleTranslation": "Tizimli takrorlash fe'l moslashuvi va predloglar bo'yicha qotib qolgan xatolarni butunlay yo'q qiladi."
+                    },
+                    {
+                        "term": "synthesize",
+                        "reading": "/ˈsɪn.θə.saɪz/",
+                        "meaning": "turli qismlarni yaxlit birlashtirmoq, sintez qilmoq",
+                        "exampleSentence": "The final examination requires candidates to synthesize grammar, vocabulary, and logic.",
+                        "exampleTranslation": "Yakuniy imtihon nomzodlardan grammatika, so'z boyligi va mantiqni yaxlit sintez qilishni talab etadi."
+                    },
+                    {
+                        "term": "articulate",
+                        "reading": "/ɑːˈtɪk.jə.lət/",
+                        "meaning": "o'z fikrini aniq, chiroyli va tushunarli ifodalovchi",
+                        "exampleSentence": "She delivered an articulate closing summary that earned high marks from the panel.",
+                        "exampleTranslation": "U hay'at tomonidan yuqori baholangan aniq va chiroyli yakuniy xulosani taqdim etdi."
+                    },
+                    {
+                        "term": "exemplary",
+                        "reading": "/ɪɡˈzem.plər.i/",
+                        "meaning": "namunali, ibratli, tengi yo'q",
+                        "exampleSentence": "Your dedication to rigorous language acquisition has been truly exemplary.",
+                        "exampleTranslation": "Sizning til o'rganishdagi qat'iy sa'y-harakatlaringiz chinakamiga namunali bo'ldi."
+                    }
+                ],
+                "grammarRules": [
+                    {
+                        "pattern": "Comprehensive B2 Syntactic Repertoire",
+                        "meaning": "Inversion, Clefts, Conditionals va Subjunctive sintezi",
+                        "usageNotes": "IELTS Band 7.5+ insholarida barcha o'rganilgan tuzilmalarning xatosiz uyg'unligi.",
+                        "examples": [
+                            {
+                                "sentence": "Had authorities recognized that it was uncurbed emissions that exacerbated global heating, they would have mandated that clean technologies be subsidized.",
+                                "translation": "Hukumat global isishni aynan jilovlanmagan chiqindilar kuchaytirganini oldinroq anglaganida edi, toza texnologiyalarni subsidiyalashni qat'iy talab qilgan bo'lardi."
+                            }
+                        ]
+                    }
+                ]
             }
-        ]
-    }
+        },
+        {
+            "id": "en-b2-u6-l5-s2",
+            "title": "Amaliy Mashqlar",
+            "type": "practice",
+            "estimatedMinutes": 5,
+            "practiceData": {
+                "instructions": "B2 darajasining barcha unitlari bo'yicha integratsiyalashgan amaliy mashqlarni bajaring.",
+                "exercises": [
+                    {
+                        "id": "en-b2-u6-l5-e1",
+                        "type": "multiple-choice",
+                        "prompt": "Rarely _______ such an insightful critique of contemporary macroeconomic policy.",
+                        "options": [
+                            "have I read",
+                            "did I readed",
+                            "I have read",
+                            "I read"
+                        ],
+                        "correctAnswer": 0,
+                        "explanation": "Negative inversion: 'Rarely have I read'."
+                    },
+                    {
+                        "id": "en-b2-u6-l5-e2",
+                        "type": "multiple-choice",
+                        "prompt": "It was the rapid proliferation of artificial intelligence _______ revolutionized customer service.",
+                        "options": [
+                            "that",
+                            "which",
+                            "what",
+                            "where"
+                        ],
+                        "correctAnswer": 0,
+                        "explanation": "It-cleft tuzilmasida: 'It was [X] that...'."
+                    },
+                    {
+                        "id": "en-b2-u6-l5-e3",
+                        "type": "multiple-choice",
+                        "prompt": "Had the municipal administration _______ the drainage network, our street wouldn't be flooded now.",
+                        "options": [
+                            "upgraded",
+                            "upgrade",
+                            "upgrading",
+                            "upgrades"
+                        ],
+                        "correctAnswer": 0,
+                        "explanation": "Inverted mixed conditional: 'Had the administration upgraded (V3)...'."
+                    },
+                    {
+                        "id": "en-b2-u6-l5-e4",
+                        "type": "multiple-choice",
+                        "prompt": "The international accord stipulates that carbon levies _______ remitted annually.",
+                        "options": [
+                            "be",
+                            "are",
+                            "were",
+                            "being"
+                        ],
+                        "correctAnswer": 0,
+                        "explanation": "Mandative Subjunctive: 'stipulates that levies be remitted'."
+                    },
+                    {
+                        "id": "en-b2-u6-l5-e5",
+                        "type": "multiple-choice",
+                        "prompt": "The historical citadel is believed _______ by nomadic tribes in the twelfth century.",
+                        "options": [
+                            "to have been founded",
+                            "to be founded",
+                            "having founded",
+                            "founded"
+                        ],
+                        "correctAnswer": 0,
+                        "explanation": "O'tgan zamondagi majhul hisobot: 'to have been founded' (asos solingan deb ishoniladi)."
+                    }
+                ]
+            }
+        },
+        {
+            "id": "en-b2-u6-l5-s3",
+            "title": "Yakuniy Test",
+            "type": "test",
+            "estimatedMinutes": 5,
+            "testData": {
+                "instructions": "B2 kursini muvaffaqiyatli yakunlash uchun 5 ta yakuniy sinov savoliga to'g'ri javob bering. O'tish bali: 80%.",
+                "passingScorePercentage": 80,
+                "questions": [
+                    {
+                        "id": "en-b2-u6-l5-q1",
+                        "question": "Not only _______ the national debate championship, but she also earned a full doctoral fellowship.",
+                        "options": [
+                            "did she win",
+                            "she won",
+                            "she did win",
+                            "was she win"
+                        ],
+                        "correctAnswerIndex": 0,
+                        "explanation": "Inversion: 'Not only did she win...'."
+                    },
+                    {
+                        "id": "en-b2-u6-l5-q2",
+                        "question": "If we had implemented those financial safeguards earlier, we _______ facing bankruptcy today.",
+                        "options": [
+                            "wouldn't be",
+                            "wouldn't have been",
+                            "won't be",
+                            "aren't"
+                        ],
+                        "correctAnswerIndex": 0,
+                        "explanation": "Mixed conditional (Past cause -> Present result): 'wouldn't be facing bankruptcy today'."
+                    },
+                    {
+                        "id": "en-b2-u6-l5-q3",
+                        "question": "It is high time that the academic committee _______ these obsolete regulations.",
+                        "options": [
+                            "revised",
+                            "revises",
+                            "revise",
+                            "has revised"
+                        ],
+                        "correctAnswerIndex": 0,
+                        "explanation": "'It is high time + Subject + Past Simple': 'revised'."
+                    },
+                    {
+                        "id": "en-b2-u6-l5-q4",
+                        "question": "Having _______ all preliminary clinical observations, the biochemists published their breakthrough.",
+                        "options": [
+                            "concluded",
+                            "conclude",
+                            "concluding",
+                            "been conclude"
+                        ],
+                        "correctAnswerIndex": 0,
+                        "explanation": "Perfect Participle: 'Having concluded'."
+                    },
+                    {
+                        "id": "en-b2-u6-l5-q5",
+                        "question": "The suspect _______ committed the theft, as security records prove he was in New York at that exact hour.",
+                        "options": [
+                            "can't have",
+                            "must have",
+                            "should have",
+                            "could have"
+                        ],
+                        "correctAnswerIndex": 0,
+                        "explanation": "O'tmishdagi mantiqiy imkonsizlik: 'can't have committed'."
+                    }
+                ]
+            }
+        }
+    ]
+}
 ];
