@@ -1,5 +1,14 @@
 import React, { useState, Suspense, lazy } from 'react';
-import { Target, BookOpen, GraduationCap, Headphones, PenTool, Mic, Sparkles, Compass } from 'lucide-react';
+import {
+  Target,
+  BookOpen,
+  GraduationCap,
+  Headphones,
+  PenTool,
+  Mic,
+  Sparkles,
+  Compass,
+} from 'lucide-react';
 import { useSearchParams, Link } from 'react-router-dom';
 import { RealWeaknessTracker } from '../components/ielts/RealWeaknessTracker';
 import { DailyTargetHub } from '../components/ielts/DailyTargetHub';
@@ -29,7 +38,7 @@ export const IeltsHubPage: React.FC = () => {
   useSEO({
     title: 'IELTS Master Hub (Bosqichlar Xaritasi, Shaxsiy Reja, Mocks, Writing)',
     description:
-      "IELTS Band 7.5+ uchun maxsus 4 bosqichli strategik xarita, Speaking Makkar 2026, Writing Task 1 & 2 baholash, Reading & Listening mock testlari va Band 7.5 Grammatika.",
+      'IELTS Band 7.5+ uchun maxsus 4 bosqichli strategik xarita, Speaking Makkar 2026, Writing Task 1 & 2 baholash, Reading & Listening mock testlari va Band 7.5 Grammatika.',
     canonical: '/ielts',
     keywords:
       "IELTS 0 dan tayyorgarlik, IELTS roadmap, IELTS mock exam O'zbekiston, IELTS Speaking AI, IELTS Writing baholash, IELTS Band 7 grammatika",
@@ -47,10 +56,10 @@ export const IeltsHubPage: React.FC = () => {
   };
 
   return (
-    <div className="mx-auto max-w-7xl max-w-full space-y-4 sm:space-y-6 overflow-x-hidden p-3 sm:p-4 pb-20 sm:pb-16 md:space-y-8 md:p-8">
+    <div className="mx-auto max-w-7xl max-w-full space-y-4 overflow-x-hidden p-3 pb-20 sm:space-y-6 sm:p-4 sm:pb-16 md:space-y-8 md:p-8">
       {/* When topicParam is present, provide a distraction-free focused single-topic header */}
       {topicParam ? (
-        <div className="flex flex-wrap items-center justify-between gap-3 rounded-2xl border border-slate-800 bg-slate-900/90 p-3 sm:p-4 backdrop-blur-md shadow-lg">
+        <div className="flex flex-wrap items-center justify-between gap-3 rounded-2xl border border-slate-800 bg-slate-900/90 p-3 shadow-lg backdrop-blur-md sm:p-4">
           <button
             onClick={() => {
               const next = new URLSearchParams(searchParams);
@@ -58,7 +67,7 @@ export const IeltsHubPage: React.FC = () => {
               next.set('tab', 'grammar');
               setSearchParams(next);
             }}
-            className="inline-flex items-center gap-2 rounded-xl bg-slate-800 hover:bg-slate-700 px-4 py-2 text-xs font-bold text-slate-200 transition shadow-sm cursor-pointer"
+            className="inline-flex cursor-pointer items-center gap-2 rounded-xl bg-slate-800 px-4 py-2 text-xs font-bold text-slate-200 shadow-sm transition hover:bg-slate-700"
           >
             ← Barcha Grammatika Darslariga Qaytish
           </button>
@@ -70,40 +79,44 @@ export const IeltsHubPage: React.FC = () => {
       ) : (
         <>
           {/* Header Banner: Desktop Full Banner */}
-          <div className="relative hidden md:block overflow-hidden rounded-3xl border border-blue-500/20 bg-gradient-to-r from-slate-900 via-blue-950 to-indigo-950 p-6 md:p-8 shadow-2xl backdrop-blur-xl">
+          <div className="relative hidden overflow-hidden rounded-3xl border border-blue-500/20 bg-gradient-to-r from-slate-900 via-blue-950 to-indigo-950 p-6 shadow-2xl backdrop-blur-xl md:block md:p-8">
             <div className="pointer-events-none absolute -right-12 -top-12 h-64 w-64 rounded-full bg-blue-500/15 blur-3xl" />
-            <div className="pointer-events-none absolute -left-12 -bottom-12 h-48 w-48 rounded-full bg-amber-500/10 blur-3xl" />
+            <div className="pointer-events-none absolute -bottom-12 -left-12 h-48 w-48 rounded-full bg-amber-500/10 blur-3xl" />
 
             <div className="relative z-10 flex flex-col items-start justify-between gap-4 md:flex-row md:items-center">
               <div className="max-w-2xl space-y-1.5 sm:space-y-2">
-                <div className="inline-flex items-center gap-2 rounded-full border border-amber-500/30 bg-amber-500/15 px-2.5 sm:px-3 py-1 text-[11px] sm:text-xs font-extrabold text-amber-400 shadow-xs">
+                <div className="inline-flex items-center gap-2 rounded-full border border-blue-500/30 bg-blue-500/15 px-2.5 py-1 text-[11px] font-bold text-blue-300 shadow-xs sm:px-3 sm:text-xs">
                   <GraduationCap size={14} />
-                  <span>IELTS MASTER SUITE & ACADEMY</span>
+                  <span>IELTS Talk Hub</span>
                 </div>
-                <h1 className="text-xl sm:text-3xl font-black tracking-tight text-white md:text-4xl">
+                <h1 className="text-xl font-black tracking-tight text-white sm:text-2xl md:text-3xl">
                   {activeTab === 'roadmap'
-                    ? 'IELTS 0 dan Band 8.0 gacha Xarita'
+                    ? '0 dan Band 8.0 gacha Xarita'
                     : activeTab === 'plan'
-                      ? 'IELTS Shaxsiy Rejangiz'
+                      ? "Shaxsiy O'quv Rejasi"
                       : activeTab === 'writing'
-                        ? 'IELTS Writing Mock & Examiner'
+                        ? 'Writing Mock & AI Examiner'
                         : activeTab === 'reading_listening'
-                          ? 'IELTS Reading & Listening Mock'
-                          : 'IELTS Band 7.5 Grammatika Akademiyasi'}
+                          ? 'Reading & Listening Mock'
+                          : 'IELTS Grammatika Akademiyasi'}
                 </h1>
-                <p className="text-xs sm:text-sm leading-relaxed text-slate-300">
+                <p className="text-xs text-slate-300 sm:text-sm">
                   {activeTab === 'roadmap'
-                    ? "Noldan boshlovchilar uchun Foundation (baza) dan tortib Makkar 2026 gacha to'liq bosqichma-bosqich o'quv dasturi."
+                    ? "Band 7.5+ uchun 4 bosqichli to'liq tayyorgarlik dasturi."
                     : activeTab === 'plan'
-                      ? 'Sizning maqsadli Band ballingiz uchun adaptiv kunlik va haftalik vazifalar taqsimoti.'
-                      : 'Band 7.5+ Grammatika Akademiyasi, Reading/Listening va Writing mock imtihonlari yagona markazda.'}
+                      ? 'Kundalik va haftalik maqsadli vazifalar.'
+                      : activeTab === 'writing'
+                        ? 'Task 1 va Task 2 insholarini rasmiy mezonlarda tekshirish.'
+                        : activeTab === 'reading_listening'
+                          ? "Cambridge standarti bo'yicha to'liq testlar."
+                          : 'Murphy qoidalari, amaliy misollar va har bir darsda 10+ testlar.'}
                 </p>
               </div>
 
-              <div className="flex items-center gap-3 shrink-0 w-full sm:w-auto">
+              <div className="flex w-full shrink-0 items-center gap-3 sm:w-auto">
                 <Link
                   to="/ielts/speaking-mock"
-                  className="flex w-full sm:w-auto items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 px-4 sm:px-5 py-2.5 sm:py-3 text-xs font-black text-white shadow-lg shadow-blue-500/25 transition-all duration-200 hover:scale-105 active:scale-95"
+                  className="flex w-full items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 px-4 py-2.5 text-xs font-black text-white shadow-lg shadow-blue-500/25 transition-all duration-200 hover:scale-105 hover:from-blue-500 hover:to-indigo-500 active:scale-95 sm:w-auto sm:px-5 sm:py-3"
                 >
                   <Mic size={16} />
                   <span>Speaking Mock Boshlash</span>
@@ -141,10 +154,10 @@ export const IeltsHubPage: React.FC = () => {
           </div>
 
           {/* Unified IELTS Navigation Tabs */}
-          <div className="scrollbar-none flex max-w-full items-center gap-1 sm:gap-1.5 overflow-x-auto rounded-xl sm:rounded-2xl border border-border/80 bg-muted/40 p-1 sm:p-1.5">
+          <div className="scrollbar-none flex max-w-full items-center gap-1 overflow-x-auto rounded-xl border border-border/80 bg-muted/40 p-1 sm:gap-1.5 sm:rounded-2xl sm:p-1.5">
             <button
               onClick={() => handleTabChange('roadmap')}
-              className={`flex shrink-0 items-center gap-1.5 sm:gap-2 whitespace-nowrap rounded-lg sm:rounded-xl px-3 sm:px-4 py-2 text-xs font-black transition-all ${
+              className={`flex shrink-0 items-center gap-1.5 whitespace-nowrap rounded-lg px-3 py-2 text-xs font-black transition-all sm:gap-2 sm:rounded-xl sm:px-4 ${
                 activeTab === 'roadmap'
                   ? 'bg-amber-600 text-white shadow-md'
                   : 'text-muted-foreground hover:text-foreground'
@@ -156,7 +169,7 @@ export const IeltsHubPage: React.FC = () => {
 
             <button
               onClick={() => handleTabChange('plan')}
-              className={`flex shrink-0 items-center gap-1.5 sm:gap-2 whitespace-nowrap rounded-lg sm:rounded-xl px-3 sm:px-4 py-2 text-xs font-black transition-all ${
+              className={`flex shrink-0 items-center gap-1.5 whitespace-nowrap rounded-lg px-3 py-2 text-xs font-black transition-all sm:gap-2 sm:rounded-xl sm:px-4 ${
                 activeTab === 'plan'
                   ? 'bg-blue-600 text-white shadow-md'
                   : 'text-muted-foreground hover:text-foreground'
@@ -168,7 +181,7 @@ export const IeltsHubPage: React.FC = () => {
 
             <button
               onClick={() => handleTabChange('grammar')}
-              className={`flex shrink-0 items-center gap-1.5 sm:gap-2 whitespace-nowrap rounded-lg sm:rounded-xl px-3 sm:px-4 py-2 text-xs font-black transition-all ${
+              className={`flex shrink-0 items-center gap-1.5 whitespace-nowrap rounded-lg px-3 py-2 text-xs font-black transition-all sm:gap-2 sm:rounded-xl sm:px-4 ${
                 activeTab === 'grammar'
                   ? 'bg-indigo-600 text-white shadow-md'
                   : 'text-muted-foreground hover:text-foreground'
@@ -180,7 +193,7 @@ export const IeltsHubPage: React.FC = () => {
 
             <button
               onClick={() => handleTabChange('reading_listening')}
-              className={`flex shrink-0 items-center gap-1.5 sm:gap-2 whitespace-nowrap rounded-lg sm:rounded-xl px-3 sm:px-4 py-2 text-xs font-black transition-all ${
+              className={`flex shrink-0 items-center gap-1.5 whitespace-nowrap rounded-lg px-3 py-2 text-xs font-black transition-all sm:gap-2 sm:rounded-xl sm:px-4 ${
                 activeTab === 'reading_listening'
                   ? 'bg-purple-600 text-white shadow-md'
                   : 'text-muted-foreground hover:text-foreground'
@@ -192,7 +205,7 @@ export const IeltsHubPage: React.FC = () => {
 
             <button
               onClick={() => handleTabChange('writing')}
-              className={`flex shrink-0 items-center gap-1.5 sm:gap-2 whitespace-nowrap rounded-lg sm:rounded-xl px-3 sm:px-4 py-2 text-xs font-black transition-all ${
+              className={`flex shrink-0 items-center gap-1.5 whitespace-nowrap rounded-lg px-3 py-2 text-xs font-black transition-all sm:gap-2 sm:rounded-xl sm:px-4 ${
                 activeTab === 'writing'
                   ? 'bg-emerald-600 text-white shadow-md'
                   : 'text-muted-foreground hover:text-foreground'
