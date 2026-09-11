@@ -5471,819 +5471,1267 @@ export const ENGLISH_B1_LESSONS: Lesson[] = [
     ]
 },
     {
-        "id": "en-b1-u5-l1",
-        "courseId": "english-b1",
-        "unitId": "en-b1-u5",
-        "unitTitle": "Unit 5: Society & Career Development",
-        "language": "en",
-        "level": "B1",
-        "lessonNumber": 1,
-        "title": "Work, Careers & Professional Interviews",
-        "description": "Kasbiy faoliyat, ish intervyusi savollari va rezyume tili.",
-        "estimatedDurationMinutes": 15,
-        "icon": "💼",
-        "steps": [
-            {
-                "id": "en-b1-u5-l1-s1",
-                "title": "Intervyu Leksikasi",
-                "type": "learn",
-                "estimatedMinutes": 5,
-                "learnData": {
-                    "title": "Job Interview Vocabulary",
-                    "explanation": "Intervyuda kuchli tomonlarni ko'rsatish: \"My key strengths include problem-solving and adaptability\", \"I have extensive experience in project coordination\".",
-                    "vocabulary": [
-                        {
-                            "term": "Adaptability",
-                            "reading": "/əˌdæp.təˈbɪl.ə.ti/",
-                            "meaning": "Moslashuvchanlik",
-                            "exampleSentence": "Adaptability is vital in dynamic environments.",
-                            "exampleTranslation": "O'zgaruvchan muhitda moslashuvchanlik muhimdir."
-                        },
-                        {
-                            "term": "Candidate",
-                            "reading": "/ˈkæn.dɪ.dət/",
-                            "meaning": "Nomzod",
-                            "exampleSentence": "She is the ideal candidate for the position.",
-                            "exampleTranslation": "U lavozim uchun eng ideal nomzod."
-                        },
-                        {
-                            "term": "Efficient",
-                            "reading": "/ɪˈfɪʃ.ənt/",
-                            "meaning": "Samarali",
-                            "exampleSentence": "We need to find a more efficient solution.",
-                            "exampleTranslation": "Biz yanada samaraliroq yechim topishimiz kerak."
-                        }
-                    ],
-                    "grammarRules": [
-                        {
-                            "pattern": "Work, Careers & Professional Interviews",
-                            "meaning": "Kasbiy faoliyat, ish intervyusi savollari va rezyume tili.",
-                            "usageNotes": "Intervyuda kuchli tomonlarni ko'rsatish: \"My key strengths include problem-solving and adaptability\", \"I have extensive experience in project coordination\".",
-                            "examples": [
-                                {
-                                    "sentence": "Adaptability is vital in dynamic environments.",
-                                    "translation": "O'zgaruvchan muhitda moslashuvchanlik muhimdir."
-                                },
-                                {
-                                    "sentence": "She is the ideal candidate for the position.",
-                                    "translation": "U lavozim uchun eng ideal nomzod."
-                                }
-                            ]
-                        }
-                    ]
-                }
-            },
-            {
-                "id": "en-b1-u5-l1-s2",
-                "title": "Mashq",
-                "type": "practice",
-                "estimatedMinutes": 5,
-                "practiceData": {
-                    "instructions": "To'g'ri kasbiy iborani tanlang.",
-                    "exercises": [
-                        {
-                            "id": "en-b1-u5-l1-e1",
-                            "type": "multiple-choice",
-                            "prompt": "\"I am applying _______ the marketing manager position.\"",
-                            "options": [
-                                "to",
-                                "at",
-                                "in",
-                                "for"
-                            ],
-                            "correctAnswer": 3,
-                            "explanation": "Apply for a position (lavozimga ariza topshirmoq)."
-                        },
-                        {
-                            "id": "en-b1-u5-l1-ex-2",
-                            "type": "multiple-choice",
-                            "prompt": "Choose the correct word to complete the sentence: \"She is the ideal candidate for the position.\"",
-                            "options": [
-                                "doubt",
-                                "reluctance",
-                                "delay",
-                                "Candidate"
-                            ],
-                            "correctAnswer": 3,
-                            "explanation": "\"Candidate\" (Nomzod) fits the context appropriately."
-                        }
-                    ]
-                }
-            },
-            {
-                "id": "en-b1-u5-l1-s3",
-                "title": "Test",
-                "type": "test",
-                "estimatedMinutes": 5,
-                "testData": {
-                    "instructions": "Savollarga javob bering.",
-                    "passingScorePercentage": 75,
-                    "questions": [
-                        {
-                            "id": "en-b1-u5-l1-q1",
-                            "question": "What is a curriculum vitae (CV)?",
-                            "options": [
-                                "A company bill",
-                                "A contract",
-                                "A tax form",
-                                "A professional resume outlining experience and qualifications"
-                            ],
-                            "correctAnswerIndex": 3,
-                            "explanation": "Professional resume."
-                        },
-                        {
-                            "id": "en-b1-u5-l1-q2",
-                            "question": "He has excellent interpersonal and communication _______.",
-                            "options": [
-                                "skills",
-                                "knowledges",
-                                "talented",
-                                "competent"
-                            ],
-                            "correctAnswerIndex": 0,
-                            "explanation": "Communication skills."
-                        },
-                        {
-                            "id": "en-b1-u5-l1-q3",
-                            "question": "\"Deadline\" nimani bildiradi?",
-                            "options": [
-                                "Maosh kuni",
-                                "Vazifani topshirishning oxirgi muddati",
-                                "Ish boshlanish vaqti",
-                                "Tushlik tanaffusi"
-                            ],
-                            "correctAnswerIndex": 1,
-                            "explanation": "Deadline — Oxirgi muddat."
-                        },
-                        {
-                            "id": "en-b1-u5-l1-q4",
-                            "question": "I am responsible _______ managing client relationships.",
-                            "options": [
-                                "with",
-                                "about",
-                                "for",
-                                "of"
-                            ],
-                            "correctAnswerIndex": 2,
-                            "explanation": "Responsible for."
-                        }
-                    ]
-                }
+    "id": "en-b1-u5-l1",
+    "courseId": "english-b1",
+    "unitId": "en-b1-u5",
+    "unitTitle": "Unit 5: Society & Career Development",
+    "language": "en",
+    "level": "B1",
+    "lessonNumber": 1,
+    "title": "Work, Careers & Professional Interviews",
+    "description": "Kasbiy faoliyat, ishga qabul qilish suhbatlari, malaka va rezyume tili: professional muloqot va intervyu ko'nikmalari.",
+    "estimatedDurationMinutes": 16,
+    "icon": "💼",
+    "steps": [
+        {
+            "id": "en-b1-u5-l1-s1",
+            "title": "Professional Karyera va Ish Suhbatlari",
+            "type": "learn",
+            "estimatedMinutes": 6,
+            "learnData": {
+                "title": "Navigating Job Interviews and Professional Career Pathways",
+                "explanation": "B1 darajasidagi professional muloqot ishga topshirish jarayoni, mehnat shartnomalari, kasbiy majburiyatlar va ish intervyularida o'z tajribasini ishonchli taqdim etishni qamrab oladi.\n\n1. Ish Suhbatlarida (Job Interviews) Ishlatiladigan Muhim Konstruksiyalar:\n- O'tmishdagi yutuqlar (Past achievements) -> Present Perfect va Past Simple kombinatsiyasi: 'I have managed client portfolios for three years, during which I increased retention by 15%.'\n- Kelajakdagi maqsadlar (Career goals) -> 'I aim to / I aspire to develop expertise in cloud infrastructure.'\n- Kuchli tomonlar (Core competencies) -> 'I consider myself adept at conflict resolution and proactive problem-solving.'\n\n2. 'Work as', 'Work for', 'Work in' Predloglari Farqi:\n- work as + lavozim/kasb: 'He works as an administrative coordinator.'\n- work for + kompaniya/shaxs: 'She works for an international telecommunications enterprise.'\n- work in + soha/departament: 'They work in pharmaceutical marketing.'\n\n3. O'zbek Tili Bilan Sintaktik Qiyos (Contrastive Analysis):\n- O'zbek tilida 'rezyumega ega bo'lmoq', 'ishdan bo'shatilmoq' kabi iboralar ingliz tilida 'submit a CV', 'be dismissed / laid off' kabi aniq fe'l-ot birikmalari (collocations) orqali yasaladi.\n- O'zbek o'rganuvchilari 'apply' fe'lidan keyin 'for' predlogini tushirib qoldirishadi: 'apply a job' EMAS, 'apply FOR a job'!\n\n4. O'zbek o'rganuvchilari uchun xavfli tuzoqlar (Common Pitfalls):\n- ❌ 'I applied a new job yesterday.' -> ✅ 'I applied FOR a new job yesterday.'\n- ❌ 'She is looking for a work.' -> ✅ 'She is looking for WORK / A JOB.' ('Work' sanalmaydigan ot, unga 'a' artikli qo'yilmaydi!).\n- ❌ 'He has five years experiences.' -> ✅ 'He has five years of EXPERIENCE.' (Ish staji ma'nosida 'experience' sanalmaydi).\n\n5. IELTS Speaking Foundation Corner:\n- Topic: Employment and Career Ambitions (Speaking Part 1 & 2)\n- Question: 'What kind of career would you like to pursue in the future?'\n- Model Band 6.0-6.5 Answer: 'At present, I am actively preparing to work as a software engineer in the fintech sector. I have always been passionate about algorithmic efficiency and mobile payments. Ideally, I would love to work for an innovative international tech company where I can collaborate with seasoned mentors and tackle complex data problems.'\n- Examiner Tip: Javob berayotganda faqat 'I want to be...' deb cheklanmasdan, 'I aim to pursue a career in...', 'I aspire to work as...', 'I have gained relevant foundational skills in...' kabi B1 professional leksikasini ishlating.",
+                "vocabulary": [
+                    {
+                        "term": "curriculum vitae",
+                        "reading": "/kəˌrɪk.jə.ləm ˈviː.taɪ/",
+                        "meaning": "rezyume, ma'lumotnoma (CV)",
+                        "exampleSentence": "Ensure your curriculum vitae highlights quantifiable achievements rather than just duties.",
+                        "exampleTranslation": "Rezyumeingizda shunchaki majburiyatlarni emas, o'lchanadigan yutuqlarni ko'rsatganingizga ishonch hosil qiling."
+                    },
+                    {
+                        "term": "probationary",
+                        "reading": "/prəˈbeɪ.ʃən.ər.i/",
+                        "meaning": "sinov muddati (probationary period)",
+                        "exampleSentence": "All newly appointed employees must complete a three-month probationary period.",
+                        "exampleTranslation": "Barcha yangi tayinlangan xodimlar uch oylik sinov muddatini o'tashlari shart."
+                    },
+                    {
+                        "term": "competence",
+                        "reading": "/ˈkɒm.pɪ.təns/",
+                        "meaning": "malaka, qobiliyat, yetuklik",
+                        "exampleSentence": "Her competence in cross-cultural negotiation impressed the hiring panel.",
+                        "exampleTranslation": "Uning madaniyatlararo muzokaralar olib borishdagi malakasi qabul hay'atida katta taassurot qoldirdi."
+                    },
+                    {
+                        "term": "redundant",
+                        "reading": "/rɪˈdʌn.dənt/",
+                        "meaning": "shtat qisqarishi sababli ishdan bo'shatilgan",
+                        "exampleSentence": "When the branch merged, twenty clerical staff were made redundant.",
+                        "exampleTranslation": "Filial birlashganda yigirma nafar idora xodimi shtat qisqarishi munosabati bilan bo'shatildi."
+                    },
+                    {
+                        "term": "remuneration",
+                        "reading": "/rɪˌmjuː.nərˈeɪ.ʃən/",
+                        "meaning": "ish haqi, to'lanadigan mukofot puli",
+                        "exampleSentence": "The position offers generous remuneration alongside comprehensive healthcare coverage.",
+                        "exampleTranslation": "Ushbu lavozim to'liq tibbiy sug'urta bilan birga yuqori maosh taklif qiladi."
+                    },
+                    {
+                        "term": "vacancy",
+                        "reading": "/ˈveɪ.kən.si/",
+                        "meaning": "bo'sh ish o'rni",
+                        "exampleSentence": "The department advertised an immediate vacancy for a bilingual executive assistant.",
+                        "exampleTranslation": "Bo'lim ikki tilli ma'muriy yordamchi uchun zudlik bilan bo'sh ish o'rnini e'lon qildi."
+                    },
+                    {
+                        "term": "qualification",
+                        "reading": "/ˌkwɒl.ɪ.fɪˈkeɪ.ʃən/",
+                        "meaning": "diplom, kasbiy malaka guvohnomasi",
+                        "exampleSentence": "Applicants must hold a certified qualification in financial management.",
+                        "exampleTranslation": "Nomzodlar moliyaviy menejment bo'yicha sertifikatlangan malakaga ega bo'lishlari lozim."
+                    },
+                    {
+                        "term": "shortlist",
+                        "reading": "/ˈʃɔːt.lɪst/",
+                        "meaning": "saralangan nomzodlar ro'yxati",
+                        "exampleSentence": "Only five candidates were shortlisted for the final boardroom interview.",
+                        "exampleTranslation": "Yakuniy rahbarlik suhbatiga faqat besh nafar nomzod saralab olindi."
+                    }
+                ],
+                "grammarRules": [
+                    {
+                        "pattern": "apply for + Noun (job, position, scholarship)",
+                        "meaning": "Biror ish yoki grantga ariza topshirmoq",
+                        "usageNotes": "Doimo 'for' predlogi bilan ishlatiladi. 'Apply a job' xato.",
+                        "examples": [
+                            {
+                                "sentence": "Over two hundred graduates applied for the graduate management scheme.",
+                                "translation": "Ikki yuzdan ortiq bitiruvchi boshqaruv dasturiga ariza topshirdi."
+                            }
+                        ]
+                    },
+                    {
+                        "pattern": "be responsible for + Verb-ing / Noun",
+                        "meaning": "Biror vazifa uchun javobgar bo'lmoq",
+                        "usageNotes": "'for'dan keyin fe'l kelsa -ing oladi.",
+                        "examples": [
+                            {
+                                "sentence": "The marketing lead is responsible for organizing product launches.",
+                                "translation": "Marketing bo'limi rahbari mahsulot taqdimotlarini tashkil qilish uchun javobgardir."
+                            }
+                        ]
+                    },
+                    {
+                        "pattern": "look forward to + Verb-ing",
+                        "meaning": "Intizorlik bilan kutmoq (professional xat va suhbatlarda)",
+                        "usageNotes": "'to' bu yerda predlog bo'lgani uchun ketidan doimo fe'lning -ing shakli keladi.",
+                        "examples": [
+                            {
+                                "sentence": "I look forward to hearing from you regarding the interview outcome.",
+                                "translation": "Suhbat natijasi bo'yicha javobingizni intizorlik bilan kutaman."
+                            }
+                        ]
+                    }
+                ]
             }
-        ]
-    },
+        },
+        {
+            "id": "en-b1-u5-l1-s2",
+            "title": "Amaliy Mashqlar",
+            "type": "practice",
+            "estimatedMinutes": 5,
+            "practiceData": {
+                "instructions": "Professional kasbiy leksika va predloglar bo'yicha to'g'ri variantlarni tanlang.",
+                "exercises": [
+                    {
+                        "id": "en-b1-u5-l1-e1",
+                        "type": "multiple-choice",
+                        "prompt": "She decided to apply _______ the senior analyst role after acquiring cloud certification.",
+                        "options": [
+                            "to",
+                            "for",
+                            "with",
+                            "at"
+                        ],
+                        "correctAnswer": 1,
+                        "explanation": "Ishga yoki lavozimga ariza topshirish: 'apply for a role/job'."
+                    },
+                    {
+                        "id": "en-b1-u5-l1-e2",
+                        "type": "multiple-choice",
+                        "prompt": "Which phrase correctly expresses professional experience in English?",
+                        "options": [
+                            "She has three years of experience in accounting.",
+                            "She has three years experiences in accounting.",
+                            "She has three works in accounting.",
+                            "She has three jobs experience in accounting."
+                        ],
+                        "correctAnswer": 0,
+                        "explanation": "Ish tajribasi ma'nosida 'experience' sanalmaydigan ot bo'lib, 'three years of experience' deb qo'llaniladi."
+                    },
+                    {
+                        "id": "en-b1-u5-l1-e3",
+                        "type": "multiple-choice",
+                        "prompt": "The lead coordinator is responsible _______ resolving client disputes swiftly.",
+                        "options": [
+                            "to",
+                            "for",
+                            "about",
+                            "of"
+                        ],
+                        "correctAnswer": 1,
+                        "explanation": "'responsible for + Verb-ing' (biror ish uchun mas'ul bo'lmoq)."
+                    },
+                    {
+                        "id": "en-b1-u5-l1-e4",
+                        "type": "multiple-choice",
+                        "prompt": "I look forward to _______ with your team next month.",
+                        "options": [
+                            "collaborate",
+                            "collaborating",
+                            "collaborated",
+                            "collaboration of"
+                        ],
+                        "correctAnswer": 1,
+                        "explanation": "'look forward to' birikmasidan keyin doimo fe'lning -ing shakli (collaborating) keladi."
+                    },
+                    {
+                        "id": "en-b1-u5-l1-e5",
+                        "type": "multiple-choice",
+                        "prompt": "Due to company restructuring, dozens of employees were made _______ .",
+                        "options": [
+                            "redundant",
+                            "resigned",
+                            "applied",
+                            "probationary"
+                        ],
+                        "correctAnswer": 0,
+                        "explanation": "'be made redundant' shtat qisqarishi sababli ishdan bo'shatilishni anglatadi."
+                    }
+                ]
+            }
+        },
+        {
+            "id": "en-b1-u5-l1-s3",
+            "title": "Yakuniy Test",
+            "type": "test",
+            "estimatedMinutes": 5,
+            "testData": {
+                "instructions": "5 ta savolga to'g'ri javob bering. O'tish bali: 80%.",
+                "passingScorePercentage": 80,
+                "questions": [
+                    {
+                        "id": "en-b1-u5-l1-q1",
+                        "question": "He has been working _______ an IT consultant for three years.",
+                        "options": [
+                            "as",
+                            "like",
+                            "for",
+                            "in"
+                        ],
+                        "correctAnswerIndex": 0,
+                        "explanation": "Kasb yoki lavozimda ishlash: 'work as + job title'."
+                    },
+                    {
+                        "id": "en-b1-u5-l1-q2",
+                        "question": "A three-month trial period for a newly hired employee is called a _______ period.",
+                        "options": [
+                            "shortlist",
+                            "probationary",
+                            "resignation",
+                            "redundant"
+                        ],
+                        "correctAnswerIndex": 1,
+                        "explanation": "Sinov muddati ingliz tilida 'probationary period' deyiladi."
+                    },
+                    {
+                        "id": "en-b1-u5-l1-q3",
+                        "question": "Identify the grammatically correct sentence:",
+                        "options": [
+                            "He applied a new job yesterday.",
+                            "He applied for a new job yesterday.",
+                            "He applied to a new job yesterday.",
+                            "He applied at a new job yesterday."
+                        ],
+                        "correctAnswerIndex": 1,
+                        "explanation": "To'g'ri shakl: 'applied for a new job'."
+                    },
+                    {
+                        "id": "en-b1-u5-l1-q4",
+                        "question": "The total financial compensation and benefits offered to an employee is known as _______ .",
+                        "options": [
+                            "vacancy",
+                            "curriculum",
+                            "remuneration",
+                            "shortlist"
+                        ],
+                        "correctAnswerIndex": 2,
+                        "explanation": "Ish haqi va to'lovlar yig'indisi 'remuneration' deyiladi."
+                    },
+                    {
+                        "id": "en-b1-u5-l1-q5",
+                        "question": "Choose the correct phrase: 'I am writing to express my interest _______ the advertised post.'",
+                        "options": [
+                            "in",
+                            "for",
+                            "at",
+                            "with"
+                        ],
+                        "correctAnswerIndex": 0,
+                        "explanation": "'interest in something' (biror narsaga qiziqish)."
+                    }
+                ]
+            }
+        }
+    ]
+},
     {
-        "id": "en-b1-u5-l2",
-        "courseId": "english-b1",
-        "unitId": "en-b1-u5",
-        "unitTitle": "Unit 5: Society & Career Development",
-        "language": "en",
-        "level": "B1",
-        "lessonNumber": 2,
-        "title": "Environment, Climate & Sustainability",
-        "description": "Atrof-muhitni muhofaza qilish, iqlim o'zgarishi va ekologik atamalar.",
-        "estimatedDurationMinutes": 14,
-        "icon": "🌱",
-        "steps": [
-            {
-                "id": "en-b1-u5-l2-s1",
-                "title": "Ekologiya Leksikasi",
-                "type": "learn",
-                "estimatedMinutes": 4,
-                "learnData": {
-                    "title": "Environmental Vocabulary",
-                    "explanation": "Iqlim o'zgarishi va tabiatni asrash bo'yicha asosiy atamalar.",
-                    "vocabulary": [
-                        {
-                            "term": "Sustainability",
-                            "reading": "/səˌsteɪ.nəˈbɪl.ə.ti/",
-                            "meaning": "Barqarorlik / Ekologik muvozanat",
-                            "exampleSentence": "Sustainability must be a global priority.",
-                            "exampleTranslation": "Barqarorlik global ustuvorlik bo'lishi shart."
-                        },
-                        {
-                            "term": "Pollution",
-                            "reading": "/pəˈluː.ʃən/",
-                            "meaning": "Ifloslanish",
-                            "exampleSentence": "Air pollution affects urban health.",
-                            "exampleTranslation": "Havo ifloslanishi shahar aholisi salomatligiga ta'sir qiladi."
-                        },
-                        {
-                            "term": "Requirement",
-                            "reading": "/rɪˈkwaɪə.mənt/",
-                            "meaning": "Talab, shart",
-                            "exampleSentence": "Fluency is a core requirement for this role.",
-                            "exampleTranslation": "Ravonlik bu lavozim uchun asosiy talabdir."
-                        }
-                    ],
-                    "grammarRules": [
-                        {
-                            "pattern": "Environment, Climate & Sustainability",
-                            "meaning": "Atrof-muhitni muhofaza qilish, iqlim o'zgarishi va ekologik atamalar.",
-                            "usageNotes": "Iqlim o'zgarishi va tabiatni asrash bo'yicha asosiy atamalar.",
-                            "examples": [
-                                {
-                                    "sentence": "Sustainability must be a global priority.",
-                                    "translation": "Barqarorlik global ustuvorlik bo'lishi shart."
-                                },
-                                {
-                                    "sentence": "Air pollution affects urban health.",
-                                    "translation": "Havo ifloslanishi shahar aholisi salomatligiga ta'sir qiladi."
-                                }
-                            ]
-                        }
-                    ]
-                }
-            },
-            {
-                "id": "en-b1-u5-l2-s2",
-                "title": "Mashq",
-                "type": "practice",
-                "estimatedMinutes": 5,
-                "practiceData": {
-                    "instructions": "To'g'ri atamani tanlang.",
-                    "exercises": [
-                        {
-                            "id": "en-b1-u5-l2-e1",
-                            "type": "multiple-choice",
-                            "prompt": "\"We must reduce our carbon _______ to combat global warming.\"",
-                            "options": [
-                                "footprint",
-                                "wasteful",
-                                "emissionless",
-                                "handprint"
-                            ],
-                            "correctAnswer": 0,
-                            "explanation": "Carbon footprint (uglerod izi)."
-                        },
-                        {
-                            "id": "en-b1-u5-l2-ex-2",
-                            "type": "multiple-choice",
-                            "prompt": "Choose the correct word to complete the sentence: \"Air pollution affects urban health.\"",
-                            "options": [
-                                "Pollution",
-                                "delay",
-                                "reluctance",
-                                "doubt"
-                            ],
-                            "correctAnswer": 0,
-                            "explanation": "\"Pollution\" (Ifloslanish) fits the context appropriately."
-                        }
-                    ]
-                }
-            },
-            {
-                "id": "en-b1-u5-l2-s3",
-                "title": "Test",
-                "type": "test",
-                "estimatedMinutes": 5,
-                "testData": {
-                    "instructions": "Savollarga javob bering.",
-                    "passingScorePercentage": 75,
-                    "questions": [
-                        {
-                            "id": "en-b1-u5-l2-q1",
-                            "question": "\"Recycle\" nimani bildiradi?",
-                            "options": [
-                                "Chiqindilarni qayta ishlash",
-                                "Suvni isrof qilish",
-                                "Daraxtlarni kesish",
-                                "Chiqindini yoqish"
-                            ],
-                            "correctAnswerIndex": 0,
-                            "explanation": "Recycle — Qayta ishlash."
-                        },
-                        {
-                            "id": "en-b1-u5-l2-q2",
-                            "question": "Deforestation causes loss of natural _______ for wildlife.",
-                            "options": [
-                                "offices",
-                                "roads",
-                                "apartments",
-                                "habitats"
-                            ],
-                            "correctAnswerIndex": 3,
-                            "explanation": "Natural habitats (yashash muhiti)."
-                        },
-                        {
-                            "id": "en-b1-u5-l2-q3",
-                            "question": "Solar and wind are types of _______ energy.",
-                            "options": [
-                                "fossil",
-                                "exhaustible",
-                                "renewable",
-                                "harmful"
-                            ],
-                            "correctAnswerIndex": 2,
-                            "explanation": "Renewable energy."
-                        },
-                        {
-                            "id": "en-b1-u5-l2-q4",
-                            "question": "Global warming leads to rising sea _______.",
-                            "options": [
-                                "depths",
-                                "levels",
-                                "waters",
-                                "heights"
-                            ],
-                            "correctAnswerIndex": 1,
-                            "explanation": "Sea levels (dengiz sathi)."
-                        }
-                    ]
-                }
+    "id": "en-b1-u5-l2",
+    "courseId": "english-b1",
+    "unitId": "en-b1-u5",
+    "unitTitle": "Unit 5: Society & Career Development",
+    "language": "en",
+    "level": "B1",
+    "lessonNumber": 2,
+    "title": "Environment, Climate & Sustainability",
+    "description": "Atrof-muhit, iqlim o'zgarishi va barqarorlik: qayta tiklanadigan energiya, ifloslanish va ekologik tashabbuslar tili.",
+    "estimatedDurationMinutes": 16,
+    "icon": "🌱",
+    "steps": [
+        {
+            "id": "en-b1-u5-l2-s1",
+            "title": "Ekologiya, Iqlim va Barqaror Rivojlanish",
+            "type": "learn",
+            "estimatedMinutes": 6,
+            "learnData": {
+                "title": "Environmental Challenges and Sustainable Solutions",
+                "explanation": "IELTS imtihonining eng sevimli va keng tarqalgan mavzularidan biri bu atrof-muhit muhofazasi, global isish va barqaror resurslardan foydalanishdir.\n\n1. Asosiy Ekologik Muammolar (Environmental Issues):\n- greenhouse gas emissions (issiqxona gazlari chiqindilari)\n- deforestation (o'rmonlarning yo'q qilinishi)\n- plastic contamination (plastik bilan ifloslanish)\n- finite fossil fuels (tugaydigan qazilma yoqilg'ilar)\n\n2. Barqaror Yechimlar (Sustainable Solutions):\n- renewable energy sources: solar, wind, and hydroelectric power\n- biodegradable packaging materials (tabiiy parchalanadigan qadoqlar)\n- carbon footprint reduction (uglerod izini qisqartirish)\n- waste segregation and recycling (chiqindilarni saralash va qayta ishlash)\n\n3. O'zbek Tili Bilan Sintaktik Qiyos (Contrastive Analysis):\n- O'zbek tilida 'atrof-muhitni asrash' deb bitta fe'l bilan ifodalansa, ingliz tilida 'combat climate change' (kurashmoq), 'preserve biodiversity' (saqlamoq), 'mitigate environmental degradation' (yumshatmoq) kabi boy akademik fe'llar qo'llaniladi.\n\n4. O'zbek o'rganuvchilari uchun xavfli tuzoqlar (Common Pitfalls):\n- ❌ 'The pollution is increasing.' (atrofdagi umumiy ifloslanish haqida gapirganda artiklsiz: 'Pollution is increasing').\n- ❌ 'We must protect nature from people.' -> ✅ 'We must protect THE ENVIRONMENT.' ('Nature' so'zidan oldin odatda 'the' qo'yilmaydi, ammo 'the environment' har doim aniq artikl bilan ishlatiladi).\n- ❌ 'Renewable energies is good.' -> ✅ 'Renewable energy is vital.' ('Energy' odatda sanalmaydi).\n\n5. IELTS Speaking Foundation Corner:\n- Topic: Environmental Responsibility (Speaking Part 3)\n- Question: 'What practical measures can individuals adopt to minimize their carbon footprint?'\n- Model Band 6.5 Answer: 'In my view, people can make a measurable difference through everyday choices. For instance, opting for public transit or bicycles instead of private vehicles noticeably curbs carbon emissions. Moreover, households can reduce domestic waste by ditching single-use plastics and recycling organic matter. Although individual initiatives might seem modest, their collective impact is substantial.'\n- Examiner Tip: IELTS Speaking va Writingda 'bad for nature' yoki 'good for trees' kabi oddiy so'zlar o'rniga 'deleterious to ecosystems', 'sustainable alternatives', 'curb emissions' kabi leksik birliklardan foydalaning.",
+                "vocabulary": [
+                    {
+                        "term": "sustainability",
+                        "reading": "/səˌsteɪ.nəˈbɪl.ə.ti/",
+                        "meaning": "barqarorlik, resurslarni tejab rivojlanish",
+                        "exampleSentence": "Long-term economic growth must be balanced with ecological sustainability.",
+                        "exampleTranslation": "Uzoq muddatli iqtisodiy o'sish ekologik barqarorlik bilan muvozanatlashishi shart."
+                    },
+                    {
+                        "term": "renewable",
+                        "reading": "/rɪˈnjuː.ə.bəl/",
+                        "meaning": "qayta tiklanadigan (energiya)",
+                        "exampleSentence": "The province generates over 60% of its electricity from renewable sources.",
+                        "exampleTranslation": "Viloyat o'z elektr energiyasining 60% dan ortig'ini qayta tiklanuvchi manbalardan ishlab chiqaradi."
+                    },
+                    {
+                        "term": "emissions",
+                        "reading": "/iˈmɪʃ.ənz/",
+                        "meaning": "havoga chiqariladigan gazlar / chiqindilar",
+                        "exampleSentence": "Stringent carbon emissions standards were imposed on heavy freight vehicles.",
+                        "exampleTranslation": "Og'ir yuk transportlariga qat'iy uglerod chiqindilari standartlari joriy etildi."
+                    },
+                    {
+                        "term": "biodiversity",
+                        "reading": "/ˌbaɪ.əʊ.daɪˈvɜː.sə.ti/",
+                        "meaning": "biologik xilma-xillik (o'simlik va hayvonot dunyosi)",
+                        "exampleSentence": "Deforestation in tropical rainforests severely threatens global biodiversity.",
+                        "exampleTranslation": "Tropik o'rmonlarning kesilishi global biologik xilma-xillikka jiddiy tahdid solmoqda."
+                    },
+                    {
+                        "term": "contamination",
+                        "reading": "/kənˌtæm.ɪˈneɪ.ʃən/",
+                        "meaning": "ifloslanish, zaharlanish",
+                        "exampleSentence": "Industrial runoff resulted in chemical contamination of the local reservoir.",
+                        "exampleTranslation": "Sanoat oqovalari mahalliy suv omborining kimyoviy ifloslanishiga olib keldi."
+                    },
+                    {
+                        "term": "biodegradable",
+                        "reading": "/ˌbaɪ.əʊ.dɪˈɡreɪ.də.bəl/",
+                        "meaning": "tabiiy yo'l bilan eriydigan / parchalanadigan",
+                        "exampleSentence": "Supermarkets are replacing synthetic plastic bags with biodegradable alternatives.",
+                        "exampleTranslation": "Supermarketlar sintetik plastik xaltalarni tabiiy parchalanuvchi muqobillarga almashtirmoqda."
+                    },
+                    {
+                        "term": "conservation",
+                        "reading": "/ˌkɒn.səˈveɪ.ʃən/",
+                        "meaning": "tabiatni asrash, muhofaza qilish",
+                        "exampleSentence": "Wildlife conservation projects have successfully restored the snow leopard population.",
+                        "exampleTranslation": "Yovvoyi tabiatni muhofaza qilish loyihalari qor qoplonlari populyatsiyasini muvaffaqiyatli tikladi."
+                    },
+                    {
+                        "term": "depletion",
+                        "reading": "/dɪˈpliː.ʃən/",
+                        "meaning": "kamayib ketish, tugash (resurslarning)",
+                        "exampleSentence": "Overfishing leads directly to the catastrophic depletion of marine ecosystems.",
+                        "exampleTranslation": "Haddan tashqari baliq ovlash dengiz ekotizimlarining halokatli darajada kamayib ketishiga olib keladi."
+                    }
+                ],
+                "grammarRules": [
+                    {
+                        "pattern": "lead to + Noun / Gerund",
+                        "meaning": "Biror salbiy yoki ijobiy oqibatga sabab bo'lmoq",
+                        "usageNotes": "'to' bu yerda predlog bo'lgani uchun ketidan ot yoki fe'lning -ing shakli keladi.",
+                        "examples": [
+                            {
+                                "sentence": "Excessive carbon emissions lead to global warming.",
+                                "translation": "Haddan tashqari ko'p uglerod chiqindilari global isishga olib keladi."
+                            }
+                        ]
+                    },
+                    {
+                        "pattern": "opt for + Noun / opt to + Verb",
+                        "meaning": "Biror narsani afzal ko'rib tanlamoq",
+                        "usageNotes": "Barqaror hayot tarzidagi tanlovlarni ifodalashda juda foydali.",
+                        "examples": [
+                            {
+                                "sentence": "Many urbanites opt for cycling rather than driving.",
+                                "translation": "Ko'plab shahar aholisi mashina haydashdan ko'ra velosipedda yurishni afzal ko'rishadi."
+                            }
+                        ]
+                    }
+                ]
             }
-        ]
-    },
+        },
+        {
+            "id": "en-b1-u5-l2-s2",
+            "title": "Amaliy Mashqlar",
+            "type": "practice",
+            "estimatedMinutes": 5,
+            "practiceData": {
+                "instructions": "Ekologiya va barqarorlik mavzusidagi to'g'ri leksik va grammatik variantlarni tanlang.",
+                "exercises": [
+                    {
+                        "id": "en-b1-u5-l2-e1",
+                        "type": "multiple-choice",
+                        "prompt": "Solar and wind power are prominent examples of _______ energy sources.",
+                        "options": [
+                            "finite",
+                            "renewable",
+                            "contaminated",
+                            "depleted"
+                        ],
+                        "correctAnswer": 1,
+                        "explanation": "Quyosh va shamol energiyasi 'renewable' (qayta tiklanuvchi) manbalar hisoblanadi."
+                    },
+                    {
+                        "id": "en-b1-u5-l2-e2",
+                        "type": "multiple-choice",
+                        "prompt": "Uncontrolled factory waste directly leads _______ groundwater contamination.",
+                        "options": [
+                            "in",
+                            "to",
+                            "at",
+                            "for"
+                        ],
+                        "correctAnswer": 1,
+                        "explanation": "'leads to + Noun' (biror oqibatga olib kelmoq)."
+                    },
+                    {
+                        "id": "en-b1-u5-l2-e3",
+                        "type": "multiple-choice",
+                        "prompt": "Which sentence correctly uses articles when discussing ecological topics?",
+                        "options": [
+                            "We must safeguard the environment for upcoming generations.",
+                            "We must safeguard an environment for upcoming generations.",
+                            "We must safeguard the nature for upcoming generations.",
+                            "We must safeguard nature's the environment."
+                        ],
+                        "correctAnswer": 0,
+                        "explanation": "'the environment' doimo aniq artikl bilan keladi ('the nature' esa xato)."
+                    },
+                    {
+                        "id": "en-b1-u5-l2-e4",
+                        "type": "multiple-choice",
+                        "prompt": "Packaging made from cornstarch is _______ because it breaks down naturally without toxic residue.",
+                        "options": [
+                            "biodegradable",
+                            "radioactive",
+                            "depleted",
+                            "redundant"
+                        ],
+                        "correctAnswer": 0,
+                        "explanation": "Tabiiy yo'l bilan parchalanadigan materiallar 'biodegradable' deyiladi."
+                    },
+                    {
+                        "id": "en-b1-u5-l2-e5",
+                        "type": "multiple-choice",
+                        "prompt": "To minimize carbon footprints, urban commuters are encouraged to opt _______ electric trains.",
+                        "options": [
+                            "for",
+                            "with",
+                            "to",
+                            "about"
+                        ],
+                        "correctAnswer": 0,
+                        "explanation": "'opt for + Noun' (biror narsani tanlash / afzal ko'rish)."
+                    }
+                ]
+            }
+        },
+        {
+            "id": "en-b1-u5-l2-s3",
+            "title": "Yakuniy Test",
+            "type": "test",
+            "estimatedMinutes": 5,
+            "testData": {
+                "instructions": "5 ta savolga to'g'ri javob bering. O'tish bali: 80%.",
+                "passingScorePercentage": 80,
+                "questions": [
+                    {
+                        "id": "en-b1-u5-l2-q1",
+                        "question": "The gradual destruction of habitats and species variety is referred to as loss of _______ .",
+                        "options": [
+                            "remuneration",
+                            "biodiversity",
+                            "qualification",
+                            "metropolis"
+                        ],
+                        "correctAnswerIndex": 1,
+                        "explanation": "Turlar va yashash muhitlarining qisqarishi biologik xilma-xillik (biodiversity) yo'qolishi deyiladi."
+                    },
+                    {
+                        "id": "en-b1-u5-l2-q2",
+                        "question": "Burning fossil fuels releases harmful greenhouse gas _______ into the atmosphere.",
+                        "options": [
+                            "vacancies",
+                            "emissions",
+                            "landmarks",
+                            "distinctions"
+                        ],
+                        "correctAnswerIndex": 1,
+                        "explanation": "Havoga chiqariladigan gaz chiqindilari 'emissions' deb ataladi."
+                    },
+                    {
+                        "id": "en-b1-u5-l2-q3",
+                        "question": "Excessive groundwater extraction causes the severe _______ of natural aquifers.",
+                        "options": [
+                            "depletion",
+                            "initiative",
+                            "scholarship",
+                            "headquarters"
+                        ],
+                        "correctAnswerIndex": 0,
+                        "explanation": "Resurslarning qurishi yoki tugashi 'depletion' deyiladi."
+                    },
+                    {
+                        "id": "en-b1-u5-l2-q4",
+                        "question": "Which collocation is natural and accurate in IELTS environmental essays?",
+                        "options": [
+                            "make climate change",
+                            "combat climate change",
+                            "do climate damage",
+                            "open biodiversity"
+                        ],
+                        "correctAnswerIndex": 1,
+                        "explanation": "Iqlim o'zgarishiga qarshi kurashish: 'combat climate change'."
+                    },
+                    {
+                        "id": "en-b1-u5-l2-q5",
+                        "question": "Forest restoration projects are essential for wildlife _______ .",
+                        "options": [
+                            "conservation",
+                            "contamination",
+                            "speculation",
+                            "redundancy"
+                        ],
+                        "correctAnswerIndex": 0,
+                        "explanation": "Yovvoyi tabiatni saqlash: 'wildlife conservation'."
+                    }
+                ]
+            }
+        }
+    ]
+},
     {
-        "id": "en-b1-u5-l3",
-        "courseId": "english-b1",
-        "unitId": "en-b1-u5",
-        "unitTitle": "Unit 5: Society & Career Development",
-        "language": "en",
-        "level": "B1",
-        "lessonNumber": 3,
-        "title": "Common Idiomatic Expressions & Collocations",
-        "description": "Kundalik va kasbiy ingliz tilidagi eng mashhur idiomalar va so'z birikmalari.",
-        "estimatedDurationMinutes": 14,
-        "icon": "💡",
-        "steps": [
-            {
-                "id": "en-b1-u5-l3-s1",
-                "title": "Idiomalar va Birikmalar",
-                "type": "learn",
-                "estimatedMinutes": 4,
-                "learnData": {
-                    "title": "Key Idioms and Collocations",
-                    "explanation": "Ingliz tilini tabiiy va boy qilish uchun idiomalar: \"Piece of cake\" (juda oson), \"Hit the nail on the head\" (to'ppa-to'g'ri topmoq), \"Under the weather\" (biroz tobi qochgan).",
-                    "vocabulary": [
-                        {
-                            "term": "Piece of cake",
-                            "reading": "/piːs əv keɪk/",
-                            "meaning": "Suv ichgandek oson",
-                            "exampleSentence": "The exam was a piece of cake.",
-                            "exampleTranslation": "Imtihon suv ichgandek oson bo'ldi."
-                        },
-                        {
-                            "term": "Under the weather",
-                            "reading": "/ˈʌn.dər ðə ˈweð.ər/",
-                            "meaning": "Tobi qochgan / Betob",
-                            "exampleSentence": "I felt under the weather yesterday.",
-                            "exampleTranslation": "Kecha o'zimni biroz noxush his qildim."
-                        },
-                        {
-                            "term": "Significantly",
-                            "reading": "/sɪɡˈnɪf.ɪ.kənt.li/",
-                            "meaning": "Sezilarli darajada",
-                            "exampleSentence": "Her grades improved significantly this term.",
-                            "exampleTranslation": "Bu semestrda uning baholari sezilarli darajada yaxshilandi."
-                        }
-                    ],
-                    "grammarRules": [
-                        {
-                            "pattern": "Common Idiomatic Expressions & Collocations",
-                            "meaning": "Kundalik va kasbiy ingliz tilidagi eng mashhur idiomalar va so'z birikmalari.",
-                            "usageNotes": "Ingliz tilini tabiiy va boy qilish uchun idiomalar: \"Piece of cake\" (juda oson), \"Hit the nail on the head\" (to'ppa-to'g'ri topmoq), \"Under the weather\" (biroz tobi qochgan).",
-                            "examples": [
-                                {
-                                    "sentence": "The exam was a piece of cake.",
-                                    "translation": "Imtihon suv ichgandek oson bo'ldi."
-                                },
-                                {
-                                    "sentence": "I felt under the weather yesterday.",
-                                    "translation": "Kecha o'zimni biroz noxush his qildim."
-                                }
-                            ]
-                        }
-                    ]
-                }
-            },
-            {
-                "id": "en-b1-u5-l3-s2",
-                "title": "Mashq",
-                "type": "practice",
-                "estimatedMinutes": 5,
-                "practiceData": {
-                    "instructions": "To'g'ri idiomani tanlang.",
-                    "exercises": [
-                        {
-                            "id": "en-b1-u5-l3-e1",
-                            "type": "multiple-choice",
-                            "prompt": "\"I am feeling slightly sick today.\" Which idiom expresses this?",
-                            "options": [
-                                "Break a leg",
-                                "Under the weather",
-                                "Piece of cake",
-                                "Cost an arm and a leg"
-                            ],
-                            "correctAnswer": 1,
-                            "explanation": "Under the weather."
-                        },
-                        {
-                            "id": "en-b1-u5-l3-ex-2",
-                            "type": "multiple-choice",
-                            "prompt": "Choose the correct word to complete the sentence: \"I felt under the weather yesterday.\"",
-                            "options": [
-                                "delay",
-                                "Under the weather",
-                                "doubt",
-                                "reluctance"
-                            ],
-                            "correctAnswer": 1,
-                            "explanation": "\"Under the weather\" (Tobi qochgan / Betob) fits the context appropriately."
-                        }
-                    ]
-                }
-            },
-            {
-                "id": "en-b1-u5-l3-s3",
-                "title": "Test",
-                "type": "test",
-                "estimatedMinutes": 5,
-                "testData": {
-                    "instructions": "Savollarga javob bering.",
-                    "passingScorePercentage": 75,
-                    "questions": [
-                        {
-                            "id": "en-b1-u5-l3-q1",
-                            "question": "\"Break a leg!\" iborasi nima uchun ishlatiladi?",
-                            "options": [
-                                "Sportda jarohat olganda",
-                                "Omad tilashda (Good luck!)",
-                                "Jazalaganda",
-                                "Doktorga borganida"
-                            ],
-                            "correctAnswerIndex": 1,
-                            "explanation": "Omad tilash (Good luck)."
-                        },
-                        {
-                            "id": "en-b1-u5-l3-q2",
-                            "question": "That luxury sports car cost an arm and a _______!",
-                            "options": [
-                                "hand",
-                                "head",
-                                "leg",
-                                "foot"
-                            ],
-                            "correctAnswerIndex": 2,
-                            "explanation": "Cost an arm and a leg (haddan tashqari qimmat)."
-                        },
-                        {
-                            "id": "en-b1-u5-l3-q3",
-                            "question": "To \"hit the nail on the head\" means to:",
-                            "options": [
-                                "Hammer a real nail",
-                                "Arrive early",
-                                "Make a mistake",
-                                "Describe exactly what is causing a situation"
-                            ],
-                            "correctAnswerIndex": 3,
-                            "explanation": "Aniq nishonga urmoq / to'g'ri topmoq."
-                        },
-                        {
-                            "id": "en-b1-u5-l3-q4",
-                            "question": "We need to make a _______ before 5 PM.",
-                            "options": [
-                                "decision",
-                                "decide",
-                                "doing",
-                                "make"
-                            ],
-                            "correctAnswerIndex": 0,
-                            "explanation": "Make a decision (collocation)."
-                        }
-                    ]
-                }
+    "id": "en-b1-u5-l3",
+    "courseId": "english-b1",
+    "unitId": "en-b1-u5",
+    "unitTitle": "Unit 5: Society & Career Development",
+    "language": "en",
+    "level": "B1",
+    "lessonNumber": 3,
+    "title": "Common Idiomatic Expressions & Collocations",
+    "description": "Kundalik va imtihon nutqidagi mustahkam iboralar, 'make vs do' kollokatsiyalari va tabiiy frazeologik birliklar.",
+    "estimatedDurationMinutes": 16,
+    "icon": "💬",
+    "steps": [
+        {
+            "id": "en-b1-u5-l3-s1",
+            "title": "Kollokatsiyalar va Idiomatik Iboralar",
+            "type": "learn",
+            "estimatedMinutes": 6,
+            "learnData": {
+                "title": "High-Yield Collocations and Natural Idiomatic Expressions",
+                "explanation": "Ingliz tilida so'zlarni alohida-alohida emas, balki bir-biri bilan tabiiy bog'lanadigan iboralar (collocations) shaklida o'rganish nutqning ravonligini ta'minlaydi va IELTS baholash mezonida 'Lexical Resource' bo'yicha 6.5+ ball olish kafolatidir.\n\n1. 'MAKE' vs 'DO' Kollokatsiyalari:\n- **DO (vazifalar, majburiyatlar, umumiy faoliyat):**\n  • do research (tadqiqot o'tkazmoq)\n  • do your best (qo'ldan kelgancha harakat qilmoq)\n  • do business (biznes yuritmoq)\n  • do homework / chores (uy vazifasi / ro'zg'or ishlarini qilmoq)\n  • do harm / do good (zarar / foyda yetkazmoq)\n- **MAKE (yangi narsa yaratish, qarorlar, muloqot):**\n  • make a decision (qaror qabul qilmoq)\n  • make an effort (harakat qilmoq, jon kuydirmoq)\n  • make a mistake (xato qilmoq)\n  • make progress (yutuqqa erishmoq, siljish qilmoq)\n  • make an impression (taassurot qoldirmoq)\n  • make a suggestion (taklif kiritmoq)\n\n2. B1 Imtihonlarida Ko'p Uchraydigan Foydali Idiomalar:\n- **see eye to eye** -> fikri bir joydan chiqmoq, to'liq hamfikr bo'lmoq: 'My supervisor and I see eye to eye on project timelines.'\n- **once in a blue moon** -> juda kamdan-kam, yilda bir marta: 'Living in the city, I only visit the countryside once in a blue moon.'\n- **cost an arm and a leg** -> juda qimmat turmoq: 'Buying original textbooks in London can cost an arm and a leg.'\n- **burn the midnight oil** -> kechasi bilan uxlamasdan qattiq o'qimoq / ishlamoq: 'I had to burn the midnight oil before the economics final.'\n\n3. O'zbek o'rganuvchilari uchun xavfli tuzoqlar (Common Pitfalls):\n- ❌ 'I did a mistake in the exam.' -> ✅ 'I MADE a mistake in the exam.'\n- ❌ 'We must do a decision.' -> ✅ 'We must MAKE a decision.'\n- ❌ 'He made research on solar energy.' -> ✅ 'He DID (or CONDUCTED) research on solar energy.'\n\n4. IELTS Speaking Foundation Corner:\n- Topic: Decision Making & Study Habits (Speaking Part 1)\n- Question: 'Do you find it difficult to make important decisions quickly?'\n- Model Band 6.5 Answer: 'Generally speaking, it depends on the gravity of the matter. When it comes to minor daily routines, I make decisions in a heartbeat. However, regarding professional career choices or financial investments, I always weigh the pros and cons thoroughly. I usually consult experienced colleagues so that we see eye to eye before committing to a final path.'\n- Strategy Tip: Idiomalarni haddan tashqari ko'p va sun'iy ishlatmang. 1-2 ta tabiiy iborani ('weigh the pros and cons', 'see eye to eye') o'z o'rnida qo'llash imtihon oluvchida yuqori taassurot qoldiradi.",
+                "vocabulary": [
+                    {
+                        "term": "collocation",
+                        "reading": "/ˌkɒl.əˈkeɪ.ʃən/",
+                        "meaning": "so'z birikmasi (odatda birga keladigan so'zlar)",
+                        "exampleSentence": "Learning collocations like 'make progress' sounds more authentic than isolated words.",
+                        "exampleTranslation": "'Make progress' kabi so'z birikmalarini o'rganish alohida so'zlarga qaraganda tabiiyroq jaranglaydi."
+                    },
+                    {
+                        "term": "see eye to eye",
+                        "reading": "/siː aɪ tuː aɪ/",
+                        "meaning": "fikri bir joydan chiqmoq, hamfikr bo'lmoq",
+                        "exampleSentence": "Although they debate vigorously, they see eye to eye on essential financial goals.",
+                        "exampleTranslation": "Ular qizg'in bahslashsalar-da, asosiy moliyaviy maqsadlar borasida to'liq hamfikrdirlar."
+                    },
+                    {
+                        "term": "once in a blue moon",
+                        "reading": "/wʌns ɪn ə bluː muːn/",
+                        "meaning": "juda kamdan-kam, kam uchraydigan",
+                        "exampleSentence": "Because of my demanding work schedule, I only dine out once in a blue moon.",
+                        "exampleTranslation": "Tig'iz ish jadvalim tufayli men faqat onda-sonda restoranda ovqatlanaman."
+                    },
+                    {
+                        "term": "burn the midnight oil",
+                        "reading": "/bɜːn ðə ˈmɪd.naɪt ɔɪl/",
+                        "meaning": "tun bo'yi dars qilmoq / uxlamay ishlamoq",
+                        "exampleSentence": "Medical students frequently burn the midnight oil during exam seasons.",
+                        "exampleTranslation": "Tibbiyot talabalari imtihon mavsumida tez-tez tuni bilan uxlamasdan dars qilishadi."
+                    },
+                    {
+                        "term": "weigh the pros and cons",
+                        "reading": "/weɪ ðə prəʊz ənd kɒnz/",
+                        "meaning": "ijobiy va salbiy tomonlarni taroziga solmoq",
+                        "exampleSentence": "Before relocating abroad, take time to weigh the pros and cons carefully.",
+                        "exampleTranslation": "Xorijga ko'chib ketishdan oldin ijobiy va salbiy tomonlarini diqqat bilan chamalang."
+                    },
+                    {
+                        "term": "make an effort",
+                        "reading": "/meɪk ən ˈef.ət/",
+                        "meaning": "harakat qilmoq, jon kuydirmoq",
+                        "exampleSentence": "You must make a conscious effort to eliminate grammatical repetitions in your essays.",
+                        "exampleTranslation": "Insholaringizdagi grammatik takroriyliklarni yo'qotish uchun ongli ravishda harakat qilishingiz shart."
+                    },
+                    {
+                        "term": "do research",
+                        "reading": "/duː rɪˈsɜːtʃ/",
+                        "meaning": "ilmiy izlanish / tadqiqot olib bormoq",
+                        "exampleSentence": "The university team will do research into sustainable agriculture methods.",
+                        "exampleTranslation": "Universitet jamoasi barqaror qishloq xo'jaligi usullari bo'yicha tadqiqot olib boradi."
+                    },
+                    {
+                        "term": "cost an arm and a leg",
+                        "reading": "/kɒst ən ɑːm ənd ə leɡ/",
+                        "meaning": "juda qimmatga tushmoq",
+                        "exampleSentence": "Purchasing real estate in the city center costs an arm and a leg nowadays.",
+                        "exampleTranslation": "Hozirgi kunda shahar markazidan ko'chmas mulk sotib olish juda katta mablag'ni talab qiladi."
+                    }
+                ],
+                "grammarRules": [
+                    {
+                        "pattern": "make + decision / mistake / effort / impression / progress",
+                        "meaning": "Yangi harakat yoki natijani ifodalovchi 'make' kollokatsiyalari",
+                        "usageNotes": "'do' bilan almashtirib bo'lmaydi.",
+                        "examples": [
+                            {
+                                "sentence": "She made remarkable progress in her academic writing skills.",
+                                "translation": "U akademik yozish ko'nikmalarida ajoyib siljishga erishdi."
+                            }
+                        ]
+                    },
+                    {
+                        "pattern": "do + research / business / someone a favor / harm",
+                        "meaning": "Jarayon va faoliyatni ifodalovchi 'do' kollokatsiyalari",
+                        "usageNotes": "'make research' qo'pol grammatik xatodir.",
+                        "examples": [
+                            {
+                                "sentence": "Scientists are doing research on antibody generation.",
+                                "translation": "Olimlar antitanalar hosil bo'lishi ustida tadqiqot o'tkazmoqdalar."
+                            }
+                        ]
+                    }
+                ]
             }
-        ]
-    },
+        },
+        {
+            "id": "en-b1-u5-l3-s2",
+            "title": "Amaliy Mashqlar",
+            "type": "practice",
+            "estimatedMinutes": 5,
+            "practiceData": {
+                "instructions": "'Make vs Do' va iboralar bo'yicha to'g'ri variantlarni tanlang.",
+                "exercises": [
+                    {
+                        "id": "en-b1-u5-l3-e1",
+                        "type": "multiple-choice",
+                        "prompt": "I accidentally _______ a spelling mistake in the first paragraph of my cover letter.",
+                        "options": [
+                            "did",
+                            "made",
+                            "took",
+                            "had"
+                        ],
+                        "correctAnswer": 1,
+                        "explanation": "Xato qilmoq: 'make a mistake' (o'tgan zamonda: made a mistake)."
+                    },
+                    {
+                        "id": "en-b1-u5-l3-e2",
+                        "type": "multiple-choice",
+                        "prompt": "Before submitting the thesis, the graduate student had to _______ extensive research in archives.",
+                        "options": [
+                            "make",
+                            "do",
+                            "create",
+                            "build"
+                        ],
+                        "correctAnswer": 1,
+                        "explanation": "Tadqiqot o'tkazmoq: 'do research' (yoki 'conduct research'). 'Make research' xato."
+                    },
+                    {
+                        "id": "en-b1-u5-l3-e3",
+                        "type": "multiple-choice",
+                        "prompt": "My business partner and I _______ on financial priorities, so negotiations were seamless.",
+                        "options": [
+                            "burned the midnight oil",
+                            "saw eye to eye",
+                            "cost an arm and a leg",
+                            "broke the ice"
+                        ],
+                        "correctAnswer": 1,
+                        "explanation": "'see eye to eye' (fikri bir joydan chiqmoq / hamfikr bo'lmoq)."
+                    },
+                    {
+                        "id": "en-b1-u5-l3-e4",
+                        "type": "multiple-choice",
+                        "prompt": "He rarely eats fast food; in fact, he only visits burger restaurants once in a _______ .",
+                        "options": [
+                            "red sky",
+                            "blue moon",
+                            "dark night",
+                            "bright sun"
+                        ],
+                        "correctAnswer": 1,
+                        "explanation": "Juda kamdan-kam holatni ifodalovchi ibora: 'once in a blue moon'."
+                    },
+                    {
+                        "id": "en-b1-u5-l3-e5",
+                        "type": "multiple-choice",
+                        "prompt": "Could you please _______ me a favor and proofread this draft?",
+                        "options": [
+                            "make",
+                            "do",
+                            "give",
+                            "create"
+                        ],
+                        "correctAnswer": 1,
+                        "explanation": "Yaxshilik yoki iltifot ko'rsatish: 'do someone a favor'."
+                    }
+                ]
+            }
+        },
+        {
+            "id": "en-b1-u5-l3-s3",
+            "title": "Yakuniy Test",
+            "type": "test",
+            "estimatedMinutes": 5,
+            "testData": {
+                "instructions": "5 ta savolga to'g'ri javob bering. O'tish bali: 80%.",
+                "passingScorePercentage": 80,
+                "questions": [
+                    {
+                        "id": "en-b1-u5-l3-q1",
+                        "question": "Which verb correctly completes: 'We need to _______ a decision before five o'clock'?",
+                        "options": [
+                            "do",
+                            "make",
+                            "act",
+                            "perform"
+                        ],
+                        "correctAnswerIndex": 1,
+                        "explanation": "Qaror qabul qilish: 'make a decision'."
+                    },
+                    {
+                        "id": "en-b1-u5-l3-q2",
+                        "question": "The idiomatic expression 'burn the midnight oil' means to _______ .",
+                        "options": [
+                            "waste fuel recklessly",
+                            "study or work late into the night",
+                            "cause a fire accident",
+                            "wake up at dawn"
+                        ],
+                        "correctAnswerIndex": 1,
+                        "explanation": "'burn the midnight oil' kechasi bilan tinimsiz o'qish yoki ishlashni bildiradi."
+                    },
+                    {
+                        "id": "en-b1-u5-l3-q3",
+                        "question": "Identify the natural collocation:",
+                        "options": [
+                            "make homework",
+                            "do homework",
+                            "make business",
+                            "do an effort"
+                        ],
+                        "correctAnswerIndex": 1,
+                        "explanation": "'do homework' tabiiy kollokatsiyadir."
+                    },
+                    {
+                        "id": "en-b1-u5-l3-q4",
+                        "question": "If something costs 'an arm and a leg', it is _______ .",
+                        "options": [
+                            "physically painful",
+                            "extremely expensive",
+                            "free of charge",
+                            "inferior in quality"
+                        ],
+                        "correctAnswerIndex": 1,
+                        "explanation": "'cost an arm and a leg' nihoyatda qimmat turishini anglatadi."
+                    },
+                    {
+                        "id": "en-b1-u5-l3-q5",
+                        "question": "Before accepting a job in another city, it is advisable to weigh the _______ .",
+                        "options": [
+                            "pros and cons",
+                            "ins and ons",
+                            "arms and legs",
+                            "eyes and ears"
+                        ],
+                        "correctAnswerIndex": 0,
+                        "explanation": "Ijobiy va salbiy tomonlarni tahlil qilish: 'weigh the pros and cons'."
+                    }
+                ]
+            }
+        }
+    ]
+},
     {
-        "id": "en-b1-u5-l4",
-        "courseId": "english-b1",
-        "unitId": "en-b1-u5",
-        "unitTitle": "Unit 5: Society & Career Development",
-        "language": "en",
-        "level": "B1",
-        "lessonNumber": 4,
-        "title": "B1 Academic Lecture: Psychology of Memory",
-        "description": "Xotira va takrorlash qonuniyatlari bo'yicha akademik mini-ma'ruzani tinglab tushunish.",
-        "estimatedDurationMinutes": 15,
-        "icon": "🎓",
-        "steps": [
-            {
-                "id": "en-b1-u5-l4-s1",
-                "title": "Ma'ruza Matni",
-                "type": "learn",
-                "estimatedMinutes": 5,
-                "learnData": {
-                    "title": "Lecture: The Forgetting Curve & Spaced Repetition",
-                    "explanation": "Akademik ma'ruza parchasi.",
-                    "keyPoints": [
-                        "\"Hermann Ebbinghaus discovered that human memory decays exponentially without reinforcement.\"",
-                        "\"Spaced repetition algorithms counteract this forgetting curve by scheduling reviews at optimal intervals.\"",
-                        "\"Active recall strengthens neural pathways more effectively than passive rereading.\""
-                    ],
-                    "vocabulary": [
-                        {
-                            "term": "Reinforcement",
-                            "reading": "/ˌriː.ɪnˈfɔːs.mənt/",
-                            "meaning": "Mustahkamlash / Kuchaytirish",
-                            "exampleSentence": "Memory requires regular reinforcement.",
-                            "exampleTranslation": "Xotira muntazam mustahkamlashni talab qiladi."
-                        },
-                        {
-                            "term": "Optimal",
-                            "reading": "/ˈɒp.tɪ.məl/",
-                            "meaning": "Eng maqbul / Optimal",
-                            "exampleSentence": "Find the optimal study schedule.",
-                            "exampleTranslation": "Eng maqbul o'quv jadvalini toping."
-                        },
-                        {
-                            "term": "Perspective",
-                            "reading": "/pəˈspek.tɪv/",
-                            "meaning": "Nuqtayi nazar",
-                            "exampleSentence": "Traveling gives you a broader perspective on life.",
-                            "exampleTranslation": "Sayohat qilish hayotga kengroq nuqtayi nazar beradi."
-                        }
-                    ],
-                    "grammarRules": [
-                        {
-                            "pattern": "B1 Academic Lecture: Psychology of Memory",
-                            "meaning": "Xotira va takrorlash qonuniyatlari bo'yicha akademik mini-ma'ruzani tinglab tushunish.",
-                            "usageNotes": "Akademik ma'ruza parchasi.",
-                            "examples": [
-                                {
-                                    "sentence": "Memory requires regular reinforcement.",
-                                    "translation": "Xotira muntazam mustahkamlashni talab qiladi."
-                                },
-                                {
-                                    "sentence": "Find the optimal study schedule.",
-                                    "translation": "Eng maqbul o'quv jadvalini toping."
-                                }
-                            ]
-                        }
-                    ]
-                }
-            },
-            {
-                "id": "en-b1-u5-l4-s2",
-                "title": "Ma'ruza Tahlili",
-                "type": "practice",
-                "estimatedMinutes": 5,
-                "practiceData": {
-                    "instructions": "Ma'ruza bo'yicha to'g'ri javobni tanlang.",
-                    "exercises": [
-                        {
-                            "id": "en-b1-u5-l4-e1",
-                            "type": "multiple-choice",
-                            "prompt": "What does active recall do more effectively than passive rereading?",
-                            "options": [
-                                "Takes zero effort",
-                                "Causes quick forgetting",
-                                "Strengthens neural pathways",
-                                "Wastes time"
-                            ],
-                            "correctAnswer": 2,
-                            "explanation": "Strengthens neural pathways."
-                        },
-                        {
-                            "id": "en-b1-u5-l4-ex-2",
-                            "type": "multiple-choice",
-                            "prompt": "Choose the correct word to complete the sentence: \"Find the optimal study schedule.\"",
-                            "options": [
-                                "reluctance",
-                                "doubt",
-                                "Optimal",
-                                "delay"
-                            ],
-                            "correctAnswer": 2,
-                            "explanation": "\"Optimal\" (Eng maqbul / Optimal) fits the context appropriately."
-                        }
-                    ]
-                }
-            },
-            {
-                "id": "en-b1-u5-l4-s3",
-                "title": "Test",
-                "type": "test",
-                "estimatedMinutes": 5,
-                "testData": {
-                    "instructions": "Savollarga javob bering.",
-                    "passingScorePercentage": 75,
-                    "questions": [
-                        {
-                            "id": "en-b1-u5-l4-q1",
-                            "question": "Who researched the forgetting curve originally?",
-                            "options": [
-                                "Albert Einstein",
-                                "Isaac Newton",
-                                "Hermann Ebbinghaus",
-                                "Charles Darwin"
-                            ],
-                            "correctAnswerIndex": 2,
-                            "explanation": "Hermann Ebbinghaus."
-                        },
-                        {
-                            "id": "en-b1-u5-l4-q2",
-                            "question": "How does spaced repetition prevent forgetting?",
-                            "options": [
-                                "By studying once for 20 hours",
-                                "By scheduling reviews at optimal intervals",
-                                "By ignoring difficult words",
-                                "By reading backwards"
-                            ],
-                            "correctAnswerIndex": 1,
-                            "explanation": "Scheduling reviews at optimal intervals."
-                        },
-                        {
-                            "id": "en-b1-u5-l4-q3",
-                            "question": "\"Decay\" so'zining ilmiy ma'nosi:",
-                            "options": [
-                                "Asta-sekin yemirilish / Pasayish",
-                                "Muzlash",
-                                "Yorishish",
-                                "Ko'payish"
-                            ],
-                            "correctAnswerIndex": 0,
-                            "explanation": "Decay — Pasayish/so'nish."
-                        },
-                        {
-                            "id": "en-b1-u5-l4-q4",
-                            "question": "Which learning method is recommended by the lecture?",
-                            "options": [
-                                "Passive rereading the night before",
-                                "Cramming in one session",
-                                "Memorizing without understanding",
-                                "Active recall with spaced repetition"
-                            ],
-                            "correctAnswerIndex": 3,
-                            "explanation": "Active recall with spaced repetition."
-                        }
-                    ]
-                }
+    "id": "en-b1-u5-l4",
+    "courseId": "english-b1",
+    "unitId": "en-b1-u5",
+    "unitTitle": "Unit 5: Society & Career Development",
+    "language": "en",
+    "level": "B1",
+    "lessonNumber": 4,
+    "title": "B1 Academic Lecture: Psychology of Memory & Learning",
+    "description": "B1 akademik ma'ruza tahlili: xotira psixologiyasi, kognitiv rivojlanish va spaced repetition metodikasi.",
+    "estimatedDurationMinutes": 16,
+    "icon": "🧠",
+    "steps": [
+        {
+            "id": "en-b1-u5-l4-s1",
+            "title": "Akademik Ma'ruza: Xotira Psixologiyasi",
+            "type": "learn",
+            "estimatedMinutes": 6,
+            "learnData": {
+                "title": "Academic Lecture: Cognitive Psychology and Memory Retention",
+                "explanation": "Ushbu darsda B1 darajadagi talaba universitet darajasidagi akademik ma'ruzalarni tushunish, g'oyalarni qayd qilish va kognitiv psixologiya atamalarini tahlil qilishni o'rganadi.\n\n📖 The Science of Memory Consolidation\nHuman memory is not a static recording device; rather, it represents a dynamic neurological process. Cognitive scientists categorize memory into three primary stages: sensory perception, short-term working memory, and permanent long-term storage.\n\nWhen we absorb novel information, it first registers in our working memory, which possesses a notoriously limited capacity. Without active reinforcement, data begins to decay within thirty seconds. In order to transfer information into long-term retention, learners must employ active retrieval and spaced repetition.\n\nSpaced repetition, which involves reviewing concepts at expanding time intervals, counteracts Hermann Ebbinghaus's famous 'Forgetting Curve'. Cognitive experiments demonstrate that passive rereading is among the least effective study tactics. Conversely, active self-testing forces the brain to reconstruct neural pathways, which solidifies recall.\n\nFurthermore, emotional engagement and adequate sleep play pivotal roles. During deep sleep cycles, the brain consolidates synaptic connections, which means that pulling an all-nighter before an exam can severely impair cognitive performance.",
+                "vocabulary": [
+                    {
+                        "term": "retention",
+                        "reading": "/rɪˈten.ʃən/",
+                        "meaning": "xotirada saqlab qolish qobiliyati",
+                        "exampleSentence": "Spaced repetition techniques dramatically improve vocabulary retention among learners.",
+                        "exampleTranslation": "Spaced repetition texnikasi o'quvchilarda so'z boyligini xotirada saqlashni keskin oshiradi."
+                    },
+                    {
+                        "term": "cognitive",
+                        "reading": "/ˈkɒɡ.nə.tɪv/",
+                        "meaning": "kognitiv, aqliy, bilishga oid",
+                        "exampleSentence": "Regular physical aerobic exercise enhances cognitive function and alertness.",
+                        "exampleTranslation": "Doimiy jismoniy aerobik mashqlar aqliy faoliyat va tetiklikni kuchaytiradi."
+                    },
+                    {
+                        "term": "consolidate",
+                        "reading": "/kənˈsɒl.ɪ.deɪt/",
+                        "meaning": "mustahkamlamoq, kuchaytirmoq",
+                        "exampleSentence": "The brain requires undisturbed sleep in order to consolidate learned experiences.",
+                        "exampleTranslation": "Miya o'rganilgan tajribalarni mustahkamlash uchun xotirjam uyquga muhtoj."
+                    },
+                    {
+                        "term": "retrieval",
+                        "reading": "/rɪˈtriː.vəl/",
+                        "meaning": "eslab topish, xotiradan chiqarib olish",
+                        "exampleSentence": "Active retrieval practice through flashcards is superior to passive textbook reading.",
+                        "exampleTranslation": "Flashkardlar orqali faol eslab topish amaliyoti darslikni shunchaki o'qishdan ustundir."
+                    },
+                    {
+                        "term": "decay",
+                        "reading": "/dɪˈkeɪ/",
+                        "meaning": "asta-sekin so'nmoq, unutilmoq, yemirilmoq",
+                        "exampleSentence": "Without systematic review, memory traces rapidly decay over the first 48 hours.",
+                        "exampleTranslation": "Tizimli takrorlash bo'lmasa, xotiradagi izlar dastlabki 48 soat ichida tezda so'nadi."
+                    },
+                    {
+                        "term": "counteract",
+                        "reading": "/ˌkaʊn.tərˈækt/",
+                        "meaning": "salbiy ta'sirni bartaraf etmoq, oldini olmoq",
+                        "exampleSentence": "We can counteract the forgetting curve by scheduling periodic revisions.",
+                        "exampleTranslation": "Vaqti-vaqti bilan takrorlab turish orqali unutilish egri chizig'iga qarshi kurashishimiz mumkin."
+                    },
+                    {
+                        "term": "capacity",
+                        "reading": "/kəˈpæs.ə.ti/",
+                        "meaning": "sig'im, hajm, imkoniyat",
+                        "exampleSentence": "Working memory has a strictly limited storage capacity of roughly four items.",
+                        "exampleTranslation": "Operativ xotira taxminan to'rtta elementdan iborat qat'iy cheklangan hajmga ega."
+                    },
+                    {
+                        "term": "synaptic",
+                        "reading": "/sɪˈnæp.tɪk/",
+                        "meaning": "sinaptik (asab tolalari orasidagi aloqa)",
+                        "exampleSentence": "Learning strengthens synaptic connections between neural clusters in the cortex.",
+                        "exampleTranslation": "O'rganish miya po'stlog'idagi asab tolalari o'rtasidagi sinaptik aloqalarni mustahkamlaydi."
+                    }
+                ],
+                "grammarRules": [
+                    {
+                        "pattern": "Active vs Passive Learning Syntax",
+                        "meaning": "Akademik taqqoslash sintaksisi",
+                        "usageNotes": "'whereas', 'conversely', 'in contrast' bog'lovchilari bilan ifodalanadi.",
+                        "examples": [
+                            {
+                                "sentence": "Passive reading produces temporary familiarity, whereas active testing generates permanent retention.",
+                                "translation": "Passiv o'qish vaqtinchalik tanishlik hissini beradi, holbuki faol test yechish uzoq muddatli eslab qolishni ta'minlaydi."
+                            }
+                        ]
+                    }
+                ]
             }
-        ]
-    },
+        },
+        {
+            "id": "en-b1-u5-l4-s2",
+            "title": "Amaliy Mashqlar",
+            "type": "practice",
+            "estimatedMinutes": 5,
+            "practiceData": {
+                "instructions": "Akademik ma'ruza matni va tushunchalari bo'yicha to'g'ri javoblarni tanlang.",
+                "exercises": [
+                    {
+                        "id": "en-b1-u5-l4-e1",
+                        "type": "multiple-choice",
+                        "prompt": "According to the lecture, why is passive rereading considered inefficient?",
+                        "options": [
+                            "Because it damages vision.",
+                            "Because it does not force the brain to actively reconstruct neural pathways.",
+                            "Because working memory has infinite capacity.",
+                            "Because Hermann Ebbinghaus proved that rereading causes memory loss."
+                        ],
+                        "correctAnswer": 1,
+                        "explanation": "Matnda ko'rsatilganidek, faol eslab topish (active retrieval) miyani neyron yo'llarini qayta qurishga majbur qiladi, passiv o'qish esa buni bajarmaydi."
+                    },
+                    {
+                        "id": "en-b1-u5-l4-e2",
+                        "type": "multiple-choice",
+                        "prompt": "Working memory, _______ registers sensory input, has a strictly limited capacity.",
+                        "options": [
+                            "which",
+                            "that",
+                            "who",
+                            "whose"
+                        ],
+                        "correctAnswer": 0,
+                        "explanation": "Vergulli izohlovchi gapda (non-defining) narsalar uchun 'which' ishlatiladi."
+                    },
+                    {
+                        "id": "en-b1-u5-l4-e3",
+                        "type": "multiple-choice",
+                        "prompt": "Learners utilize spaced repetition _______ they can counteract the forgetting curve.",
+                        "options": [
+                            "in order to",
+                            "so that",
+                            "despite",
+                            "because of"
+                        ],
+                        "correctAnswer": 1,
+                        "explanation": "'they can counteract...' to'liq gap bo'lib, maqsad ifodalanganligi uchun 'so that' to'g'ri."
+                    },
+                    {
+                        "id": "en-b1-u5-l4-e4",
+                        "type": "multiple-choice",
+                        "prompt": "What essential biological process occurs during deep sleep according to the text?",
+                        "options": [
+                            "Working memory expands ten times.",
+                            "The brain consolidates synaptic connections.",
+                            "All sensory input is discarded.",
+                            "Neural pathways completely decay."
+                        ],
+                        "correctAnswer": 1,
+                        "explanation": "Matnda chuqur uyqu paytida miya sinaptik aloqalarni mustahkamlashi (consolidate) aytilgan."
+                    },
+                    {
+                        "id": "en-b1-u5-l4-e5",
+                        "type": "multiple-choice",
+                        "prompt": "Which technique involves testing oneself at increasing intervals of time?",
+                        "options": [
+                            "Passive scanning",
+                            "Spaced repetition",
+                            "All-nighter cramming",
+                            "Sensory overload"
+                        ],
+                        "correctAnswer": 1,
+                        "explanation": "Vaqt intervallari kengayib boradigan usul 'spaced repetition' deb ataladi."
+                    }
+                ]
+            }
+        },
+        {
+            "id": "en-b1-u5-l4-s3",
+            "title": "Yakuniy Test",
+            "type": "test",
+            "estimatedMinutes": 5,
+            "testData": {
+                "instructions": "5 ta savolga to'g'ri javob bering. O'tish bali: 80%.",
+                "passingScorePercentage": 80,
+                "questions": [
+                    {
+                        "id": "en-b1-u5-l4-q1",
+                        "question": "The biological process of strengthening and stabilizing new memories in the brain is called _______ .",
+                        "options": [
+                            "consolidation",
+                            "contamination",
+                            "speculation",
+                            "remuneration"
+                        ],
+                        "correctAnswerIndex": 0,
+                        "explanation": "Xotirani mustahkamlash jarayoni 'consolidation' deyiladi."
+                    },
+                    {
+                        "id": "en-b1-u5-l4-q2",
+                        "question": "Working memory information begins to _______ within half a minute unless actively rehearsed.",
+                        "options": [
+                            "prosper",
+                            "decay",
+                            "consolidate",
+                            "shortlist"
+                        ],
+                        "correctAnswerIndex": 1,
+                        "explanation": "Ma'lumotlarning so'nishi yoki unutilishi 'decay' deb nomlanadi."
+                    },
+                    {
+                        "id": "en-b1-u5-l4-q3",
+                        "question": "Spaced repetition is an effective technique used to _______ the forgetting curve.",
+                        "options": [
+                            "counteract",
+                            "deplete",
+                            "redundant",
+                            "vacate"
+                        ],
+                        "correctAnswerIndex": 0,
+                        "explanation": "Unutilish egri chizig'iga qarshi kurashish: 'counteract the curve'."
+                    },
+                    {
+                        "id": "en-b1-u5-l4-q4",
+                        "question": "Which of the following describes 'active retrieval'?",
+                        "options": [
+                            "Silently staring at highlighted lecture slides.",
+                            "Actively quizzing oneself to recall information from memory.",
+                            "Copying textbook paragraphs word for word.",
+                            "Listening to recorded music while sleeping."
+                        ],
+                        "correctAnswerIndex": 1,
+                        "explanation": "O'z-o'ziga savol berib xotiradan ma'lumotni chiqarish 'active retrieval' sanaladi."
+                    },
+                    {
+                        "id": "en-b1-u5-l4-q5",
+                        "question": "Regular cardiovascular activity has been proven to enhance _______ functions.",
+                        "options": [
+                            "cognitive",
+                            "probationary",
+                            "biodegradable",
+                            "identical"
+                        ],
+                        "correctAnswerIndex": 0,
+                        "explanation": "Aqliy qobiliyatlar 'cognitive functions' deb ataladi."
+                    }
+                ]
+            }
+        }
+    ]
+},
     {
-        "id": "en-b1-u5-l5",
-        "courseId": "english-b1",
-        "unitId": "en-b1-u5",
-        "unitTitle": "Unit 5: Society & Career Development",
-        "language": "en",
-        "level": "B1",
-        "lessonNumber": 5,
-        "title": "B1 Capstone Comprehensive Examination",
-        "description": "B1 Intermediate darajasini to'liq tasdiqlash va B2 darajasiga o'tish sinovi.",
-        "estimatedDurationMinutes": 18,
-        "icon": "🏆",
-        "steps": [
-            {
-                "id": "en-b1-u5-l5-s1",
-                "title": "B1 Daraja Yakuniy Ko'rib Chiqish",
-                "type": "learn",
-                "estimatedMinutes": 5,
-                "learnData": {
-                    "title": "B1 Intermediate Mastery Checklist",
-                    "explanation": "Ushbu darajada siz Present Perfect (Simple & Continuous), Zero/First/Second Conditionals, Passive Voice, Reported Speech, Relative Clauses va Modal Verbs of Deduction mavzularini to'liq o'zlashtirdingiz.",
-                    "keyPoints": [
-                        "Complex sentence structures and cohesion",
-                        "Work, environment, psychology and academic foundations",
-                        "Preparation for IELTS B2 level"
-                    ],
-                    "grammarRules": [
-                        {
-                            "pattern": "B1 Capstone Comprehensive Examination",
-                            "meaning": "B1 Intermediate darajasini to'liq tasdiqlash va B2 darajasiga o'tish sinovi.",
-                            "usageNotes": "Ushbu darajada siz Present Perfect (Simple & Continuous), Zero/First/Second Conditionals, Passive Voice, Reported Speech, Relative Clauses va Modal Verbs of Deduction mavzularini to'liq o'zlashtirdingiz.",
-                            "examples": [
-                                {
-                                    "sentence": "I study English every day with dedication.",
-                                    "translation": "Har kuni ingliz tilini astoydil o'rganaman."
-                                }
-                            ]
-                        }
-                    ],
-                    "vocabulary": [
-                        {
-                            "term": "Significantly",
-                            "reading": "/sɪɡˈnɪf.ɪ.kənt.li/",
-                            "meaning": "Sezilarli darajada",
-                            "exampleSentence": "Her grades improved significantly this term.",
-                            "exampleTranslation": "Bu semestrda uning baholari sezilarli darajada yaxshilandi."
-                        },
-                        {
-                            "term": "Perspective",
-                            "reading": "/pəˈspek.tɪv/",
-                            "meaning": "Nuqtayi nazar",
-                            "exampleSentence": "Traveling gives you a broader perspective on life.",
-                            "exampleTranslation": "Sayohat qilish hayotga kengroq nuqtayi nazar beradi."
-                        },
-                        {
-                            "term": "Efficient",
-                            "reading": "/ɪˈfɪʃ.ənt/",
-                            "meaning": "Samarali",
-                            "exampleSentence": "We need to find a more efficient solution.",
-                            "exampleTranslation": "Biz yanada samaraliroq yechim topishimiz kerak."
-                        }
-                    ]
-                }
-            },
-            {
-                "id": "en-b1-u5-l5-s2",
-                "title": "Kompleks Mashq",
-                "type": "practice",
-                "estimatedMinutes": 6,
-                "practiceData": {
-                    "instructions": "Barcha mavzulardan xatoni toping.",
-                    "exercises": [
-                        {
-                            "id": "en-b1-u5-l5-e1",
-                            "type": "multiple-choice",
-                            "prompt": "Which sentence is completely correct grammatically?",
-                            "options": [
-                                "If I knew, I will tell you.",
-                                "If I was knowing, I would tell you.",
-                                "If I know, I would told you.",
-                                "If I had known, I would have told you."
-                            ],
-                            "correctAnswer": 3,
-                            "explanation": "Correct conditional structure."
-                        },
-                        {
-                            "id": "en-b1-u5-l5-ex-2",
-                            "type": "multiple-choice",
-                            "prompt": "Choose the correct word to complete the sentence: \"Traveling gives you a broader perspective on life.\"",
-                            "options": [
-                                "doubt",
-                                "delay",
-                                "reluctance",
-                                "Perspective"
-                            ],
-                            "correctAnswer": 3,
-                            "explanation": "\"Perspective\" (Nuqtayi nazar) fits the context appropriately."
-                        }
-                    ]
-                }
-            },
-            {
-                "id": "en-b1-u5-l5-s3",
-                "title": "B1 Yakuniy Sertifikatsiya Testi",
-                "type": "test",
-                "estimatedMinutes": 7,
-                "testData": {
-                    "instructions": "B1 darajasini muvaffaqiyatli yakunlash uchun testni yeching.",
-                    "passingScorePercentage": 75,
-                    "questions": [
-                        {
-                            "id": "en-b1-u5-l5-q1",
-                            "question": "The report _______ by the committee yesterday afternoon.",
-                            "options": [
-                                "is approved",
-                                "approves",
-                                "has approved",
-                                "was approved"
-                            ],
-                            "correctAnswerIndex": 3,
-                            "explanation": "Past Simple Passive: was approved."
-                        },
-                        {
-                            "id": "en-b1-u5-l5-q2",
-                            "question": "I haven't seen Sarah _______ she moved to Canada.",
-                            "options": [
-                                "since",
-                                "during",
-                                "for",
-                                "while"
-                            ],
-                            "correctAnswerIndex": 0,
-                            "explanation": "Since she moved."
-                        },
-                        {
-                            "id": "en-b1-u5-l5-q3",
-                            "question": "He said that he _______ his keys on the train.",
-                            "options": [
-                                "has left",
-                                "will leave",
-                                "had left",
-                                "leaves"
-                            ],
-                            "correctAnswerIndex": 2,
-                            "explanation": "Backshift: had left."
-                        },
-                        {
-                            "id": "en-b1-u5-l5-q4",
-                            "question": "Look at the ice! You _______ drive so fast.",
-                            "options": [
-                                "mustn't",
-                                "may not",
-                                "don't have to",
-                                "needn't"
-                            ],
-                            "correctAnswerIndex": 0,
-                            "explanation": "Mustn't (qat'iy taqiq/xavf)."
-                        }
-                    ]
-                }
+    "id": "en-b1-u5-l5",
+    "courseId": "english-b1",
+    "unitId": "en-b1-u5",
+    "unitTitle": "Unit 5: Society & Career Development",
+    "language": "en",
+    "level": "B1",
+    "lessonNumber": 5,
+    "title": "B1 Capstone Comprehensive Examination & IELTS Bridge",
+    "description": "B1 darajasining to'liq yakuniy sinovi: barcha 5 unit grammatikasi, so'z boyligi va IELTS Speaking to'liq simulyatsiyasi.",
+    "estimatedDurationMinutes": 18,
+    "icon": "🎓",
+    "steps": [
+        {
+            "id": "en-b1-u5-l5-s1",
+            "title": "B1 Yakuniy Sharh va IELTS Band 6.5 Ko'prigi",
+            "type": "learn",
+            "estimatedMinutes": 6,
+            "learnData": {
+                "title": "B1 Comprehensive Synthesis & IELTS Foundation Mastery",
+                "explanation": "Tabriklaymiz! Siz B1 darajasining barcha 5 ta unitini muvaffaqiyatli o'zlashtirdingiz. Ushbu capstone darsda siz butun B1 kursi davomida o'rganilgan barcha grammatik tizimlarni yaxlit sintez qilasiz:\n\n1. O'zlashtirilgan Asosiy B1 Grammatik Mavzular:\n- Unit 1: Present Perfect Simple vs Continuous, Past Perfect Simple (zamonlar uyg'unligi va natijalar).\n- Unit 2: Second Conditional, Wish / If only (gipotetik orzular va afsuslar).\n- Unit 3: Passive Voice (Simple & Continuous), Reported Speech & Statements (akademik obyektivlik va bayonotlar).\n- Unit 4: Defining & Non-defining Relative Clauses, Modals of Deduction (must, can't, might), Linking Devices (Although, Despite, Therefore).\n- Unit 5: Professional Career Vocabulary, Environment & Sustainability, Collocations (make vs do), Cognitive Academic Texts.\n\n2. IELTS Speaking Band 6.5 Mezonlari Sintezi:\n- Fluency & Coherence: Fikrlarni 'Although', 'Consequently', 'By contrast' kabi bog'lovchilar bilan ulay olish.\n- Lexical Resource: B1 mavzuiy kollokatsiyalari ('curb emissions', 'spaced repetition', 'see eye to eye', 'work as an analyst').\n- Grammatical Range & Accuracy: Murakkab sintaksis (relative clauses, passives, conditionals) xatosiz ishlatilishi.\n- Pronunciation: To'g'ri so'z urg'usi va mantiqiy intonatsiya.\n\n3. IELTS Speaking Part 1-3 To'liq Simulyatsiyasi:\n- Part 1: 'What do you do? Do you work or are you a student?' -> 'At present, I am working as a junior web developer...'\n- Part 2: 'Describe an environmental challenge in your country.' -> 'I would like to discuss air quality in Tashkent, which has become a pressing concern...'\n- Part 3: 'How might technological advancements shape education?' -> 'In my view, AI algorithms could revolutionize individual tutoring; nevertheless, human educators remain irreplaceable...'",
+                "vocabulary": [
+                    {
+                        "term": "synthesis",
+                        "reading": "/ˈsɪn.θə.sɪs/",
+                        "meaning": "sintez, turli qismlarni bir butunga birlashtirish",
+                        "exampleSentence": "This capstone assessment provides a rigorous synthesis of all B1 language competences.",
+                        "exampleTranslation": "Ushbu yakuniy baholash barcha B1 til kompetensiyalarining qat'iy sintezini taqdim etadi."
+                    },
+                    {
+                        "term": "competence",
+                        "reading": "/ˈkɒm.pɪ.təns/",
+                        "meaning": "saviyada, til bilish malakasi",
+                        "exampleSentence": "Achieving B1 competence empowers learners to handle daily international interactions.",
+                        "exampleTranslation": "B1 malakasiga erishish o'quvchilarga kundalik xalqaro muloqotlarni bemalol olib borish imkonini beradi."
+                    },
+                    {
+                        "term": "proficiency",
+                        "reading": "/prəˈfɪʃ.ən.si/",
+                        "meaning": "til yetukligi, mahorat darajasi",
+                        "exampleSentence": "Passing this capstone test demonstrates solid intermediate language proficiency.",
+                        "exampleTranslation": "Ushbu yakuniy testdan o'tish mustahkam o'rta darajadagi til yetukligini isbotlaydi."
+                    },
+                    {
+                        "term": "articulate",
+                        "reading": "/ɑːˈtɪk.jə.lət/",
+                        "meaning": "fikrini aniq, ravon va tushunarli ifodalay oladigan",
+                        "exampleSentence": "She gave an articulate response during the third part of the speaking interview.",
+                        "exampleTranslation": "U og'zaki suhbatning uchinchi qismida aniq va ravon javob berdi."
+                    },
+                    {
+                        "term": "advancement",
+                        "reading": "/ədˈvɑːns.mənt/",
+                        "meaning": "oldinga siljish, taraqqiyot",
+                        "exampleSentence": "Technological advancement continues to revolutionize modern workplace dynamics.",
+                        "exampleTranslation": "Texnologik taraqqiyot zamonaviy ish joyi dinamikasini tubdan o'zgartirishda davom etmoqda."
+                    },
+                    {
+                        "term": "irreplaceable",
+                        "reading": "/ˌɪr.ɪˈpleɪ.sə.bəl/",
+                        "meaning": "o'rnini bosib bo'lmaydigan, tengsiz",
+                        "exampleSentence": "Despite automation, the empathy of human mentors remains completely irreplaceable.",
+                        "exampleTranslation": "Avtomatlashtirishga qaramay, insoniy murabbiylarning mehribonligi o'rnini mutlaqo bosib bo'lmasdir."
+                    },
+                    {
+                        "term": "milestone",
+                        "reading": "/ˈmaɪl.stəʊn/",
+                        "meaning": "muhim bosqich, burilish nuqtasi",
+                        "exampleSentence": "Completing the B1 syllabus represents a momentous milestone in your language journey.",
+                        "exampleTranslation": "B1 o'quv rejasini yakunlash sizning til o'rganish safaringizdagi ulkan burilish nuqtasidir."
+                    },
+                    {
+                        "term": "transition",
+                        "reading": "/trænˈzɪʃ.ən/",
+                        "meaning": "o'tish, yangi bosqichga ko'tarilish",
+                        "exampleSentence": "You are now poised for a smooth transition into upper-intermediate B2 studies.",
+                        "exampleTranslation": "Endi siz yuqori o'rta (B2) bosqichiga muvaffaqiyatli o'tishga to'liq tayyorsiz."
+                    }
+                ],
+                "grammarRules": [
+                    {
+                        "pattern": "Comprehensive B1 Syntactic Portfolio",
+                        "meaning": "Barcha 5 Unit grammatik tuzilmalarining integratsiyasi",
+                        "usageNotes": "IELTS imtihonida turli xil zamonlar, conditionals va passiv strukturalardan foydalanish shart.",
+                        "examples": [
+                            {
+                                "sentence": "Although the project had been delayed, the team delivered results that exceeded expectations.",
+                                "translation": "Loyiha kechiktirilgan bo'lsa-da, jamoa kutilganidan yuqori natijalarni taqdim etdi."
+                            }
+                        ]
+                    }
+                ]
             }
-        ]
-    }
+        },
+        {
+            "id": "en-b1-u5-l5-s2",
+            "title": "Amaliy Mashqlar",
+            "type": "practice",
+            "estimatedMinutes": 5,
+            "practiceData": {
+                "instructions": "B1 darajasining barcha unitlari bo'yicha integratsiyalashgan amaliy mashqlarni bajaring.",
+                "exercises": [
+                    {
+                        "id": "en-b1-u5-l5-e1",
+                        "type": "multiple-choice",
+                        "prompt": "If government authorities _______ more funding into public transit, urban congestion would decrease.",
+                        "options": [
+                            "invest",
+                            "invested",
+                            "have invested",
+                            "will invest"
+                        ],
+                        "correctAnswer": 1,
+                        "explanation": "Second conditional (gipotetik holat): If + Past Simple (invested), would + Verb."
+                    },
+                    {
+                        "id": "en-b1-u5-l5-e2",
+                        "type": "multiple-choice",
+                        "prompt": "The novel solar power grid, _______ was completed last winter, supplies electricity to 20,000 households.",
+                        "options": [
+                            "that",
+                            "which",
+                            "who",
+                            "where"
+                        ],
+                        "correctAnswer": 1,
+                        "explanation": "Vergulli izohlovchi gap (non-defining relative clause) da buyumlar uchun 'which' ishlatiladi ('that' xato)."
+                    },
+                    {
+                        "id": "en-b1-u5-l5-e3",
+                        "type": "multiple-choice",
+                        "prompt": "The manager said that the revised guidelines _______ sent to all staff members the following day.",
+                        "options": [
+                            "will be",
+                            "would be",
+                            "are",
+                            "have been"
+                        ],
+                        "correctAnswer": 1,
+                        "explanation": "Reported speech da 'will be' zamon siljishi (backshift) bilan 'would be' ga aylanadi."
+                    },
+                    {
+                        "id": "en-b1-u5-l5-e4",
+                        "type": "multiple-choice",
+                        "prompt": "_______ having minimal financial reserves, the research institute completed the clinical trials.",
+                        "options": [
+                            "Although",
+                            "Despite",
+                            "In spite",
+                            "Even though"
+                        ],
+                        "correctAnswer": 1,
+                        "explanation": "'having minimal reserves' gerund frazasi bo'lgani sababli 'Despite' to'g'ri."
+                    },
+                    {
+                        "id": "en-b1-u5-l5-e5",
+                        "type": "multiple-choice",
+                        "prompt": "He has been in conference for five hours straight without food; he _______ be famished.",
+                        "options": [
+                            "can't",
+                            "must",
+                            "might not",
+                            "couldn't"
+                        ],
+                        "correctAnswer": 1,
+                        "explanation": "Dalillar asosida kuchli mantiqiy ishonch (95%+): 'must be famished' (juda och bo'lishi kerak)."
+                    }
+                ]
+            }
+        },
+        {
+            "id": "en-b1-u5-l5-s3",
+            "title": "Yakuniy Test",
+            "type": "test",
+            "estimatedMinutes": 5,
+            "testData": {
+                "instructions": "B1 darajasini muvaffaqiyatli yakunlash uchun 5 ta savolga to'g'ri javob bering. O'tish bali: 80%.",
+                "passingScorePercentage": 80,
+                "questions": [
+                    {
+                        "id": "en-b1-u5-l5-q1",
+                        "question": "The historic restoration project _______ by international architects yesterday afternoon.",
+                        "options": [
+                            "is approved",
+                            "approves",
+                            "was approved",
+                            "has approved"
+                        ],
+                        "correctAnswerIndex": 2,
+                        "explanation": "Past Simple Passive: 'was approved'."
+                    },
+                    {
+                        "id": "en-b1-u5-l5-q2",
+                        "question": "I haven't met my former colleagues _______ they established their independent consulting firm.",
+                        "options": [
+                            "since",
+                            "during",
+                            "for",
+                            "while"
+                        ],
+                        "correctAnswerIndex": 0,
+                        "explanation": "O'tgan vaqtdan to hozirgacha: 'since + Past Simple'."
+                    },
+                    {
+                        "id": "en-b1-u5-l5-q3",
+                        "question": "She admitted that she _______ her original credentials at the registration desk.",
+                        "options": [
+                            "has left",
+                            "leaves",
+                            "had left",
+                            "will leave"
+                        ],
+                        "correctAnswerIndex": 2,
+                        "explanation": "Reported speech backshift: Past Simple / Present Perfect -> Past Perfect ('had left')."
+                    },
+                    {
+                        "id": "en-b1-u5-l5-q4",
+                        "question": "Which sentence expresses a correct deduction of impossibility in the present?",
+                        "options": [
+                            "He must not be a pilot because he is blind.",
+                            "He can't be a pilot because he is blind.",
+                            "He might not a pilot because he is blind.",
+                            "He couldn't to be a pilot."
+                        ],
+                        "correctAnswerIndex": 1,
+                        "explanation": "Hozirgi zamondagi mantiqiy imkonsizlik 'can't be' orqali beriladi."
+                    },
+                    {
+                        "id": "en-b1-u5-l5-q5",
+                        "question": "Before finalizing an overseas fellowship, one should thoroughly weigh the _______ .",
+                        "options": [
+                            "pros and cons",
+                            "odds and evens",
+                            "arms and legs",
+                            "ins and outs"
+                        ],
+                        "correctAnswerIndex": 0,
+                        "explanation": "Yutuq va kamchiliklarni taroziga solish: 'pros and cons'."
+                    }
+                ]
+            }
+        }
+    ]
+}
 ];
