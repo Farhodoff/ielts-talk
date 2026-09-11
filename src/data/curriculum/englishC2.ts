@@ -3557,674 +3557,1267 @@ export const ENGLISH_C2_LESSONS: Lesson[] = [
         ]
     },
     {
-        "id": "en-c2-u4-l1",
-        "courseId": "english-c2",
-        "unitId": "en-c2-u4",
-        "unitTitle": "Unit 4: Rhetoric & Legal Discourse",
-        "language": "en",
-        "level": "C2",
-        "lessonNumber": 16,
-        "title": "Jurisprudence & Legalistic Terminology",
-        "description": "Huquqiy va institutsional til: \"Statutory\", \"Jurisdiction\", \"Inalienable\", \"Subpoena\".",
-        "estimatedDurationMinutes": 18,
-        "icon": "⚖️",
-        "steps": [
-            {
-                "id": "en-c2-u4-l1-s1",
-                "title": "Huquqiy Uslub va Terminologiya",
-                "type": "learn",
-                "estimatedMinutes": 6,
-                "learnData": {
-                    "title": "Jurisprudence & Statutory Registers",
-                    "explanation": "Institutsional va yuridik hujjatchilikka oid oliy akademik leksika.",
-                    "keyPoints": [
-                        "Inalienable rights — daxlsiz/tortib olib bo'lmaydigan huquqlar",
-                        "Statutory obligations — qonuniy majburiyatlar",
-                        "Pursuant to Section 4 — 4-bandga muvofiq"
-                    ],
-                    "vocabulary": [
-                        {
-                            "term": "Inalienable",
-                            "reading": "/ɪnˈeɪ.li.ə.nə.bəl/",
-                            "meaning": "Daxlsiz, ajralmas",
-                            "exampleSentence": "Human dignity is an inalienable right.",
-                            "exampleTranslation": "Inson qadr-qimmati ajralmas huquqdir."
-                        },
-                        {
-                            "term": "Quintessential",
-                            "reading": "/ˌkwɪn.tɪˈsen.ʃəl/",
-                            "meaning": "Eng oliy namuna, timsol",
-                            "exampleSentence": "It is the quintessential masterpiece of modern literature.",
-                            "exampleTranslation": "Bu zamonaviy adabiyotning eng oliy namunasidir."
-                        },
-                        {
-                            "term": "Inextricable",
-                            "reading": "/ˌɪn.ɪkˈstrɪk.ə.bəl/",
-                            "meaning": "Ajralmas, chambarchas bogʻliq",
-                            "exampleSentence": "Language and cultural identity are inextricably intertwined.",
-                            "exampleTranslation": "Til va madaniy oʻzlik chambarchas bogʻlangan."
-                        }
-                    ],
-                    "grammarRules": [
-                        {
-                            "pattern": "Jurisprudence & Legalistic Terminology",
-                            "meaning": "Huquqiy va institutsional til: \"Statutory\", \"Jurisdiction\", \"Inalienable\", \"Subpoena\".",
-                            "usageNotes": "Institutsional va yuridik hujjatchilikka oid oliy akademik leksika.",
-                            "examples": [
-                                {
-                                    "sentence": "Human dignity is an inalienable right.",
-                                    "translation": "Inson qadr-qimmati ajralmas huquqdir."
-                                }
-                            ]
-                        }
-                    ]
+            "id": "en-c2-u4-l1",
+            "courseId": "english-c2",
+            "unitId": "en-c2-u4",
+            "unitTitle": "Unit 4: Rhetoric & Legal Discourse",
+            "language": "en",
+            "level": "C2",
+            "lessonNumber": 16,
+            "title": "Jurisprudence & Legalistic Terminology",
+            "description": "Huquqiy, sud va konstitutsiyaviy terminologiya: statutoriy huquq, yurisdiksiya, da'volar va pretsedentlar tahlili.",
+            "estimatedDurationMinutes": 25,
+            "icon": "⚖️",
+            "steps": [
+                {
+                    "id": "en-c2-u4-l1-s1",
+                    "title": "Jurisprudence & Statutory Precision",
+                    "type": "learn",
+                    "estimatedMinutes": 8,
+                    "learnData": {
+                        "title": "Jurisprudence, Legalist Diction & Statutory Precision",
+                        "subtitle": "Sud tizimi, qonunchilik tili va huquqiy ritorika mezonlari",
+                        "explanation": "C2 darajasidagi huquqiy til (*Legal Discourse*) oddiy qoidalar bayoni emas, balki so'zma-so'z qat'iylik, noaniqlikka o'rin qoldirmaslik (*unambiguous drafting*) va yuksak institutsional intellekt talab qiladigan maydondir. Xalqaro shartnomalar, BMT konventsiyalari, xalqaro arbitraj va akademik huquqiy tadqiqotlarda qo'llaniladigan leksika o'ziga xos arxaik va aniq sintaktik qoliplarga tayanadi.\n\n### Asosiy Yuridik Tushunchalar va Sintaktik Paradigma:\n1. **Statutory vs Common Law**: Qonun chiqaruvchi organ (parlament) tomonidan rasman tasdiqlangan mezonlar *statutory law*, sudlar tomonidan chiqarilgan qarorlar to'plami esa *common law / case law* deyiladi.\n2. **Yuridik Modal Fe'llar ('Shall' vs 'May')**: Shartnoma va qonunlarda *shall* kelasi zamon emas, balki so'zsiz bajarilishi shart bo'lgan imperativ qonuniy majburiyatni anglatadi (*The licensee shall remit all royalties...*).\n3. **Prepozitsion Arxaizmlar**: Ingliz yuridik tilida takrorlarning oldini olish uchun *herein* (ushbu hujjatda), *thereof* (uning), *notwithstanding* (...ga qaramasdan), *prima facie* (birinchi qarashda yetarli dalil) kabi konstruksiyalar qo'llaniladi.\n\n⚠️ **O'zbek o'rganuvchilari uchun xavfli tuzoqlar (Common Pitfalls)**:\n- ❌ *The director has a money responsibility for the investors.* (So'zma-so'z tarjima).\n- ✅ *The director owes an undivided **fiduciary duty** to the shareholders.* ('Fiduciary' yuridik ishonch va halollik mas'uliyatini aniq ifodalaydi).\n- ❌ *The agency acted beyond their legal power.* (Oddiy so'zlashuv).\n- ✅ *The regulatory agency acted **ultra vires** by exceeding its statutory jurisdiction.* ('Ultra vires' o'z vakolatidan tashqariga chiqishning yuridik atamasidir).\n\n🎯 **IELTS Speaking & Writing Band 9.0 Masterclass**:\n- **Task 2 Prompt**: *Should corporate executives face mandatory custodial sentences for economic crimes rather than corporate fines?*\n- **Model Argument Segment**: A fundamental tenet of equitable **jurisprudence** dictates that the law must apply without selective clemency. When corporate executives commit egregious financial fraud, they violate their sacred **fiduciary obligations** to society at large. While corporate leniency advocates argue that administrative fines offer pragmatic restitution, such measures establish an insidious legal **precedent**: namely, that justice can be monetized. Consequently, tribunals must rigorously **adjudicate** white-collar offences through strict **statutory** penal frameworks, ensuring that corporate indemnities cannot shield bad actors from substantive criminal liability.\n- **Discourse Markers**: A fundamental tenet of equitable jurisprudence dictates that, without selective clemency, egregious financial fraud, sacred fiduciary obligations, establish an insidious legal precedent, rigorously adjudicate through statutory penal frameworks\n- **Examiner Tip**: 'Adjudicate', 'statutory', 'precedent' va 'ultra vires' kabi atamalarni kontekstda aniq qo'llash C2 Lexical Resource va Task Achievement mezonlarida eng yuqori 9.0 ballni ta'minlaydi.",
+                        "keyPoints": [
+                            "Statutory: qonun chiqaruvchi organ tomonidan qonun kuchi bilan tasdiqlangan mezon.",
+                            "Fiduciary duty: boshqalar ishonchini va manfaatini o'zidan ustun qo'yish bo'yicha qat'iy yuridik majburiyat.",
+                            "Adjudicate: bahsli ishni sud orqali ko'rib chiqib rasmiy yakuniy qaror chiqarmoq.",
+                            "Ultra vires: idora yoki mansabdor shaxsning qonuniy vakolatlari doirasidan chetga chiqishi.",
+                            "Inalienable rights: hech qanday hukumat yoki shaxs tomonidan tortib olinishi mumkin bo'lmagan tabiiy ajralmas huquqlar."
+                        ],
+                        "vocabulary": [
+                            {
+                                "term": "Jurisprudence",
+                                "reading": "/ˌdʒʊər.ɪsˈpruː.dəns/",
+                                "meaning": "Huquqshunoslik, huquq falsafasi va sud nazariyasi",
+                                "exampleSentence": "His seminal monograph altered the landscape of modern Anglo-American jurisprudence.",
+                                "exampleTranslation": "Uning fundamental monografiyasi zamonaviy ingliz-amerika huquqshunosligi qiyofasini butkul o'zgartirdi."
+                            },
+                            {
+                                "term": "Statutory",
+                                "reading": "/ˈstætʃ.ə.tər.i/",
+                                "meaning": "Qonun bilan belgilangan, qonuniy (statutga asoslangan)",
+                                "exampleSentence": "The company failed to comply with its statutory reporting obligations under environmental law.",
+                                "exampleTranslation": "Kompaniya atrof-muhitni muhofaza qilish to'g'risidagi qonunchilik bo'yicha belgilangan hisobot berish majburiyatlarini bajarmadi."
+                            },
+                            {
+                                "term": "Subpoena",
+                                "reading": "/səˈpiː.nə/",
+                                "meaning": "Sud chaqiruv qog'ozi; sudga majburiy chaqirmoq",
+                                "exampleSentence": "The parliamentary committee issued a subpoena requiring the executive to surrender all encrypted communications.",
+                                "exampleTranslation": "Parlament qo'mitasi rahbar xodimdan barcha shifrlangan yozishmalarni topshirishni talab qiluvchi sud chaqiruv qog'ozini chiqardi."
+                            },
+                            {
+                                "term": "Indemnity",
+                                "reading": "/ɪnˈdɛm.nɪ.ti/",
+                                "meaning": "Zararni qoplash kafolati, tovon to'lovi majburiyati",
+                                "exampleSentence": "The indemnity clause fully insulates the contractor from liability arising from third-party IP infringements.",
+                                "exampleTranslation": "Kafolat bandi pudratchini uchinchi shaxslarning intellektual mulk huquqlarini buzishi oqibatidagi javobgarlikdan to'liq himoya qiladi."
+                            },
+                            {
+                                "term": "Fiduciary",
+                                "reading": "/fɪˈdjuː.ʃər.i/",
+                                "meaning": "Ishonchli boshqaruvchi; ishonchga asoslangan yuridik majburiyat",
+                                "exampleSentence": "Trustees must exercise meticulous care in discharging their fiduciary obligations to the estate's beneficiaries.",
+                                "exampleTranslation": "Vasiylar merosdan foydalanuvchilar oldidagi o'zlarining ishonchli majburiyatlarini ado etishda o'ta ehtiyotkor bo'lishlari lozim."
+                            },
+                            {
+                                "term": "Precedent",
+                                "reading": "/ˈprɛs.ɪ.dənt/",
+                                "meaning": "Sud pretsedenti (keyingi ishlar uchun qonuniy asos bo'luvchi qaror)",
+                                "exampleSentence": "The Supreme Court's landmark ruling established a binding precedent for subsequent data privacy disputes.",
+                                "exampleTranslation": "Oliy sudning tarixiy qarori keyingi ma'lumotlar maxfiyligi bo'yicha nizolar uchun majburiy pretsedent yaratdi."
+                            },
+                            {
+                                "term": "Adjudicate",
+                                "reading": "/əˈdʒuː.dɪ.keɪt/",
+                                "meaning": "Sud orqali ko'rib chiqib hukm chiqarmoq, hal etmoq",
+                                "exampleSentence": "An independent tribunal was convened to adjudicate the territorial maritime dispute.",
+                                "exampleTranslation": "Hududiy dengiz chegaralari bo'yicha nizoni hal qilish uchun mustaqil tribunal chaqirildi."
+                            },
+                            {
+                                "term": "Inalienable",
+                                "reading": "/ɪnˈeɪ.li.ə.nə.bəl/",
+                                "meaning": "Ajralmas, tortib olinishi yoki bekor qilinishi mumkin bo'lmagan",
+                                "exampleSentence": "The constitution proclaims liberty and the pursuit of happiness as the inalienable rights of all citizens.",
+                                "exampleTranslation": "Konstitutsiya erkinlik va baxtga intilishni barcha fuqarolarning ajralmas huquqlari deb e'lon qiladi."
+                            },
+                            {
+                                "term": "Tort",
+                                "reading": "/tɔːt/",
+                                "meaning": "Fuqarolik huquqbuzarligi (shaxs yoki mulkka yetkazilgan zarar bo'yicha da'vo)",
+                                "exampleSentence": "The lawsuit alleges corporate negligence under the law of torts rather than contractual non-performance.",
+                                "exampleTranslation": "Da'vo arizasida shartnomani bajarmaslik emas, balki fuqarolik huquqbuzarligi doirasidagi korporativ beparvolik ilgari surilmoqda."
+                            },
+                            {
+                                "term": "Ultra vires",
+                                "reading": "/ˌʌl.trə ˈvaɪə.riːz/",
+                                "meaning": "Vakolat doirasidan tashqari, yuridik kuchga ega bo'lmagan harakat",
+                                "exampleSentence": "The ministerial decree was struck down as ultra vires because the executive possessed no statutory power to impose tariffs.",
+                                "exampleTranslation": "Vazirlik qarori bekor qilindi, chunki ijro hokimiyati tariflar joriy etish bo'yicha qonuniy vakolatga ega emasligi sababli o'z vakolatidan tashqariga chiqqan edi."
+                            }
+                        ]
+                    }
+                },
+                {
+                    "id": "en-c2-u4-l1-s2",
+                    "title": "Practice: Jurisprudence & Legal Diction",
+                    "type": "practice",
+                    "estimatedMinutes": 7,
+                    "practiceData": {
+                        "instructions": "Huquqiy atamalar, sud pretsedentlari va statutoriy qoidalarni tahlil qilib, to'g'ri javoblarni tanlang.",
+                        "exercises": [
+                            {
+                                "id": "en-c2-u4-l1-e1",
+                                "type": "multiple-choice",
+                                "prompt": "Choose the legal term that describes an action carried out beyond the scope of an institution's legally granted authority:",
+                                "options": [
+                                    "Statutory mandate",
+                                    "Ultra vires",
+                                    "Prima facie",
+                                    "Fiduciary discharge"
+                                ],
+                                "correctAnswer": 1,
+                                "explanation": "'Ultra vires' lotincha iborasi qonuniy vakolat doirasidan oshib ketgan harakatlarga nisbatan qo'llaniladi."
+                            },
+                            {
+                                "id": "en-c2-u4-l1-e2",
+                                "type": "multiple-choice",
+                                "prompt": "Which sentence correctly demonstrates the standard legalistic use of 'shall' in a formal contract?",
+                                "options": [
+                                    "The vendor shall probably deliver the goods when weather conditions improve.",
+                                    "The tenant shall remit payment on the first business day of each calendar month.",
+                                    "Perhaps the buyer shall consider paying an additional deposit.",
+                                    "The contractor shall might be liable if an audit discovers discrepancies."
+                                ],
+                                "correctAnswer": 1,
+                                "explanation": "Yuridik matnlarda 'shall' qat'iy majburiyatni (imperative legal duty) ifodalaydi: 'to'lovni to'lashi shart'."
+                            },
+                            {
+                                "id": "en-c2-u4-l1-e3",
+                                "type": "multiple-choice",
+                                "prompt": "Complete the legal analysis: 'The board members breached their _______ duties by enriching themselves at the expense of minority shareholders.'",
+                                "options": [
+                                    "circumlocutory",
+                                    "fiduciary",
+                                    "solipsistic",
+                                    "ephemeral"
+                                ],
+                                "correctAnswer": 1,
+                                "explanation": "Direktorlarning aktsiyadorlar manfaati oldidagi halollik va ishonch mas'uliyati 'fiduciary duty' deyiladi."
+                            },
+                            {
+                                "id": "en-c2-u4-l1-e4",
+                                "type": "multiple-choice",
+                                "prompt": "What distinguishes a 'tort' from a criminal offense in common law systems?",
+                                "options": [
+                                    "A tort is an intentional felony punishable exclusively by mandatory life imprisonment.",
+                                    "A tort is a civil wrong causing harm to another, actionable by private civil lawsuits rather than state prosecution.",
+                                    "A tort is a treaty ratified exclusively between sovereign diplomatic delegations.",
+                                    "A tort refers strictly to maritime disputes regarding continental shelf boundaries."
+                                ],
+                                "correctAnswer": 1,
+                                "explanation": "'Tort' — shaxsga yoki uning mulkiga yetkazilgan zarar bo'yicha fuqarolik huquqiy javobgarligi (civil wrong) bo'lib, xususiy da'vo orqali undiriladi."
+                            },
+                            {
+                                "id": "en-c2-u4-l1-e5",
+                                "type": "multiple-choice",
+                                "prompt": "Identify the option where 'indemnity' is used with accurate semantic precision:",
+                                "options": [
+                                    "The defendant asked for an indemnity to be excused from attending his trial due to fatigue.",
+                                    "The contract contains an indemnity clause guaranteeing compensation for losses caused by unforeseen regulatory penalties.",
+                                    "The judge wrote an indemnity outlining his personal philosophical opinions on crime.",
+                                    "The witness received an indemnity to allow him to commit future perjury without sanction."
+                                ],
+                                "correctAnswer": 1,
+                                "explanation": "'Indemnity clause' shartnomada tomonlardan birini ko'rilishi mumkin bo'lgan zarardan tovon to'lab himoya qilish bandidir."
+                            }
+                        ]
+                    }
+                },
+                {
+                    "id": "en-c2-u4-l1-s3",
+                    "title": "Assessment: Legal Discourse & Jurisprudence",
+                    "type": "test",
+                    "estimatedMinutes": 10,
+                    "testData": {
+                        "instructions": "C2 huquqiy terminologiya va sud tahlili bo'yicha yakuniy sinovdan o'ting. Kamida 80% to'g'ri javob talab etiladi.",
+                        "passingScorePercentage": 80,
+                        "questions": [
+                            {
+                                "id": "en-c2-u4-l1-q1",
+                                "question": "A legal ruling that serves as an authoritative guideline for all subsequent cases with identical facts is called a:",
+                                "options": [
+                                    "precedent",
+                                    "subpoena",
+                                    "prerogative",
+                                    "presumption"
+                                ],
+                                "correctAnswerIndex": 0,
+                                "explanation": "Kelgusi sud ishlari uchun majburiy xulosa bo'lib xizmat qiladigan avvalgi qaror 'precedent' (sud pretsedenti) deb ataladi."
+                            },
+                            {
+                                "id": "en-c2-u4-l1-q2",
+                                "question": "'Human dignity and personal bodily autonomy are regarded by international legal covenants as _______ rights that no state may abrogate.'",
+                                "options": [
+                                    "ephemeral",
+                                    "circumstantial",
+                                    "inalienable",
+                                    "discretionary"
+                                ],
+                                "correctAnswerIndex": 2,
+                                "explanation": "Hech bir davlat tortib ololmaydigan yoki bekor qilolmaydigan asosiy huquqlar 'inalienable' (ajralmas) deb ta'riflanadi."
+                            },
+                            {
+                                "id": "en-c2-u4-l1-q3",
+                                "question": "If a government agency issues regulations that exceed the mandate explicitly delegated to it by parliament, those regulations are vulnerable to being declared:",
+                                "options": [
+                                    "adjudicated in camera",
+                                    "ultra vires",
+                                    "indemnified ex post facto",
+                                    "statutorily unencumbered"
+                                ],
+                                "correctAnswerIndex": 1,
+                                "explanation": "Vakolat doirasidan tashqari chiqarilgan normativ hujjatlar sud tomonidan 'ultra vires' deb topilib bekor qilinadi."
+                            },
+                            {
+                                "id": "en-c2-u4-l1-q4",
+                                "question": "Which of the following describes an order compelling an individual to produce documents before a court under penalty of law?",
+                                "options": [
+                                    "A fiduciary deed",
+                                    "A subpoena duces tecum",
+                                    "A tortious allegation",
+                                    "A jurisprudence charter"
+                                ],
+                                "correctAnswerIndex": 1,
+                                "explanation": "Hujjatlarni sudga taqdim etish majburiyatini yuklovchi sud buyrug'i 'subpoena' deb nomlanadi."
+                            },
+                            {
+                                "id": "en-c2-u4-l1-q5",
+                                "question": "In formal legal drafting, what does the conjunction 'notwithstanding' signify in a contract clause?",
+                                "options": [
+                                    "It implies that the clause is only valid during times of armed conflict.",
+                                    "It overrides contrary provisions, meaning 'in spite of' or 'regardless of' other stipulations.",
+                                    "It indicates that the party has completely waived all contractual rights.",
+                                    "It introduces an optional recommendation rather than a binding covenant."
+                                ],
+                                "correctAnswerIndex": 1,
+                                "explanation": "'Notwithstanding' iborasi yuridik shartnomalarda 'boshqa qoidalarga qaramasdan / ustunlik qilgan holda' degan ma'noni bildiradi."
+                            }
+                        ]
+                    }
                 }
-            },
-            {
-                "id": "en-c2-u4-l1-s2",
-                "title": "Mashq",
-                "type": "practice",
-                "estimatedMinutes": 6,
-                "practiceData": {
-                    "instructions": "To'g'ri yuridik iborani tanlang.",
-                    "exercises": [
-                        {
-                            "id": "en-c2-u4-l1-e1",
-                            "type": "multiple-choice",
-                            "prompt": "\"Pursuant _______ statutory regulations, the tribunal dismissed the claim.\"",
-                            "options": [
-                                "with",
-                                "in",
-                                "to",
-                                "of"
-                            ],
-                            "correctAnswer": 2,
-                            "explanation": "Pursuant to = muvofiq."
-                        },
-                        {
-                            "id": "en-c2-u4-l1-ex-2",
-                            "type": "multiple-choice",
-                            "prompt": "Choose the correct word to complete the sentence: \"It is the quintessential masterpiece of modern literature.\"",
-                            "options": [
-                                "Quintessential",
-                                "reluctance",
-                                "delay",
-                                "doubt"
-                            ],
-                            "correctAnswer": 0,
-                            "explanation": "\"Quintessential\" (Eng oliy namuna, timsol) fits the context appropriately."
-                        }
-                    ]
+            ]
+        },
+        {
+            "id": "en-c2-u4-l2",
+            "courseId": "english-c2",
+            "unitId": "en-c2-u4",
+            "unitTitle": "Unit 4: Rhetoric & Legal Discourse",
+            "language": "en",
+            "level": "C2",
+            "lessonNumber": 17,
+            "title": "Literary Allusions & Metaphorical Nuance",
+            "description": "Adabiy va mifologik alluziyalar, klassik metaforalar va obrazli intellektual til.",
+            "estimatedDurationMinutes": 25,
+            "icon": "🏛️",
+            "steps": [
+                {
+                    "id": "en-c2-u4-l2-s1",
+                    "title": "Literary Allusions & Erudite Metaphors",
+                    "type": "learn",
+                    "estimatedMinutes": 8,
+                    "learnData": {
+                        "title": "Classical Allusions, Transferred Epithets & Metaphorical Nuance",
+                        "subtitle": "Qadimgi adabiy va mifologik alluziyalar vositasida ritorikani yuksaltirish",
+                        "explanation": "Ingliz tilining oliy adabiy va tahliliy doiralarida (*The Economist, The New Yorker*, Oksford ma'ruzalari, Band 9.0 insho va nutqlar) g'oyalarni to'g'ridan-to'g'ri bayon qilish o'rniga qadimgi yunon mifologiyasi, Shekspir asarlari va Injil alluziyalaridan foydalanish intellektual teranlik va estetik qudrat belgisidir.\n\n### Asosiy Alluziyalar va Gipallaga (Hypallage):\n1. **Gipallaga (Transferred Epithet)**: Sintaktik jihatdan sifat mantiqan tegishli bo'lgan shaxsga emas, balki u bilan bog'liq jonsiz buyumga ko'chiriladi: *He smoked a nervous cigarette* (inson asabiylashmoqda), *They reached a weary consensus* (muzokarachilar toliqqan).\n2. **Pyrrhic victory vs Quixotic quest**: *Pyrrhic victory* haddan tashqari og'ir talofatlar evaziga qozonilgan, deyarli mag'lubiyatga teng g'alaba bo'lsa, *Quixotic* olijanob, biroq mutlaqo xomxayol va amalga oshmaydigan intilishdir.\n3. **Sisyphean task vs Pandora's box**: *Sisyphean* hech qachon yakuniga yetmaydigan samarasiz mashaqqatli mehnatni, *Pandora's box* esa kutilmagan ko'plab ofatlarga eshik ochuvchi harakatni bildiradi.\n\n⚠️ **O'zbek o'rganuvchilari uchun xavfli tuzoqlar (Common Pitfalls)**:\n- ❌ *This victory was bad because we lost many people.* (Juda sodda).\n- ✅ *The coalition achieved what can only be described as a **Pyrrhic victory**, given the catastrophic depletion of their personnel.* ('Pyrrhic victory' yuksak alluziyadir).\n- ❌ *He was warning everybody about the disaster like a sad prophet.* (Tushuntirish uslubi).\n- ✅ *Dismissed as a modern **Cassandra**, the climatologist foresaw the ecological collapse decades prior to general recognition.* (Kassandra alluziyasi bevosita qo'llanadi).\n\n🎯 **IELTS Speaking & Writing Band 9.0 Masterclass**:\n- **Speaking Part 3 Prompt**: *Do you think humanity's relentless pursuit of artificial intelligence might have unforeseen consequences?*\n- **Band 9.0 Model Answer**: Indubitably. In our unbridled technological pursuit, humanity frequently risks prying open a digital **Pandora's box**. While the promised economic boons are undeniable, we simultaneously risk unleashing an intractable swarm of algorithmic biases and socioeconomic dislocations. Tech evangelists who champion immediate deployment often dismiss ethical warnings as the alarmism of modern **Cassandras**. Yet, if we engineer autonomous systems whose decision-making architectures remain utterly **labyrinthine** and inscrutable to human oversight, our apparent triumph could rapidly deteriorate into a devastating **Pyrrhic victory**.\n- **Discourse Markers**: Indubitably, In our unbridled technological pursuit, prying open a digital Pandora's box, an intractable swarm of, dismiss... as the alarmism of modern Cassandras, utterly labyrinthine and inscrutable to human oversight, rapidly deteriorate into a devastating Pyrrhic victory\n- **Examiner Tip**: Alluziyalarni sun'iy emas, balki dalilni kuchaytiruvchi metafora sifatida kiritish Band 9.0 ning asosiy farqlovchi jihatidir.",
+                        "keyPoints": [
+                            "Achilles' heel: har qanday qudratli tizimning yagona zaif va halokatli jihati.",
+                            "Sisyphean: hech qachon tugamaydigan, samarasiz mashaqqatli harakat.",
+                            "Pandora's box: boshqarib bo'lmas kutilmagan ofatlarga eshik ochuvchi harakat.",
+                            "Pyrrhic victory: o'ta og'ir yo'qotishlar evaziga qozonilgan, deyarli mag'lubiyatga teng g'alaba.",
+                            "Quixotic: olijanob, biroq mutlaqo xomxayol va amalga oshmaydigan intilish."
+                        ],
+                        "vocabulary": [
+                            {
+                                "term": "Achilles' heel",
+                                "reading": "/əˈkɪl.iːz hiːl/",
+                                "meaning": "Zaif tomon, nozik nuqta (tizimning yagona halokatli zaifligi)",
+                                "exampleSentence": "Over-reliance on imported semiconductors proved to be the industrial conglomerate's Achilles' heel.",
+                                "exampleTranslation": "Import qilinadigan yarimo'tkazgichlarga haddan tashqari bog'liqlik sanoat konglomeratining eng zaif nuqtasi bo'lib chiqdi."
+                            },
+                            {
+                                "term": "Sisyphean",
+                                "reading": "/ˌsɪs.ɪˈfiː.ən/",
+                                "meaning": "Behuda, behad mashaqqatli va hech qachon tugamaydigan yumush",
+                                "exampleSentence": "Attempting to eradicate corruption without institutional transparency is a Sisyphean endeavor.",
+                                "exampleTranslation": "Institutsional ochiqliksiz korruptsiyani yo'q qilishga urinish behuda va cheksiz mashaqqatli yumushdir."
+                            },
+                            {
+                                "term": "Pandora's box",
+                                "reading": "/pænˌdɔː.rəz ˈbɒks/",
+                                "meaning": "Balolar manbai, kutilmagan ofatlar qutisi",
+                                "exampleSentence": "Legalizing unregulated algorithmic speculation would open a veritable Pandora's box in the capital markets.",
+                                "exampleTranslation": "Tartibga solinmagan algoritmik spekulyatsiyani qonuniylashtirish kapital bozorlarida haqiqiy balolar qutisini ochib yuborgan bo'lar edi."
+                            },
+                            {
+                                "term": "Pyrrhic victory",
+                                "reading": "/ˌpɪr.ɪk ˈvɪk.tər.i/",
+                                "meaning": "Katta yo'qotishlar bilan qozonilgan, mag'lubiyatga teng g'alaba",
+                                "exampleSentence": "Winning the hostile takeover battle was a Pyrrhic victory that saddled the corporation with insurmountable debt.",
+                                "exampleTranslation": "Tajovuzkor qo'shib olish jangida g'alaba qozonish shunday zafar bo'ldiki, u korporatsiyani yengib bo'lmas qarz girdobiga tashladi."
+                            },
+                            {
+                                "term": "Quixotic",
+                                "reading": "/kwɪkˈsɒt.ɪk/",
+                                "meaning": "Xomxayol, amalga oshmaydigan darajada romantik va bema'ni",
+                                "exampleSentence": "Her quixotic campaign to abolish international borders captured public imagination but achieved zero geopolitical traction.",
+                                "exampleTranslation": "Uning xalqaro chegaralarni yo'q qilish bo'yicha xomxayol kampaniyasi jamoatchilik xayolini maftun etdi, biroq hech qanday geosiyosiy natija bermadi."
+                            },
+                            {
+                                "term": "Labyrinthine",
+                                "reading": "/ˌlæb.əˈrɪn.θaɪn/",
+                                "meaning": "Labirintsimon, haddan tashqari chigal va chalkash",
+                                "exampleSentence": "Foreign investors frequently struggle to navigate the country's labyrinthine tax bureaucracy.",
+                                "exampleTranslation": "Xorijiy investorlar mamlakatning haddan tashqari chigal soliq byurokratiyasida yo'l topishda ko'pincha qiynaladilar."
+                            },
+                            {
+                                "term": "Gargantuan",
+                                "reading": "/ɡɑːˈɡæn.tʃu.ən/",
+                                "meaning": "Ulkan, mahobatli, behad bahaybat",
+                                "exampleSentence": "The transition to net-zero emissions represents a gargantuan infrastructural undertaking.",
+                                "exampleTranslation": "Sof nol emissiyaga o'tish ulkan va mahobatli infratuzilma loyihasini anglatadi."
+                            },
+                            {
+                                "term": "Mercurial",
+                                "reading": "/mɜːˈkjʊə.ri.əl/",
+                                "meaning": "Tez o'zgaruvchan, kutilmagan fe'lli, beqaror",
+                                "exampleSentence": "The minister's mercurial temperament made sustained policy consensus exceedingly precarious.",
+                                "exampleTranslation": "Vazirning o'zgaruvchan va tezkor fe'l-atvori uzoq muddatli siyosiy konsensusni o'ta nozik qilib qo'ydi."
+                            },
+                            {
+                                "term": "Bacchanalian",
+                                "reading": "/ˌbæk.əˈneɪ.li.ən/",
+                                "meaning": "Mastona, maishatbozlikka to'la tiyiqsiz bazm",
+                                "exampleSentence": "The victory celebration soon degenerated into a bacchanalian revel that shocked the conservative neighborhood.",
+                                "exampleTranslation": "G'alaba tantanasi tez orada konservativ mahallani larzaga solgan mastona maishatbozlikka aylanib ketdi."
+                            },
+                            {
+                                "term": "Cassandra",
+                                "reading": "/kəˈsæn.drə/",
+                                "meaning": "Xavfni to'g'ri bashorat qiluvchi, biroq ishonilmaydigan shaxs",
+                                "exampleSentence": "History proved him right, yet during the asset boom he was derided as an irritating Cassandra.",
+                                "exampleTranslation": "Tarix uning haq ekanligini isbotladi, ammo aktivlar ko'tarilgan paytda uning ustidan yoqimsiz bashoratchi sifatida kulishgan edi."
+                            }
+                        ]
+                    }
+                },
+                {
+                    "id": "en-c2-u4-l2-s2",
+                    "title": "Practice: Literary Allusions & Rhetorical Figures",
+                    "type": "practice",
+                    "estimatedMinutes": 7,
+                    "practiceData": {
+                        "instructions": "Adabiy alluziyalar, gipallaga va klassik metaforalar bo'yicha berilgan topshiriqlarni bajaring.",
+                        "exercises": [
+                            {
+                                "id": "en-c2-u4-l2-e1",
+                                "type": "multiple-choice",
+                                "prompt": "Identify the literary allusion describing a victory achieved at such devastating cost that it is effectively ruinous:",
+                                "options": [
+                                    "Sisyphean triumph",
+                                    "Pyrrhic victory",
+                                    "Quixotic endeavor",
+                                    "Bacchanalian revel"
+                                ],
+                                "correctAnswer": 1,
+                                "explanation": "'Pyrrhic victory' g'olibga mag'lubiyatdan kam bo'lmagan talofat keltirgan qimmatli zafardir."
+                            },
+                            {
+                                "id": "en-c2-u4-l2-e2",
+                                "type": "multiple-choice",
+                                "prompt": "Which sentence contains an example of hypallage (transferred epithet)?",
+                                "options": [
+                                    "The lawyer reviewed the documents diligently in his quiet office.",
+                                    "The exhausted judge leaned back and closed his eyes.",
+                                    "He paced up and down the hallway, smoking a nervous cigarette.",
+                                    "The evidence proved that the defendant had committed fraud."
+                                ],
+                                "correctAnswer": 2,
+                                "explanation": "'Nervous cigarette' iborasida sifat chekuvchining asabiy holatini jonsiz sigaretaga ko'chirgan (transferred epithet)."
+                            },
+                            {
+                                "id": "en-c2-u4-l2-e3",
+                                "type": "multiple-choice",
+                                "prompt": "Select the allusion appropriate for: 'Rolling a massive boulder up a mountain only for it to roll back down repeatedly':",
+                                "options": [
+                                    "Mercurial task",
+                                    "Sisyphean task",
+                                    "Cassandra curse",
+                                    "Gargantuan feast"
+                                ],
+                                "correctAnswer": 1,
+                                "explanation": "Tugamaydigan va behuda urinish mifologik qahramon Sizif nomidan 'Sisyphean task' deyiladi."
+                            },
+                            {
+                                "id": "en-c2-u4-l2-e4",
+                                "type": "multiple-choice",
+                                "prompt": "What does calling someone a 'Cassandra' imply in political or economic commentary?",
+                                "options": [
+                                    "They are hopelessly romantic and harbor idealistic dreams of utopia.",
+                                    "They issue accurate warnings about impending catastrophes that are ignored by decision-makers.",
+                                    "They possess a volatile, unpredictable temper that destabilizes organizations.",
+                                    "They employ deceptive rhetoric to conceal fraudulent financial statements."
+                                ],
+                                "correctAnswer": 1,
+                                "explanation": "'Cassandra' kelajakdagi xatarni to'g'ri ko'rib ogohlantiruvchi, biroq ogohlantirishiga boshqalar e'tibor bermaydigan shaxsni ifodalaydi."
+                            },
+                            {
+                                "id": "en-c2-u4-l2-e5",
+                                "type": "multiple-choice",
+                                "prompt": "Choose the sentence that correctly utilizes 'quixotic':",
+                                "options": [
+                                    "The firm made a quixotic profit by ruthlessly outsourcing all manufacturing.",
+                                    "Her quixotic quest to establish world peace without state treaties was admirable yet unattainable.",
+                                    "The computer suffered a quixotic hardware breakdown during the presentation.",
+                                    "He signed a quixotic mortgage agreement with the local retail bank."
+                                ],
+                                "correctAnswer": 1,
+                                "explanation": "'Quixotic' — olijanob, ammo amalga oshirib bo'lmaydigan darajada xomxayol maqsadlarga nisbatan aytiladi."
+                            }
+                        ]
+                    }
+                },
+                {
+                    "id": "en-c2-u4-l2-s3",
+                    "title": "Assessment: Allusions & Metaphorical Nuance",
+                    "type": "test",
+                    "estimatedMinutes": 10,
+                    "testData": {
+                        "instructions": "Adabiy alluziyalar va ritorik figuralar bo'yicha bilimingizni sinovdan o'tkazing.",
+                        "passingScorePercentage": 80,
+                        "questions": [
+                            {
+                                "id": "en-c2-u4-l2-q1",
+                                "question": "Which classical allusion designates a seemingly minor vulnerability in an otherwise invulnerable person or entity?",
+                                "options": [
+                                    "Pandora's box",
+                                    "Achilles' heel",
+                                    "Gorgon's gaze",
+                                    "Sword of Damocles"
+                                ],
+                                "correctAnswerIndex": 1,
+                                "explanation": "'Achilles' heel' (Axilles tovoni) qudratli shaxs yoki tizimning yagona zaif jihatini anglatadi."
+                            },
+                            {
+                                "id": "en-c2-u4-l2-q2",
+                                "question": "'Deregulating the shadow banking sector without macroprudential oversight unlatched a veritable _______ of systemic financial contagion.'",
+                                "options": [
+                                    "Sisyphean boulder",
+                                    "Pyrrhic prize",
+                                    "Pandora's box",
+                                    "Mercurial tide"
+                                ],
+                                "correctAnswerIndex": 2,
+                                "explanation": "Kutilmagan ko'plab balolarni keltirib chiqarish 'unlatch/open Pandora's box' deb ataladi."
+                            },
+                            {
+                                "id": "en-c2-u4-l2-q3",
+                                "question": "If a government's administrative apparatus is described as 'labyrinthine', what does this convey?",
+                                "options": [
+                                    "It operates with extraordinary moral integrity and speed.",
+                                    "It is excessively intricate, bewilderingly complex, and difficult to navigate.",
+                                    "It has been totally decentralized and privatized.",
+                                    "It is characterized by lavish and wasteful bacchanalian festivities."
+                                ],
+                                "correctAnswerIndex": 1,
+                                "explanation": "'Labyrinthine' — labirint kabi haddan tashqari chigal, murakkab va chalkash ma'nosini bildiradi."
+                            },
+                            {
+                                "id": "en-c2-u4-l2-q4",
+                                "question": "What is the rhetorical impact of using transferred epithets such as 'a thoughtful silence' or 'an angry pen'?",
+                                "options": [
+                                    "They introduce grammatical errors that violate subject-verb concord.",
+                                    "They heighten figurative vividness by attributing human affective states to abstract nouns or instruments.",
+                                    "They simplify vocabulary so that non-native speakers understand faster.",
+                                    "They indicate that the speaker is quoting from an ancient statutory decree."
+                                ],
+                                "correctAnswerIndex": 1,
+                                "explanation": "Gipallaga (transferred epithet) insoniy his-tuyg'ularni jonsiz tushunchalarga ko'chirish orqali tasviriy qudrat va badiiy estetikani yuksaltiradi."
+                            },
+                            {
+                                "id": "en-c2-u4-l2-q5",
+                                "question": "'Despite warning his colleagues repeatedly of the speculative bubble, the chief economist was ignored as an inconvenient _______ until the crash materialized.'",
+                                "options": [
+                                    "Cassandra",
+                                    "Bacchanalian",
+                                    "Narcissus",
+                                    "Midas"
+                                ],
+                                "correctAnswerIndex": 0,
+                                "explanation": "Xavfdan oldindan ogohlantirib, so'ziga quloq solinmagan shaxs 'Cassandra' alluziyasi bilan ifodalanadi."
+                            }
+                        ]
+                    }
                 }
-            },
-            {
-                "id": "en-c2-u4-l1-s3",
-                "title": "Test",
-                "type": "test",
-                "estimatedMinutes": 6,
-                "testData": {
-                    "instructions": "Savollarga javob bering.",
-                    "passingScorePercentage": 75,
-                    "questions": [
-                        {
-                            "id": "en-c2-u4-l1-q1",
-                            "question": "What does \"statutory\" mean?",
-                            "options": [
-                                "Illegal",
-                                "Temporary",
-                                "Enacted, created, or required by statute or law",
-                                "Optional"
-                            ],
-                            "correctAnswerIndex": 2,
-                            "explanation": "Enacted or required by law."
-                        }
-                    ]
+            ]
+        },
+        {
+            "id": "en-c2-u4-l3",
+            "courseId": "english-c2",
+            "unitId": "en-c2-u4",
+            "unitTitle": "Unit 4: Rhetoric & Legal Discourse",
+            "language": "en",
+            "level": "C2",
+            "lessonNumber": 18,
+            "title": "Diplomatic Tact, Euphemism & Ambiguity",
+            "description": "Diplomatik etiket, xushmuomalalik strategiyalari, evfemizm va hisoblangan noaniqlik (calculated ambiguity).",
+            "estimatedDurationMinutes": 25,
+            "icon": "🕊️",
+            "steps": [
+                {
+                    "id": "en-c2-u4-l3-s1",
+                    "title": "Diplomatic Tact & Calculated Ambiguity",
+                    "type": "learn",
+                    "estimatedMinutes": 8,
+                    "learnData": {
+                        "title": "Diplomatic Protocols, Constructive Ambiguity & Euphemistic Nuance",
+                        "subtitle": "Xalqaro muzokaralar san'ati, evfemizmlar va diplomatik muloyimlik",
+                        "explanation": "Xalqaro diplomatiya va yuksak davlat muzokaralarida (C2 darajasi) to'g'ridan-to'g'ri qarama-qarshilikdan qochish, ziddiyatli masalalarni yumshatish va tomonlarga 'o'z yuzini saqlab qolish' (*save face*) imkonini beruvchi nozik ritorik usullar qo'llaniladi. Bu san'at **Diplomatic Tact** va **Constructive Ambiguity** (qasddan ikki xil talqin qilinishi mumkin bo'lgan til qo'llash) deb ataladi.\n\n### Ritorik Strategiyalar va Litotes:\n1. **Litotes (Inkor orqali tasdiq)**: Keskin maqtash yoki tanqid o'rniga inkor orqali muloyim tasdiq: *It is not entirely without merit* (unda mantiq bor), *The minister was not unmindful of the risks* (vazir xatarlardan to'liq xabardor edi).\n2. **Constructive Ambiguity**: Xalqaro shartnomalarda mafkuraviy boshi berk ko'chani (*impasse*) bartaraf etish uchun har ikkala tomon o'z manfaatiga qarab talqin qila oladigan moslashuvchan iboralar kiritiladi.\n3. **Diplomatik Evfemizmlar**: 'Civilian deaths' o'rniga *collateral damage*, 'mass layoffs' o'rniga *strategic workforce rationalization*.\n\n⚠️ **O'zbek o'rganuvchilari uchun xavfli tuzoqlar (Common Pitfalls)**:\n- ❌ *You are lying and your proposal is bad.* (Diplomatiyada butunlay qabul qilib bo'lmaydi).\n- ✅ *With respect, that characterization does not appear to align with empirical reality.* (Diplomatik andishali raddiya).\n- ❌ *The talks stopped because nobody agreed.* (Sodda so'zlashuv).\n- ✅ *The bilateral discussions reached an intractable **impasse** over sovereignty.* ('Reached an impasse' intellektual C2 mezonidir).\n\n🎯 **IELTS Speaking Part 3 Masterclass (Band 9.0 Diplomatic Nuance)**:\n- **Prompt**: *How important is calculated ambiguity in modern international diplomacy?*\n- **Model Answer**: Calculated linguistic ambiguity is not merely an artful rhetorical device; it is often the very linchpin of geopolitical stability. In high-stakes summitry, nations frequently find themselves at an ideological **impasse** where domestic constraints prevent outright capitulation. In such junctures, skilled envoys rely on 'constructive ambiguity'—drafting declarations whose phraseology permits divergent interpretations while maintaining a shared framework. Far from being deceitful **circumlocution**, this allows adversaries to adopt a **conciliatory** posture in public while preserving room for compromise. Without such diplomatic **tact** and strategic **euphemisms**, a great many peace accords would collapse prematurely.\n- **Discourse Markers**: Calculated linguistic ambiguity, the very linchpin of, high-stakes summitry, ideological impasse, outright capitulation, constructive ambiguity, deceitful circumlocution, conciliatory posture\n- **Examiner Tip**: Litotes va andishali modallardan (*might appear somewhat premature*, *not unmindful*) foydalanish C2 darajasidagi xushmuomalalik va intellektual etiketni namoyish etadi.",
+                        "keyPoints": [
+                            "Constructive ambiguity: kelishuvga erishish uchun qasddan ikki ma'noli qilib yozilgan diplomatik matn.",
+                            "Litotes: inkor orqali yumshatilgan, andishali tasdiq uslubi ('not without justification').",
+                            "Impasse: murosaga kelib bo'lmaydigan boshi berk ko'cha holati.",
+                            "Plausible deniability: davlat rahbari yoki tashkilotning mas'uliyatdan rasman qochish imkoniyati.",
+                            "Euphemism: keskin yoki noxush hodisani yumshoq va bezarar so'zlar bilan pardozlash."
+                        ],
+                        "vocabulary": [
+                            {
+                                "term": "Diplomatic tact",
+                                "reading": "/ˌdɪp.ləˈmæt.ɪk tækt/",
+                                "meaning": "Diplomatik andisha, nozik vaziyatlarda xushmuomalalik san'ati",
+                                "exampleSentence": "Navigating the border dispute required immense diplomatic tact to prevent public outrage.",
+                                "exampleTranslation": "Chegara mojarosini hal qilish xalq g'azabini qo'zg'amaslik uchun beqiyos diplomatik andishani talab qildi."
+                            },
+                            {
+                                "term": "Euphemism",
+                                "reading": "/ˈjuː.fə.mɪ.zəm/",
+                                "meaning": "Evfemizm (qo'pol yoki noxush hodisani yumshoq so'z bilan ifodalash)",
+                                "exampleSentence": "The military term 'collateral damage' is an infamous euphemism for civilian casualties.",
+                                "exampleTranslation": "'Qo'shimcha zarar' harbiy atamasi tinch aholi qurbonlari uchun mashhur evfemizmdir."
+                            },
+                            {
+                                "term": "Plausible deniability",
+                                "reading": "/ˌplɔː.zə.bəl dɪˌnaɪ.əˈbɪl.ə.ti/",
+                                "meaning": "Ishonchli inkor imkoniyati (mas'uliyatdan rasman qutulish)",
+                                "exampleSentence": "The intelligence agency operated through proxies to ensure senior leadership retained plausible deniability.",
+                                "exampleTranslation": "Razvedka agentligi oliy rahbariyatning ishonchli inkor imkoniyatini saqlab qolishi uchun vositachilar orqali ishladi."
+                            },
+                            {
+                                "term": "Circumlocution",
+                                "reading": "/ˌsɜː.kəm.ləˈkjuː.ʃən/",
+                                "meaning": "Aylanma yo'llar bilan gapirish, noaniq va cho'zilgan nutq",
+                                "exampleSentence": "Tired of political circumlocution, the journalist demanded a direct 'yes' or 'no' regarding the tax hike.",
+                                "exampleTranslation": "Siyosiy aylanma gaplardan charchagan jurnalist soliq oshishi bo'yicha to'g'ridan-to'g'ri 'ha' yoki 'yo'q' deb javob berishni talab qildi."
+                            },
+                            {
+                                "term": "Noncommittal",
+                                "reading": "/ˌnɒn.kəˈmɪt.əl/",
+                                "meaning": "Majburiyat olmaydigan, betaraf va ochiq qoldiruvchi javob",
+                                "exampleSentence": "The ambassador delivered a characteristically noncommittal reply pending further cables from his ministry.",
+                                "exampleTranslation": "Elchi o'z vazirligidan qo'shimcha xabarlar kelguniga qadar o'ziga xos betaraf va majburiyat yuklamaydigan javob berdi."
+                            },
+                            {
+                                "term": "Renegotiate",
+                                "reading": "/ˌriː.nəˈɡoʊ.ʃi.eɪt/",
+                                "meaning": "Qayta ko'rib chiqmoq, shartnomani yangitdan muzokara qilmoq",
+                                "exampleSentence": "Both sovereign nations agreed to renegotiate the terms of the bilateral extradition pact.",
+                                "exampleTranslation": "Har ikki mustaqil davlat ikki tomonlama ekstraditsiya shartnomasi shartlarini qayta muzokara qilishga kelishib oldilar."
+                            },
+                            {
+                                "term": "Impasse",
+                                "reading": "/æmˈpɑːs/",
+                                "meaning": "Boshi berk ko'cha, muzokaralarning butkul to'xtab qolishi",
+                                "exampleSentence": "Peace talks reached a perilous impasse after neither side would relinquish control of the port city.",
+                                "exampleTranslation": "Hech bir tomon port shahri ustidan nazoratdan voz kechishni istamaganidan so'ng tinchlik muzokaralari xavfli boshi berk ko'chaga kirdi."
+                            },
+                            {
+                                "term": "Conciliatory",
+                                "reading": "/kənˈsɪl.i.ə.tər.i/",
+                                "meaning": "Murosaga chorlovchi, tinchlantiruvchi va murosakor",
+                                "exampleSentence": "The foreign minister adopted a conciliatory tone, proposing a mutual drawdown of military personnel.",
+                                "exampleTranslation": "Tashqi ishlar vaziri harbiy xizmatchilarni o'zaro kamaytirishni taklif qilib, murosaga chorlovchi ohangni qo'lladi."
+                            },
+                            {
+                                "term": "Démarche",
+                                "reading": "/deɪˈmɑːʃ/",
+                                "meaning": "Demarsh (davlatlararo rasmiy diplomatik murojaat yoki norozilik)",
+                                "exampleSentence": "The ambassador lodged a formal diplomatic démarche protesting the unauthorized airspace violation.",
+                                "exampleTranslation": "Elchi havo hududining ruxsatsiz buzilishiga qarshi norozilik bildirib, rasmiy diplomatik demarsh taqdim etdi."
+                            },
+                            {
+                                "term": "Détente",
+                                "reading": "/deɪˈtɑːnt/",
+                                "meaning": "Keskinlikning yumshashi, munosabatlarning yaxshilanishi",
+                                "exampleSentence": "The landmark signing heralded an unprecedented era of détente between the rival superpowers.",
+                                "exampleTranslation": "Tarixiy shartnomaning imzolanishi raqib superdavlatlar o'rtasida misli ko'rilmagan keskinlik yumshashi davrini boshlab berdi."
+                            }
+                        ]
+                    }
+                },
+                {
+                    "id": "en-c2-u4-l3-s2",
+                    "title": "Practice: Diplomatic Tactics & Strategic Nuance",
+                    "type": "practice",
+                    "estimatedMinutes": 7,
+                    "practiceData": {
+                        "instructions": "Diplomatik muloyimlik, hisoblangan noaniqlik va evfemizmlar bo'yicha amaliy mashqlarni bajaring.",
+                        "exercises": [
+                            {
+                                "id": "en-c2-u4-l3-e1",
+                                "type": "multiple-choice",
+                                "prompt": "Which term describes intentionally wording a treaty clause vaguely so that competing factions can each claim victory?",
+                                "options": [
+                                    "Statutory litigation",
+                                    "Constructive ambiguity",
+                                    "Plausible subpoena",
+                                    "Quixotic demarcation"
+                                ],
+                                "correctAnswer": 1,
+                                "explanation": "Diplomatiyada tomonlarni murosaga keltirish uchun ataylab ikki xil talqin qilinadigan tildan foydalanish 'constructive ambiguity' deyiladi."
+                            },
+                            {
+                                "id": "en-c2-u4-l3-e2",
+                                "type": "multiple-choice",
+                                "prompt": "Identify the sentence illustrating litotes used for diplomatic hedging:",
+                                "options": [
+                                    "Your proposal is the most magnificent achievement in diplomatic history.",
+                                    "The delegation's proposal is not entirely devoid of practical validity.",
+                                    "We reject your demand unconditionally and permanently.",
+                                    "This contract will be immediately signed without any modifications."
+                                ],
+                                "correctAnswer": 1,
+                                "explanation": "'Not entirely devoid of practical validity' (amaliy jihatdan butkul asossiz emas) — litotes uslubidagi andishali C2 ifodasi."
+                            },
+                            {
+                                "id": "en-c2-u4-l3-e3",
+                                "type": "multiple-choice",
+                                "prompt": "What does a diplomat mean when they state that negotiations have 'reached an impasse'?",
+                                "options": [
+                                    "The parties have achieved complete consensus on every clause.",
+                                    "Discussions have ground to a halt because neither side is willing to concede.",
+                                    "The summit has been moved to a new geographical venue.",
+                                    "The treaties have been permanently ratified and published."
+                                ],
+                                "correctAnswer": 1,
+                                "explanation": "'Impasse' — muzokaralarning butkul boshi berk ko'chaga kirib to'xtab qolganligini anglatadi."
+                            },
+                            {
+                                "id": "en-c2-u4-l3-e4",
+                                "type": "multiple-choice",
+                                "prompt": "Select the euphemism commonly employed in corporate restructuring to soften the announcement of mass layoffs:",
+                                "options": [
+                                    "Aggressive talent liquidation",
+                                    "Strategic workforce right-sizing",
+                                    "Corporate bankruptcy declaration",
+                                    "Statutory fiduciary dismissal"
+                                ],
+                                "correctAnswer": 1,
+                                "explanation": "'Workforce right-sizing' (ishchi kuchini maqbullashtirish) ommaviy ishdan bo'shatish uchun keng qo'llaniladigan korporativ evfemizmdir."
+                            },
+                            {
+                                "id": "en-c2-u4-l3-e5",
+                                "type": "multiple-choice",
+                                "prompt": "Choose the correct completion: 'The foreign ministry issued a diplomatic _______ formally lodging a protest against maritime trespassing.'",
+                                "options": [
+                                    "démarche",
+                                    "euphemism",
+                                    "litotes",
+                                    "subpoena"
+                                ],
+                                "correctAnswer": 0,
+                                "explanation": "Diplomatik rasmiy norozilik yoki murojaat 'démarche' (demarsh) deb ataladi."
+                            }
+                        ]
+                    }
+                },
+                {
+                    "id": "en-c2-u4-l3-s3",
+                    "title": "Assessment: Diplomatic Language & Ambiguity",
+                    "type": "test",
+                    "estimatedMinutes": 10,
+                    "testData": {
+                        "instructions": "Diplomatik ritorika va xalqaro munosabatlar tili bo'yicha imtihon savollariga javob bering.",
+                        "passingScorePercentage": 80,
+                        "questions": [
+                            {
+                                "id": "en-c2-u4-l3-q1",
+                                "question": "A situation where senior officials structure operations so they can credibly claim lack of knowledge regarding illegal activities is called:",
+                                "options": [
+                                    "constructive estoppel",
+                                    "plausible deniability",
+                                    "fiduciary immunity",
+                                    "statutory indemnity"
+                                ],
+                                "correctAnswerIndex": 1,
+                                "explanation": "'Plausible deniability' (ishonchli inkor etish imkoniyati) rahbarlarning noqonuniy ishlardan xabarsiz bo'lganlik bahonasini saqlab qolishidir."
+                            },
+                            {
+                                "id": "en-c2-u4-l3-q2",
+                                "question": "When a speaker uses excessive, convoluted verbiage to evade addressing a sensitive topic directly, they are engaging in:",
+                                "options": [
+                                    "circumlocution",
+                                    "adjudication",
+                                    "solipsism",
+                                    "hegemony"
+                                ],
+                                "correctAnswerIndex": 0,
+                                "explanation": "Mavzuni to'g'ridan-to'g'ri aytmasdan aylanma va noaniq so'zlar bilan cho'zish 'circumlocution' deyiladi."
+                            },
+                            {
+                                "id": "en-c2-u4-l3-q3",
+                                "question": "Which word describes a geopolitical easing of strained political hostility between competing world powers?",
+                                "options": [
+                                    "Impasse",
+                                    "Détente",
+                                    "Démarche",
+                                    "Subpoena"
+                                ],
+                                "correctAnswerIndex": 1,
+                                "explanation": "Superdavlatlar o'rtasidagi ziddiyat va taranglikning yumshashi xalqaro tilda 'détente' (detant) deyiladi."
+                            },
+                            {
+                                "id": "en-c2-u4-l3-q4",
+                                "question": "In diplomatic parlance, if a response is described as 'noncommittal', it means the speaker:",
+                                "options": [
+                                    "has officially accepted all proposed terms without reservation",
+                                    "has explicitly rejected the dialogue and withdrawn their ambassador",
+                                    "has provided an ambiguous reply that refrains from committing to any specific path",
+                                    "has admitted criminal liability in an international court"
+                                ],
+                                "correctAnswerIndex": 2,
+                                "explanation": "'Noncommittal' javob hech qanday majburiyat yuklamaydigan, ochiq va ehtiyotkor javobdir."
+                            },
+                            {
+                                "id": "en-c2-u4-l3-q5",
+                                "question": "'By making a _______ gesture of releasing detained border guards, the government signaled its readiness to resume multilateral dialogue.'",
+                                "options": [
+                                    "conciliatory",
+                                    "quixotic",
+                                    "litigious",
+                                    "draconian"
+                                ],
+                                "correctAnswerIndex": 0,
+                                "explanation": "Vaziyatni yumshatish va tinchlikka moyillikni bildirish 'conciliatory gesture' (murosaga chorlovchi qadam) deyiladi."
+                            }
+                        ]
+                    }
                 }
-            }
-        ]
-    },
-    {
-        "id": "en-c2-u4-l2",
-        "courseId": "english-c2",
-        "unitId": "en-c2-u4",
-        "unitTitle": "Unit 4: Rhetoric & Legal Discourse",
-        "language": "en",
-        "level": "C2",
-        "lessonNumber": 17,
-        "title": "Literary Allusions & Metaphorical Nuance",
-        "description": "Adabiy ishoralar (allusions) va chuqur ko'chma ma'nolar: \"Achilles' heel\", \"Pyrrhic victory\", \"Pandora's box\".",
-        "estimatedDurationMinutes": 18,
-        "icon": "📚",
-        "steps": [
-            {
-                "id": "en-c2-u4-l2-s1",
-                "title": "Adabiy Ishoralar (Allusions)",
-                "type": "learn",
-                "estimatedMinutes": 6,
-                "learnData": {
-                    "title": "Classic Allusions in Elite English",
-                    "explanation": "Ingliz tili elita nutqida klassik va tarixiy ishoralarning ishlatilishi.",
-                    "keyPoints": [
-                        "Pyrrhic victory — juda katta yo'qotish evaziga erishilgan mag'lubiyatga teng g'alaba",
-                        "Achilles' heel — eng nozik/zaif nuqta",
-                        "Opening a Pandora's box — hal etib bo'lmas muammolar zanjirini keltirib chiqarish"
-                    ],
-                    "vocabulary": [
-                        {
-                            "term": "Pyrrhic",
-                            "reading": "/ˈpɪr.ɪk/",
-                            "meaning": "Pirr g'alabasi (og'ir yo'qotishli)",
-                            "exampleSentence": "It was a Pyrrhic victory.",
-                            "exampleTranslation": "Bu ulkan yo'qotishli g'alaba edi."
-                        },
-                        {
-                            "term": "Inextricable",
-                            "reading": "/ˌɪn.ɪkˈstrɪk.ə.bəl/",
-                            "meaning": "Ajralmas, chambarchas bogʻliq",
-                            "exampleSentence": "Language and cultural identity are inextricably intertwined.",
-                            "exampleTranslation": "Til va madaniy oʻzlik chambarchas bogʻlangan."
-                        },
-                        {
-                            "term": "Dissemination",
-                            "reading": "/dɪˌsem.ɪˈneɪ.ʃən/",
-                            "meaning": "Keng yoyish, tarqatish",
-                            "exampleSentence": "The swift dissemination of knowledge accelerates innovation.",
-                            "exampleTranslation": "Bilimlarning tezkor tarqalishi innovatsiyalarni jadallashtiradi."
-                        }
-                    ],
-                    "grammarRules": [
-                        {
-                            "pattern": "Literary Allusions & Metaphorical Nuance",
-                            "meaning": "Adabiy ishoralar (allusions) va chuqur ko'chma ma'nolar: \"Achilles' heel\", \"Pyrrhic victory\", \"Pandora's box\".",
-                            "usageNotes": "Ingliz tili elita nutqida klassik va tarixiy ishoralarning ishlatilishi.",
-                            "examples": [
-                                {
-                                    "sentence": "It was a Pyrrhic victory.",
-                                    "translation": "Bu ulkan yo'qotishli g'alaba edi."
-                                }
-                            ]
-                        }
-                    ]
+            ]
+        },
+        {
+            "id": "en-c2-u4-l4",
+            "courseId": "english-c2",
+            "unitId": "en-c2-u4",
+            "unitTitle": "Unit 4: Rhetoric & Legal Discourse",
+            "language": "en",
+            "level": "C2",
+            "lessonNumber": 19,
+            "title": "Mastery of Epistemological & Philosophical Prose",
+            "description": "Epistemologik tahlil, ontologiya, dialektika va intellektual dalillash arxitekturasi.",
+            "estimatedDurationMinutes": 25,
+            "icon": "🧠",
+            "steps": [
+                {
+                    "id": "en-c2-u4-l4-s1",
+                    "title": "Epistemology, Ontology & Philosophical Architecture",
+                    "type": "learn",
+                    "estimatedMinutes": 8,
+                    "learnData": {
+                        "title": "Epistemological Enquiry, Abstract Dialectics & Philosophical Precision",
+                        "subtitle": "Bilish nazariyasi, ontologik kategoriyalar va falsafiy sintaksis",
+                        "explanation": "CEFR C2 darajasining cho'qqisida ingliz tili falsafiy va epistemologik (bilish nazariyasi) tahlil vositasiga aylanadi. Bu yerda fikrlar oddiy subyektiv qarashlar sifatida emas, balki gnoseologik asoslar, dalillarning ontologik tabiati va dialektik qarama-qarshiliklar orqali isbotlanadi.\n\n### Falsafiy Konstruktsiyalar va Mavhum Otlar Zanjiri:\n1. **Nominalized Abstraction Cascades**: Falsafiy ingliz tilida harakatlar fe'llardan ko'ra mavhum otlar zanjiri orqali ifodalanadi: *The reconciliation of subjective phenomenology with materialist determinism constitutes the central conundrum of modern philosophy of mind.*\n2. **Empirical vs A priori**: Tajriba va sezgi a'zolari orqali tekshiriladigan bilim *empirical*, sof aql va aksiomalar orqali oldindan bilingan mantiqiy bilim esa *a priori* deyiladi.\n3. **Dialectic & Dichotomy**: Tezis va antitezisning to'qnashuvi orqali sintezga erishish *dialectic*, murakkab hodisalarni ikkita qora-oq qutbga ajratish esa *dichotomy* deyiladi.\n\n⚠️ **O'zbek o'rganuvchilari uchun xavfli tuzoqlar (Common Pitfalls)**:\n- ❌ *We know this because we did tests, not by thinking.* (Juda sodda).\n- ✅ *This proposition is grounded in **empirical** observation rather than **a priori** speculation.* (Falsafiy aniqlik).\n- ❌ *The scientist brought a big change in thinking.* (Oddiy so'zlashuv).\n- ✅ *The scientific discipline underwent a profound **paradigm shift**.* ('Paradigm shift' C2 standartidir).\n\n🎯 **IELTS Writing Task 2 Masterclass (Band 9.0 Epistemological Framing)**:\n- **Prompt**: *Some argue that with the advent of artificial intelligence, human knowledge is becoming obsolete. To what extent do you agree or disagree?*\n- **Model Argument Segment**: To contend that artificial intelligence renders human intellect obsolete betrays a fundamental conflation of computational throughput with genuine **epistemological** comprehension. Silicon architectures, regardless of algorithmic sophistication, operate solely on syntactic manipulation; they remain devoid of conscious **hermeneutic** engagement. Human understanding, by contrast, is inextricably rooted in embodied phenomenology—the lived experience through which ethical values and creative insight are forged. While AI precipitates a radical **paradigm shift** in data processing, knowledge itself is not merely an aggregated repository of facts, but a dynamic, **teleological** endeavor through which consciousness interrogates its existence. Therefore, algorithmic prowess can complement, but never supplant, the human cognitive condition.\n- **Discourse Markers**: To contend that... betrays a fundamental conflation of... with, operate solely on syntactic manipulation, remain devoid of conscious hermeneutic engagement, inextricably rooted in embodied phenomenology, precipitates a radical paradigm shift in, a dynamic teleological endeavor through which\n- **Examiner Tip**: 'Epistemological', 'hermeneutic', 'paradigm shift' va 'phenomenology' tushunchalarini o'rinli qo'llash inshoga betakror akademik vazminlik baxsh etadi.",
+                        "keyPoints": [
+                            "Epistemology: bilimning manbai, mohiyati va chegaralarini o'rganuvchi falsafa sohasi.",
+                            "Empirical vs A priori: tajriba va sensorik dalillarga tayanish (empirik) vs sof mantiq orqali oldindan bilingan (aprior).",
+                            "Paradigm shift: ilmiy yoki ijtimoiy dunyoqarashning tubdan yangi bosqichga ko'tarilishi.",
+                            "Solipsism: faqat o'z ongining mavjudligiga ishonib, tashqi olam realligini inkor qilish.",
+                            "Dichotomy: bir-birini inkor etuvchi ikkita qism yoki qarama-qarshilikka bo'linish."
+                        ],
+                        "vocabulary": [
+                            {
+                                "term": "Epistemology",
+                                "reading": "/ɪˌpɪs.tɪˈmɒl.ə.dʒi/",
+                                "meaning": "Epistemologiya, bilish nazariyasi (bilim mohiyati va chegaralari)",
+                                "exampleSentence": "Kant's critique transformed modern epistemology by delineating the limits of human reason.",
+                                "exampleTranslation": "Kantning tanqidi inson aql-idrokining chegaralarini belgilab berish orqali zamonaviy bilish nazariyasini o'zgartirdi."
+                            },
+                            {
+                                "term": "Ontology",
+                                "reading": "/ɒnˈtɒl.ə.dʒi/",
+                                "meaning": "Ontologiya, borliq falsafasi (mavjudlik tabiati va fundamental tuzilishi)",
+                                "exampleSentence": "The debate over digital entities raises profound questions regarding the ontology of virtual reality.",
+                                "exampleTranslation": "Raqamli entitetlar ustidagi bahs virtual reallik ontologiyasi borasida chuqur savollarni keltirib chiqarmoqda."
+                            },
+                            {
+                                "term": "Dialectic",
+                                "reading": "/ˌdaɪ.əˈlɛk.tɪk/",
+                                "meaning": "Dialektika (qarama-qarshiliklar orqali haqiqatni izlash uslubi)",
+                                "exampleSentence": "Hegelian dialectic posits that intellectual progress emerges through the collision of thesis and antithesis.",
+                                "exampleTranslation": "Gegel dialektikasi intellektual taraqqiyot tezis va antitezis to'qnashuvi orqali vujudga keladi deb ta'kidlaydi."
+                            },
+                            {
+                                "term": "Empirical",
+                                "reading": "/ɪmˈpɪr.ɪ.kəl/",
+                                "meaning": "Empirik, tajriba va amaliy kuzatuvlarga asoslangan",
+                                "exampleSentence": "Without robust empirical evidence, theoretical models remain mere mathematical conjecture.",
+                                "exampleTranslation": "Mustahkam empirik dalillarsiz nazariy modellar shunchaki matematik taxmin bo'lib qoladi."
+                            },
+                            {
+                                "term": "Solipsism",
+                                "reading": "/ˈsɒl.ɪp.sɪ.zəm/",
+                                "meaning": "Solipsizm (faqat o'z ongi borligiga ishonish, tashqi olamni inkor etish)",
+                                "exampleSentence": "Epistemological skepticism, taken to its absolute extreme, inevitably collapses into solipsism.",
+                                "exampleTranslation": "Epistemologik skeptitsizm eng chekka nuqtasiga yetkazilganda, muqarrar ravishda solipsizmga aylanadi."
+                            },
+                            {
+                                "term": "Paradigm shift",
+                                "reading": "/ˈpær.ə.daɪm ʃɪft/",
+                                "meaning": "Paradigma almashinuvi, dunyoqarashning tubdan yangilanishi",
+                                "exampleSentence": "The discovery of quantum mechanics triggered a paradigm shift in classical physics.",
+                                "exampleTranslation": "Kvant mexanikasining kashf etilishi klassik fizikada tub burilishga (paradigma o'zgarishiga) sabab bo'ldi."
+                            },
+                            {
+                                "term": "A priori",
+                                "reading": "/ˌeɪ praɪˈɔː.raɪ/",
+                                "meaning": "Aprior, tajribadan oldin sof mantiq orqali olingan bilim",
+                                "exampleSentence": "Mathematical truths, such as geometry axioms, are traditionally categorized as a priori propositions.",
+                                "exampleTranslation": "Matematik haqiqatlar, masalan, geometriya aksiomalari, an'anaviy ravishda aprior xulosalar deb tasniflanadi."
+                            },
+                            {
+                                "term": "Hermeneutics",
+                                "reading": "/ˌhɜː.mɪˈnjuː.tɪks/",
+                                "meaning": "Germenevtika, matnlar va ma'nolarni talqin qilish san'ati",
+                                "exampleSentence": "Biblical and constitutional hermeneutics require rigorous historical contextualization.",
+                                "exampleTranslation": "Injil va konstitutsiya germenevtikasi qat'iy tarixiy kontekstni tushunishni talab qiladi."
+                            },
+                            {
+                                "term": "Teleological",
+                                "reading": "/ˌtiː.li.əˈlɒdʒ.ɪ.kəl/",
+                                "meaning": "Teleologik, yakuniy maqsad va natijaga yo'naltirilgan",
+                                "exampleSentence": "Aristotelian biology relied on a teleological view that every organism is designed for an ultimate purpose.",
+                                "exampleTranslation": "Aristotel biologiyasi har bir tirik organizm oliy maqsad uchun yaratilgan degan teleologik qarashga tayangan."
+                            },
+                            {
+                                "term": "Dichotomy",
+                                "reading": "/daɪˈkɒt.ə.mi/",
+                                "meaning": "Dixotomiya, ikkita o'zaro qarama-qarshi qismga bo'linish",
+                                "exampleSentence": "The false dichotomy between economic growth and environmental stewardship must be dismantled.",
+                                "exampleTranslation": "Iqtisodiy o'sish va atrof-muhitni asrash o'rtasidagi soxta dixotomiya (qarama-qarshilik) bartaraf etilishi shart."
+                            }
+                        ]
+                    }
+                },
+                {
+                    "id": "en-c2-u4-l4-s2",
+                    "title": "Practice: Philosophical Prose & Epistemology",
+                    "type": "practice",
+                    "estimatedMinutes": 7,
+                    "practiceData": {
+                        "instructions": "Epistemologik va ontologik tushunchalar bo'yicha berilgan topshiriqlarni bajaring.",
+                        "exercises": [
+                            {
+                                "id": "en-c2-u4-l4-e1",
+                                "type": "multiple-choice",
+                                "prompt": "Which philosophical term refers to knowledge justified purely by deduction and theoretical reason independent of sensory experience?",
+                                "options": [
+                                    "A posteriori",
+                                    "A priori",
+                                    "Empirical verification",
+                                    "Ontological materialism"
+                                ],
+                                "correctAnswer": 1,
+                                "explanation": "'A priori' bilimi hech qanday hissiy tajribasiz, sof mantiq va aql orqali olingan xulosalarga nisbatan aytiladi."
+                            },
+                            {
+                                "id": "en-c2-u4-l4-e2",
+                                "type": "multiple-choice",
+                                "prompt": "Identify the philosophical fallacy in treating complex, nuanced spectrums as an absolute two-way opposition:",
+                                "options": [
+                                    "Teleological consensus",
+                                    "False dichotomy",
+                                    "Epistemological solipsism",
+                                    "Hermeneutic synthesis"
+                                ],
+                                "correctAnswer": 1,
+                                "explanation": "Murakkab masalani faqat ikkita o'zaro qarama-qarshi qutbga ajratib qo'yish mantiqda 'false dichotomy' (soxta dixotomiya) deyiladi."
+                            },
+                            {
+                                "id": "en-c2-u4-l4-e3",
+                                "type": "multiple-choice",
+                                "prompt": "Complete the argument: 'The belief that nothing exists outside the boundaries of one's personal mental consciousness is known as philosophical _______.'",
+                                "options": [
+                                    "solipsism",
+                                    "empiricism",
+                                    "jurisprudence",
+                                    "dialectic"
+                                ],
+                                "correctAnswer": 0,
+                                "explanation": "Faqat o'z ongi borligiga ishonib, qolgan hamma narsani xayol deb hisoblaydigan falsafiy qarash 'solipsism'dir."
+                            },
+                            {
+                                "id": "en-c2-u4-l4-e4",
+                                "type": "multiple-choice",
+                                "prompt": "What does a 'teleological' explanation focus on?",
+                                "options": [
+                                    "The immediate chemical reactions triggering an event.",
+                                    "The end goal, final purpose, or intended outcome for which something exists.",
+                                    "The legal precedent governing contractual obligations.",
+                                    "The linguistic etymology of archaic Anglo-Saxon morphemes."
+                                ],
+                                "correctAnswer": 1,
+                                "explanation": "Teleologik tushuntirish narsalarning paydo bo'lish sababini emas, balki ularning xizmat qiladigan yakuniy maqsadi (telos)ni asos qilib oladi."
+                            },
+                            {
+                                "id": "en-c2-u4-l4-e5",
+                                "type": "multiple-choice",
+                                "prompt": "Which branch of philosophy directly investigates how we acquire, validate, and evaluate human knowledge?",
+                                "options": [
+                                    "Ontology",
+                                    "Epistemology",
+                                    "Hermeneutics",
+                                    "Dichotomy"
+                                ],
+                                "correctAnswer": 1,
+                                "explanation": "Bilish nazariyasi, bilimning mohiyati va chegaralarini o'rganadigan fan sohasi 'Epistemology' hisoblanadi."
+                            }
+                        ]
+                    }
+                },
+                {
+                    "id": "en-c2-u4-l4-s3",
+                    "title": "Assessment: Epistemology & Philosophical Diction",
+                    "type": "test",
+                    "estimatedMinutes": 10,
+                    "testData": {
+                        "instructions": "Epistemologik va falsafiy atamalar bo'yicha imtihon sinovidan o'ting.",
+                        "passingScorePercentage": 80,
+                        "questions": [
+                            {
+                                "id": "en-c2-u4-l4-q1",
+                                "question": "The transition from classical Newtonian mechanics to Einsteinian general relativity is universally recognized as a classic example of a:",
+                                "options": [
+                                    "statutory indemnification",
+                                    "paradigm shift",
+                                    "quixotic aberration",
+                                    "bacchanalian detour"
+                                ],
+                                "correctAnswerIndex": 1,
+                                "explanation": "Ilmiy dunyoqarashning fundamental asoslari butkul o'zgarishi 'paradigm shift' (paradigma almashinuvi) deb ataladi."
+                            },
+                            {
+                                "id": "en-c2-u4-l4-q2",
+                                "question": "'Without rigorous _______ data collected through controlled laboratory experimentation, the hypothesis remained pure speculation.'",
+                                "options": [
+                                    "solipsistic",
+                                    "empirical",
+                                    "teleological",
+                                    "quixotic"
+                                ],
+                                "correctAnswerIndex": 1,
+                                "explanation": "Tajriba va amaliy kuzatuvlar asosida olingan ma'lumotlar 'empirical data' (empirik dalillar) deyiladi."
+                            },
+                            {
+                                "id": "en-c2-u4-l4-q3",
+                                "question": "Which field of scholarship is expressly concerned with the methodological interpretation of texts, sacred scriptures, and legal codices?",
+                                "options": [
+                                    "Hermeneutics",
+                                    "Ontology",
+                                    "Dialectic",
+                                    "Jurisprudence"
+                                ],
+                                "correctAnswerIndex": 0,
+                                "explanation": "Matnlarni talqin qilish nazariyasi va san'ati 'hermeneutics' (germenevtika) hisoblanadi."
+                            },
+                            {
+                                "id": "en-c2-u4-l4-q4",
+                                "question": "In philosophical discourse, the method of intellectual enquiry that investigates the clash of contradictory thesis and antithesis to achieve a synthesis is called:",
+                                "options": [
+                                    "the empirical method",
+                                    "the dialectic",
+                                    "circumlocution",
+                                    "solipsism"
+                                ],
+                                "correctAnswerIndex": 1,
+                                "explanation": "Qarama-qarshiliklar orqali sintezga yetishish usuli 'the dialectic' (dialektika) deb nomlanadi."
+                            },
+                            {
+                                "id": "en-c2-u4-l4-q5",
+                                "question": "'The author criticizes modern political rhetoric for forcing complex geopolitical nuances into an artificial binary _______.'",
+                                "options": [
+                                    "dichotomy",
+                                    "subpoena",
+                                    "demarche",
+                                    "precedent"
+                                ],
+                                "correctAnswerIndex": 0,
+                                "explanation": "Murakkab masalani sun'iy ravishda ikkita qora-oq qutbga ajratib qo'yish 'binary dichotomy' deyiladi."
+                            }
+                        ]
+                    }
                 }
-            },
-            {
-                "id": "en-c2-u4-l2-s2",
-                "title": "Mashq",
-                "type": "practice",
-                "estimatedMinutes": 6,
-                "practiceData": {
-                    "instructions": "To'g'ri iborani tanlang.",
-                    "exercises": [
-                        {
-                            "id": "en-c2-u4-l2-e1",
-                            "type": "multiple-choice",
-                            "prompt": "\"Lack of cyber-security proved to be the corporation's _______ heel.\"",
-                            "options": [
-                                "Hercules'",
-                                "Achilles'",
-                                "Zeus'",
-                                "Apollo's"
-                            ],
-                            "correctAnswer": 1,
-                            "explanation": "Achilles' heel = nozik nuqta."
-                        },
-                        {
-                            "id": "en-c2-u4-l2-ex-2",
-                            "type": "multiple-choice",
-                            "prompt": "Choose the correct word to complete the sentence: \"Language and cultural identity are inextricably intertwined.\"",
-                            "options": [
-                                "doubt",
-                                "delay",
-                                "Inextricable",
-                                "reluctance"
-                            ],
-                            "correctAnswer": 2,
-                            "explanation": "\"Inextricable\" (Ajralmas, chambarchas bogʻliq) fits the context appropriately."
-                        }
-                    ]
+            ]
+        },
+        {
+            "id": "en-c2-u4-l5",
+            "courseId": "english-c2",
+            "unitId": "en-c2-u4",
+            "unitTitle": "Unit 4: Rhetoric & Legal Discourse",
+            "language": "en",
+            "level": "C2",
+            "lessonNumber": 20,
+            "title": "C2 Master Class Final Capstone Examination",
+            "description": "Butun CEFR C2 darajasining yakuniy sintaktik, leksik, ritorik va IELTS Band 9.0 sinovi.",
+            "estimatedDurationMinutes": 35,
+            "icon": "🎓",
+            "steps": [
+                {
+                    "id": "en-c2-u4-l5-s1",
+                    "title": "C2 Mastery Capstone: Synthesis & Erudition",
+                    "type": "learn",
+                    "estimatedMinutes": 10,
+                    "learnData": {
+                        "title": "Grand Synthesis of C2 English: Rhetoric, Erudition & Band 9.0 Mastery",
+                        "subtitle": "Ingliz tili mukammalligining eng yuqori darajasi — yakuniy xulosa va sintez",
+                        "explanation": "CEFR C2 (Mastery) darajasi til o'rganishning marrasi emas, balki tilni ona tili egalarining eng savodli, intellektual va professional qatlami kabi boshqarish cho'qqisidir. Bu darajada talaba nafaqat grammatik qoidalarni to'g'ri qo'llaydi, balki uslublar uyg'unligi (*register switching*), nozik evfemizmlar, falsafiy abstraksiyalar va ritorik figuralarni mukammal darajada birlashtiradi.\n\n### To'liq Ritorik va Sintaktik Arsenal (The Complete Syntactic Toolkit):\n1. **Inversiya va Davriy Gaplar**: *Not only did the treaty dismantle trade barriers, but seldom in diplomatic history had so many sovereign nations capitulated on territorial claims.*\n2. **Cleft Konstruksiyalar**: *It is precisely this lack of epistemological humility that precipitated the economic collapse.*\n3. **Subjunktiv Nafosat**: *Were the global community to ignore this ecological warning, the consequences would be irremediable.*\n4. **Ellipsis va Chiasmus**: *Truth demands rigorous interrogation; deceit, mere passive credulity.*\n\n⚠️ **C2 Darajasidagi Yakuniy Tavsiyalar**:\n- ❌ *Trying to use long words in every single sentence.* (Sun'iy va zo'rma-zo'ra uslub).\n- ✅ *Choosing words for maximum cognitive precision and tonal resonance.* (Har bir so'z o'z o'rnida aniq jaranglashi kerak).\n\n🎯 **IELTS Band 9.0 Grand Master Final Assessment**:\n- **Speaking & Writing Full Criteria**: Task Achievement 9.0, Coherence & Cohesion 9.0, Lexical Resource 9.0, Grammatical Range & Accuracy 9.0.\n- **Grand Capstone Declaration**: True mastery of the English language is not measured by the ostentatious deployment of obscure terms, but by the crystalline precision with which one articulates profound human thought. In traversing the curriculum from A1 to C2, you have forged a formidable intellectual instrument—one capable of defending human dignity, deconstructing dogmas, and illuminating the human condition across global cultures. You now stand not as a passive consumer of a foreign tongue, but as an articulate architect of meaning.",
+                        "keyPoints": [
+                            "C2 Mastery: tilni shunchaki aloqa vositasi emas, balki yuksak intellektual, falsafiy va ritorik vosita sifatida egallash.",
+                            "Syntactic variety: inversiya, cleft, subjunktiv va davriy gaplarni tabiiy uyg'unlikda qo'llash.",
+                            "Erudition without pretension: so'zlarni maqtanish uchun emas, balki g'oyaga eng munosib aniqlik berish uchun tanlash.",
+                            "Band 9.0 Excellence: Task Achievement, Cohesion, Lexical Resource va Grammatical Accuracy bo'yicha eng yuqori baholash mezonlari integratsiyasi."
+                        ],
+                        "vocabulary": [
+                            {
+                                "term": "Synthesis",
+                                "reading": "/ˈsɪn.θə.sɪs/",
+                                "meaning": "Sintez, turli qarash va bilimlarning yagona yaxlit intellektual tizimga birlashishi",
+                                "exampleSentence": "Her dissertation represents an extraordinary synthesis of cognitive neuroscience and existential philosophy.",
+                                "exampleTranslation": "Uning dissertatsiyasi kognitiv neyroilm va ekzistensial falsafaning g'aroyib sintezini ifodalaydi."
+                            },
+                            {
+                                "term": "Quintessence",
+                                "reading": "/kwɪnˈtɛs.əns/",
+                                "meaning": "Eng toza mohiyat, eng yuksak va namunaviy timsol",
+                                "exampleSentence": "His diplomatic demeanor was the quintessence of aristocratic grace and understated authority.",
+                                "exampleTranslation": "Uning diplomatik muomalasi aristokratik nafosat va vazmin obro'-e'tiborning eng yuksak namunasi edi."
+                            },
+                            {
+                                "term": "Magnum opus",
+                                "reading": "/ˌmæɡ.nəm ˈoʊ.pəs/",
+                                "meaning": "Shoh asar, inson hayotidagi eng buyuk ijodiy yoki ilmiy yutuq",
+                                "exampleSentence": "The multi-volume encyclopedia of world history became the historian's magnum opus.",
+                                "exampleTranslation": "Jahon tarixining ko'p jildlik entsiklopediyasi tarixchining shoh asariga aylandi."
+                            },
+                            {
+                                "term": "Tour de force",
+                                "reading": "/ˌtʊər də ˈfɔːs/",
+                                "meaning": "Mahorat cho'qqisi, hayratlanarli daho va san'at bilan yaratilgan ish",
+                                "exampleSentence": "The pianist's interpretation of the concerto was widely acclaimed as a critical tour de force.",
+                                "exampleTranslation": "Pianinochining konsertni talqin qilishi tanqidchilar tomonidan yuksak mahorat cho'qqisi deb e'tirof etildi."
+                            },
+                            {
+                                "term": "Hegemony",
+                                "reading": "/hɪˈdʒɛm.ə.ni/",
+                                "meaning": "Gegemoniya, siyosiy, iqtisodiy yoki harbiy yetakchilik va ustunlik",
+                                "exampleSentence": "The rapid rise of multipolar trading blocs challenged the financial hegemony of the dollar.",
+                                "exampleTranslation": "Ko'p qutbli savdo bloklarining jadal yuksalishi dollarning moliyaviy gegemonligiga qarshi chiqdi."
+                            },
+                            {
+                                "term": "Acumen",
+                                "reading": "/ˈæk.jə.mən/",
+                                "meaning": "O'tkir aql, zukkolik, vaziyatni tez va to'g'ri baholash qobiliyati",
+                                "exampleSentence": "Her sharp commercial acumen allowed the startup to pivot profitably during the market crash.",
+                                "exampleTranslation": "Uning o'tkir tijoriy zukkoligi startapga bozor qulashi davrida ham foydali yo'nalishga o'tish imkonini berdi."
+                            },
+                            {
+                                "term": "Paradigm",
+                                "reading": "/ˈpær.ə.daɪm/",
+                                "meaning": "Paradigma, namuna, qolip, fundamental model",
+                                "exampleSentence": "Renewable decentralized energy creates a completely new industrial paradigm.",
+                                "exampleTranslation": "Qayta tiklanuvchi markazlashmagan energiya butkul yangi sanoat paradigmasini yaratadi."
+                            },
+                            {
+                                "term": "Ubiquitous",
+                                "reading": "/juːˈbɪk.wɪ.təs/",
+                                "meaning": "Hamma joyda uchraydigan, har qadamda hoziru nozir",
+                                "exampleSentence": "Smartphones have transformed from novelty gadgets into ubiquitous essentials of modern existence.",
+                                "exampleTranslation": "Smartfonlar noodatiy buyumdan zamonaviy hayotning hamma joyda mavjud bo'lgan ajralmas qismiga aylandi."
+                            },
+                            {
+                                "term": "Panacea",
+                                "reading": "/ˌpæn.əˈsiː.ə/",
+                                "meaning": "Barcha dardga davo, barcha muammolarni bir zumda hal etuvchi afsonaviy dori",
+                                "exampleSentence": "Technological innovation is undeniably powerful, but it is not a panacea for deep-rooted societal inequality.",
+                                "exampleTranslation": "Texnologik innovatsiya shubhasiz qudratli, ammo u chuqur ildiz otgan ijtimoiy tengsizlik uchun har dardga davo emasdir."
+                            },
+                            {
+                                "term": "Watershed",
+                                "reading": "/ˈwɔː.tə.ʃɛd/",
+                                "meaning": "Burilish nuqtasi, tarixiy muhim chegara",
+                                "exampleSentence": "The signing of the peace treaty marked a watershed in international relations.",
+                                "exampleTranslation": "Tinchlik shartnomasining imzolanishi xalqaro munosabatlarda muhim burilish nuqtasi bo'ldi."
+                            }
+                        ]
+                    }
+                },
+                {
+                    "id": "en-c2-u4-l5-s2",
+                    "title": "Practice: Grand Synthesis & Advanced Mastery",
+                    "type": "practice",
+                    "estimatedMinutes": 7,
+                    "practiceData": {
+                        "instructions": "Butun C2 darajasining leksik va sintaktik sintezi bo'yicha mashqlarni bajaring.",
+                        "exercises": [
+                            {
+                                "id": "en-c2-u4-l5-e1",
+                                "type": "multiple-choice",
+                                "prompt": "Select the Latin expression denoting an artist's, author's, or scholar's greatest single life achievement:",
+                                "options": [
+                                    "Tour de force",
+                                    "Magnum opus",
+                                    "Prima facie",
+                                    "Ultra vires"
+                                ],
+                                "correctAnswer": 1,
+                                "explanation": "Ijodkor yoki olim hayotidagi eng buyuk asar 'Magnum opus' deb ataladi."
+                            },
+                            {
+                                "id": "en-c2-u4-l5-e2",
+                                "type": "multiple-choice",
+                                "prompt": "Which sentence demonstrates seamless integration of negative inversion and high academic diction?",
+                                "options": [
+                                    "Not only the committee delayed the report, but also they did not apologize.",
+                                    "Rarely has a sovereign nation confronted such a monumental epistemological challenge without fracturing its institutional consensus.",
+                                    "Under no circumstances the company will accept responsibility for breach of contract.",
+                                    "Hardly the minister arrived when the journalists asked questions."
+                                ],
+                                "correctAnswer": 1,
+                                "explanation": "'Rarely has a sovereign nation confronted...' yordamchi fe'l inversiyasini va C2 darajasidagi leksikani to'liq aks ettiradi."
+                            },
+                            {
+                                "id": "en-c2-u4-l5-e3",
+                                "type": "multiple-choice",
+                                "prompt": "Identify the word that designates a universal remedy supposedly capable of curing all ills or resolving all dilemmas:",
+                                "options": [
+                                    "Acumen",
+                                    "Panacea",
+                                    "Quintessence",
+                                    "Paradigm"
+                                ],
+                                "correctAnswer": 1,
+                                "explanation": "'Panacea' — har qanday muammoni hal qiladi deb ishonilgan davo vositasidir."
+                            },
+                            {
+                                "id": "en-c2-u4-l5-e4",
+                                "type": "multiple-choice",
+                                "prompt": "What does describing a milestone as a 'watershed moment' signify?",
+                                "options": [
+                                    "An event marked by disastrous and irremediable oceanic flooding.",
+                                    "A decisive turning point that fundamentally transforms the subsequent trajectory of history.",
+                                    "A temporary cessation of hostilities without legal validity.",
+                                    "An ultra vires decree issued by an unconstitutional tribunal."
+                                ],
+                                "correctAnswer": 1,
+                                "explanation": "'Watershed moment' tarixiy burilish nuqtasi, jarayonlarni yangi o'zanga burib yuborgan hodisadir."
+                            },
+                            {
+                                "id": "en-c2-u4-l5-e5",
+                                "type": "multiple-choice",
+                                "prompt": "Which term describes an entity or phenomenon that appears to be present everywhere simultaneously?",
+                                "options": [
+                                    "Ephemeral",
+                                    "Ubiquitous",
+                                    "Mercurial",
+                                    "Quixotic"
+                                ],
+                                "correctAnswer": 1,
+                                "explanation": "Hamma joyda bir vaqtning o'zida hoziru nozir bo'lish 'ubiquitous' deyiladi."
+                            }
+                        ]
+                    }
+                },
+                {
+                    "id": "en-c2-u4-l5-s3",
+                    "title": "Assessment: C2 Grand Master Final Examination",
+                    "type": "test",
+                    "estimatedMinutes": 10,
+                    "testData": {
+                        "instructions": "C2 Grand Master Yakuniy Imtihoni: CEFR C2 darajasining barcha mezonlari bo'yicha so'nggi sinov.",
+                        "passingScorePercentage": 80,
+                        "questions": [
+                            {
+                                "id": "en-c2-u4-l5-q1",
+                                "question": "Which noun defines superior mental sharpness, keen insight, and the ability to make rapid, prudent judgements in practical matters?",
+                                "options": [
+                                    "Acumen",
+                                    "Circumlocution",
+                                    "Solipsism",
+                                    "Hegemony"
+                                ],
+                                "correctAnswerIndex": 0,
+                                "explanation": "'Acumen' — o'tkir aql, zukkolik va vaziyatni tez va to'g'ri baholash qobiliyatidir."
+                            },
+                            {
+                                "id": "en-c2-u4-l5-q2",
+                                "question": "'The architectural design of the opera house was hailed as the _______ of minimalist Scandinavian elegance.'",
+                                "options": [
+                                    "subpoena",
+                                    "quintessence",
+                                    "indemnity",
+                                    "impasse"
+                                ],
+                                "correctAnswerIndex": 1,
+                                "explanation": "Biror uslub yoki fazilatning eng sof, namunaviy timsoli 'quintessence' deb ataladi."
+                            },
+                            {
+                                "id": "en-c2-u4-l5-q3",
+                                "question": "Which syntactic device is manifested in: 'Were the international community to waver in its commitment, the fragile peace would disintegrate'?",
+                                "options": [
+                                    "Restrictive clefting",
+                                    "Inverted conditional (subjunctive)",
+                                    "Hypallage with transferred epithet",
+                                    "Chiasmus with lexical parallelism"
+                                ],
+                                "correctAnswerIndex": 1,
+                                "explanation": "'Were the international community to...' — 'If the international community were to...' shaklining inversiyalashgan rasmiy shart (subjunctive) shaklidir."
+                            },
+                            {
+                                "id": "en-c2-u4-l5-q4",
+                                "question": "An overwhelming artistic, rhetorical, or intellectual triumph accomplished through superlative technical prowess is termed a:",
+                                "options": [
+                                    "démarche",
+                                    "tour de force",
+                                    "quixotic gesture",
+                                    "prima facie case"
+                                ],
+                                "correctAnswerIndex": 1,
+                                "explanation": "Qoyilmaqom ijro, mahorat cho'qqisi 'tour de force' iborasi bilan ifodalanadi."
+                            },
+                            {
+                                "id": "en-c2-u4-l5-q5",
+                                "question": "Congratulations! As an articulate master of the English language at the C2 level, you have attained:",
+                                "options": [
+                                    "Passive memorization of formulaic IELTS templates",
+                                    "Profound rhetorical fluency, syntactic versatility, and erudite communicative mastery",
+                                    "Elementary comprehension of everyday shopping interactions",
+                                    "Strict adherence to simple Subject-Verb-Object sentence limits"
+                                ],
+                                "correctAnswerIndex": 1,
+                                "explanation": "C2 darajasining mohiyati — chuqur ritorik ravonlik, boy sintaktik erkinlik va intellektual kommunikativ qudratdir!"
+                            }
+                        ]
+                    }
                 }
-            },
-            {
-                "id": "en-c2-u4-l2-s3",
-                "title": "Test",
-                "type": "test",
-                "estimatedMinutes": 6,
-                "testData": {
-                    "instructions": "Savollarga javob bering.",
-                    "passingScorePercentage": 75,
-                    "questions": [
-                        {
-                            "id": "en-c2-u4-l2-q1",
-                            "question": "A \"Pyrrhic victory\" is one where:",
-                            "options": [
-                                "The victory is quick and easy",
-                                "The toll paid negates any true strategic benefit",
-                                "The enemy surrenders peacefully",
-                                "Nobody wins"
-                            ],
-                            "correctAnswerIndex": 1,
-                            "explanation": "The toll paid negates any benefit."
-                        }
-                    ]
-                }
-            }
-        ]
-    },
-    {
-        "id": "en-c2-u4-l3",
-        "courseId": "english-c2",
-        "unitId": "en-c2-u4",
-        "unitTitle": "Unit 4: Rhetoric & Legal Discourse",
-        "language": "en",
-        "level": "C2",
-        "lessonNumber": 18,
-        "title": "Diplomatic Tact, Euphemism & Ambiguity",
-        "description": "Diplomatik muloqot: evfemizmlar, vazminlik va siyosiy muloqot madaniyati.",
-        "estimatedDurationMinutes": 18,
-        "icon": "🕊️",
-        "steps": [
-            {
-                "id": "en-c2-u4-l3-s1",
-                "title": "Diplomatik Evfemizmlar",
-                "type": "learn",
-                "estimatedMinutes": 6,
-                "learnData": {
-                    "title": "Diplomatic Discourse & Subtlety",
-                    "explanation": "Xalqaro diplomatiya va oliy doiralarda fikrni o'ta bosiqlik bilan yetkazish.",
-                    "keyPoints": [
-                        "Frank exchange of views — Keskin va ziddiyatli muzokara",
-                        "Economical with the truth — Haqiqatni yashirish/chalg'itish",
-                        "Constructive ambiguity — Ikkala taraf uchun ham qulay noaniqlik"
-                    ],
-                    "vocabulary": [
-                        {
-                            "term": "Euphemism",
-                            "reading": "/ˈjuː.fə.mɪ.zəm/",
-                            "meaning": "Yumshatilgan so'z (evfemizm)",
-                            "exampleSentence": "Using a euphemism for death.",
-                            "exampleTranslation": "O'lim so'zi o'rniga yumshatilgan ibora ishlatish."
-                        },
-                        {
-                            "term": "Dissemination",
-                            "reading": "/dɪˌsem.ɪˈneɪ.ʃən/",
-                            "meaning": "Keng yoyish, tarqatish",
-                            "exampleSentence": "The swift dissemination of knowledge accelerates innovation.",
-                            "exampleTranslation": "Bilimlarning tezkor tarqalishi innovatsiyalarni jadallashtiradi."
-                        },
-                        {
-                            "term": "Ephemeral",
-                            "reading": "/ɪˈfem.ər.əl/",
-                            "meaning": "Oʻtkinchi, bir lahzalik",
-                            "exampleSentence": "Fame in the digital era can often be fleeting and ephemeral.",
-                            "exampleTranslation": "Raqamli asrdagi shuhrat koʻpincha oʻtkinchi va lahzalik boʻlishi mumkin."
-                        }
-                    ],
-                    "grammarRules": [
-                        {
-                            "pattern": "Diplomatic Tact, Euphemism & Ambiguity",
-                            "meaning": "Diplomatik muloqot: evfemizmlar, vazminlik va siyosiy muloqot madaniyati.",
-                            "usageNotes": "Xalqaro diplomatiya va oliy doiralarda fikrni o'ta bosiqlik bilan yetkazish.",
-                            "examples": [
-                                {
-                                    "sentence": "Using a euphemism for death.",
-                                    "translation": "O'lim so'zi o'rniga yumshatilgan ibora ishlatish."
-                                }
-                            ]
-                        }
-                    ]
-                }
-            },
-            {
-                "id": "en-c2-u4-l3-s2",
-                "title": "Mashq",
-                "type": "practice",
-                "estimatedMinutes": 6,
-                "practiceData": {
-                    "instructions": "To'g'ri diplomatik iborani tanlang.",
-                    "exercises": [
-                        {
-                            "id": "en-c2-u4-l3-e1",
-                            "type": "multiple-choice",
-                            "prompt": "In diplomatic cables, a \"frank exchange of views\" signifies:",
-                            "options": [
-                                "A heated disagreement or conflict",
-                                "A complete agreement",
-                                "A friendly chat over coffee",
-                                "A silent meeting"
-                            ],
-                            "correctAnswer": 0,
-                            "explanation": "Frank exchange = keskin ziddiyatli muzokara."
-                        },
-                        {
-                            "id": "en-c2-u4-l3-ex-2",
-                            "type": "multiple-choice",
-                            "prompt": "Choose the correct word to complete the sentence: \"The swift dissemination of knowledge accelerates innovation.\"",
-                            "options": [
-                                "Dissemination",
-                                "doubt",
-                                "reluctance",
-                                "delay"
-                            ],
-                            "correctAnswer": 0,
-                            "explanation": "\"Dissemination\" (Keng yoyish, tarqatish) fits the context appropriately."
-                        }
-                    ]
-                }
-            },
-            {
-                "id": "en-c2-u4-l3-s3",
-                "title": "Test",
-                "type": "test",
-                "estimatedMinutes": 6,
-                "testData": {
-                    "instructions": "Savollarga javob bering.",
-                    "passingScorePercentage": 75,
-                    "questions": [
-                        {
-                            "id": "en-c2-u4-l3-q1",
-                            "question": "What is \"constructive ambiguity\"?",
-                            "options": [
-                                "Deliberate vagueness in negotiating to allow different interpretations by opposing sides",
-                                "A translation error",
-                                "A clear mistake in a treaty",
-                                "An argument"
-                            ],
-                            "correctAnswerIndex": 0,
-                            "explanation": "Deliberate vagueness to allow different interpretations."
-                        }
-                    ]
-                }
-            }
-        ]
-    },
-    {
-        "id": "en-c2-u4-l4",
-        "courseId": "english-c2",
-        "unitId": "en-c2-u4",
-        "unitTitle": "Unit 4: Rhetoric & Legal Discourse",
-        "language": "en",
-        "level": "C2",
-        "lessonNumber": 19,
-        "title": "Mastery of Epistemological & Philosophical Prose",
-        "description": "Falsafiy va epistemologik ilmiy matnlar tahlili: \"Ontological\", \"Heuristic\", \"Hermeneutics\".",
-        "estimatedDurationMinutes": 18,
-        "icon": "🧠",
-        "steps": [
-            {
-                "id": "en-c2-u4-l4-s1",
-                "title": "Falsafiy Uslubiyat",
-                "type": "learn",
-                "estimatedMinutes": 6,
-                "learnData": {
-                    "title": "Epistemology & Theoretical Analysis",
-                    "explanation": "Akademiyadagi eng oliy tahliliy va falsafiy tushunchalar.",
-                    "keyPoints": [
-                        "Ontological security — Borliqqa oid barqarorlik hissi",
-                        "Heuristic device — Amaliy kashfiyot vositasi",
-                        "Hermeneutic circle — Matnni qism va butunlikda talqin qilish"
-                    ],
-                    "vocabulary": [
-                        {
-                            "term": "Epistemology",
-                            "reading": "/ɪˌpɪs.təˈmɒl.ə.dʒi/",
-                            "meaning": "Bilmash/Gnoseologiya nazariyasi",
-                            "exampleSentence": "Epistemology studies the nature of knowledge.",
-                            "exampleTranslation": "Epistemologiya bilimning tabiatini o'rganadi."
-                        },
-                        {
-                            "term": "Ephemeral",
-                            "reading": "/ɪˈfem.ər.əl/",
-                            "meaning": "Oʻtkinchi, bir lahzalik",
-                            "exampleSentence": "Fame in the digital era can often be fleeting and ephemeral.",
-                            "exampleTranslation": "Raqamli asrdagi shuhrat koʻpincha oʻtkinchi va lahzalik boʻlishi mumkin."
-                        },
-                        {
-                            "term": "Quintessential",
-                            "reading": "/ˌkwɪn.tɪˈsen.ʃəl/",
-                            "meaning": "Eng oliy namuna, timsol",
-                            "exampleSentence": "It is the quintessential masterpiece of modern literature.",
-                            "exampleTranslation": "Bu zamonaviy adabiyotning eng oliy namunasidir."
-                        }
-                    ],
-                    "grammarRules": [
-                        {
-                            "pattern": "Mastery of Epistemological & Philosophical Prose",
-                            "meaning": "Falsafiy va epistemologik ilmiy matnlar tahlili: \"Ontological\", \"Heuristic\", \"Hermeneutics\".",
-                            "usageNotes": "Akademiyadagi eng oliy tahliliy va falsafiy tushunchalar.",
-                            "examples": [
-                                {
-                                    "sentence": "Epistemology studies the nature of knowledge.",
-                                    "translation": "Epistemologiya bilimning tabiatini o'rganadi."
-                                }
-                            ]
-                        }
-                    ]
-                }
-            },
-            {
-                "id": "en-c2-u4-l4-s2",
-                "title": "Mashq",
-                "type": "practice",
-                "estimatedMinutes": 6,
-                "practiceData": {
-                    "instructions": "To'g'ri falsafiy atamani tanlang.",
-                    "exercises": [
-                        {
-                            "id": "en-c2-u4-l4-e1",
-                            "type": "multiple-choice",
-                            "prompt": "A practical problem-solving approach not guaranteed to be optimal is called a:",
-                            "options": [
-                                "syllogism",
-                                "tautology",
-                                "paradox",
-                                "heuristic"
-                            ],
-                            "correctAnswer": 3,
-                            "explanation": "Heuristic device."
-                        },
-                        {
-                            "id": "en-c2-u4-l4-ex-2",
-                            "type": "multiple-choice",
-                            "prompt": "Choose the correct word to complete the sentence: \"Fame in the digital era can often be fleeting and ephemeral.\"",
-                            "options": [
-                                "reluctance",
-                                "delay",
-                                "doubt",
-                                "Ephemeral"
-                            ],
-                            "correctAnswer": 3,
-                            "explanation": "\"Ephemeral\" (Oʻtkinchi, bir lahzalik) fits the context appropriately."
-                        }
-                    ]
-                }
-            },
-            {
-                "id": "en-c2-u4-l4-s3",
-                "title": "Test",
-                "type": "test",
-                "estimatedMinutes": 6,
-                "testData": {
-                    "instructions": "Savollarga javob bering.",
-                    "passingScorePercentage": 75,
-                    "questions": [
-                        {
-                            "id": "en-c2-u4-l4-q1",
-                            "question": "What does \"ontological\" concern?",
-                            "options": [
-                                "The study of insects",
-                                "Historical dates",
-                                "Chemical bonds",
-                                "The nature of being, existence, or reality"
-                            ],
-                            "correctAnswerIndex": 3,
-                            "explanation": "Nature of being or existence."
-                        }
-                    ]
-                }
-            }
-        ]
-    },
-    {
-        "id": "en-c2-u4-l5",
-        "courseId": "english-c2",
-        "unitId": "en-c2-u4",
-        "unitTitle": "Unit 4: Rhetoric & Legal Discourse",
-        "language": "en",
-        "level": "C2",
-        "lessonNumber": 20,
-        "title": "C2 Master Class Final Capstone Examination",
-        "description": "Ingliz tili C2 Oliy O'zlashtirish Darajasining to'liq va yakuniy professional baholash imtihoni.",
-        "estimatedDurationMinutes": 20,
-        "icon": "👑",
-        "steps": [
-            {
-                "id": "en-c2-u4-l5-s1",
-                "title": "C2 Ultimate Overview",
-                "type": "learn",
-                "estimatedMinutes": 6,
-                "learnData": {
-                    "title": "C2 Mastery Peak Summary",
-                    "explanation": "Congratulations! You have reached the pinnacle of English language learning (CEFR C2).",
-                    "keyPoints": [
-                        "Native-level fluency across academic, legal, and literary registers",
-                        "Flawless mastery of inversion, rhetorical tropes, and diplomatic nuance",
-                        "IELTS 8.5–9.0 equivalent competence"
-                    ],
-                    "grammarRules": [
-                        {
-                            "pattern": "C2 Master Class Final Capstone Examination",
-                            "meaning": "Ingliz tili C2 Oliy O'zlashtirish Darajasining to'liq va yakuniy professional baholash imtihoni.",
-                            "usageNotes": "Congratulations! You have reached the pinnacle of English language learning (CEFR C2).",
-                            "examples": [
-                                {
-                                    "sentence": "I study English every day with dedication.",
-                                    "translation": "Har kuni ingliz tilini astoydil o'rganaman."
-                                }
-                            ]
-                        }
-                    ],
-                    "vocabulary": [
-                        {
-                            "term": "Ephemeral",
-                            "reading": "/ɪˈfem.ər.əl/",
-                            "meaning": "Oʻtkinchi, bir lahzalik",
-                            "exampleSentence": "Fame in the digital era can often be fleeting and ephemeral.",
-                            "exampleTranslation": "Raqamli asrdagi shuhrat koʻpincha oʻtkinchi va lahzalik boʻlishi mumkin."
-                        },
-                        {
-                            "term": "Quintessential",
-                            "reading": "/ˌkwɪn.tɪˈsen.ʃəl/",
-                            "meaning": "Eng oliy namuna, timsol",
-                            "exampleSentence": "It is the quintessential masterpiece of modern literature.",
-                            "exampleTranslation": "Bu zamonaviy adabiyotning eng oliy namunasidir."
-                        },
-                        {
-                            "term": "Inextricable",
-                            "reading": "/ˌɪn.ɪkˈstrɪk.ə.bəl/",
-                            "meaning": "Ajralmas, chambarchas bogʻliq",
-                            "exampleSentence": "Language and cultural identity are inextricably intertwined.",
-                            "exampleTranslation": "Til va madaniy oʻzlik chambarchas bogʻlangan."
-                        }
-                    ]
-                }
-            },
-            {
-                "id": "en-c2-u4-l5-s2",
-                "title": "C2 Capstone Practice",
-                "type": "practice",
-                "estimatedMinutes": 7,
-                "practiceData": {
-                    "instructions": "Final Capstone practice question.",
-                    "exercises": [
-                        {
-                            "id": "en-c2-u4-l5-e1",
-                            "type": "multiple-choice",
-                            "prompt": "\"Notwithstanding the prevailing orthodoxy, her pioneering thesis _______ established a paradigm shift in quantum mechanics.\"",
-                            "options": [
-                                "unequivocally",
-                                "doubtfully",
-                                "scarcely",
-                                "partially"
-                            ],
-                            "correctAnswer": 0,
-                            "explanation": "Unequivocally established a paradigm shift."
-                        },
-                        {
-                            "id": "en-c2-u4-l5-ex-2",
-                            "type": "multiple-choice",
-                            "prompt": "Choose the correct word to complete the sentence: \"It is the quintessential masterpiece of modern literature.\"",
-                            "options": [
-                                "reluctance",
-                                "delay",
-                                "Quintessential",
-                                "doubt"
-                            ],
-                            "correctAnswer": 2,
-                            "explanation": "\"Quintessential\" (Eng oliy namuna, timsol) fits the context appropriately."
-                        }
-                    ]
-                }
-            },
-            {
-                "id": "en-c2-u4-l5-s3",
-                "title": "C2 Level Mastery Certification Exam",
-                "type": "test",
-                "estimatedMinutes": 7,
-                "testData": {
-                    "instructions": "C2 darajasidagi yakuniy professional sertifikatlash savollari.",
-                    "passingScorePercentage": 85,
-                    "questions": [
-                        {
-                            "id": "en-c2-u4-l5-q1",
-                            "question": "Select the sentence that exhibits perfect C2 academic inversion and vocabulary:",
-                            "options": [
-                                "Under no circumstances should the integrity of empirical data be compromised.",
-                                "In no circumstance data can be compromised.",
-                                "Under no circumstances compromised should be data.",
-                                "Under no circumstances the data should be compromised."
-                            ],
-                            "correctAnswerIndex": 0,
-                            "explanation": "Under no circumstances should ... be compromised."
-                        },
-                        {
-                            "id": "en-c2-u4-l5-q2",
-                            "question": "What is the meaning of \"paradigm shift\"?",
-                            "options": [
-                                "A shift in work hours",
-                                "A translation of text",
-                                "A small change in plan",
-                                "A fundamental change in the basic concepts and experimental practices of a scientific discipline"
-                            ],
-                            "correctAnswerIndex": 3,
-                            "explanation": "Fundamental change in basic concepts."
-                        },
-                        {
-                            "id": "en-c2-u4-l5-q3",
-                            "question": "Which term describes an argument that repeats the same idea in different words without adding proof?",
-                            "options": [
-                                "Oxymoron",
-                                "Paradox",
-                                "Tautology",
-                                "Metaphor"
-                            ],
-                            "correctAnswerIndex": 2,
-                            "explanation": "Tautology (takroriy mantiqsizlik)."
-                        },
-                        {
-                            "id": "en-c2-u4-l5-q4",
-                            "question": "Congratulations! You have completed the C2 English Curriculum with highest honors.",
-                            "options": [
-                                "Review Lessons",
-                                "Accept Certificate",
-                                "Exit",
-                                "Restart Course"
-                            ],
-                            "correctAnswerIndex": 1,
-                            "explanation": "Certificate awarded."
-                        }
-                    ]
-                }
-            }
-        ]
-    }
+            ]
+        }
 ];
