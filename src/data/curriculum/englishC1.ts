@@ -1195,153 +1195,228 @@ export const ENGLISH_C1_LESSONS: Lesson[] = [
         "level": "C1",
         "lessonNumber": 1,
         "title": "Nuance in Hedging: Ostensibly, Purportedly, Plausibly",
-        "description": "Dalillarning ishonchlilik darajasini yuqori aniqlikdagi ravishlar bilan ifodalash.",
-        "estimatedDurationMinutes": 15,
-        "icon": "💎",
+        "description": "Akademik va tahliliy diskursda dalillarning ehtimollik va haqiqiylik darajasini bildirish (hedging & stance adverbs).",
+        "estimatedDurationMinutes": 20,
+        "icon": "⚖️",
         "steps": [
             {
                 "id": "en-c1-u2-l1-s1",
-                "title": "Nozik Hedging So'zlari",
+                "title": "Epistemic Hedging & Stance Adverbs",
                 "type": "learn",
-                "estimatedMinutes": 5,
+                "estimatedMinutes": 7,
                 "learnData": {
-                    "title": "Advanced Stance Adverbs",
-                    "explanation": "Ostensibly — sirtdan qaraganda / ko'rinishidan (lekin aslida boshqacha bo'lishi mumkin). Purportedly — da'vo qilinishicha (isbotlanmagan). Plausibly — aqlga sig'adigan darajada / ehtimolki.",
+                    "title": "Nuance in Hedging: Navigating Academic Stance",
+                    "explanation": "C1 darajasidagi muallif yoki notiq hech qachon shoshilinch xulosalar chiqarmaydi. Buning o'rniga gapda epistemic modal ravishlar (hedging adverbs) vositasida faktlarga nisbatan o'zining aniq ilmiy masofasini (epistemic distance) ifodalaydi.\n\nAsosiy toifalar:\n1. **Zohiriy va Asl Holatni Qarama-Qarshi Qo'yish (Facade vs Reality)**:\n   - **Ostensibly**: 'Sirtdan qaraganda, go'yoki' (lekin aslida boshqacha ekaniga kuchli ishora bor).\n     *The company ostensibly introduced flexible hours to empower employees, but in reality reduced overtime pay.*\n   - **Purportedly**: 'Da'vo qilinishicha' (gap yoki mish-mish orqali aytilgan, ammo ilmiy isboti yo'q).\n     *The ancient manuscript was purportedly penned by Aristotle, though modern carbon dating disputes this claim.*\n   - **Allegedly**: 'Sudda/ayblovda aytilishicha' (yuridik javobgarlikdan qochish uchun jurnalistikada keng qo'llaniladi).\n\n2. **Ehtimollik va Mantiqiy Asoslilik (Plausibility & Conjecture)**:\n   - **Plausibly**: 'Aqlga sig'adigan darajada, ehtimolki'.\n     *Genetic factors could plausibly account for the divergent recovery trajectories of the patients.*\n   - **Presumably**: 'Katta ehtimol bilan, taxmin qilinishicha'.\n     *The minister's sudden resignation was presumably triggered by the impending corruption leak.*\n   - **Conceivably**: 'Tasavvur qilish mumkinki (eng kam ehtimol bo'lsa ham)'.\n     *Quantum computing could conceivably render modern cryptographic protocols obsolete within a decade.*\n\n3. **Mutlaq Haqiqat va Qat'iyat (Epistemic Certainty)**:\n   - **Incontestably / Indisputably**: 'Shubhasiz, munozarasiz ravishda'.\n     *Global industrialisation has indisputably elevated greenhouse gas concentrations.*\n\n⚠️ **O'zbek o'rganuvchilari uchun xavfli tuzoqlar (Common Pitfalls)**:\n- ❌ *He allegedly did the crime, so he must go to jail.* ('Allegedly' ayblov isbotlanmaganini bildiradi; 'must go to jail' kabi qat'iy hukm bilan ziddiyatga kirishadi).\n  ✅ *He allegedly committed the crime, but the trial remains ongoing.*\n- ❌ *The data ostensibly proves the hypothesis.* ('Ostensibly' shubha bildiradi, 'proves' esa mutlaq isbot; ular bir-birini inkor etadi).\n  ✅ *The data tentatively substantiates the hypothesis.*\n\n🎯 **IELTS Speaking & Writing Band 8.5 Masterclass**:\n- **Prompt**: Task 2: To what extent does artificial intelligence threaten white-collar employment?\n- **Model Answer (Band 8.0-8.5)**: Automation ostensibly targets mundane repetitive clerical chores; nevertheless, generative neural architectures could conceivably encroach upon analytical and creative spheres. While proponents purport that job creation will outpace displacement, labor economists plausibly argue that structural unemployment will intensify during the transitional decade.\n- **Discourse Markers**: ostensibly targets, could conceivably encroach, While proponents purport that, plausibly argue\n- **Examiner / Intonation Tip**: Modal ravishlarni gapning yordamchi va asosiy fe'li o'rtasiga joylashtiring (*could conceivably encroach*, *has purportedly ceased*). Bu sizning nutqingizga tug'ma ingliz olimlariga xos ritm beradi.",
                     "vocabulary": [
                         {
                             "term": "Ostensibly",
-                            "reading": "/ɒsˈten.sə.bli/",
-                            "meaning": "Zohiran / Sirtdan qaraganda",
-                            "exampleSentence": "The meeting was ostensibly about budgets, but leadership changes were discussed.",
-                            "exampleTranslation": "Majlis zohiran byudjet haqida edi, ammo rahbarlik o'zgarishlari muhokama qilindi."
+                            "reading": "/ɒsˈten.sɪ.bli/",
+                            "meaning": "Zohiran, sirtdan qaraganda (ammo tub mohiyati boshqacha bo'lishi mumkin)",
+                            "exampleSentence": "The diplomat visited the border ostensibly on a humanitarian inspection, but covert intelligence gathering was suspected.",
+                            "exampleTranslation": "Diplomat chegaraga zohiran gumanitar tekshiruv uchun borgan bo'lsa-da, yashirin razvedka ma'lumotlari yig'ish gumon qilingan edi."
+                        },
+                        {
+                            "term": "Purportedly",
+                            "reading": "/pəˈpɔː.tɪd.li/",
+                            "meaning": "Da'vo qilinishicha, mish-mishlarga ko'ra (qat'iy isbotsiz)",
+                            "exampleSentence": "The confidential dossier was purportedly leaked by an aggrieved whistleblower.",
+                            "exampleTranslation": "Maxfiy dosye da'vo qilinishicha norozi ma'lumot yetkazuvchi (whistleblower) tomonidan sizdirilgan."
                         },
                         {
                             "term": "Plausibly",
                             "reading": "/ˈplɔː.zə.bli/",
-                            "meaning": "Ishonarli tarzda / Mantiqan mumkin bo'lgan holda",
-                            "exampleSentence": "This can plausibly explain the discrepancy.",
-                            "exampleTranslation": "Bu tafovutni ishonarli tarzda tushuntirishi mumkin."
+                            "meaning": "Aqlga sig'adigan darajada, mantiqan ishonarli tarzda",
+                            "exampleSentence": "Biologists argue that climate warming could plausibly induce premature ecological migration.",
+                            "exampleTranslation": "Biologlar iqlim isishi aqlga sig'adigan darajada erta ekologik migratsiyani keltirib chiqarishi mumkinligini ta'kidlaydilar."
                         },
                         {
-                            "term": "Exemplify",
-                            "reading": "/ɪɡˈzem.plɪ.faɪ/",
-                            "meaning": "Yorqin misol boʻlmoq",
-                            "exampleSentence": "Recent discoveries exemplify the power of modern physics.",
-                            "exampleTranslation": "Soʻnggi kashfiyotlar zamonaviy fizika qudratini yaqqol namoyon etadi."
+                            "term": "Conceivably",
+                            "reading": "/kənˈsiː.və.bli/",
+                            "meaning": "Tasavvur qilish mumkinki, ehtimoldan xoli emas",
+                            "exampleSentence": "A sudden escalation in tariffs could conceivably trigger a protracted international trade war.",
+                            "exampleTranslation": "Bojlarning to'satdan oshirilishi cho'zilgan xalqaro savdo urushini keltirib chiqarishi tasavvurdan yiroq emas."
+                        },
+                        {
+                            "term": "Incontestably",
+                            "reading": "/ˌɪn.kənˈtes.tə.bli/",
+                            "meaning": "Shubhasiz, e'tirozsiz ravishda",
+                            "exampleSentence": "Vaccination campaigns have incontestably reduced infant mortality rates globally.",
+                            "exampleTranslation": "Vaksina kampaniyalari global miqyosda chaqaloqlar o'limi darajasini e'tirozsiz ravishda kamaytirdi."
+                        },
+                        {
+                            "term": "Tentatively",
+                            "reading": "/ˈten.tə.tɪv.li/",
+                            "meaning": "Dastlabki sinov tariqasida, ehtiyotkorlik bilan",
+                            "exampleSentence": "The archaeological excavation team tentatively dated the pottery shards to the Bronze Age.",
+                            "exampleTranslation": "Arxeologik qazishma guruhi sopol parchalarini dastlabki ehtiyotkorlik bilan Bronza davriga tegishli deb baholadi."
+                        },
+                        {
+                            "term": "Encroach",
+                            "reading": "/ɪnˈkrəʊtʃ/",
+                            "meaning": "Birovning hududi yoki huquqiga noqonuniy bostirib kirmoq, tajovuz qilmoq",
+                            "exampleSentence": "Urban sprawling development projects continue to encroach upon sovereign indigenous reserves.",
+                            "exampleTranslation": "Shahar kengayishi bo'yicha qurilish loyihalari mahalliy xalqlarning qo'riqxona yerlariga tajovuz qilishda davom etmoqda."
+                        },
+                        {
+                            "term": "Substantiate",
+                            "reading": "/səbˈstæn.ʃi.eɪt/",
+                            "meaning": "Dalillar bilan asoslamoq, isbotlamoq",
+                            "exampleSentence": "Without rigorous statistical regressions to substantiate the hypothesis, the thesis remains speculative.",
+                            "exampleTranslation": "Farazni tasdiqlovchi qat'iy statistik regressiyalarsiz dissertatsiya taxminiyligicha qolaveradi."
                         }
                     ],
-                    "grammarRules": [
-                        {
-                            "pattern": "Nuance in Hedging: Ostensibly, Purportedly, Plausibly",
-                            "meaning": "Dalillarning ishonchlilik darajasini yuqori aniqlikdagi ravishlar bilan ifodalash.",
-                            "usageNotes": "Ostensibly — sirtdan qaraganda / ko'rinishidan (lekin aslida boshqacha bo'lishi mumkin). Purportedly — da'vo qilinishicha (isbotlanmagan). Plausibly — aqlga sig'adigan darajada / ehtimolki.",
-                            "examples": [
-                                {
-                                    "sentence": "The meeting was ostensibly about budgets, but leadership changes were discussed.",
-                                    "translation": "Majlis zohiran byudjet haqida edi, ammo rahbarlik o'zgarishlari muhokama qilindi."
-                                },
-                                {
-                                    "sentence": "This can plausibly explain the discrepancy.",
-                                    "translation": "Bu tafovutni ishonarli tarzda tushuntirishi mumkin."
-                                }
-                            ]
-                        }
+                    "keyPoints": [
+                        "Hedging distinguishes objective factual certainty from probabilistic scientific conjecture.",
+                        "Use 'ostensibly' to signal discrepancy between outward appearance and underlying motivation.",
+                        "Use 'purportedly' to report unverified assertions without endorsing their truth value.",
+                        "Syntactic position: Adverbs of stance typically sit between the auxiliary verb and the main verb (e.g. 'could plausibly explain')."
                     ]
                 }
             },
             {
                 "id": "en-c1-u2-l1-s2",
-                "title": "Mashq",
+                "title": "Hedging & Stance Amaliyoti",
                 "type": "practice",
-                "estimatedMinutes": 5,
+                "estimatedMinutes": 6,
                 "practiceData": {
-                    "instructions": "To'g'ri ravishni tanlang.",
+                    "instructions": "Gapdagi epistemic ma'no va muallif pozitsiyasiga mos eng aniq modal ravishni tanlang.",
                     "exercises": [
                         {
                             "id": "en-c1-u2-l1-e1",
                             "type": "multiple-choice",
-                            "prompt": "\"The document was _______ authored by the minister, though experts doubt its authenticity.\"",
+                            "prompt": "Choose the correct adverb: 'The suspect was _______ located in Geneva at the time of the heist, though Interpol has verified no flight records.'",
                             "options": [
-                                "plausibly",
-                                "undoubtedly",
+                                "purportedly",
+                                "incontestably",
                                 "certainly",
-                                "purportedly"
+                                "irrefutably"
                             ],
-                            "correctAnswer": 3,
-                            "explanation": "Purportedly (da'vo qilinishicha, lekin shubhali)."
+                            "correctAnswer": 0,
+                            "explanation": "Rasmiy hujjatlarda tasdiqlanmagan, da'vo qilingan joylashuv haqida gap ketganda 'purportedly' (da'vo qilinishicha) ishlatiladi."
                         },
                         {
-                            "id": "en-c1-u2-l1-ex-2",
+                            "id": "en-c1-u2-l1-e2",
                             "type": "multiple-choice",
-                            "prompt": "Choose the correct word to complete the sentence: \"This can plausibly explain the discrepancy.\"",
+                            "prompt": "Select the adverb indicating a superficial facade that masks underlying reality: 'The corporate restructuring was _______ conducted to foster transparency, but culminated in mass layoffs.'",
                             "options": [
-                                "doubt",
-                                "Plausibly",
-                                "delay",
-                                "reluctance"
+                                "ostensibly",
+                                "invariably",
+                                "undeniably",
+                                "decisively"
+                            ],
+                            "correctAnswer": 0,
+                            "explanation": "'Ostensibly' sirtdan qaraganda ijobiy ko'rsatilgan, biroq aslida salbiy oqibat bilan yakunlangan fasadni bildiradi."
+                        },
+                        {
+                            "id": "en-c1-u2-l1-e3",
+                            "type": "multiple-choice",
+                            "prompt": "Which sentence demonstrates the highest degree of cautious scientific hedging?",
+                            "options": [
+                                "Our experiment undeniably invalidates all previous aerodynamic theories.",
+                                "The preliminary simulation results tentatively suggest a subtle thermodynamic anomaly.",
+                                "Everyone can see that the thermodynamics laws were completely false.",
+                                "The findings prove without question that current aviation is defective."
                             ],
                             "correctAnswer": 1,
-                            "explanation": "\"Plausibly\" (Ishonarli tarzda / Mantiqan mumkin bo'lgan holda) fits the context appropriately."
+                            "explanation": "'Tentatively suggest a subtle anomaly' iborasi akademik ehtiyotkorlikning eng nafis darajasidir."
+                        },
+                        {
+                            "id": "en-c1-u2-l1-e4",
+                            "type": "multiple-choice",
+                            "prompt": "Where should the stance adverb be placed: 'Renewable energy integration could [1] stabilize [2] grid fluctuations [3] in metropolitan sectors [4]?'",
+                            "options": [
+                                "Position [1] (between modal auxiliary and main verb)",
+                                "Position [2]",
+                                "Position [3]",
+                                "Position [4]"
+                            ],
+                            "correctAnswer": 0,
+                            "explanation": "Akademik ingliz tilida ravish yordamchi fe'l va asosiy fe'l o'rtasida turadi: 'could plausibly stabilize'."
+                        },
+                        {
+                            "id": "en-c1-u2-l1-e5",
+                            "type": "multiple-choice",
+                            "prompt": "Identify the word that asserts absolute, undisputed certainty:",
+                            "options": [
+                                "Plausibly",
+                                "Presumably",
+                                "Incontestably",
+                                "Conceivably"
+                            ],
+                            "correctAnswer": 2,
+                            "explanation": "'Incontestably' — shubhasiz, hech qanday e'tirozga o'rin qoldirmaydigan mutlaq isbotni bildiradi."
                         }
                     ]
                 }
             },
             {
                 "id": "en-c1-u2-l1-s3",
-                "title": "Test",
+                "title": "Hedging & Stance Baholash Testi",
                 "type": "test",
-                "estimatedMinutes": 5,
+                "estimatedMinutes": 7,
                 "testData": {
-                    "instructions": "Savollarga javob bering.",
-                    "passingScorePercentage": 75,
+                    "instructions": "C1 darajasidagi epistemic modalik va ilmiy ehtiyotkorlik mezonlari bo'yicha test.",
+                    "passingScorePercentage": 80,
                     "questions": [
                         {
                             "id": "en-c1-u2-l1-q1",
-                            "question": "\"The reform was ostensibly aimed at reducing bureaucracy, but in reality increased costs.\" What does \"ostensibly\" imply?",
+                            "question": "In academic writing, what is the primary communicative purpose of 'hedging'?",
                             "options": [
-                                "100% verified truth",
-                                "A complete secret",
-                                "An accidental occurrence",
-                                "Appearing as such on the surface, but with a different underlying reality"
+                                "To conceal that the researcher conducted no actual research.",
+                                "To calibrate the degree of certainty to match available empirical evidence and avoid dogmatic overstatement.",
+                                "To artificially lengthen the word count of academic manuscripts.",
+                                "To confuse peer reviewers with ambiguous vocabulary."
                             ],
-                            "correctAnswerIndex": 3,
-                            "explanation": "Appearing as such on the surface."
+                            "correctAnswerIndex": 1,
+                            "explanation": "Hedging tadqiqot xulosalarini dalillarga mutanosib ravishda ehtiyotkorlik bilan taqdim etish va asossiz mutlaqlikdan qochish uchun xizmat qiladi."
                         },
                         {
                             "id": "en-c1-u2-l1-q2",
-                            "question": "These archaeological artifacts could _______ belong to the Bronze Age.",
+                            "question": "'The CEO _______ stepped down for personal reasons, yet insider transactions imply imminent regulatory sanctions.' Choose the best word:",
                             "options": [
-                                "ostensible",
-                                "doubtingly",
-                                "plausibly",
-                                "purportedlyly"
+                                "ostensibly",
+                                "definitely",
+                                "indubitably",
+                                "authentically"
                             ],
-                            "correctAnswerIndex": 2,
-                            "explanation": "Plausibly belong."
+                            "correctAnswerIndex": 0,
+                            "explanation": "Sirtdan qaraganda shaxsiy sabablar deb ko'rsatilgani bois 'ostensibly' eng to'g'ri so'z."
                         },
                         {
                             "id": "en-c1-u2-l1-q3",
-                            "question": "Which adverb casts the strongest doubt on a claim's veracity?",
+                            "question": "Which statement expresses the lowest level of certainty while remaining academically plausible?",
                             "options": [
-                                "Categorically",
-                                "Allegedly / Purportedly",
-                                "Undeniably",
-                                "Conclusively"
+                                "The archaeological artifacts belong unquestionably to the Ming dynasty.",
+                                "The findings undeniably point to tectonic shifts.",
+                                "The observed variations could conceivably be attributed to calibration discrepancies.",
+                                "The data establishes beyond any shadow of doubt that the treatment works."
                             ],
-                            "correctAnswerIndex": 1,
-                            "explanation": "Allegedly / Purportedly."
+                            "correctAnswerIndex": 2,
+                            "explanation": "'Could conceivably be attributed to...' — tasavvur qilish mumkinki deb ehtiyotkorlik bilan bildirilgan eng past, ammo aqlga sig'adigan ehtimollikdir."
                         },
                         {
                             "id": "en-c1-u2-l1-q4",
-                            "question": "Categorically denied means:",
+                            "question": "What nuance does 'purportedly' introduce into a sentence?",
                             "options": [
-                                "Completely and unequivocally denied",
-                                "Maybe denied",
-                                "Partially accepted",
-                                "Whispered softly"
+                                "It indicates that the author has mathematically verified the statement.",
+                                "It signals that the claim has been made by someone else, but remains unverified or open to skepticism.",
+                                "It shows that the event occurred in the remote geological past.",
+                                "It marks an informal conversational digression."
                             ],
-                            "correctAnswerIndex": 0,
-                            "explanation": "Completely and unequivocally denied."
+                            "correctAnswerIndex": 1,
+                            "explanation": "'Purportedly' da'vo qilinayotgan fikr boshqa manbadan chiqqani va muallif uni tasdiqlash majburiyatini olmayotganini bildiradi."
+                        },
+                        {
+                            "id": "en-c1-u2-l1-q5",
+                            "question": "Find the sentence with an epistemic inconsistency:",
+                            "options": [
+                                "The theory is undeniably substantiated by extensive randomized trials.",
+                                "The suspects allegedly committed espionage, and their guilt was proven without any trial.",
+                                "The climate shift could plausibly accelerate glacial retreat.",
+                                "The document purportedly contains confidential cabinet minutes."
+                            ],
+                            "correctAnswerIndex": 1,
+                            "explanation": "'Allegedly' (gumon qilinishicha) bilan 'guilt was proven without trial' (aybi suddan tashqari isbotlandi) mantiqan bir-biriga zid."
                         }
                     ]
                 }
@@ -1357,149 +1432,228 @@ export const ENGLISH_C1_LESSONS: Lesson[] = [
         "level": "C1",
         "lessonNumber": 2,
         "title": "High-Register Idiomatic Mastery & Phrasal Verbs",
-        "description": "C1 darajasidagi adabiy iboralar: \"Double-edged sword\", \"Tip of the iceberg\", \"Steer clear of\".",
-        "estimatedDurationMinutes": 15,
-        "icon": "💡",
+        "description": "IELTS Band 8.5+ va professional diplomatiyada qo'llaniladigan oliy registrli iboralar va ko'p ma'noli predlogli fe'llar.",
+        "estimatedDurationMinutes": 20,
+        "icon": "💎",
         "steps": [
             {
                 "id": "en-c1-u2-l2-s1",
-                "title": "Yuqori Darajadagi Idiomalar",
+                "title": "High-Register Idioms & Advanced Multi-Word Verbs",
                 "type": "learn",
-                "estimatedMinutes": 5,
+                "estimatedMinutes": 7,
                 "learnData": {
-                    "title": "Sophisticated Idiomatic Expressions",
-                    "explanation": "A double-edged sword (ikki tomoni o'tkir tig' / ham foydasi ham zarari bor narsa), Tip of the iceberg (aysbergning uchi), Steer clear of (ehtiyotkorlik bilan chetlab o'tmoq), Fall short of expectations (kutilgandek chiqmaslik).",
+                    "title": "High-Register Idiomaticity and Academic Multi-Word Verbs",
+                    "explanation": "Ko'plab o'rganuvchilar 'idioms' deganda faqat so'zlashuvdagi sodda iboralarni (*piece of cake, rain cats and dogs*) tushunadilar. Biroq IELTS Band 8.5+ va C1 darajasida baholovchilar mutlaqo boshqa toifadagi — adabiy, siyosiy va ilmiy maqolalarda qo'llaniladigan **high-register idioms** va **academic phrasal verbs**ni qidiradilar.\n\n1. **High-Register Idiomatic Expressions**:\n   - **A double-edged sword**: Ikki tig'li shamshir (bir vaqtning o'zida ham katta foyda, ham jiddiy xavf keltiruvchi hodisa).\n     *Artificial intelligence is a double-edged sword: it amplifies productivity while exacerbating labor redundancy.*\n   - **Pay lip service to**: Quruq so'zda ma'qullamoq (amalda esa hech narsa qilmaslik).\n     *Many corporations pay lip service to ecological preservation while expanding fossil-fuel operations.*\n   - **The tip of the iceberg**: Aysbergning uchi (ko'rinib turgan kichik qismi, asl muammo esa ancha chuqurroq).\n     *The reported accounting fraud represents merely the tip of the iceberg.*\n   - **A catalyst for change**: O'zgarishlar katalizatori (jarayonni tezlashtiruvchi omil).\n     *The youth employment crisis served as a catalyst for sweeping educational reform.*\n\n2. **Sophisticated Multi-Word Verbs**:\n   - **Hinge upon / on**: ...ga bog'liq bo'lmoq, ...ga tayanmoq (to depend critically on).\n     *The success of the peace accord hinges upon the demilitarization of the disputed enclave.*\n   - **Stem from**: ...dan kelib chiqmoq (to originate or derive from).\n     *Current macroeconomic instability stems from decades of reckless fiscal expenditure.*\n   - **Gloss over**: Yuzaki o'tib ketmoq, xatoni bekitishga urinmoq (to treat lightly or cover up).\n     *The official audit deliberately glossed over systemic regulatory failures.*\n   - **Flesh out**: To'ldirmoq, tafsilotlar bilan boyitmoq (to provide detailed substance to an outline).\n     *The think tank must flesh out the legislative framework before submitting the bill to parliament.*\n\n⚠️ **O'zbek o'rganuvchilari uchun xavfli tuzoqlar (Common Pitfalls)**:\n- ❌ *This hinges in the government's budget.* ('Hinge' faqat 'upon' yoki 'on' predlogini oladi; 'in' xato).\n  ✅ *This hinges upon the government's budget.*\n- ❌ *We must open our eyes to this problem.* (O'zbekchadan to'g'ridan-to'g'ri ko'chirilgan so'zma-so'z ibora; o'rniga *we must confront this systemic crisis* yoki *shed light on this dilemma* ishlatiladi).\n- ❌ *It is a knife with two sides.* (So'zma-so'z tarjima xatosi).\n  ✅ *It is a double-edged sword.*\n\n🎯 **IELTS Speaking & Writing Band 8.5 Masterclass**:\n- **Prompt**: Speaking Part 3: Why do many corporate sustainability pledges fail to produce real change?\n- **Model Answer (Band 8.0-8.5)**: Regrettably, a substantial proportion of multinational conglomerates merely pay lip service to decarbonization. Their green public relations campaigns deliberately gloss over carbon-intensive supply chain operations. Unless legislative accountability mechanisms are fleshed out with punitive tariffs, environmental declarations will remain toothless.\n- **Discourse Markers**: merely pay lip service to, deliberately gloss over, fleshed out with, remain toothless\n- **Examiner / Intonation Tip**: Idiomalarni gapirayotganda go'yo 'bitta qotib qolgan formulani yodlab olgandek' sun'iy to'xtab aytmang. Ular tabiiy intonatsion oqim ichida, xuddi oddiy leksik birlikdek ravon chiqishi kerak.",
                     "vocabulary": [
                         {
+                            "term": "Hinge upon",
+                            "reading": "/hɪndʒ əˈpɒn/",
+                            "meaning": "...ga bog'liq bo'lmoq, ...ning ustiga qurilgan bo'lmoq",
+                            "exampleSentence": "The ratification of the cross-border energy pipeline hinges upon international maritime concessions.",
+                            "exampleTranslation": "Chegara osha energiya quvurini ratifikatsiya qilish xalqaro dengiz hududi bo'yicha yon berishlarga bog'liqdir."
+                        },
+                        {
+                            "term": "Stem from",
+                            "reading": "/stem frɒm/",
+                            "meaning": "...dan kelib chiqmoq, tomir otmoq",
+                            "exampleSentence": "Widespread social disillusionment stems from growing wealth polarization.",
+                            "exampleTranslation": "Keng tarqalgan ijtimoiy umidsizlik boylikning tobora qutblanishidan kelib chiqadi."
+                        },
+                        {
+                            "term": "Gloss over",
+                            "reading": "/ɡlɒs ˈəʊ.vər/",
+                            "meaning": "Yuzaki o'tib ketmoq, ahamiyatsizdek ko'rsatmoq",
+                            "exampleSentence": "The university's annual report glossed over the decline in student satisfaction metrics.",
+                            "exampleTranslation": "Universitetning yillik hisobotida talabalar qoniqish ko'rsatkichlarining pasayishi yuzaki o'tib ketildi."
+                        },
+                        {
+                            "term": "Flesh out",
+                            "reading": "/fleʃ aʊt/",
+                            "meaning": "Tafsilotlar bilan boyitmoq, to'laqonli shaklga keltirmoq",
+                            "exampleSentence": "The minister sketched a visionary strategy, but civil servants must now flesh out the concrete implementation phases.",
+                            "exampleTranslation": "Vazir istiqbolli strategiyani umumiy chizib berdi, ammo fuqarolik xizmatchilari endi aniq amalga oshirish bosqichlarini to'ldirishlari shart."
+                        },
+                        {
+                            "term": "Pay lip service to",
+                            "reading": "/peɪ lɪp ˈsɜː.vɪs tuː/",
+                            "meaning": "Quruq so'zda qo'llab-quvvatlamoq (amalda hech narsa qilmasdan)",
+                            "exampleSentence": "World leaders frequently pay lip service to climate targets while maintaining fossil fuel subsidies.",
+                            "exampleTranslation": "Dunyo yetakchilari qazilma yoqilg'i subsidiyalarini saqlab qolgan holda, iqlim maqsadlarini tez-tez quruq so'zda ma'qullaydilar."
+                        },
+                        {
                             "term": "Double-edged sword",
-                            "reading": "/ˈdʌb.əl ˌedʒd sɔːd/",
-                            "meaning": "Ikki tomonlama oqibatga ega narsa",
-                            "exampleSentence": "Rapid automation is a double-edged sword.",
-                            "exampleTranslation": "Tezkor avtomatlashtirish ikki tomoni o'tkir tig'dir."
+                            "reading": "/ˌdʌb.əl.edʒd ˈsɔːd/",
+                            "meaning": "Ikki tig'li shamshir (ham foydali, ham zararli hodisa)",
+                            "exampleSentence": "Urbanization is a double-edged sword: it unlocks economic specialization but strains municipal infrastructure.",
+                            "exampleTranslation": "Urbanizatsiya ikki tig'li shamshirdir: u iqtisodiy ixtisoslashuvni ochib beradi, ammo shahar infratuzilmasiga bosim o'tkazadi."
                         },
                         {
-                            "term": "Exemplify",
-                            "reading": "/ɪɡˈzem.plɪ.faɪ/",
-                            "meaning": "Yorqin misol boʻlmoq",
-                            "exampleSentence": "Recent discoveries exemplify the power of modern physics.",
-                            "exampleTranslation": "Soʻnggi kashfiyotlar zamonaviy fizika qudratini yaqqol namoyon etadi."
+                            "term": "Catalyst",
+                            "reading": "/ˈkæt.əl.ɪst/",
+                            "meaning": "Katalizator, jarayonni jadallashtiruvchi vosita/shaxs",
+                            "exampleSentence": "The widespread rollout of broadband internet acted as a potent catalyst for rural commerce.",
+                            "exampleTranslation": "Keng polosali internetning keng tatbiq etilishi qishloq savdosi uchun qudratli katalizator bo'lib xizmat qildi."
                         },
                         {
-                            "term": "Nominalisation",
-                            "reading": "/ˌnɒmɪnəlaɪˈzeɪʃən/",
-                            "meaning": "Feʼlni otga aylantirish (akademik uslub)",
-                            "exampleSentence": "Nominalisation lends academic weight to scientific discourse.",
-                            "exampleTranslation": "Nominalizatsiya ilmiy matnga akademik salmoq beradi."
+                            "term": "Watershed moment",
+                            "reading": "/ˈwɔː.tə.ʃed ˈməʊ.mənt/",
+                            "meaning": "Tarixiy burilish nuqtasi, davr ajratuvchi lahza",
+                            "exampleSentence": "The signing of the Paris Agreement marked a watershed moment in multilateral climate diplomacy.",
+                            "exampleTranslation": "Parij kelishuvining imzolanishi ko'p tomonlama iqlim diplomatiyasida tarixiy burilish nuqtasini belgilab berdi."
                         }
                     ],
-                    "grammarRules": [
-                        {
-                            "pattern": "High-Register Idiomatic Mastery & Phrasal Verbs",
-                            "meaning": "C1 darajasidagi adabiy iboralar: \"Double-edged sword\", \"Tip of the iceberg\", \"Steer clear of\".",
-                            "usageNotes": "A double-edged sword (ikki tomoni o'tkir tig' / ham foydasi ham zarari bor narsa), Tip of the iceberg (aysbergning uchi), Steer clear of (ehtiyotkorlik bilan chetlab o'tmoq), Fall short of expectations (kutilgandek chiqmaslik).",
-                            "examples": [
-                                {
-                                    "sentence": "Rapid automation is a double-edged sword.",
-                                    "translation": "Tezkor avtomatlashtirish ikki tomoni o'tkir tig'dir."
-                                }
-                            ]
-                        }
+                    "keyPoints": [
+                        "High-register idioms are grounded in rhetoric, history, and philosophical metaphors rather than casual slang.",
+                        "Prepositional accuracy in multi-word verbs is critical: 'hinge upon', 'stem from', 'gloss over'.",
+                        "Idioms like 'double-edged sword' and 'catalyst for change' enrich argumentative essays and IELTS Part 3 speaking.",
+                        "Avoid verbatim L1 translation of Uzbek metaphors: use conventional academic English idioms."
                     ]
                 }
             },
             {
                 "id": "en-c1-u2-l2-s2",
-                "title": "Mashq",
+                "title": "High-Register Idioms Amaliyoti",
                 "type": "practice",
-                "estimatedMinutes": 5,
+                "estimatedMinutes": 6,
                 "practiceData": {
-                    "instructions": "To'g'ri idiomani tanlang.",
+                    "instructions": "Gapdagi kontekstga eng mos keluvchi yuqori registrli ibora yoki predlogli fe'lni tanlang.",
                     "exercises": [
                         {
                             "id": "en-c1-u2-l2-e1",
                             "type": "multiple-choice",
-                            "prompt": "\"The quarterly profits _______ of Wall Street expectations by 5%.\"",
+                            "prompt": "Fill in the blank: 'The ultimate viability of the startup _______ securing venture capital before the quarter concludes.'",
                             "options": [
-                                "missed long",
-                                "dropped short",
-                                "fell short",
-                                "lost edge"
-                            ],
-                            "correctAnswer": 2,
-                            "explanation": "Fell short of expectations."
-                        },
-                        {
-                            "id": "en-c1-u2-l2-ex-2",
-                            "type": "multiple-choice",
-                            "prompt": "Choose the correct word to complete the sentence: \"Recent discoveries exemplify the power of modern physics.\"",
-                            "options": [
-                                "Exemplify",
-                                "reluctance",
-                                "doubt",
-                                "delay"
+                                "hinges upon",
+                                "glosses over",
+                                "fleshes out",
+                                "stems about"
                             ],
                             "correctAnswer": 0,
-                            "explanation": "\"Exemplify\" (Yorqin misol boʻlmoq) fits the context appropriately."
+                            "explanation": "'Hinges upon' — ...ga bog'liq bo'lmoq (to depend critically on) ma'nosini beradi."
+                        },
+                        {
+                            "id": "en-c1-u2-l2-e2",
+                            "type": "multiple-choice",
+                            "prompt": "Choose the expression that means 'supporting something with words only, without taking meaningful action':",
+                            "options": [
+                                "To turn a blind eye",
+                                "To pay lip service to",
+                                "To break the ice",
+                                "To face the music"
+                            ],
+                            "correctAnswer": 1,
+                            "explanation": "'Pay lip service to' — quruq so'zda qo'llab-quvvatlab, amalda befarq qolishni bildiradi."
+                        },
+                        {
+                            "id": "en-c1-u2-l2-e3",
+                            "type": "multiple-choice",
+                            "prompt": "Select the correct academic phrasal verb: 'Critics alleged that the government's report deliberately _______ severe ecological repercussions.'",
+                            "options": [
+                                "glossed over",
+                                "stemmed from",
+                                "hinged on",
+                                "fleshed out"
+                            ],
+                            "correctAnswer": 0,
+                            "explanation": "'Glossed over' — jiddiy xato yoki zararni ahamiyatsiz qilib ko'rsatish, yuzaki o'tib ketish deganidir."
+                        },
+                        {
+                            "id": "en-c1-u2-l2-e4",
+                            "type": "multiple-choice",
+                            "prompt": "Identify the proper metaphorical idiom: 'Rapid automation is _______: while it boosts GDP, it displaces low-skilled laborers.'",
+                            "options": [
+                                "a two-side knife",
+                                "a double-edged sword",
+                                "a coin with two heads",
+                                "a double-sided coin"
+                            ],
+                            "correctAnswer": 1,
+                            "explanation": "Ingliz tilidagi barqaror adabiy metafora 'a double-edged sword' (ikki tig'li shamshir) hisoblanadi."
+                        },
+                        {
+                            "id": "en-c1-u2-l2-e5",
+                            "type": "multiple-choice",
+                            "prompt": "Complete: 'The preliminary memorandum outlines our vision, but legal consultants must _______ the specific contractual provisions.'",
+                            "options": [
+                                "flesh out",
+                                "stem from",
+                                "pay lip service",
+                                "gloss over"
+                            ],
+                            "correctAnswer": 0,
+                            "explanation": "'Flesh out' — umumiy eskizga batafsil moddalar va tafsilotlar qo'shib to'ldirishni anglatadi."
                         }
                     ]
                 }
             },
             {
                 "id": "en-c1-u2-l2-s3",
-                "title": "Test",
+                "title": "High-Register Idioms Baholash Testi",
                 "type": "test",
-                "estimatedMinutes": 5,
+                "estimatedMinutes": 7,
                 "testData": {
-                    "instructions": "Savollarga javob bering.",
-                    "passingScorePercentage": 75,
+                    "instructions": "C1 darajasidagi iboralar va akademik fe'llar bo'yicha imtihon.",
+                    "passingScorePercentage": 80,
                     "questions": [
                         {
                             "id": "en-c1-u2-l2-q1",
-                            "question": "To \"steer clear of\" risky investments means to:",
+                            "question": "Which sentence contains an incorrect preposition in a high-register phrasal verb?",
                             "options": [
-                                "Steal them",
-                                "Invest all your money",
-                                "Avoid them intentionally",
-                                "Celebrate them"
+                                "The current geopolitical deadlock stems from unresolved historical grievances.",
+                                "The board's approval hinges in the outcome of the environmental impact assessment.",
+                                "The white paper carefully fleshes out the taxation reforms.",
+                                "The investigation revealed that authorities had glossed over multiple safety violations."
                             ],
-                            "correctAnswerIndex": 2,
-                            "explanation": "Avoid them intentionally."
+                            "correctAnswerIndex": 1,
+                            "explanation": "'Hinges in' xato; to'g'ri shakli 'hinges on' yoki 'hinges upon' bo'lishi lozim."
                         },
                         {
                             "id": "en-c1-u2-l2-q2",
-                            "question": "\"The reported cases are merely the tip of the iceberg.\" What does this imply?",
+                            "question": "What does a 'watershed moment' signify in historical or political contexts?",
                             "options": [
-                                "It is very cold",
-                                "Everything is resolved",
-                                "The problem is melting",
-                                "The vast majority of the problem remains hidden beneath the surface"
+                                "A catastrophic oceanic flood that devastates coastal infrastructure.",
+                                "A critical turning point that permanently alters the course of future developments.",
+                                "A routine bureaucratic meeting held near a lake.",
+                                "A temporary disagreement between cabinet ministers."
                             ],
-                            "correctAnswerIndex": 3,
-                            "explanation": "Vast majority remains hidden."
+                            "correctAnswerIndex": 1,
+                            "explanation": "'A watershed moment' — kelajak yo'nalishini butunlay o'zgartirib yuboradigan tarixiy burilish nuqtasi."
                         },
                         {
                             "id": "en-c1-u2-l2-q3",
-                            "question": "Which idiom means \"to face a very difficult choice between two equally undesirable outcomes\"?",
+                            "question": "'The current financial deficit is not an isolated shock; rather, it _______ long-standing fiscal mismanagement.'",
                             "options": [
-                                "Catch-22 / On the horns of a dilemma",
-                                "Bite the bullet",
-                                "Spill the beans",
-                                "A piece of cake"
+                                "stems from",
+                                "glosses over",
+                                "fleshes out",
+                                "pays lip service to"
                             ],
                             "correctAnswerIndex": 0,
-                            "explanation": "On the horns of a dilemma / Catch-22."
+                            "explanation": "Sababiyatni va o'tmishdagi ildizni ko'rsatish uchun 'stems from' (ildiz otgan, kelib chiqqan) ishlatiladi."
                         },
                         {
                             "id": "en-c1-u2-l2-q4",
-                            "question": "His speech really struck a _______ with the young audience.",
+                            "question": "What is the stylistic danger of using conversational idioms like 'at the end of the day' or 'raining cats and dogs' in C1 academic writing?",
                             "options": [
-                                "wire",
-                                "string",
-                                "chord",
-                                "bell"
+                                "They are grammatically incorrect in all registers.",
+                                "They sound clichéd, informal, and diminish academic objectivity and lexical sophistication.",
+                                "They increase reading difficulty unnecessarily.",
+                                "They are only understood in regional dialects."
                             ],
-                            "correctAnswerIndex": 2,
-                            "explanation": "Strike a chord (qalbini zabt etmoq/hamfikrlik uyg'otmoq)."
+                            "correctAnswerIndex": 1,
+                            "explanation": "Sodda so'zlashuv iboralari akademik matnning nufuzini tushiradi va eskirgan qoliplar (clichés) hisoblanadi."
+                        },
+                        {
+                            "id": "en-c1-u2-l2-q5",
+                            "question": "'The discovery of the CRISPR gene-editing mechanism served as a potent _______ for biotechnology innovation.'",
+                            "options": [
+                                "catalyst",
+                                "bottleneck",
+                                "impediment",
+                                "fallacy"
+                            ],
+                            "correctAnswerIndex": 0,
+                            "explanation": "Innovatsiyani keskin tezlashtiruvchi turtki — 'catalyst' (katalizator) so'zi bilan ifodalanadi."
                         }
                     ]
                 }
@@ -1515,153 +1669,228 @@ export const ENGLISH_C1_LESSONS: Lesson[] = [
         "level": "C1",
         "lessonNumber": 3,
         "title": "Neuroscience, AI & Technological Ethics",
-        "description": "Sun'iy intellekt xavfsizligi, algoritmik tarafkashlik va bioetika terminologiyasi.",
-        "estimatedDurationMinutes": 16,
-        "icon": "🤖",
+        "description": "Neyrobiologiya, sun'iy intellekt etikasi va raqamli transformatsiya bo'yicha Band 8.5+ darajasidagi akademik lug'at boyligi.",
+        "estimatedDurationMinutes": 22,
+        "icon": "🧠",
         "steps": [
             {
                 "id": "en-c1-u2-l3-s1",
-                "title": "AI va Texnologik Etika",
+                "title": "Neuroscience & AI Ethics Lexicon",
                 "type": "learn",
-                "estimatedMinutes": 5,
+                "estimatedMinutes": 8,
                 "learnData": {
-                    "title": "AI Governance & Algorithmic Alignment",
-                    "explanation": "Algorithmic bias (algoritmik tarafkashlik), Alignment problem (sun'iy intellekt maqsadlarini inson qadriyatlariga moslashtirish), Autonomous systems, Existential risk.",
+                    "title": "The Lexicon of Cognitive Science & Technological Ethics",
+                    "explanation": "Bugungi kunda xalqaro akademik konferensiyalar, IELTS Reading 3-qism va Writing Task 2 insholarida eng ko'p uchraydigan mavzu — kognitiv fanlar, neyrobiologiya va sun'iy intellekt etikasi hisoblanadi. Ushbu soha o'ziga xos aniq leksik apparatga ega.\n\nAsosiy tushunchalar:\n1. **Kognitiv fanlar va Neyrobiologiya**:\n   - **Neuroplasticity**: Neyroplastiklik (miyaning yangi tajribalar, ta'lim yoki jarohatdan keyin o'z neyron tarmoqlarini qayta shakllantirish qobiliyati).\n     *Adult neuroplasticity dispels the outdated dogma that cognitive architectures are immutable after adolescence.*\n   - **Cognitive dissonance**: Kognitiv dissonans (insonning o'z e'tiqodlari va amaliy harakatlari o'rtasidagi ichki ziddiyat keltirib chiqaradigan ruhiy noqulaylik).\n     *Consuming ultra-processed goods while advocating wellness induces severe cognitive dissonance.*\n\n2. **Algoritmik va Raqamli Etika**:\n   - **Algorithmic bias**: Algoritmik noxolislik/tarafkashlik (sun'iy intellekt modelining o'qitilgan ma'lumotlaridagi kamsitishlarni takrorlashi va kuchaytirishi).\n     *Facial recognition software frequently exhibits algorithmic bias against underrepresented demographics.*\n   - **Autonomous agency**: Mustaqil iroda/qaror qabul qilish kuchi (inson aralashuvisiz mustaqil qaror chiqarish huquqi yoki qobiliyati).\n     *Granting lethal autonomous weapons systems unconstrained agency violates established international humanitarian law.*\n   - **Surveillance capitalism**: Kuzatuv kapitalizmi (odamlarning xatti-harakatlarini kuzatish va ma'lumotlarni tijoriy maqsadlarda sotishga asoslangan iqtisodiy model).\n     *Digital platforms thrive on surveillance capitalism by monetizing behavioral telemetry.*\n\n3. **Paradigma va Epistemik O'zgarishlar**:\n   - **Paradigm shift**: Ilmiy qarashlarning tubdan o'zgarishi (inqilobiy yangilanish).\n     *The transition from deterministic physics to quantum theory represented a momentous paradigm shift.*\n\n⚠️ **O'zbek o'rganuvchilari uchun xavfli tuzoqlar (Common Pitfalls)**:\n- ❌ *AI is thinking like humans.* (Akademik nuqtai nazardan xato: AI o'ylamaydi, u ma'lumotlarni qayta ishlaydi).\n  ✅ *Neural networks process vast datasets through stochastic statistical modeling, rather than sentient cognition.*\n- ❌ *This machine has moral ethics.* ('Moral' va 'ethics' sinonim bo'lib, ketma-ket qo'llanilishi pleonazm/ortiqchalikdir).\n  ✅ *This system lacks an ethical framework.*\n\n🎯 **IELTS Speaking & Writing Band 8.5 Masterclass**:\n- **Prompt**: Task 2: As artificial intelligence permeates society, to what extent should autonomous algorithms be regulated?\n- **Model Answer (Band 8.0-8.5)**: Unregulated algorithmic deployment threatens to institutionalize systemic bias under the guise of computational neutrality. Because machine learning architectures operate as opaque 'black boxes', autonomous agency in critical sectors—such as judicial sentencing and medical diagnostics—must remain subservient to rigorous ethical oversight. Without legally binding governance, society risks succumbing to unchecked surveillance capitalism.\n- **Discourse Markers**: institutionalize systemic bias under the guise of, operate as opaque black boxes, must remain subservient to, succumbing to unchecked\n- **Examiner / Intonation Tip**: Texnik va falsafiy atamalarni qo'llaganda (masalan: *computational neutrality*, *autonomous agency*) ularni shoshilmasdan, aniq artikulyatsiya bilan talaffuz qiling. Bu sizning mavzuni chuqur tushunishingizni namoyish etadi.",
                     "vocabulary": [
                         {
-                            "term": "Alignment",
-                            "reading": "/əˈlaɪn.mənt/",
-                            "meaning": "Moslik / Bir chiziqqa keltirish",
-                            "exampleSentence": "AI alignment ensures models adhere to human safety.",
-                            "exampleTranslation": "AI alignment modellarning inson xavfsizligiga mos bo'lishini ta'minlaydi."
+                            "term": "Neuroplasticity",
+                            "reading": "/ˌnjʊə.rəʊ.plæsˈtɪs.ə.ti/",
+                            "meaning": "Neyroplastiklik (miya neyronlarining qayta moslashuvchanligi)",
+                            "exampleSentence": "Lifelong language acquisition harnesses the brain's innate neuroplasticity.",
+                            "exampleTranslation": "Umr bo'yi til o'rganish miyaning tug'ma neyroplastiklik qobiliyatidan foydalanadi."
                         },
                         {
-                            "term": "Autonomous",
-                            "reading": "/ɔːˈtɒn.ə.məs/",
-                            "meaning": "Muxtor / Mustaqil boshqariladigan",
-                            "exampleSentence": "Autonomous vehicles navigate complex traffic.",
-                            "exampleTranslation": "Muxtor mashinalar murakkab harakatni boshqaradi."
+                            "term": "Cognitive dissonance",
+                            "reading": "/ˈkɒɡ.nə.tɪv ˈdɪs.ən.əns/",
+                            "meaning": "Kognitiv dissonans (qarashlar va harakatlar o'rtasidagi ichki ruhiy ziddiyat)",
+                            "exampleSentence": "Heavy smokers experience cognitive dissonance when confronted with overwhelming oncology statistics.",
+                            "exampleTranslation": "Ashaddiy chekuvchilar onkologiyaning rad etib bo'lmas statistikalariga duch kelganlarida kognitiv dissonansni boshdan kechiradilar."
                         },
                         {
-                            "term": "Pragmatic",
-                            "reading": "/præɡˈmæt.ɪk/",
-                            "meaning": "Amaliy, pragmatik",
-                            "exampleSentence": "We adopted a pragmatic approach to problem-solving.",
-                            "exampleTranslation": "Biz muammoni hal qilishda amaliy yondashuvni qoʻlladik."
+                            "term": "Algorithmic bias",
+                            "reading": "/ˌæl.ɡəˈrɪð.mɪk ˈbaɪ.əs/",
+                            "meaning": "Algoritmik tarafkashlik (tizimning ma'lum guruhlarga nisbatan adolatsiz qaror chiqarishi)",
+                            "exampleSentence": "Credit scoring engines often perpetuate algorithmic bias by penalizing zip codes with historical minority populations.",
+                            "exampleTranslation": "Kredit ballini hisoblovchi tizimlar tarixan kamchilik yashagan pochta indekslarini cheklash orqali ko'pincha algoritmik tarafkashlikni davom ettiradi."
+                        },
+                        {
+                            "term": "Autonomous agency",
+                            "reading": "/ɔːˈtɒn.ə.məs ˈeɪ.dʒən.si/",
+                            "meaning": "Mustaqil qaror qabul qilish layoqati/irodasi",
+                            "exampleSentence": "Philosophers debate whether generative algorithmic agents can ever possess genuine autonomous agency.",
+                            "exampleTranslation": "Faylasuflar generativ algoritmik vositalar qachondir haqiqiy mustaqil irodaga ega bo'la oladimi yoki yo'qmi deb bahslashmoqdalar."
+                        },
+                        {
+                            "term": "Paradigm shift",
+                            "reading": "/ˈpær.ə.daɪm ʃɪft/",
+                            "meaning": "Paradigma o'zgarishi, qarashlarning tubdan inqilobiy yangilanishi",
+                            "exampleSentence": "The mainstream adoption of deep learning represents a monumental paradigm shift in software architecture.",
+                            "exampleTranslation": "Chuqur o'rganishning (deep learning) ommaviy tatbiq etilishi dasturiy arxitekturada ulkan paradigma o'zgarishini ifodalaydi."
+                        },
+                        {
+                            "term": "Opaque",
+                            "reading": "/əʊˈpeɪk/",
+                            "meaning": "Shaffof bo'lmagan, tushunarsiz, qorong'i",
+                            "exampleSentence": "The decision-making pathways of deep neural models remain notoriously opaque to external auditors.",
+                            "exampleTranslation": "Chuqur neyron modellarining qaror qabul qilish yo'llari tashqi auditorlar uchun o'ta tushunarsizligicha qolmoqda."
+                        },
+                        {
+                            "term": "Sentient",
+                            "reading": "/ˈsen.ti.ənt/",
+                            "meaning": "Hissiyotga va ongga ega, tirik sezuvchi mavjudot",
+                            "exampleSentence": "Silicon-based architectures simulate linguistic fluency without demonstrating sentient awareness.",
+                            "exampleTranslation": "Kremniyga asoslangan tizimlar ongli idrokni namoyon qilmasdan til ravonligini taqlid qiladi."
+                        },
+                        {
+                            "term": "Subservient",
+                            "reading": "/səbˈsɜː.vi.ənt/",
+                            "meaning": "Bo'ysunuvchi, tobe, ikkinchi darajali",
+                            "exampleSentence": "Technological advancement must remain strictly subservient to fundamental human rights.",
+                            "exampleTranslation": "Texnologik taraqqiyot insonning asosiy huquqlariga qat'iy ravishda bo'ysunishi shart."
                         }
                     ],
-                    "grammarRules": [
-                        {
-                            "pattern": "Neuroscience, AI & Technological Ethics",
-                            "meaning": "Sun'iy intellekt xavfsizligi, algoritmik tarafkashlik va bioetika terminologiyasi.",
-                            "usageNotes": "Algorithmic bias (algoritmik tarafkashlik), Alignment problem (sun'iy intellekt maqsadlarini inson qadriyatlariga moslashtirish), Autonomous systems, Existential risk.",
-                            "examples": [
-                                {
-                                    "sentence": "AI alignment ensures models adhere to human safety.",
-                                    "translation": "AI alignment modellarning inson xavfsizligiga mos bo'lishini ta'minlaydi."
-                                },
-                                {
-                                    "sentence": "Autonomous vehicles navigate complex traffic.",
-                                    "translation": "Muxtor mashinalar murakkab harakatni boshqaradi."
-                                }
-                            ]
-                        }
+                    "keyPoints": [
+                        "Distinguish between mechanical data processing and conscious cognitive awareness.",
+                        "Key phrases: 'algorithmic bias', 'surveillance capitalism', 'paradigm shift', 'autonomous agency'.",
+                        "Metaphorical precision: Describe AI models as 'opaque architectures' or 'probabilistic engines' rather than 'thinking beings'.",
+                        "Utilize passive constructions with reporting verbs: 'is hypothesized to facilitate', 'are acknowledged to perpetuate'."
                     ]
                 }
             },
             {
                 "id": "en-c1-u2-l3-s2",
-                "title": "Mashq",
+                "title": "Neuroscience & AI Amaliyoti",
                 "type": "practice",
-                "estimatedMinutes": 5,
+                "estimatedMinutes": 6,
                 "practiceData": {
-                    "instructions": "To'g'ri atamani tanlang.",
+                    "instructions": "Neyrobiologiya va texnologik etika kontekstiga mos eng to'g'ri ilmiy terminni tanlang.",
                     "exercises": [
                         {
                             "id": "en-c1-u2-l3-e1",
                             "type": "multiple-choice",
-                            "prompt": "\"When training datasets contain historical discrimination, the resulting model exhibits _______ bias.\"",
+                            "prompt": "Which biological term refers to the brain's dynamic capacity to reorganize its neural connections in response to learning?",
                             "options": [
-                                "natural",
-                                "algorithmic",
-                                "biological",
-                                "chemical"
+                                "Neuroplasticity",
+                                "Cognitive dissonance",
+                                "Algorithmic bias",
+                                "Epistemic determinism"
                             ],
-                            "correctAnswer": 1,
-                            "explanation": "Algorithmic bias."
+                            "correctAnswer": 0,
+                            "explanation": "'Neuroplasticity' — miyaning o'rganish yoki moslashish jarayonida o'z neyron bog'lanishlarini qayta shakllantirish qobiliyatidir."
                         },
                         {
-                            "id": "en-c1-u2-l3-ex-2",
+                            "id": "en-c1-u2-l3-e2",
                             "type": "multiple-choice",
-                            "prompt": "Choose the correct word to complete the sentence: \"Autonomous vehicles navigate complex traffic.\"",
+                            "prompt": "Complete the sentence: 'Training machine learning models on skewed historical datasets inevitably generates _______.'",
                             "options": [
-                                "doubt",
-                                "reluctance",
-                                "delay",
-                                "Autonomous"
+                                "algorithmic bias",
+                                "autonomous sentience",
+                                "neuroplastic adaptation",
+                                "biological dissonance"
                             ],
-                            "correctAnswer": 3,
-                            "explanation": "\"Autonomous\" (Muxtor / Mustaqil boshqariladigan) fits the context appropriately."
+                            "correctAnswer": 0,
+                            "explanation": "Tarixan noxolis ma'lumotlar bilan o'qitilgan neyron tarmoqlarda 'algorithmic bias' (algoritmik tarafkashlik) yuzaga keladi."
+                        },
+                        {
+                            "id": "en-c1-u2-l3-e3",
+                            "type": "multiple-choice",
+                            "prompt": "What psychological phenomenon occurs when an individual's behaviors directly contradict their core ethical convictions?",
+                            "options": [
+                                "Cognitive dissonance",
+                                "Algorithmic opacity",
+                                "Neural pruning",
+                                "Sentient agency"
+                            ],
+                            "correctAnswer": 0,
+                            "explanation": "'Cognitive dissonance' — shaxsning o'z qadriyatlari va amaliy xatti-harakatlari o'rtasidagi ziddiyatdan kelib chiquvchi ruhiy holatdir."
+                        },
+                        {
+                            "id": "en-c1-u2-l3-e4",
+                            "type": "multiple-choice",
+                            "prompt": "Choose the best collocation: 'The advent of quantum mechanics triggered a profound _______ in twentieth-century theoretical physics.'",
+                            "options": [
+                                "paradigm shift",
+                                "surveillance capitalism",
+                                "cognitive bias",
+                                "autonomous agency"
+                            ],
+                            "correctAnswer": 0,
+                            "explanation": "Ilmiy qarashlarning tubdan o'zgarishi 'a profound paradigm shift' birikmasi bilan ifodalanadi."
+                        },
+                        {
+                            "id": "en-c1-u2-l3-e5",
+                            "type": "multiple-choice",
+                            "prompt": "Why are complex deep neural networks frequently characterized as 'opaque black boxes'?",
+                            "options": [
+                                "Because they are manufactured using black carbon hardware.",
+                                "Because their internal algorithmic decision pathways cannot be easily audited or interpreted by human observers.",
+                                "Because they consume minimal electrical wattage during training.",
+                                "Because they operate exclusively in dark computer servers."
+                            ],
+                            "correctAnswer": 1,
+                            "explanation": "'Opaque black box' atamasi sun'iy intellektning ichki ko'p qatlamli neyronlari qanday qilib yakuniy qarorga kelganini inson tushunishi qiyinligini bildiradi."
                         }
                     ]
                 }
             },
             {
                 "id": "en-c1-u2-l3-s3",
-                "title": "Test",
+                "title": "Neuroscience & AI Baholash Testi",
                 "type": "test",
-                "estimatedMinutes": 6,
+                "estimatedMinutes": 7,
                 "testData": {
-                    "instructions": "Savollarga javob bering.",
-                    "passingScorePercentage": 75,
+                    "instructions": "Texnologiya etikasi va neyrofan terminologiyasi bo'yicha imtihon savollari.",
+                    "passingScorePercentage": 80,
                     "questions": [
                         {
                             "id": "en-c1-u2-l3-q1",
-                            "question": "What is the \"AI Alignment Problem\"?",
+                            "question": "What is the core concern surrounding 'surveillance capitalism' in modern digital societies?",
                             "options": [
-                                "Making robots walk fast",
-                                "The challenge of ensuring artificial intelligence systems pursue human-compatible goals and values",
-                                "Connecting monitors with cables",
-                                "Upgrading computer RAM"
+                                "The government building too many solar energy farms.",
+                                "The pervasive tracking and commercial monetization of individuals' behavioral telemetry without meaningful consent.",
+                                "The requirement that software developers register their patents publicly.",
+                                "The rising price of microchip processors."
                             ],
                             "correctAnswerIndex": 1,
-                            "explanation": "Pursuing human-compatible goals and values."
+                            "explanation": "'Surveillance capitalism' insonlarning xatti-harakatlari va shaxsiy ma'lumotlarini kuzatib, tijoriy maqsadlarda manipulyatsiya qilishga tayanadigan iqtisodiyotni bildiradi."
                         },
                         {
                             "id": "en-c1-u2-l3-q2",
-                            "question": "\"Existential risk\" refers to threats that could:",
+                            "question": "'Technological architectures must remain _______ to human moral oversight, rather than operating with unbridled autonomy.'",
                             "options": [
-                                "Wipe out humanity or permanently curtail human potential",
-                                "Cause a minor rainstorm",
-                                "Break a single phone",
-                                "Cause traffic delays"
+                                "subservient",
+                                "impervious",
+                                "opaque",
+                                "dissonant"
                             ],
                             "correctAnswerIndex": 0,
-                            "explanation": "Wipe out humanity or curtail human potential."
+                            "explanation": "'Subservient' — inson axloqiy nazoratiga bo'ysunuvchi, tobe bo'lishi kerak degan ma'noni beradi."
                         },
                         {
                             "id": "en-c1-u2-l3-q3",
-                            "question": "Bioethics deals with ethical dilemmas arising from:",
+                            "question": "Which of the following describes an entity with 'sentient awareness'?",
                             "options": [
-                                "Cooking recipes",
-                                "Car manufacturing only",
-                                "Astronomical telescope design",
-                                "Advances in biology, medicine and genetic engineering"
+                                "A computer server calculating mathematical equations at high speeds.",
+                                "A living organism capable of subjective feelings, consciousness, and perceptual experiences.",
+                                "An automated thermostat regulating indoor temperatures.",
+                                "A database storing encrypted personal records."
                             ],
-                            "correctAnswerIndex": 3,
-                            "explanation": "Advances in biology, medicine, and genetics."
+                            "correctAnswerIndex": 1,
+                            "explanation": "'Sentient' — subyektiv his-tuyg'ular, ong va idrokka ega bo'lgan tirik mavjudotni anglatadi."
                         },
                         {
                             "id": "en-c1-u2-l3-q4",
-                            "question": "Which term describes an algorithm whose internal decision logic cannot be inspected by humans?",
+                            "question": "Identify the flawed sentence regarding artificial intelligence capabilities:",
                             "options": [
-                                "Black-box model",
-                                "Transparent algorithm",
-                                "Linear flowchart",
-                                "Open-source code"
+                                "Large language models synthesize syntax based on statistical next-token prediction.",
+                                "The generative engine possesses genuine human remorse and emotional empathy.",
+                                "Algorithmic decision-making tools can inadvertently entrench existing disparities.",
+                                "Adult neural pathways exhibit plastic restructuring in response to cognitive stimulation."
+                            ],
+                            "correctAnswerIndex": 1,
+                            "explanation": "Sun'iy intellekt haqiqiy insoniy pushaymonlik (remorse) va empatiyaga ega degan gap ilmiy va falsafiy jihatdan asossiz xatodir."
+                        },
+                        {
+                            "id": "en-c1-u2-l3-q5",
+                            "question": "'The clinical study revealed that bilingualism significantly enhances _______, thereby delaying the onset of degenerative dementia.'",
+                            "options": [
+                                "neuroplasticity",
+                                "algorithmic bias",
+                                "surveillance telemetry",
+                                "ideological dissonance"
                             ],
                             "correctAnswerIndex": 0,
-                            "explanation": "Black-box model."
+                            "explanation": "Ikki tillilik miyaning neyron moslashuvchanligini ('neuroplasticity') kuchaytirib, kognitiv pasayishni sekinlashtiradi."
                         }
                     ]
                 }
@@ -1677,153 +1906,228 @@ export const ENGLISH_C1_LESSONS: Lesson[] = [
         "level": "C1",
         "lessonNumber": 4,
         "title": "Global Governance, Diplomacy & International Law",
-        "description": "Xalqaro shartnomalar, suverenitet, diplomatiya va geosiyosat terminologiyasi.",
-        "estimatedDurationMinutes": 16,
+        "description": "Xalqaro huquq, suverenitet, diplomatiya va global shartnomalar bo'yicha yuqori darajadagi leksik apparat va yuridik sintaksis.",
+        "estimatedDurationMinutes": 20,
         "icon": "🌐",
         "steps": [
             {
                 "id": "en-c1-u2-l4-s1",
-                "title": "Diplomatiya Leksikasi",
+                "title": "Diplomatic Register & Jurisprudence",
                 "type": "learn",
-                "estimatedMinutes": 5,
+                "estimatedMinutes": 7,
                 "learnData": {
-                    "title": "Diplomatic & Geopolitical Lexicon",
-                    "explanation": "Sovereignty (suverenitet), Multilateralism (ko'p tomonlama hamkorlik), Sanctions (sanksiyalar), Treaty ratification (shartnomani ratifikatsiya qilish), Jurisdiction (yurisdiksiya).",
+                    "title": "The Language of Diplomacy, Jurisprudence & Global Governance",
+                    "explanation": "Xalqaro maydondagi muzokaralar, BMT rezolyutsiyalari va global bitimlar o'ta aniq yuridik va diplomatik atamalarga tayanadi. Bitta noto'g'ri so'z butun bir suveren davlat manfaatlariga daxl qilishi mumkin.\n\nAsosiy konseptlar:\n1. **Suverenitet va Huquqiy Maydon**:\n   - **Sovereignty**: Suverenitet (davlatning o'z hududida mustaqil oliy hokimiyat yuritish huquqi).\n     *Unilateral military incursions constitute an egregious violation of sovereign territorial integrity.*\n   - **Jurisdiction**: Yurisdiksiya (sud yoki davlat hokimiyatining qonuniy vakolat doirasi).\n     *The International Criminal Court exercises jurisdiction exclusively over designated statutory offenses.*\n\n2. **Xalqaro Shartnomalar va Majburiyatlar**:\n   - **Ratify**: Ratifikatsiya qilmoq (parlament orqali shartnomaga rasmiy qonuniy kuch bermoq).\n     *Although plenipotentiaries signed the bilateral accord, parliament refused to ratify the fiscal protocols.*\n   - **Multilateralism**: Ko'p tomonlama hamkorlik (uch yoki undan ortiq davlatlarning umumiy qoidalar asosida birgalikda harakat qilishi).\n     *The resurgence of geopolitical isolationism threatens decades of hard-won multilateralism.*\n   - **Non-proliferation**: Qurollarni (ayniqsa yadro qurollarini) tarqatmaslik.\n     *Diplomats convened to reinforce the Treaty on the Non-Proliferation of Nuclear Weapons.*\n\n3. **Huquqiy Nizolar va Jazo Choralari**:\n   - **Sanctions regime**: Sanksiyalar tartibi/rejimi (xalqaro qonunbuzarliklarga qarshi joriy etiladigan iqtisodiy jazo choralari majmui).\n     *Imposing a comprehensive sanctions regime crippled the autocratic government's foreign reserves.*\n   - **Arbitration**: Hakamlik sudi, arbitraj (nizoni betaraf hakamlar orqali hal etish).\n     *Maritime boundary disputes were submitted to binding international arbitration in The Hague.*\n   - **Jurisprudence**: Huquqshunoslik, sud amaliyoti falsafasi.\n     *The tribunal's historic verdict established progressive jurisprudence regarding corporate ecological liability.*\n\n⚠️ **O'zbek o'rganuvchilari uchun xavfli tuzoqlar (Common Pitfalls)**:\n- ❌ *The president signed the treaty, so it is already an active law.* ('Signing' — faqat matnni ma'qullash; shartnoma qonuniy kuchga kirishi uchun albatta 'ratified by parliament' bo'lishi shart).\n- ❌ *The court has jurisdiction on this country.* ('Jurisdiction' odatda 'over' predlogi bilan keladi: *jurisdiction over territorial disputes*).\n  ✅ *The court exercises jurisdiction over maritime boundaries.*\n\n🎯 **IELTS Speaking & Writing Band 8.5 Masterclass**:\n- **Prompt**: Task 2: Should international institutions have the authority to override national sovereignty in cases of humanitarian crises?\n- **Model Answer (Band 8.0-8.5)**: Proponents of humanitarian intervention assert that severe human rights atrocities dissolve a state's sovereign immunity. Under the doctrine of 'Responsibility to Protect', multilateral coalitions must exercise legal jurisdiction to halt crimes against humanity. Conversely, skeptics argue that overriding state sovereignty without unanimous Security Council authorization sets a perilous precedent that destabilizes the international legal order.\n- **Discourse Markers**: assert that..., dissolve sovereign immunity, multilateral coalitions must exercise jurisdiction, sets a perilous precedent\n- **Examiner / Intonation Tip**: Diplomatik nutqda ehtirosli so'zlar o'rniga sovuqqon, neytral va muvozanatli yuridik iboralar (*egregious violation*, *perilous precedent*, *binding arbitration*) ishlatilsa, javobingiz akademik jihatdan eng yuqori baholanadi.",
                     "vocabulary": [
                         {
                             "term": "Sovereignty",
-                            "reading": "/ˈsɒv.rɪn.ti/",
-                            "meaning": "Suverenitet / Mustaqil davlat hokimiyati",
-                            "exampleSentence": "National sovereignty must be respected.",
-                            "exampleTranslation": "Milliy suverenitet hurmat qilinishi lozim."
+                            "reading": "/ˈsɒv.rən.ti/",
+                            "meaning": "Suverenitet, davlat mustaqilligi va oliy vakolati",
+                            "exampleSentence": "Respect for national sovereignty represents the cornerstone of international law.",
+                            "exampleTranslation": "Milliy suverenitetga hurmat xalqaro huquqning poydevori hisoblanadi."
+                        },
+                        {
+                            "term": "Jurisdiction",
+                            "reading": "/ˌdʒʊə.rɪsˈdɪk.ʃən/",
+                            "meaning": "Yurisdiksiya, qonuniy sud yoki ma'muriy vakolat doirasi",
+                            "exampleSentence": "The dispute falls strictly under the territorial jurisdiction of the domestic high court.",
+                            "exampleTranslation": "Nizo qat'iy ravishda mahalliy oliy sudning hududiy vakolat doirasiga kiradi."
                         },
                         {
                             "term": "Ratify",
                             "reading": "/ˈræt.ɪ.faɪ/",
-                            "meaning": "Ratifikatsiya qilmoq / Rasman tasdiqlamoq",
-                            "exampleSentence": "Parliament voted to ratify the accord.",
-                            "exampleTranslation": "Parlament bitimni ratifikatsiya qilish uchun ovoz berdi."
+                            "meaning": "Ratifikatsiya qilmoq, qonuniy kuchga kiritmoq",
+                            "exampleSentence": "Over one hundred member nations voted to ratify the international maritime pact.",
+                            "exampleTranslation": "Yuzdan ortiq a'zo davlatlar xalqaro dengiz paktini ratifikatsiya qilish uchun ovoz berdilar."
                         },
                         {
-                            "term": "Pervasive",
-                            "reading": "/pəˈveɪ.sɪv/",
-                            "meaning": "Keng tarqalgan, singib ketgan",
-                            "exampleSentence": "Digital transformation has a pervasive impact on society.",
-                            "exampleTranslation": "Raqamli transformatsiya jamiyatga chuqur singib borgan taʼsir koʻrsatadi."
+                            "term": "Multilateralism",
+                            "reading": "/ˌmʌl.tiˈlæt.ər.əl.ɪ.zəm/",
+                            "meaning": "Ko'p tomonlama hamkorlik tizimi",
+                            "exampleSentence": "Effective pandemic mitigation necessitates renewed commitment to multilateralism.",
+                            "exampleTranslation": "Pandemiyaning oqibatlarini samarali yumshatish ko'p tomonlama hamkorlikka yangilangan sodiqlikni taqozo etadi."
+                        },
+                        {
+                            "term": "Arbitration",
+                            "reading": "/ˌɑː.bɪˈtreɪ.ʃən/",
+                            "meaning": "Arbitraj, xolis hakamlik sudi orqali nizoni hal qilish",
+                            "exampleSentence": "Both sovereign states consented to resolve their continental shelf dispute via binding arbitration.",
+                            "exampleTranslation": "Har ikki suveren davlat o'zlarining kontinental shelf nizosini majburiy arbitraj orqali hal qilishga rozilik berdilar."
+                        },
+                        {
+                            "term": "Sanctions regime",
+                            "reading": "/ˈsæŋk.ʃənz reɪˈʒiːm/",
+                            "meaning": "Sanksiyalar tartibi/tizimi",
+                            "exampleSentence": "The enforcement of an embargo-based sanctions regime curtailed the regime's military procurement.",
+                            "exampleTranslation": "Embargoga asoslangan sanksiyalar tizimining joriy etilishi rejimning harbiy xaridlarini cheklab qo'ydi."
+                        },
+                        {
+                            "term": "Egregious",
+                            "reading": "/ɪˈɡriː.dʒəs/",
+                            "meaning": "O'ta qabih, ko'zga ko'ringan yovuz/qo'pol",
+                            "exampleSentence": "Targeting humanitarian aid convoys constitutes an egregious breach of the Geneva Conventions.",
+                            "exampleTranslation": "Gumanitar yordam karvonlarini nishonga olish Jeneva konvensiyalarining o'ta qabih buzilishi hisoblanadi."
+                        },
+                        {
+                            "term": "Precedent",
+                            "reading": "/ˈpres.ɪ.dənt/",
+                            "meaning": "Pretsedent, o'tmishdagi sud yoki siyosiy namuna",
+                            "exampleSentence": "The judicial decision established a binding precedent for forthcoming environmental litigation.",
+                            "exampleTranslation": "Sud qarori kelgusi ekologik sud jarayonlari uchun majburiy pretsedent yaratdi."
                         }
                     ],
-                    "grammarRules": [
-                        {
-                            "pattern": "Global Governance, Diplomacy & International Law",
-                            "meaning": "Xalqaro shartnomalar, suverenitet, diplomatiya va geosiyosat terminologiyasi.",
-                            "usageNotes": "Sovereignty (suverenitet), Multilateralism (ko'p tomonlama hamkorlik), Sanctions (sanksiyalar), Treaty ratification (shartnomani ratifikatsiya qilish), Jurisdiction (yurisdiksiya).",
-                            "examples": [
-                                {
-                                    "sentence": "National sovereignty must be respected.",
-                                    "translation": "Milliy suverenitet hurmat qilinishi lozim."
-                                },
-                                {
-                                    "sentence": "Parliament voted to ratify the accord.",
-                                    "translation": "Parlament bitimni ratifikatsiya qilish uchun ovoz berdi."
-                                }
-                            ]
-                        }
+                    "keyPoints": [
+                        "Precision in diplomatic register: 'sign' (diplomats agree) vs 'ratify' (legislature enacts).",
+                        "Collocations: 'exercise jurisdiction over', 'establish a binding precedent', 'impose a sanctions regime'.",
+                        "High-stakes rhetoric relies on neutral, legalistic phraseology rather than emotional condemnation.",
+                        "Use abstract nominal subjects to de-escalate personal blame: 'Breaches of protocol have occurred' vs 'You broke the rules'."
                     ]
                 }
             },
             {
                 "id": "en-c1-u2-l4-s2",
-                "title": "Mashq",
+                "title": "Diplomacy & Global Law Amaliyoti",
                 "type": "practice",
-                "estimatedMinutes": 5,
+                "estimatedMinutes": 6,
                 "practiceData": {
-                    "instructions": "To'g'ri atamani tanlang.",
+                    "instructions": "Diplomatiya va xalqaro huquq matnlaridagi eng mos terminlarni tanlang.",
                     "exercises": [
                         {
                             "id": "en-c1-u2-l4-e1",
                             "type": "multiple-choice",
-                            "prompt": "\"International disputes should be resolved through _______ diplomacy rather than unilateral aggression.\"",
+                            "prompt": "What legal action must a national parliament take to make a signed international treaty legally binding under domestic law?",
                             "options": [
-                                "multilateral",
-                                "hasty",
-                                "reckless",
-                                "isolated"
+                                "Ratify the treaty",
+                                "Arbitrate the treaty",
+                                "Encroach upon the treaty",
+                                "Gloss over the treaty"
                             ],
                             "correctAnswer": 0,
-                            "explanation": "Multilateral diplomacy."
+                            "explanation": "Xalqaro shartnomani ichki qonunchilikda majburiy kuchga kiritish jarayoni 'ratify' (ratifikatsiya qilish) deb ataladi."
                         },
                         {
-                            "id": "en-c1-u2-l4-ex-2",
+                            "id": "en-c1-u2-l4-e2",
                             "type": "multiple-choice",
-                            "prompt": "Choose the correct word to complete the sentence: \"Parliament voted to ratify the accord.\"",
+                            "prompt": "Choose the correct preposition: 'The International Tribunal possesses legal jurisdiction _______ transboundary water allocation disputes.'",
                             "options": [
-                                "Ratify",
-                                "delay",
-                                "reluctance",
-                                "doubt"
+                                "over",
+                                "onto",
+                                "at",
+                                "with"
                             ],
                             "correctAnswer": 0,
-                            "explanation": "\"Ratify\" (Ratifikatsiya qilmoq / Rasman tasdiqlamoq) fits the context appropriately."
+                            "explanation": "'Jurisdiction' so'zi ma'muriy/sud vakolati doirasini ko'rsatganda 'over' predlogi bilan keladi: 'jurisdiction over disputes'."
+                        },
+                        {
+                            "id": "en-c1-u2-l4-e3",
+                            "type": "multiple-choice",
+                            "prompt": "Select the term meaning 'the peaceful resolution of international disputes through an independent neutral tribunal':",
+                            "options": [
+                                "Arbitration",
+                                "Proliferation",
+                                "Dissonance",
+                                "Nominalisation"
+                            ],
+                            "correctAnswer": 0,
+                            "explanation": "'Arbitration' — xolis hakamlik sudi orqali xalqaro nizolarni tinch yo'l bilan hal etish vositasidir."
+                        },
+                        {
+                            "id": "en-c1-u2-l4-e4",
+                            "type": "multiple-choice",
+                            "prompt": "Fill in the blank: 'Unilateral trade embargoes undermine the cooperative spirit of global _______.'",
+                            "options": [
+                                "multilateralism",
+                                "neuroplasticity",
+                                "anaphora",
+                                "jurisprudence"
+                            ],
+                            "correctAnswer": 0,
+                            "explanation": "Ko'p tomonlama xalqaro hamkorlik tushunchasi 'multilateralism' so'zi bilan ifodalanadi."
+                        },
+                        {
+                            "id": "en-c1-u2-l4-e5",
+                            "type": "multiple-choice",
+                            "prompt": "Identify the phrase describing an action that creates a dangerous standard for future legal cases:",
+                            "options": [
+                                "Setting a perilous precedent",
+                                "Paying lip service to protocols",
+                                "Fleshing out a framework",
+                                "Inducing cognitive dissonance"
+                            ],
+                            "correctAnswer": 0,
+                            "explanation": "'Setting a perilous precedent' — kelajakda boshqalar ham takrorlashi mumkin bo'lgan xavfli pretsedent yaratish deganidir."
                         }
                     ]
                 }
             },
             {
                 "id": "en-c1-u2-l4-s3",
-                "title": "Test",
+                "title": "Diplomacy & Global Law Baholash Testi",
                 "type": "test",
-                "estimatedMinutes": 6,
+                "estimatedMinutes": 7,
                 "testData": {
-                    "instructions": "Savollarga javob bering.",
-                    "passingScorePercentage": 75,
+                    "instructions": "Xalqaro diplomatiya va global boshqaruv atamalari bo'yicha imtihon.",
+                    "passingScorePercentage": 80,
                     "questions": [
                         {
                             "id": "en-c1-u2-l4-q1",
-                            "question": "What does \"multilateralism\" mean in international relations?",
+                            "question": "What is the crucial legal distinction between 'signing' a treaty and 'ratifying' it?",
                             "options": [
-                                "Multiple countries working collaboratively on shared global issues",
-                                "Stopping foreign diplomacy",
-                                "Banning all trade",
-                                "A single dictator ruling the world"
+                                "Signing is done by lawyers, whereas ratifying is done by journalists.",
+                                "Signing indicates diplomatic endorsement of the text, whereas ratification represents formal legislative adoption that makes it legally binding.",
+                                "There is no distinction; they are interchangeable colloquialisms.",
+                                "Ratification occurs before signing in all international accords."
                             ],
-                            "correctAnswerIndex": 0,
-                            "explanation": "Multiple countries working collaboratively."
+                            "correctAnswerIndex": 1,
+                            "explanation": "'Signing' diplomatlar o'rtasida matnni tasdiqlash bo'lsa, 'ratification' parlament qonuni orqali shartnomaga yuridik kuch berishdir."
                         },
                         {
                             "id": "en-c1-u2-l4-q2",
-                            "question": "\"Diplomatic immunity\" protects foreign representatives from:",
+                            "question": "'The unilateral deployment of warships into contested maritime zones was condemned as an _______ violation of sovereign borders.'",
                             "options": [
-                                "Catching the flu",
-                                "Speaking their native language",
-                                "Local legal jurisdiction and prosecution in the host country",
-                                "Paying for personal food"
+                                "egregious",
+                                "ostensible",
+                                "opaque",
+                                "sentient"
                             ],
-                            "correctAnswerIndex": 2,
-                            "explanation": "Protects from local legal jurisdiction."
+                            "correctAnswerIndex": 0,
+                            "explanation": "O'ta qo'pol, ko'zga tashlanadigan noqonuniy harakat 'egregious violation' birikmasi bilan ifodalanadi."
                         },
                         {
                             "id": "en-c1-u2-l4-q3",
-                            "question": "Economic sanctions are intended to:",
+                            "question": "Which treaty principle is primarily aimed at preventing the spread of weapons of mass destruction?",
                             "options": [
-                                "Pressure a state to alter its behavior without direct military force",
-                                "Distribute free currency",
-                                "Build free roads in other countries",
-                                "Promote tourism"
+                                "Non-proliferation",
+                                "Neuroplasticity",
+                                "Commercial arbitration",
+                                "Behavioral telemetry"
                             ],
                             "correctAnswerIndex": 0,
-                            "explanation": "Pressure state without military force."
+                            "explanation": "'Non-proliferation' — ommaviy qirg'in qurollari tarqalishining oldini olish tamoyilidir."
                         },
                         {
                             "id": "en-c1-u2-l4-q4",
-                            "question": "A bilateral treaty is signed between:",
+                            "question": "When a court makes a ruling that influences all future legal decisions on the topic, it establishes a legal _______.",
                             "options": [
-                                "Twenty countries",
-                                "A citizen and a mayor",
-                                "Only private corporations",
-                                "Two sovereign parties"
+                                "precedent",
+                                "dissonance",
+                                "contingency",
+                                "bottleneck"
                             ],
-                            "correctAnswerIndex": 3,
-                            "explanation": "Two sovereign parties."
+                            "correctAnswerIndex": 0,
+                            "explanation": "Kelgusi sud qarorlari uchun majburiy namuna bo'luvchi hukm 'precedent' deb ataladi."
+                        },
+                        {
+                            "id": "en-c1-u2-l4-q5",
+                            "question": "Identify the sentence that misuses diplomatic register:",
+                            "options": [
+                                "The sovereign state agreed to abide by the arbitral award.",
+                                "The foreign minister got super mad and threatened to beat up the ambassador.",
+                                "Multilateral negotiations facilitated a temporary humanitarian ceasefire.",
+                                "The sanctions regime successfully curtailed illicit capital transfers."
+                            ],
+                            "correctAnswerIndex": 1,
+                            "explanation": "'Got super mad and threatened to beat up...' so'zlashuv uslubidagi o'ta qo'pol va nomaqbul ifodadir."
                         }
                     ]
                 }
@@ -1839,153 +2143,228 @@ export const ENGLISH_C1_LESSONS: Lesson[] = [
         "level": "C1",
         "lessonNumber": 5,
         "title": "C1 Advanced Lexical Resource & Precision Workout",
-        "description": "Kamdan-kam uchraydigan akademik so'zlar (Ubiquitous, Equivocal, Ephemeral) va sinonimik nozikliklar.",
-        "estimatedDurationMinutes": 16,
-        "icon": "💎",
+        "description": "Band 8.5+ darajasidagi kollokatsiyalar, mavhum tushunchalarni nozik farqlash va so'z boyligini sinovdan o'tkazish.",
+        "estimatedDurationMinutes": 22,
+        "icon": "🎯",
         "steps": [
             {
                 "id": "en-c1-u2-l5-s1",
-                "title": "Oliy Leksika",
+                "title": "Lexical Collocation & Precision Synthesis",
                 "type": "learn",
-                "estimatedMinutes": 5,
+                "estimatedMinutes": 8,
                 "learnData": {
-                    "title": "Precision Lexicon for Band 8.0+",
-                    "explanation": "Ubiquitous (hamma yerda hoziru-nozir), Ephemeral (o'tkinchi / bir lahzalik), Equivocal (ikki xil ma'noli / noaniq), Juxtaposition (yonma-yon qo'yib taqqoslash).",
+                    "title": "Mastering Lexical Precision & Semantic Collocations",
+                    "explanation": "C1 va Band 8.5+ darajasiga erishish uchun so'zlarning shunchaki ma'nosini bilish kamlik qiladi; qaysi so'z qaysi fe'l yoki sifat bilan tabiiy birikishi (collocation) va ularning nozik ma'no chegaralari (semantic nuances) hal qiluvchi ahamiyatga ega.\n\nUshbu darsda 3 ta asosiy leksik mahorat sintezlanadi:\n\n1. **Advanced Verb-Noun Collocations**:\n   - *Wreak havoc on*: Katta vayronagarchilik/talofat keltirmoq (*The hurricane wreaked havoc on coastal infrastructure*).\n   - *Exert influence over*: ...ga kuchli ta'sir o'tkazmoq (*Multinational corporations exert immense influence over fiscal legislation*).\n   - *Cast doubt on*: ...ga shubha uyg'otmoq (*New archaeological carbon data casts doubt on the prevailing migration timeline*).\n   - *Strike a balance between*: O'rtasidagi oltin muvozanatni topmoq (*Policymakers must strike a balance between surveillance and civil privacy*).\n\n2. **Sinonimlar orasidagi nozik farqlar (Semantic Nuance)**:\n   - *Pervasive* vs *Permissive* vs *Pernicious*:\n     - **Pervasive**: Har yerda tarqalgan, ommaviy (*pervasive corruption*).\n     - **Pernicious**: Sezdirmasdan asta-sekin halokatli zarar yetkazuvchi (*the pernicious effects of lead poisoning*).\n     - **Permissive**: O'ta erkin, ko'z yumuvchi (*a permissive regulatory environment*).\n   - *Mitigate* vs *Alleviate* vs *Exacerbate*:\n     - **Mitigate**: Xavf yoki salbiy oqibatni kamaytirmoq (*mitigate risk*).\n     - **Alleviate**: Og'riq yoki qashshoqlikni yengillashtirmoq (*alleviate suffering/poverty*).\n     - **Exacerbate**: Vaziyatni battar yomonlashtirmoq (*exacerbate inflation*).\n\n3. **De-cluttering: Bo'sh va mujmal so'zlardan tozalash**:\n   - *A lot of problems* -> *multifaceted challenges*.\n   - *Very big impact* -> *profound repercussion*.\n   - *Things that happen* -> *phenomena / empirical occurrences*.\n\n⚠️ **O'zbek o'rganuvchilari uchun xavfli tuzoqlar (Common Pitfalls)**:\n- ❌ *This decision will make big damages.* ('Damage' fe'li 'make' olmaydi; 'cause damage' yoki 'inflict damage' bo'ladi).\n  ✅ *This decision will inflict severe economic damage.*\n- ❌ *He did an influence on the election.* ('Do influence' xato; 'exert influence over' yoki 'have an influence on').\n  ✅ *He exerted substantial influence over the election results.*\n\n🎯 **IELTS Speaking & Writing Band 8.5 Masterclass**:\n- **Prompt**: Task 2 / Speaking Part 3: How can modern cities cope with the pressures of mass transit congestion?\n- **Model Answer (Band 8.0-8.5)**: Municipal authorities must strike a delicate balance between public transit subsidies and congestion pricing. Unchecked vehicular proliferation wreaks havoc on atmospheric air quality; nevertheless, punitive taxation without reliable electrified rail merely exacerbates socioeconomic inequality. By adopting transit-oriented urban zoning, planners can mitigate spatial bottlenecks while alleviating commuting stress.\n- **Discourse Markers**: strike a delicate balance between, wreaks havoc on, merely exacerbates, mitigate spatial bottlenecks while alleviating\n- **Examiner / Intonation Tip**: Bitta gap ichida *mitigate* va *alleviate* kabi sinonimlarni to'g'ri obyekti bilan qo'llang (*mitigate bottlenecks* — to'siqni kamaytirish; *alleviate stress* — ruhiy zo'riqishni yengillashtirish). Bu leksik resurs bo'yicha 9.0 ballik mukammal aniqlikni ko'rsatadi.",
                     "vocabulary": [
                         {
-                            "term": "Ubiquitous",
-                            "reading": "/juːˈbɪk.wɪ.təs/",
-                            "meaning": "Hamma yerda uchraydigan",
-                            "exampleSentence": "Smartphones have become ubiquitous.",
-                            "exampleTranslation": "Smartfonlar hamma yerda uchraydigan bo'lib qoldi."
+                            "term": "Wreak havoc on",
+                            "reading": "/riːk ˈhæv.ək ɒn/",
+                            "meaning": "Katta vayronagarchilik, talofat va tartibsizlik keltirib chiqarmoq",
+                            "exampleSentence": "Invasive pest species have wreaked havoc on indigenous agricultural ecosystems.",
+                            "exampleTranslation": "Bosqinchi zararkunanda turlari mahalliy qishloq xo'jaligi ekotizimlariga katta talofat yetkazdi."
                         },
                         {
-                            "term": "Ephemeral",
-                            "reading": "/ɪˈfem.ər.əl/",
-                            "meaning": "O'tkinchi / Qisqa umrli",
-                            "exampleSentence": "Social media fame is often ephemeral.",
-                            "exampleTranslation": "Ijtimoiy tarmoqdagi shuhrat ko'pincha o'tkinchidir."
+                            "term": "Exert",
+                            "reading": "/ɪɡˈzɜːt/",
+                            "meaning": "Ta'sir, kuch yoki bosim o'tkazmoq",
+                            "exampleSentence": "Major pharmaceutical conglomerates exert considerable pressure on patent regulators.",
+                            "exampleTranslation": "Yirik farmatsevtika konglomeratlari patent nazoratchilariga sezilarli bosim o'tkazadilar."
                         },
                         {
-                            "term": "Exemplify",
-                            "reading": "/ɪɡˈzem.plɪ.faɪ/",
-                            "meaning": "Yorqin misol boʻlmoq",
-                            "exampleSentence": "Recent discoveries exemplify the power of modern physics.",
-                            "exampleTranslation": "Soʻnggi kashfiyotlar zamonaviy fizika qudratini yaqqol namoyon etadi."
+                            "term": "Pervasive",
+                            "reading": "/pəˈveɪ.sɪv/",
+                            "meaning": "Keng tarqalgan, hamma joyga singib ketgan",
+                            "exampleSentence": "The pervasive influence of consumer advertising shapes dietary habits across all demographics.",
+                            "exampleTranslation": "Iste'molchilar reklamalarining har yerga singib ketgan ta'siri barcha qatlamlarning ovqatlanish odatlarini shakllantiradi."
+                        },
+                        {
+                            "term": "Pernicious",
+                            "reading": "/pəˈnɪʃ.əs/",
+                            "meaning": "Asta-sekin halokatli zarar yetkazuvchi, xatarli",
+                            "exampleSentence": "The pernicious spread of algorithmic radicalization undermines democratic civic cohesion.",
+                            "exampleTranslation": "Algoritmik radikallashuvning asta-sekin halokatli tarqalishi demokratik fuqarolik birdamligiga putur yetkazmoqda."
+                        },
+                        {
+                            "term": "Mitigate",
+                            "reading": "/ˈmɪt.ɪ.ɡeɪt/",
+                            "meaning": "Xavf, zarar yoki og'irlikni kamaytirmoq, yumshatmoq",
+                            "exampleSentence": "Investing in seismic retrofitting mitigates earthquake-related structural casualties.",
+                            "exampleTranslation": "Seysmik mustahkamlashga investitsiya kiritish zilzila bilan bog'liq konstruktiv qurbonlarni kamaytiradi."
+                        },
+                        {
+                            "term": "Alleviate",
+                            "reading": "/əˈliː.vi.eɪt/",
+                            "meaning": "Og'riq, qiyinchilik yoki qashshoqlikni yengillashtirmoq",
+                            "exampleSentence": "Targeted micro-credit programs aim to alleviate extreme poverty in agrarian settlements.",
+                            "exampleTranslation": "Mo'ljalli mikro-kredit dasturlari qishloq aholi punktlarida o'ta qashshoqlikni yengillashtirishga qaratilgan."
+                        },
+                        {
+                            "term": "Exacerbate",
+                            "reading": "/ɪɡˈzæs.ə.beɪt/",
+                            "meaning": "Battar yomonlashtirmoq, keskinlashtirmoq",
+                            "exampleSentence": "Prolonged agricultural droughts exacerbate regional food insecurity.",
+                            "exampleTranslation": "Uzoq davom etgan qishloq xo'jaligi qurg'oqchiligi mintaqaviy oziq-ovqat xavfsizligini battar yomonlashtiradi."
+                        },
+                        {
+                            "term": "Strike a balance",
+                            "reading": "/straɪk ə ˈbæl.əns/",
+                            "meaning": "Muvozanatni topmoq, tenglik o'rnatmoq",
+                            "exampleSentence": "Urban architects strive to strike a delicate balance between historic conservation and modern densification.",
+                            "exampleTranslation": "Shahar me'morlari tarixiy merosni asrash va zamonaviy zichlashtirish o'rtasida nozik muvozanat topishga intiladilar."
                         }
                     ],
-                    "grammarRules": [
-                        {
-                            "pattern": "C1 Advanced Lexical Resource & Precision Workout",
-                            "meaning": "Kamdan-kam uchraydigan akademik so'zlar (Ubiquitous, Equivocal, Ephemeral) va sinonimik nozikliklar.",
-                            "usageNotes": "Ubiquitous (hamma yerda hoziru-nozir), Ephemeral (o'tkinchi / bir lahzalik), Equivocal (ikki xil ma'noli / noaniq), Juxtaposition (yonma-yon qo'yib taqqoslash).",
-                            "examples": [
-                                {
-                                    "sentence": "Smartphones have become ubiquitous.",
-                                    "translation": "Smartfonlar hamma yerda uchraydigan bo'lib qoldi."
-                                },
-                                {
-                                    "sentence": "Social media fame is often ephemeral.",
-                                    "translation": "Ijtimoiy tarmoqdagi shuhrat ko'pincha o'tkinchidir."
-                                }
-                            ]
-                        }
+                    "keyPoints": [
+                        "Collocation mastery: 'wreak havoc on', 'exert influence over', 'strike a balance between'.",
+                        "Differentiate near-synonyms: 'mitigate' (reduce severity of risks/threats) vs 'alleviate' (ease pain/suffering).",
+                        "Identify false friends: 'pervasive' (widespread) vs 'pernicious' (insidiously harmful).",
+                        "Elevate essays by swapping vague descriptors ('big change', 'bad impact') for precise collocations ('profound paradigm shift', 'pernicious repercussions')."
                     ]
                 }
             },
             {
                 "id": "en-c1-u2-l5-s2",
-                "title": "Mashq",
+                "title": "Lexical Precision Amaliyoti",
                 "type": "practice",
-                "estimatedMinutes": 5,
+                "estimatedMinutes": 6,
                 "practiceData": {
-                    "instructions": "To'g'ri so'zni tanlang.",
+                    "instructions": "Gapdagi leksik moslik va kollokatsiya qoidalariga asoslanib eng to'g'ri so'zni tanlang.",
                     "exercises": [
                         {
                             "id": "en-c1-u2-l5-e1",
                             "type": "multiple-choice",
-                            "prompt": "\"The politician gave an _______ answer, avoiding any definitive commitment.\"",
+                            "prompt": "Fill in the correct collocation: 'The sudden withdrawal of foreign direct investment _______ havoc on the national currency.'",
                             "options": [
-                                "ubiquitous",
-                                "ephemeral",
-                                "epistemic",
-                                "equivocal"
+                                "wreaked",
+                                "made",
+                                "did",
+                                "struck"
                             ],
-                            "correctAnswer": 3,
-                            "explanation": "Equivocal (ikki xil ma'noli, noaniq)."
+                            "correctAnswer": 0,
+                            "explanation": "'Havoc' (vayronagarchilik/tartibsizlik) so'zi faqat 'wreak' fe'li bilan kollokatsiya hosil qiladi: 'wreaked havoc on'."
                         },
                         {
-                            "id": "en-c1-u2-l5-ex-2",
+                            "id": "en-c1-u2-l5-e2",
                             "type": "multiple-choice",
-                            "prompt": "Choose the correct word to complete the sentence: \"Social media fame is often ephemeral.\"",
+                            "prompt": "Choose the most appropriate word meaning 'gradually and insidiously harmful':",
                             "options": [
-                                "delay",
-                                "Ephemeral",
-                                "doubt",
-                                "reluctance"
+                                "Pernicious",
+                                "Pervasive",
+                                "Permissive",
+                                "Plausible"
                             ],
-                            "correctAnswer": 1,
-                            "explanation": "\"Ephemeral\" (O'tkinchi / Qisqa umrli) fits the context appropriately."
+                            "correctAnswer": 0,
+                            "explanation": "'Pernicious' — sezdirmasdan, asta-sekin chuqur halokatli zarar yetkazuvchi deganidir."
+                        },
+                        {
+                            "id": "en-c1-u2-l5-e3",
+                            "type": "multiple-choice",
+                            "prompt": "Select the correct pair: 'The pharmaceutical treatment aims to _______ physical suffering while surgical procedures _______ future cardiovascular risk.'",
+                            "options": [
+                                "alleviate / mitigate",
+                                "mitigate / alleviate",
+                                "exacerbate / alleviate",
+                                "wreak / exert"
+                            ],
+                            "correctAnswer": 0,
+                            "explanation": "Og'riq/azobni yengillashtirish uchun 'alleviate suffering', xavfni kamaytirish uchun esa 'mitigate risk' ishlatiladi."
+                        },
+                        {
+                            "id": "en-c1-u2-l5-e4",
+                            "type": "multiple-choice",
+                            "prompt": "Complete: 'Corporate lobbying groups _______ tremendous pressure on parliamentary representatives during energy debates.'",
+                            "options": [
+                                "exert",
+                                "make",
+                                "do",
+                                "perform"
+                            ],
+                            "correctAnswer": 0,
+                            "explanation": "Bosim o'tkazish birikmasi ingliz tilida 'exert pressure on' shaklida bo'ladi."
+                        },
+                        {
+                            "id": "en-c1-u2-l5-e5",
+                            "type": "multiple-choice",
+                            "prompt": "Which phrase correctly expresses 'finding a compromise between two conflicting objectives'?",
+                            "options": [
+                                "Striking a balance between",
+                                "Making a balance over",
+                                "Doing an equilibrium at",
+                                "Taking a balance upon"
+                            ],
+                            "correctAnswer": 0,
+                            "explanation": "'To strike a balance between...' — ikki qarama-qarshi tomon o'rtasida muvozanat topish iborasidir."
                         }
                     ]
                 }
             },
             {
                 "id": "en-c1-u2-l5-s3",
-                "title": "Test",
+                "title": "Lexical Precision Baholash Testi",
                 "type": "test",
-                "estimatedMinutes": 6,
+                "estimatedMinutes": 7,
                 "testData": {
-                    "instructions": "Savollarga javob bering.",
-                    "passingScorePercentage": 75,
+                    "instructions": "C1 kollokatsiyalari va leksik aniqlik bo'yicha yakuniy test.",
+                    "passingScorePercentage": 80,
                     "questions": [
                         {
                             "id": "en-c1-u2-l5-q1",
-                            "question": "What does \"juxtaposition\" mean?",
+                            "question": "Which sentence contains a non-standard collocation error?",
                             "options": [
-                                "Erasing a paragraph",
-                                "A type of mathematical equation",
-                                "A printing error",
-                                "Placing two contrasting things close together to highlight differences"
+                                "The central bank's rate hike inflicted heavy damages to the stock market.",
+                                "The governor made an influence on the municipal committee.",
+                                "The documentary casts severe doubt on the official narrative.",
+                                "Environmental protection policies mitigate catastrophic flood hazards."
                             ],
-                            "correctAnswerIndex": 3,
-                            "explanation": "Placing contrasting things close together."
+                            "correctAnswerIndex": 1,
+                            "explanation": "'Made an influence on' xato kollokatsiyadir; to'g'risi 'exerted an influence on' yoki 'had an influence on'."
                         },
                         {
                             "id": "en-c1-u2-l5-q2",
-                            "question": "The beauty of spring cherry blossoms is famously _______, lasting only a few days.",
+                            "question": "'The introduction of punitive tariffs will only _______ existing tensions between the two trading partners.'",
                             "options": [
-                                "ephemeral",
-                                "perpetual",
-                                "indestructible",
-                                "permanent"
+                                "exacerbate",
+                                "alleviate",
+                                "mitigate",
+                                "substantiate"
                             ],
                             "correctAnswerIndex": 0,
-                            "explanation": "Ephemeral (o'tkinchi)."
+                            "explanation": "Ziddiyatlarni battar yomonlashtirish 'exacerbate tensions' birikmasi bilan ifodalanadi."
                         },
                         {
                             "id": "en-c1-u2-l5-q3",
-                            "question": "\"Ubiquitous\" so'zining eng aniq sinonimi qaysi?",
+                            "question": "What is the primary difference between a 'pervasive' phenomenon and a 'pernicious' phenomenon?",
                             "options": [
-                                "Rare",
-                                "Omnipresent / Pervasive",
-                                "Temporary",
-                                "Invisible"
+                                "'Pervasive' means widespread throughout an environment, whereas 'pernicious' means subtly and severely destructive.",
+                                "'Pervasive' refers only to viruses, whereas 'pernicious' refers only to laws.",
+                                "There is no difference; they are exact grammatical synonyms.",
+                                "'Pernicious' is an informal slang word, whereas 'pervasive' is academic."
                             ],
-                            "correctAnswerIndex": 1,
-                            "explanation": "Omnipresent / Pervasive."
+                            "correctAnswerIndex": 0,
+                            "explanation": "'Pervasive' — hamma joyga yoyilgan degani; 'pernicious' — sekin va halokatli zarar yetkazuvchi degani."
                         },
                         {
                             "id": "en-c1-u2-l5-q4",
-                            "question": "His explanation was completely _______, leaving no doubt whatsoever in the jury's mind.",
+                            "question": "Choose the most sophisticated replacement for the vague words in bold: 'The new law had a **very big and bad effect** on small businesses.'",
                             "options": [
-                                "vague",
-                                "equivocal",
-                                "unequivocal / lucid",
-                                "obscure"
+                                "inflicted a pernicious toll on",
+                                "did big sadness upon",
+                                "made a lot of bad troubles to",
+                                "created giant badness with"
                             ],
-                            "correctAnswerIndex": 2,
-                            "explanation": "Unequivocal (shubhasiz, aniq)."
+                            "correctAnswerIndex": 0,
+                            "explanation": "'Inflicted a pernicious toll on' — 'juda katta va halokatli zarar yetkazdi' ma'nosidagi eng yuqori C1 akademik ifodasidir."
+                        },
+                        {
+                            "id": "en-c1-u2-l5-q5",
+                            "question": "'Disinformation on social media platforms exerts an undeniably _______ influence on public electoral integrity.'",
+                            "options": [
+                                "pernicious",
+                                "sentient",
+                                "contingent",
+                                "subdued"
+                            ],
+                            "correctAnswerIndex": 0,
+                            "explanation": "Dezinformatsiyaning saylov tizimiga halokatli zarari 'pernicious influence' birikmasi orqali to'g'ri ta'riflanadi."
                         }
                     ]
                 }
