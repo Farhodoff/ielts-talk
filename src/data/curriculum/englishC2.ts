@@ -1195,153 +1195,228 @@ export const ENGLISH_C2_LESSONS: Lesson[] = [
         "level": "C2",
         "lessonNumber": 1,
         "title": "Rare Erudite Vocabulary: Sesquipedalian, Equivocal, Pernicious",
-        "description": "Kamdan-kam uchraydigan, yuksak intellektual adabiy leksika.",
-        "estimatedDurationMinutes": 16,
+        "description": "Nodir intellektual va adabiy so'z boyligi, nozik ma'nodoshlik (equivocation), qasddan noaniqlik va tilning eng yuksak qatlamlari.",
+        "estimatedDurationMinutes": 22,
         "icon": "💎",
         "steps": [
             {
                 "id": "en-c2-u2-l1-s1",
-                "title": "Erudit Leksikasi",
+                "title": "Erudite Vocabulary & Strategic Equivocation",
                 "type": "learn",
-                "estimatedMinutes": 5,
+                "estimatedMinutes": 8,
                 "learnData": {
-                    "title": "Erudite Lexicon for Native-Level Mastery",
-                    "explanation": "Pernicious (o'ta xavfli / sezdirmasdan halokatli ta'sir ko'rsatuvchi), Sesquipedalian (juda uzun va murakkab so'zlardan foydalanuvchi), Obfuscate (atayin qorong'ilashtirmoq / chalkashtirmoq), Anachronistic (davriga to'g'ri kelmaydigan / eskirgan).",
+                    "title": "Mastering Rare Erudite Vocabulary and Strategic Ambiguity",
+                    "explanation": "C2 darajasidagi intellektual nafaqat keng tarqalgan akademik so'zlarni biladi, balki klassik falsafiy va adabiy manbalardan kelib chiqqan nodir leksik birliklarni (erudite vocabulary) o'z o'rnida, yuksak did bilan qo'llay oladi.\n\nAsosiy konseptlar:\n1. **Strategic Equivocation (Qasddan noaniq gapirish san'ati)**:\n   - **Equivocal**: Ikki xil talqin qilsa bo'ladigan, noaniq (diplomatiyada javobgarlikdan qochish uchun ataylab noaniq gapirish):\n     *The minister gave an equivocal response regarding future military deployments, satisfying neither allies nor critics.*\n   - **Unequivocal**: Boshqacha tushunish mumkin bo'lmagan, mutlaqo aniq va qat'iy:\n     *The treaty was an unequivocal victory for sovereign independence.*\n\n2. **Erudite Descriptors**:\n   - **Sesquipedalian**: Juda uzun, ko'p bo'g'inli so'zlarni ishlatishga moyil (yoki shunday so'zlar haqida):\n     *Academic essays frequently lapse into sesquipedalian obscurity when attempting to conceal a lack of empirical substance.*\n   - **Obfuscate**: Qasddan ataylab qorong'ilashtirmoq, chalkashtirib tushunarsiz qilmoq:\n     *Corporate accountants used convoluted terminology to obfuscate astronomical financial losses.*\n   - **Insidious / Pernicious**: Sezdirmasdan, ich-ichidan asta-sekin halokatli zarar yetkazuvchi.\n\n3. **Xarakter va Xatti-Harakat Belgilari**:\n   - **Sycophant**: Laganbardor, manfaat uchun maddohlik qiluvchi shaxs.\n   - **Recalcitrant**: Qaysar, bo'ysunmaydigan, qoidalarga bosh egmaydigan.\n\n⚠️ **O'zbek o'rganuvchilari uchun xavfli tuzoqlar (Common Pitfalls)**:\n- ❌ *Using rare erudite words out of context to impress.* (So'zning aniq ma'nosini va uslubiy qolipini bilmasdan ishlatish o'quvchini kulgili 'malapropism'ga duchor qiladi).\n- ❌ *Confusing 'equivocal' with 'equal'.* ('Equal' — teng; 'Equivocal' esa — ikki xil ma'noli, noaniq!).\n\n🎯 **IELTS Speaking & Writing Band 9.0 Masterclass**:\n- **Prompt**: Task 2: Should political leaders be permitted to conceal information during national security crises?\n- **Model Response (Band 9.0)**: In matters of sovereign defense, executive leaders occasionally resort to calculated equivocation to prevent operational compromise. Nevertheless, there exists an inviolable boundary between legitimate strategic ambiguity and the insidious obfuscation of systemic government corruption. When statesmen deliberately mislead legislative oversight, democratic legitimacy is fatally corroded.\n- **Discourse Markers**: calculated equivocation, operational compromise, inviolable boundary between, insidious obfuscation of, fatally corroded\n- **Examiner / Intonation Tip**: *Calculated equivocation* (hisob-kitobli noaniqlik) va *insidious obfuscation* (xiyonatkorona qorong'ilashtirish) iboralarini so'zlaganda ovozingizda vazmin intellektual salobat aks etsin.",
                     "vocabulary": [
                         {
-                            "term": "Pernicious",
-                            "reading": "/pəˈnɪʃ.əs/",
-                            "meaning": "Xavfli / Asta-sekin halokat keltiruvchi",
-                            "exampleSentence": "Misinformation has a pernicious effect on society.",
-                            "exampleTranslation": "Dezinformatsiya jamiyatga asta-sekin halokatli ta'sir ko'rsatadi."
+                            "term": "Equivocal",
+                            "reading": "/ɪˈkwɪv.ə.kəl/",
+                            "meaning": "Ikki ma'noli, noaniq, ataylab tushunarsiz qoldirilgan",
+                            "exampleSentence": "The diplomat's equivocal remarks left both delegations uncertain regarding the border demarcation.",
+                            "exampleTranslation": "Diplomatning ikki ma'noli noaniq fikrlari har ikki delegatsiyani chegara belgilanishi bo'yicha noaniqlikda qoldirdi."
+                        },
+                        {
+                            "term": "Unequivocal",
+                            "reading": "/ˌʌn.ɪˈkwɪv.ə.kəl/",
+                            "meaning": "Mutlaqo aniq, qat'iy, shubhasiz",
+                            "exampleSentence": "The Supreme Court delivered an unequivocal ruling affirming the constitutional right to privacy.",
+                            "exampleTranslation": "Oliy sud shaxsiy daxlsizlik bo'yicha konstitutsiyaviy huquqni tasdiqlovchi mutlaqo aniq va qat'iy qaror chiqardi."
+                        },
+                        {
+                            "term": "Sesquipedalian",
+                            "reading": "/ˌses.kwɪ.pɪˈdeɪ.li.ən/",
+                            "meaning": "Uzun, ko'p bo'g'inli so'zlardan iborat (yoki shunday so'zlarni yaxshi ko'ruvchi)",
+                            "exampleSentence": "The professor's sesquipedalian prose bewildered undergraduate students who sought simple explanations.",
+                            "exampleTranslation": "Professorning o'ta uzun va qiyin so'zlardan iborat tili oddiy tushuntirish izlagan talabalarni esankiratib qo'ydi."
                         },
                         {
                             "term": "Obfuscate",
                             "reading": "/ˈɒb.fʌs.keɪt/",
-                            "meaning": "Atayin tushunarsiz qilmoq / Chalkashtirmoq",
-                            "exampleSentence": "Lawyers often obfuscate plain facts.",
-                            "exampleTranslation": "Advokatlar ko'pincha oddiy faktlarni atayin chalkashtiradilar."
+                            "meaning": "Qasddan tushunarsiz qilmoq, chalg'itib qorong'ilashtirmoq",
+                            "exampleSentence": "The spokesperson attempted to obfuscate the real causes of the toxic chemical spill.",
+                            "exampleTranslation": "Matbuot kotibi zaharli kimyoviy to'kilishning asl sabablarini qasddan chalg'itib qorong'ilashtirishga urindi."
                         },
                         {
-                            "term": "Ephemeral",
-                            "reading": "/ɪˈfem.ər.əl/",
-                            "meaning": "Oʻtkinchi, bir lahzalik",
-                            "exampleSentence": "Fame in the digital era can often be fleeting and ephemeral.",
-                            "exampleTranslation": "Raqamli asrdagi shuhrat koʻpincha oʻtkinchi va lahzalik boʻlishi mumkin."
+                            "term": "Insidious",
+                            "reading": "/ɪnˈsɪd.i.əs/",
+                            "meaning": "Pinhona, sezdirmasdan ichkaridan halokatli zarar keltiruvchi",
+                            "exampleSentence": "High blood pressure is an insidious malady that often exhibits zero outward symptoms.",
+                            "exampleTranslation": "Yuqori qon bosimi hech qanday tashqi alomatsiz ichkaridan yemiruvchi pinhona kasallikdir."
+                        },
+                        {
+                            "term": "Sycophant",
+                            "reading": "/ˈsɪk.ə.fænt/",
+                            "meaning": "Laganbardor, maddoh, xushomadgo'y",
+                            "exampleSentence": "Surrounded by obsequious sycophants, the autocratic ruler grew blind to the suffering of his citizens.",
+                            "exampleTranslation": "Xushomadgo'y maddohlar qurshovida qolgan avtokrat hukmdor o'z fuqarolarining azob-uqubatlariga ko'r bo'lib qoldi."
+                        },
+                        {
+                            "term": "Recalcitrant",
+                            "reading": "/rɪˈkæl.sɪ.trənt/",
+                            "meaning": "Qaysar, bo'ysunmaydigan, qaysarlik bilan qarshilik ko'rsatuvchi",
+                            "exampleSentence": "The recalcitrant parliamentarians refused to endorse the proposed austerity budget.",
+                            "exampleTranslation": "Bo'ysunmas qaysar deputatlar taklif etilgan tejamkorlik byudjetini ma'qullashdan bosh tortdilar."
+                        },
+                        {
+                            "term": "Erudition",
+                            "reading": "/ˌer.ʊˈdɪʃ.ən/",
+                            "meaning": "Chuqur bilimdonlik, keng ilm va donolik",
+                            "exampleSentence": "Her vast historical erudition enabled her to draw startling parallels between ancient Rome and modern geopolitics.",
+                            "exampleTranslation": "Uning chuqur tarixiy bilimdonligi qadimgi Rim va zamonaviy geosiyosat o'rtasida hayratlanarli paralellarni ko'rsatish imkonini berdi."
                         }
                     ],
-                    "grammarRules": [
-                        {
-                            "pattern": "Rare Erudite Vocabulary: Sesquipedalian, Equivocal, Pernicious",
-                            "meaning": "Kamdan-kam uchraydigan, yuksak intellektual adabiy leksika.",
-                            "usageNotes": "Pernicious (o'ta xavfli / sezdirmasdan halokatli ta'sir ko'rsatuvchi), Sesquipedalian (juda uzun va murakkab so'zlardan foydalanuvchi), Obfuscate (atayin qorong'ilashtirmoq / chalkashtirmoq), Anachronistic (davriga to'g'ri kelmaydigan / eskirgan).",
-                            "examples": [
-                                {
-                                    "sentence": "Misinformation has a pernicious effect on society.",
-                                    "translation": "Dezinformatsiya jamiyatga asta-sekin halokatli ta'sir ko'rsatadi."
-                                },
-                                {
-                                    "sentence": "Lawyers often obfuscate plain facts.",
-                                    "translation": "Advokatlar ko'pincha oddiy faktlarni atayin chalkashtiradilar."
-                                }
-                            ]
-                        }
+                    "keyPoints": [
+                        "Equivocal vs Unequivocal: deliberate strategic ambiguity versus clear, indisputable certainty.",
+                        "Recognize pejorative erudite descriptors: 'sesquipedalian' (overly polysyllabic), 'obfuscate' (intentionally obscure).",
+                        "Differentiate insidious/pernicious (covert, gradual harm) from blatant aggression.",
+                        "Deploy rare vocabulary selectively where no simpler synonym captures the identical philosophical precision."
                     ]
                 }
             },
             {
                 "id": "en-c2-u2-l1-s2",
-                "title": "Mashq",
+                "title": "Rare Erudite Lexicon Amaliyoti",
                 "type": "practice",
-                "estimatedMinutes": 5,
+                "estimatedMinutes": 6,
                 "practiceData": {
-                    "instructions": "To'g'ri erudit so'zni tanlang.",
+                    "instructions": "Nodir intellektual so'zlar va nozik ma'nodoshlikka mos eng to'g'ri variantlarni tanlang.",
                     "exercises": [
                         {
                             "id": "en-c2-u2-l1-e1",
                             "type": "multiple-choice",
-                            "prompt": "\"The author's style was excessively _______, full of obscure multisyllabic terms.\"",
+                            "prompt": "What does describing a political response as 'equivocal' mean?",
                             "options": [
-                                "equivocal",
-                                "pernicious",
-                                "sesquipedalian",
-                                "anachronistic"
-                            ],
-                            "correctAnswer": 2,
-                            "explanation": "Sesquipedalian (uzun va murakkab so'zlar ishlatuvchi)."
-                        },
-                        {
-                            "id": "en-c2-u2-l1-ex-2",
-                            "type": "multiple-choice",
-                            "prompt": "Choose the correct word to complete the sentence: \"Lawyers often obfuscate plain facts.\"",
-                            "options": [
-                                "Obfuscate",
-                                "doubt",
-                                "reluctance",
-                                "delay"
+                                "Open to multiple interpretations, deliberately ambiguous, or vague",
+                                "Completely mathematical and equal",
+                                "Delivered in a screaming voice",
+                                "Translated into Arabic"
                             ],
                             "correctAnswer": 0,
-                            "explanation": "\"Obfuscate\" (Atayin tushunarsiz qilmoq / Chalkashtirmoq) fits the context appropriately."
+                            "explanation": "'Equivocal' — ikki xil talqin qilish mumkin bo'lgan, ataylab noaniq qoldirilgan degani."
+                        },
+                        {
+                            "id": "en-c2-u2-l1-e2",
+                            "type": "multiple-choice",
+                            "prompt": "Choose the word meaning 'to deliberately make something confusing, obscure, or difficult to understand':",
+                            "options": [
+                                "Obfuscate",
+                                "Elucidate",
+                                "Delineate",
+                                "Replicate"
+                            ],
+                            "correctAnswer": 0,
+                            "explanation": "'Obfuscate' — qasddan chalkashtirib qorong'ilashtirish ('elucidate' esa oydinlashtirish) demakdir."
+                        },
+                        {
+                            "id": "en-c2-u2-l1-e3",
+                            "type": "multiple-choice",
+                            "prompt": "What does 'sesquipedalian' describe?",
+                            "options": [
+                                "Using very long, multi-syllable, often pompous words",
+                                "Walking on exactly six feet",
+                                "Cooking with olive oil",
+                                "Sleeping for twelve hours"
+                            ],
+                            "correctAnswer": 0,
+                            "explanation": "'Sesquipedalian' — juda uzun, ko'p bo'g'inli, ba'zan dabdabali so'zlarni ishlatishni anglatadi."
+                        },
+                        {
+                            "id": "en-c2-u2-l1-e4",
+                            "type": "multiple-choice",
+                            "prompt": "Fill in the blank: 'The dictator was surrounded by flattering _______ who never dared to challenge his disastrous decrees.'",
+                            "options": [
+                                "sycophants",
+                                "cohorts",
+                                "treatises",
+                                "motifs"
+                            ],
+                            "correctAnswer": 0,
+                            "explanation": "Hukmdorga manfaat uchun maddohlik qiluvchi laganbardorlar 'sycophants' deb ataladi."
+                        },
+                        {
+                            "id": "en-c2-u2-l1-e5",
+                            "type": "multiple-choice",
+                            "prompt": "Complete: 'The _______ disease progressed silently for a decade before triggering acute kidney failure.'",
+                            "options": [
+                                "insidious",
+                                "sentient",
+                                "disinterested",
+                                "untenable"
+                            ],
+                            "correctAnswer": 0,
+                            "explanation": "Sezdirmasdan ichkaridan yemiruvchi pinhona xatar 'insidious' so'zi bilan ifodalanadi."
                         }
                     ]
                 }
             },
             {
                 "id": "en-c2-u2-l1-s3",
-                "title": "Test",
+                "title": "Rare Erudite Lexicon Baholash Testi",
                 "type": "test",
-                "estimatedMinutes": 6,
+                "estimatedMinutes": 7,
                 "testData": {
-                    "instructions": "Savollarga javob bering.",
-                    "passingScorePercentage": 75,
+                    "instructions": "Nodir intellektual leksika va strategik noaniqlik bo'yicha imtihon.",
+                    "passingScorePercentage": 80,
                     "questions": [
                         {
                             "id": "en-c2-u2-l1-q1",
-                            "question": "\"Anachronistic\" refers to something that is:",
+                            "question": "In diplomatic strategy, why might a statesman purposefully deploy 'equivocal' language?",
                             "options": [
-                                "Made of solid gold",
-                                "Extremely modern and high-tech",
-                                "Chronologically out of place or belonging to an earlier era",
-                                "Completely illegal"
+                                "To maintain flexibility and avoid committing to military intervention while preserving peace talks.",
+                                "Because they forgot how to speak English.",
+                                "To insult the foreign ambassador directly.",
+                                "To ensure immediate war breakout."
                             ],
-                            "correctAnswerIndex": 2,
-                            "explanation": "Chronologically out of place."
+                            "correctAnswerIndex": 0,
+                            "explanation": "Diplomatiyada hisob-kitobli noaniqlik (equivocation) o'ziga harakat erkinligini saqlab qolish va urushning oldini olish uchun qo'llaniladi."
                         },
                         {
                             "id": "en-c2-u2-l1-q2",
-                            "question": "To \"obfuscate\" the truth means to:",
+                            "question": "'The defense minister issued an _______ condemnation of the cross-border artillery attack, leaving zero doubt regarding retaliation.'",
                             "options": [
-                                "Translate it into English",
-                                "Celebrate it loudly",
-                                "Shine a bright light on it",
-                                "Deliberately make it obscure, unclear or confusing"
+                                "unequivocal",
+                                "equivocal",
+                                "ephemeral",
+                                "opaque"
                             ],
-                            "correctAnswerIndex": 3,
-                            "explanation": "Deliberately make obscure/confusing."
+                            "correctAnswerIndex": 0,
+                            "explanation": "Shubhaga o'rin qoldirmaydigan mutlaqo qat'iy va ochiq qoralash 'unequivocal condemnation' bo'ladi."
                         },
                         {
                             "id": "en-c2-u2-l1-q3",
-                            "question": "A \"pernicious influence\" is:",
+                            "question": "What is the primary distinguishing trait of a 'recalcitrant' committee member?",
                             "options": [
-                                "Subtly harmful and destructive over time",
-                                "Short-lived",
-                                "Completely harmless",
-                                "Very funny and entertaining"
+                                "They stubbornly resist authority, discipline, or cooperative guidance.",
+                                "They are extremely polite and agree with everyone.",
+                                "They arrive two hours early to every meeting.",
+                                "They take shorthand notes in ancient Greek."
                             ],
                             "correctAnswerIndex": 0,
-                            "explanation": "Subtly harmful and destructive."
+                            "explanation": "'Recalcitrant' — qaysarlik bilan bo'ysunmaydigan, qoidalarga qarshi chiquvchi deganidir."
                         },
                         {
                             "id": "en-c2-u2-l1-q4",
-                            "question": "Choose the most erudite word for \"unavoidable\":",
+                            "question": "What characterizes 'erudition' in philosophical scholarship?",
                             "options": [
-                                "Avoidless",
-                                "Quick",
-                                "Ineluctable / Inescapable",
-                                "Un-stop"
+                                "Profound, extensive knowledge acquired through diligent study and comprehensive reading of foundational texts.",
+                                "Owning an expensive suit.",
+                                "Knowing how to type quickly on a laptop.",
+                                "Traveling on commercial cruise ships."
                             ],
-                            "correctAnswerIndex": 2,
-                            "explanation": "Ineluctable."
+                            "correctAnswerIndex": 0,
+                            "explanation": "'Erudition' — teran mutolaa va qunt bilan o'rganish natijasida hosil qilingan chuqur ilm va bilimdonlikdir."
+                        },
+                        {
+                            "id": "en-c2-u2-l1-q5",
+                            "question": "'Corporate spokespersons deployed jargon-laden press releases in a cynical effort to _______ financial fraud.'",
+                            "options": [
+                                "obfuscate",
+                                "elucidate",
+                                "delineate",
+                                "substantiate"
+                            ],
+                            "correctAnswerIndex": 0,
+                            "explanation": "Moliyaviy firibgarlikni jamoatchilikdan ataylab yashirish va chalg'itish 'obfuscate financial fraud' deyiladi."
                         }
                     ]
                 }
@@ -1357,149 +1432,228 @@ export const ENGLISH_C2_LESSONS: Lesson[] = [
         "level": "C2",
         "lessonNumber": 2,
         "title": "Cognitive Metaphors & Conceptual Blendings",
-        "description": "Kognitiv tilshunoslik: metaforalarning inson tafakkurini boshqarish qudrati.",
-        "estimatedDurationMinutes": 16,
+        "description": "Kognitiv metafora nazariyasi (Lakoff & Johnson), tushunchalarni sintez qilish (conceptual blending) va yashirin aqliy modellarni dekonstruktsiya qilish.",
+        "estimatedDurationMinutes": 22,
         "icon": "🧠",
         "steps": [
             {
                 "id": "en-c2-u2-l2-s1",
-                "title": "Kognitiv Metafora",
+                "title": "Conceptual Metaphors & Mental Blends",
                 "type": "learn",
-                "estimatedMinutes": 5,
+                "estimatedMinutes": 8,
                 "learnData": {
-                    "title": "Conceptual Metaphor Theory (Lakoff & Johnson)",
-                    "explanation": "Metafora shunchaki adabiy bezak emas, balki inson fikrlash strukturasidir: \"Argument is War\" (He attacked my point, I defended my claim, She shot down his argument), \"Time is Money\" (Spend time, Save time, Invest hours).",
+                    "title": "Cognitive Metaphor Theory and Conceptual Blending in Master Rhetoric",
+                    "explanation": "Kognitiv tilshunoslikda (Jorj Lakoff va Mark Jonson) metafora shunchaki 'adabiy bezak' emas, balki inson ongining fikrlash va tushunish asosiy mexanizmi hisoblanadi (**Conceptual Metaphors**).\n\nAsosiy Kognitiv Modellar:\n1. **ARGUMENT IS WAR (Bahs — bu urush)**:\n   - Biz bahsni urush metaforasi orqali idrok qilamiz: *He attacked my weak points, I defended my claims, she demolished his position, I shot down his argument*.\n   - C2 darajasi bu aqliy modelni ongli ravishda boshqa modelga almashtira oladi: masalan, *ARGUMENT IS ARCHITECTURE* (*He laid a solid foundation, construct a framework, reinforce structural pillars*).\n\n2. **TIME IS MONEY (Vaqt — bu boylik)**:\n   - *Spend time, waste time, invest time, budget your hours*.\n\n3. **Conceptual Blending (G'oyalarni yangi qatlamda chatashtirish)**:\n   - Ikki xil mustaqil aqliy makon (mental spaces) birlashib, uchinchi yangi g'oyaviy makonni yaratadi (masalan: *computational virus* — biologik virus va kompyuter kodining sintezi).\n\n⚠️ **O'zbek o'rganuvchilari uchun xavfli tuzoqlar (Common Pitfalls)**:\n- ❌ *Mixed Metaphors (Chalkash metaforalar)*: Bitta gap ichida ikkita bir-biriga zid metaforani qo'shib yuborish kulgili xatodir (*We must steer the ship of state through rough waters so that the train of progress stays on its tracks* ❌ — Kema ham, poyezd ham aralashib ketdi!).\n  ✅ Bitta yaxlit metaforik chiziqni oxirigacha olib boring.\n\n🎯 **IELTS Speaking & Writing Band 9.0 Masterclass**:\n- **Prompt**: Task 2: How can nations navigate the economic disruption caused by technological transition?\n- **Model Answer (Band 9.0)**: Rather than conceptualizing automation as an apocalyptic tidal wave that drowns human labor, policymakers must frame technological evolution as an agricultural metamorphosis. Just as soil requires careful fertilization and seasonal rotation during crop transitions, the labor market demands proactive infrastructural nurturing. By reframing retraining programs as long-term human capital cultivation, society converts disruptive turbulence into fertile ground for shared prosperity.\n- **Discourse Markers**: Rather than conceptualizing... as..., frame technological evolution as an agricultural metamorphosis, demands proactive infrastructural nurturing, converts disruptive turbulence into fertile ground\n- **Examiner / Intonation Tip**: Yaxlit kognitiv metafora (ekologik/qishloq xo'jaligi leksikasi: *soil, fertilization, crop rotation, cultivation, fertile ground*) inshoni bitta estetik tizimga aylantiradi. Bu Band 9.0 darajasidagi mukammal ijodkorlik belgisidir.",
                     "vocabulary": [
                         {
-                            "term": "Inherent",
-                            "reading": "/ɪnˈher.ənt/",
-                            "meaning": "Tug'ma / Ajralmas xususiyat",
-                            "exampleSentence": "Risk is inherent in innovation.",
-                            "exampleTranslation": "Xatar innovatsiyaning ajralmas qismidir."
+                            "term": "Tenor",
+                            "reading": "/ˈten.ər/",
+                            "meaning": "Mavzu (metaforada ifodalanayotgan asosiy asl tushuncha)",
+                            "exampleSentence": "In the metaphor 'the world is a stage', human existence is the tenor.",
+                            "exampleTranslation": "'Dunyo — bu teatr sahnasi' metaforasida inson hayoti asosiy mavzu (tenor) hisoblanadi."
                         },
                         {
-                            "term": "Ephemeral",
-                            "reading": "/ɪˈfem.ər.əl/",
-                            "meaning": "Oʻtkinchi, bir lahzalik",
-                            "exampleSentence": "Fame in the digital era can often be fleeting and ephemeral.",
-                            "exampleTranslation": "Raqamli asrdagi shuhrat koʻpincha oʻtkinchi va lahzalik boʻlishi mumkin."
+                            "term": "Vehicle",
+                            "reading": "/ˈvɪə.kəl/",
+                            "meaning": "Vosita (metaforada mavzuni tasvirlash uchun jalb qilingan ramziy qiyofa)",
+                            "exampleSentence": "In the metaphor 'the world is a stage', theatrical drama serves as the vehicle.",
+                            "exampleTranslation": "'Dunyo — bu teatr sahnasi' metaforasida teatr tomoshasi ifoda vositasi (vehicle) bo'lib xizmat qiladi."
                         },
                         {
-                            "term": "Quintessential",
-                            "reading": "/ˌkwɪn.tɪˈsen.ʃəl/",
-                            "meaning": "Eng oliy namuna, timsol",
-                            "exampleSentence": "It is the quintessential masterpiece of modern literature.",
-                            "exampleTranslation": "Bu zamonaviy adabiyotning eng oliy namunasidir."
+                            "term": "Metamorphosis",
+                            "reading": "/ˌmet.əˈmɔː.fə.sɪs/",
+                            "meaning": "Metamorfoz, shakl va mohiyatning tubdan o'zgarishi",
+                            "exampleSentence": "The agrarian economy underwent a breathtaking metamorphosis into an advanced technological powerhouse.",
+                            "exampleTranslation": "Qishloq xo'jaligi iqtisodiyoti ilg'or texnologik qudratga aylanib, hayratlanarli metamorfozni boshdan kechirdi."
+                        },
+                        {
+                            "term": "Embodied",
+                            "reading": "/ɪmˈbɒd.id/",
+                            "meaning": "Gavdalangan, jismoniy tajriba orqali shakllangan (kognitiv fanlarda)",
+                            "exampleSentence": "Cognitive linguists argue that abstract metaphors are grounded in embodied sensory-motor interactions.",
+                            "exampleTranslation": "Kognitiv tilshunoslar mavhum metaforalar insonning jismoniy sezgi-harakat tajribasiga (embodied) asoslangan deb hisoblaydilar."
+                        },
+                        {
+                            "term": "Schema",
+                            "reading": "/ˈskiː.mə/",
+                            "meaning": "Sxema, aqliy model, tushunchalar karkasi",
+                            "exampleSentence": "Our conceptual schema of container spaces shapes how we perceive psychological privacy.",
+                            "exampleTranslation": "Bizning idish va chegara fazolari haqidagi aqliy sxemamiz ruhiy daxlsizlikni qanday idrok etishimizni shakllantiradi."
+                        },
+                        {
+                            "term": "Conflation",
+                            "reading": "/kənˈfleɪ.ʃən/",
+                            "meaning": "Ikki xil modelni noo'rin qorishtirish",
+                            "exampleSentence": "The speaker's unfortunate conflation of nautical and mechanical metaphors muddied his central message.",
+                            "exampleTranslation": "Notiqning dengizchilik va mexanika metaforalarini noo'rin qorishtirishi uning asosiy xabarini chalkashtirib yubordi."
+                        },
+                        {
+                            "term": "Turbulence",
+                            "reading": "/ˈtɜː.bjə.ləns/",
+                            "meaning": "G'alayon, beqaror to'lqinlanish, girdob",
+                            "exampleSentence": "Central banks implemented quantitative easing to stabilize the financial markets amidst unprecedented turbulence.",
+                            "exampleTranslation": "Markaziy banklar misli ko'rilmagan moliyaviy g'alayon (turbulence) ichida bozorlarni barqarorlashtirish uchun miqdoriy yumshatishni joriy etdilar."
+                        },
+                        {
+                            "term": "Cultivation",
+                            "reading": "/ˌkʌl.tɪˈveɪ.ʃən/",
+                            "meaning": "Yetishtirish, o'stirish, tarbiyalash",
+                            "exampleSentence": "Universities must prioritize the cultivation of independent, critical inquiry over rote vocational training.",
+                            "exampleTranslation": "Universitetlar yodaki kasbiy ta'limdan ko'ra mustaqil va tanqidiy izlanishni tarbiyalashga (cultivation) ustuvorlik berishlari shart."
                         }
                     ],
-                    "grammarRules": [
-                        {
-                            "pattern": "Cognitive Metaphors & Conceptual Blendings",
-                            "meaning": "Kognitiv tilshunoslik: metaforalarning inson tafakkurini boshqarish qudrati.",
-                            "usageNotes": "Metafora shunchaki adabiy bezak emas, balki inson fikrlash strukturasidir: \"Argument is War\" (He attacked my point, I defended my claim, She shot down his argument), \"Time is Money\" (Spend time, Save time, Invest hours).",
-                            "examples": [
-                                {
-                                    "sentence": "Risk is inherent in innovation.",
-                                    "translation": "Xatar innovatsiyaning ajralmas qismidir."
-                                }
-                            ]
-                        }
+                    "keyPoints": [
+                        "Conceptual metaphors ('Argument is War', 'Time is Money') structure how humans systematically conceptualize abstract reality.",
+                        "In rhetoric, maintain metaphorical consistency: avoid jarring 'mixed metaphors' that blend incompatible domains.",
+                        "Components of metaphor: Tenor (the underlying idea) and Vehicle (the figurative imagery deployed to express it).",
+                        "Conceptual blending creates powerful third-space mental models in high-level socio-economic discourse."
                     ]
                 }
             },
             {
                 "id": "en-c2-u2-l2-s2",
-                "title": "Mashq",
+                "title": "Cognitive Metaphors Amaliyoti",
                 "type": "practice",
-                "estimatedMinutes": 5,
+                "estimatedMinutes": 6,
                 "practiceData": {
-                    "instructions": "Asosiy metaforik modelni aniqlang.",
+                    "instructions": "Kognitiv metaforalar va uslubiy izchillik bo'yicha to'g'ri tahlilni tanlang.",
                     "exercises": [
                         {
                             "id": "en-c2-u2-l2-e1",
                             "type": "multiple-choice",
-                            "prompt": "\"He demolished my thesis and struck down every counter-argument.\" Which conceptual metaphor is at work?",
+                            "prompt": "Identify the flawed sentence containing a comical 'mixed metaphor':",
                             "options": [
-                                "Love is a Journey",
-                                "Argument is War / Combat",
-                                "Time is Money",
-                                "Ideas are Food"
+                                "We must put our shoulders to the wheel to keep this ship of state flying through the sky.",
+                                "The government laid a sturdy legislative foundation to support the structural pillars of the economy.",
+                                "Careful investment cultivates fertile ground for entrepreneurial flourishing.",
+                                "The debate attacked the weak premises of the opponent's thesis."
                             ],
-                            "correctAnswer": 1,
-                            "explanation": "Argument is War."
+                            "correctAnswer": 0,
+                            "explanation": "Birinchi jumlada 'g'ildirak' (quruqlik), 'kema' (suv) va 'osmonda uchish' (havo) aralashtirib yuborilgan (mixed metaphor xatosi)."
                         },
                         {
-                            "id": "en-c2-u2-l2-ex-2",
+                            "id": "en-c2-u2-l2-e2",
                             "type": "multiple-choice",
-                            "prompt": "Choose the correct word to complete the sentence: \"Fame in the digital era can often be fleeting and ephemeral.\"",
+                            "prompt": "In the metaphor 'Life is a journey', what is 'Life' in literary theory?",
                             "options": [
-                                "reluctance",
-                                "delay",
-                                "doubt",
-                                "Ephemeral"
+                                "The Tenor (the core subject being described)",
+                                "The Vehicle (the metaphorical image)",
+                                "A non-negotiable clause",
+                                "A syllogism"
                             ],
-                            "correctAnswer": 3,
-                            "explanation": "\"Ephemeral\" (Oʻtkinchi, bir lahzalik) fits the context appropriately."
+                            "correctAnswer": 0,
+                            "explanation": "'Life' — ifodalanayotgan asl mavzu bo'lib, adabiyotshunoslikda 'Tenor' deb ataladi ('Journey' esa 'Vehicle' hisoblanadi)."
+                        },
+                        {
+                            "id": "en-c2-u2-l2-e3",
+                            "type": "multiple-choice",
+                            "prompt": "What does 'conceptual blending' achieve in master-level rhetoric?",
+                            "options": [
+                                "It fuses two distinct cognitive input spaces to generate a creative, emergent mental space with novel insights.",
+                                "It mixes paints on an artist's palette.",
+                                "It deletes vowels from English words.",
+                                "It requires shouting during debates."
+                            ],
+                            "correctAnswer": 0,
+                            "explanation": "Kognitiv chatishuv (conceptual blending) ikki xil mustaqil g'oyaviy makonni birlashtirib, mutlaqo yangi intellektual tushuncha hosil qiladi."
+                        },
+                        {
+                            "id": "en-c2-u2-l2-e4",
+                            "type": "multiple-choice",
+                            "prompt": "Fill in the blank: 'The post-war era witnessed a miraculous _______ from agrarian destitution into an industrial titan.'",
+                            "options": [
+                                "metamorphosis",
+                                "stalemate",
+                                "sycophant",
+                                "bottleneck"
+                            ],
+                            "correctAnswer": 0,
+                            "explanation": "Tubdan inqilobiy qayta shakllanish 'a miraculous metamorphosis' deb ataladi."
+                        },
+                        {
+                            "id": "en-c2-u2-l2-e5",
+                            "type": "multiple-choice",
+                            "prompt": "Which conceptual metaphor underlies expressions like 'He defended his claims' and 'She demolished his argument'?",
+                            "options": [
+                                "ARGUMENT IS WAR",
+                                "ARGUMENT IS FOOD",
+                                "TIME IS MONEY",
+                                "IDEAS ARE BUILDINGS"
+                            ],
+                            "correctAnswer": 0,
+                            "explanation": "'Defend', 'attack', 'demolish' kabi so'zlar 'Bahs — bu urush' (ARGUMENT IS WAR) kognitiv metaforasiga asoslangan."
                         }
                     ]
                 }
             },
             {
                 "id": "en-c2-u2-l2-s3",
-                "title": "Test",
+                "title": "Cognitive Metaphors Baholash Testi",
                 "type": "test",
-                "estimatedMinutes": 6,
+                "estimatedMinutes": 7,
                 "testData": {
-                    "instructions": "Savollarga javob bering.",
-                    "passingScorePercentage": 75,
+                    "instructions": "Kognitiv metafora va adabiy tushunchalar arxitekturasi bo'yicha imtihon.",
+                    "passingScorePercentage": 80,
                     "questions": [
                         {
                             "id": "en-c2-u2-l2-q1",
-                            "question": "In cognitive linguistics, conceptual metaphors function as:",
+                            "question": "Why do Lakoff and Johnson argue that metaphors are 'embodied'?",
                             "options": [
-                                "Errors made by non-native speakers",
-                                "Fundamental cognitive mapping mechanisms that shape how humans perceive reality",
-                                "Decorations for poetry only",
-                                "Spelling rules"
+                                "Because our fundamental abstract concepts are structured through physical bodily experiences of balance, container spaces, temperature, and motion.",
+                                "Because metaphors can only be spoken with hand gestures.",
+                                "Because only living human bodies can write books.",
+                                "Because metaphors require physical exercise to memorize."
                             ],
-                            "correctAnswerIndex": 1,
-                            "explanation": "Cognitive mapping mechanisms shaping perception."
+                            "correctAnswerIndex": 0,
+                            "explanation": "Mavhum metaforalar insonning tana muvozanati, jismoniy harakati va issiq-sovuq his-tuyg'ulari orqali shakllanganligi sababli 'embodied' deb ataladi."
                         },
                         {
                             "id": "en-c2-u2-l2-q2",
-                            "question": "\"We have hit a crossroads in our relationship and must choose which path to take.\" Conceptual metaphor:",
+                            "question": "'The finance minister managed to steer the national economy through the treacherous reefs of monetary inflation.' What cognitive domain provides the 'Vehicle' here?",
                             "options": [
-                                "Love / Life is a Journey",
-                                "Time is Money",
-                                "Knowledge is Light",
-                                "Argument is Building"
+                                "Nautical maritime navigation (ships and reefs)",
+                                "Medical surgery",
+                                "Culinary baking",
+                                "Outer space travel"
                             ],
                             "correctAnswerIndex": 0,
-                            "explanation": "Love/Life is a Journey."
+                            "explanation": "'Treacherous reefs' va 'steer' dengiz kemachiligiga oid 'Vehicle' obrazlaridir."
                         },
                         {
                             "id": "en-c2-u2-l2-q3",
-                            "question": "How does mastering conceptual metaphors assist C2 English proficiency?",
+                            "question": "What is the primary danger of deploying a 'mixed metaphor' in high-stakes editorial writing?",
                             "options": [
-                                "It eliminates the need for grammar",
-                                "It lets you speak without vocabulary",
-                                "It reduces speaking time",
-                                "It enables effortless production and comprehension of native idiomatic nuance"
+                                "It creates contradictory mental imagery that distracts the reader and undermines the author's stylistic authority.",
+                                "It violates British copyright statutes.",
+                                "It makes the sentences too brief.",
+                                "It causes formatting errors in print."
                             ],
-                            "correctAnswerIndex": 3,
-                            "explanation": "Enables effortless idiomatic nuance."
+                            "correctAnswerIndex": 0,
+                            "explanation": "Bir-biriga zid metaforalarni qorishtirish o'quvchida chalkash kulgili tasavvur uyg'otib, muallifning obro'sini tushiradi."
                         },
                         {
                             "id": "en-c2-u2-l2-q4",
-                            "question": "\"That theory is half-baked; let me chew on it for a while.\" Conceptual metaphor:",
+                            "question": "'The progressive educational reform prioritized the _______ of intellectual curiosity over mechanical testing.'",
                             "options": [
-                                "Ideas are Food / Nourishment",
-                                "Money is Time",
-                                "Mind is Computer",
-                                "War is Peace"
+                                "cultivation",
+                                "obfuscation",
+                                "concurrency",
+                                "solipsism"
                             ],
                             "correctAnswerIndex": 0,
-                            "explanation": "Ideas are Food."
+                            "explanation": "Intellektual qiziqishni o'stirish va tarbiyalash 'cultivation of curiosity' birikmasi bilan beriladi."
+                        },
+                        {
+                            "id": "en-c2-u2-l2-q5",
+                            "question": "Which conceptual metaphor is at play in: 'Investing five hours into studying yielded immense cognitive dividends'?",
+                            "options": [
+                                "TIME / EFFORT IS FINANCIAL CAPITAL",
+                                "TIME IS AN ANIMAL",
+                                "STUDYING IS CRIME",
+                                "KNOWLEDGE IS WATER"
+                            ],
+                            "correctAnswerIndex": 0,
+                            "explanation": "'Investing hours' va 'cognitive dividends' — vaqt va kuchni moliyaviy sarmoyaga qiyoslash metaforasidir."
                         }
                     ]
                 }
@@ -1515,149 +1669,228 @@ export const ENGLISH_C2_LESSONS: Lesson[] = [
         "level": "C2",
         "lessonNumber": 3,
         "title": "Geopolitical Grand Strategy & Sovereign Macroeconomics",
-        "description": "Xalqaro moliya arxitekturasi, Bretton-Vuds tizimi va global gegemoniya terminologiyasi.",
-        "estimatedDurationMinutes": 16,
+        "description": "Geosiyosiy buyuk strategiya, gegemonik barqarorlik, suveren makroiqtisodiyot, fiskal hukmronlik va xalqaro moliya arxitekturasi.",
+        "estimatedDurationMinutes": 22,
         "icon": "🌐",
         "steps": [
             {
                 "id": "en-c2-u2-l3-s1",
-                "title": "Global Strategiya Leksikasi",
+                "title": "Grand Strategy & Sovereign Macroeconomics",
                 "type": "learn",
-                "estimatedMinutes": 5,
+                "estimatedMinutes": 8,
                 "learnData": {
-                    "title": "Macroeconomics & Grand Strategy",
-                    "explanation": "Hegemony (gegemoniya / yetakchilik), Fiat currency (qog'oz pul tizimi), Quantitative easing (miqdoriy yumshatish), Sovereign debt restructuring (davlat qarzini qayta tuzilishi).",
+                    "title": "The Language of Grand Strategy, Monetary Sovereignty & Geopolitics",
+                    "explanation": "Davlatlar xavfsizligi, markaziy banklar siyosati va xalqaro ittifoqlar shunchaki siyosat emas; u **Grand Strategy** (buyuk strategiya) va **Sovereign Macroeconomics** (suveren makroiqtisodiyot) tamoyillariga asoslanadi.\n\nAsosiy Geosiyosiy va Moliyaviy Atamalar:\n1. **Geopolitical Grand Strategy**:\n   - **Hegemony**: Gegemonlik (bitta qudratli davlatning butun tizim ustidan mutlaq yetakchiligi va irodasini o'tkazishi).\n   - **Deterrence**: Tiqilish, qo'rqitib tiyib turish (dushman hujum qilmasligi uchun harbiy yoki iqtisodiy oqibatlar dahshatini ko'rsatib qo'yish):\n     *Nuclear parity establishes a precarious regime of mutual deterrence.*\n   - **Zero-sum game**: Bir tomonning yutug'i ikkinchi tomonning aynan shuncha yo'qotishiga teng bo'lgan qat'iy o'yin (*zero-sum rivalry*).\n\n2. **Sovereign Macroeconomics & Central Banking**:\n   - **Fiscal dominance**: Fiskal hukmronlik (hukumatning davlat qarzi shu darajada kattalashib ketadiki, markaziy bank inflyatsiyani jilovlash o'rniga byudjet defitsitini yopish uchun pul chiqarishga majbur bo'ladi).\n   - **Quantitative Easing (QE)**: Miqdoriy yumshatish (markaziy bankning tijorat banklaridan uzoq muddatli obligatsiyalarni sotib olib, iqtisodiyotga sun'iy likvidlik kiritishi).\n   - **Bretton Woods architecture**: Ikkinchi jahon urushidan so'ng jahon moliyasini (XVF, Jahon banki, AQSH dollari rezervi) belgilab bergan global tizim.\n\n⚠️ **O'zbek o'rganuvchilari uchun xavfli tuzoqlar (Common Pitfalls)**:\n- ❌ *Conflating 'deficit' with 'debt'.* ('Deficit' — bitta yil ichidagi xarajatning daromaddan oshishi; 'Debt' — o'tmishdagi barcha defitsitlarning umumiy yig'indisi!).\n- ❌ *Using 'hegemony' as a simple synonym for 'government'.* (Hegemony — faqat butun tizim ustidan so'zsiz hukmronlikka nisbatan ishlatiladi).\n\n🎯 **IELTS Speaking & Writing Band 9.0 Masterclass**:\n- **Prompt**: Task 2: To what extent does economic globalization diminish national sovereignty?\n- **Model Answer (Band 9.0)**: Globalized supply chains undeniably curtail unconditional economic autonomy. When sovereign nations integrate into multilateral trade pacts, fiscal dominance is constrained by statutory debt caps and currency pegging. Nevertheless, to view this integration as a zero-sum sacrifice of sovereignty is fundamentally reductionist. Participation in global governance structures endows medium powers with collective diplomatic deterrence and commercial leverage that far outstrips autarkic isolationism.\n- **Discourse Markers**: undeniably curtail unconditional economic autonomy, fiscal dominance is constrained by, zero-sum sacrifice of sovereignty, endows medium powers with collective diplomatic deterrence, autarkic isolationism\n- **Examiner / Intonation Tip**: *Autarkic isolationism* (avtarkik yakkalanib qolish) va *diplomatic deterrence* kabi yuqori darajadagi atamalar javobingizga xalqaro munosabatlar professori darajasidagi chuqurlik baxsh etadi.",
                     "vocabulary": [
                         {
                             "term": "Hegemony",
-                            "reading": "/hɪˈdʒem.ə.ni/",
-                            "meaning": "Gegemoniya / Siyosiy ustunlik",
-                            "exampleSentence": "Economic hegemony shaped the global order.",
-                            "exampleTranslation": "Iqtisodiy gegemoniya global tartibotni shakllantirdi."
+                            "reading": "/hɪˈɡem.ən.i/",
+                            "meaning": "Gegemonlik, tizim ustidan mutlaq yetakchilik va hukmronlik",
+                            "exampleSentence": "The twilight of unilateral superpower hegemony has paved the way for an unstable multipolar order.",
+                            "exampleTranslation": "Bir tomonlama superqudrat gegemonligining so'nishi beqaror ko'p qutbli tartibga yo'l ochdi."
                         },
                         {
-                            "term": "Quintessential",
-                            "reading": "/ˌkwɪn.tɪˈsen.ʃəl/",
-                            "meaning": "Eng oliy namuna, timsol",
-                            "exampleSentence": "It is the quintessential masterpiece of modern literature.",
-                            "exampleTranslation": "Bu zamonaviy adabiyotning eng oliy namunasidir."
+                            "term": "Deterrence",
+                            "reading": "/dɪˈter.əns/",
+                            "meaning": "Tiyib turish (oqibatlar dahshati orqali dushmanning hujumidan qaytarish)",
+                            "exampleSentence": "Credible conventional deterrence prevents regional skirmishes from metastasizing into total warfare.",
+                            "exampleTranslation": "Ishonchli an'anaviy tiyib turish (deterrence) mintaqaviy to'qnashuvlarning yalpi urushga aylanib ketishining oldini oladi."
                         },
                         {
-                            "term": "Inextricable",
-                            "reading": "/ˌɪn.ɪkˈstrɪk.ə.bəl/",
-                            "meaning": "Ajralmas, chambarchas bogʻliq",
-                            "exampleSentence": "Language and cultural identity are inextricably intertwined.",
-                            "exampleTranslation": "Til va madaniy oʻzlik chambarchas bogʻlangan."
+                            "term": "Autarkic",
+                            "reading": "/ɔːˈtɑː.kɪk/",
+                            "meaning": "Avtarkik, to'liq o'zini o'zi ta'minlashga urinuvchi yopiq iqtisodiyot",
+                            "exampleSentence": "Historical attempts to establish purely autarkic economic systems have uniformly culminated in technological backwardness.",
+                            "exampleTranslation": "To'liq avtarkik yopiq iqtisodiy tizimlar qurishga bo'lgan tarixiy urinishlar doimo texnologik qoloqlik bilan yakunlangan."
+                        },
+                        {
+                            "term": "Quantitative easing",
+                            "reading": "/ˌkwɒn.tɪ.tə.tɪv ˈiː.zɪŋ/",
+                            "meaning": "Miqdoriy yumshatish (markaziy bank tomonidan iqtisodiyotga likvidlik kiritish siyosati)",
+                            "exampleSentence": "Aggressive quantitative easing prevented an immediate liquidity freeze in sovereign bond markets.",
+                            "exampleTranslation": "Faol miqdoriy yumshatish (QE) davlat obligatsiyalari bozorlarida zudlik bilan likvidlik muzlashining oldini oldi."
+                        },
+                        {
+                            "term": "Zero-sum",
+                            "reading": "/ˌzɪə.rəʊˈsʌm/",
+                            "meaning": "Nol yig'indili (birining yutug'i boshqasining aynan shuncha yo'qotishiga teng bo'lgan holat)",
+                            "exampleSentence": "Treating international trade as a zero-sum conflict ignores the immense mutual gains of comparative advantage.",
+                            "exampleTranslation": "Xalqaro savdoga nol yig'indili nizo deb qarash qiyosiy ustunlikning ulkan o'zaro foydalarini e'tiborsiz qoldiradi."
+                        },
+                        {
+                            "term": "Metastasize",
+                            "reading": "/məˈtæs.tə.saɪz/",
+                            "meaning": "Metastaza bermoq, to'xtovsiz xatarli tarqalib ketmoq",
+                            "exampleSentence": "Without decisive multilateral arbitration, localized border disputes risk metastasizing into systemic regional war.",
+                            "exampleTranslation": "Qat'iy ko'p tomonlama arbitrajsiz, mahalliy chegara nizolari butun mintaqaviy urushga aylanib ketish xavfini tug'diradi."
+                        },
+                        {
+                            "term": "Dominance",
+                            "reading": "/ˈdɒm.ɪ.nəns/",
+                            "meaning": "Hukmronlik, ustuvorlik",
+                            "exampleSentence": "Fiscal dominance severely constrains a central bank's ability to combat double-digit price inflation.",
+                            "exampleTranslation": "Fiskal hukmronlik markaziy bankning ikki xonali inflyatsiyaga qarshi kurashish imkoniyatini keskin cheklaydi."
+                        },
+                        {
+                            "term": "Liquidity",
+                            "reading": "/lɪˈkwɪd.ə.ti/",
+                            "meaning": "Likvidlik (aktivlarning naqd pulga tez va yo'qotishsiz aylana olish darajasi)",
+                            "exampleSentence": "The emergency injection of foreign exchange liquidity halted the precipitous collapse of the banking system.",
+                            "exampleTranslation": "Valyuta likvidligining favqulodda kiritilishi bank tizimining keskin qulashini to'xtatib qoldi."
                         }
                     ],
-                    "grammarRules": [
-                        {
-                            "pattern": "Geopolitical Grand Strategy & Sovereign Macroeconomics",
-                            "meaning": "Xalqaro moliya arxitekturasi, Bretton-Vuds tizimi va global gegemoniya terminologiyasi.",
-                            "usageNotes": "Hegemony (gegemoniya / yetakchilik), Fiat currency (qog'oz pul tizimi), Quantitative easing (miqdoriy yumshatish), Sovereign debt restructuring (davlat qarzini qayta tuzilishi).",
-                            "examples": [
-                                {
-                                    "sentence": "Economic hegemony shaped the global order.",
-                                    "translation": "Iqtisodiy gegemoniya global tartibotni shakllantirdi."
-                                }
-                            ]
-                        }
+                    "keyPoints": [
+                        "Grand strategy synthesizes military, diplomatic, economic, and informational instruments of national power.",
+                        "Differentiate zero-sum conflict (one party's gain is another's loss) from non-zero-sum collaborative governance.",
+                        "Sovereign macroeconomic precision: 'debt' vs 'deficit', 'quantitative easing' vs 'direct stimulus'.",
+                        "Use evocative geopolitical verbs: 'metastasize', 'curtail autonomy', 'deploy deterrence'."
                     ]
                 }
             },
             {
                 "id": "en-c2-u2-l3-s2",
-                "title": "Mashq",
+                "title": "Grand Strategy Amaliyoti",
                 "type": "practice",
-                "estimatedMinutes": 5,
+                "estimatedMinutes": 6,
                 "practiceData": {
-                    "instructions": "To'g'ri atamani tanlang.",
+                    "instructions": "Geosiyosat va makroiqtisodiyot tahliliga mos eng to'g'ri jumlalarni tanlang.",
                     "exercises": [
                         {
                             "id": "en-c2-u2-l3-e1",
                             "type": "multiple-choice",
-                            "prompt": "\"Central banks implemented _______ easing to inject liquidity into stagnating markets.\"",
+                            "prompt": "What does a 'zero-sum game' mean in international trade theory?",
                             "options": [
-                                "quantitative",
-                                "biological",
-                                "computational",
-                                "qualitative"
+                                "A situation where one participant's gain is strictly balanced by another participant's corresponding loss",
+                                "A game where all players win identical prizes",
+                                "A free financial seminar with zero admission cost",
+                                "A market that has completely run out of money"
                             ],
                             "correctAnswer": 0,
-                            "explanation": "Quantitative easing (QE)."
+                            "explanation": "'Zero-sum game' — bir tomonning yutug'i boshqa tomonning aynan shuncha yo'qotishiga teng bo'lgan yopiq ziddiyatdir."
                         },
                         {
-                            "id": "en-c2-u2-l3-ex-2",
+                            "id": "en-c2-u2-l3-e2",
                             "type": "multiple-choice",
-                            "prompt": "Choose the correct word to complete the sentence: \"It is the quintessential masterpiece of modern literature.\"",
+                            "prompt": "Choose the term that denotes the state of supreme leadership or dominant influence exerted by one powerful nation over others:",
                             "options": [
-                                "reluctance",
-                                "delay",
-                                "Quintessential",
-                                "doubt"
+                                "Hegemony",
+                                "Solipsism",
+                                "Litotes",
+                                "Affectation"
                             ],
-                            "correctAnswer": 2,
-                            "explanation": "\"Quintessential\" (Eng oliy namuna, timsol) fits the context appropriately."
+                            "correctAnswer": 0,
+                            "explanation": "'Hegemony' (gegemonlik) — bitta superqudratning xalqaro tizim ustidan mutlaq yetakchiligi va hukmronligidir."
+                        },
+                        {
+                            "id": "en-c2-u2-l3-e3",
+                            "type": "multiple-choice",
+                            "prompt": "What is an 'autarkic' economy?",
+                            "options": [
+                                "A closed, self-sufficient economic system that avoids international trade and foreign imports",
+                                "An economy run entirely by artificial intelligence",
+                                "A country that uses only gold coins",
+                                "A market that produces only automotive cars"
+                            ],
+                            "correctAnswer": 0,
+                            "explanation": "'Autarkic' — tashqi savdodan uzilib, to'liq o'zini o'zi ta'minlashga uringan yopiq iqtisodiyot demakdir."
+                        },
+                        {
+                            "id": "en-c2-u2-l3-e4",
+                            "type": "multiple-choice",
+                            "prompt": "Fill in the blank: 'The deployment of forward missile interceptors was engineered to bolster conventional _______ against regional aggression.'",
+                            "options": [
+                                "deterrence",
+                                "affectation",
+                                "chiasmus",
+                                "retraction"
+                            ],
+                            "correctAnswer": 0,
+                            "explanation": "Dushmanning tajovuzkor niyatini tiyib turish 'conventional deterrence' iborasi bilan ifodalanadi."
+                        },
+                        {
+                            "id": "en-c2-u2-l3-e5",
+                            "type": "multiple-choice",
+                            "prompt": "Complete: 'Analysts warned that small border skirmishes could rapidly _______ into a catastrophic continental war.'",
+                            "options": [
+                                "metastasize",
+                                "obfuscate",
+                                "temper",
+                                "plateau"
+                            ],
+                            "correctAnswer": 0,
+                            "explanation": "Kichik nizo xatarli darajada kengayib tarqalib ketishi 'metastasize into war' metaforasi bilan ifodalanadi."
                         }
                     ]
                 }
             },
             {
                 "id": "en-c2-u2-l3-s3",
-                "title": "Test",
+                "title": "Grand Strategy Baholash Testi",
                 "type": "test",
-                "estimatedMinutes": 6,
+                "estimatedMinutes": 7,
                 "testData": {
-                    "instructions": "Savollarga javob bering.",
-                    "passingScorePercentage": 75,
+                    "instructions": "Buyuk strategiya va makroiqtisodiy terminologiya bo'yicha imtihon.",
+                    "passingScorePercentage": 80,
                     "questions": [
                         {
                             "id": "en-c2-u2-l3-q1",
-                            "question": "What is a \"fiat currency\"?",
+                            "question": "In macroeconomic monetary theory, what occurs during 'quantitative easing' (QE)?",
                             "options": [
-                                "Money that is not backed by a physical commodity like gold, but by government decree and trust",
-                                "Foreign monopoly bills",
-                                "Cryptocurrency only",
-                                "Gold coins from Roman times"
+                                "A central bank purchases government bonds or other financial assets from commercial banks to inject liquidity directly into the economy.",
+                                "The government shuts down all banks for twenty-four hours.",
+                                "Citizens are banned from using paper currency.",
+                                "Tax rates are doubled across all income brackets."
                             ],
                             "correctAnswerIndex": 0,
-                            "explanation": "Money backed by government decree/trust."
+                            "explanation": "Miqdoriy yumshatish (QE) — markaziy bank obligatsiyalarni sotib olib, iqtisodiyotga yangi likvidlik kiritish jarayonidir."
                         },
                         {
                             "id": "en-c2-u2-l3-q2",
-                            "question": "\"Sovereign default\" occurs when a nation:",
+                            "question": "What does the concept of 'fiscal dominance' describe in central banking?",
                             "options": [
-                                "Elects a new president",
-                                "Changes its flag",
-                                "Fails to meet its debt obligations to creditors",
-                                "Builds a new capital"
+                                "A condition where excessive sovereign debt forces the central bank to keep interest rates low or print money to accommodate the government's budget deficit.",
+                                "A bank manager controlling employee salaries.",
+                                "A country having zero national debt.",
+                                "The printing of currency notes on solid gold plates."
                             ],
-                            "correctAnswerIndex": 2,
-                            "explanation": "Fails to meet debt obligations."
+                            "correctAnswerIndex": 0,
+                            "explanation": "Fiskal hukmronlik davlat qarzi o'ta og'irlashib, markaziy bank hukumat defitsitini qoplashga tobe bo'lib qolgan holatni bildiradi."
                         },
                         {
                             "id": "en-c2-u2-l3-q3",
-                            "question": "A \"zero-sum game\" means a situation in which:",
+                            "question": "Which phrase describes a geopolitical scenario where both sides possess nuclear weapons capable of annihilating each other?",
                             "options": [
-                                "One party's gain is exactly balanced by the other party's corresponding loss",
-                                "All scores are erased",
-                                "Everyone wins equally",
-                                "No one participates"
+                                "Mutually Assured Destruction (deterrence)",
+                                "Autarkic isolationism",
+                                "Litotes of warfare",
+                                "Chiasmus of peace"
                             ],
                             "correctAnswerIndex": 0,
-                            "explanation": "One party's gain equals another's loss."
+                            "explanation": "Har ikki tomonning bir-birini yo'q qila olishi tufayli urush boshlay olmaslik holati 'Mutually Assured Destruction' (yadroviy tiyib turish) deb ataladi."
                         },
                         {
                             "id": "en-c2-u2-l3-q4",
-                            "question": "What does \"multipolarity\" denote in 21st-century geopolitics?",
+                            "question": "'The sudden flight of foreign capital caused an acute _______ crisis in domestic interbank lending.'",
                             "options": [
-                                "North and South poles only",
-                                "Free trade across oceans",
-                                "Nuclear weapons proliferation",
-                                "A global distribution of power among several influential nation-states rather than a single hegemon"
+                                "liquidity",
+                                "chiasmus",
+                                "solipsism",
+                                "persona"
                             ],
-                            "correctAnswerIndex": 3,
-                            "explanation": "Power distributed among several influential states."
+                            "correctAnswerIndex": 0,
+                            "explanation": "Naqd mablag'larning keskin yetishmovchiligi 'liquidity crisis' (likvidlik inqirozi) deb ataladi."
+                        },
+                        {
+                            "id": "en-c2-u2-l3-q5",
+                            "question": "Identify the flawed sentence regarding international relations terminology:",
+                            "options": [
+                                "The treaty established robust mechanisms for multilateral crisis de-escalation.",
+                                "Both countries agreed that their military conflict was a lovely friendly game with no losers.",
+                                "The twilight of unipolar hegemony has amplified regional security volatility.",
+                                "Sovereign debt restructuring requires extensive negotiations with international creditors."
+                            ],
+                            "correctAnswerIndex": 1,
+                            "explanation": "Ikkinchi variant bolalarcha va xalqaro munosabatlar voqeligiga mutlaqo ziddir."
                         }
                     ]
                 }
@@ -1673,154 +1906,228 @@ export const ENGLISH_C2_LESSONS: Lesson[] = [
         "level": "C2",
         "lessonNumber": 4,
         "title": "High-Level Broadcast & Academic Lecture Listening: Quantum Decoherence",
-        "description": "Kvant fizikasi va dekoherentsiya bo'yicha Oksford ma'ruzasini to'liq tezlikda tinglab tushunish.",
-        "estimatedDurationMinutes": 18,
+        "description": "Kvant mexanikasi, dekoherentlik, to'lqin-zarra dualligi va ilmiy simpoziumlardagi tezkor murakkab ma'ruzalarni eshitib tushunish.",
+        "estimatedDurationMinutes": 22,
         "icon": "⚛️",
         "steps": [
             {
                 "id": "en-c2-u2-l4-s1",
-                "title": "Kvant Ma'ruzasi",
+                "title": "High-Level Academic Listening: Quantum Realities",
                 "type": "learn",
-                "estimatedMinutes": 5,
+                "estimatedMinutes": 8,
                 "learnData": {
-                    "title": "Quantum Decoherence and Superposition",
-                    "explanation": "Kvant holatlari va makroskopik olam o'rtasidagi o'tish tahlili.",
-                    "keyPoints": [
-                        "Quantum superposition allows subatomic particles to inhabit probabilistic states simultaneously.",
-                        "Decoherence describes the mechanism whereby environmental interaction irreversibly entangles a quantum system, rendering it classically deterministic.",
-                        "Preserving coherence remains the paramount engineering challenge in scalable quantum computing architectures."
-                    ],
+                    "title": "Decoding Advanced Scientific Discourse: Quantum Decoherence & Epistemic Physics",
+                    "explanation": "C2 darajasidagi eng yuqori tinglab tushunish ko'nikmasi — bu zamonaviy nazariy fizika, kvant mexanikasi va kosmologiya bo'yicha xalqaro simpoziumlardagi oliy ilmiy ma'ruzalarni o'z ona tilidagidek qabul qila olishdir.\n\nAsosiy Kvant Konseptlari:\n1. **Superposition (Superpozitsiya)**:\n   - Kvant zarralari (masalan, elektronlar) o'lchanishidan oldin bir vaqtning o'zida bir nechta turli holatlarda (states) bo'lish qobiliyati.\n2. **Quantum Decoherence (Kvant dekoherentligi)**:\n   - Kvant tizimining tashqi muhit (fotonlar, molekulalar) bilan to'qnashuvi natijasida o'zining nozik superpozitsiya xususiyatini yo'qotib, biz ko'rib turgan klassik fizik olamga aylanish jarayoni:\n     *Decoherence explains why macroscopic everyday objects obey deterministic Newtonian laws rather than quantum probabilistic paradoxes.*\n3. **Quantum Entanglement (Kvant chigalligi)**:\n   - Ikki zarraning bir-biriga shunchalik bog'lanib qolishiki, ulardan birining holati o'zgarganda, oradagi masofadan qat'i nazar (hatto koinotning ikki chekkasida bo'lsa ham) ikkinchisi bir zumda o'zgaradi (*Einstein's 'spooky action at a distance'*).\n\n⚠️ **O'zbek o'rganuvchilari uchun xavfli tuzoqlar (Common Pitfalls)**:\n- ❌ *Conflating the 'observer effect' with human mystical consciousness.* (Kvant fizikasida 'kuzatuvchi' inson ko'zi yoki ruhiyati emas, balki zarraga urilib uni o'lchaydigan har qanday fizik asbob yoki foton hisoblanadi!).\n- ❌ *Losing the thread during mathematical derivations.* Ma'ruza eshitayotganda formulalar tafsilotiga emas, ma'ruzachining falsafiy va fizik xulosasiga e'tiborni qarating.\n\n🎯 **IELTS Speaking & Writing Band 9.0 Masterclass**:\n- **Prompt**: Speaking Part 3: Why should society invest billions into fundamental theoretical physics that yields no immediate commercial profit?\n- **Model Answer (Band 9.0)**: Dismissing fundamental theoretical inquiry as an unremunerative luxury is an astonishingly short-sighted posture. The discovery of quantum mechanics was initially regarded as esoteric intellectual play; yet, without its foundational equations, modern silicon semiconductors, magnetic resonance imaging, and encrypted telecommunications would not exist. Quantum decoherence research today paves the way for fault-tolerant quantum computing tomorrow. Pure science represents an existential investment in the intellectual horizon of our species.\n- **Discourse Markers**: unremunerative luxury, astonishingly short-sighted posture, esoteric intellectual play, paves the way for, existential investment in\n- **Examiner / Intonation Tip**: *Unremunerative luxury* (foyda keltirmaydigan dabdaba) va *esoteric intellectual play* iboralari sizning ilmiy va falsafiy nutq salohiyatingizni eng cho'qqisida namoyish qiladi.",
                     "vocabulary": [
+                        {
+                            "term": "Decoherence",
+                            "reading": "/ˌdiː.kəʊˈhɪə.rəns/",
+                            "meaning": "Dekoherentlik (kvant tizimining atrof-muhit bilan to'qnashib, klassik fizik holatga o'tishi)",
+                            "exampleSentence": "Environmental thermal noise triggers rapid decoherence, destroying fragile quantum superpositions in nanoseconds.",
+                            "exampleTranslation": "Atrof-muhitning issiqlik shovqini tezkor dekoherentlikni keltirib chiqarib, nozik kvant superpozitsiyalarini nanosoniyalarda yo'q qiladi."
+                        },
                         {
                             "term": "Superposition",
                             "reading": "/ˌsuː.pə.pəˈzɪʃ.ən/",
-                            "meaning": "Kvant holatlari superpozitsiyasi",
-                            "exampleSentence": "Qubits exploit quantum superposition.",
-                            "exampleTranslation": "Kubitlar kvant superpozitsiyasidan foydalanadi."
+                            "meaning": "Superpozitsiya (zarraning bir vaqtning o'zida bir nechta fizik holatda mavjud bo'la olishi)",
+                            "exampleSentence": "Before measurement, the qubit exists in a simultaneous superposition of both zero and one.",
+                            "exampleTranslation": "O'lchov o'tkazilishidan oldin kubit bir vaqtning o'zida ham nol, ham bir holatidagi superpozitsiyada mavjud bo'ladi."
                         },
                         {
-                            "term": "Inextricable",
-                            "reading": "/ˌɪn.ɪkˈstrɪk.ə.bəl/",
-                            "meaning": "Ajralmas, chambarchas bogʻliq",
-                            "exampleSentence": "Language and cultural identity are inextricably intertwined.",
-                            "exampleTranslation": "Til va madaniy oʻzlik chambarchas bogʻlangan."
+                            "term": "Entanglement",
+                            "reading": "/ɪnˈtæŋ.ɡəl.mənt/",
+                            "meaning": "Chigallik, kvant zarrachalarining masofadan qat'i nazar o'zaro bir lahzalik bog'liqligi",
+                            "exampleSentence": "Quantum entanglement permits instantaneous state correlations across astronomical distances.",
+                            "exampleTranslation": "Kvant chigalligi astronomik masofalar osha bir lahzalik holat o'zaro bog'liqligini ta'minlaydi."
                         },
                         {
-                            "term": "Dissemination",
-                            "reading": "/dɪˌsem.ɪˈneɪ.ʃən/",
-                            "meaning": "Keng yoyish, tarqatish",
-                            "exampleSentence": "The swift dissemination of knowledge accelerates innovation.",
-                            "exampleTranslation": "Bilimlarning tezkor tarqalishi innovatsiyalarni jadallashtiradi."
+                            "term": "Macroscopic",
+                            "reading": "/ˌmæk.rəˈskɒp.ɪk/",
+                            "meaning": "Makroskopik (oddiy ko'z bilan ko'rsa bo'ladigan yirik jismoniy dunyo)",
+                            "exampleSentence": "In the macroscopic realm, objects obey deterministic classical mechanics rather than probability clouds.",
+                            "exampleTranslation": "Makroskopik olamda jismlar ehtimollik bulutlariga emas, balki qat'iy Nyuton klassik mexanikasiga bo'ysunadi."
+                        },
+                        {
+                            "term": "Esoteric",
+                            "reading": "/ˌes.əˈter.ɪk/",
+                            "meaning": "Faqat tor doiradagi mutaxassislargina tushunadigan, sirli va qiyin",
+                            "exampleSentence": "Theoretical astrophysics often appears hopelessly esoteric to the uninitiated layperson.",
+                            "exampleTranslation": "Nazariy astrofizika oddiy odamlarga ko'pincha umidsiz darajada qiyin va tushunarsiz (esoteric) bo'lib ko'rinadi."
+                        },
+                        {
+                            "term": "Unremunerative",
+                            "reading": "/ˌʌn.rɪˈmjuː.nər.ə.tɪv/",
+                            "meaning": "Daromad keltirmaydigan, moliyaviy foydasiz",
+                            "exampleSentence": "Fundamental particle research is commercially unremunerative in the short term, yet foundational for future innovation.",
+                            "exampleTranslation": "Boshlang'ich zarralar tadqiqoti qisqa muddatda tijoriy jihatdan daromad keltirmaydi, ammo kelajak innovatsiyalari uchun poydevordir."
+                        },
+                        {
+                            "term": "Probabilistic",
+                            "reading": "/ˌprɒb.ə.bɪˈlɪs.tɪk/",
+                            "meaning": "Ehtimolli, qat'iy 100% emas balki ehtimollik qonunlariga asoslangan",
+                            "exampleSentence": "Quantum mechanics replaced deterministic Newtonian trajectories with probabilistic wavefunctions.",
+                            "exampleTranslation": "Kvant mexanikasi Nyutonning qat'iy traektoriyalarini ehtimollik to'lqin funksiyalari bilan almashtirdi."
+                        },
+                        {
+                            "term": "Fault-tolerant",
+                            "reading": "/ˈfɒlt ˌtɒl.ər.ənt/",
+                            "meaning": "Xatoliklarga bardoshli, nuqsonsiz ishlovchi",
+                            "exampleSentence": "Engineering fault-tolerant quantum computing processors requires overcoming environmental thermal noise.",
+                            "exampleTranslation": "Xatolarga chidamli kvant kompyuter protsessorlarini yaratish atrof-muhitning issiqlik shovqinini yengishni talab qiladi."
                         }
                     ],
-                    "grammarRules": [
-                        {
-                            "pattern": "High-Level Broadcast & Academic Lecture Listening: Quantum Decoherence",
-                            "meaning": "Kvant fizikasi va dekoherentsiya bo'yicha Oksford ma'ruzasini to'liq tezlikda tinglab tushunish.",
-                            "usageNotes": "Kvant holatlari va makroskopik olam o'rtasidagi o'tish tahlili.",
-                            "examples": [
-                                {
-                                    "sentence": "Qubits exploit quantum superposition.",
-                                    "translation": "Kubitlar kvant superpozitsiyasidan foydalanadi."
-                                }
-                            ]
-                        }
+                    "keyPoints": [
+                        "Quantum decoherence explains the transition from microscopic quantum indeterminacy to macroscopic deterministic classical reality.",
+                        "Understand foundational quantum physics lexicon: 'superposition', 'entanglement', 'wavefunction', 'probabilistic'.",
+                        "Listen for high-level rhetorical framing: defending 'esoteric, unremunerative pure science' against short-sighted commercial skepticism.",
+                        "Recognize that in physics lectures, 'observer' refers to any physical measurement interaction, not human consciousness."
                     ]
                 }
             },
             {
                 "id": "en-c2-u2-l4-s2",
-                "title": "Mashq",
+                "title": "Quantum Physics Listening Amaliyoti",
                 "type": "practice",
                 "estimatedMinutes": 6,
                 "practiceData": {
-                    "instructions": "Ilmiy mohiyatni aniqlang.",
+                    "instructions": "Nazariy fizika va ilmiy simpozium ma'ruzalariga mos eng to'g'ri jumlalarni tanlang.",
                     "exercises": [
                         {
                             "id": "en-c2-u2-l4-e1",
                             "type": "multiple-choice",
-                            "prompt": "What causes quantum decoherence according to the lecture?",
+                            "prompt": "What physical process describes a quantum system losing its superposition states due to environmental interaction?",
                             "options": [
-                                "Keeping particles completely frozen in vacuum",
-                                "Computer programming bugs",
-                                "Lack of electricity",
-                                "Environmental interaction and entanglement with ambient particles"
+                                "Quantum Decoherence",
+                                "Chiasmus",
+                                "Litotes",
+                                "Fiscal Dominance"
                             ],
-                            "correctAnswer": 3,
-                            "explanation": "Environmental interaction."
+                            "correctAnswer": 0,
+                            "explanation": "Kvant tizimining atrof-muhit ta'sirida superpozitsiyasini yo'qotishi 'Quantum Decoherence' (kvant dekoherentligi) deb ataladi."
                         },
                         {
-                            "id": "en-c2-u2-l4-ex-2",
+                            "id": "en-c2-u2-l4-e2",
                             "type": "multiple-choice",
-                            "prompt": "Choose the correct word to complete the sentence: \"Language and cultural identity are inextricably intertwined.\"",
+                            "prompt": "What does describing knowledge as 'esoteric' mean?",
                             "options": [
-                                "doubt",
-                                "Inextricable",
-                                "delay",
-                                "reluctance"
+                                "Understood by or meant for only a tiny, specialized group with rare knowledge",
+                                "Completely wrong and stupid",
+                                "Understood easily by kindergarten children",
+                                "Written on public billboards"
                             ],
-                            "correctAnswer": 1,
-                            "explanation": "\"Inextricable\" (Ajralmas, chambarchas bogʻliq) fits the context appropriately."
+                            "correctAnswer": 0,
+                            "explanation": "'Esoteric' — faqat tor doiradagi maxsus mutaxassislargina tushunadigan o'ta murakkab bilimni bildiradi."
+                        },
+                        {
+                            "id": "en-c2-u2-l4-e3",
+                            "type": "multiple-choice",
+                            "prompt": "Choose the word meaning 'yielding zero financial profit or monetary gain':",
+                            "options": [
+                                "Unremunerative",
+                                "Sentient",
+                                "Axiomatic",
+                                "Disinterested"
+                            ],
+                            "correctAnswer": 0,
+                            "explanation": "'Unremunerative' — moliyaviy daromad yoki maosh keltirmaydigan degani."
+                        },
+                        {
+                            "id": "en-c2-u2-l4-e4",
+                            "type": "multiple-choice",
+                            "prompt": "Fill in the blank: 'Before environmental measurement, the electron exists in a delicate _______ of multiple eigenstates.'",
+                            "options": [
+                                "superposition",
+                                "retraction",
+                                "sycophant",
+                                "chiasmus"
+                            ],
+                            "correctAnswer": 0,
+                            "explanation": "Zarraning bir vaqtda bir nechta holatda bo'lishi 'superposition' deb nomlanadi."
+                        },
+                        {
+                            "id": "en-c2-u2-l4-e5",
+                            "type": "multiple-choice",
+                            "prompt": "What term describes computing architectures engineered to operate reliably even when individual components experience noise errors?",
+                            "options": [
+                                "Fault-tolerant",
+                                "Sesquipedalian",
+                                "Myopic",
+                                "Autarkic"
+                            ],
+                            "correctAnswer": 0,
+                            "explanation": "Xatoliklar yuz berganda ham to'xtamasdan aniq ishlovchi tizim 'fault-tolerant' deb ataladi."
                         }
                     ]
                 }
             },
             {
                 "id": "en-c2-u2-l4-s3",
-                "title": "Test",
+                "title": "Quantum Physics Listening Baholash Testi",
                 "type": "test",
                 "estimatedMinutes": 7,
                 "testData": {
-                    "instructions": "Savollarga javob bering.",
-                    "passingScorePercentage": 75,
+                    "instructions": "Nazariy fizika va akademik simpozium leksikasi bo'yicha imtihon.",
+                    "passingScorePercentage": 80,
                     "questions": [
                         {
                             "id": "en-c2-u2-l4-q1",
-                            "question": "What is the primary obstacle to building large-scale quantum computers?",
+                            "question": "In quantum mechanics, why did Albert Einstein refer to quantum entanglement as 'spooky action at a distance'?",
                             "options": [
-                                "Buying computer screens",
-                                "Connecting Wi-Fi",
-                                "Writing software in HTML",
-                                "Preventing quantum decoherence and maintaining fidelity"
+                                "Because measuring one entangled particle instantaneously determines the state of its partner, seemingly violating the universal speed limit of light.",
+                                "Because entangled particles are haunted by historical ghosts.",
+                                "Because quantum laboratories are always built underground.",
+                                "Because entangled particles turn green in the dark."
                             ],
-                            "correctAnswerIndex": 3,
-                            "explanation": "Preventing decoherence and maintaining fidelity."
+                            "correctAnswerIndex": 0,
+                            "explanation": "Chigal zarrachalarning bir lahzada bir-biriga ta'sir qilishi yorug'lik tezligi chegarasini buzayotgandek tuyulgani uchun Eynshteyn uni 'spooky action at a distance' deb atagan."
                         },
                         {
                             "id": "en-c2-u2-l4-q2",
-                            "question": "\"Deterministic\" systems are those in which:",
+                            "question": "'Quantum mechanics abandoned rigid determinism in favor of _______ wave mechanics.'",
                             "options": [
-                                "Future states are completely dictated by initial conditions with no randomness",
-                                "Magic is involved",
-                                "Nothing happens",
-                                "Everything is totally unpredictable"
+                                "probabilistic",
+                                "autarkic",
+                                "subversive",
+                                "sycophantic"
                             ],
                             "correctAnswerIndex": 0,
-                            "explanation": "Future states dictated by initial conditions."
+                            "explanation": "Kvant mexanikasi ehtimollik qonunlariga tayanadi: 'probabilistic wave mechanics'."
                         },
                         {
                             "id": "en-c2-u2-l4-q3",
-                            "question": "A qubit differs from a classical bit because it can represent:",
+                            "question": "What is the primary obstacle to constructing commercial quantum computers at room temperature?",
                             "options": [
-                                "Only zero",
-                                "Both 0 and 1 simultaneously via superposition",
-                                "No information",
-                                "Only one"
+                                "Rapid thermal decoherence caused by environmental heat destroys the fragile superposition of qubits.",
+                                "There are no computer monitors capable of displaying quantum data.",
+                                "Quantum computers require 500 million keyboards.",
+                                "Governments have banned the use of electricity."
                             ],
-                            "correctAnswerIndex": 1,
-                            "explanation": "Both 0 and 1 via superposition."
+                            "correctAnswerIndex": 0,
+                            "explanation": "Xona haroratidagi issiqlik shovqini tezkor dekoherentlikni keltirib chiqarib, kubitlar superpozitsiyasini bir zumda buzadi."
                         },
                         {
                             "id": "en-c2-u2-l4-q4",
-                            "question": "At C2 level, what listening capacity is expected on complex technical lectures?",
+                            "question": "Which phrase describes macroscopic objects that can be perceived with the naked eye?",
                             "options": [
-                                "Reading subtitles only",
-                                "Only catching 2 words per minute",
-                                "Comprehending rapid native speech, technical vocabulary and underlying conceptual synthesis effortlessly",
-                                "Asking for audio to be repeated 5 times"
+                                "The macroscopic realm",
+                                "The subatomic quantum foam",
+                                "The solipsistic space",
+                                "The chiasmus framework"
                             ],
-                            "correctAnswerIndex": 2,
-                            "explanation": "Effortless comprehension of rapid technical speech."
+                            "correctAnswerIndex": 0,
+                            "explanation": "Kundalik hayotimizdagi yirik moddiy olam 'the macroscopic realm' deb ataladi."
+                        },
+                        {
+                            "id": "en-c2-u2-l4-q5",
+                            "question": "Identify the flawed sentence regarding fundamental scientific research:",
+                            "options": [
+                                "Fundamental theoretical research frequently yields revolutionary, unforeseen technological innovations decades later.",
+                                "Unless an experiment produces immediate commercial profits within twenty minutes, it is completely useless and evil.",
+                                "Quantum electrodynamics remains one of the most precisely verified theories in physical science.",
+                                "Decoherence explains the apparent emergence of classical reality from quantum foundations."
+                            ],
+                            "correctAnswerIndex": 1,
+                            "explanation": "Ikkinchi variant ilmiy tadqiqotlar mohiyatiga mutlaqo zid, kaltabin fikrdir."
                         }
                     ]
                 }
@@ -1836,153 +2143,228 @@ export const ENGLISH_C2_LESSONS: Lesson[] = [
         "level": "C2",
         "lessonNumber": 5,
         "title": "C2 Academic Essay Evaluation: The Pinnacle of Critical Feedback",
-        "description": "Magistratura va doktorantura darajasidagi ilmiy maqolalarga taqriz va tahrir kiritish.",
-        "estimatedDurationMinutes": 18,
-        "icon": "📝",
+        "description": "Doktorlik dissertatsiyalari va xalqaro maqolalarni eng yuqori C2 darajasida ekspertiza qilish, metodologik nuqsonlarni fosh etish va mukammal akademik taqriz.",
+        "estimatedDurationMinutes": 25,
+        "icon": "🔍",
         "steps": [
             {
                 "id": "en-c2-u2-l5-s1",
-                "title": "Doktorlik Darajasidagi Tahrir",
+                "title": "The Pinnacle of Critical Feedback & Dissertation Defense",
                 "type": "learn",
-                "estimatedMinutes": 5,
+                "estimatedMinutes": 8,
                 "learnData": {
-                    "title": "Doctoral Peer Review Framework",
-                    "explanation": "Tahlil mezonlari: Epistemological rigor, methodological validity, falsifiability of hypotheses, and rhetorical elegance.",
-                    "keyPoints": [
-                        "Critiquing circular reasoning (begging the question)",
-                        "Elevating academic tone without compromising communicative clarity"
-                    ],
-                    "grammarRules": [
-                        {
-                            "pattern": "C2 Academic Essay Evaluation: The Pinnacle of Critical Feedback",
-                            "meaning": "Magistratura va doktorantura darajasidagi ilmiy maqolalarga taqriz va tahrir kiritish.",
-                            "usageNotes": "Tahlil mezonlari: Epistemological rigor, methodological validity, falsifiability of hypotheses, and rhetorical elegance.",
-                            "examples": [
-                                {
-                                    "sentence": "I study English every day with dedication.",
-                                    "translation": "Har kuni ingliz tilini astoydil o'rganaman."
-                                }
-                            ]
-                        }
-                    ],
+                    "title": "Expert-Level Dissertation Evaluation and Peerless Scholastic Rigor",
+                    "explanation": "C2 darajasidagi intellektual o'zgalarning ilmiy ishlarini baholashda eng oliy xalqaro mezonlarga tayanadi. U shunchaki grammatik xatolarni emas, balki dissertatsiyaning butun epistemologik poydevorini, nazariy mustahkamligini (defensibility) va tahliliy kashfiyotlarini (scholastic rigor) sinovdan o'tkazadi.\n\nEkspert Taqriri Mezonlari:\n1. **Theoretical Defensibility**:\n   - Tadqiqotning bosh gipotezasi kontr-argumentlar va qarshi empirik dalillarga bardosh bera oladimi?\n   *While the dissertation exhibits peerless historical erudition, its core econometrics remain vulnerable to endogeneity bias.*\n2. **Methodological Replicability**:\n   - Tajriba yoki empirik tahlil shunchalik shaffof va aniq bayon qilinganki, boshqa mustaqil olimlar ham uni aynan takrorlay oladilarmi?\n3. **Scholarly Elegance vs Obscurantism**:\n   - Muallif g'oyani chiroyli, aniq va kuchli tilda yetkazyaptimi, yoki o'zining bo'sh g'oyalarini dabdabali murakkab so'zlar bilan bekitishga (obscurantism) urinyaptimi?\n\n⚠️ **O'zbek o'rganuvchilari uchun xavfli tuzoqlar (Common Pitfalls)**:\n- ❌ *Hyper-critical destructive feedback.* (C2 darajasidagi taqrizchi kibrli yoki haqoratomuz bo'lmaydi; u har doim konstruktiv, xolis va hurmatli tilda gapiradi).\n- ❌ *Confusing 'peerless' with 'peer review'.* ('Peer review' — hamkasblar taqrizi; 'Peerless' — tengsiz, tengi yo'q eng oliy daraja!).\n\n🎯 **IELTS Speaking & Writing Band 9.0 Masterclass**:\n- **Prompt**: Task 2: What standards should govern academic peer review to prevent the publication of fraudulent research?\n- **Model Answer (Band 9.0)**: Upholding scientific integrity necessitates an unwavering commitment to peerless methodological scrutiny. Rather than relying solely on the institutional pedigree of authors, scholarly journals must mandate open-science protocols, requiring the public archiving of raw empirical telemetry. By institutionalizing blind adversarial peer review and funding replication studies, the academic community can eradicate the insidious proliferation of fraudulent data, thereby restoring unshakeable public trust in scientific consensus.\n- **Discourse Markers**: unwavering commitment to peerless methodological scrutiny, institutional pedigree of authors, mandate open-science protocols, institutionalizing blind adversarial peer review, eradicate the insidious proliferation\n- **Examiner / Intonation Tip**: *Peerless methodological scrutiny* (tengsiz metodologik sinchkovlik) va *institutional pedigree* (institutsional nufuz/kelib chiqish) iboralari yozuv va nutqingizga ilmiy tahririyat rahbari darajasidagi salobat bag'ishlaydi.",
                     "vocabulary": [
                         {
-                            "term": "Inextricable",
-                            "reading": "/ˌɪn.ɪkˈstrɪk.ə.bəl/",
-                            "meaning": "Ajralmas, chambarchas bogʻliq",
-                            "exampleSentence": "Language and cultural identity are inextricably intertwined.",
-                            "exampleTranslation": "Til va madaniy oʻzlik chambarchas bogʻlangan."
+                            "term": "Peerless",
+                            "reading": "/ˈpɪə.ləs/",
+                            "meaning": "Tengsiz, tengi yo'q, eng yuksak darajadagi",
+                            "exampleSentence": "Her peerless rhetorical eloquence captivated even the most hostile parliamentary adversaries.",
+                            "exampleTranslation": "Uning tengsiz notiqlik fasohati hatto eng adovatli parlament muxoliflarini ham maftun etdi."
                         },
                         {
-                            "term": "Dissemination",
-                            "reading": "/dɪˌsem.ɪˈneɪ.ʃən/",
-                            "meaning": "Keng yoyish, tarqatish",
-                            "exampleSentence": "The swift dissemination of knowledge accelerates innovation.",
-                            "exampleTranslation": "Bilimlarning tezkor tarqalishi innovatsiyalarni jadallashtiradi."
+                            "term": "Obscurantism",
+                            "reading": "/ɒbˈskjʊə.rən.tɪ.zəm/",
+                            "meaning": "Qorong'ilashtirish, haqiqatni ataylab yashirib, bilimsizlikni saqlashga urinish",
+                            "exampleSentence": "Philosophers condemned the regime's ideological obscurantism, which banned scientific literature.",
+                            "exampleTranslation": "Faylasuflar ilmiy adabiyotlarni taqiqlab qo'ygan tuzumning mafkuraviy zulmatparvarligini (obscurantism) qoraladilar."
                         },
                         {
-                            "term": "Ephemeral",
-                            "reading": "/ɪˈfem.ər.əl/",
-                            "meaning": "Oʻtkinchi, bir lahzalik",
-                            "exampleSentence": "Fame in the digital era can often be fleeting and ephemeral.",
-                            "exampleTranslation": "Raqamli asrdagi shuhrat koʻpincha oʻtkinchi va lahzalik boʻlishi mumkin."
+                            "term": "Scholastic",
+                            "reading": "/skəˈlæs.tɪk/",
+                            "meaning": "Scholastik, chuqur ilmiy va akademik (ta'limga tegishli)",
+                            "exampleSentence": "The doctoral candidate demonstrated enviable scholastic rigor throughout her oral defense.",
+                            "exampleTranslation": "Doktorant og'zaki himoya davomida havas qilgudek ilmiy qat'iyatni (scholastic rigor) namoyish etdi."
+                        },
+                        {
+                            "term": "Pedigree",
+                            "reading": "/ˈped.ɪ.ɡriː/",
+                            "meaning": "Kelib chiqish, nasl-nasab, nufuzli tarix",
+                            "exampleSentence": "Graduating from an institution with centuries of academic pedigree guarantees immediate international prestige.",
+                            "exampleTranslation": "Asrlik akademik nufuzga (pedigree) ega universitetni tamomlash bir zumda xalqaro obro'-e'tibor bag'ishlaydi."
+                        },
+                        {
+                            "term": "Flawless",
+                            "reading": "/ˈflɔː.ləs/",
+                            "meaning": "Nuqsonsiz, benuqson, xatosiz",
+                            "exampleSentence": "The computational algorithm performed a flawless simulation of atmospheric turbulent flows.",
+                            "exampleTranslation": "Hisoblash algoritmi atmosfera girdobli oqimlarining benuqson simulyatsiyasini amalga oshirdi."
+                        },
+                        {
+                            "term": "Endogeneity",
+                            "reading": "/ˌen.dəʊ.dʒəˈneɪ.ə.ti/",
+                            "meaning": "Endogenlik (statistik modelda o'zgaruvchining xatolik haddi bilan bog'lanib qolishi)",
+                            "exampleSentence": "Econometricians must employ instrumental variables to control for severe endogeneity bias.",
+                            "exampleTranslation": "Ekonometriklar jiddiy endogenlik xatosini nazorat qilish uchun instrumental o'zgaruvchilardan foydalanishlari shart."
+                        },
+                        {
+                            "term": "Adversarial",
+                            "reading": "/ˌæd.vəˈseə.ri.əl/",
+                            "meaning": "Qarama-qarshi tomonlar bahsiga asoslangan, qat'iy sinovchi",
+                            "exampleSentence": "Subjecting algorithms to adversarial stress-testing exposes hidden security vulnerabilities.",
+                            "exampleTranslation": "Algoritmlarni qat'iy qarshi sinovlarga (adversarial stress-testing) tortish yashirin xavfsizlik zaifliklarini fosh qiladi."
+                        },
+                        {
+                            "term": "Eradicate",
+                            "reading": "/ɪˈræd.ɪ.keɪt/",
+                            "meaning": "Tubdan yo'qotmoq, tag-tomiri bilan sug'urib tashlamoq",
+                            "exampleSentence": "Global vaccination coalitions have nearly eradicated poliovirus across the developing world.",
+                            "exampleTranslation": "Global vaksina koalitsiyalari rivojlanayotgan dunyo bo'ylab poliomiyelit virusini deyarli butunlay yo'q qildi."
                         }
+                    ],
+                    "keyPoints": [
+                        "Expert critical review demands assessing theoretical defensibility, empirical replicability, and ethical integrity.",
+                        "Distinguish genuine scholarly elegance from pretentious 'obscurantism' that conceals a lack of substance.",
+                        "Peerless evaluations maintain constructive objectivity, providing actionable intellectual refinement.",
+                        "Expose technical econometric vulnerabilities such as 'endogeneity bias' and unrepresentative sampling."
                     ]
                 }
             },
             {
                 "id": "en-c2-u2-l5-s2",
-                "title": "Mashq",
+                "title": "Dissertation Evaluation Amaliyoti",
                 "type": "practice",
                 "estimatedMinutes": 6,
                 "practiceData": {
-                    "instructions": "Eng yaxshi tahririy tuzatishni tanlang.",
+                    "instructions": "Ilmiy ekspertiza va dissertatsiya taqriziga mos eng to'g'ri jumlalarni tanlang.",
                     "exercises": [
                         {
                             "id": "en-c2-u2-l5-e1",
                             "type": "multiple-choice",
-                            "prompt": "Draft sentence: \"The study proves that human nature is inherently selfish because people always act in selfish ways.\" How should this be critiqued?",
+                            "prompt": "What does describing someone's linguistic eloquence as 'peerless' mean?",
                             "options": [
-                                "The assertion commits the logical fallacy of circular reasoning (petitio principii) and lacks empirical counter-weight.",
-                                "It should have more exclamation marks.",
-                                "It is completely fine.",
-                                "The font size is wrong."
+                                "Unrivaled, matchless, and having no equal in excellence",
+                                "Reviewed by peers in a clinic",
+                                "Lacking any friends",
+                                "Speaking with a heavy accent"
                             ],
                             "correctAnswer": 0,
-                            "explanation": "Identifies circular reasoning (petitio principii)."
+                            "explanation": "'Peerless' — tengsiz, tengi yo'q, eng oliy darajada mukammal degani."
                         },
                         {
-                            "id": "en-c2-u2-l5-ex-2",
+                            "id": "en-c2-u2-l5-e2",
                             "type": "multiple-choice",
-                            "prompt": "Choose the correct word to complete the sentence: \"The swift dissemination of knowledge accelerates innovation.\"",
+                            "prompt": "What is 'obscurantism' in academic prose?",
                             "options": [
-                                "Dissemination",
-                                "reluctance",
-                                "doubt",
-                                "delay"
+                                "The deliberate practice of presenting information in an excessively complex and imprecise manner to prevent enlightenment or inquiry",
+                                "Studying outer space black holes",
+                                "Writing in completely dark rooms",
+                                "Typing essays on old computers"
                             ],
                             "correctAnswer": 0,
-                            "explanation": "\"Dissemination\" (Keng yoyish, tarqatish) fits the context appropriately."
+                            "explanation": "'Obscurantism' — haqiqatni ataylab yashirish va matnni qasddan tushunarsiz qilib o'quvchini chalg'itish illatidir."
+                        },
+                        {
+                            "id": "en-c2-u2-l5-e3",
+                            "type": "multiple-choice",
+                            "prompt": "Fill in the blank: 'The candidate defended her thesis with _______ composure, addressing every methodological query.'",
+                            "options": [
+                                "flawless",
+                                "untenable",
+                                "opaque",
+                                "recalcitrant"
+                            ],
+                            "correctAnswer": 0,
+                            "explanation": "Benuqson va mukammal vazminlik 'flawless composure' iborasi orqali ifodalanadi."
+                        },
+                        {
+                            "id": "en-c2-u2-l5-e4",
+                            "type": "multiple-choice",
+                            "prompt": "Select the verb meaning 'to destroy or remove completely, putting an end to something harmful':",
+                            "options": [
+                                "Eradicate",
+                                "Obfuscate",
+                                "Posturing",
+                                "Conflate"
+                            ],
+                            "correctAnswer": 0,
+                            "explanation": "'Eradicate' — tag-tomiri bilan yo'qotmoq, butunlay bartaraf etmoq demakdir."
+                        },
+                        {
+                            "id": "en-c2-u2-l5-e5",
+                            "type": "multiple-choice",
+                            "prompt": "Complete: 'A university with centuries of distinguished academic _______ commands global authority.'",
+                            "options": [
+                                "pedigree",
+                                "affectation",
+                                "chiasmus",
+                                "conflation"
+                            ],
+                            "correctAnswer": 0,
+                            "explanation": "Asrlik nufuzli ilmiy tarix va an'analar 'academic pedigree' deb ataladi."
                         }
                     ]
                 }
             },
             {
                 "id": "en-c2-u2-l5-s3",
-                "title": "Test",
+                "title": "Dissertation Evaluation Baholash Testi",
                 "type": "test",
                 "estimatedMinutes": 7,
                 "testData": {
-                    "instructions": "Savollarga javob bering.",
-                    "passingScorePercentage": 75,
+                    "instructions": "Ilmiy ekspertiza va eng yuqori C2 taqriz mezonlari bo'yicha imtihon.",
+                    "passingScorePercentage": 80,
                     "questions": [
                         {
                             "id": "en-c2-u2-l5-q1",
-                            "question": "What does \"falsifiability\" mean in Karl Popper's philosophy of science?",
+                            "question": "What is the hallmark of a master-level doctoral dissertation critique?",
                             "options": [
-                                "The capacity for a hypothesis or theory to be inherently proven false through empirical observation",
-                                "Cheating on an exam",
-                                "Making fake documents",
-                                "Writing fiction novels"
+                                "A balanced, intellectually rigorous appraisal of theoretical defensibility, empirical integrity, and conceptual originality.",
+                                "Listing ten spelling errors and calling the candidate an idiot.",
+                                "Refusing to read the paper and accepting it blindly.",
+                                "Writing only one sentence: 'Looks good to me.'"
                             ],
                             "correctAnswerIndex": 0,
-                            "explanation": "Capacity to be proven false empirically."
+                            "explanation": "Master darajasidagi ilmiy taqriz nazariy mustahkamlik, empirik aniqlik va g'oyaviy o'ziga xoslikni muvozanatli baholaydi."
                         },
                         {
                             "id": "en-c2-u2-l5-q2",
-                            "question": "\"Petitio principii\" is the classical term for:",
+                            "question": "'The econometrician cautioned that failing to account for unobserved family background introduces severe _______ into the regression.'",
                             "options": [
-                                "A type of microscope",
-                                "An award ceremony",
-                                "A legal contract",
-                                "Begging the question / Circular argument"
+                                "endogeneity",
+                                "chiasmus",
+                                "solipsism",
+                                "litotes"
                             ],
-                            "correctAnswerIndex": 3,
-                            "explanation": "Circular reasoning / Begging the question."
+                            "correctAnswerIndex": 0,
+                            "explanation": "Statistik regressiyadagi yashirin omillar keltirib chiqaradigan xatolik 'endogeneity bias' deyiladi."
                         },
                         {
                             "id": "en-c2-u2-l5-q3",
-                            "question": "What is the hallmark of exemplary C2 academic prose?",
+                            "question": "What does an 'adversarial' review process involve?",
                             "options": [
-                                "Using words from 1500 AD that no one understands",
-                                "Writing without any paragraphs",
-                                "Crystal-clear, precise reasoning paired with sophisticated syntactic variety and seamless flow",
-                                "Convoluted sentences designed to confuse the reader"
+                                "Intentionally seeking out vulnerabilities, contradictory evidence, and stress-testing claims from a critical opposing perspective to guarantee truth.",
+                                "Physical fighting in the library.",
+                                "Signing treaties with enemies.",
+                                "Translating poetry into Latin."
                             ],
-                            "correctAnswerIndex": 2,
-                            "explanation": "Clear precise reasoning with syntactic variety."
+                            "correctAnswerIndex": 0,
+                            "explanation": "'Adversarial review' — da'volarning haqiqiyligini tekshirish uchun ularni ataylab eng qattiq tanqidiy qarama-qarshi sinovlardan o'tkazishdir."
                         },
                         {
                             "id": "en-c2-u2-l5-q4",
-                            "question": "To \"substantiate a hypothesis\" means to:",
+                            "question": "Why is 'obscurantism' the antithesis of genuine scholarly communication?",
                             "options": [
-                                "Disregard it completely",
-                                "Provide verifiable empirical or logical evidence in its support",
-                                "Delete it from the paper",
-                                "Translate it into French"
+                                "Because true scholarship aims to elucidate and enlighten, whereas obscurantism deliberately muddies concepts to create a false illusion of profound depth.",
+                                "Because obscurantism requires using too few nouns.",
+                                "Because it makes books too cheap to buy.",
+                                "Because it is only allowed in poetry."
                             ],
-                            "correctAnswerIndex": 1,
-                            "explanation": "Provide verifiable evidence in support."
+                            "correctAnswerIndex": 0,
+                            "explanation": "Haqiqiy ilm oydinlashtirishga (elucidate) intiladi, zulmatparvarlik (obscurantism) esa o'zining bo'shligini dabdaba ortiga yashiradi."
+                        },
+                        {
+                            "id": "en-c2-u2-l5-q5",
+                            "question": "'The international humanitarian coalition enacted bold measures to _______ extreme maternal mortality.'",
+                            "options": [
+                                "eradicate",
+                                "obfuscate",
+                                "conflate",
+                                "temper"
+                            ],
+                            "correctAnswerIndex": 0,
+                            "explanation": "Onalar o'limini butunlay yo'qotish va bartaraf etish 'eradicate mortality' birikmasi bilan beriladi."
                         }
                     ]
                 }
