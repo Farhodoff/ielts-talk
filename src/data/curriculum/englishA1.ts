@@ -1302,165 +1302,250 @@ export const ENGLISH_A1_LESSONS: Lesson[] = [
         "language": "en",
         "level": "A1",
         "lessonNumber": 1,
-        "title": "Family & People",
-        "description": "Oila a'zolarini tasvirlash va oilaviy munosabatlar.",
-        "estimatedDurationMinutes": 12,
+        "title": "Family & People (Describing Family)",
+        "description": "Oila a'zolarini nomlash, oilaviy munosabatlar va shaxslarni tavsiflash.",
+        "estimatedDurationMinutes": 15,
         "icon": "👨‍👩‍👧‍👦",
         "steps": [
             {
                 "id": "en-a1-u2-l1-s1",
-                "title": "Oila Leksikasi",
+                "title": "Oila Leksikasi & Grammatik Asos",
                 "type": "learn",
-                "estimatedMinutes": 4,
+                "estimatedMinutes": 5,
                 "learnData": {
-                    "title": "Oila a'zolari (Family Members)",
-                    "explanation": "Oila haqida gapirishda eng ko'p ishlatiladigan so'zlar.",
+                    "title": "Oila A'zolari va Egalik Konstruksiyalari",
+                    "subtitle": "Unit 2 • 1-Dars: Oila va yaqin insonlar haqida gapirish",
+                    "explanation": "Oila va qarindoshlik rishtalari haqida gapirish har qanday tilda, xususan IELTS Speaking Part 1 imtihonida eng ko'p uchraydigan mavzulardan biridir. Ingliz tilida oila haqida gapirishda \"have / has\" (ega bo'lmoq) fe'li va sifatlar keng qo'llaniladi.",
+                    "keyPoints": [
+                        "Parents — Ota-ona (Father + Mother)",
+                        "Siblings — Aka-uka va opa-singillar",
+                        "I have a brother / She has two sisters (3-shaxsda has!)",
+                        "O'zbek tili bilan farqi: O'zbekcha \"Mening akam bor\" inglizcha \"I have a brother\" shaklida ifodalanadi",
+                        "⚠️ Keng tarqalgan xato: \"I have two sister\" (XATO) -> \"I have two sisters\" (TO'G'RI, -s qo'shiladi)",
+                        "⚠️ 3-shaxsda have emas, HAS bo'ladi: \"My mother HAS two brothers\""
+                    ],
                     "vocabulary": [
                         {
                             "term": "Father",
                             "reading": "/ˈfɑː.ðər/",
-                            "meaning": "Ota",
-                            "exampleSentence": "My father is a doctor.",
-                            "exampleTranslation": "Mening otam shifokor."
+                            "meaning": "Ota, dada",
+                            "exampleSentence": "My father is a kind and hardworking person.",
+                            "exampleTranslation": "Mening otam mehribon va mehnatkash inson."
                         },
                         {
                             "term": "Mother",
                             "reading": "/ˈmʌð.ər/",
-                            "meaning": "Ona",
-                            "exampleSentence": "My mother is a teacher.",
-                            "exampleTranslation": "Mening onam o'qituvchi."
+                            "meaning": "Ona, oyi",
+                            "exampleSentence": "My mother teaches mathematics at school.",
+                            "exampleTranslation": "Mening onam maktabda matematika fanidan dars beradi."
+                        },
+                        {
+                            "term": "Parents",
+                            "reading": "/ˈpeə.rənts/",
+                            "meaning": "Ota-ona (doim ko'plikda)",
+                            "exampleSentence": "My parents live in a quiet neighborhood in Samarkand.",
+                            "exampleTranslation": "Ota-onam Samarqanddagi sokin mahallada yashaydilar."
                         },
                         {
                             "term": "Brother",
                             "reading": "/ˈbrʌð.ər/",
-                            "meaning": "Aka / Uka",
-                            "exampleSentence": "I have one younger brother.",
-                            "exampleTranslation": "Mening bitta ukam bor."
+                            "meaning": "Aka yoki uka",
+                            "exampleSentence": "I have an elder brother who works in IT.",
+                            "exampleTranslation": "Mening IT sohasida ishlaydigan katta akam bor."
                         },
                         {
                             "term": "Sister",
                             "reading": "/ˈsɪs.tər/",
-                            "meaning": "Opa / Singil",
-                            "exampleSentence": "Her sister lives in Samarkand.",
-                            "exampleTranslation": "Uning opasi Samarqandda yashaydi."
+                            "meaning": "Opa yoki singil",
+                            "exampleSentence": "Her younger sister is learning English online.",
+                            "exampleTranslation": "Uning singlisi ingliz tilini onlayn o'rganmoqda."
+                        },
+                        {
+                            "term": "Children",
+                            "reading": "/ˈtʃɪl.drən/",
+                            "meaning": "Bolalar, farzandlar (Child so'zining ko'pligi)",
+                            "exampleSentence": "They have three intelligent children.",
+                            "exampleTranslation": "Ularning uchta aqli farzandi bor."
+                        },
+                        {
+                            "term": "Large family",
+                            "reading": "/lɑːdʒ ˈfæm.əl.i/",
+                            "meaning": "Katta oila",
+                            "exampleSentence": "Growing up in a large family is very lively.",
+                            "exampleTranslation": "Katta oilada ulg'ayish juda quvnoq va jonli."
+                        },
+                        {
+                            "term": "Together",
+                            "reading": "/təˈɡeð.ər/",
+                            "meaning": "Birgalikda, birga",
+                            "exampleSentence": "Our family always has dinner together.",
+                            "exampleTranslation": "Bizning oilamiz doimo birga kechki ovqat tanovul qiladi."
                         }
-                    ],
-                    "keyPoints": [
-                        "Parents — Ota-ona",
-                        "Siblings — Aka-uka va opa-singillar"
                     ],
                     "grammarRules": [
                         {
-                            "pattern": "Family & People",
-                            "meaning": "Oila a'zolarini tasvirlash va oilaviy munosabatlar.",
-                            "usageNotes": "Oila haqida gapirishda eng ko'p ishlatiladigan so'zlar.",
+                            "pattern": "Subject + have / has + Noun Phrase",
+                            "meaning": "Oila a'zolari yoki qarindoshlik rishtalariga egalikni ifodalash",
+                            "usageNotes": "I / You / We / They bilan HAVE; He / She / It bilan HAS ishlatiladi.",
                             "examples": [
                                 {
-                                    "sentence": "My father is a doctor.",
-                                    "translation": "Mening otam shifokor."
+                                    "sentence": "I have two brothers and one sister.",
+                                    "translation": "Mening ikkita akam va bitta singlim bor."
                                 },
                                 {
-                                    "sentence": "My mother is a teacher.",
-                                    "translation": "Mening onam o'qituvchi."
+                                    "sentence": "He has a very supportive family.",
+                                    "translation": "Uning juda qo'llab-quvvatlovchi oilasi bor."
                                 }
                             ]
                         }
-                    ]
+                    ],
+                    "culturalNotes": "🎙️ IELTS Speaking Part 1 Foundation Corner:\nImtihon oluvchi: \"Do you have a large family or a small family?\"\nNamunaviy javob: \"I come from a relatively large family with five members: my parents, my two younger brothers, and myself. We are very close and support each other in everything.\""
                 }
             },
             {
                 "id": "en-a1-u2-l1-s2",
-                "title": "Mashq",
+                "title": "Interaktiv Amaliy Mashq",
                 "type": "practice",
-                "estimatedMinutes": 4,
+                "estimatedMinutes": 5,
                 "practiceData": {
-                    "instructions": "Oila a'zosi nomini tanlang.",
+                    "instructions": "Oila a'zolari va grammatika qoidalariga binoan to'g'ri javobni tanlang.",
                     "exercises": [
                         {
                             "id": "en-a1-u2-l1-e1",
                             "type": "multiple-choice",
-                            "prompt": "\"Ota-ona\" so'zining inglizcha tarjimasi qaysi?",
+                            "prompt": "\"Ota-ona\" so'zining to'g'ri inglizcha tarjimasi qaysi?",
                             "options": [
-                                "Partners",
-                                "Children",
                                 "Parents",
-                                "Cousins"
+                                "Partners",
+                                "Cousins",
+                                "Children"
                             ],
-                            "correctAnswer": 2,
+                            "correctAnswer": 0,
                             "explanation": "Parents — Ota-ona."
                         },
                         {
-                            "id": "en-a1-u2-l1-ex-2",
+                            "id": "en-a1-u2-l1-e2",
                             "type": "multiple-choice",
-                            "prompt": "Choose the correct word to complete the sentence: \"My mother is a teacher.\"",
+                            "prompt": "\"She _______ two younger brothers and one sister.\" Bo'sh joyga qaysi fe'l to'g'ri keladi?",
                             "options": [
-                                "doubt",
-                                "reluctance",
-                                "delay",
-                                "Mother"
+                                "has",
+                                "have",
+                                "is",
+                                "are"
                             ],
-                            "correctAnswer": 3,
-                            "explanation": "\"Mother\" (Ona) fits the context appropriately."
+                            "correctAnswer": 0,
+                            "explanation": "\"She\" birlikda bo'lgani sababli \"has\" fe'li ishlatiladi."
+                        },
+                        {
+                            "id": "en-a1-u2-l1-e3",
+                            "type": "multiple-choice",
+                            "prompt": "\"Child\" (bola) so'zining to'g'ri ko'plik shakli qaysi?",
+                            "options": [
+                                "Children",
+                                "Childs",
+                                "Childes",
+                                "Childrens"
+                            ],
+                            "correctAnswer": 0,
+                            "explanation": "Child noto'g'ri ot bo'lib, ko'pligi \"children\" shaklida yasaladi."
+                        },
+                        {
+                            "id": "en-a1-u2-l1-e4",
+                            "type": "multiple-choice",
+                            "prompt": "Qaysi gap grammatik jihatdan to'g'ri tuzilgan?",
+                            "options": [
+                                "My brother has two laptops.",
+                                "My brother have two laptops.",
+                                "My brother is two laptops.",
+                                "My brother having two laptops."
+                            ],
+                            "correctAnswer": 0,
+                            "explanation": "\"My brother\" (He) bilan \"has\" fe'li to'g'ri."
+                        },
+                        {
+                            "id": "en-a1-u2-l1-e5",
+                            "type": "multiple-choice",
+                            "prompt": "\"We always spend our Sunday holidays _______.\" (Birgalikda)",
+                            "options": [
+                                "together",
+                                "alone",
+                                "each",
+                                "between"
+                            ],
+                            "correctAnswer": 0,
+                            "explanation": "Together — Birgalikda, birga."
                         }
                     ]
                 }
             },
             {
                 "id": "en-a1-u2-l1-s3",
-                "title": "Test",
+                "title": "Dars Sinov Testi",
                 "type": "test",
-                "estimatedMinutes": 4,
+                "estimatedMinutes": 5,
                 "testData": {
-                    "instructions": "Savollarga javob bering.",
-                    "passingScorePercentage": 75,
+                    "instructions": "Savollarga javob berib, mavzuni mustahkamlang.",
+                    "passingScorePercentage": 80,
                     "questions": [
                         {
                             "id": "en-a1-u2-l1-q1",
-                            "question": "My father's mother is my _______.",
+                            "question": "How many siblings _______ you have?",
                             "options": [
-                                "aunt",
-                                "daughter",
-                                "grandmother",
-                                "sister"
+                                "do",
+                                "does",
+                                "are",
+                                "is"
                             ],
-                            "correctAnswerIndex": 2,
-                            "explanation": "Otamning onasi — buvim (grandmother)."
+                            "correctAnswerIndex": 0,
+                            "explanation": "\"You\" bilan so'roq shaklida \"do\" yordamchi fe'li ishlatiladi: Do you have...?"
                         },
                         {
                             "id": "en-a1-u2-l1-q2",
-                            "question": "My mother's brother is my _______.",
+                            "question": "My _______ are retired; they live in the countryside.",
                             "options": [
-                                "uncle",
-                                "grandfather",
-                                "nephew",
-                                "cousin"
+                                "parents",
+                                "parent",
+                                "father",
+                                "mother"
                             ],
                             "correctAnswerIndex": 0,
-                            "explanation": "Onamning ukasi/akasi — tog'a (uncle)."
+                            "explanation": "Fe'l \"are\" ko'plikda, shuning uchun \"parents\" (ota-ona) to'g'ri."
                         },
                         {
                             "id": "en-a1-u2-l1-q3",
-                            "question": "How many _______ do you have?",
+                            "question": "Jasur has three _______: two boys and one girl.",
                             "options": [
-                                "brother",
-                                "brotherses",
-                                "a brother",
-                                "brothers"
+                                "children",
+                                "childs",
+                                "child",
+                                "childrens"
                             ],
-                            "correctAnswerIndex": 3,
-                            "explanation": "How many dan keyin ko'plik ot keladi: brothers."
+                            "correctAnswerIndex": 0,
+                            "explanation": "Uchta bola: three children."
                         },
                         {
                             "id": "en-a1-u2-l1-q4",
-                            "question": "\"Daughter\" so'zining ma'nosi nima?",
+                            "question": "Anna lives with _______ family in a cozy house.",
                             "options": [
-                                "Jiyan",
-                                "Kelin",
-                                "Qiz farzand",
-                                "O'g'il farzand"
+                                "her",
+                                "his",
+                                "its",
+                                "their"
                             ],
-                            "correctAnswerIndex": 2,
-                            "explanation": "Daughter — Qiz farzand."
+                            "correctAnswerIndex": 0,
+                            "explanation": "Anna ayol kishi bo'lgani sababli: her family."
+                        },
+                        {
+                            "id": "en-a1-u2-l1-q5",
+                            "question": "I have two _______ and they both study medicine.",
+                            "options": [
+                                "sisters",
+                                "sister",
+                                "sisteres",
+                                "sisteris"
+                            ],
+                            "correctAnswerIndex": 0,
+                            "explanation": "Ikkita singil/opa: two sisters."
                         }
                     ]
                 }
@@ -1475,164 +1560,249 @@ export const ENGLISH_A1_LESSONS: Lesson[] = [
         "language": "en",
         "level": "A1",
         "lessonNumber": 2,
-        "title": "Colors & Clothes",
-        "description": "Ranglar va kiyim-kechaklarni tasvirlash.",
-        "estimatedDurationMinutes": 10,
-        "icon": "👗",
+        "title": "Colors & Clothes (Adjective + Noun)",
+        "description": "Ranglar, kundalik kiyim-kechaklar va sifatlarning ot oldidan kelishi qoidasi.",
+        "estimatedDurationMinutes": 15,
+        "icon": "👕",
         "steps": [
             {
                 "id": "en-a1-u2-l2-s1",
-                "title": "Ranglar va Kiyimlar",
+                "title": "Ranglar va Kiyimlar Leksikasi",
                 "type": "learn",
-                "estimatedMinutes": 4,
+                "estimatedMinutes": 5,
                 "learnData": {
-                    "title": "Colors and Clothes",
-                    "explanation": "Kiyimlarni ranglar bilan birga aytish: Sifat + Ot (a red shirt).",
+                    "title": "Ranglar, Kiyimlar va Sifat Qoidalari",
+                    "subtitle": "Unit 2 • 2-Dars: Kiyinish uslubi va sifatlarning o'rni",
+                    "explanation": "Ingliz tilida sifatlar (ranglar, o'lchamlar) doimo OTNING OLDIDA keladi va HECH QACHON ko'plik qo'shimchasini olmaydi. Shuningdek, shim (trousers), jinsi (jeans) kabi kiyimlar ingliz tilida doim ko'plikda hisoblanadi.",
+                    "keyPoints": [
+                        "Sifat + Ot: a blue shirt (bitta ko'k ko'ylak), blue shirts (ko'k ko'ylaklar — blues shirts emas!)",
+                        "Shim va jinsi doim ko'plik: trousers are, jeans are",
+                        "Wear fe'li: I wear a jacket (Men kurtka kiyib yuraman)",
+                        "⚠️ Keng tarqalgan xato: \"My jeans is blue\" (XATO) -> \"My jeans ARE blue\" (TO'G'RI)",
+                        "⚠️ Sifatga -s qo'shilmaydi: \"blacks shoes\" emas, \"black shoes\" bo'ladi"
+                    ],
                     "vocabulary": [
                         {
                             "term": "Shirt",
                             "reading": "/ʃɜːt/",
-                            "meaning": "Ko'ylak",
-                            "exampleSentence": "He wears a white shirt.",
-                            "exampleTranslation": "U oq ko'ylak kiyadi."
+                            "meaning": "Ko'ylak (erkaklar tugmali ko'ylagi)",
+                            "exampleSentence": "He wears a white shirt for the official interview.",
+                            "exampleTranslation": "U rasmiy suhbat uchun oq ko'ylak kiyadi."
+                        },
+                        {
+                            "term": "T-shirt",
+                            "reading": "/ˈtiː.ʃɜːt/",
+                            "meaning": "Futbolka",
+                            "exampleSentence": "I like wearing a casual cotton T-shirt in summer.",
+                            "exampleTranslation": "Yozda qulay paxtali futbolka kiyishni yoqtiraman."
+                        },
+                        {
+                            "term": "Trousers",
+                            "reading": "/ˈtraʊ.zəz/",
+                            "meaning": "Shim (doim ko'plik shaklda)",
+                            "exampleSentence": "These black trousers fit me perfectly.",
+                            "exampleTranslation": "Bu qora shim menga juda mos tushdi."
+                        },
+                        {
+                            "term": "Jeans",
+                            "reading": "/dʒiːnz/",
+                            "meaning": "Jinsi shim (doim ko'plikda)",
+                            "exampleSentence": "Dark blue jeans are very popular among youth.",
+                            "exampleTranslation": "To'q ko'k jinsilar yoshlar orasida juda ommabop."
+                        },
+                        {
+                            "term": "Jacket",
+                            "reading": "/ˈdʒæk.ɪt/",
+                            "meaning": "Kurtka, pidjak",
+                            "exampleSentence": "It is chilly outside, please put on your warm jacket.",
+                            "exampleTranslation": "Tashqarida salqin, iliq kurtkangizni kiyib oling."
                         },
                         {
                             "term": "Shoes",
                             "reading": "/ʃuːz/",
-                            "meaning": "Poyabzal",
-                            "exampleSentence": "These shoes are comfortable.",
-                            "exampleTranslation": "Bu poyabzal qulay."
+                            "meaning": "Poyabzal, tufli (ko'plikda)",
+                            "exampleSentence": "My running shoes are very comfortable.",
+                            "exampleTranslation": "Mening yugurish poyabzalim juda qulay."
                         },
                         {
                             "term": "Blue",
                             "reading": "/bluː/",
-                            "meaning": "Ko'k",
-                            "exampleSentence": "The sky is blue.",
-                            "exampleTranslation": "Osmon ko'k."
+                            "meaning": "Ko'k, moviy rang",
+                            "exampleSentence": "The sky is bright blue today.",
+                            "exampleTranslation": "Bugun osmon musaffo ko'k rangda."
                         },
                         {
-                            "term": "Black",
-                            "reading": "/blæk/",
-                            "meaning": "Qora",
-                            "exampleSentence": "I have a black jacket.",
-                            "exampleTranslation": "Menda qora kurtka bor."
+                            "term": "Wear",
+                            "reading": "/weər/",
+                            "meaning": "Kiyib yurmoq, taqmoq",
+                            "exampleSentence": "What do you usually wear on formal occasions?",
+                            "exampleTranslation": "Rasmiy tadbirlarda odatda nima kiyasiz?"
                         }
-                    ],
-                    "keyPoints": [
-                        "Ingliz tilida sifat otning oldidan keladi: a black jacket (black a jacket EMAS)."
                     ],
                     "grammarRules": [
                         {
-                            "pattern": "Colors & Clothes",
-                            "meaning": "Ranglar va kiyim-kechaklarni tasvirlash.",
-                            "usageNotes": "Kiyimlarni ranglar bilan birga aytish: Sifat + Ot (a red shirt).",
+                            "pattern": "Adjective + Noun (No plural -s on adjectives!)",
+                            "meaning": "Rang va xususiyatlarni ot bilan bog'lash",
+                            "usageNotes": "Sifat hech qachon ko'plikka kirmaydi: a white shirt -> two white shirts. Kiyim turlari (trousers, jeans, glasses) ko'plik fe'li (are) bilan moslashadi.",
                             "examples": [
                                 {
-                                    "sentence": "He wears a white shirt.",
-                                    "translation": "U oq ko'ylak kiyadi."
+                                    "sentence": "She has a stylish red jacket.",
+                                    "translation": "Uning chiroyli qizil kurtkasi bor."
                                 },
                                 {
-                                    "sentence": "These shoes are comfortable.",
-                                    "translation": "Bu poyabzal qulay."
+                                    "sentence": "His trousers are clean and ironed.",
+                                    "translation": "Uning shimi toza va dazmollangan."
                                 }
                             ]
                         }
-                    ]
+                    ],
+                    "culturalNotes": "🎙️ IELTS Speaking Part 1 Foundation Corner:\nImtihon oluvchi: \"What kind of clothes do you usually like to wear?\"\nNamunaviy javob: \"I usually prefer wearing casual and practical clothes, like a plain T-shirt and comfortable blue jeans with sneakers. When I attend formal exams or meetings, I choose a classic white shirt and dark trousers.\""
                 }
             },
             {
                 "id": "en-a1-u2-l2-s2",
-                "title": "Mashq",
+                "title": "Interaktiv Amaliy Mashq",
                 "type": "practice",
-                "estimatedMinutes": 3,
+                "estimatedMinutes": 5,
                 "practiceData": {
-                    "instructions": "To'g'ri jumlani tanlang.",
+                    "instructions": "Ranglar va kiyimlar grammatikasi bo'yicha to'g'ri variantni tanlang.",
                     "exercises": [
                         {
                             "id": "en-a1-u2-l2-e1",
                             "type": "multiple-choice",
-                            "prompt": "\"Qizil ko'ylak\" qanday aytiladi?",
+                            "prompt": "\"His blue trousers _______ very modern.\" Bo'sh joyga qaysi fe'l to'g'ri keladi?",
                             "options": [
-                                "A red shirt",
-                                "Red the shirt",
-                                "Shirt a red",
-                                "A shirt red"
+                                "are",
+                                "is",
+                                "am",
+                                "be"
                             ],
                             "correctAnswer": 0,
-                            "explanation": "Sifat otdan oldin keladi: A red shirt."
+                            "explanation": "\"Trousers\" (shim) ingliz tilida grammatik jihatdan doim ko'plikda hisoblanadi: are."
                         },
                         {
-                            "id": "en-a1-u2-l2-ex-2",
+                            "id": "en-a1-u2-l2-e2",
                             "type": "multiple-choice",
-                            "prompt": "Choose the correct word to complete the sentence: \"These shoes are comfortable.\"",
+                            "prompt": "Qaysi so'z birikmasi to'g'ri yozilgan?",
                             "options": [
-                                "Shoes",
-                                "delay",
-                                "reluctance",
-                                "doubt"
+                                "two black jackets",
+                                "two blacks jackets",
+                                "two black jacket",
+                                "two jackets black"
                             ],
                             "correctAnswer": 0,
-                            "explanation": "\"Shoes\" (Poyabzal) fits the context appropriately."
+                            "explanation": "Sifatga (black) hech qachon -s qo'shilmaydi, faqat otga (jackets) qo'shiladi: two black jackets."
+                        },
+                        {
+                            "id": "en-a1-u2-l2-e3",
+                            "type": "multiple-choice",
+                            "prompt": "\"I want to buy a pair of _______ for running.\"",
+                            "options": [
+                                "shoes",
+                                "a shoe",
+                                "shoeses",
+                                "shoen"
+                            ],
+                            "correctAnswer": 0,
+                            "explanation": "A pair of shoes — Bir juft poyabzal."
+                        },
+                        {
+                            "id": "en-a1-u2-l2-e4",
+                            "type": "multiple-choice",
+                            "prompt": "\"What do you usually _______ to work? — A white shirt and a tie.\"",
+                            "options": [
+                                "wear",
+                                "put",
+                                "carry",
+                                "hold"
+                            ],
+                            "correctAnswer": 0,
+                            "explanation": "Kiyib yurmoq — to wear."
+                        },
+                        {
+                            "id": "en-a1-u2-l2-e5",
+                            "type": "multiple-choice",
+                            "prompt": "Qaysi gapda xatolik bor?",
+                            "options": [
+                                "My jeans is in the wardrobe.",
+                                "My jeans are in the wardrobe.",
+                                "She wears a blue dress.",
+                                "They have warm jackets."
+                            ],
+                            "correctAnswer": 0,
+                            "explanation": "\"My jeans is...\" xato, chunki jeans ko'plikda bo'lib \"are\" talab qiladi."
                         }
                     ]
                 }
             },
             {
                 "id": "en-a1-u2-l2-s3",
-                "title": "Test",
+                "title": "Dars Sinov Testi",
                 "type": "test",
-                "estimatedMinutes": 3,
+                "estimatedMinutes": 5,
                 "testData": {
-                    "instructions": "Testni yeching.",
-                    "passingScorePercentage": 75,
+                    "instructions": "Savollarga javob bering va darsni yakunlang.",
+                    "passingScorePercentage": 80,
                     "questions": [
                         {
                             "id": "en-a1-u2-l2-q1",
-                            "question": "She is wearing _______ coat.",
+                            "question": "She bought two _______ yesterday at the shopping mall.",
                             "options": [
-                                "a green",
-                                "an green",
-                                "the greens",
-                                "green a"
+                                "white shirts",
+                                "whites shirts",
+                                "white shirt",
+                                "shirts white"
                             ],
                             "correctAnswerIndex": 0,
-                            "explanation": "A green coat."
+                            "explanation": "Sifat o'zgarmas qoladi, ot ko'plikka kiradi: white shirts."
                         },
                         {
                             "id": "en-a1-u2-l2-q2",
-                            "question": "\"Yellow\" qaysi rang?",
+                            "question": "These jeans _______ very comfortable for long walks.",
                             "options": [
-                                "Yashil",
-                                "Sariq",
-                                "Jigarrang",
-                                "Qizil"
+                                "are",
+                                "is",
+                                "am",
+                                "be"
                             ],
-                            "correctAnswerIndex": 1,
-                            "explanation": "Yellow — Sariq."
+                            "correctAnswerIndex": 0,
+                            "explanation": "Jeans doim ko'plik fe'li (are) bilan keladi."
                         },
                         {
                             "id": "en-a1-u2-l2-q3",
-                            "question": "I need to buy new _______ for running.",
+                            "question": "He always wears _______ dark jacket in winter.",
                             "options": [
-                                "shoeses",
-                                "a shoes",
-                                "shoes",
-                                "shoe"
+                                "a",
+                                "an",
+                                "these",
+                                "two"
                             ],
-                            "correctAnswerIndex": 2,
-                            "explanation": "Poyabzal juft bo'lgani uchun ko'plikda: shoes."
+                            "correctAnswerIndex": 0,
+                            "explanation": "Dark undosh tovush bilan boshlangani uchun: a dark jacket."
                         },
                         {
                             "id": "en-a1-u2-l2-q4",
-                            "question": "\"Trousers / Pants\" so'zining ma'nosi:",
+                            "question": "Where _______ my sports shoes?",
                             "options": [
-                                "Shlyapa",
-                                "Paypoq",
-                                "Ko'ylak",
-                                "Shim"
+                                "are",
+                                "is",
+                                "am",
+                                "does"
                             ],
-                            "correctAnswerIndex": 3,
-                            "explanation": "Trousers — Shim."
+                            "correctAnswerIndex": 0,
+                            "explanation": "Shoes ko'plikda: Where are...?"
+                        },
+                        {
+                            "id": "en-a1-u2-l2-q5",
+                            "question": "\"Poyabzal\" so'zining to'g'ri inglizcha varianti qaysi?",
+                            "options": [
+                                "Shoes",
+                                "Shirt",
+                                "Trousers",
+                                "Jacket"
+                            ],
+                            "correctAnswerIndex": 0,
+                            "explanation": "Shoes — Poyabzal."
                         }
                     ]
                 }
@@ -1647,159 +1817,250 @@ export const ENGLISH_A1_LESSONS: Lesson[] = [
         "language": "en",
         "level": "A1",
         "lessonNumber": 3,
-        "title": "Present Simple: Action Verbs (I work / live)",
-        "description": "Harakat fe'llari va hozirgi oddiy zamon tuzilishi.",
-        "estimatedDurationMinutes": 14,
-        "icon": "🏃",
+        "title": "Present Simple: Action Verbs (Daily Life)",
+        "description": "Kundalik harakat fe'llari (work, live, study, speak) va 3-shaxs birlikdagi -s/-es qoidasi.",
+        "estimatedDurationMinutes": 15,
+        "icon": "⚡",
         "steps": [
             {
                 "id": "en-a1-u2-l3-s1",
-                "title": "Present Simple Qoidasi",
+                "title": "Harakat Fe'llari & Present Simple",
                 "type": "learn",
                 "estimatedMinutes": 5,
                 "learnData": {
-                    "title": "Present Simple: Muntazam Harakatlar",
-                    "explanation": "Doimiy takrorlanadigan odatlar va faktlar uchun Present Simple ishlatiladi. He/She/It da fe'lga -s/-es qo'shiladi.",
+                    "title": "Present Simple va 3-Shaxs Birlik Qoidasi",
+                    "subtitle": "Unit 2 • 3-Dars: Doimiy odatlar va haqiqatlarni ifodalash",
+                    "explanation": "Present Simple zamoni har kuni takrorlanadigan odatlar, qiziqishlar va doimiy haqiqatlar haqida gapirganda ishlatiladi. Bu zamonning eng asosiy oltin qoidasi: Agar ega uchinchi shaxs birlik (He, She, It) bo'lsa, fe'lga \"-s\" yoki \"-es\" qo'shiladi.",
                     "keyPoints": [
-                        "I live in Tashkent.",
-                        "He lives in London.",
-                        "They work at a bank."
+                        "I / You / We / They + Fe'l (I work, You study, We live, They speak)",
+                        "He / She / It + Fe'l-S (He works, She studies, It rains)",
+                        "-o, -ch, -sh, -s, -x bilan tugasa: -es qo'shiladi (go -> goes, watch -> watches)",
+                        "Undosh + y bilan tugasa: y -> ies ga aylanadi (study -> studies)",
+                        "⚠️ Keng tarqalgan xato: \"He work in Tashkent\" (XATO) -> \"He workS in Tashkent\" (TO'G'RI)",
+                        "⚠️ To Be bilan harakat fe'lini qorishtirmang: \"I am work\" (XATO) -> \"I work\" (TO'G'RI)"
                     ],
                     "vocabulary": [
                         {
-                            "term": "Live",
-                            "reading": "/lɪv/",
-                            "meaning": "Yashamoq",
-                            "exampleSentence": "Where do you live?",
-                            "exampleTranslation": "Qayerda yashaysiz?"
-                        },
-                        {
                             "term": "Work",
                             "reading": "/wɜːk/",
-                            "meaning": "Ishlamoq",
-                            "exampleSentence": "She works hard every day.",
-                            "exampleTranslation": "U har kuni qattiq ishlaydi."
+                            "meaning": "Ishlamoq, mehnat qilmoq",
+                            "exampleSentence": "I work at an international educational academy.",
+                            "exampleTranslation": "Men xalqaro ta'lim akademiyasida ishlayman."
                         },
                         {
-                            "term": "Friend",
-                            "reading": "/frend/",
-                            "meaning": "Doʻst",
-                            "exampleSentence": "She is my best friend.",
-                            "exampleTranslation": "U mening eng yaxshi doʻstim."
+                            "term": "Study",
+                            "reading": "/ˈstʌd.i/",
+                            "meaning": "O'qimoq, tahsil olmoq",
+                            "exampleSentence": "She studies English grammar every afternoon.",
+                            "exampleTranslation": "U har kuni tushdan keyin ingliz tili grammatikasini o'rganadi."
+                        },
+                        {
+                            "term": "Live",
+                            "reading": "/lɪv/",
+                            "meaning": "Yashamoq, istiqomat qilmoq",
+                            "exampleSentence": "We live in a quiet and green district of Tashkent.",
+                            "exampleTranslation": "Biz Toshkentning sokin va yashil tumanida yashaymiz."
+                        },
+                        {
+                            "term": "Speak",
+                            "reading": "/spiːk/",
+                            "meaning": "Gapirmoq, so'zlashmoq",
+                            "exampleSentence": "He speaks three languages: Uzbek, Russian, and English.",
+                            "exampleTranslation": "U uchta tilda gapiradi: o'zbek, rus va ingliz tillarida."
+                        },
+                        {
+                            "term": "Play",
+                            "reading": "/pleɪ/",
+                            "meaning": "O'ynamoq, (cholg'u) chalmoq",
+                            "exampleSentence": "They play tennis together on Saturday mornings.",
+                            "exampleTranslation": "Ular shanba kuni ertalab birga tennis o'ynashadi."
+                        },
+                        {
+                            "term": "Read",
+                            "reading": "/riːd/",
+                            "meaning": "O'qimoq (kitob, maqola)",
+                            "exampleSentence": "My father reads English news articles online.",
+                            "exampleTranslation": "Otam onlayn inglizcha yangiliklar maqolalarini o'qiydi."
+                        },
+                        {
+                            "term": "Everyday",
+                            "reading": "/ˈev.ri.deɪ/",
+                            "meaning": "Har kuni, kundalik",
+                            "exampleSentence": "I practice IELTS listening skills everyday.",
+                            "exampleTranslation": "Men har kuni IELTS tinglash ko'nikmalarini mashq qilaman."
+                        },
+                        {
+                            "term": "Language",
+                            "reading": "/ˈlæŋ.ɡwɪdʒ/",
+                            "meaning": "Til (muloqot tili)",
+                            "exampleSentence": "English is a global language of communication.",
+                            "exampleTranslation": "Ingliz tili xalqaro muloqotning global tilidir."
                         }
                     ],
                     "grammarRules": [
                         {
-                            "pattern": "Present Simple: Action Verbs (I work / live)",
-                            "meaning": "Harakat fe'llari va hozirgi oddiy zamon tuzilishi.",
-                            "usageNotes": "Doimiy takrorlanadigan odatlar va faktlar uchun Present Simple ishlatiladi. He/She/It da fe'lga -s/-es qo'shiladi.",
+                            "pattern": "Subject (He / She / It) + Verb + -s / -es",
+                            "meaning": "Odat tusiga kirgan muntazam harakatlar",
+                            "usageNotes": "I / You / We / They bilan fe'l o'zgarmaydi. Faqat He / She / It bilan -s qo'shiladi. Misol: study -> studies (y tushib -ies bo'ladi).",
                             "examples": [
                                 {
-                                    "sentence": "Where do you live?",
-                                    "translation": "Qayerda yashaysiz?"
+                                    "sentence": "My sister studies at university and works part-time.",
+                                    "translation": "Singlim universitetda o'qiydi va yarim stavkada ishlaydi."
                                 },
                                 {
-                                    "sentence": "She works hard every day.",
-                                    "translation": "U har kuni qattiq ishlaydi."
+                                    "sentence": "They live in London, but their brother lives in New York.",
+                                    "translation": "Ular Londonda yashaydilar, ammo ularning akasi Nyu-Yorkda yashaydi."
                                 }
                             ]
                         }
-                    ]
+                    ],
+                    "culturalNotes": "🎙️ IELTS Speaking Part 1 Foundation Corner:\nImtihon oluvchi: \"Do you work or are you a student?\"\nNamunaviy javob: \"Currently, I study at university. My major is computer science. In addition to my classes, I also work as an online freelancer in the evenings.\""
                 }
             },
             {
                 "id": "en-a1-u2-l3-s2",
-                "title": "Mashq",
+                "title": "Interaktiv Amaliy Mashq",
                 "type": "practice",
-                "estimatedMinutes": 4,
+                "estimatedMinutes": 5,
                 "practiceData": {
-                    "instructions": "To'g'ri fe'l shaklini tanlang.",
+                    "instructions": "Present Simple qoidasiga ko'ra fe'lning to'g'ri shaklini tanlang.",
                     "exercises": [
                         {
                             "id": "en-a1-u2-l3-e1",
                             "type": "multiple-choice",
-                            "prompt": "\"He _______ (speak) English well.\"",
+                            "prompt": "\"She _______ English very fluently.\" Bo'sh joyga qaysi shakl qo'yiladi?",
                             "options": [
+                                "speaks",
                                 "speak",
-                                "is speak",
                                 "speaking",
-                                "speaks"
+                                "is speak"
                             ],
-                            "correctAnswer": 3,
-                            "explanation": "He olmoshi bilan fe'lga -s qo'shiladi: speaks."
+                            "correctAnswer": 0,
+                            "explanation": "\"She\" (3-shaxs birlik) bilan fe'lga -s qo'shiladi: speaks."
                         },
                         {
-                            "id": "en-a1-u2-l3-ex-2",
+                            "id": "en-a1-u2-l3-e2",
                             "type": "multiple-choice",
-                            "prompt": "Choose the correct word to complete the sentence: \"She works hard every day.\"",
+                            "prompt": "\"We _______ in Samarkand with our family.\"",
                             "options": [
-                                "delay",
-                                "Work",
-                                "doubt",
-                                "reluctance"
+                                "live",
+                                "lives",
+                                "living",
+                                "are live"
                             ],
-                            "correctAnswer": 1,
-                            "explanation": "\"Work\" (Ishlamoq) fits the context appropriately."
+                            "correctAnswer": 0,
+                            "explanation": "\"We\" ko'plik olmoshi bo'lgani sababli oddiy fe'l shakli olinadi: live."
+                        },
+                        {
+                            "id": "en-a1-u2-l3-e3",
+                            "type": "multiple-choice",
+                            "prompt": "\"He _______ hard for the IELTS exam every night.\"",
+                            "options": [
+                                "studies",
+                                "studys",
+                                "study",
+                                "is study"
+                            ],
+                            "correctAnswer": 0,
+                            "explanation": "\"Study\" fe'li 3-shaxs birlikda \"studies\" ga aylanadi (y -> ies)."
+                        },
+                        {
+                            "id": "en-a1-u2-l3-e4",
+                            "type": "multiple-choice",
+                            "prompt": "Qaysi gapda grammatik xatolik BOR?",
+                            "options": [
+                                "John work in a bank.",
+                                "John works in a bank.",
+                                "I work in a hospital.",
+                                "They study English."
+                            ],
+                            "correctAnswer": 0,
+                            "explanation": "\"John work\" xato, chunki John uchinchi shaxs birlik bo'lib \"works\" bo'lishi kerak."
+                        },
+                        {
+                            "id": "en-a1-u2-l3-e5",
+                            "type": "multiple-choice",
+                            "prompt": "\"My brother _______ television after finishing his homework.\"",
+                            "options": [
+                                "watches",
+                                "watchs",
+                                "watch",
+                                "watching"
+                            ],
+                            "correctAnswer": 0,
+                            "explanation": "-ch bilan tugagan fe'llarga 3-shaxsda -es qo'shiladi: watches."
                         }
                     ]
                 }
             },
             {
                 "id": "en-a1-u2-l3-s3",
-                "title": "Test",
+                "title": "Dars Sinov Testi",
                 "type": "test",
                 "estimatedMinutes": 5,
                 "testData": {
-                    "instructions": "Savollarga javob bering.",
-                    "passingScorePercentage": 75,
+                    "instructions": "Savollarga javob berib, o'zlashtirishni tekshiring.",
+                    "passingScorePercentage": 80,
                     "questions": [
                         {
                             "id": "en-a1-u2-l3-q1",
-                            "question": "My sister _______ coffee every morning.",
+                            "question": "Alex _______ two international languages fluently.",
                             "options": [
-                                "drink",
-                                "is drink",
-                                "drinking",
-                                "drinks"
+                                "speaks",
+                                "speak",
+                                "is speak",
+                                "speaking"
                             ],
-                            "correctAnswerIndex": 3,
-                            "explanation": "My sister (she) -> drinks."
+                            "correctAnswerIndex": 0,
+                            "explanation": "Alex birlik (He): speaks."
                         },
                         {
                             "id": "en-a1-u2-l3-q2",
-                            "question": "We _______ in a big city.",
+                            "question": "My parents _______ in a quiet town.",
                             "options": [
-                                "living",
-                                "are live",
                                 "live",
-                                "lives"
+                                "lives",
+                                "living",
+                                "are live"
                             ],
-                            "correctAnswerIndex": 2,
-                            "explanation": "We -> live."
+                            "correctAnswerIndex": 0,
+                            "explanation": "Parents ko'plik: live."
                         },
                         {
                             "id": "en-a1-u2-l3-q3",
-                            "question": "The sun _______ in the east.",
+                            "question": "Sarah _______ at an international bank in Tashkent.",
                             "options": [
-                                "is rise",
-                                "rises",
-                                "rise",
-                                "rising"
+                                "works",
+                                "work",
+                                "workes",
+                                "working"
                             ],
-                            "correctAnswerIndex": 1,
-                            "explanation": "Tabiat qonuni/haqiqat: rises."
+                            "correctAnswerIndex": 0,
+                            "explanation": "Sarah birlik (She): works."
                         },
                         {
                             "id": "en-a1-u2-l3-q4",
-                            "question": "They _______ to university by bus.",
+                            "question": "He _______ tennis with his friends every Saturday.",
                             "options": [
-                                "go",
-                                "goes",
-                                "going",
-                                "are go"
+                                "plays",
+                                "play",
+                                "plaies",
+                                "is play"
                             ],
                             "correctAnswerIndex": 0,
-                            "explanation": "They -> go."
+                            "explanation": "Play so'zida unli + y bo'lgani uchun oddiy -s qo'shiladi: plays."
+                        },
+                        {
+                            "id": "en-a1-u2-l3-q5",
+                            "question": "We _______ English vocabulary every day.",
+                            "options": [
+                                "read",
+                                "reads",
+                                "reading",
+                                "are read"
+                            ],
+                            "correctAnswerIndex": 0,
+                            "explanation": "\"We\" bilan fe'l o'zgarmaydi: read."
                         }
                     ]
                 }
@@ -1814,154 +2075,249 @@ export const ENGLISH_A1_LESSONS: Lesson[] = [
         "language": "en",
         "level": "A1",
         "lessonNumber": 4,
-        "title": "Present Simple Negatives (don't / doesn't)",
-        "description": "Inkor gaplar tuzish va yordamchi fe'llar.",
-        "estimatedDurationMinutes": 12,
-        "icon": "🚫",
+        "title": "Present Simple Negatives (Don't / Doesn't)",
+        "description": "Inkor gaplar: don't va doesn't yordamchi fe'llari orqali xatolarsiz inkor qurish.",
+        "estimatedDurationMinutes": 15,
+        "icon": "⛔",
         "steps": [
             {
                 "id": "en-a1-u2-l4-s1",
-                "title": "Inkor Shakli",
+                "title": "Inkor Shakli Qoidalari",
                 "type": "learn",
-                "estimatedMinutes": 4,
+                "estimatedMinutes": 5,
                 "learnData": {
-                    "title": "Don't va Doesn't",
-                    "explanation": "I/You/We/They uchun \"do not (don't)\", He/She/It uchun \"does not (doesn't)\" ishlatiladi. doesn't dan keyin asosiy fe'lga -s qo'shilmaydi!",
+                    "title": "Present Simple Inkor Qoidasi: Don't va Doesn't",
+                    "subtitle": "Unit 2 • 4-Dars: Harakat fe'llarini inkor qilish sintaksisi",
+                    "explanation": "Ingliz tilida harakat fe'llarini inkor qilish uchun \"not\" so'zining o'zi yetarli emas. Bizga yordamchi fe'l kerak: DON'T (do not) yoki DOESN'T (does not). Eng muhim qoida: doesn't ishlatilganda, asosiy fe'ldan \"-s\" qo'shimchasi tushib qoladi!",
                     "keyPoints": [
-                        "I don't like tea.",
-                        "He doesn't like coffee (likes EMAS)."
+                        "I / You / We / They + DON'T + Asosiy fe'l (I don't drink coffee)",
+                        "He / She / It + DOESN'T + Asosiy fe'l (He doesn't eat fast food)",
+                        "⚠️ Oltin qoida: \"He doesn't works\" (XATO) -> \"He doesn't WORK\" (TO'G'RI, -s tushib qoladi)",
+                        "⚠️ \"I not like\" (XATO) -> \"I DON'T like\" (TO'G'RI)",
+                        "Like (yoqtirmoq), understand (tushunmoq), drive (mashina haydamoq)"
                     ],
                     "vocabulary": [
                         {
+                            "term": "Coffee",
+                            "reading": "/ˈkɒf.i/",
+                            "meaning": "Qahva, kofe",
+                            "exampleSentence": "I don't drink black coffee in the evening.",
+                            "exampleTranslation": "Men kechqurun achchiq qahva ichmayman."
+                        },
+                        {
+                            "term": "Tea",
+                            "reading": "/tiː/",
+                            "meaning": "Choy",
+                            "exampleSentence": "He drinks green tea, but he doesn't like milk tea.",
+                            "exampleTranslation": "U ko'k choy ichadi, lekin sutli choyni yoqtirmaydi."
+                        },
+                        {
                             "term": "Like",
                             "reading": "/laɪk/",
-                            "meaning": "Yoqtirmoq",
-                            "exampleSentence": "I like learning languages.",
-                            "exampleTranslation": "Men til o'rganishni yoqtiraman."
+                            "meaning": "Yoqtirmoq, ma'qul ko'rmoq",
+                            "exampleSentence": "We don't like noisy and crowded places.",
+                            "exampleTranslation": "Biz shovqinli va gavjum joylarni yoqtirmaymiz."
                         },
                         {
-                            "term": "Friend",
-                            "reading": "/frend/",
-                            "meaning": "Doʻst",
-                            "exampleSentence": "She is my best friend.",
-                            "exampleTranslation": "U mening eng yaxshi doʻstim."
+                            "term": "Watch",
+                            "reading": "/wɒtʃ/",
+                            "meaning": "Tomosha qilmoq, ko'rmoq",
+                            "exampleSentence": "She doesn't watch television during weekdays.",
+                            "exampleTranslation": "U ish kunlarida televizor tomosha qilmaydi."
                         },
                         {
-                            "term": "Family",
-                            "reading": "/ˈfæm.əl.i/",
-                            "meaning": "Oila",
-                            "exampleSentence": "I love my family.",
-                            "exampleTranslation": "Men oilamni yaxshi koʻraman."
+                            "term": "Understand",
+                            "reading": "/ˌʌn.dəˈstænd/",
+                            "meaning": "Tushunmoq, anglamoq",
+                            "exampleSentence": "I don't understand this difficult grammar rule.",
+                            "exampleTranslation": "Men bu qiyin grammatika qoidasini tushunmayapman."
+                        },
+                        {
+                            "term": "Early",
+                            "reading": "/ˈɜː.li/",
+                            "meaning": "Erta, barvaqt",
+                            "exampleSentence": "He doesn't wake up early on Sunday mornings.",
+                            "exampleTranslation": "U yakshanba ertalablari barvaqt uyg'onmaydi."
+                        },
+                        {
+                            "term": "Late",
+                            "reading": "/leɪt/",
+                            "meaning": "Kech, kechikib",
+                            "exampleSentence": "Please don't be late for the speaking session.",
+                            "exampleTranslation": "Iltimos, speaking mashg'ulotiga kechikmang."
+                        },
+                        {
+                            "term": "Drive",
+                            "reading": "/draɪv/",
+                            "meaning": "Mashina haydamoq",
+                            "exampleSentence": "My sister doesn't drive a car; she takes the metro.",
+                            "exampleTranslation": "Singlim mashina haydamaydi; u metroda yuradi."
                         }
                     ],
                     "grammarRules": [
                         {
-                            "pattern": "Present Simple Negatives (don't / doesn't)",
-                            "meaning": "Inkor gaplar tuzish va yordamchi fe'llar.",
-                            "usageNotes": "I/You/We/They uchun \"do not (don't)\", He/She/It uchun \"does not (doesn't)\" ishlatiladi. doesn't dan keyin asosiy fe'lga -s qo'shilmaydi!",
+                            "pattern": "Subject + don't / doesn't + Base Verb (Infinitive without to)",
+                            "meaning": "Harakat yoki odatning mavjud emasligini bildirish",
+                            "usageNotes": "I/You/We/They -> don't; He/She/It -> doesn't. DOESN'T dan keyin fe'lga hech qanday -s qo'shilmaydi!",
                             "examples": [
                                 {
-                                    "sentence": "I like learning languages.",
-                                    "translation": "Men til o'rganishni yoqtiraman."
+                                    "sentence": "I don't eat sugar because I care about my health.",
+                                    "translation": "Men shakar yemayman, chunki sog'lig'imga e'tibor beraman."
+                                },
+                                {
+                                    "sentence": "He doesn't speak French, but he speaks English well.",
+                                    "translation": "U fransuzcha gapirmaydi, lekin inglizcha yaxshi gapiradi."
                                 }
                             ]
                         }
-                    ]
+                    ],
+                    "culturalNotes": "🎙️ IELTS Speaking Part 1 Foundation Corner:\nImtihon oluvchi: \"Do you prefer drinking coffee or tea?\"\nNamunaviy javob: \"I definitely prefer hot green tea because I don't drink coffee. Strong coffee makes me nervous, so I avoid it, especially before important exams.\""
                 }
             },
             {
                 "id": "en-a1-u2-l4-s2",
-                "title": "Mashq",
+                "title": "Interaktiv Amaliy Mashq",
                 "type": "practice",
-                "estimatedMinutes": 4,
+                "estimatedMinutes": 5,
                 "practiceData": {
-                    "instructions": "Inkor shaklini tanlang.",
+                    "instructions": "Inkor gaplar qoidasiga ko'ra to'g'ri shaklni tanlang.",
                     "exercises": [
                         {
                             "id": "en-a1-u2-l4-e1",
                             "type": "multiple-choice",
-                            "prompt": "\"She _______ (not / eat) fast food.\"",
+                            "prompt": "\"He _______ like fast food.\" Bo'sh joyga qaysi inkor shakli qo'yiladi?",
                             "options": [
-                                "not eats",
-                                "don't eat",
-                                "doesn't eat",
-                                "doesn't eats"
+                                "doesn't",
+                                "don't",
+                                "isn't",
+                                "not"
                             ],
-                            "correctAnswer": 2,
-                            "explanation": "She bilan doesn't eat ishlatiladi."
+                            "correctAnswer": 0,
+                            "explanation": "\"He\" bilan harakat fe'lini inkor qilishda \"doesn't\" ishlatiladi."
                         },
                         {
-                            "id": "en-a1-u2-l4-ex-2",
+                            "id": "en-a1-u2-l4-e2",
                             "type": "multiple-choice",
-                            "prompt": "Choose the correct word to complete the sentence: \"She is my best friend.\"",
+                            "prompt": "\"We _______ understand this complex reading passage.\"",
                             "options": [
-                                "reluctance",
-                                "doubt",
-                                "Friend",
-                                "delay"
+                                "don't",
+                                "doesn't",
+                                "aren't",
+                                "not"
                             ],
-                            "correctAnswer": 2,
-                            "explanation": "\"Friend\" (Doʻst) fits the context appropriately."
+                            "correctAnswer": 0,
+                            "explanation": "\"We\" bilan \"don't\" ishlatiladi: We don't understand."
+                        },
+                        {
+                            "id": "en-a1-u2-l4-e3",
+                            "type": "multiple-choice",
+                            "prompt": "Qaysi gap to'g'ri tuzilgan?",
+                            "options": [
+                                "She doesn't drive a car.",
+                                "She doesn't drives a car.",
+                                "She don't drive a car.",
+                                "She not drive a car."
+                            ],
+                            "correctAnswer": 0,
+                            "explanation": "\"doesn't\" dan keyin fe'lning boshlang'ich shakli (drive) keladi, -s qo'shilmaydi."
+                        },
+                        {
+                            "id": "en-a1-u2-l4-e4",
+                            "type": "multiple-choice",
+                            "prompt": "\"They _______ wake up early on weekends.\"",
+                            "options": [
+                                "don't",
+                                "doesn't",
+                                "aren't",
+                                "not"
+                            ],
+                            "correctAnswer": 0,
+                            "explanation": "\"They\" ko'plik olmoshi: don't wake up."
+                        },
+                        {
+                            "id": "en-a1-u2-l4-e5",
+                            "type": "multiple-choice",
+                            "prompt": "\"My brother _______ watch TV; he prefers reading books.\"",
+                            "options": [
+                                "doesn't",
+                                "don't",
+                                "isn't",
+                                "hasn't"
+                            ],
+                            "correctAnswer": 0,
+                            "explanation": "My brother (He): doesn't watch."
                         }
                     ]
                 }
             },
             {
                 "id": "en-a1-u2-l4-s3",
-                "title": "Test",
+                "title": "Dars Sinov Testi",
                 "type": "test",
-                "estimatedMinutes": 4,
+                "estimatedMinutes": 5,
                 "testData": {
-                    "instructions": "Savollarga javob bering.",
-                    "passingScorePercentage": 75,
+                    "instructions": "Savollarga javob bering va o'zlashtirishni tekshiring.",
+                    "passingScorePercentage": 80,
                     "questions": [
                         {
                             "id": "en-a1-u2-l4-q1",
-                            "question": "I _______ know the answer.",
+                            "question": "Sarah _______ coffee in the afternoon.",
                             "options": [
-                                "am not",
-                                "doesn't",
-                                "don't",
-                                "no"
+                                "doesn't drink",
+                                "doesn't drinks",
+                                "don't drink",
+                                "isn't drink"
                             ],
-                            "correctAnswerIndex": 2,
-                            "explanation": "I don't know."
+                            "correctAnswerIndex": 0,
+                            "explanation": "Sarah birlik (She): doesn't drink."
                         },
                         {
                             "id": "en-a1-u2-l4-q2",
-                            "question": "Tom _______ drive a car.",
+                            "question": "I _______ live in London; I live in Tashkent.",
                             "options": [
-                                "isn't",
-                                "not",
                                 "don't",
-                                "doesn't"
+                                "doesn't",
+                                "am not",
+                                "not"
                             ],
-                            "correctAnswerIndex": 3,
-                            "explanation": "Tom doesn't drive."
+                            "correctAnswerIndex": 0,
+                            "explanation": "I olmoshi bilan: don't."
                         },
                         {
                             "id": "en-a1-u2-l4-q3",
-                            "question": "They _______ live in this neighborhood.",
+                            "question": "The students _______ have their textbooks today.",
                             "options": [
                                 "don't",
-                                "not",
+                                "doesn't",
                                 "aren't",
-                                "doesn't"
+                                "haven't"
                             ],
                             "correctAnswerIndex": 0,
-                            "explanation": "They don't live."
+                            "explanation": "The students ko'plik: don't have."
                         },
                         {
                             "id": "en-a1-u2-l4-q4",
-                            "question": "She _______ speak Spanish.",
+                            "question": "He _______ late for work because he leaves home early.",
                             "options": [
-                                "don't",
-                                "isn't",
-                                "doesn't",
-                                "not"
+                                "doesn't arrive",
+                                "doesn't arrives",
+                                "don't arrive",
+                                "isn't arrive"
                             ],
-                            "correctAnswerIndex": 2,
-                            "explanation": "She doesn't speak."
+                            "correctAnswerIndex": 0,
+                            "explanation": "He doesn't arrive: doesn't dan so'ng oddiy fe'l."
+                        },
+                        {
+                            "id": "en-a1-u2-l4-q5",
+                            "question": "\"Biz shovqinni yoqtirmaymiz\" gapining to'g'ri tarjimasi qaysi?",
+                            "options": [
+                                "We don't like noise.",
+                                "We doesn't like noise.",
+                                "We not like noise.",
+                                "We aren't like noise."
+                            ],
+                            "correctAnswerIndex": 0,
+                            "explanation": "We don't like noise."
                         }
                     ]
                 }
@@ -1976,142 +2332,226 @@ export const ENGLISH_A1_LESSONS: Lesson[] = [
         "language": "en",
         "level": "A1",
         "lessonNumber": 5,
-        "title": "Present Simple Questions (Do / Does)",
-        "description": "So'roq gaplar tuzish va qisqa javoblar berish.",
-        "estimatedDurationMinutes": 12,
+        "title": "Present Simple Questions (Do / Does & Wh-)",
+        "description": "Umumiy va maxsus so'roq gaplar: Do/Does, qisqa javoblar hamda Where, What, When savol so'zlari.",
+        "estimatedDurationMinutes": 15,
         "icon": "❓",
         "steps": [
             {
                 "id": "en-a1-u2-l5-s1",
-                "title": "So'roq Shakli",
+                "title": "So'roq Gaplar Sintaksisi",
                 "type": "learn",
-                "estimatedMinutes": 4,
+                "estimatedMinutes": 5,
                 "learnData": {
-                    "title": "Do you...? / Does he...?",
-                    "explanation": "So'roq gaplarda Do/Does egadan oldinga o'tadi.",
+                    "title": "Do / Does Yordamida Savol Tuzish",
+                    "subtitle": "Unit 2 • 5-Dars: Savol berish va intervyu muloqoti",
+                    "explanation": "Ingliz tilida harakat fe'llari bilan savol tuzish uchun DO yoki DOES yordamchi fe'llari eganing (subject) oldiga chiqadi. IELTS Speaking intervyusida aynan shunday savollarga duch kelasiz va o'zingiz ham to'g'ri savol bera olishingiz zarur.",
                     "keyPoints": [
-                        "Do you play football? -> Yes, I do. / No, I don't.",
-                        "Does she work here? -> Yes, she does. / No, she doesn't."
+                        "DO + I / You / We / They + Fe'l? -> Do you speak English? (Yes, I do / No, I don't)",
+                        "DOES + He / She / It + Fe'l? -> Does she live in Tashkent? (Yes, she does / No, she doesn't)",
+                        "Maxsus savollar (Wh-): Where (qayerda), What (nima), When (qachon), Why (nega)",
+                        "Formula: Wh-so'z + DO / DOES + Ega + Fe'l? (Where do you live? / What does he study?)",
+                        "⚠️ Tipik xato: \"Where you work?\" (XATO) -> \"Where DO you work?\" (TO'G'RI)",
+                        "⚠️ \"Does he lives here?\" (XATO) -> \"Does he LIVE here?\" (TO'G'RI, -s tushadi)"
                     ],
                     "vocabulary": [
                         {
                             "term": "Question",
                             "reading": "/ˈkwes.tʃən/",
                             "meaning": "Savol",
-                            "exampleSentence": "Can I ask a question?",
-                            "exampleTranslation": "Savol bersam bo'ladimi?"
+                            "exampleSentence": "Can I ask a question about the test format?",
+                            "exampleTranslation": "Test formati haqida bitta savol bersam maylimi?"
                         },
                         {
-                            "term": "Family",
-                            "reading": "/ˈfæm.əl.i/",
-                            "meaning": "Oila",
-                            "exampleSentence": "I love my family.",
-                            "exampleTranslation": "Men oilamni yaxshi koʻraman."
+                            "term": "Answer",
+                            "reading": "/ˈɑːn.sər/",
+                            "meaning": "Javob, javob bermoq",
+                            "exampleSentence": "Please answer in complete and clear sentences.",
+                            "exampleTranslation": "Iltimos, to'liq va aniq gaplar bilan javob bering."
                         },
                         {
-                            "term": "Morning",
-                            "reading": "/ˈmɔː.nɪŋ/",
-                            "meaning": "Tong, ertalab",
-                            "exampleSentence": "Good morning, everyone!",
-                            "exampleTranslation": "Hammaga xayrli tong!"
+                            "term": "Where",
+                            "reading": "/weər/",
+                            "meaning": "Qayerda, qayerga",
+                            "exampleSentence": "Where do you practice your English speaking?",
+                            "exampleTranslation": "Inglizcha so'zlashuvni qayerda mashq qilasiz?"
+                        },
+                        {
+                            "term": "What",
+                            "reading": "/wɒt/",
+                            "meaning": "Nima, qanday",
+                            "exampleSentence": "What do you usually do in your free time?",
+                            "exampleTranslation": "Bo'sh vaqtingizda odatda nima bilan shug'ullanasiz?"
+                        },
+                        {
+                            "term": "When",
+                            "reading": "/wen/",
+                            "meaning": "Qachon",
+                            "exampleSentence": "When does your English course begin?",
+                            "exampleTranslation": "Ingliz tili kursingiz qachon boshlanadi?"
+                        },
+                        {
+                            "term": "Why",
+                            "reading": "/waɪ/",
+                            "meaning": "Nima uchun, nega",
+                            "exampleSentence": "Why do you want to achieve a high IELTS score?",
+                            "exampleTranslation": "Nima uchun yuqori IELTS baliga erishmoqchisiz?"
+                        },
+                        {
+                            "term": "Often",
+                            "reading": "/ˈɒf.ən/",
+                            "meaning": "Tez-tez",
+                            "exampleSentence": "How often do you read academic articles?",
+                            "exampleTranslation": "Qanchalik tez-tez ilmiy maqolalar o'qib turasiz?"
+                        },
+                        {
+                            "term": "Weekend",
+                            "reading": "/ˌwiːkˈend/",
+                            "meaning": "Dam olish kunlari (hafta oxiri)",
+                            "exampleSentence": "What are your plans for this upcoming weekend?",
+                            "exampleTranslation": "Yaqinlashib kelayotgan dam olish kunlari uchun rejalaringiz qanday?"
                         }
                     ],
                     "grammarRules": [
                         {
-                            "pattern": "Present Simple Questions (Do / Does)",
-                            "meaning": "So'roq gaplar tuzish va qisqa javoblar berish.",
-                            "usageNotes": "So'roq gaplarda Do/Does egadan oldinga o'tadi.",
+                            "pattern": "Do / Does + Subject + Base Verb? | Wh- + Do/Does + Subject + Base Verb?",
+                            "meaning": "Umumiy va maxsus so'roq gaplarni to'g'ri shakllantirish",
+                            "usageNotes": "Do (I, you, we, they) / Does (he, she, it). Does qatnashgan savolda asosiy fe'l o'zgarmaydi (boshlang'ich shaklida qoladi).",
                             "examples": [
                                 {
-                                    "sentence": "Can I ask a question?",
-                                    "translation": "Savol bersam bo'ladimi?"
+                                    "sentence": "Do you like listening to English podcasts? — Yes, I do.",
+                                    "translation": "Inglizcha podkastlarni tinglashni yoqtirasizmi? — Ha, yoqtiraman."
+                                },
+                                {
+                                    "sentence": "Where does your brother work? — He works at an IT company.",
+                                    "translation": "Akangiz qayerda ishlaydi? — U IT kompaniyasida ishlaydi."
                                 }
                             ]
                         }
-                    ]
+                    ],
+                    "culturalNotes": "🎙️ IELTS Speaking Part 1 Foundation Corner:\nImtihon oluvchi: \"What do you usually do on weekends?\"\nNamunaviy javob: \"On weekends, I usually relax with my family in the morning, and in the afternoon, I often play football with my friends or read books to prepare for IELTS.\""
                 }
             },
             {
                 "id": "en-a1-u2-l5-s2",
-                "title": "Mashq",
+                "title": "Interaktiv Amaliy Mashq",
                 "type": "practice",
-                "estimatedMinutes": 4,
+                "estimatedMinutes": 5,
                 "practiceData": {
-                    "instructions": "To'g'ri so'roq fe'lini tanlang.",
+                    "instructions": "So'roq gaplar grammatikasi bo'yicha to'g'ri javoblarni tanlang.",
                     "exercises": [
                         {
                             "id": "en-a1-u2-l5-e1",
                             "type": "multiple-choice",
-                            "prompt": "\"_______ you speak English?\"",
+                            "prompt": "\"_______ you live near the city center?\" Bo'sh joyga qaysi yordamchi fe'l qo'yiladi?",
                             "options": [
-                                "Is",
                                 "Do",
                                 "Does",
-                                "Are"
+                                "Are",
+                                "Is"
                             ],
-                            "correctAnswer": 1,
-                            "explanation": "You bilan \"Do you speak...?\" ishlatiladi."
+                            "correctAnswer": 0,
+                            "explanation": "\"You\" bilan harakat fe'li (live) qatnashganda \"Do\" ishlatiladi."
                         },
                         {
-                            "id": "en-a1-u2-l5-ex-2",
+                            "id": "en-a1-u2-l5-e2",
                             "type": "multiple-choice",
-                            "prompt": "Choose the correct word to complete the sentence: \"I love my family.\"",
+                            "prompt": "\"Where _______ your sister work?\"",
                             "options": [
-                                "doubt",
-                                "delay",
-                                "reluctance",
-                                "Family"
+                                "does",
+                                "do",
+                                "is",
+                                "are"
                             ],
-                            "correctAnswer": 3,
-                            "explanation": "\"Family\" (Oila) fits the context appropriately."
+                            "correctAnswer": 0,
+                            "explanation": "\"Your sister\" birlik (She), shuning uchun \"does\" to'g'ri."
+                        },
+                        {
+                            "id": "en-a1-u2-l5-e3",
+                            "type": "multiple-choice",
+                            "prompt": "Dialog: \"— Do you study English every day? — Yes, I _______.\"",
+                            "options": [
+                                "do",
+                                "am",
+                                "have",
+                                "study"
+                            ],
+                            "correctAnswer": 0,
+                            "explanation": "\"Do you...?\" savoliga qisqa ijobiy javob: \"Yes, I do.\""
+                        },
+                        {
+                            "id": "en-a1-u2-l5-e4",
+                            "type": "multiple-choice",
+                            "prompt": "Qaysi savol to'g'ri tuzilgan?",
+                            "options": [
+                                "What does he do on weekends?",
+                                "What does he does on weekends?",
+                                "What do he do on weekends?",
+                                "What he does on weekends?"
+                            ],
+                            "correctAnswer": 0,
+                            "explanation": "\"What does he do...\" to'g'ri, chunki does dan so'ng asosiy fe'l \"do\" bo'lib keladi."
+                        },
+                        {
+                            "id": "en-a1-u2-l5-e5",
+                            "type": "multiple-choice",
+                            "prompt": "\"— Does she speak French? — No, she _______.\"",
+                            "options": [
+                                "doesn't",
+                                "don't",
+                                "isn't",
+                                "hasn't"
+                            ],
+                            "correctAnswer": 0,
+                            "explanation": "Qisqa inkor javob: \"No, she doesn't.\""
                         }
                     ]
                 }
             },
             {
                 "id": "en-a1-u2-l5-s3",
-                "title": "Test",
+                "title": "Dars Sinov Testi",
                 "type": "test",
-                "estimatedMinutes": 4,
+                "estimatedMinutes": 5,
                 "testData": {
-                    "instructions": "Savollarga javob bering.",
-                    "passingScorePercentage": 75,
+                    "instructions": "Savollarga javob bering va Unit 2 ni muvaffaqiyatli yakunlang.",
+                    "passingScorePercentage": 80,
                     "questions": [
                         {
                             "id": "en-a1-u2-l5-q1",
-                            "question": "_______ he work in an office?",
-                            "options": [
-                                "Are",
-                                "Does",
-                                "Do",
-                                "Is"
-                            ],
-                            "correctAnswerIndex": 1,
-                            "explanation": "He bilan \"Does he work...?\""
-                        },
-                        {
-                            "id": "en-a1-u2-l5-q2",
-                            "question": "\"Do they live here?\" — \"Yes, they _______.\"",
+                            "question": "Where _______ your parents live?",
                             "options": [
                                 "do",
                                 "does",
                                 "are",
-                                "live"
+                                "is"
                             ],
                             "correctAnswerIndex": 0,
-                            "explanation": "Yes, they do."
+                            "explanation": "Your parents ko'plik: Where do your parents live?"
+                        },
+                        {
+                            "id": "en-a1-u2-l5-q2",
+                            "question": "_______ he like reading English novels?",
+                            "options": [
+                                "Does",
+                                "Do",
+                                "Is",
+                                "Are"
+                            ],
+                            "correctAnswerIndex": 0,
+                            "explanation": "He bilan: Does he like...?"
                         },
                         {
                             "id": "en-a1-u2-l5-q3",
-                            "question": "Where _______ she study?",
+                            "question": "How often _______ you exercise at the gym?",
                             "options": [
                                 "do",
-                                "is",
+                                "does",
                                 "are",
-                                "does"
+                                "have"
                             ],
-                            "correctAnswerIndex": 3,
-                            "explanation": "Where does she study?"
+                            "correctAnswerIndex": 0,
+                            "explanation": "You bilan: How often do you exercise?"
                         },
                         {
                             "id": "en-a1-u2-l5-q4",
