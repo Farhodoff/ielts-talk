@@ -2380,153 +2380,228 @@ export const ENGLISH_C2_LESSONS: Lesson[] = [
         "level": "C2",
         "lessonNumber": 1,
         "title": "IELTS Band 9.0 Writing Task 1: Flawless Synthesis & Elegant Overview",
-        "description": "Band 9.0 mezonlari: tabiiy tahliliy ohang, ko'p o'lchovli ma'lumotlar integratsiyasi va nol grammatik xatolik.",
-        "estimatedDurationMinutes": 18,
+        "description": "IELTS Academic Task 1 da Band 9.0 darajasidagi mukammal sintez, qoliplardan butunlay xoli bo'lgan nafis umumiy xulosa (elegant overview) va matematik ravonlik.",
+        "estimatedDurationMinutes": 22,
         "icon": "📊",
         "steps": [
             {
                 "id": "en-c2-u3-l1-s1",
-                "title": "Band 9.0 Task 1 Mezonlari",
+                "title": "Band 9.0 Task 1 Synthesis & Diction",
                 "type": "learn",
-                "estimatedMinutes": 5,
+                "estimatedMinutes": 8,
                 "learnData": {
-                    "title": "Band 9.0 Descriptor Requirements for Task 1",
-                    "explanation": "Task Achievement: Fully satisfies all requirements with an insightful, comprehensive overview. Coherence: Seamless progression with natural paragraphing. Lexical: Wide range of vocabulary used with full flexibility and precise collocation. Grammar: Wide range of structures with full flexibility and accuracy; rare minor errors occur only as 'slips'.",
-                    "keyPoints": [
-                        "Avoid formulaic clichés like \"Looking at the chart we can see that...\"",
-                        "Write authoritative, high-density analytical sentences."
-                    ],
-                    "grammarRules": [
-                        {
-                            "pattern": "IELTS Band 9.0 Writing Task 1: Flawless Synthesis & Elegant Overview",
-                            "meaning": "Band 9.0 mezonlari: tabiiy tahliliy ohang, ko'p o'lchovli ma'lumotlar integratsiyasi va nol grammatik xatolik.",
-                            "usageNotes": "Task Achievement: Fully satisfies all requirements with an insightful, comprehensive overview. Coherence: Seamless progression with natural paragraphing. Lexical: Wide range of vocabulary used with full flexibility and precise collocation. Grammar: Wide range of structures with full flexibility and accuracy; rare minor errors occur only as 'slips'.",
-                            "examples": [
-                                {
-                                    "sentence": "I study English every day with dedication.",
-                                    "translation": "Har kuni ingliz tilini astoydil o'rganaman."
-                                }
-                            ]
-                        }
-                    ],
+                    "title": "Flawless Synthesis and Native-Level Diction in Task 1",
+                    "explanation": "IELTS Writing Task 1 da Band 9.0 olish uchun o'quvchi yodlangan shablonlardan (*The given chart illustrates, First of all, In addition*) butunlay voz kechishi shart. Band 9.0 imtihon oluvchiga professional moliyaviy tahlilchi (masalan: Financial Times yoki Bloomberg muxbiri) hisobotini o'qiyotgandek taassurot qoldirishi kerak.\n\nBand 9.0 Mezonlari:\n1. **Qolipsiz Kirish va Nafis Parafraza**:\n   - *The provided data juxtaposes demographic ageing trajectories across four industrialized societies between 1980 and 2030, correlating these metrics with escalating public healthcare expenditures.*\n\n2. **The Elegant Overview (Benuqson Sintez)**:\n   - Ikkita yoki undan ko'p manbani bir-biriga bog'lovchi sababiyat va qutbli ziddiyatlarni bitta chiroyli periodik jumlada ifodalash:\n     *Overall, the half-century period is characterized by an inexorable graying of the population across all surveyed jurisdictions, most acutely manifested in Japan. Crucially, this demographic transition directly mirrors a precipitous escalation in fiscal allocations toward geriatric social care, which outstripped educational investment by a factor of three.*\n\n3. **Matematik Aniq Leksika (High-Register Metrics)**:\n   - *Asymptotic plateau* (maksimal darajada to'xtab turg'unlashish).\n   - *Outstrip by a factor of three* (uch barobar ortda qoldirmoq).\n   - *Corroborate the trend* (tendensiyani tasdiqlamoq).\n\n⚠️ **O'zbek o'rganuvchilari uchun xavfli tuzoqlar (Common Pitfalls)**:\n- ❌ *Copying the prompt's words.* Har qanday shablon so'z avtomatik ravishda Lexical Resource balini 9.0 dan 7.5 ga tushiradi.\n- ❌ *Mechanical data dumps.* Ketma-ket 10 ta raqamni sonma-son yozib chiqish 'Task Achievement' mezonini buzadi; faqat eng dramatik cho'qqi, pastlashish va konvergensiyalarni tahliliy bog'lang.\n\n🎯 **IELTS Speaking & Writing Band 9.0 Masterclass**:\n- **Prompt**: Task 1: A line graph of electric vehicle adoption and a bar chart of battery production costs.\n- **Model Overview (Band 9.0)**: Overall, the market is defined by an inverse correlation between battery pack manufacturing costs and consumer adoption rates. While production expenditures underwent an asymptotic decline toward cost parity with combustion engines, electric vehicle registrations exhibited exponential upward momentum, outstripping conventional automotive sales by the decade's culmination.\n- **Discourse Markers**: defined by an inverse correlation between, underwent an asymptotic decline toward, cost parity with, exhibited exponential upward momentum, outstripping... by the decade's culmination\n- **Examiner / Intonation Tip**: *Inverse correlation* (teskari mutanosiblik) va *cost parity* (narx tenglashuvi) kabi iqtisodiy aniq atamalar inshoni quruq raqamlar ro'yxatidan yuksak ilmiy-iqtisodiy tahlilga aylantiradi.",
                     "vocabulary": [
                         {
-                            "term": "Dissemination",
-                            "reading": "/dɪˌsem.ɪˈneɪ.ʃən/",
-                            "meaning": "Keng yoyish, tarqatish",
-                            "exampleSentence": "The swift dissemination of knowledge accelerates innovation.",
-                            "exampleTranslation": "Bilimlarning tezkor tarqalishi innovatsiyalarni jadallashtiradi."
+                            "term": "Asymptotic",
+                            "reading": "/ˌæs.ɪmˈtɒt.ɪk/",
+                            "meaning": "Asimptotik (egri chiziqning ma'lum chegaraga tobora yaqinlashib, lekin unga tegmasdan barqarorlashishi)",
+                            "exampleSentence": "Battery manufacturing costs experienced an asymptotic decline, approaching a theoretical thermodynamic limit.",
+                            "exampleTranslation": "Batareya ishlab chiqarish xarajatlari nazariy termodinamik chegaraga yaqinlashib, asimptotik pasayishni boshdan kechirdi."
                         },
                         {
-                            "term": "Ephemeral",
-                            "reading": "/ɪˈfem.ər.əl/",
-                            "meaning": "Oʻtkinchi, bir lahzalik",
-                            "exampleSentence": "Fame in the digital era can often be fleeting and ephemeral.",
-                            "exampleTranslation": "Raqamli asrdagi shuhrat koʻpincha oʻtkinchi va lahzalik boʻlishi mumkin."
+                            "term": "Corroborate",
+                            "reading": "/kəˈrɒb.ə.reɪt/",
+                            "meaning": "Tasdiqlamoq, qo'shimcha dalillar bilan mustahkamlamoq",
+                            "exampleSentence": "Satellite imagery corroborates ground census reports of rapid agricultural desertification.",
+                            "exampleTranslation": "Sun'iy yo'ldosh tasvirlari tezkor qishloq xo'jaligi cho'llanishi haqidagi yerdagi ro'yxatga olish hisobotlarini tasdiqlaydi."
                         },
                         {
-                            "term": "Quintessential",
-                            "reading": "/ˌkwɪn.tɪˈsen.ʃəl/",
-                            "meaning": "Eng oliy namuna, timsol",
-                            "exampleSentence": "It is the quintessential masterpiece of modern literature.",
-                            "exampleTranslation": "Bu zamonaviy adabiyotning eng oliy namunasidir."
+                            "term": "Inexorable",
+                            "reading": "/ɪnˈek.sər.ə.bəl/",
+                            "meaning": "To'xtatib bo'lmas, muqarrar davom etuvchi",
+                            "exampleSentence": "The demographic chart illustrates the inexorable decline of the working-age population.",
+                            "exampleTranslation": "Demografik grafik mehnatga layoqatli aholining to'xtatib bo'lmas muqarrar pasayishini ko'rsatadi."
+                        },
+                        {
+                            "term": "Geriatric",
+                            "reading": "/ˌdʒer.iˈæt.rɪk/",
+                            "meaning": "Keksalar tibbiyoti va ijtimoiy ta'minotiga oid",
+                            "exampleSentence": "Surging geriatric healthcare demands place acute fiscal pressure on municipal budgets.",
+                            "exampleTranslation": "Keksalar tibbiy yordamiga bo'lgan ehtiyojning ortishi shahar byudjetiga keskin moliyaviy bosim o'tkazmoqda."
+                        },
+                        {
+                            "term": "Parity",
+                            "reading": "/ˈpær.ə.ti/",
+                            "meaning": "Tenglik, paritet, bir xil miqdorga yetishish",
+                            "exampleSentence": "Renewable solar tariffs finally achieved cost parity with conventional fossil-fuel power.",
+                            "exampleTranslation": "Qayta tiklanuvchi quyosh tariflari nihoyat an'anaviy qazilma yoqilg'i energiyasi bilan narx paritetiga (tengligiga) erishdi."
+                        },
+                        {
+                            "term": "Juxtapose",
+                            "reading": "/ˌdʒʌk.stəˈpəʊz/",
+                            "meaning": "Qiyoslash uchun yonma-yon qo'ymoq",
+                            "exampleSentence": "Figure 1 juxtaposes primary education funding against tertiary research endowments.",
+                            "exampleTranslation": "1-chizma boshlang'ich ta'lim moliyalashtirishini oliy o'quv yurtlari tadqiqot jamg'armalari bilan yonma-yon qiyoslaydi."
+                        },
+                        {
+                            "term": "Inverse",
+                            "reading": "/ɪnˈvɜːs/",
+                            "meaning": "Teskari, mutanosib ravishda qarama-qarshi",
+                            "exampleSentence": "The data demonstrates an inverse relationship between interest rates and residential property sales.",
+                            "exampleTranslation": "Ma'lumotlar foiz stavkalari va turar-joy ko'chmas mulki savdosi o'rtasidagi teskari bog'liqlikni ko'rsatadi."
+                        },
+                        {
+                            "term": "Exponential",
+                            "reading": "/ˌek.spəˈnen.ʃəl/",
+                            "meaning": "Eksponentsial, geometrik progressiya bilan jadal o'suvchi",
+                            "exampleSentence": "The deployment of offshore wind capacity exhibited exponential growth between 2015 and 2025.",
+                            "exampleTranslation": "Dengizdagi shamol elektr quvvatini joriy etish 2015 va 2025 yillar oralig'ida eksponentsial o'sishni namoyish etdi."
                         }
+                    ],
+                    "keyPoints": [
+                        "Band 9.0 Task 1 dispenses entirely with hackneyed templates in favor of authentic economic journalism style.",
+                        "Cross-chart synthesis: identify underlying correlations (e.g. 'an inverse correlation between cost and adoption').",
+                        "Precision vocabulary for trends: 'asymptotic plateau', 'achieved cost parity', 'inexorable expansion'.",
+                        "Synthesize numerical extremes cleanly within analytical commentary rather than listing numbers sequentially."
                     ]
                 }
             },
             {
                 "id": "en-c2-u3-l1-s2",
-                "title": "Mashq",
+                "title": "IELTS Band 9.0 Task 1 Amaliyoti",
                 "type": "practice",
                 "estimatedMinutes": 6,
                 "practiceData": {
-                    "instructions": "Band 9.0 darajasidagi Overview jumlasini tanlang.",
+                    "instructions": "IELTS Writing Task 1 Band 9.0 mezonlariga mos eng nafis va aniq jumlalarni tanlang.",
                     "exercises": [
                         {
                             "id": "en-c2-u3-l1-e1",
                             "type": "multiple-choice",
-                            "prompt": "Which Overview represents genuine Band 9.0 caliber?",
+                            "prompt": "Choose the most sophisticated and template-free Overview for a demographic chart:",
                             "options": [
-                                "In summary, energy is important.",
-                                "Overall, while global fossil fuel dependency underwent a precipitous decline over the 30-year timeframe, renewable energy adoption experienced an exponential surge, outstripping conventional sources by the final period.",
-                                "Overall the line goes up and the bar goes down in the chart.",
-                                "Looking at the chart, there are many numbers that change."
+                                "Overall, we can see that old people are more and babies are less in the graph.",
+                                "Overall, the multi-decade period is defined by an inexorable demographic ageing trend, closely mirrored by a threefold surge in geriatric healthcare expenditures.",
+                                "In conclusion, the line goes up for Japan and goes down for Germany.",
+                                "First of all, old people increased very fastly across all four countries."
                             ],
                             "correctAnswer": 1,
-                            "explanation": "Insightful, cohesive, and lexically masterful overview."
+                            "explanation": "Ikkinchi variant hech qanday shablonsiz, 'inexorable demographic ageing' va 'threefold surge in geriatric healthcare' kabi eng yuqori Band 9.0 leksikasi bilan tuzilgan."
                         },
                         {
-                            "id": "en-c2-u3-l1-ex-2",
+                            "id": "en-c2-u3-l1-e2",
                             "type": "multiple-choice",
-                            "prompt": "Choose the correct word to complete the sentence: \"Fame in the digital era can often be fleeting and ephemeral.\"",
+                            "prompt": "What does an 'inverse relationship' between two statistical variables mean?",
                             "options": [
-                                "doubt",
-                                "reluctance",
-                                "delay",
-                                "Ephemeral"
+                                "As one variable increases, the other variable proportionately decreases.",
+                                "Both variables increase at identical speeds.",
+                                "Both variables remain frozen at zero.",
+                                "The variables are calculated in poetry."
                             ],
-                            "correctAnswer": 3,
-                            "explanation": "\"Ephemeral\" (Oʻtkinchi, bir lahzalik) fits the context appropriately."
+                            "correctAnswer": 0,
+                            "explanation": "'Inverse relationship' (teskari mutanosiblik) — bitta ko'rsatkich oshganda ikkinchisining mutanosib ravishda pasayishidir."
+                        },
+                        {
+                            "id": "en-c2-u3-l1-e3",
+                            "type": "multiple-choice",
+                            "prompt": "Complete: 'Electric battery packs finally achieved cost _______ with internal combustion drivetrains in 2024.'",
+                            "options": [
+                                "parity",
+                                "chiasmus",
+                                "affectation",
+                                "solipsism"
+                            ],
+                            "correctAnswer": 0,
+                            "explanation": "Narxlar bo'yicha tenglashuv va bir xil pog'onaga chiqish 'cost parity' deb ataladi."
+                        },
+                        {
+                            "id": "en-c2-u3-l1-e4",
+                            "type": "multiple-choice",
+                            "prompt": "Which verb means 'to confirm or give support to a statement, finding, or theory with independent evidence'?",
+                            "options": [
+                                "Corroborate",
+                                "Obfuscate",
+                                "Metastasize",
+                                "Conflate"
+                            ],
+                            "correctAnswer": 0,
+                            "explanation": "'Corroborate' — qo'shimcha mustaqil dalillar bilan tasdiqlash deganidir."
+                        },
+                        {
+                            "id": "en-c2-u3-l1-e5",
+                            "type": "multiple-choice",
+                            "prompt": "Identify the phrase describing an unavoidable, relentless, and impossible-to-stop upward trend:",
+                            "options": [
+                                "An inexorable upward trajectory",
+                                "A little happy line jumping up",
+                                "An equivocal small hill",
+                                "A deadpan upward jump"
+                            ],
+                            "correctAnswer": 0,
+                            "explanation": "'An inexorable upward trajectory' — to'xtatib bo'lmas muqarrar o'sish yo'nalishi degan Band 9.0 iborasidir."
                         }
                     ]
                 }
             },
             {
                 "id": "en-c2-u3-l1-s3",
-                "title": "Test",
+                "title": "IELTS Band 9.0 Task 1 Baholash Testi",
                 "type": "test",
                 "estimatedMinutes": 7,
                 "testData": {
-                    "instructions": "Savollarga javob bering.",
-                    "passingScorePercentage": 75,
+                    "instructions": "IELTS Task 1 Band 9.0 sintez va tahlil mezonlari bo'yicha imtihon.",
+                    "passingScorePercentage": 80,
                     "questions": [
                         {
                             "id": "en-c2-u3-l1-q1",
-                            "question": "How does Band 9.0 differ from Band 7.0 in Task 1 Lexical Resource?",
+                            "question": "What separates a Band 7.0 Task 1 response from a Band 9.0 response in Cohesion & Coherence?",
                             "options": [
-                                "Band 9.0 uses rhyme",
-                                "Band 9.0 uses vocabulary with full flexibility, precision and natural sophisticated collocation; errors are rare slips only",
-                                "Band 9.0 writes 500 words",
-                                "Band 9.0 uses colors"
+                                "A Band 7.0 uses frequent mechanical linkers ('Firstly, In addition'), while Band 9.0 achieves seamless, organic cohesion through sophisticated lexical reference and thematic progression.",
+                                "A Band 9.0 essay is written in pencil.",
+                                "A Band 7.0 essay uses longer paper.",
+                                "There is no difference in the grading descriptors."
                             ],
-                            "correctAnswerIndex": 1,
-                            "explanation": "Full flexibility, precision, and natural collocations."
+                            "correctAnswerIndex": 0,
+                            "explanation": "Band 7.0 mexanik bog'lovchilarni qalashtirsa, Band 9.0 anaphorik referentsiya va mavzuiy uzviy oqim orqali tabiiy bog'liqlikka erishadi."
                         },
                         {
                             "id": "en-c2-u3-l1-q2",
-                            "question": "\"Outstripping conventional sources\" means:",
+                            "question": "'The rapid expansion of the manufacturing index _______ all preliminary forecasts published by the treasury.'",
                             "options": [
-                                "Becoming smaller than them",
-                                "Stopping all generation",
-                                "Surpassing and exceeding them significantly",
-                                "Destroying them"
+                                "outstripped",
+                                "obfuscated",
+                                "precluded",
+                                "postured"
                             ],
-                            "correctAnswerIndex": 2,
-                            "explanation": "Surpassing and exceeding."
+                            "correctAnswerIndex": 0,
+                            "explanation": "Barcha dastlabki prognozlardan o'zib ketish 'outstripped all preliminary forecasts' deb ifodalanadi."
                         },
                         {
                             "id": "en-c2-u3-l1-q3",
-                            "question": "What is a \"slip\" in IELTS assessment terminology?",
+                            "question": "Why is listing raw numerical values in every single sentence considered a flaw in Task 1?",
                             "options": [
-                                "A severe misunderstanding of grammar rules",
-                                "Falling down",
-                                "Writing the wrong name on the exam paper",
-                                "A rare minor typo made under pressure that does not reflect a lack of linguistic knowledge"
+                                "It reduces the essay to an uncritical data dump, demonstrating a failure to synthesize, prioritize, and report macro-trends.",
+                                "Examiners are not allowed to read numbers.",
+                                "Numbers take up too much physical ink.",
+                                "It violates British spelling conventions."
                             ],
-                            "correctAnswerIndex": 3,
-                            "explanation": "Rare minor typo under pressure."
+                            "correctAnswerIndex": 0,
+                            "explanation": "Har gapda raqamlarni sanash tahlilning yo'qligini ko'rsatadi; asosiy vazifa ma'lumotlarni sintez qilishdir."
                         },
                         {
                             "id": "en-c2-u3-l1-q4",
-                            "question": "Is it necessary to include every single minor data point in Band 9.0 Task 1?",
+                            "question": "'After surging tenfold in the initial decade, user acquisition reached an _______ plateau at fifty million active accounts.'",
                             "options": [
-                                "No, Band 9.0 selects key features, contrasts them insightfully and synthesizes data rather than producing a raw inventory",
-                                "Yes, write 10 pages of numbers",
-                                "Yes, every millisecond must be listed",
-                                "Leave the body paragraphs blank"
+                                "asymptotic",
+                                "autarkic",
+                                "equivocal",
+                                "esoteric"
                             ],
                             "correctAnswerIndex": 0,
-                            "explanation": "Selects key features and synthesizes insightfully."
+                            "explanation": "Maksimal chegaraga yetib barqarorlashgan turg'unlik 'asymptotic plateau' deb nomlanadi."
+                        },
+                        {
+                            "id": "en-c2-u3-l1-q5",
+                            "question": "Choose the most professional opening sentence for an IELTS Task 1 synthesis:",
+                            "options": [
+                                "The accompanying graphs delineate the dynamic convergence between renewable energy adoption and carbon emission abatement across the G7 economies.",
+                                "I am writing this essay because the chart shows green energy and pollution numbers.",
+                                "Look at these charts because they show very cool data about energy.",
+                                "The given bar chart illustrates some nice facts."
+                            ],
+                            "correctAnswerIndex": 0,
+                            "explanation": "Birinchi variant professional tahliliy jurnalistika darajasidagi eng mukammal Band 9.0 kirish jumlasi hisoblanadi."
                         }
                     ]
                 }
@@ -2542,153 +2617,228 @@ export const ENGLISH_C2_LESSONS: Lesson[] = [
         "level": "C2",
         "lessonNumber": 2,
         "title": "IELTS Band 9.0 Writing Task 2: Flawless Dialectical Essay Mastery",
-        "description": "Band 9.0 insho: chuqur intellektual dalillar, tabiiy diskurs oqimi va har qanday shablonlikdan holi mukammal insho.",
-        "estimatedDurationMinutes": 18,
+        "description": "IELTS Task 2 insholarida Band 9.0 cho'qqisi: dialektik insho arxitekturasi, tezis-antiteza-sintez va g'oyalarning mutlaq uzviyligi.",
+        "estimatedDurationMinutes": 22,
         "icon": "✍️",
         "steps": [
             {
                 "id": "en-c2-u3-l2-s1",
-                "title": "Band 9.0 Insho Arxitekturasi",
+                "title": "Band 9.0 Dialectical Essay Architecture",
                 "type": "learn",
-                "estimatedMinutes": 5,
+                "estimatedMinutes": 8,
                 "learnData": {
-                    "title": "The Band 9.0 Essay Blueprint",
-                    "explanation": "Mavzu bo'yicha chuqur tahlil: Shablon iboralarsiz (e.g. \"Since ancient times this is debated\" EMAS), darhol masalaning mohiyatiga kirish va dalillarni uzviy mantiq bilan rivojlantirish.",
-                    "keyPoints": [
-                        "Nuanced position maintained throughout the entire text.",
-                        "Cohesive devices that flow so naturally they are nearly invisible."
-                    ],
-                    "grammarRules": [
-                        {
-                            "pattern": "IELTS Band 9.0 Writing Task 2: Flawless Dialectical Essay Mastery",
-                            "meaning": "Band 9.0 insho: chuqur intellektual dalillar, tabiiy diskurs oqimi va har qanday shablonlikdan holi mukammal insho.",
-                            "usageNotes": "Mavzu bo'yicha chuqur tahlil: Shablon iboralarsiz (e.g. \"Since ancient times this is debated\" EMAS), darhol masalaning mohiyatiga kirish va dalillarni uzviy mantiq bilan rivojlantirish.",
-                            "examples": [
-                                {
-                                    "sentence": "I study English every day with dedication.",
-                                    "translation": "Har kuni ingliz tilini astoydil o'rganaman."
-                                }
-                            ]
-                        }
-                    ],
+                    "title": "Mastering the Band 9.0 Dialectical Essay Paradigm",
+                    "explanation": "IELTS Writing Task 2 da Band 9.0 ball olish uchun insho shunchaki 'ikkita fikrni aytib o'zimnikini bildirish'dan iborat bo'lmasligi kerak. Band 9.0 insho — bu murakkab ijtimoiy-falsafiy ziddiyatni chuqur tahlil qilib, qarama-qarshi tomonlarni yangi yuqori sintezda yarashtiruvchi (**Hegelian Dialectical Synthesis**) durdona asardir.\n\nBand 9.0 Dialektik Arxitekturasi:\n1. **Introduction (2-3 gap)**:\n   - Global muammoning dolzarbligini ko'rsatish va ikkala qutbni sun'iy dixotomiya sifatida fosh qilish:\n     *The ongoing debate regarding whether artistic institutions should be subsidized by sovereign treasuries or left to the vagaries of the free market touches upon the foundational purpose of civil society. While free-market advocates champion commercial self-sufficiency, cultural preservationists regard state patronage as an existential imperative. I contend that rather than polarizing this issue, governance frameworks must synthesize public infrastructural endowments with private philanthropic incentives.*\n\n2. **Body 1: Tezis va uning mantiqiy chegarasi**:\n   - Birinchi tomonning eng kuchli argumentini chuqur tahlil qilib, uning qayerda o'zini oqlamasligini ko'rsatish.\n3. **Body 2: Antiteza va hal qiluvchi qarshi zarba**:\n   - Ikkinchi tomonning chuqurligi va uning ijtimoiy ahamiyati.\n4. **Conclusion: Sintez va yakuniy falsafiy xulosa**:\n   - Ikkala tomonning eng yaxshi qismlarini birlashtiruvchi yuksak yechim taqdim etiladi.\n\n⚠️ **O'zbek o'rganuvchilari uchun xavfli tuzoqlar (Common Pitfalls)**:\n- ❌ *Memorized cliché thesis statements.* ('In this essay I will discuss both sides and give my opinion' — bu ibora Band 9.0 imkoniyatini bir zumda yo'q qiladi!).\n- ❌ *Simplistic either-or thinking.* Murakkab masalani faqat qora va oqqa ajratish intellektual sayozlik belgisidir; Band 9.0 doimo uchinchi mukammal sintezni qidiradi.\n\n🎯 **IELTS Speaking & Writing Band 9.0 Masterclass**:\n- **Prompt**: Task 2: Should universities prioritize STEM fields over arts and humanities to maximize economic productivity?\n- **Model Body Paragraph (Band 9.0)**: Proponents of technocratic prioritization argue that funding scientific disciplines directly correlates with industrial innovation and national GDP growth. Admittedly, neglecting biotechnology or artificial intelligence would leave sovereign economies dangerously uncompetitive in an automated global marketplace. Nevertheless, to disenfranchise the humanities in the name of fiscal utility is a dangerously myopic miscalculation. Scientific innovation generates unprecedented ethical dilemmas—from gene editing to surveillance algorithms—that cannot be resolved through technical computation alone. The humanities cultivate the critical discernment, moral philosophy, and linguistic precision essential to govern scientific power. Consequently, a truly progressive academy does not subordinate the arts to STEM, but integrates them through interdisciplinary synthesis.\n- **Discourse Markers**: technocratic prioritization, Directly correlates with, dangerously uncompetitive, disenfranchise the humanities in the name of fiscal utility, dangerously myopic miscalculation, cultivate critical discernment, does not subordinate... but integrates through interdisciplinary synthesis\n- **Examiner / Intonation Tip**: *Disenfranchise the humanities in the name of fiscal utility* kabi qudratli iboralar inshoga mutlaq adabiy va falsafiy yetuklik bag'ishlaydi.",
                     "vocabulary": [
                         {
-                            "term": "Ephemeral",
-                            "reading": "/ɪˈfem.ər.əl/",
-                            "meaning": "Oʻtkinchi, bir lahzalik",
-                            "exampleSentence": "Fame in the digital era can often be fleeting and ephemeral.",
-                            "exampleTranslation": "Raqamli asrdagi shuhrat koʻpincha oʻtkinchi va lahzalik boʻlishi mumkin."
+                            "term": "Patronage",
+                            "reading": "/ˈpæt.rə.nɪdʒ/",
+                            "meaning": "Homiyлик, davlat yoki badavlat shaxslar tomonidan san'atni qo'llab-quvvatlash",
+                            "exampleSentence": "Renaissance painting flourished under the enlightened financial patronage of the Medici family.",
+                            "exampleTranslation": "Uyg'onish davri rassomchiligi Medichi oilasining ma'rifatli moliyaviy homiyligi (patronage) ostida gullab-yashnadi."
                         },
                         {
-                            "term": "Quintessential",
-                            "reading": "/ˌkwɪn.tɪˈsen.ʃəl/",
-                            "meaning": "Eng oliy namuna, timsol",
-                            "exampleSentence": "It is the quintessential masterpiece of modern literature.",
-                            "exampleTranslation": "Bu zamonaviy adabiyotning eng oliy namunasidir."
+                            "term": "Vagaries",
+                            "reading": "/ˈveɪ.ɡər.iz/",
+                            "meaning": "Kutilmagan injiqliklar, beqaror o'zgarishlar",
+                            "exampleSentence": "Farmers must insulate their livelihoods against the unpredictable vagaries of global commodity markets.",
+                            "exampleTranslation": "Fermerlar o'z tirikchiliklarini global xomashyo bozorlarining kutilmagan injiqliklaridan (vagaries) himoya qilishlari kerak."
                         },
                         {
-                            "term": "Inextricable",
-                            "reading": "/ˌɪn.ɪkˈstrɪk.ə.bəl/",
-                            "meaning": "Ajralmas, chambarchas bogʻliq",
-                            "exampleSentence": "Language and cultural identity are inextricably intertwined.",
-                            "exampleTranslation": "Til va madaniy oʻzlik chambarchas bogʻlangan."
+                            "term": "Disenfranchise",
+                            "reading": "/ˌdɪs.ɪnˈfræn.tʃaɪz/",
+                            "meaning": "Huquqidan yoki imkoniyatidan mahrum qilmoq, chetlatmoq",
+                            "exampleSentence": "Slashing funding for arts education threatens to disenfranchise creative working-class students.",
+                            "exampleTranslation": "San'at ta'limini moliyalashtirishni qisqartirish ijodkor ishchilar sinfi talabalarini imkoniyatdan mahrum qilish xavfini tug'diradi."
+                        },
+                        {
+                            "term": "Subsume",
+                            "reading": "/səbˈsjuːm/",
+                            "meaning": "O'z ichiga qamrab olmoq, kengroq toifaga kiritib yubormoq",
+                            "exampleSentence": "Einstein's general relativity subsumed classical Newtonian physics as a special localized case.",
+                            "exampleTranslation": "Eynshteynning umumiy nisbiylik nazariyasi klassik Nyuton fizikasini xususiy mahalliy holat sifatida o'z ichiga qamrab oldi (subsumed)."
+                        },
+                        {
+                            "term": "Discernment",
+                            "reading": "/dɪˈsɜːn.mənt/",
+                            "meaning": "Fahm-farosat, nozik farqlarni ajrata olish qobiliyati",
+                            "exampleSentence": "The humanities nurture moral discernment, enabling citizens to navigate complex ethical dilemmas.",
+                            "exampleTranslation": "Gumanitar fanlar fuqarolarga murakkab axloqiy dilemmalarni yechish imkonini beruvchi ma'naviy fahm-farosatni (discernment) tarbiyalaydi."
+                        },
+                        {
+                            "term": "Technocratic",
+                            "reading": "/ˌtek.nəˈkræt.ɪk/",
+                            "meaning": "Texnokratik (faqat texnik va muhandislik samaradorligiga tayanadigan)",
+                            "exampleSentence": "A purely technocratic approach to governance overlooks vital sociological and cultural human needs.",
+                            "exampleTranslation": "Boshqaruvga sof texnokratik yondashuv insonning hayotiy sotsiologik va madaniy ehtiyojlarini e'tiborsiz qoldiradi."
+                        },
+                        {
+                            "term": "Inviolate",
+                            "reading": "/ɪnˈvaɪ.ə.lət/",
+                            "meaning": "Daxlsiz, toza saqlangan, buzilmagan",
+                            "exampleSentence": "Freedom of conscience and speech must remain inviolate in any constitutional republic.",
+                            "exampleTranslation": "Vijdon va so'z erkinligi har qanday konstitutsiyaviy respublikada daxlsiz bo'lib qolishi shart."
+                        },
+                        {
+                            "term": "Reconcile",
+                            "reading": "/ˈrek.ən.saɪl/",
+                            "meaning": "Yarashtirmoq, ikki zid tushuncha o'rtasida murosa topmoq",
+                            "exampleSentence": "Philosophers strive to reconcile human deterministic biology with subjective moral responsibility.",
+                            "exampleTranslation": "Faylasuflar insonning deterministik biologiyasini subyektiv axloqiy javobgarlik bilan yarashtirishga intiladilar."
                         }
+                    ],
+                    "keyPoints": [
+                        "Band 9.0 Task 2 transcends the standard two-sided debate by constructing a Hegelian dialectical synthesis.",
+                        "Never use memorized essay clichés like 'In this essay I will discuss both views'.",
+                        "Demonstrate high-level vocabulary precision: 'patronage', 'vagaries of the market', 'disenfranchise', 'subsume'.",
+                        "Formulate nuanced thesis statements that integrate conflicting values into actionable, sophisticated governance solutions."
                     ]
                 }
             },
             {
                 "id": "en-c2-u3-l2-s2",
-                "title": "Mashq",
+                "title": "IELTS Band 9.0 Task 2 Amaliyoti",
                 "type": "practice",
                 "estimatedMinutes": 6,
                 "practiceData": {
-                    "instructions": "Band 9.0 insho kirish qismini tanlang.",
+                    "instructions": "IELTS Task 2 Band 9.0 dialektik insho arxitekturasiga mos eng to'g'ri ifodalarni tanlang.",
                     "exercises": [
                         {
                             "id": "en-c2-u3-l2-e1",
                             "type": "multiple-choice",
-                            "prompt": "Which introduction represents genuine Band 9.0 execution for a prompt on urbanization?",
+                            "prompt": "Identify the thesis statement that embodies Band 9.0 dialectical synthesis:",
                             "options": [
-                                "Cities are big places with buildings.",
-                                "Nowadays urbanization is very important topic. Some like cities and some hate cities. I will discuss both.",
-                                "The relentless pace of 21st-century urbanization has reignited intense debate regarding the socio-environmental viability of megacities. While detractors highlight acute infrastructure strain and ecological degradation, this essay contends that well-governed urban density remains humanity's most potent engine for sustainable economic innovation.",
-                                "People live in cities since long ago."
+                                "I will write about both sides of the issue and give my honest opinion at the end.",
+                                "Rather than viewing technological innovation and environmental conservation as an irreconcilable dichotomy, sustainable governance must synthesize green technologies with circular economic frameworks.",
+                                "Some people say yes and some people say no, but I think yes because it is good.",
+                                "Technology is very good but nature is also nice so both are important."
                             ],
-                            "correctAnswer": 2,
-                            "explanation": "Flawless academic sophistication and crystal-clear thesis."
+                            "correctAnswer": 1,
+                            "explanation": "Ikkinchi variant soxta dixotomiyani rad etib, yuqori darajadagi dialektik sintezni ('synthesize green technologies with circular economic frameworks') ilgari suradi."
                         },
                         {
-                            "id": "en-c2-u3-l2-ex-2",
+                            "id": "en-c2-u3-l2-e2",
                             "type": "multiple-choice",
-                            "prompt": "Choose the correct word to complete the sentence: \"It is the quintessential masterpiece of modern literature.\"",
+                            "prompt": "What does it mean to leave an industry to the 'vagaries of the market'?",
                             "options": [
-                                "Quintessential",
-                                "reluctance",
-                                "doubt",
-                                "delay"
+                                "Leaving it exposed to unpredictable, erratic changes and economic fluctuations without state protection",
+                                "Giving it millions of dollars in free government grants",
+                                "Operating it only on Sundays",
+                                "Advertising it on television"
                             ],
                             "correctAnswer": 0,
-                            "explanation": "\"Quintessential\" (Eng oliy namuna, timsol) fits the context appropriately."
+                            "explanation": "'Vagaries of the market' — bozordagi kutilmagan injiqliklar va beqaror o'zgarishlarga himoyasiz tashlab qo'yishni bildiradi."
+                        },
+                        {
+                            "id": "en-c2-u3-l2-e3",
+                            "type": "multiple-choice",
+                            "prompt": "Fill in the blank: 'Cutting funding for humanities faculties threatens to _______ an entire generation of creative scholars.'",
+                            "options": [
+                                "disenfranchise",
+                                "corroborate",
+                                "outstrip",
+                                "replicate"
+                            ],
+                            "correctAnswer": 0,
+                            "explanation": "Talabalarni huquq va imkoniyatlaridan mahrum qilish 'disenfranchise creative scholars' deb ataladi."
+                        },
+                        {
+                            "id": "en-c2-u3-l2-e4",
+                            "type": "multiple-choice",
+                            "prompt": "What term describes state or private financial support given to artists, scholars, or cultural institutions?",
+                            "options": [
+                                "Patronage",
+                                "Sycophancy",
+                                "Affectation",
+                                "Obscurantism"
+                            ],
+                            "correctAnswer": 0,
+                            "explanation": "San'at va madaniyatga beriladigan homiylik va moddiy yordam 'patronage' deb ataladi."
+                        },
+                        {
+                            "id": "en-c2-u3-l2-e5",
+                            "type": "multiple-choice",
+                            "prompt": "Select the verb meaning 'to include or absorb something into a more comprehensive category':",
+                            "options": [
+                                "Subsume",
+                                "Obfuscate",
+                                "Metastasize",
+                                "Conflate"
+                            ],
+                            "correctAnswer": 0,
+                            "explanation": "'Subsume' — o'z ichiga qamrab olmoq, kattaroq umumiy tizimga singdirib yubormoq deganidir."
                         }
                     ]
                 }
             },
             {
                 "id": "en-c2-u3-l2-s3",
-                "title": "Test",
+                "title": "IELTS Band 9.0 Task 2 Baholash Testi",
                 "type": "test",
                 "estimatedMinutes": 7,
                 "testData": {
-                    "instructions": "Savollarga javob bering.",
-                    "passingScorePercentage": 75,
+                    "instructions": "IELTS Task 2 dialektik insho arxitekturasi bo'yicha imtihon.",
+                    "passingScorePercentage": 80,
                     "questions": [
                         {
                             "id": "en-c2-u3-l2-q1",
-                            "question": "What characterizes Band 9.0 Task Response in IELTS Writing?",
+                            "question": "Why does using the clichéd phrase 'Every coin has two sides' harm a candidate's Task 2 Lexical Resource score?",
                             "options": [
-                                "Uses the word \"moreover\" in every sentence",
-                                "Writes 1000 words in 10 minutes",
-                                "Fully addresses all parts of the task with a fully developed position and well-supported ideas throughout",
-                                "Draws a flowchart in the margin"
+                                "It is a tired, conversational cliché that signals a lack of sophisticated academic vocabulary and original critical expression.",
+                                "It causes the test paper to be cancelled.",
+                                "Examiners are required to check if coins exist.",
+                                "It is grammatically incorrect in American English."
                             ],
-                            "correctAnswerIndex": 2,
-                            "explanation": "Fully developed position and well-supported ideas."
+                            "correctAnswerIndex": 0,
+                            "explanation": "'Every coin has two sides' eskirgan qolipli cliché bo'lib, o'quvchining akademik leksika va mustaqil fikrlash darajasining pastligini ko'rsatadi."
                         },
                         {
                             "id": "en-c2-u3-l2-q2",
-                            "question": "Why do Band 9.0 essays avoid robotic memorized templates?",
+                            "question": "'The philosopher attempted to _______ the conflicting imperatives of individual liberty and collective public health.'",
                             "options": [
-                                "Because templates are too short",
-                                "Because examiners instantly penalize artificial boilerplate formulas that disrupt organic coherence",
-                                "Because templates are illegal",
-                                "Because templates are written in pencil"
+                                "reconcile",
+                                "obfuscate",
+                                "conflate",
+                                "dismantle"
                             ],
-                            "correctAnswerIndex": 1,
-                            "explanation": "Examiners penalize artificial boilerplate."
+                            "correctAnswerIndex": 0,
+                            "explanation": "Ikki qarama-qarshi maqsadni bir-biri bilan yarashtirish va murosa topish 'reconcile conflicting imperatives' deb yoziladi."
                         },
                         {
                             "id": "en-c2-u3-l2-q3",
-                            "question": "\"Ecological degradation\" refers to:",
+                            "question": "What is the primary function of the 'Synthesis' in a Hegelian argumentative essay?",
                             "options": [
-                                "The deterioration of the environment through depletion of resources and destruction of ecosystems",
-                                "Cleaning a river",
-                                "A weather forecast",
-                                "Planting trees in a park"
+                                "To transcend and reconcile the contradiction between the Thesis and Antithesis at a higher conceptual level.",
+                                "To apologize to the reader for writing too many words.",
+                                "To copy the first paragraph word-for-word.",
+                                "To introduce ten random vocabulary words."
                             ],
                             "correctAnswerIndex": 0,
-                            "explanation": "Deterioration of the environment."
+                            "explanation": "Sintez tezis va antiteza o'rtasidagi ziddiyatni yuqori g'oyaviy darajada yarashtirib, mukammal uchinchi yechim yaratadi."
                         },
                         {
                             "id": "en-c2-u3-l2-q4",
-                            "question": "In Band 9.0 cohesion, how are paragraphs connected?",
+                            "question": "'Studying world literature nurtures critical moral _______, allowing individuals to navigate ethical complexities.'",
                             "options": [
-                                "By drawing lines between them",
-                                "By numbering them 1, 2, 3, 4",
-                                "By repeating the question title 10 times",
-                                "Through subtle thematic progression, conceptual references and natural transitions rather than mechanical linking words"
+                                "discernment",
+                                "sycophancy",
+                                "affectation",
+                                "stalemate"
                             ],
-                            "correctAnswerIndex": 3,
-                            "explanation": "Subtle thematic progression and natural transitions."
+                            "correctAnswerIndex": 0,
+                            "explanation": "Axloqiy fahm-farosat va nozik farqlarni ajratish layoqati 'moral discernment' deb ataladi."
+                        },
+                        {
+                            "id": "en-c2-u3-l2-q5",
+                            "question": "Identify the flawed sentence containing non-academic register in an IELTS essay body paragraph:",
+                            "options": [
+                                "Technocratic prioritization overlooks vital ethical dimensions of social cohesion.",
+                                "If we throw arts out the window, society is gonna be super boring and lame.",
+                                "Disenfranchising cultural institutions undermines civic intellectual resilience.",
+                                "Economic prosperity must remain subservient to fundamental human rights."
+                            ],
+                            "correctAnswerIndex": 1,
+                            "explanation": "Ikkinchi variant ko'cha tilidagi sleng ('throw out the window', 'gonna be super boring and lame') bilan to'lib, akademik registrga mutlaqo ziddir."
                         }
                     ]
                 }
@@ -2704,149 +2854,228 @@ export const ENGLISH_C2_LESSONS: Lesson[] = [
         "level": "C2",
         "lessonNumber": 3,
         "title": "Master Academic Dissertation Framing & Defense",
-        "description": "Magistrlik va doktorlik dissertatsiyasi metodologiyasi, tadqiqot gipotezasi va himoyasi.",
-        "estimatedDurationMinutes": 18,
-        "icon": "🎓",
+        "description": "Doktorlik dissertatsiyasini himoya qilish (Viva Voce), agressiv hay'at savollariga dalilli javob qaytarish va ilmiy yangilikni isbotlash.",
+        "estimatedDurationMinutes": 22,
+        "icon": "🏛️",
         "steps": [
             {
                 "id": "en-c2-u3-l3-s1",
-                "title": "Dissertatsiya Strukturasi",
+                "title": "Dissertation Framing & Viva Voce Defense",
                 "type": "learn",
-                "estimatedMinutes": 5,
+                "estimatedMinutes": 8,
                 "learnData": {
-                    "title": "Defending a Doctoral Thesis",
-                    "explanation": "Dissertatsiya doirasida tadqiqot metodologiyasi (Quantitative, Qualitative, Mixed-methods), Triangulation (bir nechta manbalar orqali dalilni tekshirish), Limitations of the study.",
+                    "title": "Master-Level Dissertation Framing and Oral Defense (Viva Voce)",
+                    "explanation": "Oksford, Kembrij yoki Garvard universitetlarida PhD (doktorlik) dissertatsiyasi himoyasi (Viva Voce) — intellektual chidamlilikning eng oliy sinovidir. Nomzod hay'at a'zolarining qattiq tanqidlariga qarshi o'z metodologiyasi, epistemologik tanlovlari va ilmiy yangiligini (original contribution) sovuqqonlik bilan himoya qilishi kerak.\n\nHimoyaning 3 Asosiy Ustuni:\n1. **Articulating Original Contribution (Ilmiy Yangilik)**:\n   - *This dissertation advances beyond existing historiographical consensus by unearthing previously uncataloged archival treaties, thereby elucidating the micro-mechanisms of sovereign border demarcation.*\n\n2. **Defending Methodological Vulnerabilities (Zaif Tomonlarni Oqlash)**:\n   - Agar hay'at a'zosi 'Nega bu metodni tanladingiz?' deb hujum qilsa:\n     *I concede that randomized controlled trials represent the gold standard in laboratory settings; nevertheless, given the ethical constraints inherent in studying active refugee cohorts, an ethnographic, semi-structured longitudinal design was epistemologically indispensable.*\n\n3. **Acknowledging Scope & Future Horizons (Cheklovlarni Tan Olish)**:\n   - Kibrga berilmasdan, tadqiqot qayerda to'xtaganini ko'rsatish: *While our econometric model robustly isolates domestic fiscal variables, transboundary capital flight remains outside the designated empirical scope of this monograph.*\n\n⚠️ **O'zbek o'rganuvchilari uchun xavfli tuzoqlar (Common Pitfalls)**:\n- ❌ *Becoming defensive or aggressive during panel questioning.* (Taqrizchilar bilan urishib ketish himoyani darhol barbod qiladi; har doim 'That is an incisive inquiry, which touches upon the core limitation of my model...' deb boshlang).\n- ❌ *Claiming your research solved every problem in the universe.* (Ilmiy kamtarlik va cheklovlarni aniq bilish C2 olimining eng asosiy fazilatidir).\n\n🎯 **IELTS Speaking & Writing Band 9.0 Masterclass**:\n- **Prompt**: Speaking Part 3: What qualities distinguish a genuine scientific breakthrough from incremental research?\n- **Model Response (Band 9.0)**: Incremental scholarship refines existing empirical parameters within an established scientific consensus; conversely, a genuine breakthrough inaugurates a seismic paradigm shift that dismantles foundational axioms. Such monumental leaps require not merely quantitative diligence, but an audacious willingness to challenge entrenched epistemological orthodoxy. They redefine the very questions that subsequent generations of researchers deemed permissible.\n- **Discourse Markers**: Incremental scholarship refines..., inaugurates a seismic paradigm shift that dismantles..., require not merely quantitative diligence, but an audacious willingness to..., challenge entrenched epistemological orthodoxy\n- **Examiner / Intonation Tip**: *Dismantles foundational axioms* va *entrenched epistemological orthodoxy* kabi falsafiy iboralarni so'zlaganda ovozingizda oliy darajadagi akademik salobat va chuqur ehtirom namoyon bo'lsin.",
                     "vocabulary": [
                         {
-                            "term": "Triangulation",
-                            "reading": "/traɪˌæŋ.ɡjəˈleɪ.ʃən/",
-                            "meaning": "Bir nechta metod va manbalar orqali ishonchlilikni tekshirish",
-                            "exampleSentence": "Data triangulation validated the conclusions.",
-                            "exampleTranslation": "Ma'lumotlar triangulyatsiyasi xulosalarni tasdiqladi."
+                            "term": "Epistemological",
+                            "reading": "/ɪˌpɪs.tə.məˈlɒdʒ.ɪ.kəl/",
+                            "meaning": "Epistemologik, bilimning kelib chiqishi va asosliligiga oid",
+                            "exampleSentence": "The doctoral committee questioned the epistemological validity of relying purely on oral histories.",
+                            "exampleTranslation": "Doktorlik komissiyasi faqat og'zaki xotiralarga tayanishning epistemologik asosliligini shubha ostiga oldi."
                         },
                         {
-                            "term": "Inextricable",
-                            "reading": "/ˌɪn.ɪkˈstrɪk.ə.bəl/",
-                            "meaning": "Ajralmas, chambarchas bogʻliq",
-                            "exampleSentence": "Language and cultural identity are inextricably intertwined.",
-                            "exampleTranslation": "Til va madaniy oʻzlik chambarchas bogʻlangan."
+                            "term": "Historiographical",
+                            "reading": "/hɪˌstɒr.i.əˈɡræf.ɪ.kəl/",
+                            "meaning": "Tarixshunoslikka oid, tarix qanday yozilganini o'rganuvchi",
+                            "exampleSentence": "The thesis challenges prevailing historiographical assumptions regarding nineteenth-century colonial diplomacy.",
+                            "exampleTranslation": "Dissertatsiya o'n to'qqizinchi asr mustamlakachilik diplomatiyasi bo'yicha hukmron tarixshunoslik qarashlariga qarshi chiqadi."
                         },
                         {
-                            "term": "Dissemination",
-                            "reading": "/dɪˌsem.ɪˈneɪ.ʃən/",
-                            "meaning": "Keng yoyish, tarqatish",
-                            "exampleSentence": "The swift dissemination of knowledge accelerates innovation.",
-                            "exampleTranslation": "Bilimlarning tezkor tarqalishi innovatsiyalarni jadallashtiradi."
+                            "term": "Inaugurate",
+                            "reading": "/ɪˈnɔː.ɡjə.reɪt/",
+                            "meaning": "Boshlab bermoq, tantanali ravishda yangi davrni ochib bermoq",
+                            "exampleSentence": "The discovery of penicillin inaugurated a revolutionary era in modern clinical antimicrobial medicine.",
+                            "exampleTranslation": "Penitsillinning kashf etilishi zamonaviy klinik mikroblarga qarshi tibbiyotda inqilobiy davrni ochib berdi."
+                        },
+                        {
+                            "term": "Audacious",
+                            "reading": "/ɔːˈdeɪ.ʃəs/",
+                            "meaning": "Jasur, dadil, qat'iyatli (ba'zan tavakkalchi)",
+                            "exampleSentence": "She formulated an audacious hypothesis proposing that dark matter interacts via an unobserved fifth force.",
+                            "exampleTranslation": "U qorong'u materiya noma'lum beshinchi kuch orqali ta'sirlashadi degan dadil farazni ishlab chiqdi."
+                        },
+                        {
+                            "term": "Orthodoxy",
+                            "reading": "/ˈɔː.θə.dɒk.si/",
+                            "meaning": "Ortodoksiya, qat'iy o'rnatilgan an'anaviy qarashlar va aqidalar",
+                            "exampleSentence": "Copernicus challenged the entrenched geocentric orthodoxy of the academic establishment.",
+                            "exampleTranslation": "Kopernik akademik elitaga xos chuqur ildiz otgan geosentrik ortodoksiyaga qarshi chiqdi."
+                        },
+                        {
+                            "term": "Seismic",
+                            "reading": "/ˈsaɪz.mɪk/",
+                            "meaning": "Zilziladek ulkan, tubdan silkituvchi",
+                            "exampleSentence": "The emergence of the internet provoked a seismic upheaval across global telecommunications.",
+                            "exampleTranslation": "Internetning paydo bo'lishi butun jahon telekommunikatsiyasida ulkan inqilobiy silkinish keltirib chiqardi."
+                        },
+                        {
+                            "term": "Incremental",
+                            "reading": "/ˌɪŋ.krəˈmen.təl/",
+                            "meaning": "Bosqichma-bosqich, kichik qadamlar bilan o'suvchi",
+                            "exampleSentence": "Most scientific publications represent incremental enhancements rather than revolutionary breakthroughs.",
+                            "exampleTranslation": "Aksariyat ilmiy nashrlar inqilobiy kashfiyotlar emas, balki bosqichma-bosqich kichik yaxshilanishlarni ifodalaydi."
+                        },
+                        {
+                            "term": "Defensible",
+                            "reading": "/dɪˈfen.sə.bəl/",
+                            "meaning": "Mantiqan himoya qilsa bo'ladigan, mustahkam asoslangan",
+                            "exampleSentence": "The researcher provided extensive econometric regressions to ensure the conclusions were statistically defensible.",
+                            "exampleTranslation": "Tadqiqotchi xulosalarning statistik jihatdan mustahkam himoyalana olishini ta'minlash uchun keng ko'lamli ekonometrik regressiyalarni taqdim etdi."
                         }
                     ],
-                    "grammarRules": [
-                        {
-                            "pattern": "Master Academic Dissertation Framing & Defense",
-                            "meaning": "Magistrlik va doktorlik dissertatsiyasi metodologiyasi, tadqiqot gipotezasi va himoyasi.",
-                            "usageNotes": "Dissertatsiya doirasida tadqiqot metodologiyasi (Quantitative, Qualitative, Mixed-methods), Triangulation (bir nechta manbalar orqali dalilni tekshirish), Limitations of the study.",
-                            "examples": [
-                                {
-                                    "sentence": "Data triangulation validated the conclusions.",
-                                    "translation": "Ma'lumotlar triangulyatsiyasi xulosalarni tasdiqladi."
-                                }
-                            ]
-                        }
+                    "keyPoints": [
+                        "A Viva Voce defense demands articulating an original contribution while defending methodological boundaries with intellectual composure.",
+                        "Distinguish 'incremental research' (refining existing parameters) from 'seismic breakthroughs' (paradigm shifts).",
+                        "Respond constructively to peer skepticism: acknowledge empirical constraints without compromising core theoretical validity.",
+                        "Use authoritative defense vocabulary: 'epistemological grounding', 'challenge orthodoxies', 'statistically defensible'."
                     ]
                 }
             },
             {
                 "id": "en-c2-u3-l3-s2",
-                "title": "Mashq",
+                "title": "Dissertation Framing Amaliyoti",
                 "type": "practice",
                 "estimatedMinutes": 6,
                 "practiceData": {
-                    "instructions": "To'g'ri metodologik iborani tanlang.",
+                    "instructions": "Dissertatsiya himoyasi va ilmiy metodologiyaga mos eng to'g'ri jumlalarni tanlang.",
                     "exercises": [
                         {
                             "id": "en-c2-u3-l3-e1",
                             "type": "multiple-choice",
-                            "prompt": "\"To mitigate subjectivity, the researcher utilized methodological _______ across three distinct datasets.\"",
+                            "prompt": "How should a PhD candidate respond when an examiner points out a potential methodological limitation in their sample size?",
                             "options": [
-                                "obfuscation",
-                                "indignation",
-                                "litotes",
-                                "triangulation"
-                            ],
-                            "correctAnswer": 3,
-                            "explanation": "Methodological triangulation."
-                        },
-                        {
-                            "id": "en-c2-u3-l3-ex-2",
-                            "type": "multiple-choice",
-                            "prompt": "Choose the correct word to complete the sentence: \"Language and cultural identity are inextricably intertwined.\"",
-                            "options": [
-                                "doubt",
-                                "Inextricable",
-                                "delay",
-                                "reluctance"
+                                "Shout that the examiner is an enemy of science.",
+                                "Concede the limitation gracefully, explain the contextual constraints that necessitated it, and demonstrate why the findings remain defensible.",
+                                "Burst into tears and leave the examination hall.",
+                                "Pretend not to understand English."
                             ],
                             "correctAnswer": 1,
-                            "explanation": "\"Inextricable\" (Ajralmas, chambarchas bogʻliq) fits the context appropriately."
+                            "explanation": "Cheklovni xolisona tan olib, shart-sharoitni tushuntirish va xulosalarning mustahkam himoyalana olishini dalillar bilan ko'rsatish doktorlik himoyasining eng oliy mezonidir."
+                        },
+                        {
+                            "id": "en-c2-u3-l3-e2",
+                            "type": "multiple-choice",
+                            "prompt": "What does an 'audacious' scientific hypothesis demonstrate?",
+                            "options": [
+                                "A bold, daring, and innovative willingness to challenge established paradigms",
+                                "A cowardly refusal to conduct laboratory experiments",
+                                "A total lack of mathematical training",
+                                "An accidental typing error"
+                            ],
+                            "correctAnswer": 0,
+                            "explanation": "'Audacious' — an'anaviy qoliplarni buzib o'tishga intiluvchi dadil va jasoratli ilmiy gipotezani bildiradi."
+                        },
+                        {
+                            "id": "en-c2-u3-l3-e3",
+                            "type": "multiple-choice",
+                            "prompt": "Fill in the blank: 'The discovery of the CRISPR genetic scissors _______ an unprecedented era in molecular bioengineering.'",
+                            "options": [
+                                "inaugurated",
+                                "obfuscated",
+                                "postured",
+                                "retracted"
+                            ],
+                            "correctAnswer": 0,
+                            "explanation": "Inqilobiy yangi davrni tantanali ravishda boshlab berish 'inaugurated an unprecedented era' iborasi bilan beriladi."
+                        },
+                        {
+                            "id": "en-c2-u3-l3-e4",
+                            "type": "multiple-choice",
+                            "prompt": "What term describes scientific progress that moves in small, gradual, step-by-step additions rather than massive revolutionary leaps?",
+                            "options": [
+                                "Incremental research",
+                                "Seismic breakthroughs",
+                                "Chiasmus trials",
+                                "Litotes analysis"
+                            ],
+                            "correctAnswer": 0,
+                            "explanation": "Kichik qadamlar bilan bosqichma-bosqich rivojlanuvchi ilmiy tadqiqot 'incremental research' deb ataladi."
+                        },
+                        {
+                            "id": "en-c2-u3-l3-e5",
+                            "type": "multiple-choice",
+                            "prompt": "Select the word meaning 'traditional, deeply entrenched institutional beliefs and doctrines':",
+                            "options": [
+                                "Orthodoxy",
+                                "Vagary",
+                                "Patronage",
+                                "Solipsism"
+                            ],
+                            "correctAnswer": 0,
+                            "explanation": "'Orthodoxy' — qat'iy o'rnatilgan an'anaviy aqidalar va qarashlar tizimidir."
                         }
                     ]
                 }
             },
             {
                 "id": "en-c2-u3-l3-s3",
-                "title": "Test",
+                "title": "Dissertation Framing Baholash Testi",
                 "type": "test",
                 "estimatedMinutes": 7,
                 "testData": {
-                    "instructions": "Savollarga javob bering.",
-                    "passingScorePercentage": 75,
+                    "instructions": "Akademik himoya va ilmiy kashfiyotlar metodologiyasi bo'yicha imtihon.",
+                    "passingScorePercentage": 80,
                     "questions": [
                         {
                             "id": "en-c2-u3-l3-q1",
-                            "question": "What is the purpose of acknowledging \"limitations of the study\" in a doctoral dissertation?",
+                            "question": "What is the primary requirement for earning a doctoral degree (PhD) in Western research universities?",
                             "options": [
-                                "It proves the author failed",
-                                "It is required by the printer",
-                                "It makes the paper shorter",
-                                "It reflects academic integrity and defines the precise scope and generalizability of findings"
+                                "Making an original, defensible contribution to the body of human scholarship that advances the frontiers of the discipline.",
+                                "Memorizing five textbooks word-for-word.",
+                                "Agreeing with every opinion of the university president.",
+                                "Paying tuition fees for twenty years."
                             ],
-                            "correctAnswerIndex": 3,
-                            "explanation": "Reflects integrity and defines scope."
+                            "correctAnswerIndex": 0,
+                            "explanation": "PhD darajasining asosiy talabi — fanning chegaralarini kengaytiruvchi asl, himoyalana oladigan yangi ilmiy kashfiyot (original contribution) qilishdir."
                         },
                         {
                             "id": "en-c2-u3-l3-q2",
-                            "question": "\"Empirical generalizability\" refers to:",
+                            "question": "'The introduction of mRNA vaccines produced a _______ transformation in pharmaceutical biotechnology.'",
                             "options": [
-                                "The extent to which study findings can be applied to broader populations or contexts",
-                                "A military rank",
-                                "Translating into general words",
-                                "A dictionary index"
+                                "seismic",
+                                "sycophantic",
+                                "recalcitrant",
+                                "sesquipedalian"
                             ],
                             "correctAnswerIndex": 0,
-                            "explanation": "Extent to which findings apply to broader contexts."
+                            "explanation": "Butun sohani tubdan o'zgartirib yuborgan ulkan inqilobiy o'zgarish 'a seismic transformation' deb ataladi."
                         },
                         {
                             "id": "en-c2-u3-l3-q3",
-                            "question": "A \"null hypothesis\" assumes that:",
+                            "question": "What does verifying the 'defensibility' of an econometric thesis involve?",
                             "options": [
-                                "Everything is 100% related",
-                                "The hypothesis was stolen",
-                                "There is no significant statistical relationship or effect between the variables being tested",
-                                "The experiment is cancelled"
+                                "Ensuring that the mathematical models withstand critical scrutiny, robustness tests, and potential counter-interpretations.",
+                                "Hiring armed bodyguards for the library.",
+                                "Encrypting the file with military passwords.",
+                                "Printing the thesis on bulletproof paper."
                             ],
-                            "correctAnswerIndex": 2,
-                            "explanation": "No significant relationship between variables."
+                            "correctAnswerIndex": 0,
+                            "explanation": "Tezisning 'defensibility'si — uning matematik modellari qat'iy sinovlar va qarshi dalillarga bardosh bera olishini ta'minlashdir."
                         },
                         {
                             "id": "en-c2-u3-l3-q4",
-                            "question": "In a thesis defense (viva voce), the candidate must:",
+                            "question": "'The candidate provided an incisive _______ analysis of how nineteenth-century historians documented the industrial revolution.'",
                             "options": [
-                                "Articulate and defend the original intellectual contribution of their research against critical committee examination",
-                                "Cry for mercy",
-                                "Stay silent and smile",
-                                "Read the whole thesis aloud word for word"
+                                "historiographical",
+                                "autarkic",
+                                "contingent",
+                                "sentient"
                             ],
                             "correctAnswerIndex": 0,
-                            "explanation": "Articulate and defend original intellectual contribution."
+                            "explanation": "Tarix qanday yozilgani va talqin qilingani tahlili 'historiographical analysis' deb nomlanadi."
+                        },
+                        {
+                            "id": "en-c2-u3-l3-q5",
+                            "question": "Identify the flawed statement regarding doctoral defense protocol:",
+                            "options": [
+                                "Candidates must defend the validity of their research design while maintaining intellectual humility regarding empirical boundaries.",
+                                "If an examiner asks a difficult question, the student should scream and challenge them to a boxing match.",
+                                "Rigorous peer scrutiny is designed to uphold the scholastic integrity of global scientific literature.",
+                                "Methodological transparency enables subsequent independent researchers to attempt replication."
+                            ],
+                            "correctAnswerIndex": 1,
+                            "explanation": "Ikkinchi variant ahmoqona va akademik etika mezonlariga mutlaqo ziddir."
                         }
                     ]
                 }
@@ -2862,153 +3091,228 @@ export const ENGLISH_C2_LESSONS: Lesson[] = [
         "level": "C2",
         "lessonNumber": 4,
         "title": "IELTS Speaking Band 9.0: Effortless Eloquence & Intellectual Spontaneity",
-        "description": "Imtihon oluvchi bilan oliy darajadagi tengma-teng intellektual muloqot, mukammal fonetika va idiomatik tabiiylik.",
-        "estimatedDurationMinutes": 18,
+        "description": "IELTS Speaking da mutlaq Band 9.0 cho'qqisi: ona tilidek erkin (effortless) ravonlik, kutilmagan savollarga falsafiy teranlik va yuksak idiomatik tabiiylik.",
+        "estimatedDurationMinutes": 22,
         "icon": "🎙️",
         "steps": [
             {
                 "id": "en-c2-u3-l4-s1",
-                "title": "Band 9.0 Speaking Mezonlari",
+                "title": "Band 9.0 Speaking: Effortless Fluency & Eloquence",
                 "type": "learn",
-                "estimatedMinutes": 5,
+                "estimatedMinutes": 8,
                 "learnData": {
-                    "title": "The Band 9.0 Speaking Profile",
-                    "explanation": "Fluency: Speaks fluently with only rare repetition or self-correction; any hesitation is content-related to develop ideas. Lexicon: Uses vocabulary with full flexibility and precision in all topics; uses idiomatic language naturally and accurately. Grammar: Fully flexible and accurate structures. Pronunciation: Effortlessly understood; uses a full range of phonological features precisely.",
-                    "keyPoints": [
-                        "No hesitation searching for words — hesitation is only intellectual pondering.",
-                        "Natural tone modulation and effortless humor/irony."
-                    ],
-                    "grammarRules": [
-                        {
-                            "pattern": "IELTS Speaking Band 9.0: Effortless Eloquence & Intellectual Spontaneity",
-                            "meaning": "Imtihon oluvchi bilan oliy darajadagi tengma-teng intellektual muloqot, mukammal fonetika va idiomatik tabiiylik.",
-                            "usageNotes": "Fluency: Speaks fluently with only rare repetition or self-correction; any hesitation is content-related to develop ideas. Lexicon: Uses vocabulary with full flexibility and precision in all topics; uses idiomatic language naturally and accurately. Grammar: Fully flexible and accurate structures. Pronunciation: Effortlessly understood; uses a full range of phonological features precisely.",
-                            "examples": [
-                                {
-                                    "sentence": "I study English every day with dedication.",
-                                    "translation": "Har kuni ingliz tilini astoydil o'rganaman."
-                                }
-                            ]
-                        }
-                    ],
+                    "title": "Mastering the Pinnacle of IELTS Speaking (Band 9.0)",
+                    "explanation": "IELTS Speaking imtihonida Band 9.0 olish uchun gapiruvchi 'yodlab olingan murakkab so'zlar' bilan gapirmaydi. Band 9.0 nomzodining tili shunchalik tabiiy, erkin va beminnat (**effortless fluency**) oqadiki, imtihon oluvchi o'zini imtihon o'tkazayotgandek emas, balki Oksford professori yoki BBC tahlilchisi bilan yuksak intellektual qahvaxonada suhbatlashayotgandek his qiladi.\n\nBand 9.0 Notiqlik Xususiyatlari:\n1. **Yuksak Idiomatik Tabiiylik (Colloquial Intellectual Idioms)**:\n   - *To play devil's advocate*: Haqiqatni sinash uchun ataylab qarama-qarshi tomonning dalilini himoya qilish.\n   - *To take something with a grain of salt*: Biror xabarga shubha bilan, tanqidiy qarash.\n   - *To nail one's colors to the mast*: O'z e'tiqod va pozitsiyasini ochiq, qat'iy e'lon qilish.\n   - *Food for thought*: Chuqur o'ylantirib qo'yuvchi jiddiy g'oya.\n\n2. **Immediate Philosophical Depth (Darhol Teran Tahlil)**:\n   - Savol berilishi bilan nomzod uning tor doirasidan chiqib, umuminsoniy, sotsiologik va tarixiy nuqtai nazardan tahlil boshlaydi:\n     *'That is an intriguing dilemma. If we play devil's advocate for a moment, one could argue that... Yet, taking historical precedents with a grain of salt, we observe...'* \n\n3. **Flawless Intonational Nuance**:\n   - Gaplar orasida mexanik to'xtashlar yo'q; intonatsiya nozik kinoya, qat'iyat, shubha va hayratni tabiiy ravishda yetkazadi.\n\n⚠️ **O'zbek o'rganuvchilari uchun xavfli tuzoqlar (Common Pitfalls)**:\n- ❌ *Using slang like 'gonna, wanna, ain't' in academic Part 3.* (Band 9.0 'norasmiy sleng' degani emas; u 'ziyolilarning erkin nutqi' degani!).\n- ❌ *Hesitating to search for words.* Agar so'z esingizga kelmasa, uni tushuntirib o'tib keting (paraphrase seamlessly); aslo jim bo'lib to'xtab qolmang.\n\n🎯 **IELTS Speaking & Writing Band 9.0 Masterclass**:\n- **Prompt**: Speaking Part 3: Is human happiness primarily determined by material wealth or internal psychological resilience?\n- **Model Response (Band 9.0)**: That is perennial food for thought that has preoccupied moral philosophers from antiquity. To play devil's advocate, an impoverished individual lacking basic caloric security or sanitary shelter cannot effortlessly cultivate transcendent inner peace; in such dire circumstances, material capital is an indispensable prerequisite for dignity. Nevertheless, once basic physiological thresholds are secured, hedonic adaptation inevitably sets in. At that juncture, happiness ceases to correlate with material accumulation and hinges entirely upon psychological resilience, existential purpose, and communal integration. Wealth provides the foundation, but resilience crafts the architecture of human fulfillment.\n- **Discourse Markers**: perennial food for thought that has preoccupied..., To play devil's advocate, indispensable prerequisite for dignity, hedonic adaptation inevitably sets in, ceases to correlate with... and hinges entirely upon..., Wealth provides the foundation, but resilience crafts the architecture of\n- **Examiner / Intonation Tip**: *Wealth provides the foundation, but resilience crafts the architecture of human fulfillment* kabi o'tkir aforistik xulosalar imtihon oluvchiga sizning ingliz tilidagi fikrlash qobiliyatingiz mutlaq cho'qqiga chiqqanini isbotlaydi.",
                     "vocabulary": [
                         {
-                            "term": "Inextricable",
-                            "reading": "/ˌɪn.ɪkˈstrɪk.ə.bəl/",
-                            "meaning": "Ajralmas, chambarchas bogʻliq",
-                            "exampleSentence": "Language and cultural identity are inextricably intertwined.",
-                            "exampleTranslation": "Til va madaniy oʻzlik chambarchas bogʻlangan."
+                            "term": "Devil's advocate",
+                            "reading": "/ˌdev.əlz ˈæd.və.kət/",
+                            "meaning": "Muxolif pozitsiyani himoya qiluvchi (bahsni jonlantirish va haqiqatni sinash uchun ataylab qarshi chiqish)",
+                            "exampleSentence": "To test the robustness of our marketing strategy, let me play devil's advocate for five minutes.",
+                            "exampleTranslation": "Marketing strategiyamizning mustahkamligini sinab ko'rish uchun, ruxsat bering, besh daqiqa muxolif pozitsiyasida (devil's advocate) bahslashay."
                         },
                         {
-                            "term": "Dissemination",
-                            "reading": "/dɪˌsem.ɪˈneɪ.ʃən/",
-                            "meaning": "Keng yoyish, tarqatish",
-                            "exampleSentence": "The swift dissemination of knowledge accelerates innovation.",
-                            "exampleTranslation": "Bilimlarning tezkor tarqalishi innovatsiyalarni jadallashtiradi."
+                            "term": "Grain of salt",
+                            "reading": "/ɡreɪn əv sɒlt/",
+                            "meaning": "Shubha bilan qarash, hamma aytilganini ko'r-ko'rona haqiqat deb qabul qilmaslik",
+                            "exampleSentence": "One should take pre-election opinion polls with a healthy grain of salt.",
+                            "exampleTranslation": "Saylovoldi so'rovnomalariga sog'lom shubha bilan (grain of salt) qarash lozim."
                         },
                         {
-                            "term": "Ephemeral",
-                            "reading": "/ɪˈfem.ər.əl/",
-                            "meaning": "Oʻtkinchi, bir lahzalik",
-                            "exampleSentence": "Fame in the digital era can often be fleeting and ephemeral.",
-                            "exampleTranslation": "Raqamli asrdagi shuhrat koʻpincha oʻtkinchi va lahzalik boʻlishi mumkin."
+                            "term": "Food for thought",
+                            "reading": "/fuːd fər θɔːt/",
+                            "meaning": "Chuqur o'ylantirib qo'yuvchi fikr, mulohaza uchun ozuqa",
+                            "exampleSentence": "The keynote speaker's remarks on automated ethics provided abundant food for thought.",
+                            "exampleTranslation": "Asosiy ma'ruzachining avtomatlashtirilgan etika bo'yicha fikrlari chuqur mulohaza uchun mo'l ozuqa berdi."
+                        },
+                        {
+                            "term": "Perennial",
+                            "reading": "/pəˈren.i.əl/",
+                            "meaning": "Doimiy, ko'p yillik, har doim qayta paydo bo'ladigan boqiy",
+                            "exampleSentence": "The conflict between individual liberty and state security is a perennial philosophical debate.",
+                            "exampleTranslation": "Shaxsiy erkinlik va davlat xavfsizligi o'rtasidagi to'qnashuv boqiy (perennial) falsafiy bahsdir."
+                        },
+                        {
+                            "term": "Hedonic",
+                            "reading": "/hiːˈdɒn.ɪk/",
+                            "meaning": "Gedonik, lazzat va quvonchga tegishli",
+                            "exampleSentence": "Hedonic adaptation explains why lottery winners eventually return to their baseline level of happiness.",
+                            "exampleTranslation": "Gedonik moslashuv lotereya yutib olganlar nima uchun vaqt o'tishi bilan o'zlarining avvalgi baxt darajasiga qaytishlarini tushuntiradi."
+                        },
+                        {
+                            "term": "Prerequisite",
+                            "reading": "/ˌpriːˈrek.wɪ.zɪt/",
+                            "meaning": "Boshlang'ich zaruriy shart, old shart",
+                            "exampleSentence": "Nutritional security is a mandatory prerequisite for educational attainment in children.",
+                            "exampleTranslation": "To'g'ri ovqatlanish xavfsizligi bolalarda ta'lim muvaffaqiyatining majburiy boshlang'ich shartidir."
+                        },
+                        {
+                            "term": "Articulate",
+                            "reading": "/ɑːˈtɪk.jə.lət/",
+                            "meaning": "Fikrni o'ta aniq, ravon va tushunarli ifodalay oladigan",
+                            "exampleSentence": "She is an exceptionally articulate advocate for indigenous environmental rights.",
+                            "exampleTranslation": "U mahalliy aholining ekologik huquqlari bo'yicha favqulodda notiq va aniq ifodalovchi (articulate) himoyachidir."
+                        },
+                        {
+                            "term": "Antiquity",
+                            "reading": "/ænˈtɪk.wə.ti/",
+                            "meaning": "Qadimiy zamonlar, antik davr",
+                            "exampleSentence": "Philosophers since classical Greek antiquity have deliberated on the nature of justice.",
+                            "exampleTranslation": "Klassik Yunon antik davridan buyon faylasuflar adolat mohiyati ustida bosh qotirib kelganlar."
                         }
+                    ],
+                    "keyPoints": [
+                        "Band 9.0 Speaking is characterized by effortless spontaneity: ideas flow with intellectual agility and zero hesitation.",
+                        "Use natural, educated idioms: 'play devil's advocate', 'take with a grain of salt', 'perennial food for thought'.",
+                        "Synthesize philosophical frameworks (e.g. hedonic adaptation, prerequisite thresholds) to address abstract prompts.",
+                        "Conclude responses with powerful, memorable aphoristic synthesis."
                     ]
                 }
             },
             {
                 "id": "en-c2-u3-l4-s2",
-                "title": "Mashq",
+                "title": "IELTS Speaking Band 9.0 Amaliyoti",
                 "type": "practice",
                 "estimatedMinutes": 6,
                 "practiceData": {
-                    "instructions": "Band 9.0 darajasidagi javobni tanlang.",
+                    "instructions": "IELTS Speaking Band 9.0 notiqlik san'atiga mos eng to'g'ri ifodalarni tanlang.",
                     "exercises": [
                         {
                             "id": "en-c2-u3-l4-e1",
                             "type": "multiple-choice",
-                            "prompt": "Examiner: \"Should museums remain free of charge for the public?\" Band 9.0 response:",
+                            "prompt": "What does someone do when they 'play devil's advocate' during an intellectual discussion?",
                             "options": [
-                                "Unquestionably. Public accessibility to cultural heritage serves as a quintessential cornerstone of an enlightened democracy. Imposing financial barriers inadvertently commodifies knowledge, whereas universally subsidized institutions cultivate cross-generational intellectual curiosity.",
-                                "I think money for museums is bad because I have no money.",
-                                "Museums have old paintings and we should see them free.",
-                                "Yes, free museums are very nice for people."
+                                "They take up an opposing or unpopular argument purposefully to test the strength of the thesis, even if they personally disagree with it.",
+                                "They practice black magic in the corner.",
+                                "They scream angrily at the examiner.",
+                                "They refuse to answer any questions."
                             ],
                             "correctAnswer": 0,
-                            "explanation": "Effortless intellectual eloquence and philosophical depth."
+                            "explanation": "'Devil's advocate' bo'lish — tezisning mustahkamligini sinab ko'rish uchun ataylab unga qarama-qarshi pozitsiyani himoya qilib bahslashishdir."
                         },
                         {
-                            "id": "en-c2-u3-l4-ex-2",
+                            "id": "en-c2-u3-l4-e2",
                             "type": "multiple-choice",
-                            "prompt": "Choose the correct word to complete the sentence: \"The swift dissemination of knowledge accelerates innovation.\"",
+                            "prompt": "Choose the phrase meaning 'to view information with healthy skepticism rather than believing it blindly':",
                             "options": [
-                                "reluctance",
-                                "delay",
-                                "Dissemination",
-                                "doubt"
+                                "To take it with a grain of salt",
+                                "To eat a bag of salt",
+                                "To play with salt shakers",
+                                "To pour salt on wounds"
                             ],
-                            "correctAnswer": 2,
-                            "explanation": "\"Dissemination\" (Keng yoyish, tarqatish) fits the context appropriately."
+                            "correctAnswer": 0,
+                            "explanation": "'To take with a grain of salt' — ma'lumotga sog'lom shubha va tanqidiy ehtiyotkorlik bilan yondashishni bildiradi."
+                        },
+                        {
+                            "id": "en-c2-u3-l4-e3",
+                            "type": "multiple-choice",
+                            "prompt": "Fill in the blank: 'The sudden surge in lottery winnings triggered temporary euphoria, but _______ adaptation soon restored baseline mood.'",
+                            "options": [
+                                "hedonic",
+                                "solipsistic",
+                                "autarkic",
+                                "pedantic"
+                            ],
+                            "correctAnswer": 0,
+                            "explanation": "Insonning yangi sharoitga ko'nikib, o'zining avvalgi baxt darajasiga qaytishi 'hedonic adaptation' deb ataladi."
+                        },
+                        {
+                            "id": "en-c2-u3-l4-e4",
+                            "type": "multiple-choice",
+                            "prompt": "What does describing a debate topic as 'perennial food for thought' imply?",
+                            "options": [
+                                "An enduring, ever-relevant philosophical issue that perpetually stimulates deep mental contemplation",
+                                "A recipe book for cooking dinner",
+                                "A boring topic that nobody cares about",
+                                "A discussion held exclusively in grocery stores"
+                            ],
+                            "correctAnswer": 0,
+                            "explanation": "'Perennial food for thought' — asrlar davomida o'z dolzarbligini yo'qotmaydigan, chuqur fikrlashga chorlovchi boqiy mavzudir."
+                        },
+                        {
+                            "id": "en-c2-u3-l4-e5",
+                            "type": "multiple-choice",
+                            "prompt": "Select the adjective describing someone who expresses ideas with exceptional clarity, precision, and eloquence:",
+                            "options": [
+                                "Articulate",
+                                "Obtuse",
+                                "Opaque",
+                                "Recalcitrant"
+                            ],
+                            "correctAnswer": 0,
+                            "explanation": "'Articulate' — fikrini benuqson aniqlik, ravshanlik va ravonlik bilan ifodalay oladigan degani."
                         }
                     ]
                 }
             },
             {
                 "id": "en-c2-u3-l4-s3",
-                "title": "Test",
+                "title": "IELTS Speaking Band 9.0 Baholash Testi",
                 "type": "test",
                 "estimatedMinutes": 7,
                 "testData": {
-                    "instructions": "Savollarga javob bering.",
-                    "passingScorePercentage": 75,
+                    "instructions": "IELTS Speaking Band 9.0 mezonlari va intellektual notiqlik bo'yicha imtihon.",
+                    "passingScorePercentage": 80,
                     "questions": [
                         {
                             "id": "en-c2-u3-l4-q1",
-                            "question": "What distinguishes Band 9.0 Fluency from lower bands in IELTS Speaking?",
+                            "question": "In the IELTS Speaking Band 9.0 descriptor for Fluency and Coherence, what is required regarding pauses and hesitation?",
                             "options": [
-                                "Hesitation is exclusively content-related (thinking what to say rather than searching for words or grammar)",
-                                "Never pausing even to breathe",
-                                "Using simple vocabulary only",
-                                "Speaking so fast the examiner cannot understand"
+                                "Speech is effortless, and any hesitation is content-related (searching for ideas) rather than language-related (searching for words or grammar).",
+                                "The candidate must never breathe.",
+                                "The candidate must pause for 30 seconds after every word.",
+                                "Speech must be delivered at auctioneer speed."
                             ],
                             "correctAnswerIndex": 0,
-                            "explanation": "Hesitation is exclusively content-related."
+                            "explanation": "Band 9.0 da nutq beminnat oqadi; biron pauza bo'lsa, u so'z yoki grammatika qidirish emas, balki chuqur g'oyani o'ylash bilan bog'liq bo'ladi."
                         },
                         {
                             "id": "en-c2-u3-l4-q2",
-                            "question": "\"Commodify knowledge\" means:",
+                            "question": "'The documentary provided compelling _______ regarding the psychological roots of authoritarian compliance.'",
                             "options": [
-                                "Learning to read",
-                                "Printing school textbooks",
-                                "Going to university",
-                                "Treating knowledge as a commercial commodity to be bought and sold"
+                                "food for thought",
+                                "salt shakers",
+                                "devil's advocacy",
+                                "bottlenecks"
                             ],
-                            "correctAnswerIndex": 3,
-                            "explanation": "Treating knowledge as commercial commodity."
+                            "correctAnswerIndex": 0,
+                            "explanation": "Chuqur o'ylantirib qo'yuvchi jiddiy mulohaza 'compelling food for thought' iborasi orqali beriladi."
                         },
                         {
                             "id": "en-c2-u3-l4-q3",
-                            "question": "\"Quintessential cornerstone\" is a collocation meaning:",
+                            "question": "What is the defining mark of 'intellectual spontaneity' in Speaking Part 3?",
                             "options": [
-                                "The most perfect and essential fundamental pillar",
-                                "A broken stone",
-                                "A minor detail",
-                                "A square room"
+                                "Directly engaging with the prompt's abstract implications using agile vocabulary, original metaphors, and natural conversational cadence without sounding scripted.",
+                                "Memorizing a Wikipedia article and reciting it robotically.",
+                                "Answering every question with a rehearsed nursery rhyme.",
+                                "Speaking in whisper tones."
                             ],
                             "correctAnswerIndex": 0,
-                            "explanation": "Most perfect and essential pillar."
+                            "explanation": "Intellektual spontanlik — yodlangan qoliplarsiz, jonli ritm va boy leksika bilan savolning chuqur qatlamlariga darhol javob qaytara olishdir."
                         },
                         {
                             "id": "en-c2-u3-l4-q4",
-                            "question": "How is humor or mild irony viewed in IELTS Speaking Part 3 at Band 9.0?",
+                            "question": "'Basic nutritional sustenance stands as an absolute _______ for child cognitive development.'",
                             "options": [
-                                "The examiner does not understand it",
-                                "As a sign of supreme pragmatic competence and natural native-level language mastery",
-                                "It is strictly forbidden and results in disqualification",
-                                "It loses grammar points"
+                                "prerequisite",
+                                "retraction",
+                                "chiasmus",
+                                "persona"
                             ],
-                            "correctAnswerIndex": 1,
-                            "explanation": "Sign of supreme pragmatic competence."
+                            "correctAnswerIndex": 0,
+                            "explanation": "Majburiy old shart va boshlang'ich zamin 'an absolute prerequisite' deb nomlanadi."
+                        },
+                        {
+                            "id": "en-c2-u3-l4-q5",
+                            "question": "Choose the response that represents Band 9.0 philosophical eloquence:",
+                            "options": [
+                                "Human progress is not an arithmetic sum of consumer goods, but an ethical commitment to dignity.",
+                                "Progress is very good and people make money and buy cars.",
+                                "Nowadays everyone wants to have a lot of things.",
+                                "Money makes the world go around like a wheel."
+                            ],
+                            "correctAnswerIndex": 0,
+                            "explanation": "Birinchi variant aforistik chuqurlik va yuksak ritorik qudratga ega bo'lgan benuqson Band 9.0 namunasidir."
                         }
                     ]
                 }
@@ -3024,154 +3328,228 @@ export const ENGLISH_C2_LESSONS: Lesson[] = [
         "level": "C2",
         "lessonNumber": 5,
         "title": "C2 Capstone Grand Mastery Examination & Global Certification",
-        "description": "Ingliz tili (CEFR C2 / IELTS 9.0) bo'yicha to'liq oliy darajadagi bitiruv imtihoni.",
-        "estimatedDurationMinutes": 20,
+        "description": "CEFR C2 (Mastery) darajasining Buyuk Yakuniy Imtihoni: ikki tilli ona tili sohibi darajasidagi mutlaq til egaligi va global sertifikatsiya.",
+        "estimatedDurationMinutes": 25,
         "icon": "👑",
         "steps": [
             {
                 "id": "en-c2-u3-l5-s1",
-                "title": "C2 Grand Mastery Xulosasi",
+                "title": "The Grand Capstone: Absolute Bilingual Mastery",
                 "type": "learn",
-                "estimatedMinutes": 5,
+                "estimatedMinutes": 8,
                 "learnData": {
-                    "title": "CEFR C2 Mastery (Near-Native Fluency & Intellect)",
-                    "explanation": "Siz ingliz tilining eng yuksak cho'qqisini zabt etdingiz. Sizning bilimingiz xalqaro ilmiy konferentsiyalar, Birlashgan Millatlar Tashkiloti sammitlari, nufuzli nashriyotlar va oliy ta'lim muassasalarida bexato va mukammal tan olinadi.",
-                    "keyPoints": [
-                        "Flawless command across all 6 skills",
-                        "Subtle literary, pragmatic and philosophical competence",
-                        "IELTS Band 8.5 - 9.0 certified readiness"
-                    ],
-                    "grammarRules": [
-                        {
-                            "pattern": "C2 Capstone Grand Mastery Examination & Global Certification",
-                            "meaning": "Ingliz tili (CEFR C2 / IELTS 9.0) bo'yicha to'liq oliy darajadagi bitiruv imtihoni.",
-                            "usageNotes": "Siz ingliz tilining eng yuksak cho'qqisini zabt etdingiz. Sizning bilimingiz xalqaro ilmiy konferentsiyalar, Birlashgan Millatlar Tashkiloti sammitlari, nufuzli nashriyotlar va oliy ta'lim muassasalarida bexato va mukammal tan olinadi.",
-                            "examples": [
-                                {
-                                    "sentence": "I study English every day with dedication.",
-                                    "translation": "Har kuni ingliz tilini astoydil o'rganaman."
-                                }
-                            ]
-                        }
-                    ],
+                    "title": "The Grand Capstone: Achieving Bilingual Native Equivalence",
+                    "explanation": "Ushbu dars — butun CEFR dasturining (A1 boshlang'ich salomlashishdan to C2 buyuk diplomatiya va nazariy fizikagacha) eng yuksak yakunlovchi cho'qqisidir (Grand Capstone). Bu bosqichni muvaffaqiyatli tamomlagan shaxs rasman ingliz tilini ikki tilli ziyoli (educated bilingual native equivalent) darajasida egallagan hisoblanadi.\n\nC2 Buyuk Malaka Mezonlari (The Grand Exit Criteria):\n1. **Effortless Comprehension**: Har qanday matnni — qadimiy Shekspr pyesalaridan to eng so'nggi kvant fizikasi maqolalarigacha — ona tilidek oson, lug'atsiz va zarracha qiynalmasdan tushunish.\n2. **Nuanced Semantic Precision**: Ma'nolar o'rtasidagi eng nozik farqlarni (litota, kinoya, stoisizm, hedging, mafkuraviy bo'yash) bir zumda ilg'ab olish va o'z nutqida qo'llay olish.\n3. **Flawless Syntactic Command**: Inversiya, subjunktiv iboralar, xiazm va dialektik insho arxitekturasini sun'iy zo'riqishsiz, erkin va nafis boshqarish.\n4. **IELTS Band 9.0 / Cambridge CPE Flawlessness**: Imtihonlarda barcha mezonlar bo'yicha maksimal ballga erishish.\n\n🎯 **The Ultimate Philosophical Capstone Masterclass**:\n- **Prompt**: Final Grand Prompt: In the era of planetary climate volatility and artificial intelligence, what constitutes the ultimate moral responsibility of the educated global citizen?\n- **Model Response (Band 9.0 / C2 Grand Mastery)**: The definitive responsibility of the enlightened citizen lies in cultivating an uncompromising synthesis of intellectual discernment and moral courage. When algorithmic ubiquity threatens to reduce human consciousness to probabilistic metrics, and ideological polarization corrodes civic solidarity, passive acquiescence constitutes moral abdication. We must not merely master technical instruments, but anchor them firmly to humanistic values. To possess language at its zenith is not an exercise in vanity, but a sacred covenant—to speak truth to power, to deconstruct deceit, and to safeguard the enduring sanctuary of human dignity for generations yet unborn.\n- **Discourse Markers**: uncompromising synthesis of intellectual discernment and moral courage, algorithmic ubiquity threatens to reduce..., ideological polarization corrodes civic solidarity, passive acquiescence constitutes moral abdication, anchor them firmly to humanistic values, sacred covenant—to speak truth to power, to deconstruct deceit, and to safeguard the enduring sanctuary\n- **Examiner / Intonation Tip**: Ushbu yakuniy javob sizning barcha o'rganilgan darslar (A1-C2) bo'yicha to'plagan aql-zakovatingiz, uslubiy nafosatingiz va til qudratining eng shonli gultojidir.",
                     "vocabulary": [
                         {
-                            "term": "Dissemination",
-                            "reading": "/dɪˌsem.ɪˈneɪ.ʃən/",
-                            "meaning": "Keng yoyish, tarqatish",
-                            "exampleSentence": "The swift dissemination of knowledge accelerates innovation.",
-                            "exampleTranslation": "Bilimlarning tezkor tarqalishi innovatsiyalarni jadallashtiradi."
+                            "term": "Equivalence",
+                            "reading": "/ɪˈkwɪv.ə.ləns/",
+                            "meaning": "Ekvivalentlik, to'liq teng qimmatlilik",
+                            "exampleSentence": "Achieving C2 certification confirms functional bilingual equivalence with native scholarly speakers.",
+                            "exampleTranslation": "C2 sertifikatiga erishish ona tilidagi ziyolilar bilan to'liq funksional ikki tilli ekvivalentlikni tasdiqlaydi."
                         },
                         {
-                            "term": "Ephemeral",
-                            "reading": "/ɪˈfem.ər.əl/",
-                            "meaning": "Oʻtkinchi, bir lahzalik",
-                            "exampleSentence": "Fame in the digital era can often be fleeting and ephemeral.",
-                            "exampleTranslation": "Raqamli asrdagi shuhrat koʻpincha oʻtkinchi va lahzalik boʻlishi mumkin."
+                            "term": "Zenith",
+                            "reading": "/ˈzen.ɪθ/",
+                            "meaning": "Zenit, eng yuqori cho'qqi, erishilgan eng oliy pog'ona",
+                            "exampleSentence": "The philosopher reached the absolute zenith of his intellectual influence in his sixties.",
+                            "exampleTranslation": "Faylasuf o'zining oltmish yoshlarida intellektual ta'sirining mutlaq zenitiga (eng yuqori cho'qqisiga) erishdi."
                         },
                         {
-                            "term": "Quintessential",
-                            "reading": "/ˌkwɪn.tɪˈsen.ʃəl/",
-                            "meaning": "Eng oliy namuna, timsol",
-                            "exampleSentence": "It is the quintessential masterpiece of modern literature.",
-                            "exampleTranslation": "Bu zamonaviy adabiyotning eng oliy namunasidir."
+                            "term": "Covenant",
+                            "reading": "/ˈkʌv.ə.nənt/",
+                            "meaning": "Muqaddas ahd, tantanali qat'iy bitim",
+                            "exampleSentence": "Preserving the biosphere represents a sacred covenant between current and future generations.",
+                            "exampleTranslation": "Biosferani asrash hozirgi va kelajak avlodlar o'rtasidagi muqaddas ahddir (covenant)."
+                        },
+                        {
+                            "term": "Acquiescence",
+                            "reading": "/ˌæk.wiˈes.əns/",
+                            "meaning": "Sukut bilan bosh egish, rozi bo'lib bo'ysunish",
+                            "exampleSentence": "Silent acquiescence in the face of authoritarian injustice is equivalent to complicity.",
+                            "exampleTranslation": "Avtoritar adolatsizlik qarshisida sukut bilan bosh egish (acquiescence) jinoyatga sheriklik bilan barobardir."
+                        },
+                        {
+                            "term": "Abdication",
+                            "reading": "/ˌæb.dɪˈkeɪ.ʃən/",
+                            "meaning": "Voz kechish, burch va mas'uliyatni tark etish",
+                            "exampleSentence": "Ignoring verifiable scientific warnings represents a shameful abdication of governmental duty.",
+                            "exampleTranslation": "Isbotlangan ilmiy ogohlantirishlarga e'tibor bermaslik hukumat burchidan sharmandali voz kechish (abdication) demakdir."
+                        },
+                        {
+                            "term": "Enlightened",
+                            "reading": "/ɪnˈlaɪ.tənd/",
+                            "meaning": "Ma'rifatli, yuksak aql-idrokli va madaniyatli",
+                            "exampleSentence": "Enlightened educational systems prioritize independent inquiry over rigid dogmatic indoctrination.",
+                            "exampleTranslation": "Ma'rifatli ta'lim tizimlari qotib qolgan aqidabozlikdan ko'ra mustaqil izlanishni ustun qo'yadi."
+                        },
+                        {
+                            "term": "Uncompromising",
+                            "reading": "/ʌnˈkɒm.prə.maɪ.zɪŋ/",
+                            "meaning": "Murosasiz, qat'iy, o'z tamoyillariga sodiq",
+                            "exampleSentence": "The investigative reporter maintained an uncompromising dedication to unmasking corruption.",
+                            "exampleTranslation": "Surishtiruvchi jurnalist korrupsiyani fosh etishda murosasiz va qat'iy sadoqatni saqlab qoldi."
+                        },
+                        {
+                            "term": "Sanctuary",
+                            "reading": "/ˈsæŋk.tʃʊə.ri/",
+                            "meaning": "Daxlsiz muqaddas maskan, panohgoh",
+                            "exampleSentence": "Academic freedom serves as an indispensable sanctuary for democratic critical discourse.",
+                            "exampleTranslation": "Akademik erkinlik demokratik tanqidiy fikrlash uchun zaruriy daxlsiz maskan (sanctuary) bo'lib xizmat qiladi."
                         }
+                    ],
+                    "keyPoints": [
+                        "C2 Grand Mastery demonstrates effortless bilingual equivalence with native scholarly speakers.",
+                        "Synthesis of all grammatical, lexical, rhetorical, and pragmatic competencies acquired from A1 through C2.",
+                        "Elimination of all mother-tongue transfer errors; complete mastery of subtle cultural idioms and litotes.",
+                        "Ability to articulate complex existential, scientific, and geopolitical paradigms with commanding eloquence."
                     ]
                 }
             },
             {
                 "id": "en-c2-u3-l5-s2",
-                "title": "Oliy Bitiruv Mashqi",
+                "title": "Grand Mastery Amaliyoti",
                 "type": "practice",
-                "estimatedMinutes": 7,
+                "estimatedMinutes": 6,
                 "practiceData": {
-                    "instructions": "Bitiruv sinovi savoliga javob bering.",
+                    "instructions": "C2 Buyuk Yakuniy Malaka mezonlariga mos eng yuksak jumlalarni tanlang.",
                     "exercises": [
                         {
                             "id": "en-c2-u3-l5-e1",
                             "type": "multiple-choice",
-                            "prompt": "\"Far be it from me to cast aspersions on their integrity; _______, the statistical anomalies warrant independent forensic auditing.\"",
+                            "prompt": "Identify the sentence that represents the zenith of English philosophical prose:",
                             "options": [
-                                "furthermore",
-                                "so as to",
-                                "nonetheless",
-                                "because"
+                                "Human dignity is an inviolable sanctuary that no technocratic totalitarianism may override.",
+                                "People should have good rights and computers should not be bad.",
+                                "Totalitarianism is sad so we want rights.",
+                                "Because of tech problems, humans have issues."
                             ],
-                            "correctAnswer": 2,
-                            "explanation": "Nonetheless (shunga qaramay)."
+                            "correctAnswer": 0,
+                            "explanation": "'Human dignity is an inviolable sanctuary that no technocratic totalitarianism may override' — leksik, sintaktik va falsafiy jihatdan benuqson C2 cho'qqisidir."
                         },
                         {
-                            "id": "en-c2-u3-l5-ex-2",
+                            "id": "en-c2-u3-l5-e2",
                             "type": "multiple-choice",
-                            "prompt": "Choose the correct word to complete the sentence: \"Fame in the digital era can often be fleeting and ephemeral.\"",
+                            "prompt": "What does 'passive acquiescence' imply in moral philosophy?",
                             "options": [
-                                "reluctance",
-                                "delay",
-                                "doubt",
-                                "Ephemeral"
+                                "Silently submitting or agreeing to injustice without actively resisting or speaking out",
+                                "Singing loudly in a choir",
+                                "Building houses with stone",
+                                "Running in an athletic marathon"
                             ],
-                            "correctAnswer": 3,
-                            "explanation": "\"Ephemeral\" (Oʻtkinchi, bir lahzalik) fits the context appropriately."
+                            "correctAnswer": 0,
+                            "explanation": "'Passive acquiescence' — adolatsizlik qarshisida qarshilik ko'rsatmasdan, jimgina bosh egib rozi bo'lish demakdir."
+                        },
+                        {
+                            "id": "en-c2-u3-l5-e3",
+                            "type": "multiple-choice",
+                            "prompt": "Fill in the blank: 'Failing to intervene when mass civilian populations face starvation represents a moral _______.'",
+                            "options": [
+                                "abdication",
+                                "sycophant",
+                                "chiasmus",
+                                "litotes"
+                            ],
+                            "correctAnswer": 0,
+                            "explanation": "Burch va mas'uliyatdan sharmandali voz kechish 'a moral abdication' deb nomlanadi."
+                        },
+                        {
+                            "id": "en-c2-u3-l5-e4",
+                            "type": "multiple-choice",
+                            "prompt": "What does reaching the 'zenith' of one's career mean?",
+                            "options": [
+                                "Reaching the absolute highest peak of achievement and acclaim",
+                                "Being fired on the first day",
+                                "Starting an entry-level internship",
+                                "Moving to an underground basement"
+                            ],
+                            "correctAnswer": 0,
+                            "explanation": "'Zenith' — muvaffaqiyat va e'tirofning eng yuksak cho'qqisiga yetish degani."
+                        },
+                        {
+                            "id": "en-c2-u3-l5-e5",
+                            "type": "multiple-choice",
+                            "prompt": "Complete: 'The international treaty represents a binding _______ to protect planetary biodiversity.'",
+                            "options": [
+                                "covenant",
+                                "affectation",
+                                "solipsism",
+                                "stalemate"
+                            ],
+                            "correctAnswer": 0,
+                            "explanation": "Muqaddas va majburiy ahd/bitim 'a binding covenant' iborasi bilan ifodalanadi."
                         }
                     ]
                 }
             },
             {
                 "id": "en-c2-u3-l5-s3",
-                "title": "C2 Yakuniy Sertifikatsiya Imtihoni",
+                "title": "C2 Grand Mastery Yakuniy Imtihoni",
                 "type": "test",
                 "estimatedMinutes": 8,
                 "testData": {
-                    "instructions": "C2 darajasini to'liq tasdiqlash uchun imtihon savollariga javob bering.",
-                    "passingScorePercentage": 75,
+                    "instructions": "CEFR C2 darajasining to'liq Grand Mastery Yakuniy Imtihoni.",
+                    "passingScorePercentage": 80,
                     "questions": [
                         {
                             "id": "en-c2-u3-l5-q1",
-                            "question": "To \"cast aspersions on someone's integrity\" means to:",
+                            "question": "What operational capabilities characterize an individual who has attained CEFR C2 (Mastery)?",
                             "options": [
-                                "Praise them publicly",
-                                "Hire them for a job",
-                                "Make damaging or derogatory remarks regarding their honesty and reputation",
-                                "Give them a medal"
+                                "Effortless comprehension of all spoken and written forms, nuanced register switching, native-level idiomatic precision, and spontaneous philosophical depth.",
+                                "Knowing how to order food at an airport.",
+                                "Memorizing thirty irregular verbs.",
+                                "Translating basic children's books."
                             ],
-                            "correctAnswerIndex": 2,
-                            "explanation": "Make damaging remarks regarding honesty."
+                            "correctAnswerIndex": 0,
+                            "explanation": "C2 (Mastery) darajasi har qanday murakkab matnni ona tilidek oson tushunish, uslublarni erkin boshqarish va teran falsafiy ravonlikni bildiradi."
                         },
                         {
                             "id": "en-c2-u3-l5-q2",
-                            "question": "Suffice it to say, the epochal discovery has _______ altered our understanding of theoretical physics.",
+                            "question": "'The investigative committee maintained an _______ pursuit of truth, regardless of political fallout.'",
                             "options": [
-                                "irrevocably",
-                                "doubtfully",
-                                "ephemeral",
-                                "temporary"
+                                "uncompromising",
+                                "autarkic",
+                                "opaque",
+                                "recalcitrant"
                             ],
                             "correctAnswerIndex": 0,
-                            "explanation": "Irrevocably altered (qaytarib bo'lmas darajada o'zgartirdi)."
+                            "explanation": "Murosasiz va qat'iy haqiqat izlash 'an uncompromising pursuit of truth' deb ataladi."
                         },
                         {
                             "id": "en-c2-u3-l5-q3",
-                            "question": "Which CEFR level represents absolute native-equivalent mastery of the English language?",
+                            "question": "Which of the following demonstrates the seamless integration of conditional inversion, nominalisation, and ethical synthesis?",
                             "options": [
-                                "B2",
-                                "A1",
-                                "C1",
-                                "C2"
+                                "Had regulatory bodies acted with proactive foresight, the catastrophic proliferation of financial fraud could plausibly have been curtailed.",
+                                "If regulators did their work, fraud was stopped maybe.",
+                                "Were regulators to act, nobody would lose money ever.",
+                                "Should regulators work good, banks will be nice."
                             ],
-                            "correctAnswerIndex": 3,
-                            "explanation": "C2 (Mastery)."
+                            "correctAnswerIndex": 0,
+                            "explanation": "'Had regulatory bodies acted with proactive foresight, the catastrophic proliferation... could plausibly have been curtailed' — C2 sintezining benuqson gultojidir."
                         },
                         {
                             "id": "en-c2-u3-l5-q4",
-                            "question": "Which IELTS overall band score corresponds to CEFR C2 proficiency?",
+                            "question": "What is the ultimate purpose of acquiring C2 Mastery of the English language?",
                             "options": [
-                                "Band 7.0",
-                                "Band 6.0",
-                                "Band 8.5 to 9.0",
-                                "Band 5.5"
+                                "To possess an uncompromising instrument of intellectual discernment, cross-cultural empathy, and truth-telling on the global stage.",
+                                "To collect another certificate for wall decoration.",
+                                "To brag to neighbors.",
+                                "To use twenty-letter words in grocery stores."
                             ],
-                            "correctAnswerIndex": 2,
-                            "explanation": "Band 8.5 to 9.0."
+                            "correctAnswerIndex": 0,
+                            "explanation": "C2 darajasining oliy maqsadi — global maydonda haqiqatni himoya qilish, intellektual teranlik va madaniyatlararo chuqur tushunish quroliga ega bo'lishdir."
+                        },
+                        {
+                            "id": "en-c2-u3-l5-q5",
+                            "question": "'True educational enlightenment is not the passive absorption of dogmatic facts, but the courageous _______ of the human spirit.'",
+                            "options": [
+                                "cultivation",
+                                "obfuscation",
+                                "conflation",
+                                "retraction"
+                            ],
+                            "correctAnswerIndex": 0,
+                            "explanation": "Inson ruhiyati va ongini tarbiyalash va yuksaltirish 'cultivation of the human spirit' deyiladi."
                         }
                     ]
                 }
