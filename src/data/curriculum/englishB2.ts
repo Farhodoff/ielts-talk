@@ -1311,821 +1311,1295 @@ export const ENGLISH_B2_LESSONS: Lesson[] = [
     ]
 },
     {
-        "id": "en-b2-u2-l1",
-        "courseId": "english-b2",
-        "unitId": "en-b2-u2",
-        "unitTitle": "Unit 2: Conditionals & Unreal Past",
-        "language": "en",
-        "level": "B2",
-        "lessonNumber": 1,
-        "title": "Third Conditional (Unreal Past & Regrets)",
-        "description": "O'tgan zamondagi amalga oshmagan voqealar (If + Had V3, Would have V3).",
-        "estimatedDurationMinutes": 15,
-        "icon": "⏳",
-        "steps": [
-            {
-                "id": "en-b2-u2-l1-s1",
-                "title": "Third Conditional Qoidasi",
-                "type": "learn",
-                "estimatedMinutes": 5,
-                "learnData": {
-                    "title": "Third Conditional: If + Had + V3, Would Have + V3",
-                    "explanation": "O'tib ketgan ish-harakatlar haqida afsuslanish yoki boshqacha bo'lishi mumkin bo'lgan natijalar: If I had studied harder, I would have passed the exam (Lekin o'qimadim va yiqildim).",
-                    "keyPoints": [
-                        "If we had taken a taxi, we wouldn't have missed the flight.",
-                        "Could have / Might have: If she had applied, she might have won the grant."
-                    ],
-                    "grammarRules": [
-                        {
-                            "pattern": "Third Conditional (Unreal Past & Regrets)",
-                            "meaning": "O'tgan zamondagi amalga oshmagan voqealar (If + Had V3, Would have V3).",
-                            "usageNotes": "O'tib ketgan ish-harakatlar haqida afsuslanish yoki boshqacha bo'lishi mumkin bo'lgan natijalar: If I had studied harder, I would have passed the exam (Lekin o'qimadim va yiqildim).",
-                            "examples": [
-                                {
-                                    "sentence": "I study English every day with dedication.",
-                                    "translation": "Har kuni ingliz tilini astoydil o'rganaman."
-                                }
-                            ]
-                        }
-                    ],
-                    "vocabulary": [
-                        {
-                            "term": "Substantiate",
-                            "reading": "/səbˈstæn.ʃi.eɪt/",
-                            "meaning": "Asoslab bermoq, isbotlamoq",
-                            "exampleSentence": "You must substantiate your claims with empirical evidence.",
-                            "exampleTranslation": "Siz oʻz daʼvolaringizni empirik dalillar bilan asoslab berishingiz kerak."
-                        },
-                        {
-                            "term": "Nuance",
-                            "reading": "/ˈnjuː.ɑːns/",
-                            "meaning": "Nozik farq, qirra",
-                            "exampleSentence": "She understood every subtle nuance of the language.",
-                            "exampleTranslation": "U tilning har bir nozik qirrasini tushundi."
-                        },
-                        {
-                            "term": "Coherence",
-                            "reading": "/kəʊˈhɪə.rəns/",
-                            "meaning": "Mantiqiy bogʻliqlik, izchillik",
-                            "exampleSentence": "Ensure structural coherence throughout your essay.",
-                            "exampleTranslation": "Inshoyingiz davomida tuzilmaviy izchillikni taʼminlang."
-                        }
-                    ]
-                }
-            },
-            {
-                "id": "en-b2-u2-l1-s2",
-                "title": "Mashq",
-                "type": "practice",
-                "estimatedMinutes": 5,
-                "practiceData": {
-                    "instructions": "To'g'ri shaklni tanlang.",
-                    "exercises": [
-                        {
-                            "id": "en-b2-u2-l1-e1",
-                            "type": "multiple-choice",
-                            "prompt": "\"If they had warned us, we _______ (not / invest) in that company.\"",
-                            "options": [
-                                "wouldn't invest",
-                                "hadn't invested",
-                                "won't have invested",
-                                "wouldn't have invested"
-                            ],
-                            "correctAnswer": 3,
-                            "explanation": "Third conditional: wouldn't have invested."
-                        },
-                        {
-                            "id": "en-b2-u2-l1-ex-2",
-                            "type": "multiple-choice",
-                            "prompt": "Choose the correct word to complete the sentence: \"She understood every subtle nuance of the language.\"",
-                            "options": [
-                                "reluctance",
-                                "delay",
-                                "doubt",
-                                "Nuance"
-                            ],
-                            "correctAnswer": 3,
-                            "explanation": "\"Nuance\" (Nozik farq, qirra) fits the context appropriately."
-                        }
-                    ]
-                }
-            },
-            {
-                "id": "en-b2-u2-l1-s3",
-                "title": "Test",
-                "type": "test",
-                "estimatedMinutes": 5,
-                "testData": {
-                    "instructions": "Savollarga javob bering.",
-                    "passingScorePercentage": 75,
-                    "questions": [
-                        {
-                            "id": "en-b2-u2-l1-q1",
-                            "question": "If I _______ about your arrival, I would have met you at the airport.",
-                            "options": [
-                                "have known",
-                                "would know",
-                                "knew",
-                                "had known"
-                            ],
-                            "correctAnswerIndex": 3,
-                            "explanation": "If I had known..."
-                        },
-                        {
-                            "id": "en-b2-u2-l1-q2",
-                            "question": "She _______ the interview if she hadn't arrived late.",
-                            "options": [
-                                "will have aced",
-                                "might ace",
-                                "might have aced",
-                                "had aced"
-                            ],
-                            "correctAnswerIndex": 2,
-                            "explanation": "Might have aced."
-                        },
-                        {
-                            "id": "en-b2-u2-l1-q3",
-                            "question": "Had you told me earlier, I _______ arranged different accommodations.",
-                            "options": [
-                                "will have",
-                                "would have",
-                                "would",
-                                "had"
-                            ],
-                            "correctAnswerIndex": 1,
-                            "explanation": "Inverted third conditional: Had you told me, I would have..."
-                        },
-                        {
-                            "id": "en-b2-u2-l1-q4",
-                            "question": "\"If I hadn't broken my leg, I would have won.\" Bu jumla nimani bildiradi?",
-                            "options": [
-                                "Oyog'im sindi va g'olib bo'la olmadim",
-                                "Kelajakda oyog'im sinishi mumkin",
-                                "Hozir oyog'im og'rimoqda",
-                                "Oyog'im sinmadi va g'olib bo'ldim"
-                            ],
-                            "correctAnswerIndex": 0,
-                            "explanation": "O'tgan zamondagi afsus."
-                        }
-                    ]
-                }
+    "id": "en-b2-u2-l1",
+    "courseId": "english-b2",
+    "unitId": "en-b2-u2",
+    "unitTitle": "Unit 2: Conditionals & Unreal Past",
+    "language": "en",
+    "level": "B2",
+    "lessonNumber": 1,
+    "title": "Third Conditional (Unreal Past & Regrets)",
+    "description": "O'tmishdagi amalga oshmagan gipotetik voqealar, afsuslar va shart inversiyasi (Had I known...) orqali yuqori darajadagi akademik nutq.",
+    "estimatedDurationMinutes": 18,
+    "icon": "⏳",
+    "steps": [
+        {
+            "id": "en-b2-u2-l1-s1",
+            "title": "Third Conditional va Shart Inversiyasi",
+            "type": "learn",
+            "estimatedMinutes": 6,
+            "learnData": {
+                "title": "Third Conditional and Inverted Conditional Structures (Unreal Past)",
+                "explanation": "Third Conditional (Uchinchi tur shart ergash gaplari) o'tib ketgan voqea-hodisalar haqida bo'lib, o'tmishda sodir bo'lmagan gipotetik holatlarni va ularning amalga oshmay qolgan natijalarini ifodalaydi. Bu zamon ko'pincha afsuslanish (regret), tanqid (criticism) yoki tarixiy gipotezalarni bayon qilishda qo'llanadi.\n\n1. Grammatik Tuzilishi:\n- If-qism (shart): `If + Past Perfect (had + V3)`\n- Asosiy qism (natija): `would have / could have / might have + Past Participle (V3)`\n  • *'If we had anticipated the market crash, we would have liquidated our shares.'* (Agar biz bozor inqirozini oldindan bilganimizda edi, aksiyalarimizni naqd pulga aylantirgan bo'lar edik — ammo bilmadik va qilm современного).\n  • *'If the paramedics had arrived five minutes sooner, they could have saved him.'*\n\n2. B2/C1 Akademik Inversiyasi (Inverted Conditionals):\nAkademik maqolalarda va rasmiy nutqda 'if' so'zi tushirib qoldirilib, 'had' yordamchi fe'li egadan oldinga o'tkaziladi:\n- `Had + Subject + V3, Subject + would have + V3`\n  • *'Had the government intervened earlier, the economic crisis would have been mitigated.'* (= *If the government had intervened earlier...*)\n  • *'Had I known about the symposium, I would certainly have registered.'*\n\n3. Sintaktik Qiyos (Uzbek Contrastive Analysis):\n- O'zbek tilida bu ma'no o'tgan zamon shart mayli (-ganda / -ganida edi ... -gan bo'lar edi) shaklida beriladi: 'Agar yomg'ir yog'maganida edi, biz tog'ga chiqqan bo'lar edik'.\n- Ingliz tilidagi eng katta xato: o'rganuvchilar 'if' qismida ham 'would have' ishlatib qo'yishadi. 'If'dan keyin HECH QACHON 'would have' kelmaydi!\n\n4. O'zbek o'rganuvchilari uchun xavfli tuzoqlar (Common Pitfalls):\n- ❌ *'If I would have studied, I would have passed.'* -> ✅ *'If I HAD studied, I would have passed.'*\n- ❌ *'Had I known the truth, I wouldn't do it.'* -> ✅ *'Had I known the truth, I wouldn't HAVE DONE it.'* (O'tgan zamon natijasi bo'lgani uchun 'have + V3' shart!).\n- ❌ *'If he had have money...'* -> ✅ *'If he HAD HAD money...'*\n\n5. IELTS Speaking & Writing Foundation Corner:\n- IELTS Speaking Part 2 & 3: Shaxsiy hayotdagi burilish nuqtalari yoki tarixiy voqealarni tahlil qilishda: *'Had I not chosen to study linguistics at university, I probably would have pursued software engineering.'*\n- IELTS Writing Task 2: *'Had authorities enforced rigorous carbon quotas a decade ago, global heating would not have accelerated to this alarming threshold.'*",
+                "vocabulary": [
+                    {
+                        "term": "liquidate",
+                        "reading": "/ˈlɪk.wɪ.deɪt/",
+                        "meaning": "aktivlarni naqd pulga aylantirmoq, tugatmoq",
+                        "exampleSentence": "Had the firm anticipated bankruptcy, it would have liquidated its real estate holdings.",
+                        "exampleTranslation": "Kompaniya bankrotlikni oldindan bilganida edi, o'zining ko'chmas mulk aktivlarini naqd pulga aylantirgan bo'lardi."
+                    },
+                    {
+                        "term": "mitigate",
+                        "reading": "/ˈmɪt.ɪ.ɡeɪt/",
+                        "meaning": "yumshatmoq, zararini kamaytirmoq",
+                        "exampleSentence": "Had timely precautions been taken, the humanitarian disaster would have been mitigated.",
+                        "exampleTranslation": "O'z vaqtida ehtiyot choralari ko'rilganda edi, gumanitar ofat ancha yumshatilgan bo'lardi."
+                    },
+                    {
+                        "term": "paramedic",
+                        "reading": "/ˌpær.əˈmed.ɪk/",
+                        "meaning": "tez yordam feldsheri / xodimi",
+                        "exampleSentence": "Had the paramedics not administered oxygen immediately, the patient might have died.",
+                        "exampleTranslation": "Agar feldsherlar zudlik bilan kislorod bermaganlarida edi, bemor vafot etgan bo'lishi mumkin edi."
+                    },
+                    {
+                        "term": "intervene",
+                        "reading": "/ˌɪn.təˈviːn/",
+                        "meaning": "aralashmoq, yordamga kelmoq (vaziyatni to'g'rilash uchun)",
+                        "exampleSentence": "If the central bank had intervened, currency devaluation would have been halted.",
+                        "exampleTranslation": "Agar markaziy bank aralashganida edi, valyuta qadrsizlanishi to'xtatilgan bo'lardi."
+                    },
+                    {
+                        "term": "threshold",
+                        "reading": "/ˈθreʃ.həʊld/",
+                        "meaning": "chegara, bo'sag'a, kritik nuqta",
+                        "exampleSentence": "Had greenhouse gases exceeded that critical threshold, ecosystems would have collapsed.",
+                        "exampleTranslation": "Agar issiqxona gazlari o'sha kritik chegaradan oshganida edi, ekotizimlar barbod bo'lgan bo'lardi."
+                    },
+                    {
+                        "term": "retrospect",
+                        "reading": "/ˈret.rə.spekt/",
+                        "meaning": "o'tmishga nazar, o'tgan voqealarni tahlil qilish",
+                        "exampleSentence": "In retrospect, had we consulted senior economists, we would have avoided the loss.",
+                        "exampleTranslation": "O'tmishga nazar tashlasak, katta iqtisodchilar bilan maslahatlashganimizda edi, zararni chetlab o'tgan bo'lardik."
+                    },
+                    {
+                        "term": "catastrophic",
+                        "reading": "/ˌkæt.əˈstrɒf.ɪk/",
+                        "meaning": "halokatli, fojiali",
+                        "exampleSentence": "If structural reinforcements had been installed, the collapse would not have been so catastrophic.",
+                        "exampleTranslation": "Agar konstruktiv mustahkamlagichlar o'rnatilganida edi, qulash bunchalik halokatli bo'lmas edi."
+                    },
+                    {
+                        "term": "anticipate",
+                        "reading": "/ænˈtɪs.ɪ.peɪt/",
+                        "meaning": "oldindan ko'ra bilmoq, kutmoq",
+                        "exampleSentence": "Had they anticipated technological disruptions, they would have modernized their equipment.",
+                        "exampleTranslation": "Agar ular texnologik inqiloblarni oldindan ko'ra bilganlarida edi, o'z uskunalarini modernizatsiya qilgan bo'lardilar."
+                    }
+                ],
+                "grammarRules": [
+                    {
+                        "pattern": "If + Subject + had + V3, Subject + would / could / might have + V3",
+                        "meaning": "Uchinchi tur shart gap (Unreal Past)",
+                        "usageNotes": "O'tib ketgan, o'zgartirib bo'lmaydigan holatlar va ularning o'tmishdagi natijasi.",
+                        "examples": [
+                            {
+                                "sentence": "If she had accepted the scholarship, she would have studied at Cambridge.",
+                                "translation": "Agar u grantni qabul qilganida edi, Kembrijda o'qigan bo'lar edi."
+                            }
+                        ]
+                    },
+                    {
+                        "pattern": "Had + Subject + V3, Subject + would / could have + V3",
+                        "meaning": "Inverted Third Conditional (shart inversiyasi)",
+                        "usageNotes": "'If' tushirib qoldiriladi va 'had' egadan oldinga o'tadi. Yuqori akademik uslub.",
+                        "examples": [
+                            {
+                                "sentence": "Had we recognized the warning signs, we would have avoided the pitfall.",
+                                "translation": "Ogohlantirish belgilarini payqaganimizda edi, bu tuzoqdan omon qolgan bo'lardik."
+                            }
+                        ]
+                    }
+                ]
             }
-        ]
-    },
+        },
+        {
+            "id": "en-b2-u2-l1-s2",
+            "title": "Amaliy Mashqlar",
+            "type": "practice",
+            "estimatedMinutes": 5,
+            "practiceData": {
+                "instructions": "Third Conditional va shart inversiyasi qoidalariga mos variantlarni tanlang.",
+                "exercises": [
+                    {
+                        "id": "en-b2-u2-l1-e1",
+                        "type": "multiple-choice",
+                        "prompt": "If the laboratory _______ the safety protocol, the chemical spill would have been averted.",
+                        "options": [
+                            "followed",
+                            "had followed",
+                            "would follow",
+                            "would have followed"
+                        ],
+                        "correctAnswer": 1,
+                        "explanation": "Third conditional shart qismida Past Perfect talab etiladi: 'had followed'."
+                    },
+                    {
+                        "id": "en-b2-u2-l1-e2",
+                        "type": "multiple-choice",
+                        "prompt": "Had they _______ about the severe blizzards, they would never have embarked on the hike.",
+                        "options": [
+                            "known",
+                            "knew",
+                            "know",
+                            "knowing"
+                        ],
+                        "correctAnswer": 0,
+                        "explanation": "Inversiya: 'Had they + known (V3)'."
+                    },
+                    {
+                        "id": "en-b2-u2-l1-e3",
+                        "type": "multiple-choice",
+                        "prompt": "If he had taken the prescribed antibiotics, he _______ much faster.",
+                        "options": [
+                            "would recover",
+                            "would have recovered",
+                            "had recovered",
+                            "recovers"
+                        ],
+                        "correctAnswer": 1,
+                        "explanation": "O'tgan zamondagi gipotetik natija: 'would have recovered'."
+                    },
+                    {
+                        "id": "en-b2-u2-l1-e4",
+                        "type": "multiple-choice",
+                        "prompt": "Transform into an inverted conditional: 'If you had contacted me earlier, I would have reserved a seat.'",
+                        "options": [
+                            "Had you contacted me earlier, I would have reserved a seat.",
+                            "Did you had contacted me earlier, I would have reserved a seat.",
+                            "Had you contact me earlier, I would have reserved a seat.",
+                            "Would you have contacted me earlier, I would reserve a seat."
+                        ],
+                        "correctAnswer": 0,
+                        "explanation": "'Had you contacted me earlier...' to'g'ri inversiyadir."
+                    },
+                    {
+                        "id": "en-b2-u2-l1-e5",
+                        "type": "multiple-choice",
+                        "prompt": "Which sentence contains a common grammatical error in conditionals?",
+                        "options": [
+                            "Had the alarm sounded, everyone would have evacuated.",
+                            "If I would have seen him, I would have warned him.",
+                            "If she had known the truth, she might have acted differently.",
+                            "Had we not missed the train, we would have arrived on time."
+                        ],
+                        "correctAnswer": 1,
+                        "explanation": "B variantida 'if' qismida 'would have' ishlatilgan, bu qo'pol xatodir ('If I had seen him' bo'lishi shart)."
+                    }
+                ]
+            }
+        },
+        {
+            "id": "en-b2-u2-l1-s3",
+            "title": "Yakuniy Test",
+            "type": "test",
+            "estimatedMinutes": 5,
+            "testData": {
+                "instructions": "5 ta test savoliga to'g'ri javob bering. O'tish bali: 80%.",
+                "passingScorePercentage": 80,
+                "questions": [
+                    {
+                        "id": "en-b2-u2-l1-q1",
+                        "question": "_______ the fire brigade arrived three minutes later, the historic library would have burned to ashes.",
+                        "options": [
+                            "Had",
+                            "If had",
+                            "Did",
+                            "Were"
+                        ],
+                        "correctAnswerIndex": 0,
+                        "explanation": "Inverted third conditional: 'Had the fire brigade arrived...'."
+                    },
+                    {
+                        "id": "en-b2-u2-l1-q2",
+                        "question": "If they had invested in renewable infrastructure, their operating expenses _______ substantially.",
+                        "options": [
+                            "would decrease",
+                            "would have decreased",
+                            "decreased",
+                            "had decreased"
+                        ],
+                        "correctAnswerIndex": 1,
+                        "explanation": "O'tmishdagi amalga oshmagan natija: 'would have decreased'."
+                    },
+                    {
+                        "id": "en-b2-u2-l1-q3",
+                        "question": "What is the true factual implication of: 'If she had passed the exam, she would have joined the diplomatic corps'?",
+                        "options": [
+                            "She passed the exam and joined the diplomatic corps.",
+                            "She failed the exam and did not join the diplomatic corps.",
+                            "She is currently taking the exam to join the corps.",
+                            "She will definitely join the corps tomorrow."
+                        ],
+                        "correctAnswerIndex": 1,
+                        "explanation": "Uchinchi tur shart gapi voqelikning aksini ifodalaydi: u imtihondan o'ta olmadi va diplomat bo'lmadi."
+                    },
+                    {
+                        "id": "en-b2-u2-l1-q4",
+                        "question": "Had the engineers _______ the faulty turbine, the outage would not have occurred.",
+                        "options": [
+                            "repair",
+                            "repaired",
+                            "repairing",
+                            "to repair"
+                        ],
+                        "correctAnswerIndex": 1,
+                        "explanation": "'Had + Subject + repaired (V3)'."
+                    },
+                    {
+                        "id": "en-b2-u2-l1-q5",
+                        "question": "Choose the correctly punctuated and structured inverted conditional:",
+                        "options": [
+                            "Had I known your predicament, I would have offered assistance.",
+                            "Had I knew your predicament, I would have offered assistance.",
+                            "Had I know your predicament I would offer assistance.",
+                            "If had I known your predicament, I would have offered assistance."
+                        ],
+                        "correctAnswerIndex": 0,
+                        "explanation": "Variant A benuqson tuzilgan: 'Had I known your predicament, I would have offered assistance'."
+                    }
+                ]
+            }
+        }
+    ]
+},
     {
-        "id": "en-b2-u2-l2",
-        "courseId": "english-b2",
-        "unitId": "en-b2-u2",
-        "unitTitle": "Unit 2: Conditionals & Unreal Past",
-        "language": "en",
-        "level": "B2",
-        "lessonNumber": 2,
-        "title": "Mixed Conditionals (Past Cause -> Present Result)",
-        "description": "Aralash shart ergash gaplar: o'tmishdagi harakatning hozirgi holatga ta'siri.",
-        "estimatedDurationMinutes": 16,
-        "icon": "🔀",
-        "steps": [
-            {
-                "id": "en-b2-u2-l2-s1",
-                "title": "Mixed Conditionals Qoidasi",
-                "type": "learn",
-                "estimatedMinutes": 5,
-                "learnData": {
-                    "title": "Mixed Conditionals: Past & Present Interplay",
-                    "explanation": "1. O'tmishdagi harakat -> Hozirgi natija: If + Had V3, Would + Verb (If I had won the lottery yesterday, I would be rich today). 2. Hozirgi doimiy holat -> O'tgan zamondagi natija: If + Past Simple, Would have V3 (If I were braver, I would have spoken up yesterday).",
-                    "keyPoints": [
-                        "If he had taken the medicine, he wouldn't feel sick now.",
-                        "If I spoke fluent German, I would have accepted the job offer in Munich."
-                    ],
-                    "grammarRules": [
-                        {
-                            "pattern": "Mixed Conditionals (Past Cause -> Present Result)",
-                            "meaning": "Aralash shart ergash gaplar: o'tmishdagi harakatning hozirgi holatga ta'siri.",
-                            "usageNotes": "1. O'tmishdagi harakat -> Hozirgi natija: If + Had V3, Would + Verb (If I had won the lottery yesterday, I would be rich today). 2. Hozirgi doimiy holat -> O'tgan zamondagi natija: If + Past Simple, Would have V3 (If I were braver, I would have spoken up yesterday).",
-                            "examples": [
-                                {
-                                    "sentence": "I study English every day with dedication.",
-                                    "translation": "Har kuni ingliz tilini astoydil o'rganaman."
-                                }
-                            ]
-                        }
-                    ],
-                    "vocabulary": [
-                        {
-                            "term": "Nuance",
-                            "reading": "/ˈnjuː.ɑːns/",
-                            "meaning": "Nozik farq, qirra",
-                            "exampleSentence": "She understood every subtle nuance of the language.",
-                            "exampleTranslation": "U tilning har bir nozik qirrasini tushundi."
-                        },
-                        {
-                            "term": "Coherence",
-                            "reading": "/kəʊˈhɪə.rəns/",
-                            "meaning": "Mantiqiy bogʻliqlik, izchillik",
-                            "exampleSentence": "Ensure structural coherence throughout your essay.",
-                            "exampleTranslation": "Inshoyingiz davomida tuzilmaviy izchillikni taʼminlang."
-                        },
-                        {
-                            "term": "Compelling",
-                            "reading": "/kəmˈpel.ɪŋ/",
-                            "meaning": "Juda ishonarli, maftunkor",
-                            "exampleSentence": "He presented a compelling argument in the debate.",
-                            "exampleTranslation": "U bahsda juda ishonarli dalil keltirdi."
-                        }
-                    ]
-                }
-            },
-            {
-                "id": "en-b2-u2-l2-s2",
-                "title": "Mashq",
-                "type": "practice",
-                "estimatedMinutes": 5,
-                "practiceData": {
-                    "instructions": "To'g'ri aralash shart shaklini tanlang.",
-                    "exercises": [
-                        {
-                            "id": "en-b2-u2-l2-e1",
-                            "type": "multiple-choice",
-                            "prompt": "\"If I had slept well last night, I _______ (not / be) so tired right now.\"",
-                            "options": [
-                                "am not",
-                                "won't be",
-                                "wouldn't be",
-                                "wouldn't have been"
-                            ],
-                            "correctAnswer": 2,
-                            "explanation": "Right now (hozirgi natija) bo'lgani uchun: wouldn't be."
-                        },
-                        {
-                            "id": "en-b2-u2-l2-ex-2",
-                            "type": "multiple-choice",
-                            "prompt": "Choose the correct word to complete the sentence: \"Ensure structural coherence throughout your essay.\"",
-                            "options": [
-                                "reluctance",
-                                "delay",
-                                "Coherence",
-                                "doubt"
-                            ],
-                            "correctAnswer": 2,
-                            "explanation": "\"Coherence\" (Mantiqiy bogʻliqlik, izchillik) fits the context appropriately."
-                        }
-                    ]
-                }
-            },
-            {
-                "id": "en-b2-u2-l2-s3",
-                "title": "Test",
-                "type": "test",
-                "estimatedMinutes": 6,
-                "testData": {
-                    "instructions": "Savollarga javob bering.",
-                    "passingScorePercentage": 75,
-                    "questions": [
-                        {
-                            "id": "en-b2-u2-l2-q1",
-                            "question": "If she had saved money in her youth, she _______ struggling financially today.",
-                            "options": [
-                                "wouldn't have been",
-                                "isn't",
-                                "wouldn't be",
-                                "won't be"
-                            ],
-                            "correctAnswerIndex": 2,
-                            "explanation": "Today bilan: wouldn't be."
-                        },
-                        {
-                            "id": "en-b2-u2-l2-q2",
-                            "question": "If I _______ afraid of flying, I would have traveled to New York with you last month.",
-                            "options": [
-                                "hadn't been",
-                                "won't be",
-                                "am not",
-                                "weren't"
-                            ],
-                            "correctAnswerIndex": 3,
-                            "explanation": "Hozirgi doimiy qo'rquv: If I weren't afraid..."
-                        },
-                        {
-                            "id": "en-b2-u2-l2-q3",
-                            "question": "Had he checked the engine before departure, we _______ stranded on the road right now.",
-                            "options": [
-                                "wouldn't be",
-                                "hadn't been",
-                                "wouldn't have been",
-                                "won't be"
-                            ],
-                            "correctAnswerIndex": 0,
-                            "explanation": "Right now: wouldn't be."
-                        },
-                        {
-                            "id": "en-b2-u2-l2-q4",
-                            "question": "Which sentence demonstrates a Mixed Conditional correctly?",
-                            "options": [
-                                "If I ate breakfast, I wouldn't have been hungry now.",
-                                "If I eat breakfast, I would be full.",
-                                "If I had eaten breakfast, I wouldn't be hungry now.",
-                                "If I had eaten, I won't be hungry."
-                            ],
-                            "correctAnswerIndex": 2,
-                            "explanation": "If I had eaten ..., I wouldn't be hungry now."
-                        }
-                    ]
-                }
+    "id": "en-b2-u2-l2",
+    "courseId": "english-b2",
+    "unitId": "en-b2-u2",
+    "unitTitle": "Unit 2: Conditionals & Unreal Past",
+    "language": "en",
+    "level": "B2",
+    "lessonNumber": 2,
+    "title": "Mixed Conditionals (Past Cause -> Present Result)",
+    "description": "Aralash shart gaplar: o'tmishdagi harakatning hozirgi holatga ta'siri (Past -> Present) va doimiy holatning o'tmishdagi natijasi (Present -> Past).",
+    "estimatedDurationMinutes": 18,
+    "icon": "🔀",
+    "steps": [
+        {
+            "id": "en-b2-u2-l2-s1",
+            "title": "Aralash Shart Gaplar (Mixed Conditionals)",
+            "type": "learn",
+            "estimatedMinutes": 6,
+            "learnData": {
+                "title": "Mixed Conditionals: Connecting Past Actions and Present Realities",
+                "explanation": "Aksariyat real hayotiy vaziyatlar faqat o'tmish yoki faqat hozirgi zamon bilan chegaralanmaydi. O'tmishda qilingan bitta xato hozirgi hayotimizga bevosita ta'sir ko'rsatishi yoki umumiy xarakterimiz o'tmishdagi biror qarorimizga sabab bo'lishi mumkin. Bunday holatlarni ifodalash uchun Mixed Conditionals (Aralash shart gaplar) ishlatiladi.\n\n1. 1-Tur Aralash Shart (O'tmishdagi Sabab -> Hozirgi Natija):\nEng ko'p ishlatiladigan turi! Shart o'tmishda (Past Perfect), natija esa HOZIRDA (would + fe'lning asosi):\n- Formula: `If + Past Perfect (had + V3), Subject + would / could + Verb (Present)`\n  • *'If I had taken that international job offer last year, I WOULD BE living in London now.'* (Agar o'tgan yili taklifni qabul qilganimda edi, hozir Londonda yashayotgan bo'lardim — o'tgan yili qabul qilmadim, hozir Londonda emasman).\n  • *'If he had not dropped out of medical school, he WOULD BE a surgeon today.'*\n\n2. 2-Tur Aralash Shart (Hozirgi Doimiy Holat -> O'tmishdagi Natija):\nInsonning doimiy xarakteri yoki hozirgi holati o'tmishdagi voqeaga sabab bo'lgan:\n- Formula: `If + Past Simple, Subject + would have + V3 (Past Result)`\n  • *'If she weren't so terrified of flying, she WOULD HAVE TRAVELED with us to Tokyo last month.'* (Agar u samolyotda uchishdan qo'rqmaganida edi [u hozir ham qo'rqadi], u o'tgan oy biz bilan Tokioga borgan bo'lar edi).\n  • *'If I were fluent in German, I WOULD HAVE APPLIED for that Berlin fellowship.'*\n\n3. Sintaktik Qiyos (Uzbek Contrastive Analysis):\n- O'zbek tilida zamonlar uyg'unligi erkinroq bo'lib, 'Agar o'shanda dars qilganimda, hozir qiynalmasdim' deb bemalol aytiladi.\n- Ingliz tilida esa bu qat'iy matematik formula talab qiladi: o'tgan zamon sharti 'had V3' bo'lsa, hozirgi natija faqat 'would + bare infinitive' bo'ladi ('would have' EMAS!).\n\n4. O'zbek o'rganuvchilari uchun xavfli tuzoqlar (Common Pitfalls):\n- ❌ *'If I had studied hard, I would have been rich today.'* -> ✅ *'If I had studied hard, I WOULD BE rich today.'* ('today' yoki 'now' so'zlari bor bo'lganda natija 'would be' bo'ladi!).\n- ❌ *'If I was brave, I would go yesterday.'* -> ✅ *'If I WERE brave, I would HAVE GONE yesterday.'*\n\n5. IELTS Speaking & Writing Foundation Corner:\n- IELTS Speaking Part 1 & 2: Hayotiy tajribalarni baholashda: *'If I hadn't developed an interest in English during childhood, I wouldn't be conversing with you so comfortably right now.'*\n- IELTS Writing Task 2: *'Had early industrial planners prioritized environmental sustainability, modern metropolises would not be suffocating under severe smog today.'*",
+                "vocabulary": [
+                    {
+                        "term": "suffocate",
+                        "reading": "/ˈsʌf.ə.keɪt/",
+                        "meaning": "bo'g'ilmoq, havoning yetishmasligidan qiynalmoq",
+                        "exampleSentence": "If emissions had been checked decades ago, urban residents wouldn't be suffocating today.",
+                        "exampleTranslation": "O'n yillar avval chiqindilar jilovlanganda edi, shahar aholisi bugun bo'g'ilib yashamayotgan bo'lardi."
+                    },
+                    {
+                        "term": "predicament",
+                        "reading": "/prɪˈdɪk.ə.mənt/",
+                        "meaning": "og'ir, chigal yoki mushkul vaziyat",
+                        "exampleSentence": "Had we negotiated more prudently, we wouldn't be in this precarious predicament now.",
+                        "exampleTranslation": "Ehtiyotkorroq muzokara olib borganimizda edi, hozir bunday mushkul ahvolda qolmagan bo'lardik."
+                    },
+                    {
+                        "term": "precarious",
+                        "reading": "/prɪˈkeə.ri.əs/",
+                        "meaning": "qaltis, xatarli, beqaror",
+                        "exampleSentence": "If the bank had not diversified its assets, its solvency would be highly precarious today.",
+                        "exampleTranslation": "Agar bank o'z aktivlarini diversifikatsiya qilmaganida edi, bugun uning to'lov qobiliyati juda qaltis bo'lardi."
+                    },
+                    {
+                        "term": "fluency",
+                        "reading": "/ˈfluː.ən.si/",
+                        "meaning": "ravonlik, tilda to'siqsiz gapirish",
+                        "exampleSentence": "If I hadn't practiced shadowing daily, my speaking fluency wouldn't be at this level.",
+                        "exampleTranslation": "Agar har kuni eshitib qaytarish mashqini qilmaganimda edi, og'zaki nutqimning ravonligi bugun bu darajada bo'lmasdi."
+                    },
+                    {
+                        "term": "solvency",
+                        "reading": "/ˈsɒl.vən.si/",
+                        "meaning": "moliyaviy to'lov qobiliyati",
+                        "exampleSentence": "Had the enterprise secured emergency loans, its financial solvency wouldn't be in doubt.",
+                        "exampleTranslation": "Agar korxona shoshilinch kreditlar olganida edi, hozir uning to'lov qobiliyati shubha ostida qolmasdi."
+                    },
+                    {
+                        "term": "prudently",
+                        "reading": "/ˈpruː.dənt.li/",
+                        "meaning": "ehtiyotkorlik bilan, aql bilan, uzoqni ko'zlab",
+                        "exampleSentence": "If we had invested prudently in youth training, our firm would lead the sector now.",
+                        "exampleTranslation": "Agar biz yoshlar ta'limiga aql bilan sarmoya kiritganimizda edi, kompaniyamiz hozir sohada yetakchi bo'lardi."
+                    },
+                    {
+                        "term": "conversant",
+                        "reading": "/kənˈvɜː.sənt/",
+                        "meaning": "bilimdon, yaxshi xabardor, yetuk",
+                        "exampleSentence": "If she had read the regulatory updates, she would be conversant with the new tax codes.",
+                        "exampleTranslation": "Agar u me'yoriy o'zgarishlarni o'qiganida edi, yangi soliq qoidalaridan yaxshi xabardor bo'lardi."
+                    },
+                    {
+                        "term": "subsequent",
+                        "reading": "/ˈsʌb.sɪ.kwənt/",
+                        "meaning": "keyingi, oqibatda yuz beradigan",
+                        "exampleSentence": "Had he verified the calculations, subsequent audit complications would not exist.",
+                        "exampleTranslation": "Agar u hisob-kitoblarni tekshirganida edi, keyingi audit muammolari hozir mavjud bo'lmasdi."
+                    }
+                ],
+                "grammarRules": [
+                    {
+                        "pattern": "If + Past Perfect (had + V3), Subject + would + Verb (bare infinitive)",
+                        "meaning": "Mixed Conditional 1 (O'tmishdagi sabab -> Hozirgi natija)",
+                        "usageNotes": "Hozirgi paytdagi natijani ifodalash uchun 'would'dan keyin fe'lning 1-shakli keladi.",
+                        "examples": [
+                            {
+                                "sentence": "If I had moved abroad, I would be speaking Spanish fluently now.",
+                                "translation": "Agar chet elga ko'chib ketganimda edi, hozir ispancha ravon gapirayotgan bo'lardim."
+                            }
+                        ]
+                    },
+                    {
+                        "pattern": "If + Past Simple (were / did), Subject + would have + V3",
+                        "meaning": "Mixed Conditional 2 (Doimiy xususiyat -> O'tmishdagi natija)",
+                        "usageNotes": "Insonning doimiy fe'l-atvori o'tmishdagi imkoniyatga qanday to'sqinlik qilganini bildiradi.",
+                        "examples": [
+                            {
+                                "sentence": "If he were more punctual, he wouldn't have missed the morning flight.",
+                                "translation": "Agar u tartibliroq inson bo'lganida edi, ertalabki reysni o'tkazib yubormagan bo'lardi."
+                            }
+                        ]
+                    }
+                ]
             }
-        ]
-    },
+        },
+        {
+            "id": "en-b2-u2-l2-s2",
+            "title": "Amaliy Mashqlar",
+            "type": "practice",
+            "estimatedMinutes": 5,
+            "practiceData": {
+                "instructions": "Aralash shart gaplar (Mixed Conditionals) qoidalariga mos variantlarni tanlang.",
+                "exercises": [
+                    {
+                        "id": "en-b2-u2-l2-e1",
+                        "type": "multiple-choice",
+                        "prompt": "If I had accepted the scholarship offer in London last year, I _______ in Bloomsbury right now.",
+                        "options": [
+                            "would have lived",
+                            "would be living",
+                            "will live",
+                            "had lived"
+                        ],
+                        "correctAnswer": 1,
+                        "explanation": "'right now' (hozirgi natija) bo'lgani sababli: 'would be living'."
+                    },
+                    {
+                        "id": "en-b2-u2-l2-e2",
+                        "type": "multiple-choice",
+                        "prompt": "If she _______ so afraid of public speaking, she would have accepted the keynote invitation yesterday.",
+                        "options": [
+                            "weren't",
+                            "hadn't been",
+                            "wouldn't be",
+                            "isn't"
+                        ],
+                        "correctAnswer": 0,
+                        "explanation": "Hozirgi doimiy qo'rquv o'tmishdagi natijaga sabab bo'lmoqda: 'If she weren't so afraid...'."
+                    },
+                    {
+                        "id": "en-b2-u2-l2-e3",
+                        "type": "multiple-choice",
+                        "prompt": "Had we invested in cloud infrastructure two years ago, our company _______ competitive today.",
+                        "options": [
+                            "would have been",
+                            "would be",
+                            "will be",
+                            "had been"
+                        ],
+                        "correctAnswer": 1,
+                        "explanation": "O'tmishdagi sarmoyaning bugungi natijasi ('today'): 'would be competitive'."
+                    },
+                    {
+                        "id": "en-b2-u2-l2-e4",
+                        "type": "multiple-choice",
+                        "prompt": "If he hadn't broken his leg on the slopes, he _______ in the tournament this weekend.",
+                        "options": [
+                            "would compete",
+                            "would have competed",
+                            "competed",
+                            "competes"
+                        ],
+                        "correctAnswer": 0,
+                        "explanation": "O'tmishdagi jarohatning hozirgi/kelasi musobaqaga ta'siri: 'would compete'."
+                    },
+                    {
+                        "id": "en-b2-u2-l2-e5",
+                        "type": "multiple-choice",
+                        "prompt": "Identify the grammatically correct mixed conditional:",
+                        "options": [
+                            "If I had studied law, I would have been a barrister today.",
+                            "If I had studied law, I would be a barrister today.",
+                            "If I studied law, I will be a barrister today.",
+                            "If I would have studied law, I am a barrister today."
+                        ],
+                        "correctAnswer": 1,
+                        "explanation": "Variant B to'g'ri: 'If I had studied law, I would be a barrister today'."
+                    }
+                ]
+            }
+        },
+        {
+            "id": "en-b2-u2-l2-s3",
+            "title": "Yakuniy Test",
+            "type": "test",
+            "estimatedMinutes": 5,
+            "testData": {
+                "instructions": "5 ta test savoliga to'g'ri javob bering. O'tish bali: 80%.",
+                "passingScorePercentage": 80,
+                "questions": [
+                    {
+                        "id": "en-b2-u2-l2-q1",
+                        "question": "What is the core syntactic difference between a Third Conditional and a Mixed Conditional (Past -> Present)?",
+                        "options": [
+                            "Third conditional uses 'will', while mixed conditional uses 'shall'.",
+                            "Third conditional has past results (would have V3), while this mixed conditional has present results (would + bare verb).",
+                            "Mixed conditional does not use the word 'if'.",
+                            "Third conditional can only refer to hypothetical futures."
+                        ],
+                        "correctAnswerIndex": 1,
+                        "explanation": "Uchinchi turda natija o'tmishda qoladi ('would have V3'), aralash shartda esa natija ayni damga tegishli bo'ladi ('would + bare infinitive')."
+                    },
+                    {
+                        "id": "en-b2-u2-l2-q2",
+                        "question": "If you had remembered to save the document, we _______ struggling to reconstruct the data now.",
+                        "options": [
+                            "wouldn't be",
+                            "wouldn't have been",
+                            "won't be",
+                            "hadn't been"
+                        ],
+                        "correctAnswerIndex": 0,
+                        "explanation": "Ayni damdagi holat ('now'): 'wouldn't be struggling'."
+                    },
+                    {
+                        "id": "en-b2-u2-l2-q3",
+                        "question": "If Mark _______ more ambitious, he would have applied for the executive position last month.",
+                        "options": [
+                            "were",
+                            "had been",
+                            "would be",
+                            "is"
+                        ],
+                        "correctAnswerIndex": 0,
+                        "explanation": "Markning doimiy xarakteri (Present state): 'If Mark were more ambitious...'."
+                    },
+                    {
+                        "id": "en-b2-u2-l2-q4",
+                        "question": "Had the municipal government modernized storm drains, our district _______ flooded right now.",
+                        "options": [
+                            "would not be",
+                            "would not have been",
+                            "is not",
+                            "will not be"
+                        ],
+                        "correctAnswerIndex": 0,
+                        "explanation": "Inverted mixed conditional: 'Had they modernized... would not be flooded right now'."
+                    },
+                    {
+                        "id": "en-b2-u2-l2-q5",
+                        "question": "Choose the correct sentence expressing a present general trait affecting a past outcome:",
+                        "options": [
+                            "If I knew Spanish, I would translate that contract yesterday.",
+                            "If I spoke Spanish, I would have translated that contract yesterday.",
+                            "If I had spoken Spanish, I would translate that contract yesterday.",
+                            "If I speak Spanish, I would have translated that contract yesterday."
+                        ],
+                        "correctAnswerIndex": 1,
+                        "explanation": "To'g'ri shakl: 'If I spoke Spanish [hozirgi bilimim], I would have translated that contract yesterday [kechagi ish]'."
+                    }
+                ]
+            }
+        }
+    ]
+},
     {
-        "id": "en-b2-u2-l3",
-        "courseId": "english-b2",
-        "unitId": "en-b2-u2",
-        "unitTitle": "Unit 2: Conditionals & Unreal Past",
-        "language": "en",
-        "level": "B2",
-        "lessonNumber": 3,
-        "title": "Past Modals of Deduction (must have, might have, can't have been)",
-        "description": "O'tgan zamondagi voqealar bo'yicha mantiqiy xulosalar chiqarish.",
-        "estimatedDurationMinutes": 15,
-        "icon": "🔍",
-        "steps": [
-            {
-                "id": "en-b2-u2-l3-s1",
-                "title": "O'tgan Zamon Modal Xulosalari",
-                "type": "learn",
-                "estimatedMinutes": 5,
-                "learnData": {
-                    "title": "Must have, Might have, Can't have + V3",
-                    "explanation": "Must have done — 95% ishonch (\"aniq qilgan bo'lsa kerak\"). Might have done — 50% ehtimol (\"qilgan bo'lishi mumkin\"). Can't / Couldn't have done — 0% ehtimol (\"qilgan bo'lishi aslo mumkin emas\").",
-                    "keyPoints": [
-                        "The ground is soaked; it must have rained heavily last night.",
-                        "He wasn't at the meeting; he might have forgotten the schedule.",
-                        "She was in Paris yesterday; she can't have stolen the jewels in Tokyo!"
-                    ],
-                    "grammarRules": [
-                        {
-                            "pattern": "Past Modals of Deduction (must have, might have, can't have been)",
-                            "meaning": "O'tgan zamondagi voqealar bo'yicha mantiqiy xulosalar chiqarish.",
-                            "usageNotes": "Must have done — 95% ishonch (\"aniq qilgan bo'lsa kerak\"). Might have done — 50% ehtimol (\"qilgan bo'lishi mumkin\"). Can't / Couldn't have done — 0% ehtimol (\"qilgan bo'lishi aslo mumkin emas\").",
-                            "examples": [
-                                {
-                                    "sentence": "I study English every day with dedication.",
-                                    "translation": "Har kuni ingliz tilini astoydil o'rganaman."
-                                }
-                            ]
-                        }
-                    ],
-                    "vocabulary": [
-                        {
-                            "term": "Coherence",
-                            "reading": "/kəʊˈhɪə.rəns/",
-                            "meaning": "Mantiqiy bogʻliqlik, izchillik",
-                            "exampleSentence": "Ensure structural coherence throughout your essay.",
-                            "exampleTranslation": "Inshoyingiz davomida tuzilmaviy izchillikni taʼminlang."
-                        },
-                        {
-                            "term": "Compelling",
-                            "reading": "/kəmˈpel.ɪŋ/",
-                            "meaning": "Juda ishonarli, maftunkor",
-                            "exampleSentence": "He presented a compelling argument in the debate.",
-                            "exampleTranslation": "U bahsda juda ishonarli dalil keltirdi."
-                        },
-                        {
-                            "term": "Substantiate",
-                            "reading": "/səbˈstæn.ʃi.eɪt/",
-                            "meaning": "Asoslab bermoq, isbotlamoq",
-                            "exampleSentence": "You must substantiate your claims with empirical evidence.",
-                            "exampleTranslation": "Siz oʻz daʼvolaringizni empirik dalillar bilan asoslab berishingiz kerak."
-                        }
-                    ]
-                }
-            },
-            {
-                "id": "en-b2-u2-l3-s2",
-                "title": "Mashq",
-                "type": "practice",
-                "estimatedMinutes": 5,
-                "practiceData": {
-                    "instructions": "To'g'ri modal xulosani tanlang.",
-                    "exercises": [
-                        {
-                            "id": "en-b2-u2-l3-e1",
-                            "type": "multiple-choice",
-                            "prompt": "\"He got 100% on the IELTS test. He _______ (study) exceptionally hard.\"",
-                            "options": [
-                                "can't have studied",
-                                "must have studied",
-                                "should study",
-                                "might study"
-                            ],
-                            "correctAnswer": 1,
-                            "explanation": "Must have studied."
-                        },
-                        {
-                            "id": "en-b2-u2-l3-ex-2",
-                            "type": "multiple-choice",
-                            "prompt": "Choose the correct word to complete the sentence: \"He presented a compelling argument in the debate.\"",
-                            "options": [
-                                "doubt",
-                                "Compelling",
-                                "delay",
-                                "reluctance"
-                            ],
-                            "correctAnswer": 1,
-                            "explanation": "\"Compelling\" (Juda ishonarli, maftunkor) fits the context appropriately."
-                        }
-                    ]
-                }
-            },
-            {
-                "id": "en-b2-u2-l3-s3",
-                "title": "Test",
-                "type": "test",
-                "estimatedMinutes": 5,
-                "testData": {
-                    "instructions": "Savollarga javob bering.",
-                    "passingScorePercentage": 75,
-                    "questions": [
-                        {
-                            "id": "en-b2-u2-l3-q1",
-                            "question": "The front door was locked from inside. The burglar _______ entered through the window.",
-                            "options": [
-                                "can't have",
-                                "must have",
-                                "would",
-                                "should have"
-                            ],
-                            "correctAnswerIndex": 1,
-                            "explanation": "Must have entered."
-                        },
-                        {
-                            "id": "en-b2-u2-l3-q2",
-                            "question": "He _______ seen me at the conference because I didn't attend.",
-                            "options": [
-                                "can't have",
-                                "might have",
-                                "should have",
-                                "must have"
-                            ],
-                            "correctAnswerIndex": 0,
-                            "explanation": "Imkonsiz: can't have seen."
-                        },
-                        {
-                            "id": "en-b2-u2-l3-q3",
-                            "question": "Where is my parcel? — The courier _______ delivered it to your neighbor.",
-                            "options": [
-                                "must to",
-                                "can have",
-                                "ought",
-                                "might have"
-                            ],
-                            "correctAnswerIndex": 3,
-                            "explanation": "Ehtimol: might have delivered."
-                        },
-                        {
-                            "id": "en-b2-u2-l3-q4",
-                            "question": "You _______ told him the secret! Now everybody knows.",
-                            "options": [
-                                "shouldn't have",
-                                "must have",
-                                "might have",
-                                "couldn't have"
-                            ],
-                            "correctAnswerIndex": 0,
-                            "explanation": "Qilmasligingiz kerak edi (afsus/tanqid): shouldn't have told."
-                        }
-                    ]
-                }
+    "id": "en-b2-u2-l3",
+    "courseId": "english-b2",
+    "unitId": "en-b2-u2",
+    "unitTitle": "Unit 2: Conditionals & Unreal Past",
+    "language": "en",
+    "level": "B2",
+    "lessonNumber": 3,
+    "title": "Past Modals of Deduction (must have, might have, can't have been)",
+    "description": "O'tgan zamondagi mantiqiy xulosa va ehtimollik modal fe'llari: dalillarga tayangan ishonch, imkonsizlik va afsuslarni ifodalash.",
+    "estimatedDurationMinutes": 18,
+    "icon": "🔎",
+    "steps": [
+        {
+            "id": "en-b2-u2-l3-s1",
+            "title": "Past Modals of Deduction",
+            "type": "learn",
+            "estimatedMinutes": 6,
+            "learnData": {
+                "title": "Modals of Past Deduction and Speculation (Must have, Can't have, Might have, Should have)",
+                "explanation": "O'tmishda sodir bo'lgan voqealar haqidagi taxminlar, mantiqiy xulosalar va dalillarga asoslangan ishonchni ifodalash uchun Past Modals of Deduction (`Modal + have + Past Participle (V3)`) ishlatiladi.\n\n1. O'tmishdagi Ishonch Darajalari (Degrees of Past Certainty):\n- **MUST HAVE + V3 (95-99% ijobiy ishonch):** O'tmishda aniq shunday bo'lgan deb xulosa qilish.\n  • *'The streets are soaking wet; it must have rained heavily last night.'* (Ko'chalar ko'lmak; kechasi kuchli yomg'ir yoqqan bo'lishi aniq).\n  • *'He scored 100% on the calculus test; he must have prepared thoroughly.'*\n- **CAN'T HAVE / COULDN'T HAVE + V3 (95-99% inkor ishonch / imkonsizlik):** O'tmishda bunday bo'lishi aslo mumkin emas.\n  • *'She can't have committed the burglary; security footage shows she was in Paris.'* (U o'g'irlik qilgan bo'lishi mutlaqo mumkin emas; kamera uning Parijda bo'lganini ko'rsatmoqda).\n  ⚠️ *Diqqat: O'tmishdagi imkonsizlik uchun 'must not have done' ISHLATILMAYDI! Har doim 'can't have done' yoki 'couldn't have done' deyiladi.*\n- **MIGHT HAVE / MAY HAVE / COULD HAVE + V3 (30-50% ehtimollik):** Bo'lgan ham, bo'lmagan ham bo'lishi mumkin.\n  • *'I cannot find my keycard; I might have left it in the conference auditorium.'*\n- **SHOULD HAVE + V3 (O'tmishdagi afsus / bajarilmagan majburiyat):** Qilishi kerak edi, ammo qilmadi!\n  • *'You should have informed the director before signing the lease.'* (Shartnomani imzolashdan oldin direktorni xabardor qilishingiz kerak edi — lekin qilmadingiz).\n\n2. Sintaktik Qiyos (Uzbek Contrastive Analysis):\n- O'zbek tilida bu ma'nolar 'qilgan bo'lsa kerak', 'qilgan bo'lishi aslo mumkin emas', 'qilishim kerak edi' kabi birikmalar bilan ifodalanadi.\n- Ingliz tilida hamma narsa `Modal + have + V3` formulasiga tayanadi. B2 imtihonlarida talabalar ko'pincha 'must have + Verb (1-shakl)' deb V3 ni unutib qo'yishadi.\n\n3. O'zbek o'rganuvchilari uchun xavfli tuzoqlar (Common Pitfalls):\n- ❌ *'He must not have been at the party because he was sick.'* (imkonsiz ma'nosida) -> ✅ *'He CAN'T have been at the party...'* ('must not have done' faqat majburiyatni buzish ma'nosida juda kam qo'llanadi).\n- ❌ *'She might had seen him.'* -> ✅ *'She might HAVE seen him.'* (Modal fe'ldan keyin har doim 'have' keladi, 'had' emas!).\n- ❌ *'You should to have called.'* -> ✅ *'You should HAVE called.'* (Modal fe'ldan keyin 'to' qo'yilmaydi).\n\n4. IELTS Speaking & Writing Foundation Corner:\n- IELTS Speaking Part 2/3 (Historical Events & Speculation): *'The ancient civilization collapsed abruptly; historians suggest they must have faced an unprecedented ecological crisis or prolonged drought.'*\n- Task 2 Critical Analysis: *'Had authorities acted decisively, the contagion could have been contained at an early stage.'*",
+                "vocabulary": [
+                    {
+                        "term": "unprecedented",
+                        "reading": "/ʌnˈpres.ɪ.den.tɪd/",
+                        "meaning": "misli ko'rilmagan, tarixda bo'lmagan",
+                        "exampleSentence": "The region must have experienced unprecedented rainfall to cause such flash floods.",
+                        "exampleTranslation": "Bunday toshqinlarga sabab bo'lishi uchun hududda misli ko'rilmagan darajada yomg'ir yoqqan bo'lishi kerak."
+                    },
+                    {
+                        "term": "burglary",
+                        "reading": "/ˈbɜː.ɡlər.i/",
+                        "meaning": "binoga noqonuniy bostirib kirib o'g'irlik qilish",
+                        "exampleSentence": "He couldn't have executed the burglary because his biometric badge logged him at work.",
+                        "exampleTranslation": "U o'g'irlikni sodir etgan bo'lishi mumkin emas, chunki uning biometrik kartasi ishda bo'lganini qayd etgan."
+                    },
+                    {
+                        "term": "contagion",
+                        "reading": "/kənˈteɪ.dʒən/",
+                        "meaning": "yuqumli kasallik tarqalishi, infeksiya",
+                        "exampleSentence": "With prompt quarantine measures, the viral contagion might have been contained.",
+                        "exampleTranslation": "Tezkor karantin choralari ko'rilganda edi, virusli infeksiya tarqalishi jilovlangan bo'lishi mumkin edi."
+                    },
+                    {
+                        "term": "culprit",
+                        "reading": "/ˈkʌl.prɪt/",
+                        "meaning": "aybdor shaxs, jinoyatchi yoki asosiy sababchi",
+                        "exampleSentence": "Inspectors deduced that faulty insulation must have been the culprit behind the blaze.",
+                        "exampleTranslation": "Inspektorlar nosoz izolyatsiya yong'inning asosiy sababchisi bo'lgan deb xulosa qilishdi."
+                    },
+                    {
+                        "term": "forensic",
+                        "reading": "/fəˈren.zɪk/",
+                        "meaning": "sud-tibbiy, ekspertizaga oid",
+                        "exampleSentence": "Forensic experts established that the document can't have been signed before 2018.",
+                        "exampleTranslation": "Sud-tibbiy ekspertlari hujjat 2018-yildan oldin imzolangan bo'lishi aslo mumkin emasligini aniqlashdi."
+                    },
+                    {
+                        "term": "deduce",
+                        "reading": "/dɪˈdjuːs/",
+                        "meaning": "mantiqiy xulosa chiqarmoq (dalillarga qarab)",
+                        "exampleSentence": "From the broken window glass, investigators deduced that someone must have forced entry.",
+                        "exampleTranslation": "Singan deraza oynasiga qarab tergovchilar kimdir kuch bilan kirgan bo'lsa kerak deb xulosa qilishdi."
+                    },
+                    {
+                        "term": "mishap",
+                        "reading": "/ˈmɪs.hæp/",
+                        "meaning": "kichik noxush hodisa, falokat",
+                        "exampleSentence": "The courier might have suffered a minor mishap along the icy expressway.",
+                        "exampleTranslation": "Kuryer muzlagan trassada kichik noxushlikka uchragan bo'lishi mumkin."
+                    },
+                    {
+                        "term": "negligence",
+                        "reading": "/ˈneɡ.lɪ.dʒəns/",
+                        "meaning": "e'tiborsizlik, sovuqqonlik",
+                        "exampleSentence": "The auditor noted that management should have identified this administrative negligence.",
+                        "exampleTranslation": "Auditor rahbariyat ushbu ma'muriy sovuqqonlikni o'z vaqtida aniqlashi kerak edi deb ta'kidladi."
+                    }
+                ],
+                "grammarRules": [
+                    {
+                        "pattern": "Subject + must have + Past Participle (V3)",
+                        "meaning": "O'tmishdagi kuchli mantiqiy ishonch (95%+ ijobiy)",
+                        "usageNotes": "Mavjud ashyoviy dalillarga asoslanib o'tmish haqida qat'iy xulosa chiqarilganda ishlatiladi.",
+                        "examples": [
+                            {
+                                "sentence": "The train was canceled; she must have taken a bus.",
+                                "translation": "Poyezd bekor qilingan edi; u avtobusda ketgan bo'lishi aniq."
+                            }
+                        ]
+                    },
+                    {
+                        "pattern": "Subject + can't / couldn't have + Past Participle (V3)",
+                        "meaning": "O'tmishdagi mantiqiy imkonsizlik (95%+ inkor)",
+                        "usageNotes": "'must not have done' o'rniga har doim 'can't have done' ishlatiladi.",
+                        "examples": [
+                            {
+                                "sentence": "He can't have forgotten our appointment; he wrote it in his diary.",
+                                "translation": "U uchrashuvimizni unutgan bo'lishi mumkin emas; u buni kundaligiga yozib qo'ygan edi."
+                            }
+                        ]
+                    },
+                    {
+                        "pattern": "Subject + should have + Past Participle (V3)",
+                        "meaning": "O'tmishdagi bajarilmagan burch yoki pushaymonlik",
+                        "usageNotes": "Ish qilinishi kerak edi, ammo qilinmadi.",
+                        "examples": [
+                            {
+                                "sentence": "We should have backed up the database before running the update.",
+                                "translation": "Yangilanishni ishga tushirishdan oldin ma'lumotlar bazasini zaxiralashimiz kerak edi."
+                            }
+                        ]
+                    }
+                ]
             }
-        ]
-    },
+        },
+        {
+            "id": "en-b2-u2-l3-s2",
+            "title": "Amaliy Mashqlar",
+            "type": "practice",
+            "estimatedMinutes": 5,
+            "practiceData": {
+                "instructions": "O'tgan zamon modal xulosalariga mos to'g'ri variantlarni tanlang.",
+                "exercises": [
+                    {
+                        "id": "en-b2-u2-l3-e1",
+                        "type": "multiple-choice",
+                        "prompt": "The front door was bolted from the inside; the intruder _______ entered through the skylight.",
+                        "options": [
+                            "must have",
+                            "can't have",
+                            "should have",
+                            "would have"
+                        ],
+                        "correctAnswer": 0,
+                        "explanation": "Eshik ichkaridan qulflanganligi sababli, o'g'ri tom darchasidan kirgan bo'lishi aniq: 'must have entered'."
+                    },
+                    {
+                        "id": "en-b2-u2-l3-e2",
+                        "type": "multiple-choice",
+                        "prompt": "Sarah was giving a live broadcast in Sydney at noon; she _______ seen in London at 1:00 PM.",
+                        "options": [
+                            "must have been",
+                            "can't have been",
+                            "might have",
+                            "should have been"
+                        ],
+                        "correctAnswer": 1,
+                        "explanation": "Sidneyda bo'lgan odam bir soat o'tib Londonda ko'rinishi mutlaqo imkonsiz: 'can't have been seen'."
+                    },
+                    {
+                        "id": "en-b2-u2-l3-e3",
+                        "type": "multiple-choice",
+                        "prompt": "I can't locate my sunglasses anywhere; I _______ left them on the restaurant table.",
+                        "options": [
+                            "might have",
+                            "must not have",
+                            "should",
+                            "can have"
+                        ],
+                        "correctAnswer": 0,
+                        "explanation": "Noaniq ehtimollik: qoldirib ketgan bo'lishim mumkin ('might have left')."
+                    },
+                    {
+                        "id": "en-b2-u2-l3-e4",
+                        "type": "multiple-choice",
+                        "prompt": "You _______ alerted the IT security department the moment you noticed the breach!",
+                        "options": [
+                            "should have",
+                            "must",
+                            "might",
+                            "can have"
+                        ],
+                        "correctAnswer": 0,
+                        "explanation": "O'tmishdagi bajarilmagan majburiyat/tanqid: 'should have alerted' (ogohlantirishingiz kerak edi)."
+                    },
+                    {
+                        "id": "en-b2-u2-l3-e5",
+                        "type": "multiple-choice",
+                        "prompt": "Which sentence expresses strong negative impossibility in the past?",
+                        "options": [
+                            "He must not have passed the bar exam.",
+                            "He couldn't have passed the bar exam; he didn't study at all.",
+                            "He might not have passed the exam.",
+                            "He should not pass the exam."
+                        ],
+                        "correctAnswer": 1,
+                        "explanation": "O'tmishdagi imkonsizlik 'couldn't have passed' orqali ifodalanadi."
+                    }
+                ]
+            }
+        },
+        {
+            "id": "en-b2-u2-l3-s3",
+            "title": "Yakuniy Test",
+            "type": "test",
+            "estimatedMinutes": 5,
+            "testData": {
+                "instructions": "5 ta test savoliga to'g'ri javob bering. O'tish bali: 80%.",
+                "passingScorePercentage": 80,
+                "questions": [
+                    {
+                        "id": "en-b2-u2-l3-q1",
+                        "question": "The pavement is bone dry and sunny; it _______ rained last night.",
+                        "options": [
+                            "must have",
+                            "can't have",
+                            "should have",
+                            "might have"
+                        ],
+                        "correctAnswerIndex": 1,
+                        "explanation": "Yo'l quruq bo'lgani sababli yomg'ir yoqqan bo'lishi imkonsiz: 'can't have rained'."
+                    },
+                    {
+                        "id": "en-b2-u2-l3-q2",
+                        "question": "Alexander looks utterly devastated; he _______ received distressing news.",
+                        "options": [
+                            "can't have",
+                            "must have",
+                            "should have",
+                            "couldn't have"
+                        ],
+                        "correctAnswerIndex": 1,
+                        "explanation": "Yuzidagi ruhiy tushkunlikka qarab ijobiy xulosa: noxush xabar olgan bo'lishi aniq ('must have received')."
+                    },
+                    {
+                        "id": "en-b2-u2-l3-q3",
+                        "question": "Why is 'She might had missed the connection' grammatically flawed?",
+                        "options": [
+                            "Because 'might' cannot refer to flights.",
+                            "Because modals must be followed by the base infinitive 'have', never 'had'.",
+                            "Because 'missed' must be in the present continuous.",
+                            "Because 'connection' requires the preposition 'at'."
+                        ],
+                        "correctAnswerIndex": 1,
+                        "explanation": "Barcha modal fe'llardan keyin fe'lning asosi 'have' kelishi shart ('had' qo'yish xato)."
+                    },
+                    {
+                        "id": "en-b2-u2-l3-q4",
+                        "question": "We _______ booked the tickets in advance; now everything is sold out!",
+                        "options": [
+                            "must have",
+                            "should have",
+                            "can't have",
+                            "might have"
+                        ],
+                        "correctAnswerIndex": 1,
+                        "explanation": "Pushaymonlik: chiptalarni oldindan bron qilishimiz kerak edi ('should have booked')."
+                    },
+                    {
+                        "id": "en-b2-u2-l3-q5",
+                        "question": "The historical tomb was completely empty when discovered; grave robbers _______ looted it centuries ago.",
+                        "options": [
+                            "must have",
+                            "should have",
+                            "can have",
+                            "must to have"
+                        ],
+                        "correctAnswerIndex": 0,
+                        "explanation": "Qabr bo'm-bo'sh bo'lgani sababli kuchli xulosa: talonchilar uni asrlar oldin talagan bo'lishi aniq ('must have looted')."
+                    }
+                ]
+            }
+        }
+    ]
+},
     {
-        "id": "en-b2-u2-l4",
-        "courseId": "english-b2",
-        "unitId": "en-b2-u2",
-        "unitTitle": "Unit 2: Conditionals & Unreal Past",
-        "language": "en",
-        "level": "B2",
-        "lessonNumber": 4,
-        "title": "Subjunctive & Formal Expressions (It's high time / Had better / I'd rather)",
-        "description": "Rasmiy sub'yunktiv va xohish-istak konstruktsiyalari.",
-        "estimatedDurationMinutes": 14,
-        "icon": "⚖️",
-        "steps": [
-            {
-                "id": "en-b2-u2-l4-s1",
-                "title": "Subjunctive & Unreal Structures",
-                "type": "learn",
-                "estimatedMinutes": 4,
-                "learnData": {
-                    "title": "It's High Time & Would Rather",
-                    "explanation": "1. It's high time + Subject + Past Simple: \"It's high time we took action\" (allaqachon vaqti keldi). 2. I'd rather + Subject + Past Simple: \"I'd rather you didn't smoke here\". 3. Had better + Bare Infinitive: \"You had better leave now\" (ogohlantirish).",
-                    "keyPoints": [
-                        "It is essential that he be informed immediately (Formal Subjunctive).",
-                        "I would rather stay home tonight."
-                    ],
-                    "grammarRules": [
-                        {
-                            "pattern": "Subjunctive & Formal Expressions (It's high time / Had better / I'd rather)",
-                            "meaning": "Rasmiy sub'yunktiv va xohish-istak konstruktsiyalari.",
-                            "usageNotes": "1. It's high time + Subject + Past Simple: \"It's high time we took action\" (allaqachon vaqti keldi). 2. I'd rather + Subject + Past Simple: \"I'd rather you didn't smoke here\". 3. Had better + Bare Infinitive: \"You had better leave now\" (ogohlantirish).",
-                            "examples": [
-                                {
-                                    "sentence": "I study English every day with dedication.",
-                                    "translation": "Har kuni ingliz tilini astoydil o'rganaman."
-                                }
-                            ]
-                        }
-                    ],
-                    "vocabulary": [
-                        {
-                            "term": "Compelling",
-                            "reading": "/kəmˈpel.ɪŋ/",
-                            "meaning": "Juda ishonarli, maftunkor",
-                            "exampleSentence": "He presented a compelling argument in the debate.",
-                            "exampleTranslation": "U bahsda juda ishonarli dalil keltirdi."
-                        },
-                        {
-                            "term": "Substantiate",
-                            "reading": "/səbˈstæn.ʃi.eɪt/",
-                            "meaning": "Asoslab bermoq, isbotlamoq",
-                            "exampleSentence": "You must substantiate your claims with empirical evidence.",
-                            "exampleTranslation": "Siz oʻz daʼvolaringizni empirik dalillar bilan asoslab berishingiz kerak."
-                        },
-                        {
-                            "term": "Nuance",
-                            "reading": "/ˈnjuː.ɑːns/",
-                            "meaning": "Nozik farq, qirra",
-                            "exampleSentence": "She understood every subtle nuance of the language.",
-                            "exampleTranslation": "U tilning har bir nozik qirrasini tushundi."
-                        }
-                    ]
-                }
-            },
-            {
-                "id": "en-b2-u2-l4-s2",
-                "title": "Mashq",
-                "type": "practice",
-                "estimatedMinutes": 5,
-                "practiceData": {
-                    "instructions": "To'g'ri shaklni tanlang.",
-                    "exercises": [
-                        {
-                            "id": "en-b2-u2-l4-e1",
-                            "type": "multiple-choice",
-                            "prompt": "\"It is high time governments _______ (invest) more heavily in green energy.\"",
-                            "options": [
-                                "invested",
-                                "investing",
-                                "invest",
-                                "have invested"
-                            ],
-                            "correctAnswer": 0,
-                            "explanation": "It is high time + Past Simple: invested."
-                        },
-                        {
-                            "id": "en-b2-u2-l4-ex-2",
-                            "type": "multiple-choice",
-                            "prompt": "Choose the correct word to complete the sentence: \"You must substantiate your claims with empirical evidence.\"",
-                            "options": [
-                                "Substantiate",
-                                "reluctance",
-                                "doubt",
-                                "delay"
-                            ],
-                            "correctAnswer": 0,
-                            "explanation": "\"Substantiate\" (Asoslab bermoq, isbotlamoq) fits the context appropriately."
-                        }
-                    ]
-                }
-            },
-            {
-                "id": "en-b2-u2-l4-s3",
-                "title": "Test",
-                "type": "test",
-                "estimatedMinutes": 5,
-                "testData": {
-                    "instructions": "Savollarga javob bering.",
-                    "passingScorePercentage": 75,
-                    "questions": [
-                        {
-                            "id": "en-b2-u2-l4-q1",
-                            "question": "I would rather you _______ mention this topic during the interview.",
-                            "options": [
-                                "didn't",
-                                "won't",
-                                "don't",
-                                "haven't"
-                            ],
-                            "correctAnswerIndex": 0,
-                            "explanation": "I would rather you didn't..."
-                        },
-                        {
-                            "id": "en-b2-u2-l4-q2",
-                            "question": "You had better _______ an umbrella; it looks like rain.",
-                            "options": [
-                                "to take",
-                                "took",
-                                "take",
-                                "taking"
-                            ],
-                            "correctAnswerIndex": 2,
-                            "explanation": "Had better + bare infinitive: take."
-                        },
-                        {
-                            "id": "en-b2-u2-l4-q3",
-                            "question": "The board recommended that the CEO _______ immediately.",
-                            "options": [
-                                "resign",
-                                "to resign",
-                                "resigned",
-                                "resigns"
-                            ],
-                            "correctAnswerIndex": 0,
-                            "explanation": "Formal subjunctive base form: resign."
-                        },
-                        {
-                            "id": "en-b2-u2-l4-q4",
-                            "question": "\"It's about time we started.\" Bu jumla nimani ifodalaydi?",
-                            "options": [
-                                "Kechikkanimizni tan olmaslikni",
-                                "Boshlash taqiqlanganini",
-                                "Boshlashga hali erta ekanini",
-                                "Boshlash vaqti allaqachon yetib kelganini"
-                            ],
-                            "correctAnswerIndex": 3,
-                            "explanation": "Allaqachon vaqti kelgan."
-                        }
-                    ]
-                }
+    "id": "en-b2-u2-l4",
+    "courseId": "english-b2",
+    "unitId": "en-b2-u2",
+    "unitTitle": "Unit 2: Conditionals & Unreal Past",
+    "language": "en",
+    "level": "B2",
+    "lessonNumber": 4,
+    "title": "Subjunctive & Formal Expressions (It's high time / Had better / I'd rather)",
+    "description": "Subjunctive kayfiyati va noreal o'tgan zamon iboralari: 'It's high time', 'I'd rather', 'demand that he be' kabi rasmiy va akademik konstruktsiyalar.",
+    "estimatedDurationMinutes": 18,
+    "icon": "⚖️",
+    "steps": [
+        {
+            "id": "en-b2-u2-l4-s1",
+            "title": "Subjunctive va Noreal O'tgan Zamon",
+            "type": "learn",
+            "estimatedMinutes": 6,
+            "learnData": {
+                "title": "The Present Subjunctive and Unreal Past Expressions",
+                "explanation": "Ingliz tilida Subjunctive (istak-mayl) va Unreal Past (noreal o'tgan zamon) konstruksiyalari qat'iy talab, rasmiy tavsiya, kechikkan zarurat va afzallik bildirish uchun xizmat qiladi.\n\n1. Mandative Subjunctive (Rasmiy Talab / Buyruq Fe'llari):\nRasmiy yoki diplomatik ingliz tilida `demand, insist, recommend, propose, suggest, vital, essential, imperative` kabi so'zlardan keyin keluvchi 'that' gapida shaxsdan qat'i nazar (he/she/it bo'lsa ham!) fe'l BOSH SHAKLDA (bare infinitive: be, do, go) turadi va '-s' qo'shimchasini OLMAYDI!\n- *'The board demanded that he RESIGN immediately.'* ('resigns' EMAS!).\n- *'It is imperative that every citizen BE informed.'* ('is informed' EMAS!).\n- Inkor shakli: `that he NOT leave` ('does not leave' EMAS!).\n\n2. 'It's time / It's high time / It's about time' (Vaqti keldi / Vaqti yetib o'tdi):\nBiror ish allaqachon bajarilishi kerak edi, ammo kechikmoqda degan tanqidiy ma'noni ifodalaydi. Ketidan Past Simple keladi:\n- `It is high time + Subject + Past Simple`\n  • *'It is high time the government REVISED environmental regulations.'* (Hukumat ekologik me'yorlarni qayta ko'rib chiqishining vaqti allaqachon yetib keldi!).\n  • *'It is about time you STARTED preparing for the IELTS exam.'*\n\n3. 'I'd rather' va 'I'd sooner' (Afzal ko'raman):\n- Agar o'zimiz haqimizda bo'lsa: `I'd rather + bare infinitive` -> *'I'd rather work independently.'*\n- Agar boshqa shaxsning harakati haqida bo'lsa: `I'd rather + Subject + Past Simple`\n  • *'I would rather you DID NOT mention this discrepancy to the client.'* (Bu nomuvofiqlik haqida mijozga aytmasligingizni ma'qul ko'rgan bo'lardim).\n\n4. O'zbek Tili Bilan Qiyos (Uzbek Contrastive Analysis):\n- O'zbek tilida 'vaqti keldi' deyilganda fe'l hozirgi zamonda turadi: 'Ketishimizning vaqti keldi'.\n- Ingliz tilida esa 'It's high time we LEFT' deb o'tgan zamon shakli (Unreal Past) qo'yiladi, chunki bu ish hali qilinmagan, faqat noreal gipotetik zaruratdir.\n\n5. O'zbek o'rganuvchilari uchun xavfli tuzoqlar (Common Pitfalls):\n- ❌ *'It is high time we go home.'* -> ✅ *'It is high time we WENT home.'*\n- ❌ *'The doctor recommended that she takes vitamins.'* -> ✅ *'The doctor recommended that she TAKE vitamins.'* (Subjunctive: hech qanday '-s' qo'shilmaydi!).\n- ❌ *'I'd rather you to leave.'* -> ✅ *'I'd rather you LEFT.'*",
+                "vocabulary": [
+                    {
+                        "term": "imperative",
+                        "reading": "/ɪmˈper.ə.tɪv/",
+                        "meaning": "o'ta muhim, kechiktirib bo'lmas, zaruriy",
+                        "exampleSentence": "It is imperative that all flight crews undergo rigorous crisis simulation training.",
+                        "exampleTranslation": "Barcha samolyot ekipajlari qat'iy inqirozli simulyatsiya tayyorgarligidan o'tishlari o'ta zarurdir."
+                    },
+                    {
+                        "term": "insist",
+                        "reading": "/ɪnˈsɪst/",
+                        "meaning": "qat'iy turib olmoq, talab qilmoq",
+                        "exampleSentence": "The auditor insisted that the finance director provide authentic expenditure vouchers.",
+                        "exampleTranslation": "Auditor moliya direktoridan xarajatlarning asl kvitansiyalarini taqdim etishini qat'iy talab qildi."
+                    },
+                    {
+                        "term": "propose",
+                        "reading": "/prəˈpəʊz/",
+                        "meaning": "rasmiy taklif kiritmoq",
+                        "exampleSentence": "The committee proposed that renewable subsidies be extended for another decade.",
+                        "exampleTranslation": "Qo'mita qayta tiklanuvchi energiya subsidiyalarini yana o'n yilga uzaytirishni taklif qildi."
+                    },
+                    {
+                        "term": "mandative",
+                        "reading": "/ˈmæn.də.tɪv/",
+                        "meaning": "buyruq yoki majburiyatga oid",
+                        "exampleSentence": "Mandative subjunctive structures are characteristic of formal legal contracts.",
+                        "exampleTranslation": "Buyruq maylidagi subjunctive tuzilmalari rasmiy yuridik shartnomalarga xosdir."
+                    },
+                    {
+                        "term": "discrepancy",
+                        "reading": "/dɪˈskrep.ən.si/",
+                        "meaning": "tafovut, noaniqlik, nomuvofiqlik",
+                        "exampleSentence": "I would rather you reconciled this inventory discrepancy before the annual audit.",
+                        "exampleTranslation": "Yillik auditdan oldin inventarizatsiyadagi ushbu tafovutni to'g'irlashingizni ma'qul ko'rgan bo'lardim."
+                    },
+                    {
+                        "term": "curriculum",
+                        "reading": "/kəˈrɪk.jə.ləm/",
+                        "meaning": "o'quv dasturi, reja",
+                        "exampleSentence": "It is high time academic councils modernized the vocational curriculum.",
+                        "exampleTranslation": "Akademik kengashlar kasbiy o'quv dasturini modernizatsiya qilishining vaqti allaqachon keldi."
+                    },
+                    {
+                        "term": "sovereignty",
+                        "reading": "/ˈsɒv.rɪn.ti/",
+                        "meaning": "mustaqillik, suverenitet",
+                        "exampleSentence": "International law demands that the sovereignty of all nations be respected.",
+                        "exampleTranslation": "Xalqaro huquq barcha davlatlarning suvereniteti hurmat qilinishini talab etadi."
+                    },
+                    {
+                        "term": "stipulate",
+                        "reading": "/ˈstɪp.jə.leɪt/",
+                        "meaning": "shartnomada qat'iy shart qilib qo'ymoq",
+                        "exampleSentence": "The agreement stipulates that payments be remitted within thirty calendar days.",
+                        "exampleTranslation": "Bitim to'lovlar o'ttiz kalendar kuni ichida o'tkazilishini qat'iy shart qilib belgilaydi."
+                    }
+                ],
+                "grammarRules": [
+                    {
+                        "pattern": "demand / insist / recommend + that + Subject + bare infinitive",
+                        "meaning": "Present Subjunctive (fe'lning asosiy shakli, -s qo'shilmaydi)",
+                        "usageNotes": "Uchinchi shaxs birlikda (he/she/it) ham fe'l bosh shaklida turadi. 'to be' fe'li uchun faqat 'be' ishlatiladi.",
+                        "examples": [
+                            {
+                                "sentence": "The judge ordered that the prisoner be released.",
+                                "translation": "Sudya mahbusning ozod etilishini buyurdi."
+                            },
+                            {
+                                "sentence": "I suggest that he study the data carefully.",
+                                "translation": "U ma'lumotlarni sinchkovlik bilan o'rganib chiqishini tavsiya qilaman."
+                            }
+                        ]
+                    },
+                    {
+                        "pattern": "It is (high / about) time + Subject + Past Simple",
+                        "meaning": "Biror ishning vaqti yetib kelgani / kechikayotgani",
+                        "usageNotes": "Hozirgi paytdagi kechikkan harakat uchun fe'l Past Simple shaklida qo'yiladi.",
+                        "examples": [
+                            {
+                                "sentence": "It is high time we addressed climate change seriously.",
+                                "translation": "Iqlim o'zgarishiga jiddiy yondashishimizning vaqti allaqachon yetib keldi."
+                            }
+                        ]
+                    },
+                    {
+                        "pattern": "Subject + would rather + Subject + Past Simple",
+                        "meaning": "Boshqa shaxsning biror ishni qilishini ma'qul ko'rmoq",
+                        "usageNotes": "Ikkinchi shaxs harakati bo'lsa Past Simple ishlatiladi.",
+                        "examples": [
+                            {
+                                "sentence": "I'd rather you did not disclose confidential client data.",
+                                "translation": "Maxfiy mijoz ma'lumotlarini oshkor qilmasligingizni ma'qul ko'rgan bo'lardim."
+                            }
+                        ]
+                    }
+                ]
             }
-        ]
-    },
+        },
+        {
+            "id": "en-b2-u2-l4-s2",
+            "title": "Amaliy Mashqlar",
+            "type": "practice",
+            "estimatedMinutes": 5,
+            "practiceData": {
+                "instructions": "Subjunctive va noreal o'tgan zamon qoidalariga mos variantlarni tanlang.",
+                "exercises": [
+                    {
+                        "id": "en-b2-u2-l4-e1",
+                        "type": "multiple-choice",
+                        "prompt": "The ethics committee recommended that the clinical trial _______ suspended immediately.",
+                        "options": [
+                            "is",
+                            "be",
+                            "was",
+                            "to be"
+                        ],
+                        "correctAnswer": 1,
+                        "explanation": "Subjunctive qoidasiga ko'ra, 'recommend that...' dan keyin 'be' (bare infinitive) ishlatiladi."
+                    },
+                    {
+                        "id": "en-b2-u2-l4-e2",
+                        "type": "multiple-choice",
+                        "prompt": "It is high time the international community _______ decisive action against human trafficking.",
+                        "options": [
+                            "takes",
+                            "took",
+                            "has taken",
+                            "will take"
+                        ],
+                        "correctAnswer": 1,
+                        "explanation": "'It is high time + Subject + Past Simple' formulasi bo'yicha 'took' to'g'ri."
+                    },
+                    {
+                        "id": "en-b2-u2-l4-e3",
+                        "type": "multiple-choice",
+                        "prompt": "I would rather you _______ anyone about our internal acquisition discussions.",
+                        "options": [
+                            "not tell",
+                            "didn't tell",
+                            "haven't told",
+                            "won't tell"
+                        ],
+                        "correctAnswer": 1,
+                        "explanation": "'would rather + Subject + Past Simple' inkorida 'didn't tell' to'g'ri keladi."
+                    },
+                    {
+                        "id": "en-b2-u2-l4-e4",
+                        "type": "multiple-choice",
+                        "prompt": "The chairperson insisted that every delegate _______ given an equal opportunity to speak.",
+                        "options": [
+                            "be",
+                            "is",
+                            "was",
+                            "were"
+                        ],
+                        "correctAnswer": 0,
+                        "explanation": "'insisted that every delegate be given...' (Subjunctive 'be')."
+                    },
+                    {
+                        "id": "en-b2-u2-l4-e5",
+                        "type": "multiple-choice",
+                        "prompt": "Which sentence demonstrates the CORRECT formal subjunctive form?",
+                        "options": [
+                            "It is essential that he submits his dissertation by Friday.",
+                            "It is essential that he submit his dissertation by Friday.",
+                            "It is essential that he will submit his dissertation by Friday.",
+                            "It is essential that he submitted his dissertation by Friday."
+                        ],
+                        "correctAnswer": 1,
+                        "explanation": "B variantida 'submit' uchinchi shaxsda ham '-s' qo'shimchasini olmasdan asosiy shaklda turibdi."
+                    }
+                ]
+            }
+        },
+        {
+            "id": "en-b2-u2-l4-s3",
+            "title": "Yakuniy Test",
+            "type": "test",
+            "estimatedMinutes": 5,
+            "testData": {
+                "instructions": "5 ta test savoliga to'g'ri javob bering. O'tish bali: 80%.",
+                "passingScorePercentage": 80,
+                "questions": [
+                    {
+                        "id": "en-b2-u2-l4-q1",
+                        "question": "The treaty stipulates that foreign observers _______ granted unfettered access to voting stations.",
+                        "options": [
+                            "are",
+                            "be",
+                            "were",
+                            "will be"
+                        ],
+                        "correctAnswerIndex": 1,
+                        "explanation": "Rasmiy shartnoma talabi (mandative subjunctive): 'be granted'."
+                    },
+                    {
+                        "id": "en-b2-u2-l4-q2",
+                        "question": "It is about time that you _______ taking responsibility for your academic commitments.",
+                        "options": [
+                            "start",
+                            "started",
+                            "have started",
+                            "will start"
+                        ],
+                        "correctAnswerIndex": 1,
+                        "explanation": "'It is about time + Subject + Past Simple': 'started'."
+                    },
+                    {
+                        "id": "en-b2-u2-l4-q3",
+                        "question": "I would rather we _______ this proposal until we receive the complete financial audit.",
+                        "options": [
+                            "do not sign",
+                            "didn't sign",
+                            "haven't signed",
+                            "won't sign"
+                        ],
+                        "correctAnswerIndex": 1,
+                        "explanation": "'would rather + we + didn't sign' (Unreal Past)."
+                    },
+                    {
+                        "id": "en-b2-u2-l4-q4",
+                        "question": "Why is 'It is vital that she is present' considered informal or non-standard in formal English?",
+                        "options": [
+                            "Because 'vital' cannot describe people.",
+                            "Because formal subjunctive mandates the base verb 'be' ('that she be present').",
+                            "Because 'present' is only a noun.",
+                            "Because 'is' must always be in the past tense."
+                        ],
+                        "correctAnswerIndex": 1,
+                        "explanation": "Rasmiy akademik tilda 'vital that she be present' (Subjunctive 'be') talab etiladi."
+                    },
+                    {
+                        "id": "en-b2-u2-l4-q5",
+                        "question": "The inspector demanded that the restaurant manager _______ the contaminated kitchen facilities.",
+                        "options": [
+                            "close",
+                            "closes",
+                            "closed",
+                            "will close"
+                        ],
+                        "correctAnswerIndex": 0,
+                        "explanation": "Subjunctive shaklida 'close' (hech qanday '-s'siz) qo'llanadi."
+                    }
+                ]
+            }
+        }
+    ]
+},
     {
-        "id": "en-b2-u2-l5",
-        "courseId": "english-b2",
-        "unitId": "en-b2-u2",
-        "unitTitle": "Unit 2: Conditionals & Unreal Past",
-        "language": "en",
-        "level": "B2",
-        "lessonNumber": 5,
-        "title": "B2 Academic Vocabulary: AWL Collocations & Precision",
-        "description": "Akademik so'zlar ro'yxati (AWL) va ilmiy kollokatsiyalar.",
-        "estimatedDurationMinutes": 15,
-        "icon": "📚",
-        "steps": [
-            {
-                "id": "en-b2-u2-l5-s1",
-                "title": "AWL Leksikasi",
-                "type": "learn",
-                "estimatedMinutes": 5,
-                "learnData": {
-                    "title": "Academic Word List (AWL) Sublist 1-3",
-                    "explanation": "Akademik yozma nutq va IELTS 6.5+ uchun yuqori darajadagi so'zlar.",
-                    "vocabulary": [
-                        {
-                            "term": "Substantial",
-                            "reading": "/səbˈstæn.ʃəl/",
-                            "meaning": "Salmoqli / Sezilarli",
-                            "exampleSentence": "There has been substantial progress.",
-                            "exampleTranslation": "Sezilarli yutuqqa erishildi."
-                        },
-                        {
-                            "term": "Paradigm",
-                            "reading": "/ˈpær.ə.daɪm/",
-                            "meaning": "Qolip / Paradigma",
-                            "exampleSentence": "This marked a paradigm shift in physics.",
-                            "exampleTranslation": "Bu fizikada yangi paradigmaga burilish yasadi."
-                        },
-                        {
-                            "term": "Empirical",
-                            "reading": "/ɪmˈpɪr.ɪ.kəl/",
-                            "meaning": "Tajribaviy / Dalillarga asoslangan",
-                            "exampleSentence": "Empirical evidence supports the hypothesis.",
-                            "exampleTranslation": "Tajribaviy dalillar farazni tasdiqlaydi."
-                        }
-                    ],
-                    "keyPoints": [
-                        "Conduct research (research qilmoq)",
-                        "Draw conclusions (xulosa chiqarmoq)",
-                        "Substantiate claims (da'volarni dalillamoq)"
-                    ],
-                    "grammarRules": [
-                        {
-                            "pattern": "B2 Academic Vocabulary: AWL Collocations & Precision",
-                            "meaning": "Akademik so'zlar ro'yxati (AWL) va ilmiy kollokatsiyalar.",
-                            "usageNotes": "Akademik yozma nutq va IELTS 6.5+ uchun yuqori darajadagi so'zlar.",
-                            "examples": [
-                                {
-                                    "sentence": "There has been substantial progress.",
-                                    "translation": "Sezilarli yutuqqa erishildi."
-                                },
-                                {
-                                    "sentence": "This marked a paradigm shift in physics.",
-                                    "translation": "Bu fizikada yangi paradigmaga burilish yasadi."
-                                }
-                            ]
-                        }
-                    ]
-                }
-            },
-            {
-                "id": "en-b2-u2-l5-s2",
-                "title": "Akademik Mashq",
-                "type": "practice",
-                "estimatedMinutes": 5,
-                "practiceData": {
-                    "instructions": "To'g'ri akademik kollokatsiyani tanlang.",
-                    "exercises": [
-                        {
-                            "id": "en-b2-u2-l5-e1",
-                            "type": "multiple-choice",
-                            "prompt": "\"The researchers failed to provide _______ evidence for their theory.\"",
-                            "options": [
-                                "imaginative",
-                                "casual",
-                                "fictional",
-                                "empirical"
-                            ],
-                            "correctAnswer": 3,
-                            "explanation": "Empirical evidence (dalillarga asoslangan isbot)."
-                        },
-                        {
-                            "id": "en-b2-u2-l5-ex-2",
-                            "type": "multiple-choice",
-                            "prompt": "Choose the correct word to complete the sentence: \"This marked a paradigm shift in physics.\"",
-                            "options": [
-                                "doubt",
-                                "reluctance",
-                                "delay",
-                                "Paradigm"
-                            ],
-                            "correctAnswer": 3,
-                            "explanation": "\"Paradigm\" (Qolip / Paradigma) fits the context appropriately."
-                        }
-                    ]
-                }
-            },
-            {
-                "id": "en-b2-u2-l5-s3",
-                "title": "Test",
-                "type": "test",
-                "estimatedMinutes": 5,
-                "testData": {
-                    "instructions": "Savollarga javob bering.",
-                    "passingScorePercentage": 75,
-                    "questions": [
-                        {
-                            "id": "en-b2-u2-l5-q1",
-                            "question": "Which verb collocates with \"a survey\"?",
-                            "options": [
-                                "Make",
-                                "Perform",
-                                "Fabricate",
-                                "Conduct"
-                            ],
-                            "correctAnswerIndex": 3,
-                            "explanation": "Conduct a survey."
-                        },
-                        {
-                            "id": "en-b2-u2-l5-q2",
-                            "question": "\"Substantial increase\" nimani anglatadi?",
-                            "options": [
-                                "Sezilarli darajada katta o'sish",
-                                "Kichik pasayish",
-                                "Sekin to'xtash",
-                                "Noaniq tebranish"
-                            ],
-                            "correctAnswerIndex": 0,
-                            "explanation": "Sezilarli katta o'sish."
-                        },
-                        {
-                            "id": "en-b2-u2-l5-q3",
-                            "question": "The findings _______ our initial assumptions.",
-                            "options": [
-                                "contradicting",
-                                "contradict",
-                                "contradiction",
-                                "contradictory"
-                            ],
-                            "correctAnswerIndex": 1,
-                            "explanation": "Contradict assumptions (farazlarga zid kelmoq)."
-                        },
-                        {
-                            "id": "en-b2-u2-l5-q4",
-                            "question": "Choose the most academic synonym for \"big problem\":",
-                            "options": [
-                                "Huge mess",
-                                "Bad thing",
-                                "Major challenge / Significant issue",
-                                "Giant trouble"
-                            ],
-                            "correctAnswerIndex": 2,
-                            "explanation": "Major challenge / Significant issue."
-                        }
-                    ]
-                }
+    "id": "en-b2-u2-l5",
+    "courseId": "english-b2",
+    "unitId": "en-b2-u2",
+    "unitTitle": "Unit 2: Conditionals & Unreal Past",
+    "language": "en",
+    "level": "B2",
+    "lessonNumber": 5,
+    "title": "B2 Academic Vocabulary: AWL Collocations & Precision",
+    "description": "Akademik So'zlar Ro'yxati (AWL): ilmiy kollokatsiyalar, dalillarni xolis asoslash va B2 darajadagi sintaktik aniqlik.",
+    "estimatedDurationMinutes": 18,
+    "icon": "📚",
+    "steps": [
+        {
+            "id": "en-b2-u2-l5-s1",
+            "title": "Akademik Kollokatsiyalar va Leksik Aniqlik",
+            "type": "learn",
+            "estimatedMinutes": 6,
+            "learnData": {
+                "title": "Academic Word List (AWL) Collocations and Lexical Precision",
+                "explanation": "IELTS Academic Writing Task 2 va Reading bo'limlarida yuqori ball olishning eng asosiy poydevori bu — Academic Word List (AWL) kollokatsiyalarini o'z o'rnida tabiiy qo'llay olishdir. B2 darajadagi akademik nutq umumiy noaniq so'zlardan ('big problem', 'good effect', 'make a change') qochib, aniq, ilmiy va daliliy leksikani talab qiladi.\n\n1. Yuqori Akademik Kollokatsiyalar (High-Yield AWL Collocations):\n- **substantiate an argument / hypothesis** -> dalil yoki farazni ilmiy isbotlamoq\n- **exert a profound impact on** -> biror narsaga chuqur ta'sir ko'rsatmoq\n- **pose a grave threat to** -> jiddiy xavf tug'dirmoq\n- **implement stringent measures** -> qat'iy choralarni amalga oshirmoq\n- **bridge the socioeconomic disparity** -> ijtimoiy-iqtisodiy tengsizlikni qisqartirmoq / bartaraf etmoq\n- **catalyze sustainable growth** -> barqaror o'sishni tezlashtirmoq / rag'batlantirmoq\n\n2. Xolis Akademik Bayonotlar (Hedging in Academic Writing):\nAkademik tilda hech qachon 100% mutlaq da'vo qilinmaydi (masalan: 'Technology always destroys social life' xato). Uning o'rniga ehtiyotkor 'hedging' iboralari qo'llaniladi:\n- *'Evidence strongly suggests that...'* (Dalillar shuni ko'rsatadiki...)\n- *'It is arguably the most viable solution...'* (Bu ehtimol eng ma'qul yechimdir...)\n- *'Data indicates a discernible tendency towards...'* (Ma'lumotlar ...ga nisbatan sezilarli moyillikni ko'rsatmoqda).\n\n3. Sintaktik Sintez va Unit 2 Integratsiyasi:\nUshbu darsda Third Conditionals, Mixed Conditionals, Past Modals va Subjunctive konstruksiyalari AWL leksikasi bilan birlashtiriladi:\n- *'Had policymakers implemented stringent measures earlier, socioeconomic disparities wouldn't exert such a profound drag on economic prosperity today.'*\n- *'It is imperative that metropolitan councils bridge the digital divide so that marginalized youth can cultivate technological literacy.'*",
+                "vocabulary": [
+                    {
+                        "term": "disparity",
+                        "reading": "/dɪˈspær.ə.ti/",
+                        "meaning": "tengsizlik, tafovut, nomutanosiblik",
+                        "exampleSentence": "Progressive taxation aims to bridge the growing socioeconomic disparity in urban centers.",
+                        "exampleTranslation": "Progressiv soliqqa tortish shahar markazlaridagi ortib borayotgan ijtimoiy-iqtisodiy tengsizlikni qisqartirishga qaratilgan."
+                    },
+                    {
+                        "term": "stringent",
+                        "reading": "/ˈstrɪn.dʒənt/",
+                        "meaning": "qat'iy, talabchan, murosasiz",
+                        "exampleSentence": "Authorities must enforce stringent environmental regulations to protect river basins.",
+                        "exampleTranslation": "Hukumat daryo havzalarini muhofaza qilish uchun qat'iy ekologik qoidalarni tatbiq etishi shart."
+                    },
+                    {
+                        "term": "discernible",
+                        "reading": "/dɪˈsɜː.nə.bəl/",
+                        "meaning": "sezilarli, ko'zga tashlanadigan, ilg'asa bo'ladigan",
+                        "exampleSentence": "There has been a discernible shift towards online tertiary education over the past decade.",
+                        "exampleTranslation": "O'tgan o'n yillikda oliy ta'limning onlayn shakliga o'tishida sezilarli siljish kuzatildi."
+                    },
+                    {
+                        "term": "viable",
+                        "reading": "/ˈvaɪ.ə.bəl/",
+                        "meaning": "hayotiy, amalga oshirib bo'ladigan, o'zini oqlaydigan",
+                        "exampleSentence": "Solar microgrids offer an economically viable alternative for remote mountainous hamlets.",
+                        "exampleTranslation": "Quyoshli mikro-tarmoqlar chekka tog'li qishloqlar uchun iqtisodiy jihatdan o'zini oqlaydigan muqobilni taqdim etadi."
+                    },
+                    {
+                        "term": "profound",
+                        "reading": "/prəˈfaʊnd/",
+                        "meaning": "chuqur, ulkan, favqulodda",
+                        "exampleSentence": "Early childhood cognitive stimulation exerts a profound impact on future academic success.",
+                        "exampleTranslation": "Erta bolalikdagi aqliy rag'batlantirish kelajakdagi akademik muvaffaqiyatga chuqur ta'sir ko'rsatadi."
+                    },
+                    {
+                        "term": "marginalized",
+                        "reading": "/ˈmɑː.dʒɪ.nəl.aɪzd/",
+                        "meaning": "ijtimoiy chetlatilgan, e'tibordan chetda qolgan",
+                        "exampleSentence": "Educational vouchers empower youth from marginalized backgrounds to attend premier academies.",
+                        "exampleTranslation": "Ta'lim vaucherlari e'tibordan chetda qolgan qatlam yoshlariga nufuzli akademiyalarda o'qish imkonini beradi."
+                    },
+                    {
+                        "term": "catalyze",
+                        "reading": "/ˈkæt.əl.aɪz/",
+                        "meaning": "tezlashtirmoq, faollashtirmoq, rag'batlantirmoq",
+                        "exampleSentence": "Targeted research grants catalyze commercial innovations in biotechnology.",
+                        "exampleTranslation": "Maqsadli ilmiy grantlar biotexnologiyadagi tijoriy innovatsiyalarni tezlashtiradi."
+                    },
+                    {
+                        "term": "substantiate",
+                        "reading": "/səbˈstæn.ʃi.eɪt/",
+                        "meaning": "dalillar bilan to'liq asoslamoq",
+                        "exampleSentence": "The claimant failed to substantiate his allegations with verified documentary evidence.",
+                        "exampleTranslation": "Da'vogar o'z ayblovlarini tasdiqlangan hujjatli dalillar bilan asoslab bera olmadi."
+                    }
+                ],
+                "grammarRules": [
+                    {
+                        "pattern": "Hedging Structure: Evidence suggests that + Clause",
+                        "meaning": "Akademik xolislik (mutlaq da'volardan qochish)",
+                        "usageNotes": "IELTS Writing Task 2 insholarida ilmiy dalillarni yetkazishda qo'llanadi.",
+                        "examples": [
+                            {
+                                "sentence": "Current econometric data suggests that inflation may stabilize next quarter.",
+                                "translation": "Amaldagi ekonometrik ma'lumotlar inflyatsiya keyingi chorakda barqarorlashishi mumkinligini ko'rsatmoqda."
+                            }
+                        ]
+                    }
+                ]
             }
-        ]
-    },
+        },
+        {
+            "id": "en-b2-u2-l5-s2",
+            "title": "Amaliy Mashqlar",
+            "type": "practice",
+            "estimatedMinutes": 5,
+            "practiceData": {
+                "instructions": "Akademik kollokatsiyalar va leksik aniqlik bo'yicha to'g'ri variantlarni tanlang.",
+                "exercises": [
+                    {
+                        "id": "en-b2-u2-l5-e1",
+                        "type": "multiple-choice",
+                        "prompt": "Unregulated industrial deforestation poses a grave _______ to regional biodiversity.",
+                        "options": [
+                            "danger of",
+                            "threat",
+                            "damage",
+                            "harm"
+                        ],
+                        "correctAnswer": 1,
+                        "explanation": "Akademik kollokatsiya: 'pose a grave threat to' (jiddiy tahdid solmoq)."
+                    },
+                    {
+                        "id": "en-b2-u2-l5-e2",
+                        "type": "multiple-choice",
+                        "prompt": "Public investment in early childhood centers can help _______ the widening socioeconomic disparity.",
+                        "options": [
+                            "bridge",
+                            "cross",
+                            "walk",
+                            "cut"
+                        ],
+                        "correctAnswer": 0,
+                        "explanation": "Tengsizlikni bartaraf etish / qisqartirish: 'bridge the disparity'."
+                    },
+                    {
+                        "id": "en-b2-u2-l5-e3",
+                        "type": "multiple-choice",
+                        "prompt": "The empirical findings _______ a profound influence on subsequent medical guidelines.",
+                        "options": [
+                            "exerted",
+                            "did",
+                            "put",
+                            "created"
+                        ],
+                        "correctAnswer": 0,
+                        "explanation": "Ta'sir o'tkazmoq: 'exert an influence / impact on'."
+                    },
+                    {
+                        "id": "en-b2-u2-l5-e4",
+                        "type": "multiple-choice",
+                        "prompt": "It is imperative that regulatory authorities _______ stringent quality control checks.",
+                        "options": [
+                            "implement",
+                            "implements",
+                            "implemented",
+                            "implementing"
+                        ],
+                        "correctAnswer": 0,
+                        "explanation": "Subjunctive tuzilmasi: 'imperative that authorities implement' (bare infinitive)."
+                    },
+                    {
+                        "id": "en-b2-u2-l5-e5",
+                        "type": "multiple-choice",
+                        "prompt": "Which sentence demonstrates proper academic 'hedging' (avoiding absolute claims)?",
+                        "options": [
+                            "Computers will 100% destroy human memory forever.",
+                            "Evidence suggests that excessive digital dependency may impair short-term recall.",
+                            "Digital devices totally eliminate cognitive thinking in everyone.",
+                            "All people who use phones always become illiterate."
+                        ],
+                        "correctAnswer": 1,
+                        "explanation": "Variant B 'Evidence suggests that... may impair' orqali professional akademik ehtiyotkorlik (hedging) ko'rsatgan."
+                    }
+                ]
+            }
+        },
+        {
+            "id": "en-b2-u2-l5-s3",
+            "title": "Yakuniy Test",
+            "type": "test",
+            "estimatedMinutes": 5,
+            "testData": {
+                "instructions": "Unit 2 bo'yicha yakuniy sinov testidan o'ting. O'tish bali: 80%.",
+                "passingScorePercentage": 80,
+                "questions": [
+                    {
+                        "id": "en-b2-u2-l5-q1",
+                        "question": "Choose the correct academic collocation meaning 'to provide strong evidence for a theory':",
+                        "options": [
+                            "substantiate a hypothesis",
+                            "make a hypothesis true",
+                            "do a hypothesis prove",
+                            "build a hypothesis"
+                        ],
+                        "correctAnswerIndex": 0,
+                        "explanation": "Gipotezani dalillar bilan asoslash: 'substantiate a hypothesis'."
+                    },
+                    {
+                        "id": "en-b2-u2-l5-q2",
+                        "question": "Had municipal planners _______ the rapid population influx, traffic congestion wouldn't be so acute today.",
+                        "options": [
+                            "anticipated",
+                            "anticipate",
+                            "anticipates",
+                            "anticipating"
+                        ],
+                        "correctAnswerIndex": 0,
+                        "explanation": "Inverted mixed conditional: 'Had municipal planners anticipated (V3)...'."
+                    },
+                    {
+                        "id": "en-b2-u2-l5-q3",
+                        "question": "The university ethics committee mandated that the researcher _______ raw survey data publicly.",
+                        "options": [
+                            "publish",
+                            "publishes",
+                            "published",
+                            "publishing"
+                        ],
+                        "correctAnswerIndex": 0,
+                        "explanation": "Subjunctive shakli: 'mandated that the researcher publish' (hech qanday '-s'siz)."
+                    },
+                    {
+                        "id": "en-b2-u2-l5-q4",
+                        "question": "The newly installed geothermal plant offers an economically _______ energy alternative.",
+                        "options": [
+                            "viable",
+                            "culpable",
+                            "dormant",
+                            "immutable"
+                        ],
+                        "correctAnswerIndex": 0,
+                        "explanation": "Iqtisodiy jihatdan o'zini oqlaydigan / hayotiy: 'viable alternative'."
+                    },
+                    {
+                        "id": "en-b2-u2-l5-q5",
+                        "question": "He _______ the national debate tournament if he had refined his rebuttal technique.",
+                        "options": [
+                            "would have won",
+                            "would win",
+                            "will win",
+                            "had won"
+                        ],
+                        "correctAnswerIndex": 0,
+                        "explanation": "Uchinchi tur shart gapi natijasi: 'would have won'."
+                    }
+                ]
+            }
+        }
+    ]
+},
     {
         "id": "en-b2-u3-l1",
         "courseId": "english-b2",
