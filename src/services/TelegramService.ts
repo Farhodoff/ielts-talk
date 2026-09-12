@@ -43,6 +43,11 @@ class TelegramService {
                 headers['Authorization'] = `Bearer ${session.access_token}`;
             }
         } catch {}
+
+        if (typeof window !== 'undefined' && (window as any).Telegram?.WebApp?.initData) {
+            headers['x-telegram-init-data'] = (window as any).Telegram.WebApp.initData;
+        }
+
         return headers;
     }
 
@@ -244,12 +249,17 @@ class TelegramService {
         return true;
     }
 
+    public lastSendError: string | null = null;
+
     /**
-     * Send a test notification via Telegram
+     * Send a test notification via Telegram with detailed status
      */
-    async sendNotification(rawUserId: string, text: string): Promise<boolean> {
+    async sendNotificationDetailed(rawUserId: string, text: string): Promise<{ ok: boolean; status?: number; error?: string }> {
         const userId = await this.resolveUserId(rawUserId);
-        if (!userId) return false;
+        if (!userId) {
+            this.lastSendError = 'Foydalanuvchi topilmadi';
+            return { ok: false, error: this.lastSendError };
+        }
 
         try {
             const headers = await this.getAuthHeaders();
@@ -260,11 +270,28 @@ class TelegramService {
             });
             if (response.ok) {
                 const res = await response.json();
-                return !!res.ok;
+                this.lastSendError = null;
+                return { ok: !!res.ok };
             }
-        } catch {}
+            if (response.status === 401) {
+                this.lastSendError = 'auth_required';
+                return { ok: false, status: 401, error: 'auth_required' };
+            }
+            const errData = await response.json().catch(() => ({}));
+            this.lastSendError = errData.error || errData.details || 'Yuborishda xatolik';
+            return { ok: false, status: response.status, error: this.lastSendError };
+        } catch (e: any) {
+            this.lastSendError = e?.message || 'Tarmoq xatosi';
+            return { ok: false, error: this.lastSendError };
+        }
+    }
 
-        return false;
+    /**
+     * Send a test notification via Telegram
+     */
+    async sendNotification(rawUserId: string, text: string): Promise<boolean> {
+        const res = await this.sendNotificationDetailed(rawUserId, text);
+        return res.ok;
     }
 
     /**

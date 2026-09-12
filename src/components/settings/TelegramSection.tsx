@@ -187,17 +187,23 @@ const TelegramSection: React.FC = () => {
                     ? `Sizda bugun takrorlash uchun <b>${dueCardsCount} ta fleshkarta</b> tayyor turibdi.\n5 daqiqa ajratib takrorlang va streak ballingizni oshiring! 🚀`
                     : `Barcha fleshkartalaringiz bugun uchun o'zlashtirilgan! Yangi so'zlar qo'shishingiz yoki test topshirishingiz mumkin. ✨`
                 );
-            const ok = await telegramService.sendNotification(effectiveUserId, text);
-            if (ok) {
+            const result = await telegramService.sendNotificationDetailed(effectiveUserId, text);
+            if (result.ok) {
                 toast({ 
                     title: "🧠 SRS eslatmasi yuborildi!", 
                     description: "Telegram botingizni tekshiring." 
+                });
+            } else if (result.status === 401 || result.error === 'auth_required') {
+                toast({ 
+                    variant: 'destructive', 
+                    title: "🔐 Tizimga qayta kirish zarur", 
+                    description: "Baza yangilandi. Xabarnoma yuborish uchun profilingizdan bir marta chiqib qayta kiring (Profil → Chiqish)." 
                 });
             } else {
                 toast({ 
                     variant: 'destructive', 
                     title: "Xabar yuborishda xatolik", 
-                    description: "Botni /start orqali qayta faollashtiring." 
+                    description: result.error || "Bot sozlamalarini tekshiring." 
                 });
             }
         } catch {
@@ -211,20 +217,26 @@ const TelegramSection: React.FC = () => {
         if (!effectiveUserId) return;
         setActionLoading('test_notif');
         try {
-            const ok = await telegramService.sendNotification(
+            const result = await telegramService.sendNotificationDetailed(
                 effectiveUserId,
                 "🔔 <b>IELTS Talk — Sinov Xabarnomasi!</b>\n\nTelegram integratsiyasi muvaffaqiyatli ishlamoqda. Kunlik rejalaringiz va eslatmalaringiz shu yerga yetkaziladi! 🚀"
             );
-            if (ok) {
+            if (result.ok) {
                 toast({ 
                     title: "🔔 Sinov xabarnomasi yuborildi!", 
                     description: "Telegram ilovangizga xabar bordi." 
+                });
+            } else if (result.status === 401 || result.error === 'auth_required') {
+                toast({ 
+                    variant: 'destructive', 
+                    title: "🔐 Tizimga qayta kirish zarur", 
+                    description: "Baza yangilandi. Xabarnoma yuborish uchun profilingizdan bir marta chiqib qayta kiring (Profil → Chiqish)." 
                 });
             } else {
                 toast({ 
                     variant: 'destructive', 
                     title: "Xabar yetkazilmadi", 
-                    description: "Bot sozlamalarini tekshiring." 
+                    description: result.error || "Bot sozlamalarini tekshiring." 
                 });
             }
         } catch {
