@@ -25,8 +25,17 @@ const StudyModePage: React.FC = () => {
   const navigate = useNavigate();
   const location = useLocation();
 
-  const { user, flashcards, subjects, reviewFlashcard, updateFlashcard, deleteFlashcard, loading } =
-    useStudyData();
+  const {
+    user,
+    flashcards,
+    subjects,
+    reviewFlashcard,
+    updateFlashcard,
+    deleteFlashcard,
+    loading,
+    addSession,
+    awardXP,
+  } = useStudyData();
   const isAdmin = isAdminEmail(user?.email);
   const { haptics } = useTelegramWebApp();
 
@@ -49,6 +58,48 @@ const StudyModePage: React.FC = () => {
       return next;
     });
   };
+
+  const sessionStartTimeRef = React.useRef<number>(Date.now());
+  const cardsReviewedCountRef = React.useRef<number>(0);
+  const xpEarnedRef = React.useRef<number>(0);
+  const sessionSavedRef = React.useRef<boolean>(false);
+
+  const saveFlashcardSession = useCallback(async () => {
+    if (sessionSavedRef.current || cardsReviewedCountRef.current === 0) return;
+    sessionSavedRef.current = true;
+
+    const elapsedMinutes = Math.max(1, Math.round((Date.now() - sessionStartTimeRef.current) / 60000));
+    const duration = Math.max(1, Math.max(elapsedMinutes, Math.round(cardsReviewedCountRef.current * 0.5)));
+    const xpGained = xpEarnedRef.current > 0 ? xpEarnedRef.current : cardsReviewedCountRef.current * 3;
+
+    try {
+      if (awardXP) {
+        await awardXP(xpGained);
+      }
+      if (addSession) {
+        await addSession({
+          duration,
+          type: 'focus',
+          completed: true,
+          subjectId: subjectId || 'flashcards',
+          startTime: new Date(sessionStartTimeRef.current).toISOString(),
+        });
+      }
+      toast({
+        title: `🎴 Fleshkartalar takrorlandi! (+${xpGained} XP)`,
+        description: `${cardsReviewedCountRef.current} ta kartochka o'rganildi (${duration} daqiqa faollik saqlandi).`,
+      });
+    } catch (e) {
+      console.warn('[StudyModePage] Failed to save study session:', e);
+    }
+  }, [awardXP, addSession, subjectId]);
+
+  // Auto-save on unmount if user reviewed any cards
+  useEffect(() => {
+    return () => {
+      saveFlashcardSession();
+    };
+  }, [saveFlashcardSession]);
 
   useEffect(() => {
     document.documentElement.classList.add('dark');
@@ -416,6 +467,8 @@ const StudyModePage: React.FC = () => {
         const xpGained =
           grade === Rating.EASY ? 15 : grade === Rating.GOOD ? 10 : grade === Rating.HARD ? 5 : 2;
         setTotalXpEarned((prev) => prev + xpGained);
+        cardsReviewedCountRef.current += 1;
+        xpEarnedRef.current += xpGained;
 
         // True Spaced Repetition (SuperMemo): If user struggled (AGAIN / HARD), re-queue at the end
         const shouldRequeue = grade === Rating.AGAIN || grade === Rating.HARD;
@@ -452,6 +505,7 @@ const StudyModePage: React.FC = () => {
         } else {
           haptics.notification('success');
           await completeLinkedPlanTask();
+          await saveFlashcardSession();
           setIsFinished(true);
         }
       } catch (err) {
@@ -762,14 +816,18 @@ const StudyModePage: React.FC = () => {
                       setCurrentCardIndex((i) => i + 1);
                     } else {
                       completeLinkedPlanTask();
+                      saveFlashcardSession();
                       setIsFinished(true);
                     }
                   } else {
                     if (!typedAnswer.trim() || !currentCard) return;
                     const isCorrect = isFlashcardAnswerCorrect(typedAnswer, currentCard.back);
+                    cardsReviewedCountRef.current += 1;
                     if (isCorrect) {
                       setTypeResult('correct');
-                      setTotalXpEarned((x) => x + 25);
+                      const xpGained = 25;
+                      setTotalXpEarned((x) => x + xpGained);
+                      xpEarnedRef.current += xpGained;
                       setTimeout(() => {
                         setTypedAnswer('');
                         setTypeResult(null);
@@ -777,6 +835,7 @@ const StudyModePage: React.FC = () => {
                           setCurrentCardIndex((i) => i + 1);
                         } else {
                           completeLinkedPlanTask();
+                          saveFlashcardSession();
                           setIsFinished(true);
                         }
                       }, 1100);

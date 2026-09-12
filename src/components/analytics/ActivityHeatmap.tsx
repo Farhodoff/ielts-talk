@@ -7,11 +7,20 @@ interface ActivityHeatmapProps {
     sessions: StudySession[];
 }
 
+export interface HeatmapActivityDetails {
+    speakingMinutes: number;
+    flashcardsMinutes: number;
+    grammarMinutes: number;
+    focusMinutes: number;
+    totalSessions: number;
+}
+
 interface HeatmapDay {
     date: Date;
     dateStr: string;
     minutes: number;
     level: number;
+    details: HeatmapActivityDetails;
 }
 
 interface TooltipState {
@@ -90,21 +99,54 @@ const ActivityHeatmap: React.FC<ActivityHeatmapProps> = ({ sessions }) => {
     const days = useMemo(() => {
         const interval = eachDayOfInterval({ start: startDate, end: endDate });
         
-        // Group sessions by date
-        const sessionMap = new Map<string, number>();
+        // Group sessions by date and activity type
+        const sessionMap = new Map<string, { minutes: number; details: HeatmapActivityDetails }>();
         sessions.forEach(s => {
             const dateStr = format(new Date(s.startTime), 'yyyy-MM-dd');
-            sessionMap.set(dateStr, (sessionMap.get(dateStr) || 0) + s.duration);
+            const current = sessionMap.get(dateStr) || {
+                minutes: 0,
+                details: {
+                    speakingMinutes: 0,
+                    flashcardsMinutes: 0,
+                    grammarMinutes: 0,
+                    focusMinutes: 0,
+                    totalSessions: 0,
+                },
+            };
+            const dur = s.duration || 0;
+            current.minutes += dur;
+            current.details.totalSessions += 1;
+
+            const sub = (s.subjectId || '').toLowerCase();
+            if (sub.includes('speaking') || sub.includes('coach')) {
+                current.details.speakingMinutes += dur;
+            } else if (sub.includes('flashcard') || sub.includes('deck') || sub.includes('vocab')) {
+                current.details.flashcardsMinutes += dur;
+            } else if (sub.includes('grammar') || sub.includes('murphy') || sub.includes('ielts')) {
+                current.details.grammarMinutes += dur;
+            } else {
+                current.details.focusMinutes += dur;
+            }
+            sessionMap.set(dateStr, current);
         });
 
         return interval.map(date => {
             const dateStr = format(date, 'yyyy-MM-dd');
-            const minutes = sessionMap.get(dateStr) || 0;
+            const data = sessionMap.get(dateStr);
+            const minutes = data ? data.minutes : 0;
+            const details = data ? data.details : {
+                speakingMinutes: 0,
+                flashcardsMinutes: 0,
+                grammarMinutes: 0,
+                focusMinutes: 0,
+                totalSessions: 0,
+            };
             return {
                 date,
                 dateStr,
                 minutes,
-                level: minutes === 0 ? 0 : minutes < 30 ? 1 : minutes < 60 ? 2 : minutes < 120 ? 3 : 4
+                level: minutes === 0 ? 0 : minutes < 30 ? 1 : minutes < 60 ? 2 : minutes < 120 ? 3 : 4,
+                details,
             };
         });
     }, [sessions, startDate, endDate]);
@@ -184,19 +226,35 @@ const ActivityHeatmap: React.FC<ActivityHeatmapProps> = ({ sessions }) => {
     }, []);
 
     // Format tooltip text
-    const formatTooltipText = (day: HeatmapDay): { activity: string; date: string } => {
+    const formatTooltipText = (day: HeatmapDay): { activity: string; date: string; breakdown: string[] } => {
         const dayOfWeek = language === 'ja' ? WEEKDAY_NAMES_JA[day.date.getDay()] : WEEKDAY_NAMES_UZ[day.date.getDay()];
         const monthName = language === 'ja' ? MONTH_NAMES_JA[day.date.getMonth()] : MONTH_NAMES_UZ[day.date.getMonth()];
         const dayNum = day.date.getDate();
         const year = day.date.getFullYear();
 
         const activity = day.minutes > 0
-            ? (language === 'ja' ? `${day.minutes}ふん がくしゅう` : `${day.minutes} daqiqa o'qish`)
+            ? (language === 'ja' ? `${day.minutes}ふん がくしゅう` : `${day.minutes} daqiqa o'qish (${day.details.totalSessions} ta faollik)`)
             : (language === 'ja' ? `がくしゅう なし` : `Faollik yo'q`);
 
         const date = language === 'ja' ? `${year}ねん ${monthName} ${dayNum}にち (${dayOfWeek})` : `${dayOfWeek}, ${monthName} ${dayNum}, ${year}`;
 
-        return { activity, date };
+        const breakdown: string[] = [];
+        if (day.details) {
+            if (day.details.speakingMinutes > 0) {
+                breakdown.push(`🎙️ Speaking: ${day.details.speakingMinutes} daq`);
+            }
+            if (day.details.flashcardsMinutes > 0) {
+                breakdown.push(`🎴 Fleshkartalar: ${day.details.flashcardsMinutes} daq`);
+            }
+            if (day.details.grammarMinutes > 0) {
+                breakdown.push(`📖 Grammatika: ${day.details.grammarMinutes} daq`);
+            }
+            if (day.details.focusMinutes > 0) {
+                breakdown.push(`⏱️ Dars/Pomodoro: ${day.details.focusMinutes} daq`);
+            }
+        }
+
+        return { activity, date, breakdown };
     };
 
     // Yil ko'rsatkichi
@@ -270,7 +328,7 @@ const ActivityHeatmap: React.FC<ActivityHeatmapProps> = ({ sessions }) => {
 
             {/* GitHub-style Tooltip */}
             {tooltip.visible && tooltip.day && (() => {
-                const { activity, date } = formatTooltipText(tooltip.day);
+                const { activity, date, breakdown } = formatTooltipText(tooltip.day);
                 return (
                     <div
                         ref={tooltipRef}
@@ -281,13 +339,22 @@ const ActivityHeatmap: React.FC<ActivityHeatmapProps> = ({ sessions }) => {
                             transform: 'translate(-50%, -100%)',
                         }}
                     >
-                        <div className="bg-[#1b1f23] border border-[#3d444d] rounded-lg px-3 py-2 shadow-[0_8px_24px_rgba(0,0,0,0.4)] whitespace-nowrap">
-                            <p className="text-[12px] font-semibold text-white leading-tight">
+                        <div className="bg-[#1b1f23] border border-[#3d444d] rounded-xl px-3.5 py-2.5 shadow-[0_8px_24px_rgba(0,0,0,0.5)] whitespace-nowrap min-w-[170px]">
+                            <p className="text-[12px] font-bold text-emerald-400 leading-tight">
                                 {activity}
                             </p>
-                            <p className="text-[11px] text-gray-400 leading-tight mt-0.5">
+                            <p className="text-[10px] text-gray-400 leading-tight mt-0.5 border-b border-white/10 pb-1.5 mb-1.5">
                                 {date}
                             </p>
+                            {breakdown.length > 0 && (
+                                <div className="space-y-1 text-[11px] text-gray-300 font-medium">
+                                    {breakdown.map((item, idx) => (
+                                        <div key={idx} className="flex items-center gap-1.5">
+                                            <span>{item}</span>
+                                        </div>
+                                    ))}
+                                </div>
+                            )}
                         </div>
                         {/* Tooltip Arrow */}
                         <div className="flex justify-center">

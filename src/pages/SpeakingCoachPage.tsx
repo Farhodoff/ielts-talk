@@ -137,6 +137,8 @@ const SpeakingCoachPage: React.FC = () => {
     addSubject,
     flashcards,
     updateFlashcard,
+    addSession,
+    awardXP,
   } = useStudyData();
   const isAdmin = isAdminEmail(user?.email);
   const isSuper = isSuperAdmin(user?.email);
@@ -1183,6 +1185,33 @@ const SpeakingCoachPage: React.FC = () => {
         } finally {
           setIsReportLoading(false);
         }
+      }
+
+      // Automatically award XP & record session in Activity Heatmap
+      const sessionMinutes = Math.max(1, Math.round(durSecs / 60));
+      const earnedXp = Math.max(10, Math.round(sessionMinutes * 3));
+      try {
+        if (awardXP) {
+          await awardXP(earnedXp);
+        }
+        if (addSession) {
+          const speakingSub = subjects?.find(
+            (s) => s.name.toLowerCase().includes('speaking') || s.name.toLowerCase().includes('ielts'),
+          );
+          await addSession({
+            duration: sessionMinutes,
+            type: 'focus',
+            completed: true,
+            subjectId: speakingSub?.id || undefined,
+            startTime: new Date().toISOString(),
+          });
+        }
+        toast({
+          title: `🎙️ Speaking faolligi saqlandi! (+${earnedXp} XP)`,
+          description: `${sessionMinutes} daqiqa jonli muloqot o'quv faolligi (Heatmap)ga qo'shildi.`,
+        });
+      } catch (sessErr) {
+        console.warn('[SpeakingCoach] Failed to save study session:', sessErr);
       }
     }
   };

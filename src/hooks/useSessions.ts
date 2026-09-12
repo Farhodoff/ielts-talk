@@ -30,15 +30,17 @@ export const useSessions = (awardXP?: (amount: number) => Promise<void>) => {
         } catch {}
 
         const sessionId = sessionData.id || generateUUID();
+        const validSubjectId =
+            sessionData.subjectId && isUuid(sessionData.subjectId) ? sessionData.subjectId : undefined;
         const supabaseData: DatabaseSession = {
             id: sessionId,
             user_id: activeUserId,
             duration: sessionData.duration || 0,
-            type: sessionData.type || 'focus',
+            type: sessionData.type === 'break' ? 'break' : 'focus',
             completed: !!sessionData.completed,
             mood_before: sessionData.moodBefore === null ? undefined : sessionData.moodBefore,
             mood_after: sessionData.moodAfter === null ? undefined : sessionData.moodAfter,
-            subject_id: sessionData.subjectId || undefined,
+            subject_id: validSubjectId,
             start_time: sessionData.startTime || new Date().toISOString()
         };
 
