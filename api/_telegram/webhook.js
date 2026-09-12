@@ -47,45 +47,45 @@ async function setTelegramMenuButton(chatId) {
 const QUIZ_QUESTIONS = [
   {
     id: 1,
-    question: "🎌 <b>[JLPT N5] Bo'sh joyni to'ldiring:</b>\n\n毎朝、パン _____ 食べます。\n<i>(Har kuni ertalab non yeyman)</i>",
-    options: ['1. を (o)', '2. に (ni)', '3. で (de)', '4. が (ga)'],
+    question: "🇬🇧 <b>[IELTS Grammar] Bo'sh joyni to'ldiring:</b>\n\nIf the government _____ invested more in renewable energy, pollution levels would be lower today.\n<i>(Agar hukumat qayta tiklanuvchi energiyaga ko'proq sarmoya kiritganida edi, bugun ifloslanish darajasi pastroq bo'lardi.)</i>",
+    options: ['1. had', '2. would have', '3. has', '4. was'],
     correct: 0,
-    explanation: "To'g'ri javob: <b>を (o)</b>\nVositasiz to'ldiruvchi harakat ob'ekti uchun <b>を</b> yuklamasi ishlatiladi (パンを食べます)."
+    explanation: "To'g'ri javob: <b>had</b>\nThird/Mixed conditional qoidasiga ko'ra o'tmishdagi gipoteza uchun <b>had + V3</b> ishlatiladi."
   },
   {
     id: 2,
-    question: "🎌 <b>[JLPT N5] Bo'sh joyni to'ldiring:</b>\n\n学校 _____ バスで行きます。\n<i>(Maktabga avtobus bilan boraman)</i>",
-    options: ['1. へ (e)', '2. を (o)', '3. と (to)', '4. から (kara)'],
+    question: "🇬🇧 <b>[IELTS Vocabulary] 'ubiquitous' so'zining eng mos ma'nodoshini tanlang:</b>\n\nSmartphones have become <b>ubiquitous</b> in modern society.",
+    options: ['1. omnipresent (hamma joyda mavjud)', '2. rare (kamyob)', '3. dangerous (xavfli)', '4. fragile (mo\'rt)'],
     correct: 0,
-    explanation: "To'g'ri javob: <b>へ (e)</b>\nHarakat yo'nalishi va manzil uchun <b>へ (e)</b> yoki <b>に (ni)</b> yuklamasi qo'llaniladi."
+    explanation: "To'g'ri javob: <b>omnipresent</b>\n'Ubiquitous' — hamma yerda uchraydigan, keng tarqalgan degan ma'noni anglatadi (Band 7+ Lexical Resource)."
   },
   {
     id: 3,
-    question: "🎌 <b>[JLPT N4] Ushbu Kanji qanday o'qiladi?</b>\n\n「約束」\n<i>(Ma'nosi: Va'da / Kelishuv)</i>",
-    options: ['1. やくそく (yakusoku)', '2. あんない (annai)', '3. しんぱい (shinpai)', '4. れんらく (renraku)'],
+    question: "🇬🇧 <b>[IELTS Grammar — Inversion] Gapni to'ldiring:</b>\n\nSeldom _____ such an impressive performance in an IELTS speaking test.",
+    options: ['1. have I witnessed', '2. I have witnessed', '3. I witnessed', '4. witnessed I'],
     correct: 0,
-    explanation: "To'g'ri javob: <b>やくそく (yakusoku)</b>\n「約束」 — va'da, kelishuv degan ma'noni bildiradi."
+    explanation: "To'g'ri javob: <b>have I witnessed</b>\nSalbiy inkor so'zlari (Seldom, Rarely, Never) gap boshida kelsa, inversiya (yordamchi fe'l + ega) talab qilinadi."
   },
   {
     id: 4,
-    question: "🎌 <b>[JLPT N5] Mos yuklamani tanlang:</b>\n\n昨日、友達 _____ 会いました。\n<i>(Kecha do'stim bilan uchrashdim)</i>",
-    options: ['1. に (ni)', '2. を (o)', '3. で (de)', '4. へ (e)'],
+    question: "🇬🇧 <b>[IELTS Academic Collocation] 'research' bilan qaysi fe'l eng to'g'ri qo'llanadi?</b>\n\nScientists need to _____ thorough research before publishing results.",
+    options: ['1. conduct (olib bormoq)', '2. make (qilmoq)', '3. construct (qurmoq)', '4. create (yaratmoq)'],
     correct: 0,
-    explanation: "To'g'ri javob: <b>に (ni)</b>\nYapon tilida 'uchrashmoq' fe'li odatda <b>に</b> bilan birikadi (友達に会う)."
+    explanation: "To'g'ri javob: <b>conduct</b>\nAkademik ingliz tilida 'conduct research' yoki 'carry out research' eng tabiiy kollokatsiya hisoblanadi."
   },
   {
     id: 5,
-    question: "🎌 <b>[JLPT N4] Bo'sh joyni to'ldiring:</b>\n\n日本へ行く _____、お金をためています。\n<i>(Yaponiyaga borish maqsadida pul yig'yapman)</i>",
-    options: ['1. ために (tameni)', '2. ように (youni)', '3. から (kara)', '4. のに (noni)'],
+    question: "🇬🇧 <b>[IELTS Writing Task 1] Mos predlogni tanlang:</b>\n\nThe graph shows a substantial rise _____ the number of international students.",
+    options: ['1. in', '2. of', '3. at', '4. to'],
     correct: 0,
-    explanation: "To'g'ri javob: <b>ために (tameni)</b>\nAniq maqsad va niyatni ifodalash uchun fe'lning oddiy shakli + <b>ために</b> ishlatiladi."
+    explanation: "To'g'ri javob: <b>in</b>\nMiqdor yoki ko'rsatkichning oshishi/kamayishi uchun 'rise/increase/drop <b>in</b> something' qo'llanadi."
   },
   {
     id: 6,
-    question: "🎌 <b>[JLPT N3] Bo'sh joyni to'ldiring:</b>\n\n雨が _____ 始めました。\n<i>(Yomg'ir yog'a boshladi)</i>",
-    options: ['1. 降り (furi)', '2. 降る (furu)', '3. 降って (futte)', '4. 降れば (fureba)'],
+    question: "🇬🇧 <b>[IELTS Vocabulary] 'detrimental' nimani bildiradi?</b>\n\nExcessive screen time can have a <b>detrimental</b> effect on cognitive development.",
+    options: ['1. harmful (zararli)', '2. beneficial (foydali)', '3. temporary (vaqtincha)', '4. unexpected (kutilmagan)'],
     correct: 0,
-    explanation: "To'g'ri javob: <b>降り (furi)</b>\nFe'l o'zagi (masu-stem) + <b>始める (hajimeru)</b> birikmasi harakatning boshlanishini bildiradi (降り始める)."
+    explanation: "To'g'ri javob: <b>harmful (zararli)</b>\n'Detrimental' — 'damaging / harmful' so'zining akademik sinonimi (IELTS Band 8+)."
   }
 ];
 
@@ -846,14 +846,14 @@ export default async function handler(req, res) {
       };
       await sendTelegramMessage(
         chatId,
-        `📱 <b>IELTS Talk:</b>\n\nTelegramdan chiqmasdan IELTS va ingliz tilini to'liq o'rganing:\n• 🎴 IELTS Band 5.0–9.0 Grammatika, Kanji va Quizlar\n• 🎙️ AI Speaking Coach\n• 📚 Anki SM-2 Fleshkartalar\n• 🔥 Shaxsiy kunlik reja va Pomodoro\n\nIlovani ochish uchun quyidagi tugmani bosing:`,
+        `📱 <b>IELTS Talk:</b>\n\nTelegramdan chiqmasdan IELTS va ingliz tilini to'liq o'rganing:\n• 🎙️ AI IELTS Speaking Coach (Part 1, 2, 3)\n• 📝 IELTS Mock Exam (Reading, Listening, Writing)\n• 📚 Oxford 3000 & Academic Anki Fleshkartalar\n• 🇬🇧 Grammatika qoidalari va interaktiv quizlar\n• 🔥 Shaxsiy kunlik o'quv rejasi\n\nIlovani ochish uchun quyidagi tugmani bosing:`,
         appMarkup
       );
       return res.status(200).json({ ok: true });
     }
 
     // C. Handle /quiz or '🇬🇧 IELTS Quiz'
-    if (text === '/quiz' || text.includes('Yaponcha Quiz') || text.includes('Quiz')) {
+    if (text === '/quiz' || text.includes('IELTS Quiz') || text.includes('Yaponcha Quiz') || text.includes('Quiz')) {
       const randIdx = Math.floor(Math.random() * QUIZ_QUESTIONS.length);
       const q = QUIZ_QUESTIONS[randIdx];
       await sendTelegramMessage(chatId, q.question, getQuizMarkup(randIdx));
@@ -889,14 +889,14 @@ export default async function handler(req, res) {
       };
       await sendTelegramMessage(
         chatId,
-        `📚 <b>IELTS Talk Fleshkartalari (SRS Tizimi):</b>\n\nSuperMemo SM-2 algoritmi asosida so'zlar va iyerogliflarni eslab qoling.${cardInfo}\n\nFleshkartalarni o'rganish uchun veb ilovaga kiring:`,
+        `📚 <b>IELTS Talk Fleshkartalari (SRS Tizimi):</b>\n\nSuperMemo SM-2 algoritmi asosida Oxford 3000 va Academic so'zlarni eslab qoling.${cardInfo}\n\nFleshkartalarni o'rganish uchun veb ilovaga kiring:`,
         flashcardMarkup
       );
       return res.status(200).json({ ok: true });
     }
 
     // D. Handle /speaking or '🎯 Speaking Coach'
-    if (text === '/speaking' || text.includes('Speaking Mashqi')) {
+    if (text === '/speaking' || text.includes('Speaking Mashqi') || text.includes('Speaking Coach')) {
       const speakingMarkup = {
         inline_keyboard: [
           [{ text: "🎙️ Speaking Coach-ga o'tish", url: "https://ielts-talk.vercel.app/speaking" }]
@@ -904,7 +904,7 @@ export default async function handler(req, res) {
       };
       await sendTelegramMessage(
         chatId,
-        `🎯 <b>Bugungi Speaking Mashqi (10 daqiqa):</b>\n\nKundalik hayotiy vaziyatlarda yapon tilida gaplashish ko'nikmangizni oshiring:\n• 🛒 Kombinida xarid qilish\n• 🚆 Tokioda metro chiptasi xarid qilish\n• 🏠 Kvartira ijarasi agentligi bilan suhbat\n• 💼 Baito / ish suhbati (Mensetsu)\n\nHar kuni 10 daqiqa jonli gaplashish tilingiz ravonlashishiga yordam beradi! 🚀`,
+        `🎯 <b>Bugungi Speaking Coach Mashqi (10 daqiqa):</b>\n\nIELTS Speaking imtihoni va kundalik ingliz tili muloqotingizni AI bilan oshiring:\n• 🎙️ <b>Part 1:</b> Introduction & Familiar Topics (Work, Study, Hometown)\n• 📋 <b>Part 2:</b> Cue Card (2 daqiqalik monolog nutq)\n• 🧠 <b>Part 3:</b> Two-way Discussion (Tahliliy fikr bildirish)\n• 💡 Band 7+ Lexical Resource & Pronunciation tahlili\n\nHar kuni 10 daqiqa jonli gaplashish speaking balingizni 7.5+ ga ko'taradi! 🚀`,
         speakingMarkup
       );
       return res.status(200).json({ ok: true });
@@ -930,13 +930,13 @@ export default async function handler(req, res) {
 
     // F. Legacy fallback: /subscription
     if (text === '/subscription' || text.includes('Obuna holati')) {
-      await sendTelegramMessage(chatId, `🎁 <b>IELTS Talk 100% Bepul va Ochiq!</b>\n\nPlatformadagi barcha imkoniyatlar (AI Speaking Coach, JLPT Mock Exam, Anki Fleshkartalar, Audio talaffuz) barcha foydalanuvchilar uchun mutlaqo bepul taqdim etiladi! 🚀\n\n🔗 Web sayt: <a href="https://ielts-talk.vercel.app">IELTS Talk Bosh Sahifa</a>`);
+      await sendTelegramMessage(chatId, `🎁 <b>IELTS Talk 100% Bepul va Ochiq!</b>\n\nPlatformadagi barcha imkoniyatlar (AI Speaking Coach, IELTS Mock Exam, Anki Fleshkartalar, Audio talaffuz) barcha foydalanuvchilar uchun mutlaqo bepul taqdim etiladi! 🚀\n\n🔗 Web sayt: <a href="https://ielts-talk.vercel.app">IELTS Talk Bosh Sahifa</a>`);
       return res.status(200).json({ ok: true });
     }
 
     // G. Handle /help or 'ℹ️ Yordam'
     if (text === '/help' || text.includes('Yordam')) {
-      await sendTelegramMessage(chatId, `ℹ️ <b>IELTS Talk Bot Yordam Qo'llanmasi:</b>\n\n/start - Akkauntni ulash yoki bosh menyu\n/app - Telegram Mini App ilovasini ochish 🚀\n/quiz - Yapon tili bo'yicha interaktiv mini-quiz\n/plan - Bugungi o'quv rejalari va vazifalar\n/flashcards - Fleshkartalar holati va takrorlash\n/speaking - Speaking Coach mashqlari\n/help - Yordam menyusi\n\n🌐 Asosiy veb-sayt: <a href="https://ielts-talk.vercel.app">IELTS Talk Platformasi</a>`);
+      await sendTelegramMessage(chatId, `ℹ️ <b>IELTS Talk Bot Yordam Qo'llanmasi:</b>\n\n/start - Akkauntni ulash yoki bosh menyu\n/app - Telegram Mini App ilovasini ochish 🚀\n/quiz - IELTS va ingliz tili bo'yicha interaktiv mini-quiz 🇬🇧\n/plan - Bugungi o'quv rejalari va vazifalar\n/flashcards - Fleshkartalar holati va takrorlash\n/speaking - AI Speaking Coach mashqlari\n/help - Yordam menyusi\n\n🌐 Asosiy veb-sayt: <a href="https://ielts-talk.vercel.app">IELTS Talk Platformasi</a>`);
       return res.status(200).json({ ok: true });
     }
 

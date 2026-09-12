@@ -18,7 +18,8 @@ async function sendTelegramMessage(chatId, text, replyMarkup = null) {
   const body = {
     chat_id: chatId,
     text,
-    parse_mode: 'HTML'
+    parse_mode: 'HTML',
+    disable_web_page_preview: true
   };
   if (replyMarkup) {
     body.reply_markup = replyMarkup;

@@ -71,9 +71,9 @@ function escapeHTML(str: string): string {
 const defaultKeyboard = {
     keyboard: [
         [{ text: '🚀 IELTS Talk-ni Ochish', web_app: { url: 'https://ielts-talk.vercel.app/' } }],
-        [{ text: '📅 Bugungi reja' }, { text: '📋 Bajarilganlar' }],
-        [{ text: '📊 Mening statistikam' }, { text: '🎯 Maqsadlarim' }],
-        [{ text: '➕ Yangi vazifa' }, { text: 'ℹ️ Yordam' }]
+        [{ text: '📅 Bugungi reja' }, { text: '🇬🇧 IELTS Quiz' }],
+        [{ text: '📚 Fleshkartalar' }, { text: '🎯 Speaking Coach' }],
+        [{ text: 'ℹ️ Yordam' }]
     ],
     resize_keyboard: true,
     one_time_keyboard: false
@@ -85,7 +85,8 @@ async function sendMessage(chatId: number, text: string, replyMarkup: Record<str
     const body: Record<string, unknown> = {
         chat_id: chatId,
         text,
-        parse_mode: 'HTML'
+        parse_mode: 'HTML',
+        disable_web_page_preview: true
     };
     if (replyMarkup) {
         body.reply_markup = replyMarkup;

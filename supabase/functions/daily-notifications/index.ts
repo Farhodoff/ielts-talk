@@ -52,7 +52,8 @@ async function sendMessage(chatId: number, text: string, reply_markup?: any) {
         const body: any = {
             chat_id: chatId,
             text,
-            parse_mode: 'HTML'
+            parse_mode: 'HTML',
+            disable_web_page_preview: true
         };
         if (reply_markup) {
             body.reply_markup = reply_markup;
