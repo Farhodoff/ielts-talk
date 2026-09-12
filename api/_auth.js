@@ -51,86 +51,29 @@ export function getBearerToken(req) {
   return token.length > 0 ? token : null;
 }
 
-import crypto from 'crypto';
-
-const BOT_TOKEN = process.env.TELEGRAM_BOT_TOKEN;
-const SERVICE_ROLE = process.env.SERVICE_ROLE || process.env.SUPABASE_SERVICE_ROLE_KEY;
-
-export function verifyTelegramWebAppData(initData, botToken) {
-  if (!initData || !botToken) return { valid: false };
-
-  try {
-    const params = new URLSearchParams(initData);
-    const hash = params.get('hash');
-    if (!hash) return { valid: false };
-
-    params.delete('hash');
-    const sortedKeys = Array.from(params.keys()).sort();
-    const dataCheckString = sortedKeys.map((key) => `${key}=${params.get(key)}`).join('\n');
-
-    const secretKey = crypto.createHmac('sha256', 'WebAppData').update(botToken).digest();
-    const calculatedHash = crypto.createHmac('sha256', secretKey).update(dataCheckString).digest('hex');
-
-    const isValid = calculatedHash === hash;
-    let user = null;
-    const userJson = params.get('user');
-    if (userJson) {
-      user = JSON.parse(userJson);
-    }
-
-    return { valid: isValid, user };
-  } catch (e) {
-    return { valid: false, error: e.message };
-  }
-}
-
 /**
- * Verifies Supabase JWT access token or signed Telegram WebApp initData.
+ * Verifies Supabase JWT access token.
  * Returns { user, error }
  */
 export async function verifyAuth(req) {
-  // 1. Check Supabase JWT access token
   const token = getBearerToken(req);
-  if (token && token !== SUPABASE_ANON_KEY) {
-    try {
-      const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY, {
-        auth: { persistSession: false, autoRefreshToken: false },
-      });
-      const {
-        data: { user },
-        error,
-      } = await supabase.auth.getUser(token);
-      if (!error && user) {
-        return { user, error: null };
-      }
-    } catch (_) {}
+  if (!token || token === SUPABASE_ANON_KEY) {
+    return { user: null, error: null };
   }
 
-  // 2. Check signed Telegram WebApp initData (from Telegram Mini App)
-  let twaHeader = null;
-  if (req && typeof req.headers?.get === 'function') {
-    twaHeader = req.headers.get('x-telegram-init-data');
-  } else if (req && req.headers) {
-    twaHeader = req.headers['x-telegram-init-data'];
-  }
-
-  if (twaHeader && BOT_TOKEN && SERVICE_ROLE) {
-    const { valid, user: tgUser } = verifyTelegramWebAppData(twaHeader, BOT_TOKEN);
-    if (valid && tgUser?.id) {
-      try {
-        const supabaseAdmin = createClient(SUPABASE_URL, SERVICE_ROLE);
-        const { data: linked } = await supabaseAdmin
-          .from('telegram_users')
-          .select('user_id')
-          .eq('telegram_id', tgUser.id)
-          .maybeSingle();
-
-        if (linked?.user_id) {
-          return { user: { id: linked.user_id }, error: null };
-        }
-      } catch (_) {}
+  try {
+    const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY, {
+      auth: { persistSession: false, autoRefreshToken: false },
+    });
+    const {
+      data: { user },
+      error,
+    } = await supabase.auth.getUser(token);
+    if (error || !user) {
+      return { user: null, error: error?.message || 'Invalid or expired authentication session.' };
     }
+    return { user, error: null };
+  } catch (err) {
+    return { user: null, error: err?.message || 'Authentication verification failed.' };
   }
-
-  return { user: null, error: 'Authentication required' };
 }
