@@ -1,14 +1,52 @@
 import react from '@vitejs/plugin-react';
 import path from 'path';
+import fs from 'fs';
 import { defineConfig } from 'vitest/config';
 import { VitePWA } from 'vite-plugin-pwa';
 import { telegramApiPlugin } from './server/vitePlugin.js';
 import { visualizer } from 'rollup-plugin-visualizer';
 
+const BUILD_TIMESTAMP = Date.now();
+
+function buildVersionPlugin() {
+  const versionData = JSON.stringify(
+    {
+      version: '1.1.0',
+      buildTime: BUILD_TIMESTAMP,
+      builtAt: new Date(BUILD_TIMESTAMP).toISOString(),
+    },
+    null,
+    2
+  );
+
+  return {
+    name: 'build-version-plugin',
+    buildStart() {
+      try {
+        const publicDir = path.resolve(__dirname, 'public');
+        if (!fs.existsSync(publicDir)) fs.mkdirSync(publicDir, { recursive: true });
+        fs.writeFileSync(path.resolve(publicDir, 'version.json'), versionData);
+      } catch (_) {}
+    },
+    generateBundle() {
+      this.emitFile({
+        type: 'asset',
+        fileName: 'version.json',
+        source: versionData,
+      });
+    },
+  };
+}
+
 // https://vitejs.dev/config/
 export default defineConfig({
   envPrefix: ['VITE_', 'NEXT_PUBLIC_'],
+  define: {
+    __APP_BUILD_TIME__: JSON.stringify(BUILD_TIMESTAMP),
+    __APP_VERSION__: JSON.stringify('1.1.0'),
+  },
   plugins: [
+    buildVersionPlugin(),
     ...(process.env.ANALYZE === 'true'
       ? [
           visualizer({
@@ -94,8 +132,9 @@ export default defineConfig({
         clientsClaim: true,
         cleanupOutdatedCaches: true,
         globPatterns: ['**/*.{js,css,html,ico,png,svg,woff2}'],
+        globIgnores: ['**/version.json'],
         navigateFallback: '/index.html',
-        navigateFallbackDenylist: [/^\/api/],
+        navigateFallbackDenylist: [/^\/api/, /^\/version\.json/],
         runtimeCaching: [
           {
             urlPattern: /^https:\/\/fonts\.googleapis\.com\/.*/i,

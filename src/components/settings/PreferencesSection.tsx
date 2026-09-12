@@ -1,4 +1,4 @@
-import { Bell, GraduationCap } from 'lucide-react';
+import { Bell, GraduationCap, RefreshCw } from 'lucide-react';
 import { PushNotificationService } from '../../services/PushNotificationService';
 import { useStudyData } from '../../context/StudyPlannerContext';
 import { toast } from '../../hooks/use-toast';
@@ -6,6 +6,7 @@ import { isSuperAdmin } from '../../utils/admin';
 import { useLanguage } from '../../context/LanguageContext';
 import { UzbekistanFlag, UKFlag } from '../common/FlagIcons';
 import AIProviderSection from './AIProviderSection';
+import autoUpdateService from '../../services/AutoUpdateService';
 
 interface Settings {
   theme: 'light' | 'dark' | 'system';
@@ -191,6 +192,54 @@ const PreferencesSection: React.FC<PreferencesSectionProps> = ({
               />
               <div className="peer h-6 w-11 rounded-full bg-muted after:absolute after:left-[2px] after:top-[2px] after:h-5 after:w-5 after:rounded-full after:border after:border-gray-300 after:bg-white after:transition-all after:content-[''] peer-checked:bg-primary peer-checked:after:translate-x-full peer-checked:after:border-white peer-focus:outline-none"></div>
             </label>
+          </div>
+        </div>
+
+        {/* Real-time Update & Cache Purge */}
+        <div className="flex flex-col justify-between gap-4 rounded-xl border border-border bg-background/50 p-4 sm:flex-row sm:items-center">
+          <div className="flex items-center gap-3">
+            <div className="rounded-lg bg-indigo-500/10 p-2.5 text-indigo-500">
+              <RefreshCw size={20} />
+            </div>
+            <div>
+              <div className="flex items-center gap-2">
+                <span className="text-sm font-semibold text-foreground">
+                  Ilova Versiyasi & Keshni Tozalash
+                </span>
+                <span className="rounded-md bg-indigo-100 px-1.5 py-0.5 text-[10px] font-bold text-indigo-600 dark:bg-indigo-950 dark:text-indigo-400">
+                  v1.1.0 (Real-time)
+                </span>
+              </div>
+              <span className="text-xs text-muted-foreground">
+                Yangi funksiyalar qo'shilganda keshni tozalab eng so'nggi versiyani yuklash
+              </span>
+            </div>
+          </div>
+          <div className="flex items-center gap-2">
+            <button
+              type="button"
+              onClick={async () => {
+                toast({ title: '🔍 Yangilanishlar tekshirilmoqda...' });
+                const hasNew = await autoUpdateService.checkForUpdate();
+                if (!hasNew) {
+                  toast({ title: '✅ Siz eng so‘nggi versiyadan foydalanmoqdasiz!' });
+                }
+              }}
+              className="rounded-lg border border-border px-3 py-1.5 text-xs font-medium text-muted-foreground transition-colors hover:bg-muted"
+            >
+              Tekshirish
+            </button>
+            <button
+              type="button"
+              onClick={async () => {
+                toast({ title: '🔄 Kesh tozalanmoqda...', description: 'Sahifa qayta yuklanmoqda' });
+                await autoUpdateService.purgeCachesAndReload();
+              }}
+              className="flex items-center gap-1.5 rounded-lg bg-indigo-600 px-3.5 py-1.5 text-xs font-bold text-white shadow-xs transition hover:bg-indigo-700 active:scale-95"
+            >
+              <RefreshCw size={13} />
+              Keshni tozalash va yangilash
+            </button>
           </div>
         </div>
       </div>

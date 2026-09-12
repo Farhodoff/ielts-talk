@@ -17,6 +17,11 @@ initErrorTracking();
 // Offline-first fleshkartalar avtomatik sinxronizatsiyasi
 FlashcardOfflineSync.initAutoSync();
 
+import autoUpdateService from './services/AutoUpdateService';
+
+// Real-time kesh tozalash va yangilanishlar xizmatini ishga tushirish (har 30 soniyada va tab active bo'lganda)
+autoUpdateService.init(30000);
+
 // PWA service worker-ni ro'yxatdan o'tkazish va avtomatik yangilash (kesh tiqilib qolishini oldini olish)
 let isRefreshing = false;
 if ('serviceWorker' in navigator) {
@@ -28,17 +33,17 @@ if ('serviceWorker' in navigator) {
   });
 }
 
-const updateSW = registerSW({
+registerSW({
   immediate: true,
   onRegisteredSW(_swUrl, registration) {
     if (registration) {
       // 1. Dastlabki kirganda yangilanishni darhol tekshirish
       registration.update().catch(() => {});
 
-      // 2. Har 60 soniyada yangi deploy borligini tekshirish
+      // 2. Har 30 soniyada yangi deploy borligini tekshirish
       setInterval(() => {
         registration.update().catch(() => {});
-      }, 60 * 1000);
+      }, 30 * 1000);
 
       // 3. Foydalanuvchi ilovaga qaytganida (tab active bo'lganda) tekshirish
       document.addEventListener('visibilitychange', () => {
@@ -49,8 +54,8 @@ const updateSW = registerSW({
     }
   },
   onNeedRefresh() {
-    console.info('[PWA] Yangi versiya aniqlandi, avtomatik o‘rnatilmoqda...');
-    updateSW(true);
+    console.info('[PWA] Yangi versiya aniqlandi, keshlar tozalanib yangilanmoqda...');
+    autoUpdateService.purgeCachesAndReload();
   },
   onRegisterError(error) {
     console.warn('[PWA] ServiceWorker registration ignored:', error);
@@ -63,13 +68,7 @@ window.addEventListener('vite:preloadError', async (event) => {
   console.warn(
     '[Vite] Dynamic import preload error detected. Keshlarni tozalab qayta yuklanmoqda...',
   );
-  if ('caches' in window) {
-    try {
-      const keys = await caches.keys();
-      await Promise.all(keys.map((k) => caches.delete(k)));
-    } catch {}
-  }
-  window.location.reload();
+  await autoUpdateService.purgeCachesAndReload();
 });
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
