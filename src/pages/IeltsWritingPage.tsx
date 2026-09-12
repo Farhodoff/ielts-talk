@@ -26,21 +26,7 @@ import { IeltsTrfCertificateModal } from '../components/ielts/IeltsTrfCertificat
 import { TrfCertificateService } from '../services/TrfCertificateService';
 import { useFreemiumQuota } from '../hooks/useFreemiumQuota';
 import { FreemiumLimitModal } from '../components/ielts/FreemiumLimitModal';
-
-const SAMPLE_PROMPTS = {
-  task1: [
-    'The chart below shows the percentage of households in different income groups owning various types of consumer goods in 2020. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.',
-    'The diagram shows the process of recycling plastic bottles into new synthetic fiber products. Describe the main stages of the process.',
-    'The maps illustrate the changes that took place in the coastal town of Pentland between 1995 and 2015. Summarise the main differences.',
-    'The line graph shows the consumption of four types of meat in a European nation from 1980 to 2010. Summarise the data.',
-  ],
-  task2: [
-    'Some people believe that university education should be free for everyone, while others argue that students should pay for their higher education. Discuss both views and give your opinion.',
-    'In many countries, traditional skills and ways of life are dying out. Is this a positive or negative development?',
-    'Rapid urbanization has led to severe traffic congestion and air pollution in major metropolises. What are the primary causes of this phenomenon, and what measures can governments implement to resolve it?',
-    'Some experts argue that the increasing use of artificial intelligence in daily life brings more advantages than disadvantages. To what extent do you agree or disagree?',
-  ],
-};
+import { IELTS_WRITING_PROMPTS, WritingPromptItem } from '../data/ielts/writing_prompts';
 
 const IeltsWritingPage: React.FC = () => {
   const { awardXP, user } = useStudyData();
@@ -54,7 +40,11 @@ const IeltsWritingPage: React.FC = () => {
   } = useFreemiumQuota();
 
   const [taskType, setTaskType] = useState<'task1' | 'task2'>('task2');
-  const [promptQuestion, setPromptQuestion] = useState(SAMPLE_PROMPTS.task2[0]);
+  const [selectedPromptItem, setSelectedPromptItem] = useState<WritingPromptItem | null>(
+    IELTS_WRITING_PROMPTS.task2[0]
+  );
+  const [promptQuestion, setPromptQuestion] = useState(IELTS_WRITING_PROMPTS.task2[0].prompt);
+  const [showPromptGuidance, setShowPromptGuidance] = useState(false);
   const [essayText, setEssayText] = useState('');
   const [isAnalyzing, setIsAnalyzing] = useState(false);
   const [report, setReport] = useState<IeltsEssayEvaluationReport | null>(null);
@@ -244,7 +234,9 @@ const IeltsWritingPage: React.FC = () => {
           <button
             onClick={() => {
               setTaskType('task1');
-              setPromptQuestion(SAMPLE_PROMPTS.task1[0]);
+              const firstItem = IELTS_WRITING_PROMPTS.task1[0];
+              setSelectedPromptItem(firstItem);
+              setPromptQuestion(firstItem.prompt);
             }}
             className={`flex-1 rounded-xl px-3 py-2 text-xs font-bold transition-all sm:px-5 md:flex-initial ${
               taskType === 'task1'
@@ -257,7 +249,9 @@ const IeltsWritingPage: React.FC = () => {
           <button
             onClick={() => {
               setTaskType('task2');
-              setPromptQuestion(SAMPLE_PROMPTS.task2[0]);
+              const firstItem = IELTS_WRITING_PROMPTS.task2[0];
+              setSelectedPromptItem(firstItem);
+              setPromptQuestion(firstItem.prompt);
             }}
             className={`flex-1 rounded-xl px-3 py-2 text-xs font-bold transition-all sm:px-5 md:flex-initial ${
               taskType === 'task2'
@@ -375,10 +369,22 @@ const IeltsWritingPage: React.FC = () => {
             />
           )}
           {/* Prompt Selection */}
-          <div className="rounded-2xl border border-border bg-card p-4 shadow-sm sm:rounded-3xl sm:p-6">
-            <label className="mb-2 block text-xs font-bold text-gray-700 dark:text-gray-300">
-              Mavzu / Savol (Essay Prompt)
-            </label>
+          <div className="rounded-2xl border border-border bg-card p-4 shadow-sm sm:rounded-3xl sm:p-6 space-y-3">
+            <div className="flex items-center justify-between">
+              <label className="block text-xs font-bold text-gray-700 dark:text-gray-300">
+                Mavzu / Savol (IELTS {taskType.toUpperCase()} Prompt)
+              </label>
+              {selectedPromptItem && (
+                <button
+                  onClick={() => setShowPromptGuidance(!showPromptGuidance)}
+                  className="text-[11px] font-bold text-indigo-600 hover:text-indigo-700 dark:text-indigo-400 flex items-center gap-1 transition-colors"
+                >
+                  <Sparkles size={13} />
+                  {showPromptGuidance ? "Maslahatlarni yopish" : "💡 Band 9 Reja & Kollokatsiyalar"}
+                </button>
+              )}
+            </div>
+
             <textarea
               value={promptQuestion}
               onChange={(e) => setPromptQuestion(e.target.value)}
@@ -386,18 +392,89 @@ const IeltsWritingPage: React.FC = () => {
               placeholder="Mavzuni kiritishingiz yoki quyidagi tayyor savollardan tanlashingiz mumkin..."
               className="w-full resize-none rounded-2xl border border-border bg-muted/40 px-4 py-3 text-xs text-gray-900 transition-all focus:outline-none focus:ring-2 focus:ring-indigo-500 dark:text-white"
             />
-            <div className="mt-3 flex flex-wrap gap-1.5 sm:gap-2">
-              <span className="text-[10px] font-semibold text-gray-400">Namunalar:</span>
-              {SAMPLE_PROMPTS[taskType].map((sample, idx) => (
-                <button
-                  key={idx}
-                  onClick={() => setPromptQuestion(sample)}
-                  className="max-w-[130px] truncate rounded-full bg-indigo-50 px-2.5 py-1 text-left text-[10px] font-medium text-indigo-600 transition-all hover:bg-indigo-100 dark:bg-indigo-950/40 dark:text-indigo-400 sm:max-w-xs sm:px-3"
-                >
-                  Mavzu {idx + 1}
-                </button>
-              ))}
+
+            {/* Prompt Selector Pills */}
+            <div className="space-y-1.5 pt-1">
+              <span className="text-[10px] font-semibold text-gray-400 block">
+                Rasmiy IELTS {taskType === 'task1' ? 'Task 1 Turlari' : 'Task 2 Mavzulari'}:
+              </span>
+              <div className="flex flex-wrap gap-1.5 sm:gap-2">
+                {IELTS_WRITING_PROMPTS[taskType].map((item) => (
+                  <button
+                    key={item.id}
+                    onClick={() => {
+                      setSelectedPromptItem(item);
+                      setPromptQuestion(item.prompt);
+                    }}
+                    className={`rounded-full px-3 py-1 text-left text-[11px] font-semibold transition-all border ${
+                      promptQuestion === item.prompt
+                        ? 'bg-indigo-600 text-white border-indigo-600 shadow-sm'
+                        : 'bg-indigo-50/70 dark:bg-indigo-950/30 text-indigo-700 dark:text-indigo-300 border-indigo-200/50 dark:border-indigo-800/40 hover:bg-indigo-100'
+                    }`}
+                  >
+                    <span className="opacity-75 text-[9px] uppercase font-black mr-1.5">[{item.category}]</span>
+                    {item.title}
+                  </button>
+                ))}
+              </div>
             </div>
+
+            {/* Band 9 Outline & Vocabulary Guidance Box */}
+            {selectedPromptItem && showPromptGuidance && (
+              <div className="rounded-2xl border border-indigo-500/20 bg-indigo-500/5 p-4 space-y-3 text-xs">
+                <div className="flex items-center justify-between border-b border-indigo-500/10 pb-2">
+                  <span className="font-bold text-indigo-700 dark:text-indigo-300 flex items-center gap-1.5 text-xs">
+                    <BookOpen size={14} /> Band 9 Tavsiya etilgan Reja: {selectedPromptItem.title}
+                  </span>
+                  <span className="px-2 py-0.5 rounded-full bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 text-[10px] font-bold">
+                    {selectedPromptItem.category}
+                  </span>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-2 text-[11px]">
+                  <div className="p-2.5 rounded-xl bg-card border border-border space-y-1">
+                    <span className="font-bold text-foreground block">1. Kirish (Introduction & Overview):</span>
+                    <p className="text-muted-foreground">{selectedPromptItem.sampleOutline.intro}</p>
+                  </div>
+                  <div className="p-2.5 rounded-xl bg-card border border-border space-y-1">
+                    <span className="font-bold text-foreground block">2. Asosiy Qism 1 (Body Paragraph 1):</span>
+                    <p className="text-muted-foreground">{selectedPromptItem.sampleOutline.body1}</p>
+                  </div>
+                  <div className="p-2.5 rounded-xl bg-card border border-border space-y-1">
+                    <span className="font-bold text-foreground block">3. Asosiy Qism 2 (Body Paragraph 2):</span>
+                    <p className="text-muted-foreground">{selectedPromptItem.sampleOutline.body2}</p>
+                  </div>
+                  <div className="p-2.5 rounded-xl bg-card border border-border space-y-1">
+                    <span className="font-bold text-foreground block">4. Xulosa (Conclusion / Summary):</span>
+                    <p className="text-muted-foreground">{selectedPromptItem.sampleOutline.conclusion}</p>
+                  </div>
+                </div>
+
+                {/* Key Collocations */}
+                <div className="pt-1">
+                  <span className="font-bold text-[11px] text-foreground block mb-1.5">
+                    🎯 Foydalanish uchun Band 8+ Kollokatsiyalar:
+                  </span>
+                  <div className="flex flex-wrap gap-1.5">
+                    {selectedPromptItem.keyVocabulary.map((vocab, vIdx) => (
+                      <span
+                        key={vIdx}
+                        className="px-2 py-0.5 rounded-md bg-white dark:bg-gray-800 border border-border text-[10px] font-mono text-indigo-600 dark:text-indigo-400"
+                      >
+                        {vocab}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                {selectedPromptItem.band9Snippet && (
+                  <div className="pt-2 border-t border-indigo-500/10 text-[11px] text-muted-foreground italic">
+                    <span className="font-semibold text-foreground not-italic">Namunaviy Band 9 jumla: </span>
+                    "{selectedPromptItem.band9Snippet}"
+                  </div>
+                )}
+              </div>
+            )}
           </div>
 
           {/* Essay Text Area */}

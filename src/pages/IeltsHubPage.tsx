@@ -13,6 +13,7 @@ import { useSearchParams, Link } from 'react-router-dom';
 import { RealWeaknessTracker } from '../components/ielts/RealWeaknessTracker';
 import { DailyTargetHub } from '../components/ielts/DailyTargetHub';
 import { useSEO } from '../hooks/useSEO';
+import { useFreemiumQuota } from '../hooks/useFreemiumQuota';
 
 const IeltsMasterRoadmapView = lazy(() => import('../components/ielts/IeltsMasterRoadmapView'));
 const PersonalPlanPage = lazy(() => import('./PersonalPlanPage'));
@@ -50,6 +51,8 @@ export const IeltsHubPage: React.FC = () => {
   const activeTab = tabParam || (topicParam ? 'grammar' : 'roadmap');
 
   const [isReflectionOpen, setIsReflectionOpen] = useState(false);
+  const { remainingSpeaking, remainingWriting, isPro, isAdmin } = useFreemiumQuota();
+  const isUnlimited = isAdmin || isPro;
 
   const handleTabChange = (tab: string) => {
     setSearchParams({ tab });
@@ -150,6 +153,40 @@ export const IeltsHubPage: React.FC = () => {
             >
               <Mic size={14} />
               <span>Mock</span>
+            </Link>
+          </div>
+
+          {/* Freemium Daily Allowance Bar */}
+          <div className="flex flex-wrap items-center justify-between gap-2.5 rounded-2xl border border-border bg-card/80 p-3 text-xs shadow-sm backdrop-blur-md sm:px-4">
+            <div className="flex flex-wrap items-center gap-2">
+              <span className="flex h-2 w-2 rounded-full bg-emerald-500 animate-pulse" />
+              <span className="font-bold text-foreground text-xs">Bugungi Bepul Imkoniyatingiz:</span>
+              <div className="flex items-center gap-2">
+                <span
+                  className={`rounded-full px-2.5 py-0.5 text-[11px] font-bold border ${
+                    isUnlimited || remainingSpeaking > 0
+                      ? 'bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border-emerald-500/20'
+                      : 'bg-muted text-muted-foreground border-border'
+                  }`}
+                >
+                  🎙️ Speaking: {isUnlimited ? 'Cheksiz ∞' : `${remainingSpeaking}/1`}
+                </span>
+                <span
+                  className={`rounded-full px-2.5 py-0.5 text-[11px] font-bold border ${
+                    isUnlimited || remainingWriting > 0
+                      ? 'bg-blue-500/10 text-blue-600 dark:text-blue-400 border-blue-500/20'
+                      : 'bg-muted text-muted-foreground border-border'
+                  }`}
+                >
+                  ✍️ Writing: {isUnlimited ? 'Cheksiz ∞' : `${remainingWriting}/1`}
+                </span>
+              </div>
+            </div>
+            <Link
+              to="/pricing"
+              className="flex items-center gap-1 text-[11px] font-bold text-indigo-600 hover:text-indigo-700 dark:text-indigo-400 hover:underline"
+            >
+              <span>⭐ Obuna & Cheksiz Tahlillar</span>
             </Link>
           </div>
 
