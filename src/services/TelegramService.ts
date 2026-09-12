@@ -279,10 +279,10 @@ class TelegramService {
             }
             const errData = await response.json().catch(() => ({}));
             this.lastSendError = errData.error || errData.details || 'Yuborishda xatolik';
-            return { ok: false, status: response.status, error: this.lastSendError };
+            return { ok: false, status: response.status, error: this.lastSendError || undefined };
         } catch (e: any) {
             this.lastSendError = e?.message || 'Tarmoq xatosi';
-            return { ok: false, error: this.lastSendError };
+            return { ok: false, error: this.lastSendError || undefined };
         }
     }
 
