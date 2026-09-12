@@ -12,7 +12,11 @@
   ],
   "crons": [
     {
-      "path": "/api/telegram/notify-daily",
+      "path": "/api/telegram/notify-daily?window=morning",
+      "schedule": "0 4 * * *"
+    },
+    {
+      "path": "/api/telegram/notify-daily?window=evening",
       "schedule": "0 15 * * *"
     },
     {

@@ -1,5 +1,7 @@
 import { supabase } from '../lib/supabase';
 import type { IeltsGrammarTopic } from '../data/ielts/ielts_grammar_data';
+import { safeLocalStorage } from '../utils/storage/safeLocalStorage';
+import { isUuid } from '../utils/uuid';
 
 export interface DbGrammarLessonRow {
   id: string;
@@ -129,15 +131,27 @@ export const GrammarService = {
    */
   async getUserProgress(): Promise<Record<string, UserGrammarProgress>> {
     try {
-      const {
-        data: { user },
-      } = await supabase.auth.getUser();
-      if (!user) return {};
+      let activeUserId: string | null = null;
+      try {
+        const {
+          data: { user },
+        } = await supabase.auth.getUser();
+        if (user?.id) activeUserId = user.id;
+      } catch {}
+
+      if (!activeUserId) {
+        const cachedUser = safeLocalStorage.getJSON<{ id?: string } | null>('study_planner_user_cache', null);
+        if (cachedUser?.id && isUuid(cachedUser.id)) {
+          activeUserId = cachedUser.id;
+        }
+      }
+
+      if (!activeUserId) return {};
 
       const { data, error } = await supabase
         .from('english_grammar_progress')
         .select('*')
-        .eq('user_id', user.id);
+        .eq('user_id', activeUserId);
 
       if (error || !data) {
         return {};
@@ -171,13 +185,25 @@ export const GrammarService = {
     totalQuestions: number,
   ): Promise<boolean> {
     try {
-      const {
-        data: { user },
-      } = await supabase.auth.getUser();
-      if (!user) return false;
+      let activeUserId: string | null = null;
+      try {
+        const {
+          data: { user },
+        } = await supabase.auth.getUser();
+        if (user?.id) activeUserId = user.id;
+      } catch {}
+
+      if (!activeUserId) {
+        const cachedUser = safeLocalStorage.getJSON<{ id?: string } | null>('study_planner_user_cache', null);
+        if (cachedUser?.id && isUuid(cachedUser.id)) {
+          activeUserId = cachedUser.id;
+        }
+      }
+
+      if (!activeUserId) return false;
 
       const payload = {
-        user_id: user.id,
+        user_id: activeUserId,
         lesson_slug: lessonSlug,
         completed,
         score,

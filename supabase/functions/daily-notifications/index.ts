@@ -4,6 +4,8 @@ import { createClient } from 'https://esm.sh/@supabase/supabase-js@2.39.0';
 import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
 import { getSupabaseSecretKey } from '../_shared/secretKey.ts';
 
+declare const Deno: { env: { get(key: string): string | undefined } };
+
 const BOT_TOKEN = Deno.env.get('TELEGRAM_BOT_TOKEN')!;
 const SUPABASE_URL = Deno.env.get('SUPABASE_URL')!;
 // Supabase Secret key (sb_secret_...) — trusted cron/server bearer sifatida ham ishlatiladi
@@ -18,6 +20,29 @@ function escapeHTML(str: string): string {
         .replace(/&/g, '&amp;')
         .replace(/</g, '&lt;')
         .replace(/>/g, '&gt;');
+}
+
+function getTaskTypeIcon(type?: string): string {
+    switch ((type || '').toLowerCase()) {
+        case 'vocabulary':
+            return '📚';
+        case 'grammar':
+            return '📝';
+        case 'speaking':
+            return '🎙️';
+        case 'writing':
+            return '✍️';
+        case 'reading':
+            return '📖';
+        case 'listening':
+            return '🎧';
+        case 'srs':
+            return '🧠';
+        case 'mock_test':
+            return '⏱️';
+        default:
+            return '📌';
+    }
 }
 
 // Helper to send message
@@ -137,13 +162,59 @@ serve(async (req: Request) => {
         let sentCount = 0;
 
         for (const user of users) {
-            // Fetch tasks for TODAY (Local Date)
+            // 1. Fetch tasks for TODAY (Local Date)
             const { data: tasks } = await supabase
                 .from('tasks')
                 .select('title, due_date, priority, status')
                 .eq('user_id', user.user_id)
                 .lte('due_date', todayDate + 'T23:59:59')
                 .order('due_date', { ascending: true });
+
+            // 2. Fetch active personal learning goal & weekly plan
+            let activeGoal: any = null;
+            try {
+                const { data: goal } = await supabase
+                    .from('personal_learning_goals')
+                    .select('*')
+                    .eq('user_id', user.user_id)
+                    .eq('status', 'active')
+                    .order('created_at', { ascending: false })
+                    .limit(1)
+                    .maybeSingle();
+                activeGoal = goal;
+            } catch (e) {
+                console.warn('Could not query personal goal:', e);
+            }
+
+            let planTasks: any[] = [];
+            let weeklyPlan: any = null;
+            const dayOfWeek = new Intl.DateTimeFormat('en-US', {
+                timeZone: 'Asia/Tashkent',
+                weekday: 'long'
+            }).format(now).toLowerCase();
+
+            try {
+                let planQuery = supabase
+                    .from('weekly_learning_plans')
+                    .select('*')
+                    .eq('user_id', user.user_id);
+                if (activeGoal?.id) {
+                    planQuery = planQuery.eq('goal_id', activeGoal.id);
+                }
+                const { data: plan } = await planQuery
+                    .order('week_number', { ascending: false })
+                    .limit(1)
+                    .maybeSingle();
+                weeklyPlan = plan;
+                if (weeklyPlan?.plan_data?.days && Array.isArray(weeklyPlan.plan_data.days)) {
+                    const dayObj = weeklyPlan.plan_data.days.find((d: any) => (d.day || '').toLowerCase() === dayOfWeek);
+                    if (dayObj && Array.isArray(dayObj.tasks)) {
+                        planTasks = dayObj.tasks;
+                    }
+                }
+            } catch (e) {
+                console.warn('Could not query weekly plan:', e);
+            }
 
             // Fetch due SRS flashcards
             const { data: dueCards } = await supabase
@@ -152,14 +223,42 @@ serve(async (req: Request) => {
                 .eq('user_id', user.user_id)
                 .lte('next_review_date', todayDate + 'T23:59:59');
 
-            const pendingTasks = tasks?.filter((t: { status: string }) => t.status !== 'done') || [];
-            const completedTasks = tasks?.filter((t: { status: string; due_date?: string }) => t.status === 'done' && t.due_date?.startsWith(todayDate)) || [];
+            const allCompletedItems: any[] = [];
+            const allPendingItems: any[] = [];
+
+            planTasks.forEach(t => {
+                const isDone = t.completed === true || t.status === 'completed';
+                const item = {
+                    title: t.title,
+                    type: t.type || 'task',
+                    duration: t.estimatedMinutes || 15,
+                    isDone
+                };
+                if (isDone) allCompletedItems.push(item);
+                else allPendingItems.push(item);
+            });
+
+            (tasks || []).forEach((t: any) => {
+                const isDone = t.status === 'done' || (t.due_date?.startsWith(todayDate) && t.completed === true);
+                const item = {
+                    title: t.title,
+                    type: 'task',
+                    duration: 20,
+                    isDone
+                };
+                if (isDone) allCompletedItems.push(item);
+                else allPendingItems.push(item);
+            });
+
             const dueFlashcardsCount = dueCards?.length || 0;
+            const totalPlannedMinutes = planTasks.reduce((sum, t) => sum + (t.estimatedMinutes || 15), 0);
+            const goalName = activeGoal?.target_goal || (activeGoal?.target_level ? `IELTS Band ${activeGoal.target_level}` : 'IELTS / Ingliz tili');
+            const weekNum = weeklyPlan?.week_number || activeGoal?.current_week || 1;
 
             let message = '';
             let replyMarkup: any = null;
 
-            const baseAppUrl = 'https://nihon-talk.vercel.app'; // Default frontend URL
+            const baseAppUrl = 'https://ielts-talk.vercel.app'; // Production frontend URL
 
             // --- MORNING / MIDDAY NOTIFICATION (09:00 / 14:00) ---
             if (currentTime === '09:00' || currentTime === '14:00') {
@@ -167,30 +266,35 @@ serve(async (req: Request) => {
                     ? `🧠 <b>SRS Fleshkartalar:</b> Bugun <b>${dueFlashcardsCount} ta</b> so'z takrorlashga tayyor!\n\n`
                     : '';
 
-                if (pendingTasks.length === 0 && dueFlashcardsCount === 0) {
+                if (allPendingItems.length === 0 && dueFlashcardsCount === 0) {
                     message = `🌅 <b>Xayrli kun, ${escapeHTML(user.telegram_first_name || 'Foydalanuvchi')}!</b>\n\n` +
-                        `Bugungi kun uchun rejalashtirilgan vazifalar va kutilayotgan fleshkartalar yo'q.\n` +
-                        `Yangi vazifa yoki fleshkarta qo'shish uchun platformaga kiring! 🚀\n\n` +
+                        `Bugungi kun uchun barcha vazifalar bajarilgan yoki hali reja tuzilmagan.\n` +
+                        `IELTS Talk orqali yangi 1 haftalik maqsadli reja tuzing! 🚀\n\n` +
                         `<i>Unumli kun tilayman!</i> ✨`;
+                    replyMarkup = {
+                        inline_keyboard: [
+                            [{ text: "🎯 Shaxsiy Reja Tuzish 🚀", web_app: { url: `${baseAppUrl}/planner` } }]
+                        ]
+                    };
                 } else {
-                    const taskList = pendingTasks.slice(0, 5).map((t: { priority: string; title: string }) => {
-                        const icon = t.priority === 'urgent' ? '🔴' : t.priority === 'high' ? '🟠' : '🔵';
-                        return `${icon} <b>${escapeHTML(t.title)}</b>`;
+                    const taskList = allPendingItems.slice(0, 6).map((t, i) => {
+                        const icon = getTaskTypeIcon(t.type);
+                        return `  <b>${i + 1}.</b> ${icon} <b>${escapeHTML(t.title)}</b> <i>(~${t.duration} daq)</i>`;
                     }).join('\n');
 
                     message = `🌅 <b>Xayrli kun, ${escapeHTML(user.telegram_first_name || 'Foydalanuvchi')}!</b>\n\n` +
+                        (activeGoal ? `🎯 <b>Maqsad:</b> ${escapeHTML(goalName)} <i>(${weekNum}-hafta)</i>\n\n` : '') +
                         srsText +
-                        (pendingTasks.length > 0 ? `📋 <b>Bugungi rejalaringiz (${pendingTasks.length} ta):</b>\n${taskList}\n\n` : '') +
+                        (allPendingItems.length > 0 ? `📋 <b>Bugungi rejalaringiz (${allPendingItems.length} ta):</b>\n${taskList}\n\n` : '') +
+                        (totalPlannedMinutes > 0 ? `⏱️ <b>Rejalashtirilgan vaqt:</b> ~${totalPlannedMinutes} daqiqa\n\n` : '') +
                         `<i>Kun davomida rejangizga amal qilib, streak ballingizni oshiring!</i> 💪`;
 
-                    if (dueFlashcardsCount > 0) {
-                        replyMarkup = {
-                            inline_keyboard: [
-                                [{ text: "🧠 Fleshkartalarni Takrorlash 🚀", url: `${baseAppUrl}/flashcards` }],
-                                [{ text: "📋 Vazifalar Ro'yxati", url: `${baseAppUrl}/tasks` }]
-                            ]
-                        };
-                    }
+                    replyMarkup = {
+                        inline_keyboard: [
+                            [{ text: "🚀 Darslarni Boshlash (Mini App)", web_app: { url: `${baseAppUrl}/study-mode` } }],
+                            [{ text: "🧠 Fleshkartalarni Takrorlash", url: `${baseAppUrl}/decks` }]
+                        ]
+                    };
                 }
 
                 if (message) {
@@ -228,7 +332,7 @@ serve(async (req: Request) => {
                         .gte('start_time', weekAgoStr + 'T00:00:00')
                         .lte('start_time', todayDate + 'T23:59:59');
 
-                    const totalWeeklyTasks = weeklyTasks?.length || 0;
+                    const totalWeeklyTasks = (weeklyTasks?.length || 0) + allCompletedItems.length;
                     const totalDurationMinutes = weeklySessions?.reduce((acc: number, s: { duration: number }) => acc + (s.duration || 0), 0) || 0;
                     const hours = Math.floor(totalDurationMinutes / 60);
                     const minutes = totalDurationMinutes % 60;
@@ -244,7 +348,7 @@ serve(async (req: Request) => {
                     sentCount++;
 
                 } else {
-                    // REGULAR DAILY REPORT + SRS ACCOUNTABILITY
+                    // REGULAR DAILY REPORT + ACCOUNTABILITY
                     const { data: todaySessions } = await supabase
                         .from('study_sessions')
                         .select('duration')
@@ -254,61 +358,65 @@ serve(async (req: Request) => {
                         .lte('start_time', todayDate + 'T23:59:59');
 
                     const todayDuration = todaySessions?.reduce((acc: number, s: { duration: number }) => acc + (s.duration || 0), 0) || 0;
-                    const totalToday = pendingTasks.length + completedTasks.length;
+                    const totalToday = allPendingItems.length + allCompletedItems.length;
 
-                    if (completedTasks.length === 0 && todayDuration === 0 && dueFlashcardsCount > 0) {
-                        // User did not study today, but has due cards
+                    if (allCompletedItems.length === 0 && todayDuration === 0 && dueFlashcardsCount > 0) {
                         message = `⚠️ <b>Kechki Eslatma, ${escapeHTML(user.telegram_first_name || 'Foydalanuvchi')}!</b>\n\n` +
-                                  `Bugun hali o'rganish seansi o'tkazilmadi, ammo <b>${dueFlashcardsCount} ta fleshkartangiz</b> takrorlashni kutmoqda!\n` +
+                                  `Bugun hali dars seansi o'tkazilmadi, ammo <b>${dueFlashcardsCount} ta fleshkartangiz</b> takrorlashni kutmoqda!\n` +
                                   `Uxlashdan oldin 5 daqiqa ajratib takrorlab oling va streak ballingizni saqlab qoling 🧠⚡️`;
 
                         replyMarkup = {
                             inline_keyboard: [
-                                [{ text: "🧠 Hozir 5 Daqiqada Takrorlash 🚀", url: `${baseAppUrl}/flashcards` }],
+                                [{ text: "🧠 Hozir 5 Daqiqada Takrorlash 🚀", url: `${baseAppUrl}/decks` }],
                                 [{ text: "😴 Bugun charchadim", callback_data: `excuse_tired_${todayDate}` }]
                             ]
                         };
                         await sendMessage(user.chat_id, message, replyMarkup);
                         sentCount++;
-                    } else if (completedTasks.length === 0 && todayDuration === 0) {
-                        // User did NOTHING today
+                    } else if (allCompletedItems.length === 0 && todayDuration === 0 && allPendingItems.length === 0) {
                         message = `⚠️ <b>Sizni sog'indik, ${escapeHTML(user.telegram_first_name || 'Foydalanuvchi')}!</b>\n\n` +
-                                  `Bugun hech qanday vazifa yopilmadi va taymer ham ishlatilmadi.\n` +
-                                  `Dangasalik qildikmi yoki jiddiy sabab bormi? Iltimos, pastdan tanlang:\n`;
+                                  `Bugun hech qanday vazifa yopilmadi.\n` +
+                                  `IELTS Talk orqali shaxsiy o'quv rejangizni faollashtiring! 🚀\n`;
 
                         replyMarkup = {
                             inline_keyboard: [
-                                [{ text: "😴 Charchadim", callback_data: `excuse_tired_${todayDate}` }],
-                                [{ text: "⏳ Vaqtim bo'lmadi", callback_data: `excuse_notime_${todayDate}` }],
-                                [{ text: "📉 Chalg'ib ketdim", callback_data: `excuse_distracted_${todayDate}` }],
-                                [{ text: "✍️ Boshqa sabab", callback_data: `excuse_other_${todayDate}` }]
+                                [{ text: "🎯 Reja Tuzish", web_app: { url: `${baseAppUrl}/planner` } }],
+                                [{ text: "😴 Bugun charchadim", callback_data: `excuse_tired_${todayDate}` }]
                             ]
                         };
                         await sendMessage(user.chat_id, message, replyMarkup);
                         sentCount++;
                     } else {
-                        const progress = totalToday > 0 ? Math.round((completedTasks.length / totalToday) * 100) : 0;
+                        const progress = totalToday > 0 ? Math.round((allCompletedItems.length / totalToday) * 100) : 0;
                         const srsRemind = dueFlashcardsCount > 0
                             ? `\n🧠 Kutilayotgan fleshkartalar: <b>${dueFlashcardsCount} ta</b>`
                             : '';
 
+                        let pendingText = '';
+                        if (allPendingItems.length > 0) {
+                            pendingText = '\n⏳ <b>Qolgan vazifalar:</b>\n' +
+                                allPendingItems.map((t, i) => `  ${i + 1}. ${getTaskTypeIcon(t.type)} ${escapeHTML(t.title)}`).join('\n') +
+                                `\n\n<i>Uxlashdan oldin qolgan vazifalarni yakunlab oling va streakingizni saqlang! 🔥</i>`;
+                        } else {
+                            pendingText = `\n🎉 <i>Barchasini mukammal uddaladingiz! Barakalla!</i> 🌟`;
+                        }
+
                         message = `🌙 <b>Xayrli kech, ${escapeHTML(user.telegram_first_name || 'Foydalanuvchi')}!</b>\n\n` +
+                            (activeGoal ? `🎯 <b>Maqsad:</b> ${escapeHTML(goalName)}\n` : '') +
                             `📊 <b>Bugungi natijalaringiz:</b>\n` +
-                            `✅ Bajarildi: <b>${completedTasks.length}</b> ta vazifa\n` +
-                            `⏳ Qoldi: <b>${pendingTasks.length}</b> ta vazifa\n` +
-                            `⏱ Fokus vaqti: <b>${todayDuration} daqiqa</b>\n` +
+                            `✅ Bajarildi: <b>${allCompletedItems.length}</b> ta vazifa\n` +
+                            `⏳ Qoldi: <b>${allPendingItems.length}</b> ta vazifa\n` +
+                            (todayDuration > 0 ? `⏱ Fokus vaqti: <b>${todayDuration} daqiqa</b>\n` : '') +
                             `📈 Samaradorlik: <b>${progress}%</b>` +
-                            srsRemind + `\n\n` +
-                            `${pendingTasks.length > 0 || dueFlashcardsCount > 0 ? `<i>Ertaga yangi marralarni zabt etamiz!</i> 💪` : `<i>Barchasini mukammal uddaladingiz! Barakalla!</i> 🎉`}\n\n` +
+                            srsRemind + `\n` +
+                            pendingText + `\n\n` +
                             `<i>Tinch osuda tun tilayman!</i> 😴`;
                         
-                        if (dueFlashcardsCount > 0) {
-                            replyMarkup = {
-                                inline_keyboard: [
-                                    [{ text: "🧠 Fleshkartalarni Ko'rish 🚀", url: `${baseAppUrl}/flashcards` }]
-                                ]
-                            };
-                        }
+                        replyMarkup = {
+                            inline_keyboard: [
+                                [{ text: "🚀 IELTS Talk-ni Ochish", web_app: { url: `${baseAppUrl}/` } }]
+                            ]
+                        };
                         await sendMessage(user.chat_id, message, replyMarkup);
                         sentCount++;
                     }

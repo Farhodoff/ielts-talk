@@ -5,6 +5,7 @@ import { useLanguage } from '../../context/LanguageContext';
 
 interface ActivityHeatmapProps {
     sessions: StudySession[];
+    subjects?: import('../../types').Subject[];
 }
 
 export interface HeatmapActivityDetails {
@@ -80,7 +81,7 @@ const MONTH_NAMES_JA: Record<number, string> = {
     11: '12がつ',
 };
 
-const ActivityHeatmap: React.FC<ActivityHeatmapProps> = ({ sessions }) => {
+const ActivityHeatmap: React.FC<ActivityHeatmapProps> = ({ sessions, subjects }) => {
     const { language } = useLanguage();
     // 2026 yil to'liq: January - December
     const year2026 = new Date(2026, 0, 1); // January 1, 2026
@@ -117,12 +118,29 @@ const ActivityHeatmap: React.FC<ActivityHeatmapProps> = ({ sessions }) => {
             current.minutes += dur;
             current.details.totalSessions += 1;
 
+            const matchedSubject = subjects?.find(sub => sub.id === s.subjectId);
             const sub = (s.subjectId || '').toLowerCase();
-            if (sub.includes('speaking') || sub.includes('coach')) {
+            const subjectName = (matchedSubject?.name || '').toLowerCase();
+            const combined = `${sub} ${subjectName}`;
+
+            if (combined.includes('speaking') || combined.includes('coach')) {
                 current.details.speakingMinutes += dur;
-            } else if (sub.includes('flashcard') || sub.includes('deck') || sub.includes('vocab')) {
+            } else if (
+                combined.includes('flashcard') ||
+                combined.includes('deck') ||
+                combined.includes('vocab') ||
+                combined.includes('oxford') ||
+                combined.includes('a1') ||
+                combined.includes('a2') ||
+                combined.includes('b1') ||
+                combined.includes('b2') ||
+                combined.includes('jlpt') ||
+                combined.includes('lug\'at') ||
+                combined.includes('part') ||
+                combined.includes('qism')
+            ) {
                 current.details.flashcardsMinutes += dur;
-            } else if (sub.includes('grammar') || sub.includes('murphy') || sub.includes('ielts')) {
+            } else if (combined.includes('grammar') || combined.includes('murphy') || combined.includes('ielts')) {
                 current.details.grammarMinutes += dur;
             } else {
                 current.details.focusMinutes += dur;

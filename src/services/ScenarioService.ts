@@ -1,6 +1,8 @@
 import { ConversationScenario, ScenarioSessionResult } from '../components/speaking/scenarioTypes';
 import { DEFAULT_SCENARIOS } from '../data/defaultScenarios';
 import { supabase } from '../lib/supabase';
+import { safeLocalStorage } from '../utils/storage/safeLocalStorage';
+import { isUuid } from '../utils/uuid';
 
 const CUSTOM_SCENARIOS_KEY = 'nihon_talk_custom_scenarios';
 const DELETED_SCENARIOS_KEY = 'nihon_talk_deleted_scenarios';
@@ -228,62 +230,84 @@ export class ScenarioService {
             localStorage.setItem(key, JSON.stringify(history.slice(0, 50)));
         }
 
-        if (userId && userId !== 'guest' && userId !== 'anonymous') {
-            try {
-                const payload: any = {
-                    user_id: userId,
-                    user_email: userEmail,
-                    language: (result as any).language || 'ja',
-                    topic: result.scenario_title || 'Umumiy suhbat',
-                    scenario_id: result.scenario_id || 'general_speaking',
-                    persona_title: result.scenario_title || 'AI Coach',
-                    fluency_score: result.fluency_score || 80,
-                    vocabulary_score: result.vocabulary_score || 80,
-                    grammar_score: result.grammar_score || 80,
-                    pronunciation_score: result.pronunciation_score || 80,
-                    overall_score: result.overall_score || 80,
-                    duration_seconds: result.duration_seconds || 0,
-                    feedback: result.ai_feedback || '',
-                    ai_feedback: result.ai_feedback || '',
-                    transcript: result.transcript || [],
-                    created_at: result.created_at || new Date().toISOString()
-                };
-
-                // Only attach id if it does not contain invalid string prefix
-                if (result.id && !result.id.startsWith('session-')) {
-                    payload.id = result.id;
-                }
-
-                if (result.audio_path) {
-                    payload.audio_path = result.audio_path;
-                }
-
-                const { error: insertErr } = await supabase.from('speaking_sessions').insert(payload);
-
-                if (insertErr) {
-                    if (insertErr.message.includes('audio_path')) {
-                        delete payload.audio_path;
-                        await supabase.from('speaking_sessions').insert(payload);
-                    } else {
-                        console.warn('[ScenarioService] speaking_sessions DB insert notice:', insertErr.message);
-                    }
-                }
-
-                // 2. Legacy table fallback insertion
-                await supabase.from('coach_sessions').insert({
-                    user_id: userId,
-                    persona_title: result.scenario_title || 'AI Coach',
-                    fluency_score: result.fluency_score || 80,
-                    vocabulary_score: result.vocabulary_score || 80,
-                    grammar_score: result.grammar_score || 80,
-                    pronunciation_score: result.pronunciation_score || 80,
-                    duration_seconds: result.duration_seconds || 0,
-                    feedback: result.ai_feedback || '',
-                    created_at: result.created_at || new Date().toISOString()
-                });
-            } catch (e) {
-                console.warn('Supabase session history insert notice:', e);
+        let effectiveUserId: string | null = userId && isUuid(userId) ? userId : null;
+        if (!effectiveUserId) {
+            const cachedUser = safeLocalStorage.getJSON<{ id?: string; email?: string } | null>('study_planner_user_cache', null);
+            if (cachedUser?.id && isUuid(cachedUser.id)) {
+                effectiveUserId = cachedUser.id;
+                userEmail = cachedUser.email || userEmail;
             }
+        }
+
+        try {
+            const payload: any = {
+                language: (result as any).language || 'en',
+                topic: result.scenario_title || 'Umumiy suhbat',
+                scenario_id: result.scenario_id || 'general_speaking',
+                persona_title: result.scenario_title || 'AI Coach',
+                fluency_score: result.fluency_score || 80,
+                vocabulary_score: result.vocabulary_score || 80,
+                grammar_score: result.grammar_score || 80,
+                pronunciation_score: result.pronunciation_score || 80,
+                overall_score: result.overall_score || 80,
+                duration_seconds: result.duration_seconds || 0,
+                feedback: result.ai_feedback || '',
+                ai_feedback: result.ai_feedback || '',
+                transcript: result.transcript || [],
+                created_at: result.created_at || new Date().toISOString()
+            };
+
+            if (effectiveUserId) {
+                payload.user_id = effectiveUserId;
+            }
+            if (userEmail) {
+                payload.user_email = userEmail;
+            }
+
+            // Only attach id if it does not contain invalid string prefix
+            if (result.id && !result.id.startsWith('session-')) {
+                payload.id = result.id;
+            }
+
+            if (result.audio_path) {
+                payload.audio_path = result.audio_path;
+            }
+
+            const { error: insertErr } = await supabase.from('speaking_sessions').insert(payload);
+
+            if (insertErr) {
+                if (insertErr.message.includes('audio_path')) {
+                    delete payload.audio_path;
+                    await supabase.from('speaking_sessions').insert(payload);
+                } else {
+                    console.warn('[ScenarioService] speaking_sessions DB insert notice:', insertErr.message);
+                }
+            }
+
+            // 2. Insert into speaking_coach_sessions
+            const coachPayload: any = {
+                id: payload.id,
+                persona: result.scenario_title || 'AI Coach',
+                persona_title: result.scenario_title || 'AI Coach',
+                topic: result.scenario_title || 'AI Coach',
+                fluency_score: result.fluency_score || 80,
+                vocabulary_score: result.vocabulary_score || 80,
+                grammar_score: result.grammar_score || 80,
+                pronunciation_score: result.pronunciation_score || 80,
+                overall_score: result.overall_score || 80,
+                duration_seconds: result.duration_seconds || 0,
+                feedback: result.ai_feedback || '',
+                created_at: result.created_at || new Date().toISOString()
+            };
+            if (effectiveUserId) {
+                coachPayload.user_id = effectiveUserId;
+            }
+            await supabase.from('speaking_coach_sessions').insert(coachPayload);
+            try {
+                await supabase.from('coach_sessions').insert(coachPayload);
+            } catch {}
+        } catch (e) {
+            console.warn('Supabase session history insert notice:', e);
         }
     }
 

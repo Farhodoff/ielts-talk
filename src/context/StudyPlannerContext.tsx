@@ -43,7 +43,7 @@ import {
   DatabaseEvent,
   DatabaseProfile,
 } from '../types/supabase-types';
-import { isUuid } from '../utils/uuid';
+import { generateUUID, isUuid } from '../utils/uuid';
 import { safeLocalStorage } from '../utils/storage/safeLocalStorage';
 import { LearningTrackStorage } from '../utils/storage/LearningTrackStorage';
 import { isSuperAdmin } from '../utils/admin';
@@ -600,6 +600,54 @@ export const StudyPlannerProvider: React.FC<{ children: React.ReactNode }> = ({ 
           ...dbSessions,
           ...localSessions.filter((s) => !dbSessionIds.has(s.id)),
         ];
+        // Auto-heal/recover today's flashcard session if user reviewed cards but session wasn't logged
+        const todayPrefix = new Date().toISOString().split('T')[0];
+        const hasSessionToday = mergedSessions.some(
+          (s) => s.startTime && s.startTime.startsWith(todayPrefix),
+        );
+        if (!hasSessionToday) {
+          const evidenceEn = safeLocalStorage.getJSON<any[]>(
+            `study_planner_mastery_evidence_${currentUser?.id || 'guest'}_en`,
+            [],
+          );
+          const evidenceJa = safeLocalStorage.getJSON<any[]>(
+            `study_planner_mastery_evidence_${currentUser?.id || 'guest'}_ja`,
+            [],
+          );
+          const allTodayEvidence = [...evidenceEn, ...evidenceJa].filter(
+            (ev) => ev.timestamp && ev.timestamp.startsWith(todayPrefix) && ev.activityType === 'srs_review',
+          );
+          if (allTodayEvidence.length > 0) {
+            const count = allTodayEvidence.length;
+            const duration = Math.max(1, Math.round(count * 0.75));
+            const recoverySession: StudySession = {
+              id: generateUUID(),
+              subjectId: 'flashcards',
+              startTime: allTodayEvidence[0].timestamp || new Date().toISOString(),
+              duration,
+              type: 'focus',
+              completed: true,
+            };
+            mergedSessions.unshift(recoverySession);
+            safeLocalStorage.setJSON(userSessionsKey, mergedSessions);
+            if (currentUser?.id && currentUser.id !== 'guest') {
+              (async () => {
+                try {
+                  await supabase.from('study_sessions').insert({
+                    id: recoverySession.id,
+                    user_id: currentUser.id,
+                    subject_id: undefined,
+                    start_time: recoverySession.startTime,
+                    duration: recoverySession.duration,
+                    type: 'focus',
+                    completed: true,
+                  });
+                } catch {}
+              })();
+            }
+          }
+        }
+
         setSessions(mergedSessions);
         safeLocalStorage.setJSON(userSessionsKey, mergedSessions);
 

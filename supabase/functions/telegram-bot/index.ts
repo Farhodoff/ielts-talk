@@ -70,6 +70,7 @@ function escapeHTML(str: string): string {
 // Keyboard layout for commands
 const defaultKeyboard = {
     keyboard: [
+        [{ text: '🚀 IELTS Talk-ni Ochish', web_app: { url: 'https://ielts-talk.vercel.app/' } }],
         [{ text: '📅 Bugungi reja' }, { text: '📋 Bajarilganlar' }],
         [{ text: '📊 Mening statistikam' }, { text: '🎯 Maqsadlarim' }],
         [{ text: '➕ Yangi vazifa' }, { text: 'ℹ️ Yordam' }]
@@ -314,6 +315,29 @@ async function handleDone(message: TelegramMessage) {
     }
 }
 
+function getTaskTypeIcon(type?: string): string {
+    switch ((type || '').toLowerCase()) {
+        case 'vocabulary':
+            return '📚';
+        case 'grammar':
+            return '📝';
+        case 'speaking':
+            return '🎙️';
+        case 'writing':
+            return '✍️';
+        case 'reading':
+            return '📖';
+        case 'listening':
+            return '🎧';
+        case 'srs':
+            return '🧠';
+        case 'mock_test':
+            return '⏱️';
+        default:
+            return '📌';
+    }
+}
+
 // Handle /today command or refresh callback
 async function handleToday(message: TelegramMessage, editMessageId: number | null = null) {
     const chatId = message.chat.id;
@@ -336,6 +360,8 @@ async function handleToday(message: TelegramMessage, editMessageId: number | nul
             return sendMessage(chatId, failText);
         }
 
+        const userId = userLink.user_id;
+
         // Get today's date string YYYY-MM-DD in Asia/Tashkent timezone (GMT+5)
         const dateFormatter = new Intl.DateTimeFormat('en-CA', {
             timeZone: 'Asia/Tashkent',
@@ -344,29 +370,69 @@ async function handleToday(message: TelegramMessage, editMessageId: number | nul
             day: '2-digit'
         });
         const today = dateFormatter.format(new Date());
+        const dayOfWeek = new Intl.DateTimeFormat('en-US', {
+            timeZone: 'Asia/Tashkent',
+            weekday: 'long'
+        }).format(new Date()).toLowerCase();
 
-        const { data: tasks, error: tasksError } = await supabase
+        const uzbekDays: Record<string, string> = {
+            monday: 'Dushanba',
+            tuesday: 'Seshanba',
+            wednesday: 'Chorshanba',
+            thursday: 'Payshanba',
+            friday: 'Juma',
+            saturday: 'Shanba',
+            sunday: 'Yakshanba'
+        };
+        const dayNameUz = uzbekDays[dayOfWeek] || 'Bugun';
+
+        // 1. Fetch active goal
+        const { data: activeGoal } = await supabase
+            .from('personal_learning_goals')
+            .select('*')
+            .eq('user_id', userId)
+            .eq('status', 'active')
+            .order('created_at', { ascending: false })
+            .limit(1)
+            .maybeSingle();
+
+        // 2. Fetch weekly plan
+        let planQuery = supabase
+            .from('weekly_learning_plans')
+            .select('*')
+            .eq('user_id', userId);
+
+        if (activeGoal?.id) {
+            planQuery = planQuery.eq('goal_id', activeGoal.id);
+        }
+
+        const { data: weeklyPlan } = await planQuery
+            .order('week_number', { ascending: false })
+            .limit(1)
+            .maybeSingle();
+
+        let planTasks: Array<{ id: string; title: string; type?: string; estimatedMinutes?: number; completed?: boolean; status?: string }> = [];
+        if (weeklyPlan?.plan_data?.days && Array.isArray(weeklyPlan.plan_data.days)) {
+            const dayObj = weeklyPlan.plan_data.days.find((d: { day?: string }) => (d.day || '').toLowerCase() === dayOfWeek);
+            if (dayObj && Array.isArray(dayObj.tasks)) {
+                planTasks = dayObj.tasks;
+            }
+        }
+
+        // 3. Fetch standalone tasks
+        const { data: customTasks } = await supabase
             .from('tasks')
-            .select('id, title, due_date, priority')
-            .eq('user_id', userLink.user_id)
-            .eq('completed', false)
+            .select('id, title, due_date, priority, completed, status')
+            .eq('user_id', userId)
             .or(`due_date.lte.${today},due_date.is.null`)
             .order('due_date', { ascending: true, nullsFirst: false })
             .limit(10);
 
-        if (tasksError) {
-            console.error('Error fetching today tasks:', tasksError);
-            const failText = "❌ Bugungi rejalarni yuklashda xatolik yuz berdi.";
-            if (editMessageId) {
-                return editMessageText(chatId, editMessageId, failText);
-            }
-            return sendMessage(chatId, failText);
-        }
-
-        if (!tasks || tasks.length === 0) {
-            const emptyText = "🎉 Bugungi barcha vazifalar bajarilgan yoki hali reja tuzilmagan!";
+        if (planTasks.length === 0 && (!customTasks || customTasks.length === 0)) {
+            const emptyText = `📅 <b>Bugungi o'quv rejangiz (${dayNameUz}, ${today}):</b>\n\n🎉 Bugungi barcha vazifalar bajarilgan yoki hali shaxsiy reja tuzilmagan!\n\nAI yordamida 1 haftalik shaxsiy reja tuzing va darslarni boshlang:`;
             const emptyKeyboard = {
                 inline_keyboard: [
+                    [{ text: '🎯 1-Haftalik AI Reja Tuzish', web_app: { url: 'https://ielts-talk.vercel.app/planner' } }],
                     [{ text: '🔄 Yangilash', callback_data: 'refresh_today' }]
                 ]
             };
@@ -376,34 +442,101 @@ async function handleToday(message: TelegramMessage, editMessageId: number | nul
             return sendMessage(chatId, emptyText, emptyKeyboard);
         }
 
-        let text = "📅 <b>Bugungi rejalar (Bajarilmagan):</b>\n\n";
-        tasks.forEach((task: { priority: string; title: string; due_date?: string }, index: number) => {
-            const priorityEmoji = task.priority === 'high' ? '🔴' : task.priority === 'medium' ? '🟡' : '🟢';
-            const dateStr = task.due_date ? (task.due_date === today ? " <i>(Bugun)</i>" : " <i>(Muddati o'tgan)</i>") : " <i>(Sanasiz)</i>";
-            text += `${index + 1}. ${priorityEmoji} ${escapeHTML(task.title)}${dateStr}\n`;
-        });
-        text += '\n✍️ <i>Vazifani bajarish uchun quyidagi raqamlardan birini bosing!</i>\n';
-        text += 'Batafsil boshqarish: <a href="https://task-planner-tau.vercel.app/tasks">task-planner-tau.vercel.app/tasks</a>';
+        const completedItems: Array<{ id: string; planId?: string; title: string; duration: number; type: string; isDone: boolean; isPlanTask: boolean }> = [];
+        const pendingItems: Array<{ id: string; planId?: string; title: string; duration: number; type: string; isDone: boolean; isPlanTask: boolean }> = [];
 
-        // Build inline keyboard
-        const inlineKeyboard = {
-            inline_keyboard: [
-                // First row of task numbers
-                tasks.map((task: { id: string }, index: number) => ({
-                    text: `${index + 1}️⃣`,
-                    callback_data: `complete:${task.id}`
-                })),
-                // Second row with a refresh button
-                [
-                    { text: '🔄 Yangilash', callback_data: 'refresh_today' }
-                ]
-            ]
-        };
+        planTasks.forEach((t) => {
+            const isDone = t.completed === true || t.status === 'completed';
+            const item = {
+                id: t.id,
+                planId: weeklyPlan?.id,
+                title: t.title,
+                duration: t.estimatedMinutes || 15,
+                type: t.type || 'task',
+                isDone,
+                isPlanTask: true
+            };
+            if (isDone) completedItems.push(item);
+            else pendingItems.push(item);
+        });
+
+        (customTasks || []).forEach((t: { id: string; title: string; completed?: boolean; status?: string }) => {
+            const isDone = t.completed === true || t.status === 'done';
+            const item = {
+                id: t.id,
+                title: t.title,
+                duration: 20,
+                type: 'task',
+                isDone,
+                isPlanTask: false
+            };
+            if (isDone) completedItems.push(item);
+            else pendingItems.push(item);
+        });
+
+        const totalCount = completedItems.length + pendingItems.length;
+        const completedCount = completedItems.length;
+        const progressPct = totalCount > 0 ? Math.round((completedCount / totalCount) * 100) : 0;
+        const totalMinutes = planTasks.reduce((sum, t) => sum + (t.estimatedMinutes || 15), 0);
+
+        const goalName = activeGoal?.target_goal || (activeGoal?.target_level ? `IELTS Band ${activeGoal.target_level}` : 'IELTS / Ingliz tili');
+        const weekNum = weeklyPlan?.week_number || activeGoal?.current_week || 1;
+
+        let text = `📅 <b>Bugungi o'quv rejangiz (${dayNameUz}, ${today}):</b>\n`;
+        if (weeklyPlan) {
+            text += `🎯 <b>Maqsad:</b> ${escapeHTML(goalName)} <i>(${weekNum}-hafta)</i>\n\n`;
+        }
+        text += `📊 <b>Kunlik natija:</b> <b>${completedCount}/${totalCount}</b> bajarildi (${progressPct}%)\n`;
+        if (totalMinutes > 0) {
+            text += `⏱️ <b>Rejalashtirilgan vaqt:</b> ~${totalMinutes} daqiqa\n`;
+        }
+        text += `\n`;
+
+        if (completedItems.length > 0) {
+            text += `✅ <b>Bajarilgan vazifalar:</b>\n`;
+            completedItems.forEach((t) => {
+                const icon = getTaskTypeIcon(t.type);
+                text += `  <s>${icon} ${escapeHTML(t.title)}</s> <i>(~${t.duration} daq)</i>\n`;
+            });
+            text += `\n`;
+        }
+
+        if (pendingItems.length > 0) {
+            text += `⏳ <b>Bugungi qilinishi kerak bo'lgan vazifalar:</b>\n`;
+            pendingItems.forEach((t, i) => {
+                const icon = getTaskTypeIcon(t.type);
+                text += `  <b>${i + 1}.</b> ${icon} <b>${escapeHTML(t.title)}</b> <i>(~${t.duration} daq)</i>\n`;
+            });
+            text += `\n💡 <i>Vazifani bajarish uchun pastdagi tugmani bosing:</i>\n`;
+        } else {
+            text += `🎉 <i>Barakalla! Bugungi barcha vazifalar to'liq yakunlandi!</i> 🌟\n`;
+        }
+
+        const inlineButtons: Array<Array<Record<string, unknown>>> = [];
+        if (pendingItems.length > 0) {
+            const numberEmojis = ['1️⃣', '2️⃣', '3️⃣', '4️⃣', '5️⃣', '6️⃣', '7️⃣', '8️⃣'];
+            const toggleRow = pendingItems.slice(0, 5).map((t, idx) => ({
+                text: `${numberEmojis[idx] || (idx + 1)} ✅`,
+                callback_data: t.isPlanTask ? `ptoggle:${t.planId}:${t.id}` : `complete:${t.id}`
+            }));
+            inlineButtons.push(toggleRow);
+        }
+
+        inlineButtons.push([
+            { text: '🚀 IELTS Talk-da Boshlash', web_app: { url: 'https://ielts-talk.vercel.app/study-mode' } }
+        ]);
+
+        inlineButtons.push([
+            { text: '🔄 Yangilash', callback_data: 'refresh_today' },
+            { text: '📋 Shaxsiy Reja', web_app: { url: 'https://ielts-talk.vercel.app/planner' } }
+        ]);
+
+        const markup = { inline_keyboard: inlineButtons };
 
         if (editMessageId) {
-            return editMessageText(chatId, editMessageId, text, inlineKeyboard);
+            return editMessageText(chatId, editMessageId, text, markup);
         }
-        return sendMessage(chatId, text, inlineKeyboard);
+        return sendMessage(chatId, text, markup);
 
     } catch (err) {
         console.error('handleToday exception:', err);
@@ -556,7 +689,51 @@ async function handleCallbackQuery(callbackQuery: TelegramCallbackQuery) {
     if (!data) return;
 
     try {
-        if (data.startsWith('complete:')) {
+        if (data.startsWith('ptoggle:') || data.startsWith('ptoggle_')) {
+            const isColon = data.startsWith('ptoggle:');
+            const planId = isColon ? data.split(':')[1] : data.replace('ptoggle_', '').split('_')[0];
+            const taskId = isColon ? data.split(':').slice(2).join(':') : data.replace('ptoggle_', '').split('_').slice(1).join('_');
+
+            const { data: planRow } = await supabase
+                .from('weekly_learning_plans')
+                .select('*')
+                .eq('id', planId)
+                .maybeSingle();
+
+            if (planRow && planRow.plan_data) {
+                const planData = planRow.plan_data;
+                let found = false;
+                let isNowCompleted = false;
+
+                if (Array.isArray(planData.days)) {
+                    for (const day of planData.days) {
+                        if (Array.isArray(day.tasks)) {
+                            for (const t of day.tasks) {
+                                if (t.id === taskId) {
+                                    t.completed = !t.completed;
+                                    t.status = t.completed ? 'completed' : 'pending';
+                                    isNowCompleted = t.completed;
+                                    found = true;
+                                    break;
+                                }
+                            }
+                        }
+                        if (found) break;
+                    }
+                }
+
+                if (found) {
+                    await supabase
+                        .from('weekly_learning_plans')
+                        .update({ plan_data: planData, updated_at: new Date().toISOString() })
+                        .eq('id', planId);
+
+                    await answerCallbackQuery(callbackQueryId, isNowCompleted ? "✅ Vazifa bajarildi! (+25 XP) 🎉" : "⏳ Vazifa qaytarildi.");
+                    await handleToday(message, messageId);
+                    return;
+                }
+            }
+        } else if (data.startsWith('complete:')) {
             const taskId = data.split(':')[1];
             
             // Mark task as completed in Supabase

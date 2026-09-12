@@ -71,6 +71,63 @@ vi.mock('@supabase/supabase-js', () => {
           };
         }
 
+        if (table === 'personal_learning_goals') {
+          return {
+            select: vi.fn().mockReturnThis(),
+            eq: vi.fn().mockReturnThis(),
+            order: vi.fn().mockReturnThis(),
+            limit: vi.fn().mockReturnThis(),
+            maybeSingle: vi.fn().mockResolvedValue({
+              data: {
+                id: 'goal_123',
+                user_id: 'user_uuid_123',
+                target_goal: 'IELTS Band 7.5',
+                target_level: '7.5',
+                daily_minutes: 60,
+                current_week: 1,
+                status: 'active'
+              },
+              error: null
+            })
+          };
+        }
+
+        if (table === 'weekly_learning_plans') {
+          const tashkentDay = new Intl.DateTimeFormat('en-US', { timeZone: 'Asia/Tashkent', weekday: 'long' }).format(new Date()).toLowerCase();
+          return {
+            select: vi.fn().mockReturnThis(),
+            eq: vi.fn().mockReturnThis(),
+            order: vi.fn().mockReturnThis(),
+            limit: vi.fn().mockReturnThis(),
+            update: vi.fn().mockReturnValue({
+              eq: vi.fn().mockResolvedValue({ error: null })
+            }),
+            maybeSingle: vi.fn().mockResolvedValue({
+              data: {
+                id: 'plan_123',
+                goal_id: 'goal_123',
+                user_id: 'user_uuid_123',
+                week_number: 1,
+                plan_data: {
+                  startDate: '2026-09-08',
+                  endDate: '2026-09-14',
+                  days: [
+                    {
+                      day: tashkentDay,
+                      tasks: [
+                        { id: 'plan_task_1', title: 'Oxford 3000 A2 Part 1', type: 'vocabulary', estimatedMinutes: 20, completed: false, status: 'pending' },
+                        { id: 'plan_task_2', title: 'Murphy Unit 1 Present Continuous', type: 'grammar', estimatedMinutes: 25, completed: true, status: 'completed' },
+                        { id: 'plan_task_3', title: 'Speaking Coach IELTS Part 1', type: 'speaking', estimatedMinutes: 15, completed: false, status: 'pending' }
+                      ]
+                    }
+                  ]
+                }
+              },
+              error: null
+            })
+          };
+        }
+
         if (table === 'tasks') {
           return {
             select: vi.fn().mockReturnThis(),
@@ -91,6 +148,9 @@ vi.mock('@supabase/supabase-js', () => {
         return {
           select: vi.fn().mockReturnThis(),
           eq: vi.fn().mockReturnThis(),
+          or: vi.fn().mockReturnThis(),
+          order: vi.fn().mockReturnThis(),
+          limit: vi.fn().mockReturnThis(),
           maybeSingle: vi.fn().mockResolvedValue({ data: null, error: null }),
         };
       }),
@@ -277,5 +337,107 @@ describe('Telegram Webhook & Notifications End-to-End Suite', () => {
     await notifyDailyHandler(req as any, res);
     expect(res.statusCode).toBe(200);
     expect(res.data).toMatchObject({ success: true });
+  });
+
+  it('8. displays today tasks from active weekly learning plan when user clicks 📅 Bugungi reja', async () => {
+    const res = createMockRes();
+    const req = {
+      method: 'POST',
+      headers: {},
+      body: {
+        message: {
+          message_id: 8,
+          chat: { id: 998877 },
+          from: { id: 998877, first_name: 'Farhod' },
+          text: '📅 Bugungi reja',
+        },
+      },
+    };
+
+    await webhookHandler(req as any, res);
+    expect(res.statusCode).toBe(200);
+    expect(global.fetch).toHaveBeenCalledWith(
+      expect.stringContaining('sendMessage'),
+      expect.objectContaining({
+        body: expect.stringContaining('Oxford 3000 A2 Part 1'),
+      }),
+    );
+    expect(global.fetch).toHaveBeenCalledWith(
+      expect.stringContaining('sendMessage'),
+      expect.objectContaining({
+        body: expect.stringContaining('IELTS Band 7.5'),
+      }),
+    );
+  });
+
+  it('9. handles ptoggle callback queries to complete a weekly plan task from Telegram', async () => {
+    const res = createMockRes();
+    const req = {
+      method: 'POST',
+      headers: {},
+      body: {
+        callback_query: {
+          id: 'cb_query_toggle_1',
+          data: 'ptoggle:plan_123:plan_task_1',
+          from: { id: 998877, first_name: 'Farhod' },
+          message: {
+            message_id: 99,
+            chat: { id: 998877 },
+          },
+        },
+      },
+    };
+
+    await webhookHandler(req as any, res);
+    expect(res.statusCode).toBe(200);
+    expect(global.fetch).toHaveBeenCalledWith(
+      expect.stringContaining('answerCallbackQuery'),
+      expect.objectContaining({
+        body: expect.stringContaining('+25 XP'),
+      }),
+    );
+  });
+
+  it('10. sends instant plan created notification via TelegramService', async () => {
+    const notificationSpy = vi.spyOn(telegramService, 'sendNotification').mockResolvedValue(true);
+
+    const goal = {
+      id: 'goal_1',
+      userId: 'user_123',
+      targetGoal: 'IELTS Band 7.0+',
+      dailyMinutes: 45,
+      currentWeek: 1,
+    };
+    const plan = {
+      id: 'plan_1',
+      goalId: 'goal_1',
+      userId: 'user_123',
+      weekNumber: 1,
+      days: [
+        {
+          day: 'monday',
+          tasks: [
+            { id: 't1', title: 'Oxford 3000 A2 Part 1', type: 'vocabulary', estimatedMinutes: 20 },
+            { id: 't2', title: 'Murphy Unit 1 Present Continuous', type: 'grammar', estimatedMinutes: 25 },
+          ],
+        },
+      ],
+    };
+
+    const result = await telegramService.sendPlanCreatedNotification(
+      '00000000-0000-0000-0000-000000000001',
+      goal as any,
+      plan as any,
+    );
+
+    expect(result).toBe(true);
+    expect(notificationSpy).toHaveBeenCalledWith(
+      '00000000-0000-0000-0000-000000000001',
+      expect.stringContaining("Yangi 1 haftalik o'quv rejangiz muvaffaqiyatli tuzildi!"),
+    );
+    expect(notificationSpy).toHaveBeenCalledWith(
+      '00000000-0000-0000-0000-000000000001',
+      expect.stringContaining('IELTS Band 7.0+'),
+    );
   });
 });

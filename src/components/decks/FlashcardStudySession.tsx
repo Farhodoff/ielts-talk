@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useMemo, useCallback } from 'react';
+import React, { useEffect, useState, useMemo, useCallback, useRef } from 'react';
 import {
   ArrowLeft,
   CheckCircle2,
@@ -37,8 +37,17 @@ export const FlashcardStudySession: React.FC<FlashcardStudySessionProps> = ({
   subjectId,
   onClose,
 }) => {
-  const { user, flashcards, subjects, reviewFlashcard, updateFlashcard, deleteFlashcard, loading } =
-    useStudyData();
+  const {
+    user,
+    flashcards,
+    subjects,
+    reviewFlashcard,
+    updateFlashcard,
+    deleteFlashcard,
+    loading,
+    addSession,
+    awardXP,
+  } = useStudyData();
   const { language } = useLanguage();
   const isJa = language === 'ja';
   const isAdmin = isAdminEmail(user?.email);
@@ -107,6 +116,57 @@ export const FlashcardStudySession: React.FC<FlashcardStudySessionProps> = ({
   const [isEditingCard, setIsEditingCard] = useState(false);
   const [editFront, setEditFront] = useState('');
   const [editBack, setEditBack] = useState('');
+
+  const sessionStartTimeRef = useRef<number>(Date.now());
+  const cardsReviewedCountRef = useRef<number>(0);
+  const xpEarnedRef = useRef<number>(0);
+  const sessionSavedRef = useRef<boolean>(false);
+
+  const saveFlashcardSession = useCallback(async () => {
+    if (sessionSavedRef.current || cardsReviewedCountRef.current === 0) return;
+    sessionSavedRef.current = true;
+
+    const elapsedMinutes = Math.max(1, Math.round((Date.now() - sessionStartTimeRef.current) / 60000));
+    const duration = Math.max(1, Math.max(elapsedMinutes, Math.round(cardsReviewedCountRef.current * 0.5)));
+    const xpGained = xpEarnedRef.current > 0 ? xpEarnedRef.current : cardsReviewedCountRef.current * 3;
+
+    try {
+      if (awardXP) {
+        await awardXP(xpGained);
+      }
+      if (addSession) {
+        await addSession({
+          duration,
+          type: 'focus',
+          completed: true,
+          subjectId: subjectId || 'flashcards',
+          startTime: new Date(sessionStartTimeRef.current).toISOString(),
+        });
+      }
+      toast({
+        title: isJa
+          ? `🎴 復習セッション記録 (+${xpGained} XP)`
+          : `🎴 Fleshkartalar takrorlandi! (+${xpGained} XP)`,
+        description: isJa
+          ? `${cardsReviewedCountRef.current}枚のカードを学習しました (${duration}分のアクティビティを記録)。`
+          : `${cardsReviewedCountRef.current} ta kartochka o'rganildi (${duration} daqiqa faollik saqlandi).`,
+      });
+    } catch (e) {
+      console.warn('[FlashcardStudySession] Failed to save session:', e);
+    }
+  }, [awardXP, addSession, subjectId, isJa]);
+
+  // Auto-save on unmount
+  useEffect(() => {
+    return () => {
+      saveFlashcardSession();
+    };
+  }, [saveFlashcardSession]);
+
+  const handleClose = useCallback(async () => {
+    await saveFlashcardSession();
+    onClose();
+  }, [saveFlashcardSession, onClose]);
 
   const currentSubject = subjects.find((s) => s.id === subjectId);
 
@@ -196,6 +256,8 @@ export const FlashcardStudySession: React.FC<FlashcardStudySessionProps> = ({
           grade === Rating.EASY ? 15 : grade === Rating.GOOD ? 10 : grade === Rating.HARD ? 5 : 2;
         setTotalXpEarned((prev) => prev + xpGained);
         setReviewedCount((prev) => prev + 1);
+        cardsReviewedCountRef.current += 1;
+        xpEarnedRef.current += xpGained;
 
         const shouldRequeue = grade === Rating.AGAIN || grade === Rating.HARD;
         if (shouldRequeue) {
@@ -240,6 +302,7 @@ export const FlashcardStudySession: React.FC<FlashcardStudySessionProps> = ({
           setIsEditingCard(false);
         } else {
           haptics.notification('success');
+          await saveFlashcardSession();
           setIsFinished(true);
         }
       } catch (error) {
@@ -253,7 +316,7 @@ export const FlashcardStudySession: React.FC<FlashcardStudySessionProps> = ({
         setIsProcessing(false);
       }
     },
-    [currentCard, isProcessing, reviewFlashcard, currentCardIndex, queue.length, haptics, isJa],
+    [currentCard, isProcessing, reviewFlashcard, currentCardIndex, queue.length, haptics, isJa, saveFlashcardSession],
   );
 
   const handleToggleFlip = useCallback(() => {
@@ -388,7 +451,7 @@ export const FlashcardStudySession: React.FC<FlashcardStudySessionProps> = ({
             </p>
           </div>
           <Button
-            onClick={onClose}
+            onClick={handleClose}
             className="w-full rounded-xl bg-primary py-3 font-black text-primary-foreground"
           >
             To'plamlarga Qaytish
@@ -443,7 +506,12 @@ export const FlashcardStudySession: React.FC<FlashcardStudySessionProps> = ({
 
           <div className="flex gap-3">
             <Button
-              onClick={() => {
+              onClick={async () => {
+                await saveFlashcardSession();
+                sessionSavedRef.current = false;
+                sessionStartTimeRef.current = Date.now();
+                cardsReviewedCountRef.current = 0;
+                xpEarnedRef.current = 0;
                 setCurrentCardIndex(0);
                 setIsFlipped(false);
                 setIsFinished(false);
@@ -455,7 +523,7 @@ export const FlashcardStudySession: React.FC<FlashcardStudySessionProps> = ({
               <RotateCcw size={16} className="mr-2" /> {isJa ? 'もう一度復習' : "Qayta O'rganish"}
             </Button>
             <Button
-              onClick={onClose}
+              onClick={handleClose}
               className="flex-1 rounded-xl bg-primary py-3 font-black text-primary-foreground"
             >
               {isJa ? '完了' : 'Tugatish'}
@@ -473,7 +541,7 @@ export const FlashcardStudySession: React.FC<FlashcardStudySessionProps> = ({
       {/* Top Bar */}
       <div className="mx-auto mb-4 sm:mb-6 flex w-full max-w-3xl items-center justify-between gap-2 sm:gap-4">
         <button
-          onClick={onClose}
+          onClick={handleClose}
           className="flex cursor-pointer items-center gap-1.5 sm:gap-2 rounded-xl p-2 text-xs font-bold text-muted-foreground transition-all hover:bg-muted/60 hover:text-foreground shrink-0"
         >
           <ArrowLeft size={18} />

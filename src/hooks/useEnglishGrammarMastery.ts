@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react';
 import { supabase } from '../lib/supabase';
+import { safeLocalStorage } from '../utils/storage/safeLocalStorage';
+import { isUuid } from '../utils/uuid';
 
 export type GrammarMasteryStatus = 'unlearned' | 'learned' | 'hard' | 'mastered';
 
@@ -61,8 +63,17 @@ export const useEnglishGrammarMastery = () => {
         } catch {}
 
         try {
-            const { data: sessionData } = await supabase.auth.getSession();
-            const userId = sessionData?.session?.user?.id;
+            let userId: string | null = null;
+            try {
+                const { data: sessionData } = await supabase.auth.getSession();
+                if (sessionData?.session?.user?.id) userId = sessionData.session.user.id;
+            } catch {}
+
+            if (!userId) {
+                const cachedUser = safeLocalStorage.getJSON<{ id?: string } | null>('study_planner_user_cache', null);
+                if (cachedUser?.id && isUuid(cachedUser.id)) userId = cachedUser.id;
+            }
+
             if (userId) {
                 await supabase.from('english_grammar_progress').upsert({
                     user_id: userId,
@@ -70,7 +81,7 @@ export const useEnglishGrammarMastery = () => {
                     completed: status === 'mastered' || status === 'learned',
                     mastery_status: status,
                     updated_at: new Date().toISOString()
-                });
+                }, { onConflict: 'user_id,lesson_slug' });
             }
         } catch {}
     };

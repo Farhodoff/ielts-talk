@@ -1,30 +1,30 @@
 [
   {
     "front": "a, an (indefinite article)",
-    "back": "a, bir",
-    "phonetic": "/a, an/",
-    "example": "Learning 'a, an' actively improves your IELTS A1 vocabulary.",
+    "back": "Noaniq artikl (biror bir, bitta)",
+    "phonetic": "/ə, æn/",
+    "example": "She is reading an interesting book.",
     "category": "Oxford 3000 A1"
   },
   {
     "front": "about (prep., adv.)",
-    "back": "qisqacha ma'lumot",
-    "phonetic": "/about/",
-    "example": "Learning 'about' actively improves your IELTS A1 vocabulary.",
+    "back": "Haqida, to'g'risida; taxminan",
+    "phonetic": "/əˈbaʊt/",
+    "example": "We talked about our future plans.",
     "category": "Oxford 3000 A1"
   },
   {
     "front": "above (prep., adv.)",
-    "back": "yuqori",
-    "phonetic": "/above/",
-    "example": "Learning 'above' actively improves your IELTS A1 vocabulary.",
+    "back": "Tepasida, yuqorisida",
+    "phonetic": "/əˈbʌv/",
+    "example": "The plane flew above the clouds.",
     "category": "Oxford 3000 A1"
   },
   {
     "front": "across (prep., adv.)",
-    "back": "bo&#39;ylab",
-    "phonetic": "/across/",
-    "example": "Learning 'across' actively improves your IELTS A1 vocabulary.",
+    "back": "Kesib o'tib, narigi tomoniga; bo'ylab",
+    "phonetic": "/əˈkrɒs/",
+    "example": "He walked across the street safely.",
     "category": "Oxford 3000 A1"
   },
   {
@@ -52,7 +52,7 @@
     "front": "actress (n.)",
     "back": "Aktrisa",
     "phonetic": "/ˈæk.trəs/",
-    "example": "The actress won a prestigious award.",
+    "example": "The actress gave an outstanding performance in the play.",
     "category": "Oxford 3000 A1"
   },
   {
@@ -64,72 +64,72 @@
   },
   {
     "front": "address (n.)",
-    "back": "Xavotirni bartaraf etmoq",
-    "phonetic": "/əˈdres ə kənˈsɜːn/",
-    "example": "The mayor held a conference to address public concerns.",
+    "back": "Manzil (turar joy yoki pochta manzili)",
+    "phonetic": "/əˈdres/",
+    "example": "Please write your home address on this form.",
     "category": "Oxford 3000 A1"
   },
   {
     "front": "adult (n.)",
-    "back": "Kattalar, balog'atga yetgan",
+    "back": "Katta yoshli inson, balog'atga yetgan shaxs",
     "phonetic": "/ˈæd.ʌlt/",
     "example": "Adults pay full price for museum tickets.",
     "category": "Oxford 3000 A1"
   },
   {
     "front": "advice (n.)",
-    "back": "Maslahat",
+    "back": "Maslahat, o'git",
     "phonetic": "/ədˈvaɪs/",
-    "example": "Listen to your teacher's advice.",
+    "example": "Listen carefully to your teacher's advice.",
     "category": "Oxford 3000 A1"
   },
   {
     "front": "afraid (adj.)",
-    "back": "Qo'rqqan, cho'chigan",
+    "back": "Qo'rqqan, xavfsiragan",
     "phonetic": "/əˈfreɪd/",
-    "example": "Do not be afraid of making mistakes.",
+    "example": "Do not be afraid of making mistakes when speaking.",
     "category": "Oxford 3000 A1"
   },
   {
     "front": "after (prep.)",
     "back": "Keyin, so'ng",
     "phonetic": "/ˈɑːf.tə/",
-    "example": "We will study after dinner.",
+    "example": "We will study English after dinner.",
     "category": "Oxford 3000 A1"
   },
   {
     "front": "afternoon (n.)",
-    "back": "Peshindan keyin",
+    "back": "Tushdan keyingi vaqt, peshin",
     "phonetic": "/ˌɑːf.təˈnuːn/",
-    "example": "Good afternoon! Welcome to class.",
+    "example": "Good afternoon! Welcome to our English class.",
     "category": "Oxford 3000 A1"
   },
   {
     "front": "again (adv.)",
-    "back": "Yana, takroran",
+    "back": "Yana, qaytadan, takroran",
     "phonetic": "/əˈɡen/",
-    "example": "Try again until you succeed.",
+    "example": "Could you please repeat that question again?",
     "category": "Oxford 3000 A1"
   },
   {
     "front": "age (n.)",
-    "back": "Yosh, davr",
+    "back": "Yosh, umr; davr",
     "phonetic": "/eɪdʒ/",
-    "example": "She started studying English at a young age.",
+    "example": "She started learning English at a young age.",
     "category": "Oxford 3000 A1"
   },
   {
     "front": "ago (adv.)",
-    "back": "Ilgari, oldin",
+    "back": "Oldin, ilgari, muqaddam",
     "phonetic": "/əˈɡəʊ/",
     "example": "Two years ago, I moved to Tashkent.",
     "category": "Oxford 3000 A1"
   },
   {
     "front": "agree (v.)",
-    "back": "Rozi bo'lmoq, qo'shilmoq",
+    "back": "Rozi bo'lmoq, fikriga qo'shilmoq",
     "phonetic": "/əˈɡriː/",
-    "example": "I agree with your suggestion about essay structure.",
+    "example": "I completely agree with your suggestion.",
     "category": "Oxford 3000 A1"
   },
   {
@@ -141,93 +141,93 @@
   },
   {
     "front": "airport (n.)",
-    "back": "Aeroport",
+    "back": "Aeroport, tayyoragoh",
     "phonetic": "/ˈeə.pɔːt/",
     "example": "We arrived at the airport two hours early.",
     "category": "Oxford 3000 A1"
   },
   {
     "front": "all (det., pron.)",
-    "back": "barchasi",
-    "phonetic": "/all/",
-    "example": "Learning 'all' actively improves your IELTS A1 vocabulary.",
+    "back": "Barcha, hamma, butun",
+    "phonetic": "/ɔːl/",
+    "example": "All the students completed their homework.",
     "category": "Oxford 3000 A1"
   },
   {
     "front": "also (adv.)",
-    "back": "Ham, shuningdek",
+    "back": "Ham, shuningdek, bundan tashqari",
     "phonetic": "/ˈɔːl.səʊ/",
     "example": "She speaks English and also learns Japanese.",
     "category": "Oxford 3000 A1"
   },
   {
     "front": "always (adv.)",
-    "back": "Doim, har doim",
+    "back": "Doim, har doim, hamisha",
     "phonetic": "/ˈɔːl.weɪz/",
-    "example": "Always save your study progress.",
+    "example": "Always review your flashcards before going to bed.",
     "category": "Oxford 3000 A1"
   },
   {
     "front": "amazing (adj.)",
-    "back": "Ajoyib, hayratlanarli",
+    "back": "Ajoyib, hayratlanarli, g'aroyib",
     "phonetic": "/əˈmeɪ.zɪŋ/",
-    "example": "What an amazing sunset!",
+    "example": "What an amazing sunset we saw by the lake!",
     "category": "Oxford 3000 A1"
   },
   {
     "front": "and (conj.)",
-    "back": "Va",
+    "back": "Va, hamda",
     "phonetic": "/ænd/",
-    "example": "Tea and bread for breakfast.",
+    "example": "I have tea and bread for breakfast.",
     "category": "Oxford 3000 A1"
   },
   {
     "front": "angry (adj.)",
     "back": "G'azablangan, jahli chiqqan",
     "phonetic": "/ˈæŋ.ɡri/",
-    "example": "Stay calm and do not get angry.",
+    "example": "Stay calm and do not get angry over small things.",
     "category": "Oxford 3000 A1"
   },
   {
     "front": "animal (n.)",
     "back": "Hayvon, jonzot",
     "phonetic": "/ˈæn.ɪ.məl/",
-    "example": "The zoo is home to many rare animals.",
+    "example": "The dolphin is an intelligent marine animal.",
     "category": "Oxford 3000 A1"
   },
   {
     "front": "another (det./pron.)",
-    "back": "boshqa",
-    "phonetic": "/another/",
-    "example": "Learning 'another' actively improves your IELTS A1 vocabulary.",
+    "back": "Boshqa, yana bir, o'zga",
+    "phonetic": "/əˈnʌð.ə/",
+    "example": "Would you like another cup of tea?",
     "category": "Oxford 3000 A1"
   },
   {
     "front": "answer (n., v.)",
-    "back": "javoblar",
-    "phonetic": "/answer/",
-    "example": "Learning 'answer' actively improves your IELTS A1 vocabulary.",
+    "back": "Javob; javob bermoq",
+    "phonetic": "/ˈɑːn.sə/",
+    "example": "Can you answer this question, please?",
     "category": "Oxford 3000 A1"
   },
   {
     "front": "any (det., pron.)",
-    "back": "ixtiyoriy",
-    "phonetic": "/any/",
-    "example": "Learning 'any' actively improves your IELTS A1 vocabulary.",
+    "back": "Biror, har qanday, hech qanday",
+    "phonetic": "/ˈen.i/",
+    "example": "Do you have any questions about the lesson?",
     "category": "Oxford 3000 A1"
   },
   {
     "front": "anyone (pron.)",
-    "back": "Kimdir, har kim",
+    "back": "Kimdir, biror kishi; har kim",
     "phonetic": "/ˈen.i.wʌn/",
-    "example": "Is anyone in the room?",
+    "example": "Is anyone ready to start the presentation?",
     "category": "Oxford 3000 A1"
   },
   {
     "front": "anything (pron.)",
-    "back": "Biror narsa",
+    "back": "Biror narsa; hech narsa",
     "phonetic": "/ˈen.i.θɪŋ/",
-    "example": "Did you notice anything unusual?",
+    "example": "Did you notice anything unusual outside?",
     "category": "Oxford 3000 A1"
   },
   {
@@ -248,49 +248,49 @@
     "front": "April (n.)",
     "back": "Aprel oyi",
     "phonetic": "/ˈeɪ.prəl/",
-    "example": "Spring flowers bloom in April.",
+    "example": "Spring flowers bloom beautifully in April.",
     "category": "Oxford 3000 A1"
   },
   {
     "front": "area (n.)",
-    "back": "Hudud, maydon",
+    "back": "Hudud, maydon, mintaqa",
     "phonetic": "/ˈeə.ri.ə/",
-    "example": "This area is famous for parks.",
+    "example": "This area is famous for quiet public parks.",
     "category": "Oxford 3000 A1"
   },
   {
     "front": "arm (n.)",
-    "back": "Qo'l",
+    "back": "Qo'l (yelkadan bilakkacha)",
     "phonetic": "/ɑːm/",
-    "example": "He broke his arm while playing sports.",
+    "example": "He broke his arm while playing football.",
     "category": "Oxford 3000 A1"
   },
   {
     "front": "around (prep., adv.)",
-    "back": "atrofida",
-    "phonetic": "/around/",
-    "example": "Learning 'around' actively improves your IELTS A1 vocabulary.",
+    "back": "Atrofida, to'garagida; taxminan",
+    "phonetic": "/əˈraʊnd/",
+    "example": "The family sat around the dinner table.",
     "category": "Oxford 3000 A1"
   },
   {
     "front": "arrive (v.)",
-    "back": "Yetib kelmoq",
+    "back": "Yetib kelmoq, kelmoq",
     "phonetic": "/əˈraɪv/",
     "example": "The express train will arrive in ten minutes.",
     "category": "Oxford 3000 A1"
   },
   {
     "front": "art (n.)",
-    "back": "San'at",
+    "back": "San'at, tasviriy san'at",
     "phonetic": "/ɑːt/",
     "example": "Modern art galleries exhibit creative works.",
     "category": "Oxford 3000 A1"
   },
   {
     "front": "article (n.)",
-    "back": "Maqola",
+    "back": "Maqola; grammatik artikl",
     "phonetic": "/ˈɑː.tɪ.kəl/",
-    "example": "Read the news article online.",
+    "example": "I read an informative article about IELTS preparation.",
     "category": "Oxford 3000 A1"
   },
   {
@@ -304,77 +304,77 @@
     "front": "as (prep.)",
     "back": "Sifatida, kabi",
     "phonetic": "/æz/",
-    "example": "She works as a software developer.",
+    "example": "She works as an English teacher.",
     "category": "Oxford 3000 A1"
   },
   {
     "front": "ask (v.)",
-    "back": "So'ramoq",
+    "back": "So'ramoq, savol bermoq",
     "phonetic": "/ɑːsk/",
-    "example": "Ask the teacher for help.",
+    "example": "Feel free to ask the teacher for help.",
     "category": "Oxford 3000 A1"
   },
   {
     "front": "at (prep.)",
-    "back": "Da, da joylashgan",
+    "back": "Da (vaqt yoki joyni bildiradi)",
     "phonetic": "/æt/",
-    "example": "We met at the station.",
+    "example": "We met at the station at five o'clock.",
     "category": "Oxford 3000 A1"
   },
   {
     "front": "August (n.)",
     "back": "Avgust oyi",
     "phonetic": "/ˈɔː.ɡəst/",
-    "example": "August is a warm summer month.",
+    "example": "August is a warm summer month with long days.",
     "category": "Oxford 3000 A1"
   },
   {
     "front": "aunt (n.)",
     "back": "Amma, xola",
     "phonetic": "/ɑːnt/",
-    "example": "My aunt visited us last weekend.",
+    "example": "My aunt visited our family last weekend.",
     "category": "Oxford 3000 A1"
   },
   {
     "front": "away (adv.)",
-    "back": "Uzoqda, narida",
+    "back": "Uzoqda, narida; ketib",
     "phonetic": "/əˈweɪ/",
-    "example": "Store your books away in the cabinet.",
+    "example": "Store your books away in the cabinet neatly.",
     "category": "Oxford 3000 A1"
   },
   {
     "front": "awesome (adj.)",
-    "back": "comment",
-    "phonetic": "/awesome/",
-    "example": "Learning 'awesome' actively improves your IELTS A1 vocabulary.",
+    "back": "Ajoyib, juda zo'r, qoyilmaqom",
+    "phonetic": "/ˈɔː.səm/",
+    "example": "You did an awesome job on your test!",
     "category": "Oxford 3000 A1"
   },
   {
     "front": "baby (n.)",
-    "back": "chaqaloq",
-    "phonetic": "/baby/",
-    "example": "Learning 'baby' actively improves your IELTS A1 vocabulary.",
+    "back": "Chaqaloq, go'dak",
+    "phonetic": "/ˈbeɪ.bi/",
+    "example": "The baby fell asleep in her mother's arms.",
     "category": "Oxford 3000 A1"
   },
   {
     "front": "back (n., adv.)",
-    "back": "orqa",
-    "phonetic": "/back/",
-    "example": "Learning 'back' actively improves your IELTS A1 vocabulary.",
+    "back": "Orqa, bel; orqaga, qaytib",
+    "phonetic": "/bæk/",
+    "example": "He turned back and waved at his friends.",
     "category": "Oxford 3000 A1"
   },
   {
     "front": "bad (adj.)",
-    "back": "name, email, key id",
-    "phonetic": "/bad/",
-    "example": "Learning 'bad' actively improves your IELTS A1 vocabulary.",
+    "back": "Yomon, yaroqsiz, noxush",
+    "phonetic": "/bæd/",
+    "example": "Bad weather prevented us from going outside today.",
     "category": "Oxford 3000 A1"
   },
   {
     "front": "bag (n.)",
-    "back": "paket",
-    "phonetic": "/bag/",
-    "example": "Learning 'bag' actively improves your IELTS A1 vocabulary.",
+    "back": "Sumka, xalta, portfel",
+    "phonetic": "/bæɡ/",
+    "example": "She carried her books in a leather bag.",
     "category": "Oxford 3000 A1"
   },
   {
@@ -386,65 +386,65 @@
   },
   {
     "front": "banana (n.)",
-    "back": "banana (n.)",
-    "phonetic": "/banana/",
-    "example": "The term 'banana' appears frequently in IELTS A1 tests.",
+    "back": "Banan",
+    "phonetic": "/bəˈnɑː.nə/",
+    "example": "Monkeys love eating sweet yellow bananas.",
     "category": "Oxford 3000 A1"
   },
   {
     "front": "band (n.)",
-    "back": "orkestr",
-    "phonetic": "/band/",
-    "example": "Learning 'band' actively improves your IELTS A1 vocabulary.",
+    "back": "Musiqiy guruh, ansambl; tasma",
+    "phonetic": "/bænd/",
+    "example": "My older brother plays guitar in a musical band.",
     "category": "Oxford 3000 A1"
   },
   {
     "front": "bank (money) (n.)",
-    "back": "bank puli",
-    "phonetic": "/bank money/",
-    "example": "Learning 'bank (money)' actively improves your IELTS A1 vocabulary.",
+    "back": "Bank (moliya muassasasi)",
+    "phonetic": "/bæŋk/",
+    "example": "I went to the bank to open a savings account.",
     "category": "Oxford 3000 A1"
   },
   {
     "front": "bar (n.)",
-    "back": "bar (n.)",
-    "phonetic": "/bar/",
-    "example": "The term 'bar' appears frequently in IELTS A1 tests.",
+    "back": "Bar (muassasa); plita (shokolad), bo'lak",
+    "phonetic": "/bɑː/",
+    "example": "He bought a bar of dark chocolate for dessert.",
     "category": "Oxford 3000 A1"
   },
   {
     "front": "baseball (n.)",
-    "back": "baseball (n.)",
-    "phonetic": "/baseball/",
-    "example": "The term 'baseball' appears frequently in IELTS A1 tests.",
+    "back": "Beysbol (sport turi)",
+    "phonetic": "/ˈbeɪs.bɔːl/",
+    "example": "Baseball is one of the most popular sports in the USA.",
     "category": "Oxford 3000 A1"
   },
   {
     "front": "basketball (n.)",
-    "back": "basketbol",
-    "phonetic": "/basketball/",
-    "example": "Learning 'basketball' actively improves your IELTS A1 vocabulary.",
+    "back": "Basketbol (sport turi)",
+    "phonetic": "/ˈbɑː.skɪt.bɔːl/",
+    "example": "We play basketball in the sports hall every Friday.",
     "category": "Oxford 3000 A1"
   },
   {
     "front": "bath (n.)",
-    "back": "bath (n.)",
-    "phonetic": "/bath/",
-    "example": "The term 'bath' appears frequently in IELTS A1 tests.",
+    "back": "Vanna qabul qilish, cho'milish; vanna",
+    "phonetic": "/bɑːθ/",
+    "example": "A warm bath helps your muscles relax.",
     "category": "Oxford 3000 A1"
   },
   {
     "front": "bathroom (n.)",
-    "back": "vannaxona",
-    "phonetic": "/bathroom/",
-    "example": "Learning 'bathroom' actively improves your IELTS A1 vocabulary.",
+    "back": "Vannaxona, yuvinish xonasi",
+    "phonetic": "/ˈbɑːθ.ruːm/",
+    "example": "The new apartment has two clean bathrooms.",
     "category": "Oxford 3000 A1"
   },
   {
     "front": "be (v., auxiliary v.)",
-    "back": "boʻling",
-    "phonetic": "/be/",
-    "example": "Learning 'be' actively improves your IELTS A1 vocabulary.",
+    "back": "Bo'lmoq, mavjud bo'lmoq",
+    "phonetic": "/biː/",
+    "example": "I want to be a successful doctor in the future.",
     "category": "Oxford 3000 A1"
   },
   {
@@ -456,23 +456,23 @@
   },
   {
     "front": "beautiful (adj.)",
-    "back": "chiroyli",
-    "phonetic": "/beautiful/",
-    "example": "Learning 'beautiful' actively improves your IELTS A1 vocabulary.",
+    "back": "Chiroyli, go'zal, ko'rkam",
+    "phonetic": "/ˈbjuː.tɪ.fəl/",
+    "example": "She received a bouquet of beautiful red roses.",
     "category": "Oxford 3000 A1"
   },
   {
     "front": "because (conj.)",
-    "back": "chunki",
-    "phonetic": "/because/",
-    "example": "Learning 'because' actively improves your IELTS A1 vocabulary.",
+    "back": "Chunki, sababli",
+    "phonetic": "/bɪˈkɒz/",
+    "example": "I practice daily because I want to score high on IELTS.",
     "category": "Oxford 3000 A1"
   },
   {
     "front": "become (v.)",
     "back": "Bo'lmoq, aylanmoq",
     "phonetic": "/bɪˈkʌm/",
-    "example": "Practice helps you become a fluent speaker.",
+    "example": "Practice helps you become a confident English speaker.",
     "category": "Oxford 3000 A1"
   },
   {
@@ -484,219 +484,219 @@
   },
   {
     "front": "bedroom (n.)",
-    "back": "bedroom (n.)",
-    "phonetic": "/bedroom/",
-    "example": "The term 'bedroom' appears frequently in IELTS A1 tests.",
+    "back": "Yotoqxona",
+    "phonetic": "/ˈbed.ruːm/",
+    "example": "His bedroom has a large desk and a comfortable chair.",
     "category": "Oxford 3000 A1"
   },
   {
     "front": "beer (n.)",
-    "back": "pivo",
-    "phonetic": "/beer/",
-    "example": "Learning 'beer' actively improves your IELTS A1 vocabulary.",
+    "back": "Pivo (ichimlik)",
+    "phonetic": "/bɪə/",
+    "example": "They serve local cold beer and fruit juices.",
     "category": "Oxford 3000 A1"
   },
   {
     "front": "before (prep.)",
-    "back": "avval",
-    "phonetic": "/before/",
-    "example": "Learning 'before' actively improves your IELTS A1 vocabulary.",
+    "back": "Oldin, avval, ilgari",
+    "phonetic": "/bɪˈfɔː/",
+    "example": "Always wash your hands before having a meal.",
     "category": "Oxford 3000 A1"
   },
   {
     "front": "begin (v.)",
-    "back": "Boshlamoq",
+    "back": "Boshlamoq, boshlanmoq",
     "phonetic": "/bɪˈɡɪn/",
     "example": "Lessons begin promptly at eight thirty in the morning.",
     "category": "Oxford 3000 A1"
   },
   {
     "front": "beginning (n.)",
-    "back": "boshlanish",
-    "phonetic": "/beginning/",
-    "example": "Learning 'beginning' actively improves your IELTS A1 vocabulary.",
+    "back": "Boshlanish, ibtido",
+    "phonetic": "/bɪˈɡɪn.ɪŋ/",
+    "example": "The movie was interesting right from the beginning.",
     "category": "Oxford 3000 A1"
   },
   {
     "front": "behind (prep., adv.)",
-    "back": "orqasida",
-    "phonetic": "/behind/",
-    "example": "Learning 'behind' actively improves your IELTS A1 vocabulary.",
+    "back": "Orqasida, ketida",
+    "phonetic": "/bɪˈhaɪnd/",
+    "example": "The cat hid quietly behind the living room sofa.",
     "category": "Oxford 3000 A1"
   },
   {
     "front": "believe (v.)",
-    "back": "Ishonmoq",
+    "back": "Ishonmoq, deb hisoblamoq",
     "phonetic": "/bɪˈliːv/",
-    "example": "Believe in your ability to master any subject.",
+    "example": "Believe in your ability to achieve your goals.",
     "category": "Oxford 3000 A1"
   },
   {
     "front": "below (adv., prep.)",
-    "back": "past:",
-    "phonetic": "/below/",
-    "example": "Learning 'below' actively improves your IELTS A1 vocabulary.",
+    "back": "Pastda, quyida; ostida",
+    "phonetic": "/bɪˈləʊ/",
+    "example": "Please read the instructions below before writing.",
     "category": "Oxford 3000 A1"
   },
   {
     "front": "best (adj.)",
-    "back": "matn",
+    "back": "Eng yaxshi, eng a'lo",
     "phonetic": "/best/",
-    "example": "Learning 'best' actively improves your IELTS A1 vocabulary.",
+    "example": "Honesty is the best policy in any relationship.",
     "category": "Oxford 3000 A1"
   },
   {
     "front": "better (adj.)",
-    "back": "better (adj.)",
-    "phonetic": "/better/",
-    "example": "The term 'better' appears frequently in IELTS A1 tests.",
+    "back": "Yaxshiroq, tuzukroq",
+    "phonetic": "/ˈbet.ə/",
+    "example": "Daily practice will make your pronunciation much better.",
     "category": "Oxford 3000 A1"
   },
   {
     "front": "between (prep.)",
-    "back": "shvetsiya",
-    "phonetic": "/between/",
-    "example": "Learning 'between' actively improves your IELTS A1 vocabulary.",
+    "back": "Orasida, o'rtasida",
+    "phonetic": "/bɪˈtwiːn/",
+    "example": "The coffee shop is between the library and the post office.",
     "category": "Oxford 3000 A1"
   },
   {
     "front": "bicycle (n.)",
-    "back": "velosiped",
-    "phonetic": "/bicycle/",
-    "example": "Learning 'bicycle' actively improves your IELTS A1 vocabulary.",
+    "back": "Velosiped",
+    "phonetic": "/ˈbaɪ.sɪ.kəl/",
+    "example": "He rides his bicycle to the university every morning.",
     "category": "Oxford 3000 A1"
   },
   {
     "front": "big (adj.)",
-    "back": "katta@ title: group date",
-    "phonetic": "/big/",
-    "example": "Learning 'big' actively improves your IELTS A1 vocabulary.",
+    "back": "Katta, ulkan, yirik",
+    "phonetic": "/bɪɡ/",
+    "example": "They live in a big house with a sunny backyard.",
     "category": "Oxford 3000 A1"
   },
   {
     "front": "bike (n.)",
-    "back": "velosiped",
-    "phonetic": "/bike/",
-    "example": "Learning 'bike' actively improves your IELTS A1 vocabulary.",
+    "back": "Velosiped (qisqartma)",
+    "phonetic": "/baɪk/",
+    "example": "I enjoy riding my bike around the city on weekends.",
     "category": "Oxford 3000 A1"
   },
   {
     "front": "bill (n.)",
-    "back": "qonun loyihasi",
-    "phonetic": "/bill/",
-    "example": "Learning 'bill' actively improves your IELTS A1 vocabulary.",
+    "back": "Hisob-kitob varaqasi, chek; qonun loyihasi",
+    "phonetic": "/bɪl/",
+    "example": "Could we please have the restaurant bill?",
     "category": "Oxford 3000 A1"
   },
   {
     "front": "bird (n.)",
     "back": "Qush",
     "phonetic": "/bɜːd/",
-    "example": "Early morning birds sing in the trees.",
+    "example": "Early morning birds sing sweetly outside my window.",
     "category": "Oxford 3000 A1"
   },
   {
     "front": "birthday (n.)",
-    "back": "tugʻilgan kun",
-    "phonetic": "/birthday/",
-    "example": "Learning 'birthday' actively improves your IELTS A1 vocabulary.",
+    "back": "Tug'ilgan kun",
+    "phonetic": "/ˈbɜːθ.deɪ/",
+    "example": "Happy birthday! We organized a small surprise party.",
     "category": "Oxford 3000 A1"
   },
   {
     "front": "black (adj., n.)",
-    "back": "qora",
-    "phonetic": "/black/",
-    "example": "Learning 'black' actively improves your IELTS A1 vocabulary.",
+    "back": "Qora (rang)",
+    "phonetic": "/blæk/",
+    "example": "He wore a stylish black coat to the meeting.",
     "category": "Oxford 3000 A1"
   },
   {
     "front": "blog (n.)",
-    "back": "blog (n.)",
-    "phonetic": "/blog/",
-    "example": "The term 'blog' appears frequently in IELTS A1 tests.",
+    "back": "Blog (internet kundaligi)",
+    "phonetic": "/blɒɡ/",
+    "example": "She writes a weekly travel blog about central Asia.",
     "category": "Oxford 3000 A1"
   },
   {
     "front": "blond (adj.)",
-    "back": "sarg&#39;ish",
-    "phonetic": "/blond/",
-    "example": "Learning 'blond' actively improves your IELTS A1 vocabulary.",
+    "back": "Sarg'ish (soch), malla",
+    "phonetic": "/blɒnd/",
+    "example": "The little child has bright blond hair and blue eyes.",
     "category": "Oxford 3000 A1"
   },
   {
     "front": "blue (adj., n.)",
-    "back": "ko'k",
-    "phonetic": "/blue/",
-    "example": "Learning 'blue' actively improves your IELTS A1 vocabulary.",
+    "back": "Ko'k, moviy (rang)",
+    "phonetic": "/bluː/",
+    "example": "The clear morning sky was completely blue.",
     "category": "Oxford 3000 A1"
   },
   {
     "front": "boat (n.)",
-    "back": "qayiq",
-    "phonetic": "/boat/",
-    "example": "Learning 'boat' actively improves your IELTS A1 vocabulary.",
+    "back": "Qayiq, kichik kema",
+    "phonetic": "/bəʊt/",
+    "example": "We rented a small wooden boat to row across the lake.",
     "category": "Oxford 3000 A1"
   },
   {
     "front": "body (n.)",
-    "back": "badan",
-    "phonetic": "/body/",
-    "example": "Learning 'body' actively improves your IELTS A1 vocabulary.",
+    "back": "Tana, gavda, jism",
+    "phonetic": "/ˈbɒd.i/",
+    "example": "Good sleep and healthy food are essential for the human body.",
     "category": "Oxford 3000 A1"
   },
   {
     "front": "book (n.)",
-    "back": "kitob",
-    "phonetic": "/book/",
-    "example": "Learning 'book' actively improves your IELTS A1 vocabulary.",
+    "back": "Kitob",
+    "phonetic": "/bʊk/",
+    "example": "Reading an English book every day expands your vocabulary.",
     "category": "Oxford 3000 A1"
   },
   {
     "front": "boot (n.)",
-    "back": "boot (n.)",
-    "phonetic": "/boot/",
-    "example": "The term 'boot' appears frequently in IELTS A1 tests.",
+    "back": "Etik, botinka",
+    "phonetic": "/buːt/",
+    "example": "Wear warm waterproof boots when hiking in winter.",
     "category": "Oxford 3000 A1"
   },
   {
     "front": "bored (adj.)",
-    "back": "bored (adj.)",
-    "phonetic": "/bored/",
-    "example": "The term 'bored' appears frequently in IELTS A1 tests.",
+    "back": "Zeriqqan, zerikkan",
+    "phonetic": "/bɔːd/",
+    "example": "The children got bored while waiting in the lobby.",
     "category": "Oxford 3000 A1"
   },
   {
     "front": "boring (adj.)",
-    "back": "zerikarli",
-    "phonetic": "/boring/",
-    "example": "Learning 'boring' actively improves your IELTS A1 vocabulary.",
+    "back": "Zerikarli, qiziqsiz",
+    "phonetic": "/ˈbɔː.rɪŋ/",
+    "example": "The speech was so boring that many people left early.",
     "category": "Oxford 3000 A1"
   },
   {
     "front": "born (v.)",
-    "back": "tug&#39;ilgan",
-    "phonetic": "/born/",
-    "example": "Learning 'born' actively improves your IELTS A1 vocabulary.",
+    "back": "Tug'ilgan (dunyoga kelgan)",
+    "phonetic": "/bɔːn/",
+    "example": "She was born in Samarkand in 2002.",
     "category": "Oxford 3000 A1"
   },
   {
     "front": "both (det./pron.)",
-    "back": "ikkalasi ham",
-    "phonetic": "/both/",
-    "example": "Learning 'both' actively improves your IELTS A1 vocabulary.",
+    "back": "Ikkalasi ham, har ikki",
+    "phonetic": "/bəʊθ/",
+    "example": "Both students scored higher than expected on the test.",
     "category": "Oxford 3000 A1"
   },
   {
     "front": "bottle (n.)",
-    "back": "Idish, shisha, baklashka",
+    "back": "Shisha, butilka, idish",
     "phonetic": "/ˈbɒt.əl/",
     "example": "Always carry a reusable water bottle to class.",
     "category": "Oxford 3000 A1"
   },
   {
     "front": "box (n.)",
-    "back": "box (n.)",
-    "phonetic": "/box/",
-    "example": "The term 'box' appears frequently in IELTS A1 tests.",
+    "back": "Quti, quticha",
+    "phonetic": "/bɒks/",
+    "example": "He packed his books inside a sturdy cardboard box.",
     "category": "Oxford 3000 A1"
   },
   {

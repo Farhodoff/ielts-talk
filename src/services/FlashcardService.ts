@@ -3,6 +3,7 @@ import { Flashcard } from '../types';
 import { generateUUID, isUuid } from '../utils/uuid';
 import { PRESET_DECKS } from '../data/presetDecks';
 import { FlashcardOfflineSync } from './FlashcardOfflineSync';
+import { KNOWN_A1_PART1_MAP, CORRUPTED_A1_SUBSTRINGS } from '../data/oxfordA1Part1Fixes';
 
 const CACHE_KEY_PREFIX = 'study_planner_flashcards_cache_';
 
@@ -79,6 +80,21 @@ export function sanitizeCardContent(card: Flashcard): { card: Flashcard; wasModi
   if (KNOWN_JLPT_FIXES[frontClean]) {
     back = KNOWN_JLPT_FIXES[frontClean];
     wasModified = true;
+  }
+
+  // 1.5 Fix corrupted Oxford 3000 A1 Part 1 cards if present in user DB or cache
+  if (KNOWN_A1_PART1_MAP[frontClean]) {
+    const isCorrupted =
+      CORRUPTED_A1_SUBSTRINGS.some((sub) => back.includes(sub)) ||
+      back.trim() === frontClean ||
+      back.startsWith(`${frontClean} (`) ||
+      back.includes('name, email') ||
+      back.includes('shvetsiya');
+
+    if (isCorrupted) {
+      back = KNOWN_A1_PART1_MAP[frontClean];
+      wasModified = true;
+    }
   }
 
   // 2. Fix OCR fill-in-the-blank questions e.g. "6 た くさん 買 い物 したので、 お金 が (aなよくし ました"

@@ -29,6 +29,7 @@ import { DiagnosticService } from '../services/DiagnosticService';
 import { PersonalLearningGoal, WeeklyLearningPlan, WeeklyEvaluation } from '../types/learningPlan';
 import { generateUUID } from '../utils/uuid';
 import { generatePersonalMilestones } from '../utils/roadmapMilestones';
+import { telegramService } from '../services/TelegramService';
 
 export const PersonalPlanPage: React.FC = () => {
   const { user, awardXP } = useStudyData();
@@ -272,6 +273,13 @@ export const PersonalPlanPage: React.FC = () => {
         await PersonalLearningPlanService.saveWeeklyPlan(result.plan);
       } catch (saveErr) {
         console.warn('[PersonalPlanPage] Remote save notice (saved to local cache):', saveErr);
+      }
+
+      // Automatically notify user via Telegram if linked
+      if (userId && userId !== 'guest') {
+        telegramService.sendPlanCreatedNotification(userId, newGoal, result.plan).catch((e) => {
+          console.warn('[PersonalPlanPage] Telegram notification notice:', e);
+        });
       }
 
       if (result.noticeMessage) {

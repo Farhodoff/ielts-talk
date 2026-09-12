@@ -119,7 +119,7 @@ const ProgressPage: React.FC = () => {
       {activeTab === 'overview' && (
         <div className="space-y-8 duration-300 animate-in fade-in">
           <ActivityAnalytics sessions={sessions} />
-          <ActivityHeatmap sessions={sessions} />
+          <ActivityHeatmap sessions={sessions} subjects={subjects} />
         </div>
       )}
 

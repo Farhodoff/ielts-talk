@@ -271,7 +271,7 @@ class TelegramService {
      * Send a daily study reminder via Telegram
      */
     async sendStudyReminder(rawUserId: string, pendingCount: number, streakDays: number): Promise<boolean> {
-        const text = `☀️ <b>Kunlik O'quv Eslatmasi!</b>\n\n📌 Sizda bugun <b>${pendingCount} ta</b> bajarilishi kerak bo'lgan vazifa mavjud.\n🔥 Joriy o'quv seriyangiz (streak): <b>${streakDays} kun</b>!\n\n🚀 <a href="https://nihon-talk.vercel.app/jlpt">Darsni davom ettirish</a>`;
+        const text = `☀️ <b>Kunlik O'quv Eslatmasi!</b>\n\n📌 Sizda bugun <b>${pendingCount} ta</b> bajarilishi kerak bo'lgan vazifa mavjud.\n🔥 Joriy o'quv seriyangiz (streak): <b>${streakDays} kun</b>!\n\n🚀 <a href="https://ielts-talk.vercel.app/study-mode">Darsni davom ettirish</a>`;
         return this.sendNotification(rawUserId, text);
     }
 
@@ -279,8 +279,51 @@ class TelegramService {
      * Send a subscription expiry or upgrade alert via Telegram
      */
     async sendSubscriptionAlert(rawUserId: string, tier: string, daysLeft: number): Promise<boolean> {
-        const text = `👑 <b>Nihon Talk Obuna Bildirishnomasi</b>\n\nSizning <b>${tier.toUpperCase()}</b> tarifingiz tugashiga <b>${daysLeft} kun</b> qoldi.\nAI speaking va barcha premium imkoniyatlardan uzluksiz foydalanish uchun obunani yangilang:\n👉 <a href="https://nihon-talk.vercel.app/pricing">Obunani uzaytirish</a>`;
+        const text = `👑 <b>IELTS Talk Obuna Bildirishnomasi</b>\n\nSizning <b>${tier.toUpperCase()}</b> tarifingiz tugashiga <b>${daysLeft} kun</b> qoldi.\nAI speaking va barcha premium imkoniyatlardan uzluksiz foydalanish uchun obunani yangilang:\n👉 <a href="https://ielts-talk.vercel.app/pricing">Obunani uzaytirish</a>`;
         return this.sendNotification(rawUserId, text);
+    }
+
+    /**
+     * Send instant notification when a new 1-week AI study plan is created
+     */
+    async sendPlanCreatedNotification(
+        rawUserId: string,
+        goal: any,
+        plan: any
+    ): Promise<boolean> {
+        const userId = await this.resolveUserId(rawUserId);
+        if (!userId) return false;
+
+        const tashkentDay = new Intl.DateTimeFormat('en-US', { timeZone: 'Asia/Tashkent', weekday: 'long' }).format(new Date()).toLowerCase();
+        const uzbekDayNames: Record<string, string> = {
+            monday: 'Dushanba',
+            tuesday: 'Seshanba',
+            wednesday: 'Chorshanba',
+            thursday: 'Payshanba',
+            friday: 'Juma',
+            saturday: 'Shanba',
+            sunday: 'Yakshanba'
+        };
+        const dayTitle = uzbekDayNames[tashkentDay] || 'Bugun';
+
+        const todayDay = (plan?.days || []).find((d: any) => (d.day || '').toLowerCase() === tashkentDay) || plan?.days?.[0];
+        const tasks = todayDay?.tasks || [];
+
+        const taskLines = tasks.map((t: any, idx: number) => {
+            const icon = t.type === 'vocabulary' ? '📚' : t.type === 'grammar' ? '📝' : t.type === 'speaking' ? '🎙️' : t.type === 'writing' ? '✍️' : '📌';
+            return `  ${idx + 1}. ${icon} <b>${t.title}</b> <i>(~${t.estimatedMinutes || 15} daq)</i>`;
+        }).join('\n');
+
+        const goalName = goal?.targetGoal || (goal?.targetLevel ? `IELTS Band ${goal.targetLevel}` : 'IELTS / Ingliz tili');
+        const text = `🎉 <b>Yangi 1 haftalik o'quv rejangiz muvaffaqiyatli tuzildi!</b>\n\n` +
+            `🎯 <b>Maqsad:</b> ${goalName}\n` +
+            `⏱️ <b>Kunlik dars vaqti:</b> ${goal?.dailyMinutes || 45} daqiqa\n\n` +
+            `📅 <b>Bugungi (${dayTitle}) vazifalaringiz:</b>\n` +
+            (taskLines || "  Darslar ro'yxati tayyorlandi.") + `\n\n` +
+            `Telegram botdagi <b>📅 Bugungi reja</b> tugmasi orqali har kuni vazifalaringizni tekshirib borishingiz mumkin! 🚀\n\n` +
+            `👉 <a href="https://ielts-talk.vercel.app/study-mode">IELTS Talk-da darsni boshlash</a>`;
+
+        return this.sendNotification(userId, text);
     }
 }
 
