@@ -24,12 +24,20 @@ const TelegramSection: React.FC = () => {
 
     const dueCardsCount = flashcards.filter(f => !f.nextReviewDate || new Date(f.nextReviewDate) <= new Date()).length;
 
-    // Get user ID strictly from authenticated user or local session cache
+    // Get user ID strictly from authenticated user, local session cache, or persistent guest UUID
     const getEffectiveUserId = useCallback(() => {
         if (user?.id) return user.id;
         try {
             const cached = safeLocalStorage.getJSON<{ id?: string } | null>('study_planner_user_cache', null);
             if (cached?.id) return cached.id;
+        } catch {}
+        try {
+            let guestId = localStorage.getItem('study_planner_guest_id');
+            if (!guestId) {
+                guestId = typeof crypto !== 'undefined' && crypto.randomUUID ? crypto.randomUUID() : 'guest_' + Math.random().toString(36).substring(2, 15);
+                localStorage.setItem('study_planner_guest_id', guestId);
+            }
+            return guestId;
         } catch {}
         return null;
     }, [user]);

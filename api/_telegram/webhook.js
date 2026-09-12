@@ -795,17 +795,43 @@ export default async function handler(req, res) {
           return res.status(200).json({ ok: true });
         }
 
-        // Link user
-        await supabase.from('telegram_users').upsert({
+        // Link user: first remove any conflicting bindings for either this telegram_id or user_id
+        try {
+          const userTable = supabase.from('telegram_users');
+          if (typeof userTable.delete === 'function') {
+            await userTable
+              .delete()
+              .or(`telegram_id.eq.${telegramId},user_id.eq.${linkRecord.user_id}`);
+          }
+        } catch (_) {}
+
+        const linkPayload = {
           user_id: linkRecord.user_id,
           telegram_id: telegramId,
           chat_id: chatId,
-          telegram_username: username,
-          telegram_first_name: firstName,
-          telegram_last_name: lastName,
+          telegram_username: username || '',
+          telegram_first_name: firstName || '',
+          telegram_last_name: lastName || '',
           notifications_enabled: true,
+          is_active: true,
           updated_at: new Date().toISOString()
-        });
+        };
+
+        const tgTable = supabase.from('telegram_users');
+        let linkErr = null;
+        if (typeof tgTable.upsert === 'function') {
+          const res = await tgTable.upsert(linkPayload, { onConflict: 'telegram_id' });
+          linkErr = res?.error;
+        } else {
+          const res = await tgTable.insert(linkPayload);
+          linkErr = res?.error;
+        }
+
+        if (linkErr) {
+          console.error('Failed to link telegram user:', linkErr);
+          await sendTelegramMessage(chatId, `❌ <b>Ulanishda xatolik yuz berdi:</b> ${escapeHTML(linkErr.message || "Iltimos, qaytadan urinib ko'ring")}`);
+          return res.status(200).json({ ok: false });
+        }
 
         // Mark code as used
         await supabase.from('telegram_link_codes').update({ used: true }).eq('id', linkRecord.id);

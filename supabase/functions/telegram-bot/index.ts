@@ -195,23 +195,28 @@ Yordam: /help`);
 
         if (error || !linkCode) {
             console.log('Invalid code:', error);
-            return sendMessage(chatId, "Noto'g'ri yoki muddati o'tgan kod!\n\nIltimos, <a href=\"https://task-planner-tau.vercel.app/settings\">task-planner-tau.vercel.app/settings</a> sahifasidan yangi kod oling.");
+            return sendMessage(chatId, "❌ Noto'g'ri yoki muddati o'tgan kod!\n\nIltimos, <a href=\"https://ielts-talk.vercel.app/settings\">ielts-talk.vercel.app/settings</a> sahifasidan yangi kod oling.");
         }
 
-        // Create or update link in telegram_users
+        // Link user: first remove any conflicting bindings for either this telegram_id or user_id
+        await supabase
+            .from('telegram_users')
+            .delete()
+            .or(`telegram_id.eq.${telegramId},user_id.eq.${linkCode.user_id}`);
+
         const { error: linkError } = await supabase
             .from('telegram_users')
-            .upsert({
+            .insert({
                 user_id: linkCode.user_id,
                 telegram_id: telegramId,
-                telegram_username: username,
-                telegram_first_name: firstName,
-                telegram_last_name: lastName,
+                telegram_username: username || '',
+                telegram_first_name: firstName || '',
+                telegram_last_name: lastName || '',
                 chat_id: chatId,
                 is_active: true,
                 notifications_enabled: true,
                 updated_at: new Date().toISOString()
-            }, { onConflict: 'telegram_id' });
+            });
 
         if (linkError) {
             console.error('Link error:', linkError);
@@ -225,17 +230,17 @@ Yordam: /help`);
             .eq('id', linkCode.id);
 
         console.log('Successfully linked!');
-        return sendMessage(chatId, "Muvaffaqiyatli ulandi!\n\nAkkauntingiz Telegram bilan bog'landi.\nEndi vazifalar va maqsadlar haqida xabarnomalar olasiz.");
+        return sendMessage(chatId, "🎉 <b>Muvaffaqiyatli ulandi!</b>\n\nAkkauntingiz IELTS Talk bilan bog'landi.\nEndi dars rejalari, speaking coach va fleshkarta eslatmalarini shu yerda olasiz! 🚀", defaultKeyboard);
     } else {
         // Welcome message - not linked yet
-        return sendMessage(chatId, `Salom! Study Planner botiga xush kelibsiz!
+        return sendMessage(chatId, `Salom! IELTS Talk botiga xush kelibsiz!
 
 Akkauntingizni bog'lash uchun:
-1. <a href="https://task-planner-tau.vercel.app">task-planner-tau.vercel.app</a> saytiga kiring.
+1. <a href="https://ielts-talk.vercel.app">ielts-talk.vercel.app</a> saytiga kiring.
 2. <b>Settings → Telegram</b> sahifasiga o'ting.
 3. Kod oling va <code>/start KOD</code> ko'rinishida yuboring.
 
-Yordam: /help`);
+Yordam: /help`, defaultKeyboard);
     }
 }
 

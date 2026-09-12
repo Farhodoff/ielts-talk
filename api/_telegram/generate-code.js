@@ -38,14 +38,15 @@ export default async function handler(req, res) {
   try {
     const supabase = createClient(SUPABASE_URL, SERVICE_ROLE);
 
-    // Check if already linked
+    // Check if already linked unless force re-linking is requested
+    const force = req.query?.force === 'true' || req.body?.force === true;
     const { data: existing } = await supabase
       .from('telegram_users')
       .select('*')
       .eq('user_id', userId)
       .maybeSingle();
 
-    if (existing) {
+    if (existing && !force) {
       return res.status(200).json({ error: 'Telegram allaqachon ulangan', linked: true, account: existing });
     }
 

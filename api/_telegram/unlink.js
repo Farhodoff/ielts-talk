@@ -17,8 +17,7 @@ export default async function handler(req, res) {
     return res.status(405).json({ error: 'Method not allowed' });
   }
 
-  // SECURITY: userId must come from the verified JWT only. Never accept a
-  // body-supplied userId — it allowed acting on arbitrary users' accounts.
+  // SECURITY: userId must come from the verified JWT only.
   const { user, error: authError } = await verifyAuth(req);
   const userId = user?.id;
 
