@@ -1,7 +1,6 @@
 import { describe, it, expect, vi, beforeEach } from 'vitest';
 // @ts-expect-error - Edge serverless module
 import ttsHandler from '../../../api/tts.js';
-// @ts-expect-error - Edge serverless module
 import * as authModule from '../../../api/_auth.js';
 // @ts-expect-error - Edge serverless module
 import * as rateLimitModule from '../../../api/_rateLimit.js';
@@ -27,6 +26,7 @@ describe('TTS Security Hardening & Edge API Test Suite (/api/tts)', () => {
     vi.spyOn(authModule, 'verifyAuth').mockResolvedValueOnce({
       user: null,
       error: 'Invalid or expired token',
+      status: 401,
     });
 
     const req = new Request('https://studyplanner.app/api/tts?text=hello&lang=en', {
@@ -44,6 +44,7 @@ describe('TTS Security Hardening & Edge API Test Suite (/api/tts)', () => {
     vi.spyOn(authModule, 'verifyAuth').mockResolvedValueOnce({
       user: { id: testUserId, role: 'user' },
       error: null,
+      status: 0,
     });
 
     // Mock global fetch for upstream Google TTS
@@ -77,6 +78,7 @@ describe('TTS Security Hardening & Edge API Test Suite (/api/tts)', () => {
     vi.spyOn(authModule, 'verifyAuth').mockResolvedValue({
       user: { id: 'rate-limited-user', role: 'user' },
       error: null,
+      status: 0,
     });
 
     vi.spyOn(rateLimitModule, 'checkRateLimit').mockResolvedValueOnce({
@@ -98,6 +100,7 @@ describe('TTS Security Hardening & Edge API Test Suite (/api/tts)', () => {
     vi.spyOn(authModule, 'verifyAuth').mockResolvedValue({
       user: { id: 'quota-exceeded-user', role: 'user' },
       error: null,
+      status: 0,
     });
 
     vi.spyOn(quotaModule, 'checkDailyQuota').mockResolvedValueOnce({
@@ -121,6 +124,7 @@ describe('TTS Security Hardening & Edge API Test Suite (/api/tts)', () => {
     vi.spyOn(authModule, 'verifyAuth').mockResolvedValue({
       user: { id: 'user-1', role: 'user' },
       error: null,
+      status: 0,
     });
 
     const longText = 'a'.repeat(201);
@@ -143,6 +147,7 @@ describe('TTS Security Hardening & Edge API Test Suite (/api/tts)', () => {
     vi.spyOn(authModule, 'verifyAuth').mockResolvedValue({
       user: { id: 'user-1', role: 'user' },
       error: null,
+      status: 0,
     });
 
     const req = new Request('https://studyplanner.app/api/tts', {
@@ -162,6 +167,7 @@ describe('TTS Security Hardening & Edge API Test Suite (/api/tts)', () => {
     vi.spyOn(authModule, 'verifyAuth').mockResolvedValue({
       user: { id: 'user-1', role: 'user' },
       error: null,
+      status: 0,
     });
 
     const req = new Request('https://studyplanner.app/api/tts?text=%20%20%20&lang=en', {
@@ -177,6 +183,7 @@ describe('TTS Security Hardening & Edge API Test Suite (/api/tts)', () => {
     vi.spyOn(authModule, 'verifyAuth').mockResolvedValue({
       user: { id: 'user-1', role: 'user' },
       error: null,
+      status: 0,
     });
 
     const req = new Request('https://studyplanner.app/api/tts?text=Test&lang=evil-lang-ssrf', {
@@ -194,6 +201,7 @@ describe('TTS Security Hardening & Edge API Test Suite (/api/tts)', () => {
     vi.spyOn(authModule, 'verifyAuth').mockResolvedValue({
       user: { id: 'user-1', role: 'user' },
       error: null,
+      status: 0,
     });
 
     vi.spyOn(globalThis, 'fetch').mockImplementationOnce(() => {
@@ -217,6 +225,7 @@ describe('TTS Security Hardening & Edge API Test Suite (/api/tts)', () => {
     vi.spyOn(authModule, 'verifyAuth').mockResolvedValue({
       user: { id: 'user-1', role: 'user' },
       error: null,
+      status: 0,
     });
 
     vi.spyOn(globalThis, 'fetch').mockResolvedValueOnce(

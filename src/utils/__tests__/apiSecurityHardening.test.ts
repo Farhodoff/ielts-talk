@@ -1,5 +1,4 @@
 import { describe, expect, it, vi, afterEach } from 'vitest';
-// @ts-ignore
 import {
   verifyAuth,
   getUserRole,

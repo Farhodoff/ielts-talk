@@ -1,6 +1,5 @@
 import { describe, expect, it, vi, beforeEach, afterEach } from 'vitest';
 import crypto from 'crypto';
-// @ts-ignore - plain JS serverless module has no type declarations
 import twaHandler, {
   verifyTelegramWebAppData,
   isInitDataFresh,
