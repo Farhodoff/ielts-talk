@@ -9,39 +9,45 @@ import toggleNotificationsHandler from './_telegram/toggle-notifications.js';
 import sendTestHandler from './_telegram/send-test.js';
 import dispatchGroupBattleHandler from './_telegram/dispatch-group-battle.js';
 
+/**
+ * Exact path-segment dispatch.
+ *
+ * The previous implementation used `url.includes('...')`, which also matched the
+ * query string — `/api/telegram/notify-daily?debug=webhook` was routed to the
+ * webhook handler (and cron URLs are attacker-reachable paths).
+ */
+const ROUTES = {
+  'auth-twa': authTwaHandler,
+  'webhook': webhookHandler,
+  'notify-daily': notifyDailyHandler,
+  'dispatch-daily-dataset': dispatchDailyHandler,
+  'dispatch-group-battle': dispatchGroupBattleHandler,
+  'generate-code': generateCodeHandler,
+  'check-link': checkLinkHandler,
+  'unlink': unlinkHandler,
+  'toggle-notifications': toggleNotificationsHandler,
+  'send-test': sendTestHandler,
+};
+
+export function resolveTelegramAction(url) {
+  const pathOnly = String(url || '')
+    .split('?')[0]
+    .split('#')[0];
+  const segments = pathOnly.split('/').filter(Boolean);
+
+  for (let i = segments.length - 1; i >= 0; i--) {
+    const segment = segments[i];
+    if (Object.prototype.hasOwnProperty.call(ROUTES, segment)) {
+      return segment;
+    }
+  }
+  return null;
+}
+
 export default async function handler(req, res) {
-  const url = req.url || '';
-
-  if (url.includes('auth-twa')) {
-    return authTwaHandler(req, res);
+  const action = resolveTelegramAction(req.url);
+  if (!action) {
+    return res.status(404).json({ error: 'Telegram endpoint not found' });
   }
-  if (url.includes('webhook')) {
-    return webhookHandler(req, res);
-  }
-  if (url.includes('notify-daily')) {
-    return notifyDailyHandler(req, res);
-  }
-  if (url.includes('dispatch-daily-dataset')) {
-    return dispatchDailyHandler(req, res);
-  }
-  if (url.includes('dispatch-group-battle')) {
-    return dispatchGroupBattleHandler(req, res);
-  }
-  if (url.includes('generate-code')) {
-    return generateCodeHandler(req, res);
-  }
-  if (url.includes('check-link')) {
-    return checkLinkHandler(req, res);
-  }
-  if (url.includes('unlink')) {
-    return unlinkHandler(req, res);
-  }
-  if (url.includes('toggle-notifications')) {
-    return toggleNotificationsHandler(req, res);
-  }
-  if (url.includes('send-test')) {
-    return sendTestHandler(req, res);
-  }
-
-  return res.status(404).json({ error: 'Telegram endpoint not found', url });
+  return ROUTES[action](req, res);
 }

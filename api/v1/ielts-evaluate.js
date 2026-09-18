@@ -1,4 +1,4 @@
-import { verifyAuth, getBearerToken } from '../_auth.js';
+import { verifyAuth, getBearerToken, getUserRole } from '../_auth.js';
 import { checkRateLimit } from '../_rateLimit.js';
 import { checkDailyQuota } from '../_quota.js';
 import { validateIeltsResponse } from '../_validators.js';
@@ -71,7 +71,31 @@ export default async function handler(req) {
   const effectiveApiKey = serverKey;
   let authenticatedUserId = null;
 
-  const { user, error: authError } = await verifyAuth(req);
+  const { user, error: authError, status: authStatus } = await verifyAuth(req);
+  if (authError) {
+    return new Response(JSON.stringify({ error: 'Unauthorized', message: authError }), {
+      status: authStatus || 401,
+      headers: { 'Content-Type': 'application/json' },
+    });
+  }
+  if (!user || !user.id) {
+    // Anonymous callers share the server API key, so they must be IP throttled.
+    const anonRate = await checkRateLimit(req, null);
+    if (!anonRate.allowed) {
+      return new Response(JSON.stringify({
+        error: 'Too Many Requests',
+        message: `So'rovlar tezligi oshdi. Iltimos ${anonRate.retryAfter} soniyadan so'ng qayta urinib ko'ring.`,
+        retryAfter: anonRate.retryAfter,
+      }), {
+        status: 429,
+        headers: {
+          'Content-Type': 'application/json',
+          'Access-Control-Allow-Origin': '*',
+          'Retry-After': String(anonRate.retryAfter),
+        },
+      });
+    }
+  }
   if (user && user.id) {
     authenticatedUserId = user.id;
 
@@ -93,7 +117,7 @@ export default async function handler(req) {
     }
 
     // Daily quota & Request size check
-    const quotaCheck = await checkDailyQuota(authenticatedUserId, user.role, rawBodyText);
+    const quotaCheck = await checkDailyQuota(authenticatedUserId, getUserRole(user), rawBodyText);
     if (!quotaCheck.allowed) {
       return new Response(JSON.stringify({
         error: 'Quota Exceeded',

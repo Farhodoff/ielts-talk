@@ -1079,5 +1079,77 @@ describe('Personal Learning Plan System Tests', () => {
       // Should still select en-a1-u1-l1 for User B as they did not complete it
       expect(bTasks[0].contentId).toBe('en-a1-u1-l1');
     });
+
+    it('generatePedagogicalPlan generates 7 days complying with dailyMinutes and routes', () => {
+      const ieltsGoal: PersonalLearningGoal = {
+        id: 'goal-ped-1',
+        userId: 'user-ped',
+        language: 'en',
+        goalType: 'ielts',
+        targetGoal: 'Band 7.5',
+        targetLevel: '7.5',
+        currentLevel: 'A1',
+        dailyMinutes: 120,
+        deadline: '2026-12-31',
+        totalWeeks: 24,
+        currentWeek: 1,
+        status: 'active',
+        createdAt: new Date().toISOString(),
+        updatedAt: new Date().toISOString(),
+      };
+
+      const result = PersonalLearningPlanEngine.generatePedagogicalPlan('user-ped', ieltsGoal, 1);
+      expect(result).toBeDefined();
+      expect(result.isFallback).toBe(true);
+      expect(result.plan.days.length).toBe(7);
+
+      const daysOfWeek = [
+        'monday',
+        'tuesday',
+        'wednesday',
+        'thursday',
+        'friday',
+        'saturday',
+        'sunday',
+      ];
+      for (const day of result.plan.days) {
+        expect(daysOfWeek).toContain(day.day);
+        expect(day.tasks.length).toBeGreaterThanOrEqual(2);
+        const dayTotal = day.tasks.reduce((sum, t) => sum + t.estimatedMinutes, 0);
+        expect(dayTotal).toBeLessThanOrEqual(120);
+        for (const task of day.tasks) {
+          expect(task.title).toBeTruthy();
+          expect(task.route).toBeTruthy();
+          expect(task.route.startsWith('/')).toBe(true);
+          expect(task.completed).toBe(false);
+        }
+      }
+    });
+
+    it('generatePedagogicalPlan works for Japanese track', () => {
+      const jaGoal: PersonalLearningGoal = {
+        id: 'goal-ped-ja',
+        userId: 'user-ja',
+        language: 'ja',
+        goalType: 'jlpt',
+        targetGoal: 'N2',
+        targetLevel: 'N2',
+        currentLevel: 'N4',
+        dailyMinutes: 45,
+        deadline: '2026-12-31',
+        totalWeeks: 16,
+        currentWeek: 1,
+        status: 'active',
+        createdAt: new Date().toISOString(),
+        updatedAt: new Date().toISOString(),
+      };
+
+      const result = PersonalLearningPlanEngine.generatePedagogicalPlan('user-ja', jaGoal, 1);
+      expect(result.plan.days.length).toBe(7);
+      for (const day of result.plan.days) {
+        const dayTotal = day.tasks.reduce((sum, t) => sum + t.estimatedMinutes, 0);
+        expect(dayTotal).toBeLessThanOrEqual(45);
+      }
+    });
   });
 });

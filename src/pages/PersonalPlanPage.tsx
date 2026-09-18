@@ -20,7 +20,11 @@ import {
   PersonalLearningPlanService,
   FeasibilityResult,
 } from '../services/PersonalLearningPlanService';
-import { PersonalLearningPlanEngine } from '../services/PersonalLearningPlanEngine';
+import {
+  PersonalLearningPlanEngine,
+  isPlanGenerationLockError,
+  type PlanGenerationResult,
+} from '../services/PersonalLearningPlanEngine';
 import { WeeklyEvaluationEngine } from '../services/WeeklyEvaluationEngine';
 import { LearningProgressionService } from '../services/LearningProgressionService';
 import { LearningSignalService } from '../services/LearningSignalService';
@@ -31,6 +35,34 @@ import { generateUUID } from '../utils/uuid';
 import { generatePersonalMilestones } from '../utils/roadmapMilestones';
 import { telegramService } from '../services/TelegramService';
 
+/**
+ * Generates a weekly plan, degrading to the deterministic pedagogical planner ONLY
+ * when the AI itself failed.
+ *
+ * A lock conflict means another generation for the same goal/week is already in
+ * flight: substituting a different plan there would discard the real result and
+ * defeat the engine's concurrency guard, so it is surfaced as `null` instead.
+ */
+const generatePlanWithFallback = async (
+  userId: string,
+  goal: PersonalLearningGoal,
+  weekNumber: number,
+): Promise<PlanGenerationResult | null> => {
+  try {
+    return await PersonalLearningPlanEngine.generateWeeklyPlan(userId, goal, weekNumber);
+  } catch (aiErr: any) {
+    if (isPlanGenerationLockError(aiErr)) {
+      console.warn('[PersonalPlanPage] Plan generation already in progress; skipping fallback.');
+      return null;
+    }
+    console.warn(
+      '[PersonalPlanPage] AI plan generation failed, activating pedagogical planner:',
+      aiErr?.message,
+    );
+    return PersonalLearningPlanEngine.generatePedagogicalPlan(userId, goal, weekNumber);
+  }
+};
+
 export const PersonalPlanPage: React.FC = () => {
   const { user, awardXP } = useStudyData();
   const { language } = useLanguage();
@@ -40,9 +72,7 @@ export const PersonalPlanPage: React.FC = () => {
   // Wizard States - IELTS Academic & General English Track
   const [step, setStep] = useState<1 | 2 | 3>(1);
   const selectedLang = 'en';
-  const [selectedGoalType, setSelectedGoalType] = useState<
-    'ielts' | 'general_en'
-  >('ielts');
+  const [selectedGoalType, setSelectedGoalType] = useState<'ielts' | 'general_en'>('ielts');
   const [targetLevel, setTargetLevel] = useState<string>('7.0');
   const [currentLevel, setCurrentLevel] = useState<string>('5.5');
   const [deadlineMonths, setDeadlineMonths] = useState<number>(6);
@@ -116,16 +146,14 @@ export const PersonalPlanPage: React.FC = () => {
 
           let plan = PersonalLearningPlanService.getLatestWeeklyPlan(userId, goal.id);
           if (!plan) {
-            try {
-              const genResult = await PersonalLearningPlanEngine.generateWeeklyPlan(
-                userId,
-                goal,
-                goal.currentWeek || 1,
-              );
+            const genResult = await generatePlanWithFallback(userId, goal, goal.currentWeek || 1);
+            if (genResult) {
               plan = genResult.plan;
-              await PersonalLearningPlanService.saveWeeklyPlan(plan);
-            } catch (genErr) {
-              console.warn('[PersonalPlanPage] Auto plan generation notice:', genErr);
+              try {
+                await PersonalLearningPlanService.saveWeeklyPlan(plan);
+              } catch (saveErr) {
+                console.warn('[PersonalPlanPage] Plan save notice (kept in local cache):', saveErr);
+              }
             }
           }
           if (plan && isMounted) setCurrentPlan(plan);
@@ -137,15 +165,22 @@ export const PersonalPlanPage: React.FC = () => {
             setActiveGoal(localCached);
             let plan = PersonalLearningPlanService.getLatestWeeklyPlan(userId, localCached.id);
             if (!plan) {
-              try {
-                const genResult = await PersonalLearningPlanEngine.generateWeeklyPlan(
-                  userId,
-                  localCached,
-                  localCached.currentWeek || 1,
-                );
+              const genResult = await generatePlanWithFallback(
+                userId,
+                localCached,
+                localCached.currentWeek || 1,
+              );
+              if (genResult) {
                 plan = genResult.plan;
-                await PersonalLearningPlanService.saveWeeklyPlan(plan);
-              } catch {}
+                try {
+                  await PersonalLearningPlanService.saveWeeklyPlan(plan);
+                } catch (saveErr) {
+                  console.warn(
+                    '[PersonalPlanPage] Plan save notice (kept in local cache):',
+                    saveErr,
+                  );
+                }
+              }
             }
             if (plan && isMounted) setCurrentPlan(plan);
             if (isMounted) setWeeklyEvals(PersonalLearningPlanService.getWeeklyEvaluations(userId));
@@ -260,7 +295,18 @@ export const PersonalPlanPage: React.FC = () => {
       await new Promise((r) => setTimeout(r, 800));
       setGenerationStep('generating');
 
-      const result = await PersonalLearningPlanEngine.generateWeeklyPlan(userId, newGoal, 1);
+      const result = await generatePlanWithFallback(userId, newGoal, 1);
+
+      if (!result) {
+        setGenerationStep(null);
+        toast({
+          title: isUz ? 'Kuting' : 'Please wait',
+          description: isUz
+            ? "Reja generatsiyasi allaqachon davom etmoqda. Iltimos bir oz kutib, qayta urinib ko'ring."
+            : 'A plan generation is already in progress. Please wait a moment and try again.',
+        });
+        return;
+      }
 
       // Immediately activate plan in local state
       setActiveGoal(newGoal);
@@ -282,17 +328,34 @@ export const PersonalPlanPage: React.FC = () => {
         });
       }
 
-      if (result.noticeMessage) {
-        toast({ title: 'Plan generated', description: result.noticeMessage });
+      if (result.isFallback) {
+        toast({
+          title: isUz ? 'Pedagogik Reja Tuzildi' : 'Pedagogical Plan Ready',
+          description:
+            result.noticeMessage ||
+            (isUz
+              ? "O'quv rejangiz pedagogik dastur asosida muvaffaqiyatli shakllantirildi. AI orqali istalgan payt yangilashingiz mumkin."
+              : 'Study plan generated based on pedagogical curriculum. You can regenerate with AI anytime.'),
+        });
+      } else if (result.noticeMessage) {
+        toast({
+          title: isUz ? 'Reja tayyor' : 'Plan Ready',
+          description: result.noticeMessage,
+        });
       } else {
-        toast({ title: 'Reja tayyor', description: 'Haftalik rejangiz muvaffaqiyatli yaratildi!' });
+        toast({
+          title: isUz ? 'Reja tayyor' : 'Plan Ready',
+          description: isUz
+            ? 'Haftalik rejangiz muvaffaqiyatli yaratildi!'
+            : 'Your weekly study plan has been successfully created!',
+        });
       }
     } catch (err: any) {
       console.error(err);
       setGenerationStep(null);
       toast({
         variant: 'destructive',
-        title: 'Xatolik',
+        title: isUz ? 'Xatolik' : 'Error',
         description: err.message || 'Plan yaratishda muammo yuz berdi.',
       });
     }
@@ -568,7 +631,8 @@ export const PersonalPlanPage: React.FC = () => {
                     <h4 className="text-base font-bold text-foreground">IELTS Imtihoni</h4>
                   </div>
                   <p className="mt-1 text-xs leading-relaxed text-muted-foreground">
-                    Band Score (5.5 – 8.5+) ko'rsatkichlariga yo'naltirilgan intensiv akademik va umumiy imtihon rejasi.
+                    Band Score (5.5 – 8.5+) ko'rsatkichlariga yo'naltirilgan intensiv akademik va
+                    umumiy imtihon rejasi.
                   </p>
                 </button>
                 <button
@@ -587,7 +651,9 @@ export const PersonalPlanPage: React.FC = () => {
                 >
                   <div className="mb-2 flex items-center gap-2">
                     <span className="text-2xl">🇬🇧</span>
-                    <h4 className="text-base font-bold text-foreground">General & Academic English</h4>
+                    <h4 className="text-base font-bold text-foreground">
+                      General & Academic English
+                    </h4>
                   </div>
                   <p className="mt-1 text-xs leading-relaxed text-muted-foreground">
                     CEFR (B1 – C2) muloqot, grammatika va akademik so'z boyligini tizimli oshirish.
@@ -602,7 +668,7 @@ export const PersonalPlanPage: React.FC = () => {
                 <select
                   value={targetsList.includes(targetLevel) ? targetLevel : targetsList[0] || ''}
                   onChange={(e) => setTargetLevel(e.target.value)}
-                  className="focus:outline-hidden w-full rounded-2xl border border-border bg-card px-4 py-3 text-foreground focus:ring-2 focus:ring-primary font-bold"
+                  className="focus:outline-hidden w-full rounded-2xl border border-border bg-card px-4 py-3 font-bold text-foreground focus:ring-2 focus:ring-primary"
                 >
                   {targetsList.map((t) => (
                     <option key={t} value={t}>
@@ -1129,7 +1195,10 @@ export const PersonalPlanPage: React.FC = () => {
                                       selectedGoalType === 'ielts';
                                     if (isEnglishPlan) {
                                       if (targetRoute === '/ielts' || !targetRoute) {
-                                        if (task.skill === 'reading' || task.skill === 'listening') {
+                                        if (
+                                          task.skill === 'reading' ||
+                                          task.skill === 'listening'
+                                        ) {
                                           targetRoute = '/ielts?tab=reading_listening';
                                         } else if (task.skill === 'writing') {
                                           targetRoute = '/ielts?tab=writing';
@@ -1142,8 +1211,14 @@ export const PersonalPlanPage: React.FC = () => {
                                             ? `/ielts?tab=grammar&topic=${task.contentId}`
                                             : '/ielts?tab=grammar';
                                         }
-                                      } else if (targetRoute.includes('topic=') && !targetRoute.includes('tab=')) {
-                                        targetRoute = targetRoute.replace('/ielts?', '/ielts?tab=grammar&');
+                                      } else if (
+                                        targetRoute.includes('topic=') &&
+                                        !targetRoute.includes('tab=')
+                                      ) {
+                                        targetRoute = targetRoute.replace(
+                                          '/ielts?',
+                                          '/ielts?tab=grammar&',
+                                        );
                                       }
                                     }
 
@@ -1247,21 +1322,34 @@ export const PersonalPlanPage: React.FC = () => {
                       setLoading(true);
                       const userId = user?.id || 'guest';
                       try {
-                        const genResult = await PersonalLearningPlanEngine.generateWeeklyPlan(
+                        const genResult = await generatePlanWithFallback(
                           userId,
                           activeGoal,
                           activeGoal.currentWeek || 1,
                         );
+                        if (!genResult) {
+                          toast({
+                            title: isUz ? 'Kuting' : 'Please wait',
+                            description: isUz
+                              ? 'Reja generatsiyasi allaqachon davom etmoqda. Iltimos bir oz kuting.'
+                              : 'A plan generation is already in progress. Please wait a moment.',
+                          });
+                          return;
+                        }
                         await PersonalLearningPlanService.saveWeeklyPlan(genResult.plan);
                         setCurrentPlan(genResult.plan);
                         toast({
-                          title: 'Reja tayyor',
-                          description: 'Haftalik dars jadvali muvaffaqiyatli yaratildi!',
+                          title: isUz ? 'Reja tayyor' : 'Plan Ready',
+                          description:
+                            genResult.noticeMessage ||
+                            (isUz
+                              ? 'Haftalik dars jadvali muvaffaqiyatli yaratildi!'
+                              : 'Weekly study plan created!'),
                         });
                       } catch (err: any) {
                         toast({
                           variant: 'destructive',
-                          title: 'Xatolik',
+                          title: isUz ? 'Xatolik' : 'Error',
                           description: err.message || 'Reja generatsiyasida xatolik',
                         });
                       } finally {

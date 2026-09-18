@@ -2,9 +2,32 @@ import type { User, Session } from '@supabase/supabase-js';
 import type { TelegramWebAppUser } from '../types/telegram-webapp';
 import { toDeterministicUUID } from './uuid';
 import { safeLocalStorage } from './storage/safeLocalStorage';
+import { supabase } from '../lib/supabase';
 
 export const TELEGRAM_SUPERADMIN_ID = 6756073816;
 export const TELEGRAM_SUPERADMIN_IDS = [6756073816, 6839776532];
+
+const TG_SESSION_CACHE_KEY = 'telegram_supabase_session';
+const USER_CACHE_KEY = 'study_planner_user_cache';
+const USER_EMAIL_KEY = 'study_planner_user_email';
+const EXPIRY_SKEW_SECONDS = 60;
+
+/**
+ * SECURITY NOTE
+ *
+ * Telegram WebApp sessions used to be fabricated on the client as
+ * `tg-jwt-<uuid>` and were then trusted by `/api/*` without any signature check.
+ * That allowed anyone to mint an "authenticated" session with curl.
+ *
+ * Sessions are now obtained exclusively from the server:
+ *   1. the Mini App posts its raw `initData` to /api/telegram/auth-twa;
+ *   2. the server verifies the Telegram HMAC and freshness window;
+ *   3. the server returns a one-time `tokenHash` created with the Supabase admin API;
+ *   4. the client exchanges it through `supabase.auth.verifyOtp()` for a real,
+ *      refreshable Supabase session.
+ *
+ * Nothing in this module ever invents credentials.
+ */
 
 /**
  * Checks whether the current runtime environment is inside Telegram WebApp (Mini App).
@@ -29,6 +52,7 @@ export function isTelegramWebApp(): boolean {
 
 /**
  * Extracts the Telegram user from WebApp initData or URL mock.
+ * This is display metadata only — it is never used as an authentication credential.
  */
 export function getTelegramWebAppUser(): TelegramWebAppUser | null {
   if (typeof window === 'undefined') return null;
@@ -49,21 +73,26 @@ export function getTelegramWebAppUser(): TelegramWebAppUser | null {
     } catch {}
   }
 
-  // Development / test fallback from query string
-  try {
-    const searchParams = new URLSearchParams(window.location.search);
-    const mockUserJson = searchParams.get('mock_tg_user');
-    if (mockUserJson) {
-      const parsed = JSON.parse(decodeURIComponent(mockUserJson));
-      if (parsed && parsed.id) return parsed;
-    }
-  } catch {}
+  // Development / test fallback from query string (never trusted by the server).
+  if (import.meta.env.DEV) {
+    try {
+      const searchParams = new URLSearchParams(window.location.search);
+      const mockUserJson = searchParams.get('mock_tg_user');
+      if (mockUserJson) {
+        const parsed = JSON.parse(decodeURIComponent(mockUserJson));
+        if (parsed && parsed.id) return parsed;
+      }
+    } catch {}
+  }
 
   return null;
 }
 
 /**
- * Builds a deterministic Supabase-compatible User object from Telegram WebApp user profile.
+ * Builds a display profile for a Telegram WebApp user.
+ * NOTE: the returned object is a UI placeholder. It carries NO session and must
+ * not be treated as proof of identity — the authoritative user comes from the
+ * Supabase session returned by `authenticateTelegramWebApp()`.
  */
 export function createTelegramUser(tgUser: TelegramWebAppUser): User {
   const isSuper =
@@ -84,6 +113,9 @@ export function createTelegramUser(tgUser: TelegramWebAppUser): User {
     app_metadata: {
       provider: 'telegram',
       providers: ['telegram'],
+      // `custom_role` is the application role used after the auth migration;
+      // `role` is kept for backwards compatibility with existing UI checks.
+      custom_role: role,
       role,
     },
     user_metadata: {
@@ -116,33 +148,45 @@ export function createTelegramUser(tgUser: TelegramWebAppUser): User {
   } as unknown as User;
 }
 
-/**
- * Builds a Supabase Session object from a Telegram User.
- */
-export function createTelegramSession(user: User): Session {
-  return {
-    access_token: `tg-jwt-${user.id}`,
-    token_type: 'bearer',
-    expires_in: 31536000, // 1 year
-    expires_at: Math.floor(Date.now() / 1000) + 31536000,
-    refresh_token: `tg-refresh-${user.id}`,
-    user,
-  };
+/** Legacy unsigned `tg-jwt-*` tokens must never be treated as credentials. */
+export function isLegacyTelegramToken(token?: string | null): boolean {
+  return typeof token === 'string' && token.startsWith('tg-jwt-');
+}
+
+export function clearCachedTelegramSession(): void {
+  safeLocalStorage.removeItem(TG_SESSION_CACHE_KEY);
 }
 
 /**
- * Automatically initializes Telegram WebApp, styles, cache, and returns session for seamless auto-login.
+ * Returns a previously verified Supabase session, or null.
+ * Expired sessions are dropped so the caller re-runs the server exchange.
  */
-export function initTelegramAuth(): { user: User; session: Session } | null {
-  if (typeof window === 'undefined') return null;
+export function readCachedTelegramSession(): Session | null {
+  const cached = safeLocalStorage.getJSON<Session | null>(TG_SESSION_CACHE_KEY, null);
+  if (!cached?.access_token) return null;
 
-  if (!isTelegramWebApp()) {
+  if (isLegacyTelegramToken(cached.access_token)) {
+    clearCachedTelegramSession();
     return null;
   }
 
-  const tg = window.Telegram?.WebApp;
+  if (cached.expires_at && cached.expires_at * 1000 - Date.now() < EXPIRY_SKEW_SECONDS * 1000) {
+    return null;
+  }
 
-  // Initialize WebApp UI options
+  return cached;
+}
+
+function persistVerifiedSession(session: Session): void {
+  safeLocalStorage.setJSON(TG_SESSION_CACHE_KEY, session);
+  safeLocalStorage.setJSON(USER_CACHE_KEY, session.user);
+  if (session.user?.email) {
+    safeLocalStorage.setItem(USER_EMAIL_KEY, session.user.email);
+  }
+}
+
+function configureWebAppUi(): void {
+  const tg = window.Telegram?.WebApp;
   try {
     tg?.ready?.();
     tg?.expand?.();
@@ -157,45 +201,103 @@ export function initTelegramAuth(): { user: User; session: Session } | null {
   } catch (err) {
     console.debug('[TelegramAuth] WebApp UI config warning:', err);
   }
+}
 
-  const tgUser = getTelegramWebAppUser();
+/**
+ * Synchronous hydration used during render.
+ *
+ * Returns ONLY a cached, previously server-verified Supabase session. When no
+ * such session exists it returns null and purges stale identity caches so that
+ * a revoked/legacy Telegram identity cannot keep the UI logged in.
+ * Call `authenticateTelegramWebApp()` to establish a session.
+ */
+export function initTelegramAuth(): { user: User; session: Session } | null {
+  if (typeof window === 'undefined' || !isTelegramWebApp()) return null;
 
-  if (tgUser) {
-    const user = createTelegramUser(tgUser);
-    const session = createTelegramSession(user);
+  configureWebAppUi();
 
-    // Persist into user cache
-    safeLocalStorage.setJSON('study_planner_user_cache', user);
-    if (user.email) {
-      safeLocalStorage.setItem('study_planner_user_email', user.email);
+  const session = readCachedTelegramSession();
+  if (session?.user) {
+    safeLocalStorage.setJSON(USER_CACHE_KEY, session.user);
+    if (session.user.email) {
+      safeLocalStorage.setItem(USER_EMAIL_KEY, session.user.email);
     }
-
-    // Background sync to backend database (upsert to telegram_users table)
-    if (typeof window !== 'undefined' && window.location?.origin && typeof fetch !== 'undefined') {
-      try {
-        const syncUrl = `${window.location.origin}/api/telegram/auth-twa`;
-        fetch(syncUrl, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            initData: tg?.initData || '',
-            mockUser: tgUser,
-          }),
-        }).catch((e) => {
-          console.debug('[TelegramAuth] Backend sync notice:', e);
-        });
-      } catch {}
-    }
-
-    return { user, session };
+    return { user: session.user, session };
   }
 
-  // If inside Telegram WebApp without explicit user object, check existing cache
-  const cachedUser = safeLocalStorage.getJSON<User | null>('study_planner_user_cache', null);
-  if (cachedUser && cachedUser.id) {
-    const session = createTelegramSession(cachedUser);
-    return { user: cachedUser, session };
-  }
+  // No verified session: drop any cached Telegram identity that may have been
+  // written by the removed client-side session fabrication, so a stale or
+  // revoked Telegram identity cannot keep the UI logged in.
+  clearCachedTelegramSession();
+  safeLocalStorage.removeItem(USER_CACHE_KEY);
+  safeLocalStorage.removeItem(USER_EMAIL_KEY);
 
   return null;
+}
+
+let inFlightExchange: Promise<{ user: User; session: Session } | null> | null = null;
+
+/**
+ * Performs the server-side Telegram handshake and installs a real Supabase session.
+ * Safe to call multiple times; concurrent calls share a single request.
+ */
+export async function authenticateTelegramWebApp(): Promise<{
+  user: User;
+  session: Session;
+} | null> {
+  if (typeof window === 'undefined' || !isTelegramWebApp()) return null;
+  if (inFlightExchange) return inFlightExchange;
+  if (!window.location?.origin || typeof fetch === 'undefined') return null;
+
+  inFlightExchange = (async () => {
+    try {
+      const tg = window.Telegram?.WebApp;
+      const initData = tg?.initData || '';
+
+      const payload: Record<string, unknown> = { initData };
+      if (!initData) {
+        // Only ever reachable in local development; the server rejects mock
+        // users in production.
+        const mockUser = getTelegramWebAppUser();
+        if (!import.meta.env.DEV || !mockUser) return null;
+        payload.mockUser = mockUser;
+      }
+
+      const response = await fetch(`${window.location.origin}/api/telegram/auth-twa`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+      });
+
+      const data = await response.json().catch(() => ({}));
+      if (!response.ok || !data?.tokenHash) {
+        console.warn(
+          '[TelegramAuth] Server rejected the Telegram session:',
+          response.status,
+          data?.error,
+        );
+        return null;
+      }
+
+      const { data: otpData, error } = await supabase.auth.verifyOtp({
+        type: 'magiclink',
+        token_hash: data.tokenHash,
+      });
+
+      if (error || !otpData?.session) {
+        console.warn('[TelegramAuth] Session exchange failed:', error?.message);
+        return null;
+      }
+
+      persistVerifiedSession(otpData.session);
+      return { user: otpData.session.user, session: otpData.session };
+    } catch (err) {
+      console.warn('[TelegramAuth] Authentication failed:', err);
+      return null;
+    } finally {
+      inFlightExchange = null;
+    }
+  })();
+
+  return inFlightExchange;
 }

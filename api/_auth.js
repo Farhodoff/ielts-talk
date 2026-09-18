@@ -52,13 +52,78 @@ export function getBearerToken(req) {
 }
 
 /**
- * Verifies Supabase JWT access token.
- * Returns { user, error }
+ * Legacy Telegram WebApp sessions used unsigned deterministic tokens of the shape
+ * `tg-jwt-<uuid>`. They were accepted as fully authenticated users without any
+ * signature, expiry or Telegram HMAC check, which allowed anyone to mint one with
+ * curl. Only real Supabase sessions are trusted now; callers must re-authenticate.
+ */
+export function isLegacyTelegramToken(token) {
+  return typeof token === 'string' && token.startsWith('tg-jwt-');
+}
+
+const NON_ROLE_VALUES = new Set(['', 'authenticated', 'anon', 'service_role']);
+
+const PRIVILEGED_ROLES = new Set(['superadmin', 'admin', 'owner']);
+
+export function isPrivilegedRole(role) {
+  return PRIVILEGED_ROLES.has(String(role || '').toLowerCase());
+}
+
+function normalizeRoleValue(candidate) {
+  if (typeof candidate !== 'string') return null;
+  const value = candidate.trim().toLowerCase();
+  if (!value || NON_ROLE_VALUES.has(value)) return null;
+  return value;
+}
+
+/**
+ * Resolves the application role from Supabase user metadata.
+ *
+ * `app_metadata` is writable only through the admin API, so it is the only
+ * source allowed to grant an elevated role. `user_metadata` can be rewritten by
+ * the user themselves via `supabase.auth.updateUser`, so it may describe an
+ * ordinary role but never grant admin/superadmin — otherwise any signed-in user
+ * could promote themselves by editing their own metadata.
+ */
+export function getUserRole(user) {
+  if (!user) return 'guest';
+  const app = user.app_metadata || {};
+  const meta = user.user_metadata || {};
+
+  for (const candidate of [app.custom_role, app.role]) {
+    const value = normalizeRoleValue(candidate);
+    if (value) return value;
+  }
+
+  const metaRole = normalizeRoleValue(meta.role);
+  if (metaRole && !isPrivilegedRole(metaRole)) return metaRole;
+
+  return 'student';
+}
+
+/**
+ * Verifies the caller's Supabase JWT access token.
+ *
+ * Returns { user, error, status }:
+ * - no token / anon key  -> { user: null, error: null, status: 0 }  (anonymous caller)
+ * - invalid/expired token -> { user: null, error: <message>, status: 401 }
+ *
+ * Callers MUST honour `error` and respond with `status` instead of silently
+ * downgrading an authenticated caller to the anonymous rate-limit bucket.
  */
 export async function verifyAuth(req) {
   const token = getBearerToken(req);
   if (!token || token === SUPABASE_ANON_KEY) {
-    return { user: null, error: null };
+    return { user: null, error: null, status: 0 };
+  }
+
+  if (isLegacyTelegramToken(token)) {
+    return {
+      user: null,
+      error:
+        'Legacy Telegram session format is no longer supported. Please sign in to Telegram again to obtain a valid session.',
+      status: 401,
+    };
   }
 
   try {
@@ -70,10 +135,19 @@ export async function verifyAuth(req) {
       error,
     } = await supabase.auth.getUser(token);
     if (error || !user) {
-      return { user: null, error: error?.message || 'Invalid or expired authentication session.' };
+      return {
+        user: null,
+        error: 'Invalid or expired authentication session.',
+        status: 401,
+      };
     }
-    return { user, error: null };
+    return { user, error: null, status: 0 };
   } catch (err) {
-    return { user: null, error: err?.message || 'Authentication verification failed.' };
+    console.warn('[Auth] Token verification failed:', err?.message || err);
+    return {
+      user: null,
+      error: 'Authentication verification failed.',
+      status: 401,
+    };
   }
 }

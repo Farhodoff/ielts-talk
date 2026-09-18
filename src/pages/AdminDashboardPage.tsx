@@ -1,7 +1,7 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react';
 import { useStudyData } from '../context/StudyPlannerContext';
 import { useLanguage } from '../context/LanguageContext';
-import { supabase, supabaseUrl, supabaseAnonKey } from '../lib/supabase';
+import { supabase } from '../lib/supabase';
 import {
   Users,
   Loader2,
@@ -28,7 +28,13 @@ import {
 } from 'lucide-react';
 import { Button } from '../components/ui/Button';
 import { useNavigate } from 'react-router-dom';
-import { isAdminEmail, isSuperAdmin, grantAdminRole, revokeAdminRole } from '../utils/admin';
+import {
+  isAdminEmail,
+  isSuperAdmin,
+  grantAdminRole,
+  revokeAdminRole,
+  resolveUserRole,
+} from '../utils/admin';
 import { UserNotificationService } from '../services/UserNotificationService';
 import { AdminAiCardCleanerModal } from '../components/decks/AdminAiCardCleanerModal';
 import { AdminScenarioManager } from '../components/admin/AdminScenarioManager';
@@ -217,6 +223,13 @@ export default function AdminDashboardPage() {
   const [isRealtimeActive, setIsRealtimeActive] = useState(false);
   const secretClicksRef = useRef(0);
   const userListRef = useRef(usersList);
+  // Verified-admin flag read by the data fetcher. It is only ever set from the
+  // result of supabase.auth.getUser(), never from a cached user object.
+  const adminAuthRef = useRef<{ authorized: boolean; email: string; role?: string }>({
+    authorized: false,
+    email: '',
+    role: undefined,
+  });
 
   const [messageModalUser, setMessageModalUser] = useState<{ id: string; email: string } | null>(
     null,
@@ -250,6 +263,13 @@ export default function AdminDashboardPage() {
 
   // Global Independent DB Data Fetcher
   const fetchAdminData = useCallback(async () => {
+    if (!adminAuthRef.current.authorized) {
+      // Every call below reads a privileged admin RPC, so nothing may run for a
+      // caller whose admin session has not been verified.
+      setLoading(false);
+      return;
+    }
+
     if (userListRef.current.length === 0) setLoading(true);
 
     // Ensure active authenticated session is restored
@@ -294,20 +314,13 @@ export default function AdminDashboardPage() {
       if (!rpcMetRes.error && rpcMetRes.data) {
         mObj = typeof rpcMetRes.data === 'string' ? JSON.parse(rpcMetRes.data) : rpcMetRes.data;
       } else {
-        // Direct fallback with verified publishable key if RPC client auth failed
-        try {
-          const directMet = await fetch(`${supabaseUrl}/rest/v1/rpc/get_admin_database_metrics`, {
-            method: 'POST',
-            headers: {
-              apikey: supabaseAnonKey,
-              Authorization: `Bearer ${supabaseAnonKey}`,
-              'Content-Type': 'application/json',
-            },
-          });
-          if (directMet.ok) {
-            mObj = await directMet.json();
-          }
-        } catch {}
+        // No unauthenticated retry: these RPCs are only callable with a real
+        // admin session, and minting them with the public anon key would leak
+        // the full dataset to anyone reading the bundle.
+        console.warn(
+          '[AdminDashboard] get_admin_database_metrics RPC failed:',
+          rpcMetRes.error?.message || 'no data returned',
+        );
       }
       if (mObj) {
         if (typeof mObj.flashcards_count === 'number') metrics.flashcards = mObj.flashcards_count;
@@ -393,24 +406,13 @@ export default function AdminDashboardPage() {
       let rawUsersData =
         !rpcRes.error && Array.isArray(rpcRes.data) && rpcRes.data.length > 0 ? rpcRes.data : null;
 
-      // Direct fetch fallback with verified anon key if RPC client failed with 401 or invalid key
       if (!rawUsersData) {
-        try {
-          const directUsersRes = await fetch(`${supabaseUrl}/rest/v1/rpc/get_admin_all_users`, {
-            method: 'POST',
-            headers: {
-              apikey: supabaseAnonKey,
-              Authorization: `Bearer ${supabaseAnonKey}`,
-              'Content-Type': 'application/json',
-            },
-          });
-          if (directUsersRes.ok) {
-            const directUsersJson = await directUsersRes.json();
-            if (Array.isArray(directUsersJson) && directUsersJson.length > 0) {
-              rawUsersData = directUsersJson;
-            }
-          }
-        } catch {}
+        // A 401/403 from the RPC is a real authorisation signal and must be
+        // surfaced, never retried with the public anon key.
+        console.warn(
+          '[AdminDashboard] get_admin_all_users RPC failed:',
+          rpcRes.error?.message || 'no data returned',
+        );
       }
 
       if (rawUsersData && rawUsersData.length > 0) {
@@ -457,11 +459,7 @@ export default function AdminDashboardPage() {
 
     // Ensure current logged-in admin is included if not present
     const currentAdminEmail = user?.email;
-    const currentAdminRoleRaw = user?.role || user?.user_metadata?.role || user?.app_metadata?.role;
-    const currentAdminRole =
-      typeof currentAdminRoleRaw === 'string'
-        ? currentAdminRoleRaw.toLowerCase()
-        : currentAdminRoleRaw;
+    const currentAdminRole = resolveUserRole(user);
     if (currentAdminEmail && isAdminEmail(currentAdminEmail, currentAdminRole)) {
       const exists = loadedUsers.some(
         (u) =>
@@ -507,22 +505,10 @@ export default function AdminDashboardPage() {
           : null;
 
       if (!sObj) {
-        try {
-          const directSessionsRes = await fetch(
-            `${supabaseUrl}/rest/v1/rpc/get_admin_all_sessions`,
-            {
-              method: 'POST',
-              headers: {
-                apikey: supabaseAnonKey,
-                Authorization: `Bearer ${supabaseAnonKey}`,
-                'Content-Type': 'application/json',
-              },
-            },
-          );
-          if (directSessionsRes.ok) {
-            sObj = await directSessionsRes.json();
-          }
-        } catch {}
+        console.warn(
+          '[AdminDashboard] get_admin_all_sessions RPC failed:',
+          rpcSessions.error?.message || 'no data returned',
+        );
       }
 
       if (sObj) {
@@ -830,45 +816,78 @@ export default function AdminDashboardPage() {
     setLoading(false);
   }, [user]);
 
-  const [authEmail, setAuthEmail] = useState<string>(() => user?.email || '');
-  const [authRole, setAuthRole] = useState<string | undefined>(
-    () => (user as { role?: string })?.role,
-  );
+  // Authorisation is derived exclusively from the verified Supabase session.
+  // `study_planner_user_cache` lives in plain localStorage, so it is fully
+  // attacker-controlled and can never be accepted as a proof of admin rights.
+  const [authEmail, setAuthEmail] = useState<string>('');
+  const [authRole, setAuthRole] = useState<string | undefined>(undefined);
+  const [authVerified, setAuthVerified] = useState(false);
 
   useEffect(() => {
-    if (user?.email) {
-      setAuthEmail(user.email);
-      setAuthRole(
-        (
-          (
-            user as {
-              role?: string;
-              user_metadata?: { role?: string };
-              app_metadata?: { role?: string };
-            }
-          )?.role ||
-          (user as { user_metadata?: { role?: string } })?.user_metadata?.role ||
-          (user as { app_metadata?: { role?: string } })?.app_metadata?.role
-        )?.toLowerCase(),
-      );
-    } else {
-      supabase.auth
-        .getUser()
-        .then(({ data }) => {
-          if (data?.user?.email) {
-            setAuthEmail(data.user.email);
-            setAuthRole(
-              (data.user.user_metadata?.role || data.user.app_metadata?.role)?.toLowerCase(),
-            );
-          }
-        })
-        .catch(() => {});
-    }
-  }, [user]);
+    let isMounted = true;
+
+    // One retry: the client may still be hydrating its stored session right
+    // after a cold start, and a transient miss must not lock a real admin out.
+    const resolveVerifiedUser = async () => {
+      for (let attempt = 0; attempt < 2; attempt += 1) {
+        try {
+          const { data } = await supabase.auth.getUser();
+          if (data?.user?.email) return data.user;
+        } catch (e: any) {
+          console.warn('[AdminDashboard] Session verification failed:', e?.message);
+        }
+        if (attempt === 0) {
+          await supabase.auth.refreshSession().catch(() => {});
+          await new Promise((resolve) => setTimeout(resolve, 250));
+        }
+      }
+      return null;
+    };
+
+    const verifySession = async () => {
+      let verifiedEmail = '';
+      let verifiedRole: string | undefined;
+
+      const verifiedUser = await resolveVerifiedUser();
+      if (verifiedUser?.email) {
+        verifiedEmail = verifiedUser.email;
+        verifiedRole = resolveUserRole(verifiedUser);
+      }
+
+      if (!isMounted) return;
+
+      const authorized = Boolean(verifiedEmail && isAdminEmail(verifiedEmail, verifiedRole));
+      adminAuthRef.current = { authorized, email: verifiedEmail, role: verifiedRole };
+      setAuthEmail(verifiedEmail);
+      setAuthRole(verifiedRole);
+      setAuthVerified(true);
+
+      if (!authorized) {
+        // Never leave another user's PII behind after an unauthenticated or
+        // unauthorised visit to the admin route.
+        try {
+          localStorage.removeItem('study_planner_admin_users_cache');
+          localStorage.removeItem('study_planner_admin_stats_cache');
+          localStorage.removeItem('study_planner_admin_speech_sessions_cache');
+        } catch {}
+        setUsersList([]);
+        setDailyStats([]);
+        setSpeechRecords([]);
+        setLoading(false);
+      }
+    };
+
+    verifySession();
+    return () => {
+      isMounted = false;
+    };
+  }, [user?.id]);
 
   const isAuthorized = Boolean(authEmail && isAdminEmail(authEmail, authRole));
 
   useEffect(() => {
+    if (!authVerified || !isAuthorized) return;
+
     let isMounted = true;
     const safetyTimer = setTimeout(() => {
       if (isMounted) setLoading(false);
@@ -888,7 +907,7 @@ export default function AdminDashboardPage() {
       isMounted = false;
       clearTimeout(safetyTimer);
     };
-  }, [fetchAdminData]);
+  }, [authVerified, isAuthorized, fetchAdminData]);
 
   // Realtime Postgres Changes Subscription (debounced to prevent query storms)
   useEffect(() => {
@@ -1031,7 +1050,9 @@ export default function AdminDashboardPage() {
   };
 
   const handleToggleAdmin = async (targetEmail: string, targetRole?: string) => {
-    if (!isSuperAdmin(user?.email)) {
+    // The privilege check must use the verified session identity, not the
+    // (cache-backed) context user object.
+    if (!isSuperAdmin(authEmail, authRole)) {
       toast({
         variant: 'destructive',
         title: 'Ruxsat Cheklangan',

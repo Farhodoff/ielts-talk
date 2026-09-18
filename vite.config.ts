@@ -8,15 +8,20 @@ import { visualizer } from 'rollup-plugin-visualizer';
 
 const BUILD_TIMESTAMP = Date.now();
 
+// Single source of truth for the app version (avoid drift with the hardcoded copies).
+const APP_VERSION: string = JSON.parse(
+  fs.readFileSync(path.resolve(__dirname, 'package.json'), 'utf-8'),
+).version;
+
 function buildVersionPlugin() {
   const versionData = JSON.stringify(
     {
-      version: '1.1.0',
+      version: APP_VERSION,
       buildTime: BUILD_TIMESTAMP,
       builtAt: new Date(BUILD_TIMESTAMP).toISOString(),
     },
     null,
-    2
+    2,
   );
 
   return {
@@ -43,7 +48,7 @@ export default defineConfig({
   envPrefix: ['VITE_', 'NEXT_PUBLIC_'],
   define: {
     __APP_BUILD_TIME__: JSON.stringify(BUILD_TIMESTAMP),
-    __APP_VERSION__: JSON.stringify('1.1.0'),
+    __APP_VERSION__: JSON.stringify(APP_VERSION),
   },
   plugins: [
     buildVersionPlugin(),
@@ -65,7 +70,8 @@ export default defineConfig({
       manifest: {
         name: 'IELTS Talk',
         short_name: 'IELTS Talk',
-        description: "IELTS Talk — AI Speaking Coach, Writing Evaluator va IELTS Master Platformasi",
+        description:
+          'IELTS Talk — AI Speaking Coach, Writing Evaluator va IELTS Master Platformasi',
         theme_color: '#4F46E5',
         background_color: '#0F1419',
         display: 'standalone',
@@ -227,10 +233,13 @@ export default defineConfig({
     // Source map o'chirish (production uchun)
     sourcemap: false,
   },
-  // Production build uchun console.log larni olib tashlash
+  // Production build uchun console.debug/console.warn/console.log chaqiruvlarini olib tashlash.
+  // DIQQAT: `drop: ['console']` barcha console.* CHAQIRUVLARINI (console.error ham) olib tashlaydi,
+  // shuning uchun production'da xatolarni Sentry (VITE_SENTRY_DSN) orqali kuzatish kerak.
+  // TODO(tech-debt): Vite 8 transform uchun oxc ishlatadi; bu blokni oxc/rolldown
+  // ekvivalentiga ko'chirish kerak, aks holda sozlama bir kuni jimgina e'tiborsiz qoladi.
   esbuild: {
     drop: process.env.NODE_ENV === 'production' ? ['console', 'debugger'] : [],
-    // Faqat console.log va console.warn olib tashlanadi, console.error qoladi
     pure: process.env.NODE_ENV === 'production' ? ['console.log', 'console.warn'] : [],
   },
   // Development server optimizatsiyasi

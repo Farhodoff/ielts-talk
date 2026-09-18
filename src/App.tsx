@@ -53,9 +53,12 @@ const LandingPage = lazyWithRetry(() => import('./pages/LandingPage'));
 
 import { isUserAdmin } from './utils/admin';
 import { useAuthStore } from './stores';
-import { safeLocalStorage } from './utils/storage/safeLocalStorage';
 import { isPublicPreviewActive, MOCK_PREVIEW_SESSION } from './config/previewMode';
-import { isTelegramWebApp, initTelegramAuth } from './utils/telegramAuth';
+import {
+  isTelegramWebApp,
+  initTelegramAuth,
+  authenticateTelegramWebApp,
+} from './utils/telegramAuth';
 
 const AdminRoute: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const user = useAuthStore((s) => s.user);
@@ -63,12 +66,13 @@ const AdminRoute: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   if (isPublicPreviewActive()) {
     return <>{children}</>;
   }
-  const cachedUser = safeLocalStorage.getJSON<any>('study_planner_user_cache', null);
-  const effectiveUser = user || cachedUser;
-  if (loading && !effectiveUser) {
+  // Authorise strictly on the store's user. Reading `study_planner_user_cache`
+  // here would let anyone unlock the panel by editing localStorage, and the
+  // dashboard additionally re-verifies against the live Supabase session.
+  if (loading && !user) {
     return <PageLoader />;
   }
-  if (!isUserAdmin(effectiveUser)) {
+  if (!isUserAdmin(user)) {
     return <Navigate to="/ielts" replace />;
   }
   return <>{children}</>;
@@ -149,18 +153,40 @@ const App: React.FC = () => {
       setIsLoading(false);
     }, 1000);
 
+    // Telegram Mini App: a real Supabase session is obtained from the server by
+    // exchanging the signed initData. Cached sessions are only a fast path.
+    const resolveTelegramSession = () => {
+      const cached = initTelegramAuth();
+      if (cached?.session) {
+        setSession(cached.session);
+        setIsLoading(false);
+        return;
+      }
+
+      authenticateTelegramWebApp()
+        .then((result) => {
+          if (result?.session) setSession(result.session);
+        })
+        .catch((tgErr) => {
+          console.warn('Telegram authentication failed:', tgErr);
+        })
+        .finally(() => setIsLoading(false));
+    };
+
     supabase.auth
       .getSession()
       .then(({ data: { session: fetchedSession } }) => {
         clearTimeout(safetyTimer);
         if (fetchedSession) {
           setSession(fetchedSession);
-        } else if (isTelegramWebApp()) {
-          const tgAuth = initTelegramAuth();
-          if (tgAuth?.session) {
-            setSession(tgAuth.session);
-          }
-        } else if (isPublicPreviewActive()) {
+          setIsLoading(false);
+          return;
+        }
+        if (isTelegramWebApp()) {
+          resolveTelegramSession();
+          return;
+        }
+        if (isPublicPreviewActive()) {
           setSession(MOCK_PREVIEW_SESSION as unknown as Session);
         }
         setIsLoading(false);
@@ -169,11 +195,10 @@ const App: React.FC = () => {
         clearTimeout(safetyTimer);
         console.warn('Session check aborted/failed:', err);
         if (isTelegramWebApp()) {
-          const tgAuth = initTelegramAuth();
-          if (tgAuth?.session) {
-            setSession(tgAuth.session);
-          }
-        } else if (isPublicPreviewActive()) {
+          resolveTelegramSession();
+          return;
+        }
+        if (isPublicPreviewActive()) {
           setSession(MOCK_PREVIEW_SESSION as unknown as Session);
         }
         setIsLoading(false);
@@ -290,7 +315,10 @@ const App: React.FC = () => {
                         path="jlpt-speaking"
                         element={<Navigate to="/speaking-coach?lang=en" replace />}
                       />
-                      <Route path="jlpt-writing" element={<Navigate to="/ielts?tab=writing" replace />} />
+                      <Route
+                        path="jlpt-writing"
+                        element={<Navigate to="/ielts?tab=writing" replace />}
+                      />
                       <Route path="scenarios" element={<ScenarioPickerPage />} />
                       <Route path="calendar" element={<CalendarPage />} />
                       <Route path="subjects" element={<SubjectsPage />} />

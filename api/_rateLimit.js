@@ -8,6 +8,31 @@
 const WINDOW_SECONDS = 60; // 1 minute window
 const MAX_REQUESTS_PER_WINDOW = 15; // Max 15 requests per minute
 
+function isProductionRuntime() {
+  return process.env.NODE_ENV === 'production' || process.env.VERCEL_ENV === 'production';
+}
+
+/**
+ * When the distributed limiter is unreachable we must choose a side:
+ * - fail CLOSED in production, so an outage cannot become an unbounded provider bill;
+ * - fail OPEN elsewhere, so local development works without Redis.
+ * `RATE_LIMIT_FAIL_OPEN=true` restores the old permissive behaviour if needed.
+ */
+function degradedDecision(reason) {
+  const failOpen = process.env.RATE_LIMIT_FAIL_OPEN === 'true' || !isProductionRuntime();
+  console.warn(
+    `[RateLimit] Distributed limiter degraded (${reason}). Failing ${failOpen ? 'OPEN' : 'CLOSED'}.`,
+  );
+  if (failOpen) return null;
+  return {
+    allowed: false,
+    remaining: 0,
+    retryAfter: WINDOW_SECONDS,
+    isDistributed: true,
+    degraded: true,
+  };
+}
+
 // Fallback in-memory store for local testing
 const localIpStore = new Map();
 const localUserStore = new Map();
@@ -88,9 +113,17 @@ export async function checkRateLimit(req, userId = null, customMaxLimit = null) 
           isDistributed: true,
         };
       }
+
+      const degraded = degradedDecision(`unexpected status ${response.status}`);
+      if (degraded) return degraded;
     } catch (err) {
-      console.warn('[RateLimit] Upstash Redis call failed, failing open with local fallback:', err?.message);
+      const degraded = degradedDecision(err?.message || 'request failed');
+      if (degraded) return degraded;
     }
+  } else {
+    console.warn(
+      '[RateLimit] UPSTASH_REDIS_REST_URL/TOKEN are not configured. Rate limiting falls back to per-instance memory and is NOT reliable in serverless.',
+    );
   }
 
   // 2. Fallback to local memory limiter if Redis is not configured or fails

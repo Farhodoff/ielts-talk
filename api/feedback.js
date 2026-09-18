@@ -9,12 +9,23 @@ const SUPABASE_URL =
 const SERVICE_ROLE = process.env.SERVICE_ROLE || process.env.SUPABASE_SERVICE_ROLE_KEY;
 const TELEGRAM_BOT_TOKEN = process.env.TELEGRAM_BOT_TOKEN;
 
-// Primary superadmin contact for feedback notifications
-const admin = 6756073816; // Superadmin Farhod Soyilov (@Soyilov_Farhod)
-const SUPERADMIN_EMAIL = 'fsoyilov@gmail.com';
-const FALLBACK_SUPERADMIN_CHAT_ID = admin;
+// Primary superadmin contact for feedback notifications.
+// Configurable via env so personal contact details are not baked into the repo.
+const parseIdList = (value, fallback) =>
+  String(value || fallback)
+    .split(',')
+    .map((id) => Number(id.trim()))
+    .filter((id) => Number.isFinite(id));
+
+const SUPERADMIN_EMAIL = process.env.SUPERADMIN_EMAIL || 'fsoyilov@gmail.com';
+const FALLBACK_SUPERADMIN_CHAT_ID = parseIdList(
+  process.env.SUPERADMIN_TELEGRAM_IDS,
+  '6756073816',
+)[0];
 // Explicit exclusion of non-admin student/test chat IDs to prevent feedback broadcast
-const EXCLUDED_NON_ADMIN_CHAT_IDS = new Set([6839776532]);
+const EXCLUDED_NON_ADMIN_CHAT_IDS = new Set(
+  parseIdList(process.env.FEEDBACK_EXCLUDED_CHAT_IDS, '6839776532'),
+);
 
 function escapeHTML(str) {
   if (!str) return '';
@@ -96,21 +107,28 @@ export default async function handler(req, res) {
   const clientUserInfo = body.userInfo && typeof body.userInfo === 'object' ? body.userInfo : {};
   const metadata = body.metadata && typeof body.metadata === 'object' ? body.metadata : {};
 
-  // 3. Optional Auth check
+  // 3. Optional Auth check (guests may leave feedback, but an invalid token is
+  //    surfaced instead of being silently downgraded to a guest).
   let authUserId = null;
   let authEmail = null;
+  let authFailed = false;
   try {
-    const { user } = await verifyAuth(req);
+    const { user, error: authError } = await verifyAuth(req);
     if (user?.id) {
       authUserId = user.id;
       authEmail = user.email;
+    } else if (authError) {
+      authFailed = true;
+      console.warn('[Feedback] Ignoring invalid session for attribution:', authError);
     }
   } catch {
     // Guest user is permitted to leave feedback
   }
 
-  const userId = authUserId || clientUserInfo.id || null;
-  const userEmail = authEmail || clientUserInfo.email || null;
+  // A spoofed/invalid session must never get to attribute feedback to an
+  // arbitrary user id supplied by the client.
+  const userId = authFailed ? null : authUserId || clientUserInfo.id || null;
+  const userEmail = authFailed ? null : authEmail || clientUserInfo.email || null;
   const userName = clientUserInfo.name || 'Mehmon (Anonim)';
   const telegramUsername = clientUserInfo.telegramUsername || null;
 
@@ -191,7 +209,7 @@ export default async function handler(req, res) {
 
   // Fallback: strictly default to verified superadmin chat ID if none resolved
   if (targetChatIds.size === 0) {
-    targetChatIds.add(admin);
+    targetChatIds.add(FALLBACK_SUPERADMIN_CHAT_ID);
   }
 
   // 6. Format Telegram Notification Message

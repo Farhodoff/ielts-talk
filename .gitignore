@@ -58,6 +58,9 @@ coverage/
 playwright-report/
 test-results/
 
+# Generated build metadata — written by vite.config.ts on every build, do not commit
+public/version.json
+
 # Custom workspace files
 bundle-analysis.html
 scratch/

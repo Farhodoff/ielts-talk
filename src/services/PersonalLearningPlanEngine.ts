@@ -14,7 +14,10 @@ import { CurriculumService } from './CurriculumService';
 import { LearningPathEngine } from './LearningPathEngine';
 import { PersonalLearningPlanService } from './PersonalLearningPlanService';
 import { generateUUID, toDeterministicUUID } from '../utils/uuid';
-import { mapIeltsBandToCefr, getCurriculumConfigForBand } from '../utils/curriculum/ieltsLevelCalibrator';
+import {
+  mapIeltsBandToCefr,
+  getCurriculumConfigForBand,
+} from '../utils/curriculum/ieltsLevelCalibrator';
 import { IELTS_GRAMMAR_DATABASE } from '../data/ielts/ielts_grammar_data';
 
 const LOCK_KEY_PREFIX = 'study_planner_pending_generation_';
@@ -23,6 +26,17 @@ export interface PlanGenerationResult {
   plan: WeeklyLearningPlan;
   isFallback: boolean;
   noticeMessage: string | null;
+}
+
+/**
+ * Raised when another generation for the same goal/week is already in flight.
+ * Callers must NOT treat this as an AI failure and silently substitute a
+ * deterministic plan — the in-flight generation will deliver the real one.
+ */
+export const PLAN_LOCK_ERROR_CODE = 'PLAN_GENERATION_IN_PROGRESS';
+
+export function isPlanGenerationLockError(error: unknown): boolean {
+  return (error as { code?: string } | null)?.code === PLAN_LOCK_ERROR_CODE;
 }
 
 export function getLevelPedagogicalDirectives(
@@ -204,9 +218,11 @@ export const PersonalLearningPlanEngine = {
   ): Promise<PlanGenerationResult> {
     const hasLock = this.acquireLock(userId, goal.id, weekNumber);
     if (!hasLock) {
-      throw new Error(
+      const lockError = new Error(
         'Hozirda ushbu hafta uchun reja generatsiyasi kutilmoqda. Iltimos bir oz kuting.',
       );
+      (lockError as Error & { code?: string }).code = PLAN_LOCK_ERROR_CODE;
+      throw lockError;
     }
 
     try {
@@ -479,10 +495,10 @@ LATEST_MOCK_RESULTS:
 ${JSON.stringify((state as any)?.recentMockScores || 'Oxirgi mock test natijasi mavjud emas')}
 
 ACTIVE_WEAKNESSES:
-${JSON.stringify(weaknessesWithSeverity)}
+${JSON.stringify(weaknessesWithSeverity.slice(0, 5))}
 
 STRONG_SKILLS:
-${JSON.stringify(strongSkills)}
+${JSON.stringify(strongSkills.slice(0, 5))}
 
 PREVIOUS_WEEK_EVALUATION:
 ${JSON.stringify(evaluation || 'Birinchi hafta (oldingi evaluation mavjud emas)')}
@@ -493,10 +509,10 @@ SRS_STATE:
 - RETENTION: ${(state as any)?.reviewSummary?.averageRetentionScore || 80}%
 
 COMPLETED_LESSON_IDS:
-${JSON.stringify(completedLessonIds)}
+${JSON.stringify(completedLessonIds.slice(-15))}
 
 AVAILABLE_CONTENT_IDS:
-${JSON.stringify(availableContent.map((c) => c.id))}
+${JSON.stringify(availableContent.slice(0, 20).map((c) => c.id))}
 
 ALLOWED_ROUTES:
 ${JSON.stringify(allowedRoutes)}
@@ -967,6 +983,250 @@ ${prompt}`;
       console.warn('[PersonalLearningPlanEngine] Validation parse failed:', err);
       return null;
     }
+  },
+
+  /**
+   * Deterministic Pedagogical Plan Generator
+   * Generates an authentic, syllabus-calibrated 7-day plan when AI is slow or unavailable.
+   */
+  generatePedagogicalPlan(
+    userId: string,
+    goal: PersonalLearningGoal,
+    weekNumber: number,
+  ): PlanGenerationResult {
+    const isJa = goal.language === 'ja';
+    const dailyMinutes = Math.min(Math.max(goal.dailyMinutes || 60, 15), 180);
+    const cleanCurrent = (goal.currentLevel || (isJa ? 'N5' : 'A1')).toUpperCase();
+    const cleanTarget = (goal.targetLevel || (isJa ? 'N1' : '7.5')).toUpperCase();
+
+    // Determine tasks budget per day
+    const taskCount = dailyMinutes < 30 ? 2 : dailyMinutes < 60 ? 2 : 3;
+    const minutesPerTask = Math.floor(dailyMinutes / taskCount);
+
+    let grammarLessons: Array<{ title: string; route: string; contentId?: string }> = [];
+    let vocabLessons: Array<{ title: string; route: string; contentId?: string }> = [];
+    let skillLessons: Array<{ title: string; route: string; skill: string }> = [];
+
+    if (!isJa) {
+      const cefr = mapIeltsBandToCefr(goal.currentLevel);
+      const levelConfig = getCurriculumConfigForBand(goal.currentLevel);
+
+      const relevantUnits = IELTS_GRAMMAR_DATABASE.filter((t) => {
+        if (cefr === 'A1') return t.level.includes('A1');
+        if (cefr === 'A2') return t.level.includes('A2') || t.level === 'A1-A2';
+        if (cefr === 'B1') return t.level.includes('B1') || t.level === 'B1-B2';
+        if (cefr === 'B2') return t.level.includes('B2') || t.level === 'B1-B2';
+        return t.level.includes('C1') || t.level.includes('B2');
+      });
+      const selectedUnits = relevantUnits.length > 0 ? relevantUnits : IELTS_GRAMMAR_DATABASE;
+
+      grammarLessons = selectedUnits.slice(0, 10).map((u) => ({
+        title: `${u.title}: Qoidalar va interaktiv mashqlar`,
+        route: `/ielts?tab=grammar&unit=${u.id}`,
+        contentId: u.id,
+      }));
+
+      const oxfordDeckId = levelConfig.oxfordDeckId;
+      const deckTitle = levelConfig.oxfordDeckTitle;
+      for (let p = 1; p <= 7; p++) {
+        vocabLessons.push({
+          title: `${deckTitle} — ${p}-Qism yangi so'zlar`,
+          route: `/study-mode?deck=${oxfordDeckId}&part=${p}`,
+          contentId: `${oxfordDeckId}_part_${p}`,
+        });
+      }
+
+      skillLessons = [
+        {
+          title: 'Speaking Coach: Part 1 tezkor savollar va ravon talaffuz',
+          route: '/speaking-coach?lang=en',
+          skill: 'speaking',
+        },
+        {
+          title: 'Writing Task 1: Diagramma va grafik trendlarini tasvirlash',
+          route: '/ielts?tab=writing',
+          skill: 'writing',
+        },
+        {
+          title: 'Reading: Skimming & Scanning strategiyasi bilan matn tahlili',
+          route: '/ielts?tab=reading_listening',
+          skill: 'reading',
+        },
+        {
+          title: "Listening: Bo'lim 1 & 2 dialoglar va audio test",
+          route: '/ielts?tab=reading_listening',
+          skill: 'listening',
+        },
+        {
+          title: "Speaking Coach: Part 2 Cue Card bo'yicha 2 daqiqalik nutq",
+          route: '/speaking-coach?lang=en',
+          skill: 'speaking',
+        },
+        {
+          title: 'Writing Task 2: Fikrni mantiqiy asoslash va insho strukturasi',
+          route: '/ielts?tab=writing',
+          skill: 'writing',
+        },
+        {
+          title: 'IELTS Mock Simulyatsiyasi: Xatolar ustida intensiv ishlash',
+          route: '/ielts/speaking-mock',
+          skill: 'practice',
+        },
+      ];
+    } else {
+      grammarLessons = [
+        {
+          title: `${cleanCurrent} Grammatika: Asosiy bog'lamalar va gap qurilishi`,
+          route: `/jlpt?tab=kanji&level=${cleanCurrent}`,
+        },
+        {
+          title: `${cleanCurrent} Bunpou: O'rta darajadagi sintaktik qoliplar`,
+          route: `/jlpt?tab=kanji&level=${cleanCurrent}`,
+        },
+        {
+          title: `${cleanCurrent} Grammatik mashqlar va testlar`,
+          route: `/jlpt?tab=kanji&level=${cleanCurrent}`,
+        },
+      ];
+      vocabLessons = [
+        {
+          title: `${cleanCurrent} Kanji & So'z boyligi takrori`,
+          route: `/jlpt?tab=kanji&level=${cleanCurrent}`,
+        },
+        {
+          title: 'Fleshkartalar: Kunlik oraliq takrorlash (SRS)',
+          route: '/study-mode?lang=ja',
+        },
+      ];
+      skillLessons = [
+        {
+          title: "Speaking Coach: Kundalik dialog va so'zlashuv amaliyoti",
+          route: '/speaking-coach?lang=ja',
+          skill: 'speaking',
+        },
+        {
+          title: 'Choukai (Listening): Audio dialoglarni tinglab tushunish',
+          route: `/jlpt?tab=listening&level=${cleanCurrent}`,
+          skill: 'listening',
+        },
+        {
+          title: 'Dokkai (Reading): Qisqa matnlarni tahlil qilish',
+          route: `/jlpt?tab=reading&level=${cleanCurrent}`,
+          skill: 'reading',
+        },
+      ];
+    }
+
+    const daysOfWeek = [
+      'monday',
+      'tuesday',
+      'wednesday',
+      'thursday',
+      'friday',
+      'saturday',
+      'sunday',
+    ] as const;
+
+    const validatedDays: WeeklyPlanDay[] = daysOfWeek.map((dayName, dayIdx) => {
+      const dayTasks: WeeklyPlanTask[] = [];
+
+      // Task 1: Grammar lesson
+      const gItem = grammarLessons[dayIdx % grammarLessons.length];
+      dayTasks.push({
+        id: `ped-g-${toDeterministicUUID(`${goal.id}:${weekNumber}:${dayName}:g`).slice(0, 12)}`,
+        title: gItem?.title || 'Grammatika darsi va mashqlar',
+        type: 'grammar',
+        skill: 'grammar',
+        estimatedMinutes: minutesPerTask,
+        completed: false,
+        status: 'pending',
+        sourceType: 'curriculum',
+        route: gItem?.route || (isJa ? '/jlpt' : '/ielts?tab=grammar'),
+        contentId: gItem?.contentId,
+      });
+
+      // Task 2: Core skill
+      const sItem = skillLessons[dayIdx % skillLessons.length];
+      dayTasks.push({
+        id: `ped-s-${toDeterministicUUID(`${goal.id}:${weekNumber}:${dayName}:s`).slice(0, 12)}`,
+        title: sItem.title,
+        type: sItem.skill as any,
+        skill: sItem.skill as any,
+        estimatedMinutes: minutesPerTask,
+        completed: false,
+        status: 'pending',
+        sourceType: 'curriculum',
+        route: sItem.route,
+      });
+
+      // Task 3: Vocab / SRS if 3 tasks fit dailyMinutes budget
+      if (taskCount >= 3) {
+        const vItem = vocabLessons[dayIdx % vocabLessons.length];
+        const remMinutes = Math.max(10, dailyMinutes - minutesPerTask * 2);
+        dayTasks.push({
+          id: `ped-v-${toDeterministicUUID(`${goal.id}:${weekNumber}:${dayName}:v`).slice(0, 12)}`,
+          title: vItem?.title || "Lug'at va Fleshkartalar (SRS takrorlash)",
+          type: 'vocabulary',
+          skill: 'vocabulary',
+          estimatedMinutes: remMinutes,
+          completed: false,
+          status: 'pending',
+          sourceType: 'srs',
+          route: vItem?.route || '/study-mode',
+          contentId: vItem?.contentId,
+        });
+      }
+
+      return {
+        day: dayName,
+        tasks: dayTasks,
+      };
+    });
+
+    const today = new Date();
+    const startDay = new Date(today.getTime() + 1 * 86400000);
+    const endDay = new Date(startDay.getTime() + 6 * 86400000);
+
+    const existingPlans = PersonalLearningPlanService.getWeeklyPlans(userId);
+    const matchingWeekPlans = existingPlans.filter(
+      (p) => p.goalId === goal.id && p.weekNumber === weekNumber,
+    );
+    const nextVersion =
+      matchingWeekPlans.length > 0 ? Math.max(...matchingWeekPlans.map((p) => p.version)) + 1 : 1;
+
+    const plan: WeeklyLearningPlan = {
+      id: generateUUID(),
+      goalId: goal.id,
+      userId,
+      weekNumber,
+      startDate: startDay.toISOString().split('T')[0],
+      endDate: endDay.toISOString().split('T')[0],
+      objectives: isJa
+        ? [
+            `${cleanCurrent} dan ${cleanTarget} darajaga o'tish uchun grammatik poydevor yaratish`,
+            "Kundalik so'zlashuv va tinglab tushunish amaliyotini oshirish",
+          ]
+        : [
+            `${goal.currentLevel} dan ${goal.targetLevel} darajaga o'tish uchun grammatika va leksikani kuchaytirish`,
+            "IELTS Speaking va Writing bo'yicha barqaror amaliyot olib borish",
+          ],
+      focusSkills: ['grammar', 'vocabulary', 'speaking'],
+      days: validatedDays,
+      reasoning: "Pedagogik o'quv dasturi asosida tuzilgan adaptiv dars jadvali.",
+      expectedOutcome:
+        "Hafta davomida asosiy grammatik mavzular, leksika va amaliy ko'nikmalar to'liq mustahkamlanadi.",
+      aiGenerated: false,
+      version: nextVersion,
+      status: 'active',
+      createdAt: new Date().toISOString(),
+    };
+
+    return {
+      plan,
+      isFallback: true,
+      noticeMessage:
+        "O'quv rejangiz pedagogik dastur asosida muvaffaqiyatli shakllantirildi. Istalgan vaqtda AI yordamida qayta yangilashingiz mumkin.",
+    };
   },
 };
 export default PersonalLearningPlanEngine;

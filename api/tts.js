@@ -1,4 +1,4 @@
-import { verifyAuth, getBearerToken, SUPABASE_ANON_KEY } from './_auth.js';
+import { verifyAuth, getBearerToken, getUserRole, SUPABASE_ANON_KEY } from './_auth.js';
 import { checkRateLimit } from './_rateLimit.js';
 import { checkDailyQuota } from './_quota.js';
 
@@ -107,7 +107,7 @@ export default async function handler(req) {
       );
     }
     authenticatedUserId = user.id;
-    userRole = user.role || 'user';
+    userRole = getUserRole(user);
   }
 
   // 3. Distributed Rate Limiter (80 req/min for conversational dialogue chunk streaming)

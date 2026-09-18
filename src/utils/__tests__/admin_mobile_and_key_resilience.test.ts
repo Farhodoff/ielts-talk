@@ -71,8 +71,16 @@ describe('Admin Mobile Responsiveness & Supabase Key Resilience Suite', () => {
 
       expect(adminContent).toContain('overflow-x-auto');
       expect(adminContent).toContain('min-w-[640px]');
-      expect(adminContent).toContain('supabaseUrl');
-      expect(adminContent).toContain('supabaseAnonKey');
+    });
+
+    it('never retries admin RPCs with the public anon key', () => {
+      const adminPath = path.resolve(__dirname, '../../pages/AdminDashboardPage.tsx');
+      const adminContent = fs.readFileSync(adminPath, 'utf-8');
+
+      // Retrying a privileged RPC with the anon key would hand the full user
+      // list / session dataset to anyone who copies the key out of the bundle.
+      expect(adminContent).not.toContain('Bearer supabaseAnonKey');
+      expect(adminContent).not.toContain('/rest/v1/rpc/');
     });
   });
 });
