@@ -157,36 +157,38 @@ export const IeltsHubPage: React.FC = () => {
           </div>
 
           {/* Freemium Daily Allowance Bar */}
-          <div className="flex flex-wrap items-center justify-between gap-2.5 rounded-2xl border border-border bg-card/80 p-3 text-xs shadow-sm backdrop-blur-md sm:px-4">
-            <div className="flex flex-wrap items-center gap-2">
-              <span className="flex h-2 w-2 rounded-full bg-emerald-500 animate-pulse" />
-              <span className="font-bold text-foreground text-xs">Bugungi Bepul Imkoniyatingiz:</span>
-              <div className="flex items-center gap-2">
+          <div className="flex flex-wrap items-center justify-between gap-2 rounded-xl border border-border bg-card/80 p-2.5 text-xs shadow-sm backdrop-blur-md sm:rounded-2xl sm:p-3">
+            <div className="flex flex-wrap items-center gap-1.5 sm:gap-2">
+              <span className="hidden h-2 w-2 animate-pulse rounded-full bg-emerald-500 sm:inline-flex" />
+              <span className="text-[11px] font-bold text-foreground sm:text-xs">
+                Kunlik limit:
+              </span>
+              <div className="flex items-center gap-1.5">
                 <span
-                  className={`rounded-full px-2.5 py-0.5 text-[11px] font-bold border ${
+                  className={`rounded-full border px-2 py-0.5 text-[10px] font-bold sm:text-[11px] ${
                     isUnlimited || remainingSpeaking > 0
-                      ? 'bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border-emerald-500/20'
-                      : 'bg-muted text-muted-foreground border-border'
+                      ? 'border-emerald-500/20 bg-emerald-500/10 text-emerald-600 dark:text-emerald-400'
+                      : 'border-border bg-muted text-muted-foreground'
                   }`}
                 >
-                  🎙️ Speaking: {isUnlimited ? 'Cheksiz ∞' : `${remainingSpeaking}/1`}
+                  🎙️ Speaking: {isUnlimited ? 'Cheksiz' : `${remainingSpeaking}/1`}
                 </span>
                 <span
-                  className={`rounded-full px-2.5 py-0.5 text-[11px] font-bold border ${
+                  className={`rounded-full border px-2 py-0.5 text-[10px] font-bold sm:text-[11px] ${
                     isUnlimited || remainingWriting > 0
-                      ? 'bg-blue-500/10 text-blue-600 dark:text-blue-400 border-blue-500/20'
-                      : 'bg-muted text-muted-foreground border-border'
+                      ? 'border-blue-500/20 bg-blue-500/10 text-blue-600 dark:text-blue-400'
+                      : 'border-border bg-muted text-muted-foreground'
                   }`}
                 >
-                  ✍️ Writing: {isUnlimited ? 'Cheksiz ∞' : `${remainingWriting}/1`}
+                  ✍️ Writing: {isUnlimited ? 'Cheksiz' : `${remainingWriting}/1`}
                 </span>
               </div>
             </div>
             <Link
               to="/pricing"
-              className="flex items-center gap-1 text-[11px] font-bold text-indigo-600 hover:text-indigo-700 dark:text-indigo-400 hover:underline"
+              className="flex shrink-0 items-center gap-1 text-[11px] font-bold text-indigo-600 hover:text-indigo-700 hover:underline dark:text-indigo-400"
             >
-              <span>⭐ Obuna & Cheksiz Tahlillar</span>
+              <span>⭐ Pro</span>
             </Link>
           </div>
 
@@ -194,62 +196,66 @@ export const IeltsHubPage: React.FC = () => {
           <div className="scrollbar-none flex max-w-full items-center gap-1 overflow-x-auto rounded-xl border border-border/80 bg-muted/40 p-1 sm:gap-1.5 sm:rounded-2xl sm:p-1.5">
             <button
               onClick={() => handleTabChange('roadmap')}
-              className={`flex shrink-0 items-center gap-1.5 whitespace-nowrap rounded-lg px-3 py-2 text-xs font-black transition-all sm:gap-2 sm:rounded-xl sm:px-4 ${
+              className={`flex shrink-0 items-center gap-1.5 whitespace-nowrap rounded-lg px-2.5 py-1.5 text-xs font-black transition-all sm:gap-2 sm:rounded-xl sm:px-4 sm:py-2 ${
                 activeTab === 'roadmap'
                   ? 'bg-amber-600 text-white shadow-md'
                   : 'text-muted-foreground hover:text-foreground'
               }`}
             >
-              <Compass size={15} />
-              <span>Bosqichlar Xaritasi</span>
+              <Compass size={14} />
+              <span className="hidden sm:inline">Bosqichlar Xaritasi</span>
+              <span className="sm:hidden">Xarita</span>
             </button>
 
             <button
               onClick={() => handleTabChange('plan')}
-              className={`flex shrink-0 items-center gap-1.5 whitespace-nowrap rounded-lg px-3 py-2 text-xs font-black transition-all sm:gap-2 sm:rounded-xl sm:px-4 ${
+              className={`flex shrink-0 items-center gap-1.5 whitespace-nowrap rounded-lg px-2.5 py-1.5 text-xs font-black transition-all sm:gap-2 sm:rounded-xl sm:px-4 sm:py-2 ${
                 activeTab === 'plan'
                   ? 'bg-blue-600 text-white shadow-md'
                   : 'text-muted-foreground hover:text-foreground'
               }`}
             >
-              <Target size={15} />
-              <span>Shaxsiy Rejam</span>
+              <Target size={14} />
+              <span className="hidden sm:inline">Shaxsiy Rejam</span>
+              <span className="sm:hidden">Rejam</span>
             </button>
 
             <button
               onClick={() => handleTabChange('grammar')}
-              className={`flex shrink-0 items-center gap-1.5 whitespace-nowrap rounded-lg px-3 py-2 text-xs font-black transition-all sm:gap-2 sm:rounded-xl sm:px-4 ${
+              className={`flex shrink-0 items-center gap-1.5 whitespace-nowrap rounded-lg px-2.5 py-1.5 text-xs font-black transition-all sm:gap-2 sm:rounded-xl sm:px-4 sm:py-2 ${
                 activeTab === 'grammar'
                   ? 'bg-indigo-600 text-white shadow-md'
                   : 'text-muted-foreground hover:text-foreground'
               }`}
             >
-              <BookOpen size={15} />
+              <BookOpen size={14} />
               <span>Grammatika</span>
             </button>
 
             <button
               onClick={() => handleTabChange('reading_listening')}
-              className={`flex shrink-0 items-center gap-1.5 whitespace-nowrap rounded-lg px-3 py-2 text-xs font-black transition-all sm:gap-2 sm:rounded-xl sm:px-4 ${
+              className={`flex shrink-0 items-center gap-1.5 whitespace-nowrap rounded-lg px-2.5 py-1.5 text-xs font-black transition-all sm:gap-2 sm:rounded-xl sm:px-4 sm:py-2 ${
                 activeTab === 'reading_listening'
                   ? 'bg-purple-600 text-white shadow-md'
                   : 'text-muted-foreground hover:text-foreground'
               }`}
             >
-              <Headphones size={15} />
-              <span>Mock Testlar</span>
+              <Headphones size={14} />
+              <span className="hidden sm:inline">Mock Testlar</span>
+              <span className="sm:hidden">Mocks</span>
             </button>
 
             <button
               onClick={() => handleTabChange('writing')}
-              className={`flex shrink-0 items-center gap-1.5 whitespace-nowrap rounded-lg px-3 py-2 text-xs font-black transition-all sm:gap-2 sm:rounded-xl sm:px-4 ${
+              className={`flex shrink-0 items-center gap-1.5 whitespace-nowrap rounded-lg px-2.5 py-1.5 text-xs font-black transition-all sm:gap-2 sm:rounded-xl sm:px-4 sm:py-2 ${
                 activeTab === 'writing'
                   ? 'bg-emerald-600 text-white shadow-md'
                   : 'text-muted-foreground hover:text-foreground'
               }`}
             >
-              <PenTool size={15} />
-              <span>Writing Mock</span>
+              <PenTool size={14} />
+              <span className="hidden sm:inline">Writing Mock</span>
+              <span className="sm:hidden">Writing</span>
             </button>
           </div>
         </>

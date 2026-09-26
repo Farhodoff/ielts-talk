@@ -274,21 +274,21 @@ export const LessonPlayerPage: React.FC = () => {
   return (
     <div className="flex min-h-screen flex-col justify-between bg-background">
       {/* Top Navigation Bar */}
-      <div className="sticky top-0 z-20 border-b border-border bg-background/80 px-4 py-3 backdrop-blur-xl">
-        <div className="mx-auto flex max-w-4xl items-center justify-between gap-4">
+      <div className="sticky top-0 z-20 border-b border-border bg-background/95 px-3.5 py-2.5 pt-[max(env(safe-area-inset-top),0.75rem)] backdrop-blur-xl sm:px-4 sm:py-3">
+        <div className="mx-auto flex max-w-4xl items-center justify-between gap-3">
           {/* Left: Exit & Title */}
-          <div className="flex items-center gap-3">
+          <div className="flex min-w-0 items-center gap-2.5">
             <button
               onClick={handleExit}
-              className="rounded-xl border border-border p-2 text-muted-foreground transition-all hover:bg-secondary hover:text-foreground"
+              className="flex h-9 w-9 shrink-0 cursor-pointer items-center justify-center rounded-xl border border-border p-2 text-muted-foreground transition-all hover:bg-secondary hover:text-foreground active:scale-95"
               title="Chiqish"
               aria-label="Chiqish"
             >
               <X size={18} />
             </button>
-            <div>
-              <div className="flex items-center gap-2">
-                <span className="rounded-md border border-primary/20 bg-primary/10 px-2 py-0.5 text-xs font-black uppercase text-primary">
+            <div className="min-w-0">
+              <div className="flex items-center gap-1.5">
+                <span className="rounded-md border border-primary/20 bg-primary/10 px-1.5 py-0.5 text-[10px] font-black uppercase text-primary sm:text-xs">
                   {lesson.language === 'ja'
                     ? `🇯🇵 JLPT ${lesson.level}`
                     : `🇬🇧 English ${lesson.level}`}
@@ -297,7 +297,7 @@ export const LessonPlayerPage: React.FC = () => {
                   {lesson.unitTitle}
                 </span>
               </div>
-              <h1 className="max-w-[200px] truncate text-sm font-bold text-foreground sm:max-w-sm md:max-w-md md:text-base">
+              <h1 className="truncate text-xs font-extrabold text-foreground sm:text-sm md:text-base">
                 {lesson.title}
               </h1>
             </div>
@@ -305,9 +305,11 @@ export const LessonPlayerPage: React.FC = () => {
 
           {/* Right: Step Counter */}
           {!isLessonCompleted && (
-            <div className="flex shrink-0 items-center gap-3">
-              <div className="text-right">
-                <div className="text-[11px] font-bold uppercase text-muted-foreground">Qadam</div>
+            <div className="flex shrink-0 items-center gap-2">
+              <div className="rounded-lg bg-secondary/60 px-2.5 py-1 text-right sm:bg-transparent sm:p-0">
+                <div className="text-[9px] font-bold uppercase text-muted-foreground sm:text-[10px]">
+                  Qadam
+                </div>
                 <div className="text-xs font-black text-foreground">
                   {currentStepIdx + 1} / {totalSteps}
                 </div>
@@ -317,7 +319,7 @@ export const LessonPlayerPage: React.FC = () => {
         </div>
 
         {/* Progress Line */}
-        <div className="mt-3 h-1.5 w-full overflow-hidden rounded-full bg-secondary">
+        <div className="mt-2 h-1.5 w-full overflow-hidden rounded-full bg-secondary sm:mt-2.5">
           <div
             className="h-full rounded-full bg-primary transition-all duration-500 ease-out"
             style={{ width: `${Math.min(100, Math.max(5, progressPercentage))}%` }}
@@ -326,7 +328,7 @@ export const LessonPlayerPage: React.FC = () => {
       </div>
 
       {/* Main Content Area */}
-      <div className="mx-auto w-full max-w-4xl flex-1 p-4 md:p-8">
+      <div className="mx-auto w-full max-w-4xl flex-1 p-3.5 sm:p-5 md:p-8">
         {isLessonCompleted ? (
           <LessonCompletionView
             lesson={lesson}
@@ -336,11 +338,11 @@ export const LessonPlayerPage: React.FC = () => {
             onExit={handleExit}
           />
         ) : currentStep ? (
-          <div className="space-y-6">
+          <div className="space-y-4 sm:space-y-6">
             {/* Step Type Pill Header */}
-            <div className="mb-2 flex items-center justify-center gap-2">
+            <div className="mb-1 flex items-center justify-center gap-2">
               <span
-                className={`flex items-center gap-1.5 rounded-full px-3 py-1 text-xs font-bold ${
+                className={`flex items-center gap-1.5 rounded-full px-3 py-0.5 text-[11px] font-bold sm:px-3 sm:py-1 sm:text-xs ${
                   currentStep.type === 'learn'
                     ? 'border border-blue-500/20 bg-blue-500/10 text-blue-500'
                     : currentStep.type === 'practice'
@@ -382,25 +384,21 @@ export const LessonPlayerPage: React.FC = () => {
 
       {/* Bottom Step Controller Footer */}
       {!isLessonCompleted && (
-        <div className="sticky bottom-0 z-20 border-t border-border bg-background/90 p-4 backdrop-blur-xl">
-          <div className="mx-auto flex max-w-4xl items-center justify-between gap-4">
+        <div className="sticky bottom-0 z-20 border-t border-border bg-background/95 p-3 pb-[max(env(safe-area-inset-bottom),0.85rem)] backdrop-blur-xl sm:p-4">
+          <div className="mx-auto flex max-w-4xl items-center justify-between gap-3">
             <button
               onClick={handlePrevStep}
               disabled={currentStepIdx === 0}
-              className="rounded-2xl border border-border px-4 py-3 text-xs font-bold text-muted-foreground transition-all hover:bg-secondary hover:text-foreground disabled:cursor-not-allowed disabled:opacity-30"
+              className="flex min-h-[44px] items-center rounded-xl border border-border px-3.5 py-2 text-xs font-bold text-muted-foreground transition-all hover:bg-secondary hover:text-foreground active:scale-95 disabled:cursor-not-allowed disabled:opacity-30 sm:rounded-2xl sm:px-4 sm:py-3"
             >
-              Oldingi qadam
+              Oldingi
             </button>
 
             <button
               onClick={handleNextStep}
-              className="flex items-center gap-2 rounded-2xl bg-primary px-6 py-3.5 text-xs font-bold text-primary-foreground shadow-lg shadow-primary/25 transition-all hover:opacity-90 md:text-sm"
+              className="flex min-h-[44px] items-center gap-1.5 rounded-xl bg-primary px-5 py-2 text-xs font-bold text-primary-foreground shadow-lg shadow-primary/25 transition-all hover:opacity-90 active:scale-95 sm:rounded-2xl sm:px-6 sm:py-3.5 sm:text-sm"
             >
-              <span>
-                {currentStepIdx === totalSteps - 1
-                  ? 'Darsni Yakunlash 🎉'
-                  : "Keyingi Qadamga O'tish"}
-              </span>
+              <span>{currentStepIdx === totalSteps - 1 ? 'Yakunlash 🎉' : 'Davom etish'}</span>
               <ChevronRight size={16} />
             </button>
           </div>

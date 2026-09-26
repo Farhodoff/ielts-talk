@@ -327,26 +327,26 @@ export const IeltsGrammarMaster: React.FC = () => {
         </div>
 
         {/* Hero Card */}
-        <div className="relative overflow-hidden rounded-3xl border border-indigo-500/30 bg-gradient-to-br from-slate-900 via-indigo-950/40 to-slate-900 p-6 shadow-2xl md:p-8">
+        <div className="relative overflow-hidden rounded-2xl border border-indigo-500/30 bg-gradient-to-br from-slate-900 via-indigo-950/40 to-slate-900 p-4 shadow-2xl sm:rounded-3xl sm:p-6 md:p-8">
           <div className="pointer-events-none absolute -right-12 -top-12 h-48 w-48 rounded-full bg-indigo-500/10 blur-3xl" />
           <div className="flex flex-col gap-3">
             <div className="inline-flex w-fit items-center gap-2 rounded-full border border-amber-500/30 bg-amber-500/15 px-3 py-1 text-xs font-extrabold text-amber-300">
               <Sparkles className="h-3.5 w-3.5" /> Shaxsiy Rejangizdagi Fokus Dars
             </div>
             <div>
-              <h1 className="text-2xl font-black tracking-tight text-white md:text-3xl">
+              <h1 className="text-xl font-black tracking-tight text-white sm:text-2xl md:text-3xl">
                 {focusedTopic.title}
               </h1>
-              <p className="mt-2 text-base font-semibold text-amber-300/90 md:text-lg">
+              <p className="mt-1.5 text-sm font-semibold text-amber-300/90 sm:text-base md:text-lg">
                 🇺🇿 {focusedTopic.uzbekMeaning}
               </p>
             </div>
             {focusedTopic.ieltsRelevance && (
-              <div className="flex items-start gap-3 rounded-2xl border border-blue-500/30 bg-blue-500/10 p-4 text-xs leading-relaxed text-blue-200 md:text-sm">
-                <Sparkles className="mt-0.5 h-5 w-5 shrink-0 text-blue-400" />
+              <div className="flex items-start gap-2.5 rounded-xl border border-blue-500/30 bg-blue-500/10 p-3 text-xs leading-relaxed text-blue-200 sm:rounded-2xl sm:p-4 md:text-sm">
+                <Sparkles className="mt-0.5 h-4 w-4 shrink-0 text-blue-400" />
                 <div>
                   <span className="mb-0.5 block font-extrabold text-white">
-                    IELTS Imtihonida Qo'llanilishi:
+                    IELTS Qo'llanilishi:
                   </span>
                   {focusedTopic.ieltsRelevance}
                 </div>
@@ -356,20 +356,18 @@ export const IeltsGrammarMaster: React.FC = () => {
         </div>
 
         {/* Formula & Theory Card */}
-        <div className="space-y-4 rounded-3xl border border-slate-800 bg-slate-900/90 p-6 shadow-xl backdrop-blur-md md:p-8">
-          <h2 className="flex items-center gap-2.5 text-lg font-black text-white">
-            <span>📐 Grammatik Formula & Tuzilishi</span>
+        <div className="space-y-3.5 rounded-2xl border border-slate-800 bg-slate-900/90 p-4 shadow-xl backdrop-blur-md sm:space-y-4 sm:rounded-3xl sm:p-6 md:p-8">
+          <h2 className="flex items-center gap-2 text-base font-black text-white sm:text-lg">
+            <span>📐 Formula & Tuzilishi</span>
           </h2>
 
-          <div className="rounded-2xl border border-indigo-500/30 bg-gradient-to-r from-indigo-950/70 to-slate-950/90 p-4 font-mono text-sm font-bold text-indigo-200 shadow-inner sm:p-5 sm:text-base">
+          <div className="rounded-xl border border-indigo-500/30 bg-gradient-to-r from-indigo-950/70 to-slate-950/90 p-3.5 font-mono text-xs font-bold text-indigo-200 shadow-inner sm:rounded-2xl sm:p-5 sm:text-sm md:text-base">
             {focusedTopic.structure}
           </div>
 
-          <div className="space-y-2 pt-2">
-            <h3 className="text-xs font-bold uppercase tracking-wider text-slate-400">
-              Batafsil Tushuntirish va Qoidalar:
-            </h3>
-            <p className="text-sm leading-relaxed text-slate-200 md:text-base">
+          <div className="space-y-1.5 pt-1 sm:pt-2">
+            <h3 className="text-xs font-bold uppercase tracking-wider text-slate-400">Qoida:</h3>
+            <p className="text-xs leading-relaxed text-slate-200 sm:text-sm md:text-base">
               {focusedTopic.explanation}
             </p>
           </div>
@@ -377,11 +375,11 @@ export const IeltsGrammarMaster: React.FC = () => {
 
         {/* Academic & Speaking Examples with Audio */}
         {focusedTopic.academicExamples && focusedTopic.academicExamples.length > 0 && (
-          <div className="space-y-4 rounded-3xl border border-slate-800 bg-slate-900/90 p-6 shadow-xl backdrop-blur-md md:p-8">
-            <h2 className="flex items-center gap-2.5 text-lg font-black text-white">
-              <span>🎙️ Amaliy Misollar & Talaffuz (IELTS Kontekstida)</span>
+          <div className="space-y-3.5 rounded-2xl border border-slate-800 bg-slate-900/90 p-4 shadow-xl backdrop-blur-md sm:space-y-4 sm:rounded-3xl sm:p-6 md:p-8">
+            <h2 className="flex items-center gap-2 text-base font-black text-white sm:text-lg">
+              <span>🎙️ Misollar va Talaffuz</span>
             </h2>
-            <div className="space-y-3">
+            <div className="space-y-2.5 sm:space-y-3">
               {focusedTopic.academicExamples.map((ex, idx) => (
                 <div
                   key={idx}
@@ -413,11 +411,11 @@ export const IeltsGrammarMaster: React.FC = () => {
 
         {/* Common Mistakes & Pitfalls */}
         {focusedTopic.commonMistakes && focusedTopic.commonMistakes.length > 0 && (
-          <div className="space-y-4 rounded-3xl border border-rose-950/40 bg-slate-900/90 p-6 shadow-xl backdrop-blur-md md:p-8">
-            <h2 className="flex items-center gap-2.5 text-lg font-black text-white">
-              <span>⚠️ Ko'p Uchraydigan Xatolar & Tuzoqlar (Common Mistakes)</span>
+          <div className="space-y-3.5 rounded-2xl border border-rose-950/40 bg-slate-900/90 p-4 shadow-xl backdrop-blur-md sm:space-y-4 sm:rounded-3xl sm:p-6 md:p-8">
+            <h2 className="flex items-center gap-2 text-base font-black text-white sm:text-lg">
+              <span>⚠️ Xatolar Tahlili</span>
             </h2>
-            <div className="space-y-3">
+            <div className="space-y-2.5 sm:space-y-3">
               {focusedTopic.commonMistakes.map((m, idx) => (
                 <div
                   key={idx}
@@ -446,11 +444,9 @@ export const IeltsGrammarMaster: React.FC = () => {
 
         {/* Practice Quiz for this unit */}
         {focusedTopic.quizQuestions && focusedTopic.quizQuestions.length > 0 && (
-          <div className="space-y-5 rounded-3xl border border-slate-800 bg-slate-900/90 p-6 shadow-xl backdrop-blur-md md:p-8">
-            <h2 className="flex items-center gap-2.5 text-lg font-black text-white">
-              <span>
-                🎯 Mavzuni Mustahkamlash Testi ({focusedTopic.quizQuestions.length} ta savol)
-              </span>
+          <div className="space-y-4 rounded-2xl border border-slate-800 bg-slate-900/90 p-4 shadow-xl backdrop-blur-md sm:space-y-5 sm:rounded-3xl sm:p-6 md:p-8">
+            <h2 className="flex items-center gap-2 text-base font-black text-white sm:text-lg">
+              <span>🎯 Mustahkamlash Testi ({focusedTopic.quizQuestions.length} ta)</span>
             </h2>
             <div className="space-y-6">
               {focusedTopic.quizQuestions.map((q, qIdx) => {
@@ -566,7 +562,7 @@ export const IeltsGrammarMaster: React.FC = () => {
   return (
     <div className="space-y-6">
       {/* Header Banner (Japanese Grammar Hub style) */}
-      <div className="relative overflow-hidden rounded-3xl border border-blue-800/40 bg-gradient-to-r from-blue-950 via-slate-900 to-indigo-950 p-6 shadow-2xl md:p-8">
+      <div className="relative overflow-hidden rounded-2xl border border-blue-800/40 bg-gradient-to-r from-blue-950 via-slate-900 to-indigo-950 p-4 shadow-2xl sm:rounded-3xl sm:p-6 md:p-8">
         <div className="pointer-events-none absolute -right-12 -top-12 h-64 w-64 rounded-full bg-blue-500/10 blur-3xl" />
         <div className="pointer-events-none absolute -bottom-12 -left-12 h-64 w-64 rounded-full bg-indigo-500/10 blur-3xl" />
 

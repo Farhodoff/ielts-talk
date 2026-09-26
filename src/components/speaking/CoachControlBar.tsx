@@ -51,7 +51,7 @@ export const CoachControlBar: React.FC<CoachControlBarProps> = ({
   const getStatusInfo = () => {
     if (isSpeaking)
       return {
-        label: isJa ? 'AI音声出力中 (タップで中断)' : "AI Gapirmoqda (To'xtatish uchun bosing)",
+        label: isJa ? 'AI音声出力中' : 'AI Gapirmoqda',
         color: 'text-blue-400',
         pulseColor: 'bg-blue-500',
       };
@@ -69,12 +69,12 @@ export const CoachControlBar: React.FC<CoachControlBarProps> = ({
       };
     if (isListening)
       return {
-        label: isJa ? '音声認識中 (お話しください)' : 'Eshitmoqda (Siz gapiryapsiz)',
+        label: isJa ? '音声認識中...' : 'Eshitmoqda...',
         color: 'text-emerald-400',
         pulseColor: 'bg-emerald-500',
       };
     return {
-      label: isJa ? '会話待機中 (マイクを押して開始)' : 'Tayyor (Gapirish uchun mikrofonga bosing)',
+      label: isJa ? '会話待機中' : 'Tayyor',
       color: 'text-amber-400',
       pulseColor: 'bg-amber-500',
     };
@@ -82,7 +82,7 @@ export const CoachControlBar: React.FC<CoachControlBarProps> = ({
   const status = getStatusInfo();
 
   return (
-    <div className="relative z-20 flex-shrink-0 px-3 pb-[72px] pt-1 md:px-5 md:pb-3">
+    <div className="relative z-20 flex-shrink-0 px-3 pb-[calc(72px+max(env(safe-area-inset-bottom),0px))] pt-1 md:px-5 md:pb-3">
       <div className="rounded-2xl border border-border bg-card/90 p-2.5 shadow-xl backdrop-blur-2xl md:p-3">
         {/* Audio Visualizer Row — Only during live session */}
         {isLiveSession && (
@@ -136,9 +136,7 @@ export const CoachControlBar: React.FC<CoachControlBarProps> = ({
               <div className="flex items-center gap-2 truncate text-xs font-medium text-muted-foreground">
                 <HeartPulse size={14} className="shrink-0 animate-pulse text-emerald-500" />
                 <span className="truncate">
-                  {isJa
-                    ? '会話を始めるには通話開始を押してください'
-                    : "Suhbat boshlash uchun qo'ng'iroq qiling"}
+                  {isJa ? '通話開始を押してください' : 'Suhbatni boshlang'}
                 </span>
               </div>
             ) : (
@@ -157,7 +155,7 @@ export const CoachControlBar: React.FC<CoachControlBarProps> = ({
             {chatHistoryLength > 0 && !isLiveSession && (
               <button
                 onClick={onClearHistory}
-                className="cursor-pointer rounded-xl border border-border bg-muted p-2.5 text-muted-foreground transition-all hover:bg-rose-500/10 hover:text-rose-400"
+                className="flex min-h-[44px] min-w-[44px] cursor-pointer items-center justify-center rounded-xl border border-border bg-muted p-2.5 text-muted-foreground transition-all hover:bg-rose-500/10 hover:text-rose-400"
                 title={isJa ? '会話履歴を消去' : 'Chatni tozalash'}
               >
                 <RotateCcw size={16} />
@@ -179,7 +177,7 @@ export const CoachControlBar: React.FC<CoachControlBarProps> = ({
                     }
                   }
                 }}
-                className={`flex cursor-pointer items-center gap-1.5 rounded-xl p-2.5 transition-all ${
+                className={`flex min-h-[44px] min-w-[44px] cursor-pointer items-center justify-center gap-1.5 rounded-xl p-2.5 transition-all ${
                   isMuted
                     ? 'bg-amber-500 text-white shadow-md shadow-amber-500/25'
                     : isSpeaking
@@ -220,7 +218,7 @@ export const CoachControlBar: React.FC<CoachControlBarProps> = ({
             {/* PRIMARY CALL BUTTON */}
             <button
               onClick={toggleSession}
-              className={`group relative flex cursor-pointer items-center gap-2 overflow-hidden rounded-xl px-4 py-2 font-extrabold text-white shadow-md transition-all duration-300 active:scale-95 sm:px-6 sm:py-2.5 ${
+              className={`group relative flex min-h-[44px] cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-xl px-4 py-2 font-extrabold text-white shadow-md transition-all duration-300 active:scale-95 sm:px-6 sm:py-2.5 ${
                 isLiveSession
                   ? 'bg-rose-600 shadow-rose-600/25 hover:bg-rose-700'
                   : 'bg-primary text-primary-foreground shadow-primary/25 hover:bg-primary/90'

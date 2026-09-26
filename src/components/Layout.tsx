@@ -114,6 +114,8 @@ const Layout: React.FC = () => {
       '/focus',
       '/ielts/speaking-mock',
       '/study-mode',
+      '/lesson',
+      '/exams',
     ];
     return fullScreenPaths.some((p) => location.pathname.startsWith(p));
   }, [location.pathname]);
@@ -388,7 +390,9 @@ const Layout: React.FC = () => {
               onClick={() => setLanguage(language === 'uz' ? 'en' : 'uz')}
               className="flex shrink-0 items-center gap-1.5 rounded-xl border border-border/80 bg-muted/80 px-2.5 py-1.5 text-[11px] font-bold text-muted-foreground shadow-xs transition-all hover:bg-muted hover:text-foreground"
               title={
-                language === 'uz' ? "Ingliz tiliga o'tish (Switch to English)" : "O'zbek tiliga o'tish"
+                language === 'uz'
+                  ? "Ingliz tiliga o'tish (Switch to English)"
+                  : "O'zbek tiliga o'tish"
               }
             >
               {language === 'uz' ? (
@@ -430,20 +434,21 @@ const Layout: React.FC = () => {
 
       {/* Mobile Bottom Navigation */}
       {!isFullScreenPage && (
-        <nav className="glass-card fixed bottom-0 z-40 flex w-full items-center justify-around border-t border-border bg-background/90 px-2 pb-[max(env(safe-area-inset-bottom),0.5rem)] pt-1.5 backdrop-blur-md md:hidden">
+        <nav className="glass-card fixed bottom-0 z-40 flex w-full items-center justify-around border-t border-border bg-background/95 px-1 pb-[max(env(safe-area-inset-bottom),0.5rem)] pt-1.5 backdrop-blur-md md:hidden">
           {[
             {
               name: 'IELTS',
               path: '/ielts',
               icon: BookOpen,
             },
-            { name: t('nav.aiCoach') || 'Speaking', path: '/speaking-coach', icon: Mic },
-            { name: t('nav.flashcards') || 'Fleshkard', path: '/flashcards', icon: Copy },
+            { name: 'Speaking', path: '/speaking-coach', icon: Mic },
+            { name: 'Kartalar', path: '/flashcards', icon: Copy },
             { name: 'Rejam', path: '/personal-plan', icon: Target },
           ].map((item) => {
             const isItemActive =
               location.pathname.startsWith(item.path) ||
-              (item.path === '/ielts' && (location.pathname === '/' || location.pathname === '/ielts')) ||
+              (item.path === '/ielts' &&
+                (location.pathname === '/' || location.pathname === '/ielts')) ||
               (item.path === '/speaking-coach' && location.pathname.startsWith('/speaking')) ||
               (item.path === '/flashcards' &&
                 (location.pathname.startsWith('/flashcards') ||
@@ -453,14 +458,14 @@ const Layout: React.FC = () => {
               <NavLink
                 key={item.path}
                 to={item.path}
-                className={`flex w-16 flex-col items-center justify-center rounded-xl p-1.5 transition-all duration-200 ${
+                className={`flex min-h-[44px] w-16 flex-col items-center justify-center rounded-xl p-1 transition-all duration-200 active:scale-95 ${
                   isItemActive
-                    ? 'scale-105 bg-primary/10 font-bold text-primary shadow-xs'
+                    ? 'bg-primary/10 font-bold text-primary shadow-xs'
                     : 'text-muted-foreground hover:text-foreground'
                 }`}
               >
-                <item.icon size={20} className="mb-1" strokeWidth={isItemActive ? 2.5 : 2} />
-                <span className="text-[10px] font-medium leading-none">{item.name}</span>
+                <item.icon size={20} className="mb-0.5" strokeWidth={isItemActive ? 2.5 : 2} />
+                <span className="text-[10px] font-semibold leading-tight">{item.name}</span>
               </NavLink>
             );
           })}
@@ -469,10 +474,10 @@ const Layout: React.FC = () => {
             <SheetTrigger asChild>
               <button
                 aria-label="Menyuni ochish"
-                className="flex w-16 flex-col items-center justify-center rounded-xl p-1.5 text-muted-foreground transition-colors hover:text-foreground"
+                className="flex min-h-[44px] w-16 flex-col items-center justify-center rounded-xl p-1 text-muted-foreground transition-colors hover:text-foreground active:scale-95"
               >
-                <Menu size={20} className="mb-1" />
-                <span className="text-[10px] font-medium leading-none">Menyu</span>
+                <Menu size={20} className="mb-0.5" />
+                <span className="text-[10px] font-semibold leading-tight">Menyu</span>
               </button>
             </SheetTrigger>
             <SheetContent side="left" className="flex w-72 flex-col bg-card p-0">
