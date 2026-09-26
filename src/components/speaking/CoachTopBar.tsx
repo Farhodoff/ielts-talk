@@ -40,7 +40,7 @@ export const CoachTopBar: React.FC<CoachTopBarProps> = ({
   targetBand,
   setTargetBand,
   isPaidUser: _isPaidUser,
-  isAdmin,
+  isAdmin: _isAdmin,
   isSuperAdmin: _isSuper,
   isFullscreen: _isFullscreen = false,
   onToggleFullscreen: _onToggleFullscreen,
@@ -89,7 +89,7 @@ export const CoachTopBar: React.FC<CoachTopBarProps> = ({
         </div>
         <div className="min-w-0">
           <div className="flex items-center gap-1.5">
-            <h2 className="truncate text-sm font-bold tracking-tight text-foreground sm:text-base md:text-lg">
+            <h2 className="max-w-[130px] truncate text-sm font-bold tracking-tight text-foreground sm:max-w-none sm:text-base md:text-lg">
               {displayName}
             </h2>
             {isLiveSession && (
@@ -99,7 +99,7 @@ export const CoachTopBar: React.FC<CoachTopBarProps> = ({
               </span>
             )}
           </div>
-          <p className="truncate text-[10px] font-medium text-muted-foreground sm:text-[11px]">
+          <p className="max-w-[130px] truncate text-[10px] font-medium text-muted-foreground sm:max-w-none sm:text-[11px]">
             {isLiveSession
               ? `⏱ ${formatTimer(sessionSeconds)} • ${chatHistoryLength} xabar`
               : displayDesc}
@@ -127,44 +127,42 @@ export const CoachTopBar: React.FC<CoachTopBarProps> = ({
                 <div className="px-3 py-2 text-[10px] font-bold uppercase tracking-wider text-muted-foreground">
                   {language === 'en' ? 'Choose Persona' : 'Persona tanlang'}
                 </div>
-                {(Object.keys(PERSONAS) as CoachPersona[])
-                  .filter((pKey) => !(pKey === 'interview' && language === 'ja' && !isAdmin))
-                  .map((pKey) => {
-                    const p = PERSONAS[pKey];
-                    const Icon = p.icon;
-                    const isSelected = persona === pKey;
-                    return (
-                      <button
-                        key={pKey}
-                        onClick={() => {
-                          setPersona(pKey);
-                          setShowPersonaSelector(false);
-                        }}
-                        className={`flex w-full cursor-pointer items-center gap-3 rounded-xl p-2.5 text-left transition-all ${
-                          isSelected
-                            ? `bg-gradient-to-r ${p.color} text-white shadow-md`
-                            : 'text-foreground hover:bg-muted'
-                        }`}
+                {(Object.keys(PERSONAS) as CoachPersona[]).map((pKey) => {
+                  const p = PERSONAS[pKey];
+                  const Icon = p.icon;
+                  const isSelected = persona === pKey;
+                  return (
+                    <button
+                      key={pKey}
+                      onClick={() => {
+                        setPersona(pKey);
+                        setShowPersonaSelector(false);
+                      }}
+                      className={`flex w-full cursor-pointer items-center gap-3 rounded-xl p-2.5 text-left transition-all ${
+                        isSelected
+                          ? `bg-gradient-to-r ${p.color} text-white shadow-md`
+                          : 'text-foreground hover:bg-muted'
+                      }`}
+                    >
+                      <div
+                        className={`rounded-lg p-1.5 ${isSelected ? 'bg-white/20' : 'bg-muted'}`}
                       >
+                        <Icon size={16} />
+                      </div>
+                      <div className="min-w-0 flex-1">
+                        <div className="flex items-center gap-1.5 truncate text-xs font-bold">
+                          {p.name}
+                        </div>
                         <div
-                          className={`rounded-lg p-1.5 ${isSelected ? 'bg-white/20' : 'bg-muted'}`}
+                          className={`truncate text-[10px] ${isSelected ? 'text-white/70' : 'text-muted-foreground'}`}
                         >
-                          <Icon size={16} />
+                          {p.desc}
                         </div>
-                        <div className="min-w-0 flex-1">
-                          <div className="flex items-center gap-1.5 truncate text-xs font-bold">
-                            {p.name}
-                          </div>
-                          <div
-                            className={`truncate text-[10px] ${isSelected ? 'text-white/70' : 'text-muted-foreground'}`}
-                          >
-                            {p.desc}
-                          </div>
-                        </div>
-                        {isSelected && <Check size={14} className="ml-auto shrink-0" />}
-                      </button>
-                    );
-                  })}
+                      </div>
+                      {isSelected && <Check size={14} className="ml-auto shrink-0" />}
+                    </button>
+                  );
+                })}
               </div>
             </>
           )}

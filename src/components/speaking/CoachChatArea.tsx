@@ -177,11 +177,7 @@ export const CoachChatArea: React.FC<CoachChatAreaProps> = ({
                 msg.correction.corrected && (
                   <div className="mt-2.5 space-y-1.5 rounded-xl border border-amber-500/30 bg-amber-500/10 p-2.5 text-xs">
                     <div className="flex items-center justify-between gap-1 text-[11px] font-bold text-[#C9A961]">
-                      <span>
-                        {language === 'ja'
-                          ? '💡 文法・表現のアドバイス:'
-                          : '💡 Grammatika / Iborani yaxshilash:'}
-                      </span>
+                      <span>💡 Tavsiya:</span>
                       <button
                         type="button"
                         onClick={() =>
@@ -195,7 +191,7 @@ export const CoachChatArea: React.FC<CoachChatAreaProps> = ({
                         title="Maslahatni to'liq ovozda tinglash"
                       >
                         <Volume2 size={12} />
-                        <span>Kengashni Tinglash</span>
+                        <span>Tinglash</span>
                       </button>
                     </div>
                     {msg.correction.original && (
@@ -227,18 +223,14 @@ export const CoachChatArea: React.FC<CoachChatAreaProps> = ({
               {msg.role === 'assistant' && msg.vocabulary && msg.vocabulary.length > 0 && (
                 <div className="mt-2.5 space-y-1.5 border-t border-border/50 pt-2">
                   <div className="flex items-center justify-between gap-1 text-[10px] font-bold uppercase tracking-wider text-muted-foreground">
-                    <span>
-                      {language === 'ja'
-                        ? '🧠 おすすめ単語・表現（単語帳）:'
-                        : "🧠 Yangi Lug'atlar (Fleshkarta):"}
-                    </span>
+                    <span>🧠 Yangi so'zlar:</span>
                     <button
                       type="button"
                       onClick={() => navigate('/decks')}
                       className="inline-flex cursor-pointer items-center gap-1 rounded-md px-1.5 py-0.5 text-[10px] font-bold text-amber-500 transition-colors hover:bg-amber-500/10 hover:text-amber-400"
                       title="Speaking fleshkartalariga o'tish"
                     >
-                      <span>🎙️ Lug'atlarim</span>
+                      <span>Lug'atlarim</span>
                       <ArrowRight size={10} />
                     </button>
                   </div>

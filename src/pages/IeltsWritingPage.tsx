@@ -41,7 +41,7 @@ const IeltsWritingPage: React.FC = () => {
 
   const [taskType, setTaskType] = useState<'task1' | 'task2'>('task2');
   const [selectedPromptItem, setSelectedPromptItem] = useState<WritingPromptItem | null>(
-    IELTS_WRITING_PROMPTS.task2[0]
+    IELTS_WRITING_PROMPTS.task2[0],
   );
   const [promptQuestion, setPromptQuestion] = useState(IELTS_WRITING_PROMPTS.task2[0].prompt);
   const [showPromptGuidance, setShowPromptGuidance] = useState(false);
@@ -223,8 +223,7 @@ const IeltsWritingPage: React.FC = () => {
               IELTS Writing Evaluator ✍️
             </h1>
             <p className="text-xs text-gray-500 dark:text-gray-400">
-              Task 1 va Task 2 insholaringizni AI orqali rasmiy mezonlar bo'yicha baholatib, Band
-              8.0 namunasini oling.
+              Task 1 va Task 2 insholarini rasmiy mezonlar bo'yicha baholash.
             </p>
           </div>
         </div>
@@ -244,7 +243,7 @@ const IeltsWritingPage: React.FC = () => {
                 : 'text-gray-600 hover:text-gray-900 dark:text-gray-400'
             }`}
           >
-            Task 1 (Report / Graph)
+            Task 1 (Report)
           </button>
           <button
             onClick={() => {
@@ -344,7 +343,7 @@ const IeltsWritingPage: React.FC = () => {
         <div className="space-y-4 rounded-3xl border border-border bg-card p-5 shadow-sm">
           <h3 className="flex items-center gap-1.5 text-xs font-extrabold uppercase tracking-wider text-foreground">
             <History size={16} className="text-indigo-500" />
-            Writing Progression Dinamikasi (Band Score Tarixi)
+            Natijalar Dinamikasi (Band Tarixi)
           </h3>
           <div className="h-44 w-full">
             <SvgLineChart
@@ -369,18 +368,18 @@ const IeltsWritingPage: React.FC = () => {
             />
           )}
           {/* Prompt Selection */}
-          <div className="rounded-2xl border border-border bg-card p-4 shadow-sm sm:rounded-3xl sm:p-6 space-y-3">
+          <div className="space-y-3 rounded-2xl border border-border bg-card p-4 shadow-sm sm:rounded-3xl sm:p-6">
             <div className="flex items-center justify-between">
               <label className="block text-xs font-bold text-gray-700 dark:text-gray-300">
-                Mavzu / Savol (IELTS {taskType.toUpperCase()} Prompt)
+                Mavzu (IELTS {taskType.toUpperCase()})
               </label>
               {selectedPromptItem && (
                 <button
                   onClick={() => setShowPromptGuidance(!showPromptGuidance)}
-                  className="text-[11px] font-bold text-indigo-600 hover:text-indigo-700 dark:text-indigo-400 flex items-center gap-1 transition-colors"
+                  className="flex items-center gap-1 text-[11px] font-bold text-indigo-600 transition-colors hover:text-indigo-700 dark:text-indigo-400"
                 >
                   <Sparkles size={13} />
-                  {showPromptGuidance ? "Maslahatlarni yopish" : "💡 Band 9 Reja & Kollokatsiyalar"}
+                  {showPromptGuidance ? 'Yopish' : "💡 Reja & Lug'at"}
                 </button>
               )}
             </div>
@@ -395,9 +394,7 @@ const IeltsWritingPage: React.FC = () => {
 
             {/* Prompt Selector Pills */}
             <div className="space-y-1.5 pt-1">
-              <span className="text-[10px] font-semibold text-gray-400 block">
-                Rasmiy IELTS {taskType === 'task1' ? 'Task 1 Turlari' : 'Task 2 Mavzulari'}:
-              </span>
+              <span className="block text-[10px] font-semibold text-gray-400">Mavzular:</span>
               <div className="flex flex-wrap gap-1.5 sm:gap-2">
                 {IELTS_WRITING_PROMPTS[taskType].map((item) => (
                   <button
@@ -406,13 +403,15 @@ const IeltsWritingPage: React.FC = () => {
                       setSelectedPromptItem(item);
                       setPromptQuestion(item.prompt);
                     }}
-                    className={`rounded-full px-3 py-1 text-left text-[11px] font-semibold transition-all border ${
+                    className={`rounded-full border px-3 py-1 text-left text-[11px] font-semibold transition-all ${
                       promptQuestion === item.prompt
-                        ? 'bg-indigo-600 text-white border-indigo-600 shadow-sm'
-                        : 'bg-indigo-50/70 dark:bg-indigo-950/30 text-indigo-700 dark:text-indigo-300 border-indigo-200/50 dark:border-indigo-800/40 hover:bg-indigo-100'
+                        ? 'border-indigo-600 bg-indigo-600 text-white shadow-sm'
+                        : 'border-indigo-200/50 bg-indigo-50/70 text-indigo-700 hover:bg-indigo-100 dark:border-indigo-800/40 dark:bg-indigo-950/30 dark:text-indigo-300'
                     }`}
                   >
-                    <span className="opacity-75 text-[9px] uppercase font-black mr-1.5">[{item.category}]</span>
+                    <span className="mr-1.5 text-[9px] font-black uppercase opacity-75">
+                      [{item.category}]
+                    </span>
                     {item.title}
                   </button>
                 ))}
@@ -421,45 +420,61 @@ const IeltsWritingPage: React.FC = () => {
 
             {/* Band 9 Outline & Vocabulary Guidance Box */}
             {selectedPromptItem && showPromptGuidance && (
-              <div className="rounded-2xl border border-indigo-500/20 bg-indigo-500/5 p-4 space-y-3 text-xs">
+              <div className="space-y-3 rounded-2xl border border-indigo-500/20 bg-indigo-500/5 p-4 text-xs">
                 <div className="flex items-center justify-between border-b border-indigo-500/10 pb-2">
-                  <span className="font-bold text-indigo-700 dark:text-indigo-300 flex items-center gap-1.5 text-xs">
+                  <span className="flex items-center gap-1.5 text-xs font-bold text-indigo-700 dark:text-indigo-300">
                     <BookOpen size={14} /> Band 9 Tavsiya etilgan Reja: {selectedPromptItem.title}
                   </span>
-                  <span className="px-2 py-0.5 rounded-full bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 text-[10px] font-bold">
+                  <span className="rounded-full bg-indigo-500/10 px-2 py-0.5 text-[10px] font-bold text-indigo-600 dark:text-indigo-400">
                     {selectedPromptItem.category}
                   </span>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-2 text-[11px]">
-                  <div className="p-2.5 rounded-xl bg-card border border-border space-y-1">
-                    <span className="font-bold text-foreground block">1. Kirish (Introduction & Overview):</span>
-                    <p className="text-muted-foreground">{selectedPromptItem.sampleOutline.intro}</p>
+                <div className="grid grid-cols-1 gap-2 text-[11px] md:grid-cols-2">
+                  <div className="space-y-1 rounded-xl border border-border bg-card p-2.5">
+                    <span className="block font-bold text-foreground">
+                      1. Kirish (Introduction & Overview):
+                    </span>
+                    <p className="text-muted-foreground">
+                      {selectedPromptItem.sampleOutline.intro}
+                    </p>
                   </div>
-                  <div className="p-2.5 rounded-xl bg-card border border-border space-y-1">
-                    <span className="font-bold text-foreground block">2. Asosiy Qism 1 (Body Paragraph 1):</span>
-                    <p className="text-muted-foreground">{selectedPromptItem.sampleOutline.body1}</p>
+                  <div className="space-y-1 rounded-xl border border-border bg-card p-2.5">
+                    <span className="block font-bold text-foreground">
+                      2. Asosiy Qism 1 (Body Paragraph 1):
+                    </span>
+                    <p className="text-muted-foreground">
+                      {selectedPromptItem.sampleOutline.body1}
+                    </p>
                   </div>
-                  <div className="p-2.5 rounded-xl bg-card border border-border space-y-1">
-                    <span className="font-bold text-foreground block">3. Asosiy Qism 2 (Body Paragraph 2):</span>
-                    <p className="text-muted-foreground">{selectedPromptItem.sampleOutline.body2}</p>
+                  <div className="space-y-1 rounded-xl border border-border bg-card p-2.5">
+                    <span className="block font-bold text-foreground">
+                      3. Asosiy Qism 2 (Body Paragraph 2):
+                    </span>
+                    <p className="text-muted-foreground">
+                      {selectedPromptItem.sampleOutline.body2}
+                    </p>
                   </div>
-                  <div className="p-2.5 rounded-xl bg-card border border-border space-y-1">
-                    <span className="font-bold text-foreground block">4. Xulosa (Conclusion / Summary):</span>
-                    <p className="text-muted-foreground">{selectedPromptItem.sampleOutline.conclusion}</p>
+                  <div className="space-y-1 rounded-xl border border-border bg-card p-2.5">
+                    <span className="block font-bold text-foreground">
+                      4. Xulosa (Conclusion / Summary):
+                    </span>
+                    <p className="text-muted-foreground">
+                      {selectedPromptItem.sampleOutline.conclusion}
+                    </p>
                   </div>
                 </div>
 
                 {/* Key Collocations */}
                 <div className="pt-1">
-                  <span className="font-bold text-[11px] text-foreground block mb-1.5">
+                  <span className="mb-1.5 block text-[11px] font-bold text-foreground">
                     🎯 Foydalanish uchun Band 8+ Kollokatsiyalar:
                   </span>
                   <div className="flex flex-wrap gap-1.5">
                     {selectedPromptItem.keyVocabulary.map((vocab, vIdx) => (
                       <span
                         key={vIdx}
-                        className="px-2 py-0.5 rounded-md bg-white dark:bg-gray-800 border border-border text-[10px] font-mono text-indigo-600 dark:text-indigo-400"
+                        className="rounded-md border border-border bg-white px-2 py-0.5 font-mono text-[10px] text-indigo-600 dark:bg-gray-800 dark:text-indigo-400"
                       >
                         {vocab}
                       </span>
@@ -468,8 +483,10 @@ const IeltsWritingPage: React.FC = () => {
                 </div>
 
                 {selectedPromptItem.band9Snippet && (
-                  <div className="pt-2 border-t border-indigo-500/10 text-[11px] text-muted-foreground italic">
-                    <span className="font-semibold text-foreground not-italic">Namunaviy Band 9 jumla: </span>
+                  <div className="border-t border-indigo-500/10 pt-2 text-[11px] italic text-muted-foreground">
+                    <span className="font-semibold not-italic text-foreground">
+                      Namunaviy Band 9 jumla:{' '}
+                    </span>
                     "{selectedPromptItem.band9Snippet}"
                   </div>
                 )}
@@ -481,7 +498,7 @@ const IeltsWritingPage: React.FC = () => {
           <div className="rounded-2xl border border-border bg-card p-4 shadow-sm sm:rounded-3xl sm:p-6">
             <div className="mb-2 flex items-center justify-between">
               <label className="block text-xs font-bold text-gray-700 dark:text-gray-300">
-                Sizning Inshongiz (Your Essay)
+                Sizning inshongiz
               </label>
               <span
                 className={`rounded-full px-2.5 py-1 text-[10px] font-bold ${
@@ -520,10 +537,10 @@ const IeltsWritingPage: React.FC = () => {
                   />
                   <span>
                     {isAdmin
-                      ? 'Admin: Cheksiz tekshiruv'
+                      ? 'Admin: Cheksiz'
                       : remainingWriting > 0
-                        ? 'Bugungi bepul limit: 1/1 qoldi'
-                        : 'Bugungi bepul limit tugadi (0/1)'}
+                        ? 'Bepul limit: 1/1 qoldi'
+                        : 'Bepul limit tugadi (0/1)'}
                   </span>
                 </span>
               </div>
@@ -674,7 +691,7 @@ const IeltsWritingPage: React.FC = () => {
                   className="mt-3 flex w-full cursor-pointer items-center justify-center gap-2 rounded-xl bg-red-600 py-3 text-xs font-black text-white shadow-md shadow-red-600/20 transition-all hover:bg-red-700"
                 >
                   <FileText size={15} />
-                  <span>Writing TRF Sertifikatini Yuklab Olish (PDF)</span>
+                  <span>Writing TRF Sertifikati (PDF)</span>
                 </button>
               </div>
 
@@ -688,7 +705,7 @@ const IeltsWritingPage: React.FC = () => {
                       : 'border-transparent text-muted-foreground'
                   }`}
                 >
-                  Mezonlar Tahlili
+                  Mezonlar
                 </button>
                 <button
                   onClick={() => setActiveTab('errors')}
@@ -698,7 +715,7 @@ const IeltsWritingPage: React.FC = () => {
                       : 'border-transparent text-muted-foreground'
                   }`}
                 >
-                  Xato & Takliflar ({report.grammarErrors.length})
+                  Xatolar ({report.grammarErrors.length})
                 </button>
                 <button
                   onClick={() => setActiveTab('model')}
@@ -708,7 +725,7 @@ const IeltsWritingPage: React.FC = () => {
                       : 'border-transparent text-muted-foreground'
                   }`}
                 >
-                  Model Answer
+                  Model Insho
                 </button>
               </div>
 

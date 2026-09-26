@@ -333,7 +333,7 @@ export const IeltsSpeakingMockPage: React.FC = () => {
         </button>
         <div className="flex items-center gap-2">
           <span className="rounded-full border border-indigo-500/20 bg-indigo-500/10 px-2.5 py-1 text-[11px] font-extrabold text-indigo-600 dark:text-indigo-400 sm:px-3 sm:text-xs">
-            🎙️ 3-Part Speaking Simulator ({CAMBRIDGE_IELTS_TOPICS.length} bilet)
+            🎙️ Speaking Mock ({CAMBRIDGE_IELTS_TOPICS.length} bilet)
           </span>
         </div>
       </div>
@@ -346,13 +346,11 @@ export const IeltsSpeakingMockPage: React.FC = () => {
             <Mic size={40} className="hidden sm:block" />
           </div>
           <div>
-            <h2 className="text-xl font-black text-foreground sm:text-2xl">
+            <h2 className="text-lg font-black text-foreground sm:text-2xl">
               IELTS Speaking Full Mock Test
             </h2>
-            <p className="mt-1.5 text-xs leading-relaxed text-muted-foreground sm:text-sm">
-              Haqiqiy imtihon muhitida Part 1, Part 2 (Cue Card + 60s tayyorlanish) va Part 3
-              bosqichlarini topshiring hamda rasmiy 4 ta mezon bo'yicha Band Score hisobotingizni
-              oling.
+            <p className="mt-1 text-xs leading-relaxed text-muted-foreground sm:text-sm">
+              Haqiqiy imtihon muhitida Part 1, Part 2 va Part 3 bosqichlarini topshiring.
             </p>
           </div>
 
@@ -415,7 +413,7 @@ export const IeltsSpeakingMockPage: React.FC = () => {
                 onClick={() => navigate(`/speaking-coach?scenario=${selectedTopic.id}`)}
                 className="active:scale-98 flex w-full cursor-pointer items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-emerald-600 via-teal-600 to-cyan-600 px-3 py-2.5 text-xs font-black text-white shadow-lg shadow-emerald-500/20 transition-all hover:from-emerald-700 hover:to-cyan-700 hover:shadow-emerald-500/30 sm:rounded-2xl sm:px-4 md:text-sm"
               >
-                <Bot size={16} /> 🎙️ AI Examiner Bilan Jonli Suhbat
+                <Bot size={16} /> 🎙️ AI Examiner Bilan Suhbat
               </button>
             </div>
           </div>
@@ -450,10 +448,10 @@ export const IeltsSpeakingMockPage: React.FC = () => {
               <Zap size={13} className={canUseSpeaking ? 'text-emerald-500' : 'text-amber-400'} />
               <span>
                 {isAdmin
-                  ? 'Admin: Cheksiz Speaking Mock'
+                  ? 'Admin: Cheksiz'
                   : remainingSpeaking > 0
-                    ? 'Bugungi bepul limit: 1/1 Mock qoldi'
-                    : 'Bugungi bepul limit tugadi (0/1)'}
+                    ? 'Bepul limit: 1/1 Mock qoldi'
+                    : 'Bepul limit tugadi (0/1)'}
               </span>
             </span>
           </div>

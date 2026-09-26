@@ -10,8 +10,6 @@ import {
 } from 'lucide-react';
 import AudioVisualizer from './AudioVisualizer';
 
-import { useLanguage } from '../../context/LanguageContext';
-
 interface CoachControlBarProps {
   isLiveSession: boolean;
   isSpeaking: boolean;
@@ -45,36 +43,33 @@ export const CoachControlBar: React.FC<CoachControlBarProps> = ({
   onBargeIn,
   isPreparingAudio = false,
 }) => {
-  const { language } = useLanguage();
-  const isJa = language === 'ja';
-
   const getStatusInfo = () => {
     if (isSpeaking)
       return {
-        label: isJa ? 'AI音声出力中' : 'AI Gapirmoqda',
+        label: 'AI Gapirmoqda',
         color: 'text-blue-400',
         pulseColor: 'bg-blue-500',
       };
     if (isPreparingAudio)
       return {
-        label: isJa ? '音声準備中...' : 'Ovoz tayyorlanmoqda...',
+        label: 'Ovoz tayyorlanmoqda...',
         color: 'text-amber-400',
         pulseColor: 'bg-amber-500',
       };
     if (isThinking)
       return {
-        label: isJa ? '思考中...' : "O'ylamoqda...",
+        label: "O'ylamoqda...",
         color: 'text-purple-400',
         pulseColor: 'bg-purple-500',
       };
     if (isListening)
       return {
-        label: isJa ? '音声認識中...' : 'Eshitmoqda...',
+        label: 'Eshitmoqda...',
         color: 'text-emerald-400',
         pulseColor: 'bg-emerald-500',
       };
     return {
-      label: isJa ? '会話待機中' : 'Tayyor',
+      label: 'Tayyor',
       color: 'text-amber-400',
       pulseColor: 'bg-amber-500',
     };
@@ -135,16 +130,12 @@ export const CoachControlBar: React.FC<CoachControlBarProps> = ({
             {!isLiveSession ? (
               <div className="flex items-center gap-2 truncate text-xs font-medium text-muted-foreground">
                 <HeartPulse size={14} className="shrink-0 animate-pulse text-emerald-500" />
-                <span className="truncate">
-                  {isJa ? '通話開始を押してください' : 'Suhbatni boshlang'}
-                </span>
+                <span className="truncate">Suhbatni boshlang</span>
               </div>
             ) : (
               <div className="flex items-center gap-2 text-xs font-medium text-muted-foreground">
                 <MessageCircle size={14} className="shrink-0 text-primary" />
-                <span>
-                  {chatHistoryLength} {isJa ? '件のメッセージ' : 'ta xabar'}
-                </span>
+                <span>{chatHistoryLength} ta xabar</span>
               </div>
             )}
           </div>
@@ -156,7 +147,7 @@ export const CoachControlBar: React.FC<CoachControlBarProps> = ({
               <button
                 onClick={onClearHistory}
                 className="flex min-h-[44px] min-w-[44px] cursor-pointer items-center justify-center rounded-xl border border-border bg-muted p-2.5 text-muted-foreground transition-all hover:bg-rose-500/10 hover:text-rose-400"
-                title={isJa ? '会話履歴を消去' : 'Chatni tozalash'}
+                title="Chatni tozalash"
               >
                 <RotateCcw size={16} />
               </button>
@@ -188,16 +179,10 @@ export const CoachControlBar: React.FC<CoachControlBarProps> = ({
                 }`}
                 title={
                   isSpeaking
-                    ? isJa
-                      ? 'AI音声を中断'
-                      : "AI ni to'xtatish va gapirish"
+                    ? "AI ni to'xtatish va gapirish"
                     : isMuted
-                      ? isJa
-                        ? 'マイクをオン'
-                        : 'Mikrofonni yoqish'
-                      : isJa
-                        ? '話す（マイク有効化）'
-                        : 'Gapirish (Mikrofonni faollashtirish)'
+                      ? 'Mikrofonni yoqish'
+                      : 'Gapirish (Mikrofonni faollashtirish)'
                 }
               >
                 {isMuted ? (
@@ -206,11 +191,9 @@ export const CoachControlBar: React.FC<CoachControlBarProps> = ({
                   <Mic size={16} className={isListening ? 'animate-pulse text-emerald-400' : ''} />
                 )}
                 {isSpeaking ? (
-                  <span className="text-[11px] font-bold text-[#C9A961]">
-                    {isJa ? '中断' : "TO'XTATISH"}
-                  </span>
+                  <span className="text-[11px] font-bold text-[#C9A961]">TO'XTATISH</span>
                 ) : !isListening && !isMuted && !isThinking ? (
-                  <span className="text-[11px] font-bold">{isJa ? '話す' : 'GAPIRISH'}</span>
+                  <span className="text-[11px] font-bold">GAPIRISH</span>
                 ) : null}
               </button>
             )}
@@ -236,9 +219,7 @@ export const CoachControlBar: React.FC<CoachControlBarProps> = ({
                     size={16}
                     className="relative z-10 shrink-0 transition-transform group-hover:rotate-12"
                   />
-                  <span className="relative z-10 text-xs tracking-wide">
-                    {isJa ? '終了' : 'TUGATISH'}
-                  </span>
+                  <span className="relative z-10 text-xs tracking-wide">Tugatish</span>
                 </>
               ) : (
                 <>
@@ -246,9 +227,7 @@ export const CoachControlBar: React.FC<CoachControlBarProps> = ({
                     size={16}
                     className="relative z-10 shrink-0 fill-current transition-transform group-hover:-rotate-12"
                   />
-                  <span className="relative z-10 text-xs tracking-wide">
-                    {isJa ? '通話開始' : "QO'NG'IROQ"}
-                  </span>
+                  <span className="relative z-10 text-xs tracking-wide">Boshlash</span>
                 </>
               )}
             </button>
