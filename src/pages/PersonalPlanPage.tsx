@@ -584,34 +584,34 @@ export const PersonalPlanPage: React.FC = () => {
   }
 
   return (
-    <div className="mx-auto max-w-7xl max-w-full space-y-8 overflow-x-hidden p-3.5 duration-200 animate-in fade-in sm:p-4 md:p-8">
+    <div className="mx-auto max-w-7xl max-w-full space-y-6 overflow-x-hidden p-3.5 duration-200 animate-in fade-in sm:space-y-8 sm:p-4 md:p-8">
       {/* WIZARD FLOW */}
       {!activeGoal ? (
-        <div className="mx-auto max-w-3xl space-y-8">
-          <div className="rounded-3xl border border-border bg-card p-6 shadow-xl md:p-8">
+        <div className="mx-auto max-w-3xl space-y-6 sm:space-y-8">
+          <div className="rounded-2xl border border-border bg-card p-5 shadow-xl sm:rounded-3xl sm:p-6 md:p-8">
             <div className="mb-2 flex items-center gap-2">
-              <Sparkles size={20} className="animate-pulse text-primary" />
+              <Sparkles size={18} className="animate-pulse text-primary sm:h-5 sm:w-5" />
               <span className="text-xs font-black uppercase tracking-wider text-primary">
                 AI-Powered Planning
               </span>
             </div>
-            <h1 className="text-2xl font-black tracking-tight text-foreground md:text-3xl">
+            <h1 className="text-xl font-black tracking-tight text-foreground sm:text-2xl md:text-3xl">
               {isUz ? "Shaxsiy O'quv Rejangizni Yarating" : 'Create Your Personalized Study Plan'}
             </h1>
-            <p className="mt-1 text-sm leading-relaxed text-muted-foreground">
+            <p className="mt-1 text-xs leading-relaxed text-muted-foreground sm:text-sm">
               {isUz
-                ? "O'z darajangiz, maqsadlaringiz va deadlinelardan kelib chiqqan holda haftalik adaptive o'quv rejasini tuzing."
+                ? 'Darajangiz, maqsadlaringiz va deadlinelardan kelib chiqqan holda haftalik adaptiv reja tuzing.'
                 : 'Construct an adaptive study track customized for your level, targets, deadlines, and schedule parameters.'}
             </p>
           </div>
 
           {/* STEP 1: Goal Selection */}
           {step === 1 && (
-            <div className="space-y-6">
-              <h3 className="text-lg font-bold text-foreground">
+            <div className="space-y-4 sm:space-y-6">
+              <h3 className="text-base font-bold text-foreground sm:text-lg">
                 {isUz ? '1-Bosqich: IELTS Maqsadingizni tanlang' : 'Step 1: Choose Your IELTS Goal'}
               </h3>
-              <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+              <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 sm:gap-4">
                 <button
                   type="button"
                   onClick={() => {
@@ -620,15 +620,17 @@ export const PersonalPlanPage: React.FC = () => {
                       setTargetLevel('7.0');
                     }
                   }}
-                  className={`rounded-3xl border p-6 text-left transition-all ${
+                  className={`cursor-pointer rounded-2xl border p-4 text-left transition-all sm:rounded-3xl sm:p-6 ${
                     selectedGoalType === 'ielts'
                       ? 'scale-[1.01] border-primary bg-primary/10 shadow-xs ring-2 ring-primary/30'
                       : 'border-border bg-card hover:border-primary/50'
                   }`}
                 >
-                  <div className="mb-2 flex items-center gap-2">
-                    <span className="text-2xl">🎯</span>
-                    <h4 className="text-base font-bold text-foreground">IELTS Imtihoni</h4>
+                  <div className="mb-1.5 flex items-center gap-2 sm:mb-2">
+                    <span className="text-xl sm:text-2xl">🎯</span>
+                    <h4 className="text-sm font-bold text-foreground sm:text-base">
+                      IELTS Imtihoni
+                    </h4>
                   </div>
                   <p className="mt-1 text-xs leading-relaxed text-muted-foreground">
                     Band Score (5.5 – 8.5+) ko'rsatkichlariga yo'naltirilgan intensiv akademik va
@@ -983,44 +985,44 @@ export const PersonalPlanPage: React.FC = () => {
         </div>
       ) : (
         /* ACTIVE DASHBOARD VIEW */
-        <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-6 sm:gap-8 lg:grid-cols-3">
           {/* LEFT PANEL: Goal Summary & Evaluations */}
-          <div className="order-2 space-y-6 lg:order-1 lg:col-span-1">
-            <div className="space-y-4 rounded-3xl border border-border bg-card p-6 shadow-xl">
+          <div className="order-2 space-y-4 sm:space-y-6 lg:order-1 lg:col-span-1">
+            <div className="space-y-3 rounded-2xl border border-border bg-card p-4 shadow-xl sm:space-y-4 sm:rounded-3xl sm:p-6">
               <div className="flex items-center justify-between">
-                <span className="rounded-full border border-primary/20 bg-primary/10 px-3 py-1 text-xs font-black uppercase tracking-wider text-primary">
+                <span className="rounded-full border border-primary/20 bg-primary/10 px-2.5 py-0.5 text-[11px] font-black uppercase tracking-wider text-primary sm:px-3 sm:py-1 sm:text-xs">
                   {activeGoal.goalType.toUpperCase()} PLAN
                 </span>
                 <button
                   onClick={handleResetPlan}
-                  className="text-xs font-medium text-destructive hover:underline"
+                  className="cursor-pointer text-xs font-medium text-destructive hover:underline"
                 >
                   Rejani o'chirish
                 </button>
               </div>
 
-              <h2 className="text-xl font-black text-foreground">
+              <h2 className="text-lg font-black text-foreground sm:text-xl">
                 {activeGoal.currentLevel} → {activeGoal.targetLevel}
               </h2>
 
-              <div className="space-y-2 text-xs text-muted-foreground">
+              <div className="space-y-1.5 text-xs text-muted-foreground sm:space-y-2">
                 <div className="flex justify-between">
-                  <span>Kunlik yuklama:</span>
+                  <span>Kunlik:</span>
                   <span className="font-bold text-foreground">
                     {activeGoal.dailyMinutes} daqiqa
                   </span>
                 </div>
                 <div className="flex justify-between">
-                  <span>Umumiy muddat:</span>
+                  <span>Muddat:</span>
                   <span className="font-bold text-foreground">{activeGoal.totalWeeks} hafta</span>
                 </div>
                 <div className="flex justify-between">
-                  <span>Joriy hafta:</span>
+                  <span>Hafta:</span>
                   <span className="font-bold text-foreground">{activeGoal.currentWeek}-hafta</span>
                 </div>
               </div>
 
-              <div className="h-2.5 w-full overflow-hidden rounded-full bg-secondary">
+              <div className="h-2 w-full overflow-hidden rounded-full bg-secondary sm:h-2.5">
                 <div
                   className="h-full bg-primary transition-all duration-300"
                   style={{
@@ -1031,8 +1033,8 @@ export const PersonalPlanPage: React.FC = () => {
             </div>
 
             {/* Weekly evaluations history */}
-            <div className="space-y-4 rounded-3xl border border-border bg-card p-6 shadow-xl">
-              <h3 className="flex items-center gap-1.5 text-sm font-black uppercase tracking-wider text-foreground">
+            <div className="space-y-3 rounded-2xl border border-border bg-card p-4 shadow-xl sm:space-y-4 sm:rounded-3xl sm:p-6">
+              <h3 className="flex items-center gap-1.5 text-xs font-black uppercase tracking-wider text-foreground sm:text-sm">
                 <Award size={16} className="text-primary" />
                 <span>Haftalik Natijalar Tahlili</span>
               </h3>
@@ -1042,18 +1044,18 @@ export const PersonalPlanPage: React.FC = () => {
                   qilinadi.
                 </p>
               ) : (
-                <div className="space-y-4">
+                <div className="space-y-3 sm:space-y-4">
                   {weeklyEvals.map((e, idx) => (
                     <div
                       key={idx}
-                      className="space-y-2 rounded-2xl border border-border bg-secondary/30 p-3.5"
+                      className="space-y-1.5 rounded-xl border border-border bg-secondary/30 p-3 sm:space-y-2 sm:rounded-2xl sm:p-3.5"
                     >
                       <div className="flex items-center justify-between">
                         <span className="text-xs font-black text-foreground">
                           {e.weekNumber}-Hafta Natijalari
                         </span>
                         <span className="rounded-md bg-emerald-500/10 px-2 py-0.5 text-[10px] font-black text-emerald-500">
-                          {e.completionRate}% completion
+                          {e.completionRate}%
                         </span>
                       </div>
                       <p className="text-xs italic leading-relaxed text-muted-foreground">
@@ -1067,19 +1069,19 @@ export const PersonalPlanPage: React.FC = () => {
           </div>
 
           {/* RIGHT PANEL: 7-day checklist and active week view */}
-          <div className="order-1 space-y-6 lg:order-2 lg:col-span-2">
+          <div className="order-1 space-y-4 sm:space-y-6 lg:order-2 lg:col-span-2">
             {currentPlan ? (
-              <div className="space-y-4">
-                <div className="space-y-2 rounded-3xl border border-border bg-card p-6 shadow-xl">
-                  <div className="flex flex-col justify-between gap-3 sm:flex-row sm:items-center">
-                    <h2 className="text-lg font-black tracking-tight text-foreground">
-                      {currentPlan.weekNumber}-Haftalik O'quv Rejasi
+              <div className="space-y-3 sm:space-y-4">
+                <div className="space-y-2 rounded-2xl border border-border bg-card p-4 shadow-xl sm:rounded-3xl sm:p-6">
+                  <div className="flex flex-col justify-between gap-2 sm:flex-row sm:items-center">
+                    <h2 className="text-base font-black tracking-tight text-foreground sm:text-lg">
+                      {currentPlan.weekNumber}-Hafta Rejasi
                     </h2>
                     <button
                       onClick={handleRegenerateCurrentWeek}
                       disabled={regenerating}
                       title={isUz ? 'Rejani qayta tuzish' : 'Regenerate plan'}
-                      className="flex shrink-0 items-center gap-1.5 rounded-xl border border-border bg-secondary/50 px-3 py-1.5 text-xs font-bold text-muted-foreground transition-all hover:bg-secondary hover:text-foreground"
+                      className="flex shrink-0 cursor-pointer items-center gap-1.5 rounded-xl border border-border bg-secondary/50 px-3 py-1.5 text-xs font-bold text-muted-foreground transition-all hover:bg-secondary hover:text-foreground"
                     >
                       <RotateCcw size={13} className={regenerating ? 'animate-spin' : ''} />
                       <span>
@@ -1088,13 +1090,13 @@ export const PersonalPlanPage: React.FC = () => {
                             ? 'Tuzilmoqda...'
                             : 'Generating...'
                           : isUz
-                            ? 'Qayta rejalashtirish'
+                            ? 'Qayta tuzish'
                             : 'Regenerate'}
                       </span>
                     </button>
                   </div>
                   <p className="text-xs leading-relaxed text-muted-foreground">
-                    <strong>Sabab/Tahlil:</strong> {currentPlan.reasoning}
+                    <strong>Fokus:</strong> {currentPlan.reasoning}
                   </p>
                   <div className="flex flex-wrap gap-2 pt-1">
                     {currentPlan.focusSkills.map((skill) => (
@@ -1247,7 +1249,7 @@ export const PersonalPlanPage: React.FC = () => {
 
                 {/* Weekly completion assessment trigger */}
                 <div
-                  className={`flex flex-col items-center justify-between gap-4 rounded-3xl border p-6 transition-all sm:flex-row ${
+                  className={`flex flex-col items-center justify-between gap-3 rounded-2xl border p-4 transition-all sm:flex-row sm:gap-4 sm:rounded-3xl sm:p-6 ${
                     weeklyCompletionRate >= 80
                       ? 'border-emerald-500/40 bg-emerald-500/10 shadow-lg'
                       : 'border-primary/20 bg-primary/10'
@@ -1256,7 +1258,7 @@ export const PersonalPlanPage: React.FC = () => {
                   <div className="space-y-1 text-center sm:text-left">
                     <div className="flex items-center justify-center gap-2 sm:justify-start">
                       <h4
-                        className={`text-sm font-black ${weeklyCompletionRate >= 80 ? 'text-emerald-500' : 'text-primary'}`}
+                        className={`text-xs font-black sm:text-sm ${weeklyCompletionRate >= 80 ? 'text-emerald-500' : 'text-primary'}`}
                       >
                         {weeklyCompletionRate >= 80
                           ? isUz
@@ -1275,17 +1277,17 @@ export const PersonalPlanPage: React.FC = () => {
                     <p className="text-xs leading-relaxed text-muted-foreground">
                       {weeklyCompletionRate >= 80
                         ? isUz
-                          ? "Haftalik darslarning asosiy qismi muvaffaqiyatli yakunlandi. Natijalarni tahlil qiling va keyingi haftaning shaxsiy rejasiga o'ting!"
-                          : "Most weekly tasks are done. Evaluate performance and advance to your next week's plan!"
+                          ? "Haftalik darslar yakunlandi. Natijalarni tahlil qiling va keyingi haftaga o'ting!"
+                          : "Most weekly tasks are done. Advance to your next week's plan!"
                         : isUz
-                          ? 'Haftalik tahlilni bajaring va keyingi haftaning shaxsiy rejasini generatsiya qiling.'
-                          : "Evaluate this week's results and generate your next week study plan."}
+                          ? "Haftalik tahlilni bajaring va keyingi haftaga o'ting."
+                          : 'Evaluate results and generate your next week study plan.'}
                     </p>
                   </div>
                   <button
                     onClick={handleEvaluateWeek}
                     disabled={evaluating}
-                    className={`flex shrink-0 items-center gap-1.5 rounded-xl px-5 py-2.5 text-xs font-black shadow-md transition-all ${
+                    className={`flex shrink-0 cursor-pointer items-center gap-1.5 rounded-xl px-4 py-2 text-xs font-black shadow-md transition-all sm:px-5 sm:py-2.5 ${
                       weeklyCompletionRate >= 80
                         ? 'bg-emerald-600 text-white hover:bg-emerald-500'
                         : 'bg-primary text-primary-foreground hover:bg-primary/90'
