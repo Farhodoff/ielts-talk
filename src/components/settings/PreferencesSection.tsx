@@ -1,4 +1,5 @@
-import { Bell, GraduationCap, RefreshCw } from 'lucide-react';
+import React, { useState } from 'react';
+import { Bell, GraduationCap, RefreshCw, Smartphone, Download, CheckCircle2 } from 'lucide-react';
 import { PushNotificationService } from '../../services/PushNotificationService';
 import { useStudyData } from '../../context/StudyPlannerContext';
 import { toast } from '../../hooks/use-toast';
@@ -7,6 +8,8 @@ import { useLanguage } from '../../context/LanguageContext';
 import { UzbekistanFlag, UKFlag } from '../common/FlagIcons';
 import AIProviderSection from './AIProviderSection';
 import autoUpdateService from '../../services/AutoUpdateService';
+import { usePWAInstall } from '../../hooks/usePWAInstall';
+import { IOSInstallModal } from '../pwa/IOSInstallModal';
 
 interface Settings {
   theme: 'light' | 'dark' | 'system';
@@ -25,14 +28,11 @@ const PreferencesSection: React.FC<PreferencesSectionProps> = ({
   onToggleNotifications,
 }) => {
   const { language, setLanguage } = useLanguage();
-  const {
-    user,
-    targetLevel,
-    targetGoal,
-    setPrimaryFocus,
-  } = useStudyData();
+  const { user, targetLevel, targetGoal, setPrimaryFocus } = useStudyData();
 
   const isSuper = isSuperAdmin(user?.email);
+  const { isInstalled, isIOS, promptInstall } = usePWAInstall();
+  const [showIOSModal, setShowIOSModal] = useState(false);
 
   return (
     <div className="space-y-8 rounded-2xl border border-border bg-card p-6 duration-200 animate-in fade-in md:p-8">
@@ -51,7 +51,6 @@ const PreferencesSection: React.FC<PreferencesSectionProps> = ({
               Asosiy til menyu, o'quv rejalari va tavsiyalarni boshqaradi.
             </p>
           </div>
-
         </div>
 
         {/* Primary & Additional Languages List */}
@@ -232,7 +231,10 @@ const PreferencesSection: React.FC<PreferencesSectionProps> = ({
             <button
               type="button"
               onClick={async () => {
-                toast({ title: '🔄 Kesh tozalanmoqda...', description: 'Sahifa qayta yuklanmoqda' });
+                toast({
+                  title: '🔄 Kesh tozalanmoqda...',
+                  description: 'Sahifa qayta yuklanmoqda',
+                });
                 await autoUpdateService.purgeCachesAndReload();
               }}
               className="flex items-center gap-1.5 rounded-lg bg-indigo-600 px-3.5 py-1.5 text-xs font-bold text-white shadow-xs transition hover:bg-indigo-700 active:scale-95"
@@ -242,7 +244,73 @@ const PreferencesSection: React.FC<PreferencesSectionProps> = ({
             </button>
           </div>
         </div>
+
+        {/* PWA App Installation Card */}
+        <div className="flex flex-col justify-between gap-4 rounded-xl border border-border bg-background/50 p-4 sm:flex-row sm:items-center">
+          <div className="flex items-center gap-3">
+            <div className="rounded-lg bg-emerald-500/10 p-2.5 text-emerald-500">
+              <Smartphone size={20} />
+            </div>
+            <div>
+              <div className="flex items-center gap-2">
+                <span className="text-sm font-semibold text-foreground">
+                  IELTS Talk Ilovasi (PWA)
+                </span>
+                {isInstalled ? (
+                  <span className="rounded-md bg-emerald-100 px-1.5 py-0.5 text-[10px] font-bold text-emerald-700 dark:bg-emerald-950 dark:text-emerald-400">
+                    O'rnatilgan
+                  </span>
+                ) : (
+                  <span className="rounded-md bg-indigo-100 px-1.5 py-0.5 text-[10px] font-bold text-indigo-600 dark:bg-indigo-950 dark:text-indigo-400">
+                    O'rnatishga tayyor
+                  </span>
+                )}
+              </div>
+              <span className="text-xs text-muted-foreground">
+                {isInstalled
+                  ? "Ilova qurilmangizga to'liq o'rnatilgan va mustaqil (standalone) rejimda ishlamoqda."
+                  : "Kompyuter yoki telefoningiz bosh ekraniga o'rnating va internetsiz ham tez foydalaning."}
+              </span>
+            </div>
+          </div>
+          <div className="flex items-center gap-2">
+            {isInstalled ? (
+              <div className="flex items-center gap-1.5 rounded-lg border border-emerald-500/20 bg-emerald-500/10 px-3 py-1.5 text-xs font-semibold text-emerald-500">
+                <CheckCircle2 size={14} />
+                <span>Faol</span>
+              </div>
+            ) : (
+              <button
+                type="button"
+                onClick={async () => {
+                  const res = await promptInstall();
+                  if (res === 'ios') {
+                    setShowIOSModal(true);
+                  } else if (res === 'accepted') {
+                    toast({ title: "✅ IELTS Talk muvaffaqiyatli o'rnatildi!" });
+                  } else if (res === 'unavailable') {
+                    if (isIOS) {
+                      setShowIOSModal(true);
+                    } else {
+                      toast({
+                        title: 'ℹ️ Brauzer menyusidan foydalaning',
+                        description:
+                          "Brauzeringiz menyusidan 'Bosh ekranga qo'shish' yoki 'Ilovani o'rnatish' bandini tanlang.",
+                      });
+                    }
+                  }
+                }}
+                className="flex cursor-pointer items-center gap-1.5 rounded-lg bg-emerald-600 px-3.5 py-1.5 text-xs font-bold text-white shadow-xs transition hover:bg-emerald-500 active:scale-95"
+              >
+                <Download size={13} />
+                <span>Ilovani o'rnatish</span>
+              </button>
+            )}
+          </div>
+        </div>
       </div>
+
+      <IOSInstallModal isOpen={showIOSModal} onClose={() => setShowIOSModal(false)} />
     </div>
   );
 };

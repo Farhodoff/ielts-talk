@@ -1,5 +1,6 @@
 import { MasterySkill } from '../types/mastery';
 import { SupportedLanguage } from '../types/lesson';
+import { CurriculumLessonNode } from '../types/curriculum';
 import {
   PersonalLearningGoal,
   WeeklyLearningPlan,
@@ -7,6 +8,7 @@ import {
   WeeklyPlanDay,
   TaskSourceType,
   PlanGoalType,
+  WeeklyEvaluation,
 } from '../types/learningPlan';
 import { callSelectedAIProvider } from '../utils/ai/aiCore';
 import { CurriculumLessonResolver, STATIC_CURRICULUM_MAP } from './CurriculumLessonResolver';
@@ -21,6 +23,35 @@ import {
 import { IELTS_GRAMMAR_DATABASE } from '../data/ielts/ielts_grammar_data';
 
 const LOCK_KEY_PREFIX = 'study_planner_pending_generation_';
+
+/**
+ * Shape of the raw (unsanitized) AI JSON payload before validation.
+ * Fields are intentionally loose: the validator clamps and defaults everything.
+ */
+interface RawAiPlanDay {
+  day?: unknown;
+  tasks?: unknown;
+}
+
+interface RawAiTask {
+  title?: unknown;
+  type?: unknown;
+  skill?: unknown;
+  estimatedMinutes?: unknown;
+  minutes?: unknown;
+  contentId?: unknown;
+  route?: unknown;
+}
+
+const MASTERY_SKILLS = [
+  'vocabulary',
+  'grammar',
+  'reading',
+  'listening',
+  'writing',
+  'speaking',
+  'kanji',
+] as const;
 
 export interface PlanGenerationResult {
   plan: WeeklyLearningPlan;
@@ -214,7 +245,7 @@ export const PersonalLearningPlanEngine = {
     userId: string,
     goal: PersonalLearningGoal,
     weekNumber: number,
-    previousWeekResult?: any,
+    previousWeekResult?: WeeklyEvaluation | null,
   ): Promise<PlanGenerationResult> {
     const hasLock = this.acquireLock(userId, goal.id, weekNumber);
     if (!hasLock) {
@@ -489,10 +520,10 @@ LEVEL_PEDAGOGICAL_BLUEPRINT:
 ${getLevelPedagogicalDirectives(goal.language, goal.goalType, cleanCurrent === 'ZERO' ? 'ZERO' : targetLevelCode, goal.targetLevel)}
 
 DIAGNOSTIC_RESULT:
-${JSON.stringify((state as any)?.diagnosticSummary || (state as any)?.diagnosticLevel || 'Barcha diagnostik savollar topshirilgan')}
+${JSON.stringify(state.diagnosticBaseline?.diagnosticLevel || 'Barcha diagnostik savollar topshirilgan')}
 
 LATEST_MOCK_RESULTS:
-${JSON.stringify((state as any)?.recentMockScores || 'Oxirgi mock test natijasi mavjud emas')}
+${JSON.stringify(state.diagnosticBaseline?.overallScore != null ? { score: state.diagnosticBaseline.overallScore, skills: state.diagnosticBaseline.skills } : 'Oxirgi mock test natijasi mavjud emas')}
 
 ACTIVE_WEAKNESSES:
 ${JSON.stringify(weaknessesWithSeverity.slice(0, 5))}
@@ -506,7 +537,7 @@ ${JSON.stringify(evaluation || 'Birinchi hafta (oldingi evaluation mavjud emas)'
 SRS_STATE:
 - DUE_CARDS: ${srsSummary.dueCount}
 - OVERDUE_CARDS: ${srsSummary.overdueCount}
-- RETENTION: ${(state as any)?.reviewSummary?.averageRetentionScore || 80}%
+- RETENTION: ${state.reviewSummary?.averageRetentionScore || 80}%
 
 COMPLETED_LESSON_IDS:
 ${JSON.stringify(completedLessonIds.slice(-15))}
@@ -568,11 +599,9 @@ ${prompt}`;
             userId,
             adjustedDailyMinutes,
           );
-        } catch (retryErr: any) {
-          console.error(
-            '[PersonalLearningPlanEngine] Repair generation attempt error:',
-            retryErr?.message,
-          );
+        } catch (retryErr: unknown) {
+          const message = retryErr instanceof Error ? retryErr.message : String(retryErr);
+          console.error('[PersonalLearningPlanEngine] Repair generation attempt error:', message);
         }
       }
 
@@ -588,7 +617,7 @@ ${prompt}`;
         isFallback: false,
         noticeMessage: timeNotice,
       };
-    } catch (e: any) {
+    } catch (e) {
       this.releaseLock(userId, goal.id, weekNumber);
       throw e;
     }
@@ -623,10 +652,10 @@ ${prompt}`;
         'sunday',
       ];
       const objectives = Array.isArray(raw.objectives)
-        ? raw.objectives.map((o: any) => this.sanitizeText(o))
+        ? raw.objectives.map((o: unknown) => this.sanitizeText(String(o)))
         : ['Mashq bajarish'];
       const focusSkills = Array.isArray(raw.focusSkills)
-        ? raw.focusSkills.map((s: any) => this.sanitizeText(s))
+        ? raw.focusSkills.map((s: unknown) => this.sanitizeText(String(s)))
         : ['general'];
 
       const targetLvl = (
@@ -635,8 +664,11 @@ ${prompt}`;
         (goal.language === 'ja' ? 'N5' : 'A1')
       ).toUpperCase();
       const validatedDays: WeeklyPlanDay[] = daysOfWeek.map((dayName): WeeklyPlanDay => {
-        const rawDay = (raw.days || []).find((d: any) => String(d.day).toLowerCase() === dayName);
-        const rawTasks = rawDay && Array.isArray(rawDay.tasks) ? rawDay.tasks : [];
+        const rawDay = (Array.isArray(raw.days) ? (raw.days as RawAiPlanDay[]) : []).find(
+          (d) => d != null && typeof d === 'object' && String(d.day).toLowerCase() === dayName,
+        );
+        const rawTasks: RawAiTask[] =
+          rawDay && Array.isArray(rawDay.tasks) ? (rawDay.tasks as RawAiTask[]) : [];
 
         let dayMinutesAllocated = 0;
         const validatedTasks: WeeklyPlanTask[] = [];
@@ -662,14 +694,27 @@ ${prompt}`;
 
           dayMinutesAllocated += minutes;
 
-          let actualTitle = this.sanitizeText(t.title || 'Dars');
-          let actualType = this.sanitizeText(t.type || 'lesson');
-          let actualContentId = t.contentId ? this.sanitizeText(t.contentId) : undefined;
-          let rawRoute = t.route
-            ? String(t.route).trim()
-            : goal.language === 'ja'
-              ? '/jlpt'
-              : '/ielts';
+          let actualTitle = this.sanitizeText(
+            typeof t.title === 'string' || typeof t.title === 'number' ? String(t.title) : 'Dars',
+          );
+          let actualType = this.sanitizeText(
+            typeof t.type === 'string' || typeof t.type === 'number' ? String(t.type) : 'lesson',
+          );
+          let actualContentId =
+            t.contentId != null && t.contentId !== ''
+              ? this.sanitizeText(String(t.contentId))
+              : undefined;
+          let rawRoute =
+            typeof t.route === 'string' && t.route.trim()
+              ? t.route.trim()
+              : goal.language === 'ja'
+                ? '/jlpt'
+                : '/ielts';
+
+          // AI-provided skill, narrowed to MasterySkill when it matches the union
+          const hasKnownSkill =
+            typeof t.skill === 'string' && (MASTERY_SKILLS as readonly string[]).includes(t.skill);
+          const taskSkill = hasKnownSkill ? (t.skill as MasterySkill) : undefined;
 
           // Completed Lesson Deduplication Check (Hard Guard)
           if (
@@ -683,22 +728,21 @@ ${prompt}`;
             let targetLevelCode =
               cleanCurrent === 'ZERO' ? (goal.language === 'ja' ? 'N5' : 'A1') : cleanCurrent;
 
-            let replacementNode: any = null;
-            course.levels?.forEach((lvl) => {
-              if (lvl.code.toUpperCase() === targetLevelCode) {
-                lvl.units?.forEach((u) => {
-                  u.lessons?.forEach((l) => {
-                    if (
-                      l.isContentAvailable &&
-                      !completedLessonIds.includes(l.id) &&
-                      l.id !== actualContentId
-                    ) {
-                      replacementNode = l;
-                    }
-                  });
-                });
+            let replacementNode: CurriculumLessonNode | null = null;
+            for (const lvl of course.levels ?? []) {
+              if (lvl.code.toUpperCase() !== targetLevelCode) continue;
+              for (const u of lvl.units ?? []) {
+                for (const l of u.lessons ?? []) {
+                  if (
+                    l.isContentAvailable &&
+                    !completedLessonIds.includes(l.id) &&
+                    l.id !== actualContentId
+                  ) {
+                    replacementNode = l;
+                  }
+                }
               }
-            });
+            }
 
             if (replacementNode) {
               actualContentId = replacementNode.id;
@@ -743,7 +787,7 @@ ${prompt}`;
             }
 
             // Smart Level Routing for Japanese skills
-            const effectiveSkill = t.skill || actualType;
+            const effectiveSkill = taskSkill || actualType;
             if (effectiveSkill === 'reading' && !resolvedRoute.includes('tab=reading')) {
               resolvedRoute = `/jlpt?tab=reading&level=${targetLvl}`;
             } else if (effectiveSkill === 'listening' && !resolvedRoute.includes('tab=listening')) {
@@ -780,7 +824,7 @@ ${prompt}`;
             }
 
             // Smart Level Routing for English / IELTS skills
-            const effectiveSkill = t.skill || actualType;
+            const effectiveSkill = taskSkill || actualType;
             if (
               (effectiveSkill === 'reading' || effectiveSkill === 'listening') &&
               !resolvedRoute.includes('tab=reading_listening')
@@ -847,7 +891,10 @@ ${prompt}`;
             sourceType,
             contentId: actualContentId,
             route: resolvedRoute,
-            skill: t.skill || (actualType as MasterySkill),
+            skill:
+              (taskSkill ?? (MASTERY_SKILLS as readonly string[]).includes(actualType))
+                ? (actualType as MasterySkill)
+                : undefined,
           });
         }
 
@@ -868,7 +915,7 @@ ${prompt}`;
         }
 
         return {
-          day: dayName as any,
+          day: dayName as WeeklyPlanDay['day'],
           tasks: validatedTasks,
         };
       });
@@ -1005,7 +1052,7 @@ ${prompt}`;
 
     let grammarLessons: Array<{ title: string; route: string; contentId?: string }> = [];
     let vocabLessons: Array<{ title: string; route: string; contentId?: string }> = [];
-    let skillLessons: Array<{ title: string; route: string; skill: string }> = [];
+    let skillLessons: Array<{ title: string; route: string; skill: MasterySkill }> = [];
 
     if (!isJa) {
       const cefr = mapIeltsBandToCefr(goal.currentLevel);
@@ -1070,7 +1117,7 @@ ${prompt}`;
         {
           title: 'IELTS Mock Simulyatsiyasi: Xatolar ustida intensiv ishlash',
           route: '/ielts/speaking-mock',
-          skill: 'practice',
+          skill: 'reading',
         },
       ];
     } else {
@@ -1150,8 +1197,8 @@ ${prompt}`;
       dayTasks.push({
         id: `ped-s-${toDeterministicUUID(`${goal.id}:${weekNumber}:${dayName}:s`).slice(0, 12)}`,
         title: sItem.title,
-        type: sItem.skill as any,
-        skill: sItem.skill as any,
+        type: sItem.skill,
+        skill: sItem.skill,
         estimatedMinutes: minutesPerTask,
         completed: false,
         status: 'pending',

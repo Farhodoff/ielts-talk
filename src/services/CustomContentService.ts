@@ -55,6 +55,61 @@ import { supabase } from '../lib/supabase';
 
 import { safeLocalStorage } from '../utils/storage/safeLocalStorage';
 
+/**
+ * Row shape of the `custom_kanji` Supabase table.
+ */
+interface CustomKanjiRow {
+  id?: string;
+  kanji?: string;
+  level?: string;
+  onyomi?: string | null;
+  kunyomi?: string | null;
+  meaning_uz?: string;
+  stroke_count?: number;
+  examples?: JlptKanjiItem['examples'];
+  updated_at?: string;
+}
+
+/**
+ * Row shape of the `custom_grammar` Supabase table.
+ */
+interface CustomGrammarRow {
+  id?: string;
+  title?: string;
+  level?: string;
+  romaji?: string | null;
+  meaning_uz?: string;
+  structure?: string | null;
+  examples?: JlptGrammarItem['examples'];
+  updated_at?: string;
+}
+
+/**
+ * Row shape of the `custom_quiz_questions` Supabase table.
+ */
+interface CustomQuizQuestionRow {
+  id?: number | string;
+  level?: string;
+  pattern?: string | null;
+  question_text?: string | null;
+  questionText?: string;
+  options?: string[];
+  correct_answer?: number;
+  correctAnswer?: number;
+  explanation_uzbek?: string | null;
+  explanationUzbek?: string;
+  updated_at?: string;
+}
+
+/** CEFR/JLPT level union accepted across custom content tables. */
+type JlptLevel = 'N5' | 'N4' | 'N3' | 'N2' | 'N1';
+
+const JLPT_LEVELS: readonly string[] = ['N5', 'N4', 'N3', 'N2', 'N1'];
+
+/** Narrows an arbitrary level string to the JlptLevel union. */
+const toJlptLevel = (value: unknown): JlptLevel =>
+  typeof value === 'string' && JLPT_LEVELS.includes(value) ? (value as JlptLevel) : 'N5';
+
 const CUSTOM_KANJI_KEY = 'study_planner_custom_admin_kanji';
 const CUSTOM_GRAMMAR_KEY = 'study_planner_custom_admin_grammar';
 const CUSTOM_QUIZ_KEY = 'study_planner_custom_admin_quiz_questions';
@@ -86,13 +141,13 @@ export class CustomContentService {
       ]);
 
       if (kRes.status === 'fulfilled' && kRes.value.data && Array.isArray(kRes.value.data)) {
-        const remoteK: JlptKanjiItem[] = kRes.value.data.map((r: any) => ({
-          id: r.id,
-          kanji: r.kanji,
-          level: r.level,
+        const remoteK: JlptKanjiItem[] = (kRes.value.data as CustomKanjiRow[]).map((r) => ({
+          id: r.id ?? '',
+          kanji: r.kanji ?? '',
+          level: r.level ?? 'N5',
           onyomi: r.onyomi || '-',
           kunyomi: r.kunyomi || '-',
-          meaningUz: r.meaning_uz,
+          meaningUz: r.meaning_uz ?? '',
           strokeCount: r.stroke_count || 1,
           examples: Array.isArray(r.examples) ? r.examples : [],
         }));
@@ -115,12 +170,12 @@ export class CustomContentService {
       }
 
       if (gRes.status === 'fulfilled' && gRes.value.data && Array.isArray(gRes.value.data)) {
-        const remoteG: JlptGrammarItem[] = gRes.value.data.map((r: any) => ({
-          id: r.id,
-          title: r.title,
-          level: r.level,
+        const remoteG: JlptGrammarItem[] = (gRes.value.data as CustomGrammarRow[]).map((r) => ({
+          id: r.id ?? '',
+          title: r.title ?? '',
+          level: r.level ?? 'N5',
           romaji: r.romaji || '',
-          meaningUz: r.meaning_uz,
+          meaningUz: r.meaning_uz ?? '',
           structure: r.structure || '',
           examples: Array.isArray(r.examples) ? r.examples : [],
         }));
@@ -141,20 +196,22 @@ export class CustomContentService {
       }
 
       if (qRes.status === 'fulfilled' && qRes.value.data && Array.isArray(qRes.value.data)) {
-        const remoteQ: JlptGrammarQuestion[] = qRes.value.data.map((r: any) => ({
-          id: r.id,
-          level: r.level || 'N5',
-          pattern: r.pattern || '',
-          questionText: r.question_text || r.questionText || '',
-          options: Array.isArray(r.options) ? r.options : [],
-          correctAnswer:
-            typeof r.correct_answer === 'number'
-              ? r.correct_answer
-              : typeof r.correctAnswer === 'number'
-                ? r.correctAnswer
-                : 0,
-          explanationUzbek: r.explanation_uzbek || r.explanationUzbek || '',
-        }));
+        const remoteQ: JlptGrammarQuestion[] = (qRes.value.data as CustomQuizQuestionRow[]).map(
+          (r) => ({
+            id: r.id ?? '',
+            level: r.level || 'N5',
+            pattern: r.pattern || '',
+            questionText: r.question_text || r.questionText || '',
+            options: Array.isArray(r.options) ? r.options : [],
+            correctAnswer:
+              typeof r.correct_answer === 'number'
+                ? r.correct_answer
+                : typeof r.correctAnswer === 'number'
+                  ? r.correctAnswer
+                  : 0,
+            explanationUzbek: r.explanation_uzbek || r.explanationUzbek || '',
+          }),
+        );
 
         const localQ = this.getCustomQuizQuestions();
         const mergedMap = new Map<string | number, JlptGrammarQuestion>();
@@ -213,7 +270,7 @@ export class CustomContentService {
 
       // Try syncing to Supabase
       try {
-        await (supabase.from('custom_kanji') as any).upsert([
+        await supabase.from('custom_kanji').upsert<CustomKanjiRow>([
           {
             id: preparedItem.id,
             kanji: preparedItem.kanji,
@@ -256,7 +313,8 @@ export class CustomContentService {
       safeLocalStorage.setJSON(CUSTOM_KANJI_KEY, [...current]);
 
       try {
-        await (supabase.from('custom_kanji') as any)
+        await supabase
+          .from('custom_kanji')
           .update({
             kanji: updatedItem.kanji,
             level: updatedItem.level,
@@ -289,9 +347,7 @@ export class CustomContentService {
       safeLocalStorage.setJSON(CUSTOM_KANJI_KEY, filtered);
 
       try {
-        await (supabase.from('custom_kanji') as any)
-          .delete()
-          .or(`id.eq.${idOrKanji},kanji.eq.${idOrKanji}`);
+        await supabase.from('custom_kanji').delete().or(`id.eq.${idOrKanji},kanji.eq.${idOrKanji}`);
       } catch {
         // ignore
       }
@@ -312,7 +368,7 @@ export class CustomContentService {
 
     const current = this.getCustomKanji();
     const map = new Map<string, JlptKanjiItem>(current.map((k) => [k.kanji, k]));
-    const toUpsertDb: any[] = [];
+    const toUpsertDb: CustomKanjiRow[] = [];
 
     for (const raw of items) {
       if (!raw.kanji || !raw.kanji.trim() || !raw.meaningUz || !raw.meaningUz.trim()) {
@@ -358,7 +414,7 @@ export class CustomContentService {
 
     if (toUpsertDb.length > 0) {
       try {
-        await (supabase.from('custom_kanji') as any).upsert(toUpsertDb);
+        await supabase.from('custom_kanji').upsert<CustomKanjiRow>(toUpsertDb);
       } catch {
         // ignore
       }
@@ -384,17 +440,26 @@ export class CustomContentService {
       (trimmed.startsWith('{') && trimmed.endsWith('}'))
     ) {
       try {
-        const parsed = JSON.parse(trimmed);
-        const list = Array.isArray(parsed) ? parsed : [parsed];
-        return list.map((item: any) => ({
-          kanji: item.kanji || item.char || item.character || '',
-          level: (['N5', 'N4', 'N3', 'N2', 'N1'].includes(item.level) ? item.level : 'N5') as any,
-          onyomi: item.onyomi || item.on || '-',
-          kunyomi: item.kunyomi || item.kun || '-',
-          meaningUz: item.meaningUz || item.meaning_uz || item.meaning || item.tarjima || '',
-          strokeCount: Number(item.strokeCount || item.stroke_count || item.strokes || 1),
-          examples: Array.isArray(item.examples) ? item.examples : [],
-        }));
+        const parsed: unknown = JSON.parse(trimmed);
+        const list: unknown[] = Array.isArray(parsed) ? parsed : [parsed];
+        return list.map((rawItem: unknown) => {
+          const item = (rawItem ?? {}) as Record<string, unknown>;
+          return {
+            kanji:
+              (item.kanji as string) || (item.char as string) || (item.character as string) || '',
+            level: toJlptLevel(item.level),
+            onyomi: (item.onyomi as string) || (item.on as string) || '-',
+            kunyomi: (item.kunyomi as string) || (item.kun as string) || '-',
+            meaningUz:
+              (item.meaningUz as string) ||
+              (item.meaning_uz as string) ||
+              (item.meaning as string) ||
+              (item.tarjima as string) ||
+              '',
+            strokeCount: Number(item.strokeCount || item.stroke_count || item.strokes || 1),
+            examples: Array.isArray(item.examples) ? item.examples : [],
+          };
+        });
       } catch {
         // Fall back to line parser
       }
@@ -411,7 +476,7 @@ export class CustomContentService {
       if (line.includes('|')) {
         const parts = line.split('|').map((p) => p.trim());
         const kanji = parts[0] || '';
-        const level = (['N5', 'N4', 'N3', 'N2', 'N1'].includes(parts[1]) ? parts[1] : 'N5') as any;
+        const level = toJlptLevel(parts[1]);
         const onyomi = parts[2] || '-';
         const kunyomi = parts[3] || '-';
         const meaningUz = parts[4] || '';
@@ -438,7 +503,7 @@ export class CustomContentService {
         if (parts[0] && parts[1]) {
           result.push({
             kanji: parts[0],
-            level: (['N5', 'N4', 'N3', 'N2', 'N1'].includes(parts[2]) ? parts[2] : 'N5') as any,
+            level: toJlptLevel(parts[2]),
             onyomi: parts[3] || '-',
             kunyomi: parts[4] || '-',
             meaningUz: parts[1],
@@ -487,7 +552,7 @@ export class CustomContentService {
       safeLocalStorage.setJSON(CUSTOM_GRAMMAR_KEY, updated);
 
       try {
-        await (supabase.from('custom_grammar') as any).upsert([
+        await supabase.from('custom_grammar').upsert<CustomGrammarRow>([
           {
             id: preparedItem.id,
             title: preparedItem.title,
@@ -532,7 +597,8 @@ export class CustomContentService {
       safeLocalStorage.setJSON(CUSTOM_GRAMMAR_KEY, [...current]);
 
       try {
-        await (supabase.from('custom_grammar') as any)
+        await supabase
+          .from('custom_grammar')
           .update({
             title: updatedItem.title,
             level: updatedItem.level,
@@ -564,7 +630,8 @@ export class CustomContentService {
       safeLocalStorage.setJSON(CUSTOM_GRAMMAR_KEY, filtered);
 
       try {
-        await (supabase.from('custom_grammar') as any)
+        await supabase
+          .from('custom_grammar')
           .delete()
           .or(`id.eq.${idOrTitle},title.eq.${idOrTitle}`);
       } catch {
@@ -587,7 +654,7 @@ export class CustomContentService {
 
     const current = this.getCustomGrammar();
     const map = new Map<string, JlptGrammarItem>(current.map((g) => [g.title, g]));
-    const toUpsertDb: any[] = [];
+    const toUpsertDb: CustomGrammarRow[] = [];
 
     for (const raw of items) {
       if (!raw.title || !raw.title.trim() || !raw.meaningUz || !raw.meaningUz.trim()) {
@@ -631,7 +698,7 @@ export class CustomContentService {
 
     if (toUpsertDb.length > 0) {
       try {
-        await (supabase.from('custom_grammar') as any).upsert(toUpsertDb);
+        await supabase.from('custom_grammar').upsert<CustomGrammarRow>(toUpsertDb);
       } catch {
         // ignore
       }
@@ -657,16 +724,25 @@ export class CustomContentService {
       (trimmed.startsWith('{') && trimmed.endsWith('}'))
     ) {
       try {
-        const parsed = JSON.parse(trimmed);
-        const list = Array.isArray(parsed) ? parsed : [parsed];
-        return list.map((item: any) => ({
-          title: item.title || item.pattern || item.grammar || '',
-          level: (['N5', 'N4', 'N3', 'N2', 'N1'].includes(item.level) ? item.level : 'N5') as any,
-          romaji: item.romaji || '',
-          meaningUz: item.meaningUz || item.meaning_uz || item.meaning || item.tarjima || '',
-          structure: item.structure || item.formula || '',
-          examples: Array.isArray(item.examples) ? item.examples : [],
-        }));
+        const parsed: unknown = JSON.parse(trimmed);
+        const list: unknown[] = Array.isArray(parsed) ? parsed : [parsed];
+        return list.map((rawItem: unknown) => {
+          const item = (rawItem ?? {}) as Record<string, unknown>;
+          return {
+            title:
+              (item.title as string) || (item.pattern as string) || (item.grammar as string) || '',
+            level: toJlptLevel(item.level),
+            romaji: (item.romaji as string) || '',
+            meaningUz:
+              (item.meaningUz as string) ||
+              (item.meaning_uz as string) ||
+              (item.meaning as string) ||
+              (item.tarjima as string) ||
+              '',
+            structure: (item.structure as string) || (item.formula as string) || '',
+            examples: Array.isArray(item.examples) ? item.examples : [],
+          };
+        });
       } catch {
         // Fall back to line parser
       }
@@ -682,7 +758,7 @@ export class CustomContentService {
       if (line.includes('|')) {
         const parts = line.split('|').map((p) => p.trim());
         const title = parts[0] || '';
-        const level = (['N5', 'N4', 'N3', 'N2', 'N1'].includes(parts[1]) ? parts[1] : 'N5') as any;
+        const level = toJlptLevel(parts[1]);
         const romaji = parts[2] || '';
         const structure = parts[3] || '';
         const meaningUz = parts[4] || '';
@@ -707,7 +783,7 @@ export class CustomContentService {
         if (parts[0] && parts[1]) {
           result.push({
             title: parts[0],
-            level: (['N5', 'N4', 'N3', 'N2', 'N1'].includes(parts[2]) ? parts[2] : 'N5') as any,
+            level: toJlptLevel(parts[2]),
             romaji: parts[3] || '',
             structure: parts[4] || '',
             meaningUz: parts[1],
@@ -900,7 +976,7 @@ export class CustomContentService {
       safeLocalStorage.setJSON(CUSTOM_QUIZ_KEY, updated);
 
       try {
-        await (supabase.from('custom_quiz_questions') as any).upsert([
+        await supabase.from('custom_quiz_questions').upsert<CustomQuizQuestionRow>([
           {
             id: preparedItem.id,
             level: preparedItem.level,
@@ -945,7 +1021,8 @@ export class CustomContentService {
       safeLocalStorage.setJSON(CUSTOM_QUIZ_KEY, [...current]);
 
       try {
-        await (supabase.from('custom_quiz_questions') as any)
+        await supabase
+          .from('custom_quiz_questions')
           .update({
             level: updatedItem.level,
             pattern: updatedItem.pattern,
@@ -977,7 +1054,7 @@ export class CustomContentService {
       safeLocalStorage.setJSON(CUSTOM_QUIZ_KEY, filtered);
 
       try {
-        await (supabase.from('custom_quiz_questions') as any).delete().eq('id', id);
+        await supabase.from('custom_quiz_questions').delete().eq('id', id);
       } catch {
         // ignore
       }
@@ -1002,7 +1079,7 @@ export class CustomContentService {
     const map = new Map<string, JlptGrammarQuestion>(
       current.map((q) => [q.questionText.trim().toLowerCase(), q]),
     );
-    const toUpsertDb: any[] = [];
+    const toUpsertDb: CustomQuizQuestionRow[] = [];
 
     for (const raw of items) {
       if (
@@ -1024,9 +1101,7 @@ export class CustomContentService {
         id: existing
           ? existing.id
           : `custom-q-${Date.now()}-${Math.random().toString(36).slice(2, 7)}`,
-        level: (['N5', 'N4', 'N3', 'N2', 'N1'].includes(raw.level as any)
-          ? raw.level
-          : 'N5') as any,
+        level: toJlptLevel(raw.level),
         pattern: raw.pattern?.trim() || '',
         questionText: qText,
         options: raw.options.map((o) => String(o).trim()),
@@ -1059,7 +1134,7 @@ export class CustomContentService {
 
     if (toUpsertDb.length > 0) {
       try {
-        await (supabase.from('custom_quiz_questions') as any).upsert(toUpsertDb);
+        await supabase.from('custom_quiz_questions').upsert<CustomQuizQuestionRow>(toUpsertDb);
       } catch {
         // ignore
       }
@@ -1080,22 +1155,32 @@ export class CustomContentService {
       (trimmed.startsWith('{') && trimmed.endsWith('}'))
     ) {
       try {
-        const parsed = JSON.parse(trimmed);
-        const list = Array.isArray(parsed) ? parsed : [parsed];
-        return list.map((item: any) => ({
-          level: (['N5', 'N4', 'N3', 'N2', 'N1'].includes(item.level) ? item.level : 'N5') as any,
-          pattern: item.pattern || '',
-          questionText: item.questionText || item.question_text || item.question || '',
-          options: Array.isArray(item.options) ? item.options : [],
-          correctAnswer:
-            typeof item.correctAnswer === 'number'
-              ? item.correctAnswer
-              : typeof item.correct_answer === 'number'
-                ? item.correct_answer
-                : 0,
-          explanationUzbek:
-            item.explanationUzbek || item.explanation_uzbek || item.explanation || '',
-        }));
+        const parsed: unknown = JSON.parse(trimmed);
+        const list: unknown[] = Array.isArray(parsed) ? parsed : [parsed];
+        return list.map((rawItem: unknown) => {
+          const item = (rawItem ?? {}) as Record<string, unknown>;
+          return {
+            level: toJlptLevel(item.level),
+            pattern: (item.pattern as string) || '',
+            questionText:
+              (item.questionText as string) ||
+              (item.question_text as string) ||
+              (item.question as string) ||
+              '',
+            options: Array.isArray(item.options) ? item.options : [],
+            correctAnswer:
+              typeof item.correctAnswer === 'number'
+                ? item.correctAnswer
+                : typeof item.correct_answer === 'number'
+                  ? item.correct_answer
+                  : 0,
+            explanationUzbek:
+              (item.explanationUzbek as string) ||
+              (item.explanation_uzbek as string) ||
+              (item.explanation as string) ||
+              '',
+          };
+        });
       } catch {
         // fallback to line parsing
       }
@@ -1126,7 +1211,7 @@ export class CustomContentService {
         }
         const expl = parts[3] || '';
         const rawLvl = parts[4]?.toUpperCase();
-        const level = (['N5', 'N4', 'N3', 'N2', 'N1'].includes(rawLvl) ? rawLvl : 'N5') as any;
+        const level = toJlptLevel(rawLvl);
         const pattern = parts[5] || '';
 
         if (qText && opts.length >= 2) {

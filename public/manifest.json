@@ -1,7 +1,31 @@
 {
   "short_name": "IELTS Talk",
-  "name": "IELTS Talk",
+  "name": "IELTS Talk — AI Speaking Coach & Platform",
   "icons": [
+    {
+      "src": "/pwa-192x192.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "any"
+    },
+    {
+      "src": "/pwa-192x192.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/pwa-512x512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any"
+    },
+    {
+      "src": "/pwa-512x512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "maskable"
+    },
     {
       "src": "/favicon.png",
       "type": "image/png",
@@ -9,27 +33,10 @@
       "purpose": "any"
     },
     {
-      "src": "/pwa-192x192.png",
-      "type": "image/png",
-      "sizes": "192x192",
-      "purpose": "any maskable"
-    },
-    {
-      "src": "/pwa-512x512.png",
-      "type": "image/png",
-      "sizes": "512x512",
-      "purpose": "any maskable"
-    },
-    {
-      "src": "/logo.png",
-      "type": "image/png",
-      "sizes": "512x512",
-      "purpose": "any"
-    },
-    {
       "src": "/favicon.svg",
       "type": "image/svg+xml",
-      "sizes": "any"
+      "sizes": "any",
+      "purpose": "any"
     }
   ],
   "start_url": "/",
@@ -42,6 +49,21 @@
   "id": "/",
   "display_override": ["standalone", "window-controls-overlay"],
   "prefer_related_applications": false,
+  "screenshots": [
+    {
+      "src": "/og-image.png",
+      "sizes": "1200x630",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "IELTS Talk Dashboard & Speaking Coach"
+    },
+    {
+      "src": "/og-image.png",
+      "sizes": "1200x630",
+      "type": "image/png",
+      "label": "IELTS Talk Platformasi"
+    }
+  ],
   "shortcuts": [
     {
       "name": "IELTS Hub",

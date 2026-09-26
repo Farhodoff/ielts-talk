@@ -9,6 +9,7 @@ import { FocusTimerProvider } from './context/FocusTimerContext';
 import { LanguageProvider } from './context/LanguageContext';
 import { supabase } from './lib/supabase';
 import OfflineIndicator from './components/OfflineIndicator';
+import { InstallPrompt } from './components/pwa/InstallPrompt';
 import { PushNotificationPrompt } from './components/pwa/PushNotificationPrompt';
 import { Toaster } from './components/ui/toaster';
 import { lazyWithRetry } from './utils/lazyRetry';
@@ -379,6 +380,7 @@ const App: React.FC = () => {
 
                 {/* PWA Prompts */}
                 <ReloadPrompt />
+                <InstallPrompt />
                 <PushNotificationPrompt />
 
                 <OfflineIndicator />
