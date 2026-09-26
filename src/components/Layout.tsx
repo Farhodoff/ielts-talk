@@ -14,6 +14,9 @@ import {
   BarChart3,
   Star,
   Target,
+  PenTool,
+  Headphones,
+  MessageSquare,
 } from 'lucide-react';
 import { NavLink, Outlet, useLocation, useNavigate } from 'react-router-dom';
 import { SessionCompleteModal } from './SessionCompleteModal';
@@ -48,10 +51,21 @@ const Layout: React.FC = () => {
     return saved === 'true';
   });
 
-  const { language, setLanguage, t } = useLanguage();
+  const { language, setLanguage } = useLanguage();
   const { user, targetLevel } = useStudyData();
   const displayEmail = user?.email || '';
   const isAdmin = Boolean(displayEmail && isAdminEmail(displayEmail, (user as any)?.role));
+
+  const userName =
+    user?.user_metadata?.full_name ||
+    user?.user_metadata?.name ||
+    (displayEmail
+      ? displayEmail.split('@')[0]
+      : language === 'en'
+        ? 'IELTS Student'
+        : 'IELTS Talabasi');
+  const userAvatar = user?.user_metadata?.avatar_url;
+  const userInitial = userName.charAt(0).toUpperCase() || 'U';
 
   const isRatingOpen = useRatingModalStore((s) => s.isOpen);
   const isRatingSubmitting = useRatingModalStore((s) => s.isSubmitting);
@@ -121,17 +135,78 @@ const Layout: React.FC = () => {
   }, [location.pathname]);
 
   const navItems: NavItem[] = useMemo(() => {
+    const isEn = language === 'en';
     return [
       { name: 'IELTS Master', path: '/ielts', icon: BookOpen },
-      { name: 'Shaxsiy Rejam', path: '/personal-plan', icon: Target },
-      { name: 'Vocabulary', path: '/vocabulary?lang=en', icon: Brain },
-      { name: 'Scenarios', path: '/scenarios?lang=en', icon: Sparkles },
+      { name: isEn ? 'Study Plan' : 'Shaxsiy Rejam', path: '/personal-plan', icon: Target },
       { name: 'Speaking Coach', path: '/speaking-coach?lang=en', icon: Mic },
-      { name: 'Fleshkard', path: '/flashcards', icon: Copy },
+      { name: isEn ? 'Flashcards' : 'Fleshkartalar', path: '/flashcards', icon: Copy },
+      { name: isEn ? 'Vocabulary' : "So'z Boyligi", path: '/vocabulary?lang=en', icon: Brain },
+      { name: isEn ? 'Scenarios' : 'Senariylar', path: '/scenarios?lang=en', icon: Sparkles },
       { name: 'Pomodoro', path: '/focus', icon: Clock },
-      { name: 'Progress', path: '/progress', icon: BarChart3 },
+      { name: isEn ? 'Progress' : 'Statistika', path: '/progress', icon: BarChart3 },
     ];
-  }, []);
+  }, [language]);
+
+  const drawerSections = useMemo(() => {
+    const isEn = language === 'en';
+    return [
+      {
+        title: isEn ? 'IELTS Learning Hub' : "IELTS O'quv Markazi",
+        items: [
+          { name: isEn ? 'IELTS Master' : 'IELTS Master (Asosiy)', path: '/ielts', icon: BookOpen },
+          {
+            name: isEn ? 'Speaking Coach' : 'Speaking AI Coach',
+            path: '/speaking-coach?lang=en',
+            icon: Mic,
+          },
+          {
+            name: isEn ? 'Speaking Mock Test' : 'Speaking Mock Imtihon',
+            path: '/ielts/speaking-mock',
+            icon: Sparkles,
+          },
+          {
+            name: isEn ? 'Writing Lab' : 'Writing & Insho Tekshirish',
+            path: '/ielts?tab=writing',
+            icon: PenTool,
+          },
+          {
+            name: isEn ? 'Reading & Listening' : 'Reading & Listening Mock',
+            path: '/ielts?tab=reading_listening',
+            icon: Headphones,
+          },
+        ],
+      },
+      {
+        title: isEn ? 'Vocabulary & Practice' : "Lug'at & Mashg'ulot",
+        items: [
+          {
+            name: isEn ? 'Flashcards (SRS)' : 'Fleshkartalar (SRS)',
+            path: '/flashcards',
+            icon: Copy,
+          },
+          { name: isEn ? 'Vocabulary' : "So'z Boyligi", path: '/vocabulary?lang=en', icon: Brain },
+          {
+            name: isEn ? 'Scenarios' : 'Muloqot Senariylari',
+            path: '/scenarios?lang=en',
+            icon: MessageSquare,
+          },
+        ],
+      },
+      {
+        title: isEn ? 'Plan & Tracking' : 'Reja & Tahlil',
+        items: [
+          { name: isEn ? 'Study Plan' : 'Shaxsiy Rejam', path: '/personal-plan', icon: Target },
+          {
+            name: isEn ? 'Study Progress' : "O'quv Statistikasi",
+            path: '/progress',
+            icon: BarChart3,
+          },
+          { name: isEn ? 'Pomodoro Focus' : 'Pomodoro Taymer', path: '/focus', icon: Clock },
+        ],
+      },
+    ];
+  }, [language]);
 
   const formatTime = (seconds: number) => {
     const mins = Math.floor(seconds / 60);
@@ -140,15 +215,33 @@ const Layout: React.FC = () => {
   };
 
   const getPageTitle = () => {
-    const found = navItems.find((item) => item.path === location.pathname);
-    if (found) return found.name;
-    if (location.pathname.startsWith('/scenarios')) return 'Scenarios';
-    if (location.pathname.startsWith('/speaking-coach')) return 'Speaking Coach';
-    if (location.pathname === '/ielts') return 'IELTS Master';
-    if (location.pathname === '/progress') return "O'quv Statistikasi & Progress";
-    if (location.pathname === '/admin') return 'Super Admin Paneli';
-    if (location.pathname === '/personal-plan') return 'Shaxsiy Rejam';
-    if (location.pathname === '/settings') return 'Sozlamalar';
+    const isEn = language === 'en';
+    if (location.pathname === '/ielts' || location.pathname === '/') {
+      if (location.search.includes('tab=writing'))
+        return isEn ? 'IELTS Writing' : 'Writing & Insho';
+      if (location.search.includes('tab=reading_listening')) return 'Reading & Listening';
+      if (location.search.includes('tab=grammar')) return isEn ? 'Grammar Master' : 'Grammatika';
+      return 'IELTS Master';
+    }
+    if (location.pathname.startsWith('/ielts/speaking-mock'))
+      return isEn ? 'Speaking Mock' : 'Speaking Mock Test';
+    if (
+      location.pathname.startsWith('/speaking') ||
+      location.pathname.startsWith('/speaking-coach')
+    )
+      return 'Speaking Coach';
+    if (location.pathname.startsWith('/flashcards') || location.pathname.startsWith('/decks'))
+      return isEn ? 'Flashcards' : 'Fleshkartalar';
+    if (location.pathname.startsWith('/vocabulary')) return isEn ? 'Vocabulary' : "So'z Boyligi";
+    if (location.pathname.startsWith('/scenarios')) return isEn ? 'Scenarios' : 'Senariylar';
+    if (location.pathname.startsWith('/personal-plan') || location.pathname === '/plan')
+      return isEn ? 'Study Plan' : 'Shaxsiy Rejam';
+    if (location.pathname.startsWith('/progress')) return isEn ? 'Progress' : 'Statistika';
+    if (location.pathname.startsWith('/focus')) return 'Pomodoro';
+    if (location.pathname.startsWith('/settings')) return isEn ? 'Settings' : 'Sozlamalar';
+    if (location.pathname.startsWith('/admin')) return 'Admin Panel';
+    if (location.pathname.startsWith('/calendar')) return isEn ? 'Calendar' : 'Kalendar';
+    if (location.pathname.startsWith('/diagnostic')) return isEn ? 'Diagnostic' : 'Diagnostika';
     return 'IELTS Talk';
   };
 
@@ -255,13 +348,15 @@ const Layout: React.FC = () => {
 
       {/* Mobile Header */}
       {!isFullScreenPage && (
-        <header className="glass-card relative z-30 flex items-center justify-between border-b px-4 py-2.5 pt-[max(env(safe-area-inset-top),0.65rem)] md:hidden">
+        <header className="glass-card relative z-30 flex items-center justify-between border-b px-3.5 py-2.5 pt-[max(env(safe-area-inset-top),0.65rem)] md:hidden">
           <div className="flex min-w-0 items-center gap-2">
             <AppLogo size="sm" showText={false} />
-            <h1 className="text-gradient truncate text-lg font-bold">{getPageTitle()}</h1>
+            <h1 className="text-gradient truncate text-base font-bold sm:text-lg">
+              {getPageTitle()}
+            </h1>
           </div>
 
-          <div className="flex shrink-0 items-center gap-1.5">
+          <div className="flex shrink-0 items-center gap-2">
             <button
               type="button"
               onClick={() => setLanguage(language === 'uz' ? 'en' : 'uz')}
@@ -281,14 +376,25 @@ const Layout: React.FC = () => {
               )}
             </button>
 
-            <button
-              type="button"
-              onClick={() => setSidebarOpen(true)}
-              className="flex items-center justify-center rounded-xl border border-border bg-muted/80 p-1.5 text-foreground transition hover:bg-muted active:scale-95"
-              aria-label="Menyu"
+            {/* Quick Profile / Settings link */}
+            <NavLink
+              to="/settings"
+              aria-label={language === 'en' ? 'Settings & Profile' : 'Profil & Sozlamalar'}
+              className="flex h-8 w-8 items-center justify-center rounded-xl border border-border/80 bg-muted/80 text-muted-foreground transition-all hover:bg-muted hover:text-foreground active:scale-95"
+              title={language === 'en' ? 'Settings & Profile' : 'Profil & Sozlamalar'}
             >
-              <Menu size={18} />
-            </button>
+              {userAvatar ? (
+                <img
+                  src={userAvatar}
+                  alt={userName}
+                  className="h-full w-full rounded-xl object-cover"
+                />
+              ) : (
+                <div className="flex h-full w-full items-center justify-center rounded-xl bg-primary/10 text-xs font-bold text-primary">
+                  {userInitial}
+                </div>
+              )}
+            </NavLink>
           </div>
         </header>
       )}
@@ -367,7 +473,7 @@ const Layout: React.FC = () => {
             title={language === 'en' ? 'Rate app & feedback' : 'Ilovani baholash (5★)'}
           >
             <Star size={16} className="shrink-0 fill-amber-400 text-amber-500" />
-            {!isCollapsed && <span>{language === 'en' ? '⭐ Rate App' : '⭐ Baholash'}</span>}
+            {!isCollapsed && <span>{language === 'en' ? 'Rate App' : 'Baholash (5★)'}</span>}
           </button>
 
           <div className="flex items-center gap-1.5">
@@ -441,31 +547,59 @@ const Layout: React.FC = () => {
               path: '/ielts',
               icon: BookOpen,
             },
-            { name: 'Speaking', path: '/speaking-coach', icon: Mic },
-            { name: 'Kartalar', path: '/flashcards', icon: Copy },
-            { name: 'Rejam', path: '/personal-plan', icon: Target },
+            {
+              name: 'Speaking',
+              path: '/speaking-coach',
+              icon: Mic,
+            },
+            {
+              name: language === 'en' ? 'Cards' : 'Kartalar',
+              path: '/flashcards',
+              icon: Copy,
+            },
+            {
+              name: language === 'en' ? 'Plan' : 'Rejam',
+              path: '/personal-plan',
+              icon: Target,
+            },
           ].map((item) => {
             const isItemActive =
               location.pathname.startsWith(item.path) ||
               (item.path === '/ielts' &&
                 (location.pathname === '/' || location.pathname === '/ielts')) ||
-              (item.path === '/speaking-coach' && location.pathname.startsWith('/speaking')) ||
+              (item.path === '/speaking-coach' &&
+                (location.pathname.startsWith('/speaking') ||
+                  location.pathname.startsWith('/ielts/speaking-mock'))) ||
               (item.path === '/flashcards' &&
                 (location.pathname.startsWith('/flashcards') ||
-                  location.pathname.startsWith('/study-mode')));
+                  location.pathname.startsWith('/study-mode') ||
+                  location.pathname.startsWith('/decks')));
 
             return (
               <NavLink
                 key={item.path}
                 to={item.path}
-                className={`flex min-h-[44px] w-16 flex-col items-center justify-center rounded-xl p-1 transition-all duration-200 active:scale-95 ${
+                className={`relative flex min-h-[48px] w-16 flex-col items-center justify-center rounded-xl p-1 transition-all duration-200 active:scale-95 ${
                   isItemActive
-                    ? 'bg-primary/10 font-bold text-primary shadow-xs'
+                    ? 'font-bold text-primary'
                     : 'text-muted-foreground hover:text-foreground'
                 }`}
               >
-                <item.icon size={20} className="mb-0.5" strokeWidth={isItemActive ? 2.5 : 2} />
-                <span className="text-[10px] font-semibold leading-tight">{item.name}</span>
+                {isItemActive && (
+                  <motion.div
+                    layoutId="activeBottomNav"
+                    className="absolute inset-0 rounded-xl bg-primary/10 shadow-xs"
+                    transition={{ type: 'spring', stiffness: 400, damping: 30 }}
+                  />
+                )}
+                <item.icon
+                  size={20}
+                  className="relative z-10 mb-0.5"
+                  strokeWidth={isItemActive ? 2.5 : 2}
+                />
+                <span className="relative z-10 text-[10px] font-semibold leading-tight">
+                  {item.name}
+                </span>
               </NavLink>
             );
           })}
@@ -474,63 +608,182 @@ const Layout: React.FC = () => {
             <SheetTrigger asChild>
               <button
                 aria-label="Menyuni ochish"
-                className="flex min-h-[44px] w-16 flex-col items-center justify-center rounded-xl p-1 text-muted-foreground transition-colors hover:text-foreground active:scale-95"
+                className={`relative flex min-h-[48px] w-16 flex-col items-center justify-center rounded-xl p-1 transition-all duration-200 active:scale-95 ${
+                  isSidebarOpen
+                    ? 'font-bold text-primary'
+                    : 'text-muted-foreground hover:text-foreground'
+                }`}
               >
-                <Menu size={20} className="mb-0.5" />
-                <span className="text-[10px] font-semibold leading-tight">Menyu</span>
+                <Menu size={20} className="mb-0.5" strokeWidth={isSidebarOpen ? 2.5 : 2} />
+                <span className="text-[10px] font-semibold leading-tight">
+                  {language === 'en' ? 'Menu' : 'Menyu'}
+                </span>
               </button>
             </SheetTrigger>
-            <SheetContent side="left" className="flex w-72 flex-col bg-card p-0">
-              <div className="flex h-16 items-center justify-between border-b border-border p-4">
-                <div className="flex items-center gap-2">
+            <SheetContent
+              side="left"
+              className="flex w-[82vw] max-w-xs flex-col bg-card p-0 shadow-2xl"
+            >
+              {/* Drawer Header & Profile Card */}
+              <div className="flex flex-col border-b border-border bg-card/60 p-3.5">
+                <div className="mb-3 flex items-center pr-8">
                   <AppLogo size="sm" />
                 </div>
-              </div>
-              <div className="flex-1 overflow-y-auto">
-                <NavLinks onClick={() => setSidebarOpen(false)} />
-              </div>
-              <div className="space-y-2 border-t border-border/60 bg-card/80 p-3.5">
-                <button
-                  type="button"
-                  onClick={() => {
-                    setSidebarOpen(false);
-                    openRatingModal();
-                  }}
-                  className="flex w-full items-center gap-2.5 rounded-xl border border-amber-500/25 bg-amber-500/10 px-3 py-2 text-xs font-bold text-amber-600 transition hover:bg-amber-500/20 active:scale-95 dark:text-amber-400"
+
+                <NavLink
+                  to="/settings"
+                  onClick={() => setSidebarOpen(false)}
+                  className="active:scale-98 group flex items-center justify-between gap-2.5 rounded-2xl border border-border/80 bg-muted/40 p-2.5 transition hover:bg-muted/70"
                 >
-                  <Star size={16} className="shrink-0 fill-amber-400 text-amber-500" />
-                  <span>{language === 'en' ? '⭐ Rate App' : '⭐ Ilovani baholash'}</span>
-                </button>
+                  <div className="flex min-w-0 items-center gap-2.5">
+                    {userAvatar ? (
+                      <img
+                        src={userAvatar}
+                        alt={userName}
+                        className="h-9 w-9 shrink-0 rounded-xl object-cover ring-1 ring-primary/20"
+                      />
+                    ) : (
+                      <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-indigo-500 to-primary text-xs font-bold text-white shadow-xs">
+                        {userInitial}
+                      </div>
+                    )}
+                    <div className="min-w-0 flex-1">
+                      <p className="truncate text-xs font-bold text-foreground transition-colors group-hover:text-primary">
+                        {userName}
+                      </p>
+                      <p className="truncate text-[11px] text-muted-foreground">
+                        {displayEmail || (language === 'en' ? 'View Profile' : "Profilni ko'rish")}
+                      </p>
+                    </div>
+                  </div>
+                  <span className="shrink-0 rounded-lg border border-indigo-500/30 bg-indigo-950/40 px-2 py-0.5 text-[10px] font-bold text-indigo-300">
+                    {`🇬🇧 ${targetLevel || 'B2'}`}
+                  </span>
+                </NavLink>
+              </div>
+
+              {/* Categorized Drawer Menu Body */}
+              <div className="scrollbar-hide flex-1 space-y-4 overflow-y-auto px-3 py-3">
+                {drawerSections.map((section, sIdx) => (
+                  <div key={sIdx} className="space-y-1">
+                    <div className="px-2 text-[10px] font-bold uppercase tracking-wider text-muted-foreground/70">
+                      {section.title}
+                    </div>
+                    <div className="space-y-0.5">
+                      {section.items.map((item) => {
+                        const isItemActive =
+                          location.pathname === item.path ||
+                          (item.path.startsWith('/ielts?') &&
+                            location.pathname === '/ielts' &&
+                            location.search.includes(item.path.split('?')[1])) ||
+                          (item.path === '/ielts' &&
+                            location.pathname === '/ielts' &&
+                            !location.search.includes('tab='));
+
+                        return (
+                          <NavLink
+                            key={item.name}
+                            to={item.path}
+                            onClick={() => setSidebarOpen(false)}
+                            className={({ isActive }) =>
+                              `active:scale-98 group flex items-center justify-between rounded-xl px-3 py-2 text-xs font-medium transition-all duration-150 ${
+                                isActive || isItemActive
+                                  ? 'bg-primary/10 font-bold text-primary shadow-xs'
+                                  : 'text-muted-foreground hover:bg-muted/70 hover:text-foreground'
+                              }`
+                            }
+                          >
+                            <div className="flex min-w-0 items-center gap-2.5">
+                              <item.icon
+                                size={16}
+                                className={
+                                  isItemActive
+                                    ? 'text-primary'
+                                    : 'text-muted-foreground group-hover:text-foreground'
+                                }
+                              />
+                              <span className="truncate">{item.name}</span>
+                            </div>
+                            <ChevronRight
+                              size={13}
+                              className="shrink-0 text-muted-foreground/40 group-hover:text-muted-foreground"
+                            />
+                          </NavLink>
+                        );
+                      })}
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              {/* Drawer Footer */}
+              <div className="space-y-2 border-t border-border/60 bg-card/95 p-3 pb-[max(env(safe-area-inset-bottom),0.875rem)]">
+                <div className="flex items-center gap-2">
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setSidebarOpen(false);
+                      openRatingModal();
+                    }}
+                    className="flex flex-1 items-center justify-center gap-1.5 rounded-xl border border-amber-500/25 bg-amber-500/10 px-2.5 py-1.5 text-xs font-semibold text-amber-600 transition hover:bg-amber-500/20 active:scale-95 dark:text-amber-400"
+                  >
+                    <Star size={14} className="fill-amber-400 text-amber-500" />
+                    <span>{language === 'en' ? 'Rate App' : 'Baholash (5★)'}</span>
+                  </button>
+
+                  <button
+                    type="button"
+                    onClick={() => setLanguage(language === 'uz' ? 'en' : 'uz')}
+                    className="flex shrink-0 items-center gap-1.5 rounded-xl border border-border/80 bg-muted/80 px-2.5 py-1.5 text-xs font-bold text-muted-foreground transition hover:bg-muted hover:text-foreground active:scale-95"
+                    title={language === 'uz' ? 'Switch to English' : "O'zbek tiliga o'tish"}
+                  >
+                    {language === 'uz' ? (
+                      <>
+                        <UzbekistanFlag className="h-2.5 w-3.5" />
+                        <span>UZ</span>
+                      </>
+                    ) : (
+                      <>
+                        <UKFlag className="h-2.5 w-3.5" />
+                        <span>EN</span>
+                      </>
+                    )}
+                  </button>
+                </div>
 
                 {isAdmin && (
                   <NavLink
                     to="/admin"
                     onClick={() => setSidebarOpen(false)}
                     className={({ isActive }) =>
-                      `flex w-full items-center gap-3 rounded-xl px-3 py-2 text-xs font-bold transition-all duration-200 ${
+                      `flex w-full items-center gap-2.5 rounded-xl px-3 py-1.5 text-xs font-bold transition-all duration-200 ${
                         isActive
                           ? 'border border-rose-500/30 bg-rose-500/15 text-rose-400 shadow-xs'
                           : 'border border-rose-500/20 text-rose-400/90 hover:bg-rose-500/10 hover:text-rose-400'
                       }`
                     }
                   >
-                    <Shield size={16} className="shrink-0 text-rose-500" />
+                    <Shield size={14} className="shrink-0 text-rose-500" />
                     <span>Admin Panel</span>
                   </NavLink>
                 )}
+
                 <NavLink
                   to="/settings"
                   onClick={() => setSidebarOpen(false)}
                   className={({ isActive }) =>
-                    `flex w-full items-center gap-2.5 rounded-xl px-3 py-2 text-xs font-semibold transition-all duration-200 ${
+                    `flex w-full items-center justify-between rounded-xl px-3 py-1.5 text-xs font-semibold transition-all duration-200 ${
                       isActive
                         ? 'bg-primary/10 font-bold text-primary shadow-xs'
                         : 'text-muted-foreground hover:bg-muted/80 hover:text-foreground'
                     }`
                   }
                 >
-                  <SettingsIcon size={16} className="shrink-0" />
-                  <span>{t('nav.settings') || 'Sozlamalar'}</span>
+                  <div className="flex items-center gap-2">
+                    <SettingsIcon size={15} />
+                    <span>{language === 'en' ? 'Settings & Profile' : 'Sozlamalar & Profil'}</span>
+                  </div>
+                  <ChevronRight size={13} className="text-muted-foreground/40" />
                 </NavLink>
               </div>
             </SheetContent>
