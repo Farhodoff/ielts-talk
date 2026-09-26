@@ -72,7 +72,7 @@ export const IeltsHubPage: React.FC = () => {
             }}
             className="inline-flex cursor-pointer items-center gap-2 rounded-xl bg-slate-800 px-4 py-2 text-xs font-bold text-slate-200 shadow-sm transition hover:bg-slate-700"
           >
-            ← Barcha Grammatika Darslariga Qaytish
+            ← Barcha darslar
           </button>
           <div className="flex items-center gap-2 rounded-full border border-amber-500/30 bg-amber-500/15 px-3 py-1 text-xs font-extrabold text-amber-400">
             <Sparkles size={14} className="animate-pulse" />

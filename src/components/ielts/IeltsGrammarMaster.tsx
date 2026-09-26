@@ -125,7 +125,7 @@ export const IeltsGrammarMaster: React.FC = () => {
       setSavedCardIds((prev) => [...prev, topic.id]);
       toast({
         title: '⚡ Fleshkarta Yaratildi!',
-        description: `"${topic.title}" Anki SM-2 takrorlash tizimingizga qo'shildi.`,
+        description: `"${topic.title}" fleshkartalarga qo'shildi.`,
       });
     } catch (e) {
       toast({
@@ -280,10 +280,10 @@ export const IeltsGrammarMaster: React.FC = () => {
         <div className="flex flex-wrap items-center justify-between gap-3 rounded-2xl border border-slate-800 bg-slate-900/90 p-3 shadow-xl backdrop-blur-md sm:p-4">
           <button
             onClick={handleBack}
-            className="flex cursor-pointer items-center gap-2 rounded-xl bg-slate-800 px-4 py-2 text-xs font-bold text-slate-200 transition hover:bg-slate-700"
+            className="flex cursor-pointer items-center gap-2 rounded-xl bg-slate-800 px-3.5 py-2 text-xs font-bold text-slate-200 transition hover:bg-slate-700 active:scale-95"
           >
             <ArrowLeft className="h-4 w-4" />
-            <span>← Barcha Grammatika Darslariga Qaytish</span>
+            <span>← Barcha darslar</span>
           </button>
 
           <div className="flex flex-wrap items-center gap-2">
@@ -356,16 +356,16 @@ export const IeltsGrammarMaster: React.FC = () => {
         </div>
 
         {/* Formula & Theory Card */}
-        <div className="space-y-3.5 rounded-2xl border border-slate-800 bg-slate-900/90 p-4 shadow-xl backdrop-blur-md sm:space-y-4 sm:rounded-3xl sm:p-6 md:p-8">
-          <h2 className="flex items-center gap-2 text-base font-black text-white sm:text-lg">
-            <span>📐 Formula & Tuzilishi</span>
+        <div className="space-y-3 rounded-2xl border border-slate-800 bg-slate-900/90 p-3.5 shadow-xl backdrop-blur-md sm:space-y-4 sm:rounded-3xl sm:p-6 md:p-8">
+          <h2 className="flex items-center gap-2 text-sm font-black text-white sm:text-base md:text-lg">
+            <span>📐 Formula</span>
           </h2>
 
-          <div className="rounded-xl border border-indigo-500/30 bg-gradient-to-r from-indigo-950/70 to-slate-950/90 p-3.5 font-mono text-xs font-bold text-indigo-200 shadow-inner sm:rounded-2xl sm:p-5 sm:text-sm md:text-base">
+          <div className="rounded-xl border border-indigo-500/30 bg-gradient-to-r from-indigo-950/70 to-slate-950/90 p-3 font-mono text-xs font-bold text-indigo-200 shadow-inner sm:rounded-2xl sm:p-5 sm:text-sm md:text-base">
             {focusedTopic.structure}
           </div>
 
-          <div className="space-y-1.5 pt-1 sm:pt-2">
+          <div className="space-y-1 pt-1 sm:pt-2">
             <h3 className="text-xs font-bold uppercase tracking-wider text-slate-400">Qoida:</h3>
             <p className="text-xs leading-relaxed text-slate-200 sm:text-sm md:text-base">
               {focusedTopic.explanation}
@@ -375,30 +375,32 @@ export const IeltsGrammarMaster: React.FC = () => {
 
         {/* Academic & Speaking Examples with Audio */}
         {focusedTopic.academicExamples && focusedTopic.academicExamples.length > 0 && (
-          <div className="space-y-3.5 rounded-2xl border border-slate-800 bg-slate-900/90 p-4 shadow-xl backdrop-blur-md sm:space-y-4 sm:rounded-3xl sm:p-6 md:p-8">
-            <h2 className="flex items-center gap-2 text-base font-black text-white sm:text-lg">
-              <span>🎙️ Misollar va Talaffuz</span>
+          <div className="space-y-3 rounded-2xl border border-slate-800 bg-slate-900/90 p-3.5 shadow-xl backdrop-blur-md sm:space-y-4 sm:rounded-3xl sm:p-6 md:p-8">
+            <h2 className="flex items-center gap-2 text-sm font-black text-white sm:text-base md:text-lg">
+              <span>🎙️ Misollar va audio</span>
             </h2>
-            <div className="space-y-2.5 sm:space-y-3">
+            <div className="space-y-2 sm:space-y-2.5">
               {focusedTopic.academicExamples.map((ex, idx) => (
                 <div
                   key={idx}
-                  className="group relative flex flex-col justify-between gap-3 rounded-2xl border border-slate-800/80 bg-slate-950/60 p-4 transition hover:border-indigo-500/40 hover:bg-slate-950/90 sm:flex-row sm:items-center"
+                  className="group relative flex flex-col justify-between gap-2.5 rounded-xl border border-slate-800/80 bg-slate-950/60 p-3 transition hover:border-indigo-500/40 hover:bg-slate-950/90 sm:flex-row sm:items-center sm:rounded-2xl sm:p-4"
                 >
-                  <div className="flex-1 space-y-1">
+                  <div className="flex-1 space-y-0.5">
                     <div className="flex items-center gap-2">
-                      <span className="rounded-md bg-indigo-500/20 px-2 py-0.5 text-[10px] font-black text-indigo-300">
+                      <span className="rounded-md bg-indigo-500/20 px-1.5 py-0.5 text-[10px] font-black text-indigo-300">
                         {ex.context}
                       </span>
-                      <p className="text-sm font-bold text-white transition group-hover:text-indigo-200 sm:text-base">
+                      <p className="text-xs font-bold text-white transition group-hover:text-indigo-200 sm:text-sm md:text-base">
                         {ex.sentence}
                       </p>
                     </div>
-                    <p className="text-xs italic text-slate-400 sm:text-sm">🇺🇿 {ex.translation}</p>
+                    <p className="text-[11px] italic text-slate-400 sm:text-xs">
+                      🇺🇿 {ex.translation}
+                    </p>
                   </div>
                   <button
                     onClick={() => speakText(ex.sentence, 'en-GB')}
-                    className="flex shrink-0 cursor-pointer items-center justify-center self-start rounded-xl border border-indigo-500/30 bg-indigo-500/10 p-2.5 text-indigo-300 transition hover:bg-indigo-500/20 sm:self-center"
+                    className="flex shrink-0 cursor-pointer items-center justify-center self-start rounded-xl border border-indigo-500/30 bg-indigo-500/10 p-2 text-indigo-300 transition hover:bg-indigo-500/20 active:scale-95 sm:self-center sm:p-2.5"
                     title="Audioni tinglash"
                   >
                     <Volume2 className="h-4 w-4" />
@@ -411,31 +413,35 @@ export const IeltsGrammarMaster: React.FC = () => {
 
         {/* Common Mistakes & Pitfalls */}
         {focusedTopic.commonMistakes && focusedTopic.commonMistakes.length > 0 && (
-          <div className="space-y-3.5 rounded-2xl border border-rose-950/40 bg-slate-900/90 p-4 shadow-xl backdrop-blur-md sm:space-y-4 sm:rounded-3xl sm:p-6 md:p-8">
-            <h2 className="flex items-center gap-2 text-base font-black text-white sm:text-lg">
-              <span>⚠️ Xatolar Tahlili</span>
+          <div className="space-y-3 rounded-2xl border border-rose-950/40 bg-slate-900/90 p-3.5 shadow-xl backdrop-blur-md sm:space-y-4 sm:rounded-3xl sm:p-6 md:p-8">
+            <h2 className="flex items-center gap-2 text-sm font-black text-white sm:text-base md:text-lg">
+              <span>⚠️ Xatolar tahlili</span>
             </h2>
-            <div className="space-y-2.5 sm:space-y-3">
+            <div className="space-y-2 sm:space-y-2.5">
               {focusedTopic.commonMistakes.map((m, idx) => (
                 <div
                   key={idx}
-                  className="space-y-2 rounded-2xl border border-rose-500/20 bg-rose-950/10 p-4 text-xs sm:text-sm"
+                  className="space-y-1.5 rounded-xl border border-rose-500/20 bg-rose-950/10 p-3 text-xs sm:rounded-2xl sm:p-4 sm:text-sm"
                 >
-                  <div className="flex items-start gap-2">
-                    <span className="shrink-0 rounded-md bg-rose-500/20 px-2 py-0.5 text-[10px] font-black text-rose-300">
-                      ❌ XATO
-                    </span>
-                    <span className="font-medium text-rose-300 line-through">{m.incorrect}</span>
+                  <div className="flex flex-col gap-1 sm:flex-row sm:items-center sm:gap-4">
+                    <div className="flex items-center gap-1.5">
+                      <span className="shrink-0 rounded-md bg-rose-500/20 px-1.5 py-0.5 text-[10px] font-black text-rose-300">
+                        ❌ XATO
+                      </span>
+                      <span className="font-medium text-rose-300 line-through">{m.incorrect}</span>
+                    </div>
+                    <div className="flex items-center gap-1.5">
+                      <span className="shrink-0 rounded-md bg-emerald-500/20 px-1.5 py-0.5 text-[10px] font-black text-emerald-300">
+                        ✅ TO'G'RI
+                      </span>
+                      <span className="font-bold text-emerald-300">{m.correct}</span>
+                    </div>
                   </div>
-                  <div className="flex items-start gap-2">
-                    <span className="shrink-0 rounded-md bg-emerald-500/20 px-2 py-0.5 text-[10px] font-black text-emerald-300">
-                      ✅ TO'G'RI
-                    </span>
-                    <span className="font-bold text-emerald-300">{m.correct}</span>
-                  </div>
-                  <div className="mt-1 border-l-2 border-slate-700 pl-2 text-xs text-slate-400">
-                    💡 <span className="font-semibold text-slate-300">Izoh:</span> {m.explanation}
-                  </div>
+                  {m.explanation && (
+                    <div className="border-t border-slate-800/80 pt-1 text-[11px] text-slate-400 sm:text-xs">
+                      💡 <span className="font-semibold text-slate-300">Izoh:</span> {m.explanation}
+                    </div>
+                  )}
                 </div>
               ))}
             </div>
@@ -444,9 +450,9 @@ export const IeltsGrammarMaster: React.FC = () => {
 
         {/* Practice Quiz for this unit */}
         {focusedTopic.quizQuestions && focusedTopic.quizQuestions.length > 0 && (
-          <div className="space-y-4 rounded-2xl border border-slate-800 bg-slate-900/90 p-4 shadow-xl backdrop-blur-md sm:space-y-5 sm:rounded-3xl sm:p-6 md:p-8">
-            <h2 className="flex items-center gap-2 text-base font-black text-white sm:text-lg">
-              <span>🎯 Mustahkamlash Testi ({focusedTopic.quizQuestions.length} ta)</span>
+          <div className="space-y-3.5 rounded-2xl border border-slate-800 bg-slate-900/90 p-3.5 shadow-xl backdrop-blur-md sm:space-y-5 sm:rounded-3xl sm:p-6 md:p-8">
+            <h2 className="flex items-center gap-2 text-sm font-black text-white sm:text-base md:text-lg">
+              <span>🎯 Mustahkamlash testi ({focusedTopic.quizQuestions.length})</span>
             </h2>
             <div className="space-y-6">
               {focusedTopic.quizQuestions.map((q, qIdx) => {
@@ -561,7 +567,7 @@ export const IeltsGrammarMaster: React.FC = () => {
 
   return (
     <div className="space-y-6">
-      {/* Header Banner (Japanese Grammar Hub style) */}
+      {/* Header Banner */}
       <div className="relative overflow-hidden rounded-2xl border border-blue-800/40 bg-gradient-to-r from-blue-950 via-slate-900 to-indigo-950 p-4 shadow-2xl sm:rounded-3xl sm:p-6 md:p-8">
         <div className="pointer-events-none absolute -right-12 -top-12 h-64 w-64 rounded-full bg-blue-500/10 blur-3xl" />
         <div className="pointer-events-none absolute -bottom-12 -left-12 h-64 w-64 rounded-full bg-indigo-500/10 blur-3xl" />
@@ -569,10 +575,10 @@ export const IeltsGrammarMaster: React.FC = () => {
         <div className="relative z-10 flex flex-col justify-between gap-4 md:flex-row md:items-center">
           <div>
             <h1 className="flex items-center gap-2.5 text-xl font-black tracking-tight text-white md:text-2xl">
-              <span>📚 English Grammar Master (Murphy)</span>
+              <span>📚 English Grammar Master</span>
             </h1>
             <p className="mt-1 text-xs text-slate-300 sm:text-sm">
-              A1 dan C1 gacha bo'lgan 76 ta dars va har birida 10+ ta mustahkamlash testlari.
+              A1 dan C1 gacha 76 ta interaktiv dars va mustahkamlash testlari.
             </p>
           </div>
 
@@ -611,7 +617,7 @@ export const IeltsGrammarMaster: React.FC = () => {
             }`}
           >
             <Flame className="h-3.5 w-3.5 text-amber-400" />
-            <span>Testlar ({allQuizPool.length} ta savol)</span>
+            <span>Testlar ({allQuizPool.length})</span>
           </button>
         </div>
       </div>
@@ -648,7 +654,7 @@ export const IeltsGrammarMaster: React.FC = () => {
                 type="text"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                placeholder="Grammatika, qoida yoki uzbekcha izlash..."
+                placeholder="Mavzu yoki qoidani qidirish..."
                 className="w-full rounded-xl border border-slate-800 bg-slate-950/80 py-2.5 pl-10 pr-4 text-sm text-white placeholder-slate-500 transition focus:border-blue-500 focus:outline-none"
               />
             </div>
@@ -685,7 +691,7 @@ export const IeltsGrammarMaster: React.FC = () => {
             {/* Progress Bar Widget */}
             <div className="flex items-center gap-3">
               <div className="text-xs text-slate-400">
-                Progress ({selectedLevel}):{' '}
+                Natija ({selectedLevel}):{' '}
                 <span className="font-bold text-emerald-400">{levelStats.progressPercent}%</span> (
                 {levelStats.mastered + levelStats.learned}/{levelStats.total})
               </div>
@@ -740,7 +746,7 @@ export const IeltsGrammarMaster: React.FC = () => {
                       <div className="flex flex-wrap items-center gap-2">
                         {isTargetTopic && (
                           <span className="inline-flex animate-pulse items-center gap-1 rounded-full border border-amber-500/50 bg-amber-500/20 px-2.5 py-0.5 text-xs font-black text-amber-300">
-                            🎯 Shaxsiy Rejangizdagi Dars
+                            🎯 Rejadagi dars
                           </span>
                         )}
                         <span
@@ -752,7 +758,7 @@ export const IeltsGrammarMaster: React.FC = () => {
                                 : 'border-purple-500/30 bg-purple-500/20 text-purple-300'
                           }`}
                         >
-                          {topic.level} Foundation
+                          {topic.level}
                         </span>
                         <span className="text-[11px] font-semibold text-slate-400">
                           {topic.category}
@@ -798,7 +804,7 @@ export const IeltsGrammarMaster: React.FC = () => {
                     {/* Formula / Structure Box */}
                     <div className="mb-3 space-y-1 rounded-xl border border-slate-800/80 bg-slate-950/70 p-3">
                       <div className="text-[10px] font-bold uppercase tracking-wider text-rose-400">
-                        📐 Grammatik Formula & Struktura:
+                        📐 Formula:
                       </div>
                       <code className="block break-words font-mono text-xs text-amber-300">
                         {topic.structure}
@@ -807,16 +813,14 @@ export const IeltsGrammarMaster: React.FC = () => {
 
                     {/* Explanation Box */}
                     <div className="mb-3 space-y-1 rounded-xl border border-slate-800/40 bg-slate-950/40 p-3 text-xs leading-relaxed text-slate-300">
-                      <span className="block text-[11px] font-bold text-slate-200">
-                        💡 Murphy Qoidasi:
-                      </span>
+                      <span className="block text-[11px] font-bold text-slate-200">💡 Qoida:</span>
                       <p>{topic.explanation}</p>
                     </div>
 
                     {/* Example Sentences with individual Audio */}
                     <div className="mb-3 space-y-2">
                       <span className="block text-[10px] font-bold uppercase tracking-wider text-slate-400">
-                        📑 Amaliy Misollar (Hayotiy & Akademik):
+                        📑 Misollar:
                       </span>
                       {topic.academicExamples.map((ex, idx) => (
                         <div
@@ -859,13 +863,15 @@ export const IeltsGrammarMaster: React.FC = () => {
 
                   {/* Bottom Row: Status Toggles */}
                   <div className="flex items-center justify-between gap-2 border-t border-slate-800/80 pt-3">
-                    <span className="text-[10px] font-medium text-slate-500">Holat:</span>
-                    <div className="flex items-center gap-1">
+                    <span className="hidden text-[10px] font-medium text-slate-500 sm:inline">
+                      Holat:
+                    </span>
+                    <div className="flex w-full items-center justify-between gap-1 sm:w-auto sm:justify-start">
                       {(['unlearned', 'hard', 'learned', 'mastered'] as const).map((st) => (
                         <button
                           key={st}
                           onClick={() => setItemStatus(topic.id, st)}
-                          className={`rounded-lg px-2 py-0.5 text-[10px] font-bold transition ${
+                          className={`flex-1 rounded-lg px-2 py-1 text-center text-[10px] font-bold transition sm:flex-initial ${
                             status === st
                               ? st === 'mastered'
                                 ? 'bg-emerald-600 text-white'
@@ -878,7 +884,7 @@ export const IeltsGrammarMaster: React.FC = () => {
                           }`}
                         >
                           {st === 'mastered'
-                            ? 'Mustahkamlandi'
+                            ? 'Mustahkam'
                             : st === 'learned'
                               ? "O'rganildi"
                               : st === 'hard'

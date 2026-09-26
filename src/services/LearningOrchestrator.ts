@@ -20,7 +20,6 @@ import { safeLocalStorage } from '../utils/storage/safeLocalStorage';
 import { Flashcard } from '../types';
 import { isDue, isOverdue } from '../utils/srs';
 import { supabase } from '../lib/supabase';
-import { isSuperAdmin } from '../utils/admin';
 
 export const LearningOrchestrator = {
   /**
