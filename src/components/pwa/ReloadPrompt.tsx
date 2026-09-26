@@ -29,7 +29,16 @@ const ReloadPrompt: React.FC = () => {
     },
   });
 
-  const shouldShow = (!dismissed && (needRefresh || autoUpdateAvailable)) || offlineReady;
+  const isLocalhost =
+    typeof window !== 'undefined' &&
+    (window.location.hostname === 'localhost' ||
+      window.location.hostname === '127.0.0.1' ||
+      window.location.hostname.endsWith('.local'));
+
+  const shouldShow =
+    !isLocalhost &&
+    !import.meta.env.DEV &&
+    ((!dismissed && (needRefresh || autoUpdateAvailable)) || offlineReady);
 
   // Auto-reload countdown when a new version/feature is pushed
   useEffect(() => {

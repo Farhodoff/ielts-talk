@@ -19,48 +19,66 @@ FlashcardOfflineSync.initAutoSync();
 
 import autoUpdateService from './services/AutoUpdateService';
 
-// Real-time kesh tozalash va yangilanishlar xizmatini ishga tushirish (har 30 soniyada va tab active bo'lganda)
-autoUpdateService.init(30000);
+const isLocalhost =
+  typeof window !== 'undefined' &&
+  (window.location.hostname === 'localhost' ||
+    window.location.hostname === '127.0.0.1' ||
+    window.location.hostname.endsWith('.local'));
 
-// PWA service worker-ni ro'yxatdan o'tkazish va avtomatik yangilash (kesh tiqilib qolishini oldini olish)
-let isRefreshing = false;
-if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.addEventListener('controllerchange', () => {
-    if (isRefreshing) return;
-    isRefreshing = true;
-    console.info('[PWA] Yangi versiya faollashdi. Sahifa avtomatik yangilanmoqda...');
-    window.location.reload();
-  });
-}
+// Real-time kesh tozalash va PWA service worker-ni faqat productionda ro'yxatdan o'tkazish
+// Localhostda service worker keshlar to'qnashuvi va to'xtovsiz reload hosil qilmasligi uchun o'chiriladi
+if (!isLocalhost && import.meta.env.PROD) {
+  autoUpdateService.init(30000);
 
-registerSW({
-  immediate: true,
-  onRegisteredSW(_swUrl, registration) {
-    if (registration) {
-      // 1. Dastlabki kirganda yangilanishni darhol tekshirish
-      registration.update().catch(() => {});
+  let isRefreshing = false;
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.addEventListener('controllerchange', () => {
+      if (isRefreshing) return;
+      isRefreshing = true;
+      console.info('[PWA] Yangi versiya faollashdi. Sahifa avtomatik yangilanmoqda...');
+      window.location.reload();
+    });
+  }
 
-      // 2. Har 30 soniyada yangi deploy borligini tekshirish
-      setInterval(() => {
+  registerSW({
+    immediate: true,
+    onRegisteredSW(_swUrl, registration) {
+      if (registration) {
+        // 1. Dastlabki kirganda yangilanishni darhol tekshirish
         registration.update().catch(() => {});
-      }, 30 * 1000);
 
-      // 3. Foydalanuvchi ilovaga qaytganida (tab active bo'lganda) tekshirish
-      document.addEventListener('visibilitychange', () => {
-        if (document.visibilityState === 'visible') {
+        // 2. Har 30 soniyada yangi deploy borligini tekshirish
+        setInterval(() => {
           registration.update().catch(() => {});
-        }
-      });
-    }
-  },
-  onNeedRefresh() {
-    console.info('[PWA] Yangi versiya aniqlandi, keshlar tozalanib yangilanmoqda...');
-    autoUpdateService.purgeCachesAndReload();
-  },
-  onRegisterError(error) {
-    console.warn('[PWA] ServiceWorker registration ignored:', error);
-  },
-});
+        }, 30 * 1000);
+
+        // 3. Foydalanuvchi ilovaga qaytganida (tab active bo'lganda) tekshirish
+        document.addEventListener('visibilitychange', () => {
+          if (document.visibilityState === 'visible') {
+            registration.update().catch(() => {});
+          }
+        });
+      }
+    },
+    onNeedRefresh() {
+      console.info('[PWA] Yangi versiya aniqlandi, keshlar tozalanib yangilanmoqda...');
+      autoUpdateService.purgeCachesAndReload();
+    },
+    onRegisterError(error) {
+      console.warn('[PWA] ServiceWorker registration ignored:', error);
+    },
+  });
+} else if (isLocalhost && typeof window !== 'undefined' && 'serviceWorker' in navigator) {
+  // Localhostda eski keshlar va service workerlarni tozalash (reload looplarini bartaraf qilish)
+  navigator.serviceWorker
+    .getRegistrations()
+    .then((registrations) => {
+      for (const reg of registrations) {
+        reg.unregister();
+      }
+    })
+    .catch(() => {});
+}
 
 // Yangi deploydan keyin keshdagi eski chunklar 404 berganda keshni tozalab avtomatik yangilash
 window.addEventListener('vite:preloadError', async (event) => {

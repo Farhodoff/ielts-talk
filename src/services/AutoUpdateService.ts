@@ -46,6 +46,17 @@ class AutoUpdateService {
    */
   public init(intervalMs = 30000): void {
     if (this.isInitialized || typeof window === 'undefined') return;
+
+    const isLocalhost =
+      typeof window !== 'undefined' &&
+      (window.location.hostname === 'localhost' ||
+        window.location.hostname === '127.0.0.1' ||
+        window.location.hostname.endsWith('.local'));
+
+    if ((import.meta.env.DEV || isLocalhost) && !import.meta.env.VITEST) {
+      return;
+    }
+
     this.isInitialized = true;
 
     // 1. Initial check after 2.5s (allow initial page load to settle)
@@ -73,7 +84,9 @@ class AutoUpdateService {
     // 5. Catch dynamic chunk load failures (Vite chunk 404 after new deploy)
     window.addEventListener('vite:preloadError', async (event) => {
       event.preventDefault();
-      console.warn('[AutoUpdate] Dynamic import preload error detected. Purging caches and reloading...');
+      console.warn(
+        '[AutoUpdate] Dynamic import preload error detected. Purging caches and reloading...',
+      );
       await this.purgeCachesAndReload();
     });
   }
@@ -93,8 +106,18 @@ class AutoUpdateService {
   /**
    * Queries /version.json with cache-busting to detect newer deployments.
    */
-  public async checkForUpdate(): Promise<boolean> {
+  public async checkForUpdate(force = false): Promise<boolean> {
     if (typeof window === 'undefined') return false;
+
+    const isLocalhost =
+      typeof window !== 'undefined' &&
+      (window.location.hostname === 'localhost' ||
+        window.location.hostname === '127.0.0.1' ||
+        window.location.hostname.endsWith('.local'));
+
+    if (!force && (import.meta.env.DEV || isLocalhost) && !import.meta.env.VITEST) {
+      return false;
+    }
 
     try {
       const url = `/version.json?t=${Date.now()}`;
@@ -112,7 +135,9 @@ class AutoUpdateService {
 
       if (data?.buildTime && data.buildTime > this.localBuildTime) {
         if (!this.hasUpdate) {
-          console.info(`[AutoUpdate] New version detected! Local: ${this.localBuildTime}, Remote: ${data.buildTime}`);
+          console.info(
+            `[AutoUpdate] New version detected! Local: ${this.localBuildTime}, Remote: ${data.buildTime}`,
+          );
           this.hasUpdate = true;
           this.remoteVersionInfo = data;
           this.notifyListeners();
@@ -185,7 +210,12 @@ class AutoUpdateService {
     }
   }
 
-  public getStatus(): { hasUpdate: boolean; localBuildTime: number; appVersion: string; remoteVersionInfo: VersionInfo | null } {
+  public getStatus(): {
+    hasUpdate: boolean;
+    localBuildTime: number;
+    appVersion: string;
+    remoteVersionInfo: VersionInfo | null;
+  } {
     return {
       hasUpdate: this.hasUpdate,
       localBuildTime: this.localBuildTime,
