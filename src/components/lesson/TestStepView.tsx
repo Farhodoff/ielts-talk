@@ -120,10 +120,10 @@ export const TestStepView: React.FC<TestStepViewProps> = ({
         <div>
           <span className="flex items-center gap-1.5 text-xs font-black uppercase tracking-wider text-primary">
             <Award size={14} />
-            <span>Dars Testi (Quiz)</span>
+            <span>Quiz</span>
           </span>
           <p className="mt-0.5 text-xs text-muted-foreground">
-            {instructions || "Bilimingizni sinovdan o'tkazing:"}
+            {instructions || "To'g'ri javobni tanlang:"}
           </p>
         </div>
         {!isCompleted && (
@@ -135,7 +135,7 @@ export const TestStepView: React.FC<TestStepViewProps> = ({
 
       {!isCompleted ? (
         /* Active Question Card */
-        <div className="space-y-4 rounded-2xl border border-border bg-card p-4 shadow-sm sm:space-y-6 sm:rounded-3xl sm:p-6">
+        <div className="space-y-3.5 rounded-2xl border border-border bg-card p-3.5 shadow-sm sm:space-y-6 sm:rounded-3xl sm:p-6">
           <div className="text-base font-bold leading-snug text-foreground md:text-lg">
             <FuriganaText text={currentQuestion.question} />
           </div>
@@ -229,8 +229,8 @@ export const TestStepView: React.FC<TestStepViewProps> = ({
             </div>
             <p className="mx-auto max-w-md text-xs text-muted-foreground">
               {isPassed
-                ? "Ajoyib natija! Ushbu darsning barcha asosiy mavzularini o'zlashtirdingiz."
-                : "Natijangizni yaxshilash uchun tahlillarni ko'rib chiqing va qayta urinib ko'ring."}
+                ? "Ajoyib natija! Dars mavzulari muvaffaqiyatli o'zlashtirildi."
+                : "Xatolarni ko'rib chiqib, qayta urinib ko'ring."}
             </p>
           </div>
 

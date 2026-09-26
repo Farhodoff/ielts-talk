@@ -50,7 +50,7 @@ export const LessonPlayerPage: React.FC = () => {
       const access = LearningOrchestrator.canAccessLesson(lessonId, user?.id || '');
       if (!access.allowed) {
         console.warn(`[LessonPlayer] Access denied: ${access.reason}`);
-        navigate(access.redirectTo || '/jlpt', { replace: true });
+        navigate(access.redirectTo || '/ielts', { replace: true });
         return;
       }
       setLesson(foundLesson);
@@ -240,7 +240,7 @@ export const LessonPlayerPage: React.FC = () => {
   };
 
   const handleExit = () => {
-    navigate('/jlpt');
+    navigate('/ielts');
   };
 
   if (loading) {

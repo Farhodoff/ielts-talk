@@ -110,11 +110,9 @@ export const PracticeStepView: React.FC<PracticeStepViewProps> = ({
       {/* Header / Subtitle */}
       <div className="flex items-center justify-between">
         <div>
-          <span className="text-xs font-black uppercase tracking-wider text-primary">
-            Interaktiv Mashq
-          </span>
+          <span className="text-xs font-black uppercase tracking-wider text-primary">Mashq</span>
           <p className="mt-0.5 text-xs text-muted-foreground">
-            {instructions || "Savolga to'g'ri javobni tanlang:"}
+            {instructions || "To'g'ri javobni tanlang:"}
           </p>
         </div>
         <div className="rounded-full bg-secondary px-2.5 py-1 text-xs font-bold text-foreground">
@@ -123,7 +121,7 @@ export const PracticeStepView: React.FC<PracticeStepViewProps> = ({
       </div>
 
       {/* Exercise Card */}
-      <div className="space-y-4 rounded-2xl border border-border bg-card p-4 shadow-sm sm:space-y-6 sm:rounded-3xl sm:p-6">
+      <div className="space-y-3.5 rounded-2xl border border-border bg-card p-3.5 shadow-sm sm:space-y-6 sm:rounded-3xl sm:p-6">
         <div className="text-base font-bold leading-snug text-foreground sm:text-lg">
           <FuriganaText text={currentExercise.prompt} />
         </div>
@@ -151,7 +149,7 @@ export const PracticeStepView: React.FC<PracticeStepViewProps> = ({
                   key={optIdx}
                   onClick={() => handleSelectOption(optIdx)}
                   disabled={isSubmitted}
-                  className={`flex min-h-[48px] w-full items-center justify-between gap-3 rounded-xl border p-3.5 text-left text-sm transition-all sm:rounded-2xl sm:p-4 ${btnStyle}`}
+                  className={`flex min-h-[46px] w-full items-center justify-between gap-3 rounded-xl border p-3 text-left text-sm transition-all sm:rounded-2xl sm:p-4 ${btnStyle}`}
                 >
                   <div className="flex items-center gap-2.5 sm:gap-3">
                     <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-lg border border-border bg-card text-xs font-black text-muted-foreground">
@@ -178,9 +176,10 @@ export const PracticeStepView: React.FC<PracticeStepViewProps> = ({
           <button
             onClick={handleCheckAnswer}
             disabled={selectedOption === null}
-            className="min-h-[48px] w-full rounded-xl bg-primary py-3 text-sm font-bold text-primary-foreground shadow-md transition-all hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-50 sm:rounded-2xl sm:py-3.5"
+            aria-label="Javobni Tekshirish"
+            className="min-h-[46px] w-full rounded-xl bg-primary py-2.5 text-sm font-bold text-primary-foreground shadow-md transition-all hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-50 sm:rounded-2xl sm:py-3.5"
           >
-            Javobni Tekshirish
+            Tekshirish
           </button>
         ) : (
           <div className="space-y-3.5 animate-in fade-in sm:space-y-4">

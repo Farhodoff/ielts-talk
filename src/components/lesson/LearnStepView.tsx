@@ -1,5 +1,13 @@
 import React, { useState } from 'react';
-import { Volume2, BookOpen, CheckCircle2, Info, Lightbulb } from 'lucide-react';
+import {
+  Volume2,
+  BookOpen,
+  CheckCircle2,
+  Info,
+  Lightbulb,
+  ChevronDown,
+  ChevronUp,
+} from 'lucide-react';
 import { LearnContent, SupportedLanguage } from '../../types/lesson';
 import { speakText, speakJapaneseText } from '../../utils/audioTts';
 import { FuriganaText } from '../common/FuriganaText';
@@ -11,6 +19,7 @@ interface LearnStepViewProps {
 
 export const LearnStepView: React.FC<LearnStepViewProps> = ({ content, language }) => {
   const [activeTab, setActiveTab] = useState<'all' | 'vocab' | 'grammar'>('all');
+  const [isExpanded, setIsExpanded] = useState(false);
 
   const handleSpeak = (text: string) => {
     if (language === 'ja') {
@@ -20,32 +29,50 @@ export const LearnStepView: React.FC<LearnStepViewProps> = ({ content, language 
     }
   };
 
+  const isLongExplanation = (content.explanation || '').length > 150;
+
   return (
-    <div className="mx-auto max-w-3xl space-y-4 duration-200 animate-in fade-in sm:space-y-6">
+    <div className="mx-auto max-w-3xl space-y-3.5 duration-200 animate-in fade-in sm:space-y-6">
       {/* Header / Intro Card */}
-      <div className="rounded-2xl border border-border bg-gradient-to-br from-card to-secondary/30 p-4 shadow-sm sm:rounded-3xl sm:p-6">
-        <div className="mb-2 flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-primary">
-          <BookOpen size={16} />
-          <span>{content.subtitle || 'Dars Mavzusi'}</span>
-        </div>
-        <h2 className="mb-2 text-xl font-black tracking-tight text-foreground sm:mb-3 sm:text-2xl md:text-3xl">
+      <div className="rounded-2xl border border-border bg-gradient-to-br from-card to-secondary/30 p-3.5 shadow-sm sm:rounded-3xl sm:p-6">
+        {content.subtitle && (
+          <div className="mb-2 inline-flex items-center gap-1.5 rounded-md border border-primary/20 bg-primary/10 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-primary sm:text-xs">
+            <BookOpen size={12} />
+            <span>{content.subtitle}</span>
+          </div>
+        )}
+        <h2 className="mb-1.5 text-lg font-black tracking-tight text-foreground sm:mb-3 sm:text-2xl md:text-3xl">
           <FuriganaText text={content.title} />
         </h2>
-        <p className="text-xs leading-relaxed text-muted-foreground sm:text-sm">
-          <FuriganaText text={content.explanation} />
-        </p>
+        <div className="text-xs leading-relaxed text-muted-foreground sm:text-sm">
+          <p className={!isExpanded && isLongExplanation ? 'line-clamp-2 sm:line-clamp-none' : ''}>
+            <FuriganaText text={content.explanation} />
+          </p>
+          {isLongExplanation && (
+            <button
+              onClick={() => setIsExpanded(!isExpanded)}
+              className="mt-1 inline-flex items-center gap-1 text-[11px] font-bold text-primary hover:underline sm:hidden"
+            >
+              <span>{isExpanded ? 'Qisqartirish' : 'Batafsil o‘qish'}</span>
+              {isExpanded ? <ChevronUp size={12} /> : <ChevronDown size={12} />}
+            </button>
+          )}
+        </div>
 
         {/* Key Takeaways */}
         {content.keyPoints && content.keyPoints.length > 0 && (
-          <div className="mt-4 space-y-2 rounded-xl border border-primary/15 bg-primary/5 p-3.5 sm:mt-5 sm:rounded-2xl sm:p-4">
+          <div className="mt-3 space-y-1.5 rounded-xl border border-primary/15 bg-primary/5 p-3 sm:mt-5 sm:rounded-2xl sm:p-4">
             <div className="flex items-center gap-1.5 text-xs font-bold text-primary">
-              <Lightbulb size={14} />
-              <span>Muhim Qoidalar:</span>
+              <Lightbulb size={13} />
+              <span>Asosiy Qoidalar:</span>
             </div>
-            <ul className="space-y-1.5">
+            <ul className="space-y-1">
               {content.keyPoints.map((point, idx) => (
-                <li key={idx} className="flex items-start gap-2 text-xs text-foreground/90">
-                  <CheckCircle2 size={13} className="mt-0.5 shrink-0 text-primary" />
+                <li
+                  key={idx}
+                  className="flex items-start gap-1.5 text-[11px] leading-relaxed text-foreground/90 sm:text-xs"
+                >
+                  <CheckCircle2 size={12} className="mt-0.5 shrink-0 text-primary" />
                   <span>
                     <FuriganaText text={point} />
                   </span>
@@ -233,7 +260,7 @@ export const LearnStepView: React.FC<LearnStepViewProps> = ({ content, language 
         <div className="flex items-start gap-2.5 rounded-xl border border-amber-500/20 bg-amber-500/10 p-3.5 sm:gap-3 sm:rounded-2xl sm:p-4">
           <Info size={18} className="mt-0.5 shrink-0 text-amber-500" />
           <div className="text-xs leading-relaxed text-foreground/90">
-            <span className="font-bold text-amber-500">Muhim eslatma: </span>
+            <span className="font-bold text-amber-500">💡 Eslatma: </span>
             <FuriganaText text={content.culturalNotes} />
           </div>
         </div>
