@@ -126,9 +126,16 @@ export const FlashcardStudySession: React.FC<FlashcardStudySessionProps> = ({
     if (sessionSavedRef.current || cardsReviewedCountRef.current === 0) return;
     sessionSavedRef.current = true;
 
-    const elapsedMinutes = Math.max(1, Math.round((Date.now() - sessionStartTimeRef.current) / 60000));
-    const duration = Math.max(1, Math.max(elapsedMinutes, Math.round(cardsReviewedCountRef.current * 0.5)));
-    const xpGained = xpEarnedRef.current > 0 ? xpEarnedRef.current : cardsReviewedCountRef.current * 3;
+    const elapsedMinutes = Math.max(
+      1,
+      Math.round((Date.now() - sessionStartTimeRef.current) / 60000),
+    );
+    const duration = Math.max(
+      1,
+      Math.max(elapsedMinutes, Math.round(cardsReviewedCountRef.current * 0.5)),
+    );
+    const xpGained =
+      xpEarnedRef.current > 0 ? xpEarnedRef.current : cardsReviewedCountRef.current * 3;
 
     try {
       if (awardXP) {
@@ -316,7 +323,16 @@ export const FlashcardStudySession: React.FC<FlashcardStudySessionProps> = ({
         setIsProcessing(false);
       }
     },
-    [currentCard, isProcessing, reviewFlashcard, currentCardIndex, queue.length, haptics, isJa, saveFlashcardSession],
+    [
+      currentCard,
+      isProcessing,
+      reviewFlashcard,
+      currentCardIndex,
+      queue.length,
+      haptics,
+      isJa,
+      saveFlashcardSession,
+    ],
   );
 
   const handleToggleFlip = useCallback(() => {
@@ -498,7 +514,7 @@ export const FlashcardStudySession: React.FC<FlashcardStudySessionProps> = ({
             </div>
             <div>
               <span className="block text-[10px] font-bold uppercase text-[#C9A961]">
-                {isJa ? '獲得 XP' : 'Yutilgan XP'}
+                To'plangan XP
               </span>
               <span className="text-xl font-black text-[#C9A961]">+{totalXpEarned} XP</span>
             </div>
@@ -520,13 +536,13 @@ export const FlashcardStudySession: React.FC<FlashcardStudySessionProps> = ({
               variant="secondary"
               className="flex-1 rounded-xl py-3 font-bold"
             >
-              <RotateCcw size={16} className="mr-2" /> {isJa ? 'もう一度復習' : "Qayta O'rganish"}
+              <RotateCcw size={16} className="mr-2" /> Qayta takrorlash
             </Button>
             <Button
               onClick={handleClose}
               className="flex-1 rounded-xl bg-primary py-3 font-black text-primary-foreground"
             >
-              {isJa ? '完了' : 'Tugatish'}
+              Tugatish
             </Button>
           </div>
         </div>
@@ -539,13 +555,15 @@ export const FlashcardStudySession: React.FC<FlashcardStudySessionProps> = ({
   return (
     <div className="fixed inset-0 z-50 flex flex-col overflow-y-auto bg-background/95 p-3.5 pb-[max(1.5rem,env(safe-area-inset-bottom,20px))] backdrop-blur-xl sm:p-6 md:p-8">
       {/* Top Bar */}
-      <div className="mx-auto mb-4 sm:mb-6 flex w-full max-w-3xl items-center justify-between gap-2 sm:gap-4">
+      <div className="mx-auto mb-4 flex w-full max-w-3xl items-center justify-between gap-2 sm:mb-6 sm:gap-4">
         <button
           onClick={handleClose}
-          className="flex cursor-pointer items-center gap-1.5 sm:gap-2 rounded-xl p-2 text-xs font-bold text-muted-foreground transition-all hover:bg-muted/60 hover:text-foreground shrink-0"
+          className="flex shrink-0 cursor-pointer items-center gap-1.5 rounded-xl p-2 text-xs font-bold text-muted-foreground transition-all hover:bg-muted/60 hover:text-foreground sm:gap-2"
         >
           <ArrowLeft size={18} />
-          <span className="hidden sm:inline">{isJa ? '単語帳一覧に戻る' : "To'plamlarga qaytish"}</span>
+          <span className="hidden sm:inline">
+            {isJa ? '単語帳一覧に戻る' : "To'plamlarga qaytish"}
+          </span>
         </button>
 
         {/* Progress bar */}
@@ -564,13 +582,13 @@ export const FlashcardStudySession: React.FC<FlashcardStudySessionProps> = ({
           </div>
         </div>
 
-        <div className="flex items-center gap-1.5 sm:gap-2 shrink-0">
+        <div className="flex shrink-0 items-center gap-1.5 sm:gap-2">
           {/* Audio Accent toggle */}
           {!isJapanese && (
             <select
               value={accent}
               onChange={(e) => setAccent(e.target.value as any)}
-              className="focus:outline-hidden rounded-xl border border-border bg-muted/60 px-2 sm:px-2.5 py-1.5 text-xs font-bold text-foreground"
+              className="focus:outline-hidden rounded-xl border border-border bg-muted/60 px-2 py-1.5 text-xs font-bold text-foreground sm:px-2.5"
             >
               <option value="en-US">🇺🇸 US</option>
               <option value="en-GB">🇬🇧 UK</option>
@@ -580,7 +598,7 @@ export const FlashcardStudySession: React.FC<FlashcardStudySessionProps> = ({
           {/* Auto Audio Playback Toggle */}
           <button
             onClick={toggleAutoAudio}
-            className={`flex cursor-pointer items-center gap-1 rounded-xl border px-2 sm:px-2.5 py-1.5 text-xs font-extrabold transition-all ${
+            className={`flex cursor-pointer items-center gap-1 rounded-xl border px-2 py-1.5 text-xs font-extrabold transition-all sm:px-2.5 ${
               autoAudio
                 ? 'border-primary/40 bg-primary/10 text-primary shadow-xs'
                 : 'border-border bg-card text-muted-foreground hover:text-foreground'
@@ -605,7 +623,7 @@ export const FlashcardStudySession: React.FC<FlashcardStudySessionProps> = ({
           <div className="flex rounded-xl border border-border bg-card p-1">
             <button
               onClick={() => setStudyMode('srs')}
-              className={`rounded-lg px-2 sm:px-2.5 py-1 text-[11px] font-extrabold transition-all ${
+              className={`rounded-lg px-2 py-1 text-[11px] font-extrabold transition-all sm:px-2.5 ${
                 studyMode === 'srs'
                   ? 'bg-primary text-primary-foreground shadow-xs'
                   : 'text-muted-foreground'
@@ -615,7 +633,7 @@ export const FlashcardStudySession: React.FC<FlashcardStudySessionProps> = ({
             </button>
             <button
               onClick={() => setStudyMode('type')}
-              className={`rounded-lg px-2 sm:px-2.5 py-1 text-[11px] font-extrabold transition-all ${
+              className={`rounded-lg px-2 py-1 text-[11px] font-extrabold transition-all sm:px-2.5 ${
                 studyMode === 'type'
                   ? 'bg-primary text-primary-foreground shadow-xs'
                   : 'text-muted-foreground'
@@ -685,7 +703,7 @@ export const FlashcardStudySession: React.FC<FlashcardStudySessionProps> = ({
                 style={{ opacity: Math.max(0.35, swipeProgress) }}
               >
                 <span>🔄</span>
-                <span>{isJa ? 'もう一度 (Again)' : 'Qayta (Again)'}</span>
+                <span>Qayta</span>
               </div>
             )}
             {isDragging && swipeDirection === 'right' && (
@@ -694,7 +712,7 @@ export const FlashcardStudySession: React.FC<FlashcardStudySessionProps> = ({
                 style={{ opacity: Math.max(0.35, swipeProgress) }}
               >
                 <span>👍</span>
-                <span>{isJa ? '良好 (Good)' : 'Yaxshi (Good)'}</span>
+                <span>Yaxshi</span>
               </div>
             )}
 
@@ -704,7 +722,7 @@ export const FlashcardStudySession: React.FC<FlashcardStudySessionProps> = ({
               }`}
             >
               {/* Front Side */}
-              <div className="backface-hidden absolute inset-0 flex flex-col justify-between rounded-3xl border border-border bg-card p-5 sm:p-8 shadow-2xl transition-all hover:border-primary/40">
+              <div className="backface-hidden absolute inset-0 flex flex-col justify-between rounded-3xl border border-border bg-card p-5 shadow-2xl transition-all hover:border-primary/40 sm:p-8">
                 {/* Top Card Controls */}
                 <div className="flex items-center justify-between">
                   <span className="rounded-full bg-primary/10 px-3 py-1 text-xs font-extrabold text-primary">
@@ -770,7 +788,7 @@ export const FlashcardStudySession: React.FC<FlashcardStudySessionProps> = ({
               </div>
 
               {/* Back Side */}
-              <div className="backface-hidden rotate-y-180 absolute inset-0 flex flex-col justify-between rounded-3xl border-2 border-primary/50 bg-gradient-to-br from-card via-card to-primary/5 p-5 sm:p-8 shadow-2xl">
+              <div className="backface-hidden rotate-y-180 absolute inset-0 flex flex-col justify-between rounded-3xl border-2 border-primary/50 bg-gradient-to-br from-card via-card to-primary/5 p-5 shadow-2xl sm:p-8">
                 {/* Top Card Controls */}
                 <div className="flex items-center justify-between">
                   <span className="rounded-full bg-emerald-500/15 px-3 py-1 text-xs font-extrabold text-emerald-600 dark:text-emerald-400">
@@ -801,13 +819,9 @@ export const FlashcardStudySession: React.FC<FlashcardStudySessionProps> = ({
                 <div className="flex items-center justify-between text-[11px] font-bold text-muted-foreground">
                   <span className="hidden sm:inline">SM-2 Algoritmi</span>
                   <span className="font-extrabold text-primary sm:hidden">
-                    {isJa ? '👈 もう一度 | 良好 👉' : '👈 Qayta | Yaxshi 👉'}
+                    👈 Qayta | Yaxshi 👉
                   </span>
-                  <span>
-                    {isJa
-                      ? `難易度: ${(currentCard?.easeFactor || 2.5).toFixed(2)}`
-                      : `Osonlik: ${(currentCard?.easeFactor || 2.5).toFixed(2)}`}
-                  </span>
+                  <span>Osonlik: {(currentCard?.easeFactor || 2.5).toFixed(2)}</span>
                 </div>
               </div>
             </div>
@@ -819,7 +833,7 @@ export const FlashcardStudySession: React.FC<FlashcardStudySessionProps> = ({
           <form onSubmit={handleTypeSubmit} className="mt-4 flex w-full gap-2">
             <input
               type="text"
-              placeholder={isJa ? '意味や読み方を入力...' : 'Tarjimasini yozing...'}
+              placeholder="Tarjimasini yozing..."
               value={typedAnswer}
               onChange={(e) => setTypedAnswer(e.target.value)}
               className="focus:outline-hidden flex-1 rounded-2xl border border-border bg-muted/60 px-4 py-3 text-sm font-bold text-foreground focus:ring-2 focus:ring-primary"
@@ -829,7 +843,7 @@ export const FlashcardStudySession: React.FC<FlashcardStudySessionProps> = ({
               type="submit"
               className="rounded-2xl bg-primary px-6 font-bold text-primary-foreground"
             >
-              {isJa ? '判定' : 'Tekshirish'}
+              Tekshirish
             </Button>
           </form>
         )}
@@ -837,17 +851,15 @@ export const FlashcardStudySession: React.FC<FlashcardStudySessionProps> = ({
         {/* SRS Grading Buttons (Again / Hard / Good / Easy) */}
         {isFlipped && (
           <div
-            className="mt-6 grid w-full grid-cols-2 gap-3 duration-200 animate-in slide-in-from-bottom-3 md:grid-cols-4"
+            className="mt-6 grid w-full grid-cols-2 gap-2.5 duration-200 animate-in slide-in-from-bottom-3 sm:gap-3 md:grid-cols-4"
             style={{ paddingBottom: isTwa ? 'var(--twa-keyboard-offset, 0px)' : undefined }}
           >
             <button
               onClick={() => handleReview(Rating.AGAIN)}
               disabled={isProcessing}
-              className="group cursor-pointer rounded-2xl border border-rose-500/20 bg-rose-500/10 p-3.5 text-center font-black text-rose-500 transition-all hover:bg-rose-500/20 active:scale-95"
+              className="group cursor-pointer rounded-2xl border border-rose-500/20 bg-rose-500/10 p-3 text-center font-black text-rose-500 transition-all hover:bg-rose-500/20 active:scale-95 sm:p-3.5"
             >
-              <span className="mb-1 block text-sm leading-none">
-                {isJa ? 'もう一度 (Again)' : 'Qayta (Again)'}
-              </span>
+              <span className="mb-0.5 block text-sm leading-none sm:mb-1">Qayta (Again)</span>
               <span className="block text-[10px] font-semibold opacity-80">
                 {previewIntervals[Rating.AGAIN]} (1)
               </span>
@@ -856,11 +868,9 @@ export const FlashcardStudySession: React.FC<FlashcardStudySessionProps> = ({
             <button
               onClick={() => handleReview(Rating.HARD)}
               disabled={isProcessing}
-              className="group cursor-pointer rounded-2xl border border-[#C9A961]/30 bg-[#C9A961]/15 p-3.5 text-center font-black text-[#C9A961] transition-all hover:bg-[#C9A961]/25 active:scale-95"
+              className="group cursor-pointer rounded-2xl border border-[#C9A961]/30 bg-[#C9A961]/15 p-3 text-center font-black text-[#C9A961] transition-all hover:bg-[#C9A961]/25 active:scale-95 sm:p-3.5"
             >
-              <span className="mb-1 block text-sm leading-none">
-                {isJa ? '難しい (Hard)' : 'Qiyin (Hard)'}
-              </span>
+              <span className="mb-0.5 block text-sm leading-none sm:mb-1">Qiyin (Hard)</span>
               <span className="block text-[10px] font-semibold opacity-80">
                 {previewIntervals[Rating.HARD]} (2)
               </span>
@@ -869,11 +879,9 @@ export const FlashcardStudySession: React.FC<FlashcardStudySessionProps> = ({
             <button
               onClick={() => handleReview(Rating.GOOD)}
               disabled={isProcessing}
-              className="group cursor-pointer rounded-2xl border border-primary/30 bg-primary/10 p-3.5 text-center font-black text-primary transition-all hover:bg-primary/20 active:scale-95"
+              className="group cursor-pointer rounded-2xl border border-primary/30 bg-primary/10 p-3 text-center font-black text-primary transition-all hover:bg-primary/20 active:scale-95 sm:p-3.5"
             >
-              <span className="mb-1 block text-sm leading-none">
-                {isJa ? '普通 (Good)' : 'Yaxshi (Good)'}
-              </span>
+              <span className="mb-0.5 block text-sm leading-none sm:mb-1">Yaxshi (Good)</span>
               <span className="block text-[10px] font-semibold opacity-80">
                 {previewIntervals[Rating.GOOD]} (3)
               </span>
@@ -882,11 +890,9 @@ export const FlashcardStudySession: React.FC<FlashcardStudySessionProps> = ({
             <button
               onClick={() => handleReview(Rating.EASY)}
               disabled={isProcessing}
-              className="group cursor-pointer rounded-2xl border border-emerald-500/20 bg-emerald-500/10 p-3.5 text-center font-black text-emerald-500 transition-all hover:bg-emerald-500/20 active:scale-95"
+              className="group cursor-pointer rounded-2xl border border-emerald-500/20 bg-emerald-500/10 p-3 text-center font-black text-emerald-500 transition-all hover:bg-emerald-500/20 active:scale-95 sm:p-3.5"
             >
-              <span className="mb-1 block text-sm leading-none">
-                {isJa ? '簡単 (Easy)' : 'Oson (Easy)'}
-              </span>
+              <span className="mb-0.5 block text-sm leading-none sm:mb-1">Oson (Easy)</span>
               <span className="block text-[10px] font-semibold opacity-80">
                 {previewIntervals[Rating.EASY]} (4)
               </span>

@@ -421,52 +421,51 @@ const DashboardPage: React.FC = () => {
   }
 
   const displayUserName =
-    user?.user_metadata?.full_name ||
-    (user?.email ? user.email.split('@')[0] : language === 'ja' ? '学習者' : 'Talaba');
+    user?.user_metadata?.full_name || (user?.email ? user.email.split('@')[0] : 'Talaba');
 
   return (
-    <div className="mx-auto max-w-7xl space-y-8 p-4 duration-200 animate-in fade-in md:p-8">
+    <div className="mx-auto max-w-7xl space-y-6 p-3.5 duration-200 animate-in fade-in sm:p-4 md:space-y-8 md:p-8">
       {/* Top Greeting & Quick Stats */}
       <div className="flex flex-col justify-between gap-4 md:flex-row md:items-center">
         <div>
-          <h1 className="text-2xl font-black tracking-tight text-foreground md:text-3xl">
+          <h1 className="text-xl font-black tracking-tight text-foreground sm:text-2xl md:text-3xl">
             {greeting}, <span className="text-gradient">{displayUserName}</span> 👋
           </h1>
-          <p className="mt-1 text-sm text-muted-foreground">{greetingSubtitle}</p>
+          <p className="mt-1 text-xs text-muted-foreground sm:text-sm">{greetingSubtitle}</p>
         </div>
 
         {/* Mini Stats Cards */}
-        <div className="flex flex-wrap items-center gap-3">
+        <div className="flex items-center gap-2.5 sm:gap-3">
           {/* Streak Card */}
-          <div className="glass-card flex items-center gap-3 rounded-2xl border border-amber-500/30 bg-amber-500/5 p-2.5 px-4 shadow-xs">
-            <div className="flex items-center justify-center rounded-xl bg-amber-500/20 p-2 text-lg text-amber-500">
+          <div className="glass-card flex flex-1 items-center gap-2.5 rounded-2xl border border-amber-500/30 bg-amber-500/5 p-2 px-3 shadow-xs sm:flex-initial sm:gap-3 sm:px-4">
+            <div className="flex items-center justify-center rounded-xl bg-amber-500/20 p-1.5 text-base text-amber-500 sm:p-2 sm:text-lg">
               🔥
             </div>
             <div>
               <div className="text-[10px] font-bold uppercase tracking-wider text-muted-foreground">
-                {language === 'ja' ? '連続日数' : 'Streak'}
+                Streak
               </div>
-              <div className="text-sm font-black text-foreground">
-                {settings?.currentStreak || 0} {language === 'ja' ? '日' : 'Kun'}
+              <div className="text-xs font-black text-foreground sm:text-sm">
+                {settings?.currentStreak || 0} Kun
               </div>
             </div>
           </div>
 
           {/* Progress Card */}
-          <div className="glass-card flex items-center gap-4 rounded-2xl border-border p-3 px-5">
-            <div className="rounded-xl bg-primary/10 p-3 text-primary">
-              <Trophy size={24} />
+          <div className="glass-card flex flex-1 items-center gap-2.5 rounded-2xl border-border p-2 px-3 sm:flex-initial sm:gap-3 sm:px-4">
+            <div className="rounded-xl bg-primary/10 p-1.5 text-primary sm:p-2">
+              <Trophy size={20} />
             </div>
             <div>
-              <div className="mb-1 flex items-end justify-between">
-                <span className="text-sm font-medium text-muted-foreground">
-                  {language === 'en' ? 'Daily Progress' : 'Kunlik progress'}
+              <div className="mb-0.5 flex items-end justify-between">
+                <span className="text-[11px] font-medium text-muted-foreground sm:text-xs">
+                  Kunlik progress
                 </span>
-                <span className="ml-4 text-sm font-bold text-foreground">
+                <span className="ml-2 text-xs font-bold text-foreground sm:text-sm">
                   {progressPercentage}%
                 </span>
               </div>
-              <div className="h-2 w-32 overflow-hidden rounded-full bg-secondary">
+              <div className="h-1.5 w-20 overflow-hidden rounded-full bg-secondary sm:h-2 sm:w-28">
                 <div
                   className="h-full rounded-full bg-primary transition-all duration-1000 ease-out"
                   style={{ width: `${progressPercentage}%` }}
@@ -478,24 +477,14 @@ const DashboardPage: React.FC = () => {
       </div>
 
       {/* Language Focus & Next Best Action Hero Card */}
-      <div
-        className={`relative overflow-hidden rounded-3xl border p-6 shadow-xl md:p-8 ${
-          primaryLanguage === 'ja'
-            ? 'border-rose-500/30 bg-gradient-to-r from-rose-950/40 via-card to-card'
-            : 'border-indigo-500/30 bg-gradient-to-r from-indigo-950/40 via-card to-card'
-        }`}
-      >
-        <div
-          className={`pointer-events-none absolute right-0 top-0 -mr-16 -mt-16 h-72 w-72 rounded-full blur-3xl ${
-            isJaTrack ? 'bg-rose-500/15' : 'bg-indigo-500/15'
-          }`}
-        />
+      <div className="relative overflow-hidden rounded-3xl border border-indigo-500/30 bg-gradient-to-r from-indigo-950/40 via-card to-card p-5 shadow-xl sm:p-6 md:p-8">
+        <div className="pointer-events-none absolute right-0 top-0 -mr-16 -mt-16 h-72 w-72 rounded-full bg-indigo-500/15 blur-3xl" />
 
-        <div className="relative z-10 flex flex-col justify-between gap-8 lg:flex-row lg:items-center">
-          <div className="max-w-2xl space-y-3">
+        <div className="relative z-10 flex flex-col justify-between gap-6 lg:flex-row lg:items-center">
+          <div className="max-w-2xl space-y-2.5">
             <div className="flex flex-wrap items-center gap-2">
-              <span className="text-2xl">🇬🇧</span>
-              <span className="rounded-full border border-indigo-500/30 bg-indigo-500/20 px-3 py-1 text-xs font-black uppercase tracking-wider text-indigo-400">
+              <span className="text-xl sm:text-2xl">🇬🇧</span>
+              <span className="rounded-full border border-indigo-500/30 bg-indigo-500/20 px-3 py-0.5 text-xs font-black uppercase tracking-wider text-indigo-400">
                 {`IELTS (${effectiveTargetLevel}) Focus Mode`}
               </span>
               <span className="text-xs font-medium text-muted-foreground">
@@ -505,22 +494,20 @@ const DashboardPage: React.FC = () => {
 
             {/* Next Best Action Banner */}
             {nextAction ? (
-              <div className="space-y-1.5 pt-1">
+              <div className="space-y-1 pt-1">
                 <div className="flex items-center gap-2">
                   <span className="flex items-center gap-1 text-xs font-bold uppercase tracking-wider text-amber-500">
                     <Sparkles size={14} className="animate-pulse" />
-                    {language === 'en'
-                      ? 'Priority Learning Step'
-                      : 'Hozirgi Eng Muhim Qadam'}
+                    {language === 'en' ? 'Priority Learning Step' : 'Hozirgi Eng Muhim Qadam'}
                   </span>
-                  <span className="rounded-full bg-secondary px-2.5 py-0.5 text-xs font-medium text-muted-foreground">
-                    ⏱️ ~{nextAction.estimatedMinutes} daqiqa
+                  <span className="rounded-full bg-secondary px-2 py-0.5 text-xs font-medium text-muted-foreground">
+                    ⏱️ ~{nextAction.estimatedMinutes} daq
                   </span>
                 </div>
-                <h2 className="text-2xl font-black tracking-tight text-foreground">
+                <h2 className="text-xl font-black tracking-tight text-foreground sm:text-2xl">
                   {nextAction.title}
                 </h2>
-                <p className="text-sm leading-relaxed text-muted-foreground">
+                <p className="text-xs leading-relaxed text-muted-foreground sm:text-sm">
                   {nextAction.description ||
                     nextAction.reason?.description ||
                     nextAction.reason?.message ||
@@ -529,28 +516,22 @@ const DashboardPage: React.FC = () => {
               </div>
             ) : (
               <div>
-                <h3 className="text-xl font-bold text-foreground">
-                  {language === 'en'
-                    ? "Today's IELTS & Academic English Tasks"
-                    : 'Bugungi IELTS & Akademik Ingliz Tili'}
+                <h3 className="text-lg font-bold text-foreground sm:text-xl">
+                  Bugungi IELTS Vazifalari
                 </h3>
                 <p className="text-xs text-muted-foreground">
-                  Speaking Examiner, Writing tahlili va Oxford Academic lug'at.
+                  Speaking, Writing va Akademik grammatika darslari.
                 </p>
               </div>
             )}
           </div>
 
           {/* Single Primary Action CTA & Quick Tools */}
-          <div className="flex shrink-0 flex-col items-start gap-3 lg:items-end">
+          <div className="flex w-full shrink-0 flex-col items-start gap-3 lg:w-auto lg:items-end">
             {nextAction && (
               <Link
-                to={nextAction.route || (isJaTrack ? '/jlpt' : '/ielts')}
-                className={`flex w-full items-center justify-center gap-2 rounded-2xl px-6 py-3.5 text-sm font-black text-white shadow-lg transition-all hover:scale-[1.02] active:scale-[0.98] sm:w-auto ${
-                  isJaTrack
-                    ? 'bg-rose-600 shadow-rose-600/30 hover:bg-rose-500'
-                    : 'bg-indigo-600 shadow-indigo-600/30 hover:bg-indigo-500'
-                }`}
+                to={nextAction.route || '/ielts'}
+                className="flex w-full items-center justify-center gap-2 rounded-2xl bg-indigo-600 px-6 py-3 text-xs font-black text-white shadow-lg shadow-indigo-600/30 transition-all hover:bg-indigo-500 active:scale-[0.98] sm:w-auto sm:text-sm"
               >
                 <span>{nextAction.badgeIcon || '🚀'}</span>
                 <span>{nextAction.ctaLabel}</span>
@@ -558,75 +539,44 @@ const DashboardPage: React.FC = () => {
               </Link>
             )}
 
-            {/* Compact Secondary Quick Links */}
-            <div className="flex flex-wrap items-center gap-2">
+            {/* Compact Quick Links Ribbon */}
+            <div className="flex w-full items-center gap-1.5 overflow-x-auto pb-1 sm:w-auto">
               <Link
                 to="/roadmap"
-                className="flex items-center gap-1 rounded-xl border border-primary/30 bg-primary/10 px-3 py-1.5 text-xs font-bold text-primary transition-all"
+                className="flex shrink-0 items-center gap-1 rounded-xl border border-primary/30 bg-primary/10 px-2.5 py-1 text-xs font-bold text-primary transition-all"
               >
-                <span>🗺️</span> {language === 'ja' ? 'ロードマップ' : 'Roadmap'}
+                <span>🗺️</span> Roadmap
               </Link>
               <Link
                 to="/diagnostic"
-                className="flex items-center gap-1 rounded-xl border border-amber-500/30 bg-amber-500/10 px-3 py-1.5 text-xs font-bold text-amber-600 transition-all dark:text-amber-400"
+                className="flex shrink-0 items-center gap-1 rounded-xl border border-amber-500/30 bg-amber-500/10 px-2.5 py-1 text-xs font-bold text-amber-600 transition-all dark:text-amber-400"
               >
-                <span>🎯</span> {language === 'ja' ? 'テスト' : 'Test'}
+                <span>🎯</span> Test
               </Link>
-              {isJaTrack ? (
-                <>
-                  <Link
-                    to="/jlpt"
-                    className="rounded-xl border border-border bg-card px-3 py-1.5 text-xs font-semibold text-foreground transition-all hover:border-rose-500/40"
-                  >
-                    <span>🈶</span> {language === 'ja' ? 'かんじ' : 'Kanji'}
-                  </Link>
-                  <Link
-                    to="/jlpt/grammar-quiz"
-                    className="rounded-xl border border-border bg-card px-3 py-1.5 text-xs font-semibold text-foreground transition-all hover:border-rose-500/40"
-                  >
-                    <span>📖</span> {language === 'ja' ? 'ぶんぽう' : 'Grammatika'}
-                  </Link>
-                  <Link
-                    to="/speaking-coach?lang=ja"
-                    className="rounded-xl border border-border bg-card px-3 py-1.5 text-xs font-semibold text-foreground transition-all hover:border-rose-500/40"
-                  >
-                    <span>🗣️</span> {language === 'ja' ? 'AI かいわ' : 'AI Suhbat'}
-                  </Link>
-                  <Link
-                    to="/jlpt/mock-exam"
-                    className="rounded-xl border border-border bg-card px-3 py-1.5 text-xs font-semibold text-foreground transition-all hover:border-rose-500/40"
-                  >
-                    <span>🎌</span> {language === 'ja' ? 'モック' : 'Mock'}
-                  </Link>
-                </>
-              ) : (
-                <>
-                  <Link
-                    to="/speaking-coach?lang=en"
-                    className="rounded-xl border border-border bg-card px-3 py-1.5 text-xs font-semibold text-foreground transition-all hover:border-indigo-500/40"
-                  >
-                    <span>🎙️</span> Speaking
-                  </Link>
-                  <Link
-                    to="/ielts/writing"
-                    className="rounded-xl border border-border bg-card px-3 py-1.5 text-xs font-semibold text-foreground transition-all hover:border-indigo-500/40"
-                  >
-                    <span>✍️</span> Writing
-                  </Link>
-                  <Link
-                    to="/vocabulary"
-                    className="rounded-xl border border-border bg-card px-3 py-1.5 text-xs font-semibold text-foreground transition-all hover:border-indigo-500/40"
-                  >
-                    <span>🧠</span> Vocab
-                  </Link>
-                  <Link
-                    to="/ielts"
-                    className="rounded-xl border border-border bg-card px-3 py-1.5 text-xs font-semibold text-foreground transition-all hover:border-indigo-500/40"
-                  >
-                    <span>🎓</span> IELTS Hub
-                  </Link>
-                </>
-              )}
+              <Link
+                to="/speaking-coach?lang=en"
+                className="flex shrink-0 items-center gap-1 rounded-xl border border-border bg-card px-2.5 py-1 text-xs font-semibold text-foreground transition-all hover:border-indigo-500/40"
+              >
+                <span>🎙️</span> Speaking
+              </Link>
+              <Link
+                to="/ielts/writing"
+                className="flex shrink-0 items-center gap-1 rounded-xl border border-border bg-card px-2.5 py-1 text-xs font-semibold text-foreground transition-all hover:border-indigo-500/40"
+              >
+                <span>✍️</span> Writing
+              </Link>
+              <Link
+                to="/flashcards"
+                className="flex shrink-0 items-center gap-1 rounded-xl border border-border bg-card px-2.5 py-1 text-xs font-semibold text-foreground transition-all hover:border-indigo-500/40"
+              >
+                <span>🧠</span> Kartalar
+              </Link>
+              <Link
+                to="/ielts"
+                className="flex shrink-0 items-center gap-1 rounded-xl border border-border bg-card px-2.5 py-1 text-xs font-semibold text-foreground transition-all hover:border-indigo-500/40"
+              >
+                <span>🎓</span> IELTS Hub
+              </Link>
             </div>
           </div>
         </div>
@@ -634,89 +584,66 @@ const DashboardPage: React.FC = () => {
 
       {/* Today's Adaptive Daily Plan */}
       {dailyPlan && dailyPlan.activities && dailyPlan.activities.length > 0 && (
-        <div className="glass-card space-y-4 rounded-3xl border border-border p-6 shadow-sm md:p-7">
+        <div className="glass-card space-y-4 rounded-3xl border border-border p-4 shadow-sm sm:p-6 md:p-7">
           <div className="flex flex-col justify-between gap-2 sm:flex-row sm:items-center">
             <div className="flex items-center gap-2.5">
-              <span className="rounded-2xl bg-primary/10 p-2.5 text-primary">
-                <Clock size={20} />
+              <span className="rounded-2xl bg-primary/10 p-2 text-primary sm:p-2.5">
+                <Clock size={18} />
               </span>
               <div>
-                <h3 className="flex items-center gap-2 text-base font-bold text-foreground duration-300 animate-in fade-in">
-                  {language === 'ja'
-                    ? 'きょうの がくしゅうプラン'
-                    : language === 'en'
-                      ? "Today's Adaptive Plan"
-                      : 'Bugungi Adaptiv Reja'}
-                  <span className="rounded-full bg-primary/10 px-2.5 py-0.5 text-xs font-bold text-primary">
-                    ⏱️ {dailyPlan.totalMinutes}{' '}
-                    {language === 'ja' ? 'ふん' : language === 'en' ? 'mins' : 'daqiqa'}
+                <h3 className="flex items-center gap-2 text-sm font-bold text-foreground sm:text-base">
+                  {language === 'en' ? "Today's Adaptive Plan" : 'Bugungi Adaptiv Reja'}
+                  <span className="rounded-full bg-primary/10 px-2 py-0.5 text-xs font-bold text-primary">
+                    ⏱️ {dailyPlan.totalMinutes} {language === 'en' ? 'mins' : 'daqiqa'}
                   </span>
                 </h3>
                 <p className="text-xs text-muted-foreground">
                   {dailyPlan.summary?.reason ||
-                    (language === 'ja'
-                      ? 'きょうの あなた専用 がくしゅうプラン'
-                      : language === 'en'
-                        ? 'Your customized route for today.'
-                        : "Bugungi moslashtirilgan o'quv rejangiz.")}
+                    (language === 'en'
+                      ? 'Your customized route for today.'
+                      : "Bugungi moslashtirilgan o'quv rejangiz.")}
                 </p>
               </div>
             </div>
           </div>
 
           {isPlanCompleted ? (
-            <div className="space-y-3 rounded-2xl border border-green-500/30 bg-green-500/10 p-8 text-center">
-              <div className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-green-500/20 text-xl font-bold text-green-600 dark:text-green-400">
+            <div className="space-y-2.5 rounded-2xl border border-green-500/30 bg-green-500/10 p-6 text-center">
+              <div className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-green-500/20 text-lg font-bold text-green-600 dark:text-green-400">
                 🎉
               </div>
-              <h4 className="text-base font-bold text-green-700 dark:text-green-400">
-                {language === 'ja'
-                  ? 'きょうの プランを かんりょうしました！'
-                  : language === 'en'
-                    ? "Today's Plan Completed!"
-                    : 'Bugungi reja bajarildi!'}
+              <h4 className="text-sm font-bold text-green-700 dark:text-green-400">
+                {language === 'en' ? "Today's Plan Completed!" : 'Bugungi reja bajarildi!'}
               </h4>
               <p className="mx-auto max-w-md text-xs text-green-600 dark:text-green-500">
-                {language === 'ja'
-                  ? 'きょうの レッスンと ふくしゅうは すべて おわりました。あしたの プランも じどうで さくせいされます。'
-                  : language === 'en'
-                    ? "All scheduled tasks for today have been completed. Tomorrow's customized plan will be automatically generated."
-                    : 'Bugun uchun rejalashtirilgan barcha dars va takrorlashlar yakunlandi. Ertangi reja avtomatik tayyorlanadi.'}
+                Bugun uchun barcha vazifalar yakunlandi. Yangi reja ertaga yangilanadi.
               </p>
             </div>
           ) : (
-            <div className="grid grid-cols-1 gap-3 pt-1 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="grid grid-cols-1 gap-2.5 pt-1 sm:grid-cols-2 lg:grid-cols-3">
               {dailyPlan.activities.map((item, idx) => (
                 <Link
                   key={item.id || idx}
-                  to={item.route || (primaryLanguage === 'ja' ? '/jlpt' : '/ielts')}
-                  className={`group relative flex flex-col justify-between gap-3 overflow-hidden rounded-2xl border p-4 transition-all ${
+                  to={item.route || '/ielts'}
+                  className={`group relative flex flex-col justify-between gap-2.5 overflow-hidden rounded-2xl border p-3.5 transition-all ${
                     item.isCompleted || item.status === 'completed'
                       ? 'border-green-500/20 bg-green-500/5 opacity-70 hover:opacity-90'
                       : 'border-border/50 bg-secondary/30 hover:border-primary/40 hover:bg-secondary/60'
                   }`}
-                  aria-label={`Step ${idx + 1}: ${item.title}, ${item.estimatedMinutes} minutes, ${
-                    item.isCompleted || item.status === 'completed' ? 'Completed' : 'Pending'
-                  }`}
+                  aria-label={`Step ${idx + 1}: ${item.title}`}
                 >
-                  <div className="space-y-1.5">
+                  <div className="space-y-1">
                     <div className="flex items-center justify-between gap-2">
-                      <span className="rounded-md border border-border bg-card px-2 py-0.5 text-xs font-black uppercase tracking-wider text-muted-foreground">
-                        {idx + 1}-{language === 'ja' ? 'ステップ' : 'Qadam'}
+                      <span className="rounded-md border border-border bg-card px-2 py-0.5 text-[11px] font-black uppercase tracking-wider text-muted-foreground">
+                        {idx + 1}-Qadam
                       </span>
                       {item.isCompleted || item.status === 'completed' ? (
                         <span className="flex items-center gap-1 text-xs font-bold text-green-600">
-                          ✓{' '}
-                          {language === 'ja'
-                            ? 'かんりょう'
-                            : language === 'en'
-                              ? 'Done'
-                              : 'Bajarildi'}
+                          ✓ Bajarildi
                         </span>
                       ) : (
                         <span className="flex items-center gap-1 text-xs font-bold text-primary">
-                          <Clock size={12} /> {item.estimatedMinutes}{' '}
-                          {language === 'ja' ? 'ふん' : language === 'en' ? 'min' : 'daq'}
+                          <Clock size={12} /> {item.estimatedMinutes} daq
                         </span>
                       )}
                     </div>
@@ -730,9 +657,7 @@ const DashboardPage: React.FC = () => {
                     </p>
                   </div>
                   <div className="flex items-center justify-end gap-1 pt-1 text-xs font-bold text-primary">
-                    <span>
-                      {language === 'ja' ? 'スタート' : language === 'en' ? 'Start' : 'Boshlash'}
-                    </span>
+                    <span>Boshlash</span>
                     <ArrowRight
                       size={14}
                       className="transition-transform group-hover:translate-x-1"
@@ -777,16 +702,10 @@ const DashboardPage: React.FC = () => {
 
             <Link
               to="/roadmap"
-              className="inline-flex w-fit items-center gap-1.5 rounded-xl border border-primary/20 bg-primary/10 px-4 py-2 text-xs font-bold text-primary transition-all hover:bg-primary/20"
+              className="inline-flex w-fit items-center gap-1.5 rounded-xl border border-primary/20 bg-primary/10 px-3.5 py-1.5 text-xs font-bold text-primary transition-all hover:bg-primary/20"
             >
               <span>🗺️</span>
-              <span>
-                {language === 'ja'
-                  ? 'ロードマップを みる'
-                  : language === 'en'
-                    ? 'View Full Roadmap'
-                    : "To'liq Xaritani Ko'rish"}
-              </span>
+              <span>Xaritaga o'tish</span>
               <ArrowRight size={14} />
             </Link>
           </div>
@@ -794,18 +713,12 @@ const DashboardPage: React.FC = () => {
           {/* Progress Bar */}
           <div className="space-y-1.5">
             <div className="flex justify-between text-xs font-semibold text-muted-foreground">
-              <span>
-                {language === 'ja'
-                  ? 'ぜんたいの しんちょく'
-                  : language === 'en'
-                    ? 'Overall Progress'
-                    : 'Umumiy Progress'}
-              </span>
+              <span>Progress</span>
               <span className="font-bold text-foreground">
                 {roadmapSummary.progressPercentage}%
               </span>
             </div>
-            <div className="h-2.5 w-full overflow-hidden rounded-full bg-secondary">
+            <div className="h-2 w-full overflow-hidden rounded-full bg-secondary">
               <div
                 className="h-full rounded-full bg-primary transition-all duration-1000 ease-out"
                 style={{ width: `${roadmapSummary.progressPercentage}%` }}
@@ -813,24 +726,19 @@ const DashboardPage: React.FC = () => {
             </div>
           </div>
 
-          {/* Phase 15: Next lesson is shown in hero CTA above — only show weakness focus card here */}
+          {/* Weakness focus card */}
           {roadmapSummary.topWeakLesson && (
             <Link
               to={roadmapSummary.topWeakLesson.route}
-              className="group flex flex-col justify-between gap-3 rounded-2xl border border-rose-500/30 bg-rose-500/5 p-4 transition-all hover:bg-rose-500/10"
+              className="group flex flex-col justify-between gap-2.5 rounded-2xl border border-rose-500/30 bg-rose-500/5 p-3.5 transition-all hover:bg-rose-500/10"
             >
-              <div className="space-y-1.5">
+              <div className="space-y-1">
                 <div className="flex items-center justify-between gap-2">
                   <span className="rounded-md bg-rose-500/15 px-2 py-0.5 text-[11px] font-black uppercase tracking-wider text-rose-500">
-                    {language === 'ja'
-                      ? 'にがてな ぶんや'
-                      : language === 'en'
-                        ? 'Focus Area'
-                        : "Zaif Ko'nikma"}
+                    E'tibor qaratish
                   </span>
                   <span className="flex items-center gap-1 text-xs text-muted-foreground">
-                    <Clock size={12} /> ~{roadmapSummary.topWeakLesson.estimatedMinutes}{' '}
-                    {language === 'ja' ? 'ふん' : language === 'en' ? 'min' : 'daq'}
+                    <Clock size={12} /> ~{roadmapSummary.topWeakLesson.estimatedMinutes} daq
                   </span>
                 </div>
                 <h4 className="line-clamp-1 text-sm font-bold text-foreground transition-colors group-hover:text-rose-500">
@@ -841,13 +749,7 @@ const DashboardPage: React.FC = () => {
                 </p>
               </div>
               <div className="flex items-center justify-end gap-1 border-t border-rose-500/10 pt-1 text-xs font-bold text-rose-500">
-                <span>
-                  {language === 'ja'
-                    ? 'れんしゅうする'
-                    : language === 'en'
-                      ? 'Practice'
-                      : 'Mashq Qilish'}
-                </span>
+                <span>Mashq qilish</span>
                 <ArrowRight size={13} className="transition-transform group-hover:translate-x-1" />
               </div>
             </Link>
@@ -857,59 +759,51 @@ const DashboardPage: React.FC = () => {
 
       {/* Progression Track Section */}
       {progression && (
-        <div className="glass-card space-y-4 rounded-3xl border border-border p-6 shadow-sm md:p-7">
-          <div className="flex flex-col justify-between gap-4 sm:flex-row sm:items-center">
+        <div className="glass-card space-y-4 rounded-3xl border border-border p-4 shadow-sm sm:p-6 md:p-7">
+          <div className="flex flex-col justify-between gap-3 sm:flex-row sm:items-center">
             <div>
-              <h3 className="text-base font-bold text-foreground">
-                {language === 'ja'
-                  ? 'レベルの せいちょう'
-                  : language === 'en'
-                    ? 'Level Progression Status'
-                    : "Daraja bo'yicha rivojlanish"}
+              <h3 className="text-sm font-bold text-foreground sm:text-base">
+                {language === 'en' ? 'Level Progression Status' : "Daraja bo'yicha rivojlanish"}
               </h3>
               <p className="text-xs text-muted-foreground">
                 {progression.explanation ||
-                  (language === 'ja'
-                    ? 'せいせきに もとづく レベルの しんちょく。'
-                    : language === 'en'
-                      ? 'Evidence-based progression tracking.'
-                      : 'Bilim va natijalar asosida darajani oshirish.')}
+                  (language === 'en'
+                    ? 'Evidence-based progression tracking.'
+                    : 'Natijalar asosida darajani oshirish.')}
               </p>
             </div>
             <div className="flex items-center gap-2">
-              <span className="text-2xl font-black text-primary">{progression.currentLevel}</span>
+              <span className="text-xl font-black text-primary sm:text-2xl">
+                {progression.currentLevel}
+              </span>
               <ArrowRight size={16} className="text-muted-foreground" />
-              <span className="text-2xl font-black text-muted-foreground">
+              <span className="text-xl font-black text-muted-foreground sm:text-2xl">
                 {progression.nextLevel || 'Max'}
               </span>
             </div>
           </div>
 
-          <div className="space-y-3">
+          <div className="space-y-2.5">
             <div className="flex items-center justify-between text-xs">
               <span className="font-semibold text-muted-foreground">
-                {language === 'ja' ? 'レベルアップ じゅんび:' : 'Promotion Readiness:'}
+                {language === 'en' ? 'Promotion Readiness:' : 'Tayyorgarlik:'}
               </span>
               <span
                 className={`font-bold ${progression.isReadyForPromotion ? 'text-green-500' : 'text-amber-500'}`}
               >
                 {progression.readinessScore || 0}% (
                 {progression.isReadyForPromotion
-                  ? language === 'ja'
-                    ? 'じゅんび OK ✓'
-                    : language === 'en'
-                      ? 'Ready ✓'
-                      : 'Tayyor ✓'
-                  : language === 'ja'
-                    ? 'まだ じゅんびちゅう'
-                    : language === 'en'
-                      ? 'Not Ready'
-                      : 'Tayyor emas'}
+                  ? language === 'en'
+                    ? 'Ready ✓'
+                    : 'Tayyor ✓'
+                  : language === 'en'
+                    ? 'Not Ready'
+                    : 'Tayyorlanmoqda'}
                 )
               </span>
             </div>
             <div
-              className="h-3 w-full overflow-hidden rounded-full bg-secondary"
+              className="h-2.5 w-full overflow-hidden rounded-full bg-secondary"
               role="progressbar"
               aria-valuenow={progression.readinessScore || 0}
               aria-valuemin={0}
@@ -926,13 +820,11 @@ const DashboardPage: React.FC = () => {
           </div>
 
           {progression.advancementBlockers && progression.advancementBlockers.length > 0 && (
-            <div className="space-y-2 rounded-2xl border border-amber-500/20 bg-amber-500/5 p-4">
+            <div className="space-y-1.5 rounded-2xl border border-amber-500/20 bg-amber-500/5 p-3.5">
               <h4 className="flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-amber-600 dark:text-amber-400">
-                {language === 'ja'
-                  ? `⚠️ ${progression.nextLevel}への じょうけん`
-                  : `⚠️ Blockers to ${progression.nextLevel}`}
+                ⚠️ {progression.nextLevel} talablari
               </h4>
-              <ul className="list-inside list-disc space-y-1 text-xs text-muted-foreground">
+              <ul className="list-inside list-disc space-y-0.5 text-xs text-muted-foreground">
                 {progression.advancementBlockers.map((blocker: string, index: number) => (
                   <li key={index}>{blocker}</li>
                 ))}
@@ -941,10 +833,8 @@ const DashboardPage: React.FC = () => {
           )}
 
           {progression.recommendedAction && (
-            <div className="flex items-center gap-2 rounded-xl border border-border bg-secondary/20 p-3 text-xs text-muted-foreground">
-              <span className="font-bold text-primary">
-                {language === 'ja' ? '💡 つぎのステップ:' : '💡 Next Step:'}
-              </span>
+            <div className="flex items-center gap-2 rounded-xl border border-border bg-secondary/20 p-2.5 text-xs text-muted-foreground">
+              <span className="font-bold text-primary">💡 Keyingi qadam:</span>
               <span>{progression.recommendedAction}</span>
             </div>
           )}
@@ -952,26 +842,14 @@ const DashboardPage: React.FC = () => {
           {promotionCandidate ? (
             <div className="mt-2 space-y-3 rounded-2xl border border-primary/20 bg-primary/10 p-4">
               <h4 className="flex items-center gap-1.5 text-sm font-bold text-primary">
-                🏆{' '}
-                {language === 'ja'
-                  ? 'レベルアップの チャンス！'
-                  : language === 'en'
-                    ? 'Promotion Candidate Available!'
-                    : "Yangi darajaga o'tish taklifi!"}
+                🏆 {language === 'ja' ? 'レベルアップの チャンス！' : "Yangi darajaga o'tish!"}
               </h4>
               <p className="text-xs text-muted-foreground">
-                {language === 'ja'
-                  ? `${promotionCandidate.currentLevel} から ${promotionCandidate.candidateLevel} へ レベルアップできます！`
-                  : language === 'en'
-                    ? `You are ready to advance from ${promotionCandidate.currentLevel} to ${promotionCandidate.candidateLevel}!`
-                    : `Siz ${promotionCandidate.currentLevel} darajasidan ${promotionCandidate.candidateLevel} darajasiga o'tishga tayyorsiz!`}
+                Siz {promotionCandidate.currentLevel} darajasidan{' '}
+                {promotionCandidate.candidateLevel} darajasiga o'tishga tayyorsiz!
               </p>
               <p className="text-xs font-semibold italic text-muted-foreground">
-                {language === 'ja'
-                  ? `りゆう: ${promotionCandidate.reason}`
-                  : language === 'en'
-                    ? `Reason: ${promotionCandidate.reason}`
-                    : `Sabab: ${promotionCandidate.reason}`}
+                Sabab: {promotionCandidate.reason}
               </p>
               <div className="flex gap-2">
                 <button
@@ -984,19 +862,13 @@ const DashboardPage: React.FC = () => {
                   ) : (
                     <Trophy size={14} />
                   )}
-                  <span>
-                    {language === 'ja'
-                      ? 'レベルアップする'
-                      : language === 'en'
-                        ? 'Confirm & Advance'
-                        : "Darajaga o'tish"}
-                  </span>
+                  <span>Darajaga o'tish</span>
                 </button>
                 <button
                   onClick={handleDismissCandidatePromotion}
                   className="rounded-xl border border-border bg-secondary px-3 py-2 text-xs font-semibold text-foreground transition hover:bg-secondary/80"
                 >
-                  {language === 'ja' ? 'あとで' : language === 'en' ? 'Not Now' : 'Hozir emas'}
+                  Hozir emas
                 </button>
               </div>
             </div>
@@ -1011,24 +883,12 @@ const DashboardPage: React.FC = () => {
                 {isPromoting ? (
                   <>
                     <Loader2 className="animate-spin" size={16} />
-                    <span>
-                      {language === 'ja'
-                        ? 'レベルアップちゅう...'
-                        : language === 'en'
-                          ? 'Promoting...'
-                          : 'Darajani oshirish...'}
-                    </span>
+                    <span>Darajani oshirish...</span>
                   </>
                 ) : (
                   <>
                     <Trophy size={16} />
-                    <span>
-                      {language === 'ja'
-                        ? `${progression.nextLevel}へ レベルアップを しんせい`
-                        : language === 'en'
-                          ? `Request Promotion to ${progression.nextLevel}`
-                          : `${progression.nextLevel} darajasiga so'rov yuborish`}
-                    </span>
+                    <span>{progression.nextLevel} darajasiga o'tish</span>
                   </>
                 )}
               </button>
@@ -1040,46 +900,46 @@ const DashboardPage: React.FC = () => {
       <CountdownWidget />
 
       {/* Tasks and AI Insights Grid */}
-      <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
+      <div className="grid grid-cols-1 gap-6 lg:grid-cols-3">
         {/* Left 2 columns: Tasks list */}
         <div className="space-y-6 lg:col-span-2">
           {/* Today's Tasks Section */}
-          <div className="space-y-4">
+          <div className="space-y-3">
             <div className="flex items-center justify-between">
-              <h2 className="flex items-center gap-2 text-xl font-semibold text-foreground">
-                <ListTodo className="text-primary" size={24} />
+              <h2 className="flex items-center gap-2 text-lg font-bold text-foreground sm:text-xl">
+                <ListTodo className="text-primary" size={22} />
                 {t('dashboard.todayTasks')}
               </h2>
               <Link
                 to="/personal-plan"
-                className="flex items-center gap-1 text-sm font-medium text-primary hover:text-primary/80"
+                className="flex items-center gap-1 text-xs font-bold text-primary hover:text-primary/80"
               >
-                {t('common.all')} <ArrowRight size={16} />
+                {t('common.all')} <ArrowRight size={14} />
               </Link>
             </div>
 
-            <div className="grid gap-3">
+            <div className="grid gap-2.5">
               {todayPendingTasks.length > 0 ? (
                 todayPendingTasks.map((task) => (
                   <div
                     key={task.id}
-                    className="glass-card group flex transform items-center justify-between rounded-2xl p-4 transition-all duration-200 hover:-translate-y-0.5 hover:border-primary/50"
+                    className="glass-card group flex transform items-center justify-between rounded-2xl p-3.5 transition-all duration-200 hover:-translate-y-0.5 hover:border-primary/50"
                   >
-                    <div className="flex items-center gap-4">
+                    <div className="flex items-center gap-3">
                       <button
                         onClick={() => updateTaskStatus(task.id, 'done')}
                         className="text-muted-foreground/50 transition-colors hover:text-green-500"
-                        title={language === 'ja' ? 'かんりょう' : 'Bajarildi deb belgilash'}
+                        title="Bajarildi deb belgilash"
                       >
-                        <CheckCircle size={26} />
+                        <CheckCircle size={22} />
                       </button>
                       <div className="flex flex-col">
-                        <span className="font-medium text-foreground transition-colors group-hover:text-primary">
+                        <span className="text-sm font-semibold text-foreground transition-colors group-hover:text-primary">
                           {task.title}
                         </span>
-                        <div className="mt-1 flex items-center gap-2">
-                          <span className="flex items-center gap-1 text-xs text-muted-foreground">
-                            <Clock size={12} /> {language === 'ja' ? 'きょう' : 'Bugun'}
+                        <div className="mt-0.5 flex items-center gap-2">
+                          <span className="flex items-center gap-1 text-[11px] text-muted-foreground">
+                            <Clock size={11} /> Bugun
                           </span>
                           {task.subjectId && subjects.find((s) => s.id === task.subjectId) && (
                             <span
@@ -1098,27 +958,21 @@ const DashboardPage: React.FC = () => {
                   </div>
                 ))
               ) : (
-                <div className="glass-card rounded-2xl border-dashed border-border px-4 py-12 text-center">
-                  <div className="mb-4 inline-flex h-16 w-16 items-center justify-center rounded-full bg-green-500/10 text-green-500">
-                    <Trophy size={32} />
+                <div className="glass-card rounded-2xl border-dashed border-border px-4 py-8 text-center">
+                  <div className="mb-3 inline-flex h-12 w-12 items-center justify-center rounded-full bg-green-500/10 text-green-500">
+                    <Trophy size={24} />
                   </div>
-                  <h3 className="mb-2 text-lg font-medium text-foreground">
-                    {language === 'ja'
-                      ? 'きょうの タスクは ありません！🎉'
-                      : "Bugungi vazifalar yo'q! 🎉"}
+                  <h3 className="mb-1 text-base font-bold text-foreground">
+                    Bugungi vazifalar yo'q! 🎉
                   </h3>
-                  <p className="mx-auto mb-6 max-w-sm text-muted-foreground">
-                    {language === 'ja'
-                      ? 'きょうの よていは すべて かんりょうしました。'
-                      : 'Bugun uchun rejalashtirilgan vazifalar mavjud emas yoki hammasi bajarilgan.'}
+                  <p className="mx-auto mb-4 max-w-sm text-xs text-muted-foreground">
+                    Bugun uchun barcha vazifalar bajarilgan yoki hali belgilanmagan.
                   </p>
                   <Link
                     to="/personal-plan"
-                    className="inline-flex items-center justify-center rounded-xl bg-primary px-6 py-2.5 font-medium text-primary-foreground shadow-sm shadow-primary/20 transition-colors hover:bg-primary/90"
+                    className="inline-flex items-center justify-center rounded-xl bg-primary px-4 py-2 text-xs font-bold text-primary-foreground shadow-sm transition-colors hover:bg-primary/90"
                   >
-                    {language === 'ja'
-                      ? 'あたらしく けいかくを さくせい'
-                      : "Shaxsiy o'quv rejasiga o'tish"}
+                    Shaxsiy rejaga o'tish
                   </Link>
                 </div>
               )}
@@ -1127,61 +981,56 @@ const DashboardPage: React.FC = () => {
 
           {/* Overdue Tasks Section */}
           {overdueTasks.length > 0 && (
-            <div className="space-y-4">
+            <div className="space-y-3">
               <div className="flex items-center justify-between">
-                <h2 className="flex items-center gap-2 text-xl font-semibold text-red-600 dark:text-red-400">
-                  <Clock className="animate-pulse" size={24} />
-                  {language === 'ja' ? 'きげんぎれの タスク' : "O'tib ketgan vazifalar"}
+                <h2 className="flex items-center gap-2 text-lg font-bold text-red-600 dark:text-red-400">
+                  <Clock className="animate-pulse" size={20} />
+                  O'tib ketgan vazifalar
                 </h2>
-                <span className="rounded-full bg-red-100 px-2 py-1 text-xs font-bold text-red-600 dark:bg-red-900/30 dark:text-red-400">
-                  {overdueTasks.length} {language === 'ja' ? 'こ' : 'ta'}
+                <span className="rounded-full bg-red-100 px-2 py-0.5 text-xs font-bold text-red-600 dark:bg-red-900/30 dark:text-red-400">
+                  {overdueTasks.length} ta
                 </span>
               </div>
-              <div className="grid gap-3">
-                <div className="space-y-2">
-                  {overdueTasks.map((task) => (
-                    <div
-                      key={task.id}
-                      className="group flex items-center justify-between rounded-2xl border border-red-100 bg-red-50/50 p-4 transition-all duration-200 dark:border-red-900/30 dark:bg-red-900/10"
-                    >
-                      <div className="flex items-center gap-4">
-                        <button
-                          onClick={() => updateTaskStatus(task.id, 'done')}
-                          className="text-red-300 transition-colors hover:text-green-500 dark:text-red-800"
-                        >
-                          <CheckCircle size={26} />
-                        </button>
-                        <div className="flex flex-col">
-                          <span className="font-medium text-gray-900 dark:text-white">
-                            {task.title}
+              <div className="grid gap-2.5">
+                {overdueTasks.map((task) => (
+                  <div
+                    key={task.id}
+                    className="group flex items-center justify-between rounded-2xl border border-red-100 bg-red-50/50 p-3.5 transition-all duration-200 dark:border-red-900/30 dark:bg-red-900/10"
+                  >
+                    <div className="flex items-center gap-3">
+                      <button
+                        onClick={() => updateTaskStatus(task.id, 'done')}
+                        className="text-red-300 transition-colors hover:text-green-500 dark:text-red-800"
+                      >
+                        <CheckCircle size={22} />
+                      </button>
+                      <div className="flex flex-col">
+                        <span className="text-sm font-medium text-gray-900 dark:text-white">
+                          {task.title}
+                        </span>
+                        <div className="mt-0.5 flex items-center gap-2">
+                          <span className="flex items-center gap-1 text-[11px] font-medium text-red-500">
+                            <Clock size={11} />{' '}
+                            {task.dueDate
+                              ? new Date(task.dueDate).toLocaleDateString()
+                              : "Muddat o'tib ketgan"}
                           </span>
-                          <div className="mt-1 flex items-center gap-2">
-                            <span className="flex items-center gap-1 text-xs font-medium text-red-500">
-                              <Clock size={12} />{' '}
-                              {task.dueDate
-                                ? new Date(task.dueDate).toLocaleDateString()
-                                : language === 'ja'
-                                  ? 'きげんぎれ'
-                                  : "Muddat o'tib ketgan"}
+                          {task.subjectId && subjects.find((s) => s.id === task.subjectId) && (
+                            <span
+                              className="rounded-full px-2 py-0.5 text-[10px] font-bold text-white opacity-90 shadow-sm"
+                              style={{
+                                backgroundColor:
+                                  subjects.find((s) => s.id === task.subjectId)?.color || '#6366f1',
+                              }}
+                            >
+                              {subjects.find((s) => s.id === task.subjectId)?.name}
                             </span>
-                            {task.subjectId && subjects.find((s) => s.id === task.subjectId) && (
-                              <span
-                                className="rounded-full px-2 py-0.5 text-[10px] font-bold text-white opacity-90 shadow-sm"
-                                style={{
-                                  backgroundColor:
-                                    subjects.find((s) => s.id === task.subjectId)?.color ||
-                                    '#6366f1',
-                                }}
-                              >
-                                {subjects.find((s) => s.id === task.subjectId)?.name}
-                              </span>
-                            )}
-                          </div>
+                          )}
                         </div>
                       </div>
                     </div>
-                  ))}
-                </div>
+                  </div>
+                ))}
               </div>
             </div>
           )}
@@ -1189,42 +1038,36 @@ const DashboardPage: React.FC = () => {
 
         {/* Right column: AI Insights Panel */}
         <div className="space-y-6">
-          <div className="glass-card flex flex-col space-y-4 rounded-[2rem] p-6">
-            <h2 className="flex items-center gap-2 text-xl font-semibold text-foreground">
-              <Sparkles size={22} className="animate-pulse text-primary" />
-              {language === 'ja' ? 'AI スマートパネル' : 'AI Aqlli Panel'}
+          <div className="glass-card flex flex-col space-y-3.5 rounded-3xl p-5 sm:p-6">
+            <h2 className="flex items-center gap-2 text-lg font-bold text-foreground">
+              <Sparkles size={20} className="animate-pulse text-primary" />
+              AI Maslahatlar
             </h2>
 
             {isAiInsightsLoading ? (
-              <div className="flex flex-col items-center justify-center space-y-3 py-12">
-                <Loader2 className="h-8 w-8 animate-spin text-primary" />
-                <p className="text-xs text-muted-foreground">
-                  {language === 'ja'
-                    ? 'AI アドバイスを じゅんびちゅう...'
-                    : 'AI maslahatlar tayyorlanmoqda...'}
-                </p>
+              <div className="flex flex-col items-center justify-center space-y-2 py-8">
+                <Loader2 className="h-6 w-6 animate-spin text-primary" />
+                <p className="text-xs text-muted-foreground">AI maslahatlar tayyorlanmoqda...</p>
               </div>
             ) : aiInsights.length > 0 ? (
-              <div className="space-y-4">
+              <div className="space-y-3">
                 {aiInsights.map((insight, idx) => (
                   <div
                     key={idx}
-                    className="space-y-1 rounded-2xl border border-primary/20 bg-primary/5 p-4"
+                    className="space-y-1 rounded-2xl border border-primary/20 bg-primary/5 p-3.5"
                   >
-                    <span className="text-xs font-bold uppercase tracking-wide text-primary">
+                    <span className="text-[11px] font-bold uppercase tracking-wide text-primary">
                       📘 {insight.subject}
                     </span>
-                    <p className="text-sm font-medium leading-relaxed text-foreground/80">
+                    <p className="text-xs font-medium leading-relaxed text-foreground/80 sm:text-sm">
                       {insight.advice}
                     </p>
                   </div>
                 ))}
               </div>
             ) : (
-              <div className="py-12 text-center text-sm text-muted-foreground">
-                {language === 'ja'
-                  ? 'レッスンや フラッシュカードを ふくしゅうして、アドバイスを うけとりましょう。📈'
-                  : 'Shaxsiy maslahatlar olish uchun fanlar ostida dars sessiyalari va flashcardlarni yakunlang. 📈'}
+              <div className="py-8 text-center text-xs text-muted-foreground">
+                Tavsiyalar olish uchun dars va mashqlarni yakunlang. 📈
               </div>
             )}
           </div>

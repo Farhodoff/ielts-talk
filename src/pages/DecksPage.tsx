@@ -496,68 +496,77 @@ const DecksPage: React.FC = () => {
         </div>
 
         {isSuper && (
-          <div className="flex flex-col sm:flex-row flex-wrap items-stretch sm:items-center gap-2.5 w-full lg:w-auto">
+          <div className="flex w-full flex-col flex-wrap items-stretch gap-2.5 sm:flex-row sm:items-center lg:w-auto">
             {/* Primary Action Buttons */}
-            <div className="grid grid-cols-2 sm:flex sm:items-center gap-2">
+            <div className="grid grid-cols-2 gap-2 sm:flex sm:items-center">
               {/* Add Subject Button */}
               <Button
                 onClick={() => setIsAddSubjectOpen(true)}
-                className="w-full sm:w-auto rounded-2xl bg-primary px-3.5 sm:px-5 py-2.5 sm:py-3 text-xs font-extrabold text-primary-foreground shadow-md hover:bg-primary/90 justify-center"
+                className="w-full justify-center rounded-2xl bg-primary px-3.5 py-2.5 text-xs font-extrabold text-primary-foreground shadow-md hover:bg-primary/90 sm:w-auto sm:px-5 sm:py-3"
               >
-                <Plus size={16} className="mr-1.5 shrink-0" /> <span className="truncate">{t('flashcards.createDeck')}</span>
+                <Plus size={16} className="mr-1.5 shrink-0" />{' '}
+                <span className="truncate">{t('flashcards.createDeck')}</span>
               </Button>
 
               {/* Primary Button */}
               <Link to="/flashcards/new" className="w-full sm:w-auto">
-                <Button className="w-full sm:w-auto rounded-2xl border border-border bg-card px-3.5 sm:px-5 py-2.5 sm:py-3 text-xs font-extrabold text-foreground shadow-xs hover:bg-muted justify-center">
-                  <Plus size={16} className="mr-1.5 shrink-0" /> <span className="truncate">{t('flashcards.addManual')}</span>
+                <Button className="w-full justify-center rounded-2xl border border-border bg-card px-3.5 py-2.5 text-xs font-extrabold text-foreground shadow-xs hover:bg-muted sm:w-auto sm:px-5 sm:py-3">
+                  <Plus size={16} className="mr-1.5 shrink-0" />{' '}
+                  <span className="truncate">{t('flashcards.addManual')}</span>
                 </Button>
               </Link>
             </div>
 
             {/* AI & Import Action Group */}
-            <div className="flex items-center gap-1.5 rounded-2xl border border-border bg-card/80 p-1 overflow-x-auto max-w-full">
+            <div className="flex max-w-full items-center gap-1.5 overflow-x-auto rounded-2xl border border-border bg-card/80 p-1">
               <button
                 onClick={() => setIsDocGeneratorOpen(true)}
-                className="flex items-center gap-1.5 rounded-xl border border-[#C9A961]/30 bg-[#C9A961]/20 px-3 py-2 text-xs font-extrabold text-[#C9A961] shadow-xs transition-all hover:bg-[#C9A961]/30 shrink-0"
+                className="flex shrink-0 items-center gap-1.5 rounded-xl border border-[#C9A961]/30 bg-[#C9A961]/20 px-3 py-2 text-xs font-extrabold text-[#C9A961] shadow-xs transition-all hover:bg-[#C9A961]/30"
                 title={
                   language === 'en'
                     ? 'Generate Q&A and flashcards from notes'
                     : 'Konspekt yoki matndan Q&A va test fleshkartalari tuzish'
                 }
               >
-                <Sparkles size={15} className="shrink-0" /> <span className="whitespace-nowrap">AI Konspekt & Quiz</span>
+                <Sparkles size={15} className="shrink-0" />{' '}
+                <span className="whitespace-nowrap">AI Konspekt</span>
               </button>
               <button
                 onClick={() => setAiSubjectId('global')}
-                className="flex items-center gap-1.5 rounded-xl px-3 py-2 text-xs font-extrabold text-primary transition-all hover:bg-primary/10 shrink-0"
+                className="flex shrink-0 items-center gap-1.5 rounded-xl px-3 py-2 text-xs font-extrabold text-primary transition-all hover:bg-primary/10"
                 title={language === 'en' ? 'Generate cards with AI' : 'AI bilan kartochka yaratish'}
               >
-                <Book size={15} className="shrink-0" /> <span className="whitespace-nowrap">AI Generator</span>
+                <Book size={15} className="shrink-0" />{' '}
+                <span className="whitespace-nowrap">AI Kartalar</span>
               </button>
               <button
                 onClick={() => setIsExtractModalOpen(true)}
-                className="flex items-center gap-1.5 rounded-xl px-3 py-2 text-xs font-extrabold text-muted-foreground transition-all hover:bg-muted/60 hover:text-foreground shrink-0"
-                title={language === 'en' ? 'Extract vocabulary from text' : "Matndan lug'at ajratib olish"}
+                className="flex shrink-0 items-center gap-1.5 rounded-xl px-3 py-2 text-xs font-extrabold text-muted-foreground transition-all hover:bg-muted/60 hover:text-foreground"
+                title={
+                  language === 'en'
+                    ? 'Extract vocabulary from text'
+                    : "Matndan lug'at ajratib olish"
+                }
               >
-                <FileText size={15} className="shrink-0" /> <span className="whitespace-nowrap">Extractor</span>
+                <FileText size={15} className="shrink-0" />{' '}
+                <span className="whitespace-nowrap">Matndan ajratish</span>
               </button>
               <button
                 onClick={() => setImportModalOpen(true)}
-                className="flex items-center gap-1.5 rounded-xl px-3 py-2 text-xs font-extrabold text-muted-foreground transition-all hover:bg-muted/60 hover:text-foreground shrink-0"
-                title={
-                  language === 'en' ? 'Import JSON file' : 'JSON formatida fayl yuklash'
-                }
+                className="flex shrink-0 items-center gap-1.5 rounded-xl px-3 py-2 text-xs font-extrabold text-muted-foreground transition-all hover:bg-muted/60 hover:text-foreground"
+                title={language === 'en' ? 'Import JSON file' : 'JSON formatida fayl yuklash'}
               >
-                <Upload size={15} className="shrink-0" /> <span className="whitespace-nowrap">Import</span>
+                <Upload size={15} className="shrink-0" />{' '}
+                <span className="whitespace-nowrap">Import</span>
               </button>
               {isAdmin && (
                 <button
                   onClick={() => setIsAdminModalOpen(true)}
-                  className="flex items-center gap-1.5 rounded-xl border border-rose-500/20 bg-rose-500/10 px-3 py-2 text-xs font-black text-rose-500 transition-all hover:bg-rose-500/20 shrink-0"
+                  className="flex shrink-0 items-center gap-1.5 rounded-xl border border-rose-500/20 bg-rose-500/10 px-3 py-2 text-xs font-black text-rose-500 transition-all hover:bg-rose-500/20"
                   title="Buzuq kartalarni saralash va o'chirish"
                 >
-                  <ShieldAlert size={15} className="shrink-0" /> <span className="whitespace-nowrap">Admin Cleaner</span>
+                  <ShieldAlert size={15} className="shrink-0" />{' '}
+                  <span className="whitespace-nowrap">Tozalash</span>
                 </button>
               )}
             </div>
@@ -567,21 +576,19 @@ const DecksPage: React.FC = () => {
 
       {/* Toast/Notice for preset deck import */}
       {isImportingPreset && (
-        <div className="flex animate-pulse items-center justify-between rounded-2xl border border-primary/20 bg-primary/10 p-4 text-primary">
-          <div className="flex items-center gap-2 text-sm font-extrabold">
-            <Sparkles size={18} className="animate-spin" />
-            <span>Kutubxonadagi barcha kartochkalar bazaga saqlanmoqda...</span>
+        <div className="flex animate-pulse items-center justify-between rounded-2xl border border-primary/20 bg-primary/10 p-3.5 text-primary">
+          <div className="flex items-center gap-2 text-xs font-extrabold sm:text-sm">
+            <Sparkles size={18} className="shrink-0 animate-spin" />
+            <span>Kartochkalar bazaga saqlanmoqda...</span>
           </div>
         </div>
       )}
 
       {importedDeckTitle && !isImportingPreset && (
-        <div className="flex items-center justify-between rounded-2xl border border-emerald-500/20 bg-emerald-500/10 p-4 text-emerald-500">
-          <div className="flex items-center gap-2 text-sm font-extrabold">
-            <Sparkles size={18} />
-            <span>
-              "{importedDeckTitle}" to'plami va uning barcha kartochkalari muvaffaqiyatli saqlandi!
-            </span>
+        <div className="flex items-center justify-between rounded-2xl border border-emerald-500/20 bg-emerald-500/10 p-3.5 text-emerald-500">
+          <div className="flex items-center gap-2 text-xs font-extrabold sm:text-sm">
+            <Sparkles size={18} className="shrink-0" />
+            <span>"{importedDeckTitle}" muvaffaqiyatli saqlandi!</span>
           </div>
         </div>
       )}
@@ -599,26 +606,32 @@ const DecksPage: React.FC = () => {
 
       {/* Navigation Tabs - Sticky */}
       <div className="sticky top-0 z-20 -my-2 flex flex-wrap items-center justify-between gap-3 border-b border-border/40 bg-background/95 py-2 backdrop-blur-md">
-        <div className="flex items-center gap-1.5 sm:gap-2 rounded-2xl border border-border/80 bg-card p-1 sm:p-1.5 shadow-xs w-full sm:w-auto">
+        <div className="flex w-full items-center gap-1.5 rounded-2xl border border-border/80 bg-card p-1 shadow-xs sm:w-auto sm:gap-2 sm:p-1.5">
           <button
             onClick={() => setActiveTab('my')}
-            className={`flex-1 sm:flex-initial flex cursor-pointer items-center justify-center gap-1.5 sm:gap-2 rounded-xl px-3.5 sm:px-5 py-2 sm:py-2.5 text-xs font-black transition-all ${
+            className={`flex flex-1 cursor-pointer items-center justify-center gap-1.5 rounded-xl px-3.5 py-2 text-xs font-black transition-all sm:flex-initial sm:gap-2 sm:px-5 sm:py-2.5 ${
               activeTab === 'my'
                 ? 'bg-primary text-primary-foreground shadow-xs'
                 : 'text-muted-foreground hover:text-foreground'
             }`}
           >
-            <Layers size={16} /> <span>{t('flashcards.myDecks')} ({subjects.length})</span>
+            <Layers size={16} />{' '}
+            <span>
+              {t('flashcards.myDecks')} ({subjects.length})
+            </span>
           </button>
           <button
             onClick={() => setActiveTab('library')}
-            className={`flex-1 sm:flex-initial flex cursor-pointer items-center justify-center gap-1.5 sm:gap-2 rounded-xl px-3.5 sm:px-5 py-2 sm:py-2.5 text-xs font-black transition-all ${
+            className={`flex flex-1 cursor-pointer items-center justify-center gap-1.5 rounded-xl px-3.5 py-2 text-xs font-black transition-all sm:flex-initial sm:gap-2 sm:px-5 sm:py-2.5 ${
               activeTab === 'library'
                 ? 'bg-primary text-primary-foreground shadow-xs'
                 : 'text-muted-foreground hover:text-foreground'
             }`}
           >
-            <Library size={16} /> <span>{t('flashcards.library')} ({visiblePresetDecks.length})</span>
+            <Library size={16} />{' '}
+            <span>
+              {t('flashcards.library')} ({visiblePresetDecks.length})
+            </span>
           </button>
         </div>
       </div>
@@ -626,14 +639,14 @@ const DecksPage: React.FC = () => {
       {activeTab === 'my' && (
         <div className="space-y-6">
           {/* Sub-tabs & Multi-select Toolbar */}
-          <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3 rounded-2xl border border-border/80 bg-card/60 p-2.5 sm:p-3">
-            <div className="grid grid-cols-2 sm:flex sm:items-center gap-2">
+          <div className="flex flex-col items-stretch justify-between gap-3 rounded-2xl border border-border/80 bg-card/60 p-2.5 sm:flex-row sm:items-center sm:p-3">
+            <div className="grid grid-cols-2 gap-2 sm:flex sm:items-center">
               <button
                 onClick={() => {
                   setSubTab('active');
                   setSelectedSubjectIds([]);
                 }}
-                className={`flex items-center justify-center gap-1.5 rounded-xl px-3 sm:px-4 py-2 text-xs font-black transition-all ${
+                className={`flex items-center justify-center gap-1.5 rounded-xl px-3 py-2 text-xs font-black transition-all sm:px-4 ${
                   subTab === 'active'
                     ? 'bg-primary text-primary-foreground shadow-xs'
                     : 'text-muted-foreground hover:bg-muted/60 hover:text-foreground'
@@ -646,7 +659,7 @@ const DecksPage: React.FC = () => {
                   setSubTab('archived');
                   setSelectedSubjectIds([]);
                 }}
-                className={`flex items-center justify-center gap-1.5 rounded-xl px-3 sm:px-4 py-2 text-xs font-black transition-all ${
+                className={`flex items-center justify-center gap-1.5 rounded-xl px-3 py-2 text-xs font-black transition-all sm:px-4 ${
                   subTab === 'archived'
                     ? 'bg-[#C9A961] font-black text-black shadow-xs'
                     : 'text-muted-foreground hover:bg-muted/60 hover:text-foreground'
@@ -858,7 +871,8 @@ const DecksPage: React.FC = () => {
                     IELTS Rasmiy Lug'at Kutubxonasi
                   </h3>
                   <p className="text-xs text-muted-foreground">
-                    Academic Word List (AWL), Collocations va Band 7.0–9.0 uchun tayyor 100 tadan bo'lingan jildlar to'plami
+                    Academic Word List (AWL), Collocations va Band 7.0–9.0 uchun tayyor 100 tadan
+                    bo'lingan jildlar to'plami
                   </p>
                 </div>
 
