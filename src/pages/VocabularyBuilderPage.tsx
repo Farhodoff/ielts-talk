@@ -14,7 +14,6 @@ import {
 import { generateAIResponse, extractJsonFromAiResponse } from '../utils/ai/aiCore';
 import { speakText } from '../utils/audioTts';
 import { useStudyData } from '../context/StudyPlannerContext';
-import { FuriganaText } from "../components/common/FuriganaText";
 import { supabase } from '../lib/supabase';
 import { toDeterministicUUID } from '../utils/uuid';
 import { isSuperAdmin } from '../utils/admin';
@@ -23,10 +22,10 @@ import { findLanguageSubject, getOrEnsureLanguageSubject } from '../utils/subjec
 
 export interface VocabWordDetails {
   word: string;
-  language: 'en' | 'ja';
+  language?: 'en' | 'ja';
   phonetic?: string;
   furigana?: string;
-  level: string; // e.g. B2, C1, C2, N3, N2, N1
+  level: string; // e.g. B2, C1, C2
   partOfSpeech: string;
   uzbekTranslation: string;
   definition: string;
@@ -38,6 +37,7 @@ export interface VocabWordDetails {
 export const VocabularyBuilderPage: React.FC = () => {
   const { user, subjects, addFlashcard, addSubject, primaryLanguage } = useStudyData();
   const { language } = useLanguage();
+  const isEn = language === 'en';
   const isSuper = isSuperAdmin(user?.email, user?.role);
 
   const BUILTIN_VOCAB_DB: Record<string, VocabWordDetails> = {
@@ -55,7 +55,7 @@ export const VocabularyBuilderPage: React.FC = () => {
       examples: [
         {
           sentence: 'The academy provides a comprehensive IELTS preparation program.',
-          translation: "Akademiya keng qamrovli IELTS tayyorgarlik dasturini taqdim etadi.",
+          translation: 'Akademiya keng qamrovli IELTS tayyorgarlik dasturini taqdim etadi.',
         },
       ],
     },
@@ -71,7 +71,9 @@ export const VocabularyBuilderPage: React.FC = () => {
   const [isAddedToFlashcards, setIsAddedToFlashcards] = useState(false);
 
   const [activeTab, setActiveTab] = useState<'search' | 'saved' | 'history'>('search');
-  const [history, setHistory] = useState<VocabWordDetails[]>(() => [BUILTIN_VOCAB_DB['comprehensive']]);
+  const [history, setHistory] = useState<VocabWordDetails[]>(() => [
+    BUILTIN_VOCAB_DB['comprehensive'],
+  ]);
   const [savedWords, setSavedWords] = useState<VocabWordDetails[]>([]);
 
   const SAMPLE_WORDS = [
@@ -219,7 +221,7 @@ Return ONLY a raw valid JSON object (no markdown, no backticks) with this struct
       setCurrentResult(parsed);
 
       // Pre-select matching subject for the analyzed word language
-      const matchedSubject = findLanguageSubject(subjects, parsed.language || 'ja');
+      const matchedSubject = findLanguageSubject(subjects, parsed.language || 'en');
       if (matchedSubject) {
         setSelectedSubjectId(matchedSubject.id);
       }
@@ -246,9 +248,9 @@ Return ONLY a raw valid JSON object (no markdown, no backticks) with this struct
         setCurrentResult(BUILTIN_VOCAB_DB[searchTerm]);
       } else {
         setErrorMsg(
-          language === 'ja'
-            ? '単語の分析中にエラーが発生しました。もう一度お試しください。'
-            : "So'zni tahlil qilishda xatolik yuz berdi. Iltimos qayta urinib ko'ring.",
+          isEn
+            ? 'Failed to analyze word with AI. Please try again.'
+            : "So'zni AI orqali tahlil qilishda xatolik yuz berdi. Iltimos qayta urinib ko'ring.",
         );
       }
     } finally {
@@ -280,9 +282,9 @@ Return ONLY a raw valid JSON object (no markdown, no backticks) with this struct
           .upsert({
             id: uuid,
             user_id: user.id,
-            language: wordObj.language || 'ja',
+            language: wordObj.language || 'en',
             term: wordObj.word,
-            reading: wordObj.furigana || wordObj.phonetic || null,
+            reading: wordObj.phonetic || null,
             meaning: wordObj.uzbekTranslation || wordObj.definition,
             example_sentence: wordObj.examples?.[0]?.sentence || null,
             example_translation: wordObj.examples?.[0]?.translation || null,
@@ -318,14 +320,12 @@ Return ONLY a raw valid JSON object (no markdown, no backticks) with this struct
       targetSubId = await getOrEnsureLanguageSubject(
         subjects,
         addSubject,
-        currentResult.language || 'ja',
+        currentResult.language || 'en',
       );
       setSelectedSubjectId(targetSubId);
     }
 
-    const front =
-      currentResult.furigana ||
-      `${currentResult.word} (${currentResult.partOfSpeech}) [${currentResult.level}]`;
+    const front = `${currentResult.word} (${currentResult.partOfSpeech}) [${currentResult.level}]`;
     const back = `Tarjimasi: ${currentResult.uzbekTranslation}\nTa'rifi: ${currentResult.definition}\nCollocations: ${currentResult.collocations.join(', ')}\n\nMisol: ${currentResult.examples[0]?.sentence || ''}`;
 
     await addFlashcard({
@@ -343,19 +343,19 @@ Return ONLY a raw valid JSON object (no markdown, no backticks) with this struct
     : false;
 
   return (
-    <div className="mx-auto max-w-6xl space-y-8 p-4 pb-16 md:p-8">
+    <div className="mx-auto max-w-5xl space-y-5 p-3.5 pb-20 sm:space-y-6 sm:p-6 md:p-8">
       {/* Header */}
-      <div className="flex flex-col items-start justify-between gap-4 border-b border-border pb-6 md:flex-row md:items-center">
-        <div className="flex items-center gap-3.5">
-          <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl border border-primary/25 bg-primary/10 text-primary shadow-xs">
-            <BookOpen size={22} />
+      <div className="flex flex-col items-start justify-between gap-4 border-b border-border pb-5 sm:pb-6 md:flex-row md:items-center">
+        <div className="flex items-center gap-3">
+          <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl border border-primary/25 bg-primary/10 text-primary shadow-xs sm:h-11 sm:w-11">
+            <BookOpen size={20} className="sm:size-[22px]" />
           </div>
           <div>
-            <h1 className="font-display text-2xl font-black tracking-tight text-foreground md:text-3xl">
-              {language === 'ja' ? 'AI単語帳・辞書ビルダー' : 'Smart Vocabulary Builder'}
+            <h1 className="font-display text-xl font-black tracking-tight text-foreground sm:text-2xl md:text-3xl">
+              Smart Vocabulary Builder
             </h1>
             <p className="mt-0.5 text-xs text-muted-foreground">
-              {language === 'en'
+              {isEn
                 ? 'Master academic & IELTS vocabulary with AI definitions, collocations, and examples.'
                 : "IELTS va akademik ingliz tili lug'at boyligingizni oshiring, kolokatsiyalar, sinonimlar va misollar o'rganing."}
             </p>
@@ -363,90 +363,93 @@ Return ONLY a raw valid JSON object (no markdown, no backticks) with this struct
         </div>
 
         {/* Tabs */}
-        <div className="flex rounded-2xl border border-border bg-muted/60 p-1.5">
+        <div className="grid w-full grid-cols-3 gap-1 rounded-2xl border border-border bg-muted/60 p-1 sm:w-auto">
           <button
             onClick={() => setActiveTab('search')}
-            className={`flex cursor-pointer items-center gap-1.5 rounded-xl px-4 py-2 text-xs font-bold transition-all ${
+            className={`flex cursor-pointer items-center justify-center gap-1.5 rounded-xl px-3 py-2 text-xs font-bold transition-all ${
               activeTab === 'search'
                 ? 'bg-primary text-primary-foreground shadow-xs'
                 : 'text-muted-foreground hover:text-foreground'
             }`}
           >
-            <Search size={14} /> {language === 'ja' ? '検索' : 'Qidiruv'}
+            <Search size={13} /> <span>{isEn ? 'Search' : 'Qidiruv'}</span>
           </button>
           <button
             onClick={() => setActiveTab('saved')}
-            className={`flex cursor-pointer items-center gap-1.5 rounded-xl px-4 py-2 text-xs font-bold transition-all ${
+            className={`flex cursor-pointer items-center justify-center gap-1.5 rounded-xl px-3 py-2 text-xs font-bold transition-all ${
               activeTab === 'saved'
                 ? 'bg-primary text-primary-foreground shadow-xs'
                 : 'text-muted-foreground hover:text-foreground'
             }`}
           >
-            <Bookmark size={14} />{' '}
-            {language === 'ja'
-              ? `保存済み (${savedWords.length})`
-              : `Saqlanganlar (${savedWords.length})`}
+            <Bookmark size={13} />{' '}
+            <span className="truncate">
+              {isEn ? `Saved (${savedWords.length})` : `Saqlangan (${savedWords.length})`}
+            </span>
           </button>
           <button
             onClick={() => setActiveTab('history')}
-            className={`flex cursor-pointer items-center gap-1.5 rounded-xl px-4 py-2 text-xs font-bold transition-all ${
+            className={`flex cursor-pointer items-center justify-center gap-1.5 rounded-xl px-3 py-2 text-xs font-bold transition-all ${
               activeTab === 'history'
                 ? 'bg-primary text-primary-foreground shadow-xs'
                 : 'text-muted-foreground hover:text-foreground'
             }`}
           >
-            <History size={14} /> {language === 'ja' ? '履歴' : 'Tarix'}
+            <History size={13} /> <span>{isEn ? 'History' : 'Tarix'}</span>
           </button>
         </div>
       </div>
 
       {/* TAB 1: SEARCH */}
       {activeTab === 'search' && (
-        <div className="space-y-6">
+        <div className="space-y-5">
           {/* Search Input Bar */}
-          <div className="space-y-4 rounded-3xl border border-border bg-card p-6 shadow-sm">
-            <div className="flex flex-col gap-3 sm:flex-row">
+          <div className="space-y-3.5 rounded-3xl border border-border bg-card p-4 shadow-xs sm:p-6">
+            <div className="flex flex-col gap-2.5 sm:flex-row">
               <div className="relative flex-1">
-                <Search className="absolute left-4 top-3.5 text-muted-foreground" size={18} />
+                <Search
+                  className="absolute left-3.5 top-3 text-muted-foreground sm:top-3.5"
+                  size={17}
+                />
                 <input
                   type="text"
                   value={query}
                   onChange={(e) => setQuery(e.target.value)}
                   onKeyDown={(e) => e.key === 'Enter' && handleSearch()}
                   placeholder={
-                    language === 'en'
-                      ? 'Type an English word & press Enter (e.g. resilient, paramount, meticulous)...'
-                      : "So'z kiritib Enter bosing (masalan: resilient, paramount, meticulous)..."
+                    isEn
+                      ? 'Type an English word & press Enter (e.g. resilient, paramount)...'
+                      : "So'z kiritib Enter bosing (masalan: resilient, paramount)..."
                   }
-                  className="w-full rounded-2xl border border-border bg-background py-3.5 pl-11 pr-4 text-sm font-medium text-foreground transition-all placeholder:text-muted-foreground/60 focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
+                  className="focus:outline-hidden w-full rounded-2xl border border-border bg-background py-2.5 pl-10 pr-3.5 text-xs font-medium text-foreground transition-all placeholder:text-muted-foreground/60 focus:border-primary focus:ring-1 focus:ring-primary sm:py-3 sm:text-sm"
                 />
               </div>
               <button
                 onClick={() => handleSearch()}
                 disabled={isSearching || !query.trim()}
-                className="flex shrink-0 cursor-pointer items-center justify-center gap-2 rounded-2xl bg-primary px-6 py-3.5 text-xs font-bold text-primary-foreground shadow-md shadow-primary/20 transition-all hover:bg-primary/90 active:scale-95 disabled:opacity-50"
+                className="flex shrink-0 cursor-pointer items-center justify-center gap-1.5 rounded-2xl bg-primary px-5 py-2.5 text-xs font-bold text-primary-foreground shadow-sm shadow-primary/20 transition-all hover:bg-primary/90 active:scale-95 disabled:opacity-50 sm:py-3"
               >
                 {isSearching ? (
-                  <Sparkles size={16} className="animate-spin" />
+                  <Sparkles size={15} className="animate-spin" />
                 ) : (
-                  <Search size={16} />
+                  <Search size={15} />
                 )}
                 <span>
                   {isSearching
-                    ? language === 'ja'
-                      ? '分析中...'
+                    ? isEn
+                      ? 'Analyzing...'
                       : 'Tahlil qilinmoqda...'
-                    : language === 'ja'
-                      ? 'AI分析'
+                    : isEn
+                      ? 'AI Analyze'
                       : 'AI Tahlil'}
                 </span>
               </button>
             </div>
 
             {/* Sample topics */}
-            <div className="flex flex-wrap items-center gap-2 pt-1">
+            <div className="flex flex-wrap items-center gap-1.5 pt-0.5">
               <span className="text-[10px] font-bold uppercase tracking-wider text-muted-foreground">
-                {language === 'ja' ? 'おすすめ単語:' : 'Namunalar:'}
+                {isEn ? 'Try words:' : 'Namunalar:'}
               </span>
               {SAMPLE_WORDS.map((w, idx) => (
                 <button
@@ -455,7 +458,7 @@ Return ONLY a raw valid JSON object (no markdown, no backticks) with this struct
                     setQuery(w.query);
                     handleSearch(w.query);
                   }}
-                  className="cursor-pointer rounded-full border border-border bg-muted px-3 py-1 text-[11px] font-medium text-muted-foreground transition-all hover:bg-muted/80 hover:text-foreground active:scale-95"
+                  className="cursor-pointer rounded-full border border-border bg-muted/80 px-2.5 py-0.5 text-[11px] font-medium text-muted-foreground transition-all hover:bg-muted hover:text-foreground active:scale-95"
                 >
                   {w.label}
                 </button>
@@ -465,26 +468,22 @@ Return ONLY a raw valid JSON object (no markdown, no backticks) with this struct
 
           {/* Error */}
           {errorMsg && (
-            <div className="rounded-2xl border border-red-500/20 bg-red-500/10 p-4 text-xs font-bold text-red-500">
+            <div className="rounded-2xl border border-red-500/20 bg-red-500/10 p-3.5 text-xs font-bold text-red-500">
               {errorMsg}
             </div>
           )}
 
           {/* Search Result Card */}
           {currentResult && (
-            <div className="space-y-6 rounded-3xl border border-border bg-card p-6 shadow-sm md:p-8">
+            <div className="space-y-5 rounded-3xl border border-border bg-card p-4 shadow-sm sm:p-6 md:p-8">
               {/* Word Top Header */}
-              <div className="flex flex-col items-start justify-between gap-4 border-b border-border pb-6 sm:flex-row sm:items-center">
+              <div className="flex flex-col items-start justify-between gap-3.5 border-b border-border pb-4 sm:flex-row sm:items-center">
                 <div>
-                  <div className="flex items-center gap-3">
-                    <h2 className="font-display text-3xl font-black text-foreground">
-                      {currentResult.furigana ? (
-                        <FuriganaText text={currentResult.furigana} />
-                      ) : (
-                        currentResult.word
-                      )}
+                  <div className="flex flex-wrap items-center gap-2 sm:gap-3">
+                    <h2 className="font-display text-2xl font-black text-foreground sm:text-3xl">
+                      {currentResult.word}
                     </h2>
-                    <span className="rounded-full border border-[#C9A961]/30 bg-[#C9A961]/15 px-3 py-1 text-xs font-black uppercase tracking-wider text-[#C9A961]">
+                    <span className="rounded-full border border-[#C9A961]/30 bg-[#C9A961]/15 px-2.5 py-0.5 text-[11px] font-black uppercase tracking-wider text-[#C9A961]">
                       {currentResult.level}
                     </span>
                     <span className="font-serif text-xs italic text-muted-foreground">
@@ -492,77 +491,69 @@ Return ONLY a raw valid JSON object (no markdown, no backticks) with this struct
                     </span>
                   </div>
                   {currentResult.phonetic && (
-                    <p className="mt-1 font-mono text-xs text-muted-foreground">
+                    <p className="mt-0.5 font-mono text-xs text-muted-foreground">
                       {currentResult.phonetic}
                     </p>
                   )}
                 </div>
 
-                <div className="flex items-center gap-2">
+                <div className="flex w-full items-center gap-2 sm:w-auto">
                   <button
-                    onClick={() =>
-                      speakText(
-                        currentResult.word,
-                        currentResult.language === 'ja' ? 'ja-JP' : 'en-US',
-                      )
-                    }
-                    className="flex cursor-pointer items-center gap-2 rounded-2xl border border-border bg-muted p-3 text-xs font-bold text-foreground transition-all hover:bg-muted/80 active:scale-95"
+                    onClick={() => speakText(currentResult.word, 'en-GB')}
+                    className="flex flex-1 cursor-pointer items-center justify-center gap-1.5 rounded-xl border border-border bg-muted px-3.5 py-2 text-xs font-bold text-foreground transition-all hover:bg-muted/80 active:scale-95 sm:flex-none"
+                    title="Talaffuzni eshitish (UK Accent)"
                   >
-                    <Volume2 size={18} className="text-primary" />
-                    <span>{language === 'ja' ? '発音' : 'Talaffuz'}</span>
+                    <Volume2 size={16} className="text-primary" />
+                    <span>{isEn ? 'Pronounce' : 'Talaffuz'}</span>
                   </button>
                   <button
                     onClick={() => toggleSaveWord(currentResult)}
-                    className={`flex cursor-pointer items-center gap-2 rounded-2xl border p-3 text-xs font-bold transition-all active:scale-95 ${
+                    className={`flex flex-1 cursor-pointer items-center justify-center gap-1.5 rounded-xl border px-3.5 py-2 text-xs font-bold transition-all active:scale-95 sm:flex-none ${
                       isCurrentSaved
                         ? 'border-[#C9A961]/40 bg-[#C9A961]/15 text-[#C9A961]'
                         : 'border-border bg-muted text-foreground hover:bg-muted/80'
                     }`}
                   >
-                    <Bookmark size={18} className={isCurrentSaved ? 'fill-current' : ''} />
+                    <Bookmark size={15} className={isCurrentSaved ? 'fill-current' : ''} />
                     <span>
-                      {language === 'ja'
-                        ? isCurrentSaved
-                          ? '保存済み'
-                          : '保存する'
-                        : isCurrentSaved
-                          ? 'Saqlangan'
-                          : 'Saqlash'}
+                      {isCurrentSaved ? (isEn ? 'Saved' : 'Saqlangan') : isEn ? 'Save' : 'Saqlash'}
                     </span>
                   </button>
                 </div>
               </div>
 
-              {/* Uzbek / Japanese Translation & Definition */}
-              <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
-                <div className="space-y-1 rounded-2xl border border-l-4 border-border border-l-primary bg-card p-5 shadow-xs">
+              {/* Uzbek Translation & English Definition */}
+              <div className="grid grid-cols-1 gap-3.5 sm:gap-5 md:grid-cols-2">
+                <div className="space-y-1 rounded-2xl border border-l-4 border-border border-l-primary bg-card p-4 shadow-xs sm:p-5">
                   <span className="text-[10px] font-black uppercase tracking-wider text-primary">
-                    {language === 'ja' ? '主な意味・対訳' : "O'zbekcha Tarjima"}
+                    O'zbekcha Tarjima
                   </span>
-                  <p className="text-xl font-bold text-foreground">
+                  <p className="text-base font-bold text-foreground sm:text-lg">
                     {currentResult.uzbekTranslation}
                   </p>
                 </div>
-                <div className="space-y-1 rounded-2xl border border-border bg-muted/30 p-5">
+                <div className="space-y-1 rounded-2xl border border-border bg-muted/30 p-4 sm:p-5">
                   <span className="text-[10px] font-bold uppercase tracking-wider text-muted-foreground">
-                    {language === 'ja' ? '定義・解説' : "Ta'rif (Definition)"}
+                    Ta'rif (English Definition)
                   </span>
-                  <p className="text-sm font-medium text-foreground">{currentResult.definition}</p>
+                  <p className="text-xs font-medium leading-relaxed text-foreground sm:text-sm">
+                    {currentResult.definition}
+                  </p>
                 </div>
               </div>
 
               {/* Synonyms & Collocations */}
-              <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+              <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
                 {currentResult.synonyms.length > 0 && (
                   <div className="space-y-2">
                     <h4 className="text-xs font-bold uppercase tracking-wider text-foreground">
-                      {language === 'ja' ? '類義語・同義語' : 'Sinonimlar'}
+                      {isEn ? 'Synonyms' : 'Sinonimlar'}
                     </h4>
-                    <div className="flex flex-wrap gap-2">
+                    <div className="flex flex-wrap gap-1.5">
                       {currentResult.synonyms.map((syn, i) => (
                         <span
                           key={i}
-                          className="rounded-xl border border-border bg-muted px-3 py-1 text-xs font-bold text-foreground"
+                          className="rounded-xl border border-border bg-muted px-2.5 py-1 text-xs font-semibold text-foreground"
                         >
                           {syn}
                         </span>
@@ -574,15 +565,13 @@ Return ONLY a raw valid JSON object (no markdown, no backticks) with this struct
                 {currentResult.collocations.length > 0 && (
                   <div className="space-y-2">
                     <h4 className="text-xs font-bold uppercase tracking-wider text-foreground">
-                      {language === 'ja'
-                        ? 'コロケーション・連語'
-                        : "Collocations (So'z birikmalari)"}
+                      {isEn ? 'Collocations' : "Collocations (So'z birikmalari)"}
                     </h4>
-                    <div className="flex flex-wrap gap-2">
+                    <div className="flex flex-wrap gap-1.5">
                       {currentResult.collocations.map((col, i) => (
                         <span
                           key={i}
-                          className="rounded-xl border border-border bg-muted/80 px-3 py-1 text-xs font-semibold text-foreground"
+                          className="rounded-xl border border-border bg-muted/80 px-2.5 py-1 text-xs font-semibold text-foreground"
                         >
                           {col}
                         </span>
@@ -594,15 +583,15 @@ Return ONLY a raw valid JSON object (no markdown, no backticks) with this struct
 
               {/* Example Sentences */}
               {currentResult.examples.length > 0 && (
-                <div className="space-y-3">
+                <div className="space-y-2.5">
                   <h4 className="text-xs font-bold uppercase tracking-wider text-foreground">
-                    {language === 'ja' ? '実践例文' : 'Kontekstual Misollar (3 ta gap)'}
+                    {isEn ? 'Contextual Examples' : 'Kontekstual Misollar'}
                   </h4>
-                  <div className="space-y-3">
+                  <div className="space-y-2.5">
                     {currentResult.examples.map((ex, i) => (
                       <div
                         key={i}
-                        className="space-y-1 rounded-2xl border border-border bg-muted/20 p-4"
+                        className="space-y-1 rounded-2xl border border-border bg-muted/20 p-3 sm:p-3.5"
                       >
                         <p className="text-xs font-bold italic text-foreground">
                           {i + 1}. "{ex.sentence}"
@@ -616,51 +605,47 @@ Return ONLY a raw valid JSON object (no markdown, no backticks) with this struct
                 </div>
               )}
 
-              {/* 1-Click Flashcard Creator Bar (Super Admin only) */}
-              {isSuper && (
-                <div className="flex flex-col items-center justify-between gap-4 border-t border-border pt-4 sm:flex-row">
-                  <div className="flex w-full items-center gap-3 sm:w-auto">
-                    <span className="whitespace-nowrap text-xs font-bold text-muted-foreground">
-                      {language === 'ja' ? '単語帳を選択:' : 'Fan tanlang:'}
-                    </span>
-                    <select
-                      value={selectedSubjectId}
-                      onChange={(e) => setSelectedSubjectId(e.target.value)}
-                      className="rounded-xl border border-border bg-background px-3 py-2 text-xs font-bold text-foreground focus:border-primary focus:outline-none"
-                    >
-                      {subjects.map((s) => (
-                        <option key={s.id} value={s.id}>
-                          {s.name}
-                        </option>
-                      ))}
-                    </select>
-                  </div>
-
-                  <button
-                    onClick={handleCreateFlashcard}
-                    disabled={isAddedToFlashcards}
-                    className={`flex cursor-pointer items-center gap-2 rounded-xl px-5 py-2.5 text-xs font-bold transition-all ${
-                      isAddedToFlashcards
-                        ? 'bg-emerald-500 text-white'
-                        : 'bg-primary text-primary-foreground shadow-sm shadow-primary/20 hover:bg-primary/90'
-                    }`}
+              {/* 1-Click Flashcard Creator Bar */}
+              <div className="flex flex-col items-center justify-between gap-3 border-t border-border pt-4 sm:flex-row">
+                <div className="flex w-full items-center gap-2 sm:w-auto">
+                  <span className="whitespace-nowrap text-xs font-bold text-muted-foreground">
+                    {isEn ? 'Subject:' : 'Fan tanlang:'}
+                  </span>
+                  <select
+                    value={selectedSubjectId}
+                    onChange={(e) => setSelectedSubjectId(e.target.value)}
+                    className="focus:outline-hidden w-full rounded-xl border border-border bg-background px-3 py-1.5 text-xs font-bold text-foreground focus:border-primary sm:w-auto"
                   >
-                    {isAddedToFlashcards ? (
-                      <>
-                        <Check size={16} />
-                        <span>{language === 'ja' ? '追加完了！' : "Qo'shildi!"}</span>
-                      </>
-                    ) : (
-                      <>
-                        <Plus size={16} />
-                        <span>
-                          {language === 'ja' ? 'フラッシュカードに追加' : "Fleshkardga qo'shish"}
-                        </span>
-                      </>
-                    )}
-                  </button>
+                    {subjects.map((s) => (
+                      <option key={s.id} value={s.id}>
+                        {s.name}
+                      </option>
+                    ))}
+                  </select>
                 </div>
-              )}
+
+                <button
+                  onClick={handleCreateFlashcard}
+                  disabled={isAddedToFlashcards}
+                  className={`flex w-full cursor-pointer items-center justify-center gap-1.5 rounded-xl px-4 py-2 text-xs font-bold transition-all active:scale-95 sm:w-auto ${
+                    isAddedToFlashcards
+                      ? 'bg-emerald-500 text-white'
+                      : 'bg-primary text-primary-foreground shadow-xs shadow-primary/20 hover:bg-primary/90'
+                  }`}
+                >
+                  {isAddedToFlashcards ? (
+                    <>
+                      <Check size={15} />
+                      <span>{isEn ? 'Added to Flashcards!' : "Fleshkardga qo'shildi!"}</span>
+                    </>
+                  ) : (
+                    <>
+                      <Plus size={15} />
+                      <span>{isEn ? 'Add to Flashcards' : "Fleshkardga qo'shish"}</span>
+                    </>
+                  )}
+                </button>
+              </div>
             </div>
           )}
         </div>
@@ -670,35 +655,39 @@ Return ONLY a raw valid JSON object (no markdown, no backticks) with this struct
       {activeTab === 'saved' && (
         <div className="space-y-4">
           {savedWords.length === 0 ? (
-            <div className="space-y-2 rounded-3xl border border-dashed border-border bg-card p-12 text-center">
-              <Bookmark size={32} className="mx-auto text-muted-foreground" />
-              <p className="text-sm font-bold text-foreground">Saqlangan so'zlar yo'q</p>
+            <div className="space-y-2 rounded-3xl border border-dashed border-border bg-card p-10 text-center">
+              <Bookmark size={28} className="mx-auto text-muted-foreground" />
+              <p className="text-sm font-bold text-foreground">
+                {isEn ? 'No saved words yet' : "Saqlangan so'zlar yo'q"}
+              </p>
               <p className="text-xs text-muted-foreground">
-                Qidiruv davomida so'zlarni saqlab qo'yishingiz mumkin.
+                {isEn
+                  ? 'You can bookmark words during search.'
+                  : "Qidiruv davomida so'zlarni saqlab qo'yishingiz mumkin."}
               </p>
             </div>
           ) : (
-            <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+            <div className="grid grid-cols-1 gap-3.5 sm:gap-4 md:grid-cols-2 lg:grid-cols-3">
               {savedWords.map((item, idx) => (
                 <div
                   key={idx}
-                  className="group relative space-y-3 rounded-3xl border border-border bg-card p-5 shadow-sm transition-all hover:border-primary/40"
+                  className="group relative space-y-2.5 rounded-3xl border border-border bg-card p-4 shadow-xs transition-all hover:border-primary/40 sm:p-5"
                 >
                   <div className="flex items-start justify-between">
                     <div>
                       <span className="text-[10px] font-black uppercase tracking-wider text-[#C9A961]">
                         {item.level}
                       </span>
-                      <h3 className="mt-0.5 font-display text-xl font-black text-foreground">
-                        {item.furigana ? <FuriganaText text={item.furigana} /> : item.word}
+                      <h3 className="mt-0.5 font-display text-lg font-black text-foreground sm:text-xl">
+                        {item.word}
                       </h3>
                     </div>
                     <button
                       onClick={() => toggleSaveWord(item)}
-                      className="cursor-pointer p-1 text-muted-foreground transition-colors hover:text-primary"
+                      className="cursor-pointer p-1 text-muted-foreground transition-colors hover:text-red-400"
                       title="Saqlanganlardan o'chirish"
                     >
-                      <Trash2 size={16} />
+                      <Trash2 size={15} />
                     </button>
                   </div>
                   <p className="text-xs font-bold text-foreground">{item.uzbekTranslation}</p>
@@ -710,9 +699,10 @@ Return ONLY a raw valid JSON object (no markdown, no backticks) with this struct
                       setCurrentResult(item);
                       setActiveTab('search');
                     }}
-                    className="flex cursor-pointer items-center gap-1 pt-1 text-[11px] font-bold text-primary hover:underline"
+                    className="flex cursor-pointer items-center gap-1 pt-1 text-[11px] font-bold text-primary hover:underline active:scale-95"
                   >
-                    Batafsil ko'rish <ArrowRight size={12} />
+                    <span>{isEn ? 'View details' : "Batafsil ko'rish"}</span>{' '}
+                    <ArrowRight size={12} />
                   </button>
                 </div>
               ))}
@@ -725,9 +715,11 @@ Return ONLY a raw valid JSON object (no markdown, no backticks) with this struct
       {activeTab === 'history' && (
         <div className="space-y-4">
           {history.length === 0 ? (
-            <div className="space-y-2 rounded-3xl border border-dashed border-border bg-card p-12 text-center">
-              <History size={32} className="mx-auto text-muted-foreground" />
-              <p className="text-sm font-bold text-foreground">Qidiruv tarixi bo'sh</p>
+            <div className="space-y-2 rounded-3xl border border-dashed border-border bg-card p-10 text-center">
+              <History size={28} className="mx-auto text-muted-foreground" />
+              <p className="text-sm font-bold text-foreground">
+                {isEn ? 'Search history is empty' : "Qidiruv tarixi bo'sh"}
+              </p>
             </div>
           ) : (
             <div className="divide-y divide-border overflow-hidden rounded-3xl border border-border bg-card">
@@ -738,22 +730,22 @@ Return ONLY a raw valid JSON object (no markdown, no backticks) with this struct
                     setCurrentResult(item);
                     setActiveTab('search');
                   }}
-                  className="flex cursor-pointer items-center justify-between p-4 transition-all hover:bg-muted/40"
+                  className="flex cursor-pointer items-center justify-between p-3.5 transition-all hover:bg-muted/40 active:bg-muted/60 sm:p-4"
                 >
-                  <div className="flex items-center gap-3">
-                    <span className="rounded-full border border-[#C9A961]/30 bg-[#C9A961]/15 px-2.5 py-0.5 text-[10px] font-black uppercase tracking-wider text-[#C9A961]">
+                  <div className="flex items-center gap-2.5 sm:gap-3">
+                    <span className="rounded-full border border-[#C9A961]/30 bg-[#C9A961]/15 px-2 py-0.5 text-[10px] font-black uppercase tracking-wider text-[#C9A961]">
                       {item.level}
                     </span>
                     <div>
-                      <span className="text-sm font-bold text-foreground">
-                        {item.furigana ? <FuriganaText text={item.furigana} /> : item.word}
+                      <span className="text-xs font-bold text-foreground sm:text-sm">
+                        {item.word}
                       </span>
-                      <span className="ml-3 text-xs text-muted-foreground">
+                      <span className="ml-2 line-clamp-1 text-xs text-muted-foreground sm:ml-3">
                         {item.uzbekTranslation}
                       </span>
                     </div>
                   </div>
-                  <ArrowRight size={16} className="text-muted-foreground" />
+                  <ArrowRight size={15} className="shrink-0 text-muted-foreground" />
                 </div>
               ))}
             </div>
