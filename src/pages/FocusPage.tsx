@@ -1,4 +1,6 @@
 import React, { useEffect, useRef, useState, useCallback } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { ArrowLeft, Clock } from 'lucide-react';
 import { useStudyData } from '../context/StudyPlannerContext';
 import { useFocusTimerContext } from '../context/FocusTimerContext';
 import { useLanguage } from '../context/LanguageContext';
@@ -9,6 +11,7 @@ import { PersonalLearningPlanService } from '../services/PersonalLearningPlanSer
 import { LearningSignalService } from '../services/LearningSignalService';
 
 const FocusPage: React.FC = () => {
+  const navigate = useNavigate();
   const {
     addSession,
     awardXP,
@@ -135,8 +138,10 @@ const FocusPage: React.FC = () => {
     if (taskCompleted) setFocusTask(null);
   };
 
+  const isEn = language === 'en';
+
   return (
-    <div className="relative mx-auto flex min-h-[75vh] max-w-4xl flex-col items-center justify-center space-y-4 p-3.5 pb-20 sm:space-y-6 sm:p-4 md:p-8 md:pb-8">
+    <div className="relative mx-auto flex min-h-[85vh] max-w-xl flex-col items-center justify-between space-y-4 p-3.5 pb-8 sm:p-6 md:p-8">
       <audio
         ref={ringtoneRef}
         src="https://cdn.pixabay.com/audio/2021/08/04/audio_0625c1539c.mp3"
@@ -149,6 +154,22 @@ const FocusPage: React.FC = () => {
         onSkip={() => setShowMoodCheck(null)}
       />
 
+      {/* Top Header with Back Button */}
+      <div className="flex w-full items-center justify-between border-b border-border/40 pb-3 pt-1">
+        <button
+          onClick={() => navigate(-1)}
+          className="flex items-center gap-1.5 rounded-xl border border-border/70 bg-card px-3 py-1.5 text-xs font-bold text-muted-foreground shadow-xs transition hover:bg-muted hover:text-foreground active:scale-95"
+        >
+          <ArrowLeft size={15} />
+          <span>{isEn ? 'Back' : 'Orqaga'}</span>
+        </button>
+        <div className="flex items-center gap-1.5 rounded-full border border-primary/20 bg-primary/10 px-3 py-1 text-xs font-bold text-primary">
+          <Clock size={13} className="animate-pulse" />
+          <span>{isEn ? 'Pomodoro Focus' : 'Pomodoro Fokus'}</span>
+        </div>
+        <div className="w-16" /> {/* Spacer for balance */}
+      </div>
+
       {/* Mode & Deep Work Duration Switcher */}
       <div className="flex flex-col items-center gap-3">
         <div className="flex rounded-2xl border border-border/50 bg-muted/50 p-1">
@@ -156,19 +177,19 @@ const FocusPage: React.FC = () => {
             onClick={() => switchMode('focus')}
             className={`rounded-xl px-4 py-2 text-xs font-bold transition-all sm:text-sm ${focusState.mode === 'focus' ? 'bg-primary text-primary-foreground shadow-xs' : 'text-muted-foreground hover:text-foreground'}`}
           >
-            {language === 'ja' ? '集中' : 'Fokus'}
+            {isEn ? 'Focus' : 'Fokus'}
           </button>
           <button
             onClick={() => switchMode('short_break')}
             className={`rounded-xl px-4 py-2 text-xs font-bold transition-all sm:text-sm ${focusState.mode === 'short_break' ? 'bg-primary text-primary-foreground shadow-xs' : 'text-muted-foreground hover:text-foreground'}`}
           >
-            {language === 'ja' ? '小休憩' : 'Qisqa'}
+            {isEn ? 'Short Break' : 'Qisqa'}
           </button>
           <button
             onClick={() => switchMode('long_break')}
             className={`rounded-xl px-4 py-2 text-xs font-bold transition-all sm:text-sm ${focusState.mode === 'long_break' ? 'bg-primary text-primary-foreground shadow-xs' : 'text-muted-foreground hover:text-foreground'}`}
           >
-            {language === 'ja' ? '大休憩' : 'Uzun'}
+            {isEn ? 'Long Break' : 'Uzun'}
           </button>
         </div>
 

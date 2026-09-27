@@ -242,6 +242,8 @@ const Layout: React.FC = () => {
     if (location.pathname.startsWith('/admin')) return 'Admin Panel';
     if (location.pathname.startsWith('/calendar')) return isEn ? 'Calendar' : 'Kalendar';
     if (location.pathname.startsWith('/diagnostic')) return isEn ? 'Diagnostic' : 'Diagnostika';
+    if (location.pathname.startsWith('/pricing'))
+      return isEn ? 'Pricing Plans' : 'Tariflar & Rejalar';
     return 'IELTS Talk';
   };
 

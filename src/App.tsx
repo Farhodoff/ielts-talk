@@ -273,9 +273,9 @@ const App: React.FC = () => {
               <div className="relative h-screen overflow-hidden bg-background text-foreground transition-colors duration-200">
                 <Suspense fallback={<PageLoader />}>
                   <Routes>
+                    <Route path="/landing" element={<LandingPage />} />
                     <Route path="/" element={<Layout />}>
                       <Route index element={<Navigate to="/ielts" replace />} />
-                      <Route path="landing" element={<LandingPage />} />
                       <Route path="dashboard" element={<DashboardPage />} />
                       <Route
                         path="admin"

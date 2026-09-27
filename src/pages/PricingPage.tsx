@@ -1,5 +1,14 @@
 import React, { useState } from 'react';
-import { ArrowRight, Sparkles, ShieldCheck, CheckCircle2, Crown, Zap, Bell } from 'lucide-react';
+import {
+  ArrowRight,
+  Sparkles,
+  ShieldCheck,
+  CheckCircle2,
+  Crown,
+  Zap,
+  Bell,
+  ChevronLeft,
+} from 'lucide-react';
 import { Button } from '../components/ui/Button';
 import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
@@ -32,27 +41,39 @@ export const PricingPage: React.FC = () => {
   };
 
   return (
-    <div className="flex min-h-screen flex-col justify-between bg-background p-4 text-foreground md:p-8">
-      {/* Top Navigation Bar */}
-      <div className="mx-auto flex w-full max-w-5xl items-center justify-between py-4">
-        <div className="cursor-pointer" onClick={() => navigate('/')}>
-          <AppLogo size="md" />
+    <div className="flex min-h-screen flex-col justify-between bg-background p-3.5 text-foreground sm:p-6 md:p-8">
+      {/* Top Navigation Bar for Guests */}
+      {!user ? (
+        <div className="mx-auto flex w-full max-w-5xl items-center justify-between py-3 sm:py-4">
+          <div className="cursor-pointer" onClick={() => navigate('/')}>
+            <AppLogo size="md" />
+          </div>
+          <button
+            onClick={() => navigate('/login')}
+            className="cursor-pointer rounded-xl border border-border bg-card px-4 py-2 text-xs font-bold text-foreground transition-all hover:bg-muted active:scale-95"
+          >
+            Kirish
+          </button>
         </div>
-        <button
-          onClick={() => navigate(user ? '/ielts' : '/login')}
-          className="cursor-pointer rounded-xl border border-border bg-card px-4 py-2 text-xs font-bold text-foreground transition-all hover:bg-muted"
-        >
-          {user ? 'Platformaga kirish' : 'Kirish'}
-        </button>
-      </div>
+      ) : (
+        <div className="mx-auto flex w-full max-w-5xl items-center justify-between pb-1 pt-0.5 md:hidden">
+          <button
+            onClick={() => navigate(-1)}
+            className="flex items-center gap-1 text-xs font-bold text-muted-foreground transition hover:text-foreground active:scale-95"
+          >
+            <ChevronLeft size={16} />
+            <span>Orqaga</span>
+          </button>
+        </div>
+      )}
 
       {/* Main Header */}
-      <div className="mx-auto max-w-3xl space-y-3 pb-8 pt-4 text-center">
-        <div className="inline-flex items-center gap-2 rounded-full border border-blue-500/30 bg-blue-500/10 px-3.5 py-1.5 text-xs font-extrabold text-blue-400">
-          <Sparkles size={14} className="animate-pulse" />
+      <div className="mx-auto max-w-3xl space-y-2.5 pb-6 pt-2 text-center sm:space-y-3 sm:pb-8 sm:pt-4">
+        <div className="inline-flex items-center gap-2 rounded-full border border-blue-500/30 bg-blue-500/10 px-3.5 py-1 text-xs font-extrabold text-blue-400">
+          <Sparkles size={13} className="animate-pulse" />
           <span>IELTS TALK FREEMIUM VA PRO REJALARI</span>
         </div>
-        <h1 className="font-display text-2xl font-black tracking-tight text-foreground sm:text-4xl">
+        <h1 className="font-display text-xl font-black tracking-tight text-foreground sm:text-3xl md:text-4xl">
           Har Kuni Bepul Mashq Qiling va Band 7.5+ ga Erishing
         </h1>
         <p className="mx-auto max-w-xl text-xs leading-relaxed text-muted-foreground sm:text-sm">
@@ -68,7 +89,7 @@ export const PricingPage: React.FC = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.3 }}
-          className="relative flex flex-col justify-between rounded-3xl border border-border bg-card p-6 shadow-xl transition-all hover:border-border/80 sm:p-8"
+          className="relative flex flex-col justify-between rounded-3xl border border-border bg-card p-5 shadow-xl transition-all hover:border-border/80 sm:p-8"
         >
           <div className="space-y-4">
             <div className="flex items-center justify-between">
@@ -140,7 +161,7 @@ export const PricingPage: React.FC = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.3, delay: 0.1 }}
-          className="relative flex flex-col justify-between overflow-hidden rounded-3xl border border-amber-500/40 bg-gradient-to-b from-card via-card to-amber-500/5 p-6 shadow-2xl sm:p-8"
+          className="relative flex flex-col justify-between overflow-hidden rounded-3xl border border-amber-500/40 bg-gradient-to-b from-card via-card to-amber-500/5 p-5 shadow-2xl sm:p-8"
         >
           {/* Ambient Glow */}
           <div className="pointer-events-none absolute -right-20 -top-20 h-60 w-60 rounded-full bg-amber-500/10 blur-3xl" />
