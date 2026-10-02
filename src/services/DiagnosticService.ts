@@ -571,37 +571,24 @@ export const DiagnosticService = {
       answers.length > 0 ? Math.round((totalCorrect / answers.length) * 100) : 50;
     const overallConfidence = Math.min(95, Math.max(50, answers.length * 10));
 
-    let recommendedLevel = isJa ? 'N5' : 'A1';
-    let firstLessonId = isJa ? 'ja-n5-u1-l1' : 'en-a1-u1-l1';
+    let recommendedLevel = 'A1';
+    let firstLessonId = 'en-a1-u1-l1';
 
-    if (isJa) {
-      if (overallScore >= 80) {
-        recommendedLevel = 'N3';
-        firstLessonId = 'ja-n3-u1-l1';
-      } else if (overallScore >= 55) {
-        recommendedLevel = 'N4';
-        firstLessonId = 'ja-n4-u1-l1';
-      } else {
-        recommendedLevel = 'N5';
-        firstLessonId = 'ja-n5-u1-l1';
-      }
+    if (overallScore >= 85) {
+      recommendedLevel = 'C1';
+      firstLessonId = 'en-c1-u1-l1';
+    } else if (overallScore >= 70) {
+      recommendedLevel = 'B2';
+      firstLessonId = 'en-b2-u1-l1';
+    } else if (overallScore >= 50) {
+      recommendedLevel = 'B1';
+      firstLessonId = 'en-b1-u1-l1';
+    } else if (overallScore >= 40) {
+      recommendedLevel = 'A2';
+      firstLessonId = 'en-a2-u1-l1';
     } else {
-      if (overallScore >= 85) {
-        recommendedLevel = 'C1';
-        firstLessonId = 'en-c1-u1-l1';
-      } else if (overallScore >= 70) {
-        recommendedLevel = 'B2';
-        firstLessonId = 'en-b2-u1-l1';
-      } else if (overallScore >= 50) {
-        recommendedLevel = 'B1';
-        firstLessonId = 'en-b1-u1-l1';
-      } else if (overallScore >= 40) {
-        recommendedLevel = 'A2';
-        firstLessonId = 'en-a2-u1-l1';
-      } else {
-        recommendedLevel = 'A1';
-        firstLessonId = 'en-a1-u1-l1';
-      }
+      recommendedLevel = 'A1';
+      firstLessonId = 'en-a1-u1-l1';
     }
 
     const result: DiagnosticResult = {

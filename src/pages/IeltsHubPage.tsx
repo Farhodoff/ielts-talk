@@ -8,6 +8,7 @@ import {
   Mic,
   Sparkles,
   Compass,
+  ArrowRight,
 } from 'lucide-react';
 import { useSearchParams, Link } from 'react-router-dom';
 import { RealWeaknessTracker } from '../components/ielts/RealWeaknessTracker';
@@ -205,6 +206,43 @@ export const IeltsHubPage: React.FC = () => {
             >
               <span>⭐ Pro</span>
             </Link>
+          </div>
+
+          {/* 0-Level Beginner Fast-Track Ribbon */}
+          <div className="flex flex-col justify-between gap-3 rounded-2xl border border-emerald-500/30 bg-gradient-to-r from-emerald-950/40 via-slate-900 to-teal-950/40 p-3.5 shadow-sm sm:flex-row sm:items-center sm:p-4">
+            <div className="flex items-center gap-3">
+              <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-emerald-500/20 text-lg shadow-sm">
+                🌱
+              </span>
+              <div>
+                <div className="flex items-center gap-2">
+                  <span className="text-xs font-black text-white sm:text-sm">
+                    Ingliz tilini noldan boshlayapsizmi?
+                  </span>
+                  <span className="rounded-full bg-emerald-500/20 px-2 py-0.5 text-[10px] font-black text-emerald-400">
+                    A1 Foundation
+                  </span>
+                </div>
+                <p className="text-[11px] text-slate-300">
+                  Fonetika (44 tovush), 600 ta baza so'z va To Be/Present Simple qoidalari.
+                </p>
+              </div>
+            </div>
+            <div className="flex shrink-0 items-center gap-2">
+              <Link
+                to="/study-mode?lesson=en-a1-u1-l1"
+                className="flex items-center gap-1.5 rounded-xl bg-emerald-600 px-3 py-1.5 text-xs font-bold text-white shadow-sm transition hover:bg-emerald-500 active:scale-95"
+              >
+                <span>1-Darsdan boshlash</span>
+                <ArrowRight size={13} />
+              </Link>
+              <Link
+                to="/flashcards?deck=phonetics_foundation"
+                className="flex items-center gap-1 rounded-xl border border-slate-700 bg-slate-800/80 px-2.5 py-1.5 text-xs font-semibold text-slate-200 transition hover:bg-slate-700"
+              >
+                <span>Fonetika</span>
+              </Link>
+            </div>
           </div>
 
           {/* Unified IELTS Navigation Tabs */}

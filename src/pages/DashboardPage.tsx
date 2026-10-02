@@ -540,6 +540,12 @@ const DashboardPage: React.FC = () => {
                 <span>🗺️</span> Roadmap
               </Link>
               <Link
+                to="/study-mode?lesson=en-a1-u1-l1"
+                className="flex shrink-0 items-center gap-1 rounded-xl border border-teal-500/30 bg-teal-500/10 px-2.5 py-1 text-xs font-bold text-teal-600 transition-all hover:bg-teal-500/20 dark:text-teal-400"
+              >
+                <span>🌱</span> 0 dan boshlash
+              </Link>
+              <Link
                 to="/diagnostic"
                 className="flex shrink-0 items-center gap-1 rounded-xl border border-amber-500/30 bg-amber-500/10 px-2.5 py-1 text-xs font-bold text-amber-600 transition-all dark:text-amber-400"
               >

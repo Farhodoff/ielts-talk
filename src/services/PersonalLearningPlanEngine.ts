@@ -71,111 +71,33 @@ export function isPlanGenerationLockError(error: unknown): boolean {
 }
 
 export function getLevelPedagogicalDirectives(
-  language: SupportedLanguage,
+  _language: SupportedLanguage,
   goalType: PlanGoalType,
   levelCode: string,
   targetLevelCode?: string,
 ): string {
-  if (language === 'ja') {
-    const cleanLevel = (levelCode || 'N5').toUpperCase();
-    const cleanTarget = (targetLevelCode || cleanLevel).toUpperCase();
+  const cleanLevel = (levelCode || 'A1').trim().toUpperCase();
+  const isZero = cleanLevel === 'ZERO' || cleanLevel === '0' || cleanLevel === 'A0';
 
-    if (
-      (goalType as string) === 'zero_ja' ||
-      cleanLevel === 'ZERO' ||
-      cleanLevel === '0' ||
-      cleanLevel === 'N0'
-    ) {
-      return `JAPANESE ZERO LEVEL (MUTLAQO NOLDAN BOSHLASH) PEDAGOGICAL BLUEPRINT:
-- Target: Mutlaqo noldan boshlovchi o'quvchilar uchun poydevor qurish.
+  if (isZero) {
+    return `IELTS & ENGLISH ZERO LEVEL (MUTLAQO NOLDAN BOSHLASH) PEDAGOGICAL BLUEPRINT:
+- Target: Nomzod ingliz tilini mutlaqo bilmaydi yoki noldan boshlamoqda. Maqsad: 0 dan mustahkam A1-A2 poydevor qurish.
 - Pedagogical Progression for Week 1:
-  * Days 1-3 (Hiragana): 46 ta asosiy hiragana belgilari, tovushlar (dakuon/handakuon: が, ざ, だ, ば, ぱ), cho'ziq unlilar va birikmalar (きゃ, しゅ, ちょ). Yozish va talaffuz mashqlari. Route: /jlpt?tab=kanji&level=N5
-  * Days 4-5 (Katakana): Katakana alifbosi, chet eldan kirib kelgan so'zlar (gairaigo: コーヒー, バス, ホテル, テレビ) va o'qish qoidalari. Route: /jlpt?tab=kanji&level=N5
-  * Days 6-7 (Eng muhim iboralar): Kundalik salomlashuv (Ohayou gozaimasu, Konnichiwa, Arigatou gozaimasu), o'zini tanishtirish (Hajimemashite, Watashi wa... desu), oddiy ~desu jumla tuzilishi. Route: /speaking-coach?lang=ja
-- Non-negotiable Rule: MUTLAQO murakkab kanji yoki N4/N3 grammatikasi bermang. Birinchi haftada faqat Hiragana, Katakana va eng asosiy so'zlashuv iboralariga e'tibor qarating!`;
-    }
+  * Day 1 (Fonetika & Alifbo): 44 ta fonetik tovush, to'g'ri talaffuz va urg'u qoidalari. Route: /flashcards?deck=phonetics_foundation
+  * Day 2 (Salomlashish & To Be): 1-Dars "Greetings & Introductions" (To Be fe'li va shaxs olmoshlari). Route: /study-mode?lesson=en-a1-u1-l1
+  * Day 3 (Baza Lug'at): Oxford 3000 A1 1-qism (25 ta eng muhim boshlang'ich so'z). Route: /study-mode?deck=deck_oxford_3000_a1&part=1
+  * Day 4 (Baza Grammatika): Murphy Unit 1 "am / is / are (darak gaplar)". Route: /ielts?tab=grammar&topic=murphy_u01_am_is_are
+  * Day 5 (Boshlang'ich Nutq): Speaking Coach orqali oddiy tanishtiruv mashqi. Route: /speaking-coach?lang=en
+  * Day 6 (Savol Tuzish): Murphy Unit 2 "am / is / are (so'roq gaplar)". Route: /ielts?tab=grammar&topic=murphy_u02_am_is_are_questions
+  * Day 7 (Haftalik Takrorlash): A1 Mini-Quiz va o'tilgan 25 so'zni SRS takrorlash. Route: /flashcards
+- Non-negotiable Rule: MUTLAQO murakkab IELTS Cambridge testlari, ilmiy matnlar yoki Task 2 insho bermang! Birinchi haftada faqat Fonetika, To Be, 25 ta baza so'z va oddiy o'zini tanishtirishga e'tibor qarating!`;
+  }
 
-    if (goalType === 'general_ja') {
-      return `JAPANESE KAIWA & DAILY COMMUNICATION DIRECTIVES:
-- Emphasize practical conversational phrases, daily situation roleplays, natural responses (aizuchi), and active pronunciation.
-- Balance Speaking (/speaking-coach?lang=ja), Dialog Scenarios (/scenarios), Listening (/jlpt?tab=listening&level=N4), and Vocabulary (/study-mode).
-- Task titles must represent real-life situations (e.g. "Restoranda taom buyurtma qilish va hisob-kitob", "Do'konda narx va chegirma so'rash", "Mehmonxona va transport yo'nalishlarini aniqlash").
-- Avoid dry grammatical jargon; emphasize situational speaking confidence.`;
-    }
+  const cefr = mapIeltsBandToCefr(levelCode);
+  const config = getCurriculumConfigForBand(levelCode);
 
-    const boundaryNotice =
-      cleanLevel !== 'N5'
-        ? `STRICT LEVEL INTEGRITY REQUIREMENT:\n- The student's current level is ${cleanLevel}, targeting ${cleanTarget}.\n- The student has ALREADY mastered Hiragana, Katakana, and basic Japanese.\n- ABSOLUTELY NEVER assign Hiragana, Katakana, basic greetings, or N5 elementary grammar.\n- Focus strictly on ${cleanLevel} consolidation and progressing towards ${cleanTarget}.\n\n`
-        : '';
-
-    switch (cleanLevel) {
-      case 'N5':
-        return `JLPT N5 PEDAGOGICAL BLUEPRINT (Boshlang'ich daraja):
-- Grammar: Hiragana & Katakana mastery, essential particles (は, が, を, に, で, と, も, へ, から, まで), ~desu/~masu polite forms, ~te-form (requests & permission: ~てください, ~てもいいです), ~nai-form (~ないでください), ~ta-form past tense.
-- Kanji & Vocabulary: 100 base N5 Kanji (numbers, days of week, directions, basic verbs), 800 core words. Route: /jlpt?tab=kanji&level=N5
-- Dokkai (O'qish): Short Furigana texts, daily notices, simple diary entries. Route: /jlpt?tab=reading&level=N5
-- Choukai (Tinglash): Basic greetings, train station announcements, shopping numbers and prices. Route: /jlpt?tab=listening&level=N5
-- Speaking: Self-introduction (Jikoshoukai), asking prices, daily routine description. Route: /speaking-coach?lang=ja
-- Non-negotiable Rule: DO NOT assign N3 or N2 complex grammar or rare Kanji to N5. Keep tasks beginner-friendly and confidence-building.`;
-
-      case 'N4':
-        return (
-          boundaryNotice +
-          `JLPT N4 PEDAGOGICAL BLUEPRINT (O'rta-boshlang'ich daraja):
-- Grammar: Potential verbs (~reru/rareru: 食べられる, 読める), Giving/Receiving (あげる, もらう, くれる), Conditionals (~たら, ~ば, ~なら, ~と), Volitional (~よう: 行こう), ~てしまう, ~ておく, ~やすい/~にくい.
-- Kanji & Vocabulary: 250 intermediate Kanji, 1,500 everyday words and compound verbs. Route: /jlpt?tab=kanji&level=N4
-- Dokkai (O'qish): Information retrieval, library rules, notices, email exchanges, short stories. Route: /jlpt?tab=reading&level=N4
-- Choukai (Tinglash): Dialogues in public settings (stations, clinics, supermarkets, schools). Route: /jlpt?tab=listening&level=N4
-- Speaking: Requesting permissions, explaining causes and reasons (~から, ~ので), making reservations. Route: /speaking-coach?lang=ja
-- Non-negotiable Rule: Equal balance of grammar, kanji, Dokkai and Choukai. Ensure conditional nuances are clearly practiced.`
-        );
-
-      case 'N3':
-        return (
-          boundaryNotice +
-          `JLPT N3 PEDAGOGICAL BLUEPRINT (O'rta daraja - Transition to Fluency):
-- Grammar: Shinkanzen Bunpou core patterns (~わけだ, ~わけではない, ~ことになっている, ~ようにする, ~をはじめ, ~に対して, ~に関して, ~にとって, ~とおりに, ~としたら).
-- Kanji & Vocabulary: 600 Kanji, 3,500 vocabulary words with kanji compounds (Jukugo). Route: /jlpt?tab=kanji&level=N3
-- Dokkai (O'qish): Analytical essays, comparison articles, opinion pieces, speed-reading short paragraphs. Route: /jlpt?tab=reading&level=N3
-- Choukai (Tinglash): Task comprehension (課題理解), Key points (ポイント理解), Quick response (即時応答). Route: /jlpt?tab=listening&level=N3
-- Speaking: Expressing opinions, explaining past events with nuance, polite Keigo foundations. Route: /speaking-coach?lang=ja
-- Non-negotiable Rule: Dokkai and Choukai MUST appear at least 2-3 times across the week to develop JLPT exam endurance.`
-        );
-
-      case 'N2':
-        return (
-          boundaryNotice +
-          `JLPT N2 PEDAGOGICAL BLUEPRINT (Yuqori-o'rta - Professional & Business):
-- Grammar: Advanced functional expressions (~に際して, ~を契機に, ~にほかならない, ~ざるを得ない, ~かねる, ~げ, ~ぬきで), Keigo honorific mastery (Sonkeigo, Kenjougo, Teineigo).
-- Kanji & Vocabulary: 1,000 Kanji, 6,000 words, newspaper, economic, and business terminology. Route: /jlpt?tab=kanji&level=N2
-- Dokkai (O'qish): Complex editorials, critical commentary, thematic long passages, contrasting viewpoints. Route: /jlpt?tab=reading&level=N2
-- Choukai (Tinglash): Integrated comprehension (総合理解), speaker stance, implied meaning and sarcasm. Route: /jlpt?tab=listening&level=N2
-- Exam Practice: Full-length timed mock simulation drills. Route: /jlpt?tab=mock&level=N2
-- Non-negotiable Rule: High linguistic register. Tasks must involve abstract thematic texts and fast-paced authentic audio.`
-        );
-
-      case 'N1':
-        return (
-          boundaryNotice +
-          `JLPT N1 PEDAGOGICAL BLUEPRINT (Oliy daraja - Academic / Literary Nuance):
-- Grammar: Classical/literary syntax (~であれ, ~を皮切りに, ~極まりない, ~ならではの, ~と相まって, ~だに), complex stylistic connectors.
-- Kanji & Vocabulary: 2,000+ Kanji, 10,000 advanced, abstract, and literary terms. Route: /jlpt?tab=kanji&level=N1
-- Dokkai (O'qish): High-difficulty essays, philosophical and scientific treatises, literary criticism. Route: /jlpt?tab=reading&level=N1
-- Choukai (Tinglash): Multi-speaker panel debates, academic lectures, subtle irony, rapid unscripted speech. Route: /jlpt?tab=listening&level=N1
-- Exam Practice: Full-length official mock exam drills. Route: /jlpt?tab=mock&level=N1
-- Non-negotiable Rule: Focus on intellectual nuance and deep comprehension of high-level Japanese discourse.`
-        );
-
-      default:
-        return `JLPT LEVEL DIRECTIVES: Calibrate tasks directly to JLPT ${cleanLevel} standards.`;
-    }
-  } else {
-    // English Track
-    const cefr = mapIeltsBandToCefr(levelCode);
-    const config = getCurriculumConfigForBand(levelCode);
-
-    if (goalType === 'ielts') {
-      return `IELTS TARGET DIRECTIVES (Current Level: ${levelCode} -> Calibrated CEFR: ${cefr}, Target Band: ${targetLevelCode || '6.5'}):
+  if (goalType === 'ielts') {
+    return `IELTS TARGET DIRECTIVES (Current Level: ${levelCode} -> Calibrated CEFR: ${cefr}, Target Band: ${targetLevelCode || '6.5'}):
 - PEDAGOGICAL CALIBRATION:
   * For IELTS 5.0 (Band 4.0 - 5.0), the student's foundation is strictly CEFR A2 (Pre-Intermediate).
   * Vocabulary: MUST assign exactly 1 Oxford 3000 A2 part (${config.dailyDosage.vocabWordsPerDay} words per day) using route /study-mode?deck=${config.oxfordDeckId}&part=1..7.
@@ -185,12 +107,11 @@ export function getLevelPedagogicalDirectives(
 - Writing: Task 1 academic report & Task 2 structure. Route: /ielts?tab=writing
 - Reading & Listening: Cambridge speed drills & keyword prediction. Route: /ielts?tab=reading_listening
 - Non-negotiable Daily Dosage ("Me'yor"): Every single day must have distinct, bite-sized tasks: exactly 1 grammar unit, exactly 1 Oxford 3000 level-matched vocabulary part (${config.dailyDosage.vocabWordsPerDay} words), and 1 skill exercise. Do not lump all topics together into generic headings!`;
-    } else {
-      return `GENERAL ENGLISH DIRECTIVES (CEFR ${cefr}, Current Band: ${levelCode}):
+  } else {
+    return `GENERAL ENGLISH DIRECTIVES (CEFR ${cefr}, Current Band: ${levelCode}):
 - Vocabulary: Oxford 3000 ${cefr} level parts via /study-mode?deck=${config.oxfordDeckId}&part=1..7
 - Grammar: Murphy ${cefr} units via /ielts?tab=grammar&topic={murphy_unit_id}
 - Rotate functional grammar, Oxford 3000 flashcard quotas, speaking coach drills, and reading.`;
-    }
   }
 }
 

@@ -94,6 +94,27 @@ export const IeltsReadingListeningMockPage: React.FC = () => {
 
   // Active selected catalog exam
   const [selectedListeningExamIndex, setSelectedListeningExamIndex] = useState(0);
+  const [difficultyFilter, setDifficultyFilter] = useState<
+    'all' | 'pre_ielts' | 'core' | 'mastery'
+  >('all');
+
+  const filteredReadingExams = IELTS_READING_EXAMS.filter((passage) => {
+    if (difficultyFilter === 'all') return true;
+    if (difficultyFilter === 'pre_ielts') return passage.academicLevel === 'Academic 1';
+    if (difficultyFilter === 'core') return passage.academicLevel === 'Academic 2';
+    if (difficultyFilter === 'mastery') return passage.academicLevel === 'Academic 3';
+    return true;
+  });
+
+  const filteredListeningSections = IELTS_LISTENING_EXAMS[
+    selectedListeningExamIndex
+  ].sections.filter((sec) => {
+    if (difficultyFilter === 'all') return true;
+    if (difficultyFilter === 'pre_ielts') return sec.sectionNumber === 1;
+    if (difficultyFilter === 'core') return sec.sectionNumber === 2 || sec.sectionNumber === 3;
+    if (difficultyFilter === 'mastery') return sec.sectionNumber === 4;
+    return true;
+  });
 
   // Timer Effect
   useEffect(() => {
@@ -554,16 +575,58 @@ export const IeltsReadingListeningMockPage: React.FC = () => {
           {/* READING CATALOG */}
           {testType === 'reading' && (
             <div className="space-y-4">
-              <div className="flex items-center justify-between">
+              <div className="flex flex-wrap items-center justify-between gap-2">
                 <h3 className="flex items-center gap-1.5 text-sm font-black text-foreground sm:gap-2 sm:text-base">
                   <BookmarkCheck size={18} className="text-indigo-500" />
-                  Reading Matnlari ({IELTS_READING_EXAMS.length} ta)
+                  Reading Matnlari ({filteredReadingExams.length} ta)
                 </h3>
-                <span className="text-[11px] text-muted-foreground sm:text-xs">20 daqiqa</span>
+                {/* Level & Difficulty Filter Ribbon */}
+                <div className="flex items-center gap-1.5 overflow-x-auto pb-1">
+                  <button
+                    onClick={() => setDifficultyFilter('all')}
+                    className={`shrink-0 rounded-xl px-2.5 py-1 text-xs font-bold transition-all ${
+                      difficultyFilter === 'all'
+                        ? 'bg-indigo-600 text-white shadow-sm'
+                        : 'bg-muted/40 text-muted-foreground hover:text-foreground'
+                    }`}
+                  >
+                    Barchasi
+                  </button>
+                  <button
+                    onClick={() => setDifficultyFilter('pre_ielts')}
+                    className={`shrink-0 rounded-xl px-2.5 py-1 text-xs font-bold transition-all ${
+                      difficultyFilter === 'pre_ielts'
+                        ? 'bg-emerald-600 text-white shadow-sm'
+                        : 'border border-emerald-500/20 bg-emerald-500/10 text-emerald-600 hover:bg-emerald-500/20 dark:text-emerald-400'
+                    }`}
+                  >
+                    🌱 Pre-IELTS (B1)
+                  </button>
+                  <button
+                    onClick={() => setDifficultyFilter('core')}
+                    className={`shrink-0 rounded-xl px-2.5 py-1 text-xs font-bold transition-all ${
+                      difficultyFilter === 'core'
+                        ? 'bg-blue-600 text-white shadow-sm'
+                        : 'border border-blue-500/20 bg-blue-500/10 text-blue-600 hover:bg-blue-500/20 dark:text-blue-400'
+                    }`}
+                  >
+                    🎯 IELTS Core (B2)
+                  </button>
+                  <button
+                    onClick={() => setDifficultyFilter('mastery')}
+                    className={`shrink-0 rounded-xl px-2.5 py-1 text-xs font-bold transition-all ${
+                      difficultyFilter === 'mastery'
+                        ? 'bg-purple-600 text-white shadow-sm'
+                        : 'border border-purple-500/20 bg-purple-500/10 text-purple-600 hover:bg-purple-500/20 dark:text-purple-400'
+                    }`}
+                  >
+                    ⚡ Mastery (C1)
+                  </button>
+                </div>
               </div>
 
               <div className="grid grid-cols-1 gap-3 sm:gap-4 md:grid-cols-2">
-                {IELTS_READING_EXAMS.map((passage, index) => (
+                {filteredReadingExams.map((passage, index) => (
                   <div
                     key={passage.id}
                     className="group flex flex-col justify-between space-y-3 rounded-2xl border border-border bg-card p-4 shadow-sm transition-all hover:border-indigo-500/50 hover:shadow-md sm:p-5"
@@ -615,26 +678,72 @@ export const IeltsReadingListeningMockPage: React.FC = () => {
                 </span>
               </div>
 
-              {/* Exam Switcher Buttons */}
-              <div className="flex gap-2 overflow-x-auto pb-1">
-                {IELTS_LISTENING_EXAMS.map((exam, exIdx) => (
+              {/* Exam Switcher Buttons & Level Filters */}
+              <div className="flex flex-col gap-2.5">
+                <div className="flex gap-2 overflow-x-auto pb-1">
+                  {IELTS_LISTENING_EXAMS.map((exam, exIdx) => (
+                    <button
+                      key={exam.id}
+                      onClick={() => setSelectedListeningExamIndex(exIdx)}
+                      className={`whitespace-nowrap rounded-xl border px-3 py-1.5 text-xs font-black transition-all sm:px-4 sm:py-2 ${
+                        selectedListeningExamIndex === exIdx
+                          ? 'border-purple-600 bg-purple-600 text-white shadow-md'
+                          : 'border-border bg-card text-muted-foreground hover:text-foreground'
+                      }`}
+                    >
+                      {exam.title.replace('IELTS Listening Academic Practice ', '')}
+                    </button>
+                  ))}
+                </div>
+
+                {/* Level & Difficulty Filter Ribbon */}
+                <div className="flex items-center gap-1.5 overflow-x-auto pb-1">
                   <button
-                    key={exam.id}
-                    onClick={() => setSelectedListeningExamIndex(exIdx)}
-                    className={`whitespace-nowrap rounded-xl border px-3 py-1.5 text-xs font-black transition-all sm:px-4 sm:py-2 ${
-                      selectedListeningExamIndex === exIdx
-                        ? 'border-purple-600 bg-purple-600 text-white shadow-md'
-                        : 'border-border bg-card text-muted-foreground hover:text-foreground'
+                    onClick={() => setDifficultyFilter('all')}
+                    className={`shrink-0 rounded-xl px-2.5 py-1 text-xs font-bold transition-all ${
+                      difficultyFilter === 'all'
+                        ? 'bg-purple-600 text-white shadow-sm'
+                        : 'bg-muted/40 text-muted-foreground hover:text-foreground'
                     }`}
                   >
-                    {exam.title.replace('IELTS Listening Academic Practice ', '')}
+                    Barcha bo'limlar
                   </button>
-                ))}
+                  <button
+                    onClick={() => setDifficultyFilter('pre_ielts')}
+                    className={`shrink-0 rounded-xl px-2.5 py-1 text-xs font-bold transition-all ${
+                      difficultyFilter === 'pre_ielts'
+                        ? 'bg-emerald-600 text-white shadow-sm'
+                        : 'border border-emerald-500/20 bg-emerald-500/10 text-emerald-600 hover:bg-emerald-500/20 dark:text-emerald-400'
+                    }`}
+                  >
+                    🌱 Pre-IELTS (S1)
+                  </button>
+                  <button
+                    onClick={() => setDifficultyFilter('core')}
+                    className={`shrink-0 rounded-xl px-2.5 py-1 text-xs font-bold transition-all ${
+                      difficultyFilter === 'core'
+                        ? 'bg-blue-600 text-white shadow-sm'
+                        : 'border border-blue-500/20 bg-blue-500/10 text-blue-600 hover:bg-blue-500/20 dark:text-blue-400'
+                    }`}
+                  >
+                    🎯 IELTS Core (S2-S3)
+                  </button>
+                  <button
+                    onClick={() => setDifficultyFilter('mastery')}
+                    className={`shrink-0 rounded-xl px-2.5 py-1 text-xs font-bold transition-all ${
+                      difficultyFilter === 'mastery'
+                        ? 'bg-purple-600 text-white shadow-sm'
+                        : 'border border-purple-500/20 bg-purple-500/10 text-purple-600 hover:bg-purple-500/20 dark:text-purple-400'
+                    }`}
+                  >
+                    ⚡ Academic (S4)
+                  </button>
+                </div>
               </div>
 
               {/* Sections Grid of Selected Exam */}
               <div className="grid grid-cols-1 gap-3 sm:gap-4 md:grid-cols-2">
-                {IELTS_LISTENING_EXAMS[selectedListeningExamIndex].sections.map((sec, sIdx) => (
+                {filteredListeningSections.map((sec, sIdx) => (
                   <div
                     key={sec.sectionNumber}
                     className="group flex flex-col justify-between space-y-3 rounded-2xl border border-border bg-card p-4 shadow-sm transition-all hover:border-purple-500/50 hover:shadow-md sm:p-5"
