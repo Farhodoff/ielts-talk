@@ -546,6 +546,12 @@ const DashboardPage: React.FC = () => {
                 <span>🎯</span> Test
               </Link>
               <Link
+                to="/ielts/full-mock"
+                className="flex shrink-0 items-center gap-1 rounded-xl border border-emerald-500/30 bg-emerald-500/10 px-2.5 py-1 text-xs font-bold text-emerald-600 transition-all hover:bg-emerald-500/20 dark:text-emerald-400"
+              >
+                <span>⚡</span> Full Mock
+              </Link>
+              <Link
                 to="/speaking-coach?lang=en"
                 className="flex shrink-0 items-center gap-1 rounded-xl border border-border bg-card px-2.5 py-1 text-xs font-semibold text-foreground transition-all hover:border-indigo-500/40"
               >

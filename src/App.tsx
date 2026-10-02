@@ -26,6 +26,12 @@ const AdminDashboardPage = lazyWithRetry(() => import('./pages/AdminDashboardPag
 const SpeakingCoachPage = lazyWithRetry(() => import('./pages/SpeakingCoachPage'));
 const IeltsHubPage = lazyWithRetry(() => import('./pages/IeltsHubPage'));
 const IeltsSpeakingMockPage = lazyWithRetry(() => import('./pages/IeltsSpeakingMockPage'));
+const IeltsFullMockPage = lazyWithRetry(() =>
+  import('./pages/IeltsFullMockPage').then((m) => ({ default: m.IeltsFullMockPage })),
+);
+const PublicVerificationPage = lazyWithRetry(() =>
+  import('./pages/PublicVerificationPage').then((m) => ({ default: m.PublicVerificationPage })),
+);
 const VocabularyBuilderPage = lazyWithRetry(() =>
   import('./pages/VocabularyBuilderPage').then((m) => ({ default: m.VocabularyBuilderPage })),
 );
@@ -305,6 +311,10 @@ const App: React.FC = () => {
                         element={<Navigate to="/ielts?tab=writing" replace />}
                       />
                       <Route path="ielts/speaking-mock" element={<IeltsSpeakingMockPage />} />
+                      <Route path="ielts/full-mock" element={<IeltsFullMockPage />} />
+                      <Route path="ielts-full-mock" element={<IeltsFullMockPage />} />
+                      <Route path="verify/:code" element={<PublicVerificationPage />} />
+                      <Route path="verify" element={<PublicVerificationPage />} />
                       <Route
                         path="ielts/reading-listening"
                         element={<Navigate to="/ielts?tab=reading_listening" replace />}

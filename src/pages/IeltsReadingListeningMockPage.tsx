@@ -528,6 +528,27 @@ export const IeltsReadingListeningMockPage: React.FC = () => {
                 <span className="mt-0.5 block text-xs font-extrabold sm:text-sm">🎧 Listening</span>
               </button>
             </div>
+
+            {/* Full 4-Skill Mock Banner Link */}
+            <div className="mx-auto max-w-md rounded-2xl border border-emerald-500/30 bg-emerald-500/10 p-3 text-center sm:p-4">
+              <div className="flex items-center justify-between gap-3">
+                <div className="text-left">
+                  <div className="flex items-center gap-1.5 text-xs font-black text-emerald-600 dark:text-emerald-400">
+                    <Sparkles size={14} />
+                    <span>To'liq 4 modulli imtihon</span>
+                  </div>
+                  <p className="text-[11px] text-muted-foreground">
+                    Listening + Reading + Writing + Speaking (~2h 45m)
+                  </p>
+                </div>
+                <button
+                  onClick={() => navigate('/ielts/full-mock')}
+                  className="shrink-0 rounded-xl bg-gradient-to-r from-emerald-600 to-teal-600 px-3.5 py-2 text-xs font-black text-white shadow-md transition-all hover:scale-105 active:scale-95"
+                >
+                  Boshlash ⚡
+                </button>
+              </div>
+            </div>
           </div>
 
           {/* READING CATALOG */}

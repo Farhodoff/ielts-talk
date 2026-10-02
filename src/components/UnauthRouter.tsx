@@ -11,6 +11,9 @@ const PricingPage = lazy(() =>
 );
 const IeltsHubPage = lazy(() => import('../pages/IeltsHubPage'));
 const SpeakingCoachPage = lazy(() => import('../pages/SpeakingCoachPage'));
+const PublicVerificationPage = lazy(() =>
+  import('../pages/PublicVerificationPage').then((m) => ({ default: m.PublicVerificationPage })),
+);
 
 /**
  * Router used when the user is not authenticated.
@@ -45,6 +48,8 @@ export const UnauthRouter: React.FC = () => (
           <Route path="/admin" element={<AuthPage />} />
           <Route path="/developers" element={<DeveloperApiPage />} />
           <Route path="/api-docs" element={<Navigate to="/developers" replace />} />
+          <Route path="/verify/:code" element={<PublicVerificationPage />} />
+          <Route path="/verify" element={<PublicVerificationPage />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </Suspense>

@@ -116,14 +116,20 @@ export const IeltsHubPage: React.FC = () => {
                 </p>
               </div>
 
-              <div className="flex w-full shrink-0 items-center gap-3 sm:w-auto">
+              <div className="flex w-full shrink-0 flex-wrap items-center gap-2.5 sm:w-auto">
+                <Link
+                  to="/ielts/full-mock"
+                  className="flex w-full items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-emerald-600 to-teal-600 px-4 py-2.5 text-xs font-black text-white shadow-lg shadow-emerald-500/25 transition-all duration-200 hover:scale-105 hover:from-emerald-500 hover:to-teal-500 active:scale-95 sm:w-auto sm:px-5 sm:py-3"
+                >
+                  <Sparkles size={16} />
+                  <span>Full Mock (~2h 45m)</span>
+                </Link>
                 <Link
                   to="/ielts/speaking-mock"
                   className="flex w-full items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 px-4 py-2.5 text-xs font-black text-white shadow-lg shadow-blue-500/25 transition-all duration-200 hover:scale-105 hover:from-blue-500 hover:to-indigo-500 active:scale-95 sm:w-auto sm:px-5 sm:py-3"
                 >
                   <Mic size={16} />
-                  <span>Speaking Mock Boshlash</span>
-                  <Sparkles size={14} />
+                  <span>Speaking Mock</span>
                 </Link>
               </div>
             </div>
@@ -147,13 +153,22 @@ export const IeltsHubPage: React.FC = () => {
                         : 'Band 7.5 Grammatika'}
               </h1>
             </div>
-            <Link
-              to="/ielts/speaking-mock"
-              className="flex shrink-0 items-center gap-1.5 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 px-3 py-1.5 text-xs font-black text-white shadow-sm active:scale-95"
-            >
-              <Mic size={14} />
-              <span>Mock</span>
-            </Link>
+            <div className="flex shrink-0 items-center gap-1.5">
+              <Link
+                to="/ielts/full-mock"
+                className="flex items-center gap-1 rounded-xl bg-gradient-to-r from-emerald-600 to-teal-600 px-2.5 py-1.5 text-xs font-black text-white shadow-sm active:scale-95"
+              >
+                <Sparkles size={13} />
+                <span>Full</span>
+              </Link>
+              <Link
+                to="/ielts/speaking-mock"
+                className="flex items-center gap-1 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 px-2.5 py-1.5 text-xs font-black text-white shadow-sm active:scale-95"
+              >
+                <Mic size={13} />
+                <span>Mock</span>
+              </Link>
+            </div>
           </div>
 
           {/* Freemium Daily Allowance Bar */}
