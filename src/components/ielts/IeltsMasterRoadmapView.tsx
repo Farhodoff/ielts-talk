@@ -15,9 +15,13 @@ import {
   ChevronUp,
   Target,
   Brain,
-  HelpCircle
+  HelpCircle,
 } from 'lucide-react';
 import { safeLocalStorage } from '../../utils/storage/safeLocalStorage';
+import { CheckpointCard } from './checkpoint/CheckpointCard';
+import { CheckpointTestModal } from './checkpoint/CheckpointTestModal';
+import { getCheckpointForStage, CheckpointTest } from '../../data/ielts/checkpointTestsData';
+import { CheckpointTestService, CheckpointResult } from '../../services/CheckpointTestService';
 
 export interface RoadmapStage {
   id: number;
@@ -49,7 +53,7 @@ const STAGES: RoadmapStage[] = [
     levelCode: 'A1-A2',
     cefr: 'Beginner -> Elementary',
     ieltsBand: '0.0 - 4.0',
-    titleUz: "1-Bosqich: Foundation (Ingliz Tili Poydevori)",
+    titleUz: '1-Bosqich: Foundation (Ingliz Tili Poydevori)',
     subtitleUz: "Noldan boshlovchilar uchun fonetika, 600 ta asosiy so'z va baza grammatika",
     color: '#10B981',
     accentGradient: 'from-emerald-500/20 via-teal-500/10 to-transparent',
@@ -57,35 +61,38 @@ const STAGES: RoadmapStage[] = [
     badgeBorder: 'border-emerald-500/30',
     badgeText: 'text-emerald-500 dark:text-emerald-400',
     targetAudience: "Ingliz tilini mutlaqo bilmaydigan yoki maktabdan so'ng unutib yuborganlar",
-    estimatedTime: "4 - 8 hafta",
+    estimatedTime: '4 - 8 hafta',
     skills: [
       {
         title: "Fonetika, Alifbo & Bo'g'in Urg'ulari",
-        description: "Inglizcha 44 ta fonetik tovush, to'g'ri talaffuz va eshitib tushunish poydevori.",
-        actionUrl: "/study-mode",
-        actionText: "Talaffuz Darslari",
-        iconName: "headphones"
+        description:
+          "Inglizcha 44 ta fonetik tovush, to'g'ri talaffuz va eshitib tushunish poydevori.",
+        actionUrl: '/study-mode',
+        actionText: 'Talaffuz Darslari',
+        iconName: 'headphones',
       },
       {
-        title: "Baza Grammatika: To be, Zamonlar & Olmoshlar",
-        description: "Present Simple, Past Simple (50 ta noto'g'ri fe'llar) va oddiy gap tuzish qoidalari.",
-        actionUrl: "/study-mode",
-        actionText: "Baza Darslar",
-        iconName: "book"
+        title: 'Baza Grammatika: To be, Zamonlar & Olmoshlar',
+        description:
+          "Present Simple, Past Simple (50 ta noto'g'ri fe'llar) va oddiy gap tuzish qoidalari.",
+        actionUrl: '/study-mode',
+        actionText: 'Baza Darslar',
+        iconName: 'book',
       },
       {
-        title: "600 Essential English Words",
-        description: "Kundalik hayotda eng ko'p ishlatiladigan asosiy so'zlar to'plami (SRS Flashcards).",
-        actionUrl: "/flashcards",
+        title: '600 Essential English Words',
+        description:
+          "Kundalik hayotda eng ko'p ishlatiladigan asosiy so'zlar to'plami (SRS Flashcards).",
+        actionUrl: '/flashcards',
         actionText: "So'zlarni Yodlash",
-        iconName: "layers"
-      }
+        iconName: 'layers',
+      },
     ],
     keyMilestones: [
-      "Oddiy inglizcha gaplarni eshitib tushunish",
+      'Oddiy inglizcha gaplarni eshitib tushunish',
       "O'zi, oilasi va qiziqishlari haqida erkin gapira olish",
-      "Kundalik 600 ta so'zni xatosiz yozish va talaffuz qilish"
-    ]
+      "Kundalik 600 ta so'zni xatosiz yozish va talaffuz qilish",
+    ],
   },
   {
     id: 2,
@@ -99,130 +106,141 @@ const STAGES: RoadmapStage[] = [
     badgeBg: 'bg-blue-500/15',
     badgeBorder: 'border-blue-500/30',
     badgeText: 'text-blue-500 dark:text-blue-400',
-    targetAudience: "Boshlang'ich grammatikani biladigan, lekin IELTS formatini hali boshlamaganlar",
-    estimatedTime: "6 - 10 hafta",
+    targetAudience:
+      "Boshlang'ich grammatikani biladigan, lekin IELTS formatini hali boshlamaganlar",
+    estimatedTime: '6 - 10 hafta',
     skills: [
       {
-        title: "IELTS Topic Vocabulary (1,000 Academic Words)",
+        title: 'IELTS Topic Vocabulary (1,000 Academic Words)',
         description: "Education, Technology, Environment, Society mavzularidagi eng muhim so'zlar.",
-        actionUrl: "/flashcards",
+        actionUrl: '/flashcards',
         actionText: "IELTS Lug'ati",
-        iconName: "layers"
+        iconName: 'layers',
       },
       {
-        title: "Murakkab Grammatika (Conditionals & Passive)",
-        description: "Present Perfect, Passiv nisbat, 1-2 turdagi shart ergash gaplar va Relative Clauses.",
-        actionUrl: "/ielts?tab=grammar",
-        actionText: "Grammatika Mashqlari",
-        iconName: "book"
+        title: 'Murakkab Grammatika (Conditionals & Passive)',
+        description:
+          'Present Perfect, Passiv nisbat, 1-2 turdagi shart ergash gaplar va Relative Clauses.',
+        actionUrl: '/ielts?tab=grammar',
+        actionText: 'Grammatika Mashqlari',
+        iconName: 'book',
       },
       {
-        title: "Speaking Part 1 Kirish & Savol-Javoblar",
-        description: "Imtihonda eng ko'p beriladigan 20 ta mavzuda 20-30 soniyalik ravon javob berish.",
-        actionUrl: "/ielts/speaking-mock",
-        actionText: "Part 1 Mashqi",
-        iconName: "mic"
-      }
+        title: 'Speaking Part 1 Kirish & Savol-Javoblar',
+        description:
+          "Imtihonda eng ko'p beriladigan 20 ta mavzuda 20-30 soniyalik ravon javob berish.",
+        actionUrl: '/ielts/speaking-mock',
+        actionText: 'Part 1 Mashqi',
+        iconName: 'mic',
+      },
     ],
     keyMilestones: [
       "Murakkab bog'lovchilardan (although, whereas, furthermore) to'g'ri foydalanish",
-      "IELTS matnlaridagi asosiy fikrlarni ajrata olish",
-      "Speaking Part 1 savollariga to'xtalmasdan 3-4 gap bilan javob berish"
-    ]
+      'IELTS matnlaridagi asosiy fikrlarni ajrata olish',
+      "Speaking Part 1 savollariga to'xtalmasdan 3-4 gap bilan javob berish",
+    ],
   },
   {
     id: 3,
     levelCode: 'B2',
     cefr: 'Upper-Intermediate',
     ieltsBand: '6.0 - 6.5',
-    titleUz: "3-Bosqich: IELTS Core Skills (Asosiy Standartlar)",
-    subtitleUz: "4 ta modul bo'yicha to'liq strategiyalar: Listening S1-4, Reading TFNG, Writing T1/T2",
+    titleUz: '3-Bosqich: IELTS Core Skills (Asosiy Standartlar)',
+    subtitleUz:
+      "4 ta modul bo'yicha to'liq strategiyalar: Listening S1-4, Reading TFNG, Writing T1/T2",
     color: '#8B5CF6',
     accentGradient: 'from-purple-500/20 via-pink-500/10 to-transparent',
     badgeBg: 'bg-purple-500/15',
     badgeBorder: 'border-purple-500/30',
     badgeText: 'text-purple-500 dark:text-purple-400',
     targetAudience: "IELTS topshirishga qat'iy tayyorlanayotgan va 6.5 ballni maqsad qilganlar",
-    estimatedTime: "8 - 12 hafta",
+    estimatedTime: '8 - 12 hafta',
     skills: [
       {
-        title: "Listening Section 1-4 Strategiyalari",
-        description: "Chalg'ituvchilar (distractors), form completion va xarita savollarini yechish sirlari.",
-        actionUrl: "/ielts?tab=reading_listening",
-        actionText: "Listening Mock",
-        iconName: "headphones"
+        title: 'Listening Section 1-4 Strategiyalari',
+        description:
+          "Chalg'ituvchilar (distractors), form completion va xarita savollarini yechish sirlari.",
+        actionUrl: '/ielts?tab=reading_listening',
+        actionText: 'Listening Mock',
+        iconName: 'headphones',
       },
       {
-        title: "Reading: Skimming, Scanning & TFNG",
-        description: "True/False/Not Given, Heading Match va ilmiy matnlarni tezkor tahlil qilish usullari.",
-        actionUrl: "/ielts?tab=reading_listening",
-        actionText: "Reading Mock",
-        iconName: "book"
+        title: 'Reading: Skimming, Scanning & TFNG',
+        description:
+          'True/False/Not Given, Heading Match va ilmiy matnlarni tezkor tahlil qilish usullari.',
+        actionUrl: '/ielts?tab=reading_listening',
+        actionText: 'Reading Mock',
+        iconName: 'book',
       },
       {
-        title: "Writing Task 1 & Task 2 4-Bosqichli Struktura",
-        description: "Grafiklar, jadvallar tahlili va 250 so'zlik Opinion/Discussion esse andozalari.",
-        actionUrl: "/ielts?tab=writing",
-        actionText: "Writing Examiner",
-        iconName: "pen"
+        title: 'Writing Task 1 & Task 2 4-Bosqichli Struktura',
+        description:
+          "Grafiklar, jadvallar tahlili va 250 so'zlik Opinion/Discussion esse andozalari.",
+        actionUrl: '/ielts?tab=writing',
+        actionText: 'Writing Examiner',
+        iconName: 'pen',
       },
       {
-        title: "Speaking Part 2 Cue Card Mahorati",
+        title: 'Speaking Part 2 Cue Card Mahorati',
         description: "1 daqiqa ichida puxta reja tuzish va 2 daqiqa davomida to'xtovsiz gapirish.",
-        actionUrl: "/ielts/speaking-mock",
-        actionText: "Cue Card Mashqi",
-        iconName: "mic"
-      }
+        actionUrl: '/ielts/speaking-mock',
+        actionText: 'Cue Card Mashqi',
+        iconName: 'mic',
+      },
     ],
     keyMilestones: [
       "Listening & Reading dan barqaror 28-32 ta to'g'ri javob (Band 6.5)",
       "Writing Task 2 ni 40 daqiqa ichida to'liq va mantiqiy yakunlash",
-      "Speaking Part 2 da 2 daqiqa to'xtamasdan nutq so'zlay olish"
-    ]
+      "Speaking Part 2 da 2 daqiqa to'xtamasdan nutq so'zlay olish",
+    ],
   },
   {
     id: 4,
     levelCode: 'C1-C2',
     cefr: 'Advanced Mastery',
     ieltsBand: '7.0 - 8.5+',
-    titleUz: "4-Bosqich: High Scorer & Makkar 2026 (Elita Daraja)",
-    subtitleUz: "30 ta Makkar 2026 biletlari, Band 8+ Lexical Resource va AI Examiner bilan jonli intervyu",
+    titleUz: '4-Bosqich: High Scorer & Makkar 2026 (Elita Daraja)',
+    subtitleUz:
+      '30 ta Makkar 2026 biletlari, Band 8+ Lexical Resource va AI Examiner bilan jonli intervyu',
     color: '#F59E0B',
     accentGradient: 'from-amber-500/20 via-orange-500/10 to-transparent',
     badgeBg: 'bg-amber-500/15',
     badgeBorder: 'border-amber-500/30',
     badgeText: 'text-amber-500 dark:text-amber-400',
-    targetAudience: "Grantlar, magistratura va chet el vizalari uchun Band 7.5+ olmoqchi bo'lganlar",
-    estimatedTime: "6 - 10 hafta",
+    targetAudience:
+      "Grantlar, magistratura va chet el vizalari uchun Band 7.5+ olmoqchi bo'lganlar",
+    estimatedTime: '6 - 10 hafta',
     skills: [
       {
-        title: "30 ta Makkar May-August 2026 Biletlari",
-        description: "Eng yangi bashorat biletlari bo'yicha AI Examiner Gordon bilan to'liq jonli audio muloqot.",
-        actionUrl: "/ielts/speaking-mock",
-        actionText: "Makkar 2026 Biletlari",
-        iconName: "mic"
+        title: '30 ta Makkar May-August 2026 Biletlari',
+        description:
+          "Eng yangi bashorat biletlari bo'yicha AI Examiner Gordon bilan to'liq jonli audio muloqot.",
+        actionUrl: '/ielts/speaking-mock',
+        actionText: 'Makkar 2026 Biletlari',
+        iconName: 'mic',
       },
       {
-        title: "Band 8+ Lexical Resource & Idiomalar",
-        description: "Tabiiy kollokatsiyalar, akademik parafraza va mavzuiy idiomatik iboralar.",
-        actionUrl: "/ielts?tab=grammar",
-        actionText: "Band 7.5+ Grammatika",
-        iconName: "zap"
+        title: 'Band 8+ Lexical Resource & Idiomalar',
+        description: 'Tabiiy kollokatsiyalar, akademik parafraza va mavzuiy idiomatik iboralar.',
+        actionUrl: '/ielts?tab=grammar',
+        actionText: 'Band 7.5+ Grammatika',
+        iconName: 'zap',
       },
       {
-        title: "Writing Task 2 Cohesion & Advanced Syntax",
-        description: "Inversiya, passiv tuzilmalar va murakkab sintaksis orqali esseni Band 8.0 ga olib chiqish.",
-        actionUrl: "/ielts?tab=writing",
-        actionText: "Esse Tahlili",
-        iconName: "pen"
-      }
+        title: 'Writing Task 2 Cohesion & Advanced Syntax',
+        description:
+          'Inversiya, passiv tuzilmalar va murakkab sintaksis orqali esseni Band 8.0 ga olib chiqish.',
+        actionUrl: '/ielts?tab=writing',
+        actionText: 'Esse Tahlili',
+        iconName: 'pen',
+      },
     ],
     keyMilestones: [
-      "Makkar 2026 dagi kutilmagan mavzularga ikkilanmasdan ravon javob berish",
+      'Makkar 2026 dagi kutilmagan mavzularga ikkilanmasdan ravon javob berish',
       "Writing da grammatik va leksik xatolarning deyarli bo'lmasligi (Band 7.5+)",
-      "Real imtihon simulyatsiyasida barqaror Band 7.5 - 8.0 natijasi"
-    ]
-  }
+      'Real imtihon simulyatsiyasida barqaror Band 7.5 - 8.0 natijasi',
+    ],
+  },
 ];
 
 export const IeltsMasterRoadmapView: React.FC = () => {
@@ -235,6 +253,20 @@ export const IeltsMasterRoadmapView: React.FC = () => {
   });
 
   const [expandedStageId, setExpandedStageId] = useState<number>(currentStageId);
+  const [selectedCheckpoint, setSelectedCheckpoint] = useState<CheckpointTest | null>(null);
+  const [isCheckpointModalOpen, setIsCheckpointModalOpen] = useState(false);
+  const [checkpointResults, setCheckpointResults] = useState<Record<string, CheckpointResult>>(() =>
+    CheckpointTestService.getAllResults(),
+  );
+
+  const handleStartCheckpoint = (checkpoint: CheckpointTest) => {
+    setSelectedCheckpoint(checkpoint);
+    setIsCheckpointModalOpen(true);
+  };
+
+  const handleCheckpointCompleted = (_res: CheckpointResult) => {
+    setCheckpointResults(CheckpointTestService.getAllResults());
+  };
 
   const handleSelectMyStage = (stageId: number) => {
     setCurrentStageId(stageId);
@@ -260,38 +292,40 @@ export const IeltsMasterRoadmapView: React.FC = () => {
   };
 
   return (
-    <div className="space-y-6 sm:space-y-8 animate-in fade-in">
+    <div className="space-y-6 animate-in fade-in sm:space-y-8">
       {/* Top Banner: Diagnostic Quick Callout */}
-      <div className="relative overflow-hidden rounded-2xl sm:rounded-3xl border border-border bg-gradient-to-r from-card via-muted/30 to-card p-4 sm:p-6 md:p-8 shadow-sm">
-        <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 sm:gap-6">
-          <div className="space-y-2 sm:space-y-2.5 max-w-2xl">
+      <div className="relative overflow-hidden rounded-2xl border border-border bg-gradient-to-r from-card via-muted/30 to-card p-4 shadow-sm sm:rounded-3xl sm:p-6 md:p-8">
+        <div className="flex flex-col justify-between gap-4 sm:gap-6 md:flex-row md:items-center">
+          <div className="max-w-2xl space-y-2 sm:space-y-2.5">
             <div className="flex flex-wrap items-center gap-2">
-              <span className="px-2.5 sm:px-3 py-1 bg-amber-500/15 border border-amber-500/30 text-amber-500 rounded-full text-[11px] sm:text-xs font-black flex items-center gap-1.5">
+              <span className="flex items-center gap-1.5 rounded-full border border-amber-500/30 bg-amber-500/15 px-2.5 py-1 text-[11px] font-black text-amber-500 sm:px-3 sm:text-xs">
                 <Compass size={14} /> Strategik Yo'l Xaritasi
               </span>
-              <span className="text-[11px] sm:text-xs font-semibold text-muted-foreground">
+              <span className="text-[11px] font-semibold text-muted-foreground sm:text-xs">
                 Noldan (A1) ➡️ Band 8.5 (C1-C2)
               </span>
             </div>
-            <h2 className="text-xl sm:text-2xl md:text-3xl font-black tracking-tight text-foreground">
+            <h2 className="text-xl font-black tracking-tight text-foreground sm:text-2xl md:text-3xl">
               Siz Qaysi Bosqichdasiz?
             </h2>
-            <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
-              O'zingizga mos bosqichni tanlang va shaxsiy reja bo'yicha harakatlaning. Agar darajangizni aniq bilmasangiz, 10 daqiqalik diagnostik test orqali aniqlab olishingiz mumkin.
+            <p className="text-xs leading-relaxed text-muted-foreground sm:text-sm">
+              O'zingizga mos bosqichni tanlang va shaxsiy reja bo'yicha harakatlaning. Agar
+              darajangizni aniq bilmasangiz, 10 daqiqalik diagnostik test orqali aniqlab olishingiz
+              mumkin.
             </p>
           </div>
 
-          <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 sm:gap-3 shrink-0">
+          <div className="flex shrink-0 flex-col items-stretch gap-2.5 sm:flex-row sm:items-center sm:gap-3">
             <button
               onClick={() => navigate('/diagnostic')}
-              className="px-4 py-2.5 sm:py-3 bg-background border border-border hover:bg-muted text-foreground rounded-xl sm:rounded-2xl text-xs font-bold flex items-center justify-center gap-2 transition-all shadow-xs cursor-pointer active:scale-95"
+              className="flex cursor-pointer items-center justify-center gap-2 rounded-xl border border-border bg-background px-4 py-2.5 text-xs font-bold text-foreground shadow-xs transition-all hover:bg-muted active:scale-95 sm:rounded-2xl sm:py-3"
             >
               <Brain size={16} className="text-purple-500" />
               <span>Darajani Aniqlash Testi</span>
             </button>
             <button
               onClick={() => navigate('/ielts/speaking-mock')}
-              className="px-4 sm:px-5 py-2.5 sm:py-3 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white rounded-xl sm:rounded-2xl text-xs font-black flex items-center justify-center gap-2 shadow-lg shadow-blue-500/20 transition-all cursor-pointer active:scale-95"
+              className="flex cursor-pointer items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 px-4 py-2.5 text-xs font-black text-white shadow-lg shadow-blue-500/20 transition-all hover:from-blue-700 hover:to-indigo-700 active:scale-95 sm:rounded-2xl sm:px-5 sm:py-3"
             >
               <Mic size={16} />
               <span>Makkar 2026 Mocks</span>
@@ -301,33 +335,35 @@ export const IeltsMasterRoadmapView: React.FC = () => {
         </div>
 
         {/* 4-Stage Fast Tracker Pills */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-2 sm:gap-2.5 mt-5 sm:mt-6 pt-5 sm:pt-6 border-t border-border/60">
+        <div className="mt-5 grid grid-cols-2 gap-2 border-t border-border/60 pt-5 sm:mt-6 sm:gap-2.5 sm:pt-6 md:grid-cols-4">
           {STAGES.map((st) => (
             <button
               key={st.id}
               onClick={() => {
                 setExpandedStageId(st.id);
               }}
-              className={`p-2.5 sm:p-3 rounded-xl sm:rounded-2xl border text-left transition-all cursor-pointer ${
+              className={`cursor-pointer rounded-xl border p-2.5 text-left transition-all sm:rounded-2xl sm:p-3 ${
                 expandedStageId === st.id
-                  ? 'bg-card border-primary/50 shadow-md ring-1 ring-primary/40'
-                  : 'bg-muted/30 border-border/70 hover:bg-muted/60'
+                  ? 'border-primary/50 bg-card shadow-md ring-1 ring-primary/40'
+                  : 'border-border/70 bg-muted/30 hover:bg-muted/60'
               }`}
             >
-              <div className="flex items-center justify-between gap-1 mb-1">
-                <span className={`text-[9px] sm:text-[10px] font-extrabold uppercase px-1.5 sm:px-2 py-0.5 rounded-md ${st.badgeBg} ${st.badgeText}`}>
+              <div className="mb-1 flex items-center justify-between gap-1">
+                <span
+                  className={`rounded-md px-1.5 py-0.5 text-[9px] font-extrabold uppercase sm:px-2 sm:text-[10px] ${st.badgeBg} ${st.badgeText}`}
+                >
                   {st.levelCode}
                 </span>
                 {currentStageId === st.id && (
-                  <span className="text-[9px] sm:text-[10px] font-bold text-amber-500 flex items-center gap-0.5 truncate">
+                  <span className="flex items-center gap-0.5 truncate text-[9px] font-bold text-amber-500 sm:text-[10px]">
                     <Target size={11} className="shrink-0" /> Mening Bosqichim
                   </span>
                 )}
               </div>
-              <div className="text-[11px] sm:text-xs font-extrabold text-foreground truncate">
+              <div className="truncate text-[11px] font-extrabold text-foreground sm:text-xs">
                 {st.titleUz.split(':')[1] || st.titleUz}
               </div>
-              <div className="text-[10px] sm:text-[11px] font-mono text-muted-foreground mt-0.5">
+              <div className="mt-0.5 font-mono text-[10px] text-muted-foreground sm:text-[11px]">
                 Band {st.ieltsBand}
               </div>
             </button>
@@ -344,55 +380,59 @@ export const IeltsMasterRoadmapView: React.FC = () => {
           return (
             <div
               key={stage.id}
-              className={`relative rounded-2xl sm:rounded-3xl border transition-all duration-300 overflow-hidden ${
+              className={`relative overflow-hidden rounded-2xl border transition-all duration-300 sm:rounded-3xl ${
                 isCurrent
-                  ? 'bg-card border-primary/40 shadow-lg ring-1 ring-primary/20'
-                  : 'bg-card border-border shadow-xs hover:border-border/80'
+                  ? 'border-primary/40 bg-card shadow-lg ring-1 ring-primary/20'
+                  : 'border-border bg-card shadow-xs hover:border-border/80'
               }`}
             >
               {/* Background gradient banner */}
-              <div className={`absolute top-0 left-0 right-0 h-32 bg-gradient-to-b ${stage.accentGradient} pointer-events-none`} />
+              <div
+                className={`absolute left-0 right-0 top-0 h-32 bg-gradient-to-b ${stage.accentGradient} pointer-events-none`}
+              />
 
               {/* Stage Header */}
               <div className="relative z-10 p-4 sm:p-5 md:p-6">
-                <div className="flex flex-col md:flex-row md:items-center justify-between gap-3 sm:gap-4">
-                  <div className="space-y-1.5 flex-1">
+                <div className="flex flex-col justify-between gap-3 sm:gap-4 md:flex-row md:items-center">
+                  <div className="flex-1 space-y-1.5">
                     <div className="flex flex-wrap items-center gap-1.5 sm:gap-2">
-                      <span className={`px-2 sm:px-2.5 py-0.5 sm:py-1 rounded-full text-[11px] sm:text-xs font-black border ${stage.badgeBg} ${stage.badgeBorder} ${stage.badgeText}`}>
+                      <span
+                        className={`rounded-full border px-2 py-0.5 text-[11px] font-black sm:px-2.5 sm:py-1 sm:text-xs ${stage.badgeBg} ${stage.badgeBorder} ${stage.badgeText}`}
+                      >
                         {stage.levelCode} • {stage.cefr}
                       </span>
-                      <span className="px-2 sm:px-2.5 py-0.5 sm:py-1 rounded-full text-[11px] sm:text-xs font-bold bg-muted text-muted-foreground border border-border">
+                      <span className="rounded-full border border-border bg-muted px-2 py-0.5 text-[11px] font-bold text-muted-foreground sm:px-2.5 sm:py-1 sm:text-xs">
                         🎯 Band {stage.ieltsBand}
                       </span>
-                      <span className="px-2 sm:px-2.5 py-0.5 sm:py-1 rounded-full text-[11px] sm:text-xs font-medium text-muted-foreground">
+                      <span className="rounded-full px-2 py-0.5 text-[11px] font-medium text-muted-foreground sm:px-2.5 sm:py-1 sm:text-xs">
                         ⏱️ {stage.estimatedTime}
                       </span>
                     </div>
 
-                    <h3 className="text-lg sm:text-xl md:text-2xl font-black text-foreground pt-1">
+                    <h3 className="pt-1 text-lg font-black text-foreground sm:text-xl md:text-2xl">
                       {stage.titleUz}
                     </h3>
-                    <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
+                    <p className="text-xs leading-relaxed text-muted-foreground sm:text-sm">
                       {stage.subtitleUz}
                     </p>
                   </div>
 
                   {/* Header Actions */}
-                  <div className="flex items-center gap-2 shrink-0">
+                  <div className="flex shrink-0 items-center gap-2">
                     <button
                       onClick={() => handleSelectMyStage(stage.id)}
-                      className={`px-3 py-1.5 sm:py-2 rounded-xl text-xs font-black transition-all cursor-pointer ${
+                      className={`cursor-pointer rounded-xl px-3 py-1.5 text-xs font-black transition-all sm:py-2 ${
                         isCurrent
                           ? 'bg-emerald-600 text-white shadow-md'
-                          : 'bg-muted hover:bg-muted/80 text-foreground border border-border'
+                          : 'border border-border bg-muted text-foreground hover:bg-muted/80'
                       }`}
                     >
                       {isCurrent ? '✓ Mening Bosqichim' : 'Bosqichni Tanlash'}
                     </button>
                     <button
                       onClick={() => setExpandedStageId(isExpanded ? 0 : stage.id)}
-                      className="p-1.5 sm:p-2 bg-muted hover:bg-muted/80 rounded-xl text-foreground border border-border transition-all cursor-pointer"
-                      title={isExpanded ? "Yopish" : "Ochish"}
+                      className="cursor-pointer rounded-xl border border-border bg-muted p-1.5 text-foreground transition-all hover:bg-muted/80 sm:p-2"
+                      title={isExpanded ? 'Yopish' : 'Ochish'}
                     >
                       {isExpanded ? <ChevronUp size={18} /> : <ChevronDown size={18} />}
                     </button>
@@ -400,44 +440,47 @@ export const IeltsMasterRoadmapView: React.FC = () => {
                 </div>
 
                 {/* Audience note */}
-                <div className="mt-3 sm:mt-4 p-2.5 sm:p-3 bg-muted/40 rounded-xl sm:rounded-2xl border border-border/50 text-xs text-muted-foreground flex items-center gap-2">
-                  <HelpCircle size={15} className="text-primary shrink-0" />
-                  <span><strong>Kimlar uchun:</strong> {stage.targetAudience}</span>
+                <div className="mt-3 flex items-center gap-2 rounded-xl border border-border/50 bg-muted/40 p-2.5 text-xs text-muted-foreground sm:mt-4 sm:rounded-2xl sm:p-3">
+                  <HelpCircle size={15} className="shrink-0 text-primary" />
+                  <span>
+                    <strong>Kimlar uchun:</strong> {stage.targetAudience}
+                  </span>
                 </div>
               </div>
 
               {/* Collapsible Content: Skills & Milestones */}
               {isExpanded && (
-                <div className="p-4 sm:p-5 md:p-6 pt-0 border-t border-border/40 space-y-5 animate-in fade-in duration-200">
+                <div className="space-y-5 border-t border-border/40 p-4 pt-0 duration-200 animate-in fade-in sm:p-5 md:p-6">
                   {/* Skills Grid */}
                   <div className="space-y-3 pt-4">
-                    <h4 className="text-xs font-black uppercase tracking-wider text-muted-foreground flex items-center gap-1.5">
-                      <Layers size={14} className="text-primary" /> Ushbu Bosqich Darslari va Mashg'ulotlari:
+                    <h4 className="flex items-center gap-1.5 text-xs font-black uppercase tracking-wider text-muted-foreground">
+                      <Layers size={14} className="text-primary" /> Ushbu Bosqich Darslari va
+                      Mashg'ulotlari:
                     </h4>
 
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-3.5">
+                    <div className="grid grid-cols-1 gap-3.5 md:grid-cols-3">
                       {stage.skills.map((skill, sIdx) => (
                         <div
                           key={sIdx}
-                          className="bg-card border border-border rounded-2xl p-4 flex flex-col justify-between gap-3 shadow-xs hover:border-primary/40 transition-all group"
+                          className="group flex flex-col justify-between gap-3 rounded-2xl border border-border bg-card p-4 shadow-xs transition-all hover:border-primary/40"
                         >
                           <div className="space-y-2">
                             <div className="flex items-center gap-2">
-                              <div className="p-2 bg-muted rounded-xl group-hover:scale-105 transition-transform">
+                              <div className="rounded-xl bg-muted p-2 transition-transform group-hover:scale-105">
                                 {getSkillIcon(skill.iconName)}
                               </div>
-                              <h5 className="text-xs font-extrabold text-foreground leading-snug">
+                              <h5 className="text-xs font-extrabold leading-snug text-foreground">
                                 {skill.title}
                               </h5>
                             </div>
-                            <p className="text-xs text-muted-foreground leading-relaxed">
+                            <p className="text-xs leading-relaxed text-muted-foreground">
                               {skill.description}
                             </p>
                           </div>
 
                           <button
                             onClick={() => navigate(skill.actionUrl)}
-                            className="w-full py-2 px-3 bg-muted hover:bg-primary hover:text-primary-foreground text-foreground rounded-xl text-xs font-bold flex items-center justify-center gap-1.5 transition-all cursor-pointer active:scale-95 border border-border group-hover:border-primary"
+                            className="flex w-full cursor-pointer items-center justify-center gap-1.5 rounded-xl border border-border bg-muted px-3 py-2 text-xs font-bold text-foreground transition-all hover:bg-primary hover:text-primary-foreground active:scale-95 group-hover:border-primary"
                           >
                             <span>{skill.actionText}</span>
                             <ArrowRight size={13} />
@@ -448,25 +491,51 @@ export const IeltsMasterRoadmapView: React.FC = () => {
                   </div>
 
                   {/* Key Milestones checklist */}
-                  <div className="bg-muted/20 border border-border/60 rounded-2xl p-4 space-y-2.5">
-                    <h4 className="text-xs font-black uppercase tracking-wider text-muted-foreground flex items-center gap-1.5">
-                      <Award size={14} className="text-amber-500" /> Bosqichni Yakunlash Natijalari (Kutiladigan Ko'nikmalar):
+                  <div className="space-y-2.5 rounded-2xl border border-border/60 bg-muted/20 p-4">
+                    <h4 className="flex items-center gap-1.5 text-xs font-black uppercase tracking-wider text-muted-foreground">
+                      <Award size={14} className="text-amber-500" /> Bosqichni Yakunlash Natijalari
+                      (Kutiladigan Ko'nikmalar):
                     </h4>
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-2 pt-1">
+                    <div className="grid grid-cols-1 gap-2 pt-1 md:grid-cols-3">
                       {stage.keyMilestones.map((ms, mIdx) => (
-                        <div key={mIdx} className="flex items-start gap-2 text-xs text-foreground font-medium">
-                          <CheckCircle2 size={15} className="text-emerald-500 shrink-0 mt-0.5" />
+                        <div
+                          key={mIdx}
+                          className="flex items-start gap-2 text-xs font-medium text-foreground"
+                        >
+                          <CheckCircle2 size={15} className="mt-0.5 shrink-0 text-emerald-500" />
                           <span>{ms}</span>
                         </div>
                       ))}
                     </div>
                   </div>
+
+                  {/* Stage Checkpoint Exam Gate */}
+                  {getCheckpointForStage(stage.id) && (
+                    <div className="pt-1">
+                      <CheckpointCard
+                        checkpoint={getCheckpointForStage(stage.id)!}
+                        result={checkpointResults[getCheckpointForStage(stage.id)!.id] || null}
+                        isUnlocked={CheckpointTestService.isStageUnlocked(stage.id)}
+                        onStartTest={handleStartCheckpoint}
+                      />
+                    </div>
+                  )}
                 </div>
               )}
             </div>
           );
         })}
       </div>
+
+      {/* Checkpoint Test Modal Runner */}
+      {isCheckpointModalOpen && selectedCheckpoint && (
+        <CheckpointTestModal
+          isOpen={isCheckpointModalOpen}
+          checkpoint={selectedCheckpoint}
+          onClose={() => setIsCheckpointModalOpen(false)}
+          onCompleted={handleCheckpointCompleted}
+        />
+      )}
     </div>
   );
 };

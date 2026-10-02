@@ -9,12 +9,14 @@ import {
   Sparkles,
   Compass,
   ArrowRight,
+  Award,
 } from 'lucide-react';
 import { useSearchParams, Link } from 'react-router-dom';
 import { RealWeaknessTracker } from '../components/ielts/RealWeaknessTracker';
 import { DailyTargetHub } from '../components/ielts/DailyTargetHub';
 import { useSEO } from '../hooks/useSEO';
 import { useFreemiumQuota } from '../hooks/useFreemiumQuota';
+import { CHECKPOINT_TESTS, CheckpointTest } from '../data/ielts/checkpointTestsData';
 
 const IeltsMasterRoadmapView = lazy(() => import('../components/ielts/IeltsMasterRoadmapView'));
 const PersonalPlanPage = lazy(() => import('./PersonalPlanPage'));
@@ -35,6 +37,11 @@ const DailyReflectionModal = lazy(() =>
     default: m.DailyReflectionModal,
   })),
 );
+const CheckpointTestModal = lazy(() =>
+  import('../components/ielts/checkpoint/CheckpointTestModal').then((m) => ({
+    default: m.CheckpointTestModal,
+  })),
+);
 
 export const IeltsHubPage: React.FC = () => {
   useSEO({
@@ -52,6 +59,7 @@ export const IeltsHubPage: React.FC = () => {
   const activeTab = tabParam || (topicParam ? 'grammar' : 'roadmap');
 
   const [isReflectionOpen, setIsReflectionOpen] = useState(false);
+  const [selectedCheckpoint, setSelectedCheckpoint] = useState<CheckpointTest | null>(null);
   const { remainingSpeaking, remainingWriting, isPro, isAdmin } = useFreemiumQuota();
   const isUnlimited = isAdmin || isPro;
 
@@ -242,6 +250,14 @@ export const IeltsHubPage: React.FC = () => {
               >
                 <span>Fonetika</span>
               </Link>
+              <button
+                type="button"
+                onClick={() => setSelectedCheckpoint(CHECKPOINT_TESTS[0])}
+                className="flex cursor-pointer items-center gap-1 rounded-xl border border-emerald-500/50 bg-emerald-500/15 px-2.5 py-1.5 text-xs font-bold text-emerald-300 transition hover:bg-emerald-500/25 active:scale-95"
+              >
+                <Award size={13} />
+                <span>A1 Imtihon</span>
+              </button>
             </div>
           </div>
 
@@ -373,6 +389,17 @@ export const IeltsHubPage: React.FC = () => {
           <DailyReflectionModal
             isOpen={isReflectionOpen}
             onClose={() => setIsReflectionOpen(false)}
+          />
+        )}
+      </Suspense>
+
+      {/* Checkpoint Test Modal */}
+      <Suspense fallback={null}>
+        {selectedCheckpoint && (
+          <CheckpointTestModal
+            isOpen={!!selectedCheckpoint}
+            checkpoint={selectedCheckpoint}
+            onClose={() => setSelectedCheckpoint(null)}
           />
         )}
       </Suspense>
