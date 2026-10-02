@@ -253,17 +253,29 @@ export default defineConfig({
               return 'dnd-kit';
             }
           }
-          // Separate curriculum data by language to avoid monolithic 1MB bundle
-          if (id.includes('/data/curriculum/english')) {
-            return 'curriculum-english';
+          // Fine-grained curriculum code-splitting per CEFR level
+          if (id.includes('/data/curriculum/englishA1')) {
+            return 'curriculum-en-a1';
           }
-          if (id.includes('/data/curriculum/japanese')) {
-            return 'curriculum-japanese';
+          if (id.includes('/data/curriculum/englishA2')) {
+            return 'curriculum-en-a2';
           }
-          if (id.includes('/data/jlptGrammarKanji')) {
-            return 'jlpt-grammar-kanji-data';
+          if (id.includes('/data/curriculum/englishB1')) {
+            return 'curriculum-en-b1';
           }
-          if (id.includes('/data/ielts/ielts_grammar_data')) {
+          if (id.includes('/data/curriculum/englishB2')) {
+            return 'curriculum-en-b2';
+          }
+          if (id.includes('/data/curriculum/englishC1')) {
+            return 'curriculum-en-c1';
+          }
+          if (id.includes('/data/curriculum/englishC2')) {
+            return 'curriculum-en-c2';
+          }
+          if (
+            id.includes('/data/ielts/ielts_grammar_data') ||
+            id.includes('/data/ielts/ielts_grammar_quizzes')
+          ) {
             return 'ielts-grammar-data';
           }
         },
