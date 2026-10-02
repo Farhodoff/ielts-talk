@@ -1,7 +1,6 @@
 import React, { useState, useMemo } from 'react';
 import { CheckCircle2, XCircle, ArrowRight, Sparkles } from 'lucide-react';
 import { PracticeExercise } from '../../types/lesson';
-import { FuriganaText } from '../common/FuriganaText';
 
 interface PracticeStepViewProps {
   instructions: string;
@@ -123,7 +122,7 @@ export const PracticeStepView: React.FC<PracticeStepViewProps> = ({
       {/* Exercise Card */}
       <div className="space-y-3.5 rounded-2xl border border-border bg-card p-3.5 shadow-sm sm:space-y-6 sm:rounded-3xl sm:p-6">
         <div className="text-base font-bold leading-snug text-foreground sm:text-lg">
-          <FuriganaText text={currentExercise.prompt} />
+          {currentExercise.prompt}
         </div>
 
         {/* Options list */}
@@ -155,9 +154,7 @@ export const PracticeStepView: React.FC<PracticeStepViewProps> = ({
                     <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-lg border border-border bg-card text-xs font-black text-muted-foreground">
                       {String.fromCharCode(65 + optIdx)}
                     </span>
-                    <span className="leading-snug">
-                      <FuriganaText text={opt} />
-                    </span>
+                    <span className="leading-snug">{opt}</span>
                   </div>
                   {isSubmitted && optIdx === currentExercise.correctAnswer && (
                     <CheckCircle2 size={18} className="shrink-0 text-emerald-500" />
@@ -201,9 +198,7 @@ export const PracticeStepView: React.FC<PracticeStepViewProps> = ({
                   {isCorrect ? "To'g'ri javob! 🎉" : "Noto'g'ri javob 💡"}
                 </div>
                 {currentExercise.explanation && (
-                  <div className="mt-1 text-foreground/80">
-                    <FuriganaText text={currentExercise.explanation} />
-                  </div>
+                  <div className="mt-1 text-foreground/80">{currentExercise.explanation}</div>
                 )}
               </div>
             </div>

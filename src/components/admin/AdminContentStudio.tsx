@@ -14,7 +14,13 @@ import {
   X,
   Sparkles,
 } from 'lucide-react';
-import { CustomContentService, BulkImportResult, JlptKanjiItem, JlptGrammarItem, JlptGrammarQuestion } from '../../services/CustomContentService';
+import {
+  CustomContentService,
+  BulkImportResult,
+  JlptKanjiItem,
+  JlptGrammarItem,
+  JlptGrammarQuestion,
+} from '../../services/CustomContentService';
 import { useStudyData } from '../../context/StudyPlannerContext';
 import { AdminScenarioManager } from './AdminScenarioManager';
 import { AdminQuizManager } from './AdminQuizManager';
@@ -25,7 +31,7 @@ export const AdminContentStudio: React.FC = () => {
 
   const [activeSubTab, setActiveSubTab] = useState<
     'kanji' | 'grammar' | 'quiz' | 'flashcards' | 'scenarios'
-  >('kanji');
+  >('grammar');
 
   const [isSyncing, setIsSyncing] = useState(false);
   const fileInputRef = useRef<HTMLInputElement | null>(null);
@@ -747,11 +753,11 @@ export const AdminContentStudio: React.FC = () => {
       <div className="flex flex-col justify-between gap-4 rounded-2xl border border-border/80 bg-gradient-to-r from-card to-muted/40 p-5 sm:flex-row sm:items-center">
         <div>
           <h2 className="flex items-center gap-2 text-lg font-black text-foreground">
-            <Sparkles className="text-primary" size={20} /> Kontent Studiosi (JLPT & Lug‘at)
+            <Sparkles className="text-primary" size={20} /> Kontent Studiosi (IELTS & Lug‘at)
           </h2>
           <p className="mt-1 text-xs text-muted-foreground">
-            Yangi Kanji, Grammatika qoliplari va fleshkarta to‘plamlarini to‘g‘ridan-to‘g‘ri
-            boshqaring.
+            Yangi Grammatika qoliplari, Test savollari, Fleshkartalar va Suhbat ssenariylarini
+            to‘g‘ridan-to‘g‘ri boshqaring.
           </p>
         </div>
 
@@ -787,16 +793,6 @@ export const AdminContentStudio: React.FC = () => {
 
       {/* Sub-tabs Navigation */}
       <div className="scrollbar-hide flex items-center gap-2 overflow-x-auto border-b border-border pb-2 text-xs font-bold">
-        <button
-          onClick={() => setActiveSubTab('kanji')}
-          className={`flex cursor-pointer items-center gap-1.5 rounded-xl px-4 py-2 transition-all ${
-            activeSubTab === 'kanji'
-              ? 'bg-primary text-primary-foreground shadow-sm'
-              : 'text-muted-foreground hover:text-foreground'
-          }`}
-        >
-          ⛩️ Kanji Boshqaruvi ({customKanjiList.length})
-        </button>
         <button
           onClick={() => setActiveSubTab('grammar')}
           className={`flex cursor-pointer items-center gap-1.5 rounded-xl px-4 py-2 transition-all ${
@@ -874,7 +870,7 @@ export const AdminContentStudio: React.FC = () => {
                       maxLength={4}
                       value={kanjiForm.kanji}
                       onChange={(e) => setKanjiForm({ ...kanjiForm, kanji: e.target.value })}
-                      placeholder="櫻"
+                      placeholder="Word"
                       className="focus:outline-hidden mt-1 w-full rounded-xl border border-border bg-background p-2.5 text-center text-xl font-black text-foreground focus:border-primary"
                       required
                     />
@@ -886,11 +882,11 @@ export const AdminContentStudio: React.FC = () => {
                       onChange={(e) => setKanjiForm({ ...kanjiForm, level: e.target.value as any })}
                       className="focus:outline-hidden mt-1 w-full rounded-xl border border-border bg-background p-2.5 font-bold text-foreground focus:border-primary"
                     >
-                      <option value="N5">JLPT N5</option>
-                      <option value="N4">JLPT N4</option>
-                      <option value="N3">JLPT N3</option>
-                      <option value="N2">JLPT N2</option>
-                      <option value="N1">JLPT N1</option>
+                      <option value="N5">Band 4.5 - 5.0 (Foundation)</option>
+                      <option value="N4">Band 5.5 - 6.0 (Intermediate)</option>
+                      <option value="N3">Band 6.5 - 7.0 (Upper-Int)</option>
+                      <option value="N2">Band 7.5 - 8.0 (Advanced)</option>
+                      <option value="N1">Band 8.5 - 9.0 (Expert)</option>
                     </select>
                   </div>
                   <div className="col-span-1">
@@ -916,7 +912,7 @@ export const AdminContentStudio: React.FC = () => {
                     type="text"
                     value={kanjiForm.meaningUz}
                     onChange={(e) => setKanjiForm({ ...kanjiForm, meaningUz: e.target.value })}
-                    placeholder="Olcha daraxti, Sakura"
+                    placeholder="So'zning o'zbekcha tarjimasi"
                     className="focus:outline-hidden mt-1 w-full rounded-xl border border-border bg-background p-2.5 font-medium text-foreground focus:border-primary"
                     required
                   />
@@ -925,25 +921,25 @@ export const AdminContentStudio: React.FC = () => {
                 <div className="grid grid-cols-2 gap-3">
                   <div>
                     <label className="block font-medium text-muted-foreground">
-                      Onyomi (Katakana)
+                      Transkripsiya / Talaffuz
                     </label>
                     <input
                       type="text"
                       value={kanjiForm.onyomi}
                       onChange={(e) => setKanjiForm({ ...kanjiForm, onyomi: e.target.value })}
-                      placeholder="オウ"
+                      placeholder="/ˈwɜːd/"
                       className="focus:outline-hidden mt-1 w-full rounded-xl border border-border bg-background p-2 font-medium text-foreground focus:border-primary"
                     />
                   </div>
                   <div>
                     <label className="block font-medium text-muted-foreground">
-                      Kunyomi (Hiragana)
+                      So'z Turcumi (Part of Speech)
                     </label>
                     <input
                       type="text"
                       value={kanjiForm.kunyomi}
                       onChange={(e) => setKanjiForm({ ...kanjiForm, kunyomi: e.target.value })}
-                      placeholder="さくら"
+                      placeholder="Noun / Verb / Adj"
                       className="focus:outline-hidden mt-1 w-full rounded-xl border border-border bg-background p-2 font-medium text-foreground focus:border-primary"
                     />
                   </div>
@@ -955,14 +951,14 @@ export const AdminContentStudio: React.FC = () => {
                   <div className="grid grid-cols-3 gap-2">
                     <input
                       type="text"
-                      placeholder="桜花"
+                      placeholder="Collocation"
                       value={kanjiForm.exampleWord}
                       onChange={(e) => setKanjiForm({ ...kanjiForm, exampleWord: e.target.value })}
                       className="focus:outline-hidden rounded-lg border border-border bg-background p-2 text-foreground"
                     />
                     <input
                       type="text"
-                      placeholder="おうか"
+                      placeholder="Pronunciation"
                       value={kanjiForm.exampleReading}
                       onChange={(e) =>
                         setKanjiForm({ ...kanjiForm, exampleReading: e.target.value })
@@ -971,7 +967,7 @@ export const AdminContentStudio: React.FC = () => {
                     />
                     <input
                       type="text"
-                      placeholder="Olcha guli"
+                      placeholder="Meaning"
                       value={kanjiForm.exampleMeaning}
                       onChange={(e) =>
                         setKanjiForm({ ...kanjiForm, exampleMeaning: e.target.value })
@@ -1100,7 +1096,7 @@ export const AdminContentStudio: React.FC = () => {
                       type="text"
                       value={grammarForm.title}
                       onChange={(e) => setGrammarForm({ ...grammarForm, title: e.target.value })}
-                      placeholder="〜てはいけない"
+                      placeholder="Not only... but also / In spite of"
                       className="focus:outline-hidden mt-1 w-full rounded-xl border border-border bg-background p-2.5 font-bold text-foreground focus:border-primary"
                       required
                     />
@@ -1114,11 +1110,11 @@ export const AdminContentStudio: React.FC = () => {
                       }
                       className="focus:outline-hidden mt-1 w-full rounded-xl border border-border bg-background p-2.5 font-bold text-foreground focus:border-primary"
                     >
-                      <option value="N5">JLPT N5</option>
-                      <option value="N4">JLPT N4</option>
-                      <option value="N3">JLPT N3</option>
-                      <option value="N2">JLPT N2</option>
-                      <option value="N1">JLPT N1</option>
+                      <option value="N5">Band 4.5 - 5.0 (Foundation / B1)</option>
+                      <option value="N4">Band 5.5 - 6.0 (Intermediate / B2)</option>
+                      <option value="N3">Band 6.5 - 7.0 (Upper-Intermediate / C1)</option>
+                      <option value="N2">Band 7.5 - 8.0 (Advanced / C1-C2)</option>
+                      <option value="N1">Band 8.5 - 9.0 (Expert / C2)</option>
                     </select>
                   </div>
                 </div>
@@ -1131,7 +1127,7 @@ export const AdminContentStudio: React.FC = () => {
                     type="text"
                     value={grammarForm.meaningUz}
                     onChange={(e) => setGrammarForm({ ...grammarForm, meaningUz: e.target.value })}
-                    placeholder="... qilish mumkin emas / taqiqlanadi"
+                    placeholder="... ga qaramasdan / nafaqat ... balki ..."
                     className="focus:outline-hidden mt-1 w-full rounded-xl border border-border bg-background p-2.5 font-medium text-foreground focus:border-primary"
                     required
                   />
@@ -1145,7 +1141,7 @@ export const AdminContentStudio: React.FC = () => {
                     type="text"
                     value={grammarForm.structure}
                     onChange={(e) => setGrammarForm({ ...grammarForm, structure: e.target.value })}
-                    placeholder="Fe'l [Te-shakli] + はいけない"
+                    placeholder="Not only + aux + subj + verb, but also..."
                     className="focus:outline-hidden mt-1 w-full rounded-xl border border-border bg-background p-2.5 font-medium text-foreground focus:border-primary"
                   />
                 </div>
@@ -1155,14 +1151,14 @@ export const AdminContentStudio: React.FC = () => {
                   <span className="font-bold text-foreground">Misol Gap (Ixtiyoriy)</span>
                   <input
                     type="text"
-                    placeholder="Yaponcha gap: ここでタバコを吸ってはいけません。"
+                    placeholder="Inglizcha gap: Not only did she ace the exam, but she also won a scholarship."
                     value={grammarForm.exampleJa}
                     onChange={(e) => setGrammarForm({ ...grammarForm, exampleJa: e.target.value })}
                     className="focus:outline-hidden w-full rounded-lg border border-border bg-background p-2 text-foreground"
                   />
                   <input
                     type="text"
-                    placeholder="Tarjimasi: Bu yerda sigaret chekish mumkin emas."
+                    placeholder="Tarjimasi: U nafaqat imtihonni a'lo topshirdi, balki grant ham yutib oldi."
                     value={grammarForm.exampleUz}
                     onChange={(e) => setGrammarForm({ ...grammarForm, exampleUz: e.target.value })}
                     className="focus:outline-hidden w-full rounded-lg border border-border bg-background p-2 text-foreground"
@@ -1307,7 +1303,7 @@ export const AdminContentStudio: React.FC = () => {
               <form onSubmit={handleAddSingleCard} className="space-y-2 text-xs">
                 <input
                   type="text"
-                  placeholder="Old tomoni (masalan: 食べる)"
+                  placeholder="Old tomoni (masalan: Ubiquitous)"
                   value={singleFront}
                   onChange={(e) => setSingleFront(e.target.value)}
                   className="focus:outline-hidden w-full rounded-xl border border-border bg-background p-2 font-medium text-foreground focus:border-primary"
@@ -1315,7 +1311,7 @@ export const AdminContentStudio: React.FC = () => {
                 />
                 <input
                   type="text"
-                  placeholder="Orqa tomoni (masalan: Yemoq)"
+                  placeholder="Orqa tomoni (masalan: Hamma yerda mavjud)"
                   value={singleBack}
                   onChange={(e) => setSingleBack(e.target.value)}
                   className="focus:outline-hidden w-full rounded-xl border border-border bg-background p-2 font-medium text-foreground focus:border-primary"
@@ -1355,11 +1351,11 @@ export const AdminContentStudio: React.FC = () => {
             <p className="text-xs text-muted-foreground">
               Har bir qatorda bittadan so‘z va uning tarjimasini kiriting. Masalan:
               <span className="mt-1 block font-mono font-semibold text-foreground">
-                猫 - Mushuk
+                Perseverance - Matonat, qat'iyat
                 <br />
-                犬 - Kuchuk
+                Eloquent - Notiq, ravon so'zlovchi
                 <br />
-                食べる - Yemoq
+                Meticulous - O'ta sinchkov, puxta
               </span>
             </p>
 
@@ -1368,7 +1364,7 @@ export const AdminContentStudio: React.FC = () => {
                 <div className="space-y-1">
                   <div className="text-xs font-bold text-foreground">CSV/JSON fayl yuklash</div>
                   <div className="text-[11px] text-muted-foreground">
-                    Avval folder tanlang: tanlangan to‘plam yoki JLPT N5–N1.
+                    Avval folder tanlang: tanlangan to‘plam yoki Band 4.5–9.0 darajasi.
                   </div>
                 </div>
 
@@ -1379,11 +1375,11 @@ export const AdminContentStudio: React.FC = () => {
                     className="focus:outline-hidden rounded-lg border border-border bg-background px-2 py-1.5 text-xs font-bold text-foreground"
                   >
                     <option value="selected">Tanlangan to‘plam</option>
-                    <option value="N5">JLPT N5 folder</option>
-                    <option value="N4">JLPT N4 folder</option>
-                    <option value="N3">JLPT N3 folder</option>
-                    <option value="N2">JLPT N2 folder</option>
-                    <option value="N1">JLPT N1 folder</option>
+                    <option value="N5">Band 4.5-5.0 to‘plami</option>
+                    <option value="N4">Band 5.5-6.0 to‘plami</option>
+                    <option value="N3">Band 6.5-7.0 to‘plami</option>
+                    <option value="N2">Band 7.5-8.0 to‘plami</option>
+                    <option value="N1">Band 8.5-9.0 to‘plami</option>
                   </select>
 
                   <button
@@ -1406,8 +1402,8 @@ export const AdminContentStudio: React.FC = () => {
                   <div className="mb-1 font-semibold text-foreground">JSON (array)</div>
                   <pre className="overflow-x-auto rounded-lg border border-border bg-muted/30 p-2 text-[11px] leading-relaxed text-foreground">
                     {`[
-  { "front": "食べる", "back": "Yemoq" },
-  { "front": "飲む", "back": "Ichmoq" }
+  { "front": "Perseverance", "back": "Matonat, qat'iyat" },
+  { "front": "Eloquent", "back": "Notiq, ravon so'zlovchi" }
 ]`}
                   </pre>
                 </div>
@@ -1417,8 +1413,8 @@ export const AdminContentStudio: React.FC = () => {
                   <pre className="overflow-x-auto rounded-lg border border-border bg-muted/30 p-2 text-[11px] leading-relaxed text-foreground">
                     {`{
   "cards": [
-    { "front": "先生", "back": "O‘qituvchi" },
-    { "front": "学生", "back": "Talaba" }
+    { "front": "Meticulous", "back": "O'ta sinchkov, puxta" },
+    { "front": "Ubiquitous", "back": "Hamma yerda uchraydigan" }
   ]
 }`}
                   </pre>
@@ -1427,10 +1423,10 @@ export const AdminContentStudio: React.FC = () => {
                 <div>
                   <div className="mb-1 font-semibold text-foreground">CSV/TXT</div>
                   <pre className="overflow-x-auto rounded-lg border border-border bg-muted/30 p-2 text-[11px] leading-relaxed text-foreground">
-                    {`猫 - Mushuk
-犬 - Kuchuk
-本, Kitob
-学校\tMaktab`}
+                    {`Perseverance - Matonat
+Eloquent - Notiq
+Meticulous, Sinchkov
+Ubiquitous\tKeng tarqalgan`}
                   </pre>
                 </div>
               </div>
@@ -1439,7 +1435,7 @@ export const AdminContentStudio: React.FC = () => {
             <form onSubmit={handleAddBulkCards} className="space-y-3">
               <textarea
                 rows={10}
-                placeholder={`本 - Kitob\n先生 - O'qituvchi\n学生 - Talaba`}
+                placeholder={`Perseverance - Matonat\nEloquent - Notiq\nMeticulous - O'ta sinchkov`}
                 value={bulkText}
                 onChange={(e) => setBulkText(e.target.value)}
                 className="focus:outline-hidden w-full rounded-xl border border-border bg-background p-3 font-mono text-xs text-foreground focus:border-primary"
@@ -1717,7 +1713,7 @@ export const AdminContentStudio: React.FC = () => {
               </div>
               <textarea
                 rows={7}
-                placeholder={`桜 | N3 | オウ | さくら | Olcha daraxti guli | 10\n川 | N5 | セン | かわ | Daryo | 3\n月 - Oy`}
+                placeholder={`Perseverance | N3 | /ˌpɜː.sɪˈvɪə.rəns/ | Noun | Matonat, qat'iyat | 1\nEloquent | N4 | /ˈel.ə.kwənt/ | Adj | Notiq, ravon so'zlovchi | 1\nUbiquitous | N2 | /juːˈbɪk.wɪ.təs/ | Adj | Hamma joyda mavjud | 1`}
                 value={bulkKanjiText}
                 onChange={(e) => setBulkKanjiText(e.target.value)}
                 className="focus:outline-hidden w-full rounded-xl border border-border bg-background p-3 font-mono text-xs text-foreground focus:border-primary"
@@ -1727,7 +1723,7 @@ export const AdminContentStudio: React.FC = () => {
             {/* Live Preview Bar */}
             <div className="flex items-center justify-between rounded-xl bg-muted/40 p-3 text-xs">
               <span className="text-muted-foreground">
-                Aniqlangan kanjilar soni:{' '}
+                Aniqlangan so'zlar soni:{' '}
                 <strong className="text-foreground">{parsedBulkKanji.length} ta</strong>
               </span>
               {parsedBulkKanji.length > 0 && (
@@ -1804,7 +1800,7 @@ export const AdminContentStudio: React.FC = () => {
               </div>
               <textarea
                 rows={7}
-                placeholder={`〜わけにはいかない | N2 | wake ni wa ikanai | V-ru + わけにはいかない | ... qilib bo'lmaydi\n〜ことにする | N3 | koto ni suru | V-ru + ことにする | ... qilishga qaror qilmoq`}
+                placeholder={`Not only... but also | N2 | not only but also | Not only + aux + subj + verb, but also... | ... nafaqat ... balki ...\nIn spite of | N3 | in spite of | In spite of + noun/gerund | ... ga qaramasdan`}
                 value={bulkGrammarText}
                 onChange={(e) => setBulkGrammarText(e.target.value)}
                 className="focus:outline-hidden w-full rounded-xl border border-border bg-background p-3 font-mono text-xs text-foreground focus:border-primary"

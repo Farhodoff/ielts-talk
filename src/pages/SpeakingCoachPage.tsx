@@ -11,7 +11,6 @@ import {
   translateTextToUzbek,
   parseMicroErrors,
   extractSpeechAudioText,
-  cleanJapaneseTTS,
 } from '../utils/ai';
 import { useStudyData } from '../context/StudyPlannerContext';
 import { ErrorVaultService } from '../services/ErrorVaultService';
@@ -45,7 +44,6 @@ import { SpeakingVocabularyService } from '../services/SpeakingVocabularyService
 import { AudioStorageService } from '../services/AudioStorageService';
 import { getOrEnsureSpeakingDeck } from '../utils/subjectResolver';
 import { supabase } from '../lib/supabase';
-
 
 const PROMPT_SUGGESTIONS_BY_LANG: Record<
   'en' | 'ja',
@@ -100,19 +98,19 @@ const PROMPT_SUGGESTIONS_BY_LANG: Record<
 export const getCoachInitialGreeting = (_lang: 'en' | 'ja', p: CoachPersona): string => {
   switch (p) {
     case 'ielts':
-      return "Good afternoon. My name is Gordon, and I will be your IELTS speaking examiner today. Could you please state your full name and where you are from?";
+      return 'Good afternoon. My name is Gordon, and I will be your IELTS speaking examiner today. Could you please state your full name and where you are from?';
     case 'roast':
-      return "Hello! Strict British Examiner Gordon here. Speak with confidence, avoid repetition, and showcase your Band 8.0 vocabulary!";
+      return 'Hello! Strict British Examiner Gordon here. Speak with confidence, avoid repetition, and showcase your Band 8.0 vocabulary!';
     case 'gentle':
       return "Hello! I'm your Cambridge English speaking tutor. Speak at your own comfortable pace whenever you're ready!";
     case 'interview':
-      return "Good day and welcome to your Global Job Interview. Please introduce yourself and your professional background in English.";
+      return 'Good day and welcome to your Global Job Interview. Please introduce yourself and your professional background in English.';
     case 'travel':
-      return "Welcome to London Heathrow Airport. Where are you travelling from today?";
+      return 'Welcome to London Heathrow Airport. Where are you travelling from today?';
     case 'casual':
       return "Hi there! Let's have a natural, fluent English conversation. What's on your mind today?";
     default:
-      return "Good day! I am your AI IELTS Speaking Coach. How can I help you prepare today?";
+      return 'Good day! I am your AI IELTS Speaking Coach. How can I help you prepare today?';
   }
 };
 
@@ -268,7 +266,6 @@ const SpeakingCoachPage: React.FC = () => {
     const secs = totalSeconds % 60;
     return `${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
   };
-
 
   // Fullscreen Toggle Support (⛶ Zoom/Fullscreen mode)
   const containerRef = useRef<HTMLDivElement>(null);
@@ -870,10 +867,10 @@ const SpeakingCoachPage: React.FC = () => {
       if (streamedSentences === 0) {
         let speechToPlay = structured.ttsText || extractSpeechAudioText(structured.reply);
         if (!speechToPlay && structured.correction?.hasError) {
-          const jaAdvice = structured.correction.explanation
+          const advice = structured.correction.explanation
             ? `${structured.correction.explanation} ${structured.correction.corrected || ''}`
             : structured.correction.corrected || '';
-          speechToPlay = language === 'ja' ? cleanJapaneseTTS(jaAdvice) : jaAdvice;
+          speechToPlay = advice;
         }
         lastCoachSpokenTextRef.current = speechToPlay;
         if (speechToPlay) {
@@ -1196,7 +1193,8 @@ const SpeakingCoachPage: React.FC = () => {
         }
         if (addSession) {
           const speakingSub = subjects?.find(
-            (s) => s.name.toLowerCase().includes('speaking') || s.name.toLowerCase().includes('ielts'),
+            (s) =>
+              s.name.toLowerCase().includes('speaking') || s.name.toLowerCase().includes('ielts'),
           );
           await addSession({
             duration: sessionMinutes,
@@ -1489,7 +1487,6 @@ const SpeakingCoachPage: React.FC = () => {
         onPauseRecorded={voiceRecorder.pauseRecorded}
         onRetry={() => startSession()}
       />
-
     </div>
   );
 };

@@ -145,13 +145,7 @@ export const CoachChatArea: React.FC<CoachChatAreaProps> = ({
                   msg.role === 'user' ? 'text-primary-foreground/70' : 'text-muted-foreground'
                 }`}
               >
-                <span>
-                  {msg.role === 'user'
-                    ? language === 'ja'
-                      ? 'あなた'
-                      : 'Siz'
-                    : currentPersona.name}
-                </span>
+                <span>{msg.role === 'user' ? 'Siz' : currentPersona.name}</span>
                 <span>•</span>
                 <span>{msg.timestamp}</span>
               </div>
@@ -289,25 +283,17 @@ export const CoachChatArea: React.FC<CoachChatAreaProps> = ({
                                   ? 'cursor-default bg-emerald-600 text-white'
                                   : 'bg-primary text-primary-foreground shadow-xs hover:bg-primary/90 active:scale-95'
                               }`}
-                              title={
-                                isSaved
-                                  ? language === 'ja'
-                                    ? '単語帳に保存済み'
-                                    : 'Fleshkartaga saqlangan'
-                                  : language === 'ja'
-                                    ? '単語帳に追加'
-                                    : "Fleshkartaga qo'shish"
-                              }
+                              title={isSaved ? 'Fleshkartaga saqlangan' : "Fleshkartaga qo'shish"}
                             >
                               {isSaved ? (
                                 <>
                                   <Check size={12} className="shrink-0" />
-                                  <span>{language === 'ja' ? '保存済み' : 'Saqlandi'}</span>
+                                  <span>Saqlandi</span>
                                 </>
                               ) : (
                                 <>
                                   <Plus size={12} className="shrink-0" />
-                                  <span>{language === 'ja' ? '追加' : "Qo'shish"}</span>
+                                  <span>Qo'shish</span>
                                 </>
                               )}
                             </button>
@@ -319,8 +305,8 @@ export const CoachChatArea: React.FC<CoachChatAreaProps> = ({
                 </div>
               )}
 
-              {/* Uzbek / Japanese Translation Box */}
-              {msg.role === 'assistant' && language !== 'ja' && (
+              {/* Uzbek Translation Box */}
+              {msg.role === 'assistant' && (
                 <div className="mt-2.5 border-t border-border/50 pt-2">
                   {!msg.showTranslation ? (
                     <button

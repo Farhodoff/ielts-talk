@@ -120,7 +120,7 @@ export const AdminQuizManager: React.FC = () => {
     if (success) {
       toast({
         title: editingId ? '✅ Savol yangilandi' : '✨ Yangi savol qo‘shildi',
-        description: `JLPT ${level} bo‘yicha test savoli saqlandi.`,
+        description: `${level} darajasi bo‘yicha test savoli saqlandi.`,
       });
       reloadQuestions();
       resetForm();
@@ -228,10 +228,10 @@ export const AdminQuizManager: React.FC = () => {
       {/* Top Action Bar */}
       <div className="flex flex-wrap items-center justify-between gap-3">
         <div>
-          <h3 className="text-sm font-bold text-foreground">⚡ JLPT Test & Savollar Boshqaruvi</h3>
+          <h3 className="text-sm font-bold text-foreground">⚡ IELTS Test & Savollar Boshqaruvi</h3>
           <p className="text-xs text-muted-foreground">
             Kiritilgan har bir test savoli darhol asosiy{' '}
-            <span className="font-bold text-foreground">/jlpt</span> test bankida faollashadi.
+            <span className="font-bold text-foreground">/ielts</span> test bankida faollashadi.
           </p>
         </div>
 
@@ -299,11 +299,11 @@ export const AdminQuizManager: React.FC = () => {
                   onChange={(e) => setLevel(e.target.value as any)}
                   className="focus:outline-hidden mt-1 w-full rounded-xl border border-border bg-background p-2.5 font-bold text-foreground focus:border-primary"
                 >
-                  <option value="N5">JLPT N5</option>
-                  <option value="N4">JLPT N4</option>
-                  <option value="N3">JLPT N3</option>
-                  <option value="N2">JLPT N2</option>
-                  <option value="N1">JLPT N1</option>
+                  <option value="N5">Band 4.5 - 5.0 (Foundation / B1)</option>
+                  <option value="N4">Band 5.5 - 6.0 (Intermediate / B2)</option>
+                  <option value="N3">Band 6.5 - 7.0 (Upper-Intermediate / C1)</option>
+                  <option value="N2">Band 7.5 - 8.0 (Advanced / C1-C2)</option>
+                  <option value="N1">Band 8.5 - 9.0 (Expert / C2)</option>
                 </select>
               </div>
 
@@ -313,7 +313,7 @@ export const AdminQuizManager: React.FC = () => {
                   type="text"
                   value={pattern}
                   onChange={(e) => setPattern(e.target.value)}
-                  placeholder="~わけにはいかない"
+                  placeholder="In spite of / Although / Despite"
                   className="focus:outline-hidden mt-1 w-full rounded-xl border border-border bg-background p-2.5 font-medium text-foreground focus:border-primary"
                 />
               </div>
@@ -327,7 +327,7 @@ export const AdminQuizManager: React.FC = () => {
                 rows={2}
                 value={questionText}
                 onChange={(e) => setQuestionText(e.target.value)}
-                placeholder="明日は大切な試験があるので、休む（　）にはいかない。"
+                placeholder="Although it was raining heavily, they decided to (   ) with the outdoor event."
                 className="focus:outline-hidden mt-1 w-full rounded-xl border border-border bg-background p-2.5 font-medium text-foreground focus:border-primary"
                 required
               />
@@ -343,10 +343,25 @@ export const AdminQuizManager: React.FC = () => {
 
               <div className="mt-2 space-y-2">
                 {[
-                  { val: opt0, setVal: setOpt0, idx: 0, placeholder: '1-variant (masalan: わけ)' },
-                  { val: opt1, setVal: setOpt1, idx: 1, placeholder: '2-variant (masalan: こと)' },
-                  { val: opt2, setVal: setOpt2, idx: 2, placeholder: '3-variant (masalan: はず)' },
-                  { val: opt3, setVal: setOpt3, idx: 3, placeholder: '4-variant (masalan: もの)' },
+                  {
+                    val: opt0,
+                    setVal: setOpt0,
+                    idx: 0,
+                    placeholder: '1-variant (masalan: proceed)',
+                  },
+                  {
+                    val: opt1,
+                    setVal: setOpt1,
+                    idx: 1,
+                    placeholder: '2-variant (masalan: postpone)',
+                  },
+                  {
+                    val: opt2,
+                    setVal: setOpt2,
+                    idx: 2,
+                    placeholder: '3-variant (masalan: cancel)',
+                  },
+                  { val: opt3, setVal: setOpt3, idx: 3, placeholder: '4-variant (masalan: stop)' },
                 ].map(({ val, setVal, idx, placeholder }) => (
                   <div key={idx} className="flex items-center gap-2">
                     <button
@@ -385,7 +400,7 @@ export const AdminQuizManager: React.FC = () => {
                 rows={3}
                 value={explanationUzbek}
                 onChange={(e) => setExplanationUzbek(e.target.value)}
-                placeholder="Qolip: [Fe'lning lug'at formasi] + わけにはいかない. Muhim imtihon sababli qoldirib bo‘lmasligini ifodalaydi."
+                placeholder="Qolip: Although + clause. Noqulay sharoit yoki to‘siqqa qaramasdan harakat davom etganini ifodalaydi."
                 className="focus:outline-hidden mt-1 w-full rounded-xl border border-border bg-background p-2.5 font-medium text-foreground focus:border-primary"
               />
             </div>
@@ -577,13 +592,13 @@ export const AdminQuizManager: React.FC = () => {
               </p>
               <div className="rounded-xl border border-border bg-background p-2.5 font-mono text-[11px] text-muted-foreground">
                 Savol matni | Variant1, Variant2, Variant3, Variant4 | To‘g‘riVariantRaqami (1-4) |
-                O‘zbekcha izoh | Daraja (N5..N1) | Qolip
+                O‘zbekcha izoh | Daraja (N5..N1 yoki B1..C2) | Qolip
               </div>
               <textarea
                 rows={9}
                 value={bulkInputText}
                 onChange={(e) => setBulkInputText(e.target.value)}
-                placeholder={`私は日本へ行ったこと（　）あります。 | が, を, に, で | 1 | Qolip: fe'l ta shakli + koto ga aru | N5 | ~たことがある\n音楽を（　）ながら勉強します。 | 聞き, 聞く, 聞いて, 聞こえ | 1 | Fe'l stem + nagara | N4 | ~ながら`}
+                placeholder={`Although it rained heavily, they decided to (   ) with the event. | proceed, cancel, postpone, stop | 1 | Qolip: proceed with sth - davom ettirmoq | N4 | proceed with\nShe succeeded (   ) spite of facing numerous challenges. | in, on, at, of | 1 | Qolip: in spite of + noun/gerund | N3 | in spite of`}
                 className="focus:outline-hidden w-full rounded-xl border border-border bg-background p-3 font-mono text-xs text-foreground focus:border-primary"
               />
             </div>

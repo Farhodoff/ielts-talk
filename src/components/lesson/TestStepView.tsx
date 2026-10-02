@@ -1,7 +1,6 @@
 import React, { useState, useMemo } from 'react';
 import { Award, CheckCircle2, XCircle, ChevronRight, RotateCcw, Sparkles } from 'lucide-react';
 import { TestQuestion } from '../../types/lesson';
-import { FuriganaText } from '../common/FuriganaText';
 
 export interface MissedQuestionInfo {
   questionId: string;
@@ -137,7 +136,7 @@ export const TestStepView: React.FC<TestStepViewProps> = ({
         /* Active Question Card */
         <div className="space-y-3.5 rounded-2xl border border-border bg-card p-3.5 shadow-sm sm:space-y-6 sm:rounded-3xl sm:p-6">
           <div className="text-base font-bold leading-snug text-foreground md:text-lg">
-            <FuriganaText text={currentQuestion.question} />
+            {currentQuestion.question}
           </div>
 
           <div className="space-y-2 sm:space-y-2.5">
@@ -163,9 +162,7 @@ export const TestStepView: React.FC<TestStepViewProps> = ({
                     >
                       {String.fromCharCode(65 + optIdx)}
                     </span>
-                    <span className="leading-snug">
-                      <FuriganaText text={opt} />
-                    </span>
+                    <span className="leading-snug">{opt}</span>
                   </div>
                   {isSelected && <CheckCircle2 size={18} className="shrink-0 text-primary" />}
                 </button>
@@ -253,7 +250,7 @@ export const TestStepView: React.FC<TestStepViewProps> = ({
                 >
                   <div className="flex items-start justify-between gap-2">
                     <div className="text-xs font-bold text-foreground">
-                      {qIdx + 1}. <FuriganaText text={q.question} />
+                      {qIdx + 1}. {q.question}
                     </div>
                     {isUserCorrect ? (
                       <span className="flex shrink-0 items-center gap-1 text-xs font-bold text-emerald-500">
@@ -270,12 +267,12 @@ export const TestStepView: React.FC<TestStepViewProps> = ({
                     <div>
                       <span className="font-semibold text-foreground">To'g'ri javob: </span>
                       <span className="font-bold text-emerald-500">
-                        <FuriganaText text={q.options[q.correctAnswerIndex]} />
+                        {q.options[q.correctAnswerIndex]}
                       </span>
                     </div>
                     {q.explanation && (
                       <div className="mt-0.5 text-[11px] text-muted-foreground">
-                        💡 <FuriganaText text={q.explanation} />
+                        💡 {q.explanation}
                       </div>
                     )}
                   </div>

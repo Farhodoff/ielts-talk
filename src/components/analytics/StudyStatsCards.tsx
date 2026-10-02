@@ -24,14 +24,10 @@ const StudyStatsCards: React.FC<StudyStatsCardsProps> = memo(
           </div>
           <h3 className="text-2xl font-bold text-gray-900 dark:text-white">
             {totalHours}
-            {language === 'ja' ? 'じかん' : language === 'en' ? 'h' : 's'}
+            {language === 'en' ? 'h' : 's'}
           </h3>
           <p className="text-sm text-gray-500">
-            {language === 'ja'
-              ? 'がくしゅうじかん'
-              : language === 'en'
-                ? 'Total Study Time'
-                : "Jami O'qish Vaqti"}
+            {language === 'en' ? 'Total Study Time' : "Jami O'qish Vaqti"}
           </p>
         </div>
         <div className="rounded-2xl border border-gray-100 bg-white p-5 shadow-sm dark:border-gray-700 dark:bg-[#1f2937]">
@@ -42,11 +38,7 @@ const StudyStatsCards: React.FC<StudyStatsCardsProps> = memo(
           </div>
           <h3 className="text-2xl font-bold text-gray-900 dark:text-white">{completedTasks}</h3>
           <p className="text-sm text-gray-500">
-            {language === 'ja'
-              ? 'かんりょうした タスク'
-              : language === 'en'
-                ? 'Completed Tasks'
-                : 'Bajarilgan Vazifalar'}
+            {language === 'en' ? 'Completed Tasks' : 'Bajarilgan Vazifalar'}
           </p>
         </div>
         <div className="rounded-2xl border border-gray-100 bg-white p-5 shadow-sm dark:border-gray-700 dark:bg-[#1f2937]">
@@ -56,14 +48,10 @@ const StudyStatsCards: React.FC<StudyStatsCardsProps> = memo(
             </div>
           </div>
           <h3 className="text-2xl font-bold text-gray-900 dark:text-white">
-            {currentStreak} {language === 'ja' ? 'にち' : language === 'en' ? 'Days' : 'Kun'}
+            {currentStreak} {language === 'en' ? 'Days' : 'Kun'}
           </h3>
           <p className="text-sm text-gray-500">
-            {language === 'ja'
-              ? 'れんぞく がくしゅう'
-              : language === 'en'
-                ? 'Current Streak'
-                : 'Joriy Streak'}
+            {language === 'en' ? 'Current Streak' : 'Joriy Streak'}
           </p>
         </div>
         <div className="rounded-2xl border border-gray-100 bg-white p-5 shadow-sm dark:border-gray-700 dark:bg-[#1f2937]">
@@ -74,7 +62,7 @@ const StudyStatsCards: React.FC<StudyStatsCardsProps> = memo(
           </div>
           <h3 className="text-2xl font-bold text-gray-900 dark:text-white">{totalXp} XP</h3>
           <p className="text-sm text-gray-500">
-            {language === 'ja' ? `レベル ${level} ランク` : `Lvl ${level} Tajriba`}
+            {language === 'en' ? `Level ${level} Rank` : `Lvl ${level} Tajriba`}
           </p>
         </div>
       </div>

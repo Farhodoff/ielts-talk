@@ -9,24 +9,19 @@ import {
   ChevronUp,
 } from 'lucide-react';
 import { LearnContent, SupportedLanguage } from '../../types/lesson';
-import { speakText, speakJapaneseText } from '../../utils/audioTts';
-import { FuriganaText } from '../common/FuriganaText';
+import { speakText } from '../../utils/audioTts';
 
 interface LearnStepViewProps {
   content: LearnContent;
   language: SupportedLanguage;
 }
 
-export const LearnStepView: React.FC<LearnStepViewProps> = ({ content, language }) => {
+export const LearnStepView: React.FC<LearnStepViewProps> = ({ content }) => {
   const [activeTab, setActiveTab] = useState<'all' | 'vocab' | 'grammar'>('all');
   const [isExpanded, setIsExpanded] = useState(false);
 
   const handleSpeak = (text: string) => {
-    if (language === 'ja') {
-      speakJapaneseText(text);
-    } else {
-      speakText(text, 'en-US');
-    }
+    speakText(text, 'en-US');
   };
 
   const isLongExplanation = (content.explanation || '').length > 150;
@@ -42,11 +37,11 @@ export const LearnStepView: React.FC<LearnStepViewProps> = ({ content, language 
           </div>
         )}
         <h2 className="mb-1.5 text-lg font-black tracking-tight text-foreground sm:mb-3 sm:text-2xl md:text-3xl">
-          <FuriganaText text={content.title} />
+          {content.title}
         </h2>
         <div className="text-xs leading-relaxed text-muted-foreground sm:text-sm">
           <p className={!isExpanded && isLongExplanation ? 'line-clamp-2 sm:line-clamp-none' : ''}>
-            <FuriganaText text={content.explanation} />
+            {content.explanation}
           </p>
           {isLongExplanation && (
             <button
@@ -73,9 +68,7 @@ export const LearnStepView: React.FC<LearnStepViewProps> = ({ content, language 
                   className="flex items-start gap-1.5 text-[11px] leading-relaxed text-foreground/90 sm:text-xs"
                 >
                   <CheckCircle2 size={12} className="mt-0.5 shrink-0 text-primary" />
-                  <span>
-                    <FuriganaText text={point} />
-                  </span>
+                  <span>{point}</span>
                 </li>
               ))}
             </ul>
@@ -141,7 +134,7 @@ export const LearnStepView: React.FC<LearnStepViewProps> = ({ content, language 
                     <div className="mb-1 flex items-start justify-between gap-2">
                       <div>
                         <div className="text-base font-black text-foreground sm:text-lg">
-                          <FuriganaText text={vocab.term} />
+                          {vocab.term}
                         </div>
                         {vocab.reading && (
                           <div className="text-xs font-medium text-primary">{vocab.reading}</div>
@@ -164,9 +157,7 @@ export const LearnStepView: React.FC<LearnStepViewProps> = ({ content, language 
                   {vocab.exampleSentence && (
                     <div className="mt-3 border-t border-border/60 pt-2.5 text-xs text-muted-foreground">
                       <div className="flex items-center justify-between gap-2 font-medium text-foreground/90">
-                        <span>
-                          <FuriganaText text={vocab.exampleSentence} />
-                        </span>
+                        <span>{vocab.exampleSentence}</span>
                         <button
                           onClick={() => handleSpeak(vocab.exampleSentence!)}
                           className="flex min-h-[28px] min-w-[28px] shrink-0 items-center justify-center p-1 text-muted-foreground hover:text-primary"
@@ -208,7 +199,7 @@ export const LearnStepView: React.FC<LearnStepViewProps> = ({ content, language 
                       Qolip #{idx + 1}
                     </span>
                     <div className="text-sm font-bold text-foreground sm:text-base">
-                      <FuriganaText text={grammar.pattern} />
+                      {grammar.pattern}
                     </div>
                   </div>
 
@@ -218,7 +209,7 @@ export const LearnStepView: React.FC<LearnStepViewProps> = ({ content, language 
 
                   {grammar.usageNotes && (
                     <p className="rounded-lg bg-secondary/50 p-2 text-xs text-muted-foreground sm:rounded-xl sm:p-2.5">
-                      <FuriganaText text={grammar.usageNotes} />
+                      {grammar.usageNotes}
                     </p>
                   )}
 
@@ -231,9 +222,7 @@ export const LearnStepView: React.FC<LearnStepViewProps> = ({ content, language 
                           className="flex items-start justify-between gap-2 rounded-xl bg-secondary/30 p-2.5 text-xs"
                         >
                           <div>
-                            <div className="font-semibold text-foreground">
-                              <FuriganaText text={ex.sentence} />
-                            </div>
+                            <div className="font-semibold text-foreground">{ex.sentence}</div>
                             <div className="mt-0.5 text-[11px] text-muted-foreground">
                               {ex.translation}
                             </div>
@@ -261,7 +250,7 @@ export const LearnStepView: React.FC<LearnStepViewProps> = ({ content, language 
           <Info size={18} className="mt-0.5 shrink-0 text-amber-500" />
           <div className="text-xs leading-relaxed text-foreground/90">
             <span className="font-bold text-amber-500">💡 Eslatma: </span>
-            <FuriganaText text={content.culturalNotes} />
+            {content.culturalNotes}
           </div>
         </div>
       )}

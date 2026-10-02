@@ -113,27 +113,19 @@ const DashboardPage: React.FC = () => {
 
   const greetingSubtitle = useMemo(() => {
     if (totalTodayItems === 0) {
-      if (language === 'ja') return '今日の学習を始めましょう 🚀';
       if (language === 'en') return "Ready to start today's study journey? 🚀";
       return "Bugungi o'quv rejangizni boshlang 🚀";
     }
     if (totalPendingItems === 0) {
-      if (language === 'ja') return '素晴らしい！今日の学習はすべて完了しました 🎉';
       if (language === 'en') return "Great job! All of today's tasks and lessons are completed 🎉";
       return 'Ajoyib! Bugungi barcha dars va vazifalar bajarildi 🎉';
     }
-    if (language === 'ja') return `今日は ${totalPendingItems} 件の学習アクティビティがあります`;
     if (language === 'en') return `You have ${totalPendingItems} activities scheduled for today`;
     return `Bugun sizda ${totalPendingItems} ta dars va vazifa rejalashtirilgan`;
   }, [language, totalTodayItems, totalPendingItems]);
 
   const greeting = useMemo(() => {
     const hour = new Date().getHours();
-    if (language === 'ja') {
-      if (hour < 12) return 'おはようございます';
-      if (hour < 18) return 'こんにちは';
-      return 'こんばんは';
-    }
     if (language === 'en') {
       if (hour < 12) return 'Good morning';
       if (hour < 18) return 'Good afternoon';
@@ -680,22 +672,15 @@ const DashboardPage: React.FC = () => {
               </span>
               <div>
                 <h3 className="flex items-center gap-2 text-base font-bold text-foreground">
-                  {language === 'ja'
-                    ? 'がくしゅう ロードマップ'
-                    : language === 'en'
-                      ? 'My Learning Roadmap'
-                      : "Mening O'quv Yo'l Xaritam"}
+                  {language === 'en' ? 'My Learning Roadmap' : "Mening O'quv Yo'l Xaritam"}
                   <span className="rounded-full bg-primary/10 px-2.5 py-0.5 text-xs font-bold text-primary">
-                    {roadmapSummary.currentLevelCode}{' '}
-                    {language === 'ja' ? 'レベル' : language === 'en' ? 'Level' : 'Bosqich'}
+                    {roadmapSummary.currentLevelCode} {language === 'en' ? 'Level' : 'Bosqich'}
                   </span>
                 </h3>
                 <p className="text-xs text-muted-foreground">
-                  {language === 'ja'
-                    ? `${roadmapSummary.totalCount}レッスンちゅう ${roadmapSummary.completedCount}こ かんりょう (${roadmapSummary.progressPercentage}%)`
-                    : language === 'en'
-                      ? `${roadmapSummary.completedCount} of ${roadmapSummary.totalCount} lessons completed (${roadmapSummary.progressPercentage}%)`
-                      : `${roadmapSummary.totalCount} ta darsdan ${roadmapSummary.completedCount} tasi bajarildi (${roadmapSummary.progressPercentage}%)`}
+                  {language === 'en'
+                    ? `${roadmapSummary.completedCount} of ${roadmapSummary.totalCount} lessons completed (${roadmapSummary.progressPercentage}%)`
+                    : `${roadmapSummary.totalCount} ta darsdan ${roadmapSummary.completedCount} tasi bajarildi (${roadmapSummary.progressPercentage}%)`}
                 </p>
               </div>
             </div>
@@ -842,7 +827,7 @@ const DashboardPage: React.FC = () => {
           {promotionCandidate ? (
             <div className="mt-2 space-y-3 rounded-2xl border border-primary/20 bg-primary/10 p-4">
               <h4 className="flex items-center gap-1.5 text-sm font-bold text-primary">
-                🏆 {language === 'ja' ? 'レベルアップの チャンス！' : "Yangi darajaga o'tish!"}
+                🏆 {language === 'en' ? 'Level Up Opportunity!' : "Yangi darajaga o'tish!"}
               </h4>
               <p className="text-xs text-muted-foreground">
                 Siz {promotionCandidate.currentLevel} darajasidan{' '}
