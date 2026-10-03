@@ -5,6 +5,7 @@ import { defineConfig } from 'vitest/config';
 import { VitePWA } from 'vite-plugin-pwa';
 import { telegramApiPlugin } from './server/vitePlugin.js';
 import { visualizer } from 'rollup-plugin-visualizer';
+import { pwaGlobIgnores, pwaRuntimeCaching } from './src/config/pwaRuntimeCaching';
 
 const BUILD_TIMESTAMP = Date.now();
 
@@ -172,50 +173,10 @@ export default defineConfig({
         clientsClaim: true,
         cleanupOutdatedCaches: true,
         globPatterns: ['**/*.{js,css,html,ico,png,svg,woff2}'],
-        globIgnores: ['**/version.json'],
+        globIgnores: pwaGlobIgnores,
         navigateFallback: '/index.html',
         navigateFallbackDenylist: [/^\/api/, /^\/version\.json/],
-        runtimeCaching: [
-          {
-            urlPattern: /^https:\/\/fonts\.googleapis\.com\/.*/i,
-            handler: 'CacheFirst',
-            options: {
-              cacheName: 'google-fonts-cache',
-              expiration: {
-                maxEntries: 10,
-                maxAgeSeconds: 60 * 60 * 24 * 365, // 1 yil
-              },
-              cacheableResponse: {
-                statuses: [0, 200],
-              },
-            },
-          },
-          {
-            urlPattern: /^https:\/\/fonts\.gstatic\.com\/.*/i,
-            handler: 'CacheFirst',
-            options: {
-              cacheName: 'gstatic-fonts-cache',
-              expiration: {
-                maxEntries: 10,
-                maxAgeSeconds: 60 * 60 * 24 * 365,
-              },
-              cacheableResponse: {
-                statuses: [0, 200],
-              },
-            },
-          },
-          {
-            urlPattern: /\.(?:png|jpg|jpeg|svg|gif|webp|ico)$/i,
-            handler: 'StaleWhileRevalidate',
-            options: {
-              cacheName: 'images-cache',
-              expiration: {
-                maxEntries: 60,
-                maxAgeSeconds: 30 * 24 * 60 * 60, // 30 kun
-              },
-            },
-          },
-        ],
+        runtimeCaching: pwaRuntimeCaching,
       },
     }),
   ],
