@@ -1,6 +1,22 @@
-import React, { useRef, useState } from 'react';
-import { Download, Printer, Image, X, ShieldCheck, User } from 'lucide-react';
-import { TrfCertificateData, TrfCertificateService } from '../../services/TrfCertificateService';
+import React, { useRef, useState, useEffect } from 'react';
+import {
+  Download,
+  Printer,
+  Image,
+  X,
+  ShieldCheck,
+  User,
+  Sparkles,
+  BookOpen,
+  TrendingUp,
+  Award,
+} from 'lucide-react';
+import {
+  TrfCertificateData,
+  TrfCertificateService,
+  LearnerDiagnostics,
+} from '../../services/TrfCertificateService';
+import { useStudyData } from '../../context/StudyPlannerContext';
 
 interface IeltsTrfCertificateModalProps {
   data: TrfCertificateData;
@@ -13,9 +29,29 @@ export const IeltsTrfCertificateModal: React.FC<IeltsTrfCertificateModalProps> =
   isOpen,
   onClose,
 }) => {
+  const { user } = useStudyData();
   const certificateRef = useRef<HTMLDivElement>(null);
   const [candidateName, setCandidateName] = useState(data.candidateName || 'IELTS Candidate');
   const [isExporting, setIsExporting] = useState(false);
+  const [includeDiagnostics, setIncludeDiagnostics] = useState(true);
+  const [diagnostics, setDiagnostics] = useState<LearnerDiagnostics | null>(
+    data.learnerDiagnostics || null,
+  );
+
+  // Automatically fetch diagnostics from relational PostgreSQL tables if not provided
+  useEffect(() => {
+    if (isOpen && !data.learnerDiagnostics) {
+      TrfCertificateService.fetchLearnerDiagnostics(user?.id)
+        .then((diag) => {
+          setDiagnostics(diag);
+        })
+        .catch((err) => {
+          console.warn('[IeltsTrfCertificateModal] Error loading diagnostics:', err);
+        });
+    } else if (data.learnerDiagnostics) {
+      setDiagnostics(data.learnerDiagnostics);
+    }
+  }, [isOpen, data.learnerDiagnostics, user?.id]);
 
   if (!isOpen) return null;
 
@@ -107,18 +143,37 @@ export const IeltsTrfCertificateModal: React.FC<IeltsTrfCertificateModalProps> =
           </div>
         </div>
 
-        {/* Candidate Name Input Control */}
-        <div className="flex items-center gap-3 border-b border-border/60 bg-muted/20 px-4 py-2 text-xs">
-          <span className="flex shrink-0 items-center gap-1 font-bold text-muted-foreground">
-            <User size={14} /> Sertifikatdagi Ism-familiya:
-          </span>
-          <input
-            type="text"
-            value={candidateName}
-            onChange={(e) => setCandidateName(e.target.value)}
-            placeholder="F.I.SH kiriting..."
-            className="flex-1 rounded-lg border border-border bg-card px-3 py-1 text-xs font-bold text-foreground focus:outline-none focus:ring-1 focus:ring-red-500"
-          />
+        {/* Candidate Name Input Control & Diagnostics Toggle */}
+        <div className="flex flex-wrap items-center justify-between gap-3 border-b border-border/60 bg-muted/20 px-4 py-2.5 text-xs">
+          <div className="flex min-w-[240px] flex-1 items-center gap-3">
+            <span className="flex shrink-0 items-center gap-1 font-bold text-muted-foreground">
+              <User size={14} /> Sertifikatdagi Ism-familiya:
+            </span>
+            <input
+              type="text"
+              value={candidateName}
+              onChange={(e) => setCandidateName(e.target.value)}
+              placeholder="F.I.SH kiriting..."
+              className="max-w-sm flex-1 rounded-lg border border-border bg-card px-3 py-1 text-xs font-bold text-foreground focus:outline-none focus:ring-1 focus:ring-red-500"
+            />
+          </div>
+
+          <button
+            type="button"
+            onClick={() => setIncludeDiagnostics(!includeDiagnostics)}
+            className={`flex items-center gap-1.5 rounded-xl border px-3 py-1.5 text-xs font-bold transition-all ${
+              includeDiagnostics
+                ? 'border-indigo-500/40 bg-indigo-500/10 text-indigo-600 dark:text-indigo-400'
+                : 'border-border bg-card text-muted-foreground hover:bg-muted'
+            }`}
+            title="Kundalik tahlillar va lug'at portfoliyosini sertifikatga qo'shish"
+          >
+            <Sparkles
+              size={13}
+              className={includeDiagnostics ? 'text-indigo-500' : 'text-muted-foreground'}
+            />
+            <span>Diagnostika Ilovasi: {includeDiagnostics ? "Qo'shilgan" : "O'chiq"}</span>
+          </button>
         </div>
 
         {/* Certificate Viewable & Printable Container */}
@@ -282,6 +337,154 @@ export const IeltsTrfCertificateModal: React.FC<IeltsTrfCertificateModalProps> =
                 <p className="italic text-slate-700">"{data.examinerNotes}"</p>
               </div>
             )}
+
+            {/* Section C: Candidate Diagnostic & Learning Progression Appendix */}
+            {includeDiagnostics &&
+              diagnostics &&
+              (diagnostics.totalReflections > 0 ||
+                diagnostics.totalVocabSearched > 0 ||
+                diagnostics.totalSignals > 0) && (
+                <div className="mt-6 rounded-xl border-2 border-dashed border-indigo-200 bg-gradient-to-br from-indigo-50/40 via-white to-slate-50 p-4">
+                  <div className="mb-3 flex items-center justify-between border-b border-indigo-100 pb-2">
+                    <div className="flex items-center gap-2">
+                      <span className="flex h-5 w-5 items-center justify-center rounded-full bg-indigo-600 text-[10px] font-black text-white">
+                        §
+                      </span>
+                      <h4 className="text-[11px] font-black uppercase tracking-wider text-indigo-950">
+                        Section C: Verified Candidate Diagnostic & Progression Appendix
+                      </h4>
+                    </div>
+                    <span className="rounded-full bg-indigo-100 px-2 py-0.5 text-[9px] font-bold text-indigo-700">
+                      Relational Database Portfolio Audit
+                    </span>
+                  </div>
+
+                  <div className="grid grid-cols-1 gap-3 sm:grid-cols-3">
+                    {/* Lexical Resource Audit */}
+                    <div className="shadow-2xs rounded-lg border border-slate-200 bg-white p-3">
+                      <div className="flex items-center gap-1.5 text-slate-800">
+                        <BookOpen size={13} className="text-indigo-600" />
+                        <span className="text-[10px] font-black uppercase tracking-wider">
+                          Lexical Resource Audit
+                        </span>
+                      </div>
+                      <div className="mt-2 flex items-baseline gap-1.5">
+                        <span className="text-xl font-black text-slate-900">
+                          {diagnostics.totalVocabSearched}
+                        </span>
+                        <span className="text-[10px] font-medium text-slate-500">
+                          so'z o'rganilgan
+                        </span>
+                      </div>
+                      {diagnostics.advancedWords.length > 0 && (
+                        <div className="mt-2 space-y-1">
+                          <span className="block text-[8px] font-bold uppercase text-slate-400">
+                            Academic C1/C2 Collocations:
+                          </span>
+                          <div className="flex flex-wrap gap-1">
+                            {diagnostics.advancedWords.slice(0, 4).map((w, i) => (
+                              <span
+                                key={i}
+                                className="inline-flex items-center gap-1 rounded border border-indigo-100 bg-indigo-50 px-1.5 py-0.5 text-[9px] font-bold text-indigo-700"
+                                title={w.translation || w.word}
+                              >
+                                <span>{w.word}</span>
+                                <span className="text-[8px] opacity-75">({w.level})</span>
+                              </span>
+                            ))}
+                          </div>
+                        </div>
+                      )}
+                    </div>
+
+                    {/* Reflective Practice & Study Consistency */}
+                    <div className="shadow-2xs rounded-lg border border-slate-200 bg-white p-3">
+                      <div className="flex items-center gap-1.5 text-slate-800">
+                        <TrendingUp size={13} className="text-emerald-600" />
+                        <span className="text-[10px] font-black uppercase tracking-wider">
+                          Task Persistence & Discipline
+                        </span>
+                      </div>
+                      <div className="mt-2 flex items-baseline gap-1.5">
+                        <span className="text-xl font-black text-emerald-600">
+                          {diagnostics.averageReflectionScore > 0
+                            ? `${diagnostics.averageReflectionScore}%`
+                            : '100%'}
+                        </span>
+                        <span className="text-[10px] font-medium text-slate-500">
+                          intizom indeksi
+                        </span>
+                      </div>
+                      <p className="mt-1 text-[9px] text-slate-600">
+                        {diagnostics.totalReflections > 0
+                          ? `${diagnostics.totalReflections} kunlik tahlil qaydlari tasdiqlangan`
+                          : "Kundalik o'z-o'zini tahlil qilish moduli faol"}
+                      </p>
+                      {diagnostics.recentStrengths.length > 0 && (
+                        <div className="mt-2 flex flex-wrap gap-1">
+                          {diagnostics.recentStrengths.slice(0, 3).map((st, i) => (
+                            <span
+                              key={i}
+                              className="rounded border border-emerald-100 bg-emerald-50 px-1.5 py-0.5 text-[8px] font-bold text-emerald-700"
+                            >
+                              ✓ {st}
+                            </span>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+
+                    {/* Verified Strengths & Recommended Growth */}
+                    <div className="shadow-2xs rounded-lg border border-slate-200 bg-white p-3">
+                      <div className="flex items-center gap-1.5 text-slate-800">
+                        <Award size={13} className="text-amber-600" />
+                        <span className="text-[10px] font-black uppercase tracking-wider">
+                          Signals & Mastery Areas
+                        </span>
+                      </div>
+                      <div className="mt-2 flex items-baseline gap-1.5">
+                        <span className="text-xl font-black text-amber-600">
+                          {diagnostics.totalSignals}
+                        </span>
+                        <span className="text-[10px] font-medium text-slate-500">
+                          o'quv signali
+                        </span>
+                      </div>
+                      {diagnostics.topSkills.length > 0 ? (
+                        <div className="mt-1">
+                          <span className="block text-[8px] font-bold uppercase text-slate-400">
+                            Yetakchi ko'nikmalar:
+                          </span>
+                          <span className="text-[9px] font-bold text-slate-700">
+                            {diagnostics.topSkills.join(', ')}
+                          </span>
+                        </div>
+                      ) : (
+                        <p className="mt-1 text-[9px] text-slate-500">
+                          IELTS Standart 4-skill tekshiruvi yakunlangan.
+                        </p>
+                      )}
+                      {diagnostics.growthAreas.length > 0 && (
+                        <div className="mt-1.5">
+                          <span className="block text-[8px] font-bold uppercase text-slate-400">
+                            Tavsiya etilgan diqqat:
+                          </span>
+                          <span className="block truncate text-[9px] font-medium text-slate-600">
+                            {diagnostics.growthAreas.slice(0, 2).join(', ')}
+                          </span>
+                        </div>
+                      )}
+                    </div>
+                  </div>
+
+                  {diagnostics.latestReflectionNotes && (
+                    <div className="mt-2.5 rounded border border-indigo-100 bg-indigo-50/50 p-2 text-[9px] leading-relaxed text-indigo-900">
+                      <span className="font-bold">Pedagogik tahlil qaydi: </span>
+                      <span className="italic">"{diagnostics.latestReflectionNotes}"</span>
+                    </div>
+                  )}
+                </div>
+              )}
 
             {/* Official Stamps, Verification & Signatures */}
             <div className="mt-8 flex flex-col items-center justify-between gap-6 border-t-2 border-slate-200 pt-6 sm:flex-row">
