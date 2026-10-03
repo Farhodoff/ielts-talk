@@ -143,28 +143,6 @@ export const LessonService = {
         console.warn('[LessonService] DB write error:', err);
       }
     }
-
-    // 2. Backward compatibility fallback in user_metadata
-    try {
-      const {
-        data: { user },
-      } = await supabase.auth.getUser();
-      if (user) {
-        const currentMetaProgress = (user.user_metadata?.lesson_progress || {}) as Record<
-          string,
-          UserLessonProgress
-        >;
-        const updatedMeta = {
-          ...currentMetaProgress,
-          [progress.lessonId]: progress,
-        };
-        await supabase.auth.updateUser({
-          data: { lesson_progress: updatedMeta },
-        });
-      }
-    } catch (err) {
-      console.warn('[LessonService] Background sync to Supabase metadata failed:', err);
-    }
   },
 
   /**

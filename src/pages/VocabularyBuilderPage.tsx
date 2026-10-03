@@ -135,7 +135,19 @@ export const VocabularyBuilderPage: React.FC = () => {
           localStorage.setItem('study_planner_vocab_saved', JSON.stringify(dbS));
         }
 
-        if (user.user_metadata?.vocab_history) {
+        // Fetch search history from user_vocab_history table
+        const { data: histData } = await supabase
+          .from('user_vocab_history')
+          .select('*')
+          .eq('user_id', user.id)
+          .order('searched_at', { ascending: false })
+          .limit(30);
+
+        if (histData && histData.length > 0) {
+          const mappedHistory = histData.map((h: any) => h.details || { word: h.word });
+          setHistory(mappedHistory);
+          localStorage.setItem('study_planner_vocab_history', JSON.stringify(mappedHistory));
+        } else if (user.user_metadata?.vocab_history) {
           const dbH = user.user_metadata.vocab_history;
           setHistory(dbH);
           localStorage.setItem('study_planner_vocab_history', JSON.stringify(dbH));
@@ -237,10 +249,19 @@ Return ONLY a raw valid JSON object (no markdown, no backticks) with this struct
       } catch (e) {
         console.warn(e);
       }
-      if (user) {
-        supabase.auth
-          .updateUser({ data: { vocab_history: updatedHistory } })
-          .catch((err) => console.warn(err));
+      if (user?.id) {
+        supabase
+          .from('user_vocab_history')
+          .insert({
+            user_id: user.id,
+            word: parsed.word,
+            language: parsed.language || 'en',
+            details: parsed,
+            searched_at: new Date().toISOString(),
+          })
+          .then(({ error }) => {
+            if (error) console.warn('[VocabularyBuilderPage] History insert error:', error);
+          });
       }
     } catch (err: any) {
       console.error('Vocab search error:', err);
@@ -304,11 +325,6 @@ Return ONLY a raw valid JSON object (no markdown, no backticks) with this struct
             if (error) console.warn('[VocabularyBuilderPage] DB delete error:', error);
           });
       }
-
-      // Fallback metadata update
-      supabase.auth
-        .updateUser({ data: { vocab_saved: updated } })
-        .catch((err) => console.warn(err));
     }
   };
 

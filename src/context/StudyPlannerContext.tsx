@@ -34,6 +34,7 @@ import { useEvents } from '../hooks/useEvents';
 import { TaskService } from '../services/TaskService';
 import { FlashcardService } from '../services/FlashcardService';
 import { GoogleCalendarEvent } from '../services/GoogleCalendarService';
+import { DataMigrationService } from '../services/DataMigrationService';
 import {
   DatabaseSubject,
   DatabaseSession,
@@ -455,6 +456,11 @@ export const StudyPlannerProvider: React.FC<{ children: React.ReactNode }> = ({ 
         if (meta.target_level_ja) LearningTrackStorage.setTargetLevel('ja', meta.target_level_ja);
         if (meta.target_goal_en) LearningTrackStorage.setTargetGoal('en', meta.target_goal_en);
         if (meta.target_goal_ja) LearningTrackStorage.setTargetGoal('ja', meta.target_goal_ja);
+
+        // One-time non-blocking migration of legacy metadata to relational tables
+        DataMigrationService.migrateUserMetadataToDB(currentUser).catch((e) => {
+          console.warn('[StudyPlannerContext] Metadata migration notice:', e);
+        });
       }
 
       // Startup synchronization is handled on-demand by dedicated pages
@@ -615,7 +621,10 @@ export const StudyPlannerProvider: React.FC<{ children: React.ReactNode }> = ({ 
             [],
           );
           const allTodayEvidence = [...evidenceEn, ...evidenceJa].filter(
-            (ev) => ev.timestamp && ev.timestamp.startsWith(todayPrefix) && ev.activityType === 'srs_review',
+            (ev) =>
+              ev.timestamp &&
+              ev.timestamp.startsWith(todayPrefix) &&
+              ev.activityType === 'srs_review',
           );
           if (allTodayEvidence.length > 0) {
             const count = allTodayEvidence.length;
