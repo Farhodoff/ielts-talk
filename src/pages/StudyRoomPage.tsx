@@ -1,758 +1,78 @@
-import {
-  ArrowLeft,
-  VideoOff,
-  Users,
-  PenTool,
-  Loader2,
-  Mic,
-  MicOff,
-  Video,
-  Monitor,
-  MonitorOff,
-  Minimize2,
-  Share2,
-  Check,
-  RotateCcw,
-  Clock,
-} from 'lucide-react';
-import React, { useEffect, useState, useRef } from 'react';
+import React, { useState, useRef } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
-const RoomWhiteboard = React.lazy(() => import('../components/study-room/RoomWhiteboard'));
-import { RoomPomodoro } from '../components/study-room/RoomPomodoro';
-import { Button } from '../components/ui/Button';
+import { Loader2 } from 'lucide-react';
 import { supabase } from '../lib/supabase';
-import { recordTelemetryEvent } from '../lib/errorTracking';
 
-interface UserProfile {
-  id: string;
-  name: string;
-  email: string;
-}
+// Custom Hooks
+import { useRoomUserProfile } from '../hooks/study-room/useRoomUserProfile';
+import { useRoomPomodoroSync } from '../hooks/study-room/useRoomPomodoroSync';
+import { useRoomWebRTC } from '../hooks/study-room/useRoomWebRTC';
+import { useRoomChannel } from '../hooks/study-room/useRoomChannel';
 
-const DEFAULT_ROOM_NAMES: Record<string, string> = {
-  library: 'Jimjit Kutubxona 📚',
-  lofi: 'Lofi Zali 🎧',
-  'group-a': "Guruhli O'qish Zali 🗣️",
-};
+// Subcomponents
+import { RoomHeader } from '../components/study-room/RoomHeader';
+import { RoomVideoGrid } from '../components/study-room/RoomVideoGrid';
+import { RoomCollabPanel } from '../components/study-room/RoomCollabPanel';
 
-// StudyRoomPage component handles custom WebRTC peer-to-peer audio/video streaming,
-// screen sharing, and the Whiteboard collaboration synchronization.
 const StudyRoomPage: React.FC = () => {
   const { roomId } = useParams<{ roomId: string }>();
   const navigate = useNavigate();
 
-  // User Profile & Room Meta
-  const [userProfile, setUserProfile] = useState<UserProfile | null>(null);
-  const [roomDisplayName, setRoomDisplayName] = useState<string>("O'quv Xonasi");
-  const [copiedLink, setCopiedLink] = useState(false);
   const clientIdRef = useRef<string>(Math.random().toString(36).substring(2, 9));
+  const [copiedLink, setCopiedLink] = useState(false);
 
-  // UI State
+  // UI View States
   const [mobileView, setMobileView] = useState<'video' | 'collab' | 'pomodoro'>('video');
   const [showCollabPanel, setShowCollabPanel] = useState(true);
   const [collabTab, setCollabTab] = useState<'whiteboard' | 'pomodoro'>('whiteboard');
 
-  // WebRTC & Media States
-  const [localStream, setLocalStream] = useState<MediaStream | null>(null);
-  const [remoteStreams, setRemoteStreams] = useState<Record<string, MediaStream>>({});
-  const [peersInfo, setPeersInfo] = useState<Record<string, string>>({});
-  const [audioEnabled, setAudioEnabled] = useState(true);
-  const [videoEnabled, setVideoEnabled] = useState(true);
-  const [joinedCall, setJoinedCall] = useState(false);
-  const [isScreenSharing, setIsScreenSharing] = useState(false);
-
-  const pcsRef = useRef<Record<string, RTCPeerConnection>>({});
-  const localStreamRef = useRef<MediaStream | null>(null);
-  const screenStreamRef = useRef<MediaStream | null>(null);
-  const userProfileRef = useRef<UserProfile | null>(null);
-
-  // Sync userProfileRef to use inside event listeners/callbacks
-  useEffect(() => {
-    userProfileRef.current = userProfile;
-  }, [userProfile]);
-
-  // Realtime channel
-  const channelRef = useRef<ReturnType<typeof supabase.channel> | null>(null);
-
-  // Sinxron Pomodoro State
-  const [timeLeft, setTimeLeft] = useState(25 * 60);
-  const [isRunning, setIsRunning] = useState(false);
-  const [pomodoroMode, setPomodoroMode] = useState<'focus' | 'short_break' | 'long_break'>('focus');
-  const [connectedPeers, setConnectedPeers] = useState<number>(1);
-
-  // Whiteboard Ref & States
+  // Whiteboard canvas ref
   const editorRef = useRef<any>(null);
 
-  // Refs for closure access in channel event listeners without triggering re-renders
-  const pomodoroStateRef = useRef({ timeLeft, isRunning, mode: pomodoroMode });
-  useEffect(() => {
-    pomodoroStateRef.current = { timeLeft, isRunning, mode: pomodoroMode };
-  }, [timeLeft, isRunning, pomodoroMode]);
+  // Shared channel ref across WebRTC, Channel, and Pomodoro
+  const channelRef = useRef<ReturnType<typeof supabase.channel> | null>(null);
 
-  const joinedCallRef = useRef(joinedCall);
-  useEffect(() => {
-    joinedCallRef.current = joinedCall;
-  }, [joinedCall]);
+  // User Profile
+  const userProfile = useRoomUserProfile(clientIdRef.current);
 
-  // Fetch user profile on mount
-  useEffect(() => {
-    const fetchUser = async () => {
-      try {
-        const sessionRes = await supabase.auth.getSession();
-        const user = sessionRes?.data?.session?.user;
-        if (user?.id) {
-          const { data: profile } = await supabase
-            .from('profiles')
-            .select('full_name')
-            .eq('id', user.id)
-            .maybeSingle();
-          setUserProfile({
-            id: user.id,
-            name: profile?.full_name || user.email?.split('@')[0] || 'Talaba',
-            email: user.email || '',
-          });
-        } else {
-          setUserProfile({
-            id: `guest-${clientIdRef.current}`,
-            name: 'Mehmon Talaba',
-            email: '',
-          });
-        }
-      } catch {
-        setUserProfile({
-          id: `guest-${clientIdRef.current}`,
-          name: 'Mehmon Talaba',
-          email: '',
-        });
-      }
-    };
-    fetchUser();
-  }, []);
+  // Synchronized Pomodoro State
+  const pomodoro = useRoomPomodoroSync({
+    channelRef,
+    clientId: clientIdRef.current,
+  });
 
-  // Fetch local camera & microphone stream with progressive fallback
-  useEffect(() => {
-    const getMedia = async () => {
-      if (typeof navigator === 'undefined' || !navigator.mediaDevices?.getUserMedia) return;
-      let stream: MediaStream | null = null;
-      try {
-        stream = await navigator.mediaDevices.getUserMedia({
-          video: { width: 640, height: 480, frameRate: { ideal: 15 } },
-          audio: true,
-        });
-      } catch (videoAudioErr) {
-        console.warn(
-          'Video+Audio getUserMedia failed, attempting audio-only fallback:',
-          videoAudioErr,
-        );
-        try {
-          stream = await navigator.mediaDevices.getUserMedia({
-            video: false,
-            audio: true,
-          });
-          setVideoEnabled(false);
-        } catch (audioErr: any) {
-          console.warn('Audio-only getUserMedia also failed or was denied:', audioErr);
-          setVideoEnabled(false);
-          setAudioEnabled(false);
-          recordTelemetryEvent('webrtc', 'Media devices access denied or unavailable', {
-            metadata: { error: audioErr?.message || String(audioErr) },
-          });
-        }
-      }
-      if (stream) {
-        setLocalStream(stream);
-        localStreamRef.current = stream;
-      }
-    };
-    if (userProfile) {
-      getMedia();
-    }
-    return () => {
-      if (localStreamRef.current) {
-        localStreamRef.current.getTracks().forEach((t) => t.stop());
-      }
-      if (screenStreamRef.current) {
-        screenStreamRef.current.getTracks().forEach((t) => t.stop());
-      }
-    };
-  }, [userProfile]);
+  // WebRTC Mesh & Media State
+  const webrtc = useRoomWebRTC({
+    userProfile,
+    channelRef,
+  });
 
-  // Set up Realtime Sync
-  useEffect(() => {
-    if (!userProfile || !roomId) return;
+  // Realtime Channel & Presence Synchronization
+  const channel = useRoomChannel({
+    roomId,
+    clientId: clientIdRef.current,
+    userProfile,
+    channelRef,
+    pcsRef: webrtc.pcsRef,
+    joinedCallRef: webrtc.joinedCallRef,
+    createPeerConnection: webrtc.createPeerConnection,
+    cleanupPeerConnection: webrtc.cleanupPeerConnection,
+    initiateCall: webrtc.initiateCall,
+    pomodoroStateRef: pomodoro.pomodoroStateRef,
+    setTimeLeft: pomodoro.setTimeLeft,
+    setIsRunning: pomodoro.setIsRunning,
+    setPomodoroMode: pomodoro.setPomodoroMode,
+  });
 
-    let channel: ReturnType<typeof supabase.channel> | null = null;
-    let isComponentMounted = true;
-
-    const createPeerConnection = (peerId: string) => {
-      if (pcsRef.current[peerId]) return pcsRef.current[peerId];
-
-      // Enterprise TURN server configuration (configured via env or fallback to openrelay)
-      const configuredTurnUrls = import.meta.env.VITE_TURN_URLS
-        ? import.meta.env.VITE_TURN_URLS.split(',')
-        : [
-            'turn:openrelay.metered.ca:80',
-            'turn:openrelay.metered.ca:443',
-            'turn:openrelay.metered.ca:443?transport=tcp',
-          ];
-      const configuredTurnUsername = import.meta.env.VITE_TURN_USERNAME || 'openrelayproject';
-      const configuredTurnCredential = import.meta.env.VITE_TURN_CREDENTIAL || 'openrelayproject';
-
-      const pc = new RTCPeerConnection({
-        iceServers: [
-          { urls: 'stun:stun.l.google.com:19302' },
-          { urls: 'stun:stun1.l.google.com:19302' },
-          {
-            urls: configuredTurnUrls,
-            username: configuredTurnUsername,
-            credential: configuredTurnCredential,
-          },
-        ],
-      });
-
-      // Add local tracks
-      if (localStreamRef.current) {
-        localStreamRef.current.getTracks().forEach((track) => {
-          pc.addTrack(track, localStreamRef.current!);
-        });
-      }
-
-      // ICE candidate handler
-      pc.onicecandidate = (event) => {
-        if (event.candidate && channelRef.current) {
-          channelRef.current.send({
-            type: 'broadcast',
-            event: 'webrtc_ice_candidate',
-            payload: {
-              senderId: userProfile.id,
-              targetId: peerId,
-              candidate: event.candidate,
-            },
-          });
-        }
-      };
-
-      // Remote stream track handler
-      pc.ontrack = (event) => {
-        console.log(`Received track from ${peerId}:`, event.streams[0]);
-        setRemoteStreams((prev) => ({
-          ...prev,
-          [peerId]: event.streams[0],
-        }));
-      };
-
-      // State change logger & auto-reconnect
-      pc.onconnectionstatechange = () => {
-        console.log(`Connection state with ${peerId}: ${pc.connectionState}`);
-        if (pc.connectionState === 'disconnected' || pc.connectionState === 'failed') {
-          cleanupPeerConnection(peerId);
-          // Schedule auto-reconnect if still in active call
-          if (joinedCallRef.current && isComponentMounted) {
-            setTimeout(() => {
-              if (joinedCallRef.current && isComponentMounted && !pcsRef.current[peerId]) {
-                createPeerConnection(peerId);
-                if (userProfile.id < peerId) {
-                  initiateCall(peerId);
-                }
-              }
-            }, 2000);
-          }
-        } else if (pc.connectionState === 'closed') {
-          cleanupPeerConnection(peerId);
-        }
-      };
-
-      pcsRef.current[peerId] = pc;
-      return pc;
-    };
-
-    const cleanupPeerConnection = (peerId: string) => {
-      const pc = pcsRef.current[peerId];
-      if (pc) {
-        console.log(`Cleaning peer connection for ${peerId}`);
-        try {
-          pc.close();
-        } catch (e) {
-          // Ignore connection close errors
-        }
-        delete pcsRef.current[peerId];
-      }
-      setRemoteStreams((prev) => {
-        const copy = { ...prev };
-        delete copy[peerId];
-        return copy;
-      });
-    };
-
-    const initiateCall = async (peerId: string) => {
-      const pc = createPeerConnection(peerId);
-      try {
-        const offer = await pc.createOffer();
-        await pc.setLocalDescription(offer);
-
-        channelRef.current?.send({
-          type: 'broadcast',
-          event: 'webrtc_offer',
-          payload: {
-            senderId: userProfile.id,
-            targetId: peerId,
-            offer,
-          },
-        });
-      } catch (e) {
-        console.error(`Error creating offer for ${peerId}:`, e);
-      }
-    };
-
-    const setupChannel = async () => {
-      // Determine friendly display name
-      if (roomId && DEFAULT_ROOM_NAMES[roomId]) {
-        setRoomDisplayName(DEFAULT_ROOM_NAMES[roomId]);
-      } else if (roomId) {
-        // Try querying Supabase study_rooms table
-        try {
-          const { data: dbRoom } = await supabase
-            .from('study_rooms')
-            .select('name, created_at, creator_id')
-            .eq('id', roomId)
-            .single();
-          if (dbRoom?.name) {
-            setRoomDisplayName(dbRoom.name);
-          }
-        } catch {
-          try {
-            const { data: dbRoomByRoomId } = await supabase
-              .from('study_rooms')
-              .select('name, created_at, creator_id')
-              .eq('room_id', roomId)
-              .single();
-            if (dbRoomByRoomId?.name) {
-              setRoomDisplayName(dbRoomByRoomId.name);
-            } else {
-              const cleanName = roomId.startsWith('custom_')
-                ? `Maxsus Xona #${roomId.split('_')[1]?.substring(0, 6) || ''}`
-                : roomId;
-              setRoomDisplayName(cleanName);
-            }
-          } catch {
-            const cleanName = roomId.startsWith('custom_')
-              ? `Maxsus Xona #${roomId.split('_')[1]?.substring(0, 6) || ''}`
-              : roomId;
-            setRoomDisplayName(cleanName);
-          }
-        }
-      }
-
-      let room: { created_at?: string; creator_id?: string } | null = null;
-      try {
-        const { data } = await supabase
-          .from('study_rooms')
-          .select('created_at, creator_id')
-          .eq('id', roomId)
-          .single();
-        room = data;
-      } catch {}
-
-      let channelName = `study-room-${roomId}`;
-      if (room && room.created_at && room.creator_id) {
-        const secret = btoa(`${room.created_at}-${room.creator_id}`)
-          .substring(0, 16)
-          .replace(/=/g, '');
-        channelName = `study-room-${roomId}-${secret}`;
-      }
-
-      if (!isComponentMounted) return;
-
-      channel = supabase.channel(channelName, {
-        config: {
-          presence: {
-            key: userProfile.id,
-          },
-        },
-      });
-      channelRef.current = channel;
-
-      // Presence & Peer Tracking
-      const bindChannelEvents = (ch: ReturnType<typeof supabase.channel>) => {
-        ch.on('presence', { event: 'sync' }, () => {
-          const state = ch.presenceState();
-          setConnectedPeers(Object.keys(state).length);
-
-          const peerIds = Object.keys(state).filter((id) => id !== userProfile.id);
-
-          const newPeersInfo: Record<string, string> = {};
-          Object.entries(state).forEach(([id, presences]) => {
-            if (id !== userProfile.id) {
-              const pres = presences[0] as { name?: string };
-              newPeersInfo[id] = pres?.name || 'Talaba';
-            }
-          });
-          setPeersInfo(newPeersInfo);
-
-          // If not joined the video call, do not establish WebRTC connections
-          if (!joinedCallRef.current) {
-            Object.keys(pcsRef.current).forEach((peerId) => {
-              cleanupPeerConnection(peerId);
-            });
-            return;
-          }
-
-          Object.keys(pcsRef.current).forEach((peerId) => {
-            if (!peerIds.includes(peerId)) {
-              cleanupPeerConnection(peerId);
-            }
-          });
-
-          peerIds.forEach((peerId) => {
-            if (!pcsRef.current[peerId]) {
-              createPeerConnection(peerId);
-              if (userProfile.id < peerId) {
-                initiateCall(peerId);
-              }
-            }
-          });
-        })
-          .on('presence', { event: 'join' }, ({ newPresences }) => {
-            console.log('Joined peers:', newPresences);
-          })
-          .on('presence', { event: 'leave' }, ({ leftPresences }) => {
-            console.log('Left peers:', leftPresences);
-          });
-
-        // Broadcast Message Handlers
-        ch.on('broadcast', { event: 'pomodoro_state_update' }, ({ payload }) => {
-          const data = payload as {
-            senderId: string;
-            timeLeft: number;
-            isRunning: boolean;
-            mode: 'focus' | 'short_break' | 'long_break';
-          };
-          if (data.senderId !== clientIdRef.current) {
-            setTimeLeft(data.timeLeft);
-            setIsRunning(data.isRunning);
-            setPomodoroMode(data.mode);
-          }
-        })
-          .on('broadcast', { event: 'request_state' }, ({ payload }) => {
-            const data = payload as { requesterId: string };
-            if (data.requesterId !== clientIdRef.current) {
-              ch.send({
-                type: 'broadcast',
-                event: 'pomodoro_state_response',
-                payload: {
-                  timeLeft: pomodoroStateRef.current.timeLeft,
-                  isRunning: pomodoroStateRef.current.isRunning,
-                  mode: pomodoroStateRef.current.mode,
-                  targetId: data.requesterId,
-                },
-              });
-            }
-          })
-          .on('broadcast', { event: 'pomodoro_state_response' }, ({ payload }) => {
-            const data = payload as {
-              targetId: string;
-              timeLeft: number;
-              isRunning: boolean;
-              mode: 'focus' | 'short_break' | 'long_break';
-            };
-            if (data.targetId === clientIdRef.current) {
-              setTimeLeft(data.timeLeft);
-              setIsRunning(data.isRunning);
-              setPomodoroMode(data.mode);
-            }
-          })
-          .on('broadcast', { event: 'webrtc_offer' }, async ({ payload }) => {
-            if (!joinedCallRef.current) return;
-            const data = payload as {
-              senderId: string;
-              targetId: string;
-              offer: RTCSessionDescriptionInit;
-            };
-            if (data.targetId === userProfileRef.current?.id) {
-              console.log(`Received WebRTC offer from ${data.senderId}`);
-              const pc = createPeerConnection(data.senderId);
-              try {
-                await pc.setRemoteDescription(new RTCSessionDescription(data.offer));
-                const answer = await pc.createAnswer();
-                await pc.setLocalDescription(answer);
-
-                ch.send({
-                  type: 'broadcast',
-                  event: 'webrtc_answer',
-                  payload: {
-                    senderId: userProfileRef.current?.id,
-                    targetId: data.senderId,
-                    answer,
-                  },
-                });
-              } catch (e) {
-                console.error('Failed to handle offer:', e);
-              }
-            }
-          })
-          .on('broadcast', { event: 'webrtc_answer' }, async ({ payload }) => {
-            if (!joinedCallRef.current) return;
-            const data = payload as {
-              senderId: string;
-              targetId: string;
-              answer: RTCSessionDescriptionInit;
-            };
-            if (data.targetId === userProfileRef.current?.id) {
-              console.log(`Received WebRTC answer from ${data.senderId}`);
-              const pc = pcsRef.current[data.senderId];
-              if (pc) {
-                try {
-                  await pc.setRemoteDescription(new RTCSessionDescription(data.answer));
-                } catch (e) {
-                  console.error('Failed to handle answer:', e);
-                }
-              }
-            }
-          })
-          .on('broadcast', { event: 'webrtc_ice_candidate' }, async ({ payload }) => {
-            if (!joinedCallRef.current) return;
-            const data = payload as {
-              senderId: string;
-              targetId: string;
-              candidate: RTCIceCandidateInit;
-            };
-            if (data.targetId === userProfileRef.current?.id) {
-              const pc = pcsRef.current[data.senderId];
-              if (pc) {
-                try {
-                  await pc.addIceCandidate(new RTCIceCandidate(data.candidate));
-                } catch (e) {
-                  console.error('Failed to add ICE candidate:', e);
-                }
-              }
-            }
-          });
-
-        // Subscribe to channel
-        ch.subscribe(async (status) => {
-          if (status === 'SUBSCRIBED') {
-            await ch.track({
-              user_id: userProfile.id,
-              name: userProfile.name,
-              joined_at: new Date().toISOString(),
-            });
-
-            ch.send({
-              type: 'broadcast',
-              event: 'request_state',
-              payload: { requesterId: clientIdRef.current },
-            });
-          }
-        });
-      };
-
-      bindChannelEvents(channel);
-    };
-
-    setupChannel().catch((e) => console.error('Error setting up channel:', e));
-
-    const currentPcs = pcsRef.current;
-    return () => {
-      isComponentMounted = false;
-      if (channel) {
-        supabase.removeChannel(channel);
-      }
-      Object.keys(currentPcs).forEach((peerId) => {
-        cleanupPeerConnection(peerId);
-      });
-    };
-  }, [userProfile, roomId]); // Removed timeLeft, isRunning, pomodoroMode, joinedCall to prevent continuous channel recreation
-
-  // Local Pomodoro Ticking
-  useEffect(() => {
-    let intervalId: ReturnType<typeof setInterval> | null = null;
-    if (isRunning) {
-      intervalId = setInterval(() => {
-        setTimeLeft((prev) => {
-          if (prev <= 1) {
-            setIsRunning(false);
-            try {
-              const audio = new Audio(
-                'https://assets.mixkit.co/active_storage/sfx/2869/2869-500.wav',
-              );
-              audio.play();
-            } catch (e) {
-              console.log('Audio blocked', e);
-            }
-            return 0;
-          }
-          return prev - 1;
-        });
-      }, 1000);
-    }
-    return () => {
-      if (intervalId) clearInterval(intervalId);
-    };
-  }, [isRunning]);
-
-  // Pomodoro Action Handlers (Synchronized via Supabase Realtime broadcast)
-  const handlePomodoroModeChange = (
-    mode: 'focus' | 'short_break' | 'long_break',
-    durationMinutes: number,
-  ) => {
-    const seconds = durationMinutes * 60;
-    setPomodoroMode(mode);
-    setTimeLeft(seconds);
-    setIsRunning(false);
-    channelRef.current?.send({
-      type: 'broadcast',
-      event: 'pomodoro_state_update',
-      payload: {
-        senderId: clientIdRef.current,
-        timeLeft: seconds,
-        isRunning: false,
-        mode,
-      },
-    });
+  const handleCopyLink = () => {
+    navigator.clipboard.writeText(window.location.href);
+    setCopiedLink(true);
+    setTimeout(() => setCopiedLink(false), 2000);
   };
 
-  const handleStartPomodoro = () => {
-    setIsRunning(true);
-    channelRef.current?.send({
-      type: 'broadcast',
-      event: 'pomodoro_state_update',
-      payload: {
-        senderId: clientIdRef.current,
-        timeLeft,
-        isRunning: true,
-        mode: pomodoroMode,
-      },
-    });
-  };
-
-  const handlePausePomodoro = () => {
-    setIsRunning(false);
-    channelRef.current?.send({
-      type: 'broadcast',
-      event: 'pomodoro_state_update',
-      payload: {
-        senderId: clientIdRef.current,
-        timeLeft,
-        isRunning: false,
-        mode: pomodoroMode,
-      },
-    });
-  };
-
-  const handleResetPomodoro = (seconds?: number) => {
-    const defaultSec =
-      pomodoroMode === 'focus' ? 25 * 60 : pomodoroMode === 'short_break' ? 5 * 60 : 15 * 60;
-    const newTime = seconds ?? defaultSec;
-    setTimeLeft(newTime);
-    setIsRunning(false);
-    channelRef.current?.send({
-      type: 'broadcast',
-      event: 'pomodoro_state_update',
-      payload: {
-        senderId: clientIdRef.current,
-        timeLeft: newTime,
-        isRunning: false,
-        mode: pomodoroMode,
-      },
-    });
-  };
-
-  const formatPomodoroTime = (sec: number) => {
-    const m = Math.floor(sec / 60);
-    const s = sec % 60;
-    return `${String(m).padStart(2, '0')}:${String(s).padStart(2, '0')}`;
-  };
-
-  // Media Controllers
-  const toggleAudio = () => {
-    if (localStream) {
-      const audioTrack = localStream.getAudioTracks()[0];
-      if (audioTrack) {
-        audioTrack.enabled = !audioTrack.enabled;
-        setAudioEnabled(audioTrack.enabled);
-      }
-    }
-  };
-
-  const toggleVideo = () => {
-    if (isScreenSharing && screenStreamRef.current) {
-      const screenTrack = screenStreamRef.current.getVideoTracks()[0];
-      if (screenTrack) {
-        screenTrack.enabled = !screenTrack.enabled;
-        setVideoEnabled(screenTrack.enabled);
-      }
-    } else if (localStream) {
-      const videoTrack = localStream.getVideoTracks()[0];
-      if (videoTrack) {
-        videoTrack.enabled = !videoTrack.enabled;
-        setVideoEnabled(videoTrack.enabled);
-      }
-    }
-  };
-
-  // Screen Sharing Controllers
-  const startScreenShare = async () => {
-    try {
-      const screenStream = await navigator.mediaDevices.getDisplayMedia({
-        video: {
-          displaySurface: 'monitor',
-        },
-        selfBrowserSurface: 'exclude',
-      } as unknown as DisplayMediaStreamOptions);
-      screenStreamRef.current = screenStream;
-      setIsScreenSharing(true);
-
-      const screenTrack = screenStream.getVideoTracks()[0];
-
-      // Replace track in all peer connections
-      Object.values(pcsRef.current).forEach((pc) => {
-        const senders = pc.getSenders();
-        const videoSender = senders.find((sender) => sender.track?.kind === 'video');
-        if (videoSender) {
-          videoSender.replaceTrack(screenTrack);
-        }
-      });
-
-      // Create a new stream combining camera audio and screen video for local preview
-      const localAudioTrack = localStreamRef.current?.getAudioTracks()[0];
-      const combinedStream = new MediaStream();
-      if (localAudioTrack) {
-        combinedStream.addTrack(localAudioTrack);
-      }
-      combinedStream.addTrack(screenTrack);
-      setLocalStream(combinedStream);
-
-      screenTrack.onended = () => {
-        stopScreenShare();
-      };
-    } catch (e) {
-      console.error('Failed to share screen:', e);
-    }
-  };
-
-  const stopScreenShare = () => {
-    if (screenStreamRef.current) {
-      screenStreamRef.current.getTracks().forEach((track) => track.stop());
-      screenStreamRef.current = null;
-    }
-    setIsScreenSharing(false);
-
-    // Restore camera video track
-    const cameraVideoTrack = localStreamRef.current?.getVideoTracks()[0];
-
-    // Replace track in all peer connections back to camera
-    Object.values(pcsRef.current).forEach((pc) => {
-      const senders = pc.getSenders();
-      const videoSender = senders.find((sender) => sender.track?.kind === 'video');
-      if (videoSender && cameraVideoTrack) {
-        videoSender.replaceTrack(cameraVideoTrack);
-      }
-    });
-
-    // Restore local stream preview to original camera stream
-    if (localStreamRef.current) {
-      setLocalStream(localStreamRef.current);
-    }
+  const handleWhiteboardMount = (canvas: HTMLCanvasElement | null) => {
+    editorRef.current = canvas;
+    return () => {};
   };
 
   if (!userProfile) {
@@ -766,419 +86,60 @@ const StudyRoomPage: React.FC = () => {
     );
   }
 
-  // Whiteboard Mount Handler
-  const handleWhiteboardMount = (canvas: HTMLCanvasElement | null) => {
-    editorRef.current = canvas;
-    return () => {};
-  };
-
   return (
     <div className="flex h-full flex-col overflow-hidden bg-[#0f172a] p-3 pb-20 font-sans text-gray-100 sm:p-4 md:p-6 md:pb-6">
       {/* Header */}
-      <header className="mb-3 flex shrink-0 flex-col items-stretch justify-between gap-2.5 rounded-2xl border border-slate-700/50 bg-[#1e293b] p-3 shadow-xl sm:mb-5 sm:flex-row sm:items-center sm:gap-3 sm:p-4">
-        <div className="flex w-full items-center justify-between sm:w-auto">
-          <div className="flex min-w-0 items-center gap-2.5 sm:gap-4">
-            <button
-              onClick={() => navigate('/ielts')}
-              className="shrink-0 cursor-pointer rounded-xl p-2 transition-colors hover:bg-slate-700"
-              title="Chiqish"
-            >
-              <ArrowLeft size={20} className="text-gray-300 sm:size-6" />
-            </button>
-            <div className="min-w-0">
-              <h1 className="max-w-[170px] truncate text-base font-bold tracking-tight text-white sm:max-w-xs sm:text-lg md:max-w-none md:text-xl">
-                {roomDisplayName}
-              </h1>
-              <div className="mt-0.5 flex items-center gap-1.5 sm:gap-2">
-                <span className="h-2 w-2 shrink-0 animate-ping rounded-full bg-green-500" />
-                <p className="whitespace-nowrap text-[11px] font-medium text-green-400 sm:text-xs">
-                  Sinxron Faoliyat
-                </p>
-                <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-slate-600" />
-                <span className="flex items-center gap-1 whitespace-nowrap text-[11px] text-slate-400 sm:text-xs">
-                  <Users size={12} /> {connectedPeers} ta talaba
-                </span>
-              </div>
-            </div>
-          </div>
-
-          {/* Mobile Exit & Share Buttons */}
-          <div className="flex shrink-0 items-center gap-1.5 sm:hidden">
-            <button
-              onClick={() => {
-                navigator.clipboard.writeText(window.location.href);
-                setCopiedLink(true);
-                setTimeout(() => setCopiedLink(false), 2000);
-              }}
-              className="cursor-pointer rounded-xl border border-slate-700 bg-slate-800 p-2 text-xs font-semibold text-slate-200 shadow-sm transition-all hover:bg-slate-700 active:scale-95"
-              title="Xona havolasini nusxalash"
-            >
-              {copiedLink ? <Check size={16} className="text-emerald-400" /> : <Share2 size={16} />}
-            </button>
-            <Button
-              variant="secondary"
-              onClick={() => navigate('/ielts')}
-              className="cursor-pointer rounded-xl border-none bg-red-500/10 px-2.5 py-1.5 text-xs font-bold text-red-400 hover:bg-red-500 hover:text-white"
-            >
-              <VideoOff size={15} className="mr-1" /> Chiqish
-            </Button>
-          </div>
-        </div>
-
-        <div className="flex w-full items-center justify-between gap-2 sm:w-auto sm:justify-end">
-          {/* Mobile Switch View Segmented Control (Video / Whiteboard / Pomodoro) */}
-          <div className="grid w-full grid-cols-3 gap-1 rounded-xl border border-slate-700 bg-slate-800/90 p-1 sm:w-auto md:hidden">
-            <button
-              onClick={() => setMobileView('video')}
-              className={`flex cursor-pointer items-center justify-center gap-1 rounded-lg px-2 py-1.5 text-xs font-semibold transition-all ${
-                mobileView === 'video'
-                  ? 'bg-indigo-600 text-white shadow-xs'
-                  : 'text-slate-400 hover:text-white'
-              }`}
-            >
-              <Video size={13} />
-              <span>Video</span>
-            </button>
-            <button
-              onClick={() => {
-                setMobileView('collab');
-                setCollabTab('whiteboard');
-              }}
-              className={`flex cursor-pointer items-center justify-center gap-1 rounded-lg px-2 py-1.5 text-xs font-semibold transition-all ${
-                mobileView === 'collab' && collabTab === 'whiteboard'
-                  ? 'bg-indigo-600 text-white shadow-xs'
-                  : 'text-slate-400 hover:text-white'
-              }`}
-            >
-              <PenTool size={13} />
-              <span>Doska</span>
-            </button>
-            <button
-              onClick={() => {
-                setMobileView('pomodoro');
-                setCollabTab('pomodoro');
-              }}
-              className={`flex cursor-pointer items-center justify-center gap-1 rounded-lg px-2 py-1.5 text-xs font-semibold transition-all ${
-                mobileView === 'pomodoro' || (mobileView === 'collab' && collabTab === 'pomodoro')
-                  ? 'bg-indigo-600 text-white shadow-xs'
-                  : 'text-slate-400 hover:text-white'
-              }`}
-            >
-              <RotateCcw size={13} />
-              <span>Fokus</span>
-            </button>
-          </div>
-
-          {/* Desktop Action Buttons */}
-          <div className="hidden items-center gap-2 sm:flex">
-            {/* Copy Room Link Button */}
-            <button
-              onClick={() => {
-                navigator.clipboard.writeText(window.location.href);
-                setCopiedLink(true);
-                setTimeout(() => setCopiedLink(false), 2000);
-              }}
-              className="flex cursor-pointer items-center gap-1.5 rounded-xl border border-slate-700 bg-slate-800 px-3.5 py-2.5 text-xs font-semibold text-slate-200 shadow-sm transition-all hover:bg-slate-700 active:scale-95"
-              title="Xona havolasini nusxalash"
-            >
-              {copiedLink ? <Check size={16} className="text-emerald-400" /> : <Share2 size={16} />}
-              <span>{copiedLink ? 'Nusxalandi!' : 'Havola'}</span>
-            </button>
-
-            {/* Desktop Whiteboard / Collab Panel Toggle Button */}
-            <button
-              onClick={() => setShowCollabPanel(!showCollabPanel)}
-              className={`flex cursor-pointer items-center gap-2 rounded-xl border px-4 py-2.5 text-xs font-bold shadow-sm transition-all active:scale-95 ${
-                showCollabPanel
-                  ? 'border-indigo-500/40 bg-indigo-600/20 text-indigo-300'
-                  : 'border-slate-700 bg-slate-800 text-slate-200 hover:bg-slate-700'
-              }`}
-              title={
-                showCollabPanel ? 'Hamkorlik panelini yashirish' : "Hamkorlik panelini ko'rsatish"
-              }
-            >
-              <PenTool size={16} />
-              <span>{showCollabPanel ? 'Panelni yashirish' : 'Hamkorlik Paneli'}</span>
-            </button>
-
-            <Button
-              variant="secondary"
-              onClick={() => navigate('/ielts')}
-              className="cursor-pointer rounded-xl border-none bg-red-500/10 text-red-400 hover:bg-red-500 hover:text-white"
-            >
-              <VideoOff size={18} className="mr-2" /> Chiqish
-            </Button>
-          </div>
-        </div>
-      </header>
+      <RoomHeader
+        roomDisplayName={channel.roomDisplayName}
+        connectedPeers={channel.connectedPeers}
+        copiedLink={copiedLink}
+        onCopyLink={handleCopyLink}
+        mobileView={mobileView}
+        setMobileView={setMobileView}
+        collabTab={collabTab}
+        setCollabTab={setCollabTab}
+        showCollabPanel={showCollabPanel}
+        setShowCollabPanel={setShowCollabPanel}
+        onExit={() => navigate('/ielts')}
+      />
 
       {/* Split Screen Layout */}
       <div className="flex min-h-0 flex-1 flex-col gap-4 overflow-hidden md:flex-row md:gap-6">
-        {/* Left Side: Custom WebRTC Video Grid Container */}
-        <div
-          className={`relative flex min-h-0 w-full flex-1 flex-col space-y-3.5 overflow-hidden rounded-3xl border border-slate-800 bg-[#0f172a] p-3.5 shadow-2xl transition-all duration-300 sm:space-y-4 sm:p-4 ${
-            mobileView === 'video' ? 'flex' : 'hidden md:flex'
-          }`}
-        >
-          {!joinedCall ? (
-            /* Pre-join / Preview Screen */
-            <div className="relative flex flex-1 flex-col items-center justify-center overflow-y-auto p-2 sm:p-4">
-              {/* Preview Video Box */}
-              <div className="relative flex aspect-video max-h-[38vh] w-full max-w-md shrink-0 items-center justify-center overflow-hidden rounded-2xl border border-slate-800 bg-slate-900 shadow-2xl transition-all duration-300 hover:border-slate-700 sm:max-h-none">
-                {videoEnabled && localStream ? (
-                  <video
-                    ref={(ref) => {
-                      if (ref) ref.srcObject = localStream;
-                    }}
-                    autoPlay
-                    playsInline
-                    muted
-                    className="h-full w-full -scale-x-100 transform rounded-2xl object-cover transition-transform duration-500"
-                  />
-                ) : (
-                  <div className="flex flex-col items-center justify-center text-slate-500 transition-all duration-300">
-                    <div className="bg-slate-850 mb-1.5 rounded-full p-3 sm:mb-2 sm:p-4">
-                      <VideoOff size={28} className="sm:size-8" />
-                    </div>
-                    <span className="text-[11px] font-bold uppercase tracking-wider text-slate-500 sm:text-xs">
-                      Kamera o'chiq
-                    </span>
-                  </div>
-                )}
-                <div className="absolute bottom-2.5 left-2.5 flex items-center gap-1.5 rounded-lg border border-white/10 bg-black/60 px-2.5 py-0.5 text-[11px] font-semibold text-white shadow-lg backdrop-blur-md sm:py-1 sm:text-xs">
-                  <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-indigo-500" />
-                  Kamera ko'rinishi (Preview)
-                </div>
-              </div>
+        {/* Left Side: Video Grid */}
+        <RoomVideoGrid
+          joinedCall={webrtc.joinedCall}
+          setJoinedCall={webrtc.setJoinedCall}
+          localStream={webrtc.localStream}
+          remoteStreams={webrtc.remoteStreams}
+          peersInfo={channel.peersInfo}
+          userProfile={userProfile}
+          audioEnabled={webrtc.audioEnabled}
+          videoEnabled={webrtc.videoEnabled}
+          isScreenSharing={webrtc.isScreenSharing}
+          toggleAudio={webrtc.toggleAudio}
+          toggleVideo={webrtc.toggleVideo}
+          startScreenShare={webrtc.startScreenShare}
+          stopScreenShare={webrtc.stopScreenShare}
+          mobileView={mobileView}
+        />
 
-              {/* Join Action Details */}
-              <div className="mt-3 w-full max-w-md shrink-0 space-y-3 rounded-2xl border border-slate-800/80 bg-slate-900/60 p-4 text-center shadow-xl sm:mt-5 sm:space-y-4 sm:p-6">
-                <h3 className="text-base font-bold tracking-tight text-white sm:text-lg">
-                  Dars Xonasi Tayyor
-                </h3>
-                <p className="text-xs text-slate-400 sm:text-sm">
-                  Guruhdoshlaringiz bilan real-vaqt rejimida video muloqot va hamkorlikni boshlash
-                  uchun qo'shiling.
-                </p>
-
-                <button
-                  onClick={() => setJoinedCall(true)}
-                  className="flex w-full cursor-pointer items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-indigo-600 to-violet-600 py-3 text-xs font-bold text-white shadow-lg shadow-indigo-600/30 transition-all duration-200 hover:from-indigo-500 hover:to-violet-500 active:scale-[0.98] sm:py-3.5 sm:text-sm"
-                >
-                  <Video size={17} /> Darsni boshlash
-                </button>
-              </div>
-            </div>
-          ) : (
-            /* Videos Grid (Active Call) - Auto-scales to fill available width */
-            <div className="relative flex h-full min-h-0 w-full flex-1 flex-col items-center justify-center overflow-hidden">
-              <div
-                className={`grid h-full min-h-0 w-full auto-rows-fr items-center justify-center gap-3 overflow-y-auto p-1 sm:gap-4 ${
-                  Object.keys(remoteStreams).length === 0
-                    ? 'mx-auto max-w-4xl grid-cols-1'
-                    : Object.keys(remoteStreams).length === 1
-                      ? 'mx-auto max-w-5xl grid-cols-1 sm:grid-cols-2'
-                      : 'mx-auto max-w-6xl grid-cols-1 sm:grid-cols-2 lg:grid-cols-3'
-                }`}
-              >
-                {/* Local Video */}
-                <div className="relative flex h-full min-h-[220px] w-full items-center justify-center overflow-hidden rounded-2xl border border-slate-800/80 bg-slate-900 shadow-lg transition-all duration-300 hover:border-slate-700/80 sm:min-h-[280px]">
-                  {videoEnabled && localStream ? (
-                    <video
-                      ref={(ref) => {
-                        if (ref) ref.srcObject = localStream;
-                      }}
-                      autoPlay
-                      playsInline
-                      muted
-                      className={`h-full w-full rounded-2xl transition-all duration-500 ${isScreenSharing ? 'bg-slate-950 object-contain' : '-scale-x-100 transform object-cover'}`}
-                    />
-                  ) : (
-                    <div className="flex flex-col items-center justify-center text-slate-500 duration-300 animate-in fade-in">
-                      <div className="mb-2 rounded-full bg-slate-800/60 p-3 sm:p-4">
-                        <VideoOff size={28} className="sm:size-8" />
-                      </div>
-                      <span className="text-xs font-bold uppercase tracking-wider">
-                        Kamera o'chiq
-                      </span>
-                    </div>
-                  )}
-                  <div className="absolute bottom-2.5 left-2.5 flex items-center gap-1.5 rounded-lg border border-white/10 bg-black/60 px-2.5 py-0.5 text-[11px] font-semibold text-white shadow-md backdrop-blur-md sm:py-1 sm:text-xs">
-                    <span className="h-1.5 w-1.5 rounded-full bg-indigo-500" />
-                    Men ({userProfile?.name || 'Talaba'}){' '}
-                    {isScreenSharing && '(Ekran ulashilmoqda)'}
-                  </div>
-                </div>
-
-                {/* Remote Videos */}
-                {Object.entries(remoteStreams).map(([peerId, stream]) => {
-                  const peerName = peersInfo[peerId] || 'Talaba';
-                  return (
-                    <div
-                      key={peerId}
-                      className="relative flex h-full min-h-[220px] w-full items-center justify-center overflow-hidden rounded-2xl border border-slate-800/80 bg-slate-900 shadow-lg transition-all duration-300 hover:border-slate-700/80 sm:min-h-[280px]"
-                    >
-                      <video
-                        ref={(ref) => {
-                          if (ref) ref.srcObject = stream;
-                        }}
-                        autoPlay
-                        playsInline
-                        className="h-full w-full rounded-2xl object-cover transition-all duration-500"
-                      />
-                      <div className="absolute bottom-2.5 left-2.5 flex items-center gap-1.5 rounded-lg border border-white/10 bg-black/60 px-2.5 py-0.5 text-[11px] font-semibold text-white shadow-md backdrop-blur-md sm:py-1 sm:text-xs">
-                        <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-green-500" />
-                        {peerName}
-                      </div>
-                    </div>
-                  );
-                })}
-              </div>
-            </div>
-          )}
-
-          {/* Media Controls Glassmorphism Floating Toolbar */}
-          <div className="flex shrink-0 items-center justify-center gap-2 self-center rounded-2xl border border-slate-700/60 bg-slate-900/90 px-3.5 py-2 shadow-2xl backdrop-blur-xl sm:gap-3 sm:px-5 sm:py-2.5">
-            <button
-              onClick={toggleAudio}
-              className={`flex cursor-pointer items-center justify-center rounded-xl border p-2.5 transition-all active:scale-95 sm:p-3 ${
-                audioEnabled
-                  ? 'hover:bg-slate-750 border-slate-700 bg-slate-800 text-slate-200'
-                  : 'border-red-500/30 bg-red-500/10 text-red-400 hover:bg-red-500/20'
-              }`}
-              title={audioEnabled ? "Mikrofonni o'chirish" : 'Mikrofonni yoqish'}
-            >
-              {audioEnabled ? (
-                <Mic size={17} className="sm:size-[18px]" />
-              ) : (
-                <MicOff size={17} className="sm:size-[18px]" />
-              )}
-            </button>
-            <button
-              onClick={toggleVideo}
-              className={`flex cursor-pointer items-center justify-center rounded-xl border p-2.5 transition-all active:scale-95 sm:p-3 ${
-                videoEnabled
-                  ? 'hover:bg-slate-750 border-slate-700 bg-slate-800 text-slate-200'
-                  : 'border-red-500/30 bg-red-500/10 text-red-400 hover:bg-red-500/20'
-              }`}
-              title={videoEnabled ? "Kamerani o'chirish" : 'Kamerani yoqish'}
-            >
-              {videoEnabled ? (
-                <Video size={17} className="sm:size-[18px]" />
-              ) : (
-                <VideoOff size={17} className="sm:size-[18px]" />
-              )}
-            </button>
-
-            {joinedCall && (
-              <>
-                <button
-                  onClick={isScreenSharing ? stopScreenShare : startScreenShare}
-                  className={`flex cursor-pointer items-center justify-center rounded-xl border p-2.5 transition-all active:scale-95 sm:p-3 ${
-                    isScreenSharing
-                      ? 'border-green-500/30 bg-green-500/10 text-green-400 hover:bg-green-500/20'
-                      : 'hover:bg-slate-750 border-slate-700 bg-slate-800 text-slate-200'
-                  }`}
-                  title={isScreenSharing ? "Ekranni ulashishni to'xtatish" : 'Ekranni ulashish'}
-                >
-                  {isScreenSharing ? (
-                    <MonitorOff size={17} className="sm:size-[18px]" />
-                  ) : (
-                    <Monitor size={17} className="sm:size-[18px]" />
-                  )}
-                </button>
-
-                <Button
-                  variant="secondary"
-                  onClick={() => {
-                    stopScreenShare();
-                    setJoinedCall(false);
-                  }}
-                  className="cursor-pointer rounded-xl border-none bg-red-500/10 px-3 py-2 text-xs font-bold text-red-400 hover:bg-red-500 hover:text-white sm:px-4 sm:py-2.5"
-                >
-                  Tark etish
-                </Button>
-              </>
-            )}
-          </div>
-        </div>
-
-        {/* Right Side: Collapsible Whiteboard / Pomodoro Sidebar Panel */}
-        <div
-          className={`relative min-h-0 w-full flex-col overflow-hidden rounded-3xl border border-slate-700/50 bg-[#1e293b] shadow-2xl transition-all duration-300 animate-in fade-in slide-in-from-right-4 md:w-[460px] lg:w-[540px] ${
-            showCollabPanel && (mobileView === 'collab' || mobileView === 'pomodoro')
-              ? 'flex h-full flex-1'
-              : showCollabPanel
-                ? 'hidden md:flex'
-                : 'hidden'
-          }`}
-        >
-          {/* Panel Header with Segmented Tabs */}
-          <div className="flex shrink-0 items-center justify-between border-b border-slate-800 bg-slate-900/90 px-3.5 py-3 sm:px-4">
-            <div className="flex items-center gap-1 rounded-xl border border-slate-700/60 bg-slate-800 p-0.5">
-              <button
-                onClick={() => setCollabTab('whiteboard')}
-                className={`flex cursor-pointer items-center gap-1.5 rounded-lg px-2.5 py-1.5 text-xs font-bold transition-all sm:px-3 ${
-                  collabTab === 'whiteboard'
-                    ? 'bg-indigo-600 text-white shadow-xs'
-                    : 'text-slate-400 hover:text-white'
-                }`}
-              >
-                <PenTool size={13} />
-                <span>Oq Doska</span>
-              </button>
-              <button
-                onClick={() => setCollabTab('pomodoro')}
-                className={`flex cursor-pointer items-center gap-1.5 rounded-lg px-2.5 py-1.5 text-xs font-bold transition-all sm:px-3 ${
-                  collabTab === 'pomodoro'
-                    ? 'bg-indigo-600 text-white shadow-xs'
-                    : 'text-slate-400 hover:text-white'
-                }`}
-              >
-                <Clock size={13} />
-                <span>Pomodoro ({formatPomodoroTime(timeLeft)})</span>
-              </button>
-            </div>
-            <button
-              onClick={() => setShowCollabPanel(false)}
-              className="hidden cursor-pointer rounded-xl p-1.5 text-slate-400 transition-colors hover:bg-slate-800 hover:text-white md:flex"
-              title="Yashirish"
-            >
-              <Minimize2 size={16} />
-            </button>
-          </div>
-
-          {/* Whiteboard Content Area */}
-          {collabTab === 'whiteboard' && (
-            <div className="relative flex h-full min-h-0 flex-1 touch-none flex-col overflow-hidden rounded-b-3xl bg-white p-2 sm:p-4">
-              <React.Suspense
-                fallback={
-                  <div className="flex h-full items-center justify-center text-xs font-bold text-slate-500">
-                    Oq doska yuklanmoqda...
-                  </div>
-                }
-              >
-                <RoomWhiteboard onMount={handleWhiteboardMount} />
-              </React.Suspense>
-            </div>
-          )}
-
-          {/* Pomodoro Content Area */}
-          {collabTab === 'pomodoro' && (
-            <div className="flex h-full min-h-0 flex-1 flex-col overflow-y-auto rounded-b-3xl bg-[#1e293b] p-3 sm:p-6">
-              <RoomPomodoro
-                pomodoroMode={pomodoroMode}
-                timeLeft={timeLeft}
-                isRunning={isRunning}
-                handleModeChange={handlePomodoroModeChange}
-                handleStart={handleStartPomodoro}
-                handlePause={handlePausePomodoro}
-                handleReset={handleResetPomodoro}
-                formatTime={formatPomodoroTime}
-              />
-            </div>
-          )}
-        </div>
+        {/* Right Side: Collapsible Whiteboard / Pomodoro Sidebar */}
+        <RoomCollabPanel
+          showCollabPanel={showCollabPanel}
+          setShowCollabPanel={setShowCollabPanel}
+          mobileView={mobileView}
+          collabTab={collabTab}
+          setCollabTab={setCollabTab}
+          onWhiteboardMount={handleWhiteboardMount}
+          pomodoroMode={pomodoro.pomodoroMode}
+          timeLeft={pomodoro.timeLeft}
+          isRunning={pomodoro.isRunning}
+          handlePomodoroModeChange={pomodoro.handlePomodoroModeChange}
+          handleStartPomodoro={pomodoro.handleStartPomodoro}
+          handlePausePomodoro={pomodoro.handlePausePomodoro}
+          handleResetPomodoro={pomodoro.handleResetPomodoro}
+          formatPomodoroTime={pomodoro.formatPomodoroTime}
+        />
       </div>
     </div>
   );
