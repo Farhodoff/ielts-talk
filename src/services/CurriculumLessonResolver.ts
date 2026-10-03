@@ -1,30 +1,8 @@
-import { SupportedLanguage, Lesson } from '../types/lesson';
+import { SupportedLanguage } from '../types/lesson';
 import { MasterySkill } from '../types/mastery';
 import { SAMPLE_LESSONS } from '../data/curriculum/sampleCurriculum';
-import { getCurriculumLessonById } from '../data/curriculum/curriculumLessons';
+import { getCurriculumLessonMetaById } from '../data/curriculum/curriculumManifest';
 import { IELTS_GRAMMAR_DATABASE } from '../data/ielts/ielts_grammar_data';
-/**
- * Derive the primary skill of a curriculum lesson from its step content.
- * Real curriculum lessons carry no explicit `skill` field, so we infer it
- * from the first learn step (grammar rules → grammar, vocabulary → vocabulary).
- */
-function deriveLessonSkill(lesson: Lesson): MasterySkill {
-  for (const step of lesson.steps) {
-    if (step.type === 'learn') {
-      if (step.learnData?.grammarRules && step.learnData.grammarRules.length > 0) {
-        return 'grammar';
-      }
-    }
-  }
-  for (const step of lesson.steps) {
-    if (step.type === 'learn') {
-      if (step.learnData?.vocabulary && step.learnData.vocabulary.length > 0) {
-        return 'vocabulary';
-      }
-    }
-  }
-  return 'grammar';
-}
 
 export const STATIC_CURRICULUM_MAP: Record<
   string,
@@ -148,18 +126,18 @@ export const CurriculumLessonResolver = {
    */
   resolveLesson(lessonId: string, _fallbackLang: SupportedLanguage = 'en'): ResolvedLessonContent {
     // 0. Phase 19 — real curriculum registry is the canonical content source.
-    const realLesson = getCurriculumLessonById(lessonId);
-    if (realLesson) {
+    const meta = getCurriculumLessonMetaById(lessonId);
+    if (meta) {
       const staticSkill = STATIC_CURRICULUM_MAP[lessonId]?.skill;
       return {
-        lessonId: realLesson.id,
+        lessonId: meta.id,
         sourceType: 'lesson_player',
-        route: `/lesson/${realLesson.id}`,
-        contentId: realLesson.id,
-        title: realLesson.title,
-        language: realLesson.language,
-        level: realLesson.level,
-        skill: staticSkill || deriveLessonSkill(realLesson),
+        route: `/lesson/${meta.id}`,
+        contentId: meta.id,
+        title: meta.title,
+        language: meta.language,
+        level: meta.level,
+        skill: staticSkill || meta.skill,
         isAvailable: true,
         availabilityMessage: "Dars to'liq interaktiv shaklda mavjud.",
       };

@@ -4,6 +4,7 @@ import { LearningOrchestrator } from '../services/LearningOrchestrator';
 import { Award, BookOpen, BrainCircuit, AlertCircle, ChevronRight, X } from 'lucide-react';
 import { useStudyData } from '../context/StudyPlannerContext';
 import { LessonService } from '../services/LessonService';
+import { extractLevelFromLessonId } from '../data/curriculum/curriculumLessons';
 import { LearningSignalService } from '../services/LearningSignalService';
 import { Lesson, LessonStep, UserLessonProgress } from '../types/lesson';
 import { IncorrectAnswerSignal } from '../types/learningSignals';
@@ -44,29 +45,71 @@ export const LessonPlayerPage: React.FC = () => {
       return;
     }
 
-    const foundLesson = LessonService.getLessonById(lessonId);
-    if (foundLesson) {
-      // Phase 15: Service-level prerequisite and access validation
+    let isMounted = true;
+
+    // 1. Check synchronous cache first (e.g. legacy sample or already loaded level)
+    const cachedLesson = LessonService.getLessonById(lessonId);
+    if (cachedLesson) {
       const access = LearningOrchestrator.canAccessLesson(lessonId, user?.id || '');
       if (!access.allowed) {
         console.warn(`[LessonPlayer] Access denied: ${access.reason}`);
         navigate(access.redirectTo || '/ielts', { replace: true });
         return;
       }
-      setLesson(foundLesson);
+      setLesson(cachedLesson);
 
-      // Load saved progress
       const savedProgress = LessonService.getLessonProgress(user?.id || '', lessonId);
       if (savedProgress) {
         if (savedProgress.isCompleted) {
           setIsLessonCompleted(true);
           setQuizResult(savedProgress.quizScore);
         } else if (savedProgress.currentStepIndex !== undefined) {
-          setCurrentStepIdx(Math.min(savedProgress.currentStepIndex, foundLesson.steps.length - 1));
+          setCurrentStepIdx(
+            Math.min(savedProgress.currentStepIndex, cachedLesson.steps.length - 1),
+          );
         }
       }
+      setLoading(false);
+      return;
     }
-    setLoading(false);
+
+    // Fast-fail if not a valid CEFR or curriculum lesson ID
+    const level = extractLevelFromLessonId(lessonId);
+    if (!level) {
+      setLoading(false);
+      return;
+    }
+
+    // 2. Otherwise lazy-load the level chunk on-demand
+    LessonService.loadLessonById(lessonId).then((loadedLesson) => {
+      if (!isMounted) return;
+      if (loadedLesson) {
+        const access = LearningOrchestrator.canAccessLesson(lessonId, user?.id || '');
+        if (!access.allowed) {
+          console.warn(`[LessonPlayer] Access denied: ${access.reason}`);
+          navigate(access.redirectTo || '/ielts', { replace: true });
+          return;
+        }
+        setLesson(loadedLesson);
+
+        const savedProgress = LessonService.getLessonProgress(user?.id || '', lessonId);
+        if (savedProgress) {
+          if (savedProgress.isCompleted) {
+            setIsLessonCompleted(true);
+            setQuizResult(savedProgress.quizScore);
+          } else if (savedProgress.currentStepIndex !== undefined) {
+            setCurrentStepIdx(
+              Math.min(savedProgress.currentStepIndex, loadedLesson.steps.length - 1),
+            );
+          }
+        }
+      }
+      setLoading(false);
+    });
+
+    return () => {
+      isMounted = false;
+    };
   }, [lessonId, user?.id]);
 
   const totalSteps = lesson ? lesson.steps.length : 0;

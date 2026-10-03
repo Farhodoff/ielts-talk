@@ -107,7 +107,7 @@ describe('LessonPlayerPage', () => {
     fireEvent.click(screen.getByRole('button', { name: /Davom etish/i }));
 
     // Finish lesson
-    fireEvent.click(screen.getByRole('button', { name: /Yakunlash/i }));
+    fireEvent.click(screen.getByRole('button', { name: /Yakunlash 🎉/i }));
 
     await waitFor(
       () => {
