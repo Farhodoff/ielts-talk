@@ -22,6 +22,44 @@ export const ENGLISH_A1_LESSONS: Lesson[] = [
           title: 'Am / Is / Are',
           explanation:
             'I bilan am, he/she/it bilan is, you/we/they bilan are ishlatiladi. Inkor uchun not qo‘shiladi.',
+          vocabulary: [
+            {
+              term: 'Hello!',
+              meaning: 'Salom!',
+              exampleSentence: 'Hello! I am Malika.',
+              exampleTranslation: 'Salom! Men Malikaman.',
+            },
+            {
+              term: 'My name is…',
+              meaning: 'Mening ismim…',
+              exampleSentence: 'My name is Aziza.',
+              exampleTranslation: 'Mening ismim Aziza.',
+            },
+            {
+              term: 'student',
+              meaning: 'talaba',
+              exampleSentence: 'I am a student.',
+              exampleTranslation: 'Men talabaman.',
+            },
+            {
+              term: 'teacher',
+              meaning: 'o‘qituvchi',
+              exampleSentence: 'She is a teacher.',
+              exampleTranslation: 'U o‘qituvchi.',
+            },
+            {
+              term: 'ready',
+              meaning: 'tayyor',
+              exampleSentence: 'We are ready for class.',
+              exampleTranslation: 'Biz darsga tayyormiz.',
+            },
+            {
+              term: 'tired',
+              meaning: 'charchagan',
+              exampleSentence: 'I am not tired today.',
+              exampleTranslation: 'Men bugun charchamaganman.',
+            },
+          ],
           grammarRules: [
             {
               pattern:

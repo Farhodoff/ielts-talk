@@ -155,7 +155,7 @@ const DecksPage: React.FC = () => {
             const batchCards = newCards.map((c) => ({
               subjectId: targetSubjectId!,
               front: c.front,
-              back: `${c.back} ${c.phonetic ? `(${c.phonetic})` : ''} ${c.example ? `\nExample: "${c.example}"` : ''}`.trim(),
+              back: `${c.back} ${c.phonetic ? `(${c.phonetic})` : ''} ${c.example ? `\nExample: "${c.example}"${c.exampleTranslation ? `\nTarjima: ${c.exampleTranslation}` : ''}` : ''}`.trim(),
               interval: 1,
               repetitions: 0,
               easeFactor: 2.5,
@@ -378,7 +378,7 @@ const DecksPage: React.FC = () => {
           const batchCards = newCards.map((c) => ({
             subjectId: targetSubjectId!,
             front: c.front,
-            back: `${c.back} ${c.phonetic ? `(${c.phonetic})` : ''} ${c.example ? `\nExample: "${c.example}"` : ''}`.trim(),
+            back: `${c.back} ${c.phonetic ? `(${c.phonetic})` : ''} ${c.example ? `\nExample: "${c.example}"${c.exampleTranslation ? `\nTarjima: ${c.exampleTranslation}` : ''}` : ''}`.trim(),
             interval: 1,
             repetitions: 0,
             easeFactor: 2.5,

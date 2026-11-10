@@ -178,37 +178,37 @@ const App: React.FC = () => {
     return <PageLoader />;
   }
 
-  if (!session && !isPublicPreviewActive()) {
-    return (
-      <LanguageProvider>
-        <UnauthRouter />
-        <ReloadPrompt />
-      </LanguageProvider>
-    );
-  }
+  const isGuest = !session && !isPublicPreviewActive();
 
   return (
     <ErrorBoundary>
       <LanguageProvider>
         <StudyPlannerProvider>
-          <FocusTimerProvider>
-            <BrowserRouter>
-              <div className="relative h-screen overflow-hidden bg-background text-foreground transition-colors duration-200">
-                <Suspense fallback={<PageLoader />}>
-                  <AppRoutes />
-                </Suspense>
-                <GlobalAudioPlayer />
+          {isGuest ? (
+            <>
+              <UnauthRouter />
+              <ReloadPrompt />
+            </>
+          ) : (
+            <FocusTimerProvider>
+              <BrowserRouter>
+                <div className="relative h-screen overflow-hidden bg-background text-foreground transition-colors duration-200">
+                  <Suspense fallback={<PageLoader />}>
+                    <AppRoutes />
+                  </Suspense>
+                  <GlobalAudioPlayer />
 
-                {/* PWA Prompts */}
-                <ReloadPrompt />
-                <InstallPrompt />
-                <PushNotificationPrompt />
+                  {/* PWA Prompts */}
+                  <ReloadPrompt />
+                  <InstallPrompt />
+                  <PushNotificationPrompt />
 
-                <OfflineIndicator />
-                <Toaster />
-              </div>
-            </BrowserRouter>
-          </FocusTimerProvider>
+                  <OfflineIndicator />
+                  <Toaster />
+                </div>
+              </BrowserRouter>
+            </FocusTimerProvider>
+          )}
         </StudyPlannerProvider>
       </LanguageProvider>
     </ErrorBoundary>
