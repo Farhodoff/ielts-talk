@@ -24,7 +24,7 @@ import { Button } from '../components/ui/Button';
 import { evaluateIeltsSpeakingFullMock, SpeakingMockReport } from '../utils/ai';
 import { speakText } from '../utils/audioTts';
 import { CAMBRIDGE_IELTS_TOPICS, IeltsSpeakingTopic } from '../data/ieltsSpeakingTopics';
-import { useStudyData } from '../context/StudyPlannerContext';
+import { useStudyData } from '../context/IeltsTalkContext';
 import { HistoryService } from '../services/HistoryService';
 import { MasteryEngine } from '../services/MasteryEngine';
 import { LearningSignalService } from '../services/LearningSignalService';

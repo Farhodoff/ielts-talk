@@ -9,7 +9,7 @@ export interface QueuedFlashcardUpdate {
   retries?: number;
 }
 
-const OFFLINE_QUEUE_KEY = 'study_planner_flashcard_offline_queue';
+const OFFLINE_QUEUE_KEY = 'ielts_talk_flashcard_offline_queue';
 let isSyncing = false;
 let isListenerInitialized = false;
 
@@ -154,7 +154,7 @@ export const FlashcardOfflineSync = {
    */
   async cacheDeck(userId: string, cards: import('../types').Flashcard[]): Promise<void> {
     try {
-      await idbSet(`study_planner_deck_cache_${userId}`, {
+      await idbSet(`ielts_talk_deck_cache_${userId}`, {
         cards,
         cachedAt: Date.now(),
         version: 1,
@@ -176,7 +176,7 @@ export const FlashcardOfflineSync = {
         cards: import('../types').Flashcard[];
         cachedAt: number;
         version: number;
-      }>(`study_planner_deck_cache_${userId}`);
+      }>(`ielts_talk_deck_cache_${userId}`);
       if (cached && cached.cards && cached.cards.length > 0) {
         return { cards: cached.cards, cachedAt: cached.cachedAt };
       }

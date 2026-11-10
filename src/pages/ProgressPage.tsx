@@ -7,7 +7,7 @@ import SubjectAnalytics from '../components/analytics/SubjectAnalytics';
 import FlashcardAnalytics from '../components/analytics/FlashcardAnalytics';
 import ExamHistoryAnalytics from '../components/analytics/ExamHistoryAnalytics';
 import CoachAnalytics from '../components/analytics/CoachAnalytics';
-import { useStudyData } from '../context/StudyPlannerContext';
+import { useStudyData } from '../context/IeltsTalkContext';
 import Skeleton from '../components/ui/Skeleton';
 import ShareCardModal from '../components/ShareCardModal';
 import { Share2, BarChart3, Globe2, BookOpen } from 'lucide-react';

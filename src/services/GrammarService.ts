@@ -140,7 +140,10 @@ export const GrammarService = {
       } catch {}
 
       if (!activeUserId) {
-        const cachedUser = safeLocalStorage.getJSON<{ id?: string } | null>('study_planner_user_cache', null);
+        const cachedUser = safeLocalStorage.getJSON<{ id?: string } | null>(
+          'ielts_talk_user_cache',
+          null,
+        );
         if (cachedUser?.id && isUuid(cachedUser.id)) {
           activeUserId = cachedUser.id;
         }
@@ -194,7 +197,10 @@ export const GrammarService = {
       } catch {}
 
       if (!activeUserId) {
-        const cachedUser = safeLocalStorage.getJSON<{ id?: string } | null>('study_planner_user_cache', null);
+        const cachedUser = safeLocalStorage.getJSON<{ id?: string } | null>(
+          'ielts_talk_user_cache',
+          null,
+        );
         if (cachedUser?.id && isUuid(cachedUser.id)) {
           activeUserId = cachedUser.id;
         }

@@ -1,6 +1,6 @@
-# 📖 AI Study Planner - Foydalanuvchi Qo'llanmasi
+# 📖 IELTS Talk - Foydalanuvchi Qo'llanmasi
 
-Xush kelibsiz! Bu qo'llanma AI Study Planner ilovasining barcha funksiyalarini o'zbek tilida tushuntiradi.
+Xush kelibsiz! Bu qo'llanma IELTS Talk ilovasining barcha funksiyalarini o'zbek tilida tushuntiradi.
 
 ---
 
@@ -20,11 +20,13 @@ Xush kelibsiz! Bu qo'llanma AI Study Planner ilovasining barcha funksiyalarini o
 ## 🚀 Boshlash
 
 ### Tizim Talablari
+
 - Zamonaviy brauzer (Chrome, Firefox, Safari, Edge)
 - Internet aloqasi
 - Google akkaunt (ixtiyoriy, AI funksiyalar uchun)
 
 ### Birinchi Marta Kirish
+
 1. Brauzerda `http://localhost:5173` ni oching
 2. "Ro'yxatdan o'tish" tugmasini bosing
 3. Email va parol kiriting
@@ -36,16 +38,19 @@ Xush kelibsiz! Bu qo'llanma AI Study Planner ilovasining barcha funksiyalarini o
 ## 🔐 Ro'yxatdan O'tish va Kirish
 
 ### Ro'yxatdan O'tish
+
 1. **Email**: Ishchi email manzilingizni kiriting
 2. **Parol**: Kamida 6 belgidan iborat xavfsiz parol
 3. **Ism**: To'liq ismingiz (ixtiyoriy)
 4. **Tasdiqlash**: Emailingizga kelgan havolani bosing
 
 ### Kirish
+
 - Email va parolingiz bilan oddiy kirish
 - "Meni eslab qol" - avtomatik kirish uchun
 
 ### Parolni Unutdingizmi?
+
 1. "Parolni unutdim" havolasini bosing
 2. Emailingizni kiriting
 3. Yangi parol o'rnatish havolasi keladi
@@ -57,6 +62,7 @@ Xush kelibsiz! Bu qo'llanma AI Study Planner ilovasining barcha funksiyalarini o
 ### 1. 📋 Vazifalar (Tasks)
 
 #### Yangi Vazifa Qo'shish
+
 1. "Vazifalar" sahifasiga o'ting
 2. "Yangi Vazifa" tugmasini bosing
 3. Ma'lumotlarni to'ldiring:
@@ -67,11 +73,13 @@ Xush kelibsiz! Bu qo'llanma AI Study Planner ilovasining barcha funksiyalarini o
 4. "Saqlash" ni bosing
 
 #### Vazifani Bajarish
+
 - Vazifa yonidagi checkbox ni belgilang
 - ✅ Bajarilgan vazifalar yashil rangda ko'rsatiladi
 - 🎉 50 XP olasiz!
 
 #### Vazifani O'chirish
+
 - Vazifa ustiga hover qiling
 - Qizil "O'chirish" tugmasini bosing
 - Tasdiqlang
@@ -81,6 +89,7 @@ Xush kelibsiz! Bu qo'llanma AI Study Planner ilovasining barcha funksiyalarini o
 ### 2. 📚 Fanlar (Subjects)
 
 #### Fan Qo'shish
+
 1. "Fanlar" sahifasiga o'ting
 2. "Fan Qo'shish" tugmasini bosing
 3. Ma'lumotlarni kiriting:
@@ -92,6 +101,7 @@ Xush kelibsiz! Bu qo'llanma AI Study Planner ilovasining barcha funksiyalarini o
 4. "Saqlash"
 
 #### Fan Tafsilotlari
+
 - Fan kartochkasini bosing
 - Ko'rasiz:
   - 📊 O'zlashtirish darajasi
@@ -103,12 +113,14 @@ Xush kelibsiz! Bu qo'llanma AI Study Planner ilovasining barcha funksiyalarini o
 ### 3. 🎯 Maqsadlar (Goals)
 
 #### Maqsad Belgilash
+
 1. "Maqsadlar" sahifasiga o'ting
 2. "Yangi Maqsad" tugmasini bosing
 3. Maqsadingizni yozing
 4. Jarayonni kuzatib boring (0-100%)
 
 #### AI Reja
+
 - "AI Reja" tugmasini bosing
 - Maqsadingizni kiriting
 - AI avtomatik reja tuzadi!
@@ -118,11 +130,13 @@ Xush kelibsiz! Bu qo'llanma AI Study Planner ilovasining barcha funksiyalarini o
 ### 4. 📅 Kalendar
 
 #### Kalendar Ko'rinishlari
+
 - **Oy**: Butun oyni ko'rish
 - **Hafta**: Haftalik jadval
 - **Kun**: Kunlik tafsilotlar
 
 #### Tadbir Qo'shish
+
 1. Sanani bosing
 2. Tadbir ma'lumotlarini kiriting
 3. Vaqt va davomiylikni belgilang
@@ -133,6 +147,7 @@ Xush kelibsiz! Bu qo'llanma AI Study Planner ilovasining barcha funksiyalarini o
 ### 5. 📝 Eslatmalar (Notes)
 
 #### Yangi Eslatma
+
 1. "Eslatmalar" sahifasiga o'ting
 2. "Yangi Eslatma" tugmasini bosing
 3. Sarlavha va matn kiriting
@@ -144,6 +159,7 @@ Xush kelibsiz! Bu qo'llanma AI Study Planner ilovasining barcha funksiyalarini o
    - `` `kod` ``
 
 #### Eslatmani Tahrirlash
+
 - Eslatma kartochkasini bosing
 - Matnni tahrirlang
 - Avtomatik saqlanadi!
@@ -153,6 +169,7 @@ Xush kelibsiz! Bu qo'llanma AI Study Planner ilovasining barcha funksiyalarini o
 ### 6. 🃏 Flashcardlar
 
 #### Flashcard Yaratish
+
 1. "Flashcardlar" sahifasiga o'ting
 2. "Yangi Flashcard" tugmasini bosing
 3. **Old tomoni**: Savol
@@ -160,12 +177,14 @@ Xush kelibsiz! Bu qo'llanma AI Study Planner ilovasining barcha funksiyalarini o
 5. Fanni tanlang
 
 #### AI bilan Yaratish
+
 1. "AI Generator" tugmasini bosing
 2. Mavzu yoki matnni kiriting
 3. Nechta karta kerakligini tanlang
 4. AI avtomatik yaratadi!
 
 #### O'rganish Rejimi
+
 1. Fanni tanlang
 2. "O'rganish" tugmasini bosing
 3. Kartani ko'ring, javobni o'ylang
@@ -185,6 +204,7 @@ Xush kelibsiz! Bu qo'llanma AI Study Planner ilovasining barcha funksiyalarini o
 ### 1. AI O'quv Rejasi
 
 #### Qanday Ishlaydi?
+
 1. "Maqsadlar" → "AI Reja"
 2. Ma'lumotlarni kiriting:
    - Mavzu (masalan, "Algebra")
@@ -194,6 +214,7 @@ Xush kelibsiz! Bu qo'llanma AI Study Planner ilovasining barcha funksiyalarini o
 4. Har kun nima qilish kerakligini ko'rasiz
 
 #### Masalan:
+
 ```
 Mavzu: Algebra
 Imtihon: 15 kundan keyin
@@ -211,6 +232,7 @@ AI Reja:
 ### 2. Aqlli Manbalar
 
 #### Avtomatik Qidiruv
+
 1. Fan tafsilotlariga o'ting
 2. "Aqlli Manbalar" tabini bosing
 3. AI eng yaxshi manbalarni topadi:
@@ -220,6 +242,7 @@ AI Reja:
    - 🌐 Veb-saytlar
 
 #### Manbalarni Saqlash
+
 - ⭐ Yulduzcha bosing - sevimlilar ro'yxatiga qo'shiladi
 - 🔗 Havolani bosing - yangi tabda ochiladi
 
@@ -228,12 +251,14 @@ AI Reja:
 ### 3. AI Flashcard Generator
 
 #### Tez Yaratish
+
 1. Mavzu yoki matnni kiriting
 2. Nechta karta kerakligini tanlang (5-20)
 3. "Yaratish" tugmasini bosing
 4. 10 soniyada tayyor!
 
 #### Masalan:
+
 ```
 Mavzu: "Fotosintez"
 
@@ -252,6 +277,7 @@ AI yaratadi:
 ### Pomodoro Timer
 
 #### Sozlash
+
 1. "Fokus" sahifasiga o'ting
 2. Rejimni tanlang:
    - 🎯 **Fokus**: 25 daqiqa
@@ -261,6 +287,7 @@ AI yaratadi:
 4. "Boshlash" tugmasini bosing
 
 #### Fokus Davomida
+
 - ⏸️ **Pauza**: Vaqtincha to'xtatish
 - 🔄 **Qayta boshlash**: Qaytadan 25 daqiqa
 - ⏭️ **O'tkazib yuborish**: Keyingi rejimga o'tish
@@ -270,6 +297,7 @@ AI yaratadi:
 ### Ambient Tovushlar
 
 #### Tovushlarni Yoqish
+
 1. Fokus rejimida
 2. "Fon Tovushi" tugmasini bosing
 3. Tanlang:
@@ -279,6 +307,7 @@ AI yaratadi:
    - 🎵 **Lo-fi**: Tinch musiqa
 
 #### Tovush Sozlamalari
+
 - 🔊 Ovoz balandligini sozlang
 - 🔇 Mute - tovushni o'chirish
 - 🔄 Loop - takrorlanadi
@@ -290,11 +319,13 @@ AI yaratadi:
 ### Kayfiyat Kuzatuvi
 
 #### Nega Kerak?
+
 - Burnout oldini olish
 - Eng samarali vaqtni aniqlash
 - Kayfiyat va samaradorlik bog'liqligini ko'rish
 
 #### Qanday Ishlatish?
+
 1. Fokus boshida: "Kayfiyatingiz qanday?" (1-5 ⭐)
 2. Fokus oxirida: "Hozir qanday?" (1-5 ⭐)
 3. Statistikada tahlil ko'ring
@@ -306,12 +337,14 @@ AI yaratadi:
 ### O'quv Xonalari
 
 #### Default Xonalar
+
 - 📚 **Kutubxona**: Jimjit o'qish
 - 💻 **Dasturlash**: Kod yozish
 - 🧮 **Matematika**: Hisob-kitoblar
 - 🌍 **Tillar**: Til o'rganish
 
 #### Xonaga Kirish
+
 1. "Hamjamiyat" sahifasiga o'ting
 2. "Xonalar" tabini bosing
 3. Xonani tanlang
@@ -323,6 +356,7 @@ AI yaratadi:
 ### Maxsus Xona Yaratish
 
 #### O'z Xonangiz
+
 1. "Yangi Xona Yaratish" tugmasini bosing
 2. Ma'lumotlarni kiriting:
    - **Xona nomi**: Masalan, "Fizika Guruhi"
@@ -331,6 +365,7 @@ AI yaratadi:
 4. Havolani do'stlaringizga yuboring!
 
 #### Xona Xususiyatlari
+
 - 🎥 Video va audio
 - 💬 Chat
 - 🖥️ Ekran ulashish
@@ -343,6 +378,7 @@ AI yaratadi:
 ### Profil
 
 #### Ma'lumotlarni Yangilash
+
 1. "Sozlamalar" sahifasiga o'ting
 2. "Profil" tabini bosing
 3. O'zgartiring:
@@ -355,6 +391,7 @@ AI yaratadi:
 ### Tema
 
 #### Qorong'i/Yorug' Rejim
+
 1. "Sozlamalar" → "Tema"
 2. Tanlang:
    - ☀️ **Yorug'**: Kunduzgi rejim
@@ -368,6 +405,7 @@ AI yaratadi:
 ### Bildirishnomalar
 
 #### Sozlash
+
 1. "Sozlamalar" → "Bildirishnomalar"
 2. Yoqing/O'chiring:
    - 📅 Dars eslatmalari
@@ -379,6 +417,7 @@ AI yaratadi:
 ### API Kalitlar
 
 #### Google Gemini AI
+
 1. [Google AI Studio](https://makersuite.google.com/app/apikey) ga o'ting
 2. Yangi API key yarating
 3. "Sozlamalar" → "API Kalitlar" ga kiriting
@@ -393,6 +432,7 @@ AI yaratadi:
 ### Samaradorlikni Oshirish
 
 #### 1. Fokus Sessiyalarini Rejalashtiring
+
 ```
 09:00 - 09:25: Matematika (Fokus)
 09:25 - 09:30: Tanaffus
@@ -401,17 +441,20 @@ AI yaratadi:
 ```
 
 #### 2. Flashcardlarni Har Kun Takrorlang
+
 - Ertalab 10 daqiqa
 - Kechqurun 10 daqiqa
 - Spaced Repetition ishlaydi!
 
 #### 3. Maqsadlarni Kichik Qismlarga Bo'ling
+
 ```
 ❌ Yomon: "Matematikani o'rganish"
 ✅ Yaxshi: "Kvadrat tenglamalarni yechish"
 ```
 
 #### 4. AI dan To'g'ri Foydalaning
+
 - Aniq mavzular kiriting
 - Qisqa va tushunarli so'rovlar
 - Natijalarni tekshiring
@@ -420,25 +463,27 @@ AI yaratadi:
 
 ### Tez Klaviatura Tugmalari
 
-| Tugma | Amal |
-|-------|------|
-| `Ctrl + K` | Qidiruv |
-| `Ctrl + N` | Yangi vazifa |
-| `Ctrl + F` | Fokus rejimi |
-| `Ctrl + /` | Yordam |
-| `Esc` | Modalni yopish |
+| Tugma      | Amal           |
+| ---------- | -------------- |
+| `Ctrl + K` | Qidiruv        |
+| `Ctrl + N` | Yangi vazifa   |
+| `Ctrl + F` | Fokus rejimi   |
+| `Ctrl + /` | Yordam         |
+| `Esc`      | Modalni yopish |
 
 ---
 
 ### Gamifikatsiya Strategiyasi
 
 #### XP Olish Yo'llari
+
 - ✅ Vazifa bajarish: **50 XP**
 - 🃏 Flashcard takrorlash: **5 XP**
 - ⏱️ Fokus sessiyasi: **100 XP**
 - 🎯 Maqsadga erishish: **500 XP**
 
 #### Darajalar
+
 1. **Novice** (0-999 XP)
 2. **Student** (1000-2999 XP)
 3. **Scholar** (3000-5999 XP)
@@ -450,18 +495,23 @@ AI yaratadi:
 ## 🆘 Tez-tez So'raladigan Savollar
 
 ### Ma'lumotlarim xavfsizmi?
+
 ✅ Ha! Barcha ma'lumotlar Supabase bulutida xavfsiz saqlanadi. Row Level Security orqali faqat siz o'z ma'lumotlaringizni ko'rasiz.
 
 ### Internetga ulanmasdan ishlayaptimi?
+
 ⚠️ Qisman. LocalStorage orqali ba'zi funksiyalar offline ishlaydi, lekin to'liq funksionallik uchun internet kerak.
 
 ### AI funksiyalar pullikmi?
+
 💰 Google Gemini API bepul limitga ega (60 so'rov/daqiqa). Ko'proq kerak bo'lsa, pullik rejaga o'tish mumkin.
 
 ### Bir nechta qurilmada ishlayaptimi?
+
 ✅ Ha! Supabase orqali barcha qurilmalarda sinxronlanadi.
 
 ### Ma'lumotlarimni export qilsam bo'ladimi?
+
 🔜 Tez orada qo'shiladi! Export/Import funksiyasi ishlab chiqilmoqda.
 
 ---
@@ -490,11 +540,13 @@ AI yaratadi:
 ## 🎓 Muvaffaqiyat Uchun Maslahatlar
 
 ### 1. Muntazamlik - Muvaffaqiyat Kaliti
+
 - Har kun kamida 1 fokus sessiyasi
 - Flashcardlarni har kuni takrorlang
 - Streakni buzmaslik!
 
 ### 2. Maqsadlarni To'g'ri Qo'ying
+
 - SMART maqsadlar:
   - **S**pecific (Aniq)
   - **M**easurable (O'lchanadigan)
@@ -503,6 +555,7 @@ AI yaratadi:
   - **T**ime-bound (Muddatli)
 
 ### 3. AI dan Samarali Foydalaning
+
 - Aniq savollar bering
 - Natijalarni tekshiring
 - O'z bilimingizni rivojlantiring
@@ -511,9 +564,10 @@ AI yaratadi:
 
 ## 🎉 Xulosa
 
-AI Study Planner - bu shunchaki ilova emas, bu sizning shaxsiy o'quv yordamchingiz!
+IELTS Talk - bu shunchaki ilova emas, bu sizning shaxsiy o'quv yordamchingiz!
 
 **Unutmang:**
+
 - 🎯 Maqsadlaringizni belgilang
 - 📚 Muntazam o'qing
 - 🧠 AI dan foydalaning
@@ -524,4 +578,4 @@ AI Study Planner - bu shunchaki ilova emas, bu sizning shaxsiy o'quv yordamching
 
 **Omad tilaymiz! 🚀**
 
-*Savollar bormi? [GitHub Issues](https://github.com/yourusername/study-planner-ai/issues) da so'rang!*
+_Savollar bormi? [GitHub Issues](https://github.com/yourusername/ielts-talk/issues) da so'rang!_

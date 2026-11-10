@@ -166,15 +166,15 @@ describe('Admin panel source guarantees', () => {
     const adminSource = readSource('../../pages/AdminDashboardPage.tsx');
     expect(adminSource).toContain('supabase.auth.getUser()');
     // No read of the cache-backed user object is allowed as an identity source.
-    expect(adminSource).not.toMatch(/study_planner_user_cache['"`]\s*[,)]/);
+    expect(adminSource).not.toMatch(/ielts_talk_user_cache['"`]\s*[,)]/);
   });
 
   it('clears cached admin PII when the visitor is not authorised', () => {
     const adminSource = readSource('../../pages/AdminDashboardPage.tsx');
-    expect(adminSource).toContain("localStorage.removeItem('study_planner_admin_users_cache')");
-    expect(adminSource).toContain("localStorage.removeItem('study_planner_admin_stats_cache')");
+    expect(adminSource).toContain("localStorage.removeItem('ielts_talk_admin_users_cache')");
+    expect(adminSource).toContain("localStorage.removeItem('ielts_talk_admin_stats_cache')");
     expect(adminSource).toContain(
-      "localStorage.removeItem('study_planner_admin_speech_sessions_cache')",
+      "localStorage.removeItem('ielts_talk_admin_speech_sessions_cache')",
     );
   });
 });

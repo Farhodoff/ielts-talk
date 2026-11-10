@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useStudyData } from '../context/StudyPlannerContext';
+import { useStudyData } from '../context/IeltsTalkContext';
 import { useLanguage } from '../context/LanguageContext';
 import { requestNotificationPermission } from '../utils/notifications';
 import PreferencesSection from '../components/settings/PreferencesSection';

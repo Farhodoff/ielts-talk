@@ -54,13 +54,13 @@ const HeroPhoneMockup: React.FC = () => {
   const [isPlayingAudio, setIsPlayingAudio] = useState(false);
 
   return (
-    <div className="mx-auto flex w-full max-w-[300px] sm:max-w-[360px] select-none justify-center [perspective:1200px]">
+    <div className="mx-auto flex w-full max-w-[300px] select-none justify-center [perspective:1200px] sm:max-w-[360px]">
       <motion.div
         initial={{ opacity: 0, y: 30, rotateY: -12, rotateX: 4 }}
         animate={{ opacity: 1, y: 0, rotateY: -6, rotateX: 2 }}
         whileHover={{ rotateY: 0, rotateX: 0, scale: 1.02 }}
         transition={{ duration: 0.6, ease: 'easeOut' }}
-        className="relative flex h-[580px] sm:h-[640px] w-full flex-col justify-between overflow-hidden rounded-[36px] sm:rounded-[44px] border border-border bg-card p-3.5 sm:p-4 shadow-2xl"
+        className="relative flex h-[580px] w-full flex-col justify-between overflow-hidden rounded-[36px] border border-border bg-card p-3.5 shadow-2xl sm:h-[640px] sm:rounded-[44px] sm:p-4"
       >
         {/* Phone Notch */}
         <div className="mx-auto mb-2 h-6 w-28 shrink-0 rounded-b-2xl bg-foreground/10" />
@@ -101,7 +101,8 @@ const HeroPhoneMockup: React.FC = () => {
           {/* Candidate Answer */}
           <div className="rounded-br-xs ml-auto max-w-[92%] space-y-1.5 rounded-2xl bg-primary p-3 text-sm text-primary-foreground shadow-sm">
             <p className="text-[13px] leading-relaxed">
-              "Certainly! I come from Samarkand, a renowned historic city famous for its breathtaking Silk Road architecture and hospitable community."
+              "Certainly! I come from Samarkand, a renowned historic city famous for its
+              breathtaking Silk Road architecture and hospitable community."
             </p>
           </div>
 
@@ -121,13 +122,22 @@ const HeroPhoneMockup: React.FC = () => {
               </span>
             </div>
             <div className="grid grid-cols-2 gap-1 text-[10px] text-muted-foreground">
-              <span>Fluency & Coherence: <b className="text-foreground">8.5</b></span>
-              <span>Lexical Resource: <b className="text-foreground">8.0</b></span>
-              <span>Grammar Accuracy: <b className="text-foreground">8.0</b></span>
-              <span>Pronunciation: <b className="text-foreground">7.5</b></span>
+              <span>
+                Fluency & Coherence: <b className="text-foreground">8.5</b>
+              </span>
+              <span>
+                Lexical Resource: <b className="text-foreground">8.0</b>
+              </span>
+              <span>
+                Grammar Accuracy: <b className="text-foreground">8.0</b>
+              </span>
+              <span>
+                Pronunciation: <b className="text-foreground">7.5</b>
+              </span>
             </div>
             <p className="mt-1.5 border-t border-amber-500/20 pt-1 text-[10px] text-muted-foreground">
-              💡 <span className="font-semibold text-foreground">Band 8+ Collocations:</span> "renowned historic city", "breathtaking architecture".
+              💡 <span className="font-semibold text-foreground">Band 8+ Collocations:</span>{' '}
+              "renowned historic city", "breathtaking architecture".
             </p>
           </motion.div>
 
@@ -141,12 +151,14 @@ const HeroPhoneMockup: React.FC = () => {
           {/* Audio Wave / Recording Indicator */}
           <div className="rounded-bl-xs inline-flex items-center gap-2 rounded-2xl border border-border/60 bg-muted/60 px-3 py-1.5">
             <span className="h-2 w-2 animate-ping rounded-full bg-primary" />
-            <span className="text-[11px] font-semibold text-muted-foreground">Candidate speaking...</span>
+            <span className="text-[11px] font-semibold text-muted-foreground">
+              Candidate speaking...
+            </span>
             <div className="flex items-center gap-0.5">
               {[6, 12, 8, 16, 10, 14, 8].map((h, i) => (
                 <span
                   key={i}
-                  className="w-0.5 rounded-full bg-primary animate-pulse"
+                  className="w-0.5 animate-pulse rounded-full bg-primary"
                   style={{ height: `${h}px`, animationDelay: `${i * 120}ms` }}
                 />
               ))}
@@ -241,7 +253,7 @@ const ProductShowcase: React.FC = () => {
                 }`}
               >
                 <span className="truncate">{t.label}</span>
-                <span className="text-[10px] font-bold opacity-60 shrink-0 ml-1">{t.section}</span>
+                <span className="ml-1 shrink-0 text-[10px] font-bold opacity-60">{t.section}</span>
               </button>
             ))}
           </div>
@@ -253,13 +265,13 @@ const ProductShowcase: React.FC = () => {
             So‘nggi Mocklar
           </div>
           <div className="space-y-1 text-xs text-muted-foreground">
-            <div className="cursor-pointer rounded-lg px-2 py-1 hover:bg-muted/40 flex items-center justify-between">
+            <div className="flex cursor-pointer items-center justify-between rounded-lg px-2 py-1 hover:bg-muted/40">
               <span>Hometown & City</span>
-              <b className="text-amber-500 font-bold">Band 8.0</b>
+              <b className="font-bold text-amber-500">Band 8.0</b>
             </div>
-            <div className="cursor-pointer rounded-lg px-2 py-1 hover:bg-muted/40 flex items-center justify-between">
+            <div className="flex cursor-pointer items-center justify-between rounded-lg px-2 py-1 hover:bg-muted/40">
               <span>Education Essay</span>
-              <b className="text-indigo-500 font-bold">Band 7.5</b>
+              <b className="font-bold text-indigo-500">Band 7.5</b>
             </div>
           </div>
         </div>
@@ -275,7 +287,7 @@ const ProductShowcase: React.FC = () => {
           <div>
             <div className="flex items-center gap-1.5 text-xs font-bold text-foreground">
               <span>Examiner Gordon (AI Examiner)</span>
-              <span className="h-2 w-2 rounded-full bg-emerald-500 animate-pulse" />
+              <span className="h-2 w-2 animate-pulse rounded-full bg-emerald-500" />
             </div>
             <span className="text-[11px] text-muted-foreground">
               {selectedTopic} · {selectedBand} · Cambridge Rubric
@@ -304,7 +316,8 @@ const ProductShowcase: React.FC = () => {
             </div>
             <div className="space-y-2">
               <div className="rounded-tl-xs rounded-2xl border border-border bg-card p-3.5 text-sm leading-relaxed text-foreground">
-                Why do you think some individuals prefer residing in tranquil rural areas rather than bustling metropolitan cities?
+                Why do you think some individuals prefer residing in tranquil rural areas rather
+                than bustling metropolitan cities?
               </div>
               <div className="flex flex-wrap gap-1.5 text-[11px] font-semibold text-muted-foreground">
                 <button className="flex items-center gap-1 rounded-md bg-muted px-2.5 py-1 hover:bg-muted/80">
@@ -321,8 +334,9 @@ const ProductShowcase: React.FC = () => {
                 </button>
               </div>
               {showTranslation && (
-                <p className="text-xs italic text-muted-foreground bg-muted/40 p-2 rounded-lg">
-                  Nima uchun ba'zi insonlar gavjum metropoliyalardan ko'ra tinch qishloq joylarda yashashni afzal ko'radilar deb o'ylaysiz?
+                <p className="rounded-lg bg-muted/40 p-2 text-xs italic text-muted-foreground">
+                  Nima uchun ba'zi insonlar gavjum metropoliyalardan ko'ra tinch qishloq joylarda
+                  yashashni afzal ko'radilar deb o'ylaysiz?
                 </p>
               )}
             </div>
@@ -332,7 +346,8 @@ const ProductShowcase: React.FC = () => {
           <div className="ml-auto flex max-w-[92%] items-start justify-end gap-3">
             <div className="space-y-2 text-right">
               <div className="rounded-tr-xs inline-block rounded-2xl bg-primary p-3.5 text-left text-sm leading-relaxed text-primary-foreground shadow-sm">
-                In my perspective, rural areas offer a peaceful atmosphere away from traffic jams and loud noise.
+                In my perspective, rural areas offer a peaceful atmosphere away from traffic jams
+                and loud noise.
               </div>
 
               {/* Correction Card */}
@@ -363,10 +378,14 @@ const ProductShowcase: React.FC = () => {
                   and{' '}
                   <u className="border-b-2 border-emerald-500 font-bold text-emerald-500 no-underline">
                     pervasive noise pollution
-                  </u>.
+                  </u>
+                  .
                 </div>
                 <p className="text-[11px] leading-relaxed text-muted-foreground">
-                  💡 <b className="text-foreground">Examiner maslahati:</b> "peaceful" so‘zi o‘rniga <b className="text-foreground">serene sanctuary</b> va "traffic jams" o‘rniga <b className="text-foreground">chronic traffic congestion</b> ishlatish sizning Lexical Resource balingizni darhol 8.5+ ga ko‘taradi.
+                  💡 <b className="text-foreground">Examiner maslahati:</b> "peaceful" so‘zi o‘rniga{' '}
+                  <b className="text-foreground">serene sanctuary</b> va "traffic jams" o‘rniga{' '}
+                  <b className="text-foreground">chronic traffic congestion</b> ishlatish sizning
+                  Lexical Resource balingizni darhol 8.5+ ga ko‘taradi.
                 </p>
               </div>
             </div>
@@ -382,7 +401,8 @@ const ProductShowcase: React.FC = () => {
             </div>
             <div className="space-y-2">
               <div className="rounded-tl-xs rounded-2xl border border-border bg-card p-3.5 text-sm leading-relaxed text-foreground">
-                That is a well-reasoned argument. How might this dynamic transform with the rise of remote working and digital technologies?
+                That is a well-reasoned argument. How might this dynamic transform with the rise of
+                remote working and digital technologies?
               </div>
               <div className="flex flex-wrap gap-1.5 text-[11px] font-semibold text-muted-foreground">
                 <button className="flex items-center gap-1 rounded-md bg-muted px-2.5 py-1 hover:bg-muted/80">
@@ -403,7 +423,7 @@ const ProductShowcase: React.FC = () => {
             <span className="flex h-8 w-8 items-center justify-center rounded-full bg-primary/10 text-primary">
               <Mic size={16} />
             </span>
-            <button className="flex h-8 w-8 items-center justify-center rounded-full bg-primary text-primary-foreground shadow-xs hover:opacity-90 transition-transform active:scale-95">
+            <button className="flex h-8 w-8 items-center justify-center rounded-full bg-primary text-primary-foreground shadow-xs transition-transform hover:opacity-90 active:scale-95">
               <ArrowRight size={14} />
             </button>
           </div>
@@ -413,9 +433,11 @@ const ProductShowcase: React.FC = () => {
       {/* RIGHT SIDEBAR (Vocabulary & Examiner Weak Spots) */}
       <aside className="hidden flex-col gap-5 border-l border-border bg-muted/20 p-5 lg:flex">
         <div>
-          <div className="mb-3 text-[11px] font-bold uppercase tracking-wider text-muted-foreground flex items-center justify-between">
+          <div className="mb-3 flex items-center justify-between text-[11px] font-bold uppercase tracking-wider text-muted-foreground">
             <span>Band 8+ So‘zlar</span>
-            <span className="rounded-full bg-primary/10 px-2 py-0.5 text-[10px] font-bold text-primary">3 ta</span>
+            <span className="rounded-full bg-primary/10 px-2 py-0.5 text-[10px] font-bold text-primary">
+              3 ta
+            </span>
           </div>
           <div className="space-y-2">
             {[
@@ -500,7 +522,7 @@ const LandingPage: React.FC = () => {
     document.documentElement.classList.add('dark');
     document.documentElement.classList.remove('light');
     try {
-      localStorage.setItem('study_planner_theme', 'dark');
+      localStorage.setItem('ielts_talk_theme', 'dark');
     } catch {}
   }, []);
 
@@ -578,8 +600,6 @@ const LandingPage: React.FC = () => {
                 <span>EN</span>
               </button>
             </div>
-
-
 
             {/* Login (desktop) */}
             <button
@@ -680,10 +700,10 @@ const LandingPage: React.FC = () => {
       </motion.nav>
 
       {/* ======== ACADEMIC BACKDROP ACCENTS ======== */}
-      <div className="pointer-events-none absolute left-6 top-24 -z-10 hidden sm:block select-none text-[160px] font-black tracking-tighter leading-none text-foreground opacity-[0.02] sm:text-[240px]">
+      <div className="pointer-events-none absolute left-6 top-24 -z-10 hidden select-none text-[160px] font-black leading-none tracking-tighter text-foreground opacity-[0.02] sm:block sm:text-[240px]">
         IELTS
       </div>
-      <div className="pointer-events-none absolute right-6 top-[850px] -z-10 hidden sm:block select-none text-[140px] font-black tracking-tighter leading-none text-foreground opacity-[0.02] sm:text-[200px]">
+      <div className="pointer-events-none absolute right-6 top-[850px] -z-10 hidden select-none text-[140px] font-black leading-none tracking-tighter text-foreground opacity-[0.02] sm:block sm:text-[200px]">
         BAND 9
       </div>
 
@@ -710,7 +730,9 @@ const LandingPage: React.FC = () => {
                 {isEn ? (
                   <>
                     Achieve IELTS <br />
-                    <em className="relative inline-block not-italic text-primary">Band 7.5+.</em>{' '}
+                    <em className="relative inline-block not-italic text-primary">
+                      Band 7.5+.
+                    </em>{' '}
                     <br />
                     Starting Today.
                   </>
@@ -869,7 +891,9 @@ const LandingPage: React.FC = () => {
           <FadeIn className="mx-auto max-w-2xl space-y-3 text-center">
             <div className="flex items-center justify-center gap-2 text-xs font-bold uppercase tracking-widest text-primary">
               <span>QANDAY ISHLAYDI</span>
-              <span className="text-sm font-semibold text-muted-foreground">· 3 QADAMDA TAYYORGARLIK</span>
+              <span className="text-sm font-semibold text-muted-foreground">
+                · 3 QADAMDA TAYYORGARLIK
+              </span>
             </div>
             <h2 className="font-display text-3xl font-black tracking-tight text-foreground sm:text-4xl lg:text-5xl">
               {t('landing.stepsTitle')}
@@ -882,7 +906,7 @@ const LandingPage: React.FC = () => {
               <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full border-2 border-primary bg-background text-lg font-black text-primary shadow-xs">
                 1
               </div>
-              <span className="block text-xs font-bold tracking-wider uppercase text-primary">
+              <span className="block text-xs font-bold uppercase tracking-wider text-primary">
                 BAND LEVEL
               </span>
               <h4 className="text-lg font-bold text-foreground">{t('landing.step1Title')}</h4>
@@ -896,7 +920,7 @@ const LandingPage: React.FC = () => {
               <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full border-2 border-indigo-500 bg-background text-lg font-black text-indigo-500 shadow-xs">
                 2
               </div>
-              <span className="block text-xs font-bold tracking-wider uppercase text-indigo-500">
+              <span className="block text-xs font-bold uppercase tracking-wider text-indigo-500">
                 MOCK MODULE
               </span>
               <h4 className="text-lg font-bold text-foreground">{t('landing.step2Title')}</h4>
@@ -910,7 +934,7 @@ const LandingPage: React.FC = () => {
               <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full border-2 border-emerald-500 bg-background text-lg font-black text-emerald-500 shadow-xs">
                 3
               </div>
-              <span className="block text-xs font-bold tracking-wider uppercase text-emerald-500">
+              <span className="block text-xs font-bold uppercase tracking-wider text-emerald-500">
                 AI EXAMINER
               </span>
               <h4 className="text-lg font-bold text-foreground">{t('landing.step3Title')}</h4>
@@ -961,7 +985,7 @@ const LandingPage: React.FC = () => {
           </FadeIn>
 
           {/* Tabs */}
-          <div className="flex justify-center gap-2 flex-wrap">
+          <div className="flex flex-wrap justify-center gap-2">
             {['Band 6.0', 'Band 6.5', 'Band 7.0', 'Band 7.5', 'Band 8.0+'].map((tab) => (
               <button
                 key={`lesson-tab-${tab}`}
@@ -987,7 +1011,9 @@ const LandingPage: React.FC = () => {
                 </div>
                 <div className="space-y-1">
                   <div className="text-xl font-bold text-foreground">Speaking Part 2 Cue Cards</div>
-                  <div className="text-sm text-muted-foreground">2-Daqiqalik nutq va ravonlik tizimi</div>
+                  <div className="text-sm text-muted-foreground">
+                    2-Daqiqalik nutq va ravonlik tizimi
+                  </div>
                 </div>
                 <div className="flex items-center gap-2 text-sm font-bold text-emerald-500">
                   <span>100% o‘zlashtirildi</span>
@@ -1007,7 +1033,9 @@ const LandingPage: React.FC = () => {
                   <div className="text-xl font-bold text-foreground">
                     Writing Task 1: Grafik Tahlili
                   </div>
-                  <div className="text-sm text-muted-foreground">Dinamik diagrammalar va trendlar</div>
+                  <div className="text-sm text-muted-foreground">
+                    Dinamik diagrammalar va trendlar
+                  </div>
                 </div>
                 <div className="flex items-center gap-2 text-sm font-bold text-primary">
                   <span>65% bajarildi</span>
@@ -1027,8 +1055,12 @@ const LandingPage: React.FC = () => {
                   <Lock size={18} />
                 </div>
                 <div className="space-y-1">
-                  <div className="text-xl font-bold text-foreground">Writing Task 2: Argument Esse</div>
-                  <div className="text-sm text-muted-foreground">Band 8.0+ darajasidagi esse strukturasi</div>
+                  <div className="text-xl font-bold text-foreground">
+                    Writing Task 2: Argument Esse
+                  </div>
+                  <div className="text-sm text-muted-foreground">
+                    Band 8.0+ darajasidagi esse strukturasi
+                  </div>
                 </div>
                 <div className="flex items-center gap-2 text-sm text-muted-foreground">
                   <span>Band 7.0 dan so‘ng ochiladi</span>

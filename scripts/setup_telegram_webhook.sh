@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Study Planner - Telegram Webhook xavfsizligini o'rnatish skripti
+# IELTS Talk - Telegram Webhook xavfsizligini o'rnatish skripti
 # Bu skript Supabase va Telegram API ga maxfiy tokenni biriktiradi.
 
 echo "🤖 Telegram Bot Webhook xavfsizligini o'rnatish"

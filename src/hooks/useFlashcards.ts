@@ -25,7 +25,7 @@ const getAuthUserId = async (): Promise<string> => {
   } catch {}
   try {
     const cachedUser = safeLocalStorage.getJSON<{ id?: string } | null>(
-      'study_planner_user_cache',
+      'ielts_talk_user_cache',
       null,
     );
     if (cachedUser?.id && isUuid(cachedUser.id)) return cachedUser.id;
@@ -82,7 +82,7 @@ export const useFlashcards = (onCardReviewed?: (amount: number) => Promise<void>
   const [flashcards, setFlashcards] = useState<Flashcard[]>(() => {
     try {
       const cachedUser = safeLocalStorage.getJSON<{ id?: string } | null>(
-        'study_planner_user_cache',
+        'ielts_talk_user_cache',
         null,
       );
       const activeId = cachedUser?.id && isUuid(cachedUser.id) ? cachedUser.id : 'guest';

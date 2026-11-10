@@ -24,7 +24,7 @@ export interface SettingsState {
   updateSettings: (updates: Partial<Settings>) => void;
 }
 
-const SETTINGS_STORAGE_KEY = 'study_planner_user_settings';
+const SETTINGS_STORAGE_KEY = 'ielts_talk_user_settings';
 
 const defaultSettings: Settings = {
   theme: 'system',

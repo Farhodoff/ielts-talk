@@ -1,6 +1,6 @@
 # 🔧 Gemini API Rate Limiting Implementation Details
 
-> AI Study Planner-da Gemini API rate limiting-ni qanday hal qilgan
+> IELTS Talk-da Gemini API rate limiting-ni qanday hal qilgan
 
 ---
 
@@ -9,34 +9,40 @@
 ### **1. Exponential Backoff Strategy**
 
 **Kod:**
+
 ```typescript
 const requestWithRetry = async <T>(
-    operation: () => Promise<T>,
-    retries: number = 3,
-    delay: number = 20000 // Start with 20s
+  operation: () => Promise<T>,
+  retries: number = 3,
+  delay: number = 20000, // Start with 20s
 ): Promise<T> => {
-    try {
-        return await operation();
-    } catch (error: any) {
-        if (retries > 0 && (error?.message?.includes('429') || 
-                           error?.status === 429 || 
-                           error?.message?.includes('quota'))) {
-            console.warn(`Rate limit hit. Retrying in ${delay / 1000}s...`);
-            await new Promise(resolve => setTimeout(resolve, delay));
-            // Exponential backoff: 20s -> 60s -> 120s
-            return requestWithRetry(operation, retries - 1, delay * 3);
-        }
-        throw error;
+  try {
+    return await operation();
+  } catch (error: any) {
+    if (
+      retries > 0 &&
+      (error?.message?.includes('429') ||
+        error?.status === 429 ||
+        error?.message?.includes('quota'))
+    ) {
+      console.warn(`Rate limit hit. Retrying in ${delay / 1000}s...`);
+      await new Promise((resolve) => setTimeout(resolve, delay));
+      // Exponential backoff: 20s -> 60s -> 120s
+      return requestWithRetry(operation, retries - 1, delay * 3);
     }
+    throw error;
+  }
 };
 ```
 
-**Qayd:** 
+**Qayd:**
+
 - ✅ **3 ta retry** (boshida to'xta, keyin ba'zi haraka)
 - ✅ **Eksponensial backoff**: 20s → 60s → 120s
 - ✅ **429 (Rate Limit) error** aniqlanadi
 
 **Kamchilik:**
+
 - ❌ User-level quota tracking yo'q
 - ❌ Daily limits check qilinmaydi
 - ❌ Multiple users bir vaqtda soʻrov yuborganda ishlashda muammo
@@ -70,45 +76,44 @@ REQUEST COMES IN
 ```
 
 **Kod (src/utils/ai.ts):**
+
 ```typescript
 const getAIProvider = async (): Promise<AIProvider> => {
-    const ollamaUrl = import.meta.env.VITE_OLLAMA_URL;
-    const geminiKey = import.meta.env.VITE_GEMINI_API_KEY;
+  const ollamaUrl = import.meta.env.VITE_OLLAMA_URL;
+  const geminiKey = import.meta.env.VITE_GEMINI_API_KEY;
 
-    // Prefer Ollama if available (no rate limits!)
-    if (ollamaUrl) {
-        const available = await isOllamaAvailable();
-        if (available) return 'ollama';
-    }
+  // Prefer Ollama if available (no rate limits!)
+  if (ollamaUrl) {
+    const available = await isOllamaAvailable();
+    if (available) return 'ollama';
+  }
 
-    // Fallback to Gemini
-    if (geminiKey) return 'gemini';
+  // Fallback to Gemini
+  if (geminiKey) return 'gemini';
 
-    throw new Error("AI provider not configured");
+  throw new Error('AI provider not configured');
 };
 
 export const generateFlashcardsWithAI = async (
-    topic: string,
-    count: number = 5,
-    userKey?: string
+  topic: string,
+  count: number = 5,
+  userKey?: string,
 ): Promise<{ front: string; back: string }[]> => {
-    const provider = await getAIProvider();
+  const provider = await getAIProvider();
 
-    if (provider === 'ollama') {
-        // LOCAL → NO RATE LIMITS ✓
-        const response = await callOllama(prompt);
-        // Process...
-    } else {
-        // GEMINI → WITH RETRY LOGIC ✓
-        const genAI = getGenAI(userKey);
-        const model = genAI.getGenerativeModel({ model: "gemini-3-flash-preview" });
-        
-        // requestWithRetry() wrapping
-        const result = await requestWithRetry(() => 
-            model.generateContent(prompt)
-        );
-        // Process...
-    }
+  if (provider === 'ollama') {
+    // LOCAL → NO RATE LIMITS ✓
+    const response = await callOllama(prompt);
+    // Process...
+  } else {
+    // GEMINI → WITH RETRY LOGIC ✓
+    const genAI = getGenAI(userKey);
+    const model = genAI.getGenerativeModel({ model: 'gemini-3-flash-preview' });
+
+    // requestWithRetry() wrapping
+    const result = await requestWithRetry(() => model.generateContent(prompt));
+    // Process...
+  }
 };
 ```
 
@@ -125,7 +130,7 @@ gemini-pro:
   - Rate limit: 60 reqs/min
   - Response time: 2-3 sec
   - Cost: $0.0025 / 1K tokens
-  
+
 gemini-3-flash-preview (TANLANDI):
   - Rate limit: 60 reqs/min (same)
   - Response time: 1-1.5 sec (40% tez!)
@@ -134,9 +139,10 @@ gemini-3-flash-preview (TANLANDI):
 ```
 
 **Kod:**
+
 ```typescript
-const model = genAI.getGenerativeModel({ 
-    model: "gemini-3-flash-preview"  // ← OPTIMIZED
+const model = genAI.getGenerativeModel({
+  model: 'gemini-3-flash-preview', // ← OPTIMIZED
 });
 ```
 
@@ -149,35 +155,29 @@ const model = genAI.getGenerativeModel({
 **Muammo:** Gemini bad response bersa, rate limit bulib ketadi
 
 **Yechim:**
+
 ```typescript
 function validateFlashcards(cards: any[]): boolean {
-    const checks = {
-        isArray: Array.isArray(cards),
-        hasContent: cards.length > 0,
-        validStructure: cards.every(c => c.front && c.back),
-        minLength: cards.every(c => 
-            c.front.length >= 5 && 
-            c.back.length >= 10
-        ),
-        noDuplicates: new Set(
-            cards.map(c => c.front)
-        ).size === cards.length,
-        diversity: new Set(
-            cards.map(c => c.category)
-        ).size >= Math.ceil(cards.length / 3)
-    };
-    
-    return Object.values(checks).every(Boolean);
+  const checks = {
+    isArray: Array.isArray(cards),
+    hasContent: cards.length > 0,
+    validStructure: cards.every((c) => c.front && c.back),
+    minLength: cards.every((c) => c.front.length >= 5 && c.back.length >= 10),
+    noDuplicates: new Set(cards.map((c) => c.front)).size === cards.length,
+    diversity: new Set(cards.map((c) => c.category)).size >= Math.ceil(cards.length / 3),
+  };
+
+  return Object.values(checks).every(Boolean);
 }
 
 // USE IN generateFlashcardsWithAI()
 const json = JSON.parse(cleanedText);
 
 if (!validateFlashcards(json)) {
-    // Bad response - DON'T retry immediately
-    console.error('Quality check failed');
-    // Fallback to static templates or ask user for retry
-    throw new Error('AI response quality too low');
+  // Bad response - DON'T retry immediately
+  console.error('Quality check failed');
+  // Fallback to static templates or ask user for retry
+  throw new Error('AI response quality too low');
 }
 
 return json;
@@ -198,7 +198,7 @@ CREATE TABLE ai_request_quota (
     request_count INTEGER DEFAULT 0,
     reset_at TIMESTAMP,
     created_at TIMESTAMP DEFAULT now(),
-    
+
     UNIQUE(user_id, reset_at::DATE)
 );
 
@@ -208,33 +208,32 @@ CREATE POLICY users_see_own_quota ON ai_request_quota
     USING (auth.uid() = user_id);
 
 -- Index for fast lookup
-CREATE INDEX idx_quota_user_reset 
+CREATE INDEX idx_quota_user_reset
     ON ai_request_quota(user_id, reset_at DESC);
 ```
 
 **Check Quota Before API Call:**
+
 ```typescript
 async function checkAndDecrementQuota(userId: string, limit = 5) {
-    const today = new Date().toDateString();
-    
-    const { data } = await supabase
-        .from('ai_request_quota')
-        .select('request_count')
-        .eq('user_id', userId)
-        .eq('reset_at::DATE', today)
-        .single();
-    
-    if (data?.request_count >= limit) {
-        throw new Error(
-            `Daily limit reached (${limit}). Try again tomorrow.`
-        );
-    }
-    
-    // Decrement quota
-    await supabase
-        .from('ai_request_quota')
-        .update({ request_count: (data?.request_count || 0) + 1 })
-        .eq('user_id', userId);
+  const today = new Date().toDateString();
+
+  const { data } = await supabase
+    .from('ai_request_quota')
+    .select('request_count')
+    .eq('user_id', userId)
+    .eq('reset_at::DATE', today)
+    .single();
+
+  if (data?.request_count >= limit) {
+    throw new Error(`Daily limit reached (${limit}). Try again tomorrow.`);
+  }
+
+  // Decrement quota
+  await supabase
+    .from('ai_request_quota')
+    .update({ request_count: (data?.request_count || 0) + 1 })
+    .eq('user_id', userId);
 }
 
 // USAGE
@@ -254,7 +253,7 @@ const result = await generateFlashcardsWithAI(topic, count);
 const AIGeneratorModal = () => {
     const [isLoading, setIsLoading] = useState(false);
     const [cooldown, setCooldown] = useState(0);
-    
+
     useEffect(() => {
         if (cooldown > 0) {
             const timer = setTimeout(() => {
@@ -263,16 +262,16 @@ const AIGeneratorModal = () => {
             return () => clearTimeout(timer);
         }
     }, [cooldown]);
-    
+
     const handleGenerate = async () => {
         if (cooldown > 0) return; // Prevent double-click
-        
+
         try {
             setIsLoading(true);
             setCooldown(5); // 5 sec cooldown
-            
+
             const result = await generateStudyPlan(topic, weeks);
-            
+
             toast.success('Plan generated!');
             savePlan(result);
         } catch (err) {
@@ -286,14 +285,14 @@ const AIGeneratorModal = () => {
             setIsLoading(false);
         }
     };
-    
+
     return (
-        <button 
+        <button
             onClick={handleGenerate}
             disabled={isLoading || cooldown > 0}
         >
-            {cooldown > 0 
-                ? `Retry in ${cooldown}s` 
+            {cooldown > 0
+                ? `Retry in ${cooldown}s`
                 : 'Generate Plan'
             }
         </button>
@@ -301,7 +300,8 @@ const AIGeneratorModal = () => {
 };
 ```
 
-**Result:** 
+**Result:**
+
 - ✅ Prevents accidental duplicate clicks
 - ✅ Visual feedback (countdown timer)
 - ✅ Rate limit error triggers longer cooldown
@@ -314,22 +314,22 @@ const AIGeneratorModal = () => {
 const AIPlanModal = ({ isOpen }: Props) => {
     const [state, setState] = useState<'idle' | 'loading' | 'error' | 'success'>('idle');
     const [queue, setQueue] = useState(0);
-    
+
     const generatePlan = async () => {
         setState('loading');
-        
+
         try {
             // Check queue
             const pending = await getPendingRequests();
             setQueue(pending.length);
-            
+
             if (pending.length > 3) {
                 toast.warning(
                     `${pending.length} requests in queue. ` +
                     'We\'ll process yours shortly.'
                 );
             }
-            
+
             const plan = await callAPI();
             setState('success');
         } catch (err) {
@@ -337,7 +337,7 @@ const AIPlanModal = ({ isOpen }: Props) => {
             handleGeminiError(err);
         }
     };
-    
+
     return (
         <>
             {state === 'loading' && (
@@ -363,74 +363,65 @@ const AIPlanModal = ({ isOpen }: Props) => {
 
 ```typescript
 enum GeminiErrorType {
-    RATE_LIMIT = '429',           // Too many requests
-    QUOTA_EXCEEDED = 'quota',      // Daily/monthly limit
-    INVALID_REQUEST = '400',       // Bad parameters
-    AUTH_ERROR = '401',            // Invalid API key
-    INTERNAL_ERROR = '500',        // Server error
-    NETWORK_ERROR = 'network',     // Connection issue
+  RATE_LIMIT = '429', // Too many requests
+  QUOTA_EXCEEDED = 'quota', // Daily/monthly limit
+  INVALID_REQUEST = '400', // Bad parameters
+  AUTH_ERROR = '401', // Invalid API key
+  INTERNAL_ERROR = '500', // Server error
+  NETWORK_ERROR = 'network', // Connection issue
 }
 
 function classifyGeminiError(error: any): GeminiErrorType {
-    if (error.status === 429 || error.message?.includes('429')) {
-        return GeminiErrorType.RATE_LIMIT;
-    }
-    if (error.message?.includes('quota')) {
-        return GeminiErrorType.QUOTA_EXCEEDED;
-    }
-    if (error.status === 400) {
-        return GeminiErrorType.INVALID_REQUEST;
-    }
-    if (error.statusCode === 401 || error.message?.includes('401')) {
-        return GeminiErrorType.AUTH_ERROR;
-    }
-    if (error.status >= 500) {
-        return GeminiErrorType.INTERNAL_ERROR;
-    }
-    if (error.message?.includes('Network')) {
-        return GeminiErrorType.NETWORK_ERROR;
-    }
+  if (error.status === 429 || error.message?.includes('429')) {
+    return GeminiErrorType.RATE_LIMIT;
+  }
+  if (error.message?.includes('quota')) {
+    return GeminiErrorType.QUOTA_EXCEEDED;
+  }
+  if (error.status === 400) {
+    return GeminiErrorType.INVALID_REQUEST;
+  }
+  if (error.statusCode === 401 || error.message?.includes('401')) {
+    return GeminiErrorType.AUTH_ERROR;
+  }
+  if (error.status >= 500) {
     return GeminiErrorType.INTERNAL_ERROR;
+  }
+  if (error.message?.includes('Network')) {
+    return GeminiErrorType.NETWORK_ERROR;
+  }
+  return GeminiErrorType.INTERNAL_ERROR;
 }
 
 // HANDLE BASED ON TYPE
 function handleGeminiError(error: any) {
-    const errorType = classifyGeminiError(error);
-    
-    switch (errorType) {
-        case GeminiErrorType.RATE_LIMIT:
-            toast.error(
-                'Too many requests. Please wait a few minutes.',
-                { duration: 5000 }
-            );
-            // Show user ~how long to wait
-            showRetryTimer(5 * 60); // 5 minutes
-            break;
-            
-        case GeminiErrorType.QUOTA_EXCEEDED:
-            toast.error(
-                'Daily AI generation limit reached. Try again tomorrow.',
-                { duration: 5000 }
-            );
-            break;
-            
-        case GeminiErrorType.AUTH_ERROR:
-            toast.error('Invalid API key. Check Settings.');
-            break;
-            
-        case GeminiErrorType.NETWORK_ERROR:
-            toast.warning(
-                'Connection lost. Check your internet.',
-                { duration: 3000 }
-            );
-            // Queue for retry when online
-            queueRequestForRetry();
-            break;
-            
-        default:
-            toast.error('Failed to generate. Please try again.');
-            logToSentry(error);
-    }
+  const errorType = classifyGeminiError(error);
+
+  switch (errorType) {
+    case GeminiErrorType.RATE_LIMIT:
+      toast.error('Too many requests. Please wait a few minutes.', { duration: 5000 });
+      // Show user ~how long to wait
+      showRetryTimer(5 * 60); // 5 minutes
+      break;
+
+    case GeminiErrorType.QUOTA_EXCEEDED:
+      toast.error('Daily AI generation limit reached. Try again tomorrow.', { duration: 5000 });
+      break;
+
+    case GeminiErrorType.AUTH_ERROR:
+      toast.error('Invalid API key. Check Settings.');
+      break;
+
+    case GeminiErrorType.NETWORK_ERROR:
+      toast.warning('Connection lost. Check your internet.', { duration: 3000 });
+      // Queue for retry when online
+      queueRequestForRetry();
+      break;
+
+    default:
+      toast.error('Failed to generate. Please try again.');
+      logToSentry(error);
+  }
 }
 ```
 
@@ -446,7 +437,7 @@ Google Gemini API:
 ├─ Daily quota: Standard
 └─ Estimated monthly cost: $0-2 (for study plans only)
 
-AI Study Planner Implementation:
+IELTS Talk Implementation:
 ├─ Per-user daily limit: 5 generations
 ├─ Per-user concurrent: 1 (button disabled)
 ├─ Global queue: 10 pending requests max
@@ -457,23 +448,24 @@ AI Study Planner Implementation:
 
 ## ✅ IMPROVEMENTS MADE (DOCUMENT-ED)
 
-| Shakl | Asl nusxasi | Ko'p vaqtdan keyin |
-|--------|----------|----------------------|
-| **Model** | Gemini Pro | Gemini 1.5 Flash (40% tez) |
-| **Cost** | $0.0025 per 1K tokens | $0.075 per 1M tokens (100x arzon) |
-| **Retry Logic** | Yo'q | 3 retries + exponential backoff |
-| **User Quota** | Yo'q | [Planned] 5 reqs/day per user |
-| **Provider Fallback** | Yo'q | Ollama (local, no limits) |
-| **Button Throttling** | Yo'q | 5 sec debounce + visual countdown |
-| **Response Validation** | Yo'q | Quality checks before acceptance |
-| **Error Classification** | Generic | 6 specific error types handled |
-| **Queue Tracking** | Yo'q | [Planned] Show position in queue |
+| Shakl                    | Asl nusxasi           | Ko'p vaqtdan keyin                |
+| ------------------------ | --------------------- | --------------------------------- |
+| **Model**                | Gemini Pro            | Gemini 1.5 Flash (40% tez)        |
+| **Cost**                 | $0.0025 per 1K tokens | $0.075 per 1M tokens (100x arzon) |
+| **Retry Logic**          | Yo'q                  | 3 retries + exponential backoff   |
+| **User Quota**           | Yo'q                  | [Planned] 5 reqs/day per user     |
+| **Provider Fallback**    | Yo'q                  | Ollama (local, no limits)         |
+| **Button Throttling**    | Yo'q                  | 5 sec debounce + visual countdown |
+| **Response Validation**  | Yo'q                  | Quality checks before acceptance  |
+| **Error Classification** | Generic               | 6 specific error types handled    |
+| **Queue Tracking**       | Yo'q                  | [Planned] Show position in queue  |
 
 ---
 
 ## 🔮 FUTURE IMPROVEMENTS
 
 ### **Phase 1: Backend Quota Management**
+
 ```sql
 -- Track all API calls
 CREATE TABLE api_usage_logs (
@@ -488,7 +480,7 @@ CREATE TABLE api_usage_logs (
 );
 
 -- Daily analytics
-SELECT 
+SELECT
     DATE(created_at) as date,
     COUNT(*) as requests,
     SUM(tokens_used) as total_tokens,
@@ -499,80 +491,82 @@ GROUP BY DATE(created_at);
 ```
 
 ### **Phase 2: Priority Queue System**
+
 ```typescript
 interface QueuedRequest {
-    id: string;
-    userId: string;
-    type: 'plan' | 'flashcard' | 'resource';
-    priority: 'high' | 'normal' | 'low';
-    createdAt: Date;
-    retryCount: number;
+  id: string;
+  userId: string;
+  type: 'plan' | 'flashcard' | 'resource';
+  priority: 'high' | 'normal' | 'low';
+  createdAt: Date;
+  retryCount: number;
 }
 
 class APIRequestQueue {
-    private queue: QueuedRequest[] = [];
-    private processing = false;
-    
-    async add(request: QueuedRequest) {
-        this.queue.push(request);
-        this.queue.sort((a, b) => {
-            const priorityMap = { high: 1, normal: 2, low: 3 };
-            return priorityMap[a.priority] - priorityMap[b.priority];
-        });
-        
-        if (!this.processing) {
-            this.processQueue();
-        }
+  private queue: QueuedRequest[] = [];
+  private processing = false;
+
+  async add(request: QueuedRequest) {
+    this.queue.push(request);
+    this.queue.sort((a, b) => {
+      const priorityMap = { high: 1, normal: 2, low: 3 };
+      return priorityMap[a.priority] - priorityMap[b.priority];
+    });
+
+    if (!this.processing) {
+      this.processQueue();
     }
-    
-    private async processQueue() {
-        this.processing = true;
-        
-        while (this.queue.length > 0) {
-            const request = this.queue.shift()!;
-            
-            try {
-                await this.executeRequest(request);
-            } catch (err) {
-                if (request.retryCount < 3) {
-                    request.retryCount++;
-                    this.queue.push(request); // Re-queue
-                }
-            }
-            
-            // Rate limit: wait between requests
-            await new Promise(r => setTimeout(r, 1000 / 60)); // 60 req/min
+  }
+
+  private async processQueue() {
+    this.processing = true;
+
+    while (this.queue.length > 0) {
+      const request = this.queue.shift()!;
+
+      try {
+        await this.executeRequest(request);
+      } catch (err) {
+        if (request.retryCount < 3) {
+          request.retryCount++;
+          this.queue.push(request); // Re-queue
         }
-        
-        this.processing = false;
+      }
+
+      // Rate limit: wait between requests
+      await new Promise((r) => setTimeout(r, 1000 / 60)); // 60 req/min
     }
+
+    this.processing = false;
+  }
 }
 ```
 
 ### **Phase 3: Caching Layer**
+
 ```typescript
 // Cache generated plans for same topic
 const planCache = new Map<string, FullStudyPlan>();
 
 export async function generateStudyPlanWithCache(
-    topic: string,
-    daysUntilExam: number,
-    hoursPerDay: number
+  topic: string,
+  daysUntilExam: number,
+  hoursPerDay: number,
 ): Promise<FullStudyPlan> {
-    const cacheKey = `${topic}_${daysUntilExam}_${hoursPerDay}`;
-    
-    if (planCache.has(cacheKey)) {
-        console.log('Cache hit!');
-        return planCache.get(cacheKey)!;
-    }
-    
-    const plan = await generateFullStudyPlan(topic, daysUntilExam, hoursPerDay);
-    
-    // Cache TTL: 7 days
-    planCache.set(cacheKey, plan);
-    setTimeout(() => planCache.delete(cacheKey), 7 * 24 * 60 * 60 * 1000);
-    
-    return plan;
+  const cacheKey = `${topic}_${daysUntilExam}_${hoursPerDay}`;
+
+  if (planCache.has(cacheKey)) {
+    console.log('Cache hit!');
+    return planCache.get(cacheKey)!;
+  }
+
+  const plan = await generateFullStudyPlan(topic, daysUntilExam, hoursPerDay);
+
+  // Cache TTL: 7 days
+  planCache.set(cacheKey, plan);
+  setTimeout(() => planCache.delete(cacheKey), 7 * 24 * 60 * 60 * 1000);
+
+  return plan;
 }
 ```
 
@@ -585,34 +579,32 @@ export async function generateStudyPlanWithCache(
 ```typescript
 // Log all Gemini API calls
 function logAPICall(
-    type: 'flashcard' | 'plan' | 'resource',
-    success: boolean,
-    error?: string,
-    responseTimeMs?: number
+  type: 'flashcard' | 'plan' | 'resource',
+  success: boolean,
+  error?: string,
+  responseTimeMs?: number,
 ) {
-    const metrics = {
-        timestamp: new Date().toISOString(),
-        type,
-        success,
-        error,
-        responseTimeMs,
-        userId: currentUser.id
-    };
-    
-    // Send to analytics
-    analytics.track('gemini_api_call', metrics);
-    
-    // Log critical errors to Sentry
-    if (!success && error?.includes('429')) {
-        Sentry.captureMessage(
-            `Rate limit hit: ${type}`,
-            'warning'
-        );
-    }
+  const metrics = {
+    timestamp: new Date().toISOString(),
+    type,
+    success,
+    error,
+    responseTimeMs,
+    userId: currentUser.id,
+  };
+
+  // Send to analytics
+  analytics.track('gemini_api_call', metrics);
+
+  // Log critical errors to Sentry
+  if (!success && error?.includes('429')) {
+    Sentry.captureMessage(`Rate limit hit: ${type}`, 'warning');
+  }
 }
 ```
 
 **Monitoring Dashboard (Future):**
+
 - Daily API call volume
 - Error rate by type
 - Average response time
@@ -622,7 +614,8 @@ function logAPICall(
 ---
 
 **Xulosa:** Rate limiting multi-layered approach bilan hal qilingan:
+
 1. ✅ **Serverside:** Exponential backoff + retry logic
-2. ✅ **Clientside:** Button throttling + debouncing  
+2. ✅ **Clientside:** Button throttling + debouncing
 3. ♻️ **Fallback:** Ollama (local, no limits)
 4. 📋 **Planned:** User quotas + queue system + caching

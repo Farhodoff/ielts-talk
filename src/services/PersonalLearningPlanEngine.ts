@@ -22,7 +22,7 @@ import {
 } from '../utils/curriculum/ieltsLevelCalibrator';
 import { IELTS_GRAMMAR_DATABASE } from '../data/ielts/ielts_grammar_data';
 
-const LOCK_KEY_PREFIX = 'study_planner_pending_generation_';
+const LOCK_KEY_PREFIX = 'ielts_talk_pending_generation_';
 
 /**
  * Shape of the raw (unsanitized) AI JSON payload before validation.

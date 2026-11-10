@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { X, Clock, CheckCircle2, Crown, Bell, Zap } from 'lucide-react';
 import { FreemiumService } from '../../services/FreemiumService';
-import { useStudyData } from '../../context/StudyPlannerContext';
+import { useStudyData } from '../../context/IeltsTalkContext';
 
 interface FreemiumLimitModalProps {
   isOpen: boolean;

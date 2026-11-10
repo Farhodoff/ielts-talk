@@ -255,7 +255,7 @@ describe('RoadmapService Unit Tests', () => {
   it('14. getNextRecommendedLesson should pick in_progress lesson if no weak lesson exists', () => {
     // Set in_progress progress for en-a1-u1-l1
     localStorage.setItem(
-      'study_planner_lesson_progress_test_roadmap_user_en-a1-u1-l1',
+      'ielts_talk_lesson_progress_test_roadmap_user_en-a1-u1-l1',
       JSON.stringify({ lessonId: 'en-a1-u1-l1', isCompleted: false, currentStepIndex: 1 }),
     );
 
@@ -377,7 +377,7 @@ describe('RoadmapService Unit Tests', () => {
 
     // Now complete l1
     localStorage.setItem(
-      'study_planner_lesson_progress_test_roadmap_user_en-a1-u1-l1',
+      'ielts_talk_lesson_progress_test_roadmap_user_en-a1-u1-l1',
       JSON.stringify({ lessonId: 'en-a1-u1-l1', isCompleted: true }),
     );
 
@@ -417,7 +417,7 @@ describe('RoadmapService Unit Tests', () => {
   it('25. User isolation: user_a progress does not affect user_b roadmap', () => {
     // Complete lesson for user_a
     localStorage.setItem(
-      'study_planner_lesson_progress_user_a_en-a1-u1-l1',
+      'ielts_talk_lesson_progress_user_a_en-a1-u1-l1',
       JSON.stringify({ lessonId: 'en-a1-u1-l1', isCompleted: true }),
     );
 
@@ -437,7 +437,7 @@ describe('RoadmapService Unit Tests', () => {
 
     // Complete a lesson
     localStorage.setItem(
-      'study_planner_lesson_progress_test_roadmap_user_en-a1-u1-l1',
+      'ielts_talk_lesson_progress_test_roadmap_user_en-a1-u1-l1',
       JSON.stringify({ lessonId: 'en-a1-u1-l1', isCompleted: true }),
     );
 
@@ -478,7 +478,7 @@ describe('RoadmapService Unit Tests', () => {
 
   it('29. In-progress step calculation: currentStepIndex calculates percentage', () => {
     localStorage.setItem(
-      'study_planner_lesson_progress_test_roadmap_user_en-b2-u1-l1',
+      'ielts_talk_lesson_progress_test_roadmap_user_en-b2-u1-l1',
       JSON.stringify({ lessonId: 'en-b2-u1-l1', isCompleted: false, currentStepIndex: 2 }),
     );
 

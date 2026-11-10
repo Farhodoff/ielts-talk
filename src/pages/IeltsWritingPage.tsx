@@ -21,7 +21,7 @@ import { LearningSignalService } from '../services/LearningSignalService';
 import { SvgLineChart } from '../components/ui/SvgCharts';
 import { Task1GraphGenerator } from '../components/ielts/Task1GraphGenerator';
 import { WritingBandRadarChart } from '../components/ielts/WritingBandRadarChart';
-import { useStudyData } from '../context/StudyPlannerContext';
+import { useStudyData } from '../context/IeltsTalkContext';
 import { IeltsTrfCertificateModal } from '../components/ielts/IeltsTrfCertificateModal';
 import { TrfCertificateService } from '../services/TrfCertificateService';
 import { useFreemiumQuota } from '../hooks/useFreemiumQuota';

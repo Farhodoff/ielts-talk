@@ -768,10 +768,7 @@ describe('Personal Learning Plan System Tests', () => {
         userId: 'test_user_dedup',
         timestamp: new Date().toISOString(),
       };
-      localStorage.setItem(
-        'study_planner_learning_signals_test_user_dedup',
-        JSON.stringify([signal]),
-      );
+      localStorage.setItem('ielts_talk_learning_signals_test_user_dedup', JSON.stringify([signal]));
 
       // Generate fallback
       const plan = PersonalLearningPlanEngine.parseAndValidateWeeklyPlan(
@@ -821,10 +818,7 @@ describe('Personal Learning Plan System Tests', () => {
           userId: 'test_user_dedup',
           timestamp: new Date().toISOString(),
         }));
-      localStorage.setItem(
-        'study_planner_learning_signals_test_user_dedup',
-        JSON.stringify(signals),
-      );
+      localStorage.setItem('ielts_talk_learning_signals_test_user_dedup', JSON.stringify(signals));
 
       const plan = PersonalLearningPlanEngine.parseAndValidateWeeklyPlan(
         JSON.stringify({
@@ -870,10 +864,7 @@ describe('Personal Learning Plan System Tests', () => {
         userId: 'test_user_dedup',
         timestamp: new Date().toISOString(),
       };
-      localStorage.setItem(
-        'study_planner_learning_signals_test_user_dedup',
-        JSON.stringify([signal]),
-      );
+      localStorage.setItem('ielts_talk_learning_signals_test_user_dedup', JSON.stringify([signal]));
 
       // Invalid Mock AI response proposing completed lesson en-a1-u1-l1 as new lesson
       const proposedPlanJson = JSON.stringify({
@@ -921,10 +912,7 @@ describe('Personal Learning Plan System Tests', () => {
         userId: 'test_user_dedup',
         timestamp: new Date().toISOString(),
       };
-      localStorage.setItem(
-        'study_planner_learning_signals_test_user_dedup',
-        JSON.stringify([signal]),
-      );
+      localStorage.setItem('ielts_talk_learning_signals_test_user_dedup', JSON.stringify([signal]));
 
       // Mock AI response proposing completed lesson as a review or SRS activity
       const proposedPlanJson = JSON.stringify({
@@ -975,7 +963,7 @@ describe('Personal Learning Plan System Tests', () => {
         timestamp: new Date().toISOString(),
       };
       localStorage.setItem(
-        'study_planner_learning_signals_test_user_dedup',
+        'ielts_talk_learning_signals_test_user_dedup',
         JSON.stringify([signalEn]),
       );
 
@@ -1039,7 +1027,7 @@ describe('Personal Learning Plan System Tests', () => {
         userId: 'user_a',
         timestamp: new Date().toISOString(),
       };
-      localStorage.setItem('study_planner_learning_signals_user_a', JSON.stringify([signalUserA]));
+      localStorage.setItem('ielts_talk_learning_signals_user_a', JSON.stringify([signalUserA]));
 
       // Generate fallback for User B
       const planB = PersonalLearningPlanEngine.parseAndValidateWeeklyPlan(

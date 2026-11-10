@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { ShieldAlert, X } from 'lucide-react';
 import { extractSpeechAudioText } from '../utils/ai';
-import { useStudyData } from '../context/StudyPlannerContext';
+import { useStudyData } from '../context/IeltsTalkContext';
 import { isAdminEmail, isSuperAdmin } from '../utils/admin';
 import { useSEO } from '../hooks/useSEO';
 import SessionReportModal from '../components/speaking/SessionReportModal';

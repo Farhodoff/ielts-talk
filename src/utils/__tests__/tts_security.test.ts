@@ -13,7 +13,7 @@ describe('TTS Security Hardening & Edge API Test Suite (/api/tts)', () => {
   });
 
   it('TEST 1: No Authorization header returns 401 Unauthorized', async () => {
-    const req = new Request('https://studyplanner.app/api/tts?text=hello&lang=en', {
+    const req = new Request('https://ieltstalk.uz/api/tts?text=hello&lang=en', {
       method: 'GET',
     });
     const res = await ttsHandler(req);
@@ -29,7 +29,7 @@ describe('TTS Security Hardening & Edge API Test Suite (/api/tts)', () => {
       status: 401,
     });
 
-    const req = new Request('https://studyplanner.app/api/tts?text=hello&lang=en', {
+    const req = new Request('https://ieltstalk.uz/api/tts?text=hello&lang=en', {
       method: 'GET',
       headers: {
         Authorization: 'Bearer invalid-token-12345',
@@ -56,7 +56,7 @@ describe('TTS Security Hardening & Edge API Test Suite (/api/tts)', () => {
       }),
     );
 
-    const req = new Request('https://studyplanner.app/api/tts', {
+    const req = new Request('https://ieltstalk.uz/api/tts', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -86,7 +86,7 @@ describe('TTS Security Hardening & Edge API Test Suite (/api/tts)', () => {
       retryAfter: 45,
     });
 
-    const req = new Request('https://studyplanner.app/api/tts?text=Hello&lang=en', {
+    const req = new Request('https://ieltstalk.uz/api/tts?text=Hello&lang=en', {
       method: 'GET',
       headers: { Authorization: 'Bearer token' },
     });
@@ -109,7 +109,7 @@ describe('TTS Security Hardening & Edge API Test Suite (/api/tts)', () => {
       reason: "Kunlik AI/TTS so'rovlar chegarasiga yetdingiz (25 ta).",
     });
 
-    const req = new Request('https://studyplanner.app/api/tts?text=Hello&lang=en', {
+    const req = new Request('https://ieltstalk.uz/api/tts?text=Hello&lang=en', {
       method: 'GET',
       headers: { Authorization: 'Bearer token' },
     });
@@ -128,7 +128,7 @@ describe('TTS Security Hardening & Edge API Test Suite (/api/tts)', () => {
     });
 
     const longText = 'a'.repeat(201);
-    const req = new Request('https://studyplanner.app/api/tts', {
+    const req = new Request('https://ieltstalk.uz/api/tts', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -150,7 +150,7 @@ describe('TTS Security Hardening & Edge API Test Suite (/api/tts)', () => {
       status: 0,
     });
 
-    const req = new Request('https://studyplanner.app/api/tts', {
+    const req = new Request('https://ieltstalk.uz/api/tts', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -170,7 +170,7 @@ describe('TTS Security Hardening & Edge API Test Suite (/api/tts)', () => {
       status: 0,
     });
 
-    const req = new Request('https://studyplanner.app/api/tts?text=%20%20%20&lang=en', {
+    const req = new Request('https://ieltstalk.uz/api/tts?text=%20%20%20&lang=en', {
       method: 'GET',
       headers: { Authorization: 'Bearer token' },
     });
@@ -186,7 +186,7 @@ describe('TTS Security Hardening & Edge API Test Suite (/api/tts)', () => {
       status: 0,
     });
 
-    const req = new Request('https://studyplanner.app/api/tts?text=Test&lang=evil-lang-ssrf', {
+    const req = new Request('https://ieltstalk.uz/api/tts?text=Test&lang=evil-lang-ssrf', {
       method: 'GET',
       headers: { Authorization: 'Bearer token' },
     });
@@ -210,7 +210,7 @@ describe('TTS Security Hardening & Edge API Test Suite (/api/tts)', () => {
       return Promise.reject(err);
     });
 
-    const req = new Request('https://studyplanner.app/api/tts?text=Test&lang=en', {
+    const req = new Request('https://ieltstalk.uz/api/tts?text=Test&lang=en', {
       method: 'GET',
       headers: { Authorization: 'Bearer token' },
     });
@@ -235,7 +235,7 @@ describe('TTS Security Hardening & Edge API Test Suite (/api/tts)', () => {
       }),
     );
 
-    const req = new Request('https://studyplanner.app/api/tts?text=Test&lang=en', {
+    const req = new Request('https://ieltstalk.uz/api/tts?text=Test&lang=en', {
       method: 'GET',
       headers: { Authorization: 'Bearer token' },
     });
@@ -255,7 +255,7 @@ describe('TTS Security Hardening & Edge API Test Suite (/api/tts)', () => {
       }),
     );
 
-    const req = new Request('https://studyplanner.app/api/tts?text=Konnichiwa&lang=ja', {
+    const req = new Request('https://ieltstalk.uz/api/tts?text=Konnichiwa&lang=ja', {
       method: 'GET',
       headers: {
         Authorization: `Bearer ${authModule.SUPABASE_ANON_KEY}`,

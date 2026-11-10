@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Button } from '../ui/Button';
 import { supabase } from '../../lib/supabase';
-import { useStudyData } from '../../context/StudyPlannerContext';
+import { useStudyData } from '../../context/IeltsTalkContext';
 import {
   Mail,
   User as UserIcon,
@@ -36,7 +36,7 @@ const AccountSection: React.FC = () => {
   const [isEditingName, setIsEditingName] = useState(false);
   const [isOnboardingOpen, setIsOnboardingOpen] = useState(false);
   const [fullName, setFullName] = useState<string>(
-    user?.user_metadata?.full_name || localStorage.getItem('study_planner_user_name') || '',
+    user?.user_metadata?.full_name || localStorage.getItem('ielts_talk_user_name') || '',
   );
   const [targetGoal, setTargetGoal] = useState<string>(
     LearningTrackStorage.getTargetGoal(primaryLanguage),
@@ -46,7 +46,7 @@ const AccountSection: React.FC = () => {
   const handleSaveName = async () => {
     setIsSavingName(true);
     try {
-      localStorage.setItem('study_planner_user_name', fullName);
+      localStorage.setItem('ielts_talk_user_name', fullName);
       LearningTrackStorage.setTargetGoal(primaryLanguage, targetGoal);
 
       if (user) {

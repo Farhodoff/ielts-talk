@@ -14,7 +14,7 @@ import { FlashcardService } from './FlashcardService';
 import { MasteryEngine } from './MasteryEngine';
 import { supabase } from '../lib/supabase';
 
-const SIGNALS_STORAGE_PREFIX = 'study_planner_learning_signals_';
+const SIGNALS_STORAGE_PREFIX = 'ielts_talk_learning_signals_';
 
 function generateUUID(): string {
   if (typeof crypto !== 'undefined' && crypto.randomUUID) {

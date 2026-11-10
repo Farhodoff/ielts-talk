@@ -11,7 +11,7 @@ vi.mock('react-router-dom', () => ({
   useNavigate: () => vi.fn(),
 }));
 
-vi.mock('../../../context/StudyPlannerContext', () => ({
+vi.mock('../../../context/IeltsTalkContext', () => ({
   useStudyData: () => ({
     flashcards: [],
     user: { id: 'u1', email: 'test@example.com' },

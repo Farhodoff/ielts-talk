@@ -57,7 +57,7 @@ function AdminRoute({ children }: { children: ReactNode }) {
   if (isPublicPreviewActive()) {
     return <>{children}</>;
   }
-  // Authorise strictly on the store's user. Reading `study_planner_user_cache`
+  // Authorise strictly on the store's user. Reading `ielts_talk_user_cache`
   // here would let anyone unlock the panel by editing localStorage, and the
   // dashboard additionally re-verifies against the live Supabase session.
   if (loading && !user) {

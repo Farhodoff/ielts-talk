@@ -110,9 +110,9 @@ const JLPT_LEVELS: readonly string[] = ['N5', 'N4', 'N3', 'N2', 'N1'];
 const toJlptLevel = (value: unknown): JlptLevel =>
   typeof value === 'string' && JLPT_LEVELS.includes(value) ? (value as JlptLevel) : 'N5';
 
-const CUSTOM_KANJI_KEY = 'study_planner_custom_admin_kanji';
-const CUSTOM_GRAMMAR_KEY = 'study_planner_custom_admin_grammar';
-const CUSTOM_QUIZ_KEY = 'study_planner_custom_admin_quiz_questions';
+const CUSTOM_KANJI_KEY = 'ielts_talk_custom_admin_kanji';
+const CUSTOM_GRAMMAR_KEY = 'ielts_talk_custom_admin_grammar';
+const CUSTOM_QUIZ_KEY = 'ielts_talk_custom_admin_quiz_questions';
 
 export interface BulkImportResult {
   added: number;

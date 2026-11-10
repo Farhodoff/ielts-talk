@@ -16,7 +16,7 @@ import {
 import type { IeltsGrammarTopic } from '../../data/ielts/ielts_grammar_data';
 import { useGrammarLessons } from '../../hooks/useGrammarLessons';
 import { speakText } from '../../utils/audioTts';
-import { useStudyData } from '../../context/StudyPlannerContext';
+import { useStudyData } from '../../context/IeltsTalkContext';
 import {
   useEnglishGrammarMastery,
   GrammarMasteryStatus,

@@ -3,7 +3,7 @@ import { renderHook, act } from '@testing-library/react';
 import { usePersonalPlan } from '../usePersonalPlan';
 import { PersonalLearningPlanService } from '../../services/PersonalLearningPlanService';
 
-vi.mock('../../context/StudyPlannerContext', () => ({
+vi.mock('../../context/IeltsTalkContext', () => ({
   useStudyData: () => ({
     awardXP: vi.fn().mockResolvedValue(undefined),
     user: { id: 'test-user-plan', email: 'planner@example.com' },

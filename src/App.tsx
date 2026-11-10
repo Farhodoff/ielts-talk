@@ -5,7 +5,7 @@ import ErrorBoundary from './components/ErrorBoundary';
 import GlobalAudioPlayer from './components/GlobalAudioPlayer';
 import AppRoutes from './AppRoutes';
 import PageLoader from './components/PageLoader';
-import { StudyPlannerProvider } from './context/StudyPlannerContext';
+import { IeltsTalkProvider } from './context/IeltsTalkContext';
 import { FocusTimerProvider } from './context/FocusTimerContext';
 import { LanguageProvider } from './context/LanguageContext';
 import { supabase } from './lib/supabase';
@@ -36,7 +36,7 @@ const App: React.FC = () => {
     }
     if (typeof window !== 'undefined') {
       try {
-        const rawUser = localStorage.getItem('study_planner_user_cache');
+        const rawUser = localStorage.getItem('ielts_talk_user_cache');
         if (rawUser) {
           const parsed = JSON.parse(rawUser);
           if (parsed && parsed.email) {
@@ -75,7 +75,7 @@ const App: React.FC = () => {
     document.documentElement.classList.add('dark');
     document.documentElement.classList.remove('light');
     try {
-      localStorage.setItem('study_planner_theme', 'dark');
+      localStorage.setItem('ielts_talk_theme', 'dark');
     } catch {}
   }, []);
 
@@ -183,7 +183,7 @@ const App: React.FC = () => {
   return (
     <ErrorBoundary>
       <LanguageProvider>
-        <StudyPlannerProvider>
+        <IeltsTalkProvider>
           {isGuest ? (
             <>
               <UnauthRouter />
@@ -209,7 +209,7 @@ const App: React.FC = () => {
               </BrowserRouter>
             </FocusTimerProvider>
           )}
-        </StudyPlannerProvider>
+        </IeltsTalkProvider>
       </LanguageProvider>
     </ErrorBoundary>
   );

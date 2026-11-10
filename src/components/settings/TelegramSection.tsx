@@ -19,7 +19,7 @@ import {
 } from 'lucide-react';
 import { Button } from '../ui/Button';
 import telegramService, { TelegramUser } from '../../services/TelegramService';
-import { useStudyData } from '../../context/StudyPlannerContext';
+import { useStudyData } from '../../context/IeltsTalkContext';
 import { toast } from '../../hooks/use-toast';
 import { motion, AnimatePresence } from 'framer-motion';
 import { safeLocalStorage } from '../../utils/storage/safeLocalStorage';
@@ -44,19 +44,19 @@ const TelegramSection: React.FC = () => {
     if (user?.id) return user.id;
     try {
       const cached = safeLocalStorage.getJSON<{ id?: string } | null>(
-        'study_planner_user_cache',
+        'ielts_talk_user_cache',
         null,
       );
       if (cached?.id) return cached.id;
     } catch {}
     try {
-      let guestId = localStorage.getItem('study_planner_guest_id');
+      let guestId = localStorage.getItem('ielts_talk_guest_id');
       if (!guestId) {
         guestId =
           typeof crypto !== 'undefined' && crypto.randomUUID
             ? crypto.randomUUID()
             : 'guest_' + Math.random().toString(36).substring(2, 15);
-        localStorage.setItem('study_planner_guest_id', guestId);
+        localStorage.setItem('ielts_talk_guest_id', guestId);
       }
       return guestId;
     } catch {}

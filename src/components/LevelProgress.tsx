@@ -1,6 +1,6 @@
 import { Flame } from 'lucide-react';
 import React, { memo } from 'react';
-import { useStudyData } from '../context/StudyPlannerContext';
+import { useStudyData } from '../context/IeltsTalkContext';
 import { useGamificationInfo } from '../stores';
 import { getLevelInfo } from '../utils/gamification';
 

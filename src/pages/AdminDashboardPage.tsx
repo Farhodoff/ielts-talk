@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react';
-import { useStudyData } from '../context/StudyPlannerContext';
+import { useStudyData } from '../context/IeltsTalkContext';
 import { useLanguage } from '../context/LanguageContext';
 import { supabase } from '../lib/supabase';
 import {
@@ -121,7 +121,7 @@ export default function AdminDashboardPage() {
   const [usersList, setUsersList] = useState<UserRecord[]>(() => {
     if (typeof window !== 'undefined') {
       try {
-        const cached = localStorage.getItem('study_planner_admin_users_cache');
+        const cached = localStorage.getItem('ielts_talk_admin_users_cache');
         if (cached) {
           const parsed = JSON.parse(cached);
           // Purge any legacy demo/mock data
@@ -134,7 +134,7 @@ export default function AdminDashboardPage() {
           ) {
             return parsed;
           }
-          localStorage.removeItem('study_planner_admin_users_cache');
+          localStorage.removeItem('ielts_talk_admin_users_cache');
         }
       } catch {}
     }
@@ -144,7 +144,7 @@ export default function AdminDashboardPage() {
   const [dailyStats, setDailyStats] = useState<any[]>(() => {
     if (typeof window !== 'undefined') {
       try {
-        const cached = localStorage.getItem('study_planner_admin_stats_cache');
+        const cached = localStorage.getItem('ielts_talk_admin_stats_cache');
         if (cached) {
           const parsed = JSON.parse(cached);
           // Purge legacy mock data if present
@@ -155,7 +155,7 @@ export default function AdminDashboardPage() {
           ) {
             return parsed;
           }
-          localStorage.removeItem('study_planner_admin_stats_cache');
+          localStorage.removeItem('ielts_talk_admin_stats_cache');
         }
       } catch {}
     }
@@ -481,11 +481,11 @@ export default function AdminDashboardPage() {
     setUsersList(loadedUsers);
     if (loadedUsers.length > 0) {
       try {
-        localStorage.setItem('study_planner_admin_users_cache', JSON.stringify(loadedUsers));
+        localStorage.setItem('ielts_talk_admin_users_cache', JSON.stringify(loadedUsers));
       } catch {}
     } else {
       try {
-        localStorage.removeItem('study_planner_admin_users_cache');
+        localStorage.removeItem('ielts_talk_admin_users_cache');
       } catch {}
     }
 
@@ -666,7 +666,7 @@ export default function AdminDashboardPage() {
     setDailyStats(allDailyStats);
     if (allDailyStats.length > 0) {
       try {
-        localStorage.setItem('study_planner_admin_stats_cache', JSON.stringify(allDailyStats));
+        localStorage.setItem('ielts_talk_admin_stats_cache', JSON.stringify(allDailyStats));
       } catch {}
     }
 
@@ -817,7 +817,7 @@ export default function AdminDashboardPage() {
   }, [user]);
 
   // Authorisation is derived exclusively from the verified Supabase session.
-  // `study_planner_user_cache` lives in plain localStorage, so it is fully
+  // `ielts_talk_user_cache` lives in plain localStorage, so it is fully
   // attacker-controlled and can never be accepted as a proof of admin rights.
   const [authEmail, setAuthEmail] = useState<string>('');
   const [authRole, setAuthRole] = useState<string | undefined>(undefined);
@@ -866,9 +866,9 @@ export default function AdminDashboardPage() {
         // Never leave another user's PII behind after an unauthenticated or
         // unauthorised visit to the admin route.
         try {
-          localStorage.removeItem('study_planner_admin_users_cache');
-          localStorage.removeItem('study_planner_admin_stats_cache');
-          localStorage.removeItem('study_planner_admin_speech_sessions_cache');
+          localStorage.removeItem('ielts_talk_admin_users_cache');
+          localStorage.removeItem('ielts_talk_admin_stats_cache');
+          localStorage.removeItem('ielts_talk_admin_speech_sessions_cache');
         } catch {}
         setUsersList([]);
         setDailyStats([]);

@@ -4,7 +4,7 @@ import { MemoryRouter, Route, Routes } from 'react-router-dom';
 import { LessonPlayerPage } from '../LessonPlayerPage';
 import { LearningSignalService } from '../../services/LearningSignalService';
 
-vi.mock('../../context/StudyPlannerContext', () => ({
+vi.mock('../../context/IeltsTalkContext', () => ({
   useStudyData: () => ({
     user: { id: 'test-user-123' },
     primaryLanguage: 'ja',

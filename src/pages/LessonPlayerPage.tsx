@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { LearningOrchestrator } from '../services/LearningOrchestrator';
 import { Award, BookOpen, BrainCircuit, AlertCircle, ChevronRight, X } from 'lucide-react';
-import { useStudyData } from '../context/StudyPlannerContext';
+import { useStudyData } from '../context/IeltsTalkContext';
 import { LessonService } from '../services/LessonService';
 import { extractLevelFromLessonId } from '../data/curriculum/curriculumLessons';
 import { LearningSignalService } from '../services/LearningSignalService';

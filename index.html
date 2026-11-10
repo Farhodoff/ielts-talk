@@ -27,9 +27,9 @@
         }
         // IELTS Talk uses one consistent dark interface.  Ignore legacy
         // preferences so a previous light-theme value cannot flash on load.
-        localStorage.setItem('study_planner_theme', 'dark');
+        localStorage.setItem('ielts_talk_theme', 'dark');
         document.documentElement.classList.add('dark');
-        const lang = localStorage.getItem('study_planner_lang');
+        const lang = localStorage.getItem('ielts_talk_lang');
         const urlLang = new URLSearchParams(window.location.search).get('lang');
         if (urlLang === 'uz' || urlLang === 'en') {
           document.documentElement.lang = urlLang;

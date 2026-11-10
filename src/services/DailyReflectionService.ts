@@ -10,7 +10,7 @@ export interface DailyReflectionRecord {
   timestamp: string;
 }
 
-const STORAGE_KEY = 'study_planner_daily_reflections';
+const STORAGE_KEY = 'ielts_talk_daily_reflections';
 
 export class DailyReflectionService {
   /**

@@ -1,6 +1,6 @@
 openapi: 3.0.3
 info:
-  title: AI Study Planner API Reference
+  title: IELTS Talk API Reference
   description: Complete API reference mapping Supabase database tables, AI generation edge functions, and AI coach speech endpoints.
   version: 1.0.0
 servers:

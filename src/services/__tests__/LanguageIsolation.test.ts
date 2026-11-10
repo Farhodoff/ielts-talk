@@ -28,37 +28,37 @@ describe('Phase 15.1 — Language Isolation Hardening', () => {
   it('1. English current level isolation', () => {
     LearningTrackStorage.setCurrentLevel('en', 'B2');
     expect(LearningTrackStorage.getCurrentLevel('en')).toBe('B2');
-    expect(localStorage.getItem('study_planner_current_level_en')).toBe('B2');
+    expect(localStorage.getItem('ielts_talk_current_level_en')).toBe('B2');
   });
 
   it('2. Japanese current level isolation', () => {
     LearningTrackStorage.setCurrentLevel('ja', 'N3');
     expect(LearningTrackStorage.getCurrentLevel('ja')).toBe('N3');
-    expect(localStorage.getItem('study_planner_current_level_ja')).toBe('N3');
+    expect(localStorage.getItem('ielts_talk_current_level_ja')).toBe('N3');
   });
 
   it('3. English target level isolation', () => {
     LearningTrackStorage.setTargetLevel('en', 'C1');
     expect(LearningTrackStorage.getTargetLevel('en')).toBe('C1');
-    expect(localStorage.getItem('study_planner_target_level_en')).toBe('C1');
+    expect(localStorage.getItem('ielts_talk_target_level_en')).toBe('C1');
   });
 
   it('4. Japanese target level isolation', () => {
     LearningTrackStorage.setTargetLevel('ja', 'N2');
     expect(LearningTrackStorage.getTargetLevel('ja')).toBe('N2');
-    expect(localStorage.getItem('study_planner_target_level_ja')).toBe('N2');
+    expect(localStorage.getItem('ielts_talk_target_level_ja')).toBe('N2');
   });
 
   it('5. English target goal isolation', () => {
     LearningTrackStorage.setTargetGoal('en', 'IELTS 7.5+');
     expect(LearningTrackStorage.getTargetGoal('en')).toBe('IELTS 7.5+');
-    expect(localStorage.getItem('study_planner_target_goal_en')).toBe('IELTS 7.5+');
+    expect(localStorage.getItem('ielts_talk_target_goal_en')).toBe('IELTS 7.5+');
   });
 
   it('6. Japanese target goal isolation', () => {
     LearningTrackStorage.setTargetGoal('ja', 'JLPT N1 Pass');
     expect(LearningTrackStorage.getTargetGoal('ja')).toBe('JLPT N1 Pass');
-    expect(localStorage.getItem('study_planner_target_goal_ja')).toBe('JLPT N1 Pass');
+    expect(localStorage.getItem('ielts_talk_target_goal_ja')).toBe('JLPT N1 Pass');
   });
 
   it('7. EN promotion does not affect JA', () => {
@@ -162,45 +162,45 @@ describe('Phase 15.1 — Language Isolation Hardening', () => {
   });
 
   it('15. legacy English migration', () => {
-    localStorage.setItem('study_planner_current_level', 'A2');
-    localStorage.setItem('study_planner_target_level', 'B1');
-    localStorage.setItem('study_planner_target_goal', 'IELTS 6.0');
+    localStorage.setItem('ielts_talk_current_level', 'A2');
+    localStorage.setItem('ielts_talk_target_level', 'B1');
+    localStorage.setItem('ielts_talk_target_goal', 'IELTS 6.0');
 
     LearningTrackStorage.migrateSharedKeys('en');
 
-    expect(localStorage.getItem('study_planner_current_level_en')).toBe('A2');
-    expect(localStorage.getItem('study_planner_target_level_en')).toBe('B1');
-    expect(localStorage.getItem('study_planner_target_goal_en')).toBe('IELTS 6.0');
+    expect(localStorage.getItem('ielts_talk_current_level_en')).toBe('A2');
+    expect(localStorage.getItem('ielts_talk_target_level_en')).toBe('B1');
+    expect(localStorage.getItem('ielts_talk_target_goal_en')).toBe('IELTS 6.0');
 
-    expect(localStorage.getItem('study_planner_current_level')).toBeNull();
-    expect(localStorage.getItem('study_planner_target_level')).toBeNull();
-    expect(localStorage.getItem('study_planner_target_goal')).toBeNull();
+    expect(localStorage.getItem('ielts_talk_current_level')).toBeNull();
+    expect(localStorage.getItem('ielts_talk_target_level')).toBeNull();
+    expect(localStorage.getItem('ielts_talk_target_goal')).toBeNull();
   });
 
   it('16. legacy Japanese migration', () => {
-    localStorage.setItem('study_planner_current_level', 'N4');
-    localStorage.setItem('study_planner_target_level', 'N3');
-    localStorage.setItem('study_planner_target_goal', 'JLPT Prep');
+    localStorage.setItem('ielts_talk_current_level', 'N4');
+    localStorage.setItem('ielts_talk_target_level', 'N3');
+    localStorage.setItem('ielts_talk_target_goal', 'JLPT Prep');
 
     LearningTrackStorage.migrateSharedKeys('ja');
 
-    expect(localStorage.getItem('study_planner_current_level_ja')).toBe('N4');
-    expect(localStorage.getItem('study_planner_target_level_ja')).toBe('N3');
-    expect(localStorage.getItem('study_planner_target_goal_ja')).toBe('JLPT Prep');
+    expect(localStorage.getItem('ielts_talk_current_level_ja')).toBe('N4');
+    expect(localStorage.getItem('ielts_talk_target_level_ja')).toBe('N3');
+    expect(localStorage.getItem('ielts_talk_target_goal_ja')).toBe('JLPT Prep');
 
-    expect(localStorage.getItem('study_planner_current_level')).toBeNull();
-    expect(localStorage.getItem('study_planner_target_level')).toBeNull();
-    expect(localStorage.getItem('study_planner_target_goal')).toBeNull();
+    expect(localStorage.getItem('ielts_talk_current_level')).toBeNull();
+    expect(localStorage.getItem('ielts_talk_target_level')).toBeNull();
+    expect(localStorage.getItem('ielts_talk_target_goal')).toBeNull();
   });
 
   it('17. existing isolated key must not be overwritten by legacy migration', () => {
-    localStorage.setItem('study_planner_current_level_en', 'B2');
-    localStorage.setItem('study_planner_current_level', 'A2');
+    localStorage.setItem('ielts_talk_current_level_en', 'B2');
+    localStorage.setItem('ielts_talk_current_level', 'A2');
 
     LearningTrackStorage.migrateSharedKeys('en');
 
-    expect(localStorage.getItem('study_planner_current_level_en')).toBe('B2');
-    expect(localStorage.getItem('study_planner_current_level')).toBeNull();
+    expect(localStorage.getItem('ielts_talk_current_level_en')).toBe('B2');
+    expect(localStorage.getItem('ielts_talk_current_level')).toBeNull();
   });
 
   it('18. reload/persistence isolation (invalid cross-language levels rejected)', () => {
@@ -212,7 +212,7 @@ describe('Phase 15.1 — Language Isolation Hardening', () => {
   });
 
   it('19. canAccessLesson prerequisite check returns missingPrerequisites', () => {
-    localStorage.setItem('study_planner_current_level_en', 'A1');
+    localStorage.setItem('ielts_talk_current_level_en', 'A1');
     const result = LearningOrchestrator.canAccessLesson('en-a1-u1-be-questions', 'test-user', 'en');
     expect(result.allowed).toBe(false);
     expect(result.missingPrerequisites).toContain('en-a1-u1-l1');

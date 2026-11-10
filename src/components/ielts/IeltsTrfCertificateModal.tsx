@@ -16,7 +16,7 @@ import {
   TrfCertificateService,
   LearnerDiagnostics,
 } from '../../services/TrfCertificateService';
-import { useStudyData } from '../../context/StudyPlannerContext';
+import { useStudyData } from '../../context/IeltsTalkContext';
 
 interface IeltsTrfCertificateModalProps {
   data: TrfCertificateData;

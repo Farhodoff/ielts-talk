@@ -21,7 +21,7 @@ import {
   JlptGrammarItem,
   JlptGrammarQuestion,
 } from '../../services/CustomContentService';
-import { useStudyData } from '../../context/StudyPlannerContext';
+import { useStudyData } from '../../context/IeltsTalkContext';
 import { AdminScenarioManager } from './AdminScenarioManager';
 import { AdminQuizManager } from './AdminQuizManager';
 import { toast } from '../../hooks/use-toast';

@@ -11,7 +11,7 @@ import {
 import React, { useMemo, useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import CountdownWidget from '../components/CountdownWidget';
-import { useStudyData } from '../context/StudyPlannerContext';
+import { useStudyData } from '../context/IeltsTalkContext';
 import { useLanguage } from '../context/LanguageContext';
 import { calculateMasteryScore } from '../utils/analytics';
 import { safeLocalStorage } from '../utils/storage/safeLocalStorage';
@@ -43,7 +43,7 @@ const DashboardPage: React.FC = () => {
   } = useStudyData();
   const { language, t } = useLanguage();
   const isJaTrack = false; // IELTS Talk is strictly English/IELTS only
-  const cachedStateKey = `study_planner_cached_dashboard_en`;
+  const cachedStateKey = `ielts_talk_cached_dashboard_en`;
   const initialCached = useMemo(() => {
     return safeLocalStorage.getJSON<any>(cachedStateKey, null);
   }, [cachedStateKey]);

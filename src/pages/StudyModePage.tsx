@@ -2,7 +2,7 @@ import { ArrowLeft, CheckCircle2, Copy, Loader2, Volume2, Trash2, Edit3, X } fro
 import React, { useEffect, useState, useMemo, useCallback } from 'react';
 import { useLocation, useNavigate, useParams } from 'react-router-dom';
 import { Button } from '../components/ui/Button';
-import { useStudyData } from '../context/StudyPlannerContext';
+import { useStudyData } from '../context/IeltsTalkContext';
 import { isAdminEmail } from '../utils/admin';
 import { Flashcard } from '../types';
 import {
@@ -54,13 +54,13 @@ const StudyModePage: React.FC = () => {
   const [accent, setAccent] = useState<'en-GB' | 'en-US' | 'ja-JP'>('en-US');
   const [isQueueInitialized, setIsQueueInitialized] = useState(false);
   const [autoAudio, setAutoAudio] = useState<boolean>(() => {
-    return localStorage.getItem('study_planner_flashcard_auto_audio') === 'true';
+    return localStorage.getItem('ielts_talk_flashcard_auto_audio') === 'true';
   });
 
   const toggleAutoAudio = () => {
     setAutoAudio((prev) => {
       const next = !prev;
-      localStorage.setItem('study_planner_flashcard_auto_audio', String(next));
+      localStorage.setItem('ielts_talk_flashcard_auto_audio', String(next));
       return next;
     });
   };
@@ -118,7 +118,7 @@ const StudyModePage: React.FC = () => {
     document.documentElement.classList.add('dark');
     document.documentElement.classList.remove('light');
     try {
-      localStorage.setItem('study_planner_theme', 'dark');
+      localStorage.setItem('ielts_talk_theme', 'dark');
     } catch {}
   }, []);
 

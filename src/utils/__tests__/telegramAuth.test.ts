@@ -18,7 +18,7 @@ vi.mock('../../lib/supabase', () => ({
 }));
 
 const SESSION_KEY = 'telegram_supabase_session';
-const USER_CACHE_KEY = 'study_planner_user_cache';
+const USER_CACHE_KEY = 'ielts_talk_user_cache';
 
 const buildVerifiedSession = (id = 'real-supabase-user-id') => ({
   access_token: 'signed.supabase.access.token',
@@ -108,13 +108,13 @@ describe('telegramAuth utility', () => {
 
     // Simulate the legacy fabricated identity left behind by older builds.
     safeLocalStorage.setJSON(USER_CACHE_KEY, { id: 'stale-local-id', email: 'stale@x.dev' });
-    safeLocalStorage.setItem('study_planner_user_email', 'stale@x.dev');
+    safeLocalStorage.setItem('ielts_talk_user_email', 'stale@x.dev');
 
     const authResult = initTelegramAuth();
 
     expect(authResult).toBeNull();
     expect(safeLocalStorage.getJSON(USER_CACHE_KEY, null)).toBeNull();
-    expect(safeLocalStorage.getItem('study_planner_user_email')).toBeNull();
+    expect(safeLocalStorage.getItem('ielts_talk_user_email')).toBeNull();
   });
 
   it('6. rejects and removes legacy unsigned tg-jwt tokens', () => {

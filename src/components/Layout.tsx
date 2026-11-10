@@ -24,7 +24,7 @@ import { RatingReviewModal } from './feedback';
 import { useRatingModalStore } from '../stores';
 import { useFocusTimerContext } from '../context/FocusTimerContext';
 import { useLanguage } from '../context/LanguageContext';
-import { useStudyData } from '../context/StudyPlannerContext';
+import { useStudyData } from '../context/IeltsTalkContext';
 import { isAdminEmail } from '../utils/admin';
 import { AnimatePresence, motion } from 'framer-motion';
 import { Sheet, SheetContent, SheetTrigger } from './ui/sheet';
@@ -47,7 +47,7 @@ const Layout: React.FC = () => {
   const [isSidebarOpen, setSidebarOpen] = useState(false);
   const [isCommandPaletteOpen, setIsCommandPaletteOpen] = useState(false);
   const [isCollapsed, setIsCollapsed] = useState(() => {
-    const saved = localStorage.getItem('study_planner_sidebar_collapsed');
+    const saved = localStorage.getItem('ielts_talk_sidebar_collapsed');
     return saved === 'true';
   });
 

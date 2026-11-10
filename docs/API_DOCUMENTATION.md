@@ -1,4 +1,4 @@
-# 🔌 AI Study Planner - API & Integration Documentation
+# 🔌 IELTS Talk - API & Integration Documentation
 
 > Detailed API specifications for External Services va Internal Endpoints
 
@@ -15,6 +15,7 @@
 **Method:** POST
 
 **Request Body:**
+
 ```json
 {
   "subject": "Machine Learning with Python",
@@ -27,8 +28,9 @@
 ```
 
 **Prompt Engineering Template:**
+
 ```
-You are an expert curriculum designer with 15 years of experience 
+You are an expert curriculum designer with 15 years of experience
 in computer science education.
 
 Create a ${duration_weeks}-week comprehensive study plan for: "${subject}"
@@ -79,6 +81,7 @@ Format your response as valid JSON ONLY (no markdown):
 ```
 
 **Response:**
+
 ```json
 {
   "schedule": [
@@ -97,6 +100,7 @@ Format your response as valid JSON ONLY (no markdown):
 ```
 
 **Error Handling:**
+
 ```
 429 - Rate Limited
   └─ Retry after 1 hour
@@ -111,11 +115,13 @@ Format your response as valid JSON ONLY (no markdown):
 ```
 
 **Rate Limits:**
+
 - Free tier: 60 requests/minute
 - Per user: 5 requests/day
 - Global quota: 1000 requests/day
 
 **Implementation Code Pattern:**
+
 ```typescript
 // Frontend
 const generatePlan = async (config: PlanConfig) => {
@@ -123,17 +129,17 @@ const generatePlan = async (config: PlanConfig) => {
     setLoading(true);
     const { data, error } = await supabase.functions.invoke('generate-plan', {
       body: config,
-      headers: { 'Authorization': `Bearer ${token}` }
+      headers: { Authorization: `Bearer ${token}` },
     });
-    
+
     if (error) throw error;
-    
+
     // Validate response
     if (!isValidSchedule(data.schedule)) {
       toast.error('Invalid response format');
       return;
     }
-    
+
     // Save to database
     await savePlan(data);
     toast.success('Plan generated!');
@@ -158,6 +164,7 @@ const generatePlan = async (config: PlanConfig) => {
 **Method:** POST
 
 **Request:**
+
 ```json
 {
   "topic": "German Verbs - Present Tense",
@@ -169,6 +176,7 @@ const generatePlan = async (config: PlanConfig) => {
 ```
 
 **Prompt Template:**
+
 ```
 You are an expert language teacher creating spaced repetition flashcards.
 
@@ -201,6 +209,7 @@ Return as valid JSON array:
 ```
 
 **Response:**
+
 ```json
 [
   {
@@ -213,16 +222,17 @@ Return as valid JSON array:
 ```
 
 **Quality Validation:**
+
 ```javascript
 function validateFlashcards(cards) {
   const checks = {
     count: cards.length === expectedCount,
-    structure: cards.every(c => c.front && c.back),
-    length: cards.every(c => c.front.length > 5 && c.back.length > 10),
+    structure: cards.every((c) => c.front && c.back),
+    length: cards.every((c) => c.front.length > 5 && c.back.length > 10),
     diversity: hasDifferentCategories(cards),
-    noDuplicates: new Set(cards.map(c => c.front)).size === cards.length
+    noDuplicates: new Set(cards.map((c) => c.front)).size === cards.length,
   };
-  
+
   return Object.values(checks).every(Boolean);
 }
 ```
@@ -238,6 +248,7 @@ function validateFlashcards(cards) {
 **Method:** POST
 
 **Request:**
+
 ```json
 {
   "topic": "Thermodynamics",
@@ -247,11 +258,12 @@ function validateFlashcards(cards) {
 ```
 
 **Prompt:**
+
 ```
-Find 10 best resources (mix video, article, interactive tutorials) 
+Find 10 best resources (mix video, article, interactive tutorials)
 for learning: "${topic}" at ${difficulty} level.
 
-Focus on: Free, reputable sources (YouTube, Khan Academy, Wikipedia, 
+Focus on: Free, reputable sources (YouTube, Khan Academy, Wikipedia,
 Medium articles, interactive tutorials).
 
 Return JSON:
@@ -279,6 +291,7 @@ Return JSON:
 **Purpose:** Receive user messages and commands from Telegram
 
 **Register Webhook:**
+
 ```bash
 curl -X POST https://api.telegram.org/botYOUR_TOKEN/setWebhook \
   -H "Content-Type: application/json" \
@@ -289,9 +302,10 @@ curl -X POST https://api.telegram.org/botYOUR_TOKEN/setWebhook \
 ```
 
 **Configure in Supabase:**
+
 ```sql
 -- Store bot token in secrets
-INSERT INTO secrets (name, value) VALUES 
+INSERT INTO secrets (name, value) VALUES
   ('TELEGRAM_BOT_TOKEN', 'YOUR_TOKEN_HERE'),
   ('TELEGRAM_BOT_SECRET', 'webhook_secret_for_validation');
 ```
@@ -301,6 +315,7 @@ INSERT INTO secrets (name, value) VALUES
 **Endpoint:** `POST /telegram-webhook`
 
 **Incoming Payload (from Telegram):**
+
 ```json
 {
   "update_id": 123456789,
@@ -322,61 +337,59 @@ INSERT INTO secrets (name, value) VALUES
 ```
 
 **Handler Logic:**
+
 ```typescript
 // supabase/functions/telegram-webhook/index.ts
-import { serve } from "https://deno.land/std@0.168.0/http/mod.ts"
-import { createClient } from 'https://esm.sh/@supabase/supabase-js@2'
+import { serve } from 'https://deno.land/std@0.168.0/http/mod.ts';
+import { createClient } from 'https://esm.sh/@supabase/supabase-js@2';
 
 const supabase = createClient(
   Deno.env.get('SUPABASE_URL')!,
-  Deno.env.get('SUPABASE_SERVICE_ROLE_KEY')!
-)
+  Deno.env.get('SUPABASE_SERVICE_ROLE_KEY')!,
+);
 
-const TELEGRAM_BOT_TOKEN = Deno.env.get('TELEGRAM_BOT_TOKEN')!
+const TELEGRAM_BOT_TOKEN = Deno.env.get('TELEGRAM_BOT_TOKEN')!;
 
 async function sendTelegramMessage(chatId: number, text: string) {
-  const response = await fetch(
-    `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`,
-    {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ chat_id: chatId, text })
-    }
-  )
-  return response.json()
+  const response = await fetch(`https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ chat_id: chatId, text }),
+  });
+  return response.json();
 }
 
 serve(async (req) => {
-  const update = await req.json()
-  const message = update.message
-  
-  if (!message?.text) return new Response('OK')
-  
-  const chatId = message.chat.id
-  const userId = message.from.id
-  const text = message.text
-  
+  const update = await req.json();
+  const message = update.message;
+
+  if (!message?.text) return new Response('OK');
+
+  const chatId = message.chat.id;
+  const userId = message.from.id;
+  const text = message.text;
+
   if (text === '/start') {
     // Link Telegram account to user
     await sendTelegramMessage(
       chatId,
-      `👋 Welcome to AI Study Planner!\n\n` +
-      `Your Telegram ID: ${userId}\n` +
-      `Complete linking: https://app.example.com/link?tid=${userId}`
-    )
-    
+      `👋 Welcome to IELTS Talk!\n\n` +
+        `Your Telegram ID: ${userId}\n` +
+        `Complete linking: https://app.example.com/link?tid=${userId}`,
+    );
+
     // Insert into telegram_users (pending status)
     await supabase.from('telegram_users').insert({
       telegram_id: userId,
       chat_id: chatId,
       first_name: message.from.first_name,
       username: message.from.username,
-      status: 'pending'
-    })
+      status: 'pending',
+    });
   }
-  
-  return new Response('OK')
-})
+
+  return new Response('OK');
+});
 ```
 
 ### **3. Scheduled Notifications (Cron)**
@@ -392,11 +405,12 @@ serve(async (req) => {
 CREATE EXTENSION IF NOT EXISTS pg_cron;
 
 -- Schedule daily message sending
-SELECT cron.schedule('send-daily-study-schedule', '0 9 * * *', 
+SELECT cron.schedule('send-daily-study-schedule', '0 9 * * *',
   'SELECT send_daily_study_reminders()');
 ```
 
 **Function Implementation:**
+
 ```sql
 CREATE OR REPLACE FUNCTION send_daily_study_reminders()
 RETURNS void AS $$
@@ -406,7 +420,7 @@ DECLARE
   message_text TEXT;
 BEGIN
   -- Get all users with linked Telegram & notifications enabled
-  FOR user_record IN 
+  FOR user_record IN
     SELECT tu.chat_id, tu.user_id, up.first_name
     FROM telegram_users tu
     JOIN users_profiles up ON tu.user_id = up.user_id
@@ -422,15 +436,15 @@ BEGIN
       AND DATE(due_date) <= CURRENT_DATE + INTERVAL '1 day'
       AND completed = FALSE
     LIMIT 5;
-    
+
     IF tasks_text IS NULL THEN
       tasks_text := 'No tasks scheduled for today! 🎉';
     END IF;
-    
+
     message_text := '📚 Your Study Plan for Today' || E'\n\n' ||
                     'Hi ' || user_record.first_name || '!' || E'\n\n' ||
                     tasks_text;
-    
+
     -- Send via Telegram API
     PERFORM http_post(
       'https://api.telegram.org/bot' || current_setting('app.telegram_token') || '/sendMessage',
@@ -466,9 +480,9 @@ BEGIN
       AND t.completed = FALSE
       AND tu.notifications_enabled = TRUE
   LOOP
-    message_text := '⏰ Reminder: ' || task_record.title || 
+    message_text := '⏰ Reminder: ' || task_record.title ||
                     ' is due tomorrow!';
-    
+
     PERFORM http_post(
       'https://api.telegram.org/bot' || current_setting('app.telegram_token') || '/sendMessage',
       json_build_object(
@@ -477,7 +491,7 @@ BEGIN
       )::text
     );
   END LOOP;
-  
+
   -- 1 hour before
   FOR task_record IN
     SELECT t.id, t.title, tu.chat_id, up.first_name
@@ -489,22 +503,23 @@ BEGIN
       AND t.completed = FALSE
       AND tu.notifications_enabled = TRUE
   LOOP
-    message_text := '⚠️ URGENT: ' || task_record.title || 
+    message_text := '⚠️ URGENT: ' || task_record.title ||
                     ' due in 1 hour!';
-    
+
     PERFORM http_post(...);
   END LOOP;
 END;
 $$ LANGUAGE plpgsql;
 
 -- Schedule to run every 5 minutes
-SELECT cron.schedule('send-deadline-reminders', '*/5 * * * *', 
+SELECT cron.schedule('send-deadline-reminders', '*/5 * * * *',
   'SELECT send_deadline_reminders()');
 ```
 
 ### **5. Message Format Examples**
 
 **Daily Schedule:**
+
 ```
 📚 Your Study Plan for Today
 
@@ -523,6 +538,7 @@ Hi John!
 ```
 
 **Deadline Alert:**
+
 ```
 ⏰ Reminder: Final Exam Preparation
 Due in 24 hours!
@@ -544,14 +560,15 @@ Due in 24 hours!
 **Purpose:** Real-time video study sessions with other users
 
 **Create Study Room:**
+
 ```typescript
 const createStudyRoom = async (title: string, description: string) => {
   // Generate unique room name
   const roomName = `study_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-  
+
   // Create Jitsi URL
   const jitsiUrl = `https://meet.jitsi.si/${roomName}`;
-  
+
   // Save to database
   const { data } = await supabase.from('study_rooms').insert({
     creator_id: user.id,
@@ -559,14 +576,15 @@ const createStudyRoom = async (title: string, description: string) => {
     description,
     jitsi_url: jitsiUrl,
     is_active: true,
-    created_at: new Date()
+    created_at: new Date(),
   });
-  
+
   return jitsiUrl;
 };
 ```
 
 **Jitsi Embed:**
+
 ```typescript
 import JitsiMeetExternalAPI from '@jitsi/react-sdk';
 
@@ -694,17 +712,17 @@ SENTRY_DSN=sentry_project_dsn
 
 400 Bad Request
   Invalid parameters or request format
-  
+
 401 Unauthorized
   Missing or invalid authentication token
-  
+
 403 Forbidden
   User doesn't have permission (RLS violation)
-  
+
 429 Too Many Requests
   Rate limit exceeded
   Retry-After header included
-  
+
 500 Internal Server Error
   Server-side error
   Logged to Sentry

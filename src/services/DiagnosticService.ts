@@ -16,9 +16,9 @@ import { LevelPromotionCandidate } from '../types/learningPath';
 import { supabase } from '../lib/supabase';
 import { toDeterministicUUID } from '../utils/uuid';
 
-const DIAGNOSTIC_SESSION_PREFIX = 'study_planner_diag_session_';
-const DIAGNOSTIC_ADAPTIVE_PREFIX = 'study_planner_diag_adaptive_';
-const DIAGNOSTIC_RESULT_PREFIX = 'study_planner_diag_result_';
+const DIAGNOSTIC_SESSION_PREFIX = 'ielts_talk_diag_session_';
+const DIAGNOSTIC_ADAPTIVE_PREFIX = 'ielts_talk_diag_adaptive_';
+const DIAGNOSTIC_RESULT_PREFIX = 'ielts_talk_diag_result_';
 
 export const ENGLISH_DIAGNOSTIC_BANK: DiagnosticQuestion[] = [
   // A1
@@ -397,7 +397,7 @@ export const DiagnosticService = {
       // Read from any prefetch cache keys in localStorage
       for (let i = 0; i < localStorage.length; i++) {
         const key = localStorage.key(i);
-        if (key && key.startsWith('study_planner_diag_prefetch_') && key.endsWith(`_${language}`)) {
+        if (key && key.startsWith('ielts_talk_diag_prefetch_') && key.endsWith(`_${language}`)) {
           const raw = localStorage.getItem(key);
           if (raw) {
             const parsed = JSON.parse(raw);

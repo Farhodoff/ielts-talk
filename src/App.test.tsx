@@ -1,15 +1,15 @@
 import { render, screen } from '@testing-library/react';
 import { describe, expect, it } from 'vitest';
 import App from './App';
-import { StudyPlannerProvider } from './context/StudyPlannerContext';
+import { IeltsTalkProvider } from './context/IeltsTalkContext';
 import { PUBLIC_PREVIEW_MODE, MOCK_PREVIEW_USER } from './config/previewMode';
 
 describe('App', () => {
   it('renders loading state initially and renders landing view when unauthenticated', async () => {
     render(
-      <StudyPlannerProvider>
+      <IeltsTalkProvider>
         <App />
-      </StudyPlannerProvider>,
+      </IeltsTalkProvider>,
     );
 
     // Verify initial loading indicator element

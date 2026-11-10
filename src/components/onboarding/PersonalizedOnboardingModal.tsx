@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Sparkles, Target, Clock, ArrowRight, ArrowLeft, X } from 'lucide-react';
-import { useStudyData } from '../../context/StudyPlannerContext';
+import { useStudyData } from '../../context/IeltsTalkContext';
 import { toast } from '../../hooks/use-toast';
 import { useNavigate } from 'react-router-dom';
 
@@ -27,7 +27,7 @@ export const PersonalizedOnboardingModal: React.FC<PersonalizedOnboardingModalPr
   if (!isOpen) return null;
 
   const handleDismiss = () => {
-    localStorage.setItem('study_planner_personalized_onboarded', 'true');
+    localStorage.setItem('ielts_talk_personalized_onboarded', 'true');
     onClose();
   };
 

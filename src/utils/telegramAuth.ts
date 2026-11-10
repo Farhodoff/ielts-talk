@@ -8,8 +8,8 @@ export const TELEGRAM_SUPERADMIN_ID = 6756073816;
 export const TELEGRAM_SUPERADMIN_IDS = [6756073816, 6839776532];
 
 const TG_SESSION_CACHE_KEY = 'telegram_supabase_session';
-const USER_CACHE_KEY = 'study_planner_user_cache';
-const USER_EMAIL_KEY = 'study_planner_user_email';
+const USER_CACHE_KEY = 'ielts_talk_user_cache';
+const USER_EMAIL_KEY = 'ielts_talk_user_email';
 const EXPIRY_SKEW_SECONDS = 60;
 
 /**
