@@ -1,3 +1,4 @@
+import { CurriculumService } from '../CurriculumService';
 import { describe, it, expect, beforeEach, vi } from 'vitest';
 import { PersonalLearningPlanService } from '../PersonalLearningPlanService';
 import { PersonalLearningPlanEngine } from '../PersonalLearningPlanEngine';
@@ -809,26 +810,20 @@ describe('Personal Learning Plan System Tests', () => {
     });
 
     it('should fall back to review tasks if all lessons at current level are completed', async () => {
-      // Mark all A1 lessons completed
-      const signal1 = {
-        id: 'sig-1',
-        type: 'completed_lesson',
-        language: 'en',
-        lessonId: 'en-a1-u1-l1',
-        userId: 'test_user_dedup',
-        timestamp: new Date().toISOString(),
-      };
-      const signal2 = {
-        id: 'sig-2',
-        type: 'completed_lesson',
-        language: 'en',
-        lessonId: 'en-a1-u1-l2',
-        userId: 'test_user_dedup',
-        timestamp: new Date().toISOString(),
-      };
+      const [a1] = CurriculumService.getEnglishCurriculum().levels;
+      const signals = a1.units
+        .flatMap((unit) => unit.lessons)
+        .map((lesson) => ({
+          id: `completed-${lesson.id}`,
+          type: 'completed_lesson',
+          language: 'en',
+          lessonId: lesson.id,
+          userId: 'test_user_dedup',
+          timestamp: new Date().toISOString(),
+        }));
       localStorage.setItem(
         'study_planner_learning_signals_test_user_dedup',
-        JSON.stringify([signal1, signal2]),
+        JSON.stringify(signals),
       );
 
       const plan = PersonalLearningPlanEngine.parseAndValidateWeeklyPlan(

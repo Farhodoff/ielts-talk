@@ -342,7 +342,7 @@ describe('Phase 15 — Adaptive Level Progression & Access Hardening', () => {
   // ----------------------------------------------------------------
   it('7. Lesson with completed prerequisite is accessible', () => {
     vi.spyOn(LessonService, 'getLessonById').mockImplementation((id: string) => {
-      if (id === 'en-a1-u1-l1' || id === 'en-a1-u1-l2') {
+      if (id === 'en-a1-u1-l1' || id === 'en-a1-u1-be-questions') {
         return {
           id,
           title: id,
@@ -370,10 +370,10 @@ describe('Phase 15 — Adaptive Level Progression & Access Hardening', () => {
     );
     localStorage.setItem('study_planner_current_level', 'A1');
 
-    const prereqs = CurriculumService.getLessonPrerequisites('en-a1-u1-l2');
+    const prereqs = CurriculumService.getLessonPrerequisites('en-a1-u1-be-questions');
     expect(prereqs).toContain('en-a1-u1-l1');
 
-    const result = LearningOrchestrator.canAccessLesson('en-a1-u1-l2', 'test-user', 'en');
+    const result = LearningOrchestrator.canAccessLesson('en-a1-u1-be-questions', 'test-user', 'en');
     expect(result.allowed).toBe(true);
     expect(result.reason).toBe('Access granted');
   });
@@ -383,7 +383,7 @@ describe('Phase 15 — Adaptive Level Progression & Access Hardening', () => {
   // ----------------------------------------------------------------
   it('8. Lesson with incomplete prerequisite is blocked', () => {
     vi.spyOn(LessonService, 'getLessonById').mockImplementation((id: string) => {
-      if (id === 'en-a1-u1-l1' || id === 'en-a1-u1-l2') {
+      if (id === 'en-a1-u1-l1' || id === 'en-a1-u1-be-questions') {
         return {
           id,
           title: id,
@@ -405,10 +405,10 @@ describe('Phase 15 — Adaptive Level Progression & Access Hardening', () => {
     // Do NOT set prerequisite as completed
     localStorage.removeItem('study_planner_lesson_progress_test-user_en-a1-u1-l1');
 
-    const prereqs = CurriculumService.getLessonPrerequisites('en-a1-u1-l2');
+    const prereqs = CurriculumService.getLessonPrerequisites('en-a1-u1-be-questions');
     expect(prereqs).toContain('en-a1-u1-l1');
 
-    const result = LearningOrchestrator.canAccessLesson('en-a1-u1-l2', 'test-user', 'en');
+    const result = LearningOrchestrator.canAccessLesson('en-a1-u1-be-questions', 'test-user', 'en');
     expect(result.allowed).toBe(false);
     expect(result.reason).toContain('Prerequisite not completed');
   });
