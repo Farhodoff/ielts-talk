@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { BrainCircuit, X, CheckCircle2, Sparkles, Send, Award } from 'lucide-react';
 import { generateAIResponse, extractJsonFromAiResponse } from '../../utils/ai/aiCore';
-import { useStudyData } from '../../context/StudyPlannerContext';
+import { useStudyData } from '../../context/IeltsTalkContext';
 import { DailyReflectionService } from '../../services/DailyReflectionService';
 
 interface DailyReflectionModalProps {

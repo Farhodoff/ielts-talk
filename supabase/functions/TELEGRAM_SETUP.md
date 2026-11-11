@@ -40,10 +40,11 @@ supabase functions deploy telegram-bot --no-verify-jwt
 ```
 
 **Output misol:**
+
 ```
 Deploying telegram-bot (project ref: abc-xyz-123)
   Deployed v1.0 in 5.2s
-  
+
   https://abc-xyz-123.supabase.co/functions/v1/telegram-bot
 ```
 
@@ -62,6 +63,7 @@ curl -X POST "https://api.telegram.org/bot${BOT_TOKEN}/setWebhook" \
 ```
 
 **Success response:**
+
 ```json
 {
   "ok": true,
@@ -75,8 +77,9 @@ curl -X POST "https://api.telegram.org/bot${BOT_TOKEN}/setWebhook" \
 Telegram appda botingizni oching va `/start` yuboring!
 
 **Expected response:**
+
 ```
-👋 Salom! Study Planner botiga xush kelibsiz! 🎓
+👋 Salom! IELTS Talk botiga xush kelibsiz! 🎓
 
 Men sizning o'quv rejalaringizni boshqarishga yordam beraman.
 
@@ -97,6 +100,7 @@ curl "https://api.telegram.org/bot${BOT_TOKEN}/getWebhookInfo"
 ```
 
 **Expected response:**
+
 ```json
 {
   "ok": true,
@@ -116,11 +120,13 @@ curl "https://api.telegram.org/bot${BOT_TOKEN}/getWebhookInfo"
 ### Bot javob bermayapti?
 
 1. Webhook to'g'ri o'rnatilganini tekshiring:
+
    ```bash
    curl "https://api.telegram.org/bot${BOT_TOKEN}/getWebhookInfo"
    ```
 
 2. Edge Function logs ni ko'ring:
+
    ```bash
    supabase functions logs telegram-bot
    ```
@@ -141,6 +147,7 @@ curl "https://api.telegram.org/bot${BOT_TOKEN}/getWebhookInfo"
 Phase 1 completed! ✅
 
 Next:
+
 - Phase 2: Account linking
 - Phase 3: Task management commands
 - Phase 4: Notifications

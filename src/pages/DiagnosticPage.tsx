@@ -14,7 +14,7 @@ import {
   Square,
   FileText,
 } from 'lucide-react';
-import { useStudyData } from '../context/StudyPlannerContext';
+import { useStudyData } from '../context/IeltsTalkContext';
 import { useLanguage } from '../context/LanguageContext';
 import { DiagnosticService } from '../services/DiagnosticService';
 import {
@@ -30,12 +30,47 @@ import { TrfCertificateService } from '../services/TrfCertificateService';
 
 export const getIeltsBandEquivalent = (level: string) => {
   const clean = level.toUpperCase();
-  if (clean.includes('C2')) return { band: '8.5 – 9.0', stage: 4, title: 'Expert User', stageName: '4-Bosqich: High Scorer (Band 7.5–8.5+)' };
-  if (clean.includes('C1')) return { band: '7.0 – 8.0', stage: 4, title: 'Very Good User', stageName: '4-Bosqich: High Scorer (Band 7.5–8.5+)' };
-  if (clean.includes('B2')) return { band: '5.5 – 6.5', stage: 3, title: 'Competent User', stageName: '3-Bosqich: IELTS Core (Band 6.0–6.5)' };
-  if (clean.includes('B1')) return { band: '4.5 – 5.0', stage: 2, title: 'Modest User', stageName: '2-Bosqich: Pre-IELTS (Band 4.5–5.0)' };
-  if (clean.includes('A2')) return { band: '3.5 – 4.0', stage: 1, title: 'Elementary Foundation', stageName: '1-Bosqich: Foundation (A1–A2)' };
-  return { band: '2.5 – 3.0', stage: 1, title: 'Beginner Foundation', stageName: '1-Bosqich: Foundation (A1–A2)' };
+  if (clean.includes('C2'))
+    return {
+      band: '8.5 – 9.0',
+      stage: 4,
+      title: 'Expert User',
+      stageName: '4-Bosqich: High Scorer (Band 7.5–8.5+)',
+    };
+  if (clean.includes('C1'))
+    return {
+      band: '7.0 – 8.0',
+      stage: 4,
+      title: 'Very Good User',
+      stageName: '4-Bosqich: High Scorer (Band 7.5–8.5+)',
+    };
+  if (clean.includes('B2'))
+    return {
+      band: '5.5 – 6.5',
+      stage: 3,
+      title: 'Competent User',
+      stageName: '3-Bosqich: IELTS Core (Band 6.0–6.5)',
+    };
+  if (clean.includes('B1'))
+    return {
+      band: '4.5 – 5.0',
+      stage: 2,
+      title: 'Modest User',
+      stageName: '2-Bosqich: Pre-IELTS (Band 4.5–5.0)',
+    };
+  if (clean.includes('A2'))
+    return {
+      band: '3.5 – 4.0',
+      stage: 1,
+      title: 'Elementary Foundation',
+      stageName: '1-Bosqich: Foundation (A1–A2)',
+    };
+  return {
+    band: '2.5 – 3.0',
+    stage: 1,
+    title: 'Beginner Foundation',
+    stageName: '1-Bosqich: Foundation (A1–A2)',
+  };
 };
 
 export const DiagnosticPage: React.FC = () => {
@@ -65,7 +100,7 @@ export const DiagnosticPage: React.FC = () => {
     document.documentElement.classList.add('dark');
     document.documentElement.classList.remove('light');
     try {
-      localStorage.setItem('study_planner_theme', 'dark');
+      localStorage.setItem('ielts_talk_theme', 'dark');
     } catch {}
   }, []);
 
@@ -202,7 +237,7 @@ export const DiagnosticPage: React.FC = () => {
       const bandInfo = getIeltsBandEquivalent(evalResult.recommendedStartLevel);
       try {
         localStorage.setItem('ielts_user_current_stage', String(bandInfo.stage));
-        localStorage.setItem('study_planner_target_level', bandInfo.band);
+        localStorage.setItem('ielts_talk_target_level', bandInfo.band);
         if (setPrimaryFocus) {
           setPrimaryFocus('en', bandInfo.band, bandInfo.stageName);
         }
@@ -226,9 +261,9 @@ export const DiagnosticPage: React.FC = () => {
   const getDifficultyLabel = (diff: string) => {
     switch (diff) {
       case 'easy':
-        return isUz ? '🟢 Boshlang\'ich (Easy)' : '🟢 Elementary';
+        return isUz ? "🟢 Boshlang'ich (Easy)" : '🟢 Elementary';
       case 'medium':
-        return isUz ? '🟡 O\'rtacha (Medium)' : '🟡 Intermediate';
+        return isUz ? "🟡 O'rtacha (Medium)" : '🟡 Intermediate';
       case 'hard':
         return isUz ? '🔴 Murakkab (Advanced)' : '🔴 Advanced';
       default:
@@ -237,7 +272,7 @@ export const DiagnosticPage: React.FC = () => {
   };
 
   return (
-    <div className="mx-auto max-w-4xl space-y-8 p-3.5 sm:p-4 duration-200 animate-in fade-in md:p-8">
+    <div className="mx-auto max-w-4xl space-y-8 p-3.5 duration-200 animate-in fade-in sm:p-4 md:p-8">
       {/* Step 1: Intro & Mode Selection */}
       {step === 'intro' && (
         <div className="space-y-6">
@@ -249,11 +284,13 @@ export const DiagnosticPage: React.FC = () => {
               </span>
             </div>
             <h1 className="text-2xl font-black text-foreground md:text-3xl">
-              {isUz ? 'IELTS & CEFR Bilim Darajangizni Aniqlang' : 'Discover Your IELTS & CEFR Band Score'}
+              {isUz
+                ? 'IELTS & CEFR Bilim Darajangizni Aniqlang'
+                : 'Discover Your IELTS & CEFR Band Score'}
             </h1>
             <p className="text-sm leading-relaxed text-muted-foreground">
               {isUz
-                ? 'Adaptiv algoritm javoblaringizga qarab savollar qiyinligini dinamik moslashtiradi: Grammatika, Leksika, Reading va Listening ko\'nikmalaringizni tez va aniq tahlil qilib beradi.'
+                ? "Adaptiv algoritm javoblaringizga qarab savollar qiyinligini dinamik moslashtiradi: Grammatika, Leksika, Reading va Listening ko'nikmalaringizni tez va aniq tahlil qilib beradi."
                 : 'Our real-time adaptive engine calibrates difficulty across Grammar, Vocabulary, Reading, and Listening to accurately pinpoint your baseline IELTS Band Score.'}
             </p>
           </div>
@@ -288,7 +325,8 @@ export const DiagnosticPage: React.FC = () => {
           <div className="flex flex-col items-center justify-between gap-4 rounded-3xl border border-border bg-card p-6 shadow-md sm:flex-row">
             <div className="space-y-1 text-center sm:text-left">
               <h3 className="flex items-center justify-center gap-2 text-base font-bold text-foreground sm:justify-start">
-                <span>🌱</span> {isUz ? 'Ingliz Tilini 0 dan Boshlayapsizmi?' : 'Complete Beginner (A1)?'}
+                <span>🌱</span>{' '}
+                {isUz ? 'Ingliz Tilini 0 dan Boshlayapsizmi?' : 'Complete Beginner (A1)?'}
               </h3>
               <p className="text-xs text-muted-foreground">
                 {isUz
@@ -408,7 +446,7 @@ export const DiagnosticPage: React.FC = () => {
               <span className="text-xs font-bold uppercase tracking-wider text-muted-foreground">
                 {currentQuestion.topic}
               </span>
-              <span className="text-xs font-mono font-bold text-primary">
+              <span className="font-mono text-xs font-bold text-primary">
                 CEFR: {currentQuestion.level}
               </span>
             </div>
@@ -519,204 +557,224 @@ export const DiagnosticPage: React.FC = () => {
       )}
 
       {/* Step 3: Result Dashboard */}
-      {step === 'result' && result && (() => {
-        const bandInfo = getIeltsBandEquivalent(result.recommendedStartLevel);
-        return (
-          <div className="space-y-6">
-            <div className="space-y-6 rounded-3xl border border-border bg-card p-6 shadow-xl md:p-8">
-              <div className="flex flex-col justify-between gap-4 border-b border-border/60 pb-6 sm:flex-row sm:items-center">
-                <div className="space-y-1.5">
-                  <span className="rounded-full border border-primary/20 bg-primary/10 px-3 py-1 text-xs font-black uppercase tracking-wider text-primary">
-                    {isUz ? 'IELTS & CEFR Natijasi' : 'IELTS Placement Result'}
-                  </span>
-                  <div className="flex items-center gap-3 pt-1">
-                    <h2 className="text-3xl font-black text-foreground md:text-4xl">
-                      Band {bandInfo.band}
-                    </h2>
-                    <span className="px-3 py-1 bg-amber-500/10 text-amber-500 border border-amber-500/20 text-xs font-black rounded-full">
-                      {bandInfo.title}
+      {step === 'result' &&
+        result &&
+        (() => {
+          const bandInfo = getIeltsBandEquivalent(result.recommendedStartLevel);
+          return (
+            <div className="space-y-6">
+              <div className="space-y-6 rounded-3xl border border-border bg-card p-6 shadow-xl md:p-8">
+                <div className="flex flex-col justify-between gap-4 border-b border-border/60 pb-6 sm:flex-row sm:items-center">
+                  <div className="space-y-1.5">
+                    <span className="rounded-full border border-primary/20 bg-primary/10 px-3 py-1 text-xs font-black uppercase tracking-wider text-primary">
+                      {isUz ? 'IELTS & CEFR Natijasi' : 'IELTS Placement Result'}
                     </span>
-                  </div>
-                  <p className="text-xs text-muted-foreground">
-                    {isUz
-                      ? `CEFR Darajangiz: ${result.recommendedStartLevel} • Sinov aniqligi: ${result.overallScore}%`
-                      : `CEFR Level: ${result.recommendedStartLevel} • Assessment confidence: ${result.overallScore}%`}
-                  </p>
-                </div>
-
-                <div className="flex shrink-0 items-center gap-3 rounded-2xl border border-border bg-secondary/50 p-4 px-6">
-                  <Award size={32} className="text-primary" />
-                  <div>
-                    <div className="text-xs text-muted-foreground">
-                      {isUz ? 'Tavsiya Pog\'ona' : 'Target Stage'}
+                    <div className="flex items-center gap-3 pt-1">
+                      <h2 className="text-3xl font-black text-foreground md:text-4xl">
+                        Band {bandInfo.band}
+                      </h2>
+                      <span className="rounded-full border border-amber-500/20 bg-amber-500/10 px-3 py-1 text-xs font-black text-amber-500">
+                        {bandInfo.title}
+                      </span>
                     </div>
-                    <div className="text-sm font-black text-foreground">{bandInfo.stageName}</div>
+                    <p className="text-xs text-muted-foreground">
+                      {isUz
+                        ? `CEFR Darajangiz: ${result.recommendedStartLevel} • Sinov aniqligi: ${result.overallScore}%`
+                        : `CEFR Level: ${result.recommendedStartLevel} • Assessment confidence: ${result.overallScore}%`}
+                    </p>
+                  </div>
+
+                  <div className="flex shrink-0 items-center gap-3 rounded-2xl border border-border bg-secondary/50 p-4 px-6">
+                    <Award size={32} className="text-primary" />
+                    <div>
+                      <div className="text-xs text-muted-foreground">
+                        {isUz ? "Tavsiya Pog'ona" : 'Target Stage'}
+                      </div>
+                      <div className="text-sm font-black text-foreground">{bandInfo.stageName}</div>
+                    </div>
                   </div>
                 </div>
-              </div>
 
-              {/* Roadmap Direct Banner */}
-              <div className="p-4 bg-gradient-to-r from-blue-900/30 to-indigo-900/30 border border-blue-500/30 rounded-2xl flex flex-col sm:flex-row items-center justify-between gap-3 text-xs">
-                <div className="space-y-0.5 text-center sm:text-left">
-                  <div className="font-extrabold text-white flex items-center justify-center sm:justify-start gap-1.5">
-                    <Compass size={16} className="text-blue-400" />
-                    <span>4 Bosqichli IELTS Xaritasida joriy holatingiz belgilandi!</span>
+                {/* Roadmap Direct Banner */}
+                <div className="flex flex-col items-center justify-between gap-3 rounded-2xl border border-blue-500/30 bg-gradient-to-r from-blue-900/30 to-indigo-900/30 p-4 text-xs sm:flex-row">
+                  <div className="space-y-0.5 text-center sm:text-left">
+                    <div className="flex items-center justify-center gap-1.5 font-extrabold text-white sm:justify-start">
+                      <Compass size={16} className="text-blue-400" />
+                      <span>4 Bosqichli IELTS Xaritasida joriy holatingiz belgilandi!</span>
+                    </div>
+                    <p className="text-slate-300">
+                      Sizning boshlang'ich o'quv dasturingiz: <b>{bandInfo.stageName}</b> sifatida
+                      sozlandi.
+                    </p>
                   </div>
-                  <p className="text-slate-300">
-                    Sizning boshlang'ich o'quv dasturingiz: <b>{bandInfo.stageName}</b> sifatida sozlandi.
-                  </p>
+                  <button
+                    onClick={() => navigate(`/ielts?tab=roadmap&stage=${bandInfo.stage}`)}
+                    className="flex shrink-0 items-center gap-1 rounded-xl bg-blue-600 px-4 py-2 font-black text-white shadow transition-all hover:bg-blue-700"
+                  >
+                    <span>Xaritada Ko'rish</span>
+                    <ArrowRight size={14} />
+                  </button>
                 </div>
-                <button
-                  onClick={() => navigate(`/ielts?tab=roadmap&stage=${bandInfo.stage}`)}
-                  className="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-xl font-black shadow transition-all shrink-0 flex items-center gap-1"
-                >
-                  <span>Xaritada Ko'rish</span>
-                  <ArrowRight size={14} />
-                </button>
-              </div>
 
-              {/* Explanation Text */}
-              {result.explanation && (
-                <div className="rounded-2xl border border-primary/20 bg-primary/5 p-4 text-xs leading-relaxed text-muted-foreground">
-                  {result.explanation}
+                {/* Explanation Text */}
+                {result.explanation && (
+                  <div className="rounded-2xl border border-primary/20 bg-primary/5 p-4 text-xs leading-relaxed text-muted-foreground">
+                    {result.explanation}
+                  </div>
+                )}
+
+                {/* Skill Radar / Bars */}
+                <div className="space-y-3">
+                  <h4 className="flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-muted-foreground">
+                    <Compass size={14} />
+                    {isUz ? "Ko'nikmalar Kesimida Baholash" : 'Skill Profile Breakdown'}
+                  </h4>
+                  <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
+                    {Object.values(result.skills).map(
+                      (sk) =>
+                        sk && (
+                          <div
+                            key={sk.skill}
+                            className="space-y-2 rounded-2xl border border-border bg-secondary/30 p-4"
+                          >
+                            <div className="flex items-center justify-between">
+                              <span className="text-xs font-black uppercase tracking-wider text-foreground">
+                                {sk.skill}
+                              </span>
+                              <span
+                                className={`text-xs font-bold ${
+                                  sk.status === 'strong'
+                                    ? 'text-emerald-500'
+                                    : sk.status === 'weak'
+                                      ? 'text-rose-500'
+                                      : 'text-muted-foreground'
+                                }`}
+                              >
+                                {sk.score}% ({sk.estimatedLevel})
+                              </span>
+                            </div>
+                            <div className="h-2 w-full overflow-hidden rounded-full bg-secondary">
+                              <div
+                                className={`h-full rounded-full transition-all ${
+                                  sk.status === 'strong'
+                                    ? 'bg-emerald-500'
+                                    : sk.status === 'weak'
+                                      ? 'bg-rose-500'
+                                      : 'bg-primary'
+                                }`}
+                                style={{ width: `${sk.score}%` }}
+                              />
+                            </div>
+                          </div>
+                        ),
+                    )}
+                  </div>
                 </div>
-              )}
 
-              {/* Skill Radar / Bars */}
-              <div className="space-y-3">
-                <h4 className="flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-muted-foreground">
-                  <Compass size={14} />
-                  {isUz ? "Ko'nikmalar Kesimida Baholash" : 'Skill Profile Breakdown'}
-                </h4>
-                <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
-                  {Object.values(result.skills).map(
-                    (sk) =>
-                      sk && (
-                        <div
-                          key={sk.skill}
-                          className="space-y-2 rounded-2xl border border-border bg-secondary/30 p-4"
-                        >
-                          <div className="flex items-center justify-between">
-                            <span className="text-xs font-black uppercase tracking-wider text-foreground">
-                              {sk.skill}
-                            </span>
-                            <span
-                              className={`text-xs font-bold ${
-                                sk.status === 'strong'
-                                  ? 'text-emerald-500'
-                                  : sk.status === 'weak'
-                                    ? 'text-rose-500'
-                                    : 'text-muted-foreground'
-                              }`}
-                            >
-                              {sk.score}% ({sk.estimatedLevel})
-                            </span>
-                          </div>
-                          <div className="h-2 w-full overflow-hidden rounded-full bg-secondary">
-                            <div
-                              className={`h-full rounded-full transition-all ${
-                                sk.status === 'strong'
-                                  ? 'bg-emerald-500'
-                                  : sk.status === 'weak'
-                                    ? 'bg-rose-500'
-                                    : 'bg-primary'
-                              }`}
-                              style={{ width: `${sk.score}%` }}
-                            />
-                          </div>
-                        </div>
-                      ),
+                {/* Strengths & Weaknesses */}
+                <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+                  {result.strengths.length > 0 && (
+                    <div className="space-y-1 rounded-2xl border border-emerald-500/20 bg-emerald-500/10 p-4">
+                      <div className="flex items-center gap-1 text-xs font-bold text-emerald-500">
+                        <CheckCircle2 size={14} /> {isUz ? "Kuchli Ko'nikmalar" : 'Key Strengths'}
+                      </div>
+                      <div className="text-xs text-muted-foreground">
+                        {result.strengths.join(', ')}
+                      </div>
+                    </div>
+                  )}
+
+                  {result.weaknesses.length > 0 && (
+                    <div className="space-y-1 rounded-2xl border border-rose-500/20 bg-rose-500/10 p-4">
+                      <div className="flex items-center gap-1 text-xs font-bold text-rose-500">
+                        <AlertTriangle size={14} /> {isUz ? 'Mustahkamlash Kerak' : 'Focus Areas'}
+                      </div>
+                      <div className="text-xs text-muted-foreground">
+                        {result.weaknesses.join(', ')}
+                      </div>
+                    </div>
                   )}
                 </div>
-              </div>
 
-              {/* Strengths & Weaknesses */}
-              <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-                {result.strengths.length > 0 && (
-                  <div className="space-y-1 rounded-2xl border border-emerald-500/20 bg-emerald-500/10 p-4">
-                    <div className="flex items-center gap-1 text-xs font-bold text-emerald-500">
-                      <CheckCircle2 size={14} /> {isUz ? "Kuchli Ko'nikmalar" : 'Key Strengths'}
-                    </div>
-                    <div className="text-xs text-muted-foreground">{result.strengths.join(', ')}</div>
+                {/* Primary Call to Action */}
+                <div className="flex flex-col items-center justify-between gap-3 border-t border-border/60 pt-4 sm:flex-row">
+                  <button
+                    onClick={() => setStep('intro')}
+                    className="flex w-full items-center justify-center gap-1.5 rounded-xl border border-border px-4 py-2.5 text-xs font-bold text-muted-foreground hover:text-foreground sm:w-auto"
+                  >
+                    <RotateCcw size={14} />
+                    <span>{isUz ? 'Qayta Test Topshirish' : 'Retake Assessment'}</span>
+                  </button>
+
+                  <div className="flex w-full flex-wrap items-center gap-2 sm:w-auto">
+                    <button
+                      onClick={() => setIsTrfModalOpen(true)}
+                      className="flex flex-1 cursor-pointer items-center justify-center gap-1.5 rounded-xl bg-red-600 px-4 py-3 text-xs font-black text-white shadow-md shadow-red-600/20 transition-all hover:bg-red-700 sm:flex-initial"
+                    >
+                      <FileText size={15} />
+                      <span>TRF Sertifikat (PDF)</span>
+                    </button>
+                    <button
+                      onClick={() => navigate('/personal-plan')}
+                      className="flex-1 rounded-xl border border-border px-4 py-3 text-xs font-bold text-foreground hover:bg-muted sm:flex-initial"
+                    >
+                      🎯 Shaxsiy Rejam
+                    </button>
+                    <button
+                      onClick={handleStartRecommendedLesson}
+                      className="flex flex-1 items-center justify-center gap-2 rounded-xl bg-primary px-6 py-3 text-xs font-black text-primary-foreground shadow-lg transition-all hover:bg-primary/90 sm:flex-initial"
+                    >
+                      <span>🚀 4-Bosqichli Xaritani Boshlash</span>
+                      <ArrowRight size={15} />
+                    </button>
                   </div>
-                )}
-
-                {result.weaknesses.length > 0 && (
-                  <div className="space-y-1 rounded-2xl border border-rose-500/20 bg-rose-500/10 p-4">
-                    <div className="flex items-center gap-1 text-xs font-bold text-rose-500">
-                      <AlertTriangle size={14} /> {isUz ? 'Mustahkamlash Kerak' : 'Focus Areas'}
-                    </div>
-                    <div className="text-xs text-muted-foreground">
-                      {result.weaknesses.join(', ')}
-                    </div>
-                  </div>
-                )}
-              </div>
-
-              {/* Primary Call to Action */}
-              <div className="flex flex-col items-center justify-between gap-3 border-t border-border/60 pt-4 sm:flex-row">
-                <button
-                  onClick={() => setStep('intro')}
-                  className="flex w-full items-center justify-center gap-1.5 rounded-xl border border-border px-4 py-2.5 text-xs font-bold text-muted-foreground hover:text-foreground sm:w-auto"
-                >
-                  <RotateCcw size={14} />
-                  <span>{isUz ? 'Qayta Test Topshirish' : 'Retake Assessment'}</span>
-                </button>
-
-                <div className="flex flex-wrap items-center gap-2 w-full sm:w-auto">
-                  <button
-                    onClick={() => setIsTrfModalOpen(true)}
-                    className="flex-1 sm:flex-initial flex items-center justify-center gap-1.5 rounded-xl bg-red-600 px-4 py-3 text-xs font-black text-white hover:bg-red-700 shadow-md shadow-red-600/20 transition-all cursor-pointer"
-                  >
-                    <FileText size={15} />
-                    <span>TRF Sertifikat (PDF)</span>
-                  </button>
-                  <button
-                    onClick={() => navigate('/personal-plan')}
-                    className="flex-1 sm:flex-initial rounded-xl border border-border px-4 py-3 text-xs font-bold text-foreground hover:bg-muted"
-                  >
-                    🎯 Shaxsiy Rejam
-                  </button>
-                  <button
-                    onClick={handleStartRecommendedLesson}
-                    className="flex-1 sm:flex-initial flex items-center justify-center gap-2 rounded-xl bg-primary px-6 py-3 text-xs font-black text-primary-foreground shadow-lg transition-all hover:bg-primary/90"
-                  >
-                    <span>🚀 4-Bosqichli Xaritani Boshlash</span>
-                    <ArrowRight size={15} />
-                  </button>
                 </div>
               </div>
-            </div>
 
-            {isTrfModalOpen && (
-              <IeltsTrfCertificateModal
-                isOpen={isTrfModalOpen}
-                onClose={() => setIsTrfModalOpen(false)}
-                data={{
-                  candidateName: user?.user_metadata?.full_name || user?.email?.split('@')[0] || 'IELTS Candidate',
-                  testDate: new Date().toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' }),
-                  testType: 'Diagnostic Assessment',
-                  module: 'Diagnostic',
-                  scores: {
-                    reading: result.skills?.reading?.score ? Math.round((result.skills.reading.score / 100) * 9 * 10) / 10 : undefined,
-                    listening: result.skills?.listening?.score ? Math.round((result.skills.listening.score / 100) * 9 * 10) / 10 : undefined,
-                    writing: result.skills?.grammar?.score ? Math.round((result.skills.grammar.score / 100) * 9 * 10) / 10 : undefined,
-                    speaking: result.skills?.vocabulary?.score ? Math.round((result.skills.vocabulary.score / 100) * 9 * 10) / 10 : undefined,
-                    overall: parseFloat(bandInfo.band.split('–')[0].trim()) || 6.5,
-                    cefrLevel: `${result.recommendedStartLevel} (${bandInfo.title})`,
-                  },
-                  subCriteria: Object.values(result.skills).map(sk => ({
-                    label: `${sk.skill.toUpperCase()} Competency`,
-                    score: `${sk.score}% (${sk.estimatedLevel})`,
-                  })),
-                  examinerNotes: `Diagnostic Placement confirmed candidate at CEFR ${result.recommendedStartLevel} (IELTS Band ${bandInfo.band}). Strengths: ${result.strengths.join(', ') || 'Solid Foundation'}.`,
-                  verificationCode: TrfCertificateService.generateVerificationCode('Diagnostic'),
-                }}
-              />
-            )}
-          </div>
-        );
-      })()}
+              {isTrfModalOpen && (
+                <IeltsTrfCertificateModal
+                  isOpen={isTrfModalOpen}
+                  onClose={() => setIsTrfModalOpen(false)}
+                  data={{
+                    candidateName:
+                      user?.user_metadata?.full_name ||
+                      user?.email?.split('@')[0] ||
+                      'IELTS Candidate',
+                    testDate: new Date().toLocaleDateString('en-GB', {
+                      day: '2-digit',
+                      month: 'short',
+                      year: 'numeric',
+                    }),
+                    testType: 'Diagnostic Assessment',
+                    module: 'Diagnostic',
+                    scores: {
+                      reading: result.skills?.reading?.score
+                        ? Math.round((result.skills.reading.score / 100) * 9 * 10) / 10
+                        : undefined,
+                      listening: result.skills?.listening?.score
+                        ? Math.round((result.skills.listening.score / 100) * 9 * 10) / 10
+                        : undefined,
+                      writing: result.skills?.grammar?.score
+                        ? Math.round((result.skills.grammar.score / 100) * 9 * 10) / 10
+                        : undefined,
+                      speaking: result.skills?.vocabulary?.score
+                        ? Math.round((result.skills.vocabulary.score / 100) * 9 * 10) / 10
+                        : undefined,
+                      overall: parseFloat(bandInfo.band.split('–')[0].trim()) || 6.5,
+                      cefrLevel: `${result.recommendedStartLevel} (${bandInfo.title})`,
+                    },
+                    subCriteria: Object.values(result.skills).map((sk) => ({
+                      label: `${sk.skill.toUpperCase()} Competency`,
+                      score: `${sk.score}% (${sk.estimatedLevel})`,
+                    })),
+                    examinerNotes: `Diagnostic Placement confirmed candidate at CEFR ${result.recommendedStartLevel} (IELTS Band ${bandInfo.band}). Strengths: ${result.strengths.join(', ') || 'Solid Foundation'}.`,
+                    verificationCode: TrfCertificateService.generateVerificationCode('Diagnostic'),
+                  }}
+                />
+              )}
+            </div>
+          );
+        })()}
     </div>
   );
 };

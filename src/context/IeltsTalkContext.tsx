@@ -76,7 +76,7 @@ export interface Settings {
   showRomaji: boolean;
 }
 
-export interface StudyPlannerContextType {
+export interface IeltsTalkContextType {
   goals: Goal[];
   tasks: Task[];
   flashcards: Flashcard[];
@@ -166,7 +166,7 @@ export interface StudyPlannerContextType {
   getRank: (level: number) => string;
 }
 
-const StudyPlannerContext = createContext<StudyPlannerContextType | undefined>(undefined);
+const IeltsTalkContext = createContext<IeltsTalkContextType | undefined>(undefined);
 
 // ===== PROVIDER =====
 const INITIAL_GAMIFICATION_STATE = {
@@ -176,7 +176,7 @@ const INITIAL_GAMIFICATION_STATE = {
   lastActivityDate: null,
 };
 
-export const StudyPlannerProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+export const IeltsTalkProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   // 1. Gamification Hook
   const { gameState, setGamificationState, awardXP, resetXP, getRank } = useGamification(
     INITIAL_GAMIFICATION_STATE,
@@ -238,10 +238,10 @@ export const StudyPlannerProvider: React.FC<{ children: React.ReactNode }> = ({ 
     showRomaji: boolean;
   }>(() => {
     const savedAiSettings = safeLocalStorage.getJSON<Record<string, any>>(
-      'study_planner_ai_settings',
+      'ielts_talk_ai_settings',
       {},
     );
-    const savedGoal = safeLocalStorage.getItem('study_planner_daily_goal');
+    const savedGoal = safeLocalStorage.getItem('ielts_talk_daily_goal');
 
     let dsModel: 'deepseek-chat' | 'deepseek-reasoner' = 'deepseek-chat';
     if (savedAiSettings.deepseekModel) {
@@ -263,8 +263,8 @@ export const StudyPlannerProvider: React.FC<{ children: React.ReactNode }> = ({ 
       deepseekThinkingMode: Boolean(savedAiSettings.deepseekThinkingMode),
       dailyStudyGoalMinutes: savedGoal ? parseInt(savedGoal, 10) : 240,
       coachAiModel: 'deepseek',
-      showFurigana: safeLocalStorage.getItem('study_planner_show_furigana') !== 'false',
-      showRomaji: safeLocalStorage.getItem('study_planner_show_romaji') === 'true',
+      showFurigana: safeLocalStorage.getItem('ielts_talk_show_furigana') !== 'false',
+      showRomaji: safeLocalStorage.getItem('ielts_talk_show_romaji') === 'true',
     };
   });
 
@@ -277,13 +277,13 @@ export const StudyPlannerProvider: React.FC<{ children: React.ReactNode }> = ({ 
 
   const [loading, setLoading] = useState<boolean>(() => {
     if (isPublicPreviewActive()) return false;
-    const cachedUser = safeLocalStorage.getJSON<User | null>('study_planner_user_cache', null);
+    const cachedUser = safeLocalStorage.getJSON<User | null>('ielts_talk_user_cache', null);
     if (cachedUser) return false;
     if (typeof window !== 'undefined' && isTelegramWebApp()) return false;
     return true;
   });
   const [user, setUser] = useState<User | null>(() => {
-    const cached = safeLocalStorage.getJSON<User | null>('study_planner_user_cache', null);
+    const cached = safeLocalStorage.getJSON<User | null>('ielts_talk_user_cache', null);
     if (cached) return cached;
     if (isPublicPreviewActive()) {
       return MOCK_PREVIEW_USER as unknown as User;
@@ -297,8 +297,8 @@ export const StudyPlannerProvider: React.FC<{ children: React.ReactNode }> = ({ 
 
   // Learning Focus State - Defaults to 100% English / IELTS ('en') for all users
   const [primaryLanguage, setPrimaryLanguage] = useState<'en' | 'ja'>(() => {
-    safeLocalStorage.setItem('study_planner_primary_language', 'en');
-    safeLocalStorage.setItem('study_planner_study_track', 'en');
+    safeLocalStorage.setItem('ielts_talk_primary_language', 'en');
+    safeLocalStorage.setItem('ielts_talk_study_track', 'en');
     return 'en';
   });
 
@@ -316,8 +316,8 @@ export const StudyPlannerProvider: React.FC<{ children: React.ReactNode }> = ({ 
   useEffect(() => {
     if (primaryLanguage !== 'en') {
       setPrimaryLanguage('en');
-      safeLocalStorage.setItem('study_planner_primary_language', 'en');
-      safeLocalStorage.setItem('study_planner_study_track', 'en');
+      safeLocalStorage.setItem('ielts_talk_primary_language', 'en');
+      safeLocalStorage.setItem('ielts_talk_study_track', 'en');
     }
     setEnabledLanguages(['en']);
     const currentEnTarget = LearningTrackStorage.getTargetLevel('en');
@@ -391,10 +391,7 @@ export const StudyPlannerProvider: React.FC<{ children: React.ReactNode }> = ({ 
     // Non-blocking background revalidation (Stale-While-Revalidate)
     try {
       if (typeof navigator !== 'undefined' && !navigator.onLine) {
-        const localSession = safeLocalStorage.getJSON<User | null>(
-          'study_planner_user_cache',
-          null,
-        );
+        const localSession = safeLocalStorage.getJSON<User | null>('ielts_talk_user_cache', null);
         if (localSession && fetchSeqRef.current === currentSeq) {
           setUser((prev) =>
             prev?.id === localSession.id && prev?.email === localSession.email
@@ -415,12 +412,12 @@ export const StudyPlannerProvider: React.FC<{ children: React.ReactNode }> = ({ 
             currentUser = sessionData.session.user;
           }
         } catch (e) {
-          console.debug('[StudyPlannerContext] Auth getSession exception:', e);
+          console.debug('[IeltsTalkContext] Auth getSession exception:', e);
         }
       }
 
       if (!currentUser) {
-        const localCached = safeLocalStorage.getJSON<User | null>('study_planner_user_cache', null);
+        const localCached = safeLocalStorage.getJSON<User | null>('ielts_talk_user_cache', null);
         if (localCached && localCached.id && isUuid(localCached.id)) {
           currentUser = localCached;
         } else if (isTelegramWebApp()) {
@@ -439,9 +436,9 @@ export const StudyPlannerProvider: React.FC<{ children: React.ReactNode }> = ({ 
         return;
       }
 
-      safeLocalStorage.setJSON('study_planner_user_cache', currentUser);
+      safeLocalStorage.setJSON('ielts_talk_user_cache', currentUser);
       if (currentUser.email) {
-        safeLocalStorage.setItem('study_planner_user_email', currentUser.email);
+        safeLocalStorage.setItem('ielts_talk_user_email', currentUser.email);
       }
       setUser((prev) =>
         prev?.id === currentUser.id && prev?.email === currentUser.email ? prev : currentUser,
@@ -459,7 +456,7 @@ export const StudyPlannerProvider: React.FC<{ children: React.ReactNode }> = ({ 
 
         // One-time non-blocking migration of legacy metadata to relational tables
         DataMigrationService.migrateUserMetadataToDB(currentUser).catch((e) => {
-          console.warn('[StudyPlannerContext] Metadata migration notice:', e);
+          console.warn('[IeltsTalkContext] Metadata migration notice:', e);
         });
       }
 
@@ -547,7 +544,7 @@ export const StudyPlannerProvider: React.FC<{ children: React.ReactNode }> = ({ 
           aiCoachSessionsSettled.status === 'fulfilled' ? aiCoachSessionsSettled.value : null;
 
         // Subjects sync
-        const userSubjectsKey = 'study_planner_subjects_cache_' + (currentUser?.id || 'guest');
+        const userSubjectsKey = 'ielts_talk_subjects_cache_' + (currentUser?.id || 'guest');
         let localCachedSubs = safeLocalStorage.getJSON<Subject[]>(userSubjectsKey, []);
 
         let mappedSubjects: Subject[] = [];
@@ -592,7 +589,7 @@ export const StudyPlannerProvider: React.FC<{ children: React.ReactNode }> = ({ 
         }
 
         // Sessions sync
-        const userSessionsKey = 'study_planner_sessions_cache_' + (currentUser?.id || 'guest');
+        const userSessionsKey = 'ielts_talk_sessions_cache_' + (currentUser?.id || 'guest');
         const localSessions = safeLocalStorage.getJSON<StudySession[]>(userSessionsKey, []);
         const dbSessions = (sessionsRes?.data || []).map((s: DatabaseSession) => ({
           ...s,
@@ -613,11 +610,11 @@ export const StudyPlannerProvider: React.FC<{ children: React.ReactNode }> = ({ 
         );
         if (!hasSessionToday) {
           const evidenceEn = safeLocalStorage.getJSON<any[]>(
-            `study_planner_mastery_evidence_${currentUser?.id || 'guest'}_en`,
+            `ielts_talk_mastery_evidence_${currentUser?.id || 'guest'}_en`,
             [],
           );
           const evidenceJa = safeLocalStorage.getJSON<any[]>(
-            `study_planner_mastery_evidence_${currentUser?.id || 'guest'}_ja`,
+            `ielts_talk_mastery_evidence_${currentUser?.id || 'guest'}_ja`,
             [],
           );
           const allTodayEvidence = [...evidenceEn, ...evidenceJa].filter(
@@ -661,7 +658,7 @@ export const StudyPlannerProvider: React.FC<{ children: React.ReactNode }> = ({ 
         safeLocalStorage.setJSON(userSessionsKey, mergedSessions);
 
         // Notes sync
-        const userNotesKey = 'study_planner_notes_cache_' + (currentUser?.id || 'guest');
+        const userNotesKey = 'ielts_talk_notes_cache_' + (currentUser?.id || 'guest');
         const localNotes = safeLocalStorage.getJSON<Note[]>(userNotesKey, []);
         const dbNotes = (notesRes?.data || []).map((n: DatabaseNote) => ({
           ...n,
@@ -676,7 +673,7 @@ export const StudyPlannerProvider: React.FC<{ children: React.ReactNode }> = ({ 
         safeLocalStorage.setJSON(userNotesKey, mergedNotes);
 
         // Study Notes (Konspektlar) sync
-        const userStudyNotesKey = 'study_planner_study_notes_cache_' + (currentUser?.id || 'guest');
+        const userStudyNotesKey = 'ielts_talk_study_notes_cache_' + (currentUser?.id || 'guest');
         const localStudyNotes = safeLocalStorage.getJSON<StudyNote[]>(userStudyNotesKey, []);
         const dbStudyNotes = (studyNotesRes?.data || []).map((n: DatabaseStudyNote) => ({
           ...n,
@@ -694,7 +691,7 @@ export const StudyPlannerProvider: React.FC<{ children: React.ReactNode }> = ({ 
         safeLocalStorage.setJSON(userStudyNotesKey, mergedStudyNotes);
 
         // Goals sync
-        const userGoalsKey = 'study_planner_goals_cache_' + (currentUser?.id || 'guest');
+        const userGoalsKey = 'ielts_talk_goals_cache_' + (currentUser?.id || 'guest');
         const localGoals = safeLocalStorage.getJSON<Goal[]>(userGoalsKey, []);
         const dbGoals = (goalsRes?.data || []).map((g: any) => ({
           id: g.id,
@@ -713,8 +710,7 @@ export const StudyPlannerProvider: React.FC<{ children: React.ReactNode }> = ({ 
         safeLocalStorage.setJSON(userGoalsKey, mergedGoals);
 
         // Whiteboards sync
-        const userWhiteboardsKey =
-          'study_planner_whiteboards_cache_' + (currentUser?.id || 'guest');
+        const userWhiteboardsKey = 'ielts_talk_whiteboards_cache_' + (currentUser?.id || 'guest');
         const localWhiteboards = safeLocalStorage.getJSON<WhiteboardMetadata[]>(
           userWhiteboardsKey,
           [],
@@ -735,7 +731,7 @@ export const StudyPlannerProvider: React.FC<{ children: React.ReactNode }> = ({ 
         safeLocalStorage.setJSON(userWhiteboardsKey, mergedWhiteboards);
 
         // Events sync
-        const userEventsKey = 'study_planner_events_cache_' + (currentUser?.id || 'guest');
+        const userEventsKey = 'ielts_talk_events_cache_' + (currentUser?.id || 'guest');
         const localEvents = safeLocalStorage.getJSON<Event[]>(userEventsKey, []);
         const dbEvents = (eventsRes?.data || []).map((e: DatabaseEvent) => ({
           id: e.id,
@@ -823,13 +819,13 @@ export const StudyPlannerProvider: React.FC<{ children: React.ReactNode }> = ({ 
 
           if (prof.primary_language) {
             setPrimaryLanguage(prof.primary_language);
-            safeLocalStorage.setItem('study_planner_primary_language', prof.primary_language);
-            safeLocalStorage.setItem('study_planner_study_track', prof.primary_language);
-            safeLocalStorage.setItem('study_planner_personalized_onboarded', 'true');
+            safeLocalStorage.setItem('ielts_talk_primary_language', prof.primary_language);
+            safeLocalStorage.setItem('ielts_talk_study_track', prof.primary_language);
+            safeLocalStorage.setItem('ielts_talk_personalized_onboarded', 'true');
           }
           if (prof.enabled_languages && Array.isArray(prof.enabled_languages)) {
             setEnabledLanguages(prof.enabled_languages as ('en' | 'ja')[]);
-            safeLocalStorage.setJSON('study_planner_enabled_languages', prof.enabled_languages);
+            safeLocalStorage.setJSON('ielts_talk_enabled_languages', prof.enabled_languages);
           }
           const activeLang = (prof.primary_language || primaryLanguage) as any;
           if (prof.target_level) {
@@ -890,7 +886,7 @@ export const StudyPlannerProvider: React.FC<{ children: React.ReactNode }> = ({ 
     if (typeof supabase?.auth?.onAuthStateChange === 'function') {
       const authSub = supabase.auth.onAuthStateChange((event, session) => {
         if (event === 'SIGNED_OUT') {
-          const hasLocalCache = safeLocalStorage.getItem('study_planner_user_cache');
+          const hasLocalCache = safeLocalStorage.getItem('ielts_talk_user_cache');
           if (!hasLocalCache) {
             fetchSeqRef.current++;
             setUser(null);
@@ -937,7 +933,7 @@ export const StudyPlannerProvider: React.FC<{ children: React.ReactNode }> = ({ 
 
   // Update Settings Handler
   const updateSettings = async (updates: Partial<Settings>) => {
-    safeLocalStorage.setItem('study_planner_theme', 'dark');
+    safeLocalStorage.setItem('ielts_talk_theme', 'dark');
     document.documentElement.classList.add('dark');
 
     if (updates.totalXp !== undefined || updates.level !== undefined) {
@@ -975,19 +971,16 @@ export const StudyPlannerProvider: React.FC<{ children: React.ReactNode }> = ({ 
         showRomaji: updates.showRomaji !== undefined ? updates.showRomaji : prev.showRomaji,
       };
 
-      safeLocalStorage.setJSON('study_planner_ai_settings', {
+      safeLocalStorage.setJSON('ielts_talk_ai_settings', {
         aiModel: 'deepseek',
         deepseekModel: newState.deepseekModel,
         deepseekThinkingMode: newState.deepseekThinkingMode,
         coachAiModel: 'deepseek',
       });
 
-      safeLocalStorage.setItem(
-        'study_planner_daily_goal',
-        newState.dailyStudyGoalMinutes.toString(),
-      );
-      safeLocalStorage.setItem('study_planner_show_furigana', String(newState.showFurigana));
-      safeLocalStorage.setItem('study_planner_show_romaji', String(newState.showRomaji));
+      safeLocalStorage.setItem('ielts_talk_daily_goal', newState.dailyStudyGoalMinutes.toString());
+      safeLocalStorage.setItem('ielts_talk_show_furigana', String(newState.showFurigana));
+      safeLocalStorage.setItem('ielts_talk_show_romaji', String(newState.showRomaji));
 
       return newState;
     });
@@ -1044,14 +1037,14 @@ export const StudyPlannerProvider: React.FC<{ children: React.ReactNode }> = ({ 
   const setPrimaryFocus = useCallback(async (lang: 'en' | 'ja', level?: string, goal?: string) => {
     const allowedLang = !isSuperAdmin(user?.email) ? 'ja' : lang;
     setPrimaryLanguage(allowedLang);
-    safeLocalStorage.setItem('study_planner_primary_language', allowedLang);
-    safeLocalStorage.setItem('study_planner_study_track', allowedLang);
+    safeLocalStorage.setItem('ielts_talk_primary_language', allowedLang);
+    safeLocalStorage.setItem('ielts_talk_study_track', allowedLang);
 
     let currentEnabled: ('en' | 'ja')[] = [];
     setEnabledLanguages((prev) => {
       const next = prev.includes(allowedLang) ? prev : [allowedLang, ...prev];
       currentEnabled = next;
-      safeLocalStorage.setJSON('study_planner_enabled_languages', next);
+      safeLocalStorage.setJSON('ielts_talk_enabled_languages', next);
       return next;
     });
 
@@ -1064,11 +1057,11 @@ export const StudyPlannerProvider: React.FC<{ children: React.ReactNode }> = ({ 
     setTargetGoal(newGoal);
     LearningTrackStorage.setTargetGoal(allowedLang, newGoal);
 
-    safeLocalStorage.setItem('study_planner_personalized_onboarded', 'true');
+    safeLocalStorage.setItem('ielts_talk_personalized_onboarded', 'true');
     window.dispatchEvent(new Event('study-track-changed'));
 
     let targetUserId: string | null = null;
-    const cachedUser = safeLocalStorage.getJSON<User | null>('study_planner_user_cache', null);
+    const cachedUser = safeLocalStorage.getJSON<User | null>('ielts_talk_user_cache', null);
     if (cachedUser?.id && isUuid(cachedUser.id)) {
       targetUserId = cachedUser.id;
     }
@@ -1110,9 +1103,9 @@ export const StudyPlannerProvider: React.FC<{ children: React.ReactNode }> = ({ 
     setEnabledLanguages((prev) => {
       if (prev.includes(lang)) return prev;
       const next = [...prev, lang];
-      safeLocalStorage.setJSON('study_planner_enabled_languages', next);
+      safeLocalStorage.setJSON('ielts_talk_enabled_languages', next);
 
-      const cached = safeLocalStorage.getJSON<User | null>('study_planner_user_cache', null);
+      const cached = safeLocalStorage.getJSON<User | null>('ielts_talk_user_cache', null);
       const uid = cached?.id;
       if (uid && isUuid(uid)) {
         supabase
@@ -1132,9 +1125,9 @@ export const StudyPlannerProvider: React.FC<{ children: React.ReactNode }> = ({ 
     setEnabledLanguages((prev) => {
       if (prev.length <= 1 || !prev.includes(lang)) return prev;
       const next = prev.filter((l) => l !== lang);
-      safeLocalStorage.setJSON('study_planner_enabled_languages', next);
+      safeLocalStorage.setJSON('ielts_talk_enabled_languages', next);
 
-      const cached = safeLocalStorage.getJSON<User | null>('study_planner_user_cache', null);
+      const cached = safeLocalStorage.getJSON<User | null>('ielts_talk_user_cache', null);
       const uid = cached?.id;
       if (uid && isUuid(uid)) {
         supabase
@@ -1281,13 +1274,13 @@ export const StudyPlannerProvider: React.FC<{ children: React.ReactNode }> = ({ 
     ],
   );
 
-  return (
-    <StudyPlannerContext.Provider value={contextValue}>{children}</StudyPlannerContext.Provider>
-  );
+  return <IeltsTalkContext.Provider value={contextValue}>{children}</IeltsTalkContext.Provider>;
 };
 
-export const useStudyData = () => {
-  const context = useContext(StudyPlannerContext);
-  if (!context) throw new Error('useStudyData must be used within StudyPlannerProvider');
+export const useIeltsTalkData = () => {
+  const context = useContext(IeltsTalkContext);
+  if (!context) throw new Error('useIeltsTalkData must be used within IeltsTalkProvider');
   return context;
 };
+export const useIeltsTalk = useIeltsTalkData;
+export const useStudyData = useIeltsTalkData;

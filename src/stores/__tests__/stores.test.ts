@@ -29,7 +29,7 @@ describe('Zustand Stores', () => {
       setUser(mockUser);
 
       expect(useAuthStore.getState().user).toEqual(mockUser);
-      expect(safeLocalStorage.setJSON).toHaveBeenCalledWith('study_planner_user_cache', mockUser);
+      expect(safeLocalStorage.setJSON).toHaveBeenCalledWith('ielts_talk_user_cache', mockUser);
     });
 
     it('should set loading state', () => {

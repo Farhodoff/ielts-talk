@@ -1,6 +1,6 @@
 # Changelog
 
-All notable changes to the Nihongo Talk (Study Planner) platform will be documented in this file.
+All notable changes to the Nihongo Talk (IELTS Talk) platform will be documented in this file.
 
 ## [1.1.0] - 2026-09-03
 

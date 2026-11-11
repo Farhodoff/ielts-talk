@@ -10,9 +10,9 @@ import { supabase } from '../lib/supabase';
 import { LearningSignalService } from './LearningSignalService';
 import { toDeterministicUUID } from '../utils/uuid';
 
-const GOAL_STORAGE_PREFIX = 'study_planner_personal_goal_';
-const PLANS_STORAGE_KEY = 'study_planner_weekly_plans';
-const EVALS_STORAGE_KEY = 'study_planner_weekly_evaluations';
+const GOAL_STORAGE_PREFIX = 'ielts_talk_personal_goal_';
+const PLANS_STORAGE_KEY = 'ielts_talk_weekly_plans';
+const EVALS_STORAGE_KEY = 'ielts_talk_weekly_evaluations';
 
 // Mappings for Guided Learning Hours
 const CEFR_HOURS_MAP: Record<string, number> = {

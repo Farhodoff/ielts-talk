@@ -13,7 +13,7 @@ import {
 } from 'lucide-react';
 import { generateAIResponse, extractJsonFromAiResponse } from '../utils/ai/aiCore';
 import { speakText } from '../utils/audioTts';
-import { useStudyData } from '../context/StudyPlannerContext';
+import { useStudyData } from '../context/IeltsTalkContext';
 import { supabase } from '../lib/supabase';
 import { toDeterministicUUID } from '../utils/uuid';
 import { isSuperAdmin } from '../utils/admin';
@@ -88,10 +88,10 @@ export const VocabularyBuilderPage: React.FC = () => {
   useEffect(() => {
     // Load from localStorage as fallback
     try {
-      const h = localStorage.getItem('study_planner_vocab_history');
+      const h = localStorage.getItem('ielts_talk_vocab_history');
       if (h) setHistory(JSON.parse(h));
 
-      const s = localStorage.getItem('study_planner_vocab_saved');
+      const s = localStorage.getItem('ielts_talk_vocab_saved');
       if (s) setSavedWords(JSON.parse(s));
     } catch (e) {
       console.error(e);
@@ -127,12 +127,12 @@ export const VocabularyBuilderPage: React.FC = () => {
               : [],
           }));
           setSavedWords(mappedSaved);
-          localStorage.setItem('study_planner_vocab_saved', JSON.stringify(mappedSaved));
+          localStorage.setItem('ielts_talk_vocab_saved', JSON.stringify(mappedSaved));
         } else if (user.user_metadata?.vocab_saved) {
           // Fallback to user_metadata
           const dbS = user.user_metadata.vocab_saved;
           setSavedWords(dbS);
-          localStorage.setItem('study_planner_vocab_saved', JSON.stringify(dbS));
+          localStorage.setItem('ielts_talk_vocab_saved', JSON.stringify(dbS));
         }
 
         // Fetch search history from user_vocab_history table
@@ -146,11 +146,11 @@ export const VocabularyBuilderPage: React.FC = () => {
         if (histData && histData.length > 0) {
           const mappedHistory = histData.map((h: any) => h.details || { word: h.word });
           setHistory(mappedHistory);
-          localStorage.setItem('study_planner_vocab_history', JSON.stringify(mappedHistory));
+          localStorage.setItem('ielts_talk_vocab_history', JSON.stringify(mappedHistory));
         } else if (user.user_metadata?.vocab_history) {
           const dbH = user.user_metadata.vocab_history;
           setHistory(dbH);
-          localStorage.setItem('study_planner_vocab_history', JSON.stringify(dbH));
+          localStorage.setItem('ielts_talk_vocab_history', JSON.stringify(dbH));
         }
       } catch (err) {
         console.warn('Failed to fetch DB vocab state:', err);
@@ -186,7 +186,7 @@ export const VocabularyBuilderPage: React.FC = () => {
       ].slice(0, 30);
       setHistory(updatedHistory);
       try {
-        localStorage.setItem('study_planner_vocab_history', JSON.stringify(updatedHistory));
+        localStorage.setItem('ielts_talk_vocab_history', JSON.stringify(updatedHistory));
       } catch (e) {}
       return;
     }
@@ -245,7 +245,7 @@ Return ONLY a raw valid JSON object (no markdown, no backticks) with this struct
       ].slice(0, 30);
       setHistory(updatedHistory);
       try {
-        localStorage.setItem('study_planner_vocab_history', JSON.stringify(updatedHistory));
+        localStorage.setItem('ielts_talk_vocab_history', JSON.stringify(updatedHistory));
       } catch (e) {
         console.warn(e);
       }
@@ -289,7 +289,7 @@ Return ONLY a raw valid JSON object (no markdown, no backticks) with this struct
     }
     setSavedWords(updated);
     try {
-      localStorage.setItem('study_planner_vocab_saved', JSON.stringify(updated));
+      localStorage.setItem('ielts_talk_vocab_saved', JSON.stringify(updated));
     } catch (e) {
       console.warn(e);
     }

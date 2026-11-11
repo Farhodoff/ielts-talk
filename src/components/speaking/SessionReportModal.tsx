@@ -13,7 +13,7 @@ import {
 } from 'lucide-react';
 import { SessionAnalysisReport, cleanJapaneseTTS } from '../../utils/ai';
 import { ErrorVaultService } from '../../services/ErrorVaultService';
-import { useStudyData } from '../../context/StudyPlannerContext';
+import { useStudyData } from '../../context/IeltsTalkContext';
 import { toast } from '../../hooks/use-toast';
 import { escapeHtml } from '../../utils/escapeHtml';
 import { downloadReportAsPNG } from '../../utils/reportExport';

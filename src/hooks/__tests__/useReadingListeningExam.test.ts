@@ -8,7 +8,7 @@ import { MasteryEngine } from '../../services/MasteryEngine';
 
 // Mock dependencies
 const mockAwardXP = vi.fn().mockResolvedValue(undefined);
-vi.mock('../../context/StudyPlannerContext', () => ({
+vi.mock('../../context/IeltsTalkContext', () => ({
   useStudyData: () => ({
     awardXP: mockAwardXP,
     user: { id: 'test-user-1', email: 'candidate@example.com' },

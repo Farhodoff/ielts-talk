@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback } from 'react';
 import { FreemiumService, FreemiumQuotaStatus } from '../services/FreemiumService';
-import { useStudyData } from '../context/StudyPlannerContext';
+import { useStudyData } from '../context/IeltsTalkContext';
 import { isAdminEmail } from '../utils/admin';
 
 export const useFreemiumQuota = () => {

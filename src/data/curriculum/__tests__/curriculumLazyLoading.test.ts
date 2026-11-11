@@ -16,8 +16,8 @@ import { LessonService } from '../../../services/LessonService';
 
 describe('Curriculum Lazy-Loading Architecture & Manifest Index', () => {
   describe('Lightweight Manifest Metadata (~15 KB index)', () => {
-    it('contains exactly 150 English lessons covering all 6 CEFR levels', () => {
-      expect(CURRICULUM_MANIFEST).toHaveLength(150);
+    it('contains exactly 259 English lessons covering all 6 CEFR levels', () => {
+      expect(CURRICULUM_MANIFEST).toHaveLength(259);
 
       const a1 = getCurriculumManifestByLevel('A1');
       const a2 = getCurriculumManifestByLevel('A2');
@@ -26,7 +26,46 @@ describe('Curriculum Lazy-Loading Architecture & Manifest Index', () => {
       const c1 = getCurriculumManifestByLevel('C1');
       const c2 = getCurriculumManifestByLevel('C2');
 
-      expect(a1).toHaveLength(25);
+      expect(a1).toHaveLength(134);
+      expect(a1.slice(0, 115).map(({ id }) => id)).toEqual([
+        'en-a1-u1-l1',
+        'en-a1-u1-be-questions',
+        'en-a1-u1-present-continuous',
+        'en-a1-u1-present-continuous-questions',
+        'en-a1-u2-l3',
+        'en-a1-u2-l4',
+        'en-a1-u2-l5',
+        'en-a1-u4-l5',
+        'en-a1-u1-have-got',
+        'en-a1-u1-was-were',
+        'en-a1-u1-past-simple',
+        'en-a1-u1-past-simple-questions-negatives',
+        'en-a1-u1-past-continuous',
+        'en-a1-u1-past-simple-vs-continuous',
+        'en-a1-u1-present-perfect',
+        'en-a1-u1-present-perfect-just-already-yet',
+        'en-a1-u1-present-perfect-experience',
+        'en-a1-u1-present-perfect-how-long',
+        'en-a1-u1-for-since-ago',
+        'en-a1-u1-present-perfect-vs-past-simple',
+        'en-a1-u1-passive-present-past',
+        'en-a1-u1-passive-continuous-perfect',
+        'en-a1-u1-auxiliary-be-have-do',
+        'en-a1-u1-regular-irregular-verbs',
+        'en-a1-u1-used-to',
+        'en-a1-u1-future-arrangements',
+        'en-a1-u1-going-to',
+        'en-a1-u1-will-decisions-offers',
+        'en-a1-u1-will-predictions',
+        'en-a1-u1-might',
+        'en-a1-u1-can-could',
+        'en-a1-u1-must-mustnt-neednt',
+        'en-a1-u1-should',
+        'en-a1-u1-have-to',
+        'en-a1-u1-would-like',
+        ...Array.from({ length: 79 }, (_, i) => `en-a1-u1-egi-${i + 36}`),
+        'en-a1-u1-l2',
+      ]);
       expect(a2).toHaveLength(25);
       expect(b1).toHaveLength(25);
       expect(b2).toHaveLength(30);
@@ -54,7 +93,7 @@ describe('Curriculum Lazy-Loading Architecture & Manifest Index', () => {
     it('retrieves single lesson metadata by ID without loading full content', () => {
       const meta = getCurriculumLessonMetaById('en-a1-u1-l1');
       expect(meta).toBeDefined();
-      expect(meta?.title).toContain('Greetings & Introductions');
+      expect(meta?.title).toBe('Am / Is / Are');
       expect(meta?.level).toBe('A1');
       expect(meta?.skill).toBe('grammar');
 
@@ -63,7 +102,7 @@ describe('Curriculum Lazy-Loading Architecture & Manifest Index', () => {
 
     it('filters manifest by language correctly', () => {
       const enManifest = getCurriculumManifestByLanguage('en');
-      expect(enManifest).toHaveLength(150);
+      expect(enManifest).toHaveLength(259);
 
       const jaManifest = getCurriculumManifestByLanguage('ja');
       expect(jaManifest).toHaveLength(0);
@@ -85,7 +124,7 @@ describe('Curriculum Lazy-Loading Architecture & Manifest Index', () => {
   describe('On-Demand Dynamic Level Chunk Loading', () => {
     it('dynamically loads A1 curriculum chunk on demand with interactive steps', async () => {
       const a1Lessons = await loadCurriculumLevel('A1');
-      expect(a1Lessons).toHaveLength(25);
+      expect(a1Lessons).toHaveLength(134);
 
       const firstLesson = a1Lessons[0];
       expect(firstLesson.id).toBe('en-a1-u1-l1');
@@ -119,8 +158,8 @@ describe('Curriculum Lazy-Loading Architecture & Manifest Index', () => {
       expect(syncResult?.id).toBe('en-a2-u1-l1');
     });
 
-    it('ALL_ENGLISH_LESSONS provides 150 manifest-backed lightweight lessons for metadata callers', () => {
-      expect(ALL_ENGLISH_LESSONS).toHaveLength(150);
+    it('ALL_ENGLISH_LESSONS provides 259 manifest-backed lightweight lessons for metadata callers', () => {
+      expect(ALL_ENGLISH_LESSONS).toHaveLength(259);
       ALL_ENGLISH_LESSONS.forEach((l) => {
         expect(l.id).toBeTruthy();
         expect(l.title).toBeTruthy();

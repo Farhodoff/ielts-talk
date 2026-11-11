@@ -29,7 +29,7 @@ import {
 } from 'date-fns';
 import { uz } from 'date-fns/locale';
 import { ChevronLeft, ChevronRight, Calendar as CalendarIcon, Plus, Sparkles } from 'lucide-react';
-import { useStudyData } from '../context/StudyPlannerContext';
+import { useStudyData } from '../context/IeltsTalkContext';
 import CalendarDay from '../components/calendar/CalendarDay';
 import DraggableTask from '../components/calendar/DraggableTask';
 import AddEventModal from '../components/AddEventModal';

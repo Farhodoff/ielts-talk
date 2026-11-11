@@ -4,7 +4,7 @@ import { CoachChatMessage, CoachVocabularyItem, CoachPersonaItem } from './speak
 import { Check, Copy, Volume2, Plus, Sparkles, ArrowRight, TrendingUp } from 'lucide-react';
 import { UzbekistanFlag } from '../common/FlagIcons';
 import { useLanguage } from '../../context/LanguageContext';
-import { useStudyData } from '../../context/StudyPlannerContext';
+import { useStudyData } from '../../context/IeltsTalkContext';
 import { safeLocalStorage } from '../../utils/storage/safeLocalStorage';
 import { ConversationScenario } from './scenarioTypes';
 
@@ -53,11 +53,11 @@ export const CoachChatArea: React.FC<CoachChatAreaProps> = ({
       const set = new Set<string>();
       const uid = user?.id || 'local_user';
       const jaWords = safeLocalStorage.getJSON<any[]>(
-        `study_planner_speaking_vocabularies_${uid}_ja`,
+        `ielts_talk_speaking_vocabularies_${uid}_ja`,
         [],
       );
       const enWords = safeLocalStorage.getJSON<any[]>(
-        `study_planner_speaking_vocabularies_${uid}_en`,
+        `ielts_talk_speaking_vocabularies_${uid}_en`,
         [],
       );
       jaWords.forEach((w: any) => w.word && set.add(w.word.trim()));
@@ -66,11 +66,11 @@ export const CoachChatArea: React.FC<CoachChatAreaProps> = ({
       // Also check fallback local_user keys if different
       if (uid !== 'local_user') {
         const fallbackJa = safeLocalStorage.getJSON<any[]>(
-          'study_planner_speaking_vocabularies_local_user_ja',
+          'ielts_talk_speaking_vocabularies_local_user_ja',
           [],
         );
         const fallbackEn = safeLocalStorage.getJSON<any[]>(
-          'study_planner_speaking_vocabularies_local_user_en',
+          'ielts_talk_speaking_vocabularies_local_user_en',
           [],
         );
         fallbackJa.forEach((w: any) => w.word && set.add(w.word.trim()));

@@ -15,7 +15,7 @@ export const PushNotificationPrompt: React.FC = () => {
       setIsGranted(true);
       setIsVisible(false);
     } else if (perm === 'default') {
-      const hasDismissed = localStorage.getItem('study_planner_push_prompt_dismissed');
+      const hasDismissed = localStorage.getItem('ielts_talk_push_prompt_dismissed');
       if (!hasDismissed) {
         setIsVisible(true);
       }
@@ -34,7 +34,7 @@ export const PushNotificationPrompt: React.FC = () => {
   };
 
   const handleDismiss = () => {
-    localStorage.setItem('study_planner_push_prompt_dismissed', 'true');
+    localStorage.setItem('ielts_talk_push_prompt_dismissed', 'true');
     setIsVisible(false);
   };
 

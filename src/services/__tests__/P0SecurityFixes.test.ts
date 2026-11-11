@@ -124,15 +124,15 @@ describe('shared admin Gemini key distribution', () => {
     return out;
   }
 
-  it('no src file reads or writes study_planner_admin_api_key (only removeItem allowed)', () => {
+  it('no src file reads or writes ielts_talk_admin_api_key (only removeItem allowed)', () => {
     const offenders: string[] = [];
     for (const file of collectFiles(srcRoot, ['.ts', '.tsx'])) {
       const content = readFileSync(file, 'utf-8');
       const forbidden = [
-        /localStorage\.getItem\(['"`]study_planner_admin_api_key/,
-        /localStorage\.setItem\(['"`]study_planner_admin_api_key/,
-        /safeStorage\.getItem\(['"`]study_planner_admin_api_key/,
-        /safeStorage\.setItem\(['"`]study_planner_admin_api_key/,
+        /localStorage\.getItem\(['"`]ielts_talk_admin_api_key/,
+        /localStorage\.setItem\(['"`]ielts_talk_admin_api_key/,
+        /safeStorage\.getItem\(['"`]ielts_talk_admin_api_key/,
+        /safeStorage\.setItem\(['"`]ielts_talk_admin_api_key/,
       ];
       if (forbidden.some((rx) => rx.test(content))) {
         offenders.push(path.relative(srcRoot, file));

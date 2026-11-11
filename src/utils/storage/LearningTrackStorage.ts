@@ -3,10 +3,10 @@ import { SupportedLanguage } from '../../types/lesson';
 import { LevelPromotionCandidate } from '../../types/learningPath';
 import { supabase } from '../../lib/supabase';
 
-const CURRENT_LEVEL_KEY = 'study_planner_current_level';
-const TARGET_LEVEL_KEY = 'study_planner_target_level';
-const TARGET_GOAL_KEY = 'study_planner_target_goal';
-const PROMOTION_CANDIDATE_KEY = 'study_planner_promotion_candidate';
+const CURRENT_LEVEL_KEY = 'ielts_talk_current_level';
+const TARGET_LEVEL_KEY = 'ielts_talk_target_level';
+const TARGET_GOAL_KEY = 'ielts_talk_target_goal';
+const PROMOTION_CANDIDATE_KEY = 'ielts_talk_promotion_candidate';
 
 export const LearningTrackStorage = {
   getCurrentLevel(language: SupportedLanguage): string {
@@ -135,7 +135,7 @@ export const LearningTrackStorage = {
 
   async triggerSupabaseSync(): Promise<void> {
     try {
-      const cachedUser = safeLocalStorage.getJSON<any>('study_planner_user_cache', null);
+      const cachedUser = safeLocalStorage.getJSON<any>('ielts_talk_user_cache', null);
       if (!cachedUser?.id || cachedUser.id === 'guest') return;
 
       const targetEn = safeLocalStorage.getItem(`${TARGET_LEVEL_KEY}_en`) || 'A1';

@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { LearningOrchestrator } from '../services/LearningOrchestrator';
 import { Award, BookOpen, BrainCircuit, AlertCircle, ChevronRight, X } from 'lucide-react';
-import { useStudyData } from '../context/StudyPlannerContext';
+import { useStudyData } from '../context/IeltsTalkContext';
 import { LessonService } from '../services/LessonService';
 import { extractLevelFromLessonId } from '../data/curriculum/curriculumLessons';
 import { LearningSignalService } from '../services/LearningSignalService';
@@ -10,6 +10,7 @@ import { Lesson, LessonStep, UserLessonProgress } from '../types/lesson';
 import { IncorrectAnswerSignal } from '../types/learningSignals';
 import { LearnStepView } from '../components/lesson/LearnStepView';
 import { PracticeStepView } from '../components/lesson/PracticeStepView';
+import { ListenStepView } from '../components/lesson/ListenStepView';
 import { TestStepView, MissedQuestionInfo } from '../components/lesson/TestStepView';
 import { LessonCompletionView } from '../components/lesson/LessonCompletionView';
 import { useSEO } from '../hooks/useSEO';
@@ -390,11 +391,14 @@ export const LessonPlayerPage: React.FC = () => {
                     ? 'border border-blue-500/20 bg-blue-500/10 text-blue-500'
                     : currentStep.type === 'practice'
                       ? 'border border-purple-500/20 bg-purple-500/10 text-purple-500'
-                      : 'border border-emerald-500/20 bg-emerald-500/10 text-emerald-500'
+                      : currentStep.type === 'listen'
+                        ? 'border border-amber-500/20 bg-amber-500/10 text-amber-500'
+                        : 'border border-emerald-500/20 bg-emerald-500/10 text-emerald-500'
                 }`}
               >
                 {currentStep.type === 'learn' && <BookOpen size={13} />}
                 {currentStep.type === 'practice' && <BrainCircuit size={13} />}
+                {currentStep.type === 'listen' && <BookOpen size={13} />}
                 {currentStep.type === 'test' && <Award size={13} />}
                 <span>{currentStep.title}</span>
               </span>
@@ -409,6 +413,13 @@ export const LessonPlayerPage: React.FC = () => {
               <PracticeStepView
                 instructions={currentStep.practiceData.instructions}
                 exercises={currentStep.practiceData.exercises}
+                onIncorrectAnswer={handlePracticeIncorrectAnswer}
+              />
+            )}
+
+            {currentStep.type === 'listen' && currentStep.listenData && (
+              <ListenStepView
+                content={currentStep.listenData}
                 onIncorrectAnswer={handlePracticeIncorrectAnswer}
               />
             )}

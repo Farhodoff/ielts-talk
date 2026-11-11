@@ -12,7 +12,7 @@ import {
 } from 'lucide-react';
 import { CheckpointTest } from '../../../data/ielts/checkpointTestsData';
 import { CheckpointTestService, CheckpointResult } from '../../../services/CheckpointTestService';
-import { useStudyData } from '../../../context/StudyPlannerContext';
+import { useStudyData } from '../../../context/IeltsTalkContext';
 
 interface CheckpointTestModalProps {
   isOpen: boolean;

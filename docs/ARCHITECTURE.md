@@ -1,4 +1,4 @@
-# 📐 AI Study Planner - Architecture & System Design
+# 📐 IELTS Talk - Architecture & System Design
 
 > System Architecture, Data Flow, va Component Diagrams
 

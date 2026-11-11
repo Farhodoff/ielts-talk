@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Bell, GraduationCap, RefreshCw, Smartphone, Download, CheckCircle2 } from 'lucide-react';
 import { PushNotificationService } from '../../services/PushNotificationService';
-import { useStudyData } from '../../context/StudyPlannerContext';
+import { useStudyData } from '../../context/IeltsTalkContext';
 import { toast } from '../../hooks/use-toast';
 import { isSuperAdmin } from '../../utils/admin';
 import { useLanguage } from '../../context/LanguageContext';

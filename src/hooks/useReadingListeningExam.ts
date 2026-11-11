@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { useStudyData } from '../context/StudyPlannerContext';
+import { useStudyData } from '../context/IeltsTalkContext';
 import { IELTS_READING_EXAMS, ReadingPassage } from '../data/ielts/reading_data';
 import { IELTS_LISTENING_EXAMS } from '../data/ielts/listening_data';
 import { HistoryService } from '../services/HistoryService';

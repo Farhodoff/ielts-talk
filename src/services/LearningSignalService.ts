@@ -5,6 +5,7 @@ import type {
   IncorrectAnswerSignal,
   RepeatedErrorSignal,
   CompletedLessonSignal,
+  // Add new types for AI Coach signals
 } from '../types/learningSignals';
 import { Lesson, VocabItem, SupportedLanguage } from '../types/lesson';
 import { MasterySkill } from '../types/mastery';
@@ -13,7 +14,7 @@ import { FlashcardService } from './FlashcardService';
 import { MasteryEngine } from './MasteryEngine';
 import { supabase } from '../lib/supabase';
 
-const SIGNALS_STORAGE_PREFIX = 'study_planner_learning_signals_';
+const SIGNALS_STORAGE_PREFIX = 'ielts_talk_learning_signals_';
 
 function generateUUID(): string {
   if (typeof crypto !== 'undefined' && crypto.randomUUID) {
@@ -537,5 +538,82 @@ export const LearningSignalService = {
         source: params.source || 'quiz',
       });
     }
+  },
+
+  /**
+   * Ingests AI Speaking Coach analysis and converts it into learning signals.
+   * This fuels the Dynamic Roadmap by flagging weaknesses and suggesting remediation.
+   */
+  async recordAiCoachAnalysis(
+    userId: string,
+    language: SupportedLanguage,
+    analysis: {
+      grammar_corrections: {
+        original: string;
+        corrected: string;
+        explanation: string;
+        practice_task: string;
+      }[];
+      better_vocabulary: { original: string; suggested: string; nuance: string }[];
+      fluency_score: number;
+      overall_feedback: string;
+    },
+    topic: string,
+  ): Promise<void> {
+    const timestamp = new Date().toISOString();
+    const activeUserId = userId || 'guest';
+    const emittedSignals: LearningSignal[] = [];
+
+    // 1. Convert Grammar Corrections to IncorrectAnswerSignals (to lower mastery & trigger remediation)
+    analysis.grammar_corrections.forEach((corr, idx) => {
+      emittedSignals.push({
+        id: `ai_coach_gram_${stablePart(activeUserId)}_${stablePart(topic)}_${idx}`,
+        type: 'incorrect_answer',
+        language,
+        lessonId: 'speaking-coach',
+        userId: activeUserId,
+        timestamp,
+        stepId: 'analysis_step',
+        questionId: `gram_err_${idx}`,
+        prompt: corr.original,
+        userAnswer: corr.original,
+        expectedAnswer: corr.corrected,
+        explanation: corr.explanation,
+        attemptCount: 1,
+        skill: 'grammar',
+        source: 'ai_coach',
+      } as any);
+    });
+
+    // 2. Convert Vocabulary suggestions to VocabularySignals (to suggest new words/decks)
+    analysis.better_vocabulary.forEach((voc, idx) => {
+      emittedSignals.push({
+        id: `ai_coach_vocab_${stablePart(activeUserId)}_${stablePart(topic)}_${idx}`,
+        type: 'new_vocabulary',
+        language,
+        lessonId: 'speaking-coach',
+        userId: activeUserId,
+        timestamp,
+        term: voc.suggested,
+        meaning: voc.nuance,
+        source: 'ai_coach',
+      } as any);
+    });
+
+    // 3. Record overall fluency as a performance signal
+    emittedSignals.push({
+      id: `ai_coach_fluency_${stablePart(activeUserId)}_${stablePart(topic)}_${timestamp}`,
+      type: 'performance_metric',
+      language,
+      lessonId: 'speaking-coach',
+      userId: activeUserId,
+      timestamp,
+      score: analysis.fluency_score,
+      skill: 'speaking',
+      details: analysis.overall_feedback,
+      source: 'ai_coach',
+    } as any);
+
+    await this.recordSignalsBatch(emittedSignals);
   },
 };

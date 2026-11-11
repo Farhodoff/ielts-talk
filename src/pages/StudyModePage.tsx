@@ -2,7 +2,7 @@ import { ArrowLeft, CheckCircle2, Copy, Loader2, Volume2, Trash2, Edit3, X } fro
 import React, { useEffect, useState, useMemo, useCallback } from 'react';
 import { useLocation, useNavigate, useParams } from 'react-router-dom';
 import { Button } from '../components/ui/Button';
-import { useStudyData } from '../context/StudyPlannerContext';
+import { useStudyData } from '../context/IeltsTalkContext';
 import { isAdminEmail } from '../utils/admin';
 import { Flashcard } from '../types';
 import {
@@ -18,7 +18,13 @@ import { PersonalLearningPlanService } from '../services/PersonalLearningPlanSer
 import { isFlashcardAnswerCorrect } from '../utils/flashcardMatching';
 import { useTelegramWebApp } from '../hooks/useTelegramWebApp';
 import { useFlashcardSwipe } from '../hooks/useFlashcardSwipe';
+import { loadCurriculumLessonById } from '../data/curriculum/curriculumLessons';
 import { PRESET_DECKS } from '../data/presetDecks';
+
+type StudyCard = Flashcard & {
+  exampleSentence?: string;
+  exampleTranslation?: string;
+};
 
 const StudyModePage: React.FC = () => {
   const { subjectId } = useParams<{ subjectId?: string }>();
@@ -39,7 +45,7 @@ const StudyModePage: React.FC = () => {
   const isAdmin = isAdminEmail(user?.email);
   const { haptics } = useTelegramWebApp();
 
-  const [queue, setQueue] = useState<Flashcard[]>([]);
+  const [queue, setQueue] = useState<StudyCard[]>([]);
   const [currentCardIndex, setCurrentCardIndex] = useState(0);
   const [isFlipped, setIsFlipped] = useState(false);
   const [isFinished, setIsFinished] = useState(false);
@@ -48,13 +54,13 @@ const StudyModePage: React.FC = () => {
   const [accent, setAccent] = useState<'en-GB' | 'en-US' | 'ja-JP'>('en-US');
   const [isQueueInitialized, setIsQueueInitialized] = useState(false);
   const [autoAudio, setAutoAudio] = useState<boolean>(() => {
-    return localStorage.getItem('study_planner_flashcard_auto_audio') === 'true';
+    return localStorage.getItem('ielts_talk_flashcard_auto_audio') === 'true';
   });
 
   const toggleAutoAudio = () => {
     setAutoAudio((prev) => {
       const next = !prev;
-      localStorage.setItem('study_planner_flashcard_auto_audio', String(next));
+      localStorage.setItem('ielts_talk_flashcard_auto_audio', String(next));
       return next;
     });
   };
@@ -68,9 +74,16 @@ const StudyModePage: React.FC = () => {
     if (sessionSavedRef.current || cardsReviewedCountRef.current === 0) return;
     sessionSavedRef.current = true;
 
-    const elapsedMinutes = Math.max(1, Math.round((Date.now() - sessionStartTimeRef.current) / 60000));
-    const duration = Math.max(1, Math.max(elapsedMinutes, Math.round(cardsReviewedCountRef.current * 0.5)));
-    const xpGained = xpEarnedRef.current > 0 ? xpEarnedRef.current : cardsReviewedCountRef.current * 3;
+    const elapsedMinutes = Math.max(
+      1,
+      Math.round((Date.now() - sessionStartTimeRef.current) / 60000),
+    );
+    const duration = Math.max(
+      1,
+      Math.max(elapsedMinutes, Math.round(cardsReviewedCountRef.current * 0.5)),
+    );
+    const xpGained =
+      xpEarnedRef.current > 0 ? xpEarnedRef.current : cardsReviewedCountRef.current * 3;
 
     try {
       if (awardXP) {
@@ -105,7 +118,7 @@ const StudyModePage: React.FC = () => {
     document.documentElement.classList.add('dark');
     document.documentElement.classList.remove('light');
     try {
-      localStorage.setItem('study_planner_theme', 'dark');
+      localStorage.setItem('ielts_talk_theme', 'dark');
     } catch {}
   }, []);
 
@@ -124,13 +137,14 @@ const StudyModePage: React.FC = () => {
   const [editFront, setEditFront] = useState('');
   const [editBack, setEditBack] = useState('');
 
-  const [allAvailableCards, setAllAvailableCards] = useState<Flashcard[]>([]);
+  const [allAvailableCards, setAllAvailableCards] = useState<StudyCard[]>([]);
   const [batchLimit, setBatchLimit] = useState<'10' | '25' | '50' | 'all'>('25');
 
   const searchParams = useMemo(() => new URLSearchParams(location.search), [location.search]);
   const langFilter = searchParams.get('lang'); // 'ja' | 'en' | null
   const deckParam = searchParams.get('deck') || searchParams.get('deckId');
   const partParam = searchParams.get('part');
+  const lessonId = searchParams.get('lesson');
 
   const extractedPart = useMemo(() => {
     if (partParam) return partParam;
@@ -167,7 +181,49 @@ const StudyModePage: React.FC = () => {
   }, [subjectId, subjects, matchedPresetDeck, extractedPart]);
 
   useEffect(() => {
-    if (isQueueInitialized) return;
+    if (!lessonId) return;
+    let cancelled = false;
+    setIsQueueInitialized(false);
+    setQueue([]);
+    setAllAvailableCards([]);
+    setCurrentCardIndex(0);
+    setIsFlipped(false);
+    setIsFinished(false);
+
+    loadCurriculumLessonById(lessonId)
+      .then((lesson) => {
+        if (cancelled) return;
+        const vocabulary = lesson?.steps.flatMap((step) => step.learnData?.vocabulary ?? []) ?? [];
+        const now = new Date().toISOString();
+        const cards: StudyCard[] = vocabulary
+          .filter((item) => item.term.trim() && item.meaning.trim())
+          .map((item, index) => ({
+            id: `preset-lesson-${lessonId}-${index}`,
+            subjectId: lessonId,
+            front: item.term,
+            back: item.meaning,
+            exampleSentence: item.exampleSentence,
+            exampleTranslation: item.exampleTranslation,
+            interval: 0,
+            repetitions: 0,
+            easeFactor: 2.5,
+            nextReviewDate: now,
+          }));
+        setAllAvailableCards(cards);
+        setQueue(cards.slice(0, 25));
+      })
+      .catch((error) => console.error('Error loading lesson vocabulary:', error))
+      .finally(() => {
+        if (!cancelled) setIsQueueInitialized(true);
+      });
+
+    return () => {
+      cancelled = true;
+    };
+  }, [lessonId]);
+
+  useEffect(() => {
+    if (lessonId || isQueueInitialized) return;
 
     if (matchedPresetDeck) {
       matchedPresetDeck
@@ -178,12 +234,14 @@ const StudyModePage: React.FC = () => {
           const startIdx = (partNum - 1) * quota;
           const chunk = rawCards.slice(startIdx, startIdx + quota);
 
-          const presetCards: Flashcard[] = chunk.map((c, i) => ({
+          const presetCards: StudyCard[] = chunk.map((c, i) => ({
             id: `preset-${matchedPresetDeck.id}-p${partNum}-${i}`,
             userId: user?.id || 'guest',
             subjectId: matchedPresetDeck.id,
             front: c.front,
-            back: `${c.back}${c.phonetic ? ` (${c.phonetic})` : ''}${c.example ? `\n\nMisol: "${c.example}"` : ''}`,
+            back: `${c.back}${c.phonetic ? ` (${c.phonetic})` : ''}`,
+            exampleSentence: c.example,
+            exampleTranslation: c.exampleTranslation,
             interval: 1,
             repetitions: 0,
             easeFactor: 2.5,
@@ -259,6 +317,7 @@ const StudyModePage: React.FC = () => {
     langFilter,
     subjects,
     matchedPresetDeck,
+    lessonId,
     partParam,
     user?.id,
   ]);
@@ -290,7 +349,7 @@ const StudyModePage: React.FC = () => {
         return !hasJaChars;
       });
     }
-    const pool = allAvailableCards.length > 0 ? allAvailableCards : fallbackCards;
+    const pool = lessonId || allAvailableCards.length > 0 ? allAvailableCards : fallbackCards;
     const limitNum = newLimit === 'all' ? pool.length : parseInt(newLimit, 10);
     const newQueue = sortCardsBySRSPriority(pool).slice(0, limitNum);
     setQueue(newQueue);
@@ -863,7 +922,9 @@ const StudyModePage: React.FC = () => {
             {typeResult === 'incorrect' && (
               <div className="mx-auto max-w-md rounded-xl border border-rose-500/20 bg-rose-500/10 p-3 text-left text-xs text-rose-500 animate-in fade-in">
                 <span className="block font-bold">To'g'ri ma'nosi:</span>
-                <span className="whitespace-pre-line font-medium">{currentCard?.back}</span>
+                <span translate="no" className="whitespace-pre-line font-medium">
+                  {currentCard?.back}
+                </span>
               </div>
             )}
           </div>
@@ -910,7 +971,7 @@ const StudyModePage: React.FC = () => {
           data-testid="study-card"
           style={cardStyle}
           {...swipeHandlers}
-          className="perspective-1000 relative h-72 sm:h-96 cursor-pointer select-none"
+          className="perspective-1000 relative h-72 cursor-pointer select-none sm:h-96"
         >
           {/* Visual Swipe Badges for Mobile */}
           {isDragging && swipeDirection === 'left' && (
@@ -936,7 +997,7 @@ const StudyModePage: React.FC = () => {
             className={`transform-style-3d relative h-full w-full transition-all duration-700 ${isFlipped ? 'rotate-y-180' : ''}`}
           >
             {/* Front Side */}
-            <div className="backface-hidden absolute inset-0 flex flex-col justify-between rounded-2xl sm:rounded-3xl border border-border bg-card p-5 sm:p-8 shadow-xl">
+            <div className="backface-hidden absolute inset-0 flex flex-col justify-between rounded-2xl border border-border bg-card p-5 shadow-xl sm:rounded-3xl sm:p-8">
               <div className="flex items-center justify-between">
                 {isAdmin ? (
                   <div className="flex items-center gap-2">
@@ -961,42 +1022,54 @@ const StudyModePage: React.FC = () => {
                 <button
                   onClick={handleSpeak}
                   title="Talaffuzni eshitish"
-                  className="rounded-2xl bg-primary/10 p-2.5 sm:p-3 text-primary shadow-xs transition-all hover:bg-primary/20 active:scale-95"
+                  className="rounded-2xl bg-primary/10 p-2.5 text-primary shadow-xs transition-all hover:bg-primary/20 active:scale-95 sm:p-3"
                 >
                   <Volume2 size={20} className="sm:h-6 sm:w-6" />
                 </button>
               </div>
               <div className="my-auto text-center">
-                <p className="text-2xl sm:text-4xl font-extrabold tracking-tight text-foreground">
+                <p className="text-2xl font-extrabold tracking-tight text-foreground sm:text-4xl">
                   {currentCard?.front}
                 </p>
               </div>
-              <p className="text-center text-[11px] sm:text-xs font-medium text-muted-foreground">
+              <p className="text-center text-[11px] font-medium text-muted-foreground sm:text-xs">
                 👆 Kartani bosing yoki suring — Javobni ko'rish (Space)
               </p>
             </div>
 
             {/* Back Side */}
-            <div className="backface-hidden rotate-y-180 absolute inset-0 flex flex-col justify-between rounded-2xl sm:rounded-3xl border-2 border-primary/50 bg-gradient-to-br from-[#1A2028] via-[#222B36] to-[#1A2028] p-5 sm:p-8 text-foreground shadow-2xl">
+            <div className="backface-hidden rotate-y-180 absolute inset-0 flex flex-col justify-between rounded-2xl border-2 border-primary/50 bg-gradient-to-br from-[#1A2028] via-[#222B36] to-[#1A2028] p-5 text-foreground shadow-2xl sm:rounded-3xl sm:p-8">
               <div className="flex justify-end">
                 <button
                   onClick={handleSpeak}
-                  className="rounded-2xl border border-border bg-card p-2.5 sm:p-3 text-foreground transition-all hover:bg-muted active:scale-95"
+                  className="rounded-2xl border border-border bg-card p-2.5 text-foreground transition-all hover:bg-muted active:scale-95 sm:p-3"
                 >
                   <Volume2 size={20} className="sm:h-6 sm:w-6" />
                 </button>
               </div>
-              <div className="custom-scrollbar my-auto max-h-[180px] sm:max-h-[220px] space-y-2 sm:space-y-3 overflow-y-auto px-2 text-center">
-                <div className="whitespace-pre-line text-lg sm:text-xl md:text-2xl font-black leading-relaxed tracking-wide text-primary">
-                  {currentCard?.back}
+              <div className="custom-scrollbar my-auto max-h-[180px] space-y-2 overflow-y-auto px-2 text-center sm:max-h-[220px] sm:space-y-3">
+                <div className="whitespace-pre-line text-lg font-black leading-relaxed tracking-wide text-primary sm:text-xl md:text-2xl">
+                  <span translate="no">{currentCard?.back}</span>
                 </div>
+                {currentCard?.exampleSentence && (
+                  <div className="space-y-1 rounded-xl bg-background/40 p-3 text-sm" translate="no">
+                    <p className="font-semibold" lang="en">
+                      {currentCard.exampleSentence}
+                    </p>
+                    {currentCard.exampleTranslation && (
+                      <p className="text-muted-foreground" lang="uz">
+                        {currentCard.exampleTranslation}
+                      </p>
+                    )}
+                  </div>
+                )}
                 <div className="border-t border-border pt-2 sm:pt-3">
-                  <p className="text-[11px] sm:text-xs font-semibold text-muted-foreground">
+                  <p className="text-[11px] font-semibold text-muted-foreground sm:text-xs">
                     {currentCard?.front}
                   </p>
                 </div>
               </div>
-              <div className="flex items-center justify-between text-[11px] sm:text-xs font-medium text-muted-foreground">
+              <div className="flex items-center justify-between text-[11px] font-medium text-muted-foreground sm:text-xs">
                 <span className="font-extrabold text-primary sm:hidden">👈 Qayta | Yaxshi 👉</span>
                 <span className="hidden sm:inline">SuperMemo SM-2 bo'yicha baholang</span>
                 <span>(1-4 tugmalari)</span>
@@ -1056,7 +1129,7 @@ const StudyModePage: React.FC = () => {
                       key={b.v}
                       disabled={isProcessing}
                       onClick={() => handleRate(b.v)}
-                      className={`${b.c} rounded-2xl border p-2.5 sm:p-3.5 text-center text-xs sm:text-sm font-extrabold shadow-xs transition-all active:scale-95`}
+                      className={`${b.c} rounded-2xl border p-2.5 text-center text-xs font-extrabold shadow-xs transition-all active:scale-95 sm:p-3.5 sm:text-sm`}
                     >
                       <div>{b.l}</div>
                       <span className="mt-0.5 block text-[11px] font-medium opacity-80">

@@ -27,8 +27,8 @@ export const LearningOrchestrator = {
    */
   getPrimaryLanguage(): SupportedLanguage {
     const saved =
-      safeLocalStorage.getItem('study_planner_primary_language') ||
-      safeLocalStorage.getItem('study_planner_study_track');
+      safeLocalStorage.getItem('ielts_talk_primary_language') ||
+      safeLocalStorage.getItem('ielts_talk_study_track');
     return saved === 'en' ? saved : 'en';
   },
 
@@ -37,7 +37,7 @@ export const LearningOrchestrator = {
    */
   getEnabledLanguages(primaryLang: SupportedLanguage): SupportedLanguage[] {
     const saved = safeLocalStorage.getJSON<SupportedLanguage[] | null>(
-      'study_planner_enabled_languages',
+      'ielts_talk_enabled_languages',
       null,
     );
     if (Array.isArray(saved) && saved.length > 0) {
@@ -65,10 +65,7 @@ export const LearningOrchestrator = {
    * Resolve daily available study minutes.
    */
   getAvailableStudyMinutes(): number {
-    const aiSettings = safeLocalStorage.getJSON<Record<string, any>>(
-      'study_planner_ai_settings',
-      {},
-    );
+    const aiSettings = safeLocalStorage.getJSON<Record<string, any>>('ielts_talk_ai_settings', {});
     if (
       typeof aiSettings.dailyStudyGoalMinutes === 'number' &&
       aiSettings.dailyStudyGoalMinutes > 0
@@ -202,13 +199,13 @@ export const LearningOrchestrator = {
     // If not provided in options, try reading from local cache
     if (cards.length === 0) {
       try {
-        const userKey = `study_planner_flashcards_cache_${_userId || 'guest'}`;
+        const userKey = `ielts_talk_flashcards_cache_${_userId || 'guest'}`;
         const userCached = safeLocalStorage.getJSON<Flashcard[]>(userKey, []);
         if (Array.isArray(userCached) && userCached.length > 0) {
           cards = userCached;
         } else {
           const genericCached = safeLocalStorage.getJSON<Flashcard[]>(
-            'study_planner_flashcards_cache',
+            'ielts_talk_flashcards_cache',
             [],
           );
           if (Array.isArray(genericCached)) {
@@ -418,7 +415,7 @@ export const LearningOrchestrator = {
 
   /**
    * Phase 15: Promote user to next level if all conditions are met.
-   * Writes to localStorage (study_planner_current_level) and syncs to Supabase.
+   * Writes to localStorage (ielts_talk_current_level) and syncs to Supabase.
    */
   /**
    * Phase 15 / Compatibility wrapper:

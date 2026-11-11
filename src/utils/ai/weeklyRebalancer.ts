@@ -119,7 +119,7 @@ export async function analyzeAndRebalanceSchedule(
         rebalancedDaysCount: 7,
         newTasksCount: newTasks.length,
       };
-      localStorage.setItem(`study_planner_rebalance_${planType}`, JSON.stringify(rebalanceInfo));
+      localStorage.setItem(`ielts_talk_rebalance_${planType}`, JSON.stringify(rebalanceInfo));
     } catch (e) {
       console.warn('Failed to cache rebalance state:', e);
     }

@@ -5,7 +5,7 @@ import { PRESET_DECKS } from '../data/presetDecks';
 import { FlashcardOfflineSync } from './FlashcardOfflineSync';
 import { KNOWN_A1_PART1_MAP, CORRUPTED_A1_SUBSTRINGS } from '../data/oxfordA1Part1Fixes';
 
-const CACHE_KEY_PREFIX = 'study_planner_flashcards_cache_';
+const CACHE_KEY_PREFIX = 'ielts_talk_flashcards_cache_';
 
 export const getLocalFlashcardCache = (userId: string): Flashcard[] => {
   try {

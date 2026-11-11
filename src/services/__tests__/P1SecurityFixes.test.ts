@@ -87,8 +87,8 @@ describe('client-side P1 fixes', () => {
     expect(pkg).not.toContain('"tldraw"');
   });
 
-  it('StudyPlannerContext never writes API keys to profiles or auth metadata', () => {
-    const src = readProject('src/context/StudyPlannerContext.tsx');
+  it('IeltsTalkContext never writes API keys to profiles or auth metadata', () => {
+    const src = readProject('src/context/IeltsTalkContext.tsx');
     expect(src).not.toMatch(/from\('profiles'\)[\s\S]{0,200}google_api_key/);
     expect(src).not.toMatch(/updateUser\([\s\S]*?googleApiKey/);
     expect(src).not.toMatch(/updateUser\([\s\S]*?deepseekApiKey/);

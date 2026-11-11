@@ -158,13 +158,21 @@ export default async function handler(req) {
     });
   }
 
-  const prompt = `You are a certified IELTS Senior Examiner.
+  const prompt = `You are a world-class IELTS Senior Examiner and Pedagogical Mentor.
+Your goal is not just to grade, but to lead the student from their current level up to Band 7.5+.
+
 Evaluate the following IELTS ${taskType === 'task1' ? 'Task 1 Report' : 'Task 2 Essay'}.
 Topic/Prompt: "${topic}"
 Student Essay:
 """
 ${essay.substring(0, 8000)}
 """
+
+PEDAGOGICAL MENTORING RULES:
+1. Analysis over Grading: Focus on WHY a score is given.
+2. Structural Integrity: First, analyze if the essay follows the correct IELTS structure (Intro, Body, Conclusion). If not, prioritize this as the biggest gap.
+3. Growth-Oriented Feedback: Instead of just "improvements", provide "Growth Tasks". A Growth Task is a specific action the student must take to reach the next 0.5 band (e.g., "Rewrite the second paragraph using at least two complex sentences").
+4. Band 8.0+ Upgrade: For every point of criticism, provide a "Gold Standard" example of how a Band 8.0+ writer would phrase that specific idea.
 
 Provide your assessment strictly in the following JSON format without markdown fences:
 {
@@ -175,10 +183,26 @@ Provide your assessment strictly in the following JSON format without markdown f
     "lexicalResource": 7.5,
     "grammaticalRange": 6.5
   },
-  "summary": "Brief overall commentary",
-  "strengths": ["point 1", "point 2"],
-  "improvements": ["point 1", "point 2"],
-  "correctedEssay": "Full improved version of the essay with advanced vocabulary"
+  "mentorSummary": "A balanced summary: what was done well, the single biggest blocker to a higher band, and a positive encouragement.",
+  "structuralAnalysis": {
+    "isCorrect": true,
+    "feedback": "Analysis of the essay structure"
+  },
+  "growthTasks": [
+    {
+      "area": "Grammar/Vocab/Structure",
+      "issue": "The specific mistake",
+      "task": "A concrete task for the student to fix this (e.g., 'Rewrite X using Y')"
+    }
+  ],
+  "goldStandardPhrasing": [
+    {
+      "original": "Student's phrase",
+      "upgraded": "Band 8.0+ version",
+      "why": "Why this is better"
+    }
+  ],
+  "correctedEssay": "Full improved version of the essay, incorporating all mentor suggestions"
 }`;
 
   try {

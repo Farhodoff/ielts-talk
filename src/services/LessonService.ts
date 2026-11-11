@@ -8,7 +8,7 @@ import {
 import { supabase } from '../lib/supabase';
 import { toDeterministicUUID } from '../utils/uuid';
 
-const PROGRESS_STORAGE_PREFIX = 'study_planner_lesson_progress_';
+const PROGRESS_STORAGE_PREFIX = 'ielts_talk_lesson_progress_';
 
 function normalizeQuizScore(quizScore: { score: number; total: number; percentage?: number }) {
   const total =

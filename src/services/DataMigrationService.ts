@@ -72,8 +72,8 @@ export class DataMigrationService {
     if (typeof window === 'undefined') return 0;
 
     try {
-      // A. study_planner_speaking_coach_sessions
-      const rawCoach = localStorage.getItem('study_planner_speaking_coach_sessions');
+      // A. ielts_talk_speaking_coach_sessions
+      const rawCoach = localStorage.getItem('ielts_talk_speaking_coach_sessions');
       if (rawCoach) {
         const parsed = JSON.parse(rawCoach);
         if (Array.isArray(parsed)) {
@@ -111,8 +111,8 @@ export class DataMigrationService {
         const k = localStorage.key(i);
         if (
           k &&
-          (k.startsWith('study_planner_scenario_history_') ||
-            k.startsWith('study_planner_speaking_history_'))
+          (k.startsWith('ielts_talk_scenario_history_') ||
+            k.startsWith('ielts_talk_speaking_history_'))
         ) {
           const raw = localStorage.getItem(k);
           if (raw) {
@@ -179,10 +179,9 @@ export class DataMigrationService {
     try {
       const languages = ['ja', 'en'];
       for (const lang of languages) {
-        const key = `study_planner_diag_result_${userId}_${lang}`;
+        const key = `ielts_talk_diag_result_${userId}_${lang}`;
         const raw =
-          localStorage.getItem(key) ||
-          localStorage.getItem(`study_planner_diag_result_guest_${lang}`);
+          localStorage.getItem(key) || localStorage.getItem(`ielts_talk_diag_result_guest_${lang}`);
         if (raw) {
           try {
             const parsed = JSON.parse(raw);
@@ -230,7 +229,7 @@ export class DataMigrationService {
     if (typeof window === 'undefined') return 0;
 
     try {
-      const raw = localStorage.getItem('study_planner_error_vault');
+      const raw = localStorage.getItem('ielts_talk_error_vault');
       if (raw) {
         const parsed = JSON.parse(raw);
         if (Array.isArray(parsed) && parsed.length > 0) {
@@ -268,7 +267,7 @@ export class DataMigrationService {
   private static async migrateStudySessions(userId: string): Promise<number> {
     let count = 0;
     try {
-      const cached = safeLocalStorage.getJSON<any[]>('study_planner_sessions_cache', []);
+      const cached = safeLocalStorage.getJSON<any[]>('ielts_talk_sessions_cache', []);
       if (cached && cached.length > 0) {
         const payloads = cached.map((s) => ({
           id: toDeterministicUUID(String(s.id)),
@@ -308,10 +307,10 @@ export class DataMigrationService {
       const langs = ['ja', 'en'];
 
       for (const lang of langs) {
-        const key = `study_planner_personal_goal_${userId}_${lang}`;
+        const key = `ielts_talk_personal_goal_${userId}_${lang}`;
         const raw =
           localStorage.getItem(key) ||
-          localStorage.getItem(`study_planner_personal_goal_guest_${lang}`);
+          localStorage.getItem(`ielts_talk_personal_goal_guest_${lang}`);
         if (raw) {
           try {
             const parsed = JSON.parse(raw);

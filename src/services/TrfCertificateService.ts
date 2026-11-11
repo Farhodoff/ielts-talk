@@ -112,7 +112,7 @@ export class TrfCertificateService {
           localReflections[reflectionDates[0]]?.text;
       }
 
-      const localVocab = safeLocalStorage.getJSON<any[]>('study_planner_vocab_history', []);
+      const localVocab = safeLocalStorage.getJSON<any[]>('ielts_talk_vocab_history', []);
       result.totalVocabSearched = localVocab.length;
       result.advancedWords = localVocab
         .filter((item) => {
@@ -165,10 +165,10 @@ export class TrfCertificateService {
             ...(typeof row.details === 'object' && row.details !== null ? row.details : {}),
           }));
         } else {
-          vocabItems = safeLocalStorage.getJSON<any[]>('study_planner_vocab_history', []);
+          vocabItems = safeLocalStorage.getJSON<any[]>('ielts_talk_vocab_history', []);
         }
       } catch {
-        vocabItems = safeLocalStorage.getJSON<any[]>('study_planner_vocab_history', []);
+        vocabItems = safeLocalStorage.getJSON<any[]>('ielts_talk_vocab_history', []);
       }
 
       result.totalVocabSearched = vocabItems.length;

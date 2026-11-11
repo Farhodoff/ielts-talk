@@ -3,6 +3,7 @@ export interface PresetCard {
   back: string;
   phonetic?: string;
   example?: string;
+  exampleTranslation?: string;
   category?: string;
 }
 
@@ -12,15 +13,7 @@ export interface PresetDeck {
   description: string;
   language: 'en';
   level:
-    | 'A1-A2'
-    | 'B1-B2'
-    | 'C1-C2'
-    | 'IELTS Collocations'
-    | 'IELTS Topics'
-    | 'A1'
-    | 'A2'
-    | 'B1'
-    | 'B2';
+    'A1-A2' | 'B1-B2' | 'C1-C2' | 'IELTS Collocations' | 'IELTS Topics' | 'A1' | 'A2' | 'B1' | 'B2';
   badgeColor: string;
   icon: string;
   cardCount: number;

@@ -26,6 +26,25 @@ const LEVEL_LOADERS: Record<CefrLevel, () => Promise<{ [key: string]: Lesson[] }
 const loadedLevelsCache = new Map<CefrLevel, Lesson[]>();
 const loadedLessonsById = new Map<string, Lesson>();
 
+/** A1/A2 enrichment: har bir darsda Vocab+Grammar+Listening step-by-step (lazy, circular-importsiz) */
+async function maybeEnrichA1(lessons: Lesson[], level: CefrLevel): Promise<void> {
+  try {
+    if (level === 'A1') {
+      const { applyA1Enrichment } = await import('./englishA1Enrichment');
+      for (let i = 0; i < lessons.length; i++) {
+        lessons[i] = applyA1Enrichment(lessons[i]);
+      }
+    } else if (level === 'A2') {
+      const { applyA2Enrichment } = await import('./englishA2Enrichment');
+      for (let i = 0; i < lessons.length; i++) {
+        lessons[i] = applyA2Enrichment(lessons[i]);
+      }
+    }
+  } catch (e) {
+    console.warn(`[CurriculumLessons] ${level} enrichment failed:`, e);
+  }
+}
+
 /**
  * Convert lightweight manifest item into a standard Lesson structure for metadata-only callers
  * (avoids undefined errors when callers inspect .courseId, .unitId, .title, etc.)
@@ -87,6 +106,7 @@ export async function loadCurriculumLevel(level: CefrLevel): Promise<Lesson[]> {
   try {
     const mod = await loader();
     const lessons: Lesson[] = mod[`ENGLISH_${normalized}_LESSONS`] || Object.values(mod)[0] || [];
+    await maybeEnrichA1(lessons, normalized);
     loadedLevelsCache.set(normalized, lessons);
     for (const l of lessons) {
       loadedLessonsById.set(l.id, l);

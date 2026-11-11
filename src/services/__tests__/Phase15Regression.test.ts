@@ -83,7 +83,7 @@ function createPromotionState(overrides: Record<string, any> = {}): any {
 
 // Helper: store diagnostic results
 function setDiagnostic(userId: string, lang: string, confidence: number) {
-  const key = `study_planner_diag_result_${userId}_${lang}`;
+  const key = `ielts_talk_diag_result_${userId}_${lang}`;
   localStorage.setItem(
     key,
     JSON.stringify({
@@ -342,7 +342,7 @@ describe('Phase 15 — Adaptive Level Progression & Access Hardening', () => {
   // ----------------------------------------------------------------
   it('7. Lesson with completed prerequisite is accessible', () => {
     vi.spyOn(LessonService, 'getLessonById').mockImplementation((id: string) => {
-      if (id === 'en-a1-u1-l1' || id === 'en-a1-u1-l2') {
+      if (id === 'en-a1-u1-l1' || id === 'en-a1-u1-be-questions') {
         return {
           id,
           title: id,
@@ -362,18 +362,18 @@ describe('Phase 15 — Adaptive Level Progression & Access Hardening', () => {
 
     // Set up a completed prerequisite
     localStorage.setItem(
-      'study_planner_lesson_progress_test-user_en-a1-u1-l1',
+      'ielts_talk_lesson_progress_test-user_en-a1-u1-l1',
       JSON.stringify({
         isCompleted: true,
         quizScore: { score: 8, total: 10, percentage: 80 },
       }),
     );
-    localStorage.setItem('study_planner_current_level', 'A1');
+    localStorage.setItem('ielts_talk_current_level', 'A1');
 
-    const prereqs = CurriculumService.getLessonPrerequisites('en-a1-u1-l2');
+    const prereqs = CurriculumService.getLessonPrerequisites('en-a1-u1-be-questions');
     expect(prereqs).toContain('en-a1-u1-l1');
 
-    const result = LearningOrchestrator.canAccessLesson('en-a1-u1-l2', 'test-user', 'en');
+    const result = LearningOrchestrator.canAccessLesson('en-a1-u1-be-questions', 'test-user', 'en');
     expect(result.allowed).toBe(true);
     expect(result.reason).toBe('Access granted');
   });
@@ -383,7 +383,7 @@ describe('Phase 15 — Adaptive Level Progression & Access Hardening', () => {
   // ----------------------------------------------------------------
   it('8. Lesson with incomplete prerequisite is blocked', () => {
     vi.spyOn(LessonService, 'getLessonById').mockImplementation((id: string) => {
-      if (id === 'en-a1-u1-l1' || id === 'en-a1-u1-l2') {
+      if (id === 'en-a1-u1-l1' || id === 'en-a1-u1-be-questions') {
         return {
           id,
           title: id,
@@ -401,14 +401,14 @@ describe('Phase 15 — Adaptive Level Progression & Access Hardening', () => {
       return null;
     });
 
-    localStorage.setItem('study_planner_current_level', 'A1');
+    localStorage.setItem('ielts_talk_current_level', 'A1');
     // Do NOT set prerequisite as completed
-    localStorage.removeItem('study_planner_lesson_progress_test-user_en-a1-u1-l1');
+    localStorage.removeItem('ielts_talk_lesson_progress_test-user_en-a1-u1-l1');
 
-    const prereqs = CurriculumService.getLessonPrerequisites('en-a1-u1-l2');
+    const prereqs = CurriculumService.getLessonPrerequisites('en-a1-u1-be-questions');
     expect(prereqs).toContain('en-a1-u1-l1');
 
-    const result = LearningOrchestrator.canAccessLesson('en-a1-u1-l2', 'test-user', 'en');
+    const result = LearningOrchestrator.canAccessLesson('en-a1-u1-be-questions', 'test-user', 'en');
     expect(result.allowed).toBe(false);
     expect(result.reason).toContain('Prerequisite not completed');
   });
@@ -417,7 +417,7 @@ describe('Phase 15 — Adaptive Level Progression & Access Hardening', () => {
   // TEST 9: Direct URL bypass → blocked (A1 → B2)
   // ----------------------------------------------------------------
   it('9. Direct URL to higher level (A1→B2) is blocked', () => {
-    localStorage.setItem('study_planner_current_level', 'A1');
+    localStorage.setItem('ielts_talk_current_level', 'A1');
     const result = LearningOrchestrator.canAccessLesson('en-b2-u1-l1', 'test-user', 'en');
     // Lesson exists in LessonService (en-b2-u1-l1 is in SAMPLE_LESSONS)
     // User is A1, lesson is B2 → blocked
@@ -448,7 +448,7 @@ describe('Phase 15 — Adaptive Level Progression & Access Hardening', () => {
   // TEST 11: English cannot receive Japanese lesson
   // ----------------------------------------------------------------
   it('11. English user cannot access Japanese lesson', () => {
-    localStorage.setItem('study_planner_current_level', 'A1');
+    localStorage.setItem('ielts_talk_current_level', 'A1');
     const result = LearningOrchestrator.canAccessLesson('ja-n3-u1-l1', 'test-user', 'en');
     expect(result.allowed).toBe(false);
     expect(result.reason).toContain('Language mismatch');
@@ -458,7 +458,7 @@ describe('Phase 15 — Adaptive Level Progression & Access Hardening', () => {
   // TEST 12: Japanese cannot receive English lesson
   // ----------------------------------------------------------------
   it('12. Japanese user cannot access English lesson', () => {
-    localStorage.setItem('study_planner_current_level', 'N5');
+    localStorage.setItem('ielts_talk_current_level', 'N5');
     const result = LearningOrchestrator.canAccessLesson('en-a1-u1-l1', 'test-user', 'ja');
     expect(result.allowed).toBe(false);
     expect(result.reason).toContain('Language mismatch');
@@ -469,14 +469,14 @@ describe('Phase 15 — Adaptive Level Progression & Access Hardening', () => {
   // ----------------------------------------------------------------
   it('13. Promoted level persists in localStorage', async () => {
     setDiagnostic('test-user', 'en', 80);
-    localStorage.setItem('study_planner_current_level', 'A1');
+    localStorage.setItem('ielts_talk_current_level', 'A1');
 
     // promoteIfReady result unused for now('test-user', 'en');
     // In real env this would promote if all conditions met.
     // In test env, the promotion check reads from the same localStorage.
     // Just verify the current level is still A1 if not promoted,
     // or A2 if promoted.
-    const storedLevel = localStorage.getItem('study_planner_current_level');
+    const storedLevel = localStorage.getItem('ielts_talk_current_level');
     expect(['A1', 'A2']).toContain(storedLevel);
   });
 
@@ -484,7 +484,7 @@ describe('Phase 15 — Adaptive Level Progression & Access Hardening', () => {
   // TEST 14: Fallback respects promoted level
   // ----------------------------------------------------------------
   it('14. getUserTarget respects persisted current level over foundation default', () => {
-    localStorage.setItem('study_planner_current_level', 'B1');
+    localStorage.setItem('ielts_talk_current_level', 'B1');
     const target = LearningOrchestrator.getUserTarget('en');
     expect(target.currentLevel).toBe('B1');
     // Foundation default (A1) must not override persisted level

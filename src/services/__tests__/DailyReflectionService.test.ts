@@ -45,7 +45,7 @@ describe('DailyReflectionService', () => {
     );
 
     expect(supabase.from).toHaveBeenCalledWith('user_daily_reflections');
-    const cached = JSON.parse(localStorage.getItem('study_planner_daily_reflections') || '{}');
+    const cached = JSON.parse(localStorage.getItem('ielts_talk_daily_reflections') || '{}');
     expect(cached['2026-10-03']).toBeDefined();
     expect(cached['2026-10-03'].score).toBe(95);
     expect(cached['2026-10-03'].text).toBe('Today I reviewed 20 Oxford words');
@@ -62,7 +62,7 @@ describe('DailyReflectionService', () => {
 
   it('falls back to local cache when user is guest', async () => {
     localStorage.setItem(
-      'study_planner_daily_reflections',
+      'ielts_talk_daily_reflections',
       JSON.stringify({
         '2026-10-02': {
           date: '2026-10-02',

@@ -19,7 +19,7 @@ const sampleCards = [
   },
 ];
 
-vi.mock('../../../context/StudyPlannerContext', () => ({
+vi.mock('../../../context/IeltsTalkContext', () => ({
   useStudyData: () => ({
     user: { id: 'u1', email: 'test@example.com' },
     flashcards: sampleCards,

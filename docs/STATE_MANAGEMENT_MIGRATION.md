@@ -2,7 +2,7 @@
 
 ## 1. Problem Statement
 
-The `StudyPlannerContext.tsx` has grown into a 45KB monolith managing the entire application state—from user authentication to flashcard reviews, tasks, and settings.
+The `IeltsTalkContext.tsx` has grown into a 45KB monolith managing the entire application state—from user authentication to flashcard reviews, tasks, and settings.
 
 **Current Pain Points:**
 
@@ -183,7 +183,7 @@ interface NoteState {
 To avoid breaking the application during the migration, we will refactor `useStudyData()` to act as a proxy for the new Zustand stores. This allows us to migrate components incrementally.
 
 ```typescript
-// src/context/StudyPlannerContext.tsx
+// src/context/IeltsTalkContext.tsx
 import { useAuthStore } from '../stores/useAuthStore';
 import { useFlashcardStore } from '../stores/useFlashcardStore';
 import { useSubjectStore } from '../stores/useSubjectStore';
@@ -231,10 +231,10 @@ export const useStudyData = () => {
 
 ### Phase 2: Adapter Integration (Low Risk)
 
-- Replace the internal state (`useState`, `useReducer`) of `StudyPlannerProvider` with calls to Zustand stores.
+- Replace the internal state (`useState`, `useReducer`) of `IeltsTalkProvider` with calls to Zustand stores.
 - Update `useStudyData()` to be the Backward-Compatibility Adapter.
 - Test the application to ensure the legacy hook behaves exactly as before.
-- **Rollback Safety:** Revert `StudyPlannerContext.tsx` to the previous commit if issues arise.
+- **Rollback Safety:** Revert `IeltsTalkContext.tsx` to the previous commit if issues arise.
 
 ### Phase 3: Incremental Component Refactoring (Medium Risk)
 
@@ -246,8 +246,8 @@ export const useStudyData = () => {
 ### Phase 4: Monolith Deprecation (Cleanup)
 
 - Once all components are migrated to Zustand stores, remove `useStudyData()` usages entirely.
-- Delete `src/context/StudyPlannerContext.tsx`.
-- Remove the `<StudyPlannerProvider>` wrapper from `App.tsx` or `main.tsx`.
+- Delete `src/context/IeltsTalkContext.tsx`.
+- Remove the `<IeltsTalkProvider>` wrapper from `App.tsx` or `main.tsx`.
 
 ---
 

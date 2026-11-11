@@ -16,7 +16,7 @@ import { WritingSection } from '../../components/exams/WritingSection';
 import { SpeakingSection } from '../../components/exams/SpeakingSection';
 import { Button } from '../../components/ui/Button';
 import { ExamCertificateModal } from '../../components/exams/ExamCertificateModal';
-import { useStudyData } from '../../context/StudyPlannerContext';
+import { useStudyData } from '../../context/IeltsTalkContext';
 import { HistoryService } from '../../services/HistoryService';
 
 // Built-in standalone exams catalog when DB records do not exist

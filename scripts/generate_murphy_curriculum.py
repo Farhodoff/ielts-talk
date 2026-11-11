@@ -663,7 +663,7 @@ ts_content = """export interface IeltsGrammarTopic {
 export const IELTS_GRAMMAR_DATABASE: IeltsGrammarTopic[] = """ + json.dumps(topics, ensure_ascii=False, indent=4) + """;
 """
 
-with open('/Users/farhod/Documents/github/study_planner/src/data/ielts/ielts_grammar_data.ts', 'w', encoding='utf-8') as f:
+with open('/Users/farhod/Documents/github/ielts_talk/src/data/ielts/ielts_grammar_data.ts', 'w', encoding='utf-8') as f:
     f.write(ts_content)
 
 print(f"Successfully generated {len(topics)} units into ielts_grammar_data.ts")

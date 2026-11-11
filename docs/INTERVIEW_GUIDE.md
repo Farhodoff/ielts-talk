@@ -1,4 +1,4 @@
-# 🎯 AI Study Planner - Technical Interview Guide
+# 🎯 IELTS Talk - Technical Interview Guide
 
 **Developer Interview Preparation** — Mid-Level Position
 
@@ -15,12 +15,15 @@
 ## ❓ 1. "Loyihaning Overall Architecture qanday va nima uchun shunday?"
 
 ### **SITUATION:**
-AI Study Planner ni boshlashda, traditional monolithic architecture bilan full-stack qurish imkoniyati bor edi, lekin turli qism lar turli talablar qo'yardi. Frontend real-time update talab qildi, backend serverless model bilan tez evolyutsiya qilishi kerak edi.
+
+IELTS Talk ni boshlashda, traditional monolithic architecture bilan full-stack qurish imkoniyati bor edi, lekin turli qism lar turli talablar qo'yardi. Frontend real-time update talab qildi, backend serverless model bilan tez evolyutsiya qilishi kerak edi.
 
 ### **TASK:**
+
 Scalable, real-time, va cost-effective architecture tanlash kerak edi.
 
 ### **ACTION:**
+
 **Microservices + BaaS (Backend-as-a-Service) Model** qabul qildim:
 
 ```
@@ -51,6 +54,7 @@ Scalable, real-time, va cost-effective architecture tanlash kerak edi.
 ```
 
 **Nima uchun BaaS (Supabase)?**
+
 - ✅ **PostgreSQL + Real-time** - FastAPI + Redis o'rniga (traditional stack)
 - ✅ **RLS built-in** - Manual authentication logic kerak emas
 - ✅ **Serverless** - Infrastructure boshqarish kerak emas
@@ -60,12 +64,14 @@ Scalable, real-time, va cost-effective architecture tanlash kerak edi.
 **Key Decision: FastAPI o'rniga nima Supabase?**
 
 Prototip phase-da tez development kerak edi, va Supabase BaaS approach:
+
 - DevOps overhead kamaytirdi (database admin kerak emas)
 - Real-time sync out-of-the-box (WebSocket managed by Supabase)
 - Row-level security declarative (SQL policy bilan)
 - Scaling automatic (pay-as-you-go)
 
 ### **RESULT:**
+
 - 🚀 **30% tez deployment** (infrastructure setup qoqilmadi)
 - 📊 **Real-time sync latency** < 100ms (supabase-js optimized)
 - 💰 **Cost efficiency** (pay-per-query model, development bosqichida)
@@ -76,17 +82,20 @@ Prototip phase-da tez development kerak edi, va Supabase BaaS approach:
 ## ❓ 2. "State Management uchun React Context tanlash sababi nima? Redux o'rniga?"
 
 ### **SITUATION:**
+
 App grows qo'ng'iroq tasks, subjects, flashcards, users data bilan. Global state (XP, level, achievements) barcha sahifalarda lazim. Redux yoki Zustand qo'llanish mumkin edi.
 
 ### **TASK:**
+
 Lightweight state management tanlash, lekin Supabase real-time sync bilan conflict qilmasin.
 
 ### **ACTION:**
+
 **React Context API** ni tanladi (Redux o'rniga):
 
 ```
 ARCHITECTURE:
-┌─ StudyPlannerContext
+┌─ IeltsTalkContext
 │  ├─ User state (authentication)
 │  ├─ Tasks state (Supabase subscription)
 │  ├─ Flashcards state (real-time sync)
@@ -101,17 +110,20 @@ ARCHITECTURE:
 ```
 
 **Nima uchun Context API?**
+
 - ✅ **Supabase bilan native integration** - Real-time subscription bilan ishlash oson
 - ✅ **Less boilerplate** - Prototype-da tez setup
 - ✅ **Custom hooks** - Business logic separation
 - ✅ **No dependency** - Zustand yoki Redux kerak emas
 
 **Lekin Redux versioning?**
+
 - ❌ Overkill small-to-medium apps uchun
 - ❌ Supabase real-time qo'lamlashdan muammolar
 - ❌ Additional bundle size (+50KB minified)
 
 ### **RESULT:**
+
 - ✅ **Simple state flow** - context tree tracking easy
 - ⚡ **Lazy loading** - sahifa load qilganida Context update
 - 📦 **Bundle size** 40KB kam (Redux o'rniga)
@@ -122,12 +134,15 @@ ARCHITECTURE:
 ## ❓ 3. "Real-time Supabase Subscriptions qanday configure qildingiz?"
 
 ### **SITUATION:**
+
 Bir nechta users bir vaqtda task qo'shishi yoki flashcard update qilishida, barcha users real-time o'zgarishlarni ko'rishlari kerak edi. Database subscription setup kerak edi.
 
 ### **TASK:**
+
 Real-time sync implement qilish Supabase subscriptions orqali, minimal latency bilan.
 
 ### **ACTION:**
+
 **Supabase Real-time Subscriptions** qo'llanildi:
 
 ```
@@ -174,6 +189,7 @@ SUBSCRIPTION SETUP:
    - Conflict resolution (last-write-wins strategy)
 
 ### **RESULT:**
+
 - ⚡ **Latency**: ~50-100ms (real-time human perception uchun)
 - 🔄 **Sync accuracy**: 99.9%+ (Supabase transaction-based)
 - 💾 **Memory efficient**: Channel-based filtering (bulk data yozilmaydi)
@@ -184,12 +200,15 @@ SUBSCRIPTION SETUP:
 ## ❓ 4. "Row Level Security (RLS) qanday configure qildingiz?"
 
 ### **SITUATION:**
+
 Multi-user app-da har bir foydalanuvchi faqat o'z ma'lumotlarini ko'rishi kerak. SQL injection yoki unauthorized access xطrdan himoya qilish lazim edi.
 
 ### **TASK:**
+
 PostgreSQL RLS policies implement qilish, har bir foydalanuvchi faqat o'z dataning access qila olsin.
 
 ### **ACTION:**
+
 **RLS Policies** configure qildim:
 
 ```
@@ -222,6 +241,7 @@ RLS POLICY STRUCTURE:
 ```
 
 **RLS Policy Logic:**
+
 - `auth.uid()` - Supabase JWT token-dan extracted user ID
 - `USING` - SELECT/DELETE uchun filter condition
 - `WITH CHECK` - INSERT/UPDATE uchun validation
@@ -245,6 +265,7 @@ SCENARIO: Study rooms - bir nechta users birgalikda ishlaydi
 ```
 
 ### **RESULT:**
+
 - 🔐 **Database-level security** - application code bypass bo'lmaydi
 - ✅ **Zero unauthorized access** - RLS enforced by PostgreSQL
 - 🚀 **Performance** - filtering database-side (client-side o'rniga)
@@ -255,12 +276,15 @@ SCENARIO: Study rooms - bir nechta users birgalikda ishlaydi
 ## ❓ 5. "Offline Support LocalStorage bilan qanday implement qildingiz?"
 
 ### **SITUATION:**
+
 Mobile users slow internet yoki offline mode-da app ishlashi kerak edi. Har safar serverga so'rov yuborish performance zaif qilarde.
 
 ### **TASK:**
+
 Offline-first strategy implement qilish, localStorage bilan client-side caching.
 
 ### **ACTION:**
+
 **Offline Storage Pattern**:
 
 ```
@@ -287,7 +311,7 @@ ARCHITECTURE:
       │ Update UI state  │
       │ (optimistic)     │
       └──────────────────┘
-      
+
 WHEN ONLINE AGAIN:
               ▼
       ┌──────────────────┐
@@ -320,6 +344,7 @@ localStorage Schema:
 ```
 
 **Sync Logic:**
+
 1. **Online detection** - window.onLine + Supabase connection check
 2. **Queue management** - localStorage "tasks_queue" array-da pending changes
 3. **Batching** - bir nechta changes batch qo'linib send (network efficient)
@@ -327,6 +352,7 @@ localStorage Schema:
 5. **TTL** - old cache entries 7 kun-dan keyin auto delete
 
 ### **RESULT:**
+
 - 📱 **Offline functionality** - internet bo'lmasadan ham ishlaydi
 - ⚡ **Faster UX** - localStorage-dan instant load
 - 🔄 **Seamless sync** - user tadbiri olmay background-da sync
@@ -341,12 +367,15 @@ localStorage Schema:
 ## ❓ 6. "Gemini API Rate Limiting va Error Handling qanday yechdingiz?"
 
 ### **SITUATION:**
+
 Google Gemini API-da rate limits bor (1K requests/min free tier). Agar users ko'p AI-generated content so'rasa, API errors yoki delays sodir bolur edi.
 
 ### **TASK:**
+
 Rate limiting handle qilish, user experience qaytarmaydigan tarzda.
 
 ### **ACTION:**
+
 **Multi-layer Rate Limiting Strategy**:
 
 ```
@@ -413,6 +442,7 @@ LEVEL 3: Network Error
 ```
 
 ### **RESULT:**
+
 - ✅ **Zero API crashes** - rate limiting prevents overload
 - 📊 **Fair usage** - daily quotas ensure equitable access
 - 🃏 **Graceful fallbacks** - static templates agar AI fail bo'lsa
@@ -423,12 +453,15 @@ LEVEL 3: Network Error
 ## ❓ 7. "Prompt Engineering approach nima? Gemini-dan quality output qanday olasiz?"
 
 ### **SITUATION:**
+
 AI-generated study plans sometimes generic yoki low-quality. Context-rich prompts kerak edi.
 
 ### **TASK:**
+
 Structured prompts qayta qilish, consistent quality bajaradigan Gemini responses.
 
 ### **ACTION:**
+
 **Prompt Engineering Framework**:
 
 ```
@@ -457,7 +490,7 @@ INPUT:
   - level: "intermediate"
   - duration: "6 weeks"
   - learningStyle: "hands-on"
-  
+
 OUTPUT PROMPT:
   "Create a 6-week intermediate study plan for Python ML...
    Focus on hands-on projects. Include resources, timeline.
@@ -468,7 +501,7 @@ QUALITY CHECKS:
   ├─ Content length (minimum 500 chars?)
   ├─ Keyword presence (topic relevant?)
   └─ Diversity (repeated content?)
-  
+
   IF QUALITY_CHECKS FAIL:
     └─> REGENERATE with refined prompt
 ```
@@ -495,6 +528,7 @@ V4 (Production):
 ```
 
 ### **RESULT:**
+
 - 🎯 **90%+ valid outputs** (before: 60%)
 - 📊 **Consistent quality** - structured prompts guarantee
 - ⚡ **Faster generation** - fewer regenerations needed
@@ -509,12 +543,15 @@ V4 (Production):
 ## ❓ 8. "Telegram Bot Webhook qanday integrate qildingiz?"
 
 ### **SITUATION:**
+
 Daily schedule reminders va deadline notifications uchun Telegram bot lazim edi. Traditional polling (bot server-ga request) inefficient. Webhooks (server bot-ga push) kerak edi.
 
 ### **TASK:**
+
 Telegram Bot API webhooks implement qilish, serverless Edge Functions bilan.
 
 ### **ACTION:**
+
 **Webhook-based Bot Architecture**:
 
 ```
@@ -614,22 +651,23 @@ STEP 4: SCHEDULED NOTIFICATIONS
 ```
 1. SIGNATURE VERIFICATION (prevent spoofing)
    HMAC-SHA256 token check
-   
+
 2. API KEY SECURITY
    - Store TELEGRAM_BOT_TOKEN in Supabase secrets
    - Never commit to git
    - Rotate quarterly
-   
+
 3. RATE LIMITING
    - Per-user message rate (max 5 msg/min)
    - Per-chat rate (max 100 msg/hour)
-   
+
 4. DATA PRIVACY
    - Don't store user messages
    - Only store: telegram_id, user_id, linking timestamp
 ```
 
 ### **RESULT:**
+
 - 📱 **100% delivery** - webhook-based (vs polling failures)
 - ⚡ **Low latency** - real-time push (vs scheduled delays)
 - 💰 **Cost efficient** - no polling overhead
@@ -640,12 +678,15 @@ STEP 4: SCHEDULED NOTIFICATIONS
 ## ❓ 9. "Performance Optimization: First Paint va Time to Interactive qanday yepttirdingiz?"
 
 ### **SITUATION:**
+
 App initially slow load bo'lardi - React bundle large, Supabase data yiqilishida delay. Mobile users specially affected.
 
 ### **TASK:**
+
 FCP (First Contentful Paint) va TTI (Time to Interactive) optimize qilish.
 
 ### **ACTION:**
+
 **Multi-layer Optimization Strategy**:
 
 ```
@@ -708,11 +749,11 @@ SOLUTION:
   2. Selective columns (SELECT id, title - don't load full data)
   3. Indexed queries (created_at index for sorting)
   4. Real-time subscriptions (delta updates, not full reload)
-  
+
 QUERY OPTIMIZATION:
   Before:
     SELECT * FROM tasks WHERE user_id = ? (loads all columns)
-  
+
   After:
     SELECT id, title, status, due_date FROM tasks
     WHERE user_id = ?
@@ -722,6 +763,7 @@ QUERY OPTIMIZATION:
 ```
 
 ### **RESULT:**
+
 - ⚡ **FCP 65% faster** (3.5s -> 1.2s)
 - 🚀 **TTI reduced** (2.1s average)
 - 📦 **Bundle 62% smaller** (Vite + tree shaking)
@@ -736,12 +778,15 @@ QUERY OPTIMIZATION:
 ## ❓ 10. "Testing Strategy: Vitest + React Testing Library qanday qo'llanasiz?"
 
 ### **SITUATION:**
+
 Bug fixes difficult, regression unstable. Testing framework kerak edi, lekin Jest setup complex edi (Vite-ga compatibility issues).
 
 ### **TASK:**
+
 Lightweight testing stack implement qilish, Vite-native.
 
 ### **ACTION:**
+
 **Vitest + RTL Testing Stack**:
 
 ```
@@ -808,6 +853,7 @@ npm run coverage    # Coverage report
 ```
 
 ### **RESULT:**
+
 - ✅ **70%+ code coverage** (critical paths tested)
 - 🐛 **Catch bugs early** (CI blocks bad commits)
 - ⚡ **Tests fast** (vitest 5x faster than Jest)
@@ -822,12 +868,15 @@ npm run coverage    # Coverage report
 ## ❓ 11. "Production Deployment: Vercel + Supabase Setup qanday?"
 
 ### **SITUATION:**
+
 App production-ga joylashtirish kerak edi. CI/CD pipeline, environment variables, database migrations setup.
 
 ### **TASK:**
+
 Seamless deployment pipeline qurish Vercel + Supabase bilan.
 
 ### **ACTION:**
+
 **Production Deployment Architecture**:
 
 ```
@@ -904,6 +953,7 @@ MIGRATION WORKFLOW:
 ```
 
 ### **RESULT:**
+
 - ✅ **Zero-downtime deploys** (blue-green on Vercel)
 - 🔄 **Automated testing** (CI prevents broken builds)
 - 📊 **Monitoring ready** (Sentry + Vercel analytics)
@@ -918,19 +968,22 @@ MIGRATION WORKFLOW:
 ## ❓ 12. "Eng qiyin bug: Real-time Sync Conflict qanday yechgan?"
 
 ### **SITUATION:**
+
 Two users bir vaqtda tasks update qilishida conflict sodir bo'ldi - one user's changes lost. Race condition problem.
 
 ### **TASK:**
+
 Concurrent updates handle qilish, data loss prevent qilish.
 
 ### **ACTION:**
+
 **Optimistic Update + Server Reconciliation Pattern**:
 
 ```
 CONFLICT SCENARIO:
 User A at 14:00 → Update task "priority: HIGH"
 User B at 14:00 → Update task "status: DONE"
-                  
+
 Without conflict resolution:
   ├─ A's update lost
   └─ Only B's status saved (wrong!)
@@ -1008,6 +1061,7 @@ CONFLICT RESOLUTION STRATEGY (Last-Write-Wins):
 ```
 
 ### **RESULT:**
+
 - ✅ **Zero data loss** - all concurrent updates preserved
 - ⚡ **Fast UX** - no waiting for server confirmation
 - 🔄 **Automatic reconciliation** - field-level merging
@@ -1018,12 +1072,15 @@ CONFLICT RESOLUTION STRATEGY (Last-Write-Wins):
 ## ❓ 13. "Skalabilyy va Future Growth: 100K+ users uchun nima tayyorlash kerak?"
 
 ### **SITUATION:**
+
 App currently 1K+ users with stable performance. Lekin agar 100K users bo'lsa, bottlenecks emerge qiladi.
 
 ### **TASK:**
+
 Scalability roadmap implement qilish, future-proof architecture.
 
 ### **ACTION:**
+
 **Scalability Strategy (3-phase)**:
 
 ```
@@ -1118,6 +1175,7 @@ AT 100K USERS:
 ```
 
 ### **RESULT:**
+
 - 📈 **Roadmap clear** - bottlenecks identified
 - 🔧 **Modular approach** - phase-by-phase scaling
 - 💰 **Cost-aware** - gradual investment
@@ -1127,21 +1185,21 @@ AT 100K USERS:
 
 ## 📊 SUMMARY: Quick Reference
 
-| Sual | Kalit Javob | Metric |
-|------|------------|--------|
-| 1. Architecture | Supabase BaaS + React Context | 30% tez deploy |
-| 2. State Mgmt | Context API (vs Redux) | 40KB kam bundle |
-| 3. Real-time | Subscriptions + optimistic | <100ms latency |
-| 4. RLS Security | PostgreSQL policies | 0 unauthorized |
-| 5. Offline | localStorage queue | Works offline |
-| 6. AI Rate Limit | Multi-layer throttling | 0 crashes |
-| 7. Prompting | Structured + few-shot | 90%+ quality |
-| 8. Telegram Bot | Webhook + Edge Func | 100% delivery |
-| 9. Performance | Code splitting + cache | FCP 1.2s |
-| 10. Testing | Vitest + RTL 70% cover | 5x faster |
-| 11. Deployment | Vercel + Supabase CI/CD | Zero-downtime |
-| 12. Sync conflicts | LWW + timestamps | 0 data loss |
-| 13. Scalability | 3-phase roadmap | 100K+ ready |
+| Sual               | Kalit Javob                   | Metric          |
+| ------------------ | ----------------------------- | --------------- |
+| 1. Architecture    | Supabase BaaS + React Context | 30% tez deploy  |
+| 2. State Mgmt      | Context API (vs Redux)        | 40KB kam bundle |
+| 3. Real-time       | Subscriptions + optimistic    | <100ms latency  |
+| 4. RLS Security    | PostgreSQL policies           | 0 unauthorized  |
+| 5. Offline         | localStorage queue            | Works offline   |
+| 6. AI Rate Limit   | Multi-layer throttling        | 0 crashes       |
+| 7. Prompting       | Structured + few-shot         | 90%+ quality    |
+| 8. Telegram Bot    | Webhook + Edge Func           | 100% delivery   |
+| 9. Performance     | Code splitting + cache        | FCP 1.2s        |
+| 10. Testing        | Vitest + RTL 70% cover        | 5x faster       |
+| 11. Deployment     | Vercel + Supabase CI/CD       | Zero-downtime   |
+| 12. Sync conflicts | LWW + timestamps              | 0 data loss     |
+| 13. Scalability    | 3-phase roadmap               | 100K+ ready     |
 
 ---
 

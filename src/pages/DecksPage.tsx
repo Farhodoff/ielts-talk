@@ -30,7 +30,7 @@ import { AdminPresetAuditorModal } from '../components/decks/AdminPresetAuditorM
 import { AdminAlbumCreatorModal } from '../components/decks/AdminAlbumCreatorModal';
 import { LevelFolderExplorerModal } from '../components/decks/LevelFolderExplorerModal';
 import { Button } from '../components/ui/Button';
-import { useStudyData } from '../context/StudyPlannerContext';
+import { useStudyData } from '../context/IeltsTalkContext';
 import { useLanguage } from '../context/LanguageContext';
 import { useFlashcardImport } from '../hooks/useFlashcardImport';
 import { isAdminEmail, isSuperAdmin } from '../utils/admin';
@@ -63,7 +63,7 @@ const DecksPage: React.FC = () => {
     document.documentElement.classList.add('dark');
     document.documentElement.classList.remove('light');
     try {
-      localStorage.setItem('study_planner_theme', 'dark');
+      localStorage.setItem('ielts_talk_theme', 'dark');
     } catch {}
   }, []);
 
@@ -155,7 +155,7 @@ const DecksPage: React.FC = () => {
             const batchCards = newCards.map((c) => ({
               subjectId: targetSubjectId!,
               front: c.front,
-              back: `${c.back} ${c.phonetic ? `(${c.phonetic})` : ''} ${c.example ? `\nExample: "${c.example}"` : ''}`.trim(),
+              back: `${c.back} ${c.phonetic ? `(${c.phonetic})` : ''} ${c.example ? `\nExample: "${c.example}"${c.exampleTranslation ? `\nTarjima: ${c.exampleTranslation}` : ''}` : ''}`.trim(),
               interval: 1,
               repetitions: 0,
               easeFactor: 2.5,
@@ -378,7 +378,7 @@ const DecksPage: React.FC = () => {
           const batchCards = newCards.map((c) => ({
             subjectId: targetSubjectId!,
             front: c.front,
-            back: `${c.back} ${c.phonetic ? `(${c.phonetic})` : ''} ${c.example ? `\nExample: "${c.example}"` : ''}`.trim(),
+            back: `${c.back} ${c.phonetic ? `(${c.phonetic})` : ''} ${c.example ? `\nExample: "${c.example}"${c.exampleTranslation ? `\nTarjima: ${c.exampleTranslation}` : ''}` : ''}`.trim(),
             interval: 1,
             repetitions: 0,
             easeFactor: 2.5,

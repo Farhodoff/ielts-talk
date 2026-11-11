@@ -39,8 +39,9 @@ export function validateIeltsResponse(rawObj, fallbackEssay = '') {
   const calculatedOverall = Math.round(((taskAchievement + coherenceAndCohesion + lexicalResource + grammaticalRange) / 4) * 2) / 2;
   const overallBand = clampBand(rawObj.overallBand, calculatedOverall);
 
-  const summary = typeof rawObj.summary === 'string' && rawObj.summary.trim().length > 0
-    ? rawObj.summary.trim().substring(0, 3000)
+  // Compatibility layer: support both 'summary' and 'mentorSummary'
+  const summary = (typeof rawObj.mentorSummary === 'string' || typeof rawObj.summary === 'string')
+    ? (rawObj.mentorSummary || rawObj.summary).trim().substring(0, 3000)
     : 'Insho tahlil qilindi.';
 
   const sanitizeStringArray = (arr, maxItems = 10) => {
@@ -51,8 +52,17 @@ export function validateIeltsResponse(rawObj, fallbackEssay = '') {
       .map(item => item.trim().substring(0, 500));
   };
 
+  // Handle growthTasks (new mentor format) or improvements (old format)
+  let improvements = [];
+  if (Array.isArray(rawObj.growthTasks)) {
+    improvements = rawObj.growthTasks
+      .map(task => typeof task === 'object' ? `${task.area}: ${task.issue}` : String(task))
+      .slice(0, 10);
+  } else {
+    improvements = sanitizeStringArray(rawObj.improvements);
+  }
+
   const strengths = sanitizeStringArray(rawObj.strengths);
-  const improvements = sanitizeStringArray(rawObj.improvements);
 
   const correctedEssay = typeof rawObj.correctedEssay === 'string' && rawObj.correctedEssay.trim().length > 0
     ? rawObj.correctedEssay.trim()
@@ -70,6 +80,10 @@ export function validateIeltsResponse(rawObj, fallbackEssay = '') {
     strengths: strengths.length > 0 ? strengths : ['Asosiy fikrlar yaxshi bayon etilgan.'],
     improvements: improvements.length > 0 ? improvements : ['Murakkab gap tuzilmalaridan ko\'proq foydalaning.'],
     correctedEssay,
+    // Pass through new mentor fields if they exist
+    structuralAnalysis: rawObj.structuralAnalysis || { isCorrect: true, feedback: '' },
+    growthTasks: Array.isArray(rawObj.growthTasks) ? rawObj.growthTasks : [],
+    goldStandardPhrasing: Array.isArray(rawObj.goldStandardPhrasing) ? rawObj.goldStandardPhrasing : [],
   };
 }
 

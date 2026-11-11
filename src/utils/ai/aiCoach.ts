@@ -1,11 +1,18 @@
+import type { SupportedLanguage } from '../../types/lesson';
 import { parseAIError } from './aiConfig';
 import { callSelectedAIProvider } from './aiCore';
 import { ErrorVaultService } from '../../services/ErrorVaultService';
+import { LearningSignalService } from '../../services/LearningSignalService';
 import { ConversationScenario } from '../../components/speaking/scenarioTypes';
 
 export interface SpeechAnalysisResult {
-  grammar_corrections: string[];
-  better_vocabulary: { original: string; suggested: string }[];
+  grammar_corrections: {
+    original: string;
+    corrected: string;
+    explanation: string;
+    practice_task: string;
+  }[];
+  better_vocabulary: { original: string; suggested: string; nuance: string }[];
   fluency_score: number;
   overall_feedback: string;
 }
@@ -14,19 +21,24 @@ export const analyzeSpeech = async (
   transcript: string,
   topic: string = 'General Conversation',
   _userKey?: string,
+  userId?: string,
+  language: SupportedLanguage = 'en',
 ): Promise<SpeechAnalysisResult> => {
   const prompt = `
-      Act as an expert English language Speaking Coach (like an IELTS examiner).
+      Act as a world-class English Language Mentor and IELTS Coach.
+      Your ultimate goal is to lead the student from their current level up to Band 7.5+.
       The user was asked to talk about: "${topic}".
       Here is the exact transcript of what they said:
       "${transcript}"
-      
-      Task: Analyze the transcript and provide feedback.
+
+      Task: Analyze the transcript using a pedagogical "Mentor" approach.
+      Instead of just correcting, teach.
+
       Output Format: A VALID JSON object with the following keys exactly:
-      - "grammar_corrections": An array of strings, pointing out grammar mistakes and how to fix them.
-      - "better_vocabulary": An array of objects with "original" and "suggested" keys to improve their word choice.
+      - "grammar_corrections": An array of objects { "original": "the mistake", "corrected": "the fix", "explanation": "briefly explain the rule", "practice_task": "a tiny challenge to apply this fix immediately" }.
+      - "better_vocabulary": An array of objects { "original": "simple word", "suggested": "Band 8+ alternative", "nuance": "explain why the suggested word is better in this context" }.
       - "fluency_score": A number out of 9.0 (IELTS band scale) estimating their fluency based on the text coherence.
-      - "overall_feedback": A short, encouraging paragraph summarizing their performance and areas to improve.
+      - "overall_feedback": A mentor's summary. Start with a positive "win", identify the single biggest gap, and give one clear action step for their next practice session.
 
       Constraint: ONLY return the JSON object. Do not include any markdown formatting, preamble, or explanation.
     `;
@@ -37,7 +49,14 @@ export const analyzeSpeech = async (
       .replace(/```json/g, '')
       .replace(/```/g, '')
       .trim();
-    return JSON.parse(cleanedText);
+    const result = JSON.parse(cleanedText);
+
+    // Dynamic Roadmap Integration: Record analysis as learning signals
+    if (userId) {
+      await LearningSignalService.recordAiCoachAnalysis(userId, language, result, topic);
+    }
+
+    return result;
   } catch (error: any) {
     throw new Error(parseAIError(error));
   }
@@ -436,6 +455,7 @@ export const buildCoachPrompts = (
   language: 'en' | 'ja' = 'en',
   persona: string = 'roast',
   scenario?: ConversationScenario | null,
+  userLevel: string = 'B2',
 ): { systemPrompt: string; userPrompt: string } => {
   // Keep last 6 messages to optimize token usage & ensure fast responses
   const recentHistory = history.slice(-6);
@@ -573,26 +593,42 @@ You MUST respond with a VALID JSON object matching this schema exactly:
   ]
 }`;
 
+  const levelInstruction =
+    language === 'en'
+      ? `USER LEVEL: ${userLevel} (CEFR).
+         - If A1/A2: Use simple vocabulary, speak slowly (shorter sentences), provide helpful sentence starters (scaffolding), and be extremely encouraging.
+         - If B1/B2: Use a mix of simple and complex structures. Challenge them to use more specific adjectives and cohesive devices.
+         - If C1/C2: Use sophisticated, academic language. Focus on precision, nuance, and high-level idiomatic expressions. Expect near-native fluency.`
+      : `USER LEVEL: ${userLevel} (JLPT).
+         - If N5/N4: Use basic grammar, limit kanji, use polite (desu/masu) form, and provide clear, simple feedback.
+         - If N3: Introduce more natural phrasing and intermediate grammar.
+         - If N2/N1: Use advanced academic/business vocabulary, complex sentence structures, and subtle nuances of keigo.`;
+
   const systemPrompt = `
       ${personaPrompt}
       Target Language: ${language === 'ja' ? 'Japanese (日本語)' : 'English'}
+      ${levelInstruction}
       ${weakItemsSnippet}
 
       ${jsonContract}
 
       PEDAGOGICAL & DIALOGUE RULES:
       1. ONLY return a valid JSON object matching the contract. Do not include any text, preamble, or markdown outside the JSON.
-      2. Keep responses brief (1-3 sentences maximum). Act as an active conversation partner and coach. Always encourage the student to speak more by asking a natural, relevant follow-up question.
-      3. For Japanese: "reply" and "ttsText" MUST be 100% Japanese (Kanji/Kana). NEVER mix Romaji or English into reply or ttsText. Romaji goes ONLY in "romaji" field for UI display.
-      4. For English: "reply" and "ttsText" MUST be 100% English. "romaji" must be an empty string.
-      5. Error Correction & Critique Policy:
+      2. ACT AS A MENTOR (Taught, not just Evaluated): Your goal is "0 to 7.5+".
+         - DO NOT simply provide the correct answer immediately.
+         - Use SOCRATIC GUIDANCE: If the user makes a mistake, first try to guide them to find it themselves by asking a leading question about the rule (e.g., "You mentioned 'yesterday', but the verb is in present tense. Can you try adjusting it?").
+         - Only provide the full correction if the user fails to correct it after one hint or if they are at a very low level (A1).
+      3. REINFORCEMENT LOOP: Whenever a mistake is corrected, immediately challenge the user to produce a NEW sentence using the same rule to ensure the learning is internalized.
+      4. For Japanese: "reply" and "ttsText" MUST be 100% Japanese (Kanji/Kana). NEVER mix Romaji or English into reply or ttsText. Romaji goes ONLY in "romaji" field for UI display.
+      5. For English: "reply" and "ttsText" MUST be 100% English. "romaji" must be an empty string.
+      6. Error Correction & Critique Policy:
          ${
            persona === 'roast'
-             ? `ROAST MODE IS ACTIVE: Call out every flaw with fiery strictness and witty sarcasm. If the student gives an overly short answer (like "いいです", "yes", "fine"), uses elementary words, hesitates, or makes a particle/grammar slip, roast them sharply (e.g. "小学生のような短い返事です！もっと詳しく理由を話してください！") and challenge them with an advanced follow-up question.`
-             : `Correct ONLY meaningful mistakes (incorrect particles は/が/に/で/を, wrong verb/adjective forms, incorrect tenses, or unnatural vocabulary). Do NOT nitpick minor stylistic variations. If the student made no mistake, set "hasError": false. Keep explanations concise (1 short sentence).`
+             ? `TOUGH LOVE MENTOR MODE: You are a "High-Standard Growth Coach". Call out laziness, elementary vocabulary, and grammar slips with sharp wit and sarcasm, BUT always pivot to a "Growth Challenge". After a roast, immediately provide a Band 8.5+ alternative and challenge them to use it in the next sentence. Your brutality is a tool for rapid growth.`
+             : `Correct ONLY meaningful mistakes (incorrect particles, wrong verb forms, incorrect tenses). Do NOT nitpick minor stylistic variations. If the student made no mistake, set "hasError": false. Keep explanations concise (1 short sentence).`
          }
-      6. Vocabulary Engine: Provide 1 to 3 truly useful, contextual words or collocations with reading, meaning, and contextual example. For Japanese, the "meaning" field MUST prioritize the Uzbek explanation followed by English in parentheses, e.g. "O'zini tanishtirish va kuchli tomonlarini ko'rsatish (Self-promotion)". The student is studying Japanese and speaks Uzbek, so the Uzbek explanation is required.
-      7. Scenario & Topic Adherence: Stay in character and context throughout the dialogue.
+      7. Vocabulary Engine: Provide 1 to 3 truly useful, contextual words or collocations. For Japanese, prioritize Uzbek explanation.
+      8. Scenario & Topic Adherence: Stay in character and context throughout the dialogue.
     `;
 
   const userPrompt = `
@@ -729,7 +765,7 @@ export const analyzeSpeakingSession = async (
       Full Conversation Transcript:
       ${conversationText}
 
-      Task: Perform a FORMAL MULTI-DIMENSIONAL LINGUISTIC ASSESSMENT using 4 weighted pillars:
+      Task: Perform a FORMAL MULTI-DIMENSIONAL LINGUISTIC ASSESSMENT and create a PERSONALIZED GROWTH PLAN.
       1. Lexical Resource (30%): Analyze vocabulary depth, idioms, kanji/keigo or C1/C2 terms used.
       2. Grammatical Range & Accuracy (30%): Sentence complexity ratio & error density.
       3. Fluency & Coherence (25%): Turn length & logical connectors used.
@@ -766,7 +802,7 @@ export const analyzeSpeakingSession = async (
             "context": "Context or example sentence in Uzbek"
           }
         ],
-        "overall_feedback": "Studentning suhbatini to'liq sarhisob qiluvchi chuqur tahliliy fikr (O'zbek tilida).",
+        "overall_feedback": "Suhbatni to'liq sarhisob qiluvchi tahlil.- UNDAN KEYIN - 'Keyingi qadamlar' (Next Steps) qismini qo'shing: aynan qaysi grammatik mavzuni o'qish kerakligi va qaysi so'zlar ustida ishlash kerakligi haqida aniq rejani bering (O'zbek tilida).",
         "strengths": ["Suhbatdagi 2-3 ta eng kuchli tomonlari (O'zbek tilida)"],
         "areas_to_improve": ["Kelgusida ishlash kerak bo'lgan 2-3 ta yo'nalish (O'zbek tilida)"]
       }

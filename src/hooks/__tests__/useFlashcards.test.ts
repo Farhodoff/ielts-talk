@@ -172,7 +172,7 @@ describe('useFlashcards BUG #4 regression - Cache isolation', () => {
     const { result } = renderHook(() => useFlashcards());
 
     expect(result.current.flashcards).toEqual([]);
-    expect(safeLocalStorage.getJSON).toHaveBeenCalledWith('study_planner_user_cache', null);
+    expect(safeLocalStorage.getJSON).toHaveBeenCalledWith('ielts_talk_user_cache', null);
     expect(safeLocalStorage.getJSON).not.toHaveBeenCalledWith(
       expect.stringContaining('99a2f2c1-3fa0-477e-b73c-2ca6537d1721'),
     );
@@ -185,7 +185,7 @@ describe('useFlashcards BUG #4 regression - Cache isolation', () => {
     renderHook(() => useFlashcards());
 
     await waitFor(() => {
-      expect(safeLocalStorage.getJSON).toHaveBeenCalledWith('study_planner_user_cache', null);
+      expect(safeLocalStorage.getJSON).toHaveBeenCalledWith('ielts_talk_user_cache', null);
     });
 
     expect(FlashcardService.fetchFlashcards).not.toHaveBeenCalled();
@@ -197,7 +197,7 @@ describe('useFlashcards BUG #4 regression - Cache isolation', () => {
     renderHook(() => useFlashcards());
 
     await waitFor(() => {
-      expect(safeLocalStorage.getJSON).toHaveBeenCalledWith('study_planner_user_cache', null);
+      expect(safeLocalStorage.getJSON).toHaveBeenCalledWith('ielts_talk_user_cache', null);
     });
   });
 
@@ -207,7 +207,7 @@ describe('useFlashcards BUG #4 regression - Cache isolation', () => {
     renderHook(() => useFlashcards());
 
     await waitFor(() => {
-      expect(safeLocalStorage.getJSON).toHaveBeenCalledWith('study_planner_user_cache', null);
+      expect(safeLocalStorage.getJSON).toHaveBeenCalledWith('ielts_talk_user_cache', null);
     });
   });
 });
