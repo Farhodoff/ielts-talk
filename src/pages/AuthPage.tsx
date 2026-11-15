@@ -408,8 +408,8 @@ const AuthPage: React.FC<{ recovery?: boolean }> = ({ recovery = false }) => {
                 </div>
               </div>
 
-              {/* Confirm Password field (Register only) */}
-              {!isLogin && !isResetPassword && (
+              {/* Confirm password for registration and recovery. */}
+              {(!isLogin || isResetPassword) && (
                 <motion.div
                   initial={{ opacity: 0, y: -8 }}
                   animate={{ opacity: 1, y: 0 }}
