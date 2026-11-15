@@ -69,10 +69,12 @@ const AuthPage: React.FC<{ recovery?: boolean }> = ({ recovery = false }) => {
   const [resetSuccess, setResetSuccess] = useState(false);
   const [recoveryReady, setRecoveryReady] = useState(false);
   const [recoveryProblem, setRecoveryProblem] = useState('');
+  const [recoveryAttempt, setRecoveryAttempt] = useState(0);
   useEffect(() => {
     if (!isResetPassword) return;
     let active = true;
     setRecoveryReady(false);
+    setRecoveryProblem('');
     ensurePasswordRecoverySession().then(
       () => {
         if (active) setRecoveryReady(true);
@@ -87,7 +89,7 @@ const AuthPage: React.FC<{ recovery?: boolean }> = ({ recovery = false }) => {
     return () => {
       active = false;
     };
-  }, [isResetPassword]);
+  }, [isResetPassword, recoveryAttempt]);
 
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -359,13 +361,22 @@ const AuthPage: React.FC<{ recovery?: boolean }> = ({ recovery = false }) => {
               <div className="space-y-3 rounded-xl border border-border p-3" role="status">
                 <p className="text-sm">{recoveryProblem || 'Tiklash havolasi tekshirilmoqda…'}</p>
                 {recoveryProblem && (
-                  <button
-                    type="button"
-                    className="font-semibold text-primary underline"
-                    onClick={() => setShowForgotPassword(true)}
-                  >
-                    Yangi tiklash havolasini olish
-                  </button>
+                  <div className="flex flex-wrap gap-3">
+                    <button
+                      type="button"
+                      className="font-semibold text-primary underline"
+                      onClick={() => setRecoveryAttempt((attempt) => attempt + 1)}
+                    >
+                      Qayta tekshirish
+                    </button>
+                    <button
+                      type="button"
+                      className="font-semibold text-primary underline"
+                      onClick={() => setShowForgotPassword(true)}
+                    >
+                      Yangi tiklash havolasini olish
+                    </button>
+                  </div>
                 )}
               </div>
             )}

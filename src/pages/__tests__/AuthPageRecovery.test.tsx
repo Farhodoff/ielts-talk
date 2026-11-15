@@ -29,6 +29,22 @@ function renderRecovery() {
 }
 
 describe('Actual password recovery form', () => {
+  it('can retry session initialization after a temporary server error', async () => {
+    vi.mocked(supabase.auth.getSession).mockResolvedValueOnce({
+      data: { session: null },
+      error: { status: 520 },
+    } as any);
+    renderRecovery();
+    expect(
+      await screen.findByText('Tiklash serveriga ulanishda xato. Qayta urinib ko‘ring.'),
+    ).toBeInTheDocument();
+    expect(screen.getByRole('button', { name: 'Parolni yangilash' })).toBeDisabled();
+    fireEvent.click(screen.getByRole('button', { name: 'Qayta tekshirish' }));
+    await waitFor(() =>
+      expect(screen.getByRole('button', { name: 'Parolni yangilash' })).toBeEnabled(),
+    );
+  });
+
   it('shows confirmation and submits matching test passwords', async () => {
     renderRecovery();
     const password = screen.getByPlaceholderText('Parolingizni kiriting');

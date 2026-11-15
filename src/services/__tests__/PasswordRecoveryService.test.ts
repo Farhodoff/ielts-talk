@@ -2,7 +2,14 @@ import { describe, expect, it, vi, beforeEach, afterEach } from 'vitest';
 import { supabase } from '../../lib/supabase';
 import { ensurePasswordRecoverySession } from '../PasswordRecoveryService';
 vi.mock('../../lib/supabase', () => ({
-  supabase: { auth: { getSession: vi.fn(), setSession: vi.fn(), exchangeCodeForSession: vi.fn() } },
+  supabase: {
+    auth: {
+      getSession: vi.fn(),
+      setSession: vi.fn(),
+      refreshSession: vi.fn(),
+      exchangeCodeForSession: vi.fn(),
+    },
+  },
 }));
 beforeEach(() => {
   vi.resetAllMocks();
@@ -46,6 +53,50 @@ describe('Recovery session establishment', () => {
       data: { session: null, user: null },
       error: new Error('expired'),
     } as any);
+    vi.mocked(supabase.auth.refreshSession).mockResolvedValue({
+      data: { session: null, user: null },
+      error: { code: 'refresh_token_not_found' },
+    } as any);
     await expect(ensurePasswordRecoverySession()).rejects.toThrow('muddati');
+  });
+
+  it('exchanges the recovery refresh token when the access JWT is rejected', async () => {
+    window.history.replaceState(
+      {},
+      '',
+      '/auth/reset-password#access_token=rejected&refresh_token=recovery-refresh',
+    );
+    vi.mocked(supabase.auth.getSession).mockResolvedValue({
+      data: { session: { access_token: 'other-account' } },
+      error: null,
+    } as any);
+    vi.mocked(supabase.auth.setSession).mockResolvedValue({
+      data: { session: null, user: null },
+      error: { code: 'bad_jwt', status: 403 },
+    } as any);
+    vi.mocked(supabase.auth.refreshSession).mockResolvedValue({
+      data: { session: { access_token: 'fresh' }, user: null },
+      error: null,
+    } as any);
+    await ensurePasswordRecoverySession();
+    expect(supabase.auth.setSession).toHaveBeenCalled();
+    expect(supabase.auth.refreshSession).toHaveBeenCalledWith({
+      refresh_token: 'recovery-refresh',
+    });
+    expect(window.location.hash).toBe('');
+  });
+
+  it('preserves a link for retry when the auth server is temporarily unavailable', async () => {
+    window.history.replaceState(
+      {},
+      '',
+      '/auth/reset-password#access_token=access&refresh_token=refresh',
+    );
+    vi.mocked(supabase.auth.getSession).mockResolvedValue({ data: { session: null }, error: null });
+    const unavailable = { data: { session: null, user: null }, error: { status: 520 } } as any;
+    vi.mocked(supabase.auth.setSession).mockResolvedValue(unavailable);
+    vi.mocked(supabase.auth.refreshSession).mockResolvedValue(unavailable);
+    await expect(ensurePasswordRecoverySession()).rejects.toThrow('ulanishda');
+    expect(window.location.hash).toContain('refresh_token=refresh');
   });
 });
