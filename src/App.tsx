@@ -1,3 +1,4 @@
+import { isPasswordRecoveryLocation } from './utils/passwordRecovery';
 import React, { Suspense, useEffect, useState } from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import { Session } from '@supabase/supabase-js';
@@ -23,7 +24,10 @@ import {
 import ReloadPrompt from './components/pwa/ReloadPrompt';
 import UnauthRouter from './components/UnauthRouter';
 
+const RecoveryAuthPage = React.lazy(() => import('./pages/AuthPage'));
+
 const App: React.FC = () => {
+  const [isRecovery, setIsRecovery] = useState(() => isPasswordRecoveryLocation(window.location));
   const [session, setSession] = useState<Session | null>(() => {
     if (isPublicPreviewActive()) {
       return MOCK_PREVIEW_SESSION as unknown as Session;
@@ -138,7 +142,11 @@ const App: React.FC = () => {
 
     const {
       data: { subscription },
-    } = supabase.auth.onAuthStateChange((_event, newSession) => {
+    } = supabase.auth.onAuthStateChange((event, newSession) => {
+      if (event === 'PASSWORD_RECOVERY') {
+        setIsRecovery(true);
+        setIsLoading(false);
+      }
       if (newSession) {
         setSession(newSession);
       } else if (isTelegramWebApp()) {
@@ -173,6 +181,20 @@ const App: React.FC = () => {
       window.removeEventListener('storage', handleStorageAuth);
     };
   }, []);
+
+  if (isRecovery) {
+    return (
+      <ErrorBoundary>
+        <LanguageProvider>
+          <BrowserRouter>
+            <Suspense fallback={<PageLoader />}>
+              <RecoveryAuthPage recovery />
+            </Suspense>
+          </BrowserRouter>
+        </LanguageProvider>
+      </ErrorBoundary>
+    );
+  }
 
   if (isLoading) {
     return <PageLoader />;

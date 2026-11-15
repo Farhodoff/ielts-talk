@@ -1,3 +1,4 @@
+import { getPasswordRecoveryRedirect } from '../../utils/passwordRecovery';
 import React, { useState } from 'react';
 import { Button } from '../ui/Button';
 import { supabase } from '../../lib/supabase';
@@ -69,7 +70,7 @@ const AccountSection: React.FC = () => {
     if (confirm(`${user.email} manziliga parolni tiklash havolasi yuborilsinmi?`)) {
       try {
         const { error } = await supabase.auth.resetPasswordForEmail(user.email, {
-          redirectTo: `${window.location.origin}/settings`,
+          redirectTo: getPasswordRecoveryRedirect(window.location.origin),
         });
         if (error) throw error;
         toast({ title: '📧 Parolni tiklash havolasi pochtangizga yuborildi!' });

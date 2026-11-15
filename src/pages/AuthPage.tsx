@@ -1,3 +1,4 @@
+import { isPasswordRecoveryLocation } from '../utils/passwordRecovery';
 import { Loader2, Lock, Mail, User, Eye, EyeOff, ArrowLeft, Sparkles } from 'lucide-react';
 import React, { useState, useEffect } from 'react';
 import { useNavigate, useLocation, useSearchParams } from 'react-router-dom';
@@ -36,7 +37,7 @@ const formatAuthError = (err: unknown): string => {
   return message;
 };
 
-const AuthPage: React.FC = () => {
+const AuthPage: React.FC<{ recovery?: boolean }> = ({ recovery = false }) => {
   const navigate = useNavigate();
   const location = useLocation();
   const [searchParams] = useSearchParams();
@@ -48,16 +49,9 @@ const AuthPage: React.FC = () => {
     searchParams.get('mode') === 'signup';
 
   const [isLogin, setIsLogin] = useState(() => !isRegisterPath);
-  const [isResetPassword, setIsResetPassword] = useState(() => {
-    if (typeof window !== 'undefined') {
-      return (
-        window.location.pathname.includes('reset-password') ||
-        window.location.hash.includes('type=recovery') ||
-        window.location.search.includes('type=recovery')
-      );
-    }
-    return false;
-  });
+  const [isResetPassword, setIsResetPassword] = useState(
+    () => recovery || isPasswordRecoveryLocation(window.location),
+  );
 
   useEffect(() => {
     if (isRegisterPath) {
@@ -66,14 +60,10 @@ const AuthPage: React.FC = () => {
       setIsLogin(true);
     }
 
-    if (
-      location.pathname.includes('reset-password') ||
-      window.location.hash.includes('type=recovery') ||
-      window.location.search.includes('type=recovery')
-    ) {
+    if (recovery || isPasswordRecoveryLocation(window.location)) {
       setIsResetPassword(true);
     }
-  }, [location.pathname, searchParams, isRegisterPath]);
+  }, [location.pathname, searchParams, isRegisterPath, recovery]);
 
   const [resetSuccess, setResetSuccess] = useState(false);
   const [email, setEmail] = useState('');
@@ -114,12 +104,12 @@ const AuthPage: React.FC = () => {
     e.preventDefault();
     setError('');
 
-    if (!isLogin && !isResetPassword) {
+    if (!isLogin || isResetPassword) {
       if (password !== confirmPassword) {
         setError('Kiritilgan parollar bir-biriga mos kelmadi');
         return;
       }
-      if (!agreedToTerms) {
+      if (!isResetPassword && !agreedToTerms) {
         setError('Foydalanish shartlari va Maxfiylik siyosatiga rozilik bildiring');
         return;
       }
@@ -228,20 +218,16 @@ const AuthPage: React.FC = () => {
               Parol yangilandi!
             </h2>
             <p className="mx-auto max-w-sm text-sm leading-relaxed text-muted-foreground">
-              Yangi parolingiz muvaffaqiyatli saqlandi. Endi yangi parol bilan tizimga kirishingiz
-              mumkin.
+              Yangi parolingiz muvaffaqiyatli saqlandi. Ilovaga qaytishingiz mumkin.
             </p>
             <div className="pt-4">
               <button
                 onClick={() => {
-                  setResetSuccess(false);
-                  setIsResetPassword(false);
-                  setIsLogin(true);
-                  navigate('/login', { replace: true });
+                  window.location.assign('/ielts');
                 }}
                 className="flex h-12 w-full cursor-pointer items-center justify-center rounded-xl bg-primary text-sm font-bold text-primary-foreground shadow-md shadow-primary/25 transition-all hover:bg-primary/90"
               >
-                Kirish sahifasiga o'tish
+                Ilovaga qaytish
               </button>
             </div>
           </motion.div>
