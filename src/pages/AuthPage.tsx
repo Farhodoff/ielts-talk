@@ -1,3 +1,4 @@
+import { ensurePasswordRecoverySession } from '../services/PasswordRecoveryService';
 import { isPasswordRecoveryLocation } from '../utils/passwordRecovery';
 import { Loader2, Lock, Mail, User, Eye, EyeOff, ArrowLeft, Sparkles } from 'lucide-react';
 import React, { useState, useEffect } from 'react';
@@ -66,6 +67,28 @@ const AuthPage: React.FC<{ recovery?: boolean }> = ({ recovery = false }) => {
   }, [location.pathname, searchParams, isRegisterPath, recovery]);
 
   const [resetSuccess, setResetSuccess] = useState(false);
+  const [recoveryReady, setRecoveryReady] = useState(false);
+  const [recoveryProblem, setRecoveryProblem] = useState('');
+  useEffect(() => {
+    if (!isResetPassword) return;
+    let active = true;
+    setRecoveryReady(false);
+    ensurePasswordRecoverySession().then(
+      () => {
+        if (active) setRecoveryReady(true);
+      },
+      (err: unknown) => {
+        if (active)
+          setRecoveryProblem(
+            err instanceof Error ? err.message : 'Tiklash sessiyasi ochilmadi. Yangi havola oling.',
+          );
+      },
+    );
+    return () => {
+      active = false;
+    };
+  }, [isResetPassword]);
+
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
@@ -119,6 +142,7 @@ const AuthPage: React.FC<{ recovery?: boolean }> = ({ recovery = false }) => {
 
     try {
       if (isResetPassword) {
+        await ensurePasswordRecoverySession();
         const { error: resetErr } = await supabase.auth.updateUser({
           password,
         });
@@ -186,6 +210,14 @@ const AuthPage: React.FC<{ recovery?: boolean }> = ({ recovery = false }) => {
         setIsRegistered(true);
       }
     } catch (authError: unknown) {
+      if (
+        isResetPassword &&
+        authError instanceof Error &&
+        /auth session missing|session.*expired|refresh token/i.test(authError.message)
+      ) {
+        setRecoveryReady(false);
+        setRecoveryProblem('Tiklash sessiyasi tugagan. Yangi tiklash havolasini oling.');
+      }
       setError(formatAuthError(authError));
     } finally {
       setLoading(false);
@@ -323,6 +355,20 @@ const AuthPage: React.FC<{ recovery?: boolean }> = ({ recovery = false }) => {
             </AnimatePresence>
 
             {/* Form */}
+            {isResetPassword && !recoveryReady && (
+              <div className="space-y-3 rounded-xl border border-border p-3" role="status">
+                <p className="text-sm">{recoveryProblem || 'Tiklash havolasi tekshirilmoqda…'}</p>
+                {recoveryProblem && (
+                  <button
+                    type="button"
+                    className="font-semibold text-primary underline"
+                    onClick={() => setShowForgotPassword(true)}
+                  >
+                    Yangi tiklash havolasini olish
+                  </button>
+                )}
+              </div>
+            )}
             <form onSubmit={handleAuth} className="space-y-4">
               {/* Full Name field (Register only) */}
               {!isLogin && !isResetPassword && (
@@ -483,7 +529,7 @@ const AuthPage: React.FC<{ recovery?: boolean }> = ({ recovery = false }) => {
               <div className="space-y-3 pt-2">
                 <button
                   type="submit"
-                  disabled={loading}
+                  disabled={loading || (isResetPassword && !recoveryReady)}
                   className="flex h-12 w-full cursor-pointer items-center justify-center gap-2 rounded-xl bg-primary text-sm font-bold text-primary-foreground shadow-md shadow-primary/25 transition-all hover:bg-primary/90 active:scale-[0.99] disabled:cursor-not-allowed disabled:opacity-60"
                 >
                   {loading ? (
